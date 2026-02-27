@@ -1,0 +1,30 @@
+# dependencies
+node_modules/
+
+# astro
+dist/
+.astro/
+
+# env
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# logs
+*.log
+
+# caches
+.cache/
+*.tsbuildinfo

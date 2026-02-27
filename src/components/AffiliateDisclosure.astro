@@ -1,0 +1,53 @@
+---
+interface Props {
+  variant?: 'inline' | 'banner';
+}
+
+const { variant = 'inline' } = Astro.props;
+---
+
+{variant === 'banner' ? (
+  <div class="disclosure-banner">
+    <p>
+      <strong>Disclosure:</strong> This post contains affiliate links. If you make a purchase through these links, we may earn a small commission at no extra cost to you.
+      <a href="/affiliate-disclosure">Learn more</a>.
+    </p>
+  </div>
+) : (
+  <p class="disclosure-inline">
+    <em>As an Amazon Associate, we earn from qualifying purchases. <a href="/affiliate-disclosure">Full disclosure</a>.</em>
+  </p>
+)}
+
+<style>
+  .disclosure-banner {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-md) var(--space-lg);
+    margin-top: var(--space-lg);
+    display: inline-block;
+  }
+
+  .disclosure-banner p {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-normal);
+  }
+
+  .disclosure-banner a {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+
+  .disclosure-inline {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-block: var(--space-md);
+  }
+
+  .disclosure-inline a {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+</style>

@@ -1,0 +1,72 @@
+---
+import CoolingProductCard from './CoolingProductCard.astro';
+import type { CoolingProduct } from '@data/cooling-products';
+
+interface Props {
+  products: CoolingProduct[];
+  ctaKind: 'internal' | 'amazon';
+  pageType: 'collector' | 'converter';
+  pageSlug?: string;
+  /** For internal CTAs, the base href to link to */
+  internalHref?: string;
+  /** For Amazon CTAs, the button label */
+  ctaLabel?: string;
+  columns?: 2 | 3;
+}
+
+const {
+  products,
+  ctaKind,
+  pageType,
+  pageSlug = '',
+  internalHref = '',
+  ctaLabel = 'Check Price on Amazon',
+  columns = 3,
+} = Astro.props;
+---
+
+<div class={`cpg-grid cpg-grid--${columns}`}>
+  {products.map((product, i) => (
+    <CoolingProductCard
+      product={product}
+      cta={{
+        label: ctaKind === 'amazon' ? ctaLabel : `See best ${product.category.replace(/-/g, ' ')}`,
+        href: ctaKind === 'amazon' ? product.amazonUrl : internalHref,
+        kind: ctaKind,
+      }}
+      position={i + 1}
+      pageType={pageType}
+      pageSlug={pageSlug}
+    />
+  ))}
+</div>
+
+<style>
+  .cpg-grid {
+    display: grid;
+    gap: var(--space-lg);
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .cpg-grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cpg-grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 1024px) {
+    .cpg-grid--3 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .cpg-grid--3,
+    .cpg-grid--2 {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

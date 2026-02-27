@@ -1,0 +1,173 @@
+---
+import AffiliateLink from '@components/AffiliateLink.astro';
+import type { CoolingProduct } from '@data/cooling-products';
+
+interface Props {
+  product: CoolingProduct;
+  cta: { label: string; href: string; kind: 'internal' | 'amazon' };
+  position?: number;
+  pageType?: 'collector' | 'converter';
+  pageSlug?: string;
+}
+
+const { product, cta, position = 0, pageType = 'converter', pageSlug = '' } = Astro.props;
+
+const isAmazon = cta.kind === 'amazon';
+const trackEvent = isAmazon ? 'amazon_outbound_click' : 'collector_to_converter_click';
+---
+
+<div class="cp-card">
+  {product.image && (
+    <div class="cp-image">
+      <img
+        src={product.image.src}
+        alt={product.image.alt}
+        loading="lazy"
+        width="400"
+        height="300"
+      />
+    </div>
+  )}
+  <div class="cp-body">
+    <h3 class="cp-name">{product.name}</h3>
+    <p class="cp-best-for">
+      <strong>Best for:</strong> {product.bestFor}
+    </p>
+    <ul class="cp-bullets">
+      {product.bullets.map((b) => <li>{b}</li>)}
+    </ul>
+    {product.coolingMethod && (
+      <p class="cp-meta">
+        <span class="cp-meta-label">Cooling:</span> {product.coolingMethod}
+      </p>
+    )}
+    {isAmazon ? (
+      <AffiliateLink
+        href={cta.href}
+        class="cp-cta"
+        data-track={trackEvent}
+        data-page-type={pageType}
+        data-page-slug={pageSlug}
+        data-product-name={product.name}
+        data-product-category={product.category}
+        data-position={String(position)}
+        data-destination="amazon.com"
+      >
+        {cta.label}
+      </AffiliateLink>
+    ) : (
+      <a
+        href={cta.href}
+        class="cp-cta"
+        data-track={trackEvent}
+        data-from-page={pageSlug}
+        data-to-page={cta.href}
+        data-category={product.category}
+        data-link-position="section"
+      >
+        {cta.label}
+      </a>
+    )}
+  </div>
+</div>
+
+<style>
+  .cp-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: box-shadow var(--transition-base);
+  }
+
+  .cp-card:hover {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .cp-image {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--color-bg-alt);
+  }
+
+  .cp-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .cp-body {
+    padding: var(--space-lg);
+  }
+
+  .cp-name {
+    font-size: var(--text-lg);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-sm);
+  }
+
+  .cp-best-for {
+    font-size: var(--text-sm);
+    color: var(--color-accent);
+    margin-bottom: var(--space-md);
+    line-height: var(--leading-normal);
+  }
+
+  .cp-best-for strong {
+    color: var(--color-text);
+  }
+
+  .cp-bullets {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+    line-height: var(--leading-normal);
+  }
+
+  .cp-bullets li {
+    padding-left: var(--space-md);
+    position: relative;
+    margin-bottom: var(--space-xs);
+  }
+
+  .cp-bullets li::before {
+    content: '+';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: var(--weight-bold);
+  }
+
+  .cp-meta {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+  }
+
+  .cp-meta-label {
+    font-weight: var(--weight-semibold);
+    color: var(--color-text);
+  }
+
+  :global(.cp-cta) {
+    display: block;
+    text-align: center;
+    background: var(--color-primary);
+    color: var(--color-text-inverse) !important;
+    font-weight: var(--weight-semibold);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-md);
+    transition: background var(--transition-fast);
+    text-decoration: none;
+  }
+
+  :global(.cp-cta:hover) {
+    background: var(--color-primary-hover);
+    color: var(--color-text-inverse) !important;
+  }
+
+  :global(.cp-cta:focus-visible) {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+</style>

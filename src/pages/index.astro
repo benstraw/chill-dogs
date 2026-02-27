@@ -1,0 +1,89 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import HeroSection from '@components/HeroSection.astro';
+import PostCard from '@components/PostCard.astro';
+import { getAllPosts, getSlugFromId, getCategoryFromId } from '@utils/collection-helpers';
+
+const allPosts = await getAllPosts();
+
+const converterPosts = allPosts.filter((p) => p.data.pageType === 'converter').slice(0, 3);
+const latestPosts = allPosts.slice(0, 6);
+---
+
+<BaseLayout title="Home">
+  <!-- A/B alternatives:
+    "Cool dogs. Calm dogs. Happy dogs."
+    "When your dog feels better, everything's better."
+  -->
+  <HeroSection
+    headline="Keep dogs cool. Keep dogs calm."
+    subheadline="Curated cooling and calming picks to help your dog feel better fast — from summer heat relief to anxiety-friendly comfort."
+    ctaCooling={{ text: 'Shop Cooling Relief', href: '/cooling/' }}
+    ctaCalming={{ text: 'Shop Calm & Comfort', href: '/calming/' }}
+  />
+
+  {converterPosts.length > 0 && (
+    <section class="featured container">
+      <h2 class="section-title">Top Guides</h2>
+      <div class="posts-grid">
+        {converterPosts.map((post) => (
+          <PostCard
+            title={post.data.title}
+            description={post.data.description}
+            href={`/${getCategoryFromId(post.id)}/${getSlugFromId(post.id)}`}
+            category={post.data.category}
+            image={post.data.heroImage}
+          />
+        ))}
+      </div>
+    </section>
+  )}
+
+  {latestPosts.length > 0 && (
+    <section class="latest container">
+      <h2 class="section-title">Latest Posts</h2>
+      <div class="posts-grid">
+        {latestPosts.map((post) => (
+          <PostCard
+            title={post.data.title}
+            description={post.data.description}
+            href={`/${getCategoryFromId(post.id)}/${getSlugFromId(post.id)}`}
+            category={post.data.category}
+            image={post.data.heroImage}
+          />
+        ))}
+      </div>
+    </section>
+  )}
+</BaseLayout>
+
+<style>
+  .featured,
+  .latest {
+    padding-block: var(--space-3xl);
+  }
+
+  .section-title {
+    font-size: var(--text-2xl);
+    text-align: center;
+    margin-bottom: var(--space-xl);
+  }
+
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+  }
+
+  @media (max-width: 1024px) {
+    .posts-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .posts-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

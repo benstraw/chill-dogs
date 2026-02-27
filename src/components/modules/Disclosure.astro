@@ -1,0 +1,60 @@
+---
+interface Props {
+  showSafety?: boolean;
+}
+
+const { showSafety = true } = Astro.props;
+---
+
+<aside class="disc" aria-label="Disclosures">
+  <div class="disc-inner">
+    <p class="disc-affiliate">
+      <strong>Affiliate Disclosure:</strong> This page contains affiliate links. If you purchase through these links,
+      we earn a small commission at no extra cost to you. This supports our ability to research and recommend products.
+      <a href="/affiliate-disclosure">Full disclosure</a>.
+    </p>
+    {showSafety && (
+      <p class="disc-safety">
+        <strong>Safety Note:</strong> No product replaces shade, water, and common sense. If temperatures exceed 85 °F (29 °C),
+        limit outdoor time and watch for signs of overheating — excessive panting, drooling, or lethargy.
+        When in doubt, consult your vet.
+      </p>
+    )}
+  </div>
+</aside>
+
+<style>
+  .disc {
+    max-width: var(--max-width-prose);
+    margin: 0 auto;
+    padding: 0 var(--space-lg) var(--space-2xl);
+  }
+
+  .disc-inner {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+  }
+
+  .disc-affiliate,
+  .disc-safety {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-normal);
+    margin-bottom: var(--space-md);
+  }
+
+  .disc-safety {
+    margin-bottom: 0;
+  }
+
+  .disc-inner strong {
+    color: var(--color-text);
+  }
+
+  .disc-inner a {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+</style>

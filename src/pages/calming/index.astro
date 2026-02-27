@@ -1,0 +1,49 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Calm & Comfort"
+  description="Help your anxious dog find peace with our curated calming picks — from anxiety wraps and supplements to soothing toys and crate accessories."
+>
+  <section class="hub container">
+    <h1 class="hub-title">Calm & Comfort</h1>
+    <p class="hub-intro">
+      Thunderstorms, separation, vet visits — anxiety shows up everywhere. We
+      review the best calming aids, anxiety wraps, supplements, and comfort
+      products so your dog can relax when it matters most.
+    </p>
+    <div class="hub-placeholder">
+      <p>Product guides coming soon.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hub {
+    padding-block: var(--space-3xl);
+    max-width: var(--max-width-prose);
+  }
+
+  .hub-title {
+    font-size: var(--text-4xl);
+    font-weight: var(--weight-extrabold);
+    margin-bottom: var(--space-lg);
+  }
+
+  .hub-intro {
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .hub-placeholder {
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-md);
+    padding: var(--space-2xl);
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: var(--text-base);
+  }
+</style>

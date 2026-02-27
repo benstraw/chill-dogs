@@ -1,0 +1,109 @@
+---
+import AffiliateLink from './AffiliateLink.astro';
+import type { Product } from '@utils/types';
+
+interface Props {
+  products: Product[];
+}
+
+const { products } = Astro.props;
+
+const tagOrder = ['best-overall', 'budget', 'premium'] as const;
+const tagLabels: Record<string, string> = {
+  'best-overall': 'Best Overall',
+  'budget': 'Budget Pick',
+  'premium': 'Premium Pick',
+};
+
+const topProducts = tagOrder
+  .map((tag) => products.find((p) => p.tag === tag))
+  .filter((p): p is Product => p !== undefined);
+---
+
+{topProducts.length > 0 && (
+  <div class="top-picks">
+    <h2 class="top-picks-title">Our Top Picks</h2>
+    <div class="top-picks-grid">
+      {topProducts.map((product) => (
+        <div class="pick-card">
+          <span class="pick-tag">{tagLabels[product.tag!]}</span>
+          <h3 class="pick-name">{product.name}</h3>
+          {product.priceNote && (
+            <p class="pick-price">{product.priceNote}</p>
+          )}
+          {product.affiliateUrl && (
+            <AffiliateLink href={product.affiliateUrl} class="pick-cta">
+              View on Amazon
+            </AffiliateLink>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+)}
+
+<style>
+  .top-picks {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .top-picks-title {
+    font-size: var(--text-xl);
+    text-align: center;
+    margin-bottom: var(--space-lg);
+  }
+
+  .top-picks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .pick-card {
+    text-align: center;
+    padding: var(--space-lg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+  }
+
+  .pick-tag {
+    display: inline-block;
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-sm);
+  }
+
+  .pick-name {
+    font-size: var(--text-base);
+    margin-bottom: var(--space-xs);
+  }
+
+  .pick-price {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+  }
+
+  :global(.pick-cta) {
+    display: inline-block;
+    background: var(--color-primary);
+    color: var(--color-text-inverse) !important;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    padding: var(--space-xs) var(--space-lg);
+    border-radius: var(--radius-md);
+    transition: background var(--transition-fast);
+    text-decoration: none;
+  }
+
+  :global(.pick-cta:hover) {
+    background: var(--color-primary-hover);
+    color: var(--color-text-inverse) !important;
+  }
+</style>

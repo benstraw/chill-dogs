@@ -1,0 +1,35 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact" description="Get in touch with the Chill Dogs team. We'd love to hear from you.">
+  <section class="contact container">
+    <div class="prose">
+      <h1>Contact Us</h1>
+      <p>
+        Have a question, suggestion, or just want to say hi? We'd love to hear from you.
+      </p>
+      <p>
+        The best way to reach us is by email:
+      </p>
+      <p>
+        <strong>hello@chill-dogs.com</strong>
+      </p>
+      <p>
+        Whether you have a product recommendation, spotted an error on the site, or want to collaborate — drop us a line. We aim to respond within 48 hours.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .contact {
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-4xl);
+  }
+
+  .contact h1 {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--space-xl);
+  }
+</style>

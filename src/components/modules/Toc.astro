@@ -1,0 +1,78 @@
+---
+interface TocHeading {
+  label: string;
+  anchor: string;
+}
+
+interface Props {
+  headings: TocHeading[];
+  pageSlug?: string;
+}
+
+const { headings, pageSlug = '' } = Astro.props;
+---
+
+<nav class="toc" aria-label="Table of contents">
+  <h2 class="toc-title">What's in this guide</h2>
+  <ol class="toc-list">
+    {headings.map((h) => (
+      <li>
+        <a
+          href={`#${h.anchor}`}
+          class="toc-link"
+          data-track="toc_click"
+          data-page-slug={pageSlug}
+          data-target-anchor={h.anchor}
+        >
+          {h.label}
+        </a>
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<style>
+  .toc {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg) var(--space-xl);
+    max-width: var(--max-width-prose);
+    margin: 0 auto var(--space-2xl);
+  }
+
+  .toc-title {
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+  }
+
+  .toc-list {
+    list-style: decimal inside;
+    margin: 0;
+    padding: 0;
+  }
+
+  .toc-list li {
+    margin-bottom: var(--space-sm);
+  }
+
+  .toc-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: var(--weight-medium);
+  }
+
+  .toc-link:hover {
+    text-decoration: underline;
+  }
+
+  .toc-link:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+</style>

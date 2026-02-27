@@ -1,0 +1,77 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import PostCard from '@components/PostCard.astro';
+import { getPostsForCategory, getSlugFromId } from '@utils/collection-helpers';
+
+const posts = await getPostsForCategory('gift-guides');
+---
+
+<BaseLayout title="Gift Guides" description="Thoughtfully curated gift guides for dogs and the people who love them.">
+  <section class="category-page container">
+    <header class="category-header">
+      <h1>Gift Guides</h1>
+      <p>Thoughtfully curated gifts for dogs and the people who love them.</p>
+    </header>
+    {posts.length > 0 ? (
+      <div class="posts-grid">
+        {posts.map((post) => (
+          <PostCard
+            title={post.data.title}
+            description={post.data.description}
+            href={`/gift-guides/${getSlugFromId(post.id)}`}
+            category={post.data.category}
+            image={post.data.heroImage}
+          />
+        ))}
+      </div>
+    ) : (
+      <p class="empty">New gift guides coming soon!</p>
+    )}
+  </section>
+</BaseLayout>
+
+<style>
+  .category-page {
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-4xl);
+  }
+
+  .category-header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .category-header h1 {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--space-sm);
+  }
+
+  .category-header p {
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+  }
+
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+  }
+
+  .empty {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: var(--text-lg);
+  }
+
+  @media (max-width: 1024px) {
+    .posts-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .posts-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

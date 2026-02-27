@@ -1,0 +1,27 @@
+---
+const gaId = import.meta.env.PUBLIC_GA_ID;
+---
+
+{gaId && (
+  <>
+    <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+    <script define:vars={{ gaId }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', gaId);
+
+      // Track affiliate link clicks
+      document.addEventListener('click', function(e) {
+        const link = e.target.closest('[data-affiliate="true"]');
+        if (link) {
+          gtag('event', 'affiliate_click', {
+            event_category: 'affiliate',
+            event_label: link.href,
+            transport_type: 'beacon',
+          });
+        }
+      });
+    </script>
+  </>
+)}

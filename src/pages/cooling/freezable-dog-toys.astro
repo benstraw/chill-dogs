@@ -1,0 +1,88 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/modules/Hero.astro';
+import ComparisonTable from '@components/modules/ComparisonTable.astro';
+import CoolingProductGrid from '@components/modules/CoolingProductGrid.astro';
+import FAQ from '@components/modules/FAQ.astro';
+import Disclosure from '@components/modules/Disclosure.astro';
+import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
+import { getProductsByCategory, categoryMeta } from '@data/cooling-products';
+
+const category = 'freezable-dog-toys' as const;
+const pageSlug = 'freezable-dog-toys';
+const meta = categoryMeta[category];
+const products = getProductsByCategory(category);
+---
+
+<BaseLayout title={meta.title} description={meta.description}>
+  <script slot="head" type="module">
+    import { init } from '/src/scripts/analytics.ts';
+    init();
+  </script>
+
+  <Hero
+    title={meta.heroHeadline}
+    subtitle={meta.introCopy}
+    disclaimer="As an Amazon Associate, we earn from qualifying purchases."
+    primaryCta={{ label: 'See #1 Pick on Amazon', href: products[0].amazonUrl }}
+  />
+
+  <div class="converter-content">
+    <section class="converter-section">
+      <div class="converter-inner">
+        <h2>Quick Comparison</h2>
+        <ComparisonTable products={products} pageSlug={pageSlug} />
+      </div>
+    </section>
+
+    <section class="converter-section converter-section--alt">
+      <div class="converter-inner">
+        <h2>Detailed Reviews</h2>
+        <CoolingProductGrid
+          products={products}
+          ctaKind="amazon"
+          pageType="converter"
+          pageSlug={pageSlug}
+          columns={2}
+        />
+      </div>
+    </section>
+
+    <FAQ faqs={meta.faqs} />
+
+    <Disclosure />
+
+    <InternalLinkStrip links={meta.internalLinks} fromPage={pageSlug} />
+  </div>
+</BaseLayout>
+
+<style>
+  .converter-content {
+    padding-bottom: var(--space-2xl);
+  }
+
+  .converter-section {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+
+  .converter-section--alt {
+    background: var(--color-bg-alt);
+  }
+
+  .converter-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .converter-inner h2 {
+    font-size: var(--text-2xl);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-lg);
+  }
+
+  @media (max-width: 640px) {
+    .converter-section {
+      padding: var(--space-xl) var(--space-md);
+    }
+  }
+</style>
