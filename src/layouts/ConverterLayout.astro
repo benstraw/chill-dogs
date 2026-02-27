@@ -25,7 +25,6 @@ const formattedDate = date.toLocaleDateString('en-US', {
 
 const categoryLabels: Record<string, string> = {
   'gift-guides': 'Gift Guides',
-  'luxury-gear': 'Luxury & Gear',
   blog: 'Blog',
 };
 ---
@@ -54,7 +53,7 @@ const categoryLabels: Record<string, string> = {
 
     {products.length > 0 && (
       <section class="container product-grid-section">
-        <h2 class="section-title">All Products Reviewed</h2>
+        <h2 class="section-title">All Products Compared</h2>
         <ProductGrid products={products} />
       </section>
     )}

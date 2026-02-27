@@ -224,10 +224,10 @@ export const categoryMeta: Record<Exclude<ProductCategory, 'bonus'>, CategoryMet
   'cooling-mats': {
     title: 'Best Cooling Mats for Dogs (2026)',
     description:
-      'We compared the top dog cooling mats by material, durability, and real-world performance. Here are the 3 worth buying.',
+      'We compared the top dog cooling mats by material, durability, and overall value. Here are the 3 worth buying.',
     heroHeadline: 'The Best Cooling Mats to Keep Your Dog Comfortable',
     introCopy:
-      'A good cooling mat gives your dog an instant cool-down spot — no electricity, no prep. We tested pressure-activated gel pads and water-based mats to find the ones that actually work. Here are our top picks.',
+      'A good cooling mat gives your dog an instant cool-down spot — no electricity, no prep. We compared pressure-activated gel pads and water-based mats to find the strongest options. Here are our top picks.',
     faqs: [
       {
         question: 'Are cooling mats safe for dogs?',
@@ -286,7 +286,7 @@ export const categoryMeta: Record<Exclude<ProductCategory, 'bonus'>, CategoryMet
   'cooling-vests': {
     title: 'Best Cooling Vests for Dogs (2026)',
     description:
-      'Evaporative cooling vests that actually work — tested on hikes, walks, and backyard play. Here are the 3 best options.',
+      'Evaporative cooling vests for hikes, walks, and backyard play. Here are the 3 best options.',
     heroHeadline: 'The Best Cooling Vests for Active Dogs',
     introCopy:
       'Cooling vests use evaporative technology to pull heat away from your dog\'s body. They\'re ideal for hikes, runs, and any extended time outside. We picked three that balance cooling power, fit, and durability.',

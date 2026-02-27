@@ -17,7 +17,7 @@ const posts = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    category: z.enum(['gift-guides', 'luxury-gear', 'blog']),
+    category: z.enum(['gift-guides', 'blog']),
     date: z.coerce.date(),
     pageType: z.enum(['converter', 'collector', 'attractor', 'informer']),
     heroImage: z.string().optional(),

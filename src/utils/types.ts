@@ -1,6 +1,6 @@
 export type PageType = 'converter' | 'collector' | 'attractor' | 'informer';
 
-export type Category = 'gift-guides' | 'luxury-gear' | 'blog';
+export type Category = 'gift-guides' | 'blog';
 
 export interface Product {
   name: string;
