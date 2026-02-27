@@ -1,0 +1,128 @@
+---
+const currentYear = new Date().getFullYear();
+
+const exploreLinks = [
+  { href: '/cooling', label: 'Cooling' },
+  { href: '/calming', label: 'Calming' },
+  { href: '/blog', label: 'Blog' },
+];
+
+const companyLinks = [
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
+];
+
+const legalLinks = [
+  { href: '/privacy-policy', label: 'Privacy Policy' },
+  { href: '/terms', label: 'Terms of Use' },
+  { href: '/affiliate-disclosure', label: 'Affiliate Disclosure' },
+];
+---
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Explore</h3>
+        <ul>
+          {exploreLinks.map(({ href, label }) => (
+            <li><a href={href}>{label}</a></li>
+          ))}
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Company</h3>
+        <ul>
+          {companyLinks.map(({ href, label }) => (
+            <li><a href={href}>{label}</a></li>
+          ))}
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <ul>
+          {legalLinks.map(({ href, label }) => (
+            <li><a href={href}>{label}</a></li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-disclosure">
+      <p>
+        Chill Dogs is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. As an Amazon Associate, we earn from qualifying purchases.
+      </p>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {currentYear} Chill Dogs. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--color-charcoal);
+    color: var(--color-text-inverse);
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-xl);
+    margin-top: var(--space-4xl);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-2xl);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .footer-col h3 {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-md);
+    color: var(--color-sand);
+  }
+
+  .footer-col ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .footer-col a {
+    color: rgba(240, 244, 246, 0.7);
+    font-size: var(--text-sm);
+    transition: color var(--transition-fast);
+  }
+
+  .footer-col a:hover {
+    color: var(--color-text-inverse);
+  }
+
+  .footer-disclosure {
+    border-top: 1px solid rgba(240, 244, 246, 0.15);
+    padding-top: var(--space-xl);
+    margin-bottom: var(--space-lg);
+  }
+
+  .footer-disclosure p {
+    font-size: var(--text-xs);
+    color: rgba(240, 244, 246, 0.5);
+    line-height: var(--leading-relaxed);
+    max-width: 600px;
+  }
+
+  .footer-bottom p {
+    font-size: var(--text-xs);
+    color: rgba(240, 244, 246, 0.4);
+  }
+
+  @media (max-width: 640px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+    }
+  }
+</style>
