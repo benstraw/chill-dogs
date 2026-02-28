@@ -185,3 +185,17 @@ A `netlify.toml` is also present with equivalent build config and security heade
   "outputDirectory": "dist"
 }
 ```
+
+---
+
+## TODO
+
+- [ ] Connect Vercel project and set up auto-deploy from `main`
+- [ ] Point `chill-dogs.com` domain to Vercel; confirm SSL
+- [ ] Set up analytics — **Plausible or Google Analytics 4** (undecided); wire into `src/components/Analytics.astro` and connect `hero_cta_click` + `collector_to_converter_click` events
+- [ ] Add OG image (`/public/og-default.jpg`) — currently referenced but missing
+- [ ] Add `favicon.svg` — currently referenced but missing
+- [ ] Evaluate hero experiment winner after 2 weeks / 200+ primary CTA clicks per variant; promote winner to default, retire losing variant URLs
+- [ ] Expand calming category: individual converter pages for anxiety-wraps, calming-treats, lick-mats, snuffle-mats (parallel to cooling converter structure)
+- [ ] Add `luxury-gear` and `gift-guides` content (directories exist, no markdown yet)
+- [ ] Review affiliate tag is active and approved in Amazon Associates dashboard (`chill-dogs-20`)

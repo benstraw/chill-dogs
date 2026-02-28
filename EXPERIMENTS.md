@@ -5,14 +5,25 @@ No images, no heavy JS, no third-party animation libraries.
 
 ## URLs
 
-| Page    | Control (canonical)   | Variants                                |
-|---------|-----------------------|-----------------------------------------|
-| Cooling | `/cooling/`           | `/cooling/v/a/` … `/cooling/v/g/`      |
-| Calming | `/calming/`           | `/calming/v/a/` … `/calming/v/g/`      |
+| Page     | Control (canonical)   | Variants                                |
+|----------|-----------------------|-----------------------------------------|
+| Cooling  | `/cooling/`           | `/cooling/v/a/` … `/cooling/v/g/`      |
+| Calming  | `/calming/`           | `/calming/v/a/` … `/calming/v/g/`      |
+| Homepage | `/`                   | `/v/v1/` … `/v/v5/`                    |
 
 All variant pages carry `<meta name="robots" content="noindex, follow">` and
 a canonical link pointing to the control URL. The body content below the hero
 is identical across control and all variants.
+
+---
+
+## Experiment Status
+
+| Page    | Status   | Winner      | Notes                                                  |
+|---------|----------|-------------|--------------------------------------------------------|
+| Cooling | Complete | Variant A   | Aurora Wash promoted to default; variant URLs remain live |
+| Calming | Complete | Variant A   | Aurora Wash promoted to default; variant URLs remain live |
+| Homepage | Active  | —           | v1 is current default; collecting data                 |
 
 ---
 
@@ -210,3 +221,168 @@ Before declaring a winner:
 A Marp-compatible slides file is available at `docs/hero-experiments-slides.md`
 if you need to present this experiment plan to stakeholders. Each slide covers
 one variant with hypothesis, implementation notes, and metric definitions.
+
+---
+
+# Homepage Hero Experiment — Temperature vs Temperament
+
+A split-pane hero that routes visitors directly into either the cooling or calming
+category hub. Unlike the single-theme hub heroes, this one presents both destinations
+simultaneously and measures which visual style produces the highest combined CTA engagement.
+
+## URLs
+
+| Control | Variants             |
+|---------|----------------------|
+| `/`     | `/v/v1/` … `/v/v5/` |
+
+All variant pages carry `noindex, follow` + `<link rel="canonical" href="/">`.
+Body content (Top Guides + Latest Posts) is identical across control and all variants.
+
+---
+
+## Variants
+
+### Variant v1 — Split Screen Gradient + Grain (default)
+
+**Design:** True 50/50 split with two bold multi-radial gradients — deep navy/teal
+for cooling, deep forest/sage for calming. An SVG feTurbulence grain overlay adds
+subtle texture. Hover brightens the moused-over pane slightly.
+
+**Hypothesis:** Bold, high-contrast split signals two distinct value propositions
+without ambiguity. The grain texture adds premium feel. Visitors self-select
+into their problem category faster than a single-theme hero allows.
+
+**Primary metric:** Combined cooling + calming CTA click-through rate vs overall visitors
+**Secondary metric:** Cooling vs calming click distribution (does one dominate?)
+
+---
+
+### Variant v2 — Poster Typography + CSS Pattern
+
+**Design:** Solid dark panes with diagonal stripe texture via `repeating-linear-gradient`.
+Large faint "TEMP." and "CALM." ghost words positioned behind each pane's content via
+`::after` pseudo-elements. Headline and pane titles use tighter letter-spacing and
+larger clamp ranges for a bold editorial feel.
+
+**Hypothesis:** Oversized typography and textural richness hold attention longer,
+giving copy more time to land. The ghost words reinforce category identity without
+adding visual clutter.
+
+**Primary metric:** Combined CTA click-through
+**Secondary metric:** Scroll depth below the hero (does richer top-of-page content improve engagement?)
+
+---
+
+### Variant v3 — Diagonal / Geometric Split (clip-path)
+
+**Design:** The cooling pane uses `clip-path: polygon()` to create a diagonal
+right edge, with the calming pane flowing into the freed space. Falls back
+gracefully to a straight 50/50 split on browsers without clip-path support.
+
+**Hypothesis:** A non-rectangular split creates visual surprise and momentum,
+guiding the eye from left (cool) to right (calm). The diagonal implies movement
+and direction — useful for a decision-oriented page.
+
+**Primary metric:** Combined CTA click-through
+**Secondary metric:** Mobile vs desktop CTR split (clip-path degrades on mobile; tests whether
+the fallback still converts at parity)
+
+---
+
+### Variant v4 — Toggle Mode (segmented control)
+
+**Design:** A segmented control above the split shows one category pane at a time.
+Tabs are implemented as `<label>` elements tied to hidden radio inputs — no JS
+required for the core toggle. JS enhances with localStorage persistence so
+returning visitors see their previous selection. CTAs appear prominently for
+whichever mode is active.
+
+**Hypothesis:** Reducing simultaneous choice to one option at a time lowers
+decision friction. Visitors commit to one category before being presented with
+a single CTA, potentially increasing click intent on the visible option.
+
+**Primary metric:** CTA click-through on the active/visible pane
+**Secondary metric:** Cool vs calm tab selection distribution (which category do
+visitors choose first?)
+
+---
+
+### Variant v5 — Generative Gradient Field
+
+**Design:** Multi-layer radial gradients (cool blue at left, sage green at right,
+deep indigo at bottom) create a "generative blob" background that spans the full
+hero. Both panes use semi-transparent backdrops; where `backdrop-filter` is
+available, a blur enhances the glass-like separation.
+
+**Hypothesis:** A fluid, organic background feels warmer and less product-catalog
+than flat or striped alternatives. The merged gradient hints at the two categories
+without hard separation, potentially keeping undecided visitors engaged longer
+before they self-select.
+
+**Primary metric:** Combined CTA click-through
+**Secondary metric:** Bounce rate relative to control
+
+---
+
+## Tracking Implementation
+
+### DOM attributes
+
+```html
+<!-- Hero root -->
+<section data-hero-variant="v1" data-hero-impression="true" ...>
+
+<!-- CTA links -->
+<a data-cta="cooling" href="/cooling/">Explore cooling picks</a>
+<a data-cta="calming" href="/calming/">Explore calming picks</a>
+```
+
+### JavaScript event emission
+
+**Impression** (fires once at 50% IntersectionObserver visibility):
+```js
+{ event: 'hero_impression', variant: 'v1' }
+```
+
+**CTA click:**
+```js
+{ event: 'hero_cta_click', variant: 'v1', cta: 'cooling', href: '/cooling/' }
+```
+
+Both payloads push to `window.dataLayer` (GA4/GTM compatible) and call `gtag()` directly
+if the function is present. Falls back to `console.info` if neither is available.
+
+---
+
+## CSS Architecture
+
+| File | Purpose |
+|------|---------|
+| `src/styles/hero.home.base.css` | Token defaults, base layout, split panes, CTA buttons, tabs, mobile, reduced motion |
+| `src/styles/hero.home.variants.css` | Per-variant backgrounds, effects, and token overrides (v1–v5) |
+| `src/components/modules/HomepageHero.astro` | Template; imports both CSS files; handles v4 radio markup conditionally |
+| `src/components/modules/HomepageBody.astro` | Below-hero content (Top Guides + Latest Posts); shared by `/` and all `/v/vN/` pages |
+
+---
+
+## Accessibility Notes
+
+- All variants target WCAG AA 4.5:1 contrast for text and CTA buttons against pane backgrounds.
+- CTA links have `focus-visible` outlines (3px solid, 4px offset) — never suppressed.
+- v3 clip-path: `@supports` fallback ensures a clean split on unsupported browsers.
+- v4 labels have `tabindex="0"`; JS binds Enter/Space for keyboard activation.
+- v5 backdrop-filter: falls back to a solid semi-transparent pane background.
+- `prefers-reduced-motion: reduce` disables all transitions and animations.
+
+---
+
+## Measurement Checklist
+
+- [ ] Minimum 200 combined CTA clicks per variant before calling significance
+- [ ] Run for at least 2 full weeks to capture weekly seasonality
+- [ ] Check cooling vs calming click split per variant — some variants may skew one direction
+- [ ] Check mobile/desktop split — v3 clip-path and v5 backdrop-filter may diverge by device
+- [ ] Verify `data-hero-variant` appears in GA4 event reports for each variant URL
+- [ ] Confirm canonical tags resolve correctly (no `/v/vN/` URLs indexed)
+- [ ] After winner selection: promote winner to `/` as new default, retire or redirect variant URLs

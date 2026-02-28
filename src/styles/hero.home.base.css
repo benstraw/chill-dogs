@@ -1,0 +1,238 @@
+/*
+ * hero.home.base.css — Homepage hero base layout and design tokens
+ *
+ * VARIANTS (set via data-hero-variant="vN" on the hero <section>):
+ *   v1 — Split Screen Gradient + Subtle Grain
+ *   v2 — Poster Typography + CSS Pattern (ghost words)
+ *   v3 — Diagonal / Geometric Split (clip-path)
+ *   v4 — Toggle Mode (CSS radio trick, JS-enhanced for localStorage)
+ *   v5 — Generative Gradient Field (multi-layer radial blobs)
+ *
+ * CSS VARIABLES (override per variant by redefining on .hp-hero):
+ *   --cool-a, --cool-b     gradient stops for the cooling pane
+ *   --calm-a, --calm-b     gradient stops for the calming pane
+ *   --hero-ink             primary text color on panes and headline
+ *   --hero-ink-muted       muted/secondary text color
+ *   --hero-pad             padding on the top headline section
+ *   --hp-btn-cool-bg       cooling CTA background color
+ *   --hp-btn-cool-ink      cooling CTA text color
+ *   --hp-btn-calm-bg       calming CTA background color
+ *   --hp-btn-calm-ink      calming CTA text color
+ *
+ * HOW TO ADD A NEW VARIANT:
+ *   1. Add the key to HomepageVariant in HomepageHero.astro
+ *   2. Add the key to getStaticPaths() in src/pages/v/[variant].astro
+ *   3. Add a [data-hero-variant="vN"] block in hero.home.variants.css
+ *   4. Override token variables or add pseudo-element effects only
+ *   5. If different markup is required, add a conditional in HomepageHero.astro
+ */
+
+.hp-hero {
+  /* ─── Token defaults (override per variant) ─── */
+  --cool-a: hsl(200, 55%, 16%);
+  --cool-b: hsl(190, 48%, 30%);
+  --calm-a: hsl(155, 38%, 16%);
+  --calm-b: hsl(140, 30%, 33%);
+  --hero-ink: #f0f4f6;
+  --hero-ink-muted: rgba(240, 244, 246, 0.75);
+  --hero-pad: 3.5rem var(--space-lg);
+  --hp-btn-cool-bg: hsl(197, 62%, 60%);
+  --hp-btn-cool-ink: hsl(210, 55%, 12%);
+  --hp-btn-calm-bg: hsl(142, 42%, 57%);
+  --hp-btn-calm-ink: hsl(155, 40%, 11%);
+
+  position: relative;
+  overflow: hidden;
+  background: hsl(210, 40%, 11%);
+}
+
+/* ─── Top section: shared headline + subhead ─── */
+
+.hp-top {
+  text-align: center;
+  padding: var(--hero-pad);
+  padding-bottom: var(--space-2xl);
+  position: relative;
+  z-index: 1;
+}
+
+.hp-headline {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 4vw, 2.625rem);
+  font-weight: var(--weight-extrabold);
+  line-height: var(--leading-tight);
+  color: var(--hero-ink);
+  margin: 0 auto var(--space-md);
+  max-width: 700px;
+}
+
+.hp-subhead {
+  font-size: var(--text-lg);
+  color: var(--hero-ink-muted);
+  line-height: var(--leading-relaxed);
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* ─── Split panes ─── */
+
+.hp-split {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  z-index: 1;
+}
+
+.hp-pane {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: var(--space-3xl) var(--space-2xl);
+  min-height: 280px;
+  position: relative;
+}
+
+.hp-pane--cool {
+  background: linear-gradient(145deg, var(--cool-a), var(--cool-b));
+}
+
+.hp-pane--calm {
+  background: linear-gradient(145deg, var(--calm-a), var(--calm-b));
+}
+
+/* ─── Pane content ─── */
+
+.hp-pane-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-extrabold);
+  color: var(--hero-ink);
+  line-height: var(--leading-tight);
+  margin: 0 0 var(--space-sm);
+}
+
+.hp-pane-sub {
+  font-size: var(--text-base);
+  color: var(--hero-ink-muted);
+  line-height: var(--leading-relaxed);
+  margin: 0 0 var(--space-lg);
+  max-width: 300px;
+}
+
+/* ─── CTA buttons ─── */
+
+.hp-cta {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: var(--weight-bold);
+  text-decoration: none;
+  line-height: 1;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.hp-cta--cool {
+  background: var(--hp-btn-cool-bg);
+  color: var(--hp-btn-cool-ink);
+}
+
+.hp-cta--calm {
+  background: var(--hp-btn-calm-bg);
+  color: var(--hp-btn-calm-ink);
+}
+
+.hp-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28);
+}
+
+.hp-cta:focus-visible {
+  outline: 3px solid var(--hero-ink);
+  outline-offset: 4px;
+}
+
+/* ─── Segmented tabs (v4 toggle mode only) ─── */
+
+.hp-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-top: var(--space-xl);
+}
+
+.hp-tab {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  font-family: var(--font-heading);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  border: 2px solid rgba(240, 244, 246, 0.35);
+  color: var(--hero-ink-muted);
+  background: transparent;
+  user-select: none;
+  transition: background var(--transition-fast), color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.hp-tab:first-of-type {
+  border-radius: var(--radius-full) 0 0 var(--radius-full);
+  border-right-width: 0;
+}
+
+.hp-tab:last-of-type {
+  border-radius: 0 var(--radius-full) var(--radius-full) 0;
+}
+
+.hp-tab:focus-visible {
+  outline: 3px solid var(--hero-ink);
+  outline-offset: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── Mobile ─── */
+
+@media (max-width: 640px) {
+  .hp-split {
+    flex-direction: column;
+  }
+
+  .hp-pane {
+    min-height: 220px;
+    padding: var(--space-2xl) var(--space-lg);
+    align-items: stretch;
+  }
+
+  .hp-pane-sub {
+    max-width: 100%;
+  }
+
+  .hp-cta {
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* ─── Reduced motion ─── */
+
+@media (prefers-reduced-motion: reduce) {
+  .hp-cta {
+    transition: none;
+  }
+
+  .hp-tab {
+    transition: none;
+  }
+
+  .hp-hero *::before,
+  .hp-hero *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

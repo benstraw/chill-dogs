@@ -1,0 +1,31 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import HomepageHero from '@components/modules/HomepageHero.astro';
+import HomepageBody from '@components/modules/HomepageBody.astro';
+import type { HomepageVariant } from '@components/modules/HomepageHero.astro';
+
+export function getStaticPaths() {
+  const variants: HomepageVariant[] = ['v1', 'v2', 'v3', 'v4', 'v5'];
+  return variants.map((v) => ({ params: { variant: v } }));
+}
+
+const { variant } = Astro.params as { variant: HomepageVariant };
+
+/**
+ * Variant pages are experiment copies of /.
+ * - canonical: / (prevents SEO duplication)
+ * - robots: noindex, follow (crawl links but don't index)
+ */
+const canonicalUrl = new URL('/', Astro.site).href;
+---
+
+<BaseLayout
+  title="Home"
+  description="Curated cooling and calming picks to help your dog feel better fast — from summer heat relief to anxiety-friendly comfort."
+  canonicalUrl={canonicalUrl}
+>
+  <meta slot="head" name="robots" content="noindex, follow" />
+
+  <HomepageHero variant={variant} />
+  <HomepageBody />
+</BaseLayout>

@@ -1,0 +1,176 @@
+---
+export type HomepageVariant = 'v1' | 'v2' | 'v3' | 'v4' | 'v5';
+
+interface Props {
+  variant: HomepageVariant;
+}
+
+const { variant } = Astro.props;
+---
+
+<section
+  class="hp-hero"
+  data-hero-variant={variant}
+  data-hero-impression="true"
+  aria-label="Homepage hero"
+>
+  {/*
+    v4 toggle: radio inputs must be the first children of the section
+    so the CSS general sibling combinator (~) can reach .hp-top and .hp-split.
+    They are visually hidden but stay in the accessibility tree for label association.
+  */}
+  {variant === 'v4' && (
+    <>
+      <input
+        type="radio"
+        id="hp-toggle-cool"
+        name="hp-mode"
+        class="hp-radio"
+        checked
+        aria-hidden="true"
+        tabindex="-1"
+      />
+      <input
+        type="radio"
+        id="hp-toggle-calm"
+        name="hp-mode"
+        class="hp-radio"
+        aria-hidden="true"
+        tabindex="-1"
+      />
+    </>
+  )}
+
+  <div class="hp-top">
+    <h1 class="hp-headline">Temperature or temperament — we've got you covered.</h1>
+    <p class="hp-subhead">
+      Whether your dog is overheating on a summer walk or overwhelmed by a thunderstorm,
+      we've curated the picks that actually help.
+    </p>
+
+    {variant === 'v4' && (
+      <div class="hp-tabs" role="group" aria-label="Choose a category">
+        <label for="hp-toggle-cool" class="hp-tab" tabindex="0">Temperature</label>
+        <label for="hp-toggle-calm" class="hp-tab" tabindex="0">Temperament</label>
+      </div>
+    )}
+  </div>
+
+  <div class="hp-split">
+    <div class="hp-pane hp-pane--cool">
+      <h2 class="hp-pane-title">Cool off fast.</h2>
+      <p class="hp-pane-sub">
+        Cooling mats, vests, and hydration picks for hot days and active dogs.
+      </p>
+      <a class="hp-cta hp-cta--cool" href="/cooling/" data-cta="cooling">
+        Explore cooling picks
+      </a>
+    </div>
+
+    <div class="hp-pane hp-pane--calm">
+      <h2 class="hp-pane-title">Settle in.</h2>
+      <p class="hp-pane-sub">
+        Calming aids, wraps, and enrichment tools for anxious or restless dogs.
+      </p>
+      <a class="hp-cta hp-cta--calm" href="/calming/" data-cta="calming">
+        Explore calming picks
+      </a>
+    </div>
+  </div>
+</section>
+
+<script define:vars={{ hpVariant: variant }}>
+  (function () {
+    function trackHeroCtaClick(payload) {
+      if (window.dataLayer) {
+        window.dataLayer.push(payload);
+      } else {
+        console.info('[hero-home]', payload);
+      }
+      if (typeof gtag === 'function') {
+        gtag('event', payload.event, { variant: payload.variant, cta: payload.cta, href: payload.href });
+      }
+    }
+
+    function trackImpression(variant) {
+      var payload = { event: 'hero_impression', variant: variant };
+      if (window.dataLayer) {
+        window.dataLayer.push(payload);
+      } else {
+        console.info('[hero-home]', payload);
+      }
+    }
+
+    var hero = document.querySelector('[data-hero-impression="true"]');
+    if (!hero) return;
+
+    // CTA click tracking
+    hero.addEventListener('click', function (e) {
+      var cta = e.target.closest('[data-cta]');
+      if (!cta) return;
+      trackHeroCtaClick({
+        event: 'hero_cta_click',
+        variant: hpVariant,
+        cta: cta.dataset.cta,
+        href: cta.href,
+      });
+    });
+
+    // Impression tracking — 50% IntersectionObserver, DOMContentLoaded fallback
+    var impressed = false;
+    function onImpression() {
+      if (impressed) return;
+      impressed = true;
+      trackImpression(hpVariant);
+    }
+
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(
+        function (entries) {
+          if (entries[0].intersectionRatio >= 0.5) {
+            onImpression();
+            io.disconnect();
+          }
+        },
+        { threshold: 0.5 }
+      );
+      io.observe(hero);
+    } else {
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', onImpression);
+      } else {
+        onImpression();
+      }
+    }
+
+    // v4: localStorage persistence + keyboard activation for toggle labels
+    if (hpVariant === 'v4') {
+      var savedMode = localStorage.getItem('hp-mode');
+      if (savedMode === 'calm') {
+        var calmInput = document.getElementById('hp-toggle-calm');
+        if (calmInput) calmInput.checked = true;
+      }
+
+      document.querySelectorAll('.hp-radio').forEach(function (input) {
+        input.addEventListener('change', function () {
+          localStorage.setItem('hp-mode', input.id === 'hp-toggle-calm' ? 'calm' : 'cool');
+        });
+      });
+
+      // Enter/Space on tab labels activates the associated radio
+      document.querySelectorAll('.hp-tab').forEach(function (label) {
+        label.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            label.click();
+          }
+        });
+      });
+    }
+  })();
+</script>
+
+<style>
+  @import '@styles/hero.home.base.css';
+  @import '@styles/hero.home.variants.css';
+</style>

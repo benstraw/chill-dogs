@@ -1,0 +1,248 @@
+/*
+ * hero.home.variants.css — Homepage hero visual variants
+ *
+ * All rules scoped to [data-hero-variant="vN"].
+ * Only override tokens, backgrounds, and effects — avoid changing layout.
+ * See hero.home.base.css for the token reference and how to add a variant.
+ */
+
+/* ═══════════════════════════════════════════════════════════════
+   v1 — Split Screen Gradient + Subtle Grain
+   Two bold multi-radial gradients per pane with an SVG feTurbulence
+   grain overlay via ::before. Hover brightens the hovered pane.
+   ═══════════════════════════════════════════════════════════════ */
+
+[data-hero-variant="v1"] {
+  --cool-a: hsl(200, 65%, 14%);
+  --cool-b: hsl(190, 55%, 28%);
+  --calm-a: hsl(155, 45%, 13%);
+  --calm-b: hsl(140, 38%, 28%);
+}
+
+[data-hero-variant="v1"] .hp-pane--cool {
+  background:
+    radial-gradient(ellipse 85% 85% at 20% 85%, hsl(196, 70%, 34%) 0%, transparent 62%),
+    radial-gradient(ellipse 60% 55% at 85% 15%, hsl(210, 60%, 22%) 0%, transparent 68%),
+    hsl(205, 60%, 11%);
+}
+
+[data-hero-variant="v1"] .hp-pane--calm {
+  background:
+    radial-gradient(ellipse 80% 85% at 80% 85%, hsl(148, 55%, 29%) 0%, transparent 62%),
+    radial-gradient(ellipse 60% 55% at 18% 18%, hsl(165, 44%, 20%) 0%, transparent 68%),
+    hsl(155, 50%, 10%);
+}
+
+/* SVG feTurbulence grain via data URI — no external file */
+[data-hero-variant="v1"] .hp-pane::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E");
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+[data-hero-variant="v1"] .hp-pane {
+  transition: filter var(--transition-base);
+}
+
+[data-hero-variant="v1"] .hp-pane:hover {
+  filter: brightness(1.1);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   v2 — Poster Typography + CSS Pattern
+   Solid dark panes with diagonal stripe texture via
+   repeating-linear-gradient. Large faint ghost words via ::after.
+   Tighter headline and pane title letter-spacing.
+   ═══════════════════════════════════════════════════════════════ */
+
+[data-hero-variant="v2"] {
+  --cool-a: hsl(200, 50%, 18%);
+  --cool-b: hsl(200, 50%, 18%);
+  --calm-a: hsl(155, 35%, 17%);
+  --calm-b: hsl(155, 35%, 17%);
+}
+
+[data-hero-variant="v2"] .hp-pane--cool {
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      transparent 0px,
+      transparent 20px,
+      rgba(135, 183, 199, 0.06) 20px,
+      rgba(135, 183, 199, 0.06) 21px
+    ),
+    hsl(200, 50%, 18%);
+}
+
+[data-hero-variant="v2"] .hp-pane--calm {
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      transparent 0px,
+      transparent 20px,
+      rgba(143, 169, 139, 0.06) 20px,
+      rgba(143, 169, 139, 0.06) 21px
+    ),
+    hsl(155, 35%, 17%);
+}
+
+/* Ghost words — positioned bottom-right of each pane */
+[data-hero-variant="v2"] .hp-pane--cool::after {
+  content: 'TEMP.';
+  position: absolute;
+  bottom: -0.1em;
+  right: -0.06em;
+  font-family: var(--font-heading);
+  font-size: clamp(4.5rem, 14vw, 9rem);
+  font-weight: var(--weight-extrabold);
+  line-height: 1;
+  color: rgba(135, 183, 199, 0.11);
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+[data-hero-variant="v2"] .hp-pane--calm::after {
+  content: 'CALM.';
+  position: absolute;
+  bottom: -0.1em;
+  right: -0.06em;
+  font-family: var(--font-heading);
+  font-size: clamp(4.5rem, 14vw, 9rem);
+  font-weight: var(--weight-extrabold);
+  line-height: 1;
+  color: rgba(143, 169, 139, 0.11);
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+[data-hero-variant="v2"] .hp-headline {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  letter-spacing: -0.025em;
+}
+
+[data-hero-variant="v2"] .hp-pane-title {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  letter-spacing: -0.025em;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   v3 — Diagonal / Geometric Split (clip-path)
+   The cool pane clips to a parallelogram; the calm pane fills the
+   remaining space. Falls back to a straight 50/50 split when
+   clip-path is unsupported.
+   ═══════════════════════════════════════════════════════════════ */
+
+[data-hero-variant="v3"] {
+  --cool-a: hsl(200, 60%, 16%);
+  --cool-b: hsl(190, 52%, 30%);
+  --calm-a: hsl(155, 42%, 15%);
+  --calm-b: hsl(140, 34%, 31%);
+}
+
+@supports (clip-path: polygon(0 0, 1px 0, 0 1px)) {
+  [data-hero-variant="v3"] .hp-pane--cool {
+    clip-path: polygon(0 0, 110% 0, 90% 100%, 0 100%);
+    margin-right: -5%;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   v4 — Toggle Mode (CSS radio + label trick)
+   Hidden radio inputs control which pane is visible via the
+   general sibling combinator. Segmented tab labels in .hp-tabs
+   serve as the UI control. JS enhances with localStorage.
+   No-JS fallback: cool pane shown by default (checked attribute).
+   ═══════════════════════════════════════════════════════════════ */
+
+[data-hero-variant="v4"] {
+  --cool-a: hsl(200, 55%, 16%);
+  --cool-b: hsl(190, 48%, 30%);
+  --calm-a: hsl(155, 38%, 16%);
+  --calm-b: hsl(140, 30%, 33%);
+}
+
+/* Visually hide radio inputs while keeping them accessible */
+[data-hero-variant="v4"] .hp-radio {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+  margin: 0;
+}
+
+/* Toggle: cool selected — hide calm pane */
+[data-hero-variant="v4"] #hp-toggle-cool:checked ~ .hp-split .hp-pane--calm {
+  display: none;
+}
+
+/* Toggle: calm selected — hide cool pane */
+[data-hero-variant="v4"] #hp-toggle-calm:checked ~ .hp-split .hp-pane--cool {
+  display: none;
+}
+
+/* Expand the visible pane to full width */
+[data-hero-variant="v4"] .hp-split .hp-pane {
+  flex-basis: 100%;
+}
+
+/* Active tab — cool */
+[data-hero-variant="v4"] #hp-toggle-cool:checked ~ .hp-top label[for="hp-toggle-cool"] {
+  background: rgba(135, 183, 199, 0.88);
+  color: hsl(210, 55%, 12%);
+  border-color: rgba(135, 183, 199, 0.88);
+}
+
+/* Active tab — calm */
+[data-hero-variant="v4"] #hp-toggle-calm:checked ~ .hp-top label[for="hp-toggle-calm"] {
+  background: rgba(143, 169, 139, 0.88);
+  color: hsl(155, 40%, 11%);
+  border-color: rgba(143, 169, 139, 0.88);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   v5 — Generative Gradient Field
+   Multi-layer radial gradients simulate an SVG blob / gradient
+   mesh feel. Pane backgrounds are semi-transparent overlays;
+   @supports enhances with backdrop-filter blur where available.
+   ═══════════════════════════════════════════════════════════════ */
+
+[data-hero-variant="v5"] {
+  background:
+    radial-gradient(ellipse 75% 80% at 18% 65%, hsl(196, 65%, 32%) 0%, transparent 62%),
+    radial-gradient(ellipse 70% 75% at 82% 38%, hsl(150, 52%, 28%) 0%, transparent 62%),
+    radial-gradient(ellipse 50% 50% at 50% 90%, hsl(220, 45%, 20%) 0%, transparent 65%),
+    hsl(215, 45%, 10%);
+}
+
+[data-hero-variant="v5"] .hp-pane--cool {
+  background: rgba(16, 40, 65, 0.55);
+}
+
+[data-hero-variant="v5"] .hp-pane--calm {
+  background: rgba(12, 42, 30, 0.55);
+}
+
+@supports (backdrop-filter: blur(12px)) {
+  [data-hero-variant="v5"] .hp-pane--cool,
+  [data-hero-variant="v5"] .hp-pane--calm {
+    backdrop-filter: blur(12px);
+  }
+
+  [data-hero-variant="v5"] .hp-pane--cool {
+    background: rgba(10, 22, 42, 0.38);
+  }
+
+  [data-hero-variant="v5"] .hp-pane--calm {
+    background: rgba(8, 26, 20, 0.38);
+  }
+}
