@@ -169,6 +169,17 @@ See [EXPERIMENTS.md](./EXPERIMENTS.md) for variant descriptions, hypotheses, and
 
 ---
 
+## Strategy and build docs
+
+| File | Purpose |
+|---|---|
+| [docs/web-systems-adventure-mode.md](./docs/web-systems-adventure-mode.md) | The modular conversion-system framework governing all site decisions |
+| [docs/site-plan.md](./docs/site-plan.md) | Applied system plan for chill-dogs: keystone metrics, page inventory, module registry, architecture decisions, analytics events |
+| [docs/build-log.md](./docs/build-log.md) | Chronological build phases — strategy → architecture → modules → pages → SEO → experiments → analytics → backlog |
+| [EXPERIMENTS.md](./EXPERIMENTS.md) | Hero A/B experiment details, variant descriptions, tracking setup, measurement checklists |
+
+---
+
 ## Deploy
 
 The repo is at [github.com/benstraw/chill-dogs](https://github.com/benstraw/chill-dogs), deployed via Vercel with automatic deploys on push to `main`.
