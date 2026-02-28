@@ -21,6 +21,7 @@ const { product, position = 0, pageType = 'collector', pageSlug = '' } = Astro.p
         loading="lazy"
         width="400"
         height="300"
+        onerror="this.closest('.calm-image').style.display='none'"
       />
     </div>
   )}

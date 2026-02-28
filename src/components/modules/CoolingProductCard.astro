@@ -25,6 +25,7 @@ const trackEvent = isAmazon ? 'amazon_outbound_click' : 'collector_to_converter_
         loading="lazy"
         width="400"
         height="300"
+        onerror="this.closest('.cp-image').style.display='none'"
       />
     </div>
   )}
