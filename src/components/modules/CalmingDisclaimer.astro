@@ -1,0 +1,59 @@
+---
+interface Props {
+  variant?: 'standard' | 'supplement' | 'cbd';
+}
+
+const { variant = 'standard' } = Astro.props;
+
+const copy = {
+  standard: {
+    label: 'Calming Note',
+    text: 'Calming products can help manage mild to moderate anxiety but are not a substitute for veterinary care. If your dog\'s anxiety is severe, sudden, or worsening, consult a veterinarian.',
+  },
+  supplement: {
+    label: 'Supplement Note',
+    text: 'Calming supplements are not regulated as medications. Effectiveness varies by dog and by ingredient. Consult your vet before introducing supplements, especially if your dog takes other medications.',
+  },
+  cbd: {
+    label: 'CBD Note',
+    text: 'CBD products for dogs are not FDA-approved. Safety data is limited. Consult your vet before use.',
+  },
+};
+
+const { label, text } = copy[variant];
+---
+
+<aside class="calming-disc" aria-label={label}>
+  <div class="calming-disc-inner">
+    <p>
+      <strong>{label}:</strong> {text}
+    </p>
+  </div>
+</aside>
+
+<style>
+  .calming-disc {
+    max-width: var(--max-width-prose);
+    margin: 0 auto;
+    padding: var(--space-lg) var(--space-lg) 0;
+  }
+
+  .calming-disc-inner {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-sage);
+    border-radius: var(--radius-md);
+    padding: var(--space-md) var(--space-lg);
+  }
+
+  .calming-disc-inner p {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-normal);
+    margin: 0;
+  }
+
+  .calming-disc-inner strong {
+    color: var(--color-text);
+  }
+</style>

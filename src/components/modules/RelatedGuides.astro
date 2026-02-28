@@ -1,0 +1,90 @@
+---
+interface RelatedGuide {
+  href: string;
+  title: string;
+  description: string;
+}
+
+interface Props {
+  heading?: string;
+  guides: RelatedGuide[];
+}
+
+const { heading = 'Related Guides', guides } = Astro.props;
+---
+
+<section class="related-guides">
+  <div class="related-guides-inner">
+    <h2>{heading}</h2>
+    <div class="related-guides-grid">
+      {guides.map(({ href, title, description }) => (
+        <a href={href} class="related-guide-card">
+          <h3>{title}</h3>
+          <p>{description}</p>
+          <span class="related-guide-link">Read the guide &rarr;</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .related-guides {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-2xl) var(--space-lg);
+  }
+
+  .related-guides-inner h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-lg);
+    text-align: center;
+  }
+
+  .related-guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .related-guide-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    text-decoration: none;
+    color: var(--color-text);
+    transition: box-shadow var(--transition-base);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .related-guide-card:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  .related-guide-card h3 {
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+    margin-bottom: var(--space-xs);
+  }
+
+  .related-guide-card p {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-normal);
+    flex: 1;
+    margin-bottom: var(--space-md);
+  }
+
+  .related-guide-link {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--color-primary);
+  }
+
+  .related-guide-card:hover .related-guide-link {
+    text-decoration: underline;
+  }
+</style>

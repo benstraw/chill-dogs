@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
+import JsonLd from '@components/JsonLd.astro';
 import Hero from '@components/modules/Hero.astro';
 import SummaryBlock from '@components/modules/SummaryBlock.astro';
 import Toc from '@components/modules/Toc.astro';
@@ -7,6 +8,7 @@ import CoolingProductCard from '@components/modules/CoolingProductCard.astro';
 import BonusCallout from '@components/modules/BonusCallout.astro';
 import FAQ from '@components/modules/FAQ.astro';
 import Disclosure from '@components/modules/Disclosure.astro';
+import RelatedGuides from '@components/modules/RelatedGuides.astro';
 import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
 import { getProductsByCategory, getBonusProduct } from '@data/cooling-products';
 
@@ -50,6 +52,21 @@ const tocHeadings = [
   { label: 'FAQ', anchor: 'faq' },
 ];
 
+const allProducts = [...mats, ...bandanas, ...vests, ...toys, ...(bonus ? [bonus] : [])];
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: '10 Best Cooling Products for Dogs (2026)',
+  url: 'https://chill-dogs.com/cooling/best-cooling-products-for-dogs/',
+  numberOfItems: allProducts.length,
+  itemListElement: allProducts.map((p, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: p.name,
+    url: p.amazonUrl,
+  })),
+};
+
 const pillarFaqs = [
   {
     question: 'How do I know if my dog is overheating?',
@@ -83,6 +100,7 @@ const pillarFaqs = [
   title="10 Best Cooling Products for Dogs (2026)"
   description="Beat the heat with our expert picks: cooling mats, bandanas, vests, and freezable toys compared for comfort, durability, and practicality. Keep your dog safe and comfortable all summer."
 >
+  <JsonLd slot="head" schema={itemListSchema} />
   <script slot="head" type="module">
     import { init } from '/src/scripts/analytics.ts';
     init();
@@ -193,6 +211,22 @@ const pillarFaqs = [
     <section id="faq">
       <FAQ faqs={pillarFaqs} heading="Cooling & Heat Safety FAQ" />
     </section>
+
+    <RelatedGuides
+      heading="Beyond the Heat"
+      guides={[
+        {
+          href: '/calming/best-calming-products-for-anxious-dogs/',
+          title: 'Best Calming Products for Anxious Dogs',
+          description: 'Hot dogs are often anxious dogs. If your pup gets restless during summer storms or fireworks, our calming guide covers wraps, treats, and enrichment tools.',
+        },
+        {
+          href: '/calming/best-thundershirt-alternatives/',
+          title: 'Best ThunderShirt Alternatives',
+          description: 'ThunderShirt not the right fit? Compare calming chews, lick mats, and snuffle mats as practical alternatives.',
+        },
+      ]}
+    />
 
     <Disclosure />
 

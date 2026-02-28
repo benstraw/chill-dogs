@@ -28,9 +28,12 @@ const {
   navAccent,
 } = Astro.props;
 
-const siteTitle = title === 'Home' ? 'Chill-Dogs' : `${title} | Chill-Dogs`;
+const siteTitle = title === 'Home'
+  ? 'Chill-Dogs — Cooling & Calming Products for Dogs'
+  : `${title} | Chill-Dogs`;
 const resolvedOgImage = new URL(ogImage, Astro.site).href;
 const resolvedCanonical = canonicalUrl || Astro.url.href;
+const isStaging = import.meta.env.VERCEL_ENV === 'preview' || import.meta.env.VERCEL_ENV === 'development';
 ---
 
 <!doctype html>
@@ -44,7 +47,7 @@ const resolvedCanonical = canonicalUrl || Astro.url.href;
     <meta name="description" content={description} />
     <link rel="canonical" href={resolvedCanonical} />
 
-    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    {(noindex || isStaging) && <meta name="robots" content="noindex, nofollow" />}
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />

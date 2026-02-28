@@ -2,6 +2,19 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import HeroExperiment from '@components/modules/HeroExperiment.astro';
 import CalmingHubBody from '@components/modules/CalmingHubBody.astro';
+import JsonLd from '@components/JsonLd.astro';
+
+const collectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Calming Products for Anxious Dogs',
+  url: 'https://chill-dogs.com/calming/',
+  description: 'Explore Chill-Dogs calming guides for anxious dogs, including ThunderShirt, calming chews, lick mats, and snuffle mats.',
+  hasPart: [
+    { '@type': 'WebPage', name: 'Best Calming Products for Anxious Dogs', url: 'https://chill-dogs.com/calming/best-calming-products-for-anxious-dogs/' },
+    { '@type': 'WebPage', name: 'Best ThunderShirt Alternatives for Dogs', url: 'https://chill-dogs.com/calming/best-thundershirt-alternatives/' },
+  ],
+};
 ---
 
 <BaseLayout
@@ -9,13 +22,14 @@ import CalmingHubBody from '@components/modules/CalmingHubBody.astro';
   description="Explore Chill-Dogs calming guides for anxious dogs, including ThunderShirt, calming chews, lick mats, and snuffle mats."
   navAccent="var(--color-sage)"
 >
+  <JsonLd slot="head" schema={collectionSchema} />
   <HeroExperiment
     variant="a"
     theme="calming"
     headline="Chill starts here."
     subhead="Anxiety wraps, calming chews, and routines for anxious dogs."
     primaryCta={{ label: 'See top calming picks', href: '/calming/best-calming-products-for-anxious-dogs/' }}
-    secondaryCta={{ label: 'What to try first', href: '/best-thundershirt-alternatives/' }}
+    secondaryCta={{ label: 'What to try first', href: '/calming/best-thundershirt-alternatives/' }}
   />
 
   <CalmingHubBody />

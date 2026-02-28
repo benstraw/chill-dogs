@@ -2,6 +2,7 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Hero from '@components/modules/Hero.astro';
 import Disclosure from '@components/modules/Disclosure.astro';
+import CalmingDisclaimer from '@components/modules/CalmingDisclaimer.astro';
 import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
 import CalmingProductCard from '@components/modules/CalmingProductCard.astro';
 import { calmingProducts, type CalmingProduct } from '@data/calming-products';
@@ -27,6 +28,7 @@ const comparisonCards = [thunderShirt, nativePet, lukito, rundic];
 <BaseLayout
   title="Best ThunderShirt Alternatives for Dogs"
   description="Looking for a ThunderShirt alternative? Compare ThunderShirt with calming chews, lick mats, and snuffle mats to decide what fits your dog best."
+  navAccent="var(--color-sage)"
 >
   <script slot="head" type="module">
     import { init } from '/src/scripts/analytics.ts';
@@ -105,6 +107,8 @@ const comparisonCards = [thunderShirt, nativePet, lukito, rundic];
         </p>
       </div>
     </section>
+
+    <CalmingDisclaimer />
 
     <Disclosure showSafety={false} />
 

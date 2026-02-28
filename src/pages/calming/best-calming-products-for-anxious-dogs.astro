@@ -1,10 +1,13 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
+import JsonLd from '@components/JsonLd.astro';
 import AffiliateLink from '@components/AffiliateLink.astro';
 import Hero from '@components/modules/Hero.astro';
 import Toc from '@components/modules/Toc.astro';
 import FAQ from '@components/modules/FAQ.astro';
 import Disclosure from '@components/modules/Disclosure.astro';
+import CalmingDisclaimer from '@components/modules/CalmingDisclaimer.astro';
+import RelatedGuides from '@components/modules/RelatedGuides.astro';
 import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
 import CalmingProductCard from '@components/modules/CalmingProductCard.astro';
 import CalmingUseTable from '@components/modules/CalmingUseTable.astro';
@@ -18,6 +21,21 @@ const lickMats = getCalmingProductsByCategory('lick-mats');
 const snuffleMats = getCalmingProductsByCategory('snuffle-mats');
 const thunderShirt = wraps[0];
 const lukito = lickMats.find((product) => product.id === 'lukito-licking-mat');
+
+const allCalmingProducts = [...wraps, ...treats, ...lickMats, ...snuffleMats];
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Best Calming Products for Anxious Dogs',
+  url: 'https://chill-dogs.com/calming/best-calming-products-for-anxious-dogs/',
+  numberOfItems: allCalmingProducts.length,
+  itemListElement: allCalmingProducts.map((p, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: p.name,
+    url: p.amazonUrl,
+  })),
+};
 
 const tocHeadings = [
   { label: 'Quick Picks', anchor: 'quick-picks' },
@@ -84,7 +102,9 @@ const pillarFaqs = [
 <BaseLayout
   title="Best Calming Products for Anxious Dogs"
   description="Compare the best calming products for anxious dogs, including ThunderShirt, calming chews, lick mats, and snuffle mats for storms, fireworks, grooming, and separation stress."
+  navAccent="var(--color-sage)"
 >
+  <JsonLd slot="head" schema={itemListSchema} />
   <script slot="head" type="module">
     import { init } from '/src/scripts/analytics.ts';
     init();
@@ -96,7 +116,7 @@ const pillarFaqs = [
       subtitle="If your dog gets shaky during storms, paces before fireworks, struggles with separation, or melts down during grooming, the right calming tool can make those moments more manageable. Some products work through gentle pressure, some through nutritional support, some through licking, and some by giving anxious dogs a job for their nose."
       disclaimer="As an Amazon Associate, we earn from qualifying purchases."
       primaryCta={{ label: 'See Quick Picks', href: '#quick-picks' }}
-      secondaryCta={{ label: 'ThunderShirt Alternatives', href: '/best-thundershirt-alternatives/' }}
+      secondaryCta={{ label: 'ThunderShirt Alternatives', href: '/calming/best-thundershirt-alternatives/' }}
     />
 
     <Toc headings={tocHeadings} pageSlug={pageSlug} />
@@ -181,7 +201,7 @@ const pillarFaqs = [
           Pressure wraps are designed to apply light, steady compression around the torso. The idea is similar to swaddling or weighted pressure: some dogs seem to settle when their body feels held and contained. This approach tends to make the most sense for storms, fireworks, travel days, or other situations you can anticipate.
         </p>
         <p class="section-copy">
-          A wrap may not be the right fit for every dog. If your dog hates wearing gear, overheats easily, or freezes when anything snug touches their body, a lick mat or calming chew may be more realistic. If you want a deeper breakdown of when a wrap is worth buying, read <a href="/best-thundershirt-alternatives/">our ThunderShirt alternatives guide</a>.
+          A wrap may not be the right fit for every dog. If your dog hates wearing gear, overheats easily, or freezes when anything snug touches their body, a lick mat or calming chew may be more realistic. If you want a deeper breakdown of when a wrap is worth buying, read <a href="/calming/best-thundershirt-alternatives/">our ThunderShirt alternatives guide</a>.
         </p>
         <div class="section-grid section-grid--1">
           {wraps.map((product, i) => (
@@ -305,13 +325,26 @@ const pillarFaqs = [
       <FAQ faqs={pillarFaqs} heading="Calming Products FAQ" />
     </section>
 
+    <RelatedGuides
+      heading="Don't Forget the Heat"
+      guides={[
+        {
+          href: '/cooling/best-cooling-products-for-dogs/',
+          title: 'Best Cooling Products for Dogs',
+          description: 'Anxious dogs often overheat faster. If summer heat is part of the problem, our cooling guide covers mats, vests, bandanas, and freezable toys.',
+        },
+      ]}
+    />
+
+    <CalmingDisclaimer variant="supplement" />
+
     <Disclosure showSafety={false} />
 
     <InternalLinkStrip
       heading="More Calming Guides"
       links={[
         { label: 'Back to Calming Hub', href: '/calming/' },
-        { label: 'ThunderShirt Alternatives', href: '/best-thundershirt-alternatives/' },
+        { label: 'ThunderShirt Alternatives', href: '/calming/best-thundershirt-alternatives/' },
       ]}
       fromPage={pageSlug}
     />

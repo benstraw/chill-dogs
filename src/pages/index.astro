@@ -2,12 +2,83 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import HomepageHero from '@components/modules/HomepageHero.astro';
 import HomepageBody from '@components/modules/HomepageBody.astro';
+import JsonLd from '@components/JsonLd.astro';
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Chill-Dogs',
+  url: 'https://chill-dogs.com/',
+  description: 'Curated cooling and calming picks to help your dog feel better fast — from summer heat relief to anxiety-friendly comfort.',
+};
+
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Chill-Dogs',
+  url: 'https://chill-dogs.com/',
+  logo: 'https://chill-dogs.com/favicon.svg',
+};
 ---
 
 <BaseLayout
   title="Home"
   description="Curated cooling and calming picks to help your dog feel better fast — from summer heat relief to anxiety-friendly comfort."
 >
+  <JsonLd slot="head" schema={websiteSchema} />
+  <JsonLd slot="head" schema={orgSchema} />
   <HomepageHero variant="v1" />
+
+  <section class="start-prompt">
+    <p class="start-prompt-text">Not sure where to start?</p>
+    <div class="start-prompt-links">
+      <a href="/cooling/best-cooling-products-for-dogs/" class="start-prompt-link start-prompt-link--cool">Our top cooling picks</a>
+      <a href="/calming/best-calming-products-for-anxious-dogs/" class="start-prompt-link start-prompt-link--calm">Our top calming picks</a>
+    </div>
+  </section>
+
   <HomepageBody />
 </BaseLayout>
+
+<style>
+  .start-prompt {
+    text-align: center;
+    padding: var(--space-xl) var(--space-lg) var(--space-lg);
+  }
+
+  .start-prompt-text {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-sm);
+  }
+
+  .start-prompt-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+  }
+
+  .start-prompt-link {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    text-decoration: none;
+    padding: var(--space-xs) var(--space-lg);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+  }
+
+  .start-prompt-link--cool:hover {
+    background: var(--color-sky);
+    border-color: var(--color-sky);
+    color: var(--color-charcoal);
+  }
+
+  .start-prompt-link--calm:hover {
+    background: var(--color-sage);
+    border-color: var(--color-sage);
+    color: var(--color-charcoal);
+  }
+</style>

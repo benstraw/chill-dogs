@@ -2,19 +2,36 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import HeroExperiment from '@components/modules/HeroExperiment.astro';
 import CoolingHubBody from '@components/modules/CoolingHubBody.astro';
+import JsonLd from '@components/JsonLd.astro';
+
+const collectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Cooling Relief for Dogs',
+  url: 'https://chill-dogs.com/cooling/',
+  description: 'Beat the heat with our curated cooling picks for dogs — from cooling mats and vests to frozen treats and shade solutions.',
+  hasPart: [
+    { '@type': 'WebPage', name: 'Best Cooling Products for Dogs', url: 'https://chill-dogs.com/cooling/best-cooling-products-for-dogs/' },
+    { '@type': 'WebPage', name: 'Best Cooling Mats', url: 'https://chill-dogs.com/cooling/cooling-mats/' },
+    { '@type': 'WebPage', name: 'Best Cooling Bandanas', url: 'https://chill-dogs.com/cooling/cooling-bandanas/' },
+    { '@type': 'WebPage', name: 'Best Cooling Vests', url: 'https://chill-dogs.com/cooling/cooling-vests/' },
+    { '@type': 'WebPage', name: 'Best Freezable Dog Toys', url: 'https://chill-dogs.com/cooling/freezable-dog-toys/' },
+  ],
+};
 ---
 
 <BaseLayout
   title="Cooling Relief"
   description="Beat the heat with our curated cooling picks for dogs — from cooling mats and vests to frozen treats and shade solutions."
 >
+  <JsonLd slot="head" schema={collectionSchema} />
   <HeroExperiment
     variant="a"
     theme="cooling"
     headline="Beat the heat in minutes."
     subhead="Cooling mats, vests, and hydration picks that actually work."
     primaryCta={{ label: 'See top cooling picks', href: '/cooling/best-cooling-products-for-dogs/' }}
-    secondaryCta={{ label: 'How we choose products', href: '/about/' }}
+    secondaryCta={{ label: 'How we choose products', href: '/about/#how-we-choose' }}
   />
 
   <CoolingHubBody />
