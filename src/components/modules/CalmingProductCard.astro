@@ -1,0 +1,135 @@
+---
+import AffiliateLink from '@components/AffiliateLink.astro';
+import type { CalmingProduct } from '@data/calming-products';
+
+interface Props {
+  product: CalmingProduct;
+  position?: number;
+  pageType?: 'collector' | 'converter';
+  pageSlug?: string;
+}
+
+const { product, position = 0, pageType = 'collector', pageSlug = '' } = Astro.props;
+---
+
+<div class="calm-card">
+  <div class="calm-card-body">
+    <h3 class="calm-card-name">{product.name}</h3>
+    <p class="calm-card-best-for">
+      <strong>Best for:</strong> {product.bestFor}
+    </p>
+    <ul class="calm-card-bullets">
+      {product.bullets.map((bullet) => <li>{bullet}</li>)}
+    </ul>
+    <p class="calm-card-meta">
+      <span class="calm-card-meta-label">Works by:</span> {product.howItHelps}
+    </p>
+    <p class="calm-card-meta">
+      <span class="calm-card-meta-label">Consider it if:</span> {product.considerIf}
+    </p>
+    <AffiliateLink
+      href={product.amazonUrl}
+      class="calm-card-cta"
+      data-track="amazon_outbound_click"
+      data-page-type={pageType}
+      data-page-slug={pageSlug}
+      data-product-name={product.name}
+      data-product-category={product.category}
+      data-position={String(position)}
+      data-destination="amazon.com"
+    >
+      Check Price on Amazon
+    </AffiliateLink>
+  </div>
+</div>
+
+<style>
+  .calm-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: box-shadow var(--transition-base);
+  }
+
+  .calm-card:hover {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .calm-card-body {
+    padding: var(--space-lg);
+  }
+
+  .calm-card-name {
+    font-size: var(--text-lg);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-sm);
+  }
+
+  .calm-card-best-for {
+    font-size: var(--text-sm);
+    color: var(--color-accent);
+    margin-bottom: var(--space-md);
+    line-height: var(--leading-normal);
+  }
+
+  .calm-card-best-for strong {
+    color: var(--color-text);
+  }
+
+  .calm-card-bullets {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+    line-height: var(--leading-normal);
+  }
+
+  .calm-card-bullets li {
+    padding-left: var(--space-md);
+    position: relative;
+    margin-bottom: var(--space-xs);
+  }
+
+  .calm-card-bullets li::before {
+    content: '+';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: var(--weight-bold);
+  }
+
+  .calm-card-meta {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-sm);
+    line-height: var(--leading-normal);
+  }
+
+  .calm-card-meta-label {
+    font-weight: var(--weight-semibold);
+    color: var(--color-text);
+  }
+
+  :global(.calm-card-cta) {
+    display: block;
+    text-align: center;
+    background: var(--color-primary);
+    color: var(--color-text-inverse) !important;
+    font-weight: var(--weight-semibold);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-md);
+    transition: background var(--transition-fast);
+    text-decoration: none;
+    margin-top: var(--space-md);
+  }
+
+  :global(.calm-card-cta:hover) {
+    background: var(--color-primary-hover);
+    color: var(--color-text-inverse) !important;
+  }
+
+  :global(.calm-card-cta:focus-visible) {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+</style>

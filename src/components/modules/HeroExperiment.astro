@@ -1,0 +1,135 @@
+---
+/**
+ * HeroExperiment — Polymorphic hero for A/B URL-based experiments.
+ *
+ * Supports 7 visual variants (a–g) and 2 page themes (cooling | calming).
+ * Adds data attributes for tracking + emits hero_cta_click events.
+ *
+ * CSS: Pulls from hero.base.css (layout, tokens, focus) and
+ *      hero.variants.css (per-variant backgrounds/effects).
+ */
+
+export type HeroVariant = 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g';
+export type HeroTheme = 'cooling' | 'calming';
+
+interface Props {
+  variant: HeroVariant;
+  theme: HeroTheme;
+  headline: string;
+  subhead: string;
+  primaryCta: { label: string; href: string };
+  secondaryCta?: { label: string; href: string };
+}
+
+const { variant, theme, headline, subhead, primaryCta, secondaryCta } = Astro.props;
+
+const badgeLabel = theme === 'cooling' ? 'Beat the heat' : 'Find your calm';
+---
+
+<section
+  class={`hx hx--${variant} hx--${theme}`}
+  data-hero-variant={variant}
+  aria-label="Page hero"
+>
+  {/*
+    Variant E uses a glass card wrapper around the inner content.
+    All others share the same flat .hx-inner structure.
+  */}
+  {variant === 'e' ? (
+    <div class="hx-inner">
+      <div class="hx-glass-card">
+        {variant === 'g' && <span class="hx-badge">{badgeLabel}</span>}
+        <h1 class="hx-title">{headline}</h1>
+        <p class="hx-subhead">{subhead}</p>
+        <div class="hx-ctas">
+          <a
+            href={primaryCta.href}
+            class="hx-cta hx-cta--primary"
+            data-hero-cta="primary"
+          >
+            {primaryCta.label}
+          </a>
+          {secondaryCta && (
+            <a
+              href={secondaryCta.href}
+              class="hx-cta hx-cta--secondary"
+              data-hero-cta="secondary"
+            >
+              {secondaryCta.label}
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+  ) : (
+    <div class="hx-inner">
+      {variant === 'g' && <span class="hx-badge">{badgeLabel}</span>}
+      {/*
+        Variant F wraps the headline in .hx-kinetic to carry
+        the animated underline via ::after pseudo-element.
+      */}
+      {variant === 'f' ? (
+        <h1 class="hx-title">
+          <span class="hx-kinetic">{headline}</span>
+        </h1>
+      ) : (
+        <h1 class="hx-title">{headline}</h1>
+      )}
+      <p class="hx-subhead">{subhead}</p>
+      <div class="hx-ctas">
+        <a
+          href={primaryCta.href}
+          class="hx-cta hx-cta--primary"
+          data-hero-cta="primary"
+        >
+          {primaryCta.label}
+        </a>
+        {secondaryCta && (
+          <a
+            href={secondaryCta.href}
+            class="hx-cta hx-cta--secondary"
+            data-hero-cta="secondary"
+          >
+            {secondaryCta.label}
+          </a>
+        )}
+      </div>
+    </div>
+  )}
+</section>
+
+<!--
+  Tracking: Emits hero_cta_click events via dataLayer and gtag (if present).
+  define:vars injects `page` and `variant` as build-time constants.
+-->
+<script define:vars={{ page: theme, variant }}>
+  (function () {
+    var hero = document.querySelector('[data-hero-variant="' + variant + '"]');
+    if (!hero) return;
+
+    function track(ctaType) {
+      var payload = {
+        event: 'hero_cta_click',
+        page: page,
+        variant: variant,
+        cta: ctaType,
+      };
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(payload);
+      if (typeof gtag === 'function') {
+        gtag('event', 'hero_cta_click', { page: page, variant: variant, cta: ctaType });
+      }
+    }
+
+    hero.querySelectorAll('[data-hero-cta]').forEach(function (el) {
+      el.addEventListener('click', function () {
+        track(el.getAttribute('data-hero-cta'));
+      });
+    });
+  })();
+</script>
+
+<style>
+  @import '../../styles/hero.base.css';
+  @import '../../styles/hero.variants.css';
+</style>

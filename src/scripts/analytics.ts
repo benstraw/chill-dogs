@@ -1,5 +1,5 @@
 /**
- * Lightweight analytics utility for Chill Dogs.
+ * Lightweight analytics utility for Chill-Dogs.
  * Uses event delegation on [data-track] attributes.
  * Maps to GA4 gtag() when available, else logs to console in dev.
  */

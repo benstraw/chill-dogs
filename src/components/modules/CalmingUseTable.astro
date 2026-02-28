@@ -1,0 +1,127 @@
+---
+interface UseCaseRow {
+  situation: string;
+  bestChoice: string;
+  why: string;
+}
+
+interface Props {
+  rows: UseCaseRow[];
+}
+
+const { rows } = Astro.props;
+---
+
+<div class="cut-wrapper">
+  <table class="cut-table">
+    <thead>
+      <tr>
+        <th scope="col">Situation</th>
+        <th scope="col">Best Tool Type</th>
+        <th scope="col">Why It Fits</th>
+      </tr>
+    </thead>
+    <tbody>
+      {rows.map((row) => (
+        <tr>
+          <td class="cut-situation">{row.situation}</td>
+          <td>{row.bestChoice}</td>
+          <td>{row.why}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
+<div class="cut-mobile">
+  {rows.map((row) => (
+    <div class="cut-card">
+      <h3 class="cut-card-title">{row.situation}</h3>
+      <dl class="cut-card-dl">
+        <dt>Best Tool Type</dt>
+        <dd>{row.bestChoice}</dd>
+        <dt>Why It Fits</dt>
+        <dd>{row.why}</dd>
+      </dl>
+    </div>
+  ))}
+</div>
+
+<style>
+  .cut-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .cut-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--text-sm);
+  }
+
+  .cut-table th {
+    background: var(--color-bg-alt);
+    font-weight: var(--weight-semibold);
+    text-align: left;
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  .cut-table td {
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: top;
+    line-height: var(--leading-normal);
+  }
+
+  .cut-situation {
+    font-weight: var(--weight-semibold);
+    white-space: nowrap;
+  }
+
+  .cut-mobile {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .cut-wrapper {
+      display: none;
+    }
+
+    .cut-mobile {
+      display: block;
+    }
+  }
+
+  .cut-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-md);
+  }
+
+  .cut-card-title {
+    font-size: var(--text-lg);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-sm);
+  }
+
+  .cut-card-dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-xs) var(--space-md);
+    font-size: var(--text-sm);
+  }
+
+  .cut-card-dl dt {
+    font-weight: var(--weight-semibold);
+    color: var(--color-text-muted);
+  }
+
+  .cut-card-dl dd {
+    margin: 0;
+    color: var(--color-text);
+  }
+</style>

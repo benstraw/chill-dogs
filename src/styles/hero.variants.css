@@ -1,0 +1,287 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   hero.variants.css — Variant-specific backgrounds and visual effects.
+   Imported inside HeroExperiment.astro's <style> block; selectors are
+   scoped by Astro's component data attribute.
+───────────────────────────────────────────────────────────────────────────── */
+
+/* ══════════════════════════════════════════════════════════════
+   VARIANT A — Aurora Wash Gradient
+   Multi-radial gradients on dark base. Bold, atmospheric.
+══════════════════════════════════════════════════════════════ */
+.hx--a {
+  background:
+    radial-gradient(ellipse 65% 55% at 15% 35%, var(--hx-a3) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 60% at 80% 65%, var(--hx-a2) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 45% at 55% 20%, var(--hx-a1) 0%, transparent 70%),
+    var(--hx-dark);
+  color: hsl(195, 100%, 97%);
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
+}
+
+.hx--a .hx-title {
+  color: #ffffff;
+}
+
+.hx--a .hx-subhead {
+  color: rgba(220, 242, 248, 0.82);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   VARIANT B — Split Temperature / Temperament
+   Two-tone vertical split. Strong typographic contrast.
+══════════════════════════════════════════════════════════════ */
+.hx--b {
+  background: linear-gradient(
+    90deg,
+    var(--hx-dark) 0%,
+    var(--hx-dark) 50%,
+    var(--hx-a2) 50%,
+    var(--hx-a2) 100%
+  );
+  color: #ffffff;
+}
+
+.hx--b .hx-title {
+  color: #ffffff;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+}
+
+.hx--b .hx-subhead {
+  color: rgba(255, 255, 255, 0.84);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Vertical split on mobile */
+@media (max-width: 640px) {
+  .hx--b {
+    background: linear-gradient(
+      180deg,
+      var(--hx-dark) 0%,
+      var(--hx-dark) 50%,
+      var(--hx-a2) 50%,
+      var(--hx-a2) 100%
+    );
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   VARIANT C — Conic Spotlight
+   Blurred conic gradient "spotlight" behind a light base.
+   Especially effective for the calming theme.
+══════════════════════════════════════════════════════════════ */
+.hx--c {
+  background: linear-gradient(
+    150deg,
+    var(--hx-light) 0%,
+    var(--hx-bg-mid) 100%
+  );
+  color: var(--color-charcoal, #2d2d2d);
+}
+
+.hx--c::before {
+  content: '';
+  position: absolute;
+  inset: -30% -15%;
+  background: conic-gradient(
+    from 240deg at 50% 120%,
+    transparent 0deg,
+    var(--hx-a1) 45deg,
+    var(--hx-a3) 90deg,
+    var(--hx-a2) 120deg,
+    transparent 160deg
+  );
+  filter: blur(72px);
+  opacity: 0.38;
+  pointer-events: none;
+}
+
+.hx--c .hx-subhead {
+  color: #6b6b6b;
+}
+
+.hx--c .hx-cta--secondary {
+  color: var(--hx-cta-bg);
+  border-color: var(--hx-cta-bg);
+}
+
+.hx--c .hx-cta--secondary:hover {
+  background: var(--hx-cta-bg);
+  color: #ffffff;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   VARIANT D — Pattern Overlay
+   Subtle dot-grid over a gradient. Does not reduce readability.
+══════════════════════════════════════════════════════════════ */
+.hx--d {
+  /* Gradient base */
+  background-color: var(--hx-light);
+  /* Dot grid layered via multiple backgrounds */
+  background-image:
+    radial-gradient(circle at center, var(--hx-dot-color) 1.2px, transparent 1.2px),
+    linear-gradient(150deg, var(--hx-light) 0%, var(--hx-bg-mid) 100%);
+  background-size:
+    22px 22px,
+    100% 100%;
+  background-blend-mode: multiply;
+  color: var(--color-charcoal, #2d2d2d);
+}
+
+.hx--d .hx-subhead {
+  color: #6b6b6b;
+}
+
+.hx--d .hx-cta--secondary {
+  color: var(--hx-cta-bg);
+  border-color: var(--hx-cta-bg);
+}
+
+.hx--d .hx-cta--secondary:hover {
+  background: var(--hx-cta-bg);
+  color: #ffffff;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   VARIANT E — Glass Card
+   Saturated gradient bg + translucent blur card.
+   Fallback included for browsers without backdrop-filter.
+══════════════════════════════════════════════════════════════ */
+.hx--e {
+  background:
+    radial-gradient(ellipse 65% 55% at 25% 40%, var(--hx-a1) 0%, transparent 65%),
+    radial-gradient(ellipse 55% 65% at 75% 60%, var(--hx-a2) 0%, transparent 60%),
+    var(--hx-dark);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 340px;
+}
+
+.hx--e .hx-inner {
+  width: 100%;
+  max-width: 720px;
+}
+
+/* Glass card — fallback (no backdrop-filter) */
+.hx-glass-card {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 1.25rem;
+  padding: 3rem 2.5rem;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* Enhanced glass when backdrop-filter is supported */
+@supports (backdrop-filter: blur(16px)) {
+  .hx-glass-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    border-color: rgba(255, 255, 255, 0.18);
+  }
+}
+
+.hx--e .hx-subhead {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+@media (max-width: 640px) {
+  .hx-glass-card {
+    padding: 2rem 1.25rem;
+    border-radius: 1rem;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   VARIANT F — Kinetic Underline
+   Animated underline slides in under the headline.
+   Fully respects prefers-reduced-motion.
+══════════════════════════════════════════════════════════════ */
+.hx--f {
+  background: linear-gradient(148deg, var(--hx-light) 0%, var(--hx-bg-mid) 100%);
+  color: var(--color-charcoal, #2d2d2d);
+}
+
+.hx--f .hx-subhead {
+  color: #6b6b6b;
+}
+
+.hx-kinetic {
+  position: relative;
+  display: inline;
+  white-space: pre-wrap;
+}
+
+.hx-kinetic::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.2em;
+  width: 100%;
+  height: 5px;
+  background: var(--hx-a1);
+  border-radius: 3px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: hx-underline-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.35s forwards;
+}
+
+@keyframes hx-underline-in {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Respect the user's motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .hx-kinetic::after {
+    animation: none;
+    transform: scaleX(1); /* show it statically */
+  }
+}
+
+.hx--f .hx-cta--secondary {
+  color: var(--hx-cta-bg);
+  border-color: var(--hx-cta-bg);
+}
+
+.hx--f .hx-cta--secondary:hover {
+  background: var(--hx-cta-bg);
+  color: #ffffff;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   VARIANT G — Minimal Badge + Big Type
+   Clean light gradient. Small pill badge + oversized bold headline.
+══════════════════════════════════════════════════════════════ */
+.hx--g {
+  background: linear-gradient(180deg, #ffffff 0%, var(--hx-light) 100%);
+  color: var(--color-charcoal, #2d2d2d);
+  padding-top: 5rem;
+  padding-bottom: 5.5rem;
+}
+
+.hx--g .hx-title {
+  font-size: clamp(2.5rem, 6.5vw, 3.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  margin-top: 0.25rem;
+}
+
+.hx--g .hx-subhead {
+  color: #6b6b6b;
+  font-size: 1.05rem;
+}
+
+.hx--g .hx-cta--secondary {
+  color: var(--hx-cta-bg);
+  border-color: var(--hx-cta-bg);
+}
+
+.hx--g .hx-cta--secondary:hover {
+  background: var(--hx-cta-bg);
+  color: #ffffff;
+}

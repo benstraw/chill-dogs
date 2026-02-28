@@ -3,7 +3,6 @@ const navItems = [
   { href: '/', label: 'Home' },
   { href: '/cooling', label: 'Cooling' },
   { href: '/calming', label: 'Calming' },
-  { href: '/blog', label: 'Blog' },
   { href: '/about', label: 'About' },
 ];
 
@@ -12,7 +11,7 @@ const currentPath = Astro.url.pathname;
 
 <header class="site-header">
   <div class="container header-inner">
-    <a href="/" class="logo">Chill Dogs</a>
+    <a href="/" class="logo">Chill-Dogs</a>
     <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span class="hamburger"></span>
     </button>
@@ -92,8 +91,8 @@ const currentPath = Astro.url.pathname;
 
   .main-nav a:hover,
   .main-nav a.active {
-    color: var(--color-primary);
-    border-bottom-color: var(--color-primary);
+    color: var(--color-nav-accent, var(--color-primary));
+    border-bottom-color: var(--color-nav-accent, var(--color-primary));
   }
 
   .menu-toggle {

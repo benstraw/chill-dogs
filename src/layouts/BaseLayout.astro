@@ -16,6 +16,7 @@ interface Props {
   ogImage?: string;
   canonicalUrl?: string;
   noindex?: boolean;
+  navAccent?: string;
 }
 
 const {
@@ -24,15 +25,16 @@ const {
   ogImage = '/og-default.jpg',
   canonicalUrl,
   noindex = false,
+  navAccent,
 } = Astro.props;
 
-const siteTitle = title === 'Home' ? 'Chill Dogs' : `${title} | Chill Dogs`;
+const siteTitle = title === 'Home' ? 'Chill-Dogs' : `${title} | Chill-Dogs`;
 const resolvedOgImage = new URL(ogImage, Astro.site).href;
 const resolvedCanonical = canonicalUrl || Astro.url.href;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" style={navAccent ? `--color-nav-accent: ${navAccent}` : undefined}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -50,7 +52,7 @@ const resolvedCanonical = canonicalUrl || Astro.url.href;
     <meta property="og:description" content={description} />
     <meta property="og:image" content={resolvedOgImage} />
     <meta property="og:url" content={resolvedCanonical} />
-    <meta property="og:site_name" content="Chill Dogs" />
+    <meta property="og:site_name" content="Chill-Dogs" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />

@@ -25,7 +25,7 @@ function buildSchema() {
       image: image ? new URL(image, siteUrl).href : undefined,
       publisher: {
         '@type': 'Organization',
-        name: 'Chill Dogs',
+        name: 'Chill-Dogs',
         url: siteUrl,
       },
     };
@@ -34,7 +34,7 @@ function buildSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Chill Dogs',
+    name: 'Chill-Dogs',
     description,
     url: siteUrl,
   };

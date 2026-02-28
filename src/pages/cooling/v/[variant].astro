@@ -2,14 +2,32 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import HeroExperiment from '@components/modules/HeroExperiment.astro';
 import CoolingHubBody from '@components/modules/CoolingHubBody.astro';
+import type { HeroVariant } from '@components/modules/HeroExperiment.astro';
+
+export function getStaticPaths() {
+  const variants: HeroVariant[] = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+  return variants.map((v) => ({ params: { variant: v } }));
+}
+
+const { variant } = Astro.params as { variant: HeroVariant };
+
+/**
+ * Variant pages are experiment copies of /cooling/.
+ * - canonical: /cooling/ (prevents SEO duplication)
+ * - robots: noindex, follow (crawl links but don't index)
+ */
+const canonicalUrl = new URL('/cooling/', Astro.site).href;
 ---
 
 <BaseLayout
   title="Cooling Relief"
   description="Beat the heat with our curated cooling picks for dogs — from cooling mats and vests to frozen treats and shade solutions."
+  canonicalUrl={canonicalUrl}
 >
+  <meta slot="head" name="robots" content="noindex, follow" />
+
   <HeroExperiment
-    variant="a"
+    variant={variant}
     theme="cooling"
     headline="Beat the heat in minutes."
     subhead="Cooling mats, vests, and hydration picks that actually work."

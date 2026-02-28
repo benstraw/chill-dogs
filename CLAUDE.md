@@ -19,6 +19,12 @@ This site is a **modular conversion system** governed by `docs/web-systems-adven
 3. **Is this modular?** Components must be reusable workhorse modules — no hardcoded content, responsive, accessible, performant. Build for reuse. Showstopper (custom/complex) modules are used sparingly and never stacked. Don't over-engineer; don't under-abstract.
 4. **Does this preserve clarity and speed?** Minimize friction between visitor and conversion. Fewer steps, fewer distractions, fast loads (sub-2s). Navigation stays minimal (≤5 links). Every page answers: "What is the single action this page exists to drive?"
 
+## Content Guardrails
+
+- Do not describe products or picks as "vet-recommended," "vet-approved," or similar unless the site has real, documented veterinarian sourcing for that exact claim.
+- Do not imply Chill Dogs consulted veterinarians, commissioned veterinary reviews, or gathered veterinary endorsements when that did not happen.
+- Prefer grounded language like `researched`, `compared`, `curated`, `popular`, or `practical` instead of medical-authority framing.
+
 ## Project Overview
 
 Amazon affiliate dog lifestyle site built with **Astro 5** (SSG) and **bun**. Revenue comes from affiliate links to Amazon products. Deploy target is Netlify.

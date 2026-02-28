@@ -1,0 +1,234 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/modules/Hero.astro';
+import Disclosure from '@components/modules/Disclosure.astro';
+import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
+import CalmingProductCard from '@components/modules/CalmingProductCard.astro';
+import { calmingProducts, type CalmingProduct } from '@data/calming-products';
+
+const pageSlug = 'best-thundershirt-alternatives';
+
+function getRequiredProduct(id: string): CalmingProduct {
+  const product = calmingProducts.find((item) => item.id === id);
+  if (!product) {
+    throw new Error(`Missing calming product: ${id}`);
+  }
+  return product;
+}
+
+const thunderShirt = getRequiredProduct('thundershirt-classic');
+const nativePet = getRequiredProduct('native-pet-calm-chews');
+const lukito = getRequiredProduct('lukito-licking-mat');
+const rundic = getRequiredProduct('rundic-snuffle-mat');
+
+const comparisonCards = [thunderShirt, nativePet, lukito, rundic];
+---
+
+<BaseLayout
+  title="Best ThunderShirt Alternatives for Dogs"
+  description="Looking for a ThunderShirt alternative? Compare ThunderShirt with calming chews, lick mats, and snuffle mats to decide what fits your dog best."
+>
+  <script slot="head" type="module">
+    import { init } from '/src/scripts/analytics.ts';
+    init();
+  </script>
+
+  <div class="calming-theme">
+    <Hero
+      title="Best ThunderShirt Alternatives for Dogs"
+      subtitle="People usually look for a ThunderShirt alternative for one of four reasons: the fit is not quite right, the price feels high for a wrap, their dog hates wearing gear, or they want something lighter for warmer indoor use. The honest answer is that the best alternative depends on why ThunderShirt is not working for your dog."
+      disclaimer="As an Amazon Associate, we earn from qualifying purchases."
+      primaryCta={{ label: 'Compare the Options', href: '#compare' }}
+      secondaryCta={{ label: 'See All Calming Picks', href: '/calming/best-calming-products-for-anxious-dogs/' }}
+    />
+
+    <section class="converter-section">
+      <div class="converter-inner prose">
+        <h2>Start with the real question</h2>
+        <p>
+          If you specifically want another pressure wrap, this site is not currently recommending a second wrap. That is deliberate. ThunderShirt is still the clearest choice when your dog handles fitted gear well and the main problem is predictable, event-based anxiety like storms or fireworks.
+        </p>
+        <p>
+          Most "alternatives" are really alternative calming approaches. If your dog resists wearable gear, a lick mat or calming chew may solve the actual problem more effectively than shopping for a second jacket-style product.
+        </p>
+      </div>
+    </section>
+
+    <section class="converter-section converter-section--alt" id="compare">
+      <div class="converter-inner">
+        <h2>ThunderShirt vs. the closest alternatives on this site</h2>
+        <p class="section-intro">
+          These are not identical replacements. They are the best substitutes from the current Chill-Dogs calming lineup, based on the situation you are trying to fix.
+        </p>
+        <div class="comparison-grid">
+          {comparisonCards.map((product, i) => (
+            <CalmingProductCard
+              product={product}
+              position={i + 1}
+              pageType="converter"
+              pageSlug={pageSlug}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="converter-section">
+      <div class="converter-inner decisions">
+        <div class="decision-card">
+          <h2>When ThunderShirt is worth it</h2>
+          <ul>
+            <li>Your dog&apos;s stress is tied to storms, fireworks, travel, or other predictable events.</li>
+            <li>Your dog tolerates snug clothing without shutting down or overheating.</li>
+            <li>You want something you can put on before the trigger starts instead of timing a chew or prepping food.</li>
+          </ul>
+        </div>
+        <div class="decision-card">
+          <h2>When a cheaper or simpler alternative may be better</h2>
+          <ul>
+            <li>Choose LUKITO if the real issue is bath time, brushing, or nail trims.</li>
+            <li>Choose Native Pet Calm Chews if you want a non-wearable option for planned stress.</li>
+            <li>Choose Rundic if your dog&apos;s tension looks more like restless boredom or pre-departure pacing.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="converter-section converter-section--alt">
+      <div class="converter-inner prose">
+        <h2>Pros and cons, honestly</h2>
+        <p>
+          ThunderShirt is the most direct tool for noise-triggered anxiety, but it is still a wearable product. That means fit matters, tolerance matters, and some dogs simply will not like it. Lick mats and snuffle mats are cheaper and easier to introduce, but they are distraction tools, not pressure tools. Calming chews are simple and flexible, but they require some lead time and ingredient preferences vary by household.
+        </p>
+        <p>
+          If your dog panics during fireworks and accepts clothing, ThunderShirt is still the better buy. If your dog hates wearing anything, buying another wrap-style product probably does not solve the real problem.
+        </p>
+      </div>
+    </section>
+
+    <Disclosure showSafety={false} />
+
+    <InternalLinkStrip
+      heading="More Calming Guides"
+      links={[
+        { label: 'Calming Hub', href: '/calming/' },
+        { label: 'Best Calming Products for Anxious Dogs', href: '/calming/best-calming-products-for-anxious-dogs/' },
+      ]}
+      fromPage={pageSlug}
+    />
+  </div>
+</BaseLayout>
+
+<style>
+  .converter-section {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+
+  .converter-section--alt {
+    background: var(--color-bg-alt);
+  }
+
+  .converter-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .section-intro {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    max-width: var(--max-width-prose);
+    margin-bottom: var(--space-xl);
+  }
+
+  .comparison-grid,
+  .decisions {
+    display: grid;
+    gap: var(--space-lg);
+  }
+
+  .comparison-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .decisions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .decision-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+  }
+
+  .decision-card h2 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-sm);
+  }
+
+  .decision-card ul {
+    margin: 0;
+    padding-left: 1.125rem;
+  }
+
+  .decision-card li {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+  }
+
+  .decision-card li + li {
+    margin-top: var(--space-xs);
+  }
+
+  :global(.calming-theme .hero-cta--primary) {
+    background: var(--color-sage);
+    color: var(--color-charcoal);
+  }
+
+  :global(.calming-theme .hero-cta--primary:hover) {
+    background: var(--color-sage-hover);
+    color: var(--color-charcoal);
+  }
+
+  :global(.calming-theme .hero-cta--secondary) {
+    color: var(--color-sage);
+    border-color: var(--color-sage);
+  }
+
+  :global(.calming-theme .hero-cta--secondary:hover) {
+    background: var(--color-sage);
+    color: var(--color-charcoal);
+  }
+
+  :global(.calming-theme .ils-link:hover) {
+    background: var(--color-sage);
+    color: var(--color-charcoal);
+  }
+
+  :global(.calming-theme .disc-inner a) {
+    color: var(--color-sage);
+  }
+
+  :global(.calming-theme .calm-card-cta) {
+    background: var(--color-sage);
+    color: var(--color-charcoal) !important;
+  }
+
+  :global(.calming-theme .calm-card-cta:hover) {
+    background: var(--color-sage-hover);
+    color: var(--color-charcoal) !important;
+  }
+
+  :global(.calming-theme .calm-card-cta:focus-visible) {
+    outline-color: var(--color-sage);
+  }
+
+  @media (max-width: 900px) {
+    .comparison-grid,
+    .decisions {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
