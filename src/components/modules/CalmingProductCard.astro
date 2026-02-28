@@ -13,6 +13,17 @@ const { product, position = 0, pageType = 'collector', pageSlug = '' } = Astro.p
 ---
 
 <div class="calm-card">
+  {product.image && (
+    <div class="calm-image">
+      <img
+        src={product.image.src}
+        alt={product.image.alt}
+        loading="lazy"
+        width="400"
+        height="300"
+      />
+    </div>
+  )}
   <div class="calm-card-body">
     <h3 class="calm-card-name">{product.name}</h3>
     <p class="calm-card-best-for">
@@ -54,6 +65,18 @@ const { product, position = 0, pageType = 'collector', pageSlug = '' } = Astro.p
 
   .calm-card:hover {
     box-shadow: var(--shadow-lg);
+  }
+
+  .calm-image {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--color-bg-alt);
+  }
+
+  .calm-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   .calm-card-body {

@@ -45,6 +45,10 @@ export const coolingProducts: CoolingProduct[] = [
     bestFor: 'Hassle-free cooling anywhere — just set it down and go',
     coolingMethod: 'Pressure-activated gel',
     sizingNote: 'Available in S, M, L, XL — measure your dog lying down',
+    image: {
+      src: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B006NONHNE&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=chill-dogs-20',
+      alt: 'The Green Pet Shop Cooling Pet Pad',
+    },
   },
   {
     id: 'kh-cool-bed-iii',
@@ -60,6 +64,10 @@ export const coolingProducts: CoolingProduct[] = [
     bestFor: 'Large breeds that need sustained, even cooling',
     coolingMethod: 'Water-based absorption',
     sizingNote: 'Comes in S through XL — XL fits dogs up to 100 lbs',
+    image: {
+      src: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B003KK60R4&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=chill-dogs-20',
+      alt: 'K&H Cool Bed III Water-Based Dog Cooling Mat',
+    },
   },
   {
     id: 'arf-pets-self-cooling-mat',
@@ -75,6 +83,10 @@ export const coolingProducts: CoolingProduct[] = [
     bestFor: 'Crate training and car travel in hot weather',
     coolingMethod: 'Pressure-activated gel',
     sizingNote: 'Multiple sizes — pick one that matches your crate dimensions',
+    image: {
+      src: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0192CJO30&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=chill-dogs-20',
+      alt: 'Arf Pets Self Cooling Mat for Dogs',
+    },
   },
 
   // Cooling Bandanas
@@ -92,6 +104,10 @@ export const coolingProducts: CoolingProduct[] = [
     bestFor: 'Quick walks and outdoor play on warm days',
     coolingMethod: 'Evaporative + optional ice pack',
     sizingNote: 'S/M and L/XL — measure around the base of the neck',
+    image: {
+      src: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00IAR9WCM&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=chill-dogs-20',
+      alt: 'All For Paws Chill Out Ice Bandana for Dogs',
+    },
   },
   {
     id: 'kyeese-cooling-bandanas',
@@ -107,6 +123,10 @@ export const coolingProducts: CoolingProduct[] = [
     bestFor: 'Small to medium dogs on daily summer walks',
     coolingMethod: 'Evaporative cooling',
     sizingNote: 'Fits necks up to 20 inches — best for small/medium breeds',
+    image: {
+      src: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B09N35XX2C&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=chill-dogs-20',
+      alt: 'KYEESE Dog Instant Cooling Bandanas 2-Pack',
+    },
   },
 
   // Cooling Vests
@@ -124,6 +144,10 @@ export const coolingProducts: CoolingProduct[] = [
     bestFor: 'Hiking, trail running, and all-day outdoor adventures',
     coolingMethod: 'Evaporative (soak, wring, wear)',
     sizingNote: 'Sized XXS through XL — use Ruffwear\'s girth measurement chart',
+    image: {
+      src: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B09MSMSP69&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=chill-dogs-20',
+      alt: 'Ruffwear Swamp Cooler Dog Cooling Vest',
+    },
   },
   {
     id: 'kurgo-core-cooling-vest',
@@ -139,6 +163,10 @@ export const coolingProducts: CoolingProduct[] = [
     bestFor: 'Budget-friendly everyday cooling on walks and errands',
     coolingMethod: 'Evaporative mesh',
     sizingNote: 'S, M, L — measure chest girth for the best fit',
+    image: {
+      src: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B06VT1VDZX&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=chill-dogs-20',
+      alt: 'Kurgo Core Cooling Vest for Dogs',
+    },
   },
   {
     id: 'canada-pooch-chill-seeker',
@@ -154,6 +182,10 @@ export const coolingProducts: CoolingProduct[] = [
     bestFor: 'Style-conscious pet parents who want function and fashion',
     coolingMethod: 'Evaporative cooling',
     sizingNote: 'Runs slightly small — size up if your dog is between sizes',
+    image: {
+      src: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B009JLQCUI&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=chill-dogs-20',
+      alt: 'Canada Pooch Chill Seeker Cooling Vest for Dogs',
+    },
   },
 
   // Freezable Toys
@@ -170,6 +202,10 @@ export const coolingProducts: CoolingProduct[] = [
     ],
     bestFor: 'Heavy chewers who need long-lasting frozen enrichment',
     coolingMethod: 'Freeze stuffing inside',
+    image: {
+      src: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B000AYN7LU&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=chill-dogs-20',
+      alt: 'KONG Classic Dog Toy',
+    },
   },
   {
     id: 'petsafe-chilly-penguin',
@@ -184,6 +220,10 @@ export const coolingProducts: CoolingProduct[] = [
     ],
     bestFor: 'Dogs who love to lick and need gentle hydration encouragement',
     coolingMethod: 'Frozen water release',
+    image: {
+      src: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0G1NDQQYF&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=chill-dogs-20',
+      alt: 'PetSafe Chilly Penguin Freezable Dog Toy',
+    },
   },
 
   // Bonus
@@ -201,6 +241,10 @@ export const coolingProducts: CoolingProduct[] = [
     bestFor: 'Senior dogs or large breeds that overheat on traditional beds',
     coolingMethod: 'Breathable open-cell memory foam',
     isBonus: true,
+    image: {
+      src: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0BQPJLB68&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=chill-dogs-20',
+      alt: 'Wag This World NASA-Inspired Orthopedic Dog Bed',
+    },
   },
 ];
 
