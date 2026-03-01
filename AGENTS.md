@@ -42,6 +42,16 @@ Repository guidance for coding agents working in `/Volumes/wanderer/dev/solo/chi
 - Package manager/scripts: `bun run dev`, `bun run build`, `bun run preview`.
 - Key aliases: `@components`, `@layouts`, `@styles`, `@data`, `@utils`.
 
+## Testing
+
+- **All new features and changes to utility/script modules must include unit tests.**
+- Tests live in `src/__tests__/` and use [Vitest](https://vitest.dev/).
+- Run tests: `npm test` (alias: `bun run test`).
+- Run coverage: `npm run test:coverage` (alias: `bun run test:coverage`).
+- A pre-commit git hook runs `npm test` automatically — commits are blocked if any test fails.
+- Target: keep statement coverage ≥ 90% for `src/utils/**` and `src/scripts/**`.
+- The `astro:content` virtual module is stubbed in `src/__mocks__/astro-content.ts` so helpers that call `getCollection` can be tested without the Astro build context.
+
 ## Workflow
 
 - Read [CLAUDE.md](/Volumes/wanderer/dev/solo/chill-dogs/CLAUDE.md) when repo-specific product, content, or conversion rules matter.
