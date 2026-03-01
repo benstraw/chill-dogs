@@ -131,7 +131,7 @@ Converter pages also need a `products` array:
 products:
   - name: "Product Name"
     description: "Short description"
-    affiliateUrl: "https://amazon.com/dp/ASIN?tag=chilldogs-20"
+    affiliateUrl: "https://amazon.com/dp/ASIN?tag=chill-dogs-20"
     priceNote: "~$29"
     tag: best-overall    # best-overall | budget | premium
     pros: ["Pro one", "Pro two"]
@@ -147,12 +147,12 @@ All Amazon links must use the `AffiliateLink` component — never a plain `<a>` 
 ```astro
 import AffiliateLink from '@components/AffiliateLink.astro';
 
-<AffiliateLink href="https://amazon.com/dp/ASIN?tag=chilldogs-20">
+<AffiliateLink href="https://amazon.com/dp/ASIN?tag=chill-dogs-20">
   Check price on Amazon
 </AffiliateLink>
 ```
 
-The component enforces `rel="nofollow sponsored noopener"`, `target="_blank"`, and `data-affiliate="true"`. The Associates tag is `chilldogs-20`.
+The component enforces `rel="nofollow sponsored noopener"`, `target="_blank"`, and `data-affiliate="true"`. The Associates tag is `chill-dogs-20`.
 
 ---
 
