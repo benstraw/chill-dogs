@@ -1,0 +1,756 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="404 — Lost in the Snow" description="This page doesn't exist, but the vibes are immaculate." noindex={true}>
+
+<div class="snowscape">
+  <!-- Falling snowflakes -->
+  <div class="snow-layer">
+    {Array.from({ length: 60 }).map((_, i) => (
+      <div class="flake" style={`--x: ${Math.random() * 100}%; --delay: ${Math.random() * 8}s; --dur: ${3 + Math.random() * 6}s; --size: ${4 + Math.random() * 12}px; --drift: ${-30 + Math.random() * 60}px; --opacity: ${0.3 + Math.random() * 0.7};`} />
+    ))}
+  </div>
+
+  <!-- Aurora / Northern lights -->
+  <div class="aurora">
+    <div class="aurora-band aurora-band--1"></div>
+    <div class="aurora-band aurora-band--2"></div>
+    <div class="aurora-band aurora-band--3"></div>
+  </div>
+
+  <!-- Ground snow with hills -->
+  <div class="ground">
+    <svg class="ground-svg" viewBox="0 0 1440 320" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,224 C120,180 240,280 360,240 C480,200 600,160 720,200 C840,240 960,280 1080,220 C1200,160 1320,200 1440,224 L1440,320 L0,320 Z" fill="#e8f0f8"/>
+      <path d="M0,260 C180,230 300,290 480,260 C660,230 840,270 1020,250 C1200,230 1350,270 1440,260 L1440,320 L0,320 Z" fill="#f0f5fa"/>
+      <path d="M0,285 C200,275 400,295 600,280 C800,265 1000,290 1200,278 C1350,270 1400,285 1440,280 L1440,320 L0,320 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+
+  <!-- Silly dog in the snow -->
+  <div class="dog-scene">
+    <div class="dog">
+      <!-- Dog body -->
+      <div class="dog-body">
+        <div class="dog-torso"></div>
+        <div class="dog-head">
+          <div class="dog-ear dog-ear--left"></div>
+          <div class="dog-ear dog-ear--right"></div>
+          <div class="dog-face">
+            <div class="dog-eye dog-eye--left">
+              <div class="dog-pupil"></div>
+            </div>
+            <div class="dog-eye dog-eye--right">
+              <div class="dog-pupil"></div>
+            </div>
+            <div class="dog-nose"></div>
+            <div class="dog-tongue"></div>
+          </div>
+        </div>
+        <div class="dog-tail"></div>
+      </div>
+      <!-- Paw prints -->
+      <div class="pawprint pawprint--1">🐾</div>
+      <div class="pawprint pawprint--2">🐾</div>
+      <div class="pawprint pawprint--3">🐾</div>
+    </div>
+  </div>
+
+  <!-- Floating ice crystals -->
+  <div class="crystal crystal--1">❄</div>
+  <div class="crystal crystal--2">✦</div>
+  <div class="crystal crystal--3">❋</div>
+  <div class="crystal crystal--4">✧</div>
+  <div class="crystal crystal--5">❅</div>
+
+  <!-- The 404 window panel -->
+  <div class="window-panel">
+    <div class="window-bar">
+      <div class="window-dot window-dot--red"></div>
+      <div class="window-dot window-dot--yellow"></div>
+      <div class="window-dot window-dot--green"></div>
+      <span class="window-title">lost_puppy.exe</span>
+    </div>
+    <div class="window-body">
+      <h1 class="glitch-404" data-text="404">404</h1>
+      <p class="subtitle">This page wandered off into the snow.</p>
+      <p class="description">
+        Probably chasing a squirrel. We've sent a search party
+        <span class="wiggle">(treats included)</span>.
+      </p>
+      <div class="action-row">
+        <a href="/" class="home-btn">
+          <span class="btn-icon">🏠</span>
+          Take me home
+        </a>
+        <a href="/cooling/" class="cool-btn">
+          <span class="btn-icon">🧊</span>
+          Stay cool
+        </a>
+      </div>
+      <div class="frost-border"></div>
+    </div>
+  </div>
+
+  <!-- Floating thought bubble from dog -->
+  <div class="thought-bubble">
+    <span class="thought-text">where page?</span>
+    <div class="bubble-dot bubble-dot--1"></div>
+    <div class="bubble-dot bubble-dot--2"></div>
+    <div class="bubble-dot bubble-dot--3"></div>
+  </div>
+</div>
+
+</BaseLayout>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Fredoka:wght@400;600&display=swap');
+
+  /* ── 10+ Color Palette ── */
+  :root {
+    --c-midnight: #0b1628;
+    --c-deep-navy: #132744;
+    --c-arctic-blue: #3a8fb7;
+    --c-ice: #a8daec;
+    --c-powder: #d6eef8;
+    --c-snow: #f0f5fa;
+    --c-white: #ffffff;
+    --c-aurora-green: #5de8b5;
+    --c-aurora-teal: #38c9b1;
+    --c-aurora-purple: #9f7aea;
+    --c-aurora-pink: #ed64a6;
+    --c-warm-orange: #f6a623;
+    --c-berry: #e53e6b;
+    --c-golden: #fbd38d;
+    --c-dog-brown: #c68642;
+    --c-nose-dark: #2d2d2d;
+    --c-tongue-pink: #ff8fab;
+  }
+
+  .snowscape {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    background: linear-gradient(
+      175deg,
+      var(--c-midnight) 0%,
+      var(--c-deep-navy) 25%,
+      var(--c-arctic-blue) 55%,
+      var(--c-ice) 75%,
+      var(--c-powder) 90%
+    );
+    z-index: 100;
+    font-family: 'Fredoka', sans-serif;
+  }
+
+  /* ── Aurora Borealis ── */
+  .aurora {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 55%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .aurora-band {
+    position: absolute;
+    width: 200%;
+    height: 120px;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.35;
+    animation: aurora-drift 12s ease-in-out infinite alternate;
+  }
+
+  .aurora-band--1 {
+    top: 8%;
+    left: -20%;
+    background: linear-gradient(90deg, transparent, var(--c-aurora-green), var(--c-aurora-teal), transparent);
+    animation-duration: 10s;
+  }
+
+  .aurora-band--2 {
+    top: 18%;
+    left: -40%;
+    background: linear-gradient(90deg, transparent, var(--c-aurora-purple), var(--c-aurora-pink), transparent);
+    animation-duration: 14s;
+    animation-delay: -3s;
+    opacity: 0.25;
+  }
+
+  .aurora-band--3 {
+    top: 12%;
+    left: -10%;
+    background: linear-gradient(90deg, transparent, var(--c-aurora-teal), var(--c-aurora-green), var(--c-aurora-purple), transparent);
+    animation-duration: 18s;
+    animation-delay: -7s;
+    opacity: 0.2;
+  }
+
+  @keyframes aurora-drift {
+    0% { transform: translateX(0) scaleY(1); }
+    50% { transform: translateX(10%) scaleY(1.4); }
+    100% { transform: translateX(-5%) scaleY(0.8); }
+  }
+
+  /* ── Snowflakes ── */
+  .snow-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .flake {
+    position: absolute;
+    top: -20px;
+    left: var(--x);
+    width: var(--size);
+    height: var(--size);
+    background: white;
+    border-radius: 50%;
+    opacity: var(--opacity);
+    animation: snowfall var(--dur) linear var(--delay) infinite;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+  }
+
+  @keyframes snowfall {
+    0% {
+      transform: translateY(-20px) translateX(0) rotate(0deg);
+      opacity: var(--opacity);
+    }
+    100% {
+      transform: translateY(100vh) translateX(var(--drift)) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  /* ── Ground ── */
+  .ground {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    z-index: 3;
+  }
+
+  .ground-svg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* ── Floating Crystals ── */
+  .crystal {
+    position: absolute;
+    font-size: 28px;
+    opacity: 0.4;
+    animation: crystal-float 6s ease-in-out infinite;
+    z-index: 4;
+    pointer-events: none;
+  }
+
+  .crystal--1 { top: 15%; left: 8%; animation-delay: 0s; color: var(--c-ice); font-size: 36px; }
+  .crystal--2 { top: 25%; right: 12%; animation-delay: -1.5s; color: var(--c-aurora-green); font-size: 20px; }
+  .crystal--3 { top: 40%; left: 5%; animation-delay: -3s; color: var(--c-aurora-purple); font-size: 24px; }
+  .crystal--4 { top: 10%; right: 25%; animation-delay: -4s; color: var(--c-golden); font-size: 18px; }
+  .crystal--5 { top: 35%; right: 6%; animation-delay: -2s; color: var(--c-powder); font-size: 32px; }
+
+  @keyframes crystal-float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(20deg); }
+  }
+
+  /* ── CSS Dog ── */
+  .dog-scene {
+    position: absolute;
+    bottom: 8%;
+    left: 10%;
+    z-index: 5;
+  }
+
+  .dog {
+    position: relative;
+    animation: dog-bounce 2s ease-in-out infinite;
+  }
+
+  @keyframes dog-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .dog-body {
+    position: relative;
+    width: 100px;
+    height: 70px;
+  }
+
+  .dog-torso {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 65px;
+    height: 40px;
+    background: var(--c-dog-brown);
+    border-radius: 30px 25px 15px 15px;
+  }
+
+  .dog-head {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 50px;
+    height: 45px;
+    background: var(--c-dog-brown);
+    border-radius: 50% 50% 40% 40%;
+    z-index: 2;
+  }
+
+  .dog-ear {
+    position: absolute;
+    width: 18px;
+    height: 25px;
+    background: #a06830;
+    border-radius: 50% 50% 30% 30%;
+    top: -10px;
+  }
+
+  .dog-ear--left {
+    left: 3px;
+    transform: rotate(-15deg);
+    animation: ear-flop 3s ease-in-out infinite;
+  }
+
+  .dog-ear--right {
+    right: 3px;
+    transform: rotate(15deg);
+    animation: ear-flop 3s ease-in-out infinite reverse;
+  }
+
+  @keyframes ear-flop {
+    0%, 100% { transform: rotate(-15deg); }
+    50% { transform: rotate(-25deg); }
+  }
+
+  .dog-face {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 36px;
+    height: 28px;
+  }
+
+  .dog-eye {
+    position: absolute;
+    top: 0;
+    width: 11px;
+    height: 11px;
+    background: white;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .dog-eye--left { left: 2px; }
+  .dog-eye--right { right: 2px; }
+
+  .dog-pupil {
+    width: 7px;
+    height: 7px;
+    background: var(--c-nose-dark);
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    animation: look-around 4s ease-in-out infinite;
+  }
+
+  @keyframes look-around {
+    0%, 40% { transform: translate(0, 0); }
+    50% { transform: translate(2px, -1px); }
+    60%, 100% { transform: translate(0, 0); }
+  }
+
+  .dog-nose {
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 7px;
+    background: var(--c-nose-dark);
+    border-radius: 50%;
+  }
+
+  .dog-tongue {
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 10px;
+    background: var(--c-tongue-pink);
+    border-radius: 0 0 50% 50%;
+    animation: pant 1.5s ease-in-out infinite;
+    transform-origin: top center;
+  }
+
+  @keyframes pant {
+    0%, 100% { transform: translateX(-50%) scaleY(1); }
+    50% { transform: translateX(-50%) scaleY(0.6); }
+  }
+
+  .dog-tail {
+    position: absolute;
+    right: -8px;
+    top: 5px;
+    width: 8px;
+    height: 30px;
+    background: var(--c-dog-brown);
+    border-radius: 4px;
+    transform-origin: bottom center;
+    animation: wag 0.4s ease-in-out infinite alternate;
+  }
+
+  @keyframes wag {
+    0% { transform: rotate(-25deg); }
+    100% { transform: rotate(25deg); }
+  }
+
+  .pawprint {
+    position: absolute;
+    font-size: 14px;
+    opacity: 0.3;
+    transform: rotate(-20deg);
+  }
+
+  .pawprint--1 { bottom: -15px; left: 110px; }
+  .pawprint--2 { bottom: -10px; left: 145px; transform: rotate(10deg); }
+  .pawprint--3 { bottom: -18px; left: 180px; transform: rotate(-5deg); }
+
+  /* ── Thought Bubble ── */
+  .thought-bubble {
+    position: absolute;
+    bottom: calc(8% + 90px);
+    left: calc(10% + 20px);
+    z-index: 6;
+    animation: thought-float 3s ease-in-out infinite;
+  }
+
+  .thought-text {
+    display: block;
+    background: var(--c-white);
+    color: var(--c-nose-dark);
+    font-family: 'Baloo 2', cursive;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    white-space: nowrap;
+  }
+
+  .bubble-dot {
+    position: absolute;
+    background: var(--c-white);
+    border-radius: 50%;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+
+  .bubble-dot--1 { width: 10px; height: 10px; bottom: -14px; left: 10px; }
+  .bubble-dot--2 { width: 7px; height: 7px; bottom: -24px; left: 5px; }
+  .bubble-dot--3 { width: 4px; height: 4px; bottom: -30px; left: 2px; }
+
+  @keyframes thought-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  /* ── Window Panel ── */
+  .window-panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: min(460px, 90vw);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow:
+      0 25px 80px rgba(0, 0, 0, 0.35),
+      0 0 0 1px rgba(255, 255, 255, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    animation: panel-appear 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  }
+
+  @keyframes panel-appear {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -45%) scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  .window-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    background: linear-gradient(180deg, #2a3a5c, #1e2d4a);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .window-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+
+  .window-dot--red { background: var(--c-berry); }
+  .window-dot--yellow { background: var(--c-warm-orange); }
+  .window-dot--green { background: var(--c-aurora-green); }
+
+  .window-title {
+    margin-left: auto;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+    font-family: 'Fredoka', monospace;
+    letter-spacing: 0.5px;
+  }
+
+  .window-body {
+    padding: 40px 36px 36px;
+    background: linear-gradient(
+      170deg,
+      rgba(15, 25, 50, 0.92),
+      rgba(20, 35, 65, 0.95)
+    );
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .frost-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(
+      90deg,
+      var(--c-aurora-green),
+      var(--c-aurora-teal),
+      var(--c-arctic-blue),
+      var(--c-aurora-purple),
+      var(--c-aurora-pink),
+      var(--c-warm-orange),
+      var(--c-aurora-green)
+    );
+    background-size: 300% 100%;
+    animation: frost-shimmer 4s linear infinite;
+  }
+
+  @keyframes frost-shimmer {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 300% 0%; }
+  }
+
+  /* ── Glitch 404 ── */
+  .glitch-404 {
+    font-family: 'Baloo 2', cursive;
+    font-size: clamp(72px, 15vw, 120px);
+    font-weight: 800;
+    line-height: 1;
+    margin: 0 0 8px;
+    background: linear-gradient(
+      135deg,
+      var(--c-ice) 0%,
+      var(--c-aurora-green) 25%,
+      var(--c-aurora-teal) 50%,
+      var(--c-aurora-purple) 75%,
+      var(--c-aurora-pink) 100%
+    );
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 5s ease-in-out infinite;
+    position: relative;
+  }
+
+  .glitch-404::before,
+  .glitch-404::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: inherit;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .glitch-404::before {
+    animation: glitch-1 3s infinite;
+    clip-path: inset(20% 0 60% 0);
+    opacity: 0.7;
+  }
+
+  .glitch-404::after {
+    animation: glitch-2 3s infinite;
+    clip-path: inset(60% 0 10% 0);
+    opacity: 0.7;
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  @keyframes glitch-1 {
+    0%, 90%, 100% { transform: translate(0); }
+    92% { transform: translate(-4px, 2px); }
+    94% { transform: translate(3px, -1px); }
+    96% { transform: translate(-2px, 1px); }
+  }
+
+  @keyframes glitch-2 {
+    0%, 88%, 100% { transform: translate(0); }
+    90% { transform: translate(3px, -2px); }
+    93% { transform: translate(-4px, 1px); }
+    95% { transform: translate(2px, -1px); }
+  }
+
+  .subtitle {
+    font-family: 'Baloo 2', cursive;
+    font-size: clamp(18px, 3.5vw, 24px);
+    font-weight: 700;
+    color: var(--c-powder);
+    margin: 0 0 8px;
+  }
+
+  .description {
+    font-size: clamp(13px, 2.5vw, 15px);
+    color: var(--c-ice);
+    opacity: 0.7;
+    margin: 0 0 28px;
+    line-height: 1.6;
+  }
+
+  .wiggle {
+    display: inline-block;
+    animation: wiggle 2s ease-in-out infinite;
+  }
+
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
+  }
+
+  .action-row {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .home-btn,
+  .cool-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-family: 'Baloo 2', cursive;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border: none;
+    cursor: pointer;
+  }
+
+  .home-btn {
+    background: linear-gradient(135deg, var(--c-aurora-green), var(--c-aurora-teal));
+    color: var(--c-midnight);
+    box-shadow: 0 4px 15px rgba(93, 232, 181, 0.3);
+  }
+
+  .home-btn:hover {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 8px 25px rgba(93, 232, 181, 0.45);
+    color: var(--c-midnight);
+  }
+
+  .cool-btn {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--c-ice);
+    border: 1.5px solid rgba(168, 218, 236, 0.25);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  .cool-btn:hover {
+    background: rgba(255, 255, 255, 0.14);
+    transform: translateY(-3px) scale(1.04);
+    border-color: rgba(168, 218, 236, 0.5);
+    color: var(--c-powder);
+  }
+
+  .btn-icon {
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .dog-scene {
+      left: 5%;
+      bottom: 5%;
+      transform: scale(0.8);
+      transform-origin: bottom left;
+    }
+
+    .thought-bubble {
+      left: calc(5% + 15px);
+      bottom: calc(5% + 75px);
+    }
+
+    .thought-text { font-size: 12px; }
+
+    .crystal--3,
+    .crystal--4 { display: none; }
+
+    .window-body { padding: 28px 20px 28px; }
+
+    .action-row { flex-direction: column; align-items: center; }
+
+    .home-btn, .cool-btn { width: 100%; max-width: 220px; justify-content: center; }
+  }
+
+  /* ── Hide base layout footer/header on 404 ── */
+  :global(header),
+  :global(footer),
+  :global(.sr-only) {
+    display: none !important;
+  }
+
+  :global(main) {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  :global(body) {
+    overflow: hidden;
+  }
+</style>
