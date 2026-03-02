@@ -94,21 +94,6 @@ const {
   </div>
 </section>
 
-<script>
-  document.querySelectorAll('[data-track]').forEach((el) => {
-    el.addEventListener('click', () => {
-      const action = el.getAttribute('data-track');
-      if (typeof gtag === 'function') {
-        gtag('event', action, {
-          event_category: 'hero',
-          event_label: action,
-          transport_type: 'beacon',
-        });
-      }
-    });
-  });
-</script>
-
 <style>
   .hero {
     background: var(--color-bg-cool);

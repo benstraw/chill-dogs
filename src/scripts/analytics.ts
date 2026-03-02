@@ -1,22 +1,34 @@
 /**
- * Lightweight analytics utility for Chill-Dogs.
+ * Lightweight, provider-agnostic analytics utility for Chill-Dogs.
  * Uses event delegation on [data-track] attributes.
- * Maps to GA4 gtag() when available, else logs to console in dev.
+ * Sends events to Plausible (primary) and GA4 (secondary) when available.
+ * Falls back to console logging in dev mode.
  */
 
 declare global {
   interface Window {
     gtag?: (...args: any[]) => void;
     dataLayer?: any[];
+    plausible?: (...args: any[]) => void;
   }
 }
 
 export function track(eventName: string, props: Record<string, any>): void {
   if (typeof window === 'undefined') return;
 
+  let sent = false;
+
+  if (window.plausible) {
+    window.plausible(eventName, { props });
+    sent = true;
+  }
+
   if (window.gtag) {
     window.gtag('event', eventName, props);
-  } else if (import.meta.env.DEV) {
+    sent = true;
+  }
+
+  if (!sent && import.meta.env.DEV) {
     console.log(`[analytics] ${eventName}`, props);
   }
 }

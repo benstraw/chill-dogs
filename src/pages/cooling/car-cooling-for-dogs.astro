@@ -15,10 +15,7 @@ const products = getProductsByCategory(category);
 ---
 
 <BaseLayout title={meta.title} description={meta.description}>
-  <script slot="head" type="module">
-    import { init } from '/src/scripts/analytics.ts';
-    init();
-  </script>
+
 
   <Hero
     title={meta.heroHeadline}

@@ -59,6 +59,14 @@ Self-hosted fonts via `@fontsource`: Nunito Variable (headings), Inter (body).
 
 All Amazon affiliate links **must** use the `AffiliateLink.astro` component which enforces `rel="nofollow sponsored noopener" target="_blank"` and adds `data-affiliate="true"` for click tracking. Products are defined in markdown frontmatter `products` array with affiliate URLs using tag `chill-dogs-20`.
 
+### Analytics
+
+Event tracking is provider-agnostic via `src/scripts/analytics.ts`. Plausible (`PUBLIC_PLAUSIBLE_DOMAIN`) is the primary provider; GA4 (`PUBLIC_GA_ID`) is optional and runs alongside it. Both are loaded by `src/components/Analytics.astro`, which also calls `init()` globally — do not add per-page `init()` calls.
+
+To track clicks, add `data-track="event_name"` to any element. Additional `data-*` attributes become event properties. For non-click events, import `track()` from `src/scripts/analytics.ts`.
+
+Current events: `hero_click_cooling`, `hero_click_calming`, `amazon_outbound_click`, `collector_to_converter_click`, `toc_click`.
+
 ### Path Aliases
 
 `@components/`, `@layouts/`, `@styles/`, `@data/`, `@utils/` — configured in tsconfig.json.
