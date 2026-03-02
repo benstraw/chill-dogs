@@ -24,6 +24,9 @@ Amazon Associates affiliate site for dog cooling and calming products. Built as 
 bun run dev       # Dev server at localhost:4321
 bun run build     # Static build → dist/
 bun run preview   # Preview the built site
+bun run test      # Full Vitest suite
+bun run test:smoke # Built-site smoke tests for key pages
+bun run test:coverage # Coverage for src/utils and src/scripts
 ```
 
 ---
@@ -192,6 +195,26 @@ Import `track()` directly when you need to fire events outside of click delegati
 import { track } from '../scripts/analytics';
 track('custom_event', { key: 'value' });
 ```
+
+---
+
+## Testing
+
+The test suite is split into fast unit tests and a built-site smoke layer:
+
+| Command | What it checks |
+|---|---|
+| `bun run test` | Full Vitest suite |
+| `bun run test:smoke` | Builds the site and verifies key rendered `.astro` output |
+| `bun run test:coverage` | Coverage report for `src/utils/**` and `src/scripts/**` |
+
+The smoke tests are intentionally narrow and stable. They verify:
+
+- homepage funnel CTAs route to `/cooling/` and `/calming/`
+- key converter pages emit Amazon affiliate links with required attributes and the `chill-dogs-20` tag
+- legal and SEO basics like `noindex`, canonical tags, `robots.txt`, and sitemap output
+
+Pre-commit runs both the Vitest suite and the smoke tests, so broken rendered output blocks commits before it reaches `main`.
 
 ---
 
