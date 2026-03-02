@@ -258,7 +258,8 @@ A `netlify.toml` is also present with equivalent build config and security heade
 
 - [ ] Connect Vercel project and set up auto-deploy from `main`
 - [ ] Point `chill-dogs.com` domain to Vercel; confirm SSL
-- [x] Set up analytics — Plausible (primary) + GA4 (optional); wired via `src/components/Analytics.astro` with global `init()` and `data-track` event delegation
+- [x] Set up analytics — Plausible (primary) + GA4 (optional) + PostHog; wired via `src/components/Analytics.astro` with global `init()` and `data-track` event delegation
+- [ ] **Set up PostHog reverse proxy on Netlify/Vercel** — PostHog scripts are blocked by Firefox Enhanced Tracking Protection and ad blockers. Proxy `/ingest/*` → `us.posthog.com/*` so the SDK loads from the same origin. See [PostHog reverse proxy docs](https://posthog.com/docs/advanced/proxy). Critical for accurate analytics coverage.
 - [ ] Add OG image (`/public/og-default.jpg`) — currently referenced but missing
 - [ ] Add `favicon.svg` — currently referenced but missing
 - [ ] Evaluate hero experiment winner after 2 weeks / 200+ primary CTA clicks per variant; promote winner to default, retire losing variant URLs

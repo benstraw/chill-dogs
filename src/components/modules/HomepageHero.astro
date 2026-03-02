@@ -62,7 +62,7 @@ const { variant } = Astro.props;
       <p class="hp-pane-sub">
         Cooling mats, vests, and hydration picks for hot days and active dogs.
       </p>
-      <a class="hp-cta hp-cta--cool" href="/cooling/" data-cta="cooling">
+      <a class="hp-cta hp-cta--cool" href="/cooling/" data-cta="cooling" data-track="hero_click_cooling" data-variant={variant}>
         Explore cooling picks
       </a>
     </div>
@@ -72,7 +72,7 @@ const { variant } = Astro.props;
       <p class="hp-pane-sub">
         Calming aids, wraps, and enrichment tools for anxious or restless dogs.
       </p>
-      <a class="hp-cta hp-cta--calm" href="/calming/" data-cta="calming">
+      <a class="hp-cta hp-cta--calm" href="/calming/" data-cta="calming" data-track="hero_click_calming" data-variant={variant}>
         Explore calming picks
       </a>
     </div>

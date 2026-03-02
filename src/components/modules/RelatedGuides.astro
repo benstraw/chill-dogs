@@ -18,7 +18,13 @@ const { heading = 'Related Guides', guides } = Astro.props;
     <h2>{heading}</h2>
     <div class="related-guides-grid">
       {guides.map(({ href, title, description }) => (
-        <a href={href} class="related-guide-card">
+        <a
+          href={href}
+          class="related-guide-card"
+          data-track="collector_to_converter_click"
+          data-to-page={href}
+          data-link-position="related-guides"
+        >
           <h3>{title}</h3>
           <p>{description}</p>
           <span class="related-guide-link">Read the guide &rarr;</span>

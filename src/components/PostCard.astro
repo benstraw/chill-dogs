@@ -15,7 +15,7 @@ const categoryLabels: Record<string, string> = {
 };
 ---
 
-<a href={href} class="post-card">
+<a href={href} class="post-card" data-track="collector_to_converter_click" data-to-page={href} data-link-position="post-card">
   {image && (
     <div class="post-card-image">
       <img src={image} alt="" loading="lazy" />

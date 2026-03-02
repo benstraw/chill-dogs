@@ -22,6 +22,7 @@ const products = getProductsByCategory(category);
     subtitle={meta.introCopy}
     disclaimer="As an Amazon Associate, we earn from qualifying purchases."
     primaryCta={{ label: 'See #1 Pick on Amazon', href: products[0].amazonUrl }}
+    pageSlug={pageSlug}
   />
 
   <div class="converter-content">

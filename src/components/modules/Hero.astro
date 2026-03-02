@@ -1,13 +1,29 @@
 ---
+import AffiliateLink from '@components/AffiliateLink.astro';
+
+interface HeroCta {
+  label: string;
+  href: string;
+  isAffiliate?: boolean;
+}
+
 interface Props {
   title: string;
   subtitle?: string;
   disclaimer?: string;
-  primaryCta: { label: string; href: string };
-  secondaryCta?: { label: string; href: string };
+  primaryCta: HeroCta;
+  secondaryCta?: HeroCta;
+  pageSlug?: string;
 }
 
-const { title, subtitle, disclaimer, primaryCta, secondaryCta } = Astro.props;
+const { title, subtitle, disclaimer, primaryCta, secondaryCta, pageSlug = '' } = Astro.props;
+
+function isAmazonUrl(href: string) {
+  return href.includes('amazon.com') || href.includes('amzn.');
+}
+
+const primaryIsAffiliate = primaryCta.isAffiliate ?? isAmazonUrl(primaryCta.href);
+const secondaryIsAffiliate = secondaryCta ? (secondaryCta.isAffiliate ?? isAmazonUrl(secondaryCta.href)) : false;
 ---
 
 <section class="hero">
@@ -16,13 +32,53 @@ const { title, subtitle, disclaimer, primaryCta, secondaryCta } = Astro.props;
     {subtitle && <p class="hero-subtitle">{subtitle}</p>}
     {disclaimer && <p class="hero-disclaimer">{disclaimer}</p>}
     <div class="hero-ctas">
-      <a href={primaryCta.href} class="hero-cta hero-cta--primary">
-        {primaryCta.label}
-      </a>
-      {secondaryCta && (
-        <a href={secondaryCta.href} class="hero-cta hero-cta--secondary">
-          {secondaryCta.label}
+      {primaryIsAffiliate ? (
+        <AffiliateLink
+          href={primaryCta.href}
+          class="hero-cta hero-cta--primary"
+          data-track="amazon_outbound_click"
+          data-page-slug={pageSlug}
+          data-position="hero-primary"
+          data-destination="amazon.com"
+        >
+          {primaryCta.label}
+        </AffiliateLink>
+      ) : (
+        <a
+          href={primaryCta.href}
+          class="hero-cta hero-cta--primary"
+          data-track="collector_to_converter_click"
+          data-from-page={pageSlug}
+          data-to-page={primaryCta.href}
+          data-link-position="hero-primary"
+        >
+          {primaryCta.label}
         </a>
+      )}
+      {secondaryCta && (
+        secondaryIsAffiliate ? (
+          <AffiliateLink
+            href={secondaryCta.href}
+            class="hero-cta hero-cta--secondary"
+            data-track="amazon_outbound_click"
+            data-page-slug={pageSlug}
+            data-position="hero-secondary"
+            data-destination="amazon.com"
+          >
+            {secondaryCta.label}
+          </AffiliateLink>
+        ) : (
+          <a
+            href={secondaryCta.href}
+            class="hero-cta hero-cta--secondary"
+            data-track="collector_to_converter_click"
+            data-from-page={pageSlug}
+            data-to-page={secondaryCta.href}
+            data-link-position="hero-secondary"
+          >
+            {secondaryCta.label}
+          </a>
+        )
       )}
     </div>
   </div>

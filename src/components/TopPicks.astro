@@ -24,7 +24,7 @@ const topProducts = tagOrder
   <div class="top-picks">
     <h2 class="top-picks-title">Our Top Picks</h2>
     <div class="top-picks-grid">
-      {topProducts.map((product) => (
+      {topProducts.map((product, i) => (
         <div class="pick-card">
           <span class="pick-tag">{tagLabels[product.tag!]}</span>
           <h3 class="pick-name">{product.name}</h3>
@@ -32,7 +32,14 @@ const topProducts = tagOrder
             <p class="pick-price">{product.priceNote}</p>
           )}
           {product.affiliateUrl && (
-            <AffiliateLink href={product.affiliateUrl} class="pick-cta">
+            <AffiliateLink
+              href={product.affiliateUrl}
+              class="pick-cta"
+              data-track="amazon_outbound_click"
+              data-product-name={product.name}
+              data-position={String(i + 1)}
+              data-destination="amazon.com"
+            >
               View on Amazon
             </AffiliateLink>
           )}
