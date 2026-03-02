@@ -63,8 +63,9 @@ scaffolding before writing any content.
 Two typed TypeScript data files were created for the core revenue categories:
 
 - `src/data/cooling-products.ts` — 11 cooling products (3 mats, 2 bandanas,
-  3 vests, 2 freezable toys, 1 bonus). Includes `CategoryMeta` for each
-  subcategory (titles, FAQs, internal links).
+  3 vests, 2 freezable toys, 1 bonus) + 4 car-cooling products (magnetic window
+  shades, clip-on fan, collapsible bowl, seat hammock). Includes `CategoryMeta`
+  for each subcategory (titles, FAQs, internal links).
 - `src/data/calming-products.ts` — 8 calming products (1 anxiety wrap, 3
   calming treats, 2 lick mats, 2 snuffle mats).
 
@@ -386,3 +387,78 @@ Items identified for the next iteration cycle, in priority order:
    pages for product-rich results in Google Search.
 8. **Affiliate tag verification** — Confirm `chill-dogs-20` is active and
    approved in Amazon Associates.
+
+---
+
+## Phase 9 — Road Trip Collector + Car Cooling/Calming Converters
+
+**Goal:** Add a cross-category collector page targeting road-trip search traffic
+and route visitors into two new focused converter pages — one for car cooling
+gear and one for travel calming aids.
+
+### Rationale
+
+Road trips represent a high-intent use case that combines both revenue categories:
+dogs in hot cars need cooling gear; anxious dogs in cars need calming aids. A
+single collector bridges both pillars and adds a new SEO entry point without
+duplicating product data already on the pillar pages.
+
+### New pages
+
+| URL | Type | Target action |
+|---|---|---|
+| `/travel/rhys-road-trip-chill-kit/` | collector | Route to `/cooling/car-cooling-for-dogs/` or `/calming/car-anxiety-for-dogs/` |
+| `/cooling/car-cooling-for-dogs/` | converter | Affiliate click to Amazon (car cooling gear) |
+| `/calming/car-anxiety-for-dogs/` | converter | Affiliate click to Amazon (travel calming aids) |
+
+### Collector page structure (`/travel/rhys-road-trip-chill-kit/`)
+
+The page follows the Web Systems collector pattern: one job (route to converters),
+two primary CTAs above the fold, and all product content organized to support
+that routing decision.
+
+Sections:
+1. Hero + above-fold CTA bar (Cooling + Calming buttons)
+2. Summary block + "what to buy first" quick list
+3. Table of contents (6 anchors)
+4. "The Real Setup" — Rhys's cross-country setup (fan, ice, magnetic shades, routine)
+5. Problem → Solution map table (5 road trip scenarios)
+6. Cooling section — shades, fan, mats, vests; each subsection links to cooling converter
+7. Calming section — wraps, chews, routine, lick mats; each subsection links to calming converter
+8. Road Trip Checklist — minimal kit and full cross-country kit, each with converter CTA
+9. FAQ — 8 questions covering cooling, hydration, carsickness, calming chews
+10. Closing CTAs — both converters repeated
+
+### Analytics attributes
+
+All primary CTAs carry `data-cta` for click tracking in GA4:
+
+```html
+data-cta="roadtrip_to_cooling"   <!-- all cooling converter CTAs -->
+data-cta="roadtrip_to_calming"   <!-- all calming converter CTAs -->
+```
+
+Both also carry `data-track="collector_to_converter_click"` for the existing
+`analytics.ts` event delegation system.
+
+### Data model changes (`src/data/cooling-products.ts`)
+
+Added a `car-cooling` product category with 4 products:
+
+| Product | Purpose |
+|---|---|
+| Enovoe Magnetic Car Window Shades (4-Pack) | Passive sun/UV blocking on rear windows |
+| K&H Pet Products Clip-On Travel Fan | Active airflow directed at the back seat |
+| Outward Hound Port-A-Bowl Collapsible Bowl | Pit-stop hydration |
+| 4Knines Dog Seat Cover Hammock | Cooler surface + back-seat safety positioning |
+
+`categoryMeta['car-cooling']` added with title, description, hero copy, FAQs, and
+internal links (following the same pattern as `cooling-mats`, `cooling-vests`, etc.).
+
+### Internal linking additions
+
+- `CoolingHubBody.astro` — Road Trip card added; grid updated from 2→3 columns.
+- `CalmingHubBody.astro` — Road Trip card added; grid updated from 2→3 columns.
+- `best-cooling-products-for-dogs.astro` — Road Trip entry added to `RelatedGuides`.
+- `best-calming-products-for-anxious-dogs.astro` — Road Trip entry added to `RelatedGuides`.
+- Both new converter pages link back to the collector and to each other's hub.
