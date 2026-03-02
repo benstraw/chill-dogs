@@ -6,6 +6,7 @@ describe('track', () => {
     vi.restoreAllMocks();
     delete (window as any).gtag;
     delete (window as any).plausible;
+    delete (window as any).posthog;
   });
 
   it('calls window.gtag when it is available', () => {
@@ -79,6 +80,35 @@ describe('track', () => {
     delete (window as any).plausible;
     expect(() => track('test_event', {})).not.toThrow();
   });
+
+  it('calls window.posthog.capture when posthog is available', () => {
+    const capture = vi.fn();
+    (window as any).posthog = { capture };
+
+    track('test_event', { label: 'foo' });
+
+    expect(capture).toHaveBeenCalledWith('test_event', { label: 'foo' });
+  });
+
+  it('sends to posthog, plausible, and gtag when all three are available', () => {
+    const capture = vi.fn();
+    const plausible = vi.fn();
+    const gtag = vi.fn();
+    (window as any).posthog = { capture };
+    (window as any).plausible = plausible;
+    (window as any).gtag = gtag;
+
+    track('triple_event', { product: 'mat' });
+
+    expect(capture).toHaveBeenCalledWith('triple_event', { product: 'mat' });
+    expect(plausible).toHaveBeenCalledWith('triple_event', { props: { product: 'mat' } });
+    expect(gtag).toHaveBeenCalledWith('event', 'triple_event', { product: 'mat' });
+  });
+
+  it('does not throw when window.posthog is absent', () => {
+    delete (window as any).posthog;
+    expect(() => track('test_event', {})).not.toThrow();
+  });
 });
 
 describe('init — affiliate click tracking', () => {
@@ -90,6 +120,7 @@ describe('init — affiliate click tracking', () => {
     vi.restoreAllMocks();
     delete (window as any).gtag;
     delete (window as any).plausible;
+    delete (window as any).posthog;
   });
 
   it('fires track for a [data-track] click', () => {
@@ -168,6 +199,22 @@ describe('init — affiliate click tracking', () => {
     expect(plausible).toHaveBeenCalledWith(
       'hero_click_cooling',
       { props: expect.objectContaining({ section: 'hero' }) }
+    );
+  });
+
+  it('fires posthog.capture for a [data-track] click', () => {
+    const capture = vi.fn();
+    (window as any).posthog = { capture };
+
+    document.body.innerHTML =
+      '<a data-track="amazon_outbound_click" data-asin="B002" href="#">Amazon</a>';
+
+    init();
+    document.querySelector('a')!.click();
+
+    expect(capture).toHaveBeenCalledWith(
+      'amazon_outbound_click',
+      expect.objectContaining({ asin: 'B002' })
     );
   });
 });
