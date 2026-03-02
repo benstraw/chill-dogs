@@ -22,7 +22,7 @@ export function track(eventName: string, props: Record<string, any>): void {
 
   let sent = false;
 
-  if (window.posthog) {
+  if (window.posthog && typeof window.posthog.capture === 'function') {
     window.posthog.capture(eventName, props);
     sent = true;
   }
