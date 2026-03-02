@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
-import HeroExperiment from '@components/modules/HeroExperiment.astro';
+import CalmingHubHero from '@components/modules/CalmingHubHero.astro';
 import CalmingHubBody from '@components/modules/CalmingHubBody.astro';
 import JsonLd from '@components/JsonLd.astro';
 
@@ -23,9 +23,7 @@ const collectionSchema = {
   navAccent="var(--color-sage)"
 >
   <JsonLd slot="head" schema={collectionSchema} />
-  <HeroExperiment
-    variant="a"
-    theme="calming"
+  <CalmingHubHero
     headline="Chill starts here."
     subhead="Anxiety wraps, calming chews, and routines for anxious dogs."
     primaryCta={{ label: 'See top calming picks', href: '/calming/best-calming-products-for-anxious-dogs/' }}
