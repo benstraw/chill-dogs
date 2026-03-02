@@ -140,6 +140,61 @@ products:
 
 ---
 
+## Analytics
+
+Event tracking uses a provider-agnostic system that supports **Plausible** (recommended) and **GA4** simultaneously.
+
+### Setup
+
+Set environment variables in your hosting platform (Vercel):
+
+| Variable | Required | Example |
+|---|---|---|
+| `PUBLIC_PLAUSIBLE_DOMAIN` | Recommended | `chill-dogs.com` |
+| `PUBLIC_GA_ID` | Optional | `G-XXXXXXXXXX` |
+
+Both can run at the same time. If neither is set, events log to the browser console in dev mode.
+
+### How it works
+
+1. `src/components/Analytics.astro` loads provider scripts and calls `init()` globally (included via `BaseLayout.astro`)
+2. `src/scripts/analytics.ts` sets up a single `click` event delegation listener on `[data-track]` attributes
+3. Every click on an element with `data-track="event_name"` fires to all configured providers
+4. Additional `data-*` attributes on the same element are sent as event properties (e.g. `data-product-name`, `data-asin`, `data-position`)
+
+### Tracked events
+
+| Event name | Fired from | Purpose |
+|---|---|---|
+| `hero_click_cooling` | HeroSection | Homepage CTA → cooling hub |
+| `hero_click_calming` | HeroSection | Homepage CTA → calming hub |
+| `amazon_outbound_click` | ProductCards, ComparisonTable, BonusCallout | Outbound affiliate click (uses `sendBeacon` fallback) |
+| `collector_to_converter_click` | HubBody, SummaryBlock, InternalLinkStrip | Internal routing from collector → converter pages |
+| `toc_click` | Toc | Table of contents navigation |
+
+### Adding a tracked element
+
+Add `data-track="your_event_name"` to any clickable element. Extra `data-*` attributes become event props:
+
+```html
+<a href="/cooling/cooling-mats/" data-track="collector_to_converter_click" data-destination="cooling-mats">
+  See cooling mats
+</a>
+```
+
+For Plausible, register matching **Goals** in the Plausible dashboard for each event name.
+
+### Programmatic tracking
+
+Import `track()` directly when you need to fire events outside of click delegation:
+
+```ts
+import { track } from '../scripts/analytics';
+track('custom_event', { key: 'value' });
+```
+
+---
+
 ## Affiliate links
 
 All Amazon links must use the `AffiliateLink` component — never a plain `<a>` tag:
@@ -199,54 +254,11 @@ A `netlify.toml` is also present with equivalent build config and security heade
 
 ---
 
-## Analytics
-
-Event tracking uses a dual-sink approach: events fire to both **Plausible** and **GA4** when configured.
-
-### Setup
-
-Set environment variables (copy `.env.example`):
-
-```
-PUBLIC_GA_ID=G-XXXXXXXXXX        # GA4 Measurement ID (optional)
-PUBLIC_PLAUSIBLE_DOMAIN=chill-dogs.com  # Plausible domain (optional)
-```
-
-### Architecture
-
-- `src/scripts/analytics.ts` — `track(eventName, props)` sends to `window.gtag` (GA4) and/or `window.plausible` (Plausible), falling back to `console.log` in dev.
-- `src/components/Analytics.astro` — loads GA4 and Plausible scripts and calls `init()` once globally; included in `BaseLayout.astro`.
-- Event delegation: `init()` attaches a single `click` listener on `document` that fires whenever any `[data-track]` element is clicked. No per-page wiring needed.
-- Outbound Amazon clicks additionally fire `navigator.sendBeacon('/api/track', …)` as a reliability fallback.
-
-### Tracked events
-
-| Event | Trigger | Key props |
-|---|---|---|
-| `hero_click_cooling` | Hero CTA — cooling | — |
-| `hero_click_calming` | Hero CTA — calming | — |
-| `amazon_outbound_click` | Any `[data-track="amazon_outbound_click"]` link | `asin`, `product_name` |
-| `affiliate_click` | Any `[data-affiliate="true"]` link via `[data-track]` | `product_name` |
-
-### Adding a new tracked event
-
-Add `data-track="event_name"` plus any `data-*` props to the element:
-
-```html
-<a href="…" data-track="amazon_outbound_click" data-asin="B001XYZ" data-product-name="Cool Mat">
-  Buy on Amazon
-</a>
-```
-
-The `data-*` attributes (excluding `data-track` itself) are forwarded as snake_cased props.
-
----
-
 ## TODO
 
 - [ ] Connect Vercel project and set up auto-deploy from `main`
 - [ ] Point `chill-dogs.com` domain to Vercel; confirm SSL
-- [x] Set up analytics — Plausible + GA4 dual-sink via `src/scripts/analytics.ts`; events captured via `[data-track]` delegation wired in `src/components/Analytics.astro`
+- [x] Set up analytics — Plausible (primary) + GA4 (optional); wired via `src/components/Analytics.astro` with global `init()` and `data-track` event delegation
 - [ ] Add OG image (`/public/og-default.jpg`) — currently referenced but missing
 - [ ] Add `favicon.svg` — currently referenced but missing
 - [ ] Evaluate hero experiment winner after 2 weeks / 200+ primary CTA clicks per variant; promote winner to default, retire losing variant URLs

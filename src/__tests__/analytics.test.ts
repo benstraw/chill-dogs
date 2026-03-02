@@ -17,8 +17,30 @@ describe('track', () => {
     expect(gtag).toHaveBeenCalledWith('event', 'test_event', { label: 'foo' });
   });
 
-  it('does not throw when window.gtag is absent', () => {
+  it('calls window.plausible when it is available', () => {
+    const plausible = vi.fn();
+    (window as any).plausible = plausible;
+
+    track('test_event', { label: 'foo' });
+
+    expect(plausible).toHaveBeenCalledWith('test_event', { props: { label: 'foo' } });
+  });
+
+  it('sends to both providers when both are available', () => {
+    const gtag = vi.fn();
+    const plausible = vi.fn();
+    (window as any).gtag = gtag;
+    (window as any).plausible = plausible;
+
+    track('dual_event', { product: 'mat' });
+
+    expect(gtag).toHaveBeenCalledWith('event', 'dual_event', { product: 'mat' });
+    expect(plausible).toHaveBeenCalledWith('dual_event', { props: { product: 'mat' } });
+  });
+
+  it('does not throw when no providers are available', () => {
     delete (window as any).gtag;
+    delete (window as any).plausible;
     expect(() => track('test_event', {})).not.toThrow();
   });
 
@@ -85,6 +107,23 @@ describe('init — affiliate click tracking', () => {
       'event',
       'affiliate_click',
       expect.objectContaining({ product_name: 'Cool Harness' })
+    );
+  });
+
+  it('fires plausible for a [data-track] click', () => {
+    const plausible = vi.fn();
+    (window as any).plausible = plausible;
+
+    document.body.innerHTML =
+      '<a data-track="affiliate_click" data-product-name="Cool Harness" href="#">Buy</a>';
+
+    init();
+
+    document.querySelector('a')!.click();
+
+    expect(plausible).toHaveBeenCalledWith(
+      'affiliate_click',
+      { props: expect.objectContaining({ product_name: 'Cool Harness' }) }
     );
   });
 
