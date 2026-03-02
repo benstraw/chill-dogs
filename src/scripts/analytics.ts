@@ -10,6 +10,10 @@ declare global {
     gtag?: (...args: any[]) => void;
     dataLayer?: any[];
     plausible?: (...args: any[]) => void;
+    posthog?: {
+      capture: (eventName: string, props?: Record<string, any>) => void;
+      [key: string]: any;
+    };
   }
 }
 
@@ -17,6 +21,11 @@ export function track(eventName: string, props: Record<string, any>): void {
   if (typeof window === 'undefined') return;
 
   let sent = false;
+
+  if (window.posthog && typeof window.posthog.capture === 'function') {
+    window.posthog.capture(eventName, props);
+    sent = true;
+  }
 
   if (window.plausible) {
     window.plausible(eventName, { props });

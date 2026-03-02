@@ -61,7 +61,7 @@ All Amazon affiliate links **must** use the `AffiliateLink.astro` component whic
 
 ### Analytics
 
-Event tracking is provider-agnostic via `src/scripts/analytics.ts`. Plausible (`PUBLIC_PLAUSIBLE_DOMAIN`) is the primary provider; GA4 (`PUBLIC_GA_ID`) is optional and runs alongside it. Both are loaded by `src/components/Analytics.astro`, which also calls `init()` globally — do not add per-page `init()` calls.
+Event tracking is provider-agnostic via `src/scripts/analytics.ts`. **PostHog** (`PUBLIC_POSTHOG_KEY`) is the primary analytics and experimentation platform; Plausible (`PUBLIC_PLAUSIBLE_DOMAIN`) and GA4 (`PUBLIC_GA_ID`) are optional and run alongside it. All three are loaded by `src/components/Analytics.astro`, which also calls `init()` globally — do not add per-page `init()` calls.
 
 To track clicks, add `data-track="event_name"` to any element. Additional `data-*` attributes become event properties. For non-click events, import `track()` from `src/scripts/analytics.ts`.
 
@@ -77,9 +77,17 @@ Create a markdown file in `src/data/posts/{category}/` with required frontmatter
 
 ## Analytics
 
-Event tracking uses `src/scripts/analytics.ts`. The `track(eventName, props)` function fires to both GA4 (`window.gtag`) and Plausible (`window.plausible`) when configured, falling back to `console.log` in dev.
+Event tracking uses `src/scripts/analytics.ts`. The `track(eventName, props)` function fires to PostHog (`window.posthog.capture`), GA4 (`window.gtag`), and Plausible (`window.plausible`) when configured, falling back to `console.log` in dev.
 
 - `src/components/Analytics.astro` calls `init()` once globally — **do not** add per-page `init()` calls.
 - Wire events via `data-track="event_name"` on elements; extra `data-*` attrs become props.
 - Amazon outbound clicks use `data-track="amazon_outbound_click"` with `data-asin` and `data-product-name`.
 - All affiliate links must use `AffiliateLink.astro` (enforces `data-affiliate="true"`, `rel`, `target`).
+
+### PostHog Setup
+
+1. Create a project at [posthog.com](https://posthog.com).
+2. Copy the **Project API Key** from Project Settings.
+3. Set `PUBLIC_POSTHOG_KEY=<your-key>` in `.env` (and in your Netlify environment variables).
+4. Optionally set `PUBLIC_POSTHOG_HOST` — defaults to `https://us.i.posthog.com`; use `https://eu.i.posthog.com` for EU cloud or your self-hosted URL.
+5. PostHog is used for experiments (A/B tests via Feature Flags), funnel analysis, and session recordings.
