@@ -1,5 +1,6 @@
 ---
 const gaId = import.meta.env.PUBLIC_GA_ID;
+const plausibleDomain = import.meta.env.PUBLIC_PLAUSIBLE_DOMAIN;
 ---
 
 {gaId && (
@@ -10,18 +11,15 @@ const gaId = import.meta.env.PUBLIC_GA_ID;
       function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
       gtag('config', gaId);
-
-      // Track affiliate link clicks
-      document.addEventListener('click', function(e) {
-        const link = e.target.closest('[data-affiliate="true"]');
-        if (link) {
-          gtag('event', 'affiliate_click', {
-            event_category: 'affiliate',
-            event_label: link.href,
-            transport_type: 'beacon',
-          });
-        }
-      });
     </script>
   </>
 )}
+
+{plausibleDomain && (
+  <script defer data-domain={plausibleDomain} src="https://plausible.io/js/script.js"></script>
+)}
+
+<script>
+  import { init } from '../scripts/analytics.ts';
+  init();
+</script>

@@ -66,3 +66,12 @@ All Amazon affiliate links **must** use the `AffiliateLink.astro` component whic
 ## Adding Content
 
 Create a markdown file in `src/data/posts/{category}/` with required frontmatter fields: `title`, `description`, `category`, `date`, `pageType`. Converter pages need a `products` array. Set `draft: true` to exclude from build.
+
+## Analytics
+
+Event tracking uses `src/scripts/analytics.ts`. The `track(eventName, props)` function fires to both GA4 (`window.gtag`) and Plausible (`window.plausible`) when configured, falling back to `console.log` in dev.
+
+- `src/components/Analytics.astro` calls `init()` once globally — **do not** add per-page `init()` calls.
+- Wire events via `data-track="event_name"` on elements; extra `data-*` attrs become props.
+- Amazon outbound clicks use `data-track="amazon_outbound_click"` with `data-asin` and `data-product-name`.
+- All affiliate links must use `AffiliateLink.astro` (enforces `data-affiliate="true"`, `rel`, `target`).

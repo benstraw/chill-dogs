@@ -5,6 +5,7 @@ describe('track', () => {
   afterEach(() => {
     vi.restoreAllMocks();
     delete (window as any).gtag;
+    delete (window as any).plausible;
   });
 
   it('calls window.gtag when it is available', () => {
@@ -30,6 +31,32 @@ describe('track', () => {
 
     expect(gtag).toHaveBeenCalledWith('event', 'view_item', props);
   });
+
+  it('calls window.plausible when it is available', () => {
+    const plausible = vi.fn();
+    (window as any).plausible = plausible;
+
+    track('test_event', { label: 'foo' });
+
+    expect(plausible).toHaveBeenCalledWith('test_event', { props: { label: 'foo' } });
+  });
+
+  it('calls both gtag and plausible when both are available', () => {
+    const gtag = vi.fn();
+    const plausible = vi.fn();
+    (window as any).gtag = gtag;
+    (window as any).plausible = plausible;
+
+    track('test_event', { label: 'bar' });
+
+    expect(gtag).toHaveBeenCalledWith('event', 'test_event', { label: 'bar' });
+    expect(plausible).toHaveBeenCalledWith('test_event', { props: { label: 'bar' } });
+  });
+
+  it('does not throw when window.plausible is absent', () => {
+    delete (window as any).plausible;
+    expect(() => track('test_event', {})).not.toThrow();
+  });
 });
 
 describe('init — affiliate click tracking', () => {
@@ -40,6 +67,7 @@ describe('init — affiliate click tracking', () => {
   afterEach(() => {
     vi.restoreAllMocks();
     delete (window as any).gtag;
+    delete (window as any).plausible;
   });
 
   it('fires track for a [data-track] click', () => {
@@ -85,6 +113,22 @@ describe('init — affiliate click tracking', () => {
     expect(sendBeacon).toHaveBeenCalledWith(
       '/api/track',
       expect.any(Blob)
+    );
+  });
+
+  it('fires plausible for a [data-track] click', () => {
+    const plausible = vi.fn();
+    (window as any).plausible = plausible;
+
+    document.body.innerHTML =
+      '<a data-track="hero_click_cooling" data-section="hero" href="#">Shop Cooling</a>';
+
+    init();
+    document.querySelector('a')!.click();
+
+    expect(plausible).toHaveBeenCalledWith(
+      'hero_click_cooling',
+      { props: expect.objectContaining({ section: 'hero' }) }
     );
   });
 });
