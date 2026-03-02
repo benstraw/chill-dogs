@@ -61,7 +61,15 @@ registry.
 | `/calming/best-calming-products-for-anxious-dogs/` | collector | Route to product converters | Traffic + click-through to converters | `BaseLayout` |
 | `/calming/best-thundershirt-alternatives/` | collector | Route to anxiety-wrap converters | Traffic + click-through | `BaseLayout` |
 
-### Content Collection Categories (markdown-driven)
+### Travel / Road Trip Category
+
+| URL | Type | Target action | Metric | Layout |
+|---|---|---|---|---|
+| `/travel/rhys-road-trip-chill-kit/` | collector | Route to `/cooling/car-cooling-for-dogs/` or `/calming/car-anxiety-for-dogs/` | Click-through to converters | `BaseLayout` |
+| `/cooling/car-cooling-for-dogs/` | converter | Affiliate click to Amazon (car cooling gear) | Conversion rate | `BaseLayout` |
+| `/calming/car-anxiety-for-dogs/` | converter | Affiliate click to Amazon (travel calming aids) | Conversion rate | `BaseLayout` |
+
+
 
 | URL pattern | Type | Target action | Layout |
 |---|---|---|---|
