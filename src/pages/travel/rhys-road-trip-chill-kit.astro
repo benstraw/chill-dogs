@@ -1,0 +1,1132 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import AffiliateLink from '@components/AffiliateLink.astro';
+import Hero from '@components/modules/Hero.astro';
+import Toc from '@components/modules/Toc.astro';
+import FAQ from '@components/modules/FAQ.astro';
+import Disclosure from '@components/modules/Disclosure.astro';
+import CalmingDisclaimer from '@components/modules/CalmingDisclaimer.astro';
+import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
+import CoolingProductCard from '@components/modules/CoolingProductCard.astro';
+import CalmingProductCard from '@components/modules/CalmingProductCard.astro';
+import JsonLd from '@components/JsonLd.astro';
+import { getProductsByCategory } from '@data/cooling-products';
+import { getCalmingProductsByCategory } from '@data/calming-products';
+
+const pageSlug = 'rhys-road-trip-chill-kit';
+
+const carCoolingProducts = getProductsByCategory('car-cooling');
+const coolingMats = getProductsByCategory('cooling-mats').slice(0, 2);
+const coolingVests = getProductsByCategory('cooling-vests').slice(0, 2);
+const anxietyWraps = getCalmingProductsByCategory('anxiety-wraps');
+const calmingTreats = getCalmingProductsByCategory('calming-treats').slice(0, 3);
+const lickMats = getCalmingProductsByCategory('lick-mats');
+
+const tocHeadings = [
+  { label: 'The Real Setup', anchor: 'real-setup' },
+  { label: 'Problem → Solution Map', anchor: 'problem-solution' },
+  { label: 'Cooling the Car', anchor: 'cooling' },
+  { label: 'Calming the Dog', anchor: 'calming' },
+  { label: 'Road Trip Checklist', anchor: 'checklist' },
+  { label: 'FAQ', anchor: 'faq' },
+];
+
+const roadTripFaqs = [
+  {
+    question: 'How do I keep a dog cool in the car without AC?',
+    answer:
+      'Combine passive and active methods: magnetic window shades block heat before it builds up; a clip-on fan keeps air moving over your dog; a cooling mat gives a cool surface to lie on. Schedule drives in the early morning or evening on very hot days, and stop every 1–2 hours to offer water.',
+  },
+  {
+    question: 'Are magnetic window shades safe for dogs in the car?',
+    answer:
+      'Yes — they attach to the door frame with magnets, so there is nothing adhesive or loose to chew or swallow. They do reduce visibility through that window, so check that your driver\'s sightlines are clear before driving.',
+  },
+  {
+    question: 'What is the best cooling mat for a car seat?',
+    answer:
+      'The Arf Pets Self Cooling Mat works well in car seats because it folds to fit crate or seat dimensions and activates on contact. For large dogs on longer trips, the K&H Cool Bed III provides more sustained cooling.',
+  },
+  {
+    question: 'What if my dog gets carsick?',
+    answer:
+      'Motion sickness and anxiety can overlap. Keep the car cool and well-ventilated, limit food 2–3 hours before travel, and face your dog forward if possible. If symptoms are severe or persistent, talk to your vet — prescription options exist for dogs with significant motion sickness.',
+  },
+  {
+    question: 'How often should we stop on a road trip with a dog?',
+    answer:
+      'Every 1–2 hours is a practical baseline. Dogs that are panting heavily, stressed, or in hot weather need more frequent breaks. Each stop is a good opportunity to offer water, allow a short walk, and let your dog decompress before getting back in.',
+  },
+  {
+    question: 'Is it safe to give calming chews on a road trip?',
+    answer:
+      'Calming chews are generally considered safe for occasional travel use. Give them 30–45 minutes before departure so they have time to work. Consult your vet before introducing supplements, especially if your dog takes other medications or has health conditions.',
+  },
+  {
+    question: 'Can I use a lick mat in the car?',
+    answer:
+      'Yes — spread peanut butter, plain yogurt, or wet food on the mat and give it to your dog during the drive. The repetitive licking can reduce stress in the moment. The LUKITO mat with suction cups is especially practical since it stays in place.',
+  },
+  {
+    question: 'What is a good minimal road trip kit for a dog?',
+    answer:
+      'Start with four items: magnetic window shades (passive cooling), a cooling mat (cool surface), a collapsible water bowl (hydration at every stop), and an anxiety wrap (if your dog shows travel stress). That covers the core problems without overcomplicating the setup.',
+  },
+];
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: "Rhys's Road Trip Chill Kit: Cooling + Calming Essentials for Long Drives",
+  description:
+    'Window fan, ice cooler, magnetic shades — a practical road trip cooling and calming setup built from one real cross-country drive with a dog.',
+  url: 'https://chill-dogs.com/travel/rhys-road-trip-chill-kit/',
+};
+---
+
+<BaseLayout
+  title="Rhys's Road Trip Chill Kit: Cooling + Calming Essentials for Long Drives"
+  description="Window fan, magnetic shades, and a cooler of ice — a practical cooling and calming road trip setup built from a real cross-country drive. Shop cooling and calming picks for dogs."
+>
+  <JsonLd slot="head" schema={articleSchema} />
+  <script slot="head" type="module">
+    import { init } from '/src/scripts/analytics.ts';
+    init();
+  </script>
+
+  <Hero
+    title="Rhys's Road Trip Chill Kit"
+    subtitle="Cooling + calming essentials for long drives — built from one real cross-country setup."
+    disclaimer="As an Amazon Associate, we earn from qualifying purchases."
+    primaryCta={{ label: 'Shop Cooling Road Trip Picks', href: '/cooling/car-cooling-for-dogs/' }}
+    secondaryCta={{ label: 'Shop Calming Travel Essentials', href: '/calming/car-anxiety-for-dogs/' }}
+  />
+
+  <div class="collector-content">
+
+    <!-- CTA attributes for click tracking -->
+    <section class="cta-bar">
+      <div class="cta-bar-inner">
+        <p class="cta-bar-label">Jump to what you need:</p>
+        <div class="cta-bar-buttons">
+          <a
+            href="/cooling/car-cooling-for-dogs/"
+            class="cta-btn cta-btn--cool"
+            data-cta="roadtrip_to_cooling"
+            data-track="collector_to_converter_click"
+            data-from-page={pageSlug}
+            data-to-page="/cooling/car-cooling-for-dogs/"
+            data-link-position="above-fold"
+          >
+            Cooling Picks
+          </a>
+          <a
+            href="/calming/car-anxiety-for-dogs/"
+            class="cta-btn cta-btn--calm"
+            data-cta="roadtrip_to_calming"
+            data-track="collector_to_converter_click"
+            data-from-page={pageSlug}
+            data-to-page="/calming/car-anxiety-for-dogs/"
+            data-link-position="above-fold"
+          >
+            Calming Picks
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Summary Block -->
+    <section class="summary-section">
+      <div class="summary-inner">
+        <h2 class="summary-heading">What You'll Get From This Guide</h2>
+        <ul class="summary-list">
+          <li>The exact road trip setup that works for keeping a dog cool and calm on a long drive</li>
+          <li>Cooling section: window shades, clip-on fans, mats, vests, and hydration picks</li>
+          <li>Calming section: anxiety wraps, calming chews, and lick-mat distraction</li>
+          <li>A scannable checklist — minimal kit and full cross-country kit</li>
+          <li>Honest FAQ with practical answers (no fluff)</li>
+        </ul>
+        <div class="quick-buy">
+          <h3 class="quick-buy-heading">What to buy first</h3>
+          <ul class="quick-buy-list">
+            <li><span class="qb-icon">🪟</span> Magnetic window shades</li>
+            <li><span class="qb-icon">🌬️</span> Clip-on dual-head fan</li>
+            <li><span class="qb-icon">❄️</span> Cooling mat</li>
+            <li><span class="qb-icon">🧣</span> Anxiety wrap</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <Toc headings={tocHeadings} pageSlug={pageSlug} />
+
+    <!-- Story Section -->
+    <section class="collector-section" id="real-setup">
+      <div class="section-inner">
+        <h2>The Real Setup: What Rhys Actually Uses</h2>
+        <p class="section-body">
+          Rhys is a 4-year-old Australian Shepherd who did a 2,400-mile cross-country drive. No dedicated climate-controlled dog compartment — just a back seat, a few smart pieces of gear, and a routine that made the trip manageable.
+        </p>
+        <p class="section-body">
+          Here's what actually worked:
+        </p>
+        <ul class="story-list">
+          <li>
+            <strong>Window-mounted fan pointed directly at the back seat.</strong>
+            The car AC hits the front seats first. A clip-on fan mounted to the headrest fixes the airflow problem without any complex setup.
+          </li>
+          <li>
+            <strong>A small cooler of ice at every stop.</strong>
+            Not just for cold water — Rhys would crunch ice cubes at rest stops, which provides both hydration and a satisfying enrichment activity. It also noticeably reduced post-stop restlessness.
+          </li>
+          <li>
+            <strong>Magnetic window shades on both rear windows.</strong>
+            Direct sun through glass can heat a back seat even with AC running. The shades knocked the seat temperature down significantly on west-facing afternoon drives.
+          </li>
+          <li>
+            <strong>A stop-every-2-hours rule.</strong>
+            Not negotiable. A structured routine (same order: water first, short walk, stretch, back in with a lick mat) reduced the between-stop restlessness considerably by the second day.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Problem → Solution Map -->
+    <section class="collector-section collector-section--alt" id="problem-solution">
+      <div class="section-inner">
+        <h2>Problem → Solution Map</h2>
+        <p class="section-intro">
+          Match the symptom to the gear that addresses it.
+        </p>
+        <div class="ps-table-wrap">
+          <table class="ps-table">
+            <thead>
+              <tr>
+                <th scope="col">Problem</th>
+                <th scope="col">Root Cause</th>
+                <th scope="col">Solution</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Hot back seat even with AC on</td>
+                <td>Direct sun through windows; AC airflow reaches front first</td>
+                <td>Magnetic window shades + clip-on rear fan</td>
+              </tr>
+              <tr>
+                <td>Panting and restlessness mid-drive</td>
+                <td>Heat + boredom + no outlet for stress</td>
+                <td>Ice at rest stops, cooling mat, lick mat during drive</td>
+              </tr>
+              <tr>
+                <td>Highway anxiety: whining, pacing</td>
+                <td>Motion, noise, confinement stress</td>
+                <td>Anxiety wrap before departure + calming chew routine</td>
+              </tr>
+              <tr>
+                <td>Overstimulation at rest stops</td>
+                <td>Unfamiliar environments, other dogs, traffic noise</td>
+                <td>Cooling vest for the walk + calm protocol on return</td>
+              </tr>
+              <tr>
+                <td>Refusing water at stops</td>
+                <td>Stress suppresses thirst response in some dogs</td>
+                <td>Offer ice cubes instead of a full bowl; familiar-smelling bowl</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cooling Section -->
+    <section class="collector-section" id="cooling">
+      <div class="section-inner">
+        <h2>Cooling the Car: Temperature Management</h2>
+        <p class="section-intro">
+          Car heat is a layered problem. The most effective setup addresses all four layers: passive sun blocking, active airflow, a cool surface to lie on, and on-the-go cooling for rest stops.
+        </p>
+
+        <!-- Subsection: Window Shades + Fan -->
+        <div class="subsection">
+          <h3 id="cooling-shades">1. Passive Heat Reduction — Magnetic Window Shades</h3>
+          <ul class="why-bullets">
+            <li>Blocks UV and direct sun before it heats the seat — prevention is easier than cooling after the fact</li>
+            <li>Installs in seconds with magnetic edges; no adhesive, no suction cups to fail at 75 mph</li>
+          </ul>
+          <div class="product-row">
+            {carCoolingProducts.slice(0, 1).map((product, i) => (
+              <CoolingProductCard
+                product={product}
+                cta={{ label: 'Check Price on Amazon', href: product.amazonUrl, kind: 'amazon' }}
+                position={i + 1}
+                pageType="collector"
+                pageSlug={pageSlug}
+              />
+            ))}
+          </div>
+          <p class="section-cta-line">
+            <a
+              href="/cooling/car-cooling-for-dogs/"
+              class="inline-cta"
+              data-cta="roadtrip_to_amazon_window-shade"
+              data-track="collector_to_converter_click"
+              data-from-page={pageSlug}
+              data-to-page="/cooling/car-cooling-for-dogs/"
+              data-link-position="section"
+            >
+              See all car cooling picks →
+            </a>
+          </p>
+        </div>
+
+        <!-- Subsection: Fan -->
+        <div class="subsection">
+          <h3 id="cooling-fan">2. Active Airflow — Clip-On Car Fan</h3>
+          <ul class="why-bullets">
+            <li>Fixes the AC distribution problem: pushes cool air directly to the back seat instead of the windshield</li>
+            <li>Runs off any USB port or 12V adapter — no wiring required</li>
+          </ul>
+          <div class="product-row">
+            {carCoolingProducts.slice(1, 2).map((product, i) => (
+              <CoolingProductCard
+                product={product}
+                cta={{ label: 'Check Price on Amazon', href: product.amazonUrl, kind: 'amazon' }}
+                position={i + 2}
+                pageType="collector"
+                pageSlug={pageSlug}
+              />
+            ))}
+          </div>
+        </div>
+
+        <!-- Subsection: Cooling Mats -->
+        <div class="subsection">
+          <h3 id="cooling-mats">3. Seat &amp; Crate Cooling — Cooling Mats</h3>
+          <ul class="why-bullets">
+            <li>Gives your dog a cool surface to choose — works even when the seat itself is warm</li>
+            <li>No electricity required; pressure-activated gel recharges between uses</li>
+          </ul>
+          <div class="product-grid-2">
+            {coolingMats.map((product, i) => (
+              <CoolingProductCard
+                product={product}
+                cta={{ label: 'Check Price on Amazon', href: product.amazonUrl, kind: 'amazon' }}
+                position={i + 3}
+                pageType="collector"
+                pageSlug={pageSlug}
+              />
+            ))}
+          </div>
+          <p class="section-cta-line">
+            <a
+              href="/cooling/cooling-mats/"
+              class="inline-cta"
+              data-track="collector_to_converter_click"
+              data-from-page={pageSlug}
+              data-to-page="/cooling/cooling-mats/"
+              data-link-position="section"
+            >
+              See full cooling mats guide →
+            </a>
+          </p>
+        </div>
+
+        <!-- Subsection: Vests -->
+        <div class="subsection">
+          <h3 id="cooling-vests">4. Pit-Stop Cooling — Cooling Vests &amp; Bandanas</h3>
+          <ul class="why-bullets">
+            <li>Evaporative vests keep your dog cooler during rest-stop walks so they get back in the car already cooling down</li>
+            <li>Soak once, good for 30–60 minutes of walking in dry heat</li>
+          </ul>
+          <div class="product-grid-2">
+            {coolingVests.map((product, i) => (
+              <CoolingProductCard
+                product={product}
+                cta={{ label: 'Check Price on Amazon', href: product.amazonUrl, kind: 'amazon' }}
+                position={i + 5}
+                pageType="collector"
+                pageSlug={pageSlug}
+              />
+            ))}
+          </div>
+          <p class="section-cta-line">
+            <a
+              href="/cooling/cooling-vests/"
+              class="inline-cta"
+              data-track="collector_to_converter_click"
+              data-from-page={pageSlug}
+              data-to-page="/cooling/cooling-vests/"
+              data-link-position="section"
+            >
+              See full cooling vests guide →
+            </a>
+          </p>
+        </div>
+
+        <!-- Bottom CTA -->
+        <div class="section-converter-cta">
+          <a
+            href="/cooling/car-cooling-for-dogs/"
+            class="converter-cta-btn"
+            data-cta="roadtrip_to_cooling"
+            data-track="collector_to_converter_click"
+            data-from-page={pageSlug}
+            data-to-page="/cooling/car-cooling-for-dogs/"
+            data-link-position="section-bottom"
+          >
+            See all car cooling picks →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calming Section -->
+    <section class="collector-section collector-section--alt" id="calming">
+      <div class="section-inner">
+        <h2>Calming the Dog: Temperament Management</h2>
+        <p class="section-intro">
+          Car anxiety and heat stress feed each other. A hot dog gets anxious faster; an anxious dog pants more and heats up faster. Address both. Here's the calming toolkit.
+        </p>
+
+        <!-- Subsection: Wraps -->
+        <div class="subsection">
+          <h3 id="calming-wraps">1. Compression &amp; Anxiety Wraps</h3>
+          <ul class="why-bullets">
+            <li>Put it on before you start the engine — works immediately for dogs that respond to pressure</li>
+            <li>No timing required: unlike chews, you get results from the first moment</li>
+          </ul>
+          <div class="product-row">
+            {anxietyWraps.map((product, i) => (
+              <CalmingProductCard
+                product={product}
+                position={i + 1}
+                pageType="collector"
+                pageSlug={pageSlug}
+              />
+            ))}
+          </div>
+          <p class="section-cta-line">
+            <a
+              href="/calming/car-anxiety-for-dogs/"
+              class="inline-cta inline-cta--calm"
+              data-cta="roadtrip_to_calming"
+              data-track="collector_to_converter_click"
+              data-from-page={pageSlug}
+              data-to-page="/calming/car-anxiety-for-dogs/"
+              data-link-position="section"
+            >
+              See all car calming picks →
+            </a>
+          </p>
+        </div>
+
+        <!-- Subsection: Chews -->
+        <div class="subsection">
+          <h3 id="calming-chews">2. Calming Chews &amp; Supplements</h3>
+          <ul class="why-bullets">
+            <li>Give 30–45 minutes before departure so they have time to work before you hit the highway</li>
+            <li>Best used consistently on multi-day trips rather than as a last-minute fix</li>
+          </ul>
+          <p class="section-note">
+            These are nutritional supplements, not medications. Consult your vet before introducing supplements, especially if your dog takes other medications.
+          </p>
+          <div class="product-grid-3">
+            {calmingTreats.map((product, i) => (
+              <CalmingProductCard
+                product={product}
+                position={i + 2}
+                pageType="collector"
+                pageSlug={pageSlug}
+              />
+            ))}
+          </div>
+        </div>
+
+        <!-- Subsection: Routine -->
+        <div class="subsection">
+          <h3 id="calming-routine">3. Routine &amp; Predictability</h3>
+          <p class="section-body">
+            Predictability is one of the most effective calming tools for anxious dogs — and it's free. Use the same pre-drive routine every time: gear goes on in the same order, the same treat appears, you load up the same way. By day two of a multi-day trip, most dogs show noticeably less startup anxiety when the routine is consistent.
+          </p>
+          <p class="section-body">
+            Bring a piece of home: your dog's regular blanket or a worn T-shirt on the back seat gives them a familiar-smelling anchor in an unfamiliar environment.
+          </p>
+        </div>
+
+        <!-- Subsection: Lick Mats -->
+        <div class="subsection">
+          <h3 id="calming-lick">4. In-Car Distraction — Lick Mats</h3>
+          <ul class="why-bullets">
+            <li>Repetitive licking focuses a restless dog and can help them settle into the drive</li>
+            <li>Works during the drive itself — not just before or after</li>
+          </ul>
+          <div class="product-grid-2">
+            {lickMats.map((product, i) => (
+              <CalmingProductCard
+                product={product}
+                position={i + 5}
+                pageType="collector"
+                pageSlug={pageSlug}
+              />
+            ))}
+          </div>
+        </div>
+
+        <!-- Bottom CTA -->
+        <div class="section-converter-cta">
+          <a
+            href="/calming/car-anxiety-for-dogs/"
+            class="converter-cta-btn converter-cta-btn--calm"
+            data-cta="roadtrip_to_calming"
+            data-track="collector_to_converter_click"
+            data-from-page={pageSlug}
+            data-to-page="/calming/car-anxiety-for-dogs/"
+            data-link-position="section-bottom"
+          >
+            See all car calming picks →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Road Trip Checklist -->
+    <section class="collector-section" id="checklist">
+      <div class="section-inner">
+        <h2>Road Trip Checklist</h2>
+        <p class="section-intro">
+          Two versions: a minimal starting kit and a full cross-country setup.
+        </p>
+        <div class="checklist-grid">
+          <div class="checklist-card">
+            <h3>Minimal Kit</h3>
+            <p class="checklist-subtitle">Good for drives under 4 hours or budget-first builds</p>
+            <ul class="checklist">
+              <li>Magnetic window shades (rear windows)</li>
+              <li>Cooling mat (back seat or crate)</li>
+              <li>Collapsible water bowl + water jug</li>
+              <li>Anxiety wrap (if travel stress is an issue)</li>
+              <li>2–3 lick mat loads of peanut butter or yogurt</li>
+              <li>Ice bag for the cooler</li>
+            </ul>
+            <a
+              href="/cooling/car-cooling-for-dogs/"
+              class="checklist-cta"
+              data-cta="roadtrip_to_cooling"
+              data-track="collector_to_converter_click"
+              data-from-page={pageSlug}
+              data-to-page="/cooling/car-cooling-for-dogs/"
+              data-link-position="checklist"
+            >
+              See the full Cooling list →
+            </a>
+          </div>
+          <div class="checklist-card">
+            <h3>Full Cross-Country Kit</h3>
+            <p class="checklist-subtitle">For multi-day drives or dogs who run hot or anxious</p>
+            <ul class="checklist">
+              <li>Magnetic window shades</li>
+              <li>Clip-on rear seat fan</li>
+              <li>Cooling mat</li>
+              <li>Cooling vest (for rest-stop walks)</li>
+              <li>Seat cover hammock (cooler surface, safer positioning)</li>
+              <li>Collapsible water bowl + ice cooler</li>
+              <li>Anxiety wrap</li>
+              <li>Calming chews (start 30–45 min before each driving session)</li>
+              <li>Lick mat (loaded and frozen the night before)</li>
+              <li>Dog's regular blanket or worn clothing for scent comfort</li>
+              <li>Portable snuffle mat or chew toy for rest stops</li>
+            </ul>
+            <a
+              href="/calming/car-anxiety-for-dogs/"
+              class="checklist-cta checklist-cta--calm"
+              data-cta="roadtrip_to_calming"
+              data-track="collector_to_converter_click"
+              data-from-page={pageSlug}
+              data-to-page="/calming/car-anxiety-for-dogs/"
+              data-link-position="checklist"
+            >
+              See the full Calming list →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <FAQ faqs={roadTripFaqs} heading="Road Trip FAQ" />
+    </section>
+
+    <!-- Closing CTAs -->
+    <section class="closing-ctas">
+      <div class="closing-inner">
+        <h2>Ready to Build Your Road Trip Kit?</h2>
+        <p>Start with the problem you're solving first — heat or anxiety — then layer in the rest.</p>
+        <div class="closing-buttons">
+          <a
+            href="/cooling/car-cooling-for-dogs/"
+            class="closing-btn closing-btn--cool"
+            data-cta="roadtrip_to_cooling"
+            data-track="collector_to_converter_click"
+            data-from-page={pageSlug}
+            data-to-page="/cooling/car-cooling-for-dogs/"
+            data-link-position="closing"
+          >
+            Shop Cooling Road Trip Picks
+          </a>
+          <a
+            href="/calming/car-anxiety-for-dogs/"
+            class="closing-btn closing-btn--calm"
+            data-cta="roadtrip_to_calming"
+            data-track="collector_to_converter_click"
+            data-from-page={pageSlug}
+            data-to-page="/calming/car-anxiety-for-dogs/"
+            data-link-position="closing"
+          >
+            Shop Calming Travel Essentials
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <CalmingDisclaimer variant="supplement" />
+
+    <Disclosure />
+
+    <InternalLinkStrip
+      heading="More Dog Travel Guides"
+      links={[
+        { label: 'Cooling Hub', href: '/cooling/' },
+        { label: 'Car Cooling Picks', href: '/cooling/car-cooling-for-dogs/' },
+        { label: 'Cooling Mats', href: '/cooling/cooling-mats/' },
+        { label: 'Cooling Vests', href: '/cooling/cooling-vests/' },
+        { label: 'Calming Hub', href: '/calming/' },
+        { label: 'Car Anxiety Picks', href: '/calming/car-anxiety-for-dogs/' },
+        { label: 'All Calming Products', href: '/calming/best-calming-products-for-anxious-dogs/' },
+      ]}
+      fromPage={pageSlug}
+    />
+  </div>
+</BaseLayout>
+
+<style>
+  .collector-content {
+    padding-bottom: var(--space-2xl);
+  }
+
+  /* Above-fold CTA bar */
+  .cta-bar {
+    background: var(--color-bg-alt);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-md) var(--space-lg);
+  }
+
+  .cta-bar-inner {
+    max-width: var(--max-width-prose);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+  }
+
+  .cta-bar-label {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    font-weight: var(--weight-medium);
+    white-space: nowrap;
+  }
+
+  .cta-bar-buttons {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    padding: var(--space-xs) var(--space-lg);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: background var(--transition-fast), color var(--transition-fast);
+  }
+
+  .cta-btn--cool {
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+  }
+
+  .cta-btn--cool:hover {
+    background: var(--color-primary-hover);
+    color: var(--color-text-inverse);
+  }
+
+  .cta-btn--calm {
+    background: var(--color-sage);
+    color: var(--color-charcoal);
+  }
+
+  .cta-btn--calm:hover {
+    background: var(--color-sage-hover);
+    color: var(--color-charcoal);
+  }
+
+  /* Summary */
+  .summary-section {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-2xl) var(--space-lg);
+  }
+
+  .summary-heading {
+    font-size: var(--text-2xl);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-lg);
+  }
+
+  .summary-list {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-xl);
+    max-width: var(--max-width-prose);
+  }
+
+  .summary-list li {
+    padding-left: var(--space-md);
+    position: relative;
+    margin-bottom: var(--space-sm);
+  }
+
+  .summary-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: var(--weight-bold);
+  }
+
+  .quick-buy {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg) var(--space-xl);
+    max-width: 480px;
+  }
+
+  .quick-buy-heading {
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+    margin-bottom: var(--space-md);
+  }
+
+  .quick-buy-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .quick-buy-list li {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    padding: var(--space-xs) 0;
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .quick-buy-list li:last-child {
+    border-bottom: none;
+  }
+
+  .qb-icon {
+    font-size: 1.2em;
+    width: 1.5rem;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  /* Sections */
+  .collector-section {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+
+  .collector-section--alt {
+    background: var(--color-bg-alt);
+  }
+
+  .section-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .section-inner > h2 {
+    font-size: var(--text-2xl);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-sm);
+  }
+
+  .section-intro {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    max-width: var(--max-width-prose);
+    margin-bottom: var(--space-xl);
+  }
+
+  .section-body {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    max-width: var(--max-width-prose);
+    margin-bottom: var(--space-md);
+  }
+
+  .section-note {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    font-style: italic;
+    border-left: 3px solid var(--color-sage);
+    padding-left: var(--space-md);
+    margin-bottom: var(--space-lg);
+    max-width: var(--max-width-prose);
+  }
+
+  /* Story list */
+  .story-list {
+    max-width: var(--max-width-prose);
+    margin-bottom: var(--space-lg);
+  }
+
+  .story-list li {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    padding-left: var(--space-lg);
+    position: relative;
+    margin-bottom: var(--space-md);
+  }
+
+  .story-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: var(--weight-bold);
+  }
+
+  .story-list li strong {
+    color: var(--color-text);
+    display: block;
+    margin-bottom: var(--space-xs);
+  }
+
+  /* Problem-solution table */
+  .ps-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .ps-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--text-sm);
+    min-width: 600px;
+  }
+
+  .ps-table th {
+    background: var(--color-bg-alt);
+    font-weight: var(--weight-semibold);
+    text-align: left;
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  .ps-table td {
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: top;
+    line-height: var(--leading-normal);
+    color: var(--color-text-muted);
+  }
+
+  .ps-table td:first-child {
+    font-weight: var(--weight-semibold);
+    color: var(--color-text);
+  }
+
+  .ps-table td:last-child {
+    color: var(--color-accent);
+    font-weight: var(--weight-medium);
+  }
+
+  /* Subsections */
+  .subsection {
+    margin-bottom: var(--space-3xl);
+  }
+
+  .subsection h3 {
+    font-size: var(--text-xl);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-md);
+  }
+
+  .why-bullets {
+    margin-bottom: var(--space-lg);
+    max-width: var(--max-width-prose);
+  }
+
+  .why-bullets li {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    padding-left: var(--space-md);
+    position: relative;
+    margin-bottom: var(--space-sm);
+  }
+
+  .why-bullets li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: var(--weight-bold);
+  }
+
+  .product-row {
+    max-width: 480px;
+    margin-bottom: var(--space-md);
+  }
+
+  .product-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    margin-bottom: var(--space-md);
+  }
+
+  .product-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    margin-bottom: var(--space-md);
+  }
+
+  .section-cta-line {
+    margin-top: var(--space-md);
+  }
+
+  .inline-cta {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .inline-cta:hover {
+    text-decoration: underline;
+  }
+
+  .inline-cta--calm {
+    color: var(--color-sage);
+  }
+
+  .section-converter-cta {
+    margin-top: var(--space-xl);
+  }
+
+  .converter-cta-btn {
+    display: inline-block;
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+    font-weight: var(--weight-semibold);
+    padding: var(--space-sm) var(--space-xl);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: background var(--transition-fast);
+  }
+
+  .converter-cta-btn:hover {
+    background: var(--color-primary-hover);
+    color: var(--color-text-inverse);
+  }
+
+  .converter-cta-btn--calm {
+    background: var(--color-sage);
+    color: var(--color-charcoal);
+  }
+
+  .converter-cta-btn--calm:hover {
+    background: var(--color-sage-hover);
+    color: var(--color-charcoal);
+  }
+
+  /* Checklist */
+  .checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .checklist-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .checklist-card h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-xs);
+  }
+
+  .checklist-subtitle {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
+    font-style: italic;
+  }
+
+  .checklist {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-normal);
+    flex: 1;
+    margin-bottom: var(--space-lg);
+  }
+
+  .checklist li {
+    padding-left: var(--space-md);
+    position: relative;
+    margin-bottom: var(--space-sm);
+  }
+
+  .checklist li::before {
+    content: '☐';
+    position: absolute;
+    left: 0;
+    color: var(--color-text-muted);
+  }
+
+  .checklist-cta {
+    display: inline-block;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--color-primary);
+    text-decoration: none;
+    margin-top: auto;
+  }
+
+  .checklist-cta:hover {
+    text-decoration: underline;
+  }
+
+  .checklist-cta--calm {
+    color: var(--color-sage);
+  }
+
+  /* Closing CTAs */
+  .closing-ctas {
+    background: var(--color-bg-alt);
+    padding: var(--space-3xl) var(--space-lg);
+    text-align: center;
+  }
+
+  .closing-inner {
+    max-width: var(--max-width-prose);
+    margin: 0 auto;
+  }
+
+  .closing-inner h2 {
+    font-size: var(--text-2xl);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-sm);
+  }
+
+  .closing-inner p {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+  }
+
+  .closing-buttons {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .closing-btn {
+    display: inline-block;
+    font-weight: var(--weight-semibold);
+    padding: var(--space-sm) var(--space-xl);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-size: var(--text-base);
+    transition: background var(--transition-fast), color var(--transition-fast);
+  }
+
+  .closing-btn--cool {
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+  }
+
+  .closing-btn--cool:hover {
+    background: var(--color-primary-hover);
+    color: var(--color-text-inverse);
+  }
+
+  .closing-btn--calm {
+    background: var(--color-sage);
+    color: var(--color-charcoal);
+  }
+
+  .closing-btn--calm:hover {
+    background: var(--color-sage-hover);
+    color: var(--color-charcoal);
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .product-grid-3 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .checklist-grid,
+    .product-grid-2,
+    .product-grid-3 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .collector-section {
+      padding: var(--space-xl) var(--space-md);
+    }
+
+    .cta-bar-inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .closing-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .closing-btn {
+      width: 100%;
+      max-width: 320px;
+      text-align: center;
+    }
+  }
+</style>

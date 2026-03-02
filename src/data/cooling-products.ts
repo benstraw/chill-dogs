@@ -3,6 +3,7 @@ export type ProductCategory =
   | 'cooling-bandanas'
   | 'cooling-vests'
   | 'freezable-dog-toys'
+  | 'car-cooling'
   | 'bonus';
 
 export interface CoolingProduct {
@@ -186,6 +187,68 @@ export const coolingProducts: CoolingProduct[] = [
     coolingMethod: 'Frozen water release',
   },
 
+  // Car Cooling
+  {
+    id: 'enovoe-car-window-shades',
+    name: 'Enovoe Magnetic Car Window Shades (4-Pack)',
+    category: 'car-cooling',
+    amazonUrl:
+      'https://www.amazon.com/Enovoe-Window-Shade-4-Pack/dp/B00U0GRCK2/?tag=chill-dogs-20',
+    bullets: [
+      'Magnetic edges stick directly to the car door frame — no clips, no suction cups',
+      'Blocks UV rays and cuts cabin temperature significantly on sunny drives',
+      'Folds flat for storage; quick to attach and remove at rest stops',
+    ],
+    bestFor: 'Blocking direct sun from back-seat windows on hot road trips',
+    coolingMethod: 'Passive sun and UV blocking',
+    sizingNote: 'Universal fit — covers most standard rear side windows',
+  },
+  {
+    id: 'kh-travel-fan',
+    name: 'K&H Pet Products Clip-On Travel Fan',
+    category: 'car-cooling',
+    amazonUrl:
+      'https://www.amazon.com/KH-Manufacturing-Travel-Fan/dp/B00AN8KOLS/?tag=chill-dogs-20',
+    bullets: [
+      'Clips to headrest or cargo bar to direct airflow toward your dog',
+      'Two-speed setting; runs off any USB port or 12V adapter',
+      'Flexible neck adjusts to point exactly where you need it',
+    ],
+    bestFor: 'Active airflow for crated or back-seat dogs when AC vents fall short',
+    coolingMethod: 'Active airflow — clip-on fan',
+    sizingNote: 'One size; flexible clip fits most headrests and cargo bars',
+  },
+  {
+    id: 'outward-hound-port-a-bowl',
+    name: 'Outward Hound Port-A-Bowl Collapsible Bowl',
+    category: 'car-cooling',
+    amazonUrl:
+      'https://www.amazon.com/Outward-Hound-Kyjen-Collapsible-Waterproof/dp/B07N9MMCG7/?tag=chill-dogs-20',
+    bullets: [
+      'Folds completely flat — slips into a pocket, bag, or door panel',
+      'Carabiner clip attaches to a leash or backpack for hands-free carry',
+      'Dishwasher-safe BPA-free nylon holds up to 32 oz for larger dogs',
+    ],
+    bestFor: 'Pit-stop hydration without hauling a bulky bowl',
+    coolingMethod: 'Hydration support',
+    sizingNote: 'Available in S (1 cup) and L (32 oz) — size up for large dogs',
+  },
+  {
+    id: 'four-knines-seat-hammock',
+    name: '4Knines Dog Seat Cover Hammock',
+    category: 'car-cooling',
+    amazonUrl:
+      'https://www.amazon.com/4Knines-Dog-Seat-Cover-Hammock/dp/B01N3AWSJY/?tag=chill-dogs-20',
+    bullets: [
+      'Hammock style prevents your dog from tumbling into the footwell on long drives',
+      'Waterproof quilted surface stays cooler than bare upholstery or vinyl seats',
+      'Anchors to headrests front and back — no tools needed',
+    ],
+    bestFor: 'Keeping dogs stable, cool, and off hot leather seats in the back',
+    coolingMethod: 'Surface insulation from hot upholstery',
+    sizingNote: 'Standard and XL fit most sedans, SUVs, and trucks',
+  },
+
   // Bonus
   {
     id: 'nasa-bed',
@@ -221,6 +284,42 @@ export function getBonusProduct(): CoolingProduct | undefined {
 // ─── Category Meta ───────────────────────────────────────────────────
 
 export const categoryMeta: Record<Exclude<ProductCategory, 'bonus'>, CategoryMeta> = {
+  'car-cooling': {
+    title: 'Best Car Cooling Products for Dogs (2026)',
+    description:
+      'Keep your dog cool and comfortable on road trips with magnetic window shades, clip-on fans, collapsible bowls, and seat hammocks. Our top picks for every budget.',
+    heroHeadline: 'The Best Car Cooling Setup for Dogs on Road Trips',
+    introCopy:
+      'Hot back seats are one of the biggest road-trip risks for dogs. These four products address the core problem: passive sun blocking, active airflow, quick hydration, and a cooler surface to lie on.',
+    faqs: [
+      {
+        question: 'How do I keep my dog cool in the car without AC?',
+        answer:
+          'Combine passive and active methods: magnetic shades block the sun before heat builds up, a clip-on fan keeps air moving, and a collapsible bowl at every stop replaces fluids. On very hot days, schedule drives in the morning or evening.',
+      },
+      {
+        question: 'Are magnetic window shades safe for dogs?',
+        answer:
+          'Yes — they attach to the door frame with magnets, not adhesive, so there is nothing to chew or swallow. They do block some visibility, so confirm your driver\'s sightlines are clear before driving.',
+      },
+      {
+        question: 'Can I use a regular USB fan in the car?',
+        answer:
+          'You can, but a fan designed for cars (like the K&H clip-on) attaches more securely to headrests and includes power options for a 12V adapter. A regular desk fan can tip or fall at highway speed.',
+      },
+      {
+        question: 'How often should I stop and offer water on a road trip?',
+        answer:
+          'Every 1–2 hours is a reasonable baseline, but dogs that are stressed, panting heavily, or in hot weather may need more frequent breaks. Always offer cool (not ice cold) water.',
+      },
+    ],
+    internalLinks: [
+      { label: 'Road Trip Chill Kit', href: '/travel/rhys-road-trip-chill-kit/' },
+      { label: 'Cooling Mats', href: '/cooling/cooling-mats/' },
+      { label: 'Cooling Vests', href: '/cooling/cooling-vests/' },
+      { label: 'All Cooling Products', href: '/cooling/best-cooling-products-for-dogs/' },
+    ],
+  },
   'cooling-mats': {
     title: 'Best Cooling Mats for Dogs (2026)',
     description:
