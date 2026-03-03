@@ -7,7 +7,7 @@ No images, no heavy JS, no third-party animation libraries.
 
 | Page     | Control (canonical)   | Variants                                |
 |----------|-----------------------|-----------------------------------------|
-| Cooling  | `/cooling/`           | `/cooling/v/a/` … `/cooling/v/g/`      |
+| Cooling  | `/cooling/`           | `/cooling/v/a/` … `/cooling/v/h/`      |
 | Calming  | `/calming/`           | `/calming/v/a/` … `/calming/v/g/`      |
 | Homepage | `/`                   | `/v/v1/` … `/v/v5/`                    |
 
@@ -21,7 +21,7 @@ is identical across control and all variants.
 
 | Page    | Status   | Winner      | Notes                                                  |
 |---------|----------|-------------|--------------------------------------------------------|
-| Cooling | Complete | Variant A   | Aurora Wash promoted to default; variant URLs remain live |
+| Cooling | Active   | —           | Variant A is control; variant H (Playful Animated) added for comparison |
 | Calming | Complete | Variant A   | Aurora Wash promoted to default; variant URLs remain live |
 | Homepage | Active  | —           | v1 is current default; collecting data                 |
 
@@ -140,6 +140,32 @@ anchor, reducing cognitive load for first-time visitors.
 
 ---
 
+### Variant H — Playful Animated Scene (Cooling only)
+
+**Design:** Bespoke full-scene hero — layered SVG wavy ground (navy → teal → aqua → ice →
+powder), rotating CSS sun with repeating-conic-gradient rays and radial glow (top-right),
+floating cool elements (❄ 💧 ✦), CSS dog with squinting eyes, lazy tail wag, panting
+tongue, and a "so chill" thought bubble. Content lives in a frosted-glass card
+(`backdrop-filter: blur(18px) saturate(150%)`). Headline uses an animated gradient
+cycling through powder → aqua → teal → sky. Fonts: Baloo 2 + Fredoka. All animations
+off under `prefers-reduced-motion`.
+
+**Cooling accent:** Navy sky (#1a5f8a), teal (#2ec4b6), aqua (#4de8c4), ice (#a8daec),
+powder (#d6eef8). Warm sun contrast: #ff9020 / #ffd166.
+
+**Hypothesis:** A playful, character-driven scene with visible motion signals personality
+and memorability, driving stronger brand recall and CTA activation than a gradient-only
+hero. The visual "it's hot, but the dog is chill" narrative reinforces the product
+category's promise at a glance.
+
+**Primary metric:** Hero primary CTA click-through rate vs variant A control
+**Secondary metric:** Downstream affiliate link clicks on `/best-cooling-products-for-dogs/`
+
+**URL:** `/cooling/v/h/`
+**Component:** `src/components/modules/CoolingHubHero.astro`
+
+---
+
 ## Tracking Implementation
 
 All variants instrument two event surfaces:
@@ -182,8 +208,9 @@ GA4 custom event definition for `hero_cta_click` with the three parameters.
 | File | Purpose |
 |------|---------|
 | `src/styles/hero.base.css` | Theme tokens (cooling/calming), base layout, typography, CTA focus states, mobile breakpoints |
-| `src/styles/hero.variants.css` | Per-variant background, color, and effect rules (a–g) |
-| `src/components/modules/HeroExperiment.astro` | Component template; imports both CSS files; handles variant-specific markup differences (glass card wrapper for E, kinetic span for F, badge for G) |
+| `src/styles/hero.variants.css` | Per-variant background, color, and effect rules (a–h; variant h styles are self-contained in CoolingHubHero.astro) |
+| `src/components/modules/HeroExperiment.astro` | Component template for variants a–g; imports both CSS files; handles variant-specific markup differences |
+| `src/components/modules/CoolingHubHero.astro` | Self-contained component for variant h; SVG art, CSS dog, glass card, and all styles scoped within |
 
 Both CSS files are imported inside the Astro component's `<style>` block and
 are scoped to the component via Astro's data-attribute mechanism.

@@ -7,7 +7,7 @@ const projectRoot = path.resolve(__dirname, '../..');
 const distRoot = path.join(projectRoot, 'dist');
 
 function buildSite() {
-  execFileSync('bun', ['run', 'build'], {
+  execFileSync('npm', ['run', 'build'], {
     cwd: projectRoot,
     stdio: 'pipe',
   });
