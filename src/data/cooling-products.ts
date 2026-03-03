@@ -357,7 +357,7 @@ export const categoryMeta: Record<Exclude<ProductCategory, 'bonus'>, CategoryMet
       'Lightweight, affordable, and effective — these are the best cooling bandanas to keep your dog comfortable on hot walks.',
     heroHeadline: 'The Best Cooling Bandanas for Hot-Weather Walks',
     introCopy:
-      'Cooling bandanas are the simplest way to take the edge off the heat. Soak, wring, tie, and go. We picked two standouts that actually stay cool and stay on.',
+      'Cooling bandanas are the simplest way to take the edge off the heat. Soak, wring, tie, and go. We picked two standouts that stay cool and stay on.',
     faqs: [
       {
         question: 'How do cooling bandanas work?',
