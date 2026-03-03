@@ -1,11 +1,12 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 import HeroExperiment from '@components/modules/HeroExperiment.astro';
+import CalmingHubHeroFireworks from '@components/modules/CalmingHubHeroFireworks.astro';
 import CalmingHubBody from '@components/modules/CalmingHubBody.astro';
 import type { HeroVariant } from '@components/modules/HeroExperiment.astro';
 
 export function getStaticPaths() {
-  const variants: HeroVariant[] = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+  const variants: HeroVariant[] = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
   return variants.map((v) => ({ params: { variant: v } }));
 }
 
@@ -27,14 +28,23 @@ const canonicalUrl = new URL('/calming/', Astro.site).href;
 >
   <meta slot="head" name="robots" content="noindex, follow" />
 
-  <HeroExperiment
-    variant={variant}
-    theme="calming"
-    headline="Chill starts here."
-    subhead="Anxiety wraps, calming chews, and routines for anxious dogs."
-    primaryCta={{ label: 'See top calming picks', href: '/calming/best-calming-products-for-anxious-dogs/' }}
-    secondaryCta={{ label: 'What to try first', href: '/best-thundershirt-alternatives/' }}
-  />
+  {variant === 'h' ? (
+    <CalmingHubHeroFireworks
+      headline="Chill starts here."
+      subhead="Anxiety wraps, calming chews, and routines for anxious dogs."
+      primaryCta={{ label: 'See top calming picks', href: '/calming/best-calming-products-for-anxious-dogs/' }}
+      secondaryCta={{ label: 'What to try first', href: '/best-thundershirt-alternatives/' }}
+    />
+  ) : (
+    <HeroExperiment
+      variant={variant}
+      theme="calming"
+      headline="Chill starts here."
+      subhead="Anxiety wraps, calming chews, and routines for anxious dogs."
+      primaryCta={{ label: 'See top calming picks', href: '/calming/best-calming-products-for-anxious-dogs/' }}
+      secondaryCta={{ label: 'What to try first', href: '/best-thundershirt-alternatives/' }}
+    />
+  )}
 
   <CalmingHubBody />
 </BaseLayout>
