@@ -2,11 +2,12 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import HeroExperiment from '@components/modules/HeroExperiment.astro';
 import CoolingHubHero from '@components/modules/CoolingHubHero.astro';
+import CoolingHubHeroDesert from '@components/modules/CoolingHubHeroDesert.astro';
 import CoolingHubBody from '@components/modules/CoolingHubBody.astro';
 import type { HeroVariant } from '@components/modules/HeroExperiment.astro';
 
 export function getStaticPaths() {
-  const variants: HeroVariant[] = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+  const variants: HeroVariant[] = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'];
   return variants.map((v) => ({ params: { variant: v } }));
 }
 
@@ -27,7 +28,14 @@ const canonicalUrl = new URL('/cooling/', Astro.site).href;
 >
   <meta slot="head" name="robots" content="noindex, follow" />
 
-  {variant === 'h' ? (
+  {variant === 'i' ? (
+    <CoolingHubHeroDesert
+      headline="Beat the heat in minutes."
+      subhead="Cooling mats, vests, and hydration picks that work."
+      primaryCta={{ label: 'See top cooling picks', href: '/cooling/best-cooling-products-for-dogs/' }}
+      secondaryCta={{ label: 'How we choose products', href: '/about/' }}
+    />
+  ) : variant === 'h' ? (
     <CoolingHubHero
       headline="Beat the heat in minutes."
       subhead="Cooling mats, vests, and hydration picks that work."

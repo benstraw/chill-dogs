@@ -2,14 +2,14 @@
 /**
  * HeroExperiment — Polymorphic hero for A/B URL-based experiments.
  *
- * Supports 7 visual variants (a–g) and 2 page themes (cooling | calming).
+ * Supports 8 visual variants (a–h) plus variant i (desert theme) and 2 page themes (cooling | calming).
  * Adds data attributes for tracking + emits hero_cta_click events.
  *
  * CSS: Pulls from hero.base.css (layout, tokens, focus) and
  *      hero.variants.css (per-variant backgrounds/effects).
  */
 
-export type HeroVariant = 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h';
+export type HeroVariant = 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i';
 export type HeroTheme = 'cooling' | 'calming';
 
 interface Props {
