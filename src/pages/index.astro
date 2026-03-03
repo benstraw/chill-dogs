@@ -1,84 +1,417 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
-import HomepageHero from '@components/modules/HomepageHero.astro';
-import HomepageBody from '@components/modules/HomepageBody.astro';
-import JsonLd from '@components/JsonLd.astro';
 
-const websiteSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'Chill-Dogs',
-  url: 'https://chill-dogs.com/',
-  description: 'Curated cooling and calming picks to help your dog feel better fast — from summer heat relief to anxiety-friendly comfort.',
-};
-
-const orgSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'Chill-Dogs',
-  url: 'https://chill-dogs.com/',
-  logo: 'https://chill-dogs.com/favicon.svg',
-};
+const launchWindows = [
+  'cooling picks for hot-weather dogs',
+  'calming essentials for high-stress pups',
+  'road-trip gear for dogs who travel in style',
+];
 ---
 
 <BaseLayout
-  title="Home"
-  description="Curated cooling and calming picks to help your dog feel better fast — from summer heat relief to anxiety-friendly comfort."
+  title="Chill-Dogs Coming Soon"
+  description="Chill-Dogs is getting ready to launch with cooling, calming, and travel picks for dogs."
+  noindex={true}
+  hideChrome={true}
 >
-  <JsonLd slot="head" schema={websiteSchema} />
-  <JsonLd slot="head" schema={orgSchema} />
-  <HomepageHero variant="v1" />
+  <section class="coming-soon">
+    <div class="snow-layer" aria-hidden="true">
+      {Array.from({ length: 52 }).map((_, index) => (
+        <span
+          class="flake"
+          style={`--x:${(index * 7) % 100}%; --delay:${(index % 9) * 0.65}s; --dur:${4 + (index % 6)}s; --size:${5 + (index % 7)}px; --drift:${-24 + (index % 8) * 7}px; --opacity:${0.35 + (index % 4) * 0.15};`}
+        />
+      ))}
+    </div>
 
-  <section class="start-prompt">
-    <p class="start-prompt-text">Not sure where to start?</p>
-    <div class="start-prompt-links">
-      <a href="/cooling/best-cooling-products-for-dogs/" class="start-prompt-link start-prompt-link--cool" data-track="collector_to_converter_click" data-destination="best-cooling-products">Our top cooling picks</a>
-      <a href="/calming/best-calming-products-for-anxious-dogs/" class="start-prompt-link start-prompt-link--calm" data-track="collector_to_converter_click" data-destination="best-calming-products">Our top calming picks</a>
+    <div class="aurora" aria-hidden="true">
+      <div class="aurora-band aurora-band--1"></div>
+      <div class="aurora-band aurora-band--2"></div>
+      <div class="aurora-band aurora-band--3"></div>
+    </div>
+
+    <div class="ice-hills" aria-hidden="true">
+      <svg viewBox="0 0 1440 360" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,236 C140,188 260,282 420,248 C572,214 664,164 820,198 C974,232 1086,294 1234,242 C1328,210 1388,216 1440,228 L1440,360 L0,360 Z" fill="#e4eff8"></path>
+        <path d="M0,276 C160,248 326,302 500,276 C648,254 858,306 1022,276 C1186,246 1322,296 1440,276 L1440,360 L0,360 Z" fill="#f5f9fd"></path>
+        <path d="M0,314 C206,294 396,330 602,314 C832,296 1100,326 1440,304 L1440,360 L0,360 Z" fill="#ffffff"></path>
+      </svg>
+    </div>
+
+    <div class="scene">
+      <div class="badge">Coming Soon</div>
+      <h1>Chill-Dogs is setting up camp.</h1>
+      <ul class="launch-list" aria-label="Launch preview">
+        {launchWindows.map((item) => <li>{item}</li>)}
+      </ul>
+
+      <div class="dog-card" aria-hidden="true">
+        <div class="snow-mound"></div>
+        <div class="dog-body"></div>
+        <div class="dog-chest"></div>
+        <div class="dog-head">
+          <span class="ear ear--left"></span>
+          <span class="ear ear--right"></span>
+          <span class="snout"></span>
+          <span class="eye eye--left"></span>
+          <span class="eye eye--right"></span>
+          <span class="nose"></span>
+          <span class="collar"></span>
+        </div>
+        <div class="tail"></div>
+      </div>
     </div>
   </section>
-
-  <HomepageBody />
 </BaseLayout>
 
 <style>
-  .start-prompt {
+  @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Fredoka:wght@400;500;600&display=swap');
+
+  :root {
+    --c-night: #071120;
+    --c-deep: #12263f;
+    --c-sky: #2f6f95;
+    --c-frost: #9fd5ec;
+    --c-mist: #d9eef8;
+    --c-snow: #f4f9fd;
+    --c-white: #ffffff;
+    --c-mint: #76edc1;
+    --c-cyan: #53d1d8;
+    --c-violet: #8f87ff;
+    --c-pink: #ff8cb9;
+    --c-amber: #f6b24a;
+    --c-brown: #c98a52;
+    --c-brown-dark: #82532e;
+    --c-ink: #163250;
+  }
+
+  .coming-soon {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at top, rgba(118, 237, 193, 0.18), transparent 28%),
+      linear-gradient(180deg, var(--c-night) 0%, var(--c-deep) 35%, var(--c-sky) 68%, var(--c-frost) 100%);
+    color: var(--c-white);
+    font-family: 'Fredoka', sans-serif;
+    isolation: isolate;
+  }
+
+  .aurora,
+  .snow-layer,
+  .ice-hills {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .aurora-band {
+    position: absolute;
+    width: 160%;
+    height: 10rem;
+    border-radius: 999px;
+    filter: blur(42px);
+    opacity: 0.3;
+    animation: drift 16s ease-in-out infinite alternate;
+  }
+
+  .aurora-band--1 {
+    top: 7%;
+    left: -15%;
+    background: linear-gradient(90deg, transparent, var(--c-mint), var(--c-cyan), transparent);
+  }
+
+  .aurora-band--2 {
+    top: 14%;
+    left: -24%;
+    background: linear-gradient(90deg, transparent, var(--c-violet), var(--c-pink), transparent);
+    animation-duration: 18s;
+    animation-delay: -4s;
+  }
+
+  .aurora-band--3 {
+    top: 19%;
+    left: -10%;
+    background: linear-gradient(90deg, transparent, var(--c-cyan), var(--c-mint), var(--c-violet), transparent);
+    animation-duration: 22s;
+    animation-delay: -9s;
+    opacity: 0.22;
+  }
+
+  .flake {
+    position: absolute;
+    top: -2rem;
+    left: var(--x);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    opacity: var(--opacity);
+    animation: snowfall var(--dur) linear infinite;
+    animation-delay: var(--delay);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.35);
+  }
+
+  .ice-hills {
+    inset: auto 0 0;
+    height: 35vh;
+  }
+
+  .ice-hills svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .scene {
+    position: relative;
+    z-index: 1;
+    width: min(92vw, 70rem);
+    margin: 0 auto;
+    min-height: 100vh;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    gap: 1.5rem;
+    padding: 4.5rem 1.5rem 8rem;
     text-align: center;
-    padding: var(--space-xl) var(--space-lg) var(--space-lg);
   }
 
-  .start-prompt-text {
-    font-size: var(--text-sm);
-    color: var(--color-text-muted);
-    margin-bottom: var(--space-sm);
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 0.95rem;
+    border: 1px solid rgba(255, 255, 255, 0.26);
+    border-radius: 999px;
+    background: rgba(7, 17, 32, 0.32);
+    box-shadow: 0 16px 40px rgba(6, 12, 26, 0.28);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 0.74rem;
   }
 
-  .start-prompt-links {
+  h1 {
+    margin: 0;
+    max-width: 12ch;
+    font-family: 'Baloo 2', cursive;
+    font-size: clamp(3.3rem, 8vw, 6.6rem);
+    line-height: 0.92;
+    text-wrap: balance;
+    text-shadow: 0 12px 32px rgba(7, 17, 32, 0.45);
+  }
+
+  .launch-list {
+    list-style: none;
     display: flex;
-    justify-content: center;
-    gap: var(--space-md);
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.85rem;
+    margin: 0;
+    padding: 0;
+    max-width: 48rem;
   }
 
-  .start-prompt-link {
-    font-size: var(--text-sm);
-    font-weight: var(--weight-semibold);
-    text-decoration: none;
-    padding: var(--space-xs) var(--space-lg);
-    border-radius: var(--radius-md);
-    border: 1px solid var(--color-border);
-    color: var(--color-text);
-    transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+  .launch-list li {
+    padding: 0.8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 999px;
+    background: rgba(9, 22, 40, 0.46);
+    box-shadow: 0 16px 44px rgba(5, 12, 25, 0.2);
+    color: var(--c-snow);
+    font-size: 0.98rem;
   }
 
-  .start-prompt-link--cool:hover {
-    background: var(--color-sky);
-    border-color: var(--color-sky);
-    color: var(--color-charcoal);
+  .dog-card {
+    position: relative;
+    width: 12rem;
+    height: 8.75rem;
+    margin-top: 0.75rem;
+    animation: bob 3.8s ease-in-out infinite;
   }
 
-  .start-prompt-link--calm:hover {
-    background: var(--color-sage);
-    border-color: var(--color-sage);
-    color: var(--color-charcoal);
+  .snow-mound {
+    position: absolute;
+    inset: auto 0 0;
+    height: 2.8rem;
+    border-radius: 50% 50% 42% 42%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, #dcecf7 100%);
+    box-shadow: inset 0 -0.5rem 0 rgba(125, 176, 205, 0.18);
+  }
+
+  .dog-head {
+    position: absolute;
+    left: 3.3rem;
+    bottom: 2.4rem;
+    width: 4rem;
+    height: 3.7rem;
+    border-radius: 46% 46% 42% 42%;
+    background: linear-gradient(180deg, #d79a63 0%, var(--c-brown) 100%);
+    z-index: 3;
+    box-shadow: inset 0 -0.22rem 0 rgba(130, 83, 46, 0.18);
+  }
+
+  .dog-body {
+    position: absolute;
+    left: 3rem;
+    bottom: 1.8rem;
+    width: 4.7rem;
+    height: 3.2rem;
+    border-radius: 52% 52% 38% 38%;
+    background: linear-gradient(180deg, #cf8f58 0%, #b57240 100%);
+    z-index: 2;
+  }
+
+  .dog-chest {
+    position: absolute;
+    left: 4.35rem;
+    bottom: 1.95rem;
+    width: 1.8rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    background: #f2d4b3;
+    z-index: 2;
+  }
+
+  .ear {
+    position: absolute;
+    top: -0.5rem;
+    width: 1.15rem;
+    height: 1.7rem;
+    border-radius: 70% 70% 26% 26%;
+    background: var(--c-brown-dark);
+  }
+
+  .ear--left {
+    left: 0.35rem;
+    transform: rotate(-18deg);
+  }
+
+  .ear--right {
+    right: 0.35rem;
+    transform: rotate(18deg);
+  }
+
+  .snout {
+    position: absolute;
+    left: 50%;
+    bottom: 0.45rem;
+    width: 2rem;
+    height: 1.55rem;
+    border-radius: 48%;
+    background: #f3d8b8;
+    transform: translateX(-50%);
+  }
+
+  .eye {
+    position: absolute;
+    top: 1.35rem;
+    width: 0.42rem;
+    height: 0.56rem;
+    border-radius: 50%;
+    background: var(--c-ink);
+    z-index: 1;
+  }
+
+  .eye--left {
+    left: 1.08rem;
+  }
+
+  .eye--right {
+    right: 1.08rem;
+  }
+
+  .nose {
+    position: absolute;
+    left: 50%;
+    bottom: 0.95rem;
+    width: 0.78rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    background: #1d232d;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .collar {
+    position: absolute;
+    left: 0.5rem;
+    right: 0.5rem;
+    bottom: -0.2rem;
+    height: 0.42rem;
+    border-radius: 999px;
+    background: var(--c-pink);
+  }
+
+  .tail {
+    position: absolute;
+    right: 3rem;
+    bottom: 3.65rem;
+    width: 1.95rem;
+    height: 0.72rem;
+    border-radius: 999px;
+    background: var(--c-brown-dark);
+    transform-origin: left center;
+    animation: wag 0.9s ease-in-out infinite alternate;
+  }
+
+  @keyframes drift {
+    0% {
+      transform: translateX(0) scaleY(1);
+    }
+
+    50% {
+      transform: translateX(8%) scaleY(1.35);
+    }
+
+    100% {
+      transform: translateX(-6%) scaleY(0.85);
+    }
+  }
+
+  @keyframes snowfall {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+
+    to {
+      transform: translate3d(var(--drift), 108vh, 0);
+    }
+  }
+
+  @keyframes bob {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-0.45rem);
+    }
+  }
+
+  @keyframes wag {
+    from {
+      transform: rotate(14deg);
+    }
+
+    to {
+      transform: rotate(-18deg);
+    }
+  }
+
+  @media (max-width: 720px) {
+    .scene {
+      gap: 1.2rem;
+      padding-top: 5.5rem;
+    }
+
+    .window-body {
+      padding: 1.15rem 1rem 1.2rem;
+    }
+
+    .launch-list li {
+      font-size: 0.94rem;
+    }
+
   }
 </style>

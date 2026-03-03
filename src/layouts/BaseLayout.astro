@@ -18,6 +18,7 @@ interface Props {
   canonicalUrl?: string;
   noindex?: boolean;
   navAccent?: string;
+  hideChrome?: boolean;
 }
 
 const {
@@ -27,6 +28,7 @@ const {
   canonicalUrl,
   noindex = false,
   navAccent,
+  hideChrome = false,
 } = Astro.props;
 
 const siteTitle = title === 'Home'
@@ -71,11 +73,11 @@ const isStaging = import.meta.env.VERCEL_ENV === 'preview' || import.meta.env.VE
   </head>
   <body>
     <a href="#main-content" class="sr-only">Skip to content</a>
-    <Header />
+    {!hideChrome && <Header />}
     <main id="main-content">
       <slot />
     </main>
-    <Footer />
+    {!hideChrome && <Footer />}
     <SpeedInsights />
   </body>
 </html>

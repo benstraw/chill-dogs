@@ -35,16 +35,24 @@ describe('site smoke tests', () => {
     buildSite();
   }, 30_000);
 
-  it('renders the homepage with both primary navigation CTAs', () => {
+  it('renders the homepage as a chrome-free coming soon page', () => {
     const doc = readBuiltPage('index.html');
 
-    const coolingCta = doc.querySelector<HTMLAnchorElement>('a[data-track="hero_click_cooling"]');
-    const calmingCta = doc.querySelector<HTMLAnchorElement>('a[data-track="hero_click_calming"]');
+    const heading = doc.querySelector('h1');
     const canonical = doc.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    const header = doc.querySelector('header');
+    const footer = doc.querySelector('footer');
+    const pills = Array.from(doc.querySelectorAll('.launch-list li')).map((item) => item.textContent?.trim());
 
-    expect(coolingCta?.getAttribute('href')).toBe('/cooling/');
-    expect(calmingCta?.getAttribute('href')).toBe('/calming/');
+    expect(heading?.textContent).toContain('Chill-Dogs is setting up camp.');
     expect(canonical?.getAttribute('href')).toBe('https://chill-dogs.com/');
+    expect(header).toBeNull();
+    expect(footer).toBeNull();
+    expect(pills).toEqual([
+      'cooling picks for hot-weather dogs',
+      'calming essentials for high-stress pups',
+      'road-trip gear for dogs who travel in style',
+    ]);
   });
 
   it('renders cooling converter pages with tagged Amazon affiliate links', () => {

@@ -1,0 +1,27 @@
+{
+  "routes": [
+    {
+      "src": "/_assets/(.*)",
+      "dest": "/_assets/$1"
+    },
+    {
+      "src": "/favicon\\.svg",
+      "dest": "/favicon.svg"
+    },
+    {
+      "src": "/og-default\\.jpg",
+      "dest": "/og-default.jpg"
+    },
+    {
+      "src": "/.+",
+      "status": 308,
+      "headers": {
+        "Location": "/"
+      }
+    },
+    {
+      "src": "/",
+      "dest": "/"
+    }
+  ]
+}

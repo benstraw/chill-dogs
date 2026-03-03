@@ -28,6 +28,9 @@ Thumbs.db
 # caches
 .cache/
 *.tsbuildinfo
+.vercel/
 
 # test coverage
 coverage/
+.vercel
+.env*.local
