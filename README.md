@@ -52,8 +52,8 @@ src/
 │   ├── cooling/              # Cooling hub + converters + v/[variant] experiments
 │   ├── calming/              # Calming hub + pillar + v/[variant] experiments
 │   ├── gift-guides/
-│   ├── luxury-gear/
-│   └── blog/
+│   ├── blog/
+│   └── content-sitemap.astro # Hidden editor-facing sitemap page (`/content-sitemap/`)
 ├── styles/
 │   ├── tokens.css            # All design tokens (colors, spacing, type, radii)
 │   ├── hero.base.css         # Hero experiment base layout + theme tokens
@@ -83,6 +83,8 @@ Every page is exactly one type, set via the `pageType` frontmatter field:
 Cooling and calming pages are hand-authored in `src/pages/` (not the content collection) because they use typed TypeScript product data rather than markdown frontmatter.
 
 The content collection (`src/content.config.ts`) handles `blog/`, `gift-guides/`, and `luxury-gear/`. Content IDs from the glob loader are in `category/filename` format — use `getSlugFromId()` and `getCategoryFromId()` from `src/utils/collection-helpers.ts` to extract them.
+
+There is also a hidden internal page at `/content-sitemap/` for editorial workflow. It is built from a mix of explicit hand-authored routes and collection-driven entries, and it is marked `noindex` so it stays out of search.
 
 ---
 

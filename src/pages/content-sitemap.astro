@@ -1,0 +1,278 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { categoryMeta } from '@data/cooling-products';
+import { getAllPosts, getCategoryFromId, getSlugFromId } from '@utils/collection-helpers';
+
+interface SitemapPage {
+  title: string;
+  href: string;
+  pageType: 'converter' | 'collector' | 'attractor' | 'informer';
+}
+
+interface SitemapSection {
+  title: string;
+  description: string;
+  pages: SitemapPage[];
+}
+
+const posts = await getAllPosts();
+
+// Keep this list explicit so editors can review the current hand-authored routes in one place.
+const staticSections: SitemapSection[] = [
+  {
+    title: 'Core Pages',
+    description: 'Primary site entry points and hub pages.',
+    pages: [
+      { title: 'Chill-Dogs Coming Soon', href: '/', pageType: 'attractor' },
+      { title: 'Cooling Relief', href: '/cooling/', pageType: 'collector' },
+      { title: 'Calm & Comfort', href: '/calming/', pageType: 'collector' },
+      { title: 'Rhys\'s Road Trip Chill Kit: Cooling + Calming Essentials for Long Drives', href: '/travel/rhys-road-trip-chill-kit/', pageType: 'converter' },
+    ],
+  },
+  {
+    title: 'Cooling Converters',
+    description: 'Current commercial cooling pages and supporting category converters.',
+    pages: [
+      { title: '10 Best Cooling Products for Dogs (2026)', href: '/cooling/best-cooling-products-for-dogs/', pageType: 'converter' },
+      { title: categoryMeta['car-cooling'].title, href: '/cooling/car-cooling-for-dogs/', pageType: 'converter' },
+      { title: categoryMeta['cooling-mats'].title, href: '/cooling/cooling-mats/', pageType: 'converter' },
+      { title: categoryMeta['cooling-bandanas'].title, href: '/cooling/cooling-bandanas/', pageType: 'converter' },
+      { title: categoryMeta['cooling-vests'].title, href: '/cooling/cooling-vests/', pageType: 'converter' },
+      { title: categoryMeta['freezable-dog-toys'].title, href: '/cooling/freezable-dog-toys/', pageType: 'converter' },
+    ],
+  },
+  {
+    title: 'Calming Converters',
+    description: 'Current commercial calming pages.',
+    pages: [
+      { title: 'Best Calming Products for Anxious Dogs', href: '/calming/best-calming-products-for-anxious-dogs/', pageType: 'converter' },
+      { title: 'Best ThunderShirt Alternatives for Dogs', href: '/calming/best-thundershirt-alternatives/', pageType: 'converter' },
+      { title: 'Best Calming Products for Car Anxiety in Dogs', href: '/calming/car-anxiety-for-dogs/', pageType: 'converter' },
+    ],
+  },
+  {
+    title: 'Admin And Legal',
+    description: 'Low-priority informer pages that still need editorial maintenance.',
+    pages: [
+      { title: 'About', href: '/about/', pageType: 'informer' },
+      { title: 'Contact', href: '/contact/', pageType: 'informer' },
+      { title: 'Affiliate Disclosure', href: '/affiliate-disclosure/', pageType: 'informer' },
+      { title: 'Privacy Policy', href: '/privacy-policy/', pageType: 'informer' },
+      { title: 'Terms of Use', href: '/terms/', pageType: 'informer' },
+    ],
+  },
+];
+
+const collectionSections: SitemapSection[] = [
+  {
+    title: 'Blog Content',
+    description: 'Collection-driven blog posts for editorial work.',
+    pages: [
+      { title: 'Blog', href: '/blog/', pageType: 'collector' },
+      ...posts
+        .filter((post) => getCategoryFromId(post.id) === 'blog')
+        .map((post) => ({
+          title: post.data.title,
+          href: `/blog/${getSlugFromId(post.id)}/`,
+          pageType: post.data.pageType,
+        })),
+    ],
+  },
+  {
+    title: 'Gift Guide Content',
+    description: 'Collection-driven gift guide pages.',
+    pages: [
+      { title: 'Gift Guides', href: '/gift-guides/', pageType: 'collector' },
+      ...posts
+        .filter((post) => getCategoryFromId(post.id) === 'gift-guides')
+        .map((post) => ({
+          title: post.data.title,
+          href: `/gift-guides/${getSlugFromId(post.id)}/`,
+          pageType: post.data.pageType,
+        })),
+    ],
+  },
+];
+
+const allSections = [...staticSections, ...collectionSections];
+const totalPages = allSections.reduce((count, section) => count + section.pages.length, 0);
+---
+
+<BaseLayout
+  title="Content Sitemap"
+  description="Hidden editor-facing sitemap for working through current Chill-Dogs page titles and routes."
+  noindex={true}
+>
+  <section class="content-sitemap container">
+    <div class="intro">
+      <p class="eyebrow">Hidden Editor Page</p>
+      <h1>Content sitemap</h1>
+      <p class="lede">
+        A working list of current page titles and routes for editorial review. This page is set to noindex and is intended for internal use only.
+      </p>
+      <p class="meta">{totalPages} linked pages across {allSections.length} sections.</p>
+    </div>
+
+    <div class="section-list">
+      {allSections.map((section) => (
+        <section class="group">
+          <header class="group-header">
+            <h2>{section.title}</h2>
+            <p>{section.description}</p>
+          </header>
+
+          <ul class="page-list">
+            {section.pages.map((page) => (
+              <li class="page-row">
+                <div class="page-copy">
+                  <a href={page.href}>{page.title}</a>
+                  <code>{page.href}</code>
+                </div>
+                <span class={`page-type page-type--${page.pageType}`}>{page.pageType}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .content-sitemap {
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-4xl);
+  }
+
+  .intro {
+    max-width: 48rem;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .eyebrow {
+    margin: 0 0 var(--space-sm);
+    color: var(--color-text-muted);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .intro h1 {
+    margin-bottom: var(--space-md);
+    font-size: var(--text-4xl);
+  }
+
+  .lede,
+  .meta,
+  .group-header p,
+  code {
+    color: var(--color-text-muted);
+  }
+
+  .meta {
+    margin-top: var(--space-md);
+    font-size: var(--text-sm);
+  }
+
+  .section-list {
+    display: grid;
+    gap: var(--space-xl);
+  }
+
+  .group {
+    padding: var(--space-xl);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .group-header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .group-header h2 {
+    margin-bottom: var(--space-xs);
+    font-size: var(--text-2xl);
+  }
+
+  .page-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-md);
+  }
+
+  .page-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .page-row:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .page-copy {
+    display: grid;
+    gap: 0.25rem;
+  }
+
+  .page-copy a {
+    color: var(--color-text);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .page-copy a:hover,
+  .page-copy a:focus-visible {
+    text-decoration: underline;
+  }
+
+  code {
+    font-size: var(--text-sm);
+  }
+
+  .page-type {
+    flex-shrink: 0;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .page-type--converter {
+    background: rgba(201, 138, 82, 0.14);
+    color: #8a4e1d;
+  }
+
+  .page-type--collector {
+    background: rgba(104, 160, 133, 0.16);
+    color: #2e6448;
+  }
+
+  .page-type--attractor {
+    background: rgba(95, 150, 196, 0.16);
+    color: #24587e;
+  }
+
+  .page-type--informer {
+    background: rgba(78, 86, 98, 0.12);
+    color: #3f4a56;
+  }
+
+  @media (max-width: 720px) {
+    .page-row {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+</style>
