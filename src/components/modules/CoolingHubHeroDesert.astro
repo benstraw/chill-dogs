@@ -1,0 +1,683 @@
+---
+interface Props {
+  headline: string;
+  subhead: string;
+  primaryCta: { label: string; href: string };
+  secondaryCta?: { label: string; href: string };
+}
+
+const { headline, subhead, primaryCta, secondaryCta } = Astro.props;
+---
+
+<section class="desert-hero" aria-label="Page hero">
+
+  <!-- SVG: desert dune layers at bottom -->
+  <svg class="dh-ground-svg" viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M0,90 C280,54 560,130 840,88 C1080,54 1280,112 1440,90 L1440,200 L0,200 Z" fill="#c86a1a" opacity="0.30"/>
+    <path d="M0,115 C320,85 640,152 960,118 C1200,90 1370,126 1440,118 L1440,200 L0,200 Z" fill="#e07828" opacity="0.38"/>
+    <path d="M0,142 C220,124 480,168 740,148 C1000,128 1240,162 1440,146 L1440,200 L0,200 Z" fill="#f0a030" opacity="0.45"/>
+    <path d="M0,165 C340,156 680,178 1000,164 C1210,154 1370,170 1440,166 L1440,200 L0,200 Z" fill="#f5c96a" opacity="0.55"/>
+    <path d="M0,184 C400,178 800,190 1160,183 C1310,179 1410,185 1440,184 L1440,200 L0,200 Z" fill="#fde8a0" opacity="0.60"/>
+  </svg>
+
+  <!-- Blazing desert sun (top-right) -->
+  <div class="dh-sun" aria-hidden="true">
+    <div class="dh-sun-rays"></div>
+    <div class="dh-sun-halo"></div>
+    <div class="dh-sun-core"></div>
+  </div>
+
+  <!-- Heat shimmer lines near sun -->
+  <div class="dh-heat dh-heat--1" aria-hidden="true"></div>
+  <div class="dh-heat dh-heat--2" aria-hidden="true"></div>
+  <div class="dh-heat dh-heat--3" aria-hidden="true"></div>
+
+  <!-- Floating desert elements -->
+  <div class="dh-float dh-float--1" aria-hidden="true">🌵</div>
+  <div class="dh-float dh-float--2" aria-hidden="true">☀️</div>
+  <div class="dh-float dh-float--3" aria-hidden="true">🌶️</div>
+  <div class="dh-float dh-float--4" aria-hidden="true">✦</div>
+  <div class="dh-float dh-float--5" aria-hidden="true">🌵</div>
+
+  <!-- Cool oasis aura around dog -->
+  <div class="dh-oasis-aura" aria-hidden="true"></div>
+
+  <!-- SVG: blue cool ground under dog -->
+  <svg class="dh-oasis-ground" viewBox="0 0 260 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <ellipse cx="130" cy="42" rx="130" ry="22" fill="#1a5f8a" opacity="0.45"/>
+    <ellipse cx="130" cy="48" rx="110" ry="15" fill="#2ec4b6" opacity="0.40"/>
+    <ellipse cx="130" cy="54" rx="80" ry="10" fill="#a8daec" opacity="0.50"/>
+  </svg>
+
+  <!-- Floating cool elements near dog -->
+  <div class="dh-cool dh-cool--1" aria-hidden="true">❄</div>
+  <div class="dh-cool dh-cool--2" aria-hidden="true">💧</div>
+  <div class="dh-cool dh-cool--3" aria-hidden="true">✧</div>
+
+  <!-- CSS dog scene (bottom-left) — chill dog in desert -->
+  <div class="dh-dog-wrap" aria-hidden="true">
+    <div class="dh-dog">
+      <div class="dh-dog-body">
+        <div class="dh-dog-torso"></div>
+        <div class="dh-dog-head">
+          <div class="dh-dog-ear dh-dog-ear--l"></div>
+          <div class="dh-dog-ear dh-dog-ear--r"></div>
+          <div class="dh-dog-face">
+            <div class="dh-dog-eye dh-dog-eye--l"></div>
+            <div class="dh-dog-eye dh-dog-eye--r"></div>
+            <div class="dh-dog-nose"></div>
+            <div class="dh-dog-tongue"></div>
+          </div>
+        </div>
+        <div class="dh-dog-tail"></div>
+      </div>
+      <div class="dh-pawprint dh-pawprint--1">🐾</div>
+      <div class="dh-pawprint dh-pawprint--2">🐾</div>
+    </div>
+    <!-- Thought bubble -->
+    <div class="dh-thought">
+      <span class="dh-thought-text">so chill</span>
+      <div class="dh-bubble dh-bubble--1"></div>
+      <div class="dh-bubble dh-bubble--2"></div>
+      <div class="dh-bubble dh-bubble--3"></div>
+    </div>
+  </div>
+
+  <!-- Glass content card (centered) -->
+  <div class="dh-inner">
+    <div class="dh-glass-card">
+      <h1 class="dh-headline">{headline}</h1>
+      <p class="dh-subhead">{subhead}</p>
+      <div class="dh-ctas">
+        <a
+          href={primaryCta.href}
+          class="dh-cta dh-cta--primary"
+          data-track="collector_to_converter_click"
+          data-to-page={primaryCta.href}
+          data-link-position="cooling-hub-hero-desert-primary"
+        >
+          {primaryCta.label}
+        </a>
+        {secondaryCta && (
+          <a
+            href={secondaryCta.href}
+            class="dh-cta dh-cta--secondary"
+            data-track="collector_to_converter_click"
+            data-to-page={secondaryCta.href}
+            data-link-position="cooling-hub-hero-desert-secondary"
+          >
+            {secondaryCta.label}
+          </a>
+        )}
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Fredoka:wght@400;600&display=swap');
+
+  /* ── Color palette ── */
+  .desert-hero {
+    /* desert hot tones */
+    --dh-sun-fire:    #ff6a00;
+    --dh-sun-bright:  #ffcc00;
+    --dh-sand-light:  #fde8a0;
+    --dh-sand-mid:    #f5c96a;
+    --dh-sand-gold:   #f0a030;
+    --dh-dune-amber:  #e07828;
+    --dh-dune-burnt:  #c86a1a;
+    --dh-sky-hot:     #e8531a;
+    --dh-horizon:     #b8420e;
+    /* cool oasis tones (around dog) */
+    --dh-oasis-deep:  #1a5f8a;
+    --dh-oasis-teal:  #2ec4b6;
+    --dh-oasis-aqua:  #4de8c4;
+    --dh-oasis-ice:   #a8daec;
+    --dh-oasis-mist:  #d6eef8;
+    /* shared */
+    --dh-midnight:    #0b1a2e;
+    --dh-dog-tan:     #d4956a;
+    --dh-dog-dark:    #a06830;
+    --dh-pink:        #ff8fab;
+  }
+
+  /* ── Section base — hot desert gradient ── */
+  .desert-hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 520px;
+    background: linear-gradient(
+      175deg,
+      hsl(28,  90%, 22%) 0%,
+      hsl(22,  85%, 30%) 22%,
+      hsl(16,  80%, 38%) 50%,
+      hsl(30,  75%, 48%) 78%,
+      hsl(44,  85%, 62%) 100%
+    );
+    font-family: 'Fredoka', var(--font-body, sans-serif);
+    padding: 5rem 1.5rem 7rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ── SVG desert dunes ── */
+  .dh-ground-svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ── Blazing sun (top-right) ── */
+  .dh-sun {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 190px;
+    height: 190px;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .dh-sun-rays {
+    position: absolute;
+    inset: -32px;
+    border-radius: 50%;
+    background: repeating-conic-gradient(
+      rgba(255, 160, 30, 0.38) 0deg 7deg,
+      transparent 7deg 20deg
+    );
+    animation: sun-spin 18s linear infinite;
+  }
+
+  .dh-sun-halo {
+    position: absolute;
+    inset: 4px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 200, 50, 0.60) 0%, rgba(255, 90, 10, 0.22) 60%, transparent 100%);
+    filter: blur(16px);
+  }
+
+  .dh-sun-core {
+    position: absolute;
+    inset: 28px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--dh-sun-bright) 25%, var(--dh-sun-fire) 100%);
+    box-shadow:
+      0 0 28px rgba(255, 180, 20, 0.80),
+      0 0 70px rgba(255, 100, 10, 0.40);
+  }
+
+  @keyframes sun-spin {
+    to { transform: rotate(360deg); }
+  }
+
+  /* ── Heat shimmer lines ── */
+  .dh-heat {
+    position: absolute;
+    height: 3px;
+    border-top: 2px dashed rgba(255, 120, 20, 0.55);
+    pointer-events: none;
+    z-index: 1;
+    animation: heat-waver 2.2s ease-in-out infinite;
+  }
+
+  .dh-heat--1 { top: 12%; right: 13%; width: 60px; animation-delay:  0s;   }
+  .dh-heat--2 { top: 19%; right: 19%; width: 40px; animation-delay: -1.0s; }
+  .dh-heat--3 { top: 26%; right: 15%; width: 28px; animation-delay: -1.8s; }
+
+  @keyframes heat-waver {
+    0%, 100% { opacity: 0.22; transform: scaleX(1); }
+    50%       { opacity: 0.55; transform: scaleX(1.15); }
+  }
+
+  /* ── Floating desert elements (top half) ── */
+  .dh-float {
+    position: absolute;
+    font-size: 22px;
+    opacity: 0.40;
+    animation: dh-float-sway 7s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .dh-float--1 { top: 12%; left:  6%; font-size: 28px; animation-delay:  0s;   }
+  .dh-float--2 { top: 24%; right: 10%; font-size: 20px; animation-delay: -2.2s; }
+  .dh-float--3 { top: 14%; left: 24%; font-size: 18px; animation-delay: -4s;   }
+  .dh-float--4 { top: 40%; left:  4%; color: var(--dh-sand-light); font-size: 16px; animation-delay: -1.5s; }
+  .dh-float--5 { top: 32%; right: 18%; font-size: 24px; animation-delay: -3s;   }
+
+  @keyframes dh-float-sway {
+    0%, 100% { transform: translateY(0)   rotate(0deg); }
+    50%       { transform: translateY(-12px) rotate(10deg); }
+  }
+
+  /* ── Cool oasis aura behind dog ── */
+  .dh-oasis-aura {
+    position: absolute;
+    bottom: 5%;
+    left: 2%;
+    width: 220px;
+    height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(46, 196, 182, 0.30) 0%,
+      rgba(26, 95, 138, 0.22) 45%,
+      transparent 75%
+    );
+    filter: blur(18px);
+    z-index: 3;
+    pointer-events: none;
+    animation: oasis-pulse 4s ease-in-out infinite;
+  }
+
+  @keyframes oasis-pulse {
+    0%, 100% { opacity: 0.75; transform: scale(1); }
+    50%       { opacity: 1;    transform: scale(1.06); }
+  }
+
+  /* ── Blue oasis ground SVG ── */
+  .dh-oasis-ground {
+    position: absolute;
+    bottom: 6%;
+    left: 2%;
+    width: 260px;
+    height: 60px;
+    z-index: 4;
+    pointer-events: none;
+  }
+
+  /* ── Cool floating elements near dog ── */
+  .dh-cool {
+    position: absolute;
+    opacity: 0.60;
+    animation: dh-cool-rise 5s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 6;
+    color: var(--dh-oasis-ice);
+  }
+
+  .dh-cool--1 { bottom: 36%; left:  8%; font-size: 18px; animation-delay:  0s;   }
+  .dh-cool--2 { bottom: 46%; left: 14%; font-size: 14px; animation-delay: -1.8s; }
+  .dh-cool--3 { bottom: 30%; left: 18%; font-size: 16px; animation-delay: -3.2s; }
+
+  @keyframes dh-cool-rise {
+    0%, 100% { transform: translateY(0)   rotate(0deg);   opacity: 0.6; }
+    50%       { transform: translateY(-18px) rotate(20deg); opacity: 0.9; }
+  }
+
+  /* ── Dog scene ── */
+  .dh-dog-wrap {
+    position: absolute;
+    bottom: 9%;
+    left: 6%;
+    z-index: 5;
+    pointer-events: none;
+  }
+
+  .dh-dog {
+    position: relative;
+    animation: dog-lounge 3.5s ease-in-out infinite;
+  }
+
+  @keyframes dog-lounge {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-6px); }
+  }
+
+  .dh-dog-body {
+    position: relative;
+    width: 100px;
+    height: 70px;
+  }
+
+  .dh-dog-torso {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 65px;
+    height: 40px;
+    background: var(--dh-dog-tan);
+    border-radius: 30px 25px 15px 15px;
+  }
+
+  .dh-dog-head {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 50px;
+    height: 45px;
+    background: var(--dh-dog-tan);
+    border-radius: 50% 50% 40% 40%;
+    z-index: 2;
+  }
+
+  .dh-dog-ear {
+    position: absolute;
+    width: 18px;
+    height: 25px;
+    background: var(--dh-dog-dark);
+    border-radius: 50% 50% 30% 30%;
+    top: -10px;
+  }
+
+  .dh-dog-ear--l {
+    left: 3px;
+    transform: rotate(-14deg);
+    animation: ear-droop 4s ease-in-out infinite;
+  }
+
+  .dh-dog-ear--r {
+    right: 3px;
+    transform: rotate(14deg);
+    animation: ear-droop 4s ease-in-out infinite reverse;
+  }
+
+  @keyframes ear-droop {
+    0%, 100% { transform: rotate(-14deg); }
+    50%       { transform: rotate(-22deg); }
+  }
+
+  .dh-dog-face {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 36px;
+    height: 28px;
+  }
+
+  .dh-dog-eye {
+    position: absolute;
+    top: 2px;
+    width: 11px;
+    height: 7px;
+    background: transparent;
+    border-bottom: 3px solid var(--dh-midnight);
+    border-left: 1.5px solid var(--dh-midnight);
+    border-right: 1.5px solid var(--dh-midnight);
+    border-radius: 0 0 7px 7px;
+  }
+
+  .dh-dog-eye--l { left: 2px; }
+  .dh-dog-eye--r { right: 2px; }
+
+  .dh-dog-nose {
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 7px;
+    background: var(--dh-midnight);
+    border-radius: 50%;
+  }
+
+  .dh-dog-tongue {
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 11px;
+    background: var(--dh-pink);
+    border-radius: 0 0 50% 50%;
+    animation: lick 2.2s ease-in-out infinite;
+    transform-origin: top center;
+  }
+
+  @keyframes lick {
+    0%, 100% { transform: translateX(-50%) scaleY(1); }
+    50%       { transform: translateX(-50%) scaleY(0.65); }
+  }
+
+  .dh-dog-tail {
+    position: absolute;
+    right: -8px;
+    top: 5px;
+    width: 8px;
+    height: 30px;
+    background: var(--dh-dog-tan);
+    border-radius: 4px;
+    transform-origin: bottom center;
+    animation: tail-lazy 1.4s ease-in-out infinite alternate;
+  }
+
+  @keyframes tail-lazy {
+    0%   { transform: rotate(-18deg); }
+    100% { transform: rotate(22deg); }
+  }
+
+  .dh-pawprint {
+    position: absolute;
+    font-size: 13px;
+    opacity: 0.35;
+  }
+
+  .dh-pawprint--1 { bottom: -14px; left: 108px; transform: rotate(-18deg); }
+  .dh-pawprint--2 { bottom: -10px; left: 140px; transform: rotate(8deg); }
+
+  /* ── Thought bubble ── */
+  .dh-thought {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 18px;
+    z-index: 6;
+    animation: thought-bob 3s ease-in-out infinite;
+  }
+
+  .dh-thought-text {
+    display: block;
+    background: rgba(210, 240, 255, 0.95);
+    color: var(--dh-midnight);
+    font-family: 'Baloo 2', 'Fredoka', cursive;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 5px 13px;
+    border-radius: 18px;
+    box-shadow: 0 2px 10px rgba(26, 95, 138, 0.25);
+    white-space: nowrap;
+  }
+
+  .dh-bubble {
+    position: absolute;
+    background: rgba(210, 240, 255, 0.90);
+    border-radius: 50%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .dh-bubble--1 { width: 9px;  height: 9px;  bottom: -13px; left: 9px; }
+  .dh-bubble--2 { width: 6px;  height: 6px;  bottom: -21px; left: 5px; }
+  .dh-bubble--3 { width: 4px;  height: 4px;  bottom: -27px; left: 2px; }
+
+  @keyframes thought-bob {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-5px); }
+  }
+
+  /* ── Glass content card ── */
+  .dh-inner {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .dh-glass-card {
+    background: rgba(255, 220, 140, 0.12);
+    border: 1px solid rgba(255, 200, 100, 0.25);
+    border-radius: 1.5rem;
+    padding: 3rem 2.5rem 2.75rem;
+    text-align: center;
+    animation: card-appear 0.75s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  }
+
+  @supports (backdrop-filter: blur(18px)) {
+    .dh-glass-card {
+      background: rgba(255, 180, 80, 0.08);
+      backdrop-filter: blur(18px) saturate(150%);
+      -webkit-backdrop-filter: blur(18px) saturate(150%);
+      border-color: rgba(255, 200, 100, 0.20);
+      box-shadow:
+        0 20px 60px rgba(100, 30, 0, 0.30),
+        0 0 0 1px rgba(255, 200, 100, 0.10),
+        inset 0 1px 0 rgba(255, 240, 180, 0.18);
+    }
+  }
+
+  @keyframes card-appear {
+    0%   { opacity: 0; transform: translateY(22px) scale(0.94); }
+    100% { opacity: 1; transform: translateY(0)    scale(1); }
+  }
+
+  /* ── Headline — cool blue gradient contrasting the desert bg ── */
+  .dh-headline {
+    font-family: 'Baloo 2', var(--font-heading, sans-serif);
+    font-size: clamp(2rem, 6vw, 2.85rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 0.75rem;
+    background: linear-gradient(
+      135deg,
+      var(--dh-oasis-mist)  0%,
+      var(--dh-oasis-aqua)  30%,
+      var(--dh-oasis-teal)  60%,
+      var(--dh-oasis-ice)   80%,
+      var(--dh-sand-light) 100%
+    );
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 5s ease-in-out infinite;
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0%   50%; }
+    50%       { background-position: 100% 50%; }
+  }
+
+  .dh-subhead {
+    font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+    color: rgba(253, 232, 160, 0.90);
+    line-height: 1.7;
+    margin: 0 0 1.85rem;
+  }
+
+  /* ── CTAs ── */
+  .dh-ctas {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .dh-cta {
+    display: inline-flex;
+    align-items: center;
+    padding: 11px 22px;
+    border-radius: 10px;
+    font-family: 'Baloo 2', var(--font-heading, sans-serif);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+    cursor: pointer;
+    border: none;
+  }
+
+  /* Primary: cool blue oasis contrast against desert bg */
+  .dh-cta--primary {
+    background: linear-gradient(135deg, var(--dh-oasis-teal), var(--dh-oasis-aqua));
+    color: var(--dh-midnight);
+    box-shadow: 0 4px 14px rgba(46, 196, 182, 0.40);
+  }
+
+  .dh-cta--primary:hover {
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(46, 196, 182, 0.58);
+    color: var(--dh-midnight);
+  }
+
+  /* Secondary: warm translucent */
+  .dh-cta--secondary {
+    background: rgba(255, 220, 120, 0.12);
+    color: var(--dh-sand-light);
+    border: 1.5px solid rgba(253, 232, 160, 0.40);
+  }
+
+  .dh-cta--secondary:hover {
+    background: rgba(255, 220, 120, 0.22);
+    transform: translateY(-2px) scale(1.04);
+    border-color: rgba(253, 232, 160, 0.65);
+    color: #fff;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .desert-hero {
+      padding: 3.5rem 1rem 6rem;
+      min-height: 460px;
+    }
+
+    .dh-dog-wrap {
+      left: 3%;
+      bottom: 6%;
+      transform: scale(0.8);
+      transform-origin: bottom left;
+    }
+
+    .dh-oasis-aura { width: 160px; height: 130px; }
+    .dh-oasis-ground { width: 200px; }
+
+    .dh-float--3,
+    .dh-float--4 { display: none; }
+
+    .dh-cool--2,
+    .dh-cool--3 { display: none; }
+
+    .dh-glass-card { padding: 2rem 1.25rem 1.75rem; border-radius: 1.1rem; }
+
+    .dh-ctas {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .dh-cta {
+      width: 100%;
+      max-width: 240px;
+      justify-content: center;
+    }
+  }
+
+  /* ── Respect prefers-reduced-motion ── */
+  @media (prefers-reduced-motion: reduce) {
+    .dh-sun-rays,
+    .dh-dog,
+    .dh-dog-ear--l,
+    .dh-dog-ear--r,
+    .dh-dog-tongue,
+    .dh-dog-tail,
+    .dh-float,
+    .dh-cool,
+    .dh-heat,
+    .dh-thought,
+    .dh-oasis-aura,
+    .dh-headline,
+    .dh-glass-card {
+      animation: none;
+    }
+
+    .dh-headline {
+      -webkit-text-fill-color: var(--dh-oasis-aqua);
+    }
+  }
+</style>
