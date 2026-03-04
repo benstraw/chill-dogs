@@ -1,0 +1,240 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
+
+const title = 'How Hot Is Too Hot for Dogs?';
+const description =
+  'A practical temperature guide for dog owners: when heat is safe, when to take caution, and how to protect your dog from overheating.';
+const pageSlug = 'how-hot-is-too-hot-for-dogs';
+
+const internalLinks = [
+  { label: 'Best Cooling Mats', href: '/cooling/cooling-mats/' },
+  { label: 'Best Cooling Vests', href: '/cooling/cooling-vests/' },
+  { label: 'Best Cooling Bandanas', href: '/cooling/cooling-bandanas/' },
+  { label: 'Freezable Dog Toys', href: '/cooling/freezable-dog-toys/' },
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="collector-article container">
+    <header class="article-header">
+      <span class="eyebrow">Cooling &amp; Safety</span>
+      <h1>{title}</h1>
+      <p class="lede">{description}</p>
+    </header>
+
+    <div class="prose">
+      <h2>Why dogs overheat faster than humans</h2>
+      <p>
+        Dogs can't cool themselves the way humans do. We sweat across the entire surface of our skin;
+        dogs primarily pant and release heat through their paw pads. That's a much smaller surface area,
+        which means heat builds up quickly — especially in humid weather when panting becomes less effective.
+        Flat-faced breeds (like Bulldogs and Pugs), older dogs, overweight dogs, and very young puppies
+        are at even higher risk because their airways are narrower or their temperature regulation is less efficient.
+      </p>
+
+      <h2>Temperature risk chart</h2>
+      <p>
+        Outdoor air temperature is a starting point, but humidity, sun exposure, and activity level all
+        increase the real feel for your dog. Use this as a general guide:
+      </p>
+
+      <div class="temp-chart" role="table" aria-label="Dog heat risk by temperature">
+        <div class="temp-row temp-row--header" role="row">
+          <span role="columnheader">Temperature</span>
+          <span role="columnheader">Risk level</span>
+          <span role="columnheader">What to do</span>
+        </div>
+        <div class="temp-row temp-row--safe" role="row">
+          <span role="cell"><strong>70–80 °F</strong></span>
+          <span role="cell" class="badge badge--safe">Safe</span>
+          <span role="cell">Normal outdoor activity is fine. Keep water available.</span>
+        </div>
+        <div class="temp-row temp-row--caution" role="row">
+          <span role="cell"><strong>80–85 °F</strong></span>
+          <span role="cell" class="badge badge--caution">Caution</span>
+          <span role="cell">Shorten exercise, avoid peak afternoon sun, offer water frequently.</span>
+        </div>
+        <div class="temp-row temp-row--high" role="row">
+          <span role="cell"><strong>85–90 °F</strong></span>
+          <span role="cell" class="badge badge--high">High risk</span>
+          <span role="cell">Limit outdoor time to early morning or evening. Use cooling gear.</span>
+        </div>
+        <div class="temp-row temp-row--danger" role="row">
+          <span role="cell"><strong>90 °F+</strong></span>
+          <span role="cell" class="badge badge--danger">Dangerous</span>
+          <span role="cell">Keep dogs indoors in air conditioning as much as possible.</span>
+        </div>
+      </div>
+
+      <h2>Pavement temperature warning</h2>
+      <p>
+        Air temperature does not tell the whole story. Asphalt and concrete absorb and radiate heat far beyond
+        ambient air temperature. When it's 85 °F outside, blacktop can reach <strong>135 °F</strong> — hot
+        enough to cause burns in under a minute.
+      </p>
+      <p>
+        A simple test: press the back of your hand against the pavement for seven seconds. If you can't hold it
+        there comfortably, it's too hot for your dog's paws. Walk on grass where possible, or stick to early
+        morning and late evening walks.
+      </p>
+
+      <h2>Signs your dog is overheating</h2>
+      <ul>
+        <li><strong>Heavy, rapid panting</strong> that doesn't slow down with rest</li>
+        <li><strong>Excessive drooling</strong> or thick, sticky saliva</li>
+        <li><strong>Bright red gums or tongue</strong></li>
+        <li><strong>Lethargy or weakness</strong> — stumbling or reluctance to move</li>
+        <li><strong>Vomiting or diarrhea</strong></li>
+        <li><strong>Glazed or unfocused eyes</strong></li>
+      </ul>
+      <p>
+        If you see multiple signs at once, move your dog to a cool, shaded area immediately, offer small amounts
+        of cool (not ice-cold) water, and contact your vet. Heatstroke can escalate quickly and requires
+        prompt professional care.
+      </p>
+
+      <h2>How to keep your dog cool</h2>
+      <p>
+        The right gear can make a real difference during hot months. These popular options cover the most
+        practical approaches to keeping dogs cool:
+      </p>
+      <ul>
+        <li><strong>Cooling mats</strong> — pressure-activated gel pads designed for indoor or outdoor use.</li>
+        <li><strong>Cooling vests</strong> — evaporative or reflective wraps intended to lower body temperature during walks.</li>
+        <li><strong>Cooling bandanas</strong> — a lightweight, budget-friendly option for shorter outings.</li>
+        <li><strong>Freezable toys</strong> — frozen treat dispensers that provide enrichment and help with internal cooling.</li>
+      </ul>
+    </div>
+
+    <InternalLinkStrip links={internalLinks} fromPage={pageSlug} />
+  </article>
+</BaseLayout>
+
+<style>
+  .collector-article {
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-4xl);
+    max-width: var(--max-width-prose);
+  }
+
+  .article-header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: var(--space-sm);
+  }
+
+  .article-header h1 {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .lede {
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+  }
+
+  .prose h2 {
+    font-size: var(--text-2xl);
+    margin-top: var(--space-2xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .prose p,
+  .prose ul {
+    margin-bottom: var(--space-md);
+    line-height: 1.7;
+  }
+
+  .prose ul {
+    padding-left: var(--space-lg);
+  }
+
+  .prose li {
+    margin-bottom: var(--space-sm);
+  }
+
+  /* Temperature chart */
+  .temp-chart {
+    display: grid;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: var(--space-xl);
+    font-size: var(--text-sm);
+  }
+
+  .temp-row {
+    display: grid;
+    grid-template-columns: 9rem 8rem 1fr;
+    gap: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+    align-items: center;
+  }
+
+  .temp-row--header {
+    font-weight: 700;
+    font-size: var(--text-xs);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--color-bg-alt);
+    color: var(--color-text-muted);
+  }
+
+  .temp-row:not(.temp-row--header) {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: var(--text-xs);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .badge--safe {
+    background: rgba(104, 160, 133, 0.16);
+    color: #2e6448;
+  }
+
+  .badge--caution {
+    background: rgba(201, 185, 82, 0.22);
+    color: #7a6200;
+  }
+
+  .badge--high {
+    background: rgba(201, 138, 82, 0.18);
+    color: #8a4e1d;
+  }
+
+  .badge--danger {
+    background: rgba(200, 70, 70, 0.14);
+    color: #8b1a1a;
+  }
+
+  @media (max-width: 640px) {
+    .article-header h1 {
+      font-size: var(--text-3xl);
+    }
+
+    .temp-row {
+      grid-template-columns: 1fr;
+      gap: var(--space-xs);
+    }
+
+    .temp-row--header {
+      display: none;
+    }
+  }
+</style>
