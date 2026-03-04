@@ -93,6 +93,27 @@ import Disclosure from '@components/modules/Disclosure.astro';
   </div>
 </section>
 
+<!-- Safety Guides -->
+<section class="guides">
+  <h2 class="guides-heading">Cooling Safety Guides</h2>
+  <p class="guides-intro">Practical guides to help you understand heat risks and keep your dog safe in warm weather.</p>
+  <div class="guides-grid">
+    <a
+      href="/cooling/how-hot-is-too-hot-for-dogs/"
+      class="cat-card"
+      data-track="collector_to_converter_click"
+      data-from-page="cooling-hub"
+      data-to-page="/cooling/how-hot-is-too-hot-for-dogs/"
+      data-category="safety-guide"
+      data-link-position="section"
+    >
+      <h3>How Hot Is Too Hot for Dogs?</h3>
+      <p>A practical temperature guide explaining when outdoor heat becomes dangerous and how to protect dogs from overheating.</p>
+      <span class="cat-card-link">Read the guide &rarr;</span>
+    </a>
+  </div>
+</section>
+
 <Disclosure />
 
 <style>
@@ -201,6 +222,38 @@ import Disclosure from '@components/modules/Disclosure.astro';
 
   @media (max-width: 640px) {
     .categories-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .guides {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-lg) var(--space-2xl);
+  }
+
+  .guides-heading {
+    font-size: var(--text-2xl);
+    font-weight: var(--weight-bold);
+    text-align: center;
+    margin-bottom: var(--space-sm);
+  }
+
+  .guides-intro {
+    text-align: center;
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
+  }
+
+  .guides-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+
+  @media (max-width: 640px) {
+    .guides-grid {
       grid-template-columns: 1fr;
     }
   }</style>
