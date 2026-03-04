@@ -24,6 +24,11 @@ const internalLinks = [
     </header>
 
     <div class="prose">
+      <p>
+        Many dog owners ask the same question during summer: how hot is too hot for dogs? Understanding
+        temperature risks can help prevent heat exhaustion and keep your dog safe during warm weather.
+      </p>
+
       <h2>Why dogs overheat faster than humans</h2>
       <p>
         Dogs can't cool themselves the way humans do. We sweat across the entire surface of our skin;
@@ -35,7 +40,7 @@ const internalLinks = [
 
       <h2>Temperature risk chart</h2>
       <p>
-        Outdoor air temperature is a starting point, but humidity, sun exposure, and activity level all
+        Outdoor air temperature is a useful starting point. Humidity, sun exposure, and activity level all
         increase the real feel for your dog. Use this as a general guide:
       </p>
 
@@ -43,29 +48,41 @@ const internalLinks = [
         <div class="temp-row temp-row--header" role="row">
           <span role="columnheader">Temperature</span>
           <span role="columnheader">Risk level</span>
-          <span role="columnheader">What to do</span>
+          <span role="columnheader">Guidance</span>
         </div>
         <div class="temp-row temp-row--safe" role="row">
           <span role="cell"><strong>70–80 °F</strong></span>
           <span role="cell" class="badge badge--safe">Safe</span>
-          <span role="cell">Normal outdoor activity is fine. Keep water available.</span>
+          <span role="cell">Normal outdoor activity is generally fine. Provide water and shade.</span>
         </div>
         <div class="temp-row temp-row--caution" role="row">
           <span role="cell"><strong>80–85 °F</strong></span>
           <span role="cell" class="badge badge--caution">Caution</span>
-          <span role="cell">Shorten exercise, avoid peak afternoon sun, offer water frequently.</span>
+          <span role="cell">Shorten exercise and avoid peak afternoon sun.</span>
         </div>
         <div class="temp-row temp-row--high" role="row">
           <span role="cell"><strong>85–90 °F</strong></span>
           <span role="cell" class="badge badge--high">High risk</span>
-          <span role="cell">Limit outdoor time to early morning or evening. Use cooling gear.</span>
+          <span role="cell">Limit activity to early morning or evening and consider cooling gear.</span>
         </div>
         <div class="temp-row temp-row--danger" role="row">
           <span role="cell"><strong>90 °F+</strong></span>
           <span role="cell" class="badge badge--danger">Dangerous</span>
-          <span role="cell">Keep dogs indoors in air conditioning as much as possible.</span>
+          <span role="cell">Keep dogs indoors with air conditioning when possible.</span>
         </div>
       </div>
+
+      <h2>Humidity makes heat more dangerous</h2>
+      <p>
+        Air temperature alone doesn't tell the full story. Dogs rely almost entirely on panting to regulate
+        body temperature — and panting works by evaporating moisture from the respiratory tract. When
+        humidity is high, that evaporation slows down significantly, making panting far less effective.
+      </p>
+      <p>
+        A day in the low 80s with high humidity can be more stressful for a dog than a dry day at 90 °F.
+        If it feels muggy to you, it's worth shortening your walk and watching your dog closely for early
+        signs of overheating.
+      </p>
 
       <h2>Pavement temperature warning</h2>
       <p>
@@ -96,8 +113,17 @@ const internalLinks = [
 
       <h2>How to keep your dog cool</h2>
       <p>
-        The right gear can make a real difference during hot months. These popular options cover the most
-        practical approaches to keeping dogs cool:
+        Several simple habits go a long way on hot days:
+      </p>
+      <ul>
+        <li>Walk dogs during early morning or evening hours when temperatures are lower.</li>
+        <li>Avoid hot pavement — opt for grass or shaded paths whenever possible.</li>
+        <li>Always bring fresh water and offer it frequently during any outdoor activity.</li>
+        <li>Provide shaded rest areas and limit intense exercise when temperatures are high.</li>
+      </ul>
+      <p>
+        When temperatures rise, specialized cooling gear can also help dogs regulate body temperature
+        during walks or outdoor activity. These popular options are worth considering:
       </p>
       <ul>
         <li><strong>Cooling mats</strong> — pressure-activated gel pads designed for indoor or outdoor use.</li>
@@ -105,6 +131,30 @@ const internalLinks = [
         <li><strong>Cooling bandanas</strong> — a lightweight, budget-friendly option for shorter outings.</li>
         <li><strong>Freezable toys</strong> — frozen treat dispensers that provide enrichment and help with internal cooling.</li>
       </ul>
+
+      <h2>Frequently asked questions</h2>
+
+      <h3>Is 85 °F too hot to walk a dog?</h3>
+      <p>
+        It can be, depending on the conditions. At 85 °F with direct sun, high humidity, or hot pavement,
+        the risk for many dogs increases significantly. If you do walk at this temperature, keep it short,
+        stick to shaded routes, and watch closely for early signs of overheating.
+      </p>
+
+      <h3>Is 90 °F too hot for dogs?</h3>
+      <p>
+        For most dogs, yes. At 90 °F or above, outdoor activity should be limited to brief bathroom breaks.
+        Prolonged exposure at this temperature — especially with sun or humidity — puts dogs at real risk
+        of heat exhaustion. Keep dogs indoors in air conditioning as much as possible.
+      </p>
+
+      <h3>What temperature do dogs overheat?</h3>
+      <p>
+        Many dogs begin to struggle once temperatures reach roughly 85–90 °F, particularly in direct sun
+        or high humidity. Brachycephalic (flat-faced) breeds, senior dogs, and overweight dogs may show
+        signs of heat stress at lower temperatures. No single threshold applies to every dog — knowing
+        your individual dog's limits matters.
+      </p>
     </div>
 
     <InternalLinkStrip links={internalLinks} fromPage={pageSlug} />
@@ -146,6 +196,12 @@ const internalLinks = [
     font-size: var(--text-2xl);
     margin-top: var(--space-2xl);
     margin-bottom: var(--space-md);
+  }
+
+  .prose h3 {
+    font-size: var(--text-xl);
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-sm);
   }
 
   .prose p,
