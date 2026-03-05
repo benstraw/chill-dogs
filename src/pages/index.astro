@@ -1,8 +1,11 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
+import ComingSoon from '@components/ComingSoon.astro';
 import HomepageHero from '@components/modules/HomepageHero.astro';
 import HomepageBody from '@components/modules/HomepageBody.astro';
 import JsonLd from '@components/JsonLd.astro';
+
+const maintenanceMode = !!import.meta.env.MAINTENANCE_MODE;
 
 const websiteSchema = {
   '@context': 'https://schema.org',
@@ -21,24 +24,35 @@ const orgSchema = {
 };
 ---
 
-<BaseLayout
-  title="Home"
-  description="Curated cooling and calming picks to help your dog feel better fast — from summer heat relief to anxiety-friendly comfort."
->
-  <JsonLd slot="head" schema={websiteSchema} />
-  <JsonLd slot="head" schema={orgSchema} />
-  <HomepageHero variant="v1" />
+{maintenanceMode ? (
+  <BaseLayout
+    title="Chill-Dogs Coming Soon"
+    description="Chill-Dogs is getting ready to launch with cooling, calming, and travel picks for dogs."
+    noindex={true}
+    hideChrome={true}
+  >
+    <ComingSoon />
+  </BaseLayout>
+) : (
+  <BaseLayout
+    title="Home"
+    description="Curated cooling and calming picks to help your dog feel better fast — from summer heat relief to anxiety-friendly comfort."
+  >
+    <JsonLd slot="head" schema={websiteSchema} />
+    <JsonLd slot="head" schema={orgSchema} />
+    <HomepageHero variant="v1" />
 
-  <section class="start-prompt">
-    <p class="start-prompt-text">Not sure where to start?</p>
-    <div class="start-prompt-links">
-      <a href="/cooling/best-cooling-products-for-dogs/" class="start-prompt-link start-prompt-link--cool" data-track="collector_to_converter_click" data-destination="best-cooling-products">Our top cooling picks</a>
-      <a href="/calming/best-calming-products-for-anxious-dogs/" class="start-prompt-link start-prompt-link--calm" data-track="collector_to_converter_click" data-destination="best-calming-products">Our top calming picks</a>
-    </div>
-  </section>
+    <section class="start-prompt">
+      <p class="start-prompt-text">Not sure where to start?</p>
+      <div class="start-prompt-links">
+        <a href="/cooling/best-cooling-products-for-dogs/" class="start-prompt-link start-prompt-link--cool" data-track="collector_to_converter_click" data-destination="best-cooling-products">Our top cooling picks</a>
+        <a href="/calming/best-calming-products-for-anxious-dogs/" class="start-prompt-link start-prompt-link--calm" data-track="collector_to_converter_click" data-destination="best-calming-products">Our top calming picks</a>
+      </div>
+    </section>
 
-  <HomepageBody />
-</BaseLayout>
+    <HomepageBody />
+  </BaseLayout>
+)}
 
 <style>
   .start-prompt {
