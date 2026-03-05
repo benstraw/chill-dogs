@@ -67,6 +67,23 @@ describe('site smoke tests', () => {
     expect(coolingOg.length).toBeGreaterThan(1024);
   });
 
+  it('injects BreadcrumbList schema on indexable pages only', () => {
+    const coolingDoc = readBuiltPage(path.join('cooling', 'cooling-mats', 'index.html'));
+    const termsDoc = readBuiltPage(path.join('terms', 'index.html'));
+
+    const coolingSchemas = Array.from(
+      coolingDoc.querySelectorAll<HTMLScriptElement>('script[type="application/ld+json"]')
+    ).map((script) => script.textContent || '');
+
+    expect(coolingSchemas.some((schema) => schema.includes('\"@type\":\"BreadcrumbList\"'))).toBe(true);
+
+    const termsSchemas = Array.from(
+      termsDoc.querySelectorAll<HTMLScriptElement>('script[type="application/ld+json"]')
+    ).map((script) => script.textContent || '');
+
+    expect(termsSchemas.some((schema) => schema.includes('\"@type\":\"BreadcrumbList\"'))).toBe(false);
+  });
+
   it('renders cooling converter pages with tagged Amazon affiliate links', () => {
     const doc = readBuiltPage(path.join('cooling', 'cooling-mats', 'index.html'));
     const affiliateLinks = getAmazonAffiliateLinks(doc);

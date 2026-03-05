@@ -11,6 +11,7 @@ import Footer from '@components/Footer.astro';
 import Analytics from '@components/Analytics.astro';
 import SpeedInsights from '@vercel/speed-insights/astro';
 import { resolveAutoOgImagePath } from '@utils/og';
+import { buildBreadcrumbSchema } from '@utils/breadcrumbs';
 
 interface Props {
   title: string;
@@ -39,6 +40,9 @@ const autoOgImage = resolveAutoOgImagePath({ pathname: Astro.url.pathname, noind
 const resolvedOgImage = new URL(ogImage || autoOgImage || '/og-default.jpg', Astro.site).href;
 const resolvedCanonical = canonicalUrl || Astro.url.href;
 const isStaging = import.meta.env.VERCEL_ENV === 'preview' || import.meta.env.VERCEL_ENV === 'development';
+const breadcrumbSchema = !noindex && !isStaging && Astro.site
+  ? buildBreadcrumbSchema(Astro.url.pathname, Astro.site.href)
+  : null;
 ---
 
 <!doctype html>
@@ -71,6 +75,9 @@ const isStaging = import.meta.env.VERCEL_ENV === 'preview' || import.meta.env.VE
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
     <slot name="head" />
+    {breadcrumbSchema && (
+      <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    )}
     <Analytics />
   </head>
   <body>
