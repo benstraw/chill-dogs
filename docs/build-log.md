@@ -462,3 +462,55 @@ internal links (following the same pattern as `cooling-mats`, `cooling-vests`, e
 - `best-cooling-products-for-dogs.astro` — Road Trip entry added to `RelatedGuides`.
 - `best-calming-products-for-anxious-dogs.astro` — Road Trip entry added to `RelatedGuides`.
 - Both new converter pages link back to the collector and to each other's hub.
+
+---
+
+## Phase 10 — Cooling Collector Content
+
+**Goal:** Expand the cooling category with collector articles targeting
+informational search queries that route traffic to converter pages.
+
+### New pages
+
+| URL | Type | Purpose |
+|---|---|---|
+| `/cooling/how-hot-is-too-hot-for-dogs/` | collector | Informational article on heat safety thresholds; routes to cooling converters |
+
+### Hub updates
+
+- `CoolingHubBody.astro` — Added "Cooling Safety Guides" section with link to
+  the new article.
+
+---
+
+## Phase 11 — Maintenance Mode & Site Polish
+
+**Goal:** Merge the coming-soon page capability into `main` so a single
+environment variable toggles the homepage between the live site and a
+coming-soon page, without affecting other routes.
+
+### Changes
+
+- `src/layouts/BaseLayout.astro` — Added `hideChrome` prop to conditionally
+  hide Header and Footer (used by coming-soon page).
+- `src/components/ComingSoon.astro` — Self-contained coming-soon component
+  ported from the `codex/coming-soon` branch. CSS-drawn dog illustration,
+  aurora/snow animations, no external image dependencies.
+- `src/pages/index.astro` — Checks `import.meta.env.MAINTENANCE_MODE` at
+  build time. If truthy, renders `ComingSoon` with `noindex` and `hideChrome`.
+  If falsy, renders the normal homepage unchanged.
+- `.env.example` — Documented `MAINTENANCE_MODE` variable.
+
+### Additional fixes
+
+- **Favicon:** Switched from `.svg` to `.ico` format. Updated `BaseLayout.astro`
+  link tag and `index.astro` org schema logo reference.
+- **OG image:** Added real `og-default.jpg` to `/public/`.
+- **Sitemap cleanup:** Updated `astro.config.mjs` sitemap filter to exclude
+  `/v/` experiment variant URLs. Previously only `/draft` pages were filtered.
+
+### Verification
+
+- `bun run build` (no env var) — normal homepage, no noindex, all routes built.
+- `MAINTENANCE_MODE=true bun run build` — coming-soon at `/`, noindex applied,
+  all other routes still built and accessible.
