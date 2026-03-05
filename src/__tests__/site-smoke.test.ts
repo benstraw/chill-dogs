@@ -47,6 +47,26 @@ describe('site smoke tests', () => {
     expect(canonical?.getAttribute('href')).toBe('https://chill-dogs.com/');
   });
 
+  it('publishes generated per-page OG assets and metadata references', () => {
+    const homeDoc = readBuiltPage('index.html');
+    const coolingDoc = readBuiltPage(path.join('cooling', 'cooling-mats', 'index.html'));
+    const termsDoc = readBuiltPage(path.join('terms', 'index.html'));
+
+    expect(homeDoc.querySelector('meta[property=\"og:image\"]')?.getAttribute('content'))
+      .toContain('/og/home.svg');
+    expect(coolingDoc.querySelector('meta[property=\"og:image\"]')?.getAttribute('content'))
+      .toContain('/og/cooling-cooling-mats.svg');
+
+    // noindex pages keep the static default fallback
+    expect(termsDoc.querySelector('meta[property=\"og:image\"]')?.getAttribute('content'))
+      .toContain('/og-default.jpg');
+
+    const homeOg = readBuiltAsset(path.join('og', 'home.svg'));
+    const coolingOg = readBuiltAsset(path.join('og', 'cooling-cooling-mats.svg'));
+    expect(homeOg).toContain('<svg');
+    expect(coolingOg).toContain('Shop Top Picks Now');
+  });
+
   it('renders cooling converter pages with tagged Amazon affiliate links', () => {
     const doc = readBuiltPage(path.join('cooling', 'cooling-mats', 'index.html'));
     const affiliateLinks = getAmazonAffiliateLinks(doc);

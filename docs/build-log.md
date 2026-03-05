@@ -514,3 +514,63 @@ coming-soon page, without affecting other routes.
 - `bun run build` (no env var) — normal homepage, no noindex, all routes built.
 - `MAINTENANCE_MODE=true bun run build` — coming-soon at `/`, noindex applied,
   all other routes still built and accessible.
+
+---
+
+## Phase 12 — Automated Per-Page OG Images
+
+**Goal:** Remove the single-image Open Graph bottleneck by generating
+route-specific OG images with deterministic headline + CTA text at build time.
+
+### Why this was added
+
+The site previously used one static OG image (`/public/og-default.jpg`) for all
+pages. That created weak social previews and failed common OG quality checks
+("missing clear headline" / "missing CTA in image"). The fix needed to be:
+
+- automatic (no per-page manual image editing),
+- compatible with Astro static builds on Vercel,
+- page-type aware so converter pages can keep conversion-oriented CTA language.
+
+### What changed
+
+- Added `src/scripts/generate-og-images.mjs`.
+  - Runs in `prebuild` (`package.json`) before `astro build`.
+  - Scans static Astro routes + markdown content routes.
+  - Excludes non-indexable routes (`404`, `/v/` variants, selected `noindex` pages).
+  - Generates one SVG OG image per route to `public/og/<route-slug>.svg`.
+- Added `src/utils/og.ts`.
+  - Deterministic headline derivation with fallback chain:
+    `ogHeadline` -> `seoTitle` -> `title`.
+  - Deterministic CTA derivation with fallback chain:
+    `ogCta` -> page-type default.
+  - Route slug + auto-eligibility helpers for consistent OG path resolution.
+- Updated `src/layouts/BaseLayout.astro`.
+  - `og:image`/`twitter:image` now resolve in this order:
+    1. explicit `ogImage` prop,
+    2. auto-generated route image (`/og/<route-slug>.svg`) when eligible,
+    3. `/og-default.jpg` fallback.
+- Extended content schema in `src/content.config.ts` for optional OG overrides:
+  - `ogHeadline`, `ogCta`, `ogTheme`.
+- Updated `.gitignore` to ignore generated OG artifacts (`public/og/`) and
+  local Vercel metadata (`.vercel/`) so routine builds do not dirty the repo.
+
+### Documentation updates
+
+- `README.md` now includes a dedicated "Per-page OG images" section:
+  - generation command and lifecycle (`prebuild`),
+  - default behavior and exclusions,
+  - frontmatter override fields and priority rules.
+- TODO checklist updated to mark per-page OG generation complete.
+
+### Verification
+
+- Added `src/__tests__/og.test.ts` for utility behavior:
+  - headline and CTA precedence,
+  - text clamping,
+  - route slug generation,
+  - route eligibility and resolved OG path.
+- Updated `src/__tests__/site-smoke.test.ts`:
+  - verifies generated OG asset references in built HTML,
+  - verifies OG files exist in `dist/og/`,
+  - verifies `noindex` pages still fall back to default OG image.

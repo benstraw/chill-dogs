@@ -145,6 +145,46 @@ products:
 
 ---
 
+## Per-page OG images
+
+Per-page OG images are generated automatically at build time into `public/og/` by:
+
+```bash
+node src/scripts/generate-og-images.mjs
+```
+
+This runs automatically via the `prebuild` script before `astro build`.
+
+### Default behavior
+
+- Every indexable route gets an OG SVG at `/og/<route-slug>.svg`.
+- `og:image` and `twitter:image` are auto-resolved from the current pathname.
+- Routes with `noindex`, `/v/` experiment variants, and `404` are excluded from auto OG and fall back to `/og-default.jpg`.
+
+### Frontmatter overrides (posts collection)
+
+Use optional frontmatter fields when you need per-page control:
+
+```yaml
+ogHeadline: "Short custom OG headline"
+ogCta: "Custom CTA text"
+ogTheme: cooling # cooling | calming | neutral
+ogImage: "/og/my-manual-image.jpg" # explicit override, bypasses auto route image
+```
+
+Override priority:
+
+1. `ogImage` (explicit image path)
+2. Auto-generated route image (`/og/<route-slug>.svg`) when eligible
+3. `/og-default.jpg` fallback
+
+Text priority:
+
+1. Headline: `ogHeadline` -> `seoTitle` -> `title`
+2. CTA: `ogCta` -> page-type default (`converter`, `collector`, `attractor`, `informer`)
+
+---
+
 ## Analytics
 
 Event tracking uses a provider-agnostic system that supports **Plausible** (recommended) and **GA4** simultaneously.
@@ -287,7 +327,7 @@ A `netlify.toml` is also present with equivalent build config and security heade
 - [ ] **Set up PostHog reverse proxy on Netlify/Vercel** — PostHog scripts are blocked by Firefox Enhanced Tracking Protection and ad blockers. Proxy `/ingest/*` → `us.posthog.com/*` so the SDK loads from the same origin. See [PostHog reverse proxy docs](https://posthog.com/docs/advanced/proxy). Critical for accurate analytics coverage.
 - [x] Add OG image (`/public/og-default.jpg`)
 - [x] Add favicon (`/public/favicon.ico`)
-- [ ] Generate per-page OG images with dynamic titles (e.g. `@vercel/og` or `astro-og-canvas`)
+- [x] Generate per-page OG images with dynamic headline + CTA text (`src/scripts/generate-og-images.mjs`)
 - [ ] Evaluate hero experiment winner after 2 weeks / 200+ primary CTA clicks per variant; promote winner to default, retire losing variant URLs
 - [ ] Expand calming category: individual converter pages for anxiety-wraps, calming-treats, lick-mats, snuffle-mats (parallel to cooling converter structure)
 - [ ] Add `luxury-gear` and `gift-guides` content (directories exist, no markdown yet)

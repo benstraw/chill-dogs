@@ -10,6 +10,7 @@ import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
 import Analytics from '@components/Analytics.astro';
 import SpeedInsights from '@vercel/speed-insights/astro';
+import { resolveAutoOgImagePath } from '@utils/og';
 
 interface Props {
   title: string;
@@ -24,7 +25,7 @@ interface Props {
 const {
   title,
   description = 'Curated gear, gift guides, and party ideas for dogs who live the good life.',
-  ogImage = '/og-default.jpg',
+  ogImage,
   canonicalUrl,
   noindex = false,
   navAccent,
@@ -34,7 +35,8 @@ const {
 const siteTitle = title === 'Home'
   ? 'Chill-Dogs — Cooling & Calming Products for Dogs'
   : `${title} | Chill-Dogs`;
-const resolvedOgImage = new URL(ogImage, Astro.site).href;
+const autoOgImage = resolveAutoOgImagePath({ pathname: Astro.url.pathname, noindex });
+const resolvedOgImage = new URL(ogImage || autoOgImage || '/og-default.jpg', Astro.site).href;
 const resolvedCanonical = canonicalUrl || Astro.url.href;
 const isStaging = import.meta.env.VERCEL_ENV === 'preview' || import.meta.env.VERCEL_ENV === 'development';
 ---
