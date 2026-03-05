@@ -539,6 +539,8 @@ pages. That created weak social previews and failed common OG quality checks
   - Scans static Astro routes + markdown content routes.
   - Excludes non-indexable routes (`404`, `/v/` variants, selected `noindex` pages).
   - Generates one PNG OG image per route to `public/og/<route-slug>.png`.
+  - Uses `@resvg/resvg-js` to render PNG output at build time for broad social
+    platform compatibility (`jpg/png/gif/webp` family support expectations).
 - Added `src/utils/og.ts`.
   - Deterministic headline derivation with fallback chain:
     `ogHeadline` -> `seoTitle` -> `title`.
@@ -574,3 +576,44 @@ pages. That created weak social previews and failed common OG quality checks
   - verifies generated OG asset references in built HTML,
   - verifies OG files exist in `dist/og/`,
   - verifies `noindex` pages still fall back to default OG image.
+- Confirmed OG metadata now points to `.png` assets (not `.svg`) on indexable
+  routes to avoid unsupported-format issues on some platforms.
+
+---
+
+## Phase 13 — BreadcrumbList Schema Coverage
+
+**Goal:** Add consistent `BreadcrumbList` JSON-LD on indexable pages so search
+engines get explicit page hierarchy context.
+
+### Why this was added
+
+The site had multiple JSON-LD types (`WebSite`, `Organization`, `CollectionPage`,
+`ItemList`, `Article`) but no breadcrumb structured data. Breadcrumb schema is
+low-effort SEO hygiene and can improve SERP URL presentation.
+
+### What changed
+
+- Added `src/utils/breadcrumbs.ts`:
+  - Builds deterministic breadcrumb chains from `Astro.url.pathname`.
+  - Emits `Home -> ... -> current page` `ListItem` entries with canonical URLs.
+  - Includes label normalization for known segments (`gift-guides`,
+    `affiliate-disclosure`, etc.).
+- Updated `src/layouts/BaseLayout.astro`:
+  - Injects `BreadcrumbList` JSON-LD automatically in `<head>` for indexable
+    pages.
+  - Skips breadcrumbs when:
+    - page is `noindex`,
+    - environment is staging/preview,
+    - route is homepage (`/`).
+
+### Verification
+
+- Added `src/__tests__/breadcrumbs.test.ts`:
+  - verifies nested route breadcrumb generation,
+  - verifies special label mapping,
+  - verifies homepage returns no breadcrumb schema.
+- Extended `src/__tests__/site-smoke.test.ts`:
+  - confirms `BreadcrumbList` exists on indexable routes,
+  - confirms no breadcrumb schema is injected on `noindex` pages.
+- Full suite passes with breadcrumb coverage added.
