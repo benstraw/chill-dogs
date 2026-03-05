@@ -141,4 +141,14 @@ describe('site smoke tests', () => {
     expect(sitemap).toContain('<loc>https://chill-dogs.com/cooling/cooling-mats/</loc>');
     expect(sitemap).toContain('<loc>https://chill-dogs.com/calming/best-calming-products-for-anxious-dogs/</loc>');
   });
+
+  it('publishes llms.txt with curated absolute links', () => {
+    const llmsText = readBuiltAsset('llms.txt');
+
+    expect(llmsText).toContain('# Chill-Dogs');
+    expect(llmsText).toContain('## Cooling Guides');
+    expect(llmsText).toContain('https://chill-dogs.com/cooling/');
+    expect(llmsText).not.toContain('/v/a/');
+    expect(llmsText).not.toContain('/content-sitemap/');
+  });
 });

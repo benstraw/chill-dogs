@@ -27,6 +27,7 @@ const posts = defineCollection({
     relatedSlugs: z.array(z.string()).default([]),
     seoTitle: z.string().optional(),
     seoDescription: z.string().optional(),
+    llmsPriority: z.number().optional(),
     ogHeadline: z.string().optional(),
     ogCta: z.string().optional(),
     ogTheme: z.enum(['cooling', 'calming', 'neutral']).optional(),
