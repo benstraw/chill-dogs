@@ -7,7 +7,7 @@ export default defineConfig({
   trailingSlash: 'always',
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/draft'),
+      filter: (page) => !page.includes('/draft') && !page.includes('/v/'),
       serialize: (item) => {
         if (item.url === 'https://chill-dogs.com/') {
           item.priority = 1.0;
