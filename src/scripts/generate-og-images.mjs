@@ -1,6 +1,7 @@
 import { mkdirSync, readdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { PAGE_TYPE_CTA } from '../config/og-cta.mjs';
+import { Resvg } from '@resvg/resvg-js';
 
 const projectRoot = process.cwd();
 const pagesDir = path.join(projectRoot, 'src', 'pages');
@@ -389,8 +390,15 @@ function generateOgImages() {
       theme: inferTheme(record.pathname, record.ogTheme),
     });
 
-    const targetPath = path.join(outDir, `${slugFromPathname(record.pathname)}.svg`);
-    writeFileSync(targetPath, svg, 'utf8');
+    const targetPath = path.join(outDir, `${slugFromPathname(record.pathname)}.png`);
+    const resvg = new Resvg(svg, {
+      fitTo: {
+        mode: 'width',
+        value: 1200,
+      },
+    });
+    const pngData = resvg.render();
+    writeFileSync(targetPath, pngData.asPng());
   }
 
   console.log(`[og] generated ${records.length} per-page OG images in public/og`);

@@ -53,18 +53,18 @@ describe('site smoke tests', () => {
     const termsDoc = readBuiltPage(path.join('terms', 'index.html'));
 
     expect(homeDoc.querySelector('meta[property=\"og:image\"]')?.getAttribute('content'))
-      .toContain('/og/home.svg');
+      .toContain('/og/home.png');
     expect(coolingDoc.querySelector('meta[property=\"og:image\"]')?.getAttribute('content'))
-      .toContain('/og/cooling-cooling-mats.svg');
+      .toContain('/og/cooling-cooling-mats.png');
 
     // noindex pages keep the static default fallback
     expect(termsDoc.querySelector('meta[property=\"og:image\"]')?.getAttribute('content'))
       .toContain('/og-default.jpg');
 
-    const homeOg = readBuiltAsset(path.join('og', 'home.svg'));
-    const coolingOg = readBuiltAsset(path.join('og', 'cooling-cooling-mats.svg'));
-    expect(homeOg).toContain('<svg');
-    expect(coolingOg).toContain('Shop Top Picks Now');
+    const homeOg = readFileSync(path.join(distRoot, 'og', 'home.png'));
+    const coolingOg = readFileSync(path.join(distRoot, 'og', 'cooling-cooling-mats.png'));
+    expect(homeOg.length).toBeGreaterThan(1024);
+    expect(coolingOg.length).toBeGreaterThan(1024);
   });
 
   it('renders cooling converter pages with tagged Amazon affiliate links', () => {

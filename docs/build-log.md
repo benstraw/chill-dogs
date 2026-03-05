@@ -538,7 +538,7 @@ pages. That created weak social previews and failed common OG quality checks
   - Runs in `prebuild` (`package.json`) before `astro build`.
   - Scans static Astro routes + markdown content routes.
   - Excludes non-indexable routes (`404`, `/v/` variants, selected `noindex` pages).
-  - Generates one SVG OG image per route to `public/og/<route-slug>.svg`.
+  - Generates one PNG OG image per route to `public/og/<route-slug>.png`.
 - Added `src/utils/og.ts`.
   - Deterministic headline derivation with fallback chain:
     `ogHeadline` -> `seoTitle` -> `title`.
@@ -548,7 +548,7 @@ pages. That created weak social previews and failed common OG quality checks
 - Updated `src/layouts/BaseLayout.astro`.
   - `og:image`/`twitter:image` now resolve in this order:
     1. explicit `ogImage` prop,
-    2. auto-generated route image (`/og/<route-slug>.svg`) when eligible,
+    2. auto-generated route image (`/og/<route-slug>.png`) when eligible,
     3. `/og-default.jpg` fallback.
 - Extended content schema in `src/content.config.ts` for optional OG overrides:
   - `ogHeadline`, `ogCta`, `ogTheme`.

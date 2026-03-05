@@ -56,7 +56,7 @@ describe('og utility functions', () => {
     expect(isAutoOgEligible({ pathname: '/cooling/v/a/' })).toBe(false);
     expect(isAutoOgEligible({ pathname: '/about/', noindex: true })).toBe(false);
 
-    expect(resolveAutoOgImagePath({ pathname: '/cooling/cooling-mats/' })).toBe('/og/cooling-cooling-mats.svg');
+    expect(resolveAutoOgImagePath({ pathname: '/cooling/cooling-mats/' })).toBe('/og/cooling-cooling-mats.png');
     expect(resolveAutoOgImagePath({ pathname: '/cooling/v/a/' })).toBeNull();
   });
 });

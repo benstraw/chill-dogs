@@ -157,7 +157,7 @@ This runs automatically via the `prebuild` script before `astro build`.
 
 ### Default behavior
 
-- Every indexable route gets an OG SVG at `/og/<route-slug>.svg`.
+- Every indexable route gets an OG PNG at `/og/<route-slug>.png`.
 - `og:image` and `twitter:image` are auto-resolved from the current pathname.
 - Routes with `noindex`, `/v/` experiment variants, and `404` are excluded from auto OG and fall back to `/og-default.jpg`.
 
@@ -175,7 +175,7 @@ ogImage: "/og/my-manual-image.jpg" # explicit override, bypasses auto route imag
 Override priority:
 
 1. `ogImage` (explicit image path)
-2. Auto-generated route image (`/og/<route-slug>.svg`) when eligible
+2. Auto-generated route image (`/og/<route-slug>.png`) when eligible
 3. `/og-default.jpg` fallback
 
 Text priority:
