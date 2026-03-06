@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import robotsTxt from 'astro-robots-txt';
+import vercel from '@astrojs/vercel';
 
 export default defineConfig({
   site: 'https://chill-dogs.com',
@@ -30,6 +31,8 @@ export default defineConfig({
     }),
     robotsTxt(),
   ],
+  adapter: vercel({ webAnalytics: { enabled: false } }),
+  output: 'static',
   build: {
     assets: '_assets',
   },

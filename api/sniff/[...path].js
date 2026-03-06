@@ -2,15 +2,11 @@
  * Vercel Edge Function: PostHog first-party reverse proxy
  *
  * PostHog is initialized with api_host: '/api/sniff', so all event ingestion
- * (POST /api/sniff/e/, POST /api/sniff/flags/, etc.) and config requests
- * (GET /api/sniff/array/...) are sent directly to this edge function.
+ * (POST /api/sniff/e/, POST /api/sniff/flags/, etc.) and config/asset requests
+ * are sent directly to this edge function, bypassing Vercel's CDN layer.
  *
- * Requests to /api/** on Vercel bypass the static CDN layer and are always
- * handled by compute, which is why this works for POST requests whereas a
- * plain vercel.json CDN rewrite to an external host would return 405.
- *
- * Static JS assets (GET /api/sniff/static/*) are intercepted before reaching
- * this function via the vercel.json CDN rewrite to us-assets.i.posthog.com.
+ * Static JS assets (/api/sniff/static/*) are routed to us-assets.i.posthog.com;
+ * all other requests go to us.i.posthog.com.
  */
 export const config = {
   runtime: 'edge',
@@ -20,10 +16,15 @@ export default async function handler(req) {
   const url = new URL(req.url);
   // Strip /api/sniff prefix to recover the PostHog-relative path
   const path = url.pathname.replace(/^\/api\/sniff\/?/, '');
-  const targetUrl = `https://us.i.posthog.com/${path}${url.search}`;
+
+  const isStatic = path.startsWith('static/');
+  const baseUrl = isStatic
+    ? 'https://us-assets.i.posthog.com'
+    : 'https://us.i.posthog.com';
+  const targetUrl = `${baseUrl}/${path}${url.search}`;
 
   const headers = new Headers(req.headers);
-  headers.set('host', 'us.i.posthog.com');
+  headers.set('host', isStatic ? 'us-assets.i.posthog.com' : 'us.i.posthog.com');
 
   const hasBody = req.body != null && req.method !== 'GET' && req.method !== 'HEAD';
   const response = await fetch(targetUrl, {
