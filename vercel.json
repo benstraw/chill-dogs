@@ -6,7 +6,7 @@
     },
     {
       "source": "/sniff/:path*",
-      "destination": "https://us.i.posthog.com/:path*"
+      "destination": "/api/sniff/:path*"
     }
   ]
 }
