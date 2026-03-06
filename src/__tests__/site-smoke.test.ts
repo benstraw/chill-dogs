@@ -30,6 +30,13 @@ function getAmazonAffiliateLinks(doc: Document): HTMLAnchorElement[] {
   );
 }
 
+function relTokens(link: HTMLAnchorElement): string[] {
+  return (link.getAttribute('rel') || '')
+    .split(/\s+/)
+    .filter(Boolean)
+    .sort();
+}
+
 describe('site smoke tests', () => {
   beforeAll(() => {
     buildSite();
@@ -91,7 +98,7 @@ describe('site smoke tests', () => {
     expect(affiliateLinks.length).toBeGreaterThan(0);
 
     for (const link of affiliateLinks) {
-      expect(link.getAttribute('rel')).toBe('nofollow sponsored noopener');
+      expect(relTokens(link)).toEqual(['noopener', 'noreferrer', 'sponsored']);
       expect(link.getAttribute('target')).toBe('_blank');
       expect(link.getAttribute('data-track')).toBe('amazon_outbound_click');
       expect(link.href).toContain('tag=chill-dogs-20');
@@ -105,7 +112,7 @@ describe('site smoke tests', () => {
     expect(affiliateLinks.length).toBeGreaterThan(0);
 
     for (const link of affiliateLinks) {
-      expect(link.getAttribute('rel')).toBe('nofollow sponsored noopener');
+      expect(relTokens(link)).toEqual(['noopener', 'noreferrer', 'sponsored']);
       expect(link.getAttribute('target')).toBe('_blank');
       expect(link.getAttribute('data-track')).toBe('amazon_outbound_click');
       expect(link.href).toContain('tag=chill-dogs-20');
