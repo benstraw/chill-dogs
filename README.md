@@ -332,8 +332,8 @@ A `netlify.toml` is also present with equivalent build config and security heade
 
 ## TODO
 
-- [ ] Connect Vercel project and set up auto-deploy from `main`
-- [ ] Point `chill-dogs.com` domain to Vercel; confirm SSL
+- [x] Connect Vercel project and set up auto-deploy from `main`
+- [x] Point `chill-dogs.com` domain to Vercel; confirm SSL
 - [x] Set up analytics — Plausible (primary) + GA4 (optional) + PostHog; wired via `src/components/Analytics.astro` with global `init()` and `data-track` event delegation
 - [ ] **Set up PostHog reverse proxy on Netlify/Vercel** — PostHog scripts are blocked by Firefox Enhanced Tracking Protection and ad blockers. Proxy `/ingest/*` → `us.posthog.com/*` so the SDK loads from the same origin. See [PostHog reverse proxy docs](https://posthog.com/docs/advanced/proxy). Critical for accurate analytics coverage.
 - [x] Add OG image (`/public/og-default.jpg`)
@@ -342,5 +342,6 @@ A `netlify.toml` is also present with equivalent build config and security heade
 - [ ] Evaluate hero experiment winner after 2 weeks / 200+ primary CTA clicks per variant; promote winner to default, retire losing variant URLs
 - [ ] Expand calming category: individual converter pages for anxiety-wraps, calming-treats, lick-mats, snuffle-mats (parallel to cooling converter structure)
 - [ ] Add `luxury-gear` and `gift-guides` content (directories exist, no markdown yet)
-- [ ] Review affiliate tag is active and approved in Amazon Associates dashboard (`chill-dogs-20`)
+- [x] Review affiliate tag is active and approved in Amazon Associates dashboard (`chill-dogs-20`)
 - [ ] Set up IndexNow for instant search engine indexing on deploy (Bing, Yandex, etc.)
+- [ ] Add third pillar: **Relaxing** — dog beds, plush toys, snuggly blankets, and cozy comfort gear
