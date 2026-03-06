@@ -1,13 +1,16 @@
 /**
- * Vercel Edge Function: PostHog first-party reverse proxy via /sniff/*
+ * Vercel Edge Function: PostHog first-party reverse proxy
  *
- * Vercel's static CDN only handles GET/HEAD, so POST event calls from
- * PostHog (e.g. /sniff/e/, /sniff/decide/) would return 405 if handled
- * by a plain vercel.json rewrite alone. Routing through this edge function
- * ensures all HTTP methods are proxied to us.i.posthog.com.
+ * PostHog is initialized with api_host: '/api/sniff', so all event ingestion
+ * (POST /api/sniff/e/, POST /api/sniff/flags/, etc.) and config requests
+ * (GET /api/sniff/array/...) are sent directly to this edge function.
  *
- * Static JS assets (/sniff/static/*) continue to use a direct CDN rewrite
- * in vercel.json since those are always GET requests.
+ * Requests to /api/** on Vercel bypass the static CDN layer and are always
+ * handled by compute, which is why this works for POST requests whereas a
+ * plain vercel.json CDN rewrite to an external host would return 405.
+ *
+ * Static JS assets (GET /api/sniff/static/*) are intercepted before reaching
+ * this function via the vercel.json CDN rewrite to us-assets.i.posthog.com.
  */
 export const config = {
   runtime: 'edge',

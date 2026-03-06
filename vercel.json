@@ -1,12 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/sniff/static/:path*",
+      "source": "/api/sniff/static/:path*",
       "destination": "https://us-assets.i.posthog.com/static/:path*"
-    },
-    {
-      "source": "/sniff/:path*",
-      "destination": "/api/sniff/:path*"
     }
   ]
 }
