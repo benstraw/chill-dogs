@@ -196,6 +196,6 @@ Current converter pages:
 
 ## TODO
 
-- [ ] Set up Netlify/Vercel reverse proxy for PostHog (`/ingest/*` → `us.posthog.com/*`) to bypass Firefox ETP and ad blockers
-- [ ] Change `api_host` in `Analytics.astro` to use the proxy URL once deployed
+- [ ] Set up PostHog reverse proxy — managed proxy at `woof.chill-dogs.com` created but stuck "Erroring" (support ticket open, CNAME verified resolving to `363de8967e998f4c87e3.cf-prod-us-proxy.proxyhog.com`). Once resolved: update `api_host` to `https://woof.chill-dogs.com` and add `ui_host: 'https://us.posthog.com'` in `Analytics.astro`. Fallback: Cloudflare Worker proxy.
+- [x] Updated PostHog snippet loader to latest version (March 2026)
 - [ ] Implement feature flag–driven hero experiments (replace hardcoded variants)

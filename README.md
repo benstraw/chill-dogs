@@ -335,7 +335,7 @@ A `netlify.toml` is also present with equivalent build config and security heade
 - [x] Connect Vercel project and set up auto-deploy from `main`
 - [x] Point `chill-dogs.com` domain to Vercel; confirm SSL
 - [x] Set up analytics — Plausible (primary) + GA4 (optional) + PostHog; wired via `src/components/Analytics.astro` with global `init()` and `data-track` event delegation
-- [ ] **Set up PostHog reverse proxy on Netlify/Vercel** — PostHog scripts are blocked by Firefox Enhanced Tracking Protection and ad blockers. Proxy `/ingest/*` → `us.posthog.com/*` so the SDK loads from the same origin. See [PostHog reverse proxy docs](https://posthog.com/docs/advanced/proxy). Critical for accurate analytics coverage.
+- [ ] **Set up PostHog reverse proxy** — Managed proxy at `woof.chill-dogs.com` created but stuck in "Erroring" state (support ticket open). Once resolved, update `api_host` in `Analytics.astro` to `https://woof.chill-dogs.com` and add `ui_host: 'https://us.posthog.com'`. Fallback option: Cloudflare Worker proxy.
 - [x] Add OG image (`/public/og-default.jpg`)
 - [x] Add favicon (`/public/favicon.ico`)
 - [x] Generate per-page OG images with dynamic headline + CTA text (`src/scripts/generate-og-images.mjs`)
