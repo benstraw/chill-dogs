@@ -32,12 +32,16 @@ export const ALL: APIRoute = async ({ request }) => {
   const headers = new Headers(request.headers);
   headers.set('host', isStatic ? 'us-assets.i.posthog.com' : 'us.i.posthog.com');
 
-  const hasBody =
-    !['GET', 'HEAD', 'OPTIONS', 'TRACE'].includes(request.method) && request.body != null;
+  // Buffer the body before forwarding. Node.js 18+ fetch() throws a TypeError
+  // ("duplex option is required") when given a ReadableStream body directly.
+  // Buffering via arrayBuffer() sidesteps this in both Node.js and edge runtimes.
+  const hasBody = !['GET', 'HEAD', 'OPTIONS', 'TRACE'].includes(request.method);
+  const body = hasBody ? await request.arrayBuffer() : null;
+
   const response = await fetch(targetUrl, {
     method: request.method,
     headers,
-    body: hasBody ? request.body : null,
+    body,
   });
 
   // Strip hop-by-hop headers that must not be forwarded through a proxy.
