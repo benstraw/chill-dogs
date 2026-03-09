@@ -39,10 +39,10 @@ describe('buildBreadcrumbSchema', () => {
   });
 
   it('uses special labels for known route segments', () => {
-    const schema = buildBreadcrumbSchema('/gift-guides/', siteUrl) as {
+    const schema = buildBreadcrumbSchema('/affiliate-disclosure/', siteUrl) as {
       itemListElement: Array<{ name: string }>;
     };
 
-    expect(schema.itemListElement[1].name).toBe('Gift Guides');
+    expect(schema.itemListElement[1].name).toBe('Affiliate Disclosure');
   });
 });

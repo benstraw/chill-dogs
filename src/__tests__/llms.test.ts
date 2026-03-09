@@ -13,7 +13,7 @@ describe('llms utilities', () => {
     expect(shouldExcludePath('/404/')).toBe(true);
     expect(shouldExcludePath('/content-sitemap/')).toBe(true);
     expect(shouldExcludePath('/cooling/v/a/')).toBe(true);
-    expect(shouldExcludePath('/blog/page/3/')).toBe(true);
+    expect(shouldExcludePath('/cooling/page/3/')).toBe(true);
     expect(shouldExcludePath('/cooling/cooling-mats/')).toBe(false);
   });
 

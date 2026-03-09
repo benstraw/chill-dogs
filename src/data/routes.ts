@@ -1,0 +1,18 @@
+export const ROUTES = {
+  home: '/',
+  about: '/about/',
+  contact: '/contact/',
+  coolingHub: '/cooling/',
+  coolingTop: '/cooling/best-cooling-products-for-dogs/',
+  coolingMats: '/cooling/cooling-mats/',
+  coolingBandanas: '/cooling/cooling-bandanas/',
+  coolingVests: '/cooling/cooling-vests/',
+  coolingToys: '/cooling/freezable-dog-toys/',
+  coolingCar: '/cooling/car-cooling-for-dogs/',
+  coolingSafety: '/cooling/how-hot-is-too-hot-for-dogs/',
+  calmingHub: '/calming/',
+  calmingTop: '/calming/best-calming-products-for-anxious-dogs/',
+  calmingAlternatives: '/calming/best-thundershirt-alternatives/',
+  calmingCar: '/calming/car-anxiety-for-dogs/',
+  roadTrip: '/travel/rhys-road-trip-chill-kit/',
+} as const;

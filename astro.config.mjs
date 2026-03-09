@@ -4,7 +4,7 @@ import robotsTxt from 'astro-robots-txt';
 
 export default defineConfig({
   site: 'https://chill-dogs.com',
-  trailingSlash: 'always',
+  trailingSlash: 'ignore',
   integrations: [
     sitemap({
       filter: (page) => !page.includes('/draft') && !page.includes('/v/'),

@@ -10,6 +10,12 @@ bun run build     # Static build to dist/
 bun run preview   # Preview built site
 ```
 
+## Source Of Truth
+
+- `docs/system-definition.yaml` defines this project as a modular conversion system.
+- Keep `docs/system-definition.yaml` updated whenever pages, routes, page types, module stacks, navigation, or conversion flow change.
+- AI-assisted page changes are incomplete unless this file remains accurate.
+
 ## Governing Principles
 
 This site is a **modular conversion system** governed by `docs/web-systems-adventure-mode.md`. Before any change, ask:
@@ -18,6 +24,41 @@ This site is a **modular conversion system** governed by `docs/web-systems-adven
 2. **What page type is this for?** Every page is exactly one of: converter, collector, attractor, informer. Know the type before touching it. Converters have one job and one CTA. Collectors route traffic to converters. Attractors convert campaign traffic. Informers are administrative. Don't blur the lines.
 3. **Is this modular?** Components must be reusable workhorse modules — no hardcoded content, responsive, accessible, performant. Build for reuse. Showstopper (custom/complex) modules are used sparingly and never stacked. Don't over-engineer; don't under-abstract.
 4. **Does this preserve clarity and speed?** Minimize friction between visitor and conversion. Fewer steps, fewer distractions, fast loads (sub-2s). Navigation stays minimal (≤5 links). Every page answers: "What is the single action this page exists to drive?"
+
+## AI Build Contract (Strict)
+
+### Terminology
+
+- Use only these page-type terms: `converter`, `collector`, `attractor`, `informer`.
+- Do not use "hub" in specs, comments, or implementation notes. Use `collector`.
+
+### Architecture Rules
+
+- Every new page must have one declared page type before implementation.
+- If two or more pages share structure, use one reusable composer/module plus config inputs instead of duplicating page scaffolding.
+- Keep page-level differences in centralized data/config objects (copy, category keys, CTA targets, FAQ sets, section toggles).
+- Avoid hardcoded internal route strings in page bodies when centralized route constants exist.
+- Reuse existing modules first; introduce new modules only when no existing module can satisfy page goals.
+
+### Converter Rules
+
+- `converter` pages should render this stack unless scope explicitly says otherwise:
+- `Hero`, comparison/product sections, `FAQ` when data exists, `Disclosure`, internal links to related converters/collectors.
+- Above-the-fold CTA should prioritize high-intent conversion behavior.
+- All Amazon outbound links must use `AffiliateLink.astro`.
+
+### Collector Rules
+
+- `collector` pages must route users to relevant `converter` pages.
+- Require at least one above-the-fold route to a `converter`.
+- `collector` pages should aggregate and route intent; avoid duplicating full converter-style comparison implementations.
+
+### Quality Gates
+
+- Validate internal routes (no dead or malformed links).
+- Validate modularity (no repeated scaffolding where shared module/config patterns should be used).
+- Run `npm test` and `npm run build` for substantive page/module changes.
+- Changes to `src/utils/**` or `src/scripts/**` require updated unit tests.
 
 ## Content Guardrails
 
@@ -31,23 +72,9 @@ Amazon affiliate dog lifestyle site built with **Astro 5** (SSG) and **bun**. Re
 
 ## Architecture
 
-### Content System
-
-Single `posts` collection defined in `src/content.config.ts` using Astro 5's Content Layer with `glob()` loader. All content lives in `src/data/posts/{category}/` as markdown files with YAML frontmatter.
-
-**Page types** (frontmatter `pageType` field) determine layout, purpose, and metric. Each page has **one job** — if a page tries to do two things, split it or remove the secondary CTA.
-- **converter** — Money pages. One CTA: buy via affiliate link. Metric: conversion rate. Uses `ConverterLayout.astro`.
-- **collector** — SEO pages. Job: capture organic traffic and route it to converters. Metric: traffic volume + % routed to converters. Uses `PostLayout.astro`.
-- **attractor** — Social/viral pages. Job: convert campaign/social traffic. Metric: campaign conversion rate. Uses `PostLayout.astro`.
-- **informer** — Admin/legal pages (about, privacy, terms). Not metric-driven. Not in the collection.
-
-**Categories**: `gift-guides`, `luxury-gear`, `blog` — each maps to a URL path and has its own `pages/{category}/index.astro` + `[...slug].astro`.
-
-### Routing Pattern
-
-Each category has an identical pair of route files. The `[...slug].astro` file selects `ConverterLayout` or `PostLayout` based on `pageType`. Content rendering uses Astro 5's `render(post)` from `astro:content` (not the old `post.render()` API).
-
-Slug extraction uses helpers in `src/utils/collection-helpers.ts` — content IDs come from the glob loader as `category/filename` format.
+- Astro 5 static routes with modular section components.
+- Shared render patterns should be driven by centralized data/config inputs rather than duplicated page markup.
+- The active page model is based on explicit routes and page-type behavior (`converter`, `collector`, `attractor`, `informer`), not freeform category templates.
 
 ### Styling
 
@@ -70,10 +97,6 @@ Current events: `hero_click_cooling`, `hero_click_calming`, `amazon_outbound_cli
 ### Path Aliases
 
 `@components/`, `@layouts/`, `@styles/`, `@data/`, `@utils/` — configured in tsconfig.json.
-
-## Adding Content
-
-Create a markdown file in `src/data/posts/{category}/` with required frontmatter fields: `title`, `description`, `category`, `date`, `pageType`. Converter pages need a `products` array. Set `draft: true` to exclude from build.
 
 ## Analytics
 

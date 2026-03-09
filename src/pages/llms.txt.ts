@@ -1,7 +1,6 @@
 import type { APIContext } from 'astro';
-import { getCollection } from 'astro:content';
 import { buildLlmsMarkdown, type LlmsLink } from '@utils/llms';
-import { getSlugFromId } from '@utils/collection-helpers';
+import { ROUTES } from '@data/routes';
 
 export const prerender = true;
 
@@ -12,97 +11,97 @@ const INTRO = 'This index prioritizes evergreen guides and key conversion pages 
 const STATIC_LINKS: LlmsLink[] = [
   {
     title: 'Home',
-    path: '/',
+    path: ROUTES.home,
     description: 'Main entry point to cooling and calming recommendation paths.',
     explicitPriority: 1000,
   },
   {
-    title: 'Cooling Hub',
-    path: '/cooling/',
+    title: 'Cooling Collector',
+    path: ROUTES.coolingHub,
     description: 'Overview of cooling categories and supporting heat-safety guides.',
     explicitPriority: 960,
   },
   {
-    title: 'Calming Hub',
-    path: '/calming/',
+    title: 'Calming Collector',
+    path: ROUTES.calmingHub,
     description: 'Overview of calming categories and high-intent anxiety guides.',
     explicitPriority: 955,
   },
   {
     title: 'Best Cooling Products for Dogs',
-    path: '/cooling/best-cooling-products-for-dogs/',
+    path: ROUTES.coolingTop,
     description: 'Top cooling picks across mats, vests, bandanas, and frozen enrichment.',
     explicitPriority: 940,
   },
   {
     title: 'Best Calming Products for Anxious Dogs',
-    path: '/calming/best-calming-products-for-anxious-dogs/',
+    path: ROUTES.calmingTop,
     description: 'Top calming picks across wraps, chews, lick mats, and snuffle mats.',
     explicitPriority: 935,
   },
   {
-    title: 'Rhys\'s Road Trip Chill Kit',
-    path: '/travel/rhys-road-trip-chill-kit/',
+    title: "Rhys's Road Trip Chill Kit",
+    path: ROUTES.roadTrip,
     description: 'Road-trip setup that combines cooling and calming recommendations.',
     explicitPriority: 930,
   },
   {
     title: 'Car Cooling for Dogs',
-    path: '/cooling/car-cooling-for-dogs/',
+    path: ROUTES.coolingCar,
     description: 'Converter page focused on in-car cooling gear and heat-risk reduction.',
     explicitPriority: 920,
   },
   {
     title: 'Car Anxiety for Dogs',
-    path: '/calming/car-anxiety-for-dogs/',
+    path: ROUTES.calmingCar,
     description: 'Converter page focused on travel calming aids and routines.',
     explicitPriority: 915,
   },
   {
     title: 'Cooling Mats',
-    path: '/cooling/cooling-mats/',
+    path: ROUTES.coolingMats,
     description: 'Category converter for cooling mat recommendations.',
     explicitPriority: 910,
   },
   {
     title: 'Cooling Vests',
-    path: '/cooling/cooling-vests/',
+    path: ROUTES.coolingVests,
     description: 'Category converter for evaporative cooling vest recommendations.',
     explicitPriority: 905,
   },
   {
     title: 'Cooling Bandanas',
-    path: '/cooling/cooling-bandanas/',
+    path: ROUTES.coolingBandanas,
     description: 'Category converter for lightweight neck-cooling options.',
     explicitPriority: 900,
   },
   {
     title: 'Freezable Dog Toys',
-    path: '/cooling/freezable-dog-toys/',
+    path: ROUTES.coolingToys,
     description: 'Category converter for frozen enrichment and cooling play.',
     explicitPriority: 895,
   },
   {
     title: 'How Hot Is Too Hot for Dogs?',
-    path: '/cooling/how-hot-is-too-hot-for-dogs/',
+    path: ROUTES.coolingSafety,
     description: 'Heat threshold explainer with routing to cooling products.',
     explicitPriority: 885,
   },
   {
     title: 'Best ThunderShirt Alternatives for Dogs',
-    path: '/calming/best-thundershirt-alternatives/',
+    path: ROUTES.calmingAlternatives,
     description: 'Comparison guide for calming options beyond pressure wraps.',
     explicitPriority: 880,
   },
   {
     title: 'About Chill-Dogs',
-    path: '/about/',
+    path: ROUTES.about,
     description: 'Editorial approach, positioning, and trust context.',
     explicitPriority: 600,
   },
   {
     title: 'Contact',
-    path: '/contact/',
+    path: ROUTES.contact,
     description: 'Direct contact page for editorial or site questions.',
     explicitPriority: 590,
   },
@@ -121,34 +120,15 @@ function resolveBaseUrl(context: APIContext): string {
   throw new Error('Missing site URL. Set PUBLIC_SITE_URL or Astro site config.');
 }
 
-async function getCollectionLinks(): Promise<LlmsLink[]> {
-  const posts = await getCollection('posts', ({ data }) => !data.draft);
-
-  return posts.map((post) => {
-    const slug = getSlugFromId(post.id);
-    const path = `/${post.data.category}/${slug}/`;
-
-    return {
-      title: post.data.title,
-      path,
-      description: post.data.description,
-      explicitPriority: typeof (post.data as { llmsPriority?: number }).llmsPriority === 'number'
-        ? (post.data as { llmsPriority?: number }).llmsPriority
-        : undefined,
-    };
-  });
-}
-
 export async function GET(context: APIContext): Promise<Response> {
   const baseUrl = resolveBaseUrl(context);
-  const collectionLinks = await getCollectionLinks();
 
   const body = buildLlmsMarkdown({
     siteName: SITE_NAME,
     description: SITE_DESCRIPTION,
     shortParagraph: INTRO,
     baseUrl,
-    links: [...STATIC_LINKS, ...collectionLinks],
+    links: STATIC_LINKS,
     maxLinks: 40,
   });
 
