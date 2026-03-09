@@ -1,0 +1,518 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { coolingProducts } from '../../data/cooling-products';
+import { calmingProducts } from '../../data/calming-products';
+
+const allProducts = [
+  ...coolingProducts.map((p) => ({ ...p, pillar: 'cooling' as const, howItHelps: undefined as string | undefined, considerIf: undefined as string | undefined })),
+  ...calmingProducts.map((p) => ({ ...p, pillar: 'calming' as const, coolingMethod: undefined as string | undefined, sizingNote: undefined as string | undefined, image: undefined as { src: string; alt: string } | undefined, isBonus: undefined as boolean | undefined })),
+];
+
+const pillars = [...new Set(allProducts.map((p) => p.pillar))];
+const categories = [...new Set(allProducts.map((p) => p.category))];
+---
+
+<BaseLayout title="Product Catalog (Admin)" noindex={true} hideChrome={true}>
+  <div class="admin-products">
+    <h1>Product Catalog</h1>
+
+    <div class="toolbar">
+      <input type="text" id="search" placeholder="Search products..." />
+      <div class="filter-group">
+        <span class="filter-label">Pillar</span>
+        <div class="chips" id="pillar-chips">
+          {pillars.map((p) => (
+            <button class="chip" data-filter="pillar" data-value={p}>{p}</button>
+          ))}
+        </div>
+      </div>
+      <div class="filter-group">
+        <span class="filter-label">Category</span>
+        <div class="chips" id="category-chips">
+          {categories.map((c) => (
+            <button class="chip" data-filter="category" data-value={c}>{c}</button>
+          ))}
+        </div>
+      </div>
+      <div class="toolbar-footer">
+        <p class="count"><span id="visible-count">{allProducts.length}</span> of {allProducts.length} products</p>
+        <button class="clear-btn" id="clear-filters">Clear filters</button>
+        <button class="expand-btn" id="expand-all">Expand all</button>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th class="col-expand"></th>
+          <th data-sort="pillar">Pillar</th>
+          <th data-sort="category">Category</th>
+          <th data-sort="name">Name</th>
+          <th>Best For</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody id="product-rows">
+        {allProducts.map((p) => (
+          <>
+            <tr class="product-row" data-pillar={p.pillar} data-category={p.category} data-name={p.name}>
+              <td class="toggle-cell"><button class="toggle-btn" aria-label="Expand details">+</button></td>
+              <td><span class={`badge badge--${p.pillar}`}>{p.pillar}</span></td>
+              <td>{p.category}</td>
+              <td class="name-cell">{p.name}</td>
+              <td>{p.bestFor}</td>
+              <td><a href={p.amazonUrl} target="_blank" rel="nofollow noopener">Amazon</a></td>
+            </tr>
+            <tr class="detail-row" style="display:none">
+              <td colspan="6">
+                <div class="detail-content">
+                  <div class="detail-section">
+                    <h4>Bullets</h4>
+                    <ul class="detail-bullets">
+                      {p.bullets.map((b) => <li>{b}</li>)}
+                    </ul>
+                  </div>
+                  <div class="detail-meta">
+                    {p.coolingMethod && (
+                      <div class="meta-item">
+                        <span class="meta-label">Cooling Method</span>
+                        <span class="meta-value">{p.coolingMethod}</span>
+                      </div>
+                    )}
+                    {p.sizingNote && (
+                      <div class="meta-item">
+                        <span class="meta-label">Sizing Note</span>
+                        <span class="meta-value">{p.sizingNote}</span>
+                      </div>
+                    )}
+                    {p.howItHelps && (
+                      <div class="meta-item">
+                        <span class="meta-label">How It Helps</span>
+                        <span class="meta-value">{p.howItHelps}</span>
+                      </div>
+                    )}
+                    {p.considerIf && (
+                      <div class="meta-item">
+                        <span class="meta-label">Consider If</span>
+                        <span class="meta-value">{p.considerIf}</span>
+                      </div>
+                    )}
+                    {p.isBonus && (
+                      <div class="meta-item">
+                        <span class="meta-label">Bonus Pick</span>
+                        <span class="meta-value">Yes</span>
+                      </div>
+                    )}
+                    <div class="meta-item">
+                      <span class="meta-label">ID</span>
+                      <span class="meta-value meta-value--mono">{p.id}</span>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</BaseLayout>
+
+<script>
+  const search = document.getElementById('search') as HTMLInputElement;
+  const productRows = document.querySelectorAll<HTMLTableRowElement>('#product-rows tr.product-row');
+  const visibleCount = document.getElementById('visible-count')!;
+  const headers = document.querySelectorAll<HTMLTableCellElement>('th[data-sort]');
+  const chips = document.querySelectorAll<HTMLButtonElement>('.chip');
+  const clearBtn = document.getElementById('clear-filters')!;
+  const expandAllBtn = document.getElementById('expand-all')!;
+
+  let sortKey = '';
+  let sortAsc = true;
+  let allExpanded = false;
+  const activeFilters: Record<string, Set<string>> = { pillar: new Set(), category: new Set() };
+
+  function applyFilters() {
+    const q = search.value.toLowerCase();
+    let count = 0;
+
+    productRows.forEach((row) => {
+      const detailRow = row.nextElementSibling as HTMLTableRowElement;
+      const matchPillar = activeFilters.pillar.size === 0 || activeFilters.pillar.has(row.dataset.pillar!);
+      const matchCategory = activeFilters.category.size === 0 || activeFilters.category.has(row.dataset.category!);
+      const text = row.textContent! + (detailRow?.textContent || '');
+      const matchSearch = !q || text.toLowerCase().includes(q);
+      const visible = matchPillar && matchCategory && matchSearch;
+      row.style.display = visible ? '' : 'none';
+      if (!visible && detailRow) detailRow.style.display = 'none';
+      if (visible) count++;
+    });
+
+    visibleCount.textContent = String(count);
+
+    const hasFilters = search.value || activeFilters.pillar.size > 0 || activeFilters.category.size > 0;
+    clearBtn.style.display = hasFilters ? '' : 'none';
+  }
+
+  function applySort(key: string) {
+    if (sortKey === key) {
+      sortAsc = !sortAsc;
+    } else {
+      sortKey = key;
+      sortAsc = true;
+    }
+
+    headers.forEach((th) => {
+      th.classList.remove('sort-asc', 'sort-desc');
+      if (th.dataset.sort === key) {
+        th.classList.add(sortAsc ? 'sort-asc' : 'sort-desc');
+      }
+    });
+
+    const tbody = document.getElementById('product-rows')!;
+    const pairs: [HTMLTableRowElement, HTMLTableRowElement][] = [];
+    productRows.forEach((row) => {
+      const detailRow = row.nextElementSibling as HTMLTableRowElement;
+      pairs.push([row, detailRow]);
+    });
+
+    pairs.sort((a, b) => {
+      const aVal = (a[0].dataset[key] || '').toLowerCase();
+      const bVal = (b[0].dataset[key] || '').toLowerCase();
+      return sortAsc ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+    });
+
+    pairs.forEach(([row, detail]) => {
+      tbody.appendChild(row);
+      tbody.appendChild(detail);
+    });
+  }
+
+  function toggleRow(productRow: HTMLTableRowElement) {
+    const detailRow = productRow.nextElementSibling as HTMLTableRowElement;
+    const btn = productRow.querySelector('.toggle-btn')!;
+    const isOpen = detailRow.style.display !== 'none';
+    detailRow.style.display = isOpen ? 'none' : '';
+    btn.textContent = isOpen ? '+' : '\u2212';
+  }
+
+  function toggleAll() {
+    allExpanded = !allExpanded;
+    productRows.forEach((row) => {
+      if (row.style.display === 'none') return;
+      const detailRow = row.nextElementSibling as HTMLTableRowElement;
+      const btn = row.querySelector('.toggle-btn')!;
+      detailRow.style.display = allExpanded ? '' : 'none';
+      btn.textContent = allExpanded ? '\u2212' : '+';
+    });
+    expandAllBtn.textContent = allExpanded ? 'Collapse all' : 'Expand all';
+  }
+
+  function clearAll() {
+    search.value = '';
+    activeFilters.pillar.clear();
+    activeFilters.category.clear();
+    chips.forEach((c) => c.classList.remove('active'));
+    applyFilters();
+  }
+
+  productRows.forEach((row) => {
+    row.addEventListener('click', (e) => {
+      if ((e.target as HTMLElement).tagName === 'A') return;
+      toggleRow(row);
+    });
+  });
+
+  chips.forEach((chip) => {
+    chip.addEventListener('click', () => {
+      const filterType = chip.dataset.filter!;
+      const value = chip.dataset.value!;
+      if (activeFilters[filterType].has(value)) {
+        activeFilters[filterType].delete(value);
+        chip.classList.remove('active');
+      } else {
+        activeFilters[filterType].add(value);
+        chip.classList.add('active');
+      }
+      applyFilters();
+    });
+  });
+
+  search.addEventListener('input', applyFilters);
+  clearBtn.addEventListener('click', clearAll);
+  expandAllBtn.addEventListener('click', toggleAll);
+  headers.forEach((th) => {
+    th.addEventListener('click', () => applySort(th.dataset.sort!));
+  });
+
+  clearBtn.style.display = 'none';
+</script>
+
+<style>
+  .admin-products {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--space-lg);
+  }
+
+  h1 {
+    margin-bottom: var(--space-md);
+  }
+
+  .toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+  }
+
+  .toolbar input {
+    font-size: var(--text-sm);
+    padding: var(--space-xs) var(--space-sm);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-cream);
+    color: var(--color-text);
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .filter-group {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+  }
+
+  .filter-label {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text-muted);
+    min-width: 5em;
+  }
+
+  .chips {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .chip {
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+
+  .chip:hover {
+    border-color: var(--color-charcoal);
+  }
+
+  .chip.active {
+    background: var(--color-charcoal);
+    border-color: var(--color-charcoal);
+    color: var(--color-sand);
+  }
+
+  .toolbar-footer {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .count {
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+  }
+
+  .clear-btn,
+  .expand-btn {
+    font-size: var(--text-sm);
+    color: var(--color-terracotta);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--text-sm);
+  }
+
+  th {
+    text-align: left;
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 2px solid var(--color-border);
+    font-weight: var(--weight-semibold);
+    white-space: nowrap;
+  }
+
+  .col-expand {
+    width: 2rem;
+  }
+
+  th[data-sort] {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  th[data-sort]:hover {
+    color: var(--color-terracotta);
+  }
+
+  th[data-sort]::after {
+    content: ' \2195';
+    opacity: 0.3;
+  }
+
+  th.sort-asc::after {
+    content: ' \2191';
+    opacity: 1;
+  }
+
+  th.sort-desc::after {
+    content: ' \2193';
+    opacity: 1;
+  }
+
+  td {
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: top;
+  }
+
+  .product-row {
+    cursor: pointer;
+  }
+
+  .product-row:hover td {
+    background: var(--color-cream);
+  }
+
+  .toggle-cell {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .toggle-btn {
+    background: none;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.85rem;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--color-text-muted);
+  }
+
+  .name-cell {
+    font-weight: var(--weight-semibold);
+  }
+
+  .detail-row td {
+    padding: 0;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  .detail-content {
+    padding: var(--space-md) var(--space-lg) var(--space-lg);
+    background: var(--color-cream);
+    display: flex;
+    gap: var(--space-xl);
+    flex-wrap: wrap;
+  }
+
+  .detail-section {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  .detail-section h4 {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    margin-bottom: var(--space-xs);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .detail-bullets {
+    font-size: var(--text-sm);
+    color: var(--color-text);
+    line-height: 1.6;
+    padding-left: var(--space-md);
+  }
+
+  .detail-bullets li {
+    margin-bottom: var(--space-xs);
+  }
+
+  .detail-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md) var(--space-xl);
+    align-content: flex-start;
+  }
+
+  .meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .meta-label {
+    font-size: 0.7rem;
+    font-weight: var(--weight-semibold);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .meta-value {
+    font-size: var(--text-sm);
+    color: var(--color-text);
+  }
+
+  .meta-value--mono {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+  }
+
+  .badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: var(--weight-semibold);
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .badge--cooling {
+    background: var(--color-sky);
+    color: var(--color-charcoal);
+  }
+
+  .badge--calming {
+    background: var(--color-sage);
+    color: var(--color-charcoal);
+  }
+
+  a {
+    color: var(--color-terracotta);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
