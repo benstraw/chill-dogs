@@ -1,0 +1,155 @@
+# Chill-Dogs System Definition
+# Source of truth for site intent, page types, modules, and conversion architecture.
+#
+# Maintenance rule (mandatory):
+# - Update this file whenever pages, routes, page types, module stacks,
+#   navigation, or conversion flow changes.
+# - Any AI-assisted page additions/changes must keep this file current.
+
+site_system:
+  status: "active"
+  as_of: "2026-03-06"
+  owner: "Chill-Dogs"
+  purpose: "Define the website as a modular conversion system and keep implementation aligned."
+
+  maintenance_policy:
+    required_on_change:
+      - "new page added"
+      - "page removed"
+      - "page type changed"
+      - "route changed"
+      - "navigation changed"
+      - "module stack changed"
+      - "analytics funnel changed"
+    enforced_by:
+      - "AGENTS.md"
+      - "CLAUDE.md"
+
+  keystone_metrics:
+    primary: "Amazon affiliate revenue (qualified outbound clicks to purchases)"
+    secondary: "collector_to_converter_click rate"
+
+  page_inventory:
+    - name: "Home"
+      type: "attractor"
+      target_action: "Route visitors into cooling or calming collector paths"
+      metric: "hero_click_cooling + hero_click_calming CTR"
+
+    - name: "Cooling"
+      type: "collector"
+      target_action: "Route heat-intent traffic to cooling converters"
+      metric: "collector_to_converter_click to cooling converters"
+
+    - name: "Calming"
+      type: "collector"
+      target_action: "Route anxiety-intent traffic to calming converters"
+      metric: "collector_to_converter_click to calming converters"
+
+    - name: "Cooling converters"
+      type: "converter"
+      target_action: "Drive affiliate outbound clicks"
+      metric: "amazon_outbound_click rate"
+      routes:
+        - "/cooling/best-cooling-products-for-dogs/"
+        - "/cooling/cooling-mats/"
+        - "/cooling/cooling-bandanas/"
+        - "/cooling/cooling-vests/"
+        - "/cooling/freezable-dog-toys/"
+        - "/cooling/car-cooling-for-dogs/"
+
+    - name: "Calming converters"
+      type: "converter"
+      target_action: "Drive affiliate outbound clicks"
+      metric: "amazon_outbound_click rate"
+      routes:
+        - "/calming/best-calming-products-for-anxious-dogs/"
+        - "/calming/best-thundershirt-alternatives/"
+        - "/calming/car-anxiety-for-dogs/"
+
+    - name: "Road Trip Chill Kit"
+      type: "collector"
+      target_action: "Route mixed intent to cooling and calming converters"
+      metric: "collector_to_converter_click split by destination"
+      routes:
+        - "/travel/rhys-road-trip-chill-kit/"
+
+    - name: "Informer pages"
+      type: "informer"
+      target_action: "Trust and compliance clarity"
+      metric: "No conversion obstruction"
+      routes:
+        - "/about/"
+        - "/contact/"
+        - "/privacy-policy/"
+        - "/terms/"
+        - "/affiliate-disclosure/"
+
+  modules:
+    workhorse:
+      - "BaseLayout"
+      - "Hero"
+      - "HeroExperiment"
+      - "CoolingConverterPage"
+      - "CalmingConverterPage"
+      - "CollectorBody"
+      - "ComparisonTable"
+      - "CoolingProductGrid"
+      - "CoolingProductCard"
+      - "CalmingProductCard"
+      - "FAQ"
+      - "Disclosure"
+      - "InternalLinkStrip"
+      - "Toc"
+      - "RelatedGuides"
+    showstopper:
+      - "CoolingHubHeroDesert"
+      - "CalmingHubHeroFireworks"
+      - "404 visual page"
+    high_touch:
+      - "HomepageHero variants"
+      - "collector variant routes (/v/, /cooling/v/, /calming/v/)"
+      - "Road Trip collector narrative"
+
+  nav:
+    primary_links:
+      - "/"
+      - "/cooling/"
+      - "/calming/"
+      - "/about/"
+
+  footer:
+    sections:
+      - "Explore: cooling, calming"
+      - "Company: about, contact"
+      - "Legal: privacy-policy, terms, affiliate-disclosure"
+    final_cta: "Persistent affiliate disclosure and trust reinforcement"
+
+  conversion_flow:
+    steps:
+      - "Entry on attractor or collector"
+      - "Above-the-fold route to converter"
+      - "Comparison and product rationale"
+      - "Affiliate outbound click"
+      - "Amazon purchase completion"
+    friction_points:
+      - "Route or tracking metadata mismatches"
+      - "Duplicated page scaffolding that drifts over time"
+      - "Unused modules that create implementation confusion"
+      - "Collector pages without clear converter paths"
+
+  architecture:
+    frontend: "Astro 5 static site with scoped CSS and reusable modules"
+    cms: "None (code-first content/config in repository)"
+    hosting: "Static build deployment"
+    seo_strategy: "collector captures intent; converter monetizes intent; variant routes remain canonicalized and noindex"
+
+  analytics:
+    primary_events:
+      - "amazon_outbound_click"
+      - "collector_to_converter_click"
+      - "hero_click_cooling"
+      - "hero_click_calming"
+      - "hero_cta_click"
+      - "hero_impression"
+      - "toc_click"
+    funnel_definition: "collector or attractor entry -> converter click -> amazon_outbound_click"

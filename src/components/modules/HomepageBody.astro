@@ -1,45 +1,81 @@
 ---
-import PostCard from '@components/PostCard.astro';
-import { getAllPosts, getSlugFromId, getCategoryFromId } from '@utils/collection-helpers';
+import { ROUTES } from '@data/routes';
 
-const allPosts = await getAllPosts();
-const converterPosts = allPosts.filter((p) => p.data.pageType === 'converter').slice(0, 3);
-const latestPosts = allPosts.slice(0, 6);
+const topGuides = [
+  {
+    title: 'Best Cooling Products for Dogs',
+    description: 'Top cooling picks across mats, vests, bandanas, and frozen enrichment.',
+    href: ROUTES.coolingTop,
+  },
+  {
+    title: 'Best Calming Products for Anxious Dogs',
+    description: 'Top calming picks across wraps, chews, lick mats, and snuffle mats.',
+    href: ROUTES.calmingTop,
+  },
+  {
+    title: "Rhys's Road Trip Chill Kit",
+    description: 'A practical cooling + calming setup for long drives with dogs.',
+    href: ROUTES.roadTrip,
+  },
+];
+
+const latestGuides = [
+  {
+    title: 'Car Cooling for Dogs',
+    description: 'In-car cooling gear and heat-risk reduction essentials.',
+    href: ROUTES.coolingCar,
+  },
+  {
+    title: 'Car Anxiety for Dogs',
+    description: 'Practical calming tools for travel stress and restless rides.',
+    href: ROUTES.calmingCar,
+  },
+  {
+    title: 'How Hot Is Too Hot for Dogs?',
+    description: 'Heat threshold guidance with routes to cooling product pages.',
+    href: ROUTES.coolingSafety,
+  },
+  {
+    title: 'Cooling Mats',
+    description: 'Compare pressure-activated and water-based cooling mat picks.',
+    href: ROUTES.coolingMats,
+  },
+  {
+    title: 'Cooling Vests',
+    description: 'Evaporative cooling vest picks for active outdoor dogs.',
+    href: ROUTES.coolingVests,
+  },
+  {
+    title: 'ThunderShirt Alternatives',
+    description: 'When to choose wraps, chews, lick mats, or snuffle mats instead.',
+    href: ROUTES.calmingAlternatives,
+  },
+];
 ---
 
-{converterPosts.length > 0 && (
-  <section class="featured container">
-    <h2 class="section-title">Top Guides</h2>
-    <div class="posts-grid">
-      {converterPosts.map((post) => (
-        <PostCard
-          title={post.data.title}
-          description={post.data.description}
-          href={`/${getCategoryFromId(post.id)}/${getSlugFromId(post.id)}`}
-          category={post.data.category}
-          image={post.data.heroImage}
-        />
-      ))}
-    </div>
-  </section>
-)}
+<section class="featured container">
+  <h2 class="section-title">Top Guides</h2>
+  <div class="cards-grid">
+    {topGuides.map((guide) => (
+      <a href={guide.href} class="guide-card" data-track="collector_to_converter_click" data-to-page={guide.href} data-link-position="homepage-top-guides">
+        <h3 class="guide-title">{guide.title}</h3>
+        <p class="guide-description">{guide.description}</p>
+      </a>
+    ))}
+  </div>
+</section>
 
-{latestPosts.length > 0 && (
-  <section class="latest container">
-    <h2 class="section-title">Latest Posts</h2>
-    <div class="posts-grid">
-      {latestPosts.map((post) => (
-        <PostCard
-          title={post.data.title}
-          description={post.data.description}
-          href={`/${getCategoryFromId(post.id)}/${getSlugFromId(post.id)}`}
-          category={post.data.category}
-          image={post.data.heroImage}
-        />
-      ))}
-    </div>
-  </section>
-)}
+<section class="latest container">
+  <h2 class="section-title">Latest Guides</h2>
+  <div class="cards-grid">
+    {latestGuides.map((guide) => (
+      <a href={guide.href} class="guide-card" data-track="collector_to_converter_click" data-to-page={guide.href} data-link-position="homepage-latest-guides">
+        <h3 class="guide-title">{guide.title}</h3>
+        <p class="guide-description">{guide.description}</p>
+      </a>
+    ))}
+  </div>
+</section>
 
 <style>
   .featured,
@@ -53,20 +89,49 @@ const latestPosts = allPosts.slice(0, 6);
     margin-bottom: var(--space-xl);
   }
 
-  .posts-grid {
+  .cards-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-xl);
   }
 
+  .guide-card {
+    display: block;
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: var(--space-lg);
+    text-decoration: none;
+    color: inherit;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+  }
+
+  .guide-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    color: inherit;
+  }
+
+  .guide-title {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-sm);
+    color: var(--color-text);
+  }
+
+  .guide-description {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-normal);
+  }
+
   @media (max-width: 1024px) {
-    .posts-grid {
+    .cards-grid {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
   @media (max-width: 640px) {
-    .posts-grid {
+    .cards-grid {
       grid-template-columns: 1fr;
     }
   }

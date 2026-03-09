@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 import { categoryMeta } from '@data/cooling-products';
-import { getAllPosts, getCategoryFromId, getSlugFromId } from '@utils/collection-helpers';
 
 interface SitemapPage {
   title: string;
@@ -14,8 +13,6 @@ interface SitemapSection {
   description: string;
   pages: SitemapPage[];
 }
-
-const posts = await getAllPosts();
 
 // Keep this list explicit so editors can review the current hand-authored routes in one place.
 const staticSections: SitemapSection[] = [
@@ -70,38 +67,7 @@ const staticSections: SitemapSection[] = [
   },
 ];
 
-const collectionSections: SitemapSection[] = [
-  {
-    title: 'Blog Content',
-    description: 'Collection-driven blog posts for editorial work.',
-    pages: [
-      { title: 'Blog', href: '/blog/', pageType: 'collector' },
-      ...posts
-        .filter((post) => getCategoryFromId(post.id) === 'blog')
-        .map((post) => ({
-          title: post.data.title,
-          href: `/blog/${getSlugFromId(post.id)}/`,
-          pageType: post.data.pageType,
-        })),
-    ],
-  },
-  {
-    title: 'Gift Guide Content',
-    description: 'Collection-driven gift guide pages.',
-    pages: [
-      { title: 'Gift Guides', href: '/gift-guides/', pageType: 'collector' },
-      ...posts
-        .filter((post) => getCategoryFromId(post.id) === 'gift-guides')
-        .map((post) => ({
-          title: post.data.title,
-          href: `/gift-guides/${getSlugFromId(post.id)}/`,
-          pageType: post.data.pageType,
-        })),
-    ],
-  },
-];
-
-const allSections = [...staticSections, ...collectionSections];
+const allSections = staticSections;
 const totalPages = allSections.reduce((count, section) => count + section.pages.length, 0);
 ---
 

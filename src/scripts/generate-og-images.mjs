@@ -87,7 +87,7 @@ function inferPageType(pathname) {
     return 'attractor';
   }
 
-  if (pathname === '/cooling/' || pathname === '/calming/' || pathname === '/blog/' || pathname === '/gift-guides/') {
+  if (pathname === '/cooling/' || pathname === '/calming/') {
     return 'collector';
   }
 

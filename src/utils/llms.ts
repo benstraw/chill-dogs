@@ -13,8 +13,6 @@ const SECTION_RULES: Array<{ prefix: string; section: string }> = [
   { prefix: '/cooling/', section: 'Cooling Guides' },
   { prefix: '/calming/', section: 'Calming Guides' },
   { prefix: '/travel/', section: 'Travel Guides' },
-  { prefix: '/blog/', section: 'Articles' },
-  { prefix: '/gift-guides/', section: 'Gift Guides' },
   { prefix: '/about/', section: 'About' },
   { prefix: '/contact/', section: 'About' },
 ];
@@ -80,10 +78,6 @@ export function rankLlmsLink(link: LlmsLink): number {
 
   if (path.startsWith('/travel/')) {
     return 880;
-  }
-
-  if (path.startsWith('/blog/') || path.startsWith('/gift-guides/')) {
-    return 700;
   }
 
   if (path === '/about/' || path === '/contact/') {
@@ -162,8 +156,6 @@ export function buildLlmsMarkdown(options: {
     'Cooling Guides',
     'Calming Guides',
     'Travel Guides',
-    'Gift Guides',
-    'Articles',
     'About',
   ];
 

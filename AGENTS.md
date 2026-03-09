@@ -15,6 +15,35 @@ Repository guidance for coding agents working in `/Volumes/wanderer/dev/solo/chi
 - `collector`: capture search traffic and route users to converters.
 - `attractor`: convert campaign or social traffic.
 - `informer`: admin or legal content only.
+- Use the official page-type terminology above. Do not use "hub" in specs or implementation notes; use `collector`.
+
+## AI Build Contract (Strict)
+
+- Every new page must declare one page type (`converter`, `collector`, `attractor`, `informer`) in the implementation context before coding.
+- If 2+ pages share structure, use one reusable composer/module and data/config inputs instead of duplicating page scaffolding.
+- Keep per-page differences in centralized data/config objects (copy, category keys, CTA targets, FAQ sets, section toggles).
+- Do not hardcode internal routes in page bodies when route constants are available.
+- Reuse existing modules first; only create a new module when no current module can satisfy the page type and conversion goal.
+
+### Converter Requirements
+
+- `converter` pages should render the standard stack unless explicitly exempted by scope:
+- `Hero`, comparison/product sections, `FAQ` when data exists, `Disclosure`, and internal links to related converters/collectors.
+- Above-the-fold CTA should prioritize high-intent conversion behavior.
+- Amazon outbound links must use [AffiliateLink.astro](/Volumes/wanderer/dev/solo/chill-dogs/src/components/AffiliateLink.astro) only.
+
+### Collector Requirements
+
+- `collector` pages must route users to relevant `converter` pages.
+- At least one above-the-fold path to a `converter` is required.
+- `collector` pages should aggregate, qualify, and route intent, not duplicate full converter comparison implementations.
+
+### Completion Gates
+
+- Verify internal route integrity (no dead or malformed links).
+- Verify modularity (no repeated section scaffolding where a shared module/config pattern exists).
+- Run `npm test` and `npm run build` for substantive page/module changes.
+- For `src/utils/**` or `src/scripts/**` changes, add/update unit tests in `src/__tests__/`.
 
 ## Content Guardrails
 
@@ -55,5 +84,7 @@ Repository guidance for coding agents working in `/Volumes/wanderer/dev/solo/chi
 ## Workflow
 
 - Read [CLAUDE.md](/Volumes/wanderer/dev/solo/chill-dogs/CLAUDE.md) when repo-specific product, content, or conversion rules matter.
+- Treat [docs/system-definition.yaml](/Volumes/wanderer/dev/solo/chill-dogs/docs/system-definition.yaml) as a required source of truth for site structure and intent.
+- **Whenever pages/routes/page types/modules/conversion flow change, update `docs/system-definition.yaml` in the same task.**
 - Prefer local consistency over introducing a new pattern.
 - Before changing copy, check that claims about expertise, testing, safety, and sourcing are actually supported.

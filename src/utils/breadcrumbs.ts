@@ -6,7 +6,6 @@ interface BreadcrumbItem {
 }
 
 const SEGMENT_LABELS: Record<string, string> = {
-  'gift-guides': 'Gift Guides',
   'privacy-policy': 'Privacy Policy',
   'affiliate-disclosure': 'Affiliate Disclosure',
   'content-sitemap': 'Content Sitemap',
@@ -59,4 +58,3 @@ export function buildBreadcrumbSchema(pathname: string, siteUrl: string): Record
     itemListElement: items,
   };
 }
-
