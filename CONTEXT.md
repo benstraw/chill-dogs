@@ -212,12 +212,6 @@ bun run test      # Vitest unit tests
 - **Usage:** A/B experiments via Feature Flags, funnel analysis, session recordings.
 - Loaded globally by `src/components/Analytics.astro` — do not add per-page `init()` calls.
 
-**Optional additional analytics:**
-- Plausible (`PUBLIC_PLAUSIBLE_DOMAIN`)
-- GA4 (`PUBLIC_GA_ID`)
-
-All three run alongside PostHog when configured. The `Analytics.astro` component handles all three.
-
 **Event tracking pattern:**
 - Add `data-track="event_name"` to any element for click tracking.
 - Additional `data-*` attributes become event properties.

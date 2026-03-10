@@ -82,22 +82,14 @@ const { variant } = Astro.props;
 <script define:vars={{ hpVariant: variant }}>
   (function () {
     function trackHeroCtaClick(payload) {
-      if (window.dataLayer) {
-        window.dataLayer.push(payload);
-      } else {
-        console.info('[hero-home]', payload);
-      }
-      if (typeof gtag === 'function') {
-        gtag('event', payload.event, { variant: payload.variant, cta: payload.cta, href: payload.href });
+      if (window.posthog && typeof window.posthog.capture === 'function') {
+        window.posthog.capture(payload.event, { variant: payload.variant, cta: payload.cta, href: payload.href });
       }
     }
 
     function trackImpression(variant) {
-      var payload = { event: 'hero_impression', variant: variant };
-      if (window.dataLayer) {
-        window.dataLayer.push(payload);
-      } else {
-        console.info('[hero-home]', payload);
+      if (window.posthog && typeof window.posthog.capture === 'function') {
+        window.posthog.capture('hero_impression', { variant: variant });
       }
     }
 

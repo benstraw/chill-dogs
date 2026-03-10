@@ -1,29 +1,6 @@
 ---
-const gaId = import.meta.env.PUBLIC_GA_ID;
-const plausibleDomain = import.meta.env.PUBLIC_PLAUSIBLE_DOMAIN;
 const posthogKey = import.meta.env.PUBLIC_POSTHOG_KEY;
-const posthogHost = import.meta.env.PUBLIC_POSTHOG_HOST || 'https://us.posthog.com';
 ---
-
-{plausibleDomain && (
-  <script
-    defer
-    data-domain={plausibleDomain}
-    src="https://plausible.io/js/script.js"
-  ></script>
-)}
-
-{gaId && (
-  <>
-    <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
-    <script define:vars={{ gaId }}>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', gaId);
-    </script>
-  </>
-)}
 
 {posthogKey && (
   <script is:inline>

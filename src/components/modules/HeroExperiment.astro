@@ -99,7 +99,7 @@ const badgeLabel = theme === 'cooling' ? 'Beat the heat' : 'Find your calm';
 </section>
 
 <!--
-  Tracking: Emits hero_cta_click events via dataLayer and gtag (if present).
+  Tracking: Emits hero_cta_click events via PostHog (if present).
   define:vars injects `page` and `variant` as build-time constants.
 -->
 <script define:vars={{ page: theme, variant }}>
@@ -108,16 +108,8 @@ const badgeLabel = theme === 'cooling' ? 'Beat the heat' : 'Find your calm';
     if (!hero) return;
 
     function track(ctaType) {
-      var payload = {
-        event: 'hero_cta_click',
-        page: page,
-        variant: variant,
-        cta: ctaType,
-      };
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push(payload);
-      if (typeof gtag === 'function') {
-        gtag('event', 'hero_cta_click', { page: page, variant: variant, cta: ctaType });
+      if (window.posthog && typeof window.posthog.capture === 'function') {
+        window.posthog.capture('hero_cta_click', { page: page, variant: variant, cta: ctaType });
       }
     }
 

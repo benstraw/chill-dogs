@@ -92,7 +92,7 @@ All Amazon affiliate links **must** use the `AffiliateLink.astro` component whic
 
 ## Analytics
 
-Event tracking uses `src/scripts/analytics.ts`. The `track(eventName, props)` function fires to PostHog (`window.posthog.capture`), GA4 (`window.gtag`), and Plausible (`window.plausible`) when configured, falling back to `console.log` in dev.
+Event tracking uses `src/scripts/analytics.ts`. The `track(eventName, props)` function fires to PostHog (`window.posthog.capture`) when configured, falling back to `console.log` in dev.
 
 - `src/components/Analytics.astro` calls `init()` once globally — **do not** add per-page `init()` calls.
 - Wire events via `data-track="event_name"` on elements; extra `data-*` attrs become props.
