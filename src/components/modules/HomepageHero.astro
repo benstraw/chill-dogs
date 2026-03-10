@@ -1,4 +1,6 @@
 ---
+import { ROUTES } from '@data/routes';
+
 export type HomepageVariant = 'v1' | 'v2' | 'v3' | 'v4' | 'v5';
 
 interface Props {
@@ -62,7 +64,7 @@ const { variant } = Astro.props;
       <p class="hp-pane-sub">
         Cooling mats, vests, and hydration picks for hot days and active dogs.
       </p>
-      <a class="hp-cta hp-cta--cool" href="/cooling/" data-cta="cooling" data-track="hero_click_cooling" data-variant={variant}>
+      <a class="hp-cta hp-cta--cool" href={ROUTES.coolingHub} data-cta="cooling" data-track="hero_click_cooling" data-variant={variant}>
         Explore cooling picks
       </a>
     </div>
@@ -72,7 +74,7 @@ const { variant } = Astro.props;
       <p class="hp-pane-sub">
         Calming aids, wraps, and enrichment tools for anxious or restless dogs.
       </p>
-      <a class="hp-cta hp-cta--calm" href="/calming/" data-cta="calming" data-track="hero_click_calming" data-variant={variant}>
+      <a class="hp-cta hp-cta--calm" href={ROUTES.calmingHub} data-cta="calming" data-track="hero_click_calming" data-variant={variant}>
         Explore calming picks
       </a>
     </div>

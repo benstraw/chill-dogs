@@ -1,4 +1,6 @@
 ---
+import { ROUTES } from '@data/routes';
+
 interface Props {
   variant?: 'inline' | 'banner';
 }
@@ -10,12 +12,12 @@ const { variant = 'inline' } = Astro.props;
   <div class="disclosure-banner">
     <p>
       <strong>Disclosure:</strong> This post contains affiliate links. If you make a purchase through these links, we may earn a small commission at no extra cost to you.
-      <a href="/affiliate-disclosure/">Learn more</a>.
+      <a href={ROUTES.affiliateDisclosure}>Learn more</a>.
     </p>
   </div>
 ) : (
   <p class="disclosure-inline">
-    <em>As an Amazon Associate, we earn from qualifying purchases. <a href="/affiliate-disclosure/">Full disclosure</a>.</em>
+    <em>As an Amazon Associate, we earn from qualifying purchases. <a href={ROUTES.affiliateDisclosure}>Full disclosure</a>.</em>
   </p>
 )}
 

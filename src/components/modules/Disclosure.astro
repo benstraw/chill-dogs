@@ -1,4 +1,6 @@
 ---
+import { ROUTES } from '@data/routes';
+
 interface Props {
   showSafety?: boolean;
 }
@@ -11,7 +13,7 @@ const { showSafety = true } = Astro.props;
     <p class="disc-affiliate">
       <strong>Affiliate Disclosure:</strong> This page contains affiliate links. If you purchase through these links,
       we earn a small commission at no extra cost to you. This supports our ability to research and recommend products.
-      <a href="/affiliate-disclosure/">Full disclosure</a>.
+      <a href={ROUTES.affiliateDisclosure}>Full disclosure</a>.
     </p>
     {showSafety && (
       <p class="disc-safety">

@@ -1,9 +1,11 @@
 ---
+import { ROUTES } from '@data/routes';
+
 const navItems = [
-  { href: '/', label: 'Home' },
-  { href: '/cooling/', label: 'Cooling' },
-  { href: '/calming/', label: 'Calming' },
-  { href: '/about/', label: 'About' },
+  { href: ROUTES.home, label: 'Home' },
+  { href: ROUTES.coolingHub, label: 'Cooling' },
+  { href: ROUTES.calmingHub, label: 'Calming' },
+  { href: ROUTES.about, label: 'About' },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -11,7 +13,7 @@ const currentPath = Astro.url.pathname;
 
 <header class="site-header">
   <div class="container header-inner">
-    <a href="/" class="logo">Chill-Dogs</a>
+    <a href={ROUTES.home} class="logo">Chill-Dogs</a>
     <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span class="hamburger"></span>
     </button>

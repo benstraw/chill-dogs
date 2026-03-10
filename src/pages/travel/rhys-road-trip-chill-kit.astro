@@ -1,4 +1,5 @@
 ---
+import { ROUTES } from '@data/routes';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import AffiliateLink from '@components/AffiliateLink.astro';
 import Hero from '@components/modules/Hero.astro';
@@ -95,8 +96,8 @@ const articleSchema = {
     title="Rhys's Road Trip Chill Kit"
     subtitle="Cooling + calming essentials for long drives — built from one real cross-country setup."
     disclaimer="As an Amazon Associate, we earn from qualifying purchases."
-    primaryCta={{ label: 'Shop Cooling Road Trip Picks', href: '/cooling/car-cooling-for-dogs/' }}
-    secondaryCta={{ label: 'Shop Calming Travel Essentials', href: '/calming/car-anxiety-for-dogs/' }}
+    primaryCta={{ label: 'Shop Cooling Road Trip Picks', href: ROUTES.coolingCar }}
+    secondaryCta={{ label: 'Shop Calming Travel Essentials', href: ROUTES.calmingCar }}
     pageSlug="rhys-road-trip-chill-kit"
   />
 
@@ -108,23 +109,23 @@ const articleSchema = {
         <p class="cta-bar-label">Jump to what you need:</p>
         <div class="cta-bar-buttons">
           <a
-            href="/cooling/car-cooling-for-dogs/"
+            href={ROUTES.coolingCar}
             class="cta-btn cta-btn--cool"
             data-cta="roadtrip_to_cooling"
             data-track="collector_to_converter_click"
             data-from-page={pageSlug}
-            data-to-page="/cooling/car-cooling-for-dogs/"
+            data-to-page={ROUTES.coolingCar}
             data-link-position="above-fold"
           >
             Cooling Picks
           </a>
           <a
-            href="/calming/car-anxiety-for-dogs/"
+            href={ROUTES.calmingCar}
             class="cta-btn cta-btn--calm"
             data-cta="roadtrip_to_calming"
             data-track="collector_to_converter_click"
             data-from-page={pageSlug}
-            data-to-page="/calming/car-anxiety-for-dogs/"
+            data-to-page={ROUTES.calmingCar}
             data-link-position="above-fold"
           >
             Calming Picks
@@ -265,12 +266,12 @@ const articleSchema = {
           </div>
           <p class="section-cta-line">
             <a
-              href="/cooling/car-cooling-for-dogs/"
+              href={ROUTES.coolingCar}
               class="inline-cta"
               data-cta="roadtrip_to_cooling"
               data-track="collector_to_converter_click"
               data-from-page={pageSlug}
-              data-to-page="/cooling/car-cooling-for-dogs/"
+              data-to-page={ROUTES.coolingCar}
               data-link-position="section"
             >
               See all car cooling picks →
@@ -318,11 +319,11 @@ const articleSchema = {
           </div>
           <p class="section-cta-line">
             <a
-              href="/cooling/cooling-mats/"
+              href={ROUTES.coolingMats}
               class="inline-cta"
               data-track="collector_to_converter_click"
               data-from-page={pageSlug}
-              data-to-page="/cooling/cooling-mats/"
+              data-to-page={ROUTES.coolingMats}
               data-link-position="section"
             >
               See full cooling mats guide →
@@ -350,11 +351,11 @@ const articleSchema = {
           </div>
           <p class="section-cta-line">
             <a
-              href="/cooling/cooling-vests/"
+              href={ROUTES.coolingVests}
               class="inline-cta"
               data-track="collector_to_converter_click"
               data-from-page={pageSlug}
-              data-to-page="/cooling/cooling-vests/"
+              data-to-page={ROUTES.coolingVests}
               data-link-position="section"
             >
               See full cooling vests guide →
@@ -365,12 +366,12 @@ const articleSchema = {
         <!-- Bottom CTA -->
         <div class="section-converter-cta">
           <a
-            href="/cooling/car-cooling-for-dogs/"
+            href={ROUTES.coolingCar}
             class="converter-cta-btn"
             data-cta="roadtrip_to_cooling"
             data-track="collector_to_converter_click"
             data-from-page={pageSlug}
-            data-to-page="/cooling/car-cooling-for-dogs/"
+            data-to-page={ROUTES.coolingCar}
             data-link-position="section-bottom"
           >
             See all car cooling picks →
@@ -406,12 +407,12 @@ const articleSchema = {
           </div>
           <p class="section-cta-line">
             <a
-              href="/calming/car-anxiety-for-dogs/"
+              href={ROUTES.calmingCar}
               class="inline-cta inline-cta--calm"
               data-cta="roadtrip_to_calming"
               data-track="collector_to_converter_click"
               data-from-page={pageSlug}
-              data-to-page="/calming/car-anxiety-for-dogs/"
+              data-to-page={ROUTES.calmingCar}
               data-link-position="section"
             >
               See all car calming picks →
@@ -474,12 +475,12 @@ const articleSchema = {
         <!-- Bottom CTA -->
         <div class="section-converter-cta">
           <a
-            href="/calming/car-anxiety-for-dogs/"
+            href={ROUTES.calmingCar}
             class="converter-cta-btn converter-cta-btn--calm"
             data-cta="roadtrip_to_calming"
             data-track="collector_to_converter_click"
             data-from-page={pageSlug}
-            data-to-page="/calming/car-anxiety-for-dogs/"
+            data-to-page={ROUTES.calmingCar}
             data-link-position="section-bottom"
           >
             See all car calming picks →
@@ -508,12 +509,12 @@ const articleSchema = {
               <li>Ice bag for the cooler</li>
             </ul>
             <a
-              href="/cooling/car-cooling-for-dogs/"
+              href={ROUTES.coolingCar}
               class="checklist-cta"
               data-cta="roadtrip_to_cooling"
               data-track="collector_to_converter_click"
               data-from-page={pageSlug}
-              data-to-page="/cooling/car-cooling-for-dogs/"
+              data-to-page={ROUTES.coolingCar}
               data-link-position="checklist"
             >
               See the full Cooling list →
@@ -536,12 +537,12 @@ const articleSchema = {
               <li>Portable snuffle mat or chew toy for rest stops</li>
             </ul>
             <a
-              href="/calming/car-anxiety-for-dogs/"
+              href={ROUTES.calmingCar}
               class="checklist-cta checklist-cta--calm"
               data-cta="roadtrip_to_calming"
               data-track="collector_to_converter_click"
               data-from-page={pageSlug}
-              data-to-page="/calming/car-anxiety-for-dogs/"
+              data-to-page={ROUTES.calmingCar}
               data-link-position="checklist"
             >
               See the full Calming list →
@@ -563,23 +564,23 @@ const articleSchema = {
         <p>Start with the problem you're solving first — heat or anxiety — then layer in the rest.</p>
         <div class="closing-buttons">
           <a
-            href="/cooling/car-cooling-for-dogs/"
+            href={ROUTES.coolingCar}
             class="closing-btn closing-btn--cool"
             data-cta="roadtrip_to_cooling"
             data-track="collector_to_converter_click"
             data-from-page={pageSlug}
-            data-to-page="/cooling/car-cooling-for-dogs/"
+            data-to-page={ROUTES.coolingCar}
             data-link-position="closing"
           >
             Shop Cooling Road Trip Picks
           </a>
           <a
-            href="/calming/car-anxiety-for-dogs/"
+            href={ROUTES.calmingCar}
             class="closing-btn closing-btn--calm"
             data-cta="roadtrip_to_calming"
             data-track="collector_to_converter_click"
             data-from-page={pageSlug}
-            data-to-page="/calming/car-anxiety-for-dogs/"
+            data-to-page={ROUTES.calmingCar}
             data-link-position="closing"
           >
             Shop Calming Travel Essentials
