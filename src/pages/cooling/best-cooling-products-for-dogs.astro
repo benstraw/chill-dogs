@@ -56,7 +56,7 @@ const allProducts = [...mats, ...bandanas, ...vests, ...toys, ...(bonus ? [bonus
 const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: '10 Best Cooling Products for Dogs (2026)',
+  name: '10 Best Cooling Products for Dogs',
   url: 'https://chill-dogs.com/cooling/best-cooling-products-for-dogs/',
   numberOfItems: allProducts.length,
   itemListElement: allProducts.map((p, i) => ({
@@ -71,7 +71,7 @@ const pillarFaqs = [
   {
     question: 'How do I know if my dog is overheating?',
     answer:
-      "Watch for excessive panting, drooling, bright red gums, vomiting, or staggering. If you see these signs, move your dog to shade, offer cool (not ice-cold) water, and seek professional help immediately.",
+      "Watch for excessive panting, drooling, bright red gums, vomiting, or staggering. If you see these signs, move your dog to shade and offer cool (not ice-cold) water. If symptoms persist, seek professional help immediately.",
   },
   {
     question: 'Are cooling mats safe for dogs who chew?',
@@ -86,27 +86,27 @@ const pillarFaqs = [
   {
     question: 'At what temperature is it too hot to walk my dog?',
     answer:
-      "If pavement is too hot for your hand (hold it flat for 7 seconds), it's too hot for paws. Generally, limit walks when air temperature exceeds 85 °F (29 °C), and walk during early morning or evening.",
+      "Hold your hand flat on the pavement for 7 seconds. If it is too hot for you, it is too hot for your dog's paws. Generally, limit walks when air temperature exceeds 85 °F (29 °C), and walk during the early morning or evening.",
   },
   {
     question: 'Can dogs overheat indoors?',
     answer:
-      'Absolutely. Homes without air conditioning can reach dangerous temperatures on hot days. A cooling mat indoors gives your dog a self-serve cool-down spot. Keep water available and consider a fan.',
+      'Absolutely. Homes without air conditioning can reach dangerous temperatures on hot days. A cooling mat indoors gives your dog a safe space to cool down. Keep water available and consider a fan.',
   },
 ];
 ---
 
 <BaseLayout
-  title="10 Best Cooling Products for Dogs (2026)"
+  title="10 Best Cooling Products for Dogs"
   description="Beat the heat with our expert picks: cooling mats, bandanas, vests, and freezable toys compared for comfort, durability, and practicality. Keep your dog safe and comfortable all summer."
 >
   <JsonLd slot="head" schema={itemListSchema} />
 
 
   <Hero
-    title="The 10 Best Cooling Products for Dogs in 2026"
-    subtitle="Summer heat is no joke for dogs. We researched and compared the top cooling mats, bandanas, vests, and toys so you can pick the right gear for your pup."
-    disclaimer="As an Amazon Associate, we earn from qualifying purchases."
+    title="The 10 Best Cooling Products for Dogs"
+    subtitle="Summer heat can be dangerous. We researched and compared the top cooling mats, bandanas, vests, and toys to keep your pup safe and comfortable."
+    disclaimer="As an Amazon Associate, we earn from qualifying purchases at no cost to you."
     primaryCta={{ label: 'See Best Cooling Mats', href: '/cooling/cooling-mats/' }}
     pageSlug={pageSlug}
   />
@@ -121,7 +121,7 @@ const pillarFaqs = [
       <div class="section-inner">
         <h2>Best Cooling Mats for Dogs</h2>
         <p class="section-intro">
-          A cooling mat gives your dog an instant cool spot — no prep, no electricity. Great for crates, beds, or just the kitchen floor.
+          A cooling mat gives your dog instant relief from the heat — no prep, no electricity. Great for crates, beds, or just the kitchen floor.
         </p>
         <div class="section-grid section-grid--3">
           {mats.map((product, i) => (
@@ -142,7 +142,7 @@ const pillarFaqs = [
       <div class="section-inner">
         <h2>Best Cooling Bandanas for Dogs</h2>
         <p class="section-intro">
-          The simplest cooling hack: soak, wring, tie. Bandanas are lightweight, packable, and work in minutes.
+          The simplest cooling solution: soak, wring, tie. Bandanas are lightweight, packable, and work in minutes.
         </p>
         <div class="section-grid section-grid--2">
           {bandanas.map((product, i) => (
@@ -216,12 +216,12 @@ const pillarFaqs = [
         {
           href: '/travel/rhys-road-trip-chill-kit/',
           title: "Rhys's Road Trip Chill Kit",
-          description: 'Planning a long drive? See the complete road trip cooling and calming setup — window shades, fans, mats, and anxiety picks built from a real cross-country trip.',
+          description: 'Planning a long drive? See the complete road trip cooling and calming setup — window shades, fans, mats, and anti-anxiety picks used on real cross-country trips.',
         },
         {
           href: '/calming/best-calming-products-for-anxious-dogs/',
           title: 'Best Calming Products for Anxious Dogs',
-          description: 'Hot dogs are often anxious dogs. If your pup gets restless during summer storms or fireworks, our calming guide covers wraps, treats, and enrichment tools.',
+          description: 'Loud noises can scare dogs. If your pup gets restless during summer storms or fireworks, our calming guide covers wraps, treats, and enrichment tools.',
         },
         {
           href: '/calming/best-thundershirt-alternatives/',

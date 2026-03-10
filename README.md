@@ -332,3 +332,4 @@ The repo is at [github.com/benstraw/chill-dogs](https://github.com/benstraw/chil
 - [x] Review affiliate tag is active and approved in Amazon Associates dashboard (`chill-dogs-20`)
 - [ ] Set up IndexNow for instant search engine indexing on deploy (Bing, Yandex, etc.)
 - [ ] Add third pillar: **Relaxing** — dog beds, plush toys, snuggly blankets, and cozy comfort gear
+- [ ] Redo the entire article about Thundershirt alternatives
