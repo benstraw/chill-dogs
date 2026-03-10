@@ -57,7 +57,7 @@ This site is a **modular conversion system** governed by `docs/web-systems-adven
 
 - Validate internal routes (no dead or malformed links).
 - Validate modularity (no repeated scaffolding where shared module/config patterns should be used).
-- Run `npm test` and `npm run build` for substantive page/module changes.
+- Run `bun run test` and `bun run build` for substantive page/module changes.
 - Changes to `src/utils/**` or `src/scripts/**` require updated unit tests.
 
 ## Content Guardrails
@@ -68,7 +68,7 @@ This site is a **modular conversion system** governed by `docs/web-systems-adven
 
 ## Project Overview
 
-Amazon affiliate dog lifestyle site built with **Astro 5** (SSG) and **bun**. Revenue comes from affiliate links to Amazon products. Deploy target is Netlify.
+Amazon affiliate dog lifestyle site built with **Astro 5** (SSG) and **bun**. Revenue comes from affiliate links to Amazon products. Deploy target is Vercel.
 
 ## Architecture
 
@@ -84,15 +84,7 @@ Self-hosted fonts via `@fontsource`: Nunito Variable (headings), Inter (body).
 
 ### Affiliate Link Requirements
 
-All Amazon affiliate links **must** use the `AffiliateLink.astro` component which enforces `rel="nofollow sponsored noopener" target="_blank"` and adds `data-affiliate="true"` for click tracking. Products are defined in markdown frontmatter `products` array with affiliate URLs using tag `chill-dogs-20`.
-
-### Analytics
-
-Event tracking is provider-agnostic via `src/scripts/analytics.ts`. **PostHog** (`PUBLIC_POSTHOG_KEY`) is the primary analytics and experimentation platform; Plausible (`PUBLIC_PLAUSIBLE_DOMAIN`) and GA4 (`PUBLIC_GA_ID`) are optional and run alongside it. All three are loaded by `src/components/Analytics.astro`, which also calls `init()` globally — do not add per-page `init()` calls.
-
-To track clicks, add `data-track="event_name"` to any element. Additional `data-*` attributes become event properties. For non-click events, import `track()` from `src/scripts/analytics.ts`.
-
-Current events: `hero_click_cooling`, `hero_click_calming`, `amazon_outbound_click`, `collector_to_converter_click`, `toc_click`.
+All Amazon affiliate links **must** use the `AffiliateLink.astro` component which enforces `rel="nofollow sponsored noopener" target="_blank"` and adds `data-affiliate="true"` for click tracking. Products are defined in TypeScript data files (`src/data/cooling-products.ts`, `src/data/calming-products.ts`) with affiliate URLs using tag `chill-dogs-20`.
 
 ### Path Aliases
 
@@ -111,6 +103,6 @@ Event tracking uses `src/scripts/analytics.ts`. The `track(eventName, props)` fu
 
 1. Create a project at [posthog.com](https://posthog.com).
 2. Copy the **Project API Key** from Project Settings.
-3. Set `PUBLIC_POSTHOG_KEY=<your-key>` in `.env` (and in your Netlify environment variables).
+3. Set `PUBLIC_POSTHOG_KEY=<your-key>` in `.env` (and in your Vercel environment variables).
 4. Optionally set `PUBLIC_POSTHOG_HOST` — defaults to `https://us.i.posthog.com`; use `https://eu.i.posthog.com` for EU cloud or your self-hosted URL.
 5. PostHog is used for experiments (A/B tests via Feature Flags), funnel analysis, and session recordings.
