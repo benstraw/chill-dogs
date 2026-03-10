@@ -1,12 +1,16 @@
 # Test Plan — Unit & Smoke Testing
 
 **Status:** Draft — awaiting review before implementation  
-**Scope:** `src/utils/**`, `src/scripts/analytics.ts`, `src/__tests__/site-smoke.test.ts`  
+**Scope:** `src/utils/**`, `src/scripts/analytics.ts`, `src/data/**`, `src/__tests__/site-smoke.test.ts`  
 **Test runner:** Vitest 4 · Environment: happy-dom · Coverage: v8
 
 ---
 
 ## 1. Coverage Baseline (current)
+
+The coverage configuration in `vitest.config.ts` currently only includes `src/utils/**` and `src/scripts/**`. The refactor introduced two new data-helper files in `src/data/` that are **not yet in scope** and have zero coverage.
+
+### Currently tracked (utils + scripts)
 
 | File | Stmts | Branch | Funcs | Notes |
 |---|---|---|---|---|
@@ -18,8 +22,16 @@
 | `utils/og.ts` | 97% | 81% | 100% | 2 branch gaps |
 | `utils/types.ts` | — | — | — | Type-only, excluded |
 
-**Overall (utils + scripts):** ~70% statements, ~67% branches  
-Not meeting the ≥ 90% statement coverage goal for `utils/` + `scripts/`.
+**Overall (tracked files):** ~70% statements, ~67% branches — below the ≥ 90% goal.
+
+### New files not yet in coverage scope
+
+| File | Exported helpers | Coverage |
+|---|---|---|
+| `data/cooling-products.ts` | `getProductsByCategory`, `getCoreProducts`, `getBonusProduct` | ❌ 0% (not in scope) |
+| `data/calming-products.ts` | `getCalmingProductsByCategory` | ❌ 0% (not in scope) |
+
+These files contain no Astro dependencies and are directly unit-testable. Adding `src/data/**` to the `coverage.include` array in `vitest.config.ts` is required.
 
 ---
 
@@ -29,8 +41,11 @@ Not meeting the ≥ 90% statement coverage goal for `utils/` + `scripts/`.
 |---|---|---|
 | `src/utils/**` | ≥ 90% stmts, ≥ 90% branches | Stated in AGENTS.md |
 | `src/scripts/analytics.ts` | ≥ 90% stmts, ≥ 90% branches | Stated in AGENTS.md |
+| `src/data/**` | ≥ 90% stmts, ≥ 90% branches | New data layer introduced in refactor; helpers are pure TS with no Astro deps |
 | `src/scripts/generate-og-images.mjs` | excluded from unit coverage | Node build script; indirectly validated by smoke tests |
 | Smoke: key page types | 1 representative per type | converter, collector, attractor (variant), informer |
+
+**Config change required:** Add `'src/data/**'` to `coverage.include` in `vitest.config.ts`.
 
 ---
 
@@ -168,6 +183,77 @@ Lines 78, 82, 86, 93, 102 in the coverage report correspond to priority tiers an
 
 ---
 
+### 3.6 `data/cooling-products.ts` — new file, 0% coverage ⚠️
+
+This file was introduced in the refactor. It exports three pure TypeScript helpers used by every cooling converter page. No tests exist yet.
+
+**`getProductsByCategory(category: ProductCategory)`**
+
+| Test case | What it proves |
+|---|---|
+| `getProductsByCategory('cooling-mats')` returns 3 products | Correct category filtering |
+| `getProductsByCategory('cooling-bandanas')` returns 2 products | Correct category filtering |
+| `getProductsByCategory('cooling-vests')` returns 3 products | Correct category filtering |
+| `getProductsByCategory('freezable-dog-toys')` returns 2 products | Correct category filtering |
+| `getProductsByCategory('car-cooling')` returns 4 products | Correct category filtering |
+| `getProductsByCategory('bonus')` returns only the bonus product | Doesn't filter out `isBonus = true` items |
+| All returned products have the expected `category` field | No cross-category contamination |
+
+**`getCoreProducts()`**
+
+| Test case | What it proves |
+|---|---|
+| Returns all products where `isBonus` is falsy | Bonus item excluded |
+| Does not include the NASA bed (only bonus item) | Correct bonus exclusion |
+| Returns 15 products (all 16 minus the 1 bonus) | Count is stable against data changes |
+
+**`getBonusProduct()`**
+
+| Test case | What it proves |
+|---|---|
+| Returns the single product with `isBonus: true` | Correct bonus selection |
+| Returned product has `id: 'nasa-bed'` | Points to the right record |
+| Returns `undefined` if no bonus product exists (mocked data) | Handles empty-bonus case gracefully |
+
+**`categoryMeta` record**
+
+| Test case | What it proves |
+|---|---|
+| Every non-bonus `ProductCategory` key has a `title`, `heroHeadline`, `introCopy`, and non-empty `faqs` array | Record is complete; no undefined on page load |
+| Every `internalLinks` entry has a non-empty `label` and an `href` starting with `/` | Internal link data is valid |
+
+**Edge cases:**
+
+- `getProductsByCategory` with a valid category that has no products (mock data with empty array) → returns `[]`
+- All `amazonUrl` values in `coolingProducts` contain `tag=chill-dogs-20` — assert the affiliate tag is present on every product
+
+---
+
+### 3.7 `data/calming-products.ts` — new file, 0% coverage ⚠️
+
+This file was introduced in the refactor. It exports one pure TypeScript helper used by every calming page and the travel page.
+
+**`getCalmingProductsByCategory(category: CalmingProductCategory)`**
+
+| Test case | What it proves |
+|---|---|
+| `getCalmingProductsByCategory('anxiety-wraps')` returns 1 product | Correct category filtering |
+| `getCalmingProductsByCategory('calming-treats')` returns 3 products | Correct category filtering |
+| `getCalmingProductsByCategory('lick-mats')` returns 2 products | Correct category filtering |
+| `getCalmingProductsByCategory('snuffle-mats')` returns 2 products | Correct category filtering |
+| All returned products have the expected `category` field | No cross-category contamination |
+| Calling with a category that has no matching products (mocked empty data) → returns `[]` | Graceful empty-result handling |
+
+**`calmingProducts` data integrity**
+
+| Test case | What it proves |
+|---|---|
+| All `amazonUrl` values contain `tag=chill-dogs-20` | Affiliate tag is present on every product |
+| Every product has exactly 3 `bullets` (tuple constraint is runtime-verifiable) | Data matches the `[string, string, string]` type |
+| Every product has non-empty `bestFor`, `howItHelps`, and `considerIf` | Required display fields are populated |
+
+---
+
 ## 4. `generate-og-images.mjs` — Build Script Coverage Strategy
 
 This file is a Node.js build-time script that invokes `@resvg/resvg-js` to rasterise SVG templates. Direct unit testing is impractical because:
@@ -189,9 +275,11 @@ The smoke suite (`site-smoke.test.ts`) builds the site once in `beforeAll` and t
 
 | Page | Path | What to assert |
 |---|---|---|
+| Cooling pillar | `/cooling/best-cooling-products-for-dogs/` | ≥ 1 Amazon link; `data-affiliate="true"`, correct `rel`, `tag=chill-dogs-20` |
+| Car cooling converter | `/cooling/car-cooling-for-dogs/` | Same affiliate link checks (new page added in refactor) |
 | Travel converter | `/travel/rhys-road-trip-chill-kit/` | ≥ 1 Amazon link; each has `data-affiliate="true"`, `rel` contains `noopener noreferrer sponsored`, `tag=chill-dogs-20` |
 | Additional calming converters | `/calming/best-thundershirt-alternatives/`, `/calming/car-anxiety-for-dogs/` | Same affiliate link checks |
-| Additional cooling converters | `/cooling/car-cooling-for-dogs/`, `/cooling/cooling-bandanas/`, `/cooling/cooling-vests/`, `/cooling/freezable-dog-toys/` | Same affiliate link checks |
+| Additional cooling converters | `/cooling/cooling-bandanas/`, `/cooling/cooling-vests/`, `/cooling/freezable-dog-toys/` | Same affiliate link checks |
 
 ### 5.2 Tests to add — SEO / meta correctness
 
@@ -216,12 +304,16 @@ The smoke suite (`site-smoke.test.ts`) builds the site once in `beforeAll` and t
 | Test | Pages | What to assert |
 |---|---|---|
 | Hub collector pages have `CollectionPage` schema | `/cooling/`, `/calming/` | `application/ld+json` script present; `@type` is `CollectionPage` |
+| Calming pillar page has `ItemList` schema | `/calming/best-calming-products-for-anxious-dogs/` | `@type` is `ItemList`; `numberOfItems` matches the product count (8); each `itemListElement` has a `position`, `name`, and Amazon `url` |
 | Converter pages have `BreadcrumbList` schema | `/cooling/car-cooling-for-dogs/`, `/calming/car-anxiety-for-dogs/` | `@type` is `BreadcrumbList`; positions are sequential |
+| New cooling pillar has `BreadcrumbList` schema | `/cooling/best-cooling-products-for-dogs/` | `BreadcrumbList` present with at least 3 items (Home → Cooling → page) |
 
 ### 5.5 Tests to add — Sitemap completeness
 
 | Test | What to assert |
 |---|---|
+| New cooling pillar in sitemap | `sitemap-0.xml` contains `/cooling/best-cooling-products-for-dogs/` |
+| Car cooling converter in sitemap | `sitemap-0.xml` contains `/cooling/car-cooling-for-dogs/` |
 | Calming converter URLs in sitemap | `sitemap-0.xml` contains `best-thundershirt-alternatives` and `car-anxiety-for-dogs` |
 | Travel converter URL in sitemap | `sitemap-0.xml` contains `/travel/rhys-road-trip-chill-kit/` |
 | Variant pages excluded from sitemap | `sitemap-0.xml` does NOT contain `/cooling/v/` or `/calming/v/` |
@@ -231,9 +323,12 @@ The smoke suite (`site-smoke.test.ts`) builds the site once in `beforeAll` and t
 
 | Test | What to assert |
 |---|---|
-| All major content sections present | Contains `## Calming Guides`, `## Travel Guides`, `## Gift Guides` |
+| All major content sections present | Contains `## Cooling Guides`, `## Calming Guides`, `## Travel Guides` |
+| New cooling pillar link present | Contains `https://chill-dogs.com/cooling/best-cooling-products-for-dogs/` |
+| Car cooling converter link present | Contains `https://chill-dogs.com/cooling/car-cooling-for-dogs/` |
 | Travel link present and absolute | Contains `https://chill-dogs.com/travel/rhys-road-trip-chill-kit/` |
 | Variant paths excluded | Does NOT contain `/v/a/` or `/v/b/` |
+| Policy paths excluded | Does NOT contain `/privacy-policy/` or `/terms/` |
 
 ---
 
@@ -249,9 +344,12 @@ The smoke suite (`site-smoke.test.ts`) builds the site once in `beforeAll` and t
 
 ## 7. Implementation Order
 
-1. **analytics.ts** — close 3 branch gaps + clean up duplicate test
-2. **llms.ts** — add `rankLlmsLink` tier tests, `normalizePath` edge cases, `dedupeAndRankLinks` exclusion, `buildLlmsMarkdown` maxLinks + section ordering
-3. **og.ts** — close 2 branch gaps + hardening cases
-4. **breadcrumbs.ts** — optional hardening (low priority, already 100%)
-5. **collection-helpers.ts** — optional hardening (low priority, already 100%)
-6. **site-smoke.test.ts** — add affiliate, SEO/meta, OG, schema, sitemap, and llms.txt tests from §5
+1. **vitest.config.ts** — add `'src/data/**'` to `coverage.include`
+2. **data/cooling-products.ts** — new test file covering all 3 helpers + data integrity (easy wins, no mocking needed)
+3. **data/calming-products.ts** — new test file covering the 1 helper + data integrity
+4. **analytics.ts** — close 3 branch gaps + clean up duplicate test
+5. **llms.ts** — add `rankLlmsLink` tier tests, `normalizePath` edge cases, `dedupeAndRankLinks` exclusion, `buildLlmsMarkdown` maxLinks + section ordering
+6. **og.ts** — close 2 branch gaps + hardening cases
+7. **breadcrumbs.ts** — optional hardening (low priority, already 100%)
+8. **collection-helpers.ts** — optional hardening (low priority, already 100%)
+9. **site-smoke.test.ts** — add affiliate, SEO/meta, OG, schema, sitemap, and llms.txt tests from §5
