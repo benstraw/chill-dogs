@@ -412,7 +412,7 @@ export const calmingConverterPages: Record<string, CalmingConverterPageConfig> =
         columns: 2,
         alt: true,
         intro:
-          'These are not identical replacements. They are the best substitutes from the current Chill-Dogs calming lineup, based on the situation you are trying to fix.',
+          'These are not identical replacements. They are the best substitutes from the current chill-dogs calming lineup, based on the situation you are trying to fix.',
         productIds: ['thundershirt-classic', 'native-pet-calm-chews', 'lukito-licking-mat', 'rundic-snuffle-mat'],
       },
       {

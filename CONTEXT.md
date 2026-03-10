@@ -4,15 +4,15 @@ tags: [ai-context, strategy, creative]
 updated: 2026-03-02
 ---
 
-# Chill-Dogs — AI Context File
+# chill-dogs — AI Context File
 
 This file is the single source of truth for sharing context about `chill-dogs.com` with AI platforms and coding assistants. It covers strategy, content, technical stack, and creative guidelines.
 
 ---
 
-## 1. What Is Chill-Dogs?
+## 1. What Is chill-dogs?
 
-**Chill-Dogs** (`chill-dogs.com`) is an Amazon affiliate site focused on dog lifestyle — specifically cooling and calming products. The site earns revenue through the Amazon Associates program. Every design, content, and engineering decision is evaluated against one question: does this drive or support affiliate revenue?
+**chill-dogs** (`chill-dogs.com`) is an Amazon affiliate site focused on dog lifestyle — specifically cooling and calming products. The site earns revenue through the Amazon Associates program. Every design, content, and engineering decision is evaluated against one question: does this drive or support affiliate revenue?
 
 ---
 
@@ -265,7 +265,7 @@ Blog, gift guide, and luxury-gear content uses the Astro 5 Content Layer (markdo
 
 ### Brand Name
 
-**Chill-Dogs** (hyphenated, title case). Domain: `chill-dogs.com`.
+**chill-dogs** (hyphenated, title case). Domain: `chill-dogs.com`.
 
 ### Tagline
 
@@ -321,7 +321,7 @@ No Google Fonts — all fonts are self-hosted to avoid third-party DNS lookups.
 
 ### Logo
 
-Text-based. The site name **"Chill-Dogs"** is the logo:
+Text-based. The site name **"chill-dogs"** is the logo:
 - Font: `var(--font-heading)` (Nunito Variable)
 - Weight: `800` (extrabold)
 - Size: `var(--text-xl)`
@@ -374,7 +374,7 @@ No image or SVG logo mark — the word mark is the identity.
 These rules apply to all copy written for or about chill-dogs.com:
 
 - **Do not** describe products as "vet-recommended," "vet-approved," or similar unless the site has real, documented veterinarian sourcing for that exact claim.
-- **Do not** imply Chill Dogs consulted veterinarians or has veterinary endorsements.
+- **Do not** imply chill-dogs consulted veterinarians or has veterinary endorsements.
 - **Do not** claim products were hands-on tested or physically reviewed by the site unless that actually happened.
 - **Prefer** language like: `researched`, `compared`, `curated`, `practical`, `popular`.
 - Keep all affiliate disclosure language accurate and visible.

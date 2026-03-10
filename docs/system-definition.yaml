@@ -1,4 +1,4 @@
-# Chill-Dogs System Definition
+# chill-dogs System Definition
 # Source of truth for site intent, page types, modules, and conversion architecture.
 #
 # Maintenance rule (mandatory):
@@ -9,7 +9,7 @@
 site_system:
   status: "active"
   as_of: "2026-03-06"
-  owner: "Chill-Dogs"
+  owner: "chill-dogs"
   purpose: "Define the website as a modular conversion system and keep implementation aligned."
 
   maintenance_policy:

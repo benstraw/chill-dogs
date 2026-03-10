@@ -21,12 +21,12 @@ describe('og utility functions', () => {
 
     expect(
       deriveOgHeadline({
-        seoTitle: 'Best Cooling Mats | Chill-Dogs',
+        seoTitle: 'Best Cooling Mats | chill-dogs',
         title: 'Base Title',
       })
     ).toBe('Best Cooling Mats');
 
-    expect(deriveOgHeadline({ title: 'Chill-Dogs — Car Cooling Picks' })).toBe('Car Cooling Picks');
+    expect(deriveOgHeadline({ title: 'chill-dogs — Car Cooling Picks' })).toBe('Car Cooling Picks');
   });
 
   it('clamps long text with ellipsis', () => {

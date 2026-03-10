@@ -1,4 +1,4 @@
-# Chill-Dogs
+# chill-dogs
 
 Amazon Associates affiliate site for dog cooling and calming products. Built as a static site and deployed to Vercel.
 

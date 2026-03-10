@@ -4,7 +4,7 @@ tags: [strategy, site-plan]
 created: 2026-02-28
 ---
 
-# Chill-Dogs — Site System Plan
+# chill-dogs — Site System Plan
 
 This document is the concrete application of the
 [Web Systems Adventure Mode](./web-systems-adventure-mode.md) framework to

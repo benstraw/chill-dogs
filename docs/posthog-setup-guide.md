@@ -1,6 +1,6 @@
 # PostHog Dashboard Setup Guide
 
-Step-by-step guide to setting up PostHog dashboards, funnels, and actions for Chill Dogs.
+Step-by-step guide to setting up PostHog dashboards, funnels, and actions for chill-dogs.
 
 ## Prerequisites
 

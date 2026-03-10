@@ -1,5 +1,5 @@
 /**
- * Lightweight analytics utility for Chill-Dogs.
+ * Lightweight analytics utility for chill-dogs.
  * Uses event delegation on [data-track] attributes.
  * Sends events to PostHog when available, falls back to console logging in dev.
  */

@@ -38,7 +38,7 @@ describe('llms utilities', () => {
 
   it('builds markdown with absolute links and grouped sections', () => {
     const markdown = buildLlmsMarkdown({
-      siteName: 'Chill-Dogs',
+      siteName: 'chill-dogs',
       description: 'Test description',
       shortParagraph: 'Quick summary paragraph.',
       baseUrl: 'https://chill-dogs.com/',
@@ -50,7 +50,7 @@ describe('llms utilities', () => {
       maxLinks: 40,
     });
 
-    expect(markdown).toContain('# Chill-Dogs');
+    expect(markdown).toContain('# chill-dogs');
     expect(markdown).toContain('> Test description');
     expect(markdown).toContain('## Core Pages');
     expect(markdown).toContain('## Cooling Guides');

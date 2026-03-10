@@ -48,7 +48,7 @@ Repository guidance for coding agents working in `/Volumes/wanderer/dev/solo/chi
 ## Content Guardrails
 
 - Do not say products are `vet-recommended`, `vet-approved`, or anything similar unless there is real documented sourcing for that exact claim.
-- Do not imply Chill Dogs consulted veterinarians or has veterinary endorsements when it did not.
+- Do not imply chill-dogs consulted veterinarians or has veterinary endorsements when it did not.
 - Prefer language like `researched`, `compared`, `curated`, `practical`, or `popular`.
 - Do not claim the site hands-on tests products unless that actually happened.
 - Do not imply products were ordered, tried, or tested by the site unless that actually happened.

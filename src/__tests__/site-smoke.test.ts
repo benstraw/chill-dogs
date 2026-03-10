@@ -152,7 +152,7 @@ describe('site smoke tests', () => {
   it('publishes llms.txt with curated absolute links', () => {
     const llmsText = readBuiltAsset('llms.txt');
 
-    expect(llmsText).toContain('# Chill-Dogs');
+    expect(llmsText).toContain('# chill-dogs');
     expect(llmsText).toContain('## Cooling Guides');
     expect(llmsText).toContain('https://chill-dogs.com/cooling/');
     expect(llmsText).not.toContain('/v/a/');
