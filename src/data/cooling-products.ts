@@ -192,8 +192,7 @@ export const coolingProducts: CoolingProduct[] = [
     id: 'enovoe-car-window-shades',
     name: 'Enovoe Magnetic Car Window Shades (4-Pack)',
     category: 'car-cooling',
-    amazonUrl:
-      'https://www.amazon.com/Enovoe-Window-Shade-4-Pack/dp/B00U0GRCK2/?tag=chill-dogs-20',
+    amazonUrl: 'https://a.co/d/0ibvjezH?tag=chill-dogs-20',
     bullets: [
       'Magnetic edges stick directly to the car door frame — no clips, no suction cups',
       'Blocks UV rays and cuts cabin temperature significantly on sunny drives',
@@ -207,8 +206,7 @@ export const coolingProducts: CoolingProduct[] = [
     id: 'kh-travel-fan',
     name: 'K&H Pet Products Clip-On Travel Fan',
     category: 'car-cooling',
-    amazonUrl:
-      'https://www.amazon.com/KH-Manufacturing-Travel-Fan/dp/B00AN8KOLS/?tag=chill-dogs-20',
+    amazonUrl: 'https://a.co/d/0gdIEc6H?tag=chill-dogs-20',
     bullets: [
       'Clips to headrest or cargo bar to direct airflow toward your dog',
       'Two-speed setting; runs off any USB port or 12V adapter',
@@ -237,8 +235,7 @@ export const coolingProducts: CoolingProduct[] = [
     id: 'four-knines-seat-hammock',
     name: '4Knines Dog Seat Cover Hammock',
     category: 'car-cooling',
-    amazonUrl:
-      'https://www.amazon.com/4Knines-Dog-Seat-Cover-Hammock/dp/B01N3AWSJY/?tag=chill-dogs-20',
+    amazonUrl: 'https://a.co/d/0iAjKmBj?tag=chill-dogs-20',
     bullets: [
       'Hammock style prevents your dog from tumbling into the footwell on long drives',
       'Waterproof quilted surface stays cooler than bare upholstery or vinyl seats',
