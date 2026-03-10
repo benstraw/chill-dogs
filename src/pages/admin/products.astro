@@ -2,6 +2,9 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import { coolingProducts } from '../../data/cooling-products';
 import { calmingProducts } from '../../data/calming-products';
+import { buildProductPageMap } from '../../data/product-page-map';
+
+const pageMap = buildProductPageMap();
 
 const allProducts = [
   ...coolingProducts.map((p) => ({ ...p, pillar: 'cooling' as const, howItHelps: undefined as string | undefined, considerIf: undefined as string | undefined })),
@@ -108,6 +111,16 @@ const categories = [...new Set(allProducts.map((p) => p.category))];
                       <span class="meta-value meta-value--mono">{p.id}</span>
                     </div>
                   </div>
+                  {(pageMap[p.id] ?? []).length > 0 && (
+                    <div class="detail-pages">
+                      <h4>Appears On</h4>
+                      <ul class="page-list">
+                        {(pageMap[p.id] ?? []).map((ref) => (
+                          <li><a href={ref.href}>{ref.label}</a></li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               </td>
             </tr>
@@ -460,6 +473,44 @@ const categories = [...new Set(allProducts.map((p) => p.category))];
     flex-wrap: wrap;
     gap: var(--space-md) var(--space-xl);
     align-content: flex-start;
+  }
+
+  .detail-pages {
+    flex-basis: 100%;
+  }
+
+  .detail-pages h4 {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    margin-bottom: var(--space-xs);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .page-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .page-list li a {
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    color: var(--color-terracotta);
+    text-decoration: none;
+  }
+
+  .page-list li a:hover {
+    background: var(--color-terracotta);
+    color: var(--color-sand);
+    border-color: var(--color-terracotta);
   }
 
   .meta-item {
