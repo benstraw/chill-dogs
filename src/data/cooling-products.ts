@@ -148,11 +148,11 @@ export const coolingProducts: CoolingProduct[] = [
     amazonUrl:
       'https://www.amazon.com/Canada-Pooch-Chill-Seeker-Cooling/dp/B009JLQCUI/?tag=chill-dogs-20',
     bullets: [
-      'Stylish design that looks like a regular vest — not "medical"',
+      'Stylish design',
       'Moisture-activated cooling lasts through a full walk',
       'Lightweight enough that most dogs forget they\'re wearing it',
     ],
-    bestFor: 'Style-conscious pet parents who want function and fashion',
+    bestFor: 'Pet owners who want function and fashion',
     coolingMethod: 'Evaporative cooling',
     sizingNote: 'Runs slightly small — size up if your dog is between sizes',
   },
