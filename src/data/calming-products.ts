@@ -6,6 +6,7 @@ export type CalmingProductCategory =
 
 export interface CalmingProduct {
   id: string;
+  asin?: string;
   name: string;
   category: CalmingProductCategory;
   amazonUrl: string;
@@ -18,6 +19,7 @@ export interface CalmingProduct {
 export const calmingProducts: CalmingProduct[] = [
   {
     id: 'thundershirt-classic',
+    asin: 'B0029PUFAE',
     name: 'ThunderShirt Classic Dog Anxiety Jacket',
     category: 'anxiety-wraps',
     amazonUrl:
@@ -33,6 +35,7 @@ export const calmingProducts: CalmingProduct[] = [
   },
   {
     id: 'native-pet-calm-chews',
+    asin: 'B0BRPQV9XF',
     name: 'Native Pet Calm Chews for Dogs',
     category: 'calming-treats',
     amazonUrl:
@@ -48,6 +51,7 @@ export const calmingProducts: CalmingProduct[] = [
   },
   {
     id: 'greenies-calming-chews',
+    asin: 'B0CHVCLLFJ',
     name: 'Greenies Supplements Calming Chews',
     category: 'calming-treats',
     amazonUrl:
@@ -63,6 +67,7 @@ export const calmingProducts: CalmingProduct[] = [
   },
   {
     id: 'pet-honesty-hemp-calming-chews',
+    asin: 'B08J4HNQZF',
     name: 'Pet Honesty Hemp Calming Chews',
     category: 'calming-treats',
     amazonUrl:
@@ -78,6 +83,7 @@ export const calmingProducts: CalmingProduct[] = [
   },
   {
     id: 'lickimat-classic-soother',
+    asin: 'B09CPJKQLW',
     name: 'LickiMat Classic Soother Slow Feeder',
     category: 'lick-mats',
     amazonUrl:
@@ -93,6 +99,7 @@ export const calmingProducts: CalmingProduct[] = [
   },
   {
     id: 'lukito-licking-mat',
+    asin: 'B0CMH169XW',
     name: 'LUKITO Premium Silicone Licking Mat',
     category: 'lick-mats',
     amazonUrl:
@@ -108,6 +115,7 @@ export const calmingProducts: CalmingProduct[] = [
   },
   {
     id: 'rundic-snuffle-mat',
+    asin: 'B08JGHMDLX',
     name: 'Rundic Snuffle Mat for Dogs',
     category: 'snuffle-mats',
     amazonUrl:
@@ -123,6 +131,7 @@ export const calmingProducts: CalmingProduct[] = [
   },
   {
     id: 'awoof-snuffle-mat',
+    asin: 'B07N1JYYCW',
     name: 'AWOOF Pet Snuffle Mat for Dogs',
     category: 'snuffle-mats',
     amazonUrl:

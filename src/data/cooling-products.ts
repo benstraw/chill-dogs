@@ -8,6 +8,7 @@ export type ProductCategory =
 
 export interface CoolingProduct {
   id: string;
+  asin?: string;
   name: string;
   category: ProductCategory;
   amazonUrl: string;
@@ -34,6 +35,7 @@ export const coolingProducts: CoolingProduct[] = [
   // Cooling Mats
   {
     id: 'green-pet-shop-cooling-pad',
+    asin: 'B006NONHNE',
     name: 'The Green Pet Shop Cooling Pet Pad',
     category: 'cooling-mats',
     amazonUrl:
@@ -49,6 +51,7 @@ export const coolingProducts: CoolingProduct[] = [
   },
   {
     id: 'kh-cool-bed-iii',
+    asin: 'B003KK60R4',
     name: 'K&H Cool Bed III',
     category: 'cooling-mats',
     amazonUrl:
@@ -64,6 +67,7 @@ export const coolingProducts: CoolingProduct[] = [
   },
   {
     id: 'arf-pets-self-cooling-mat',
+    asin: 'B0192CJO30',
     name: 'Arf Pets Self Cooling Mat',
     category: 'cooling-mats',
     amazonUrl:
@@ -81,6 +85,7 @@ export const coolingProducts: CoolingProduct[] = [
   // Cooling Bandanas
   {
     id: 'afp-chill-out-ice-bandana',
+    asin: 'B00IAR9WCM',
     name: 'All For Paws Chill Out Ice Bandana',
     category: 'cooling-bandanas',
     amazonUrl:
@@ -96,6 +101,7 @@ export const coolingProducts: CoolingProduct[] = [
   },
   {
     id: 'kyeese-cooling-bandanas',
+    asin: 'B09N35XX2C',
     name: 'KYEESE Dog Instant Cooling Bandanas (2-Pack)',
     category: 'cooling-bandanas',
     amazonUrl:
@@ -113,6 +119,7 @@ export const coolingProducts: CoolingProduct[] = [
   // Cooling Vests
   {
     id: 'ruffwear-swamp-cooler',
+    asin: 'B09MSMSP69',
     name: 'Ruffwear Swamp Cooler Dog Cooling Vest',
     category: 'cooling-vests',
     amazonUrl:
@@ -128,6 +135,7 @@ export const coolingProducts: CoolingProduct[] = [
   },
   {
     id: 'kurgo-core-cooling-vest',
+    asin: 'B06VT1VDZX',
     name: 'Kurgo Core Cooling Vest',
     category: 'cooling-vests',
     amazonUrl:
@@ -143,6 +151,7 @@ export const coolingProducts: CoolingProduct[] = [
   },
   {
     id: 'canada-pooch-chill-seeker',
+    asin: 'B009JLQCUI',
     name: 'Canada Pooch Chill Seeker Cooling Vest',
     category: 'cooling-vests',
     amazonUrl:
@@ -160,6 +169,7 @@ export const coolingProducts: CoolingProduct[] = [
   // Freezable Toys
   {
     id: 'kong-classic',
+    asin: 'B000AYN7LU',
     name: 'KONG Classic Dog Toy',
     category: 'freezable-dog-toys',
     amazonUrl:
@@ -174,6 +184,7 @@ export const coolingProducts: CoolingProduct[] = [
   },
   {
     id: 'petsafe-chilly-penguin',
+    asin: 'B0G1NDQQYF',
     name: 'PetSafe Chilly Penguin',
     category: 'freezable-dog-toys',
     amazonUrl:
@@ -190,9 +201,11 @@ export const coolingProducts: CoolingProduct[] = [
   // Car Cooling
   {
     id: 'enovoe-car-window-shades',
+    asin: 'B0BTV5YVFR',
     name: 'Enovoe Magnetic Car Window Shades (4-Pack)',
     category: 'car-cooling',
-    amazonUrl: 'https://a.co/d/0ibvjezH?tag=chill-dogs-20',
+    amazonUrl:
+      'https://www.amazon.com/dp/B0BTV5YVFR/?tag=chill-dogs-20',
     bullets: [
       'Magnetic edges stick directly to the car door frame — no clips, no suction cups',
       'Blocks UV rays and cuts cabin temperature significantly on sunny drives',
@@ -204,9 +217,11 @@ export const coolingProducts: CoolingProduct[] = [
   },
   {
     id: 'kh-travel-fan',
+    asin: 'B0BRPZR3CZ',
     name: 'K&H Pet Products Clip-On Travel Fan',
     category: 'car-cooling',
-    amazonUrl: 'https://a.co/d/0gdIEc6H?tag=chill-dogs-20',
+    amazonUrl:
+      'https://www.amazon.com/dp/B0BRPZR3CZ/?tag=chill-dogs-20',
     bullets: [
       'Clips to headrest or cargo bar to direct airflow toward your dog',
       'Two-speed setting; runs off any USB port or 12V adapter',
@@ -218,6 +233,7 @@ export const coolingProducts: CoolingProduct[] = [
   },
   {
     id: 'outward-hound-port-a-bowl',
+    asin: 'B07N9MMCG7',
     name: 'Outward Hound Port-A-Bowl Collapsible Bowl',
     category: 'car-cooling',
     amazonUrl:
@@ -233,9 +249,11 @@ export const coolingProducts: CoolingProduct[] = [
   },
   {
     id: 'four-knines-seat-hammock',
+    asin: 'B0CLVCMLCK',
     name: '4Knines Dog Seat Cover Hammock',
     category: 'car-cooling',
-    amazonUrl: 'https://a.co/d/0iAjKmBj?tag=chill-dogs-20',
+    amazonUrl:
+      'https://www.amazon.com/dp/B0CLVCMLCK/?tag=chill-dogs-20',
     bullets: [
       'Hammock style prevents your dog from tumbling into the footwell on long drives',
       'Waterproof quilted surface stays cooler than bare upholstery or vinyl seats',
@@ -249,6 +267,7 @@ export const coolingProducts: CoolingProduct[] = [
   // Bonus
   {
     id: 'nasa-bed',
+    asin: 'B0BQPJLB68',
     name: 'Wag This World NASA-Inspired Orthopedic Dog Bed',
     category: 'bonus',
     amazonUrl:
