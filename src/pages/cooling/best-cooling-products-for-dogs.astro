@@ -5,12 +5,11 @@ import Hero from '@components/modules/Hero.astro';
 import SummaryBlock from '@components/modules/SummaryBlock.astro';
 import Toc from '@components/modules/Toc.astro';
 import CoolingProductCard from '@components/modules/CoolingProductCard.astro';
-import BonusCallout from '@components/modules/BonusCallout.astro';
 import FAQ from '@components/modules/FAQ.astro';
 import Disclosure from '@components/modules/Disclosure.astro';
 import RelatedGuides from '@components/modules/RelatedGuides.astro';
 import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
-import { getProductsByCategory, getBonusProduct } from '@data/cooling-products';
+import { getProductsByCategory } from '@data/cooling-products';
 
 const pageSlug = 'best-cooling-products-for-dogs';
 
@@ -18,28 +17,31 @@ const mats = getProductsByCategory('cooling-mats');
 const bandanas = getProductsByCategory('cooling-bandanas');
 const vests = getProductsByCategory('cooling-vests');
 const toys = getProductsByCategory('freezable-dog-toys');
-const bonus = getBonusProduct();
 
 const summaryItems = [
   {
     label: 'Cooling Mats',
     href: '/cooling/cooling-mats/',
     picks: ['The Green Pet Shop Cooling Pad — best gel mat', 'K&H Cool Bed III — best for large breeds'],
+    image: mats[0]?.image,
   },
   {
     label: 'Cooling Bandanas',
     href: '/cooling/cooling-bandanas/',
     picks: ['AFP Chill Out Ice Bandana — ice-pack option', 'KYEESE 2-Pack — great value'],
+    image: bandanas[0]?.image,
   },
   {
     label: 'Cooling Vests',
     href: '/cooling/cooling-vests/',
     picks: ['Ruffwear Swamp Cooler — best for hiking', 'Kurgo Core — budget-friendly'],
+    image: vests[0]?.image,
   },
   {
     label: 'Freezable Toys',
     href: '/cooling/freezable-dog-toys/',
     picks: ['KONG Classic — freeze-and-stuff legend', 'PetSafe Chilly Penguin — cool hydration'],
+    image: toys[0]?.image,
   },
 ];
 
@@ -48,11 +50,10 @@ const tocHeadings = [
   { label: 'Best Cooling Bandanas', anchor: 'cooling-bandanas' },
   { label: 'Best Cooling Vests', anchor: 'cooling-vests' },
   { label: 'Best Freezable Toys', anchor: 'freezable-toys' },
-  { label: 'Bonus: NASA-Inspired Bed', anchor: 'bonus' },
   { label: 'FAQ', anchor: 'faq' },
 ];
 
-const allProducts = [...mats, ...bandanas, ...vests, ...toys, ...(bonus ? [bonus] : [])];
+const allProducts = [...mats, ...bandanas, ...vests, ...toys];
 const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
@@ -198,11 +199,6 @@ const pillarFaqs = [
           ))}
         </div>
       </div>
-    </section>
-
-    <!-- Bonus -->
-    <section id="bonus">
-      {bonus && <BonusCallout product={bonus} pageSlug={pageSlug} />}
     </section>
 
     <!-- FAQ -->

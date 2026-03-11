@@ -1,0 +1,539 @@
+{
+  "search_metadata": {
+    "id": "search_6dAL2p4KqYsp1XD6Bk7wnGOm",
+    "status": "Success",
+    "created_at": "2026-03-11T20:52:26Z",
+    "request_time_taken": 2.03,
+    "parsing_time_taken": 0.09,
+    "total_time_taken": 2.12,
+    "request_url": "https://www.amazon.com/dp/B07N1JYYCW?th=1&psc=1",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_6dAL2p4KqYsp1XD6Bk7wnGOm.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_6dAL2p4KqYsp1XD6Bk7wnGOm"
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B07N1JYYCW",
+    "amazon_domain": "amazon.com",
+    "delivery_country": "us"
+  },
+  "product": {
+    "asin": "B07N1JYYCW",
+    "title": "AWOOF Pet Snuffle Mat for Dogs, Interactive Feed Game for Boredom, Encourages Natural Foraging Skills for Cats Dogs Bowl Travel Use, Dog Treat Dispenser Indoor Outdoor Stress Relief",
+    "brand_store": {
+      "id": "D5199F54-6951-49DB-8994-8E9BF8DE141A",
+      "text": "Visit the AWOOF Store",
+      "link": "https://www.amazon.com/stores/AWOOF/page/D5199F54-6951-49DB-8994-8E9BF8DE141A?lp_asin=B07N1JYYCW&ref_=ast_bln&store_ref=bl_ast_dp_brandlogo_sto"
+    },
+    "marketplace_id": "ATVPDKIKX0DER",
+    "link": "https://www.amazon.com/s?k=snuffle+mat+for+dogs",
+    "rating": 4.2,
+    "reviews": 21536,
+    "bought_past_month": "4K+ bought in past month",
+    "feature_bullets": [
+      "★ Dog Training Toys: It is a unique dog training mat that allows your dog to find snacks or small toys hidden in the mat. It helps to train your dog's smell, consume your dog's energy and lose weight. Keep your dog occupied and avoid your dog being bored and engaged in destructive behavior.",
+      "★ Non-slip & Large & Portable: The bottom is a non-slip cloth that effectively holds the mat and prevents the dog from moving the mat. The design is small and can be shrunk into a small storage bag. It can also be hung or set aside when not in use. Suitable for traveling.",
+      "★ Dual-use Design: The feeding mat can be folded into a bowl. Stick to the good habits of your dog or use it as an olfactory pad.",
+      "★ Easy to clean: The main fabric of the scent pad is felt cloth, environmentally friendly and easy to clean. It is suggested that washed by hand.",
+      "★ Guarantee: If you are not satisfied with our dog feeding snuffle mat, please feel free to contact us."
+    ],
+    "variants": [
+      {
+        "asin": "B0DPJZNXYH",
+        "title": "yellow",
+        "link": "https://www.amazon.com/dp/B0DPJZNXYH?th=1&pcs=1",
+        "dimensions": [
+          {
+            "name": "Color",
+            "value": "yellow"
+          }
+        ]
+      },
+      {
+        "asin": "B07N1JYYCW",
+        "title": "green",
+        "link": "https://www.amazon.com/dp/B07N1JYYCW?th=1&pcs=1",
+        "is_current_product": true,
+        "dimensions": [
+          {
+            "name": "Color",
+            "value": "green"
+          }
+        ]
+      },
+      {
+        "asin": "B0F2MX6VG4",
+        "title": "blue",
+        "link": "https://www.amazon.com/dp/B0F2MX6VG4?th=1&pcs=1",
+        "dimensions": [
+          {
+            "name": "Color",
+            "value": "blue"
+          }
+        ]
+      },
+      {
+        "asin": "B0DP2N5QC6",
+        "title": "brown",
+        "link": "https://www.amazon.com/dp/B0DP2N5QC6?th=1&pcs=1",
+        "dimensions": [
+          {
+            "name": "Color",
+            "value": "brown"
+          }
+        ]
+      },
+      {
+        "asin": "B0DP2S699J",
+        "title": "red",
+        "link": "https://www.amazon.com/dp/B0DP2S699J?th=1&pcs=1",
+        "dimensions": [
+          {
+            "name": "Color",
+            "value": "red"
+          }
+        ]
+      },
+      {
+        "asin": "B0F2MWYGBX",
+        "title": "Khaki",
+        "link": "https://www.amazon.com/dp/B0F2MWYGBX?th=1&pcs=1",
+        "dimensions": [
+          {
+            "name": "Color",
+            "value": "Khaki"
+          }
+        ]
+      }
+    ],
+    "search_alias": {
+      "title": "Pet Supplies",
+      "value": "pets"
+    },
+    "buybox": {
+      "price": {
+        "raw": "$11.98",
+        "value": 11.98,
+        "symbol": "$",
+        "currency": "USD"
+      },
+      "maximum_order_quantity": 30,
+      "offer_listing_id": "78wZkHNmBd8lUrbrLVWusKXfvVE0VIYQ25ZnXXz%2BXmrDV1tlvV3aoeVzR4bhTzTXsw4gERs4jqSXnO8fxvHTIcWkgeH9D4tIHJ8InBRM78yV53bBRRPHCf6xmJZYHbqr9D2Qw04rd9Dk785CW3LRNcu0u3uo8I0pfwUwfgLEiLXgIN%2BADy52rWFj9PsW4oez",
+      "fulfillment": {
+        "standard_delivery": {
+          "text": "FREE delivery Monday, March 16 on orders shipped by Amazon over $35",
+          "type": "FREE",
+          "condition": "on orders shipped by Amazon over $35",
+          "date": "Monday, March 16"
+        },
+        "fastest_delivery": {
+          "text": "Or Prime members get FREE delivery Friday, March 13. Order within 5 hrs 57 mins. Join Prime",
+          "type": "FREE",
+          "date": "Friday, March 13"
+        },
+        "third_party_seller": {
+          "id": "A31X8DP6LGTHNZ",
+          "name": "NEEDOON-US",
+          "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A31X8DP6LGTHNZ&asin=B07N1JYYCW&ref_=dp_merchant_link&isAmazonFulfilled=1"
+        },
+        "ships_from": "Amazon",
+        "sold_by": "NEEDOON-US",
+        "is_sold_by_amazon": true
+      },
+      "availability": "In Stock"
+    },
+    "specifications": [
+      {
+        "name": "Item Weight",
+        "value": "4.9 ounces"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "AWOOF"
+      },
+      {
+        "name": "ASIN",
+        "value": "B07N1JYYCW"
+      },
+      {
+        "name": "Item model number",
+        "value": "HJC0121501BW"
+      },
+      {
+        "name": "Date First Available",
+        "value": "January 23, 2019"
+      },
+      {
+        "name": "Item Package Dimensions L x W x H",
+        "value": "8.86 x 8.5 x 1.38 inches"
+      },
+      {
+        "name": "Item Dimensions LxWxH",
+        "value": "18.8 x 18.8 x 3.1 inches"
+      },
+      {
+        "name": "Item Weight",
+        "value": "4.94 ounces"
+      },
+      {
+        "name": "Brand Name",
+        "value": "AWOOF"
+      },
+      {
+        "name": "Target Audience Keyword",
+        "value": "dogs"
+      },
+      {
+        "name": "Directions",
+        "value": "no"
+      },
+      {
+        "name": "Warranty Description",
+        "value": "no"
+      },
+      {
+        "name": "Model Name",
+        "value": "BW"
+      },
+      {
+        "name": "Color",
+        "value": "green"
+      },
+      {
+        "name": "Material",
+        "value": "Cloth"
+      },
+      {
+        "name": "Age Range Description",
+        "value": "Puppy"
+      },
+      {
+        "name": "Care Instructions",
+        "value": "Hand Wash Only"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "AWOOF"
+      },
+      {
+        "name": "Breed Recommendation",
+        "value": "dog and cat"
+      },
+      {
+        "name": "Included Components",
+        "value": "1Pcs Snuffle Mat"
+      },
+      {
+        "name": "Specific Uses for Product",
+        "value": "Dog and cat"
+      },
+      {
+        "name": "Is Discontinued By Manufacturer",
+        "value": "No"
+      },
+      {
+        "name": "Product Dimensions",
+        "value": "18.8 x 18.8 x 3.1 inches; 4.94 ounces"
+      },
+      {
+        "name": "Item model number",
+        "value": "HJC0121501BW"
+      },
+      {
+        "name": "Date First Available",
+        "value": "January 23, 2019"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "AWOOF"
+      },
+      {
+        "name": "ASIN",
+        "value": "B07N1JYYCW"
+      }
+    ],
+    "bestsellers_rank": [
+      {
+        "name": "See Top 100 in Pet Supplies",
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "rank": 2246
+      },
+      {
+        "name": "Dog Feeding Mats",
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/14828689011/ref=pd_zg_hrsr_pet-supplies",
+        "rank": 14
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/71Wmu0n5rtL.jpg",
+    "images": [
+      {
+        "link": "https://m.media-amazon.com/images/I/71Wmu0n5rtL.jpg",
+        "variant": "MAIN"
+      },
+      {
+        "link": "https://m.media-amazon.com/images/I/61hGJlEcJfL.jpg",
+        "variant": "PT01"
+      },
+      {
+        "link": "https://m.media-amazon.com/images/I/618nSnqjZpL.jpg",
+        "variant": "PT02"
+      },
+      {
+        "link": "https://m.media-amazon.com/images/I/61rTUZ8i00L.jpg",
+        "variant": "PT03"
+      },
+      {
+        "link": "https://m.media-amazon.com/images/I/71cgqL-BviL.jpg",
+        "variant": "PT04"
+      },
+      {
+        "link": "https://m.media-amazon.com/images/I/71Au5rcwaQL.jpg",
+        "variant": "PT05"
+      },
+      {
+        "link": "https://m.media-amazon.com/images/I/61iWFSdxNKL.jpg",
+        "variant": "PT06"
+      },
+      {
+        "link": "https://m.media-amazon.com/images/I/61j8nKruTVL.jpg",
+        "variant": "PT07"
+      }
+    ]
+  },
+  "frequently_bought_together": {
+    "total_price": {
+      "raw": "$25.97",
+      "value": 25.97,
+      "symbol": "$",
+      "currency": "USD"
+    },
+    "products": [
+      {
+        "asin": "B07N1JYYCW",
+        "title": "AWOOF Pet Snuffle Mat for Dogs, Interactive Feed Game for Boredom, Encourages Natural Foraging Skills for Cats Dogs Bowl Travel Use, Dog Treat Dispenser Indoor Outdoor Stress Relief",
+        "link": "https://www.amazon.com/dp/B07N1JYYCW",
+        "price": {
+          "symbol": "$",
+          "currency": "USD",
+          "value": 11.98,
+          "raw": "$11.98"
+        },
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71Wmu0n5rtL.jpg"
+      },
+      {
+        "asin": "B0CK11D97T",
+        "title": "Dog Snuffle Ball-Interactive Puzzle Dog Toys Encourage Natural Foraging Skills Slow Feeder for Training and Stress Relief, Cloth Strip Hiding Food Chew Toys with Squeaky Carrot Toy for Any Size",
+        "link": "https://www.amazon.com/Ball-Interactive-Encourage-Foraging-Training-Washable/dp/B0CK11D97T/ref=pd_bxgy_thbs_d_sccl_1/145-1099357-9598222?pd_rd_w=cJHoJ&content-id=amzn1.sym.9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_p=9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_r=V0EZBXVZR9GZAE4KH3FT&pd_rd_wg=gUKVN&pd_rd_r=88921d25-a779-4e7b-949f-ffc92ce17b56&pd_rd_i=B0CK11D97T&psc=1",
+        "price": {
+          "symbol": "$",
+          "currency": "USD",
+          "value": 13.99,
+          "raw": "$13.99"
+        },
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71W1eqeZvcL.jpg"
+      }
+    ]
+  },
+  "review_results": {
+    "local": [
+      {
+        "id": "R15DTW4AETJCIL",
+        "asin": "R15DTW4AETJCIL",
+        "title": "Engaging, well-crafted, and a must-have for any dog with energy to burn",
+        "link": "https://www.amazon.com/gp/customer-reviews/R15DTW4AETJCIL/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8",
+        "text": "I recently got the AWOOF Pet Snuffle Mat for Dogs and it's already become a reliable tool in our daily routine for both enrichment and calming-down moments. Right out of the box it impressed: the fabric is thick and sturdy, the colors are bright, and the mat has tons of folds, pockets, and hidden sections that easily hold kibble or treats. The design encourages my dog to slow down, sniff, search — and that means less gulping, less boredom, and more mental engagement. During use, the mat has worked wonders. Instead of the usual \"empty bowl, done\" routine, feeding time now takes my dog a solid chunk of time and holds her interest. She gets excited, goes through the layers, noses down into the piles, and seems genuinely satisfied when she's finished. After the session, she’s calmer and less hyperactive than she used to be — which is exactly what I hoped for when I bought it. The fact that it’s machine-washable and still holds its shape after multiple washes is a huge plus. Another benefit: the mat is adaptable to different feeding or play settings. Sometimes I’ll hide a few treats and use it as a semi -training tool; other times I’ll fill it with kibble and let her munch while I prep dinner. It’s convenient, reduces food-driven anxiety, and provides a fun sensory experience. For dogs that have big ears, have finished their zoomies, or just need something meaningful in the day, this snuffle mat gives value way beyond its price. If you’re looking for something to reduce boredom, encourage natural foraging behavior, and make feed time more engaging — the AWOOF Pet Snuffle Mat is absolutely worth five stars.",
+        "rating": 5,
+        "date": "Reviewed in the United States on November 17, 2025",
+        "extracted_date": "2025-11-17",
+        "profile": {
+          "id": "AFCIMTU3GTWTKHLJGRONINY52OYA",
+          "name": "Moon",
+          "link": "https://www.amazon.com/gp/profile/amzn1.account.AFCIMTU3GTWTKHLJGRONINY52OYA"
+        },
+        "helpful_votes": 9,
+        "is_verified_purchase": true
+      },
+      {
+        "id": "R1MJ7FN07K4K39",
+        "asin": "R1MJ7FN07K4K39",
+        "title": "Great for special needs dog. Playground with benefits.",
+        "link": "https://www.amazon.com/gp/customer-reviews/R1MJ7FN07K4K39/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8",
+        "text": "My 5 1/2 lb chihuahua had a stroke last year and is now nearly deaf and totally blind. It is very hard to find something to amuse her.Her nose still works and appetite too. She and I love this hiding place for treats. I break up BegginStrips into tiny piaces and place them in throughout the felt strips. It takes her 10 to 15 minutes to find them all. She needs to rely on her sense of smell so this plays to her strength and ability. She never liked toys, but this satisfies her as a playground with benefits. I am ordering a second one for the rv so I dont have to remember to pack it.",
+        "rating": 5,
+        "date": "Reviewed in the United States on March 3, 2026",
+        "extracted_date": "2026-03-03",
+        "profile": {
+          "id": "AGDVYKQYTOCTBFJOBL6TNTNR63PA",
+          "name": "cabooklover",
+          "link": "https://www.amazon.com/gp/profile/amzn1.account.AGDVYKQYTOCTBFJOBL6TNTNR63PA"
+        },
+        "is_verified_purchase": true
+      },
+      {
+        "id": "R2RJYHTEJJVS6O",
+        "asin": "R2RJYHTEJJVS6O",
+        "title": "Overall good and in daily use, but the cord with plastic toggle was not good.",
+        "link": "https://www.amazon.com/gp/customer-reviews/R2RJYHTEJJVS6O/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8",
+        "text": "The media could not be loaded. We generally love this snuffle mat. Setup is easy, the fabric feels durable, and the little flaps are tougher than I expected; my 3 month old hasn’t chewed any off yet. Foraging with kibble keeps her busy and gives her a “job.” The first several uses kept her occupied for a good 30+ minutes. Now, after about two weeks, it holds her attention for 10–15 minutes, which I’d say makes it a great “beginner” or “easy” snuffle mat. Regular kibble seems to be the perfect size for hiding in it. What I didn’t like: the string and plastic toggle closure. My pup went straight for the plastic toggle and cord, chewed on it, and I realized it could turn into a hazard. I removed the toggle within minutes, but then the string itself became the toy of the day. Honestly, I don’t think the closure is needed at all — something like velcro would be safer. Over all, it's in daily use, but I’d choose a future snuffle mat without a cord.",
+        "rating": 4,
+        "date": "Reviewed in the United States on September 3, 2025",
+        "extracted_date": "2025-09-03",
+        "profile": {
+          "id": "AFPJAZQXEKG6VPTADWGXSL25S4YA",
+          "name": "Ann Miró",
+          "link": "https://www.amazon.com/gp/profile/amzn1.account.AFPJAZQXEKG6VPTADWGXSL25S4YA"
+        },
+        "helpful_votes": 12,
+        "images": [
+          "https://m.media-amazon.com/images/I/71zdZxQlQYL.jpg"
+        ],
+        "is_verified_purchase": true
+      },
+      {
+        "id": "R16T2C4F8DYPLV",
+        "asin": "R16T2C4F8DYPLV",
+        "title": "Overpriced, but a cute activity",
+        "link": "https://www.amazon.com/gp/customer-reviews/R16T2C4F8DYPLV/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8",
+        "text": "This sniff mat is a cute activity for dogs who enjoy sniffing or for dogs who are busy bodies. However, the mat itself is overpriced and low quality. The grass petals are not durable (they come out easily), the mat does not lay flat (even when I adjust the draw strings), and it’s pretty small in comparison to what I had hoped for. It is easy to use, easy to clean, and easy for dogs to figure out. However, it is generally low quality. I would not recommend for daily use, but it is good for occasional distractions.",
+        "rating": 3,
+        "date": "Reviewed in the United States on February 15, 2026",
+        "extracted_date": "2026-02-15",
+        "profile": {
+          "id": "AG7DEUAVI6DOLVHJKJ3RKBA5JCGA",
+          "name": "TJ.",
+          "link": "https://www.amazon.com/gp/profile/amzn1.account.AG7DEUAVI6DOLVHJKJ3RKBA5JCGA"
+        },
+        "is_verified_purchase": true
+      },
+      {
+        "id": "R3MHNFBNXKF9PU",
+        "asin": "R3MHNFBNXKF9PU",
+        "title": "Great Enrichment for My Pup!",
+        "link": "https://www.amazon.com/gp/customer-reviews/R3MHNFBNXKF9PU/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8",
+        "text": "The media could not be loaded. I purchased the AWOOF Pet Snuffle Mat for my energetic 8-month-old puppy, and it’s been such a game changer! He loves sniffing around and searching for his treats, and it keeps him engaged way longer than a regular bowl. I honestly expected him to start tearing it up right away, but instead he stayed focused on finding the treats and was entertained much longer than I anticipated. The mat feels well-made, easy to fold up for travel, and simple to clean. What I love most is how it slows down his eating while giving him mental stimulation—perfect for a dog that needs enrichment and stress relief. Even my older dog enjoys it. Highly recommend this for anyone with a pup that gets bored easily or eats too fast!",
+        "rating": 5,
+        "date": "Reviewed in the United States on September 11, 2025",
+        "extracted_date": "2025-09-11",
+        "profile": {
+          "id": "AFYF4TCTCIUIXPKMRLHL2C2F6RYA",
+          "name": "Jennifer Deakins",
+          "link": "https://www.amazon.com/gp/profile/amzn1.account.AFYF4TCTCIUIXPKMRLHL2C2F6RYA"
+        },
+        "helpful_votes": 5,
+        "is_verified_purchase": true
+      },
+      {
+        "id": "R2VDLH6VURK5NB",
+        "asin": "R2VDLH6VURK5NB",
+        "title": "Love love love this",
+        "link": "https://www.amazon.com/gp/customer-reviews/R2VDLH6VURK5NB/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8",
+        "text": "This is the second one I purchased and I dont plan on every feeding my dog out of a regular bowl again. This helps to engage them and make them work for their food. Also helps slow the eating down if you have a gobbler. Im 100% satisfied and will keep purchasing as they wear out",
+        "rating": 5,
+        "date": "Reviewed in the United States on March 8, 2026",
+        "extracted_date": "2026-03-08",
+        "profile": {
+          "id": "AH2BHM6KK2Q5YWX6DBLT4OFTPKRA",
+          "name": "Erica",
+          "link": "https://www.amazon.com/gp/profile/amzn1.account.AH2BHM6KK2Q5YWX6DBLT4OFTPKRA"
+        },
+        "is_verified_purchase": true
+      },
+      {
+        "id": "R22JPWHRFXH7BK",
+        "asin": "R22JPWHRFXH7BK",
+        "title": "I'd buy again",
+        "link": "https://www.amazon.com/gp/customer-reviews/R22JPWHRFXH7BK/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8",
+        "text": "I bought 2 different brands/types and this one is much more sturdy overall. Not thrilled with the felt for small pockets because those are too flimsy to use but the rest holds up to my hound carrying/ moving it around",
+        "rating": 5,
+        "date": "Reviewed in the United States on November 29, 2025",
+        "extracted_date": "2025-11-29",
+        "profile": {
+          "id": "AEMXUOJQOK67JF7VMZYGCGVHHT2Q",
+          "name": "Blakely Lewis",
+          "link": "https://www.amazon.com/gp/profile/amzn1.account.AEMXUOJQOK67JF7VMZYGCGVHHT2Q"
+        },
+        "is_verified_purchase": true
+      },
+      {
+        "id": "R9H0HAMU30CP6",
+        "asin": "R9H0HAMU30CP6",
+        "title": "Wonderful for a new puppy gift",
+        "link": "https://www.amazon.com/gp/customer-reviews/R9H0HAMU30CP6/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8",
+        "text": "Dogs love hunting for kibble. Slows a fast eater. Been using \"snuffles\" for over 10yrs. One dog refuses to use certain colors, her fav is this one in light green. Can be washed in sink but easier to purchase new ones every 6mos. Makes great new puppy gift",
+        "rating": 4,
+        "date": "Reviewed in the United States on March 7, 2026",
+        "extracted_date": "2026-03-07",
+        "profile": {
+          "id": "AEN5E7TAPABDVYY7EIREE72LUUNA",
+          "name": "Tamara",
+          "link": "https://www.amazon.com/gp/profile/amzn1.account.AEN5E7TAPABDVYY7EIREE72LUUNA"
+        },
+        "is_verified_purchase": true
+      }
+    ],
+    "global": [
+      {
+        "id": "R10DZ4EMGG3GZL",
+        "title": "Great item my puppy loves it",
+        "text": "When I have to leave my puppy I put her dry food in this to keep her occupied. Age enjoys the challenge and the item is well made and withstands puppy teeth and doesn’t move around at all. Highly recommend!!",
+        "rating": 5,
+        "date": "Reviewed in Australia on November 16, 2023",
+        "extracted_date": "2023-11-16",
+        "profile": {
+          "name": "Rachel D."
+        },
+        "is_verified_purchase": true
+      },
+      {
+        "id": "RSJ5XDNB9W2Y0",
+        "title": "Recommended",
+        "text": "Very simple easy to pack away toy I got for my 2 kittens. Hide some treats in the leaves and keeps them entertained for a good period of time and then once finished simply turn inside out and pull the toggle to pack away. Very good product.",
+        "rating": 5,
+        "date": "Reviewed in the United Kingdom on January 5, 2024",
+        "extracted_date": "2024-01-05",
+        "profile": {
+          "name": "Chris Egan"
+        },
+        "is_verified_purchase": true
+      },
+      {
+        "id": "RVWXH00U3PGRL",
+        "title": "My Gigi loves this",
+        "text": "Very pet friendly. Easy to use. With this, I can get my dog to eat her kibble, which is good for her but that she's not crazy about. My dog is 5 months old and had no difficulty figuring this out. I haven't washed it yet so I can't comment on that.",
+        "rating": 5,
+        "date": "Reviewed in Canada on December 23, 2021",
+        "extracted_date": "2021-12-23",
+        "profile": {
+          "name": "Coco"
+        },
+        "is_verified_purchase": true
+      },
+      {
+        "id": "R1Y2GSBSQ848YL",
+        "title": "Recommend",
+        "text": "Our dog loved this... he is a big chewer with his toys... and the fact this lasted two weeks.. was amazing LOL. I do recommend this...",
+        "rating": 5,
+        "date": "Reviewed in Canada on March 25, 2021",
+        "extracted_date": "2021-03-25",
+        "profile": {
+          "name": "Marie Redgrift"
+        },
+        "is_verified_purchase": true
+      },
+      {
+        "id": "R28JBZ7FZMXTD3",
+        "title": "Keeps my dog busy",
+        "text": "The media could not be loaded. This is a great snuffle rug. My chihuahua loves it and it keeps her occupied for ages.",
+        "rating": 5,
+        "date": "Reviewed in Australia on October 11, 2023",
+        "extracted_date": "2023-10-11",
+        "profile": {
+          "name": "Lissie EJ"
+        },
+        "images": [
+          "https://m.media-amazon.com/images/I/61WJ4e9aGcL.jpg"
+        ],
+        "is_verified_purchase": true
+      }
+    ]
+  }
+}

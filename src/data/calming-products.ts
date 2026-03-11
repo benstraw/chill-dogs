@@ -14,6 +14,7 @@ export interface CalmingProduct {
   bestFor: string;
   howItHelps: string;
   considerIf: string;
+  image?: { src: string; alt: string };
 }
 
 export const calmingProducts: CalmingProduct[] = [
@@ -32,6 +33,7 @@ export const calmingProducts: CalmingProduct[] = [
     bestFor: 'Dogs who respond well to wearable support during predictable stress',
     howItHelps: 'Gentle pressure support',
     considerIf: 'Your dog tolerates fitted gear and anxiety tends to spike in specific situations',
+    image: { src: 'https://m.media-amazon.com/images/I/61PxVCtYzUL.jpg', alt: 'ThunderShirt Classic Dog Anxiety Jacket' },
   },
   {
     id: 'native-pet-calm-chews',
@@ -48,6 +50,7 @@ export const calmingProducts: CalmingProduct[] = [
     bestFor: 'Natural-leaning households that want a simple chew before stressful moments',
     howItHelps: 'Nutritional calming support',
     considerIf: 'You want a chewable option instead of a wearable product',
+    image: { src: 'https://m.media-amazon.com/images/I/71wvagsKePL.jpg', alt: 'Native Pet Calm Chews for Dogs' },
   },
   {
     id: 'greenies-calming-chews',
@@ -64,6 +67,7 @@ export const calmingProducts: CalmingProduct[] = [
     bestFor: 'Dog owners who want a recognizable brand and straightforward calming chew',
     howItHelps: 'Daily or situational nutritional support',
     considerIf: 'Your dog already does well with soft supplement-style treats',
+    image: { src: 'https://m.media-amazon.com/images/I/71UE9SW5IOL.jpg', alt: 'Greenies Supplements Calming Chews' },
   },
   {
     id: 'pet-honesty-hemp-calming-chews',
@@ -80,6 +84,7 @@ export const calmingProducts: CalmingProduct[] = [
     bestFor: 'Pet parents specifically looking for a hemp-based calming chew',
     howItHelps: 'Multi-ingredient calming support',
     considerIf: 'You want hemp positioned as part of your calming routine',
+    image: { src: 'https://m.media-amazon.com/images/I/61nfdlquMVL.jpg', alt: 'Pet Honesty Hemp Calming Chews' },
   },
   {
     id: 'lickimat-classic-soother',
@@ -96,6 +101,7 @@ export const calmingProducts: CalmingProduct[] = [
     bestFor: 'Everyday grooming distraction and short calming sessions',
     howItHelps: 'Licking and steady focus',
     considerIf: 'You want the most straightforward lick-mat format',
+    image: { src: 'https://m.media-amazon.com/images/I/71srIBjOAhL.jpg', alt: 'LickiMat Classic Soother Slow Feeder' },
   },
   {
     id: 'lukito-licking-mat',
@@ -112,6 +118,7 @@ export const calmingProducts: CalmingProduct[] = [
     bestFor: 'Budget-conscious dog owners who want extra stability during grooming',
     howItHelps: 'Licking with added suction stability',
     considerIf: 'You need a mat that stays put on tile, tub walls, or smooth floors',
+    image: { src: 'https://m.media-amazon.com/images/I/71fXsViJtML.jpg', alt: 'LUKITO Premium Silicone Licking Mat' },
   },
   {
     id: 'rundic-snuffle-mat',
@@ -128,6 +135,7 @@ export const calmingProducts: CalmingProduct[] = [
     bestFor: 'Dogs who need indoor enrichment and a simple nose-work outlet',
     howItHelps: 'Foraging and mental engagement',
     considerIf: 'You want a snuffle mat with an approachable, playful design',
+    image: { src: 'https://m.media-amazon.com/images/I/812agfn++dL.jpg', alt: 'Rundic Snuffle Mat for Dogs' },
   },
   {
     id: 'awoof-snuffle-mat',
@@ -144,6 +152,7 @@ export const calmingProducts: CalmingProduct[] = [
     bestFor: 'Dogs who need a more adjustable nose-work challenge',
     howItHelps: 'Adjustable foraging puzzle',
     considerIf: 'Your dog gets bored with simpler enrichment setups',
+    image: { src: 'https://m.media-amazon.com/images/I/71Wmu0n5rtL.jpg', alt: 'AWOOF Pet Snuffle Mat for Dogs' },
   },
 ];
 

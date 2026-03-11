@@ -1,7 +1,7 @@
 import type { ProductCategory } from './cooling-products';
 import { ROUTES } from './routes';
 
-export type CoolingConverterCategory = Exclude<ProductCategory, 'bonus'>;
+export type CoolingConverterCategory = ProductCategory;
 
 export interface CoolingConverterPageConfig {
   category: CoolingConverterCategory;

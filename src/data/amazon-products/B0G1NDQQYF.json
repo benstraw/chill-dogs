@@ -1,0 +1,512 @@
+{
+  "search_metadata": {
+    "id": "search_mR5DzpePyDIpNmWJy4YdGQno",
+    "status": "Success",
+    "created_at": "2026-03-11T20:51:39Z",
+    "request_time_taken": 3.78,
+    "parsing_time_taken": 0.13,
+    "total_time_taken": 3.91,
+    "request_url": "https://www.amazon.com/dp/B0G1NDQQYF?th=1&psc=1",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_mR5DzpePyDIpNmWJy4YdGQno.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_mR5DzpePyDIpNmWJy4YdGQno"
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0G1NDQQYF",
+    "amazon_domain": "amazon.com",
+    "delivery_country": "us"
+  },
+  "product": {
+    "asin": "B0G1NDQQYF",
+    "title": "PetSafe Freezable Treat Holding Chilly Penguin - Durable,Vanilla-Scented,Rubber,Freezable Interactive Pet Puzzle for Boredom or Separation Anxiety - for Small Dogs,(Pack of 2)",
+    "brand_store": {
+      "id": "98286354-F1CF-4035-931E-969101222584",
+      "text": "Visit the PetSafe Store",
+      "link": "https://www.amazon.com/stores/PetSafe/page/98286354-F1CF-4035-931E-969101222584?lp_asin=B0G1NDQQYF&ref_=ast_bln&store_ref=bl_ast_dp_brandlogo_sto"
+    },
+    "marketplace_id": "ATVPDKIKX0DER",
+    "link": "https://www.amazon.com/PetSafe-Freezable-Holding-Chilly-Penguin/dp/B0G1NDQQYF",
+    "rating": 4.3,
+    "reviews": 6787,
+    "feature_bullets": [
+      "The information below is per-pack only",
+      "Customized Frozen Treat: The small PetSafe Freezable Treat Holding Chilly Penguin can be filled with flavored water, broth, peanut butter, or wet dog food for a frozen boredom-busting treat",
+      "Durable Rubber: This vanilla-scented, BPA-free rubber toy offers long-lasting playtime; top-rack dishwasher safe for easy cleaning",
+      "Interactive Wobble: A fun round base wobble and slow feeder action provides active simulation, slows down eating habits, and encourages enrichment",
+      "Global Mission, Local Care: With U.S. roots and worldwide reach, PetSafe delivers vet- and trainer-recommended solutions and exceptional customer support to create fields of joy for pets",
+      "25 Years of Trust: Since 1998, PetSafe has created safe, innovative, and trusted products that bring joy, enhance pet lives, and support the lifelong bond between pets and their families"
+    ],
+    "variants": [
+      {
+        "asin": "B0G1N66BY1",
+        "title": "Chilly Penguin Medium/Large (Pack of 2)",
+        "link": "https://www.amazon.com/dp/B0G1N66BY1?th=1&pcs=1",
+        "dimensions": [
+          {
+            "name": "Style",
+            "value": "Chilly Penguin"
+          },
+          {
+            "name": "Size",
+            "value": "Medium/Large (Pack of 2)"
+          }
+        ]
+      },
+      {
+        "asin": "B07BVKY59G",
+        "title": "Chilly Penguin Small (Pack of 1)",
+        "link": "https://www.amazon.com/dp/B07BVKY59G?th=1&pcs=1",
+        "dimensions": [
+          {
+            "name": "Style",
+            "value": "Chilly Penguin"
+          },
+          {
+            "name": "Size",
+            "value": "Small (Pack of 1)"
+          }
+        ]
+      },
+      {
+        "asin": "B095VVWN9F",
+        "title": "Frosty Cone Small (Pack of 1)",
+        "link": "https://www.amazon.com/dp/B095VVWN9F?th=1&pcs=1",
+        "dimensions": [
+          {
+            "name": "Style",
+            "value": "Frosty Cone"
+          },
+          {
+            "name": "Size",
+            "value": "Small (Pack of 1)"
+          }
+        ]
+      },
+      {
+        "asin": "B0G1NDQQYF",
+        "title": "Chilly Penguin Small (Pack of 2)",
+        "link": "https://www.amazon.com/dp/B0G1NDQQYF?th=1&pcs=1",
+        "is_current_product": true,
+        "dimensions": [
+          {
+            "name": "Style",
+            "value": "Chilly Penguin"
+          },
+          {
+            "name": "Size",
+            "value": "Small (Pack of 2)"
+          }
+        ]
+      },
+      {
+        "asin": "B07FM65GL1",
+        "title": "Chilly Penguin Medium/Large (Pack of 1)",
+        "link": "https://www.amazon.com/dp/B07FM65GL1?th=1&pcs=1",
+        "dimensions": [
+          {
+            "name": "Style",
+            "value": "Chilly Penguin"
+          },
+          {
+            "name": "Size",
+            "value": "Medium/Large (Pack of 1)"
+          }
+        ]
+      }
+    ],
+    "search_alias": {
+      "title": "Pet Supplies",
+      "value": "pets"
+    },
+    "buybox": {
+      "price": {
+        "raw": "$12.98",
+        "value": 12.98,
+        "symbol": "$",
+        "currency": "USD"
+      },
+      "maximum_order_quantity": 30,
+      "offer_listing_id": "f75voUFRCt1ZdxxWjra7GKBBL5eWnIWTFNIvdueVoz%2FMMs6WThBOg9VrTBXMPeNVcHXSCCdFLuRjKnu26iDEfHFpMe%2BRSwaibxWQ7P7WqiElzLQWZZA4diS5azka0zkyDcYNUrrCiDJ1lx0t7qCIBTaloTbHQqD1",
+      "fulfillment": {
+        "standard_delivery": {
+          "text": "FREE delivery Monday, March 16 on orders shipped by Amazon over $35",
+          "type": "FREE",
+          "condition": "on orders shipped by Amazon over $35",
+          "date": "Monday, March 16"
+        },
+        "fastest_delivery": {
+          "text": "Or Prime members get FREE delivery Tomorrow, March 12. Order within 7 hrs 8 mins. Join Prime",
+          "type": "FREE",
+          "date": "Tomorrow, March 12"
+        },
+        "sold_by": "Amazon.com",
+        "is_sold_by_amazon": true
+      },
+      "availability": "In Stock"
+    },
+    "specifications": [
+      {
+        "name": "Item Weight",
+        "value": "8 ounces"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "Radio Systems Corporation"
+      },
+      {
+        "name": "ASIN",
+        "value": "B0G1NDQQYF"
+      },
+      {
+        "name": "Item model number",
+        "value": "BB-PENGUIN-S"
+      },
+      {
+        "name": "Date First Available",
+        "value": "April 1, 2018"
+      },
+      {
+        "name": "Item Package Dimensions L x W x H",
+        "value": "10.24 x 9.45 x 7.91 inches"
+      },
+      {
+        "name": "Item Dimensions LxWxH",
+        "value": "3.25 x 1.33 x 7 inches"
+      },
+      {
+        "name": "Item Weight",
+        "value": "0.5 Pounds"
+      },
+      {
+        "name": "Brand Name",
+        "value": "PetSafe"
+      },
+      {
+        "name": "Target Audience Keyword",
+        "value": "dogs"
+      },
+      {
+        "name": "Directions",
+        "value": "Read the manual before the first use."
+      },
+      {
+        "name": "Color",
+        "value": "Blue"
+      },
+      {
+        "name": "Size",
+        "value": "Small (Pack of 2)"
+      },
+      {
+        "name": "Material",
+        "value": "Rubber"
+      },
+      {
+        "name": "Age Range Description",
+        "value": "Puppies"
+      },
+      {
+        "name": "Number of Items",
+        "value": "2"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "Radio Systems Corporation"
+      },
+      {
+        "name": "Style",
+        "value": "Chilly Penguin"
+      },
+      {
+        "name": "Breed Recommendation",
+        "value": "Small Breeds"
+      },
+      {
+        "name": "Product Dimensions",
+        "value": "3.25 x 1.33 x 7 inches; 8 ounces"
+      },
+      {
+        "name": "Item model number",
+        "value": "BB-PENGUIN-S"
+      },
+      {
+        "name": "Date First Available",
+        "value": "April 1, 2018"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "Radio Systems Corporation"
+      },
+      {
+        "name": "ASIN",
+        "value": "B0G1NDQQYF"
+      }
+    ],
+    "bestsellers_rank": [
+      {
+        "name": "See Top 100 in Pet Supplies",
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "rank": 5201
+      },
+      {
+        "name": "Dog Slow Feeders",
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/17602455011/ref=pd_zg_hrsr_pet-supplies",
+        "rank": 29
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/7196xcBelQL.jpg",
+    "images": [
+      {
+        "link": "https://m.media-amazon.com/images/I/7196xcBelQL.jpg",
+        "variant": "MAIN"
+      },
+      {
+        "link": "https://m.media-amazon.com/images/I/81kbK0z4YkL.jpg",
+        "variant": "PT01"
+      },
+      {
+        "link": "https://m.media-amazon.com/images/I/81Z5Al8OJjL.jpg",
+        "variant": "PT02"
+      },
+      {
+        "link": "https://m.media-amazon.com/images/I/81531066S+L.jpg",
+        "variant": "PT03"
+      },
+      {
+        "link": "https://m.media-amazon.com/images/I/61DOtZn-enL.jpg",
+        "variant": "PT04"
+      },
+      {
+        "link": "https://m.media-amazon.com/images/I/81DgJToCupL.jpg",
+        "variant": "PT05"
+      },
+      {
+        "link": "https://m.media-amazon.com/images/I/81L-Hq2LsQL.jpg",
+        "variant": "PT06"
+      }
+    ]
+  },
+  "similar_item": {
+    "asin": "B0BFR2S1GQ",
+    "title": "Amazon Basics Interactive Durable Natural Rubber Dog Treat Dispensing Enrichment Chew Toy for Medium Dogs, Multi Color, 2-Pack",
+    "link": "https://www.amazon.com/dp/B0BFR2S1GQ/ref=vp_d_pb_TIER4_sessmp_lp_B0G1NDQQYF_pd?_encoding=UTF8&pf_rd_p=833279f6-3822-4089-a177-f6c02b33c169&pf_rd_r=9SNS0CRYMF6HKN542CW6&pd_rd_wg=yhqQO&pd_rd_i=B0BFR2S1GQ&pd_rd_w=5gdhV&content-id=amzn1.sym.833279f6-3822-4089-a177-f6c02b33c169&pd_rd_r=2ca1dd5c-8bef-4fe2-8475-231849102e93&psc=1",
+    "rating": 4.5,
+    "reviews": 2227,
+    "price": {
+      "raw": "$9.59",
+      "value": 9.59,
+      "symbol": "$",
+      "currency": "USD"
+    },
+    "image": "https://m.media-amazon.com/images/I/81ErEO46o8L.jpg"
+  },
+  "frequently_bought_together": {
+    "total_price": {
+      "raw": "$31.020000000000003",
+      "value": 31.02,
+      "symbol": "$",
+      "currency": "USD"
+    }
+  },
+  "review_results": {
+    "local": [
+      {
+        "id": "ROC0Q4Q1U00CN",
+        "asin": "ROC0Q4Q1U00CN",
+        "title": "Buy it and keep them occupied for hours",
+        "link": "https://www.amazon.com/gp/customer-reviews/ROC0Q4Q1U00CN/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8",
+        "text": "Amazing keeps my dog busy so I can work quality is outstanding it has lasted forever and he had not been able to destroy it my log loves it and keeps him buy for hours. It is soft enough to not hurt your dogs teeth but strong enough they can't chew it to pieces so easy to you just put in the treat freeze and hand it over I have two to I always have one ready.",
+        "rating": 5,
+        "date": "Reviewed in the United States on December 23, 2025",
+        "extracted_date": "2025-12-23",
+        "profile": {
+          "id": "AETUFJBUZ7Q474NORZKGFPSYJRNQ",
+          "name": "Tasha Lee Jones",
+          "link": "https://www.amazon.com/gp/profile/amzn1.account.AETUFJBUZ7Q474NORZKGFPSYJRNQ"
+        },
+        "is_verified_purchase": true
+      },
+      {
+        "id": "R1Z6M54CVKGSNO",
+        "asin": "R1Z6M54CVKGSNO",
+        "title": "Excellent Idea to keep you fur baby happy!",
+        "link": "https://www.amazon.com/gp/customer-reviews/R1Z6M54CVKGSNO/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8",
+        "text": "These are excellent! I have three fur babies and while I have to work a full-time job, I still want them to have something to do. I filled these with a mixture of wet dog food and freeze them overnight. The next day the dogs have these to lick on as a treat and the way it is shaped poses a challenge as they near the end. Helps relieve boredom and stressors when your dogs are left alone. Excellent size for my little ones and very creative idea. Easy to clean, and difficult to destroy which makes a great toy for any pet!",
+        "rating": 5,
+        "date": "Reviewed in the United States on July 15, 2025",
+        "extracted_date": "2025-07-15",
+        "profile": {
+          "id": "AHUNBGKAWCHXZM3ENJRGFNMBXQLQ",
+          "name": "Shopaholic74",
+          "link": "https://www.amazon.com/gp/profile/amzn1.account.AHUNBGKAWCHXZM3ENJRGFNMBXQLQ"
+        },
+        "helpful_votes": 3,
+        "is_verified_purchase": true
+      },
+      {
+        "id": "R11Q97F2JWDQCU",
+        "asin": "R11Q97F2JWDQCU",
+        "title": "Dogs love the treats hidden within",
+        "link": "https://www.amazon.com/gp/customer-reviews/R11Q97F2JWDQCU/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8",
+        "text": "The treat holding penguin is ideal for feeding treats, frozen and otherwise, to your loving pets. I have put yogurt, applesauce, mashed bananas, and other treats inside the penguin. The puppies love licking the yummy treats out of the penguin. It occupies them for quite a while. The only thing is that they are not very easy to clean. I use a small soft brush after soaking them in hot water.",
+        "rating": 4,
+        "date": "Reviewed in the United States on December 7, 2025",
+        "extracted_date": "2025-12-07",
+        "profile": {
+          "id": "AEROSBLST4LCB6JF3UYIMWW7BMFA",
+          "name": "Rosemarie",
+          "link": "https://www.amazon.com/gp/profile/amzn1.account.AEROSBLST4LCB6JF3UYIMWW7BMFA"
+        },
+        "helpful_votes": 2,
+        "is_verified_purchase": true
+      },
+      {
+        "id": "R12UOLK0VWOMLQ",
+        "asin": "R12UOLK0VWOMLQ",
+        "title": "Perfect treat toy for small dogs",
+        "link": "https://www.amazon.com/gp/customer-reviews/R12UOLK0VWOMLQ/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8",
+        "text": "This is my 20 lb. dog's favorite busy treat. I put a little dog safe peanut butter in it with a few treats. When it's empty she'll chew on it which keeps her busy even longer. It's holding up really well, too.",
+        "rating": 5,
+        "date": "Reviewed in the United States on January 13, 2026",
+        "extracted_date": "2026-01-13",
+        "profile": {
+          "id": "AG7ZCY6MEQQMIIZC64PXKHWTQCZQ",
+          "name": "Amazon Customer",
+          "link": "https://www.amazon.com/gp/profile/amzn1.account.AG7ZCY6MEQQMIIZC64PXKHWTQCZQ"
+        },
+        "is_verified_purchase": true
+      },
+      {
+        "id": "RE9I2ISNHITRA",
+        "asin": "RE9I2ISNHITRA",
+        "title": "Difficult to fill",
+        "link": "https://www.amazon.com/gp/customer-reviews/RE9I2ISNHITRA/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8",
+        "text": "The Penguins is cute and pretty sturdy. However it is difficult to get treat ingredients inside. We made a mix of yogurt, pumpkin, and peanut butter and could only get about a teaspoon in. If you have a syringe and can squirt something in there or are using something watery like broth it might be okay. We used it once and that was enough trouble.",
+        "rating": 3,
+        "date": "Reviewed in the United States on February 14, 2026",
+        "extracted_date": "2026-02-14",
+        "profile": {
+          "id": "AEI5A3H3IT4TS2MFPXVLGS3IXDHQ",
+          "name": "SmithFosterFamily",
+          "link": "https://www.amazon.com/gp/profile/amzn1.account.AEI5A3H3IT4TS2MFPXVLGS3IXDHQ"
+        },
+        "is_verified_purchase": true
+      },
+      {
+        "id": "R1QQJ5EZJ7P5CZ",
+        "asin": "R1QQJ5EZJ7P5CZ",
+        "title": "Puppy loves them",
+        "link": "https://www.amazon.com/gp/customer-reviews/R1QQJ5EZJ7P5CZ/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8",
+        "text": "These were recommend by the breeder and I use them once a day when I need to keep the puppy busy. I freeze with a mix of yogurt and a small amount of peanut butter. She chews on the on the penguin when she has finished the treat. When she sees it coming out of the freezer she gives me all her attention and gets excited! These have been a life saver when I need a quiet moment as they keep her engaged. I use a stiff bottle brush to clean them.",
+        "rating": 5,
+        "date": "Reviewed in the United States on March 3, 2026",
+        "extracted_date": "2026-03-03",
+        "profile": {
+          "id": "AHSKTDXHCA3BW2WFMFOFQ7IKQCKQ",
+          "name": "Jill",
+          "link": "https://www.amazon.com/gp/profile/amzn1.account.AHSKTDXHCA3BW2WFMFOFQ7IKQCKQ"
+        },
+        "is_verified_purchase": true
+      },
+      {
+        "id": "R1JOS0PC95J8CF",
+        "asin": "R1JOS0PC95J8CF",
+        "title": "Its a hit for my 9lb chewer!",
+        "link": "https://www.amazon.com/gp/customer-reviews/R1JOS0PC95J8CF/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8",
+        "text": "So far so good! My Pup is a chewer and destroys most of his toys. This has been great to keep him happy and occupied for about an hour. I work from home, so when I know I need to keep him busy this is perfect. Ill keep an eye on it to make sure he doesn't break it, but it is pretty solid and thick. He can get through a puzzle in seconds, so this has been so good for him. Ive done mostly broth and veggies, some kibble. Even yogurt and peanut butter. Right now he gets it twice a day. He spends about an hour with it and then hes so tired hes ready for a nap. Once around mid day and another late evening before bed. Im ordering another to keep for when I have to leave him home alone.He cleans it pretty well, but Ive found soaking in hot water also loosens any bits left behind. Because its small, I'm not worried about extra calories.",
+        "rating": 5,
+        "date": "Reviewed in the United States on September 8, 2025",
+        "extracted_date": "2025-09-08",
+        "profile": {
+          "id": "AGTPDOQ5Q4I5R2CQWP3SFR35RBLQ",
+          "name": "Amazon Shopper",
+          "link": "https://www.amazon.com/gp/profile/amzn1.account.AGTPDOQ5Q4I5R2CQWP3SFR35RBLQ"
+        },
+        "helpful_votes": 2,
+        "is_verified_purchase": true
+      },
+      {
+        "id": "R3PCXLOWOBOLY2",
+        "asin": "R3PCXLOWOBOLY2",
+        "title": "For Aggressive chewers",
+        "link": "https://www.amazon.com/gp/customer-reviews/R3PCXLOWOBOLY2/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8",
+        "text": "My Yorkie loves this thing. I put peanut butter inside for a treat and he licks chews bites at it until it is gone. He is an aggressive chewer because he is a puppy as well as teething and this little penguin has held up nice. He even likes to play fetch with it so it does bounce not like a ball but enough for him to enjoy. It is soft but not too soft more of a sturdy softness. The design looks exactly like the picture I penguins with a snowflake belly opening. It is a great activity for him when it is time to bed he can chew on it to help calm him. He normally chews a hole through stuff but this little guy has great chewability. It’s easy to clean and you can stuff it with treats as well to keep your furbaby entertained. I recommend this product your dog will love it",
+        "rating": 5,
+        "date": "Reviewed in the United States on June 12, 2025",
+        "extracted_date": "2025-06-12",
+        "profile": {
+          "id": "AGNAVTRDZJVDZNMGVJBGBVWQKDIA",
+          "name": "DeeVa",
+          "link": "https://www.amazon.com/gp/profile/amzn1.account.AGNAVTRDZJVDZNMGVJBGBVWQKDIA"
+        },
+        "is_verified_purchase": true
+      }
+    ],
+    "global": [
+      {
+        "id": "R2F51NJA9HA7RW",
+        "title": "Perfeito!",
+        "text": "Muito resistente, comporta uma pequena quantidade de alimento úmido (50g), mas ocupa o filhote por quase uma hora. Meu favorito - e dele também!",
+        "rating": 5,
+        "date": "Reviewed in Brazil on March 5, 2022",
+        "extracted_date": "2022-03-05",
+        "profile": {
+          "name": "Inaiara De Souza Golob"
+        },
+        "is_verified_purchase": true
+      },
+      {
+        "id": "R2MLX1RS82URNM",
+        "title": "Good quality",
+        "text": "This actually lasted longer than I thought it would. My lab destroys most toys quickly. This lasted months before he managed to break it.",
+        "rating": 5,
+        "date": "Reviewed in Canada on December 29, 2025",
+        "extracted_date": "2025-12-29",
+        "profile": {
+          "name": "Sheri"
+        },
+        "is_verified_purchase": true
+      },
+      {
+        "id": "R30E22JVQ4PGNH",
+        "title": "Smaller than I thought but held up well.",
+        "text": "Have a golden retriever and she's 60lbs and this was a bit too small. That said, my dog still likes to get a frozen treat out of it.",
+        "rating": 5,
+        "date": "Reviewed in Canada on February 12, 2025",
+        "extracted_date": "2025-02-12",
+        "profile": {
+          "name": "K. O'Shaughnessy"
+        },
+        "is_verified_purchase": true
+      },
+      {
+        "id": "RF5TESQK281NI",
+        "title": "Great quality! Dog loves it!",
+        "text": "Ok people who are saying there’s not a single dent on it, don’t have power chewers. My dog’s been using it for about 2 weeks and you can see in the pics there are tons of marks. That being said, I would consider this extremely durable. It’s very thick and sturdy. I was worried the ridges forming the snowflake would be thin and he’d rip them off. But they are very thick! No longer a concern at all. This is an awesome toy. I fill it every morning with different treats and then give it to him in the afternoon. It keeps him very busy and is a great way to keep him cool on hot days. I like to fill with different baby foods, peanut butter, or rehydrated kibble.",
+        "rating": 5,
+        "date": "Reviewed in Canada on July 14, 2023",
+        "extracted_date": "2023-07-14",
+        "profile": {
+          "name": "MoonMonkey"
+        },
+        "images": [
+          "https://m.media-amazon.com/images/I/71iUfyVVeaL.jpg",
+          "https://m.media-amazon.com/images/I/71jVk27TnDL.jpg"
+        ],
+        "is_verified_purchase": true
+      },
+      {
+        "id": "RHLLAOIA5EH8U",
+        "title": "Excelente",
+        "text": "Se entretiene mucho mi perroTiene ansiedad por separación y ésto le ayuda para entretenerse",
+        "rating": 5,
+        "date": "Reviewed in Mexico on March 23, 2024",
+        "extracted_date": "2024-03-23",
+        "profile": {
+          "name": "Monica S."
+        },
+        "is_verified_purchase": true
+      }
+    ]
+  }
+}

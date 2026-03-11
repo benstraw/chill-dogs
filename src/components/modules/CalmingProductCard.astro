@@ -13,6 +13,25 @@ const { product, position = 0, pageType = 'collector', pageSlug = '' } = Astro.p
 ---
 
 <div class="calm-card">
+  <div class="calm-card-image">
+    {product.image ? (
+      <img
+        src={product.image.src}
+        alt={product.image.alt}
+        loading="lazy"
+        decoding="async"
+        width="400"
+        height="300"
+        onerror="this.style.display='none';this.parentElement.classList.add('calm-card-image--fallback')"
+      />
+    ) : (
+      <div class="calm-card-image-placeholder" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="48" height="48" fill="currentColor" aria-hidden="true">
+          <path d="M50 15c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zm-20 25c-3.3 0-6 2.7-6 6v4c0 8.8 11.2 16 26 16s26-7.2 26-16v-4c0-3.3-2.7-6-6-6H30zm-8 30c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm56 0c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zM36 78c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm28 0c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z"/>
+        </svg>
+      </div>
+    )}
+  </div>
   <div class="calm-card-body">
     <h3 class="calm-card-name">{product.name}</h3>
     <p class="calm-card-best-for">
@@ -54,6 +73,31 @@ const { product, position = 0, pageType = 'collector', pageSlug = '' } = Astro.p
 
   .calm-card:hover {
     box-shadow: var(--shadow-lg);
+  }
+
+  .calm-card-image {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--color-bg-alt);
+  }
+
+  .calm-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #fff;
+  }
+
+  .calm-card-image--fallback,
+  .calm-card-image:has(.calm-card-image-placeholder) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .calm-card-image-placeholder {
+    color: var(--color-sage);
+    opacity: 0.5;
   }
 
   .calm-card-body {

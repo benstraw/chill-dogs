@@ -13,8 +13,8 @@ describe('cooling product data integrity', () => {
     }
   });
 
-  it('every non-bonus category has complete meta with FAQs and internal links', () => {
-    const categories: Exclude<ProductCategory, 'bonus'>[] = [
+  it('every category has complete meta with FAQs and internal links', () => {
+    const categories: ProductCategory[] = [
       'cooling-mats',
       'cooling-bandanas',
       'cooling-vests',

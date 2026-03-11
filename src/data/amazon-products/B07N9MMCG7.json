@@ -1,0 +1,20 @@
+{
+  "search_metadata": {
+    "id": "search_MG6OPWeEVjFxjPqRP4jR8w7N",
+    "status": "Success",
+    "created_at": "2026-03-11T20:51:49Z",
+    "request_time_taken": 0.46,
+    "parsing_time_taken": 0,
+    "total_time_taken": 0.47,
+    "request_url": "https://www.amazon.com/dp/B07N9MMCG7?th=1&psc=1",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_MG6OPWeEVjFxjPqRP4jR8w7N.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_MG6OPWeEVjFxjPqRP4jR8w7N"
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B07N9MMCG7",
+    "amazon_domain": "amazon.com",
+    "delivery_country": "us"
+  },
+  "error": "Amazon Product didn't return any results."
+}

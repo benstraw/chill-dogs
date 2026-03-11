@@ -8,7 +8,7 @@ const pageMap = buildProductPageMap();
 
 const allProducts = [
   ...coolingProducts.map((p) => ({ ...p, pillar: 'cooling' as const, howItHelps: undefined as string | undefined, considerIf: undefined as string | undefined })),
-  ...calmingProducts.map((p) => ({ ...p, pillar: 'calming' as const, coolingMethod: undefined as string | undefined, sizingNote: undefined as string | undefined, image: undefined as { src: string; alt: string } | undefined, isBonus: undefined as boolean | undefined })),
+  ...calmingProducts.map((p) => ({ ...p, pillar: 'calming' as const, coolingMethod: undefined as string | undefined, sizingNote: undefined as string | undefined })),
 ];
 
 const pillars = [...new Set(allProducts.map((p) => p.pillar))];
@@ -69,58 +69,67 @@ const categories = [...new Set(allProducts.map((p) => p.category))];
             <tr class="detail-row" style="display:none">
               <td colspan="6">
                 <div class="detail-content">
-                  <div class="detail-section">
-                    <h4>Bullets</h4>
-                    <ul class="detail-bullets">
-                      {p.bullets.map((b) => <li>{b}</li>)}
-                    </ul>
-                  </div>
-                  <div class="detail-meta">
-                    {p.coolingMethod && (
-                      <div class="meta-item">
-                        <span class="meta-label">Cooling Method</span>
-                        <span class="meta-value">{p.coolingMethod}</span>
-                      </div>
-                    )}
-                    {p.sizingNote && (
-                      <div class="meta-item">
-                        <span class="meta-label">Sizing Note</span>
-                        <span class="meta-value">{p.sizingNote}</span>
-                      </div>
-                    )}
-                    {p.howItHelps && (
-                      <div class="meta-item">
-                        <span class="meta-label">How It Helps</span>
-                        <span class="meta-value">{p.howItHelps}</span>
-                      </div>
-                    )}
-                    {p.considerIf && (
-                      <div class="meta-item">
-                        <span class="meta-label">Consider If</span>
-                        <span class="meta-value">{p.considerIf}</span>
-                      </div>
-                    )}
-                    {p.isBonus && (
-                      <div class="meta-item">
-                        <span class="meta-label">Bonus Pick</span>
-                        <span class="meta-value">Yes</span>
-                      </div>
-                    )}
-                    <div class="meta-item">
-                      <span class="meta-label">ID</span>
-                      <span class="meta-value meta-value--mono">{p.id}</span>
-                    </div>
-                  </div>
-                  {(pageMap[p.id] ?? []).length > 0 && (
-                    <div class="detail-pages">
-                      <h4>Appears On</h4>
-                      <ul class="page-list">
-                        {(pageMap[p.id] ?? []).map((ref) => (
-                          <li><a href={ref.href}>{ref.label}</a></li>
-                        ))}
-                      </ul>
+                  {p.image && (
+                    <div class="detail-thumb">
+                      <img src={p.image.src} alt={p.image.alt} loading="lazy" />
                     </div>
                   )}
+                  <div class="detail-body">
+                    <div class="detail-section">
+                      <h4>Bullets</h4>
+                      <ul class="detail-bullets">
+                        {p.bullets.map((b) => <li>{b}</li>)}
+                      </ul>
+                    </div>
+                    <div class="detail-meta">
+                      {p.coolingMethod && (
+                        <div class="meta-item">
+                          <span class="meta-label">Cooling Method</span>
+                          <span class="meta-value">{p.coolingMethod}</span>
+                        </div>
+                      )}
+                      {p.sizingNote && (
+                        <div class="meta-item">
+                          <span class="meta-label">Sizing Note</span>
+                          <span class="meta-value">{p.sizingNote}</span>
+                        </div>
+                      )}
+                      {p.howItHelps && (
+                        <div class="meta-item">
+                          <span class="meta-label">How It Helps</span>
+                          <span class="meta-value">{p.howItHelps}</span>
+                        </div>
+                      )}
+                      {p.considerIf && (
+                        <div class="meta-item">
+                          <span class="meta-label">Consider If</span>
+                          <span class="meta-value">{p.considerIf}</span>
+                        </div>
+                      )}
+                    </div>
+                    <div class="detail-ids">
+                      <div class="meta-item">
+                        <span class="meta-label">ID</span>
+                        <span class="meta-value meta-value--mono">{p.id}</span>
+                      </div>
+                      {p.asin && (
+                        <div class="meta-item">
+                          <span class="meta-label">ASIN</span>
+                          <span class="meta-value meta-value--mono">{p.asin}</span>
+                        </div>
+                      )}
+                    </div>
+                    {(pageMap[p.id] ?? []).length > 0 && (
+                      <div class="detail-pages">
+                        <h4>Appears On</h4>
+                        <ul class="page-list">
+                          {(pageMap[p.id] ?? []).map((ref) => (
+                            <li><a href={ref.href}>{ref.label}</a></li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </td>
             </tr>
@@ -439,16 +448,39 @@ const categories = [...new Set(allProducts.map((p) => p.category))];
     padding: var(--space-md) var(--space-lg) var(--space-lg);
     background: var(--color-cream);
     display: flex;
-    gap: var(--space-xl);
-    flex-wrap: wrap;
+    gap: var(--space-lg);
+    align-items: flex-start;
   }
 
-  .detail-section {
+  .detail-thumb {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .detail-thumb img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .detail-body {
     flex: 1;
-    min-width: 280px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
   }
 
-  .detail-section h4 {
+  .detail-section h4,
+  .detail-pages h4 {
     font-size: var(--text-sm);
     font-weight: var(--weight-semibold);
     margin-bottom: var(--space-xs);
@@ -471,21 +503,21 @@ const categories = [...new Set(allProducts.map((p) => p.category))];
   .detail-meta {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-md) var(--space-xl);
-    align-content: flex-start;
+    gap: var(--space-sm) var(--space-xl);
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-sand);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
   }
 
-  .detail-pages {
-    flex-basis: 100%;
-  }
-
-  .detail-pages h4 {
-    font-size: var(--text-sm);
-    font-weight: var(--weight-semibold);
-    margin-bottom: var(--space-xs);
-    color: var(--color-text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
+  .detail-ids {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm) var(--space-xl);
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-sand);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
   }
 
   .page-list {
