@@ -59,13 +59,13 @@ describe('site smoke tests', () => {
     const coolingDoc = readBuiltPage(path.join('cooling', 'cooling-mats', 'index.html'));
     const termsDoc = readBuiltPage(path.join('terms', 'index.html'));
 
-    expect(homeDoc.querySelector('meta[property=\"og:image\"]')?.getAttribute('content'))
+    expect(homeDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
       .toContain('/og/home.png');
-    expect(coolingDoc.querySelector('meta[property=\"og:image\"]')?.getAttribute('content'))
+    expect(coolingDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
       .toContain('/og/cooling-cooling-mats.png');
 
     // noindex pages keep the static default fallback
-    expect(termsDoc.querySelector('meta[property=\"og:image\"]')?.getAttribute('content'))
+    expect(termsDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
       .toContain('/og-default.jpg');
 
     const homeOg = readFileSync(path.join(distRoot, 'og', 'home.png'));
@@ -82,13 +82,13 @@ describe('site smoke tests', () => {
       coolingDoc.querySelectorAll<HTMLScriptElement>('script[type="application/ld+json"]')
     ).map((script) => script.textContent || '');
 
-    expect(coolingSchemas.some((schema) => schema.includes('\"@type\":\"BreadcrumbList\"'))).toBe(true);
+    expect(coolingSchemas.some((schema) => schema.includes('"@type":"BreadcrumbList"'))).toBe(true);
 
     const termsSchemas = Array.from(
       termsDoc.querySelectorAll<HTMLScriptElement>('script[type="application/ld+json"]')
     ).map((script) => script.textContent || '');
 
-    expect(termsSchemas.some((schema) => schema.includes('\"@type\":\"BreadcrumbList\"'))).toBe(false);
+    expect(termsSchemas.some((schema) => schema.includes('"@type":"BreadcrumbList"'))).toBe(false);
   });
 
   it('renders cooling converter pages with tagged Amazon affiliate links', () => {
@@ -119,6 +119,17 @@ describe('site smoke tests', () => {
     }
   });
 
+  it('renders travel converter with affiliate links', () => {
+    const doc = readBuiltPage(path.join('travel', 'rhys-road-trip-chill-kit', 'index.html'));
+    const affiliateLinks = getAmazonAffiliateLinks(doc);
+
+    expect(affiliateLinks.length).toBeGreaterThan(0);
+    for (const link of affiliateLinks) {
+      expect(relTokens(link)).toEqual(['noopener', 'noreferrer', 'sponsored']);
+      expect(link.href).toContain('tag=chill-dogs-20');
+    }
+  });
+
   it('marks the custom 404 page as noindex', () => {
     const doc = readBuiltPage('404.html');
     const robots = doc.querySelector('meta[name="robots"]');
@@ -137,7 +148,20 @@ describe('site smoke tests', () => {
     expect(affiliateDoc.body.textContent).toContain('no additional cost to you');
   });
 
-  it('publishes robots and sitemap entries for key routes', () => {
+  it('collector hub pages are indexable with correct canonical', () => {
+    const coolingDoc = readBuiltPage(path.join('cooling', 'index.html'));
+    const calmingDoc = readBuiltPage(path.join('calming', 'index.html'));
+
+    expect(coolingDoc.querySelector('meta[name="robots"]')).toBeNull();
+    expect(calmingDoc.querySelector('meta[name="robots"]')).toBeNull();
+
+    expect(coolingDoc.querySelector('link[rel="canonical"]')?.getAttribute('href'))
+      .toBe('https://chill-dogs.com/cooling/');
+    expect(calmingDoc.querySelector('link[rel="canonical"]')?.getAttribute('href'))
+      .toBe('https://chill-dogs.com/calming/');
+  });
+
+  it('publishes robots and sitemap with key routes and no variants', () => {
     const robotsTxt = readBuiltAsset('robots.txt');
     const sitemapIndex = readBuiltAsset('sitemap-index.xml');
     const sitemap = readBuiltAsset('sitemap-0.xml');
@@ -145,17 +169,26 @@ describe('site smoke tests', () => {
     expect(robotsTxt).toContain('Sitemap: https://chill-dogs.com/sitemap-index.xml');
     expect(sitemapIndex).toContain('/sitemap-0.xml');
     expect(sitemap).toContain('<loc>https://chill-dogs.com/</loc>');
-    expect(sitemap).toContain('<loc>https://chill-dogs.com/cooling/cooling-mats/</loc>');
-    expect(sitemap).toContain('<loc>https://chill-dogs.com/calming/best-calming-products-for-anxious-dogs/</loc>');
+    expect(sitemap).toContain('/cooling/best-cooling-products-for-dogs/');
+    expect(sitemap).toContain('/cooling/car-cooling-for-dogs/');
+    expect(sitemap).toContain('/travel/rhys-road-trip-chill-kit/');
+    expect(sitemap).toContain('/calming/best-calming-products-for-anxious-dogs/');
+    expect(sitemap).not.toContain('/cooling/v/');
+    expect(sitemap).not.toContain('/calming/v/');
   });
 
-  it('publishes llms.txt with curated absolute links', () => {
+  it('publishes llms.txt with all sections, key links, and no excluded paths', () => {
     const llmsText = readBuiltAsset('llms.txt');
 
     expect(llmsText).toContain('# chill-dogs');
     expect(llmsText).toContain('## Cooling Guides');
+    expect(llmsText).toContain('## Calming Guides');
+    expect(llmsText).toContain('## Travel Guides');
     expect(llmsText).toContain('https://chill-dogs.com/cooling/');
+    expect(llmsText).toContain('https://chill-dogs.com/cooling/best-cooling-products-for-dogs/');
+    expect(llmsText).toContain('https://chill-dogs.com/travel/rhys-road-trip-chill-kit/');
     expect(llmsText).not.toContain('/v/a/');
     expect(llmsText).not.toContain('/content-sitemap/');
+    expect(llmsText).not.toContain('/privacy-policy/');
   });
 });

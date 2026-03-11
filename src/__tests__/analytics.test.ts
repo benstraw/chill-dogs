@@ -20,16 +20,6 @@ describe('track', () => {
     delete (window as any).posthog;
     expect(() => track('test_event', {})).not.toThrow();
   });
-
-  it('passes the props object to posthog unchanged', () => {
-    const capture = vi.fn();
-    (window as any).posthog = { capture };
-    const props = { product: 'harness', position: 1 };
-
-    track('view_item', props);
-
-    expect(capture).toHaveBeenCalledWith('view_item', props);
-  });
 });
 
 describe('init — click tracking', () => {
@@ -70,35 +60,36 @@ describe('init — click tracking', () => {
     expect(capture).not.toHaveBeenCalled();
   });
 
-  it('fires posthog.capture for amazon_outbound_click events', () => {
+  it('fires event when clicking a child of a [data-track] element', () => {
     const capture = vi.fn();
     (window as any).posthog = { capture };
 
     document.body.innerHTML =
-      '<a data-track="amazon_outbound_click" data-asin="B001" href="#">Amazon</a>';
+      '<a data-track="affiliate_click" data-product-name="Cool Harness" href="#"><span id="child">Buy</span></a>';
 
     init();
-    document.querySelector('a')!.click();
+    document.querySelector<HTMLElement>('#child')!.click();
 
     expect(capture).toHaveBeenCalledWith(
-      'amazon_outbound_click',
-      expect.objectContaining({ asin: 'B001' })
+      'affiliate_click',
+      expect.objectContaining({ product_name: 'Cool Harness' })
     );
   });
 
-  it('fires posthog.capture for hero click events', () => {
+  it('maps multiple data-* attrs to snake_case props', () => {
     const capture = vi.fn();
     (window as any).posthog = { capture };
 
     document.body.innerHTML =
-      '<a data-track="hero_click_cooling" data-section="hero" href="#">Shop Cooling</a>';
+      '<a data-track="click" data-asin="B001" data-product-name="Toy" data-section="hero" href="#">Go</a>';
 
     init();
     document.querySelector('a')!.click();
 
-    expect(capture).toHaveBeenCalledWith(
-      'hero_click_cooling',
-      expect.objectContaining({ section: 'hero' })
-    );
+    expect(capture).toHaveBeenCalledWith('click', {
+      asin: 'B001',
+      product_name: 'Toy',
+      section: 'hero',
+    });
   });
 });

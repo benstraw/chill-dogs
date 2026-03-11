@@ -4,7 +4,7 @@ export default defineConfig({
     environment: 'happy-dom',
     coverage: {
       provider: 'v8',
-      include: ['src/utils/**', 'src/scripts/**'],
+      include: ['src/utils/**', 'src/scripts/**', 'src/data/**'],
       reporter: ['text', 'json-summary'],
     },
   },
