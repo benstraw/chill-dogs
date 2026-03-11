@@ -1,0 +1,725 @@
+{
+  "search_metadata": {
+    "id": "69b1f54fe3e1769d2651f6f7",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/qxgOL3zoTOGi9u8MNhEtmQ/69b1f54fe3e1769d2651f6f7.json",
+    "created_at": "2026-03-11 23:05:51 UTC",
+    "processed_at": "2026-03-11 23:05:51 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0FMQSMN93/?",
+    "raw_html_file": "https://serpapi.com/searches/qxgOL3zoTOGi9u8MNhEtmQ/69b1f54fe3e1769d2651f6f7.html",
+    "total_time_taken": 2.63
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0FMQSMN93",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0FMQSMN93",
+    "title": "BEAUTYZOO Reversible Thunder Shirt for Dogs Anxiety- 2-in-1 Dog Anxiety Calming Vest with Hood,Turtleneck Thundershirt Jacket for Fireworks, Separation, Vet Visits- Pet Hoodie for Small to Large Dog",
+    "link": "https://www.amazon.com/BEAUTYZOO-Reversible-Turtleneck-Thundershirt-Separation/dp/B0FMQSMN93/",
+    "link_clean": "https://www.amazon.com/dp/B0FMQSMN93/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FMQSMN93&device=desktop&engine=amazon_product",
+    "variants": [
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0FMQSNF5K",
+            "name": "X-Small",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FMQSNF5K&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0FMQSMN93",
+            "name": "Small",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FMQSMN93&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0FMQTFM4B",
+            "name": "Medium",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FMQTFM4B&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 4,
+            "asin": "B0FMQTPS48",
+            "name": "Large",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FMQTPS48&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 5,
+            "asin": "B0FMQV479C",
+            "name": "X-Large",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FMQV479C&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 6,
+            "asin": "B0FMQSGSF7",
+            "name": "XX-Large",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FMQSGSF7&device=desktop&engine=amazon_product"
+          }
+        ]
+      },
+      {
+        "title": "Color",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0FMQSMN93",
+            "name": "Grey",
+            "image": "https://m.media-amazon.com/images/I/31P64zhV0sL._SS64_.jpg",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FMQSMN93&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0FMQVGR3T",
+            "name": "Rose",
+            "image": "https://m.media-amazon.com/images/I/411DDPSJaJL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FMQVGR3T&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the BEAUTYZOO Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/61Pplb6TlfL._AC_SY300_SX300_QL70_ML2_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/61Pplb6TlfL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61tPET37eiL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71iGjx7xLOL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/719hpKtUTJL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71ugwkC8IdL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71JNQnPCBkL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71dw3qjUCVL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.4,
+    "reviews": 37,
+    "discount": "-5%",
+    "price": "$15.66",
+    "extracted_price": 15.66,
+    "price_unit": "$15.66 / count",
+    "extracted_price_unit": 15.66,
+    "old_price": "$16.49",
+    "extracted_old_price": 16.49,
+    "offers": [
+      "Save 5%"
+    ],
+    "delivery": [
+      "FREE delivery Monday, March 16 on orders shipped by Amazon over $35",
+      "Or Prime members get FREE delivery Friday, March 13. Order within 5 hrs 54 mins. Join Prime"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$15.66",
+      "extracted_price": 15.66,
+      "price_unit": "$15.66 / count",
+      "extracted_price_unit": 15.66,
+      "delivery": [
+        "FREE delivery Monday, March 16 on orders shipped by Amazon over $35",
+        "Or Prime members get FREE delivery Friday, March 13. Order within 5 hrs 54 mins. Join Prime"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "BEAUTYZOO",
+          "details": {
+            "heading": "Sold by",
+            "content": "BEAUTYZOO"
+          },
+          "link": {
+            "text": "BEAUTYZOO",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A244XKXTGXCL7W&asin=B0FMQSMN93&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement",
+            "content": "This item can be returned in its original condition for a full refund or replacement within 30 days of receipt."
+          },
+          "link": {
+            "text": "Read full return policy",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GKM69DUUYKQWKWX7&ref_=dp_ret_policy"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "size": "Small",
+    "occasion": "casual",
+    "special_feature": "Reversible",
+    "breed_recommendation": "All Breed Sizes",
+    "brand": "BEAUTYZOO"
+  },
+  "about_item": [
+    "Reversible Design for Double the Style: This innovative dog anxiety vest is made to be worn two ways, offering a fresh look and extended durability. The reversible thunder shirt for dogs means you can choose the color that best suits your mood or situation, providing versatile calming support for storms, vet visits, or separation",
+    "Plush & Elastic Fleece for Ultimate Comfort: Crafted from high-quality 90% polyester, 10% spandex fleece, this dog calming vest is incredibly soft, thick, and offers comfortable stretch in all directions. The plush, skin-friendly fabric ensures your pet stays cozy and soothed without feeling restricted, making it a comfortable anxiety relief jacket for all-day wear. Light-weight, breathable, and machine washable for easy care",
+    "Find the Perfect Fit for Your Dog: Available in six sizes (XS to 2XL), this dog calming shirt fits small medium large and extra large dogs. Measure your dog before ordering to ensure this thunder shirt provides optimal comfort and anxiety relief. This dog hoodie suit for indoor or outdoor occasions such as dog grooming, walking, bathing, home cleaning, hurricanes, photo shoot and other events",
+    "Adjustable Turtleneck with Soothing Ear Wrap: The versatile collar on this thunder shirt can be worn as a turtleneck for extra warmth or folded down. For maximum calming, it can be gently pulled up to cover your dog's ears, creating a secure, hug-like effect that helps muffle frightening noises from fireworks or thunderstorms",
+    "Wider Straps for a Secure, Custom Fit: Calming Wrap for Dogs features extra-wide hook-and-loop straps that are easy to fasten and adjust, eaay to put on/off, significantly increasing the belly coverage for a more enveloping, calming pressure. This anxiety vest allows you to customize the snugness for a perfect and secure fit that effectively comforts your dog"
+  ],
+  "related_products": [
+    {
+      "position": 1,
+      "title": "Meifsou Dog Anxiety Vest with Hood, Skin-Friendly Thunder Jacket for Dogs, All-in-One Dog Calming Shirt with Hood for Thunder",
+      "link": "https://www.amazon.com/Meifsou-Anxiety-Skin-Friendly-Fireworks-Separation/dp/B0FNK6424V/ref=pd_sbs_d_sccl_1_1/131-5055590-9127418?pd_rd_w=CbG8P&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=JR1D1N0GGK1PM14WFZCP&pd_rd_wg=mBYsk&pd_rd_r=1e4f4007-4145-42da-ae15-028f75c0b095&pd_rd_i=B0FNK6424V&psc=1",
+      "asin": "B0FNK6424V",
+      "link_clean": "https://www.amazon.com/Meifsou-Anxiety-Skin-Friendly-Fireworks-Separation/dp/B0FNK6424V/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FNK6424V&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/719zK2oEIqL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.3,
+      "reviews": 145,
+      "price": "$19.99",
+      "extracted_price": 19.99,
+      "delivery": [
+        "Get it as soon as Monday, Mar 16"
+      ]
+    },
+    {
+      "position": 2,
+      "title": "Dog Anxiety Calming Vest Adjustable Turtleneck Thunder Shirt Jacket for Fireworks, Separation, Vet Visits, Pet Hoodie for Lar",
+      "link": "https://www.amazon.com/Anxiety-Adjustable-Turtleneck-Fireworks-Separation/dp/B0FH8ZJC89/ref=pd_sbs_d_sccl_1_2/131-5055590-9127418?pd_rd_w=CbG8P&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=JR1D1N0GGK1PM14WFZCP&pd_rd_wg=mBYsk&pd_rd_r=1e4f4007-4145-42da-ae15-028f75c0b095&pd_rd_i=B0FH8ZJC89&psc=1",
+      "asin": "B0FH8ZJC89",
+      "link_clean": "https://www.amazon.com/Anxiety-Adjustable-Turtleneck-Fireworks-Separation/dp/B0FH8ZJC89/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FH8ZJC89&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/61kj44NWJ5L._AC_UL165_SR165,165_.jpg",
+      "rating": 4,
+      "reviews": 106,
+      "price": "$12.99",
+      "extracted_price": 12.99,
+      "price_unit": "Typical: $14.99",
+      "extracted_price_unit": 14.99,
+      "old_price": "$14.99",
+      "extracted_old_price": 14.99,
+      "delivery": [
+        "Get it as soon as Monday, Mar 16"
+      ]
+    },
+    {
+      "position": 3,
+      "title": "IDOMIK Dog Anxiety Calming Hoodie, Breathable Jacket Vest for Thunderstorms, Fireworks, Vet Visits, Separation, Adjustable fo",
+      "link": "https://www.amazon.com/IDOMIK-Breathable-Thunderstorms-Separation-Adjustable/dp/B0D5QSTVKV/ref=pd_sbs_d_sccl_1_3/131-5055590-9127418?pd_rd_w=CbG8P&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=JR1D1N0GGK1PM14WFZCP&pd_rd_wg=mBYsk&pd_rd_r=1e4f4007-4145-42da-ae15-028f75c0b095&pd_rd_i=B0D5QSTVKV&psc=1",
+      "asin": "B0D5QSTVKV",
+      "link_clean": "https://www.amazon.com/IDOMIK-Breathable-Thunderstorms-Separation-Adjustable/dp/B0D5QSTVKV/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0D5QSTVKV&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71oxV0NIgnL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.3,
+      "reviews": 182,
+      "price": "$18.99",
+      "extracted_price": 18.99,
+      "price_unit": "$18.99/count",
+      "extracted_price_unit": 18.99,
+      "delivery": [
+        "Get it as soon as Monday, Mar 16"
+      ]
+    },
+    {
+      "position": 4,
+      "title": "AOOLMOL Dog Anxiety Vest and Coat, Vet Visits and Separation - Keep Pet Calm, Dog Jacket for Thunder, Fireworks, Anti Anxiety",
+      "link": "https://www.amazon.com/AOOLMOL-Anxiety-Vest-Visits-Separation/dp/B0DHJY6SCL/ref=pd_sbs_d_sccl_1_4/131-5055590-9127418?pd_rd_w=CbG8P&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=JR1D1N0GGK1PM14WFZCP&pd_rd_wg=mBYsk&pd_rd_r=1e4f4007-4145-42da-ae15-028f75c0b095&pd_rd_i=B0DHJY6SCL&psc=1",
+      "asin": "B0DHJY6SCL",
+      "link_clean": "https://www.amazon.com/AOOLMOL-Anxiety-Vest-Visits-Separation/dp/B0DHJY6SCL/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DHJY6SCL&device=desktop&engine=amazon_product",
+      "badges": [
+        "Amazon's Choice"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71fxv+ELDJL._AC_UL165_SR165,165_.jpg",
+      "rating": 4,
+      "reviews": 273,
+      "price": "$14.98",
+      "extracted_price": 14.98,
+      "price_unit": "$14.98/count",
+      "extracted_price_unit": 14.98,
+      "delivery": [
+        "Get it as soon as Monday, Mar 16"
+      ]
+    },
+    {
+      "position": 5,
+      "title": "JOHNBOLIN Dog Anxiety Jacket, Dog Shirt with Turtleneck, Breathable Calming Vest, Indoor and Outdoor Separated Pet Jacket (Na",
+      "link": "https://www.amazon.com/JOHNBOLIN-Anxiety-Turtleneck-Breathable-Separated/dp/B0D7ZXHVB6/ref=pd_sbs_d_sccl_1_5/131-5055590-9127418?pd_rd_w=CbG8P&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=JR1D1N0GGK1PM14WFZCP&pd_rd_wg=mBYsk&pd_rd_r=1e4f4007-4145-42da-ae15-028f75c0b095&pd_rd_i=B0D7ZXHVB6&psc=1",
+      "asin": "B0D7ZXHVB6",
+      "link_clean": "https://www.amazon.com/JOHNBOLIN-Anxiety-Turtleneck-Breathable-Separated/dp/B0D7ZXHVB6/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0D7ZXHVB6&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71RS+cABwhL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.2,
+      "reviews": 106,
+      "price": "$16.96",
+      "extracted_price": 16.96,
+      "price_unit": "$16.96/count",
+      "extracted_price_unit": 16.96,
+      "delivery": [
+        "Get it as soon as Monday, Mar 16"
+      ]
+    },
+    {
+      "position": 6,
+      "title": "Leotrag Dog Anxiety Vest and Coat, Skin-Friendly Anxiety Calming Hoodie with Ear Wrap, Dog Jacket for Thunder, Fireworks, Tra",
+      "link": "https://www.amazon.com/Leotrag-Anxiety-Skin-Friendly-Fireworks-Separation/dp/B0F9K1G3FV/ref=pd_sbs_d_sccl_1_6/131-5055590-9127418?pd_rd_w=CbG8P&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=JR1D1N0GGK1PM14WFZCP&pd_rd_wg=mBYsk&pd_rd_r=1e4f4007-4145-42da-ae15-028f75c0b095&pd_rd_i=B0F9K1G3FV&psc=1",
+      "asin": "B0F9K1G3FV",
+      "link_clean": "https://www.amazon.com/Leotrag-Anxiety-Skin-Friendly-Fireworks-Separation/dp/B0F9K1G3FV/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F9K1G3FV&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71n7x5DYYyL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.2,
+      "reviews": 77,
+      "price": "$17.99",
+      "extracted_price": 17.99,
+      "price_unit": "$17.99/count",
+      "extracted_price_unit": 17.99,
+      "delivery": [
+        "Get it as soon as Monday, Mar 16"
+      ]
+    }
+  ],
+  "sustainability_features": {
+    "summary": "This product has sustainability features recognized by trusted certifications.",
+    "climate_pledge_friendly": true,
+    "learn_more_link": "https://www.amazon.com/climatepledgefriendly",
+    "features": [
+      {
+        "position": 1,
+        "title": "Recycled materials",
+        "text": "Contains at least 50% recycled material.",
+        "certified_by": [
+          {
+            "name": "Global Recycled Standard",
+            "logo": "https://m.media-amazon.com/images/I/51IhSrucIyL._SS144_.png",
+            "description": "Global Recycled Standard (GRS) certified products contain recycled content that has been independently verified at each stage of the supply chain, from the source to the final product and meet social, environmental, and chemical requirements. The purchase of Global Recycled Standard (GRS) certified products supports the use of recycled content in the supply chain. A product must contain at least 50% certified GRS material to qualify for inclusion in Climate Pledge Friendly.",
+            "link": "https://textileexchange.org/integrity/"
+          }
+        ]
+      },
+      {
+        "position": 2,
+        "title": "Safer chemicals",
+        "text": "Made with chemicals safer for human health and the environment.",
+        "certified_by": [
+          {
+            "name": "Global Recycled Standard",
+            "logo": "https://m.media-amazon.com/images/I/51IhSrucIyL._SS144_.png",
+            "description": "Global Recycled Standard (GRS) certified products contain recycled content that has been independently verified at each stage of the supply chain, from the source to the final product and meet social, environmental, and chemical requirements. The purchase of Global Recycled Standard (GRS) certified products supports the use of recycled content in the supply chain. A product must contain at least 50% certified GRS material to qualify for inclusion in Climate Pledge Friendly.",
+            "link": "https://textileexchange.org/integrity/"
+          }
+        ]
+      },
+      {
+        "position": 3,
+        "title": "Worker well-being",
+        "text": "Manufactured on farms or in facilities that protect the rights and/or health of workers.",
+        "certified_by": [
+          {
+            "name": "Global Recycled Standard",
+            "logo": "https://m.media-amazon.com/images/I/51IhSrucIyL._SS144_.png",
+            "description": "Global Recycled Standard (GRS) certified products contain recycled content that has been independently verified at each stage of the supply chain, from the source to the final product and meet social, environmental, and chemical requirements. The purchase of Global Recycled Standard (GRS) certified products supports the use of recycled content in the supply chain. A product must contain at least 50% certified GRS material to qualify for inclusion in Climate Pledge Friendly.",
+            "link": "https://textileexchange.org/integrity/"
+          }
+        ]
+      }
+    ]
+  },
+  "videos": [
+    {
+      "position": 1,
+      "title": "BEAUTYZOO Reversible Dog Anxiety Vest Model Show",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/824533a9-e0f6-413f-929f-93e425045ca3/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61eX+keUmkL.jpg",
+      "duration": "0:48",
+      "vendor": "BEAUTYZOO",
+      "date": "Nov 13, 2025"
+    },
+    {
+      "position": 2,
+      "title": "BEAUTYZOO Reversible Thunder Shirt for Dogs",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/2c0400f4-60c3-40e7-aed6-e70339fa5d05/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/617jyzjZAjL.jpg",
+      "duration": "1:03",
+      "vendor": "✅Maya Acosta✅",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/91Gz3z3zGNL._CR333,0,720,720_._FMpng_._SL34_.png",
+      "date": "Oct 11, 2025"
+    },
+    {
+      "position": 3,
+      "title": "BEAUTYZOO Reversible Thunder Shirt for Dogs",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/34da452c-a6dd-4056-9c31-a36584d12970/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/B1tOZvoS9NL.png",
+      "duration": "1:43",
+      "vendor": "Taylor Exchange",
+      "vendor_thumbnail": "https://images-na.ssl-images-amazon.com/images/S/influencer-profile-image-prod/logo/taylorexchange_1679695307233_original._FMjpg_._SL34_.jpeg",
+      "date": "Oct 13, 2025"
+    },
+    {
+      "position": 4,
+      "title": "BEAUTYZOO Dog Anxiety Vest",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/a4392e07-ed11-43f3-a233-79108da7ac4b/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/81izUcDznDL.jpg",
+      "duration": "0:36",
+      "vendor": "BEAUTYZOO",
+      "date": "Dec 23, 2025"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1
+    },
+    {
+      "position": 2,
+      "title": "thunder jacket for dogs anxiety",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/96d3a77a-212f-40eb-b672-eb0329ea14e9.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 3,
+      "title": "anxiety vest for dogs",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/48d418a5-7572-45bd-857c-9fb3926e8260.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 4,
+      "carousel_images": [
+        {
+          "position": 1,
+          "title": "xlarge-sized anxiety vest for dogs male",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/ae7f162a-c44e-4bd1-9a52-dd0545bd31b9.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 2,
+          "title": "calming vest for dogs rainny days",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/ede96f63-1393-4d54-ba8c-f7b49687013d.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 3,
+          "title": "thunder vest for dogs anxiety",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/6730654b-3401-4c24-a93c-dfa3151f8d36.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        }
+      ]
+    },
+    {
+      "position": 5,
+      "carousel_images": [
+        {
+          "position": 1,
+          "title": "xlarge-sized anxiety vest for dogs male",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/762b73e6-a287-4dd5-87a5-35ea8c607e41.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 2,
+          "title": "small thunder vest for dogs anxiety",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/41c828d5-bb73-42ba-bcf0-f9a4197e7cfe.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        }
+      ]
+    },
+    {
+      "position": 6,
+      "carousel_images": [
+        {
+          "position": 1,
+          "title": "dog thunder jacket",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/f41eddd2-d681-4baa-8cfe-c669bd6c68eb.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 2,
+          "title": "calming vest for dogs",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/0ab9bd5e-dea1-4073-955e-1eace7555463.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 3,
+          "title": "thunder vest",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/c5cb9eee-49b7-42ba-a9ac-b4119b878959.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 4,
+          "title": "medium-sized thunder vest for medium dogs",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/1c1d8e3e-3065-4035-b198-0466cfb9c489.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 5,
+          "title": "large-sized dog calming vest for large dogs",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/806a8b69-e183-4192-92fa-9db113d1f906.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 6,
+          "title": "BEAUTYZOO dog anxiety coat",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/9a7252c7-cba9-4ddb-a13d-b877171fcc73.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        }
+      ]
+    }
+  ],
+  "product_details": {
+    "item_weight": "5.6 ounces",
+    "manufacturer": "BEAUTYZOO",
+    "asin": "B0FMQSMN93",
+    "customer_reviews": "4.4 out of 5 stars",
+    "rating": 4.4,
+    "reviews": 37,
+    "date_first_available": "August 18, 2025",
+    "item_package_dimensions_l_x_w_x_h": "7.24 x 6.54 x 2.01 inches",
+    "brand_name": "BEAUTYZOO",
+    "target_audience_keyword": "Dogs, dogs",
+    "color": "Grey",
+    "size": "Small",
+    "material": "Polyester Blend",
+    "care_instructions": "Hand Wash Only, Machine Wash",
+    "style": "Casual",
+    "breed_recommendation": "All Breed Sizes"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0G57S64ND",
+      "title": "KOESON Dog Calming Hoodie, Adjustable No Shake Ear Wraps for Dogs with Hook & Loop, Soft Dog Ear Muffs Noise Protecion, Pet Head, Ear & Neck Covers for Thunder, Firework, Separation Anxiety, Hematoma",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JFe9_l6YJSpfq6sePusNK_QAAAGc3yZCEQEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDEgICCx7NME/clv1c_ek-wBXf2VcbW3jI2m_XuA8GUija5bo-vwnPiwghLNefReBwLRP8DVaI_6zGtlZkIjzPiWVPdRdyMJGRz4dOtk6tBhhxpiQiv8AJE6MHVntRVTzlDmQsKBHXeIlk3IfPEhLJIwrKpYZiaL8g4DZDXqUDbo9fUZtVYM4ZwyjOAtJILQXCMw0a3asRkybk-7ZcovdPT4FZtG18YtDdctsqi2eA9H9C7oC_HujysidEB7zIlyzOnUuCHYXASmNn7SWJYno6x1frgjGOxiyWaOHQuuKELVwxRQ8-yW8bARpLi9WgiR9XU1Q19kBZ_K92JLjxqrbHOTx80MjsVl5WvvlUwsGlDJAOHAPi1bVHBosnh7XDeokTs_jMCfEGRj_G2eIH9OobaLvXoaJB_aAfnNHr-VHTkeIlMknGNMkD3PaUL7aRPtIOkdWaJdhmbJiTRE_jhVEpk8pnscTyRkt36lcsVSyERBYDu1XfHeRnSKH2OkSeGO3kjtwJQ5lHIo75lxW9KEcYLllIaMJ6qplqQUhqNoM7DqJ8IxlncxpjTxtbn7tFA5DIgiUvmOzPLCfNJzam-hmz7NAyKg58dqAjXMcH2vX3lL_4vPC59WWTzZ7Tj7FrdIelgbB6a6DXm9fpeOdHbh04_14BmRtoRTDrBNVDR5_5_Qb7lu9cOyYDu6xQZH9w9S5gOmoviPMWGxEVe0MGygT2aGAvTC4x1oU_N0mqCR1oFSImvgoXPLawtWqNoAMXB8uLitf8Eca_kGX_64j0w2kyR5NBstbLQe9vIZgXe00Oyo6dDMpev6fOBjOnkSUtXKeWsB_hzL_SDyUfuTwyV0VljiyVTc8Jgj5I6bJ64RgGxfMBij3nsMiUjzBpYF4Lj6JGT95-BZ9QS4Pwt99TKGPMyWcaX-Ge-AMls5ElaETn8cC8fAFTI0ZnNR7np3-7xCSKqxT9M33ZlFfl8KR2SbBK7yEJE9mB_ttZzpEpyeSK1Y4oDI2pjJMvICIp2n22E5NkNfPj1VrDRnAfs_1uH73sG8zZvzJdfvM8qPHqz63r2qwxy6VCi10nnREV85OLc9lI_1wzBGtgwyoT2VwEqq5S6gohRLZZZuFC-PXrccgMunuM86kOHdqtlA1abebXvoJClo1-Jnv5frmY3dQUnhGWm6ntNTlaUZy5r2AlMEwRyuNDzko6fdgGG9d7seWNUfr4wQ8AG6-vORRCnk8lt-gKcOOc5Cjl443u5k18Z0Lf8CrJ9nONKldemqhAdCJkfILZjrgTfxphTgFLxeARRnUUszSt7aAQeQBRTsxbWW-LzndTTVPZoRd4vzYCk-WJ57vhEwYPHSGfBWecGQvQ064BJLr_9TDnPTgW-9lQlQdjRtCFk4MRJdDCC7W5lr3rvbS-0jnRlR5uaNnqYELHb2fn3eDmeblqSX2frEBKbPP26ZbWAl0YHs5mJ893Wmtu49pXqXwar8CUd-ixi6KSWluyQg6B59sSBGZxeiLVxPMrVaL1lgBsFmw1XZgp8zfk6QRl6yGM2UrvBgxoyKSI/https://www.amazon.com/dp/B0G57S64ND/?_encoding=UTF8&pd_rd_i=B0G57S64ND&pd_rd_i=B0G57S64ND&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=CCxM1&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=JR1D1N0GGK1PM14WFZCP&pd_rd_wg=mBYsk&pd_rd_r=1e4f4007-4145-42da-ae15-028f75c0b095",
+      "link_clean": "https://www.amazon.com/dp/B0G57S64ND/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G57S64ND&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41sOv07wFeL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/1645242f-61b4-47c7-814c-c07c467aae10.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/1645242f-61b4-47c7-814c-c07c467aae10.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 3,
+      "price": "$19.99",
+      "extracted_price": 19.99
+    },
+    {
+      "position": 2,
+      "asin": "B0FLHD669H",
+      "title": "Nanaki Warm Fleece Lined Dog Coats Vests for Winter Waterproof, Furry Collar Dog Jacket with Leash Hole, Reflective Pet Snow Jacket Suit for Outdoor Walking Hunting,Easy On Puppy Coat Beagle, Blue L",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JHlvqcnfhvNXn46Rxa9Gi_8AAAGc3yZCEwEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDEgICA5_ius/clv1c_ek-wxYf3LcTWTKXhnF_o_V7jhDDDGJh6amyz5tdmz5l6vATfG2KhjLWHZnTPWGa68-slVnOjVLcFA9l-qY0TB9Ymz1n0DMzbE6JGV8qm7a86jyEtIiCKrYf98-MUxjKwXe2JfeE1EKEjg49hlrZYrWHJMFyYgE2qE6QzTbSk-KQ_UWNNgxPHLKYjftK_PSFH9_8EIt7qnoTG0KjH04jRni9KSU8HGEM9D9KTbdIh7zIly_DSpsRuCQvp1NKZFSTxEYEDMeAz8QA9tvEMEyN966q9C-JiUXOvL0wggBY3xibRqji7RFpGUfL_q3jwiYrf75IAz5vBHPQ9-Btgb31RaHm_v1o4O6G21dPNvEGT68f7DeuIdGWnPI0h47TLBQrFMT7HzaLNLT8DGkQJQZsMUDTuV04RIB-J1n4GtjYJI-ZUqpZZBOgY5KDcrX6fWI5zUHAmrevk_u3oY2XCdC9iLpooVjwb59vfo8hqKSdCWIZVnFlyVYSIh_uSg4RFBcT1YxKWqnei0X3hFkk4sfOwN7uzdu6h344Nq5weuDhod0ADQKefcGy-OD8vyZM7ixnNamYI1geHWUoH9QSAZYY8Te1BljJ5tPIx-iHmrFXhrnCy0ngZ9lvjTzLw1qQwJyVb9JF8zW18vf44cev0A-G2bG-L3lJXeuPy-F0Hp4F_HtxLRM2IeHnoNeXwpz1XLhC6c6FMidmMmIlH2yLKKT6aD-HhkoTcX1wBnXq8Fb1cYb93t2GU0XRc04hVTJunfzij88JUqNlH8XG1k74NIyhtInuNkTWk_pt82npzXe-xLE9RnUZ6PKdb1pi5QfDATx6jDnYYC6HCdY5-kNLr3hPQ64l8U_hz6fceqOj6lOHRBZPKog5546q1XhpC-9Vhnyxh_HOa3G70uYsZ30hRwx5akg_yTNF5O4JyMUsmYYdk6WC4gNsBpQF3OEMmfjk5uhqaNv7YJjGxtjSegD9IKZ6qCRhjWEJ4LC9cn1qobFqDHjA1-rqF86YGd5_IaKBJ3MdxMDHJ_8TEQo7x3PsFMPBzeitarMezyKYdL_J3VOg_QczbwjgnWAd8aIe1wTp6_7kYnhJ41gBgAiVs-0C-SKf66tk4zfk8-aojO9Z-wZwth46GrYvhVn-v3OLMo9qe3JfOaxsKEmC-9Lb2noCt8ESZBsnZEr5Uv5tmf1-kEGFPu7ncQgxtJJxn0qiQUSgRPciLS9q17dDtrIQn6tm5DQU6eqD9NqPlMJhe96NUWX4OT34fV0SfRrAFfIG-CVeiJ8Yh4y21VYYWM4scsDsbQZW9PUT7_z-ieuldF-t4C_suwRy37Ek2qaWWNz0qYXFA_1zliFzTKhxebVh4HfQcSDzgqddKhYJmEoBv0zoZzvwXgu5XdnFUYf60YsrvXE7A9Zmot3hOuqIsueJFYCAQd55GGI60vRZhx6y-GWmD_IVVHdGsZTzUPY8M7QuDF_6kuNjilG08b3nAyodbUeNVEPFo-ZzM8XVuEGLhTUTqa_czAC03JUFsg_Mayc9sQxTgSKy1mOCXbLc4vgNKimho8xgTfmVnGPpAGdY/https://www.amazon.com/dp/B0FLHD669H/?_encoding=UTF8&pd_rd_i=B0FLHD669H&pd_rd_i=B0FLHD669H&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=CCxM1&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=JR1D1N0GGK1PM14WFZCP&pd_rd_wg=mBYsk&pd_rd_r=1e4f4007-4145-42da-ae15-028f75c0b095",
+      "link_clean": "https://www.amazon.com/dp/B0FLHD669H/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FLHD669H&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41Bs46GaLML._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/5f7569c1-87af-4a1d-82fb-392ef01f7120.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/5f7569c1-87af-4a1d-82fb-392ef01f7120.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.8,
+      "reviews": 87,
+      "price": "$21.83",
+      "extracted_price": 21.83,
+      "old_price": "$23.30",
+      "extracted_old_price": 23.3
+    },
+    {
+      "position": 3,
+      "asin": "B0FHBG3P5B",
+      "title": "PAPIAMEN Dog Ear Covers,Dog Ear Muffs Noise Protection No Shake Head Wrap for Bath,Anxiety Relief Quiet Dogs Calming Hoodie,Adjustable Shower Cap Pet Ears for Grooming,Swimming,Hematoma(Grey,S)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JF3Z_IO5Gte5ppwQwLJ6BSwAAAGc3yZCFAEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDEgICBt2t5C/clv1c_ek-YBfHXbcbWXixXZFvu-lwLMH0Cd0b4sT_J5kjLhepxyA9F-8iNo-01G--m9npf4qbIGzQDOE5G8PkBHgknEDEiDV_oCIWIPuOHRKEjGdQVB4HBIEILtQq5YvdwPiKQxoSLzdZ0M2FHM592Eo7h2x3LtH0dkVuaMtxgDvaq2pMvTX91yZKMDevB6IvazxErxi6h1wxjvoRL1PGbvk2I5ikJCUZ7Ih2XhKPQxPoUzbBDTct5lSPnT9kJMbV0m8KdVzgicdoBsymYSfcqTgprULJeIH_palAp9qiOi7Js3cU3JtKx1HmbxU8XtkTu-zV8-f64jH81DDwQM0nAJKurZ8bxEZTHV0yZl_tXJ9RiLPmGkYLVES1WeA2zR4LAeVODtq6gVBn1hwftiEGz0MFJBoUzSJJbY3MHOfDLh0tzei0cHWN-Gmko0VEDmcruCBeBaGqI6ruUcsuqZHAUpZhznk2o78gX-Q-Ej-TQhyetukBO3pcfL_lL5qgbtpNj1qo0Eae-8_Cy38DMnN2_aj1oxB06sSFniB4a7ePY9ilhxv7rlao9QweI867Td-nmerPYm7EIyEk6ebeDoq47x9Hs1D-ZCiOAkt0BFX676jhkWEAr-iH1oW_pxVJ6KmIFq03MEpnu_dyY-SO6S5oxL9sCDjfg-MIV7ekVlARtNcyPjEQmAYuAOewDGwPJyngt85ZDmeRwrOCzAkhKvgUMETkIqELqL-QzLxcrHV9q2kwF-M3PvdzAGPav6XXVlW4zWzqbsOyhoCMF7xuzgCIj10jjVDwvdT_spjqZ4pGvtItquiHI9_V2jPCVotXaGOSswqY64nB2Bu8ddMLTsHA0lSQ2hVl5Ob8CQmJ0XYFJ_8hre2LZi1x2oqPLx8iidqH-nB3jrFfkUKtSgL1ef7cKeWxXBRNvKAf0vgdyGhyhYikeuKkT_-y19-L5D2Z069UYwVnHFxsG1h0lhCADjYNxC8CoRR8g8H_PttfsyABR3uzj1nTBknbdB3pvzhsWNKy3GthRjP_Q9tjhoe8Gkpm5RXxUaJ9yO6TIyJW3dPeqTJd0PM-sWlLohwiINC8O_YnyV0otMENBsvY064e-DIx05WAGVv_C_xVXVCWfdSlq7xfpSnbeE5In7RDMPA7MFwqTKxpH14605R8cjbS6n9wA-WdBc4emG5DzXEA0e8qEQAryowv-c84NiiYXGrgWwVGuXcjptwe7SyEYTilH7-ldbQHRRGtCQweUn2mAUAo7ZhcmBPRhBxfua_TwS50SUC-Bfc1N6L6x48Y_wUbINYJ4OVpFhEc-mmq5-eALnqFi8mNmo6V5pr3y613gKU-8ixdJoW3j41lRXgsvdXmI-jDpmByI1t4q-kWqM-r8sOmoJjMYUVQFv994RcQ6gxJBr8e-r0LVMWTha77ZR-s6WMEJK2iF2S-MMxQ5PLCCQWu9K_LlgsROeAQ2HaLiush91wPq9APgocUM-ygRj8WCF_kxhxmDF8Z6kg9tXEcHXAeVS6bBGXu5Lhb5Aj_SgCAcZe13bGnsyYB9nHJ6fw/https://www.amazon.com/dp/B0FHBG3P5B/?_encoding=UTF8&pd_rd_i=B0FHBG3P5B&pd_rd_i=B0FHBG3P5B&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=CCxM1&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=JR1D1N0GGK1PM14WFZCP&pd_rd_wg=mBYsk&pd_rd_r=1e4f4007-4145-42da-ae15-028f75c0b095",
+      "link_clean": "https://www.amazon.com/dp/B0FHBG3P5B/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FHBG3P5B&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41igRVDZ77L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/36af2f23-3e09-4b4f-a7d5-ed9f5f0f4c4e.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/36af2f23-3e09-4b4f-a7d5-ed9f5f0f4c4e.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 3.9,
+      "reviews": 78,
+      "price": "$13.98",
+      "extracted_price": 13.98
+    },
+    {
+      "position": 4,
+      "asin": "B0DHKJXYQ5",
+      "title": "AOOLMOL Dog Anxiety Vest and Coat, Vet Visits and Separation - Keep Pet Calm, Dog Jacket for Thunder, Fireworks, Anti Anxiety Vest for Dogs and Cat Body and Ear",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JPKk17Mw6CBSgl4jgnNlmVkAAAGc3yZCFQEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDEgICBmGmO1/clv1c_ek-wxQfWbcbaTBXUV5oo3gDJ7TFWToMXM_0x5oNzPUMrrNlejW1S81b7N4WclTkcK6Aw3A8cIbEc7ZTrTNNW9dsdzuvNb_y88YcdKu3l1o81it3bIEKNtQa6ZvNsfuKQx4SzH1l1N6ljwr92Odc6eQz4cF2YgE2qEyQwTLCs-Kw_cUNN_kFeQeg8Yvz95gAj2H9uO3zJFRnSsQzx_8hjqtg3N38cJeeyds4QvpVZCxJKdASTLf-fwmUpPALfRoHACyKnu6PBjeua0kbf6M2k5aqz9DdLsjhrt_H6bDItnXL6z1dX1j1i-L5dF1nzKZekOtv9RCAioC38p6CWBvJ71muRUyGQXhTe4YEreJrH7dayTKp8QRfnNinzrQ6gjMQxqvtIHcaBux_O2YNmNrb3EviiGcgJLYd0qEf8JGG7AsTc1sx2Xi0lHajAR6wPfZ0M2AYp-ORIZVJEM9TqmfUjlxoWjZca8VfpIwFCaYz95-8BToQkiq8RYkEu2AjrXVxproRzk7N3IHALbiEi3ggzOtbhU0a-yCz5KGsj01KZleDarshAbyFyvKHHmPdNkDWZZ-dyI_abCJPtKDYgJF0_MGn6AA6Q34i3UhnVt0GsuWLjjZJCrWn5l6KtvKf3OvmX-EQ0R7HxfkYBK_rqaOyfZzfMIrb2mmkIcWDrA8hYct0PLHBDi1YQ5A7QROsr8ctLmfR0LIAXtHlYxQBCcbw-f4JbLm699P0O0YTb55ey5d07-8QvicZxLwrp-X4a7griG0ES0S2rXpzTogO_QMwUcoo1wYSEV_v4TBnptH9rviHIIfoZvoK201F-Kvlfeon7upv8_X3fuNH7PFfJJE2jSSItQvjKQT6YuxPCsFhKRrOSfIxPLkQfPV7Saua88oispHtY77LBSbn0IGDEdsRjczHCyvyo_UTknUb_4-IdSmEU9L0dO4FKBc-UqZ8rR_AByGmXWyNL3_W7wiYYHIIwAvMPOfMx6S_YMY9-puc1gOn7SNaTCfmvFQuHMin8DwMZrs77LjuTzNrqe3uWCUqi8r4iLWRWpGYQAEriLFZLFwVLmtgPhCjARlDM3OUBqx8EIR7tTBhBQwstzxN0F5OQq2fLdH74ICtEDsnQ8_VmIxHVtIKr12nkY2wI9n4HPlXn-6Du9TC3giiPRsDcHzHv0rPMK7jXM5aIMyeVO07hMWWd97T4ctD5AkTfRO9_ogrCw48AhpXpcICSMZAJ36Op5eefTxDSGydj_pia88zoxD9rMOOsp-mRJRAtnDCekVetjgc2gHpN2iVHyV7ojyt3GnEyFMGUPwFQlvyzBefsaYDL2UCWgXVazaZiprGqpOZtJlGmZv8w2lxjbBtO-pFdq3OlZRbGoV-Rin2UYPxzRaIG3zwHrHkj1PPxykdnK2bm1MV3ggkVWhjQ6I-cYPp77A_bjapPd5158geSYsPWtqS5-VbIFbKVEUFUb0n4a8YQSOd0cF9PWgVZqpBLpn8TSta4ZO-F9DSxQCILNuGn8Fr4ekR7ndBmD62oC6ueKjCV5mwINm7_mRQUFiFgBjgOvvQS2gbM/https://www.amazon.com/dp/B0DHKJXYQ5/?_encoding=UTF8&pd_rd_i=B0DHKJXYQ5&pd_rd_i=B0DHKJXYQ5&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=CCxM1&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=JR1D1N0GGK1PM14WFZCP&pd_rd_wg=mBYsk&pd_rd_r=1e4f4007-4145-42da-ae15-028f75c0b095",
+      "link_clean": "https://www.amazon.com/dp/B0DHKJXYQ5/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DHKJXYQ5&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41Dwz9viuPL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/6b891636-ead4-4cd8-90b5-3359cf8c966b.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/6b891636-ead4-4cd8-90b5-3359cf8c966b.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4,
+      "reviews": 273,
+      "price": "$16.98",
+      "extracted_price": 16.98,
+      "old_price": "$17.98",
+      "extracted_old_price": 17.98
+    },
+    {
+      "position": 5,
+      "asin": "B0FJQPCYDL",
+      "title": "Turtleneck with Sleeves Dog Coats for Medium Dogs-L| Jackets with Reflective Harness Built in,Water-Repellent & Windproof Snowsuit,Soft Warm Lining for Beagle Cold Protection(Navy-Blue)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JInFWO9AHX1qzBYkYnbp-BEAAAGc3yZCFgEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDEgICD6ZGtj/clv1c_ek-wBQfWKsTSnuebkwQLr10kIMgy-AuoG4eYm13DEOzxFeow4ERG6us6SHRXGi8HjE1u13NmjRKJPs41Am90rdscV3sd56efOmDI4I5OjG2cox0_89g0iWTl6knU5FFpyY2PkITTJjhLu2aTYkRex4BapsOkVtXAskdzxhuALLZ_GXDucwSX_SoGh0C4uT3g9bS3DqsrXQLzVubZuxXUl2O_eTumRHrmsJ0IGT32IdKu_TJvxmZUO_8JlojOR-PO97J8qI3wuPbt6D_djgKljsZozdu3IP-C5u0q4k4Zwc-M6PNSHtY__VFQ-rG8vX-QdLEx18orDKDHkA4pj280i1PV6vTARdPWpJC6nHmM3JltOmXXNTXskt_m0Vvurz5UbTMt5kTNdZUgorbKFsJDomC37QUhV9JYYHUnvwaMAJn2-67DQAdiF8dSm_JvwE4us3gaRaQHKFv9GtOOtlB89D9kYy-FtfXGhp1ayg1uZX1SEU3OQNWJNA1fe1zGc_PpV3faR9NbtActeKRrg1IH2AZmHfcj_rpQlliNutSsE1XfmUu8FoRLyByLCwOTfzwmwS0UiJdu1UCM8VH8qmIGiq-fKSgNse0F2r1tHLrCtC9wb0GI1wAl1_3LE2z6tc5WpvUkjEPncojowUG7h5royG4XN4lUfFQ5omBrNnGUA4QOgpdtLEbvPJk5H6v2AfSTCYlTZUNU7iUHwWLdhyarc6igCfzsOvUqBxc7FjB4qxvUWZ1aa8f6BUeLllUMdGmXsgI2NbGRgOE_eKc8v9weX1vLUuxBIbFuUU69I38fSQqF3cQMPRjW4Z_nXp7rcTnJJnbq2hBLfVWXgogRgVDgRfxstQHeXfZks_uYzn3mKGnI-vpQECKImA3r0R_KHngBmzxt5cIWmMJ0528EVDGSky4wPy9Dq3wODhz8ddaji8MdKDMMdAmpWA79lu_nxM3nqHlBhVmEv3KHYR1f1B_OCpV6TLlb5HyEuTxEExWDRe8xGpghEvgok-nN9DmC_a6I2mYoyxdFUUpaURJuumL1PbsNo7OeKD_BFFC02MSW-5u-dVUdXvFXfVGZOuzmyR66LjLO8B2ftV-O1EPyFUZ7LTfkYq2f_fN6bWz_KH16t0WHtJ-oxQ0hfGVq3pt3Bjt3s5m_-4rGjGetJS1je8oVrh-wPuYVH4tEp5GOGmdD3WqzGquJ_q4pI8aZfx0IjZ6wgk-C_Y5GCL_NgkAxTPQkrUcu_Pvv_VzcyksU_tazC2skGs0hnjuJazaDHvmnhCLt2O88M7Rc8aWB5RBQsAmtSCMEu0N21obfXiI4DJIoUZpFspjl6pkDU6H7dprryjYeGPWyfXVrDpLDEUbCHpvrzJjjAG4vYnOsYL5AVpvNseuSs41lKOQ9xZXAydHtSS1v3V2L0He2tYHC58qqDA5I0TaLs9cwitF0l3W7UuUcVePA2et8P5DEpjEZIdvj6ScT9-DUq-imp6XoKFuK9C4KTKoSQFUGXZXNSbT8EMDUWOF3nURRk8IQv63qsQ4h5dVhsBziR5pmW18ZLDkNUeXJ/https://www.amazon.com/dp/B0FJQPCYDL/?_encoding=UTF8&pd_rd_i=B0FJQPCYDL&pd_rd_i=B0FJQPCYDL&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=CCxM1&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=JR1D1N0GGK1PM14WFZCP&pd_rd_wg=mBYsk&pd_rd_r=1e4f4007-4145-42da-ae15-028f75c0b095",
+      "link_clean": "https://www.amazon.com/dp/B0FJQPCYDL/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FJQPCYDL&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41x4x8-c88L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/df479b51-caef-4a83-9675-fd48f24fafbc.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/df479b51-caef-4a83-9675-fd48f24fafbc.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 83,
+      "price": "$32.99",
+      "extracted_price": 32.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "images": [
+        "https://m.media-amazon.com/images/I/71q6vPCybaL.jpg",
+        "https://m.media-amazon.com/images/I/71SociashhL.jpg",
+        "https://m.media-amazon.com/images/I/51hFrKMMyyL.jpg",
+        "https://m.media-amazon.com/images/I/71tb2vrYlrL.jpg",
+        "https://m.media-amazon.com/images/I/71PCj8ISCDL.jpg",
+        "https://m.media-amazon.com/images/I/71FFmH4G1gL.jpg",
+        "https://m.media-amazon.com/images/I/71w0yy8qvPL.jpg",
+        "https://m.media-amazon.com/images/I/71AzWk0DUrL.jpg",
+        "https://m.media-amazon.com/images/I/71KlsmW4TvL.jpg",
+        "https://m.media-amazon.com/images/I/617JAm63XaL.jpg",
+        "https://m.media-amazon.com/images/I/81XJb5ZveWL.jpg",
+        "https://m.media-amazon.com/images/I/71p3vT6JGHL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 65,
+        "4 star": 15,
+        "3 star": 16,
+        "2 star": 4,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Pet parents approve !",
+        "text": "Beautiful jacket, very well made. Sleeps like a rock, no itches.",
+        "rating": 5,
+        "date": "February 11, 2026",
+        "author": "Carol P. Neukam",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFCFQLYOXAERBGZJQQTDIIDTVFBA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "product": {
+          "size": "Medium",
+          "color": "Grey"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Great",
+        "text": "Very soft feeling function is basic works does run a little large my dog is 14 lb and a foot tall and I ordered a small and a little bit too big so I had to reorder extra small great quality warmth is great probably the best on your shirt I've seen so far",
+        "rating": 5,
+        "date": "January 10, 2026",
+        "author": "Emily",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEKZKPKSEE73NRAIWXEHYN6ESZUQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/03b799c6-e612-40ee-9ac1-651e036d729c._CR0%2C0%2C500%2C500_SX460_.jpg",
+        "product": {
+          "size": "Small",
+          "color": "Grey"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Fit is important on this style. Very soft and easy to get on.",
+        "text": "This was a soft item and the neck part fit really well but the body section was too big and not enough Velcro adjustment to fit tighter on my dog. I know my doggie does not like things tight around her neck and I did not want to get one too small. She is a 6-lb chiweenie and this neck/head part worked for her. It was easy to get on since the head/neck was not too tight. The fabric felt good and comfy. She did not like the turtle neck pulled up around her ears really. This might work for some dogs but not so much for mine due to the fit and her not liking it over her ears. She did not mind the neck being folded for a turtle neck as it was comfortable. Be sure you get sizing right.",
+        "rating": 3,
+        "date": "October 21, 2025",
+        "author": "Sunshine",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHU4D2PSZKGQPFFR3O3UO472WROQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/1595506d-2d62-48c1-b52b-8c675d26f076._CR0%2C0%2C500%2C500_SX460_.jpeg",
+        "images": [
+          "https://m.media-amazon.com/images/I/71KlsmW4TvL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81B1NcVf2dL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/51hFrKMMyyL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61hzabGBPKL._SY88.jpg"
+        ],
+        "helpful_votes": "2 people found this helpful",
+        "product": {
+          "size": "Small",
+          "color": "Rose"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Better than the original thunder shirt",
+        "text": "So I loved the idea of having a piece of clothing for my dog to wear that would help with thunder and anxiety. My dog does not care if its thundering or not but does have major separation anxiety. Since his anxiety only happens whenI am away from him it is hard to gauge how well this shirt works.I will say that the material is nice and soft, the price isn't bad and the design is nice since its easy to put on and take off.The only thing I will say is that it seems to run a little bit small. I know its supposed to be tight but I think I would have been better ordering the next size up.All in all I think it's a smart idea and worth a shot if your pup suffers from anxiety.",
+        "rating": 4,
+        "date": "December 27, 2025",
+        "author": "Sarah A",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AENCEOWA3VWIERXHEIMJZVF25GNA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/96ccffd4-77a5-4e95-86cd-81c7f0c5dd70._CR0%2C0%2C500%2C500_SX460_.jpeg",
+        "product": {
+          "size": "Medium",
+          "color": "Grey"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Did thunder jacket",
+        "text": "Very nice material and great price. Highly recommend",
+        "rating": 5,
+        "date": "December 13, 2025",
+        "author": "Placeholder",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHGMDOCNJVBGZY2BJDM3HBK5FFSA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "product": {
+          "size": "X-Large",
+          "color": "Grey"
+        }
+      },
+      {
+        "position": 6,
+        "title": "Thunder coat",
+        "text": "Love it",
+        "rating": 5,
+        "date": "December 16, 2025",
+        "author": "Amazon Customer",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEDMA3OKGOGF3ODHYDQ4JTL67O5Q",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "product": {
+          "size": "Medium",
+          "color": "Grey"
+        }
+      },
+      {
+        "position": 7,
+        "title": "Nicer than expected!",
+        "text": "The material is soft and pretty thick.The vest itself feels to be of really good quality, better than I had expected for the price.I like that it is fairly adjustable, with the ability to tighten it with the Velcro straps. Dogs have varying shapes and sizes beyond just small, medium, large, etc.., and it’s nice that it’s been realized here.Obviously, this isn’t a product that will work to calm every animal, but if these types of shirts/vests do work for your pet, or you’d like to give them a try, this is not a bad one to try out!It’s good quality for the price, it’s adjustable, and it has the turtleneck option.I wasn’t sure if my little guy would like the turtleneck thing, but I’m happy I tried it out. Definitely satisfied with the whole thing!",
+        "rating": 5,
+        "date": "December 22, 2025",
+        "author": "Dez",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AH6J7XYWSSF55FS3TKPR7VX5ISUA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/aa27a39e-2355-453b-a03c-e400ce3ef064._CR0%2C0%2C500%2C500_SX460_.jpeg",
+        "product": {
+          "size": "Small",
+          "color": "Grey"
+        }
+      },
+      {
+        "position": 8,
+        "title": "This is great, hes happy, we are all happy",
+        "text": "I have a 50lb boxer mix and this fit him perfectly. He has anxiety over everything and where calming chews have failed this has actually helped calm him down. Worth its weight in gold. Its not overly thick but is well made with lots of sticky velcro.",
+        "rating": 5,
+        "date": "November 25, 2025",
+        "author": "JBrad",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AH3N6UFMVK5BKTRMWFWLNFW4ZBDA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/0d79aee6-6c02-48b8-9c7c-f05fa0bf0c6b._CR0%2C0%2C500%2C500_SX460_.jpg",
+        "product": {
+          "size": "Large",
+          "color": "Grey"
+        }
+      }
+    ]
+  }
+}

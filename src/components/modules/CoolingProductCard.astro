@@ -49,6 +49,11 @@ const trackEvent = isAmazon ? 'amazon_outbound_click' : 'collector_to_converter_
         <span class="cp-meta-label">Cooling:</span> {product.coolingMethod}
       </p>
     )}
+    {product.sizingNote && (
+      <p class="cp-meta">
+        <span class="cp-meta-label">Sizing:</span> {product.sizingNote}
+      </p>
+    )}
     {isAmazon ? (
       <AffiliateLink
         href={cta.href}

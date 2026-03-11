@@ -46,7 +46,7 @@ export const coolingProducts: CoolingProduct[] = [
     bestFor: 'Hassle-free cooling anywhere — just set it down and go',
     coolingMethod: 'Pressure-activated gel',
     sizingNote: 'Available in S, M, L, XL — measure your dog lying down',
-    image: { src: 'https://m.media-amazon.com/images/I/71n1Mod8sRL.jpg', alt: 'The Green Pet Shop Cooling Pet Pad' },
+    image: { src: 'https://m.media-amazon.com/images/I/71n1Mod8sRL._SL500_.jpg', alt: 'The Green Pet Shop Cooling Pet Pad' },
   },
   {
     id: 'kh-cool-bed-iii',
@@ -63,7 +63,7 @@ export const coolingProducts: CoolingProduct[] = [
     bestFor: 'Large breeds that need sustained, even cooling',
     coolingMethod: 'Water-based absorption',
     sizingNote: 'Comes in S through XL — XL fits dogs up to 100 lbs',
-    image: { src: 'https://m.media-amazon.com/images/I/61xAcMN3KJL.jpg', alt: 'K&H Cool Bed III' },
+    image: { src: 'https://m.media-amazon.com/images/I/61xAcMN3KJL._SL500_.jpg', alt: 'K&H Cool Bed III' },
   },
   {
     id: 'arf-pets-self-cooling-mat',
@@ -80,7 +80,7 @@ export const coolingProducts: CoolingProduct[] = [
     bestFor: 'Crate training and car travel in hot weather',
     coolingMethod: 'Pressure-activated gel',
     sizingNote: 'Multiple sizes — pick one that matches your crate dimensions',
-    image: { src: 'https://m.media-amazon.com/images/I/71JPOml6KrL.jpg', alt: 'Arf Pets Self Cooling Mat' },
+    image: { src: 'https://m.media-amazon.com/images/I/71JPOml6KrL._SL500_.jpg', alt: 'Arf Pets Self Cooling Mat' },
   },
 
   // Cooling Bandanas
@@ -99,7 +99,7 @@ export const coolingProducts: CoolingProduct[] = [
     bestFor: 'Quick walks and outdoor play on warm days',
     coolingMethod: 'Evaporative + optional ice pack',
     sizingNote: 'S/M and L/XL — measure around the base of the neck',
-    image: { src: 'https://m.media-amazon.com/images/I/611AOa13OFL.jpg', alt: 'All For Paws Chill Out Ice Bandana' },
+    image: { src: 'https://m.media-amazon.com/images/I/611AOa13OFL._SL500_.jpg', alt: 'All For Paws Chill Out Ice Bandana' },
   },
   {
     id: 'kyeese-cooling-bandanas',
@@ -116,7 +116,7 @@ export const coolingProducts: CoolingProduct[] = [
     bestFor: 'Small to medium dogs on daily summer walks',
     coolingMethod: 'Evaporative cooling',
     sizingNote: 'Fits necks up to 20 inches — best for small/medium breeds',
-    image: { src: 'https://m.media-amazon.com/images/I/71yNibhBnRS.jpg', alt: 'KYEESE Dog Instant Cooling Bandanas (2-Pack)' },
+    image: { src: 'https://m.media-amazon.com/images/I/71yNibhBnRS._SL500_.jpg', alt: 'KYEESE Dog Instant Cooling Bandanas (2-Pack)' },
   },
 
   // Cooling Vests
@@ -135,7 +135,7 @@ export const coolingProducts: CoolingProduct[] = [
     bestFor: 'Hiking, trail running, and all-day outdoor adventures',
     coolingMethod: 'Evaporative (soak, wring, wear)',
     sizingNote: 'Sized XXS through XL — use Ruffwear\'s girth measurement chart',
-    image: { src: 'https://m.media-amazon.com/images/I/71CjrUbyTWL.jpg', alt: 'Ruffwear Swamp Cooler Dog Cooling Vest' },
+    image: { src: 'https://m.media-amazon.com/images/I/71CjrUbyTWL._SL500_.jpg', alt: 'Ruffwear Swamp Cooler Dog Cooling Vest' },
   },
   {
     id: 'kurgo-core-cooling-vest',
@@ -152,7 +152,7 @@ export const coolingProducts: CoolingProduct[] = [
     bestFor: 'Budget-friendly everyday cooling on walks and errands',
     coolingMethod: 'Evaporative mesh',
     sizingNote: 'S, M, L — measure chest girth for the best fit',
-    image: { src: 'https://m.media-amazon.com/images/I/81Dk2mMHkhL.jpg', alt: 'Kurgo Core Cooling Vest' },
+    image: { src: 'https://m.media-amazon.com/images/I/81Dk2mMHkhL._SL500_.jpg', alt: 'Kurgo Core Cooling Vest' },
   },
   {
     id: 'canada-pooch-chill-seeker',
@@ -169,7 +169,7 @@ export const coolingProducts: CoolingProduct[] = [
     bestFor: 'Pet owners who want function and fashion',
     coolingMethod: 'Evaporative cooling',
     sizingNote: 'Runs slightly small — size up if your dog is between sizes',
-    image: { src: 'https://m.media-amazon.com/images/I/81ZAyuCF-sL.jpg', alt: 'Canada Pooch Chill Seeker Cooling Vest' },
+    image: { src: 'https://m.media-amazon.com/images/I/81ZAyuCF-sL._SL500_.jpg', alt: 'Canada Pooch Chill Seeker Cooling Vest' },
   },
 
   // Freezable Toys
@@ -187,7 +187,7 @@ export const coolingProducts: CoolingProduct[] = [
     ],
     bestFor: 'Heavy chewers who need long-lasting frozen enrichment',
     coolingMethod: 'Freeze stuffing inside',
-    image: { src: 'https://m.media-amazon.com/images/I/61eVAqrR7uL.jpg', alt: 'KONG Classic Dog Toy' },
+    image: { src: 'https://m.media-amazon.com/images/I/61eVAqrR7uL._SL500_.jpg', alt: 'KONG Classic Dog Toy' },
   },
   {
     id: 'petsafe-chilly-penguin',
@@ -203,7 +203,7 @@ export const coolingProducts: CoolingProduct[] = [
     ],
     bestFor: 'Dogs who love to lick and need gentle hydration encouragement',
     coolingMethod: 'Frozen water release',
-    image: { src: 'https://m.media-amazon.com/images/I/7196xcBelQL.jpg', alt: 'PetSafe Chilly Penguin' },
+    image: { src: 'https://m.media-amazon.com/images/I/7196xcBelQL._SL500_.jpg', alt: 'PetSafe Chilly Penguin' },
   },
 
   // Car Cooling
@@ -222,7 +222,7 @@ export const coolingProducts: CoolingProduct[] = [
     bestFor: 'Blocking direct sun from back-seat windows on hot road trips',
     coolingMethod: 'Passive sun and UV blocking',
     sizingNote: 'Universal fit — covers most standard rear side windows',
-    image: { src: 'https://m.media-amazon.com/images/I/61GEGcE92WL.jpg', alt: 'Enovoe Magnetic Car Window Shades (4-Pack)' },
+    image: { src: 'https://m.media-amazon.com/images/I/61GEGcE92WL._SL500_.jpg', alt: 'Enovoe Magnetic Car Window Shades (4-Pack)' },
   },
   {
     id: 'kh-travel-fan',
@@ -239,23 +239,24 @@ export const coolingProducts: CoolingProduct[] = [
     bestFor: 'Active airflow for crated or back-seat dogs when AC vents fall short',
     coolingMethod: 'Active airflow — clip-on fan',
     sizingNote: 'One size; flexible clip fits most headrests and cargo bars',
-    image: { src: 'https://m.media-amazon.com/images/I/71aPhAz-VlL.jpg', alt: 'K&H Pet Products Clip-On Travel Fan' },
+    image: { src: 'https://m.media-amazon.com/images/I/71aPhAz-VlL._SL500_.jpg', alt: 'K&H Pet Products Clip-On Travel Fan' },
   },
   {
-    id: 'outward-hound-port-a-bowl',
-    asin: 'B07N9MMCG7',
-    name: 'Outward Hound Port-A-Bowl Collapsible Bowl',
+    id: 'ohmo-spill-proof-bowl',
+    asin: 'B0C9TX38RZ',
+    name: 'OHMO Spill Proof Collapsible Dog Water Bowl',
     category: 'car-cooling',
     amazonUrl:
-      'https://www.amazon.com/Outward-Hound-Kyjen-Collapsible-Waterproof/dp/B07N9MMCG7/?tag=chill-dogs-20',
+      'https://www.amazon.com/dp/B0C9TX38RZ/?tag=chill-dogs-20',
     bullets: [
-      'Folds completely flat — slips into a pocket, bag, or door panel',
-      'Carabiner clip attaches to a leash or backpack for hands-free carry',
-      'Dishwasher-safe BPA-free nylon holds up to 32 oz for larger dogs',
+      'Spill-proof design keeps water in the bowl during bumpy car rides',
+      'Collapses flat for easy storage in a door panel, console, or travel bag',
+      'Dishwasher-safe and holds 24 oz — practical for medium and large dogs',
     ],
-    bestFor: 'Pit-stop hydration without hauling a bulky bowl',
+    bestFor: 'In-car hydration that stays in the bowl instead of on the seat',
     coolingMethod: 'Hydration support',
-    sizingNote: 'Available in S (1 cup) and L (32 oz) — size up for large dogs',
+    sizingNote: '24 oz capacity; works well for medium to large dogs',
+    image: { src: 'https://m.media-amazon.com/images/I/61rhiId91LL._SL500_.jpg', alt: 'OHMO Spill Proof Collapsible Dog Water Bowl' },
   },
   {
     id: 'four-knines-seat-hammock',
@@ -272,7 +273,7 @@ export const coolingProducts: CoolingProduct[] = [
     bestFor: 'Keeping dogs stable, cool, and off hot leather seats in the back',
     coolingMethod: 'Surface insulation from hot upholstery',
     sizingNote: 'Standard and XL fit most sedans, SUVs, and trucks',
-    image: { src: 'https://m.media-amazon.com/images/I/81ypdd26KKL.jpg', alt: '4Knines Dog Seat Cover Hammock' },
+    image: { src: 'https://m.media-amazon.com/images/I/81ypdd26KKL._SL500_.jpg', alt: '4Knines Dog Seat Cover Hammock' },
   },
 
 ];

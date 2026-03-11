@@ -86,6 +86,8 @@ Self-hosted fonts via `@fontsource`: Nunito Variable (headings), Inter (body).
 
 All Amazon affiliate links **must** use the `AffiliateLink.astro` component which enforces `rel="nofollow sponsored noopener" target="_blank"` and adds `data-affiliate="true"` for click tracking. Products are defined in TypeScript data files (`src/data/cooling-products.ts`, `src/data/calming-products.ts`) with affiliate URLs using tag `chill-dogs-20`.
 
+Amazon Associates Program Policies (operating agreement): <https://affiliate-program.amazon.com/help/operating/policies>. Refer to this when making decisions about affiliate link usage, product claims, pricing display, trademark usage, or any compliance questions.
+
 ### Images
 
 All local images **must** use the `<Image>` component from `astro:assets` — never raw `<img>` tags. Astro optimizes local images at build time (format conversion, compression, responsive sizing). Use raw `<img>` only for external URLs (e.g. Amazon CDN) that cannot be optimized at build time.

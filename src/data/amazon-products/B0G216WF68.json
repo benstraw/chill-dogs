@@ -1,0 +1,616 @@
+{
+  "search_metadata": {
+    "id": "69b1f54c231ffe681e816588",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/xmHC7KddQ12Oitp_HWmPbQ/69b1f54c231ffe681e816588.json",
+    "created_at": "2026-03-11 23:05:48 UTC",
+    "processed_at": "2026-03-11 23:05:48 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0G216WF68/?",
+    "raw_html_file": "https://serpapi.com/searches/xmHC7KddQ12Oitp_HWmPbQ/69b1f54c231ffe681e816588.html",
+    "total_time_taken": 1.96
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0G216WF68",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0G216WF68",
+    "title": "Dog Anxiety Vest - Skin-Friendly Calming Shirt for Thunder, Fireworks, Vet Visits & Separation Anxiety – No Medicine or Training Needed – Suitable for Small, Medium, and Large Dogs",
+    "link": "https://www.amazon.com/Harbyel-Dog-Anxiety-Vest-Skin-Friendly/dp/B0G216WF68/",
+    "link_clean": "https://www.amazon.com/dp/B0G216WF68/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G216WF68&device=desktop&engine=amazon_product",
+    "badges": [
+      "Amazon's Choice"
+    ],
+    "variants": [
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0G21QSGHQ",
+            "name": "XS-Chest(8.6\"-12\")",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G21QSGHQ&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0G1ZJ6FND",
+            "name": "S-Chest(11\"-14.9\")",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G1ZJ6FND&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0G1ZQK73S",
+            "name": "M-Chest(14.1\"-22\")",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G1ZQK73S&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 4,
+            "asin": "B0G21V9YQY",
+            "name": "L-Chest(18.8\"-26.9\")",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G21V9YQY&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 5,
+            "asin": "B0G216WF68",
+            "name": "XL-Chest(22\"-34.6\")",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G216WF68&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 6,
+            "asin": "B0G1ZZM59S",
+            "name": "2XL-Chest(26\"-36\")",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G1ZZM59S&device=desktop&engine=amazon_product"
+          }
+        ]
+      },
+      {
+        "title": "Color",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0G21ZGPSD",
+            "name": "Blue",
+            "image": "https://m.media-amazon.com/images/I/41zridzv8JL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G21ZGPSD&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0G216WF68",
+            "name": "Dark Grey",
+            "image": "https://m.media-amazon.com/images/I/41ZCbH9bmYL._SS64_.jpg",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G216WF68&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0G219W8LW",
+            "name": "Dark Purple",
+            "image": "https://m.media-amazon.com/images/I/41GmrLJxxxL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G219W8LW&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 4,
+            "asin": "B0G216JLFV",
+            "name": "Green",
+            "image": "https://m.media-amazon.com/images/I/419zb9g0ZKL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G216JLFV&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 5,
+            "asin": "B0G21N2CMD",
+            "name": "Light Purple",
+            "image": "https://m.media-amazon.com/images/I/41RsBqCmjPL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G21N2CMD&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 6,
+            "asin": "B0G21MDRZ9",
+            "name": "Rose",
+            "image": "https://m.media-amazon.com/images/I/41YFbtg+fvL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G21MDRZ9&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the Harbyel Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/71plUgjjhoL._AC_SX300_SY300_QL70_ML2_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/71plUgjjhoL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71ATktYy4NL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/817xauo8t4L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81tGOxpzj9L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81KMbMWf82L._AC_SL1500_.jpg"
+    ],
+    "rating": 4.4,
+    "reviews": 31,
+    "discount": "-20%",
+    "price": "$19.99",
+    "extracted_price": 19.99,
+    "old_price": "$24.99",
+    "extracted_old_price": 24.99,
+    "prime": true,
+    "delivery": [
+      "FREE delivery Monday, March 16 on orders shipped by Amazon over $35",
+      "Or Prime members get FREE delivery Friday, March 13. Order within 4 mins. Join Prime"
+    ],
+    "stock": "Only 13 left in stock - order soon."
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$19.99",
+      "extracted_price": 19.99,
+      "delivery": [
+        "FREE delivery Monday, March 16 on orders shipped by Amazon over $35",
+        "Or Prime members get FREE delivery Friday, March 13. Order within 4 mins. Join Prime"
+      ],
+      "stock": "Only 13 left in stock - order soon.",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "Harbyel",
+          "details": {
+            "heading": "Sold by",
+            "content": "Harbyel"
+          },
+          "link": {
+            "text": "Harbyel",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A1IYK6AEDNLM7A&asin=B0G216WF68&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "30-day refund / replacement",
+          "details": {
+            "heading": "30-day refund / replacement",
+            "content": "This item can be returned in its original condition for a full refund or replacement within 30 days of receipt."
+          },
+          "link": {
+            "text": "Read full return policy",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GKM69DUUYKQWKWX7&ref_=dp_ret_policy"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "size": "XL-Chest(22\"-34.6\")",
+    "special_feature": "Lightweight, Breathable, Durable, Comfortable, Adjustable",
+    "breed_recommendation": "All Breed Sizes",
+    "brand": "Harbyel",
+    "material": "Cotton Blend"
+  },
+  "about_item": [
+    "Harbyel Dog Anxiety Jacket for Stress Relief: Dog calming vest applies gentle pressure to reduce fear and anxiety. Perfect thunder shirt for dogs during fireworks, storms, travel, or separation.",
+    "Soft Breathable Fabric for Comfort: Made from elastic, skin-friendly cotton blend. Lightweight, breathable, and durable dog anxiety shirt for all breeds, ensuring long-wear comfort.",
+    "Adjustable & Quiet Hook-and-Loop Design: Harbyel Upgraded low-noise Velcro makes this thunder vest easy to put on and remove. Fully adjustable for a snug fit on small, medium, and large dogs.",
+    "Calming Vest Endorsed by Vets & Trainers: Proven dog stress relief jacket helps manage anxiety, fear, and overexcitement. Recommended by veterinarians and trainers for safe daily use.",
+    "Washable, Durable & Easy Care: Machine washable and quick-drying thunder shirt for dogs. Reliable calming aid alternative to medication for long-term comfort and relaxation."
+  ],
+  "related_products": [
+    {
+      "position": 1,
+      "title": "Meifsou Dog Anxiety Vest with Hood, Skin-Friendly Thunder Jacket for Dogs, All-in-One Dog Calming Shirt with Hood for Thunder",
+      "link": "https://www.amazon.com/Meifsou-Anxiety-Skin-Friendly-Fireworks-Separation/dp/B0FNK6424V/ref=pd_sbs_d_sccl_1_1/133-7383701-9112552?pd_rd_w=4SUiJ&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=GB1DDBGK1GGF916XT363&pd_rd_wg=7WVjH&pd_rd_r=39033088-9ba5-4e55-8786-3226ea8b1610&pd_rd_i=B0FNK6424V&psc=1",
+      "asin": "B0FNK6424V",
+      "link_clean": "https://www.amazon.com/Meifsou-Anxiety-Skin-Friendly-Fireworks-Separation/dp/B0FNK6424V/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FNK6424V&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/719zK2oEIqL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.3,
+      "reviews": 145,
+      "price": "$19.99",
+      "extracted_price": 19.99,
+      "delivery": [
+        "Get it as soon as Monday, Mar 16"
+      ]
+    },
+    {
+      "position": 2,
+      "title": "ThunderShirt for Dogs, Large, Platinum Sport - Dog Anxiety Relief Calming Vest",
+      "link": "https://www.amazon.com/Thundershirt-clothing-Anxiety-Jacket-Platinum/dp/B01FN4GW2M/ref=pd_sbs_d_sccl_1_2/133-7383701-9112552?pd_rd_w=4SUiJ&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=GB1DDBGK1GGF916XT363&pd_rd_wg=7WVjH&pd_rd_r=39033088-9ba5-4e55-8786-3226ea8b1610&pd_rd_i=B01FN4GW2M&psc=1",
+      "asin": "B01FN4GW2M",
+      "link_clean": "https://www.amazon.com/Thundershirt-clothing-Anxiety-Jacket-Platinum/dp/B01FN4GW2M/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B01FN4GW2M&device=desktop&engine=amazon_product",
+      "badges": [
+        "Amazon's Choice"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/61NPrGM6MeL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.3,
+      "reviews": 20999,
+      "price": "$49.99",
+      "extracted_price": 49.99,
+      "delivery": [
+        "Get it as soon as Monday, Mar 16"
+      ]
+    },
+    {
+      "position": 3,
+      "title": "CozyVest® Dog Anxiety Vest 3-in-1 Music & Aromatherapy Shirt, Relaxing Sound & Essential Oils Jacket, Fireworks Thunder Separ",
+      "link": "https://www.amazon.com/CozyVest-Aromatherapy-Essential-Separation-Thunderstorm/dp/B088PPZWYL/ref=pd_sbs_d_sccl_1_3/133-7383701-9112552?pd_rd_w=4SUiJ&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=GB1DDBGK1GGF916XT363&pd_rd_wg=7WVjH&pd_rd_r=39033088-9ba5-4e55-8786-3226ea8b1610&pd_rd_i=B088PPZWYL&psc=1",
+      "asin": "B088PPZWYL",
+      "link_clean": "https://www.amazon.com/CozyVest-Aromatherapy-Essential-Separation-Thunderstorm/dp/B088PPZWYL/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B088PPZWYL&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71L-5Kv2EuL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.2,
+      "reviews": 2819,
+      "price": "$29.99",
+      "extracted_price": 29.99,
+      "price_unit": "$29.99/count",
+      "extracted_price_unit": 29.99,
+      "delivery": [
+        "Get it as soon as Monday, Mar 16"
+      ]
+    },
+    {
+      "position": 4,
+      "title": "Meifsou Dog Anxiety Vest - Thunder & Fireworks Calming Shirt for Dogs, Vet Visits & Separation - No Medicine or Training Requ",
+      "link": "https://www.amazon.com/Meifsou-Dog-Anxiety-Vest-Separation/dp/B0DM5X9XH9/ref=pd_sbs_d_sccl_1_4/133-7383701-9112552?pd_rd_w=4SUiJ&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=GB1DDBGK1GGF916XT363&pd_rd_wg=7WVjH&pd_rd_r=39033088-9ba5-4e55-8786-3226ea8b1610&pd_rd_i=B0DM5X9XH9&psc=1",
+      "asin": "B0DM5X9XH9",
+      "link_clean": "https://www.amazon.com/Meifsou-Dog-Anxiety-Vest-Separation/dp/B0DM5X9XH9/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DM5X9XH9&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71TehOp2E7L._AC_UL165_SR165,165_.jpg",
+      "rating": 4,
+      "reviews": 575,
+      "price": "$14.99",
+      "extracted_price": 14.99,
+      "price_unit": "$14.99/count",
+      "extracted_price_unit": 14.99,
+      "delivery": [
+        "Get it as soon as Monday, Mar 16"
+      ]
+    },
+    {
+      "position": 5,
+      "title": "Kodervo Dog Anxiety Vest, Skin-Friendly Thunder Jacket for Dogs, Dog Calming Shirt for Thunder, Fireworks, Vet Visits and Sep",
+      "link": "https://www.amazon.com/Kodervo-Anxiety-Skin-Friendly-Fireworks-Separation/dp/B0GC7TB1BG/ref=pd_sbs_d_sccl_1_5/133-7383701-9112552?pd_rd_w=4SUiJ&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=GB1DDBGK1GGF916XT363&pd_rd_wg=7WVjH&pd_rd_r=39033088-9ba5-4e55-8786-3226ea8b1610&pd_rd_i=B0GC7TB1BG&psc=1",
+      "asin": "B0GC7TB1BG",
+      "link_clean": "https://www.amazon.com/Kodervo-Anxiety-Skin-Friendly-Fireworks-Separation/dp/B0GC7TB1BG/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GC7TB1BG&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71IgF90zRWL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.2,
+      "reviews": 34,
+      "price": "$24.99",
+      "extracted_price": 24.99,
+      "price_unit": "$24.99/count",
+      "extracted_price_unit": 24.99,
+      "delivery": [
+        "Get it as soon as Monday, Mar 16"
+      ]
+    },
+    {
+      "position": 6,
+      "title": "Kodervo Dog Anxiety Jacket, Skin-Friendly Dog Calming Shirt - Dog Coat for Thunder, Fireworks, Vet Visits and Separation - Ke",
+      "link": "https://www.amazon.com/Kodervo-Anxiety-Jacket-Skin-Friendly-Calming/dp/B0CRV7Q3VJ/ref=pd_sbs_d_sccl_1_6/133-7383701-9112552?pd_rd_w=4SUiJ&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=GB1DDBGK1GGF916XT363&pd_rd_wg=7WVjH&pd_rd_r=39033088-9ba5-4e55-8786-3226ea8b1610&pd_rd_i=B0CRV7Q3VJ&psc=1",
+      "asin": "B0CRV7Q3VJ",
+      "link_clean": "https://www.amazon.com/Kodervo-Anxiety-Jacket-Skin-Friendly-Calming/dp/B0CRV7Q3VJ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CRV7Q3VJ&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81FW1PVQXBL._AC_UL165_SR165,165_.jpg",
+      "rating": 3.9,
+      "reviews": 973,
+      "price": "$18.99",
+      "extracted_price": 18.99,
+      "delivery": [
+        "Get it as soon as Tuesday, Mar 17"
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "position": 1,
+      "title": "Dog Calming Vest",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/146e4814-6bdd-4ee3-96a6-1105fbd6803d/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/51VVOoW4HjL.jpg",
+      "duration": "0:44",
+      "vendor": "Harbyel",
+      "date": "Dec 22, 2025"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1
+    },
+    {
+      "position": 2,
+      "title": "01",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/73db3fa1-5b5d-459d-b13b-3a05aa64fefc.__CR0,0,1800,738_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 3,
+      "title": "02",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/d864730a-195c-474d-83c7-138051df59d7.__CR0,0,1800,738_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 4,
+      "title": "03",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/e43c6a70-9fb1-49c0-89fd-4f0baddd5957.__CR0,0,1800,738_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 5,
+      "title": "04",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/01ab4712-9f68-4f54-9fab-92603c67d6e1.__CR0,0,1800,738_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 6,
+      "title": "05",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/d676add7-2d3d-4480-a275-9253ab007918.__CR0,0,1800,738_PT0_SX1464_V1___.jpg"
+    }
+  ],
+  "product_details": {
+    "item_weight": "1.5 ounces",
+    "manufacturer": "Harbyel",
+    "asin": "B0G216WF68",
+    "customer_reviews": "4.4 out of 5 stars",
+    "rating": 4.4,
+    "reviews": 31,
+    "date_first_available": "November 12, 2025",
+    "item_package_dimensions_l_x_w_x_h": "6 x 4 x 0.2 inches",
+    "brand_name": "Harbyel",
+    "target_audience_keyword": "dogs",
+    "color": "Dark Grey",
+    "size": "XL-Chest(22\"-34.6\")",
+    "material": "Cotton Blend",
+    "age_range_description": "Adult",
+    "care_instructions": "Hand Washable",
+    "breed_recommendation": "All Breed Sizes"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0GCH6LG56",
+      "title": "Dog Calming Pheromones Diffuser & 6 in 1 Kit Appeasing Dog Pheromone Diffuser to Calm (2 Plug in+4 x48ml Refill) Dog Calming Diffuser Anxiety Reduce Aggression Fighting Barking Stress 120 Day Supply",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JOYQZfHZRfyUBPgVfwhXBE0AAAGc3yY3ZAEAAAH2AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDEgICCPHOUd/clv1c_ek-wBYHXFcbWDn2nI-MgDzpZHJmQrgBT9Y4YiHTStwG-RRv1SABz262NsGfU7AsefdJM624ftl03JsQ94JERRiOzVGEWeCwQcDlWic7HWN1wB5fVEB78Hc377tMgzmSg9hDTvs5Bq5a7yjbUVger8dT7odyWijWetjTAT3etSwAZ9F00AwlDQbv7JEF3vt6l0XDJ4URINcvC30SVEWwhlwrKTK7PANWXr4bMg_ONEO6YLWo0O8etdxnAtMKEo5tVczB2brjtLwgiM1fM-AKDMRaPhydXUWM-eFbPPZxrhgWmI2i3jIj4xpKfBuey02SZ52BzPw3gnMg9ok1xxSAceqFTGkJdnM24nXIgwqxNb1dlbHRSVQwS4gl0ErwrVZEnN6iRgDXpKvt4b2y2OOE2-MIxRSZFaQXuPqvcT0Dw2YNvfNwAkN89jr_NySZSWA_v_wMYVVHGWC-xGbIMiOgBbnK5GJNksu1NMoc0w10rWvEJHwLL0B0dX_5iZ1CuVGXxqKcmTi_zAXh1VcsfJziGHQwGE_IPeD7KPTd4NTMRvjR0TdDUlsYMLCigx6aHie9DOBjdHwcgDA2R9VGV4ghCH-CsgSF5p6QzykJXfzmIQ1Ej_r5StIm7ldarO6hZNlyGfkS_oMoyDNI_1iCMbSaNUx7lBMhFN7MiC-D3y7Ysn_BU1mkOHOrpL_pSW54nzdBdM0CvKT96iuQAUmLZ8RBzrq8gQ638ec6ppJrsRhGDSbkrB3lgPNGtsnO2nlJLFObfoEBO1t-Kp-X6-Ei1Mxc-SMAm7Pw0wz_jfpMql5mSThFiP-Gg-ECSvSO5CN9GGWBDA36VwikZt7oT1czZx982sY4s_p6mzcCWCbKJTWm_4bQWuHzPi0dR9Wgr7dItQpFn8MJuE6wrHIuWshp6-zYp82fRG-uLPIBV7Fs1e7ciKf14TFugb4f-TaZ69qTXRnHV0J42prqFnNcqSQY0EKbIEIav9LqB0VZoT8oHhsEw5B3hHyaIE0ef7y-a0NzTp0cLQSo3oTe55oOA5xgwxy8OwHnJC8wpMCbTpUKYSsGnKzzNL-3wgOv-LBE_lGUg4vnm63cD_AkvpaIq3JyVGQLlVGBChugBTZ8h_yW5710bjcKemQi1vb2dfzuzmsThU-5dq12UlPmVYPYw0F3xlf0Tl_vHff-KvU9cBFjgCkuELDFKAiPysxMSoozRY15dN0csysPeIDJRC5NJJt1KfEkBzjWeGfpeQc501Iwlmzzku28i-vtq8_PO_80nrh3VKISQjIF8FMSqgsukMQeoSroDvmI4xA9yO314x-40LdRIciXIgox1N_8PXFCY5_mkCpa1Szp7qPTxcSxcR4djW8JduhFIa7ckZegQxF-GqrypEKXHZiCp3aE0rXQ6HktN_5wU8iCHeUgftkIxxhPCkRThmOH8CKk24ciTYO3tNeKBd_B7UWT2ln5SVfDoehsaxZwC151CQsH-oawbAz4zgjFp0cwveofi0KvUN-bbhIu3EkmiBhCGMBBhQtBb4g/https://www.amazon.com/dp/B0GCH6LG56/?_encoding=UTF8&pd_rd_i=B0GCH6LG56&pd_rd_i=B0GCH6LG56&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=hTsqw&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=GB1DDBGK1GGF916XT363&pd_rd_wg=7WVjH&pd_rd_r=39033088-9ba5-4e55-8786-3226ea8b1610",
+      "link_clean": "https://www.amazon.com/dp/B0GCH6LG56/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GCH6LG56&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51ev0Co4O-L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/b44116ed-5425-4266-966c-70fd6ce81ccf.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/b44116ed-5425-4266-966c-70fd6ce81ccf.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.5,
+      "reviews": 32,
+      "price": "$24.99",
+      "extracted_price": 24.99
+    },
+    {
+      "position": 2,
+      "asin": "B0G57S64ND",
+      "title": "KOESON Dog Calming Hoodie, Adjustable No Shake Ear Wraps for Dogs with Hook & Loop, Soft Dog Ear Muffs Noise Protecion, Pet Head, Ear & Neck Covers for Thunder, Firework, Separation Anxiety, Hematoma",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JCt2wUYEN-E13Pem2izVav8AAAGc3yY3ZQEAAAH2AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDEgICBwbVrC/clv1c_ek-wBQfWFbbazTI3YlNR34IoBl2ZtCQUaIp4inzoxJ1gwhP87rpid9xVZ-fWVD0ry5tMC1hmdJm5JHRzfqYph3grBGgc0Oqox6klM1XR1EpX43kDl8lLA2XeIlk3IZOhj4qfs-P-oMs8idAbPrQHK5DZss08VlYsFs7x2SdCLFfPOSt8ZBSpVl7hLssw4crCRrrLVS_TD2eJUql-sWBaX0KjCCdrUFK0SuvvtptZiDJCdy-7AebF_dkJvVwah8VwG57sR9B1xefCURByqvgDjdehC8Vrd87O6X2nBiLzKds4X4rTQcXxlf7TPphwvGz8yZIlCzxHe_GZrQCrXfNaGt6ZatHH28qOoBxIntkcALX9jZ6LvwARcUhtsdExEgLAAazKBYcEQzM-1vo0U_BRsvataxe-PbB4gLwBoxZ12yTI3k5RR-s-AAiiASehnTNprGqEhEjE-8GupktTMsFgHcbU7clJ5hCAMUSt7DmrDc5TPV3Ru6sKJmPZVkRogTP2t21ysqvgz-2srOxvDNV2UkTb7RHticn7i3bzyuaAuE-ifcAczZ7VZZy3raixQxVbTR1ERA4PaS8e8nl78geXUkvgNzKX3gzArWd958gOR9r7AXXFMVN46IQhI44etwm6UDiuPInsVAEzJGe0-2O2dP5OSuEIaa5l0jdmt8F0HFxOBVTEON66t6OeaXeG3AQwwIz89Uew5uUThtUAQw1qAMq-63qDYwPvLd79223mdriHNcRtW_pFba_k2Zz7ovU9WkuRJJN8pc2i_eu5uYazTyXRRr8EyaNhczg35YOAixpjRN2XLw1jdUPOlroRJaYwGpHq_3se1eFxmP_sXCDygXz5jK02wuk7fiMj77tFXk0TpMR-IeYb9L7w8W3qkXLvUKs9R1xMu-311GzXw0pkOlsCum3kzYUpMeYRD7-eGotuEzXVaA912De3srQm0LrxkSIC7VPXxZRnbPPM7pQ7G94y3fZ_G0iOFrCBPmwWnFYggZ9O7kwG1oSdw4FQZVse2KEpoU9bqKa0wcaZKe-DbVVSPDS05kxiYjw9FCV_W-Oiq0EGOPTfr_EEgJvmXSVaV9JUoI4TwB4IAJ5jfaJb5zCbVC9Td99xF_BIiANert-GnAhEMQJ4aTJ9Pcr46RejDwYfPWO8Phjb1ubOA06a1CC2ClipOReVuV67IJmegBugCs705HLrUK97T58FPUNJFJ5sUEy8OxKkXGcwvSCX8xdkJPpF0GBMq5gC-2-wOYu55BJaRKyIzJtsSyFsJCOsv1FL3-vTV_AjcJCVkEgzDQjk3zmSTCU7lyUkvY7C7gCpGy7VsM6V0m8CMUbZOO43zoiZlmk-Cd5RnIDe5DrLlgSWimi5XkUl1Ifv-TNzX_osZo1kp1bubQdBoRe2xW2HlLz4g-HuGpe8jE2zyXCRf3N1tDrHE4Dq2LPKieX3Hx3f4ZDaP3NvPtIij6rCsbTAM7yg28WyQ76DkipZmL6I2UZVeONVjONnX-MIYK1ZjvDWMj9tafAZZqj-oplsag/https://www.amazon.com/dp/B0G57S64ND/?_encoding=UTF8&pd_rd_i=B0G57S64ND&pd_rd_i=B0G57S64ND&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=hTsqw&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=GB1DDBGK1GGF916XT363&pd_rd_wg=7WVjH&pd_rd_r=39033088-9ba5-4e55-8786-3226ea8b1610",
+      "link_clean": "https://www.amazon.com/dp/B0G57S64ND/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G57S64ND&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41sOv07wFeL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/1645242f-61b4-47c7-814c-c07c467aae10.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/1645242f-61b4-47c7-814c-c07c467aae10.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 3,
+      "price": "$19.99",
+      "extracted_price": 19.99
+    },
+    {
+      "position": 3,
+      "asin": "B0FNRZVJ2V",
+      "title": "Honest Paws Calming Peanut Butter for Dogs – Dog Supplement with Ashwagandha, Valerian Root & L-Tryptophan – Supports Relaxation & Balanced Behavior – Made in USA – 12 oz",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JDH-gcnr9Qus6c3pix9Kuo0AAAGc3yY3ZwEAAAH2AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDEgICARsyMm/clv1c_ek-YBYHXFcbWDn2nI-MgDzpZHJmQrgDPCLUEmFzu1W9tadeFj77-5dSeb6i2e0CW-emiRdmcobPURrSBkrtp_xJK5ckrWJKZ35FlP1phza66mlPDgsOBlmnxxBkU5PVQRkG5J2iIRlW5dtxANMPPG6feqm3cllLCwohYL1erT4wHU2GRGl7j2-ZE5amNouVU8GCd5BbEf4VL0PmLskWI5jkNFFW3zIayqP_0vCLhNrzNQDnJtqaDvd5wJrGO1hWzx2u8kPeQ6bK0CL-0nZy6PA0_IWBJCdEKBZx85iT9OhY9QJsjcRU2wHujm0COwzoUNo7gt13trFksGRVzaHkQf2GGEFCM1eYjQyDWFl5M9AWoaLsk7XzSJiSpvjU1FB2Myq5QYGNLSmMNjIPzHWjUNydO1hjenwp4rIs-Ecg0hz-JstQDu5429zdUyXYPSSpo75Ur731_Ch3_9c6XyHS6KChW7E1SX6rDcH0RtcapcgQXFtMj-enKDaijCUpE7BJNIMCnFo8Mmhbir0E-9ED4KSXXn4ExW4uJXaniKIh-U9pfPA0E8MgrwwQOCyj2emV7_0H6FJmkJVMdxM3b3L3Ze2w-2PrMEof06-Tjkzd3xXmZ3F_Lmy5jGp_gshiFbCWtG29-x1p29AX2zQorDhiWir7Fo-laBo_GgDZRq09868KR5n-LF4mdvEW56zejhZMtMKzHmFxxKBdrhiUMX_-W-tDlPFQlgdYC4oShKn85T3jLZq99LRG12HpVle7wztM-HEIExHDYLgViW6HXQ0d7srf4nXUmAUi29k2-9nYaD3mv4AQa54Gvaud6K2I4nmoZXeK-wrhOvBbAuByVmNXDBGz23rE6-MYYcPrht3Zc7OV9NRrGy-Nw7Q1WB4ZWpbRr5JxvY7d0Dr-hdLoJBO1Wbquu0WzaPyLahAP5_ZotzZOnAOCVZA_Pb71U7GWoQ5LHrsFj4AermTaPxWMDuItBK3jmJlNJIceND9CDQvPyHY_KiClgWk3kqdANQfnZHlllVf7zm3VCKyAhghucBRWGrc3w-Y_AloYmFUsXurE3n9iBRVIngGo5W8yxMCrFTRLVR-ssez-Q6enDbfb8-6lRq5aCPIfvG_YuLorfCOxQjJrvE9rV9r_ofnXVuM9ECWQjqtKW1oF8ysIe_A_fltqccKdlosO0ePWOJy_Psd0rmDGU3OKQZquR3BRyICcXdmcV6iC8nJzzn1QPZRuN3zs-CbJJi1nK-jX_v1Z-IeWTlpXklIxAzptTK0iuzRkagFJMwgVbkOn92jfOjk3Z3Nt5JiFTLEoLs2TGP8zFqM0qbgZ9crq4pVJ924Gm0Y7go3hzGxZzSbL-gnKUAdDhs03Zw0d2BeAquxmDGJ0lYadDKQkHR8dAkhAAm9q2xcm3cBTAphUib3xaRQDsmhCK3Hjq6AEJnDrNzFuoNhH03N0-RtVfdss285hHbHyj8fYfolkgn-yi6vdorI3ZwgF2unnnzzIPBm9ZNke_TAdP-_bQ__Z_6h2xwr4kehWPDbeSSGnl-k0Sf8Y/https://www.amazon.com/dp/B0FNRZVJ2V/?_encoding=UTF8&pd_rd_i=B0FNRZVJ2V&pd_rd_i=B0FNRZVJ2V&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=hTsqw&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=GB1DDBGK1GGF916XT363&pd_rd_wg=7WVjH&pd_rd_r=39033088-9ba5-4e55-8786-3226ea8b1610",
+      "link_clean": "https://www.amazon.com/dp/B0FNRZVJ2V/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FNRZVJ2V&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/5194nHb4a3L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/90eee137-3416-4641-87a0-ab24982871fd.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/90eee137-3416-4641-87a0-ab24982871fd.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 3.8,
+      "reviews": 47,
+      "price": "$18.99",
+      "extracted_price": 18.99
+    },
+    {
+      "position": 4,
+      "asin": "B0DHKJXYQ5",
+      "title": "AOOLMOL Dog Anxiety Vest and Coat, Vet Visits and Separation - Keep Pet Calm, Dog Jacket for Thunder, Fireworks, Anti Anxiety Vest for Dogs and Cat Body and Ear",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JIlyVgy805bgVhWJKziEF1sAAAGc3yY3aAEAAAH2AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDEgICDL4bnN/clv1c_ek-wxXfWVcbaTPWXb9o-ITBwCaVHk6jpyw8Vqvq22j18-NffvhSp9OAMP_lOlF-H6VvE-y5m_CpGB6QYJr1d0WGEyuOnVB71LsyVRiHnHxx2i9JnqBLbuzYYQ_pynCZZ8YE-JYh1bPkQCcrzyO8uwm-ygNyfruVqkA10wyGsHC6f-ctdBecUy1PfnIYEGZhfN9C3sclFCQGcTdDV9-jYQCbLnRh5Iq4_Byse2JOSapLTkPL51JMyT7B3UtmWkWXRD9-Wa6ltJt2dmv5C8pdmFEiVhZh2VfLv7J82RKBVrryDKeS22YzZ8dlpjszLD42e7xYhI65SLXMdxNQVVfZsByPxlefOxEmXiK9UKLjufcNw6RIr-GU1PSQpCLeUIPIO_2LmpOVuSIUWACc31v_KMetChY7KuTJbVFWuSJkeA_nkg6J3xYUhW1uqUhqkAuUlIw3ESHQgBxxNGYgtj72VEoHkhR7FMTt6D0wIudxwFsZm8o9fNgkwIsZIlK5Hv2FG-vMQSreUwHHhrCbmcSX9qOFrqmhjBZm1wyrxD3OFWNfGAUgrAOzP-rktF7Dy0VNc7Q00A3TCAT2YKL7c6FoPJFlQmlBn_jBZMDIF0Cyl6goNVED7LNDuoNFZmxIXyC7OrBIJRU54k1jX24qR6pKfZdqkyuWdzuoT24XzQNmpGad7ASqRAcNrdbYs7B3CEBcLK8atElg7OjEQNpQE2OJI0aLlTRr9CfmD4JdxbbAQ_b5t9SZA_ujpN6Pmxy9hlP_fQvYtO1QJ4KF9Vdn4j4GXRHs0NrrHtTBvy63RJIo7HTiK03_E8LFrG4Oml_ovMaUHGD7YnLjOW6mwOTnc2Gzz5k8LPsgAsgP_BxpCcxyex_GFDCTA9f3mDN3gVUp0gkeA5NzlC4tkuAge0idZTstLfCR7K0mzGgh2ObBmJi-BCET4oh4aiZnU2obGwLK2sE2CYLBzOpuk36OFP2BNc_TH13XDokJWFsrJEzMp2T0t2eeoC6SkhBjWMgs9eqLxIDAGerWaEi1KKgxuXx5iagBbdWOjvh_xg7KIXW1saoxkl42hSYvXY_eAgNTa4UqFej-tPtpvIInnxpoLMRk4gTRDyVHyBtXO4EEH93Tv4xwp-0n0ox34eGMEDq1hERRZaJr5jgWG61wbNVlqLJymo_kpdk2rw5Jaa4s88U6hAGLEdME0MU22jcoCTpjdYSs-4VfxcqopVBBow9atMhtmuwyGb8iH51uwbJDv8U7VVMnEK86E7B-vpjni6E5pNCL-Qgltn7aQIgcRdirJXQNWWOghyHUrpIkEVT-z0BXVfVDMVMumGKJUrov9rZUnPQkkYnad4QGs4r6zY6OGJxtRHItpW2LMtH2uCcZhVk2vfRvEkI_JaoInf6CTjCtlH-HESC6mxJZDtLOMprZfXkPNgXi0UnAPRrnMCiRD0FZE8gm6hNdLtsxniV553u3Vt9oIQ4GBD5KnEVNvK6NnduxEeG7JVISpEfywRUD270y4TD7EHPPP38JSmONGD_2pzido3lDw8ksihDhO-sCGjJZPYPzJ9FI/https://www.amazon.com/dp/B0DHKJXYQ5/?_encoding=UTF8&pd_rd_i=B0DHKJXYQ5&pd_rd_i=B0DHKJXYQ5&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=hTsqw&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=GB1DDBGK1GGF916XT363&pd_rd_wg=7WVjH&pd_rd_r=39033088-9ba5-4e55-8786-3226ea8b1610",
+      "link_clean": "https://www.amazon.com/dp/B0DHKJXYQ5/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DHKJXYQ5&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41Dwz9viuPL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/6b891636-ead4-4cd8-90b5-3359cf8c966b.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/6b891636-ead4-4cd8-90b5-3359cf8c966b.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4,
+      "reviews": 273,
+      "price": "$16.98",
+      "extracted_price": 16.98,
+      "old_price": "$17.98",
+      "extracted_old_price": 17.98
+    },
+    {
+      "position": 5,
+      "asin": "B0FSF9Z7WS",
+      "title": "Harbyel Dog & Cat Calming Hoodie - Anxiety Relief Ear Protector, Noise-Canceling Head Cover for Grooming, Bath, Force Drying, Thunder & Fireworks",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JMGg3hw-LMpcSRhAFrllj5kAAAGc3yY3aQEAAAH2AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDEgICAHZK2h/clv1c_ek-wBQf2bcbW3lYJYXvv_sCVHlWna5iGXDIUdhyzGzrcENA3Tl_8pQMX9ZfexdpNLsag_66Qu67FIQwjnZYZPWZCSChGGgePLGtWiVr2GsQHyVN1KXOthVz44fpu0nmv8hATrs5BwgCeyRN5ePTZsUBaocHE1tWO0sX33F_OjBeP-eAz2-L8JvhOrkE4iDRQiKy2ZEpFOTP4nky9l9FSVqK7LcY1mi4F8IkI3XzmJVOGvZNIFiT75_jzG3Hu-dfJWZoXtJEwcYwy7qJbjCeG0Dqx3MJ8KlEGo3sUped0WHW9x7Yhn5jgqmgPdnVczbfS3ROLDoPOfNdtxs0qXRLpFnuRCXqkCpWw7mgJqS2bq_8bLWWPQat9Jy1ulKDM0_I4KuHU7uP6tPrOwWE30V-zSNf-RXtDxwOoNMZQvvnrgjSm_xxPreG_Ba0iAmZoAhaJ6GqI7sfUHxUrvCuqF566Td-jzmJWbqSb5UqisHliLFyd5TWLA_F9Z21tW0Eg0qpti31fzK1JmBXNrBLj3hzjqdxm2ndtqUFmu9je2tajc74U7bknMo-7C3QjwMtSZ61v9eawzHYL4JHh75Q4RYjq7ExoWMBYJ1m65rJiFe04LxCmOuaEyMz-X9FCKIVHwDnk3KsN4rQ5h0k602FtV1p43oydt_sLxvrCroCF-aRx7C9N5STtgJLOuIf2DHUUObdhPHFhVsIfQNJ0A0BMvZHq4A3atRjHSvLUcOg4FkCTK2kuAK6G_tMM4B6Q4MnPUuI9KKNYsBC3DICfNKMDKsIIuqWLjveOJAdMkVt4rpBcU6AsH9pVh7byZbIdZZh6dFmwqWY7yL35BtS-puAOPckiud4IQcK3lH7mQtGc2TIrEbbHpB4_R0N6qXETR6E5Bf7R5QoA5_MsDxpkMfal8mVXnb5yOy3Xsju87tJ9RUWBYX8aRE4OrZr5f0CNfre8p1zUrDh8ues5cd86aj3h4P4CQf3GIy0J2N8RCaJKN2BQDfRSon9CVOHdD44qwXe5hiNGrQcKs3Xx0ne87kPEdeJGXWANnfCP3mVLlLTr5sL-hRmdwwctqreCgsqAFko9xbeMox7GMD6eazpBVcRWCcsj6pdFAYr31y3KCTteZogkgn1VRgRpVrIzkh9pDFspqWt9EWl7lRIp7dTHk5g65c3zoYgzvUHo09xNxOZwBC4MkYz_FITHPI5Gg5QN8eVFViEugoxy-Y--G7vAsJ1TpHe3NxkTHlyz5yFS7jHlH3ak7YBZAvy_7SvhZOp4yZ9N9wJDvUOmUpvVBftoWMs8wDnibk2OJxQ5tp-WNZzTxnrhx7E-2vMaJMlXqni3pbJOf_b0jjea01u6KE6Z0wd_CaGEjp_BiOAayZiMF7vADJMeCT90rxjo3phBacL7tZJh6nSmiA2adgolbH_JfJybmMqBoJIoSvfovSmiIGPe5psAPj7zU5wY0f3n60z-GHtSOfiO1H37ClM1vxVVdTnsvZ601AH1Tpa-8fpj2fO9eVWC5pu0uMpi9bOuB0zguzqq5vWTc1Qmtq86PXUbPn1XJBOq/https://www.amazon.com/dp/B0FSF9Z7WS/?_encoding=UTF8&pd_rd_i=B0FSF9Z7WS&pd_rd_i=B0FSF9Z7WS&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=hTsqw&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=GB1DDBGK1GGF916XT363&pd_rd_wg=7WVjH&pd_rd_r=39033088-9ba5-4e55-8786-3226ea8b1610",
+      "link_clean": "https://www.amazon.com/dp/B0FSF9Z7WS/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FSF9Z7WS&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41iV0bRQbQL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cd7e437b-3c12-448f-91eb-0898698f74c2.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/cd7e437b-3c12-448f-91eb-0898698f74c2.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.3,
+      "reviews": 45,
+      "price": "$7.99",
+      "extracted_price": 7.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "images": [
+        "https://m.media-amazon.com/images/I/81AsOAcG0AL.jpg",
+        "https://m.media-amazon.com/images/I/61Ax3VuYzeL.jpg",
+        "https://m.media-amazon.com/images/I/8198u96t78L.jpg",
+        "https://m.media-amazon.com/images/I/71wzgNVM4HL.jpg",
+        "https://m.media-amazon.com/images/I/71XYhS8RbTL.jpg",
+        "https://m.media-amazon.com/images/I/71rodcoPbmL.jpg",
+        "https://m.media-amazon.com/images/I/71CjJlu3ytL.jpg",
+        "https://m.media-amazon.com/images/I/71JYoC5HFyL.jpg",
+        "https://m.media-amazon.com/images/I/71+Mh-LO31L.jpg",
+        "https://m.media-amazon.com/images/I/81TvTEhma7L.jpg",
+        "https://m.media-amazon.com/images/I/715Cm8nZ-4L.jpg",
+        "https://m.media-amazon.com/images/I/61pagPo2lEL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 67,
+        "4 star": 13,
+        "3 star": 15,
+        "2 star": 5,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Great quality for price!!",
+        "text": "Love this vest and how it has two Velcro pieces that wrap opposite ways. This helps keep the vest on your pet so they can’t rub it off like my dog used to do with other vest. It helps calm my dog without medication and I love that! She is a rescue and comes with baggage and needs a little extra help! Love the color and really loved the price!!",
+        "rating": 5,
+        "date": "February 26, 2026",
+        "author": "Gena",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGW7IJI6YACGM34PIJ35NWGCX7SA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/fa3cbccb-ec23-444f-a68c-92cfa2461224._CR0%2C41%2C250%2C250_UX460_.jpg",
+        "images": [
+          "https://m.media-amazon.com/images/I/81AsOAcG0AL._SY88.jpg"
+        ]
+      },
+      {
+        "position": 2,
+        "title": "Calming",
+        "text": "This helped my dog's anxiety so much.",
+        "rating": 5,
+        "date": "February 26, 2026",
+        "author": "Carrie",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFHFMZNOYAUSTEHOE3Y3WHZVI6CA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "product": {
+          "size": "XL-Chest(22\"-34.6\")",
+          "color": "Blue"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Best thing ever",
+        "text": "I have bought 3 so far in different colors. My oldest seemed to do so much better with her surgery recovery with this. The puppy hasn't worn hers yet and it'll only fit for a short while but I will definitely buy more. Oh and its vet approved for softness, not causing irritation to incision areas.",
+        "rating": 3,
+        "date": "February 3, 2026",
+        "author": "Stefanie",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHE2YR33JLU7O7CZIE5IFESRKRQQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/8198u96t78L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81TvTEhma7L._SY88.jpg"
+        ],
+        "helpful_votes": "2 people found this helpful",
+        "product": {
+          "size": "M-Chest(14.1\"-22\")",
+          "color": "Light Purple"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Good buy",
+        "text": "Fits my 5 lb chihuahua",
+        "rating": 5,
+        "date": "February 21, 2026",
+        "author": "Barbara Mead",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHYBYBUEG6J7K5GBUZFPGFAD3HQQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "product": {
+          "size": "XS-Chest(8.6\"-12\")",
+          "color": "Dark Purple"
+        }
+      },
+      {
+        "position": 5,
+        "title": "It's a nice general dog shirt, but didn't do anything for her anxiety",
+        "text": "As a general dog outfit, this is nice - it's soft and cute, and the colour really stands out. The material has a decent stretch to it, and it was easy to wash, and the colour didn't fade. I like the velcro, it isn't the typical course or rough material, although when my dog was trying it out, it got stuck to her plush doghouse, which ended up following her around all day.As an anxiety vest, I don't know if it does anything special. I call it her \"hug shirt,\" as it feels like it just gives her a nice snug hug, although it doesn't seem to help her anxiety or personality. To her, it's just a normal shirt, which does feel warm when she wears it. Nothing bad, yet nothing special.",
+        "rating": 4,
+        "date": "January 29, 2026",
+        "author": "Kyle A",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGLAA3XVFEOISOAX5SZKKYGMETQQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/61pagPo2lEL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71XYhS8RbTL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71asKTTpUbL._SY88.jpg"
+        ],
+        "helpful_votes": "One person found this helpful",
+        "product": {
+          "size": "S-Chest(11\"-14.9\")",
+          "color": "Dark Purple"
+        }
+      },
+      {
+        "position": 6,
+        "title": "Stretchable Dog Anxiety Vest that Calms Our Dog",
+        "text": "I have one dog that lives with severe anxiety when it comes to rain, thunder, and snow storms. He also experiences anxiety with loud noises like fireworks. So, anything natural to help ease his anxiety I jump for and will try. The first thing I like about this anxiety vest is the material and the wide Velcro closures. The material is smooth, soft, stretchable, and breathable. The vest appears and feels of good quality material and we got dark purple and the color is solid and consistent.I love that the vest is machine washable and can be dried in the clothing dryer. However, as not to breakdown the Velcro closures (and causing curling up of the Velcro), I may just hang dry the vest. The vest is not water resistant which means it may get urine on it depending on the location of the bottom of the vestWhen I put the vest on my dog that has anxiety, he was calm and actually sat and laid down. I think the vest is a hit for him based of how he settled down when he got into the vest. Also, it was easy to put the vest on him and to take it off of him.We measured our dog’s chest before ordering the vest to try and get him the best size for him. He measured out to fit a small and the vest fits fine. With the Velcro closures and the vest being stretchable I was able to make the vest fit snug like a hug or to loosen it if necessary. Due to the dog’s comfortability I feel comfortable letting him sleep in the vest overnight if needed.I even tried it on my slightly bigger sized elderly dog and it fit and he didn’t resist getting into the vest. He was calm and seemed ok wearing the vest. It was easy to get him into and out of the vest even with him having a thicker and fluffier coat and his fur didn’t get caught into the Velcro.The price of the vest is reasonable for the quality of the vest and its effect on my dog’s anxiety. The vest material is a lightweight, and a cotton blend, that is strong and stretchable and I think that it can hold up to much usage and many washes. Overall, we like the vest and would consider getting a second one for our elderly dog.",
+        "rating": 5,
+        "date": "December 26, 2025",
+        "author": "F. Crews",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEZSVT7C3BXZ7HABGWI2WYSCXXVA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/61Ax3VuYzeL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71CjJlu3ytL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71rodcoPbmL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71JYoC5HFyL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61NGD27xT4L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/715Cm8nZ-4L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71wzgNVM4HL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71+Mh-LO31L._SY88.jpg"
+        ],
+        "helpful_votes": "5 people found this helpful",
+        "product": {
+          "size": "S-Chest(11\"-14.9\")",
+          "color": "Dark Purple"
+        }
+      },
+      {
+        "position": 7,
+        "title": "Good quality, fits and works well!",
+        "text": "I have a dog who recently decided that she hates a LONG list of noises, with thunder being at the top of the list...Unfortunately, for at least three months a year, we have frequent thunderstorms in our area. I started experimenting with compression vests like this one during our last thunderstorm season, and found that the compression helped her quite a lot. This is the second short of this type that I've tried, and there are a number of factors that make it better than the first one I tried:The fabric is soft and stretchy, and it fits her well--to have the desired effect, it needs to be snug, and I can wrap this to fit her tightly while it's stretchy enough for her to move comfortably.My wondermutt is 70 pounds with a deep chest and a narrow waist (she's what happens when a string-mop of an Old English sheepdog sweeps a poodle off her paws...She's a glorious mutt!) The XL fits her perfectly.The shirt definitely calms her, and I think it's helped that we've conditioned her to know that good things (and snacks!) happen when we get out the shirt. While training is not strictly necessary, giving her positive associations with the shirt means that she doesn't object to me putting it on.The design makes it easy to put on--I secure the neck band first, then burrito wrap her with the waist bands. The whole process takes maybe 30 seconds.The quality is good--the one I received was cleanly finished and there are no scratchy bits of velcro or loose ends or crooked seams.This is definitely a product I'd recommend, and the price is definitely on par for the product.(Pardon the sad face in the photos...That has nothing to do with wearing the shirt and everything to do with the expectation of a treat that has yet to arrive even though the shirt has come out...)",
+        "rating": 5,
+        "date": "January 10, 2026",
+        "author": "MikeTango",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFEAXX2O43SNMHEG44KVGQSXZBCQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/81UtEEJDz9L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81j7Y7YPpkL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/719jLQUP86L._SY88.jpg"
+        ],
+        "helpful_votes": "One person found this helpful",
+        "product": {
+          "size": "XL-Chest(22\"-34.6\")",
+          "color": "Dark Grey"
+        }
+      }
+    ]
+  }
+}

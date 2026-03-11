@@ -24,7 +24,20 @@ const { products, pageSlug = '' } = Astro.props;
     <tbody>
       {products.map((product, i) => (
         <tr>
-          <td class="ct-product-name">{product.name}</td>
+          <td class="ct-product-cell">
+            {product.image && (
+              <img
+                src={product.image.src}
+                alt=""
+                class="ct-thumb"
+                loading="lazy"
+                decoding="async"
+                width="80"
+                height="80"
+              />
+            )}
+            <span class="ct-product-name">{product.name}</span>
+          </td>
           <td>{product.bestFor}</td>
           <td>{product.coolingMethod || '—'}</td>
           <td>{product.sizingNote || '—'}</td>
@@ -54,6 +67,17 @@ const { products, pageSlug = '' } = Astro.props;
 <div class="ct-mobile">
   {products.map((product, i) => (
     <div class="ct-mobile-card">
+      {product.image && (
+        <img
+          src={product.image.src}
+          alt=""
+          class="ct-mobile-thumb"
+          loading="lazy"
+          decoding="async"
+          width="120"
+          height="120"
+        />
+      )}
       <h3 class="ct-mobile-name">{product.name}</h3>
       <dl class="ct-mobile-dl">
         <dt>Best For</dt>
@@ -114,9 +138,28 @@ const { products, pageSlug = '' } = Astro.props;
     line-height: var(--leading-normal);
   }
 
+  .ct-product-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+    text-align: center;
+    min-width: 140px;
+  }
+
+  .ct-thumb {
+    display: block;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
+    background: #fff;
+  }
+
   .ct-product-name {
     font-weight: var(--weight-semibold);
-    white-space: nowrap;
+    white-space: normal;
+    line-height: var(--leading-tight);
   }
 
   .ct-cta-col {
@@ -166,9 +209,20 @@ const { products, pageSlug = '' } = Astro.props;
     margin-bottom: var(--space-md);
   }
 
+  .ct-mobile-thumb {
+    display: block;
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
+    background: #fff;
+    margin: 0 auto var(--space-sm);
+  }
+
   .ct-mobile-name {
     font-size: var(--text-lg);
     font-weight: var(--weight-bold);
+    text-align: center;
     margin-bottom: var(--space-sm);
   }
 

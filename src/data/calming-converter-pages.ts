@@ -382,68 +382,110 @@ export const calmingConverterPages: Record<string, CalmingConverterPageConfig> =
 
   'best-thundershirt-alternatives': {
     slug: 'best-thundershirt-alternatives',
-    title: 'Best ThunderShirt Alternatives for Dogs',
+    title: 'Best ThunderShirt Alternatives for Dogs (Anxiety Wraps Compared)',
     description:
-      'Looking for a ThunderShirt alternative? Compare ThunderShirt with calming chews, lick mats, and snuffle mats to decide what fits your dog best.',
+      'Compare 6 anxiety wraps for dogs side by side — ThunderShirt and 5 alternatives with silent fastening, ear coverage, hoods, firmer compression, and budget-friendly options.',
     pageSlug: 'best-thundershirt-alternatives',
     hero: {
-      title: 'Best ThunderShirt Alternatives for Dogs',
+      title: 'Best ThunderShirt Alternatives: 5 Anxiety Wraps Compared',
       subtitle:
-        'People usually look for a ThunderShirt alternative for one of four reasons: the fit is not quite right, the price feels high for a wrap, their dog hates wearing gear, or they want something lighter for warmer indoor use. The honest answer is that the best alternative depends on why ThunderShirt is not working for your dog.',
+        'ThunderShirt is the most popular anxiety wrap, but it is not the only option. Some dogs flinch at velcro noise, others need ear or head coverage for noise phobias, some need firmer compression, and some owners just want to spend less. We compared 5 wraps against ThunderShirt so you can find the right fit.',
       disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
-      primaryCta: { label: 'Compare the Options', href: '#compare' },
+      primaryCta: { label: 'Compare All 6 Wraps', href: '#compare' },
       secondaryCta: { label: 'See All Calming Picks', href: ROUTES.calmingTop },
     },
     blocks: [
       {
         kind: 'prose',
-        heading: 'Start with the real question',
+        heading: 'Why look beyond ThunderShirt?',
         paragraphs: [
-          'If you specifically want another pressure wrap, this site is not currently recommending a second wrap. That is deliberate. ThunderShirt is still the clearest choice when your dog handles fitted gear well and the main problem is predictable, event-based anxiety like storms or fireworks.',
-          'Most "alternatives" are really alternative calming approaches. If your dog resists wearable gear, a lick mat or calming chew may solve the actual problem more effectively than shopping for a second jacket-style product.',
+          'ThunderShirt works well for a lot of dogs, but it has real limitations. The velcro closure is loud enough to startle noise-sensitive dogs mid-storm. The standard fit does not work for every body type, especially barrel-chested or very small breeds. There is no ear or head coverage, which matters for dogs whose noise phobia centers on sound reaching their ears. And the compression level is fixed — some dogs need firmer pressure to feel the effect.',
+          'Price is another factor. ThunderShirt is the most recognized brand, and you pay for that. Several wraps on this list deliver comparable or different compression approaches at a lower price point, which makes it easier to try a wrap without a big commitment.',
         ],
       },
       {
         kind: 'product_section',
         id: 'compare',
-        heading: 'ThunderShirt vs. the closest alternatives on this site',
+        heading: '6 Anxiety Wraps Compared',
         pageType: 'converter',
         positionOffset: 0,
-        columns: 2,
+        columns: 3,
         alt: true,
         intro:
-          'These are not identical replacements. They are the best substitutes from the current chill-dogs calming lineup, based on the situation you are trying to fix.',
-        productIds: ['thundershirt-classic', 'native-pet-calm-chews', 'lukito-licking-mat', 'rundic-snuffle-mat'],
+          'ThunderShirt is listed first as the baseline. The five alternatives each solve a specific gap — noise-free fastening, budget price, ear coverage, a hood for head-hiding dogs, or firmer double compression.',
+        productIds: [
+          'thundershirt-classic',
+          'dajidali-anxiety-vest',
+          'harbyel-anxiety-jacket',
+          'beautyzoo-reversible-turtleneck',
+          'morvigive-hooded-vest',
+          'caslfuca-anxiety-vest',
+        ],
       },
       {
         kind: 'decision_columns',
         left: {
-          heading: 'When ThunderShirt is worth it',
+          heading: 'When to stick with ThunderShirt',
           items: [
-            "Your dog's stress is tied to storms, fireworks, travel, or other predictable events.",
-            'Your dog tolerates snug clothing without shutting down or overheating.',
-            'You want something you can put on before the trigger starts instead of timing a chew or prepping food.',
+            'Your dog tolerates velcro noise without flinching.',
+            'The standard fit works well for your dog.',
+            'You want the most established, widely reviewed wrap on the market.',
+            'You do not need ear, head, or hood coverage.',
+            'The simplest one-piece design is what you prefer.',
           ],
         },
         right: {
-          heading: 'When a cheaper or simpler alternative may be better',
+          heading: 'When to try an alternative wrap',
           items: [
-            'Choose LUKITO if the real issue is bath time, brushing, or nail trims.',
-            'Choose Native Pet Calm Chews if you want a non-wearable option for planned stress.',
-            "Choose Rundic if your dog's tension looks more like restless boredom or pre-departure pacing.",
+            'Noise-free fastening — DAJIDALI or Harbyel use silent or quiet closures.',
+            'Ear and neck coverage for sound-sensitive dogs — BEAUTYZOO turtleneck covers ears.',
+            'Hood for dogs who hide during loud events — MORVIGIVE has an adjustable hood.',
+            'Firmer compression than ThunderShirt provides — Caslfuca uses double compression with an adjustable belt.',
+            'Lower price to test whether your dog responds to wraps at all — Harbyel and BEAUTYZOO are the most budget-friendly.',
           ],
         },
       },
       {
         kind: 'prose',
-        heading: 'Pros and cons, honestly',
+        heading: 'What to expect from any anxiety wrap',
         alt: true,
         paragraphs: [
-          'ThunderShirt is the most direct tool for noise-triggered anxiety, but it is still a wearable product. That means fit matters, tolerance matters, and some dogs simply will not like it. Lick mats and snuffle mats are cheaper and easier to introduce, but they are distraction tools, not pressure tools. Calming chews are simple and flexible, but they require some lead time and ingredient preferences vary by household.',
-          'If your dog panics during fireworks and accepts clothing, ThunderShirt is still the better buy. If your dog hates wearing anything, buying another wrap-style product probably does not solve the real problem.',
+          'Anxiety wraps are support tools, not guaranteed fixes. The gentle-pressure concept is popular and many dog owners report positive results, but every dog responds differently. Some settle quickly, some take a few sessions to adjust, and some will never tolerate wearing a garment at all.',
+          'Fit is the single biggest factor in whether a wrap helps. A wrap that is too loose provides no compression. One that is too tight causes discomfort and can make anxiety worse. Measure your dog carefully and follow the sizing chart for whichever wrap you choose.',
+          'If your dog resists wearable gear entirely, a different calming approach — like calming chews, lick mats, or snuffle mats — may be more realistic. You can explore those options in our <a href="/calming/best-calming-products-for-anxious-dogs/">full calming products comparison</a>.',
         ],
       },
     ],
+    faq: {
+      heading: 'Anxiety Wrap FAQ',
+      items: [
+        {
+          question: 'Are ThunderShirt alternatives as effective?',
+          answer:
+            'Effectiveness depends on the individual dog, not the brand. ThunderShirt has the most reviews and recognition, but the core concept — gentle torso compression — is the same across wraps. What matters most is proper fit, how well your dog tolerates wearing gear, and matching the wrap features to specific triggers.',
+        },
+        {
+          question: 'What size anxiety wrap should I get?',
+          answer:
+            'Measure chest girth at the widest point behind the front legs. Every wrap brand has its own sizing chart, so check the specific product listing rather than guessing from a different brand. When in between sizes, most manufacturers recommend sizing up.',
+        },
+        {
+          question: 'Can dogs wear anxiety wraps all day?',
+          answer:
+            'Most wraps are designed for situational use during stressful events, not all-day wear. Extended compression can cause skin irritation or overheating. Put the wrap on before a known trigger and remove it once the stressful event passes. Check skin and comfort regularly during use.',
+        },
+        {
+          question: 'Do anxiety wraps help with separation anxiety?',
+          answer:
+            'Some dog owners report that wraps help with mild separation anxiety, but wraps work best for event-based triggers like storms and fireworks where you can put the wrap on before the stress starts. For separation anxiety, you typically cannot be there to put the wrap on when the anxiety peaks.',
+        },
+        {
+          question: 'Which anxiety wrap is quietest?',
+          answer:
+            'The DAJIDALI vest uses a self-gripping fabric that is nearly silent. The Harbyel jacket uses a quieter hook-and-loop design. Both are meaningfully quieter than standard velcro closures, which matters for dogs who startle at the ripping sound during storms or other noise events.',
+        },
+      ],
+    },
     disclaimerVariant: 'standard',
     disclosureShowSafety: false,
     internalLinkStrip: {
@@ -451,6 +493,18 @@ export const calmingConverterPages: Record<string, CalmingConverterPageConfig> =
       links: [
         { label: 'Calming Hub', href: ROUTES.calmingHub },
         { label: 'Best Calming Products for Anxious Dogs', href: ROUTES.calmingTop },
+      ],
+    },
+    itemListSchema: {
+      name: 'Best ThunderShirt Alternatives: Anxiety Wraps Compared',
+      url: 'https://chill-dogs.com/calming/best-thundershirt-alternatives/',
+      productIds: [
+        'thundershirt-classic',
+        'dajidali-anxiety-vest',
+        'harbyel-anxiety-jacket',
+        'beautyzoo-reversible-turtleneck',
+        'morvigive-hooded-vest',
+        'caslfuca-anxiety-vest',
       ],
     },
   },

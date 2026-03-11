@@ -1,0 +1,592 @@
+{
+  "search_metadata": {
+    "id": "69b1f528f8cc78be47dd5a4d",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/FTJqx6JnvtY_SrIIA1PMsA/69b1f528f8cc78be47dd5a4d.json",
+    "created_at": "2026-03-11 23:05:12 UTC",
+    "processed_at": "2026-03-11 23:05:12 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0G8LY8ZZ9/?",
+    "raw_html_file": "https://serpapi.com/searches/FTJqx6JnvtY_SrIIA1PMsA/69b1f528f8cc78be47dd5a4d.html",
+    "total_time_taken": 1.88
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0G8LY8ZZ9",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0G8LY8ZZ9",
+    "title": "DAJIDALI® Dog & Cat Anxiety Vest & Spay Recovery Suit – Silent Adjustable Calming Wrap for Surgery & Thunderstorms – 2-Piece Cone Alternative",
+    "link": "https://www.amazon.com/DAJIDALI%C2%AE-Anxiety-Vest-Spay-Recovery/dp/B0G8LY8ZZ9/",
+    "link_clean": "https://www.amazon.com/dp/B0G8LY8ZZ9/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G8LY8ZZ9&device=desktop&engine=amazon_product",
+    "variants": [
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0FVZGDDCS",
+            "name": "XS",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FVZGDDCS&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0FVZGFJVW",
+            "name": "S",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FVZGFJVW&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0FVZHZFKF",
+            "name": "M",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FVZHZFKF&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 4,
+            "asin": "B0G8LY8ZZ9",
+            "name": "L",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G8LY8ZZ9&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 5,
+            "asin": "B0FVZ2KJX5",
+            "name": "XL",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FVZ2KJX5&device=desktop&engine=amazon_product"
+          }
+        ]
+      },
+      {
+        "title": "Color",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0FVZLZ86L",
+            "name": "Black",
+            "image": "https://m.media-amazon.com/images/I/21-3SnGnw6L._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FVZLZ86L&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0FVZPSLS2",
+            "name": "Dark Blue",
+            "image": "https://m.media-amazon.com/images/I/31X01JgIf1L._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FVZPSLS2&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0G8LY8ZZ9",
+            "name": "Gray",
+            "image": "https://m.media-amazon.com/images/I/21g63IByGgL._SS64_.jpg",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G8LY8ZZ9&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 4,
+            "asin": "B0FVZG55YH",
+            "name": "Pink",
+            "image": "https://m.media-amazon.com/images/I/21iuMhmaGnL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FVZG55YH&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 5,
+            "asin": "B0FVZ8K71T",
+            "name": "Tie-Dye HH",
+            "image": "https://m.media-amazon.com/images/I/41pce3TsOQL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FVZ8K71T&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 6,
+            "asin": "B0FVZ565RP",
+            "name": "Tie-Dye LH",
+            "image": "https://m.media-amazon.com/images/I/41CZa4uN-JL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FVZ565RP&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 7,
+            "asin": "B0FVZ9TT83",
+            "name": "Tie-Dye MH",
+            "image": "https://m.media-amazon.com/images/I/418K+hfp5VL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FVZ9TT83&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the DAJIDALI Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/712jcgYde6L._AC_SY300_SX300_QL70_ML2_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/712jcgYde6L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71xV2VtfAjL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/819bmJHA66L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71zsdgQJ9gL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71S9b9L355L._AC_SL1500_.jpg"
+    ],
+    "rating": 4.6,
+    "reviews": 15,
+    "price": "$32.99",
+    "extracted_price": 32.99,
+    "price_unit": "$32.99 / count",
+    "extracted_price_unit": 32.99,
+    "delivery": [
+      "FREE delivery Monday, March 16 on orders shipped by Amazon over $35",
+      "Or Prime members get FREE delivery Friday, March 13. Order within 5 hrs 54 mins. Join Prime"
+    ],
+    "stock": "Only 9 left in stock - order soon."
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$32.99",
+      "extracted_price": 32.99,
+      "price_unit": "$32.99 / count",
+      "extracted_price_unit": 32.99,
+      "delivery": [
+        "FREE delivery Monday, March 16 on orders shipped by Amazon over $35",
+        "Or Prime members get FREE delivery Friday, March 13. Order within 5 hrs 54 mins. Join Prime"
+      ],
+      "stock": "Only 9 left in stock - order soon.",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "DAJIDALIPET",
+          "details": {
+            "heading": "Sold by",
+            "content": "DAJIDALIPET"
+          },
+          "link": {
+            "text": "DAJIDALIPET",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=ALCAGYW1C8AG6&asin=B0G8LY8ZZ9&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "30-day refund / replacement",
+          "details": {
+            "heading": "30-day refund / replacement",
+            "content": "This item can be returned in its original condition for a full refund or replacement within 30 days of receipt."
+          },
+          "link": {
+            "text": "Read full return policy",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GKM69DUUYKQWKWX7&ref_=dp_ret_policy"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "size": "L",
+    "minimum_weight_recommendation": "40 Pounds",
+    "occasion": "Holiday",
+    "brand": "DAJIDALI",
+    "color": "Gray"
+  },
+  "about_item": [
+    "🛡️ Anxiety Calming & Female Spay Recovery (Potty Friendly): Applies gentle, wrap-style pressure to help calm anxious pets. For female spay recovery, the Body Module can be used alone to cover the chest and belly, while the open-rear design allows normal potty breaks. A flexible alternative to fully enclosed recovery suits. Not intended for male neuter",
+    "🤫 Silent Self-Gripping Fabric (No Velcro Noise): No ripping sounds, no startling. The quiet self-gripping fabric allows silent, fully adjustable wrapping and removal, making it especially suitable for dogs and cats that are anxious or in recovery, as pets tend to be more sensitive during stressful or healing periods",
+    "📏 UNIVERSAL CUSTOM FIT (Patent Pending): The 2-piece structure allows independent adjustment of chest, neck, and back length for a secure, custom fit. Designed to fit standard body types while adapting to long bodies (Corgis) or broad chests (Bulldogs). Modules can also be used independently—see A+ for modular use cases",
+    "🤝 Dual Calming Support: Wrap Pressure + Familiar Scent: Wrap-style pressure combined with familiar scent comfort helps reduce stress during separation, recovery, or travel. Modules can be briefly worn or handled by the owner before use, allowing familiar scent to remain and provide added reassurance",
+    "🛋️ Fur Barrier & Easy Care: Helps collect loose fur to reduce shedding on furniture. If adhesion weakens due to fur buildup, simply clean the surface with a lint roller to restore grip. Machine washable for easy everyday care"
+  ],
+  "related_products": [
+    {
+      "position": 1,
+      "title": "Kodervo Dog Anxiety Vest, Skin-Friendly Thunder Jacket for Dogs, Dog Calming Shirt for Thunder, Fireworks, Vet Visits and Sep",
+      "link": "https://www.amazon.com/Kodervo-Anxiety-Skin-Friendly-Fireworks-Separation/dp/B0GC6MCDY8/ref=pd_sbs_d_sccl_1_1/147-2539144-8630046?pd_rd_w=uJRM7&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=992KXBYPGY81BE584QWT&pd_rd_wg=XIGtB&pd_rd_r=b303ddcb-1456-4f6b-8ada-d418f12fea8f&pd_rd_i=B0GC6MCDY8&psc=1",
+      "asin": "B0GC6MCDY8",
+      "link_clean": "https://www.amazon.com/Kodervo-Anxiety-Skin-Friendly-Fireworks-Separation/dp/B0GC6MCDY8/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GC6MCDY8&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71IgF90zRWL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.2,
+      "reviews": 34,
+      "price": "$23.99",
+      "extracted_price": 23.99,
+      "delivery": [
+        "Get it as soon as Monday, Mar 16"
+      ]
+    },
+    {
+      "position": 2,
+      "title": "ThunderShirt For Cats, Grey, Large ( > 13 lbs)",
+      "link": "https://www.amazon.com/Thundershirt-T02-HGL-ThunderShirt-For-Cats/dp/B007Y31JT2/ref=pd_sbs_d_sccl_1_2/147-2539144-8630046?pd_rd_w=uJRM7&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=992KXBYPGY81BE584QWT&pd_rd_wg=XIGtB&pd_rd_r=b303ddcb-1456-4f6b-8ada-d418f12fea8f&pd_rd_i=B007Y31JT2&psc=1",
+      "asin": "B007Y31JT2",
+      "link_clean": "https://www.amazon.com/Thundershirt-T02-HGL-ThunderShirt-For-Cats/dp/B007Y31JT2/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B007Y31JT2&device=desktop&engine=amazon_product",
+      "badges": [
+        "Amazon's Choice"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71KqkqtUWHL._AC_UL165_SR165,165_.jpg",
+      "rating": 4,
+      "reviews": 3335,
+      "price": "$39.95",
+      "extracted_price": 39.95,
+      "delivery": [
+        "Get it as soon as Monday, Mar 16"
+      ]
+    },
+    {
+      "position": 3,
+      "title": "Surgi Snuggly Dog Surgery Recovery Suit – Dog Onesie for Post Surgery Recovery, Female Spay & Male Neuter – Surgical Suit for",
+      "link": "https://www.amazon.com/SurgiSnuggly-Dog-Surgical-Recovery-Suit-for-Female-Spay-or-Male-Dogs-Neuters/dp/B07WPWQKX7/ref=pd_sbs_d_sccl_1_3/147-2539144-8630046?pd_rd_w=uJRM7&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=992KXBYPGY81BE584QWT&pd_rd_wg=XIGtB&pd_rd_r=b303ddcb-1456-4f6b-8ada-d418f12fea8f&pd_rd_i=B07WPWQKX7&psc=1",
+      "asin": "B07WPWQKX7",
+      "link_clean": "https://www.amazon.com/SurgiSnuggly-Dog-Surgical-Recovery-Suit-for-Female-Spay-or-Male-Dogs-Neuters/dp/B07WPWQKX7/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07WPWQKX7&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81nXNXes3BL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.3,
+      "reviews": 5077,
+      "price": "$37.81",
+      "extracted_price": 37.81,
+      "price_unit": "$37.81/count",
+      "extracted_price_unit": 37.81,
+      "delivery": [
+        "Get it as soon as Monday, Mar 16"
+      ]
+    },
+    {
+      "position": 4,
+      "title": "ThunderShirt for Dogs, Small, Fuchsia Sport - Dog Anxiety Relief Calming Vest",
+      "link": "https://www.amazon.com/Thundershirt-Sport-Anxiety-Jacket-Fuchsia/dp/B01DMTPS8E/ref=pd_sbs_d_sccl_1_4/147-2539144-8630046?pd_rd_w=uJRM7&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=992KXBYPGY81BE584QWT&pd_rd_wg=XIGtB&pd_rd_r=b303ddcb-1456-4f6b-8ada-d418f12fea8f&pd_rd_i=B01DMTPS8E&psc=1",
+      "asin": "B01DMTPS8E",
+      "link_clean": "https://www.amazon.com/Thundershirt-Sport-Anxiety-Jacket-Fuchsia/dp/B01DMTPS8E/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B01DMTPS8E&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/51ufzIqMKAL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.3,
+      "reviews": 20999,
+      "price": "$45.99",
+      "extracted_price": 45.99,
+      "delivery": [
+        "Get it as soon as Monday, Mar 16"
+      ]
+    },
+    {
+      "position": 5,
+      "title": "Meifsou Dog Anxiety Vest, Skin-Friendly Thunder Jacket for Dogs, Dog Calming Shirt for Thunder, Fireworks, Vet Visits and Sep",
+      "link": "https://www.amazon.com/Meifsou-Anxiety-Skin-Friendly-Fireworks-Separation/dp/B0DM5XFHTQ/ref=pd_sbs_d_sccl_1_5/147-2539144-8630046?pd_rd_w=uJRM7&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=992KXBYPGY81BE584QWT&pd_rd_wg=XIGtB&pd_rd_r=b303ddcb-1456-4f6b-8ada-d418f12fea8f&pd_rd_i=B0DM5XFHTQ&psc=1",
+      "asin": "B0DM5XFHTQ",
+      "link_clean": "https://www.amazon.com/Meifsou-Anxiety-Skin-Friendly-Fireworks-Separation/dp/B0DM5XFHTQ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DM5XFHTQ&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71ngKDGePmL._AC_UL165_SR165,165_.jpg",
+      "rating": 4,
+      "reviews": 575,
+      "price": "$23.99",
+      "extracted_price": 23.99,
+      "price_unit": "$23.99/count",
+      "extracted_price_unit": 23.99,
+      "delivery": [
+        "Get it as soon as Monday, Mar 16"
+      ]
+    },
+    {
+      "position": 6,
+      "title": "Nanaki After Surgery Dog Recovery Suit Female Spay-Male Neuter Surgery Suit For Dogs,Abdominal Wounds Bandages, E-Collar & Co",
+      "link": "https://www.amazon.com/Nanaki-Spay-Male-Abdominal-Alternative-Protective/dp/B0FNMVYS3D/ref=pd_sbs_d_sccl_1_6/147-2539144-8630046?pd_rd_w=uJRM7&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=992KXBYPGY81BE584QWT&pd_rd_wg=XIGtB&pd_rd_r=b303ddcb-1456-4f6b-8ada-d418f12fea8f&pd_rd_i=B0FNMVYS3D&psc=1",
+      "asin": "B0FNMVYS3D",
+      "link_clean": "https://www.amazon.com/Nanaki-Spay-Male-Abdominal-Alternative-Protective/dp/B0FNMVYS3D/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FNMVYS3D&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71hRwqMefRL._AC_UL165_SR165,165_.jpg",
+      "rating": 3.9,
+      "reviews": 25,
+      "price": "$27.99",
+      "extracted_price": 27.99,
+      "price_unit": "$27.99/count",
+      "extracted_price_unit": 27.99,
+      "delivery": [
+        "Get it as soon as Monday, Mar 16"
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "position": 1,
+      "title": "Transform One Outfit into Many Uses",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/69c5e26e-e9b9-4a36-bc4d-81b5e64175d7/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/71k8kCpgUcL.png",
+      "duration": "0:30",
+      "vendor": "DAJIDALIPET",
+      "date": "Nov 19, 2025"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1
+    },
+    {
+      "position": 2
+    },
+    {
+      "position": 3,
+      "title": "DAJIDALI  Anxiety Vest",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/065d22a4-f1d7-4432-a626-2406a626f195.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 4,
+      "title": "DOG  SHIRT",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/47cc6a25-8658-41d8-985e-b9a2109f393d.__CR15,0,3201,1312_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 5
+    },
+    {
+      "position": 6
+    },
+    {
+      "position": 7
+    }
+  ],
+  "product_details": {
+    "item_weight": "1.3 pounds",
+    "manufacturer": "DAJIDALI",
+    "asin": "B0G8LY8ZZ9",
+    "customer_reviews": "4.6 out of 5 stars",
+    "rating": 4.6,
+    "reviews": 15,
+    "date_first_available": "December 18, 2025",
+    "item_package_dimensions_l_x_w_x_h": "9.8 x 7.9 x 0.7 inches",
+    "brand_name": "DAJIDALI",
+    "target_audience_keyword": "Dogs",
+    "warranty_description": "Please refer to the platform policy",
+    "color": "Gray",
+    "size": "L",
+    "care_instructions": "Hand Washable, Machine Washable",
+    "specific_uses_for_product": "Adjustable pet apparel, Dog and cat calming gear, Modular pet clothing, Post-surgery recovery support, Self-adhesive pet fabric"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0FS1JP5K6",
+      "title": "Recovery Suit for Dogs Cats After Surgery, E-Collar & Cone Alternative Surgical Suit, Prevent Licking Dog Onesies Pet Surgery Recovery Suit Soft Dog Bodysuit, Pink, M",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JOVnvJlRhMV4pbGTaJH9zBAAAAGc3yWnlAEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICBzb_k9/clv1c_ek-wBXfWFbbSzjK3Y2tRX9r7-FuCmJWwlkuKMV_2GqeW_laNRg0dxCw4Y2FB0NNIalU_yQClDZe-rKc2YSIrm7Z0DmlOPGz16s9VDmgnn6qwh2jb-88mm3_q7nk1I3RsLtKsxXrrEK2a-LVWJDT4rtTZAF2dk1uatM6Il3cITwUWShGsU1RLXZnpdbPCqGX98Dq_YUpVCTMQ7LC911JSVqJbv_0VDDa92ThX_X4rpsI-MGf72fElu55dO0A9-D3npjfLclsW6Jop3xQs5S-j3cmtjZh2kmmHZMwq1MCIx_HmaE9P0avsq_dfNft-3w_BxYqZ_6OFRTwNv4iHJTLhIsbLHis1FPPFVYzFw-QKEnvmZoASYYgU6Fg6PDrweW0Xkw-fZHjJoIuKAjPwaRD_Q4QedeNKpb7oXQKmL6DyslNDRIs25WVmwODxg_sbIdFElKX4CkKgZHXpCTnP3jaEmM4cLFmDxk2QfLcDjLqGyeWSa7XIeha2-p3-nPwRn2wzz4LSHDSbv00F-kIreP5efB8tGHt0xvvEXDSgc2tbMqdADMQW7yEhnmjB51tYoDybvoLXeG_8lUYUcfw_5bG-8w-ETQoIXzhI2Vmwk82tvhXs4mdEaar0thy8N1ohCst9qob7_rfOaUcSdqYZwcn6_4htR4aGsnIua95HquVCQmX4QIFLEhsjDd97Rk8-F4CJ20XyPvlCyvLax0au25OdPsFWtXYRmYohqVzg46LGzmH2z4jOwK239F8dy1sF4HZvSL-NBxEp-fIo38pyoZaI6OCtCl-1zRfZPsRl3iQZc8JDRF2WAAG-w3fHVY1J4i6IzGPjjdD_3pU3VfgMUlmLuBiiBZj5dSqVsN2rXM8Tp1UTZnn9p4xfNLBR4VXpUrUDIkZc7JryN4AL7_9vWhKEj7T5Si9lIkeF3H-F61mq_QIZ5Am-zrvJ4XojXGIf-No84NpYvMN5yeJUQotNXgadz-EVrEkDC0UT8M5nx3jAqmk6teGSiRPX7CcHOtEEiYqJn9DNnWH7Djb8z9RWY5giROpmT135DUznUzVg2R3niPTAk8rXeM9_9jNunY4dp4u6ob4sqbyRttKxeunlAGtoSSWKrPLZJMoydXUHD9sW1dxNITMQr8F42SJ9Oev4lw-6SrPMWmRRRlSGUSsQNkPA74cCpQe2bWrPURY4NwQk7JhCPa7wdUVNnfYkUxoAwsajlZ5k0DbaLBi-R0UNgwBdwDRC83_2CYdDKCm13uN5A8HXZ8ByAkMqJhejD-PswvQ_PIPlunh3bN5sVp5lnmhBoHKtm8_AYEH_Wsy1VKSEbBk9BbnS-51GXva-BO-1cbgT4TqvIb7jH1qfNy1FTH_KGko6zjUSTJPoyVQ4qXqBcr9NqgxQ-8ONBVg_VXYapHfTl8ky-NLf8PX5gIknSEzOrGg_3lGW_0oCAbMMO7jJkEtR8cRwHn9Dl49dIitwsMZw8OnW-aOZJwc1WvFyol9K-xga4ycv3yd9WfYfYa3gwCyq5c5v6kqhJLQo3I9mPQ/https://www.amazon.com/dp/B0FS1JP5K6/?_encoding=UTF8&pd_rd_i=B0FS1JP5K6&pd_rd_i=B0FS1JP5K6&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=zrUSt&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=992KXBYPGY81BE584QWT&pd_rd_wg=XIGtB&pd_rd_r=b303ddcb-1456-4f6b-8ada-d418f12fea8f",
+      "link_clean": "https://www.amazon.com/dp/B0FS1JP5K6/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FS1JP5K6&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41zkIXzt89L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/15a28f59-258e-4bd7-ae00-483c1e4019b1.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/15a28f59-258e-4bd7-ae00-483c1e4019b1.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.1,
+      "reviews": 74,
+      "price": "$19.99",
+      "extracted_price": 19.99,
+      "old_price": "$24.99",
+      "extracted_old_price": 24.99
+    },
+    {
+      "position": 2,
+      "asin": "B0F1ZHWFPQ",
+      "title": "PET Glam Recovery Suit for Dogs Cats, After Surgery, Alternative E-Collar Dog CAT. PET Shirt Breathable Abdominal Wounds, Neuter Cotton, Prevent Licking Onesie Surgical (Green, XS)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JGQKrmsoMIU1TO8yIVl1uiQAAAGc3yWnlQEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICDca1i1/clv1c_ek-YBff3asTaBgN_A_hw2nszoRMg_PcgXQHWTnIkT__epXAyjMhlQagfppUnsUxR4h2DiHQ6E2U2Ycxn1dSO2BA6LigRwJi9vezyHsP9v2AujwSva3XiWgOw0nl0oWhFckqxelJM8HPbQnvpTle5lZILId-G7pVr84VxzySSmEZPCcuCDMQRQ087q-e57kfUKB9jr0JIHUugNXKtNgzx1iMKXB55UkZyURhr0OypJiEdDGpian0OcOibfNeKlWaLiLHNtXCqH8J4Loyx00DbSqz6e9dpXbSQ9HohROe-1LwD6OGCVEVEF-PxbtTxDYmeKYmzKk-CVuvo9NSVNfZsx2PFVBS8HTNi-GBk3a9VC07VJcJmYw1BGC67G1wYEiU4nabeqiLxdgkbK1jKA9JBPq9kXmdDx1xIeQM97iK5qX9Yv0ehlo6m3kkk7WDSPozwIP1hqZQBC548TtnZC3JNPx-QRVipeeOYavU5pfGZFaGUnjhhJgcgJsaqlCIaHIU8_Ae1bQ0D33FCYJTp0P2wKftvNdCLbRfSdJ0UyHbbuE5c-GpPbfZP5D7TlPBGNW1ntGE2TzkYkjJZqO7-DCrpH2fP3rSGE3dbzlXKr_bZl8hKjw77aMZYEN0NRQNlpmOyxyG7m1ams4PC2cdr5i0DDkMi5eSbJCN1qC0Aykc_wJMroLdonysrDx-o5II2N9vKuO3mZMKsj6Ka1_QG38nmC5tsvYG5JAUcG4-C1IKi7kpmslhGKS_09ynpcCQBeBc4gvfFOlSKgC18PO4OSvq3P5UYijemWVKvyLHTJI3Ratc08L6jXTf0d01soYAq2iW4QhHqt7MXWBqKCtqeReT3YAA3sAYPXLvn9fHC4zaceb0JKlBlqinxnHyXHAYdcO7kkGedJLEy9cQx-fRxm8c6H8k0vFNmZPgup7K0JvDVY3XlF8UUNUPaskkxrrVvlX-fKWrg3SsXBYfgJu9u_a_Hnx4gjw5wPtfJaX2K-avZBrW5GW-AVRJbRJjpAYM4lKRLIG0ye9NjNS63moBsAA48DGUrUCnVniM1rIQY7__huYvB_y9Ruinwr9gdcnSd8-37B-D0LvC7aZD9PIJushvZwv-QfAwZ9GZnLYQwlidz0Bo4Ttcis3FxUVZHi0O86QISu1oY2mfWf6UKe2re-9XV1gSST_pMZB4EQH-et2l8-qKJFu_Pfc_N6zH5QyvKmvecYV6eVhhr-iAUSilijbxyD-NL1L7HgpE4-W26KzXsHL-Cv90Bp1CQdRUOTFMgSXXhdyBSg1iXW3e-7ZkE-4b9Tf8dJFwJrTEXesHT1OUW2nnJi6_rhONRRSXE3CXOjmnLOVLN1WRNDxrUBRT5I0PW2zVhS_O0DQGzEcxD049BKWmdiFoT3fVUjuy7LqhvcJRA4t4rsbFTsCclT-eEqbz0TzSZFxN0yHDI4-N5SCaNRzV8PlNDDPDd2zm8DI_FL2wVIVxmO4zyReUDeMAZN4FH3tZOe5WgbMPgXBCdeQoguP5DEtm_uNZrTheZbYhGFqyGxNk2I2I/https://www.amazon.com/dp/B0F1ZHWFPQ/?_encoding=UTF8&pd_rd_i=B0F1ZHWFPQ&pd_rd_i=B0F1ZHWFPQ&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=zrUSt&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=992KXBYPGY81BE584QWT&pd_rd_wg=XIGtB&pd_rd_r=b303ddcb-1456-4f6b-8ada-d418f12fea8f",
+      "link_clean": "https://www.amazon.com/dp/B0F1ZHWFPQ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F1ZHWFPQ&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41+TVXperzL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/1cad1f50-e938-4380-b844-5c2305f8c45a.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/1cad1f50-e938-4380-b844-5c2305f8c45a.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.3,
+      "reviews": 13,
+      "price": "$21.00",
+      "extracted_price": 21
+    },
+    {
+      "position": 3,
+      "asin": "B0G57S64ND",
+      "title": "KOESON Dog Calming Hoodie, Adjustable No Shake Ear Wraps for Dogs with Hook & Loop, Soft Dog Ear Muffs Noise Protecion, Pet Head, Ear & Neck Covers for Thunder, Firework, Separation Anxiety, Hematoma",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JOgLZUNAtd0c8K3n1BC1AUgAAAGc3yWnlgEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICD8cglM/clv1c_ek-wBfHXbcbW3kaJGWWQg8HhpKqbHBjPstd00m-wi-pRGXaznZ6rv2bQ-0Mw6lya6VuUMxg2QYvFIWiQbPzLk2WvhgzJo3P_bX4n2viwWPzww0C7be82Dn70Yrj3oC_MPW9AFYmuDgRIG4aSJq1S8lhbotuI7pVzGtSQzb6g0oMaY9aJZRK5-_nOg6T9KUlGHK6nhwvLFgo8x87dn_7sWWDrVRcVEqmUv5AYWxz6Ko2HTnPixeWCZ_GLmOF1QKcbBAVYESSCOh8EjPiCNN2kbP76AGCHkP8D23U0tTVCFGk_3VO4RstOIR7sIcv368ef00ElOJmCgl-yEAq9aXfQztyYbr_rnytTjBd17JmZWYAHu6FGaMTcnMHljXg3QxqKt_e84D38GOX5lcaZrKw2fLgqXA9OZub1cOudXE8Jrl9A5JvO1U0AqX2LhPd3roWB9eYYqQTNVxtR_ArJooXGG5x3DGQN4vRrlvjBb3xRi1DMa-SI2ICxAlMHRdUBv7Nu9eBN-P8jRNBWZnnzwuRWf9eS3vEJBNlVzOiIrmKZIqdCTMxUCoLa5fmFe9ji--p_o-JakA3Pc2xnVNNumEtuoLhuyNRH_D2JX8Gw3FAAP79YzThYbd2GN_EE5ru_X2D7tzI6-EDBl9B-bfSeqowXV8bVKm72msHzzVytHTf23JgjbCkviBIJCldn0L96tLUAa8gTbZa-j5J9FwxCAieoHxQhzUM_b1ynMFrgy6DFCdMCGAzfc2fhYAoAeTAHd-g6MOVAHwhF1XbucxYKrA89PlwRsfSps0Qn9pkFM6UInZUH5902KUaybGWdj87cPrR0CYw5DKNCQjilBWXXw306j5UGH-_21vsfXhNxBSKzQrd1exBFL9uqvdjydieiEVdZ0xDnwRbYjQM8jpvvEAy-n3UWisQIaYqwzIpees0tqD979ZU85VQYfSgofWTrWxUmY9GRw_AuTLMylcQOHsDwUeW82ndXKrI_ChtI2Sf9vf5RBALxmpGGuuKtcsLTA84AcKpGJgI8YSngIHtJlWX3deiUTGqUoNrPs7p_8_VJBBKLOFMSjtkvb0C1RoeXkvmqywN1eCGbwusU7JBqp3BIXJ07FeWwR-UkB5n_AOIINRAekfoOy-k4rWRSug-WzfCMJkBZTHO0tkA9sS3q7v2Z2-Vai8OmacTN7A5YBiZZODEFMTYCuQNrCJgnXv9xL-Gvrn8aeHG2ONmHoZgmT_2TENA6RXZ0dh5Z6ztm2j6YBpxVzD11TB7x9O49UBH3A1GnhtRsQznH-7eESIXeazmYV7o12OW52UWTN6gGpB6h3vCeTeEh7uBODq2m-_pmmYrgFJ4RSKW0X0jf0BN4DbRDRq2FWECtud1FbHAKiSqvdCFrhyAy-ajt04nuYCKTzxuuSWeXghZCvMPZpYpQIyhxwojciFBPUKppA2RYB4_us_upoh6qk7AbFvExrbIZ_wSmBP5jB99ED36AKsMir6_Pe4of564rPENYZGRTXJsigmG5EOdHlHtxAsd7Vw0/https://www.amazon.com/dp/B0G57S64ND/?_encoding=UTF8&pd_rd_i=B0G57S64ND&pd_rd_i=B0G57S64ND&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=zrUSt&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=992KXBYPGY81BE584QWT&pd_rd_wg=XIGtB&pd_rd_r=b303ddcb-1456-4f6b-8ada-d418f12fea8f",
+      "link_clean": "https://www.amazon.com/dp/B0G57S64ND/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G57S64ND&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41sOv07wFeL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/1645242f-61b4-47c7-814c-c07c467aae10.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/1645242f-61b4-47c7-814c-c07c467aae10.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 3,
+      "price": "$19.99",
+      "extracted_price": 19.99
+    },
+    {
+      "position": 4,
+      "asin": "B0DHKJXYQ5",
+      "title": "AOOLMOL Dog Anxiety Vest and Coat, Vet Visits and Separation - Keep Pet Calm, Dog Jacket for Thunder, Fireworks, Anti Anxiety Vest for Dogs and Cat Body and Ear",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JOFyAcrnVGvwnRidBcpZ3AsAAAGc3yWnlwEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICBaPUWu/clv1c_ek-wxfHXbcbWDVXQl5qIwd59BF5KfsE4VeSfOI9zPYMGt1L0mZlcP2bQe-OON_zWzEPeVb3H805u7aRYpd_cCf4pDd20-nkS2XB5B3im7dYy3yC_znFQ6Oj458lEhzNn3K0DmlMrFq2aBL1XBAz7rtjRsJ2enX26jsCAH7fryoI1DaPxjRDoEuoS-tI2RdE1yX-_70Fzd5doMvT8MCIJQMAbldub5kc1P6IeZair5s6ejZtIna6b_IQTAJ6Ddf1rNNnCSs08SDa3YquqCXIZSqD4NLixOKXvAXWDWkBf4h2681s67sziBJqf9bU0LeDm7Xz63KhYQ3Zs0ugK26yqLFrz2-QIl7jTUWT4w5nJMuZCPsgwLjxjknbZ9EFCdch_3KMroWPOwXEDG-uYJVteXpyIn5XW5HFX63NLTLVq7ICWavuJysf-TK6TlcVxffOd7h1ld4F4BLVwQNATSbdHrc4CvF5QfIz6inxygorRvuXQRknIXEyKLHtdC11ZtOKW2HbSADQYv03F-dlaB5w9kscTy02mLyGLsuzr82nbpb0cYS0oRvRkSv7vwbbuoob7hOCj6Gx-lW44rDEf4Hax8nHD_bvXL5h74VfqLn60QCSQpzHCyhY9HQjjgi5dQbSR4m6EM0mRR1BxXsuWmrOEdIssmx0odEWq6palHk3ZlBD3LQFtJV7ai_UJ3UU_GgMX1d3F1AMk7DUbsjxMry2NZAvZGkydNJG_4_cqBR2lOBI9fzYjfEP_FCPyRzgWdjIgeWn04S1Crx1vrAIcSiuLL3f2CBt7EEjIw5IEC8uHpDtNDzb2j17F1ywE_GWOmUKW2CAf2dhFqU-ShEX8Bv2SCIkdY61IT4UmcwUG7KvPUtGuKkp4QCQ-__HCAi9ZIMaymDGeCC5axJA5WOoYB3HMpE-wFifD2HotpVsdI0poxx8yo1eA8V6svqVxU2LVIS8FB_fTbjGYzK0gtxcFww2PShLbQ2V3ccYLGTDN1l-9uy40BOTrsGsVL6ypSKE7me2UnFKxp8_p1ixxJfoxViRBEQJzGoM0H8K59t6EnJHkMZVEOxzov07Xc5_ZJssSTsKvzG1olwC869E3n7xdIug9iqmUSAYTYoZAmFlGPskSURzz1_gmdU-Who50MXDdrVgDIm7doleW92BwGzYU0srfueYI7LTIQrwL1M9ZiTgB2ycL88Mb7DiFRcF7E67U5Nmdyl6HiKUSRSIpue0ZBJjM7-mpXc2tZQsAjrQDqQRQrAWwSkdkGCvVt15kfEVEjjSfN6QgNy8URSiYl4ftmk99WW0EKAeByHTaXq7xRieN0GWTSebP0dgFr7WnFZAXvvVu-DS44iIILK1CsgfTbKM_Ww0bIGUVCEItgw3X47OqfBG7uPH3QxQzhiXgHgqU5PC2sV39bgw9XNRaJx_WsfF0iVlPpX6nc9hjvgaHla07WI2YK5Ab0UAgCuAe95YkCfhw91KHiJkUV1JlHUm2VvhFIZwc8zYjjzVpVyqfgtdwiH-2CfRAbUaXJsP0q2n56mS9nJvg5dqw6u_dwC97nd-e/https://www.amazon.com/dp/B0DHKJXYQ5/?_encoding=UTF8&pd_rd_i=B0DHKJXYQ5&pd_rd_i=B0DHKJXYQ5&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=zrUSt&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=992KXBYPGY81BE584QWT&pd_rd_wg=XIGtB&pd_rd_r=b303ddcb-1456-4f6b-8ada-d418f12fea8f",
+      "link_clean": "https://www.amazon.com/dp/B0DHKJXYQ5/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DHKJXYQ5&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41Dwz9viuPL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/6b891636-ead4-4cd8-90b5-3359cf8c966b.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/6b891636-ead4-4cd8-90b5-3359cf8c966b.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4,
+      "reviews": 273,
+      "price": "$16.98",
+      "extracted_price": 16.98,
+      "old_price": "$17.98",
+      "extracted_old_price": 17.98
+    },
+    {
+      "position": 5,
+      "asin": "B0FMK6JLMS",
+      "title": "LIANZIMAU Dog Surgery Recovery Suit Full Body Alternative to Cone with Leg Sleeves Comfortable Spay Neuter Suit for Female Male Dogs Postoperative Protective Pet Clothes Pink L",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JAZEXo_K6OieNRDplldDLV4AAAGc3yWnmAEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICCMAiu9/clv1c_ek-IBXfWarbS3lYJGhWWgc2FhGqbDBjsuz-yaRqlFanno1nyrBQxTjav8Yog7MKa4h2DSGzJcwtXR7RYlU_z198pFSfoozF3Wq73ItLwnpmekVSqt7W2QGQo4vp3rCbU_Md5nIbPc--h8LMxJFk_fPDYofksFlUv0MD30i_-jNdP-bmpec7pzFu5liNMD6blUzYNY01FJRP43ix9FFBSVqK7PX4WAOwzuFU2Ahp1ccM-wGZ9Y8wwZ_zeexAl9K06WlAZgwjHrafZeETKNpdm7MutjZh2khE5_M0q_MAY4c8PKOCCVEXtUjDfLzoVDomeKYGRKi9SLe_ojNTRNfZsx2PFVBS8HXP22lU7Bo2ofS-8UuWrpLJhyZ22Ux9x5ZAD5AXVxhsB9wpHtu-GK8FHvbJR-WNe90nPUd764vEsOb7bJEE8z8oqVoyb9uEUcO_Ue6cBp98p7ifOBQgOYzRCJMvT3ALHuSgJY-hu2HpCnBCA7wkXQkRUGWMIRpHduCymUVLa_aSD2b7x4nfYMazq-eQiCwPCR8gNz64vsEXq3i9-_SgHfxkkIvnI0ghWlc2zOXyE2R_KHqVllxUgrOMIHwd8hFElKMQFXzK9Av-JsvQAHPvbZqryaDEjg6p9TX982-PnglHx2vk7HiyB2lTP8mxnHEIpxu_rZQFbe2uM70i52v7WJh2POeGAzkaeJIq5AwxjBrJLC5B7167FvIFRPXKZtfAf-eTf4xSK3osmJb8nRBSPBXGk2iCm8-pm8NjGw4EL2py0rESl7Ba-WvnTSAti6VgNAaYUCMYLwc-cPDksNIIcuiEr10ok9XBGJ8dTvxCwcLLUf2s-ZeKJ7Kq7xYRmqvFEIYWySspnRWmU23Y2ciyXUXC0iWAqwnfTECspbpN-ZoI2l8PLVO4W523YFAeBTKDJpTNqe4gy_fUIRMc-QNtiIaU1pYYbQRquTpWJlSdPtSXOwO95kj9AJPVadCNB2XZW6vMcCimcpoAvZ9U8GtoR9vgok-nN9PeBHUqKg-d-NKetL21A8S_71IJ_7LYKag1X61w7HZVVGUjV50nom5WzgOSKRScG4KliiuxGc1AoI6soS0p6VF3hITyhGhzSp2LBOOrGA7PQfr5zsUVFtFqIUwtFeWNSKiBXSEw9610J5cb6Brh-4uEhCvfROwyrm_MwBIWspRSJYAvVhs_DxRW1PXDaaONIVjVPlHG1xO4or_k-JsxARw_NZry9RAe7_XAhBZWBY91V2eGiIBsdnCXZXxr6SMuiZyh-4aMBzaOMTtdQhLHA-d17VdzCKNO1yZf99ocVMbNe_YQXllUcbfBRInzq1l-3pLINb_70jr8xtgFSxH7trykLc9R-o4gH2XlOG8elYhOHsotzrgb8V0fHwpKw-6BWlfRwaSp8KjjsWBseXCsdu0h3CfrRMa4oiovoSamiICLeZmJgpjHzUdwYUUAgv-Ga6c_WbKMqP9vCOpBBozNxtOgC8L1D9Ohg0CPVmIp0Yo9YgNawanOh7W74DpCzqddxS9HWb66Qn3HilTLk1CJrTQm5D5FGxg/https://www.amazon.com/dp/B0FMK6JLMS/?_encoding=UTF8&pd_rd_i=B0FMK6JLMS&pd_rd_i=B0FMK6JLMS&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=zrUSt&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=992KXBYPGY81BE584QWT&pd_rd_wg=XIGtB&pd_rd_r=b303ddcb-1456-4f6b-8ada-d418f12fea8f",
+      "link_clean": "https://www.amazon.com/dp/B0FMK6JLMS/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FMK6JLMS&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41sRATpEW0L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7a431dcb-aeb6-4de0-a9d5-dc5a12117ea0.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7a431dcb-aeb6-4de0-a9d5-dc5a12117ea0.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4,
+      "reviews": 75,
+      "price": "$26.99",
+      "extracted_price": 26.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "images": [
+        "https://m.media-amazon.com/images/I/71e6t5gB2IL.jpg",
+        "https://m.media-amazon.com/images/I/71mINJqPFTL.jpg",
+        "https://m.media-amazon.com/images/I/71GMpfd9f4L.jpg",
+        "https://m.media-amazon.com/images/I/81AQE4c3ZwL.jpg",
+        "https://m.media-amazon.com/images/I/514daOS9XzL.jpg",
+        "https://m.media-amazon.com/images/I/61taz+m-fmL.jpg",
+        "https://m.media-amazon.com/images/I/61h2mJnDklL.jpg",
+        "https://m.media-amazon.com/images/I/61EvoEH6wKL.jpg",
+        "https://m.media-amazon.com/images/I/61rqUgcAurL.jpg",
+        "https://m.media-amazon.com/images/I/61PWBct1SPL.jpg",
+        "https://m.media-amazon.com/images/I/81BIXq-u33L.jpg",
+        "https://m.media-amazon.com/images/I/71Z8+aOcH6L.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 72,
+        "4 star": 18,
+        "3 star": 10,
+        "2 star": 0,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Awesome thunder shirt for cats!",
+        "text": "Excellent product! I bought this for my cat whose stress grooms. It’s really nice. I love the fabric, it doesn’t need to be pulled over the head so even putting it on them is low stress. So far our cat doesn’t seem to mind it either. I’m going to order more",
+        "rating": 5,
+        "date": "February 22, 2026",
+        "author": "Runner72",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFFVV47FXACIOXGL6W2VIBKLWAYQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/71e6t5gB2IL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71mINJqPFTL._SY88.jpg"
+        ]
+      },
+      {
+        "position": 2,
+        "title": "flexible, comfortable, and silent to remove. excellent for cats!",
+        "text": "this thing is amazing! our cat was meowing loudly and excessively for almost 2 years since we adopted him. by chance we figured out that putting this \"Kitty holster\" harness on him calmed him way down (we realized he had anxiety.. duh!) and he started acting like a normal cat and would only meow occasionally! our problem was finally solved, however it was a bit stiff and restrictive and he didn't seem totally comfortable; he couldn't jump up on his cat tree very well. I knew about the thundershirt and thought about getting one, but then I saw this, and I'm so glad I did! it has the exact same calming effect on him and it's way more flexible and comfortable. it is also way easier to take off...the kitty holster has strong Velcro because it's made so that you can take them on walks. I had a thundershirt for my dog and remember that it had velcro too. Forest was trying to bite us when we took it off because it made a lot of noise and scared him. no noise with this one! I'm so glad I took a chance on this because it didn't have a lot of reviews, but the ones it did have were glowing. I am now joining that crowd and plan to tell everyone I know who has a cat!",
+        "rating": 5,
+        "date": "December 18, 2025",
+        "author": "Meredith Rock",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFUFDVOW4ZY4KBYYCMLXMMMVEWSA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/71GMpfd9f4L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81AQE4c3ZwL._SY88.jpg"
+        ],
+        "helpful_votes": "6 people found this helpful",
+        "product": {
+          "size": "XS",
+          "color": "Tie-Dye LH"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Absolutely amazing fabric",
+        "text": "This material is so cool, and this little vest solves so many problems that I've had with other types of doggie clothes. I have a miniature dachshund and she gets nervous for some reason when I put any type of harness/vest/jacket/sweater on her. She doesn't like anything being stretched over her head, and she doesn't like when I grab her paws and try to direct them through a hole. She also really does not like the sound of velcro ripping apart like when I take off her walking harness, so the silently detaching fabric is really fantastic. Another huge problem is that her legs are so short, if she's wearing something with any kind of sleeves, her front legs usually end up getting stuck inside and then she can't walk at all. She has needed surgery for a couple of ruptured disks years ago, so I like to use a harness when I take her for walks, but it's just always a challenge to put it on or take it off without her leaking a little pee during the process of putting it on. I do like how this vest is very adjustable and versatile being in 2 pieces, but there were just a couple of reasons that I didn't think it was a perfect 5-star product. I thought the price was on the high side at first, but after I investigated this fabric, it's very expensive from the source so I'm not too surprised. Also the shape is a little strange for my dog's body and it hangs a little weird, like around her neck. I know it's supposed to be a calming vest, but it has the opposite effect on my dog, and she's really only nervous when she's wearing something. She's not at all afraid of fireworks or thunder, so I mainly wanted to use this for warmth in the winter months. I know it's not advertised for that purpose, and I was just hoping it would be a little thicker. It's really nice and innovative, but I just don't think I'll be getting as much use out of this as I had imagined. It's really a cool product, and thank you so much for letting me try it out.",
+        "rating": 4,
+        "date": "December 2, 2025",
+        "author": "RJ",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEFMAUGDBBAJUHMB2HKZLBTDNMAA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "helpful_votes": "2 people found this helpful",
+        "product": {
+          "size": "S",
+          "color": "Black"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Amazing Calming Jacket — Noticeable Anxiety Relief & Comfortable Fit",
+        "text": "I bought this for my anxious pup and wow — it’s been a game-changer! Unlike other calming wraps I’ve tried, the modular 2-piece design with a detachable ear hood makes it really versatile. The vest feels snug without restricting movement, and my dog seems much calmer during thunderstorms and fireworks. The silent self-adhesive fabric is easy to adjust and stays in place — no noisy Velcro ripping off mid-walk! The ear hood is a bonus during loud events, and surprisingly she doesn’t fuss about wearing it. It’s helped with separation stress and even eased her reactions on car rides.Highly recommend to anyone with a nervous dog or cat! 🐾",
+        "rating": 5,
+        "date": "January 7, 2026",
+        "author": "kelley anderson",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHGBY7OFXNWVSDSYVMSZ5MK2A6EQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/42c9343c-b91a-4c24-ba98-e1f656187f20._CR0%2C0%2C500%2C500_SX460_.jpeg",
+        "images": [
+          "https://m.media-amazon.com/images/I/514daOS9XzL._SY88.jpg"
+        ],
+        "helpful_votes": "One person found this helpful",
+        "product": {
+          "size": "XL",
+          "color": "Tie-Dye MH"
+        }
+      },
+      {
+        "position": 5,
+        "title": "A great product for my loved pet !!!",
+        "text": "Let me start with the very nice fabric -I guess I don't have to understand how Velcroless fabrics works -but it does ! It sticks to itself and does so silently ....I assume the silence is to not alarm an already alarmed dog that ur trying to keep calm-very good idea ! The material is reversible and works identically on either side ..it is also fully washable ...(100% poly .. )My pictures are of my 80 pound pit bull -she shakes with thunder ..she was very comfortable with the vest on (wore it for about 30 minutes for my pictures ) -and I've yet to test it during storm -but I will next storm and come back here to edit this review with an update of how it worked \"under fire\" ...but so far I couldn't ask for anything more for my very fair $35 price ..",
+        "rating": 5,
+        "date": "December 10, 2025",
+        "author": "Concerned Customer",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFYHUJ4X53RMBJTCNGYY7FMMGUDQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/61h2mJnDklL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61EvoEH6wKL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61taz+m-fmL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61rqUgcAurL._SY88.jpg"
+        ],
+        "helpful_votes": "One person found this helpful",
+        "product": {
+          "size": "XL",
+          "color": "Pink"
+        }
+      },
+      {
+        "position": 6,
+        "title": "Very light, no sounds when applying/removing, didn’t notice a difference in comfort for our dog",
+        "text": "We ordered this for use with our mini dachshund how shakes like crazy on car rides. It fit her body well, is very soft and super easy to put on and take off. The way it attaches to itself is great! Sticks in any position and doesn’t make a Velcro type sound when removing it. It’s hard to explain but it’s a smooth process to put on and take off, no noise which is great because our dachshund flinches at pretty much any sound she’s not familiar with. It seems like decent quality and should be fairly durable in the long term. Unfortunately we didn’t see any noticeable improvement with her shaking in the car. We were really hopeful it would bring her comfort. Obviously every animal is different so you may have a different experience then us. If you’re like most people you’d try anything to make your “baby” happy. Best of luck if you decide to purchase and try this out!",
+        "rating": 3,
+        "date": "January 6, 2026",
+        "author": "David S",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFDK6WPF77CSZVV3RICJ75POK45Q",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/61PWBct1SPL._SY88.jpg"
+        ],
+        "helpful_votes": "3 people found this helpful",
+        "product": {
+          "size": "XS",
+          "color": "Pink"
+        }
+      }
+    ]
+  }
+}
