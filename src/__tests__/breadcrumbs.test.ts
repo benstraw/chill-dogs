@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest';
 import { buildBreadcrumbSchema } from '../utils/breadcrumbs';
 
 describe('buildBreadcrumbSchema', () => {
-  const siteUrl = 'https://chill-dogs.com';
+  const siteUrl = 'https://www.chill-dogs.com';
 
   it('returns null for homepage', () => {
     expect(buildBreadcrumbSchema('/', siteUrl)).toBeNull();
@@ -21,19 +21,19 @@ describe('buildBreadcrumbSchema', () => {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://chill-dogs.com/',
+        item: 'https://www.chill-dogs.com/',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Cooling',
-        item: 'https://chill-dogs.com/cooling/',
+        item: 'https://www.chill-dogs.com/cooling/',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: 'Cooling Mats',
-        item: 'https://chill-dogs.com/cooling/cooling-mats/',
+        item: 'https://www.chill-dogs.com/cooling/cooling-mats/',
       },
     ]);
   });

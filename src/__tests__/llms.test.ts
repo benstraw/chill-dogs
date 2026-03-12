@@ -57,7 +57,7 @@ describe('llms utilities', () => {
       siteName: 'chill-dogs',
       description: 'Test description',
       shortParagraph: 'Quick summary paragraph.',
-      baseUrl: 'https://chill-dogs.com/',
+      baseUrl: 'https://www.chill-dogs.com/',
       links: [
         { title: 'Home', path: '/', description: 'Main page', explicitPriority: 1000 },
         { title: 'Cooling Hub', path: '/cooling/', description: 'Cooling index' },
@@ -71,16 +71,16 @@ describe('llms utilities', () => {
     expect(markdown).toContain('## Core Pages');
     expect(markdown).toContain('## Cooling Guides');
     expect(markdown).toContain('## About');
-    expect(markdown).toContain('- [Home](https://chill-dogs.com/): Main page');
-    expect(markdown).toContain('- [Cooling Hub](https://chill-dogs.com/cooling/): Cooling index');
-    expect(markdown).toContain('- [Contact](https://chill-dogs.com/contact/)');
+    expect(markdown).toContain('- [Home](https://www.chill-dogs.com/): Main page');
+    expect(markdown).toContain('- [Cooling Hub](https://www.chill-dogs.com/cooling/): Cooling index');
+    expect(markdown).toContain('- [Contact](https://www.chill-dogs.com/contact/)');
   });
 
   it('respects maxLinks and omits paragraph when not supplied', () => {
     const markdown = buildLlmsMarkdown({
       siteName: 'chill-dogs',
       description: 'Test',
-      baseUrl: 'https://chill-dogs.com/',
+      baseUrl: 'https://www.chill-dogs.com/',
       links: [
         { title: 'Home', path: '/' },
         { title: 'Cooling', path: '/cooling/' },
@@ -105,7 +105,7 @@ describe('llms utilities', () => {
     const markdown = buildLlmsMarkdown({
       siteName: 'chill-dogs',
       description: 'Test',
-      baseUrl: 'https://chill-dogs.com/',
+      baseUrl: 'https://www.chill-dogs.com/',
       links: [],
     });
     expect(markdown).toContain('# chill-dogs');
@@ -114,7 +114,7 @@ describe('llms utilities', () => {
   });
 
   it('resolves absolute URLs from base + path', () => {
-    expect(toAbsoluteUrl('https://chill-dogs.com', '/cooling/')).toBe('https://chill-dogs.com/cooling/');
+    expect(toAbsoluteUrl('https://www.chill-dogs.com', '/cooling/')).toBe('https://www.chill-dogs.com/cooling/');
   });
 });
 

@@ -366,7 +366,7 @@ export const calmingConverterPages: Record<string, CalmingConverterPageConfig> =
     },
     itemListSchema: {
       name: 'Best Calming Products for Anxious Dogs',
-      url: 'https://chill-dogs.com/calming/best-calming-products-for-anxious-dogs/',
+      url: 'https://www.chill-dogs.com/calming/best-calming-products-for-anxious-dogs/',
       productIds: [
         'thundershirt-classic',
         'native-pet-calm-chews',
@@ -497,7 +497,7 @@ export const calmingConverterPages: Record<string, CalmingConverterPageConfig> =
     },
     itemListSchema: {
       name: 'Best ThunderShirt Alternatives: Anxiety Wraps Compared',
-      url: 'https://chill-dogs.com/calming/best-thundershirt-alternatives/',
+      url: 'https://www.chill-dogs.com/calming/best-thundershirt-alternatives/',
       productIds: [
         'thundershirt-classic',
         'dajidali-anxiety-vest',

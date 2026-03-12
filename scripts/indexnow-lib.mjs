@@ -5,11 +5,11 @@ export function isProductionVercelEnv(env = process.env) {
 }
 
 export function normalizeOrigin(origin) {
-  const value = (origin || 'https://chill-dogs.com').trim();
+  const value = (origin || 'https://www.chill-dogs.com').trim();
   return value.endsWith('/') ? value.slice(0, -1) : value;
 }
 
-export function mapPageFileToUrl(filePath, origin = 'https://chill-dogs.com') {
+export function mapPageFileToUrl(filePath, origin = 'https://www.chill-dogs.com') {
   if (!filePath || !filePath.startsWith(PAGES_PREFIX)) return null;
   if (!filePath.endsWith('.astro')) return null;
 
@@ -34,7 +34,7 @@ export function mapPageFileToUrl(filePath, origin = 'https://chill-dogs.com') {
   return `${siteOrigin}${pathname}`;
 }
 
-export function collectChangedPageUrls(changedFiles, origin = 'https://chill-dogs.com') {
+export function collectChangedPageUrls(changedFiles, origin = 'https://www.chill-dogs.com') {
   const urls = new Set();
   for (const filePath of changedFiles || []) {
     const mapped = mapPageFileToUrl(filePath, origin);

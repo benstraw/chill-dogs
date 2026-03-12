@@ -15,15 +15,15 @@ describe('indexnow-lib', () => {
   });
 
   it('normalizes origin by trimming trailing slash', () => {
-    expect(normalizeOrigin('https://chill-dogs.com/')).toBe('https://chill-dogs.com');
-    expect(normalizeOrigin('https://chill-dogs.com')).toBe('https://chill-dogs.com');
+    expect(normalizeOrigin('https://www.chill-dogs.com/')).toBe('https://www.chill-dogs.com');
+    expect(normalizeOrigin('https://www.chill-dogs.com')).toBe('https://www.chill-dogs.com');
   });
 
   it('maps Astro page files to public URLs', () => {
-    expect(mapPageFileToUrl('src/pages/index.astro')).toBe('https://chill-dogs.com/');
-    expect(mapPageFileToUrl('src/pages/calming/index.astro')).toBe('https://chill-dogs.com/calming/');
+    expect(mapPageFileToUrl('src/pages/index.astro')).toBe('https://www.chill-dogs.com/');
+    expect(mapPageFileToUrl('src/pages/calming/index.astro')).toBe('https://www.chill-dogs.com/calming/');
     expect(mapPageFileToUrl('src/pages/calming/best-calming-products-for-anxious-dogs.astro'))
-      .toBe('https://chill-dogs.com/calming/best-calming-products-for-anxious-dogs/');
+      .toBe('https://www.chill-dogs.com/calming/best-calming-products-for-anxious-dogs/');
   });
 
   it('excludes non-indexable page files', () => {
@@ -42,32 +42,32 @@ describe('indexnow-lib', () => {
     ]);
 
     expect(urls).toEqual([
-      'https://chill-dogs.com/calming/',
-      'https://chill-dogs.com/cooling/',
+      'https://www.chill-dogs.com/calming/',
+      'https://www.chill-dogs.com/cooling/',
     ]);
   });
 
   it('selects changed URLs payload when available', () => {
     const result = buildSubmissionUrls({
-      changedPageUrls: ['https://chill-dogs.com/calming/'],
-      sitemapUrl: 'https://chill-dogs.com/sitemap-index.xml',
+      changedPageUrls: ['https://www.chill-dogs.com/calming/'],
+      sitemapUrl: 'https://www.chill-dogs.com/sitemap-index.xml',
     });
 
     expect(result).toEqual({
       mode: 'changed_urls',
-      urlList: ['https://chill-dogs.com/calming/'],
+      urlList: ['https://www.chill-dogs.com/calming/'],
     });
   });
 
   it('falls back to sitemap payload when no changed URLs', () => {
     const result = buildSubmissionUrls({
       changedPageUrls: [],
-      sitemapUrl: 'https://chill-dogs.com/sitemap-index.xml',
+      sitemapUrl: 'https://www.chill-dogs.com/sitemap-index.xml',
     });
 
     expect(result).toEqual({
       mode: 'sitemap_fallback',
-      urlList: ['https://chill-dogs.com/sitemap-index.xml'],
+      urlList: ['https://www.chill-dogs.com/sitemap-index.xml'],
     });
   });
 });

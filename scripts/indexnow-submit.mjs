@@ -70,7 +70,7 @@ async function main() {
     return;
   }
 
-  const siteOrigin = normalizeOrigin(process.env.INDEXNOW_SITE_ORIGIN || 'https://chill-dogs.com');
+  const siteOrigin = normalizeOrigin(process.env.INDEXNOW_SITE_ORIGIN || 'https://www.chill-dogs.com');
   const endpoint = (process.env.INDEXNOW_ENDPOINT || 'https://api.indexnow.org/indexnow').trim();
   const dryRun = toBool(process.env.INDEXNOW_DRY_RUN);
   const distDir = process.env.INDEXNOW_DIST_DIR || 'dist';
