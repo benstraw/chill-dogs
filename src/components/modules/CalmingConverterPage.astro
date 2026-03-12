@@ -157,7 +157,7 @@ function quickPickProduct(item: QuickPickItem) {
           <div class="converter-inner prose">
             <h2>{block.heading}</h2>
             {block.intro && <p class="section-intro">{block.intro}</p>}
-            {block.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+            {block.paragraphs.map((paragraph) => <p set:html={paragraph} />)}
           </div>
         </section>
       )

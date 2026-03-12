@@ -177,6 +177,43 @@ describe('site smoke tests', () => {
     expect(sitemap).not.toContain('/calming/v/');
   });
 
+  it('does not render escaped HTML tags as visible text on any page', () => {
+    const { readdirSync, statSync } = require('node:fs');
+
+    function collectHtmlFiles(dir: string): string[] {
+      const files: string[] = [];
+      for (const entry of readdirSync(dir)) {
+        const full = path.join(dir, entry);
+        if (statSync(full).isDirectory()) {
+          files.push(...collectHtmlFiles(full));
+        } else if (entry.endsWith('.html')) {
+          files.push(full);
+        }
+      }
+      return files;
+    }
+
+    const htmlFiles = collectHtmlFiles(distRoot);
+    const failures: string[] = [];
+
+    for (const filePath of htmlFiles) {
+      const html = readFileSync(filePath, 'utf8');
+      // Look for escaped HTML tags in the rendered output (outside of <script>/<style> blocks)
+      const stripped = html
+        .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '')
+        .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, '');
+
+      // Match &lt;a, &lt;span, &lt;div etc — escaped tags that should have been rendered
+      const escapedTagPattern = /&lt;(?:a|span|div|p|strong|em|br|img|ul|ol|li)\b/i;
+      if (escapedTagPattern.test(stripped)) {
+        const relative = path.relative(distRoot, filePath);
+        failures.push(relative);
+      }
+    }
+
+    expect(failures, `Pages with escaped HTML tags visible as text: ${failures.join(', ')}`).toEqual([]);
+  });
+
   it('publishes llms.txt with all sections, key links, and no excluded paths', () => {
     const llmsText = readBuiltAsset('llms.txt');
 
