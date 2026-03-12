@@ -82,7 +82,6 @@ const breadcrumbSchema = !noindex && !isStaging && Astro.site
     {breadcrumbSchema && (
       <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
     )}
-    <Analytics />
   </head>
   <body>
     <a href="#main-content" class="sr-only">Skip to content</a>
@@ -91,6 +90,7 @@ const breadcrumbSchema = !noindex && !isStaging && Astro.site
       <slot />
     </main>
     {!hideChrome && <Footer />}
+    <Analytics />
     <SpeedInsights />
   </body>
 </html>

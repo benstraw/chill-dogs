@@ -1,10 +1,23 @@
 import { beforeAll, describe, expect, it } from 'vitest';
 import { execFileSync } from 'node:child_process';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import path from 'node:path';
 
 const projectRoot = path.resolve(__dirname, '../..');
 const distRoot = path.join(projectRoot, 'dist');
+
+function collectHtmlFiles(dir: string): string[] {
+  const files: string[] = [];
+  for (const entry of readdirSync(dir)) {
+    const full = path.join(dir, entry);
+    if (statSync(full).isDirectory()) {
+      files.push(...collectHtmlFiles(full));
+    } else if (entry.endsWith('.html')) {
+      files.push(full);
+    }
+  }
+  return files;
+}
 
 function buildSite() {
   execFileSync('npm', ['run', 'build'], {
@@ -178,21 +191,6 @@ describe('site smoke tests', () => {
   });
 
   it('does not render escaped HTML tags as visible text on any page', () => {
-    const { readdirSync, statSync } = require('node:fs');
-
-    function collectHtmlFiles(dir: string): string[] {
-      const files: string[] = [];
-      for (const entry of readdirSync(dir)) {
-        const full = path.join(dir, entry);
-        if (statSync(full).isDirectory()) {
-          files.push(...collectHtmlFiles(full));
-        } else if (entry.endsWith('.html')) {
-          files.push(full);
-        }
-      }
-      return files;
-    }
-
     const htmlFiles = collectHtmlFiles(distRoot);
     const failures: string[] = [];
 
@@ -212,6 +210,144 @@ describe('site smoke tests', () => {
     }
 
     expect(failures, `Pages with escaped HTML tags visible as text: ${failures.join(', ')}`).toEqual([]);
+  });
+
+  it('every page has exactly one h1 tag', () => {
+    const ignored = ['404.html'];
+    const htmlFiles = collectHtmlFiles(distRoot);
+    const failures: string[] = [];
+
+    for (const filePath of htmlFiles) {
+      const relative = path.relative(distRoot, filePath);
+      if (ignored.some((i) => relative.includes(i))) continue;
+
+      const html = readFileSync(filePath, 'utf8');
+      const h1Count = (html.match(/<h1[\s>]/gi) || []).length;
+      if (h1Count !== 1) {
+        failures.push(`${relative} (${h1Count} h1 tags)`);
+      }
+    }
+
+    expect(failures, `Pages without exactly 1 h1: ${failures.join(', ')}`).toEqual([]);
+  });
+
+  it('every page has exactly one canonical tag', () => {
+    const htmlFiles = collectHtmlFiles(distRoot);
+    const failures: string[] = [];
+
+    for (const filePath of htmlFiles) {
+      const html = readFileSync(filePath, 'utf8');
+      const canonicalCount = (html.match(/<link[^>]+rel=['"]canonical['"][^>]*>/gi) || []).length;
+      if (canonicalCount !== 1) {
+        const relative = path.relative(distRoot, filePath);
+        failures.push(`${relative} (${canonicalCount} canonical tags)`);
+      }
+    }
+
+    expect(failures, `Pages without exactly 1 canonical: ${failures.join(', ')}`).toEqual([]);
+  });
+
+  it('every page has a meta description', () => {
+    const htmlFiles = collectHtmlFiles(distRoot);
+    const failures: string[] = [];
+
+    for (const filePath of htmlFiles) {
+      const html = readFileSync(filePath, 'utf8');
+      const descMatch = html.match(/<meta[^>]*name=['"]description['"][^>]*content=['"]([^'"]*)['"]/i);
+      if (!descMatch || !descMatch[1].trim()) {
+        const relative = path.relative(distRoot, filePath);
+        failures.push(relative);
+      }
+    }
+
+    expect(failures, `Pages missing meta description: ${failures.join(', ')}`).toEqual([]);
+  });
+
+  it('every page has an og:image', () => {
+    const htmlFiles = collectHtmlFiles(distRoot);
+    const failures: string[] = [];
+
+    for (const filePath of htmlFiles) {
+      const html = readFileSync(filePath, 'utf8');
+      const ogMatch = html.match(/<meta[^>]*property=['"]og:image['"][^>]*content=['"]([^'"]*)['"]/i);
+      if (!ogMatch || !/^https:\/\/www\.chill-dogs\.com\//.test(ogMatch[1])) {
+        const relative = path.relative(distRoot, filePath);
+        failures.push(relative);
+      }
+    }
+
+    expect(failures, `Pages missing og:image: ${failures.join(', ')}`).toEqual([]);
+  });
+
+  it('content pages have at least one JSON-LD script', () => {
+    const noSchemaExpected = ['404.html', 'privacy-policy', 'terms', 'content-sitemap', 'admin/'];
+    const htmlFiles = collectHtmlFiles(distRoot);
+    const failures: string[] = [];
+
+    for (const filePath of htmlFiles) {
+      const relative = path.relative(distRoot, filePath);
+      if (noSchemaExpected.some((i) => relative.includes(i))) continue;
+
+      const html = readFileSync(filePath, 'utf8');
+      const ldJsonCount = (html.match(/<script[^>]*type="application\/ld\+json"/gi) || []).length;
+      if (ldJsonCount === 0) {
+        failures.push(relative);
+      }
+    }
+
+    expect(failures, `Content pages missing JSON-LD: ${failures.join(', ')}`).toEqual([]);
+  });
+
+  it('all internal links resolve to built pages', () => {
+    const htmlFiles = collectHtmlFiles(distRoot);
+    const failures: string[] = [];
+
+    for (const filePath of htmlFiles) {
+      const html = readFileSync(filePath, 'utf8');
+      const relative = path.relative(distRoot, filePath);
+      const hrefMatches = html.matchAll(/href="(\/[^"#?]*)"/g);
+
+      for (const match of hrefMatches) {
+        const href = match[1];
+        const skipAsset = /\.(ico|png|jpg|jpeg|webp|svg|pdf|xml|txt|webmanifest|css|js)$/i.test(href);
+        if (skipAsset) continue;
+        // Check if the path resolves to a file or directory with index.html
+        const asFile = path.join(distRoot, href);
+        const asIndex = path.join(distRoot, href, 'index.html');
+        const asHtml = href.endsWith('/') ? null : path.join(distRoot, href + '.html');
+
+        const exists =
+          existsSync(asFile) ||
+          existsSync(asIndex) ||
+          (asHtml !== null && existsSync(asHtml));
+
+        if (!exists) {
+          const entry = `${relative}: broken link → ${href}`;
+          if (!failures.includes(entry)) failures.push(entry);
+        }
+      }
+    }
+
+    expect(failures, `Broken internal links:\n${failures.join('\n')}`).toEqual([]);
+  });
+
+  it('no render-blocking external stylesheets in head', () => {
+    const htmlFiles = collectHtmlFiles(distRoot);
+    const failures: string[] = [];
+
+    for (const filePath of htmlFiles) {
+      const html = readFileSync(filePath, 'utf8');
+      const headMatch = html.match(/<head[\s>][\s\S]*?<\/head>/i);
+      if (!headMatch) continue;
+
+      const blockingLinks = (headMatch[0].match(/<link[^>]+rel=['"]stylesheet['"][^>]*>/gi) || []);
+      if (blockingLinks.length > 0) {
+        const relative = path.relative(distRoot, filePath);
+        failures.push(`${relative} (${blockingLinks.length} blocking stylesheet(s))`);
+      }
+    }
+
+    expect(failures, `Pages with render-blocking CSS:\n${failures.join('\n')}`).toEqual([]);
   });
 
   it('publishes llms.txt with all sections, key links, and no excluded paths', () => {

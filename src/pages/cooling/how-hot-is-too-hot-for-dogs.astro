@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
+import FAQ from '@components/modules/FAQ.astro';
 import JsonLd from '@components/JsonLd.astro';
 
 const title = 'How Hot Is Too Hot for Dogs?';
@@ -22,6 +23,21 @@ const articleSchema = {
     logo: { '@type': 'ImageObject', url: 'https://www.chill-dogs.com/og/og-default.png' },
   },
 };
+
+const faqs = [
+  {
+    question: 'Is 85 °F too hot to walk a dog?',
+    answer: 'It can be, depending on the conditions. At 85 °F with direct sun, high humidity, or hot pavement, the risk for many dogs increases significantly. If you do walk at this temperature, keep it short, stick to shaded routes, and watch closely for early signs of overheating.',
+  },
+  {
+    question: 'Is 90 °F too hot for dogs?',
+    answer: 'For most dogs, yes. At 90 °F or above, outdoor activity should be limited to brief bathroom breaks. Prolonged exposure at this temperature — especially with sun or humidity — puts dogs at real risk of heat exhaustion. Keep dogs indoors in air conditioning as much as possible.',
+  },
+  {
+    question: 'What temperature do dogs overheat?',
+    answer: 'Many dogs begin to struggle once temperatures reach roughly 85–90 °F, particularly in direct sun or high humidity. Brachycephalic (flat-faced) breeds, senior dogs, and overweight dogs may show signs of heat stress at lower temperatures. No single threshold applies to every dog — knowing your individual dog\'s limits matters.',
+  },
+];
 
 const internalLinks = [
   { label: 'Best Cooling Mats', href: '/cooling/cooling-mats/' },
@@ -149,30 +165,9 @@ const internalLinks = [
         <li><strong>Freezable toys</strong> — frozen treat dispensers that provide enrichment and help with internal cooling.</li>
       </ul>
 
-      <h2>Frequently asked questions</h2>
-
-      <h3>Is 85 °F too hot to walk a dog?</h3>
-      <p>
-        It can be, depending on the conditions. At 85 °F with direct sun, high humidity, or hot pavement,
-        the risk for many dogs increases significantly. If you do walk at this temperature, keep it short,
-        stick to shaded routes, and watch closely for early signs of overheating.
-      </p>
-
-      <h3>Is 90 °F too hot for dogs?</h3>
-      <p>
-        For most dogs, yes. At 90 °F or above, outdoor activity should be limited to brief bathroom breaks.
-        Prolonged exposure at this temperature — especially with sun or humidity — puts dogs at real risk
-        of heat exhaustion. Keep dogs indoors in air conditioning as much as possible.
-      </p>
-
-      <h3>What temperature do dogs overheat?</h3>
-      <p>
-        Many dogs begin to struggle once temperatures reach roughly 85–90 °F, particularly in direct sun
-        or high humidity. Brachycephalic (flat-faced) breeds, senior dogs, and overweight dogs may show
-        signs of heat stress at lower temperatures. No single threshold applies to every dog — knowing
-        your individual dog's limits matters.
-      </p>
     </div>
+
+    <FAQ faqs={faqs} />
 
     <InternalLinkStrip links={internalLinks} fromPage={pageSlug} />
   </article>
