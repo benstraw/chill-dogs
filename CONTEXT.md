@@ -1,7 +1,7 @@
 ---
 type: context
 tags: [ai-context, strategy, creative]
-updated: 2026-03-02
+updated: 2026-03-12
 ---
 
 # chill-dogs — AI Context File
@@ -12,7 +12,7 @@ This file is the single source of truth for sharing context about `chill-dogs.co
 
 ## 1. What Is chill-dogs?
 
-**chill-dogs** (`chill-dogs.com`) is an Amazon affiliate site focused on dog lifestyle — specifically cooling and calming products. The site earns revenue through the Amazon Associates program. Every design, content, and engineering decision is evaluated against one question: does this drive or support affiliate revenue?
+**chill-dogs** (`chill-dogs.com`) is an Amazon affiliate site focused on dog lifestyle — specifically cooling, calming, and relaxing products. The site earns revenue through the Amazon Associates program. Every design, content, and engineering decision is evaluated against one question: does this drive or support affiliate revenue?
 
 ---
 
@@ -38,7 +38,7 @@ Every page belongs to exactly one type. Mixing types is not allowed.
 - Maximum 5 primary nav links
 - No novelty patterns
 - Informer pages (about, privacy, terms) go in the footer only, never the primary nav
-- Current primary nav: **Cooling**, **Calming**, **Gift Guides**
+- Current primary nav: **Cooling**, **Calming**
 
 ### Conversion Flow
 
@@ -72,12 +72,13 @@ The **keystone event** in analytics is `amazon_outbound_click`.
 
 ### Category Strategy
 
-The site is organized around two high-intent problem categories:
+The site is organized around three high-intent problem categories:
 
 1. **Cooling** — summer heat relief for dogs. High seasonal intent (May–September peak).
 2. **Calming** — anxiety management for dogs. Evergreen intent year-round.
+3. **Relaxing** *(TBD — in progress)* — relaxation and comfort products for dogs. Scope, pages, and product data are not yet defined. Theme color: Dusty Rose (`--color-rose: #b56f76`).
 
-Both categories cross-link naturally (hot dogs are often anxious dogs), which supports internal link equity.
+Cooling and calming cross-link naturally (hot dogs are often anxious dogs), which supports internal link equity.
 
 ### SEO Model: Pillar + Cluster
 
@@ -114,12 +115,10 @@ Each category has a pillar collector page that targets broad intent, with cluste
 |---|---|---|
 | `/travel/rhys-road-trip-chill-kit/` | **collector** | Route to car cooling and car anxiety converters |
 
-#### Content Collection (expanding)
-| URL Pattern | Type | Job |
+#### Relaxing Category *(TBD — in progress)*
+| URL | Type | Job |
 |---|---|---|
-| `/blog/{slug}/` | collector | Route warm informational traffic to converters |
-| `/gift-guides/{slug}/` | collector or converter | Gift-intent traffic; affiliate clicks |
-| `/luxury-gear/{slug}/` | collector or converter | Premium product traffic; affiliate clicks |
+| TBD | TBD | TBD |
 
 #### Informer Pages
 | URL | Type | Purpose |
@@ -241,12 +240,10 @@ Product data for cooling and calming pages lives in strongly-typed TypeScript fi
 - `src/data/cooling-products.ts` — 11 products, 5 categories
 - `src/data/calming-products.ts` — 8 products, 4 categories
 
-Blog, gift guide, and luxury-gear content uses the Astro 5 Content Layer (markdown files with Zod-validated frontmatter) in `src/data/posts/{category}/`.
-
 ### SEO
 
 - Canonical URLs enforced on every page via `BaseLayout`
-- `@astrojs/sitemap` with priority tuning (homepage: 1.0, cooling/calming: 0.9, gift-guides/luxury-gear: 0.8)
+- `@astrojs/sitemap` with priority tuning (homepage: 1.0, cooling/calming: 0.9)
 - `robots.txt` via `astro-robots-txt`
 - JSON-LD structured data (WebSite, Organization, CollectionPage, ItemList, Product) on hub and converter pages
 - OpenGraph + Twitter card meta on every page
@@ -273,12 +270,13 @@ Blog, gift guide, and luxury-gear content uses the Astro 5 Content Layer (markdo
 
 ### Color Palette
 
-Six named brand colors form the palette. Sky blue signals cooling; sage green signals calming.
+Seven named brand colors form the palette. Sky blue signals cooling; sage green signals calming; dusty rose signals relaxing.
 
 | Token | Hex | Role |
 |---|---|---|
 | `--color-sky` | `#87b7c7` | Cooling theme primary; primary CTA color |
 | `--color-sage` | `#8fa98b` | Calming theme primary; accent color |
+| `--color-rose` | `#b56f76` | Relaxing theme primary *(TBD — in progress)* |
 | `--color-sand` | `#e8dcc8` | Warm neutral; secondary surfaces |
 | `--color-cream` | `#f5f0e8` | Light surface; card backgrounds |
 | `--color-terracotta` | `#c4704b` | Warm accent; secondary CTAs |
@@ -295,6 +293,7 @@ Six named brand colors form the palette. Sky blue signals cooling; sage green si
 | `--color-text-inverse` | `#f0f4f6` | Text on dark backgrounds |
 | `--color-primary` | `var(--color-sky)` | Primary button and link color |
 | `--color-primary-hover` | `#74a5b6` | Primary hover state |
+| `--color-rose-hover` | `#a25f66` | Rose hover state |
 | `--color-accent` | `var(--color-sage)` | Accent elements |
 | `--color-accent-alt` | `var(--color-terracotta)` | Alternate accent |
 | `--color-surface` | `#ffffff` | Card / surface |
@@ -321,13 +320,14 @@ No Google Fonts — all fonts are self-hosted to avoid third-party DNS lookups.
 
 ### Logo
 
-Text-based. The site name **"chill-dogs"** is the logo:
-- Font: `var(--font-heading)` (Nunito Variable)
-- Weight: `800` (extrabold)
-- Size: `var(--text-xl)`
-- Color: `var(--color-text)` at rest; `var(--color-primary)` on hover
+The logo is a gradient paw print that blends the three pillar colors (sky → sage → rose, top to bottom).
 
-No image or SVG logo mark — the word mark is the identity.
+- **Logo mark:** `public/images/paw-logo.png` (tight crop) / `public/images/chill-dogs-logo-padded.png` (with padding)
+- **Word mark:** The site name **"chill-dogs"** rendered in text alongside the paw:
+  - Font: `var(--font-heading)` (Nunito Variable)
+  - Weight: `800` (extrabold)
+  - Size: `var(--text-xl)`
+  - Color: `var(--color-text)` at rest; `var(--color-primary)` on hover
 
 ### Spacing Scale
 

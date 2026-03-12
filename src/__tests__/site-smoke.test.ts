@@ -51,7 +51,7 @@ describe('site smoke tests', () => {
 
     expect(coolingCta?.getAttribute('href')).toBe('/cooling/');
     expect(calmingCta?.getAttribute('href')).toBe('/calming/');
-    expect(canonical?.getAttribute('href')).toBe('https://chill-dogs.com/');
+    expect(canonical?.getAttribute('href')).toBe('https://www.chill-dogs.com/');
   });
 
   it('publishes generated per-page OG assets and metadata references', () => {
@@ -156,9 +156,9 @@ describe('site smoke tests', () => {
     expect(calmingDoc.querySelector('meta[name="robots"]')).toBeNull();
 
     expect(coolingDoc.querySelector('link[rel="canonical"]')?.getAttribute('href'))
-      .toBe('https://chill-dogs.com/cooling/');
+      .toBe('https://www.chill-dogs.com/cooling/');
     expect(calmingDoc.querySelector('link[rel="canonical"]')?.getAttribute('href'))
-      .toBe('https://chill-dogs.com/calming/');
+      .toBe('https://www.chill-dogs.com/calming/');
   });
 
   it('publishes robots and sitemap with key routes and no variants', () => {
@@ -166,9 +166,9 @@ describe('site smoke tests', () => {
     const sitemapIndex = readBuiltAsset('sitemap-index.xml');
     const sitemap = readBuiltAsset('sitemap-0.xml');
 
-    expect(robotsTxt).toContain('Sitemap: https://chill-dogs.com/sitemap-index.xml');
+    expect(robotsTxt).toContain('Sitemap: https://www.chill-dogs.com/sitemap-index.xml');
     expect(sitemapIndex).toContain('/sitemap-0.xml');
-    expect(sitemap).toContain('<loc>https://chill-dogs.com/</loc>');
+    expect(sitemap).toContain('<loc>https://www.chill-dogs.com/</loc>');
     expect(sitemap).toContain('/cooling/best-cooling-products-for-dogs/');
     expect(sitemap).toContain('/cooling/car-cooling-for-dogs/');
     expect(sitemap).toContain('/travel/rhys-road-trip-chill-kit/');
@@ -221,9 +221,9 @@ describe('site smoke tests', () => {
     expect(llmsText).toContain('## Cooling Guides');
     expect(llmsText).toContain('## Calming Guides');
     expect(llmsText).toContain('## Travel Guides');
-    expect(llmsText).toContain('https://chill-dogs.com/cooling/');
-    expect(llmsText).toContain('https://chill-dogs.com/cooling/best-cooling-products-for-dogs/');
-    expect(llmsText).toContain('https://chill-dogs.com/travel/rhys-road-trip-chill-kit/');
+    expect(llmsText).toContain('https://www.chill-dogs.com/cooling/');
+    expect(llmsText).toContain('https://www.chill-dogs.com/cooling/best-cooling-products-for-dogs/');
+    expect(llmsText).toContain('https://www.chill-dogs.com/travel/rhys-road-trip-chill-kit/');
     expect(llmsText).not.toContain('/v/a/');
     expect(llmsText).not.toContain('/content-sitemap/');
     expect(llmsText).not.toContain('/privacy-policy/');
