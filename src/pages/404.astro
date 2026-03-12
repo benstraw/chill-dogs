@@ -111,8 +111,6 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Fredoka:wght@400;600&display=swap');
-
   /* ── 10+ Color Palette ── */
   :root {
     --c-midnight: #0b1628;
@@ -147,7 +145,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
       var(--c-powder) 90%
     );
     z-index: 100;
-    font-family: 'Fredoka', sans-serif;
+    font-family: var(--font-body);
   }
 
   /* ── Aurora Borealis ── */
@@ -452,7 +450,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
     display: block;
     background: var(--c-white);
     color: var(--c-nose-dark);
-    font-family: 'Baloo 2', cursive;
+    font-family: var(--font-heading);
     font-weight: 700;
     font-size: 14px;
     padding: 6px 14px;
@@ -529,7 +527,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
     margin-left: auto;
     font-size: 12px;
     color: rgba(255, 255, 255, 0.4);
-    font-family: 'Fredoka', monospace;
+    font-family: var(--font-body);
     letter-spacing: 0.5px;
   }
 
@@ -572,7 +570,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 
   /* ── Glitch 404 ── */
   .glitch-404 {
-    font-family: 'Baloo 2', cursive;
+    font-family: var(--font-heading);
     font-size: clamp(72px, 15vw, 120px);
     font-weight: 800;
     line-height: 1;
@@ -638,7 +636,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
   }
 
   .subtitle {
-    font-family: 'Baloo 2', cursive;
+    font-family: var(--font-heading);
     font-size: clamp(18px, 3.5vw, 24px);
     font-weight: 700;
     color: var(--c-powder);
@@ -678,7 +676,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
     gap: 8px;
     padding: 12px 24px;
     border-radius: 12px;
-    font-family: 'Baloo 2', cursive;
+    font-family: var(--font-heading);
     font-size: 16px;
     font-weight: 700;
     text-decoration: none;
