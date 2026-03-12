@@ -269,7 +269,7 @@ export const coolingProducts: CoolingProduct[] = [
       'Waterproof quilted surface stays cooler than bare upholstery or vinyl seats',
       'Anchors to headrests front and back — no tools needed',
     ],
-    bestFor: 'Keeping dogs stable, cool, and off hot leather seats in the back',
+    bestFor: 'Keeping dogs stable, cool, and off hot leather seats',
     coolingMethod: 'Surface insulation from hot upholstery',
     sizingNote: 'Standard and XL fit most sedans, SUVs, and trucks',
     image: { src: 'https://m.media-amazon.com/images/I/81ypdd26KKL.jpg', alt: '4Knines Dog Seat Cover Hammock' },
@@ -290,14 +290,14 @@ export const categoryMeta: Record<ProductCategory, CategoryMeta> = {
     title: 'Best Car Cooling Products for Dogs (2026)',
     description:
       'Keep your dog cool and comfortable on road trips with magnetic window shades, clip-on fans, collapsible bowls, and seat hammocks. Our top picks for every budget.',
-    heroHeadline: 'The Best Car Cooling Setup for Dogs on Road Trips',
+    heroHeadline: 'The Best Car Cooling Setup for Dogs on the Road',
     introCopy:
-      'Hot back seats are one of the biggest road-trip risks for dogs. These four products address the core problem: passive sun blocking, active airflow, quick hydration, and a cooler surface to lie on.',
+      'Hot back seats are one of the biggest dangers for dogs on road trips. To help keep dogs safe, look to products that provide passive sun blocking, active airflow, quick hydration, and a cooler surface to lie on.',
     faqs: [
       {
         question: 'How do I keep my dog cool in the car without AC?',
         answer:
-          'Combine passive and active methods: magnetic shades block the sun before heat builds up, a clip-on fan keeps air moving, and a collapsible bowl at every stop replaces fluids. On very hot days, schedule drives in the morning or evening.',
+          'Combine passive and active methods: magnetic shades block the sun before heat builds up, a clip-on fan keeps air moving, and water from a collapsible bowl at every stop replaces fluids. On very hot days, schedule drives in the morning or evening.',
       },
       {
         question: 'Are magnetic window shades safe for dogs?',
@@ -310,7 +310,7 @@ export const categoryMeta: Record<ProductCategory, CategoryMeta> = {
           'You can, but a fan designed for cars (like the K&H clip-on) attaches more securely to headrests and includes power options for a 12V adapter. A regular desk fan can tip or fall at highway speed.',
       },
       {
-        question: 'How often should I stop and offer water on a road trip?',
+        question: 'How often should I stop and offer water to my dog on a road trip?',
         answer:
           'Every 1–2 hours is a reasonable baseline, but dogs that are stressed, panting heavily, or in hot weather may need more frequent breaks. Always offer cool (not ice cold) water.',
       },
