@@ -315,6 +315,42 @@ The repo is at [github.com/benstraw/chill-dogs](https://github.com/benstraw/chil
 }
 ```
 
+### IndexNow on deploy
+
+`bun run build` now runs Astro build and then an IndexNow submission script.
+
+Required Vercel env var:
+
+- `INDEXNOW_KEY` (your generated key; deployed as `https://chill-dogs.com/<KEY>.txt`)
+- Set this manually in Vercel Project Settings → Environment Variables (the build script reads it; it does not create it).
+
+Setup:
+
+1. Generate a key locally: `openssl rand -hex 16`
+2. In Vercel, open Project Settings → Environment Variables
+3. Add `INDEXNOW_KEY` with that value for `Production`
+4. Redeploy production (`main`)
+5. Verify key file is live at `https://chill-dogs.com/<INDEXNOW_KEY>.txt`
+
+Optional env vars:
+
+- `INDEXNOW_ENDPOINT` (default `https://api.indexnow.org/indexnow`)
+- `INDEXNOW_SITE_ORIGIN` (default `https://chill-dogs.com`)
+- `INDEXNOW_DRY_RUN` (default `false`)
+
+Behavior:
+
+- Runs only when `VERCEL_ENV=production`
+- Uses `VERCEL_GIT_PREVIOUS_SHA` + `VERCEL_GIT_COMMIT_SHA` to submit changed `src/pages/**/*.astro` URLs
+- Excludes non-index targets such as admin pages, variant pages, and content sitemap
+- Falls back to submitting `https://chill-dogs.com/sitemap-index.xml` if SHA data is missing or no indexable page routes changed
+
+Dry-run locally (no network submission):
+
+```bash
+VERCEL_ENV=production INDEXNOW_KEY=example INDEXNOW_DRY_RUN=true bun run indexnow:submit
+```
+
 ---
 
 ## TODO
@@ -329,7 +365,8 @@ The repo is at [github.com/benstraw/chill-dogs](https://github.com/benstraw/chil
 - [ ] Implement feature flag–driven hero experiments (replace hardcoded variants)
 - [ ] Evaluate hero experiment winner after 2 weeks / 200+ primary CTA clicks per variant; promote winner to default, retire losing variant URLs
 - [ ] Expand calming category: individual converter pages for anxiety-wraps, calming-treats, lick-mats, snuffle-mats (parallel to cooling converter structure)
+- [ ] Defer PostHog init (idle + interaction fallback); monitor early-bounce event loss and feature-flag flicker
 - [x] Review affiliate tag is active and approved in Amazon Associates dashboard (`chill-dogs-20`)
-- [ ] Set up IndexNow for instant search engine indexing on deploy (Bing, Yandex, etc.)
+- [x] Set up IndexNow for instant search engine indexing on deploy (Bing, Yandex, etc.)
 - [ ] Add third pillar: **Relaxing** — dog beds, plush toys, snuggly blankets, and cozy comfort gear
 - [ ] Redo the entire article about Thundershirt alternatives
