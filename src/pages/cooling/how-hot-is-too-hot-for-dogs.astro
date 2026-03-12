@@ -1,11 +1,27 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
+import JsonLd from '@components/JsonLd.astro';
 
 const title = 'How Hot Is Too Hot for Dogs?';
 const description =
   'A practical temperature guide for dog owners: when heat is safe, when to take caution, and how to protect your dog from overheating.';
 const pageSlug = 'how-hot-is-too-hot-for-dogs';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  url: 'https://www.chill-dogs.com/cooling/how-hot-is-too-hot-for-dogs/',
+  image: ['https://www.chill-dogs.com/og/cooling-how-hot-is-too-hot-for-dogs.png'],
+  author: { '@type': 'Person', name: 'Benjamin Strawbridge' },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Chill-Dogs',
+    logo: { '@type': 'ImageObject', url: 'https://www.chill-dogs.com/og/og-default.png' },
+  },
+};
 
 const internalLinks = [
   { label: 'Best Cooling Mats', href: '/cooling/cooling-mats/' },
@@ -16,6 +32,7 @@ const internalLinks = [
 ---
 
 <BaseLayout title={title} description={description}>
+  <JsonLd slot="head" schema={articleSchema} />
   <article class="collector-article container">
     <header class="article-header">
       <span class="eyebrow">Cooling &amp; Safety</span>

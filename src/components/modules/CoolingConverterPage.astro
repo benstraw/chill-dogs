@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
+import JsonLd from '@components/JsonLd.astro';
 import Hero from '@components/modules/Hero.astro';
 import ComparisonTable from '@components/modules/ComparisonTable.astro';
 import CoolingProductGrid from '@components/modules/CoolingProductGrid.astro';
@@ -20,9 +21,24 @@ const products = getProductsByCategory(config.category);
 if (products.length === 0) {
   throw new Error(`No products found for category: ${config.category}`);
 }
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: meta.title,
+  url: `https://www.chill-dogs.com/cooling/${config.pageSlug}/`,
+  numberOfItems: products.length,
+  itemListElement: products.map((p, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: p.name,
+    url: p.amazonUrl,
+  })),
+};
 ---
 
 <BaseLayout title={meta.title} description={meta.description}>
+  <JsonLd slot="head" schema={itemListSchema} />
   <Hero
     title={meta.heroHeadline}
     subtitle={meta.introCopy}

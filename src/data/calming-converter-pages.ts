@@ -589,6 +589,18 @@ export const calmingConverterPages: Record<string, CalmingConverterPageConfig> =
         },
       ],
     },
+    itemListSchema: {
+      name: 'Best Calming Products for Car Anxiety in Dogs',
+      url: 'https://www.chill-dogs.com/calming/car-anxiety-for-dogs/',
+      productIds: [
+        'thundershirt-classic',
+        'native-pet-calm-chews',
+        'greenies-calming-chews',
+        'pet-honesty-hemp-calming-chews',
+        'lickimat-classic-soother',
+        'lukito-licking-mat',
+      ],
+    },
     disclaimerVariant: 'supplement',
     disclosureShowSafety: false,
     internalLinkStrip: {
