@@ -329,7 +329,7 @@ export const categoryMeta: Record<ProductCategory, CategoryMeta> = {
       'We compared the top dog cooling mats by material, durability, and overall value. Here are the 3 worth buying.',
     heroHeadline: 'The Best Cooling Mats to Keep Your Dog Comfortable',
     introCopy:
-      'A good cooling mat gives your dog an instant cool-down spot — no electricity, no prep. We compared pressure-activated gel pads and water-based mats to find the strongest options. Here are our top picks.',
+      'A good cooling mat gives your dog an instant cool-down spot — no electricity needed. We compared pressure-activated gel pads and water-based mats to find the best options.',
     faqs: [
       {
         question: 'Are cooling mats safe for dogs?',
