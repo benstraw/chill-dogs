@@ -185,7 +185,7 @@ export const coolingProducts: CoolingProduct[] = [
       'Nearly indestructible natural rubber stands up to heavy chewers',
       'Unpredictable bounce keeps dogs mentally engaged',
     ],
-    bestFor: 'Heavy chewers who need long-lasting frozen enrichment',
+    bestFor: 'Heavy chewers who need long-lasting enrichment',
     coolingMethod: 'Freeze stuffing inside',
     image: { src: 'https://m.media-amazon.com/images/I/61eVAqrR7uL._SL500_.jpg', alt: 'KONG Classic Dog Toy' },
   },
@@ -197,7 +197,7 @@ export const coolingProducts: CoolingProduct[] = [
     amazonUrl:
       'https://www.amazon.com/PetSafe-Freezable-Holding-Chilly-Penguin/dp/B0G1NDQQYF/?tag=chill-dogs-20',
     bullets: [
-      'Fill with water and freeze — the penguin slowly releases cool water as it thaws',
+      'Fill with water and freeze — Cool water is released as it thaws',
       'Dishwasher-safe for easy cleanup',
       'Fun shape encourages interactive play and licking',
     ],
@@ -427,22 +427,22 @@ export const categoryMeta: Record<ProductCategory, CategoryMeta> = {
       'Cool your dog down from the inside out. These freezable toys provide enrichment and relief on hot days.',
     heroHeadline: 'The Best Freezable Toys to Cool Down Your Dog',
     introCopy:
-      'Freezable toys combine enrichment with cooling — stuff them, freeze them, and let your dog work for a cold treat. Here are two classics that deliver.',
+      'Freezable toys combine enrichment with cooling — stuff them, freeze them, and let your dog work for a cold treat.',
     faqs: [
       {
         question: 'What can I freeze inside a KONG?',
         answer:
-          'Peanut butter (xylitol-free), plain yogurt, mashed banana, wet dog food, or a mix. Freeze for at least 4 hours for the longest-lasting challenge.',
+          'Peanut butter (xylitol-free), plain yogurt, or wet dog food all work well. Freeze for at least 4 hours for a long-lasting challenge.',
       },
       {
         question: 'Are freezable toys safe for puppies?',
         answer:
-          'Yes — the KONG Classic and Chilly Penguin are both safe for puppies. Use the KONG Puppy (softer rubber) for teething pups under 9 months.',
+          'Yes — the KONG Classic and Chilly Penguin are both safe for puppies. Use the KONG Puppy (softer rubber) for teething pups younger than 9 months old.',
       },
       {
         question: 'How long do frozen toys keep dogs busy?',
         answer:
-          'A fully frozen KONG can last 20–45 minutes depending on the filling and your dog\'s determination. The Chilly Penguin is quicker — usually 10–20 minutes.',
+          'A fully frozen KONG can last 20–45 minutes depending on the filling and your dog\'s determination. The Chilly Penguin will usually last 10–20 minutes.',
       },
     ],
     internalLinks: [
