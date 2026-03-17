@@ -37,11 +37,13 @@ site_system:
 
     - name: "Cooling"
       type: "collector"
+      collector_subtype: "hub"
       target_action: "Route heat-intent traffic to cooling converters"
       metric: "collector_to_converter_click to cooling converters"
 
     - name: "Calming"
       type: "collector"
+      collector_subtype: "hub"
       target_action: "Route anxiety-intent traffic to calming converters"
       metric: "collector_to_converter_click to calming converters"
 
@@ -68,13 +70,23 @@ site_system:
 
     - name: "Keep a Dog Cool in a Car"
       type: "collector"
+      collector_subtype: "article"
       target_action: "Route car-heat-intent traffic to cooling converters"
       metric: "collector_to_converter_click to car cooling and related converters"
       routes:
         - "/cooling/keep-dog-cool-in-car/"
 
+    - name: "How Hot Is Too Hot for Dogs"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Route heat-safety-intent traffic to cooling converters"
+      metric: "collector_to_converter_click to cooling converters"
+      routes:
+        - "/cooling/how-hot-is-too-hot-for-dogs/"
+
     - name: "Road Trip Chill Kit"
       type: "collector"
+      collector_subtype: "article"
       target_action: "Route mixed intent to cooling and calming converters"
       metric: "collector_to_converter_click split by destination"
       routes:
