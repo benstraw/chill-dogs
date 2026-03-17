@@ -1,0 +1,178 @@
+---
+import AffiliateLink from '@components/AffiliateLink.astro';
+import type { RelaxationProduct } from '@data/relaxation-products';
+
+interface Props {
+  product: RelaxationProduct;
+  position?: number;
+  pageSlug?: string;
+}
+
+const { product, position = 0, pageSlug = '' } = Astro.props;
+---
+
+<div class="rx-card">
+  <div class="rx-card-image">
+    {product.image ? (
+      <img
+        src={product.image.src}
+        alt={product.image.alt}
+        loading="lazy"
+        decoding="async"
+        width="400"
+        height="300"
+        onerror="this.style.display='none';this.parentElement.classList.add('rx-card-image--fallback')"
+      />
+    ) : (
+      <div class="rx-card-image-placeholder" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="48" height="48" fill="currentColor" aria-hidden="true">
+          <path d="M50 15c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zm-20 25c-3.3 0-6 2.7-6 6v4c0 8.8 11.2 16 26 16s26-7.2 26-16v-4c0-3.3-2.7-6-6-6H30zm-8 30c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm56 0c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zM36 78c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm28 0c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z"/>
+        </svg>
+      </div>
+    )}
+  </div>
+  <div class="rx-card-body">
+    <h3 class="rx-card-name">{product.name}</h3>
+    <p class="rx-card-best-for">
+      <strong>Best for:</strong> {product.bestFor}
+    </p>
+    <ul class="rx-card-bullets">
+      {product.bullets.map((bullet) => <li>{bullet}</li>)}
+    </ul>
+    <p class="rx-card-meta">
+      <span class="rx-card-meta-label">Why it works:</span> {product.whyItWorks}
+    </p>
+    <p class="rx-card-meta">
+      <span class="rx-card-meta-label">Consider it if:</span> {product.considerIf}
+    </p>
+    <AffiliateLink
+      href={product.amazonUrl}
+      class="rx-card-cta"
+      data-track="amazon_outbound_click"
+      data-page-type="converter"
+      data-page-slug={pageSlug}
+      data-product-name={product.name}
+      data-product-category={product.category}
+      data-position={String(position)}
+      data-destination="amazon.com"
+    >
+      Check Price on Amazon
+    </AffiliateLink>
+  </div>
+</div>
+
+<style>
+  .rx-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: box-shadow var(--transition-base);
+  }
+
+  .rx-card:hover {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .rx-card-image {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--color-bg-alt);
+  }
+
+  .rx-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #fff;
+  }
+
+  .rx-card-image--fallback,
+  .rx-card-image:has(.rx-card-image-placeholder) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rx-card-image-placeholder {
+    color: var(--color-sky);
+    opacity: 0.5;
+  }
+
+  .rx-card-body {
+    padding: var(--space-lg);
+  }
+
+  .rx-card-name {
+    font-size: var(--text-lg);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-sm);
+  }
+
+  .rx-card-best-for {
+    font-size: var(--text-sm);
+    color: var(--color-accent-text);
+    margin-bottom: var(--space-md);
+    line-height: var(--leading-normal);
+  }
+
+  .rx-card-best-for strong {
+    color: var(--color-text);
+  }
+
+  .rx-card-bullets {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+    line-height: var(--leading-normal);
+  }
+
+  .rx-card-bullets li {
+    padding-left: var(--space-md);
+    position: relative;
+    margin-bottom: var(--space-xs);
+  }
+
+  .rx-card-bullets li::before {
+    content: '+';
+    position: absolute;
+    left: 0;
+    color: var(--color-sky);
+    font-weight: var(--weight-bold);
+  }
+
+  .rx-card-meta {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-sm);
+    line-height: var(--leading-normal);
+  }
+
+  .rx-card-meta-label {
+    font-weight: var(--weight-semibold);
+    color: var(--color-text);
+  }
+
+  :global(.rx-card-cta) {
+    display: block;
+    text-align: center;
+    background: var(--color-sky);
+    color: var(--color-charcoal) !important;
+    font-weight: var(--weight-semibold);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-md);
+    transition: background var(--transition-fast);
+    text-decoration: none;
+    margin-top: var(--space-md);
+  }
+
+  :global(.rx-card-cta:hover) {
+    background: var(--color-sky-hover);
+    color: var(--color-charcoal) !important;
+  }
+
+  :global(.rx-card-cta:focus-visible) {
+    outline: 2px solid var(--color-sky);
+    outline-offset: 2px;
+  }
+</style>
