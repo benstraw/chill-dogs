@@ -16,6 +16,11 @@ bun run preview   # Preview built site
 - Keep `docs/system-definition.yaml` updated whenever pages, routes, page types, module stacks, navigation, or conversion flow change.
 - AI-assisted page changes are incomplete unless this file remains accurate.
 
+## Content Sitemap
+
+- `src/pages/content-sitemap.astro` is the live page inventory. **Every new page must be added to it before the work is considered done.** This includes hub collectors, article collectors, converters, and attractor pages — not just informer pages.
+- When adding a page: add it to the correct section (or create a new section if the pillar is new), set the correct `pageType` and `collectorSubtype` where applicable.
+
 ## Governing Principles
 
 This site is a **modular conversion system** governed by `docs/web-systems-adventure-mode.md`. Before any change, ask:

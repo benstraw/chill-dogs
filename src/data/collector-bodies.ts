@@ -152,6 +152,14 @@ export const calmingCollectorBody: CollectorBodyConfig = {
           linkLabel: 'Read the guide ->',
           dataToPage: ROUTES.roadTrip,
         },
+        {
+          href: ROUTES.comfortCalmingBeds,
+          title: 'Best Calming Dog Beds',
+          description:
+            'Donut beds, cuddler beds, and bolster beds for dogs who curl up, burrow, or press against something when they sleep.',
+          linkLabel: 'See our picks ->',
+          dataToPage: ROUTES.comfortCalmingBeds,
+        },
       ],
     },
   ],
