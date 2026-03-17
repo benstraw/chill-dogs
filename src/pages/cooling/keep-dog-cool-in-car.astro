@@ -1,0 +1,38 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import HeroExperiment from '@components/modules/HeroExperiment.astro';
+import CarCoolingGuideBody from '@components/modules/CarCoolingGuideBody.astro';
+import JsonLd from '@components/JsonLd.astro';
+
+const collectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'How to Keep a Dog Cool in a Car Without Overdoing It',
+  url: 'https://www.chill-dogs.com/cooling/keep-dog-cool-in-car/',
+  description: 'Practical car cooling strategies for dogs — what works in the back seat, when AC isn\'t enough, and which gear to use on short trips and long drives.',
+  hasPart: [
+    { '@type': 'WebPage', name: 'Best Car Cooling Products for Dogs', url: 'https://www.chill-dogs.com/cooling/car-cooling-for-dogs/' },
+    { '@type': 'WebPage', name: 'Best Cooling Mats', url: 'https://www.chill-dogs.com/cooling/cooling-mats/' },
+    { '@type': 'WebPage', name: 'Best Cooling Bandanas', url: 'https://www.chill-dogs.com/cooling/cooling-bandanas/' },
+    { '@type': 'WebPage', name: 'Road Trip Chill Kit', url: 'https://www.chill-dogs.com/travel/rhys-road-trip-chill-kit/' },
+    { '@type': 'WebPage', name: 'How Hot Is Too Hot for Dogs?', url: 'https://www.chill-dogs.com/cooling/how-hot-is-too-hot-for-dogs/' },
+  ],
+};
+---
+
+<BaseLayout
+  title="Keep a Dog Cool in a Car Without Overdoing It"
+  description="Practical car cooling strategies for dogs — what works in the back seat, when AC isn't enough, and which gear to use on short trips and long drives."
+>
+  <JsonLd slot="head" schema={collectionSchema} />
+  <HeroExperiment
+    variant="c"
+    theme="cooling"
+    headline="Cool Car, Happy Dog"
+    subhead="What actually works when the AC doesn't reach the back seat"
+    primaryCta={{ label: 'See car cooling picks', href: '/cooling/car-cooling-for-dogs/' }}
+    secondaryCta={{ label: 'How we choose products', href: '/about/#how-we-choose' }}
+  />
+
+  <CarCoolingGuideBody />
+</BaseLayout>

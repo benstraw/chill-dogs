@@ -91,7 +91,7 @@ function inferPageType(pathname) {
     return 'collector';
   }
 
-  if (pathname === '/cooling/how-hot-is-too-hot-for-dogs/' || pathname.startsWith('/travel/')) {
+  if (pathname === '/cooling/how-hot-is-too-hot-for-dogs/' || pathname === '/cooling/keep-dog-cool-in-car/' || pathname.startsWith('/travel/')) {
     return 'collector';
   }
 

@@ -9,6 +9,7 @@ export const ROUTES = {
   coolingVests: '/cooling/cooling-vests/',
   coolingToys: '/cooling/freezable-dog-toys/',
   coolingCar: '/cooling/car-cooling-for-dogs/',
+  coolingCarGuide: '/cooling/keep-dog-cool-in-car/',
   coolingSafety: '/cooling/how-hot-is-too-hot-for-dogs/',
   calmingHub: '/calming/',
   calmingTop: '/calming/best-calming-products-for-anxious-dogs/',

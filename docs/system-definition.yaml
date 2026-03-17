@@ -8,7 +8,7 @@
 
 site_system:
   status: "active"
-  as_of: "2026-03-06"
+  as_of: "2026-03-17"
   owner: "chill-dogs"
   purpose: "Define the website as a modular conversion system and keep implementation aligned."
 
@@ -65,6 +65,13 @@ site_system:
         - "/calming/best-calming-products-for-anxious-dogs/"
         - "/calming/best-thundershirt-alternatives/"
         - "/calming/car-anxiety-for-dogs/"
+
+    - name: "Keep a Dog Cool in a Car"
+      type: "collector"
+      target_action: "Route car-heat-intent traffic to cooling converters"
+      metric: "collector_to_converter_click to car cooling and related converters"
+      routes:
+        - "/cooling/keep-dog-cool-in-car/"
 
     - name: "Road Trip Chill Kit"
       type: "collector"
