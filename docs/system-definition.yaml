@@ -86,13 +86,13 @@ site_system:
 
     - name: "Relaxation converters"
       type: "converter"
-      pillar: "relaxation"
+      pillar: "comfort"
       pillar_tagline: "Rest. Recovery. Relaxation."
       target_action: "Drive affiliate outbound clicks on dog beds"
       metric: "amazon_outbound_click rate"
       routes:
-        - "/relaxation/best-calming-dog-beds/"
-        - "/relaxation/best-orthopedic-dog-beds/"
+        - "/comfort/best-calming-dog-beds/"
+        - "/comfort/best-orthopedic-dog-beds/"
       notes: >
         Relaxation pillar is in early build-out. Collector page and additional
         converters (dog crates, etc.) are planned but not yet live.

@@ -2,7 +2,7 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import { coolingProducts } from '../../data/cooling-products';
 import { calmingProducts } from '../../data/calming-products';
-import { relaxationProducts } from '../../data/relaxation-products';
+import { comfortProducts } from '../../data/comfort-products';
 import { buildProductPageMap } from '../../data/product-page-map';
 
 const pageMap = buildProductPageMap();
@@ -10,7 +10,7 @@ const pageMap = buildProductPageMap();
 const allProducts = [
   ...coolingProducts.map((p) => ({ ...p, pillar: 'cooling' as const, howItHelps: undefined as string | undefined, considerIf: undefined as string | undefined, whyItWorks: undefined as string | undefined })),
   ...calmingProducts.map((p) => ({ ...p, pillar: 'calming' as const, coolingMethod: undefined as string | undefined, sizingNote: undefined as string | undefined, whyItWorks: undefined as string | undefined })),
-  ...relaxationProducts.map((p) => ({ ...p, pillar: 'relaxation' as const, coolingMethod: undefined as string | undefined, sizingNote: undefined as string | undefined, howItHelps: undefined as string | undefined })),
+  ...comfortProducts.map((p) => ({ ...p, pillar: 'comfort' as const, coolingMethod: undefined as string | undefined, sizingNote: undefined as string | undefined, howItHelps: undefined as string | undefined })),
 ];
 
 const pillars = [...new Set(allProducts.map((p) => p.pillar))];
@@ -598,7 +598,7 @@ const categories = [...new Set(allProducts.map((p) => p.category))];
     color: var(--color-charcoal);
   }
 
-  .badge--relaxation {
+  .badge--comfort {
     background: var(--color-terracotta);
     color: var(--color-sand);
   }

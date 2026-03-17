@@ -146,7 +146,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         'Some dogs sleep anywhere. Others circle the same spot twelve times before lying down — and still look anxious once they do. The right bed shapes how your dog settles. Raised rims, soft fill, and enclosed shapes give dogs the containment and comfort they look for on their own.',
       disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
       primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
-      secondaryCta: { label: 'Orthopedic Beds', href: ROUTES.relaxationOrthopedicBeds },
+      secondaryCta: { label: 'Orthopedic Beds', href: ROUTES.comfortOrthopedicBeds },
     },
     toc: [
       { label: 'Quick Picks', anchor: 'quick-picks' },
@@ -270,7 +270,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       heading: 'More Rest & Recovery',
       guides: [
         {
-          href: ROUTES.relaxationOrthopedicBeds,
+          href: ROUTES.comfortOrthopedicBeds,
           title: 'Best Orthopedic Dog Beds',
           description:
             'For older dogs, large breeds, or heavy resters, orthopedic foam and full-surround bolsters make a real difference in sustained daily comfort.',
@@ -287,14 +287,14 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
     internalLinkStrip: {
       heading: 'More Relaxation Guides',
       links: [
-        { label: 'Orthopedic Dog Beds', href: ROUTES.relaxationOrthopedicBeds },
+        { label: 'Orthopedic Dog Beds', href: ROUTES.comfortOrthopedicBeds },
         { label: 'Best Calming Products', href: ROUTES.calmingTop },
         { label: 'Calming Hub', href: ROUTES.calmingHub },
       ],
     },
     itemListSchema: {
       name: 'Best Calming Dog Beds',
-      url: 'https://www.chill-dogs.com/relaxation/best-calming-dog-beds/',
+      url: 'https://www.chill-dogs.com/comfort/best-calming-dog-beds/',
       productIds: [
         'bedstill-donut-calming-bed',
         'chixnuggle-dog-bed',
@@ -316,7 +316,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         'Older dogs, larger breeds, and heavy daily resters need more than a padded surface. Orthopedic beds use denser foam to distribute body weight more evenly — reducing pressure on joints over the hours dogs spend resting each day. The right bed does that without sliding across the floor or collapsing after a few weeks.',
       disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
       primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
-      secondaryCta: { label: 'Calming Beds', href: ROUTES.relaxationCalmingBeds },
+      secondaryCta: { label: 'Calming Beds', href: ROUTES.comfortCalmingBeds },
     },
     toc: [
       { label: 'Quick Picks', anchor: 'quick-picks' },
@@ -437,7 +437,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       heading: 'More Rest & Recovery',
       guides: [
         {
-          href: ROUTES.relaxationCalmingBeds,
+          href: ROUTES.comfortCalmingBeds,
           title: 'Best Calming Dog Beds',
           description:
             'Donut beds, cuddler beds, and bolster beds for dogs who need extra comfort and security — not just a supportive surface.',
@@ -454,14 +454,14 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
     internalLinkStrip: {
       heading: 'More Relaxation Guides',
       links: [
-        { label: 'Calming Dog Beds', href: ROUTES.relaxationCalmingBeds },
+        { label: 'Calming Dog Beds', href: ROUTES.comfortCalmingBeds },
         { label: 'Best Calming Products', href: ROUTES.calmingTop },
         { label: 'Calming Hub', href: ROUTES.calmingHub },
       ],
     },
     itemListSchema: {
       name: 'Best Orthopedic Dog Beds',
-      url: 'https://www.chill-dogs.com/relaxation/best-orthopedic-dog-beds/',
+      url: 'https://www.chill-dogs.com/comfort/best-orthopedic-dog-beds/',
       productIds: [
         'invenho-orthopedic-bed',
         'invenho-orthopedic-couch-bed',

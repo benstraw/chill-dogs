@@ -17,8 +17,8 @@ export interface CollectorSection {
 
 export interface CollectorBodyConfig {
   fromPage: string;
-  accent: 'primary' | 'sage';
-  start: {
+  accent: 'primary' | 'sage' | 'terracotta';
+  start?: {
     href: string;
     title: string;
     description: string;
@@ -156,5 +156,35 @@ export const calmingCollectorBody: CollectorBodyConfig = {
     },
   ],
   showCalmingDisclaimer: true,
+  disclosureShowSafety: false,
+};
+
+export const comfortCollectorBody: CollectorBodyConfig = {
+  fromPage: 'comfort-hub',
+  accent: 'terracotta',
+  sections: [
+    {
+      heading: 'Shop by Bed Type',
+      intro: 'Two types of beds for two different needs — calming beds for dogs who seek security and enclosure, orthopedic beds for dogs who need joint support.',
+      cards: [
+        {
+          href: ROUTES.comfortCalmingBeds,
+          title: 'Best Calming Dog Beds',
+          description: 'Donut beds, cuddler beds, and bolster beds for dogs who curl up, burrow, or press against something when they sleep.',
+          linkLabel: 'See our picks ->',
+          dataToPage: ROUTES.comfortCalmingBeds,
+          dataCategory: 'calming-beds',
+        },
+        {
+          href: ROUTES.comfortOrthopedicBeds,
+          title: 'Best Orthopedic Dog Beds',
+          description: 'Dense foam beds for larger breeds, older dogs, and heavy resters who need consistent joint support through the night.',
+          linkLabel: 'See our picks ->',
+          dataToPage: ROUTES.comfortOrthopedicBeds,
+          dataCategory: 'orthopedic-beds',
+        },
+      ],
+    },
+  ],
   disclosureShowSafety: false,
 };
