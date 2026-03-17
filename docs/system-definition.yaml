@@ -66,6 +66,21 @@ site_system:
         - "/calming/best-thundershirt-alternatives/"
         - "/calming/car-anxiety-for-dogs/"
 
+    - name: "Relaxation converters"
+      type: "converter"
+      pillar: "relaxation"
+      pillar_tagline: "Rest. Recovery. Relaxation."
+      target_action: "Drive affiliate outbound clicks on dog beds"
+      metric: "amazon_outbound_click rate"
+      routes:
+        - "/relaxation/best-calming-dog-beds/"
+        - "/relaxation/best-orthopedic-dog-beds/"
+      notes: >
+        Relaxation pillar is in early build-out. Collector page and additional
+        converters (dog crates, etc.) are planned but not yet live.
+        Placeholder product entries (ASINs B0D5B56X9V, B0DTH4195V) need
+        to be identified and updated in src/data/relaxation-products.ts.
+
     - name: "Road Trip Chill Kit"
       type: "collector"
       target_action: "Route mixed intent to cooling and calming converters"
@@ -91,11 +106,13 @@ site_system:
       - "HeroExperiment"
       - "CoolingConverterPage"
       - "CalmingConverterPage"
+      - "RelaxationConverterPage"
       - "CollectorBody"
       - "ComparisonTable"
       - "CoolingProductGrid"
       - "CoolingProductCard"
       - "CalmingProductCard"
+      - "RelaxationProductCard"
       - "FAQ"
       - "Disclosure"
       - "InternalLinkStrip"
@@ -140,6 +157,7 @@ site_system:
   product_data:
     cooling_products: "src/data/cooling-products.ts — 15 products with ASIN, affiliate URL, and image thumbnails"
     calming_products: "src/data/calming-products.ts — 13 products with ASIN, affiliate URL, and image thumbnails"
+    relaxation_products: "src/data/relaxation-products.ts — 11 products (calming beds, orthopedic beds, crates) with ASIN and affiliate URL. 2 placeholder entries (B0D5B56X9V, B0DTH4195V) need identification."
     raw_api_cache: "src/data/amazon-products/*.json — full SearchAPI Amazon Product responses per ASIN"
 
   architecture:

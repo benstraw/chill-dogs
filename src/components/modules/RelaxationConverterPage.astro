@@ -1,0 +1,371 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import JsonLd from '@components/JsonLd.astro';
+import AffiliateLink from '@components/AffiliateLink.astro';
+import Hero from '@components/modules/Hero.astro';
+import Toc from '@components/modules/Toc.astro';
+import FAQ from '@components/modules/FAQ.astro';
+import Disclosure from '@components/modules/Disclosure.astro';
+import RelatedGuides from '@components/modules/RelatedGuides.astro';
+import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
+import RelaxationProductCard from '@components/modules/RelaxationProductCard.astro';
+import {
+  buildRelaxationItemListSchema,
+  getRequiredProducts,
+  type RelaxationBlock,
+  type RelaxationConverterPageConfig,
+  type QuickPickItem,
+} from '@data/relaxation-converter-pages';
+
+interface Props {
+  config: RelaxationConverterPageConfig;
+}
+
+const { config } = Astro.props;
+const schema = config.itemListSchema ? buildRelaxationItemListSchema(config.itemListSchema) : null;
+
+function sectionClass(block: RelaxationBlock): string {
+  return block.alt ? 'converter-section converter-section--alt' : 'converter-section';
+}
+
+function quickPickProduct(item: QuickPickItem) {
+  return getRequiredProducts([item.productId])[0];
+}
+---
+
+<BaseLayout title={config.title} description={config.description} navAccent="var(--color-sky)">
+  {schema && <JsonLd slot="head" schema={schema} />}
+
+  <div class="relaxation-theme">
+    <Hero
+      title={config.hero.title}
+      subtitle={config.hero.subtitle}
+      disclaimer={config.hero.disclaimer}
+      primaryCta={config.hero.primaryCta}
+      secondaryCta={config.hero.secondaryCta}
+      pageSlug={config.pageSlug}
+    />
+
+    {config.toc && <Toc headings={config.toc} pageSlug={config.pageSlug} />}
+
+    {config.blocks.map((block) => (
+      block.kind === 'quick_picks' ? (
+        <section class={sectionClass(block)} id={block.id}>
+          <div class="converter-inner">
+            <h2>{block.heading}</h2>
+            <p class="section-intro">{block.intro}</p>
+            <div class="quick-picks-grid">
+              {block.items.map((item) => {
+                const product = quickPickProduct(item);
+                return (
+                  <article class="quick-pick-card">
+                    <div class="quick-pick-image">
+                      {product.image ? (
+                        <img
+                          src={product.image.src}
+                          alt={product.image.alt}
+                          loading="lazy"
+                          decoding="async"
+                          onerror="this.style.display='none';this.parentElement.classList.add('quick-pick-image--fallback')"
+                        />
+                      ) : (
+                        <div class="quick-pick-image-placeholder" aria-hidden="true">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="48" height="48" fill="currentColor" aria-hidden="true">
+                            <path d="M50 15c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zm-20 25c-3.3 0-6 2.7-6 6v4c0 8.8 11.2 16 26 16s26-7.2 26-16v-4c0-3.3-2.7-6-6-6H30zm-8 30c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm56 0c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zM36 78c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm28 0c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z"/>
+                          </svg>
+                        </div>
+                      )}
+                    </div>
+                    <p class="quick-pick-label">{item.label}</p>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                    <AffiliateLink
+                      href={product.amazonUrl}
+                      class="quick-pick-link"
+                      data-track="amazon_outbound_click"
+                      data-page-type="converter"
+                      data-page-slug={config.pageSlug}
+                      data-product-name={product.name}
+                      data-product-category={product.category}
+                      data-position={item.position}
+                      data-destination="amazon.com"
+                    >
+                      Check price on Amazon
+                    </AffiliateLink>
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      ) : block.kind === 'product_section' ? (
+        <section class={sectionClass(block)} id={block.id}>
+          <div class="converter-inner">
+            <h2>{block.heading}</h2>
+            {block.intro && <p class="section-intro">{block.intro}</p>}
+            {block.copyHtml && <p class="section-copy" set:html={block.copyHtml} />}
+            <div class={`product-grid product-grid--${block.columns}`}>
+              {getRequiredProducts(block.productIds).map((product, i) => (
+                <RelaxationProductCard
+                  product={product}
+                  position={block.positionOffset + i + 1}
+                  pageSlug={config.pageSlug}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : block.kind === 'decision_columns' ? (
+        <section class={sectionClass(block)} id={block.id}>
+          <div class="converter-inner decisions">
+            <div class="decision-card">
+              <h2>{block.left.heading}</h2>
+              <ul>
+                {block.left.items.map((item) => <li>{item}</li>)}
+              </ul>
+            </div>
+            <div class="decision-card">
+              <h2>{block.right.heading}</h2>
+              <ul>
+                {block.right.items.map((item) => <li>{item}</li>)}
+              </ul>
+            </div>
+          </div>
+        </section>
+      ) : block.kind === 'note' ? (
+        <section class={sectionClass(block)}>
+          <div class="converter-inner">
+            <aside class="relaxation-note">
+              <h2>{block.heading}</h2>
+              <p>{block.text}</p>
+            </aside>
+          </div>
+        </section>
+      ) : (
+        <section class={sectionClass(block)} id={block.id}>
+          <div class="converter-inner prose">
+            <h2>{block.heading}</h2>
+            {block.intro && <p class="section-intro">{block.intro}</p>}
+            {block.paragraphs.map((paragraph) => <p set:html={paragraph} />)}
+          </div>
+        </section>
+      )
+    ))}
+
+    {config.faq && (
+      <section id="faq">
+        <FAQ faqs={config.faq.items} heading={config.faq.heading} />
+      </section>
+    )}
+
+    {config.relatedGuides && (
+      <RelatedGuides heading={config.relatedGuides.heading} guides={config.relatedGuides.guides} />
+    )}
+
+    <Disclosure showSafety={config.disclosureShowSafety} />
+
+    {config.internalLinkStrip && (
+      <InternalLinkStrip
+        heading={config.internalLinkStrip.heading}
+        links={config.internalLinkStrip.links}
+        fromPage={config.pageSlug}
+      />
+    )}
+  </div>
+</BaseLayout>
+
+<style>
+  .converter-section {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+
+  .converter-section--alt {
+    background: var(--color-bg-alt);
+  }
+
+  .converter-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .section-intro,
+  .section-copy {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    max-width: var(--max-width-prose);
+    margin-bottom: var(--space-xl);
+  }
+
+  .section-copy a {
+    color: var(--color-sky);
+    text-decoration: underline;
+  }
+
+  .quick-picks-grid,
+  .decisions,
+  .product-grid {
+    display: grid;
+    gap: var(--space-lg);
+  }
+
+  .quick-picks-grid,
+  .product-grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .product-grid--2,
+  .decisions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-grid--1 {
+    max-width: 720px;
+    grid-template-columns: 1fr;
+  }
+
+  .quick-pick-card,
+  .decision-card,
+  .relaxation-note {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+  }
+
+  .quick-pick-label {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xs);
+  }
+
+  .quick-pick-image {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-sm);
+  }
+
+  .quick-pick-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #fff;
+  }
+
+  .quick-pick-image--fallback,
+  .quick-pick-image:has(.quick-pick-image-placeholder) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .quick-pick-image-placeholder {
+    color: var(--color-sky);
+    opacity: 0.5;
+  }
+
+  .quick-pick-card h3 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-sm);
+  }
+
+  .quick-pick-card p,
+  .decision-card li,
+  .relaxation-note p {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+  }
+
+  .quick-pick-link {
+    display: block;
+    text-align: center;
+    margin-top: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-sky);
+    color: var(--color-charcoal) !important;
+    font-weight: var(--weight-semibold);
+    font-size: var(--text-sm);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    transition: background 0.15s ease;
+  }
+
+  .quick-pick-link:hover {
+    background: var(--color-sky-hover);
+    color: var(--color-charcoal) !important;
+  }
+
+  .quick-pick-link:focus-visible {
+    outline: 2px solid var(--color-sky);
+    outline-offset: 2px;
+  }
+
+  .decision-card ul {
+    margin: 0;
+    padding-left: 1.125rem;
+  }
+
+  .decision-card li + li {
+    margin-top: var(--space-xs);
+  }
+
+  :global(.relaxation-theme .hero-cta--primary) {
+    background: var(--color-sky);
+    color: var(--color-charcoal);
+  }
+
+  :global(.relaxation-theme .hero-cta--primary:hover) {
+    background: var(--color-sky-hover);
+    color: var(--color-charcoal);
+  }
+
+  :global(.relaxation-theme .hero-cta--secondary) {
+    color: var(--color-sky);
+    border-color: var(--color-sky);
+  }
+
+  :global(.relaxation-theme .hero-cta--secondary:hover) {
+    background: var(--color-sky);
+    color: var(--color-charcoal);
+  }
+
+  :global(.relaxation-theme .ils-link:hover) {
+    background: var(--color-sky);
+    color: var(--color-charcoal);
+  }
+
+  :global(.relaxation-theme .disc-inner a) {
+    color: var(--color-sky);
+  }
+
+  @media (max-width: 1024px) {
+    .quick-picks-grid,
+    .product-grid--3 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 900px) {
+    .product-grid--2,
+    .decisions {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .converter-section {
+      padding: var(--space-xl) var(--space-md);
+    }
+
+    .quick-picks-grid,
+    .product-grid--3 {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
