@@ -200,8 +200,6 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         productIds: [
           'bedstill-donut-calming-bed',
           'chixnuggle-dog-bed',
-          'calming-bed-placeholder-1',
-          'calming-bed-placeholder-2',
         ],
       },
       {
@@ -300,8 +298,6 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       productIds: [
         'bedstill-donut-calming-bed',
         'chixnuggle-dog-bed',
-        'calming-bed-placeholder-1',
-        'calming-bed-placeholder-2',
         'pendleton-fleece-kuddler',
         'carolina-pet-bolster-sm',
       ],
@@ -371,7 +367,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         columns: 3,
         intro:
           'These beds prioritize the foam base. The focus is consistent support across the full sleeping surface — particularly useful for heavier dogs or dogs who spend long stretches resting in the same spot.',
-        productIds: ['invenho-orthopedic-bed', 'zomisia-orthopedic-bed', 'anti-anxiety-orthopedic-bed'],
+        productIds: ['invenho-orthopedic-bed', 'invenho-orthopedic-couch-bed', 'zomisia-orthopedic-bed', 'anti-anxiety-orthopedic-bed', 'bedsure-comfyfleece-orthopedic'],
       },
       {
         kind: 'product_section',
@@ -468,8 +464,10 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       url: 'https://www.chill-dogs.com/relaxation/best-orthopedic-dog-beds/',
       productIds: [
         'invenho-orthopedic-bed',
+        'invenho-orthopedic-couch-bed',
         'zomisia-orthopedic-bed',
         'anti-anxiety-orthopedic-bed',
+        'bedsure-comfyfleece-orthopedic',
         'cwawz-orthopedic-bolster',
         'carolina-pet-bolster-lg',
       ],

@@ -1,0 +1,170 @@
+{
+  "search_metadata": {
+    "id": "69b9c6d2ef15ce8c18648ebf",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/j83fDujjLx1dApl0Qs46YA/69b9c6d2ef15ce8c18648ebf.json",
+    "created_at": "2026-03-17 21:25:38 UTC",
+    "processed_at": "2026-03-17 21:25:38 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0DCGQLJJ8/?",
+    "raw_html_file": "https://serpapi.com/searches/j83fDujjLx1dApl0Qs46YA/69b9c6d2ef15ce8c18648ebf.html",
+    "total_time_taken": 4.19
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0DCGQLJJ8",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0DCGQLJJ8",
+    "title": "CAROLINA PET COMPANY Microfiber & Tipped Berber Comfy Cup Dog Bed - Blue, S",
+    "link": "https://www.amazon.com/CAROLINA-PET-COMPANY-Microfiber-Tipped/dp/B0DCGQLJJ8/",
+    "link_clean": "https://www.amazon.com/dp/B0DCGQLJJ8/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DCGQLJJ8&device=desktop&engine=amazon_product",
+    "variants": [
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0DCGQLJJ8",
+            "name": "Small",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DCGQLJJ8&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0DCGKQQ64",
+            "name": "Medium",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DCGKQQ64&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0DCGR7YKR",
+            "name": "Large",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DCGR7YKR&device=desktop&engine=amazon_product"
+          }
+        ]
+      },
+      {
+        "title": "Color",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0DCGQLJJ8",
+            "name": "Blue",
+            "image": "https://m.media-amazon.com/images/I/318Y34VPi7L._SS64_.jpg",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DCGQLJJ8&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0DCGPFVMC",
+            "name": "Bone",
+            "image": "https://m.media-amazon.com/images/I/31+EeBrZItL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DCGPFVMC&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0DCGRYC26",
+            "name": "Brown",
+            "image": "https://m.media-amazon.com/images/I/31rKwBnvilL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DCGRYC26&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 4,
+            "asin": "B0DCGQH8H2",
+            "name": "Green",
+            "image": "https://m.media-amazon.com/images/I/31fPQm1y25L._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DCGQH8H2&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Brand: CAROLINA PET COMPANY",
+    "thumbnail": "https://m.media-amazon.com/images/I/51pzu55J+1L._AC_SY300_SX300_QL70_ML2_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/51pzu55J+1L._AC_SL1200_.jpg",
+      "https://m.media-amazon.com/images/I/51bDKx-2+uL._AC_SL1200_.jpg",
+      "https://m.media-amazon.com/images/I/51iH-u+XosL._AC_SL1200_.jpg",
+      "https://m.media-amazon.com/images/I/51Q9eDcy+ML._AC_SL1200_.jpg",
+      "https://m.media-amazon.com/images/I/71XJa3S1ksL._AC_SL1200_.jpg",
+      "https://m.media-amazon.com/images/I/71cJfy9V1hL._AC_SL1200_.jpg",
+      "https://m.media-amazon.com/images/I/71gYvHo8nAL._AC_SL1200_.jpg",
+      "https://m.media-amazon.com/images/I/619+3iVuV+L._AC_SL1200_.jpg",
+      "https://m.media-amazon.com/images/I/61Cjv+qQk-L._AC_SL1200_.jpg"
+    ],
+    "rating": 4.3,
+    "reviews": 10,
+    "price": "$85.00",
+    "extracted_price": 85,
+    "price_unit": "$85.00 / count",
+    "extracted_price_unit": 85,
+    "prime": true,
+    "delivery": [
+      "FREE delivery March 24 - 25. Details"
+    ],
+    "stock": "Only 4 left in stock - order soon."
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$85.00",
+      "extracted_price": 85,
+      "price_unit": "$85.00 / count",
+      "extracted_price_unit": 85,
+      "delivery": [
+        "FREE delivery March 24 - 25. Details"
+      ],
+      "stock": "Only 4 left in stock - order soon.",
+      "features": {
+        "shipper_seller": {
+          "text": "Petco Supplies",
+          "details": {
+            "heading": "Shipper / Seller",
+            "content": "Petco Supplies"
+          },
+          "link": {
+            "text": "Petco Supplies",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A2LDZGFAGG1QXE&asin=B0DCGQLJJ8&ref_=dp_merchant_link"
+          }
+        },
+        "returns": {
+          "text": "30-day refund/replacement",
+          "details": {
+            "heading": "30-day refund/replacement",
+            "content": "This item can be returned in its original condition for a full refund or replacement within 30 days of receipt. You may receive a partial or no refund on used, damaged or materially different returns."
+          },
+          "link": {
+            "text": "Read full return policy",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GKM69DUUYKQWKWX7&ref_=dp_ret_policy"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "brand": "CAROLINA PET COMPANY",
+    "breed_recommendation": "Small",
+    "special_feature": "Removable Cover",
+    "material": "Polyester",
+    "product_dimensions": "27\"L x 24\"W x 8\"Th"
+  },
+  "about_item": [
+    "Polyester microfiber cover with berber sleep surface",
+    "Wrap around bolster provides comfort, support & security",
+    "Overstuffed with high-loft polyester fiber for maximum comfort",
+    "Zippered, removable cover for easy washing",
+    "Interior liners have zippers to adjust fill over time & use"
+  ]
+}

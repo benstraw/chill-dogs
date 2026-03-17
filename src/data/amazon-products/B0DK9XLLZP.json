@@ -1,0 +1,178 @@
+{
+  "search_metadata": {
+    "id": "69b9c6a1e6590e14f65222be",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/NONx4HOdbjU_vNwHbdSvpw/69b9c6a1e6590e14f65222be.json",
+    "created_at": "2026-03-17 21:24:49 UTC",
+    "processed_at": "2026-03-17 21:24:49 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0DK9XLLZP/?",
+    "raw_html_file": "https://serpapi.com/searches/NONx4HOdbjU_vNwHbdSvpw/69b9c6a1e6590e14f65222be.html",
+    "total_time_taken": 1.88
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0DK9XLLZP",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0DK9XLLZP",
+    "title": "Pendleton Fleece Kuddler Dog Bed - Cabin Stripe Shale, M",
+    "link": "https://www.amazon.com/gp/aag/details/?seller=A1CE26U2AUDO5L&sshmPath=shipping-rates",
+    "link_clean": "https://www.amazon.com/dp/B0DK9XLLZP/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DK9XLLZP&device=desktop&engine=amazon_product",
+    "variants": [
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0DK9XLLZP",
+            "name": "Medium",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DK9XLLZP&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0DK9Y2CBL",
+            "name": "Large",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DK9Y2CBL&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0DK9XZJF6",
+            "name": "X-Large",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DK9XZJF6&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 4,
+            "asin": "B01N8QH76R",
+            "name": "One Size",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B01N8QH76R&device=desktop&engine=amazon_product"
+          }
+        ]
+      },
+      {
+        "title": "Color",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0DK9VQL7Q",
+            "name": "Cabin Stripe Gray",
+            "image": "https://m.media-amazon.com/images/I/31y65lMuhJL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DK9VQL7Q&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0DK9XLLZP",
+            "name": "Cabin Stripe Shale",
+            "image": "https://m.media-amazon.com/images/I/31kvhSynCtL._SS64_.jpg",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DK9XLLZP&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B01N8QH76R",
+            "name": "Grey Stewart Plaid",
+            "image": "https://m.media-amazon.com/images/I/41Ke0TH5uNL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B01N8QH76R&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 4,
+            "asin": "B0D79D6BWZ",
+            "name": "Los Ojos",
+            "image": "https://m.media-amazon.com/images/I/41oIbvlX4hL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0D79D6BWZ&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 5,
+            "asin": "B0815P4BLY",
+            "name": "San Miguel",
+            "image": "https://m.media-amazon.com/images/I/31cFN+54OgL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0815P4BLY&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the Pendleton Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/71sayTkHvuL._AC_SY300_SX300_QL70_ML2_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/71sayTkHvuL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61jT1iNDuzL._AC_SL1200_.jpg",
+      "https://m.media-amazon.com/images/I/51YZcjkhbPL._AC_SL1200_.jpg",
+      "https://m.media-amazon.com/images/I/614MdpaS66L._AC_SL1500_.jpg"
+    ],
+    "rating": 4.7,
+    "reviews": 13,
+    "price": "$170.00",
+    "extracted_price": 170,
+    "price_unit": "$170.00 / count",
+    "extracted_price_unit": 170,
+    "prime": true,
+    "delivery": [
+      "FREE delivery March 24 - 26. Details"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$170.00",
+      "extracted_price": 170,
+      "price_unit": "$170.00 / count",
+      "extracted_price_unit": 170,
+      "delivery": [
+        "FREE delivery March 24 - 26. Details"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "shipper_seller": {
+          "text": "Carolina Pet Company, LLC",
+          "details": {
+            "heading": "Shipper / Seller",
+            "content": "Carolina Pet Company, LLC"
+          },
+          "link": {
+            "text": "Carolina Pet Company, LLC",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A1CE26U2AUDO5L&asin=B0DK9XLLZP&ref_=dp_merchant_link"
+          }
+        },
+        "returns": {
+          "text": "30-day refund/replacement",
+          "details": {
+            "heading": "30-day refund/replacement",
+            "content": "This item can be returned in its original condition for a full refund or replacement within 30 days of receipt. You may receive a partial or no refund on used, damaged or materially different returns."
+          },
+          "link": {
+            "text": "Read full return policy",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GKM69DUUYKQWKWX7&ref_=dp_ret_policy"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "brand": "Pendleton",
+    "breed_recommendation": "Small",
+    "special_feature": "Removable Cover, Travel",
+    "material": "Polyester",
+    "product_dimensions": "30\"L x 24\"W x 9\"Th"
+  },
+  "about_item": [
+    "Perfect for Travel - Easily travels along for camping, to a friends house, or in the car.",
+    "Durable - This bed features a non-pill polar fleece in a one-piece construction.",
+    "Machine Washable - Easy to clean machine-washable removable cover. To dry, use a delicate cycle or gentle setting with very low heat.",
+    "Comfortable & Supportive - Overstuffed with recycled high-loft MemoryFiber polyester fiberfill that keeps pets elevated off cold floors and provides relief on joints and pressure points. The raised bolsters support your dog's head, neck, and joints.",
+    "Sylish - Features the Cabin Stripe pattern on a Shale Blue background"
+  ]
+}

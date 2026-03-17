@@ -30,6 +30,7 @@ export const relaxationProducts: RelaxationProduct[] = [
     bestFor: 'Dogs who like to curl, burrow, or press against something when resting',
     whyItWorks: 'Raised border and round shape create an enclosed feel that many dogs seek out on their own',
     considerIf: 'Your dog tends to curl tightly or consistently gravitates toward corners and edges during naps',
+    image: { src: 'https://m.media-amazon.com/images/I/71hPsNDImjL._SL500_.jpg', alt: 'BedStill Donut Calming Dog Bed' },
   },
   {
     id: 'chixnuggle-dog-bed',
@@ -45,6 +46,7 @@ export const relaxationProducts: RelaxationProduct[] = [
     bestFor: 'Medium dogs who prefer a cozy, nestled sleeping position',
     whyItWorks: 'Recessed center and snuggle-focused fill support the natural positions dogs choose for deep rest',
     considerIf: 'Your dog regularly seeks out confined spaces, tight spots, or curls tightly when napping',
+    image: { src: 'https://m.media-amazon.com/images/I/61Wrn3q+2yL._SL500_.jpg', alt: 'ChiXnuggle Dog Bed' },
   },
   {
     id: 'pendleton-fleece-kuddler',
@@ -61,6 +63,7 @@ export const relaxationProducts: RelaxationProduct[] = [
     whyItWorks: 'Pendleton fleece provides deep softness that encourages dogs to settle and stay put through full naps',
     considerIf:
       'You want a bed that looks as good as it functions and your dog favors flat or low-profile resting',
+    image: { src: 'https://m.media-amazon.com/images/I/71sayTkHvuL._SL500_.jpg', alt: 'Pendleton Fleece Kuddler Dog Bed' },
   },
   {
     id: 'carolina-pet-bolster-sm',
@@ -76,38 +79,39 @@ export const relaxationProducts: RelaxationProduct[] = [
     bestFor: 'Dogs who like to rest their head on a raised edge or lean against a bolster',
     whyItWorks: 'Raised bolster perimeter supports resting heads and creates a defined, comforting sleeping area',
     considerIf: 'Your dog regularly leans against furniture, walls, or cushions when settling in for a nap',
+    image: { src: 'https://m.media-amazon.com/images/I/51zWC7FVLdL._SL500_.jpg', alt: 'Carolina Pet Company Microfiber Tipped Bolster Bed' },
   },
   {
-    // PLACEHOLDER — product not yet identified. Update name/copy when ASIN is confirmed.
-    id: 'calming-bed-placeholder-1',
+    id: 'invenho-orthopedic-couch-bed',
     asin: 'B0D5B56X9V',
-    name: 'Calming Dog Bed (Details TBD)',
-    category: 'calming-beds',
+    name: 'INVENHO Orthopedic Dog Couch Bed',
+    category: 'orthopedic-beds',
     amazonUrl: 'https://www.amazon.com/dp/B0D5B56X9V/?tag=chill-dogs-20',
     bullets: [
-      'Product details to be confirmed — update this entry once the ASIN is identified',
-      'Placeholder entry included to reserve position in the calming beds section',
-      'See Amazon listing for current product name, features, and sizing options',
+      'Egg-crate foam base distributes body weight more evenly than flat poly fill',
+      'Waterproof lining and washable removable cover make cleanup practical for daily use',
+      'Couch-style profile with raised back gives dogs a surface to rest against during sleep',
     ],
-    bestFor: 'Details TBD — check Amazon listing',
-    whyItWorks: 'Details TBD — update once product is identified',
-    considerIf: 'Details TBD — update once product is identified',
+    bestFor: 'Dogs who like a raised back to lean against and need orthopedic joint support',
+    whyItWorks: 'Egg-crate foam provides better pressure distribution than standard foam, reducing buildup at hips and shoulders during long rest',
+    considerIf: 'Your dog actively seeks out furniture or walls to lean against when napping',
+    image: { src: 'https://m.media-amazon.com/images/I/610mMpDp39L._SL500_.jpg', alt: 'INVENHO Orthopedic Dog Couch Bed' },
   },
   {
-    // PLACEHOLDER — product not yet identified. Update name/copy when ASIN is confirmed.
-    id: 'calming-bed-placeholder-2',
+    id: 'bedsure-comfyfleece-orthopedic',
     asin: 'B0DTH4195V',
-    name: 'Calming Dog Bed (Details TBD)',
-    category: 'calming-beds',
+    name: 'Bedsure ComfyFleece Orthopedic Dog Bed with Sides',
+    category: 'orthopedic-beds',
     amazonUrl: 'https://www.amazon.com/dp/B0DTH4195V/?tag=chill-dogs-20',
     bullets: [
-      'Product details to be confirmed — update this entry once the ASIN is identified',
-      'Placeholder entry included to reserve position in the calming beds section',
-      'See Amazon listing for current product name, features, and sizing options',
+      'Memory foam and egg-crate base combined in a sofa-style profile with raised sides',
+      'ComfyFleece corduroy cover adds texture and warmth without trapping excess heat',
+      'Non-slip bottom keeps the bed stable on hardwood and tile floors',
     ],
-    bestFor: 'Details TBD — check Amazon listing',
-    whyItWorks: 'Details TBD — update once product is identified',
-    considerIf: 'Details TBD — update once product is identified',
+    bestFor: 'Dogs who want both memory foam support and the enclosed feel of raised sides',
+    whyItWorks: 'Memory foam conforms to the dog\'s shape while raised sides provide the perimeter security many dogs naturally seek',
+    considerIf: 'You want a bed that looks like furniture and your dog benefits from both joint support and a contained sleeping area',
+    image: { src: 'https://m.media-amazon.com/images/I/81-9n7k4bTL._SL500_.jpg', alt: 'Bedsure ComfyFleece Orthopedic Dog Bed with Sides' },
   },
 
   // ── Orthopedic Beds ───────────────────────────────────────────────────────
@@ -127,6 +131,7 @@ export const relaxationProducts: RelaxationProduct[] = [
     whyItWorks:
       'Dense orthopedic foam distributes body weight more evenly than poly fill, reducing pressure buildup during long sleep sessions',
     considerIf: 'Your dog rests heavily, is over 40 lbs, or you want a bed that stays in one place on smooth floors',
+    image: { src: 'https://m.media-amazon.com/images/I/71UWPGl3COL._SL500_.jpg', alt: 'INVENHO Washable Orthopedic Dog Bed' },
   },
   {
     id: 'anti-anxiety-orthopedic-bed',
@@ -142,6 +147,7 @@ export const relaxationProducts: RelaxationProduct[] = [
     bestFor: 'Dogs who need both joint support and the enclosed feel of a bolster-surround design',
     whyItWorks: 'Combines dense foam support with a contained perimeter that many dogs actively seek out during rest',
     considerIf: 'Your dog wants both body support and the security of a surrounded sleeping area',
+    image: { src: 'https://m.media-amazon.com/images/I/81n7foznoHL._SL500_.jpg', alt: 'Anti-Anxiety Orthopedic Dog Bed with Bolster' },
   },
   {
     id: 'zomisia-orthopedic-bed',
@@ -159,6 +165,7 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Oversized foam gives bigger dogs enough room to fully stretch without losing support at the edges',
     considerIf:
       'You have a large breed dog that currently sleeps on the floor or regularly falls off smaller beds',
+    image: { src: 'https://m.media-amazon.com/images/I/71bAiTc5GCL._SL500_.jpg', alt: 'ZOMISIA Orthopedic Dog Bed for Large Dogs' },
   },
   {
     id: 'cwawz-orthopedic-bolster',
@@ -176,6 +183,7 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Full perimeter bolsters combined with orthopedic base support both body and head from every angle',
     considerIf:
       'Your dog constantly repositions to lean against a bed edge — full-surround means there is always one in reach',
+    image: { src: 'https://m.media-amazon.com/images/I/71wdK2f8JkL._SL500_.jpg', alt: 'CWAWZ Orthopedic Dog Bed with Full-Surround Bolsters' },
   },
   {
     id: 'carolina-pet-bolster-lg',
@@ -193,6 +201,7 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Microfiber construction holds loft longer than standard poly, so the bed stays comfortable through regular use',
     considerIf:
       'Your dog prefers a medium-depth sleeping bowl over a flat mat or a fully raised donut bed',
+    image: { src: 'https://m.media-amazon.com/images/I/51pzu55J+1L._SL500_.jpg', alt: 'Carolina Pet Company Microfiber Tipped Bolster Bed Large' },
   },
 
   // ── Crates (future page) ─────────────────────────────────────────────────
@@ -213,6 +222,7 @@ export const relaxationProducts: RelaxationProduct[] = [
       'A dedicated enclosed space gives dogs the den-like environment that helps many dogs wind down between activities',
     considerIf:
       'You want a crate that works at home and on the road without the bulk of traditional wire or plastic options',
+    image: { src: 'https://m.media-amazon.com/images/I/61jTpS6FsTL._SL500_.jpg', alt: 'KindTail Collapsible Dog Crate' },
   },
 ];
 

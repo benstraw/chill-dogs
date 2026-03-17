@@ -5,8 +5,10 @@
 
 import { coolingProducts, type ProductCategory } from './cooling-products';
 import { calmingProducts } from './calming-products';
+import { relaxationProducts } from './relaxation-products';
 import { coolingConverterPageConfigs } from './cooling-converter-pages';
 import { calmingConverterPages } from './calming-converter-pages';
+import { relaxationConverterPages } from './relaxation-converter-pages';
 
 interface PageRef {
   label: string;
@@ -29,6 +31,7 @@ export function buildProductPageMap(): ProductPageMap {
   // Initialize all product IDs
   for (const p of coolingProducts) map[p.id] = [];
   for (const p of calmingProducts) map[p.id] = [];
+  for (const p of relaxationProducts) map[p.id] = [];
 
   // Cooling converter pages: each config maps a category to a page
   for (const [slug, config] of Object.entries(coolingConverterPageConfigs)) {
@@ -48,6 +51,23 @@ export function buildProductPageMap(): ProductPageMap {
   // Calming converter pages: blocks contain explicit product IDs
   for (const [slug, config] of Object.entries(calmingConverterPages)) {
     const href = `/calming/${slug}/`;
+    for (const block of config.blocks) {
+      if (block.kind === 'product_section') {
+        for (const id of block.productIds) {
+          addRef(map, id, { label: slug, href });
+        }
+      }
+      if (block.kind === 'quick_picks') {
+        for (const item of block.items) {
+          addRef(map, item.productId, { label: slug, href });
+        }
+      }
+    }
+  }
+
+  // Relaxation converter pages: blocks contain explicit product IDs
+  for (const [slug, config] of Object.entries(relaxationConverterPages)) {
+    const href = `/relaxation/${slug}/`;
     for (const block of config.blocks) {
       if (block.kind === 'product_section') {
         for (const id of block.productIds) {
