@@ -294,7 +294,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
     },
     itemListSchema: {
       name: 'Best Calming Dog Beds',
-      url: 'https://www.chill-dogs.com/comfort/best-calming-dog-beds/',
+      url: 'https://www.chill-dogs.com/comforting/best-calming-dog-beds/',
       productIds: [
         'bedstill-donut-calming-bed',
         'chixnuggle-dog-bed',
@@ -461,7 +461,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
     },
     itemListSchema: {
       name: 'Best Orthopedic Dog Beds',
-      url: 'https://www.chill-dogs.com/comfort/best-orthopedic-dog-beds/',
+      url: 'https://www.chill-dogs.com/comforting/best-orthopedic-dog-beds/',
       productIds: [
         'invenho-orthopedic-bed',
         'invenho-orthopedic-couch-bed',

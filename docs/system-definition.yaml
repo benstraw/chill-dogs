@@ -91,8 +91,8 @@ site_system:
       target_action: "Drive affiliate outbound clicks on dog beds"
       metric: "amazon_outbound_click rate"
       routes:
-        - "/comfort/best-calming-dog-beds/"
-        - "/comfort/best-orthopedic-dog-beds/"
+        - "/comforting/best-calming-dog-beds/"
+        - "/comforting/best-orthopedic-dog-beds/"
       notes: >
         Relaxation pillar is in early build-out. Collector page and additional
         converters (dog crates, etc.) are planned but not yet live.
