@@ -2,7 +2,7 @@
 /**
  * HeroExperiment — Polymorphic hero for A/B URL-based experiments.
  *
- * Supports 8 visual variants (a–h) plus variant i (desert theme) and 2 page themes (cooling | calming).
+ * Supports 8 visual variants (a–h) plus variant i (desert theme) and 3 page themes (cooling | calming | comfort).
  * Adds data attributes for tracking + emits hero_cta_click events.
  *
  * CSS: Pulls from hero.base.css (layout, tokens, focus) and
@@ -10,7 +10,7 @@
  */
 
 export type HeroVariant = 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i';
-export type HeroTheme = 'cooling' | 'calming';
+export type HeroTheme = 'cooling' | 'calming' | 'comfort';
 
 interface Props {
   variant: HeroVariant;
@@ -23,7 +23,7 @@ interface Props {
 
 const { variant, theme, headline, subhead, primaryCta, secondaryCta } = Astro.props;
 
-const badgeLabel = theme === 'cooling' ? 'Beat the heat' : 'Find your calm';
+const badgeLabel = theme === 'cooling' ? 'Beat the heat' : theme === 'comfort' ? 'Rest & comfort' : 'Find your calm';
 ---
 
 <section

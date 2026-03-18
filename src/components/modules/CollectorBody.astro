@@ -8,26 +8,28 @@ interface Props {
 }
 
 const { config } = Astro.props;
-const accentColor = config.accent === 'sage' ? 'var(--color-sage)' : 'var(--color-primary)';
+const accentColor = config.accent === 'sage' ? 'var(--color-sage)' : config.accent === 'terracotta' ? 'var(--color-terracotta)' : 'var(--color-primary)';
 ---
 
-<section class="start-here">
-  <div class="start-here-inner" style={`--collector-accent: ${accentColor}`}>
-    <span class="start-here-label">Start here</span>
-    <h2>
-      <a
-        href={config.start.href}
-        data-track="collector_to_converter_click"
-        data-from-page={config.fromPage}
-        data-to-page={config.start.dataToPage}
-        data-link-position="hero"
-      >
-        {config.start.title}
-      </a>
-    </h2>
-    <p>{config.start.description}</p>
-  </div>
-</section>
+{config.start && (
+  <section class="start-here">
+    <div class="start-here-inner" style={`--collector-accent: ${accentColor}`}>
+      <span class="start-here-label">Start here</span>
+      <h2>
+        <a
+          href={config.start.href}
+          data-track="collector_to_converter_click"
+          data-from-page={config.fromPage}
+          data-to-page={config.start.dataToPage}
+          data-link-position="hero"
+        >
+          {config.start.title}
+        </a>
+      </h2>
+      <p>{config.start.description}</p>
+    </div>
+  </section>
+)}
 
 {config.sections.map((section) => (
   <section class="section-block">

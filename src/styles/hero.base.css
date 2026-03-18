@@ -49,6 +49,26 @@
   --hx-cta-alt-hover: hsl(150, 34%, 43%);
 }
 
+/* ── Theme tokens: Comfort ── */
+.hx--comfort {
+  --hx-a1: hsl(345, 42%, 68%);    /* dusty rose — primary accent */
+  --hx-a2: hsl(20, 35%, 52%);     /* warm terracotta — second layer */
+  --hx-a3: hsl(330, 30%, 58%);    /* muted mauve — third gradient layer */
+
+  --hx-dark: hsl(345, 30%, 12%);
+  --hx-light: hsl(345, 40%, 97%); /* blush near-white — light-bg variants */
+  --hx-bg-mid: hsl(20, 20%, 90%); /* warm sand — gradient endpoints */
+  --hx-dot-color: hsl(345, 30%, 75%);
+
+  --hx-cta-bg: hsl(345, 38%, 38%);
+  --hx-cta-text: #ffffff;
+  --hx-cta-hover: hsl(345, 40%, 30%);
+
+  --hx-cta-alt-bg: hsl(345, 42%, 68%);
+  --hx-cta-alt-text: hsl(345, 30%, 12%);
+  --hx-cta-alt-hover: hsl(345, 42%, 60%);
+}
+
 /* ── Base section ── */
 .hx {
   position: relative;

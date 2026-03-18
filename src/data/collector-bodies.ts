@@ -17,8 +17,8 @@ export interface CollectorSection {
 
 export interface CollectorBodyConfig {
   fromPage: string;
-  accent: 'primary' | 'sage';
-  start: {
+  accent: 'primary' | 'sage' | 'terracotta';
+  start?: {
     href: string;
     title: string;
     description: string;
@@ -92,6 +92,15 @@ export const coolingCollectorBody: CollectorBodyConfig = {
         'Practical guides to help you understand heat risks and keep your dog safe in warm weather.',
       cards: [
         {
+          href: ROUTES.coolingCarGuide,
+          title: 'Keep a Dog Cool in a Car',
+          description:
+            'What actually works when the AC doesn\'t reach the back seat — and which gear to use on short trips and long drives.',
+          linkLabel: 'Read the guide ->',
+          dataToPage: ROUTES.coolingCarGuide,
+          dataCategory: 'car-cooling-guide',
+        },
+        {
           href: ROUTES.coolingSafety,
           title: 'How Hot Is Too Hot for Dogs?',
           description:
@@ -143,9 +152,47 @@ export const calmingCollectorBody: CollectorBodyConfig = {
           linkLabel: 'Read the guide ->',
           dataToPage: ROUTES.roadTrip,
         },
+        {
+          href: ROUTES.comfortCalmingBeds,
+          title: 'Best Calming Dog Beds',
+          description:
+            'Donut beds, cuddler beds, and bolster beds for dogs who curl up, burrow, or press against something when they sleep.',
+          linkLabel: 'See our picks ->',
+          dataToPage: ROUTES.comfortCalmingBeds,
+        },
       ],
     },
   ],
   showCalmingDisclaimer: true,
+  disclosureShowSafety: false,
+};
+
+export const comfortCollectorBody: CollectorBodyConfig = {
+  fromPage: 'comfort-hub',
+  accent: 'terracotta',
+  sections: [
+    {
+      heading: 'Shop by Bed Type',
+      intro: 'Two types of beds for two different needs — calming beds for dogs who seek security and enclosure, orthopedic beds for dogs who need joint support.',
+      cards: [
+        {
+          href: ROUTES.comfortCalmingBeds,
+          title: 'Best Calming Dog Beds',
+          description: 'Donut beds, cuddler beds, and bolster beds for dogs who curl up, burrow, or press against something when they sleep.',
+          linkLabel: 'See our picks ->',
+          dataToPage: ROUTES.comfortCalmingBeds,
+          dataCategory: 'calming-beds',
+        },
+        {
+          href: ROUTES.comfortOrthopedicBeds,
+          title: 'Best Orthopedic Dog Beds',
+          description: 'Dense foam beds for larger breeds, older dogs, and heavy resters who need consistent joint support through the night.',
+          linkLabel: 'See our picks ->',
+          dataToPage: ROUTES.comfortOrthopedicBeds,
+          dataCategory: 'orthopedic-beds',
+        },
+      ],
+    },
+  ],
   disclosureShowSafety: false,
 };
