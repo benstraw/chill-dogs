@@ -47,7 +47,7 @@ function clampText(text, maxChars) {
 }
 
 function deriveHeadline({ title, seoTitle, ogHeadline }) {
-  const raw = ogHeadline || seoTitle || title || 'chill-dogs';
+  const raw = ogHeadline || seoTitle || title || 'Chill-Dogs';
   return clampText(
     normalizeWhitespace(raw)
       .replace(/\s*\|\s*Chill-?Dogs\s*$/i, '')
@@ -104,11 +104,11 @@ function inferPageType(pathname) {
 
 function titleFromPathname(pathname) {
   if (pathname === '/') {
-    return 'chill-dogs: Cooling & Calming Picks for Dogs';
+    return 'Chill-Dogs: Cooling & Calming Picks for Dogs';
   }
 
   const clean = pathname.replace(/^\//, '').replace(/\/$/, '');
-  const segment = clean.split('/').pop() || 'chill-dogs';
+  const segment = clean.split('/').pop() || 'Chill-Dogs';
   return segment
     .split('-')
     .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
@@ -208,7 +208,7 @@ function renderOgSvg({ headline, cta, theme }) {
   <circle cx="1120" cy="560" r="240" fill="${selected.accent}" opacity="0.14" />
 
   <text x="72" y="98" font-size="34" font-family="'Nunito', Arial, sans-serif" fill="${selected.accent}" font-weight="700" letter-spacing="0.4">
-    chill-dogs
+    Chill-Dogs
   </text>
 
   <text x="72" y="${headlineY}" font-size="66" font-family="'Nunito', Arial, sans-serif" fill="${selected.ink}" font-weight="800">

@@ -4,7 +4,7 @@ import { ROUTES } from '@data/routes';
 
 export const prerender = true;
 
-const SITE_NAME = 'chill-dogs';
+const SITE_NAME = 'Chill-Dogs';
 const SITE_DESCRIPTION = 'Curated cooling and calming product guides for dogs, focused on practical picks and clear routes to high-intent recommendations.';
 const INTRO = 'This index prioritizes evergreen guides and key conversion pages for fast retrieval by LLM tools and agents.';
 
@@ -94,7 +94,7 @@ const STATIC_LINKS: LlmsLink[] = [
     explicitPriority: 880,
   },
   {
-    title: 'About chill-dogs',
+    title: 'About Chill-Dogs',
     path: ROUTES.about,
     description: 'Editorial approach, positioning, and trust context.',
     explicitPriority: 600,

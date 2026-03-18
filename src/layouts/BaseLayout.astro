@@ -34,8 +34,8 @@ const {
 } = Astro.props;
 
 const siteTitle = title === 'Home'
-  ? 'chill-dogs — Cooling & Calming Products for Dogs'
-  : `${title} | chill-dogs`;
+  ? 'Chill-Dogs — Cooling & Calming Products for Dogs'
+  : `${title} | Chill-Dogs`;
 const autoOgImage = resolveAutoOgImagePath({ pathname: Astro.url.pathname, noindex });
 const resolvedOgImage = new URL(ogImage || autoOgImage || '/og-default.jpg', Astro.site).href;
 const resolvedCanonical = canonicalUrl || Astro.url.href;
@@ -64,7 +64,7 @@ const breadcrumbSchema = !noindex && !isStaging && Astro.site
     <meta property="og:description" content={description} />
     <meta property="og:image" content={resolvedOgImage} />
     <meta property="og:url" content={resolvedCanonical} />
-    <meta property="og:site_name" content="chill-dogs" />
+    <meta property="og:site_name" content="Chill-Dogs" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />

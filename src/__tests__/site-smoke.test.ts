@@ -353,7 +353,7 @@ describe('site smoke tests', () => {
   it('publishes llms.txt with all sections, key links, and no excluded paths', () => {
     const llmsText = readBuiltAsset('llms.txt');
 
-    expect(llmsText).toContain('# chill-dogs');
+    expect(llmsText).toContain('# Chill-Dogs');
     expect(llmsText).toContain('## Cooling Guides');
     expect(llmsText).toContain('## Calming Guides');
     expect(llmsText).toContain('## Travel Guides');
