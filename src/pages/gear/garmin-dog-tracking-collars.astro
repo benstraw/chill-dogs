@@ -1,0 +1,674 @@
+---
+import { ROUTES } from '@data/routes';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/modules/Hero.astro';
+import Toc from '@components/modules/Toc.astro';
+import FAQ from '@components/modules/FAQ.astro';
+import Disclosure from '@components/modules/Disclosure.astro';
+import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
+import JsonLd from '@components/JsonLd.astro';
+import { getTrackersByType } from '@data/tracking-products';
+
+const pageSlug = 'garmin-dog-tracking-collars';
+
+const garminProducts = getTrackersByType('off-grid');
+
+const tocHeadings = [
+  { label: 'Why Off-Grid Matters', anchor: 'why-off-grid' },
+  { label: 'How Garmin Systems Work', anchor: 'how-it-works' },
+  { label: 'Garmin Products', anchor: 'products' },
+  { label: 'Trade-offs', anchor: 'tradeoffs' },
+  { label: 'Who Should Use Garmin', anchor: 'who-its-for' },
+  { label: 'FAQ', anchor: 'faq' },
+];
+
+const faqs = [
+  {
+    question: 'How does Garmin dog tracking work without cell service?',
+    answer:
+      "Garmin off-grid systems combine two technologies: GPS satellites (for location) and VHF radio (to transmit that location to the handheld unit). The GPS satellites are always available globally. The radio signal travels directly between the collar and the handheld device — no towers, no internet required. That's why it works in true wilderness.",
+  },
+  {
+    question: 'Do I need a monthly subscription for Garmin dog tracking?',
+    answer:
+      'No. Garmin systems use GPS and radio technology — no network subscription is required. The upfront cost is higher, but there are no ongoing monthly fees.',
+  },
+  {
+    question: 'How far can Garmin track a dog?',
+    answer:
+      'The Garmin Alpha 300 system claims up to 9 miles line-of-sight range. Practical range in the field varies with terrain — dense forest, canyons, and hills reduce effective range. In open terrain, several miles of reliable communication is realistic.',
+  },
+  {
+    question: 'Can Garmin track multiple dogs at once?',
+    answer:
+      'Yes. The Alpha 300 system can track up to 20 dogs simultaneously on a single handheld unit. This is a key feature for hunters and handlers who work multiple dogs in the field.',
+  },
+  {
+    question: 'Is Garmin dog tracking worth the cost?',
+    answer:
+      "For hikers, hunters, or anyone who regularly takes dogs into remote terrain, yes — it's the only system that reliably works without cell signal. For city dogs on daily urban walks, it's over-engineered and overpriced. Know your use case first.",
+  },
+  {
+    question: 'Can I use Garmin dog tracking for everyday suburban use?',
+    answer:
+      "You can, but it's not designed for that use case. Garmin systems require a dedicated handheld device, have bulkier collars, and are optimized for field conditions. For everyday suburban or city use, a cellular tracker like Fi is more practical.",
+  },
+];
+
+const collectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Garmin Dog Tracking Collars: Off-Grid GPS Systems for Hiking and Wilderness',
+  description:
+    'Overview of Garmin off-grid dog tracking systems — GPS + radio technology that works in wilderness without cell signal. Who needs it, how it works, and what to expect.',
+  url: 'https://www.chill-dogs.com/gear/garmin-dog-tracking-collars/',
+};
+---
+
+<BaseLayout
+  title="Garmin Dog Tracking Collars: Off-Grid GPS for Wilderness & Hiking (2026)"
+  description="Garmin off-grid GPS systems track dogs in wilderness without any cell signal — using GPS satellites and VHF radio. Who needs it, how it works, and key trade-offs."
+>
+  <JsonLd slot="head" schema={collectionSchema} />
+
+  <Hero
+    title="Garmin Dog Tracking Systems"
+    subtitle="Off-grid GPS tracking that works in wilderness, backcountry, and anywhere cell service fails — because it doesn't need cell service at all."
+    primaryCta={{ label: 'Compare All GPS Trackers', href: ROUTES.trackingTop }}
+    secondaryCta={{ label: 'Need Cellular Instead?', href: ROUTES.fiCollarReview }}
+    pageSlug={pageSlug}
+  />
+
+  <div class="collector-content">
+
+    <Toc headings={tocHeadings} pageSlug={pageSlug} />
+
+    <!-- Why Off-Grid Matters -->
+    <section class="content-section" id="why-off-grid">
+      <div class="section-inner">
+        <h2>Why Off-Grid Tracking Matters</h2>
+        <p class="section-body">
+          Most dog GPS trackers use LTE cellular networks. That's fine in cities and suburbs — but LTE coverage ends well before the terrain gets interesting. Many popular hiking trails lose signal within the first mile of the trailhead. Remote canyons, high-altitude terrain, and wilderness areas often have no cell coverage at all.
+        </p>
+        <p class="section-body">
+          When Astro ran off the summit of Bishop Peak in thick fog, a Fi collar was being worn. The app showed a location from an hour prior — the trailhead parking lot. No signal meant no tracking. The collar was physically on the dog but functionally useless in that environment.
+        </p>
+        <p class="section-body">
+          Off-grid tracking solves this problem at the root. Garmin's systems don't use cell towers. They use GPS satellites to locate the dog, and VHF radio to transmit that location to a handheld device in your hand. As long as you can see the sky, the system works.
+        </p>
+        <div class="story-link-block">
+          <p>Read the Bishop Peak incident in full:</p>
+          <a
+            href={ROUTES.rhysRanAway}
+            class="story-link"
+            data-track="collector_to_converter_click"
+            data-from-page={pageSlug}
+            data-to-page={ROUTES.rhysRanAway}
+            data-link-position="why-offgrid-section"
+          >
+            When Rhys Ran Away on Bishop Peak →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="content-section content-section--alt" id="how-it-works">
+      <div class="section-inner">
+        <h2>How Garmin Off-Grid Systems Work</h2>
+        <p class="section-intro">
+          Two technologies working together — neither of which requires a cell network.
+        </p>
+
+        <div class="tech-grid">
+          <div class="tech-card">
+            <h3 class="tech-heading">GPS Satellites</h3>
+            <p class="tech-body">
+              GPS satellites orbit globally and are accessible anywhere with a clear sky view. The collar chip receives satellite signals to calculate precise location — the same technology in your phone's maps, but independent of any ground-based network.
+            </p>
+          </div>
+          <div class="tech-card">
+            <h3 class="tech-heading">VHF Radio Transmission</h3>
+            <p class="tech-body">
+              The collar transmits its GPS coordinates via VHF radio directly to a dedicated handheld device. Radio waves travel through terrain that blocks Bluetooth and cellular — dense forest, hills, and canyons all reduce but don't eliminate radio range in the way they eliminate cellular.
+            </p>
+          </div>
+          <div class="tech-card">
+            <h3 class="tech-heading">Dedicated Handheld</h3>
+            <p class="tech-body">
+              Location is displayed on a purpose-built Garmin handheld unit — not your phone. The handheld has a built-in map display, buttons, and a durable field-ready build. This adds cost and gear weight but removes the dependency on a smartphone with cell service.
+            </p>
+          </div>
+        </div>
+
+        <div class="callout callout--note">
+          <p class="callout-heading">The key difference</p>
+          <p class="callout-body">
+            Garmin systems transmit data device-to-device via radio. There is no server, no app, no subscription, no network. The handheld receives the collar's signal directly. This is why it works in wilderness where everything else fails.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section class="content-section" id="products">
+      <div class="section-inner">
+        <h2>Garmin Dog Tracking Products</h2>
+        <p class="section-intro">
+          Two systems to know: the Alpha 300 (full-featured system for hunting and serious backcountry) and the T&amp;REx Plus collar (field dog tracking compatible with Alpha handhelds).
+        </p>
+
+        <div class="product-grid">
+          {garminProducts.map((product) => (
+            <div class="product-card" id={product.id}>
+              <div class="product-card-header">
+                <h3 class="product-card-name">{product.name}</h3>
+              </div>
+              <p class="product-card-use">{product.use_case}</p>
+              <ul class="product-bullets">
+                {product.bullets.map(b => <li>{b}</li>)}
+              </ul>
+              <div class="product-meta">
+                <p class="product-signal"><strong>Signal:</strong> {product.signalNote}</p>
+                <p class="product-best-for"><strong>Best for:</strong> {product.best_for}</p>
+              </div>
+              <div class="product-pros-cons">
+                <div class="pros">
+                  <p class="pros-heading">Pros</p>
+                  <ul>
+                    {product.pros.map(p => <li>{p}</li>)}
+                  </ul>
+                </div>
+                <div class="cons">
+                  <p class="cons-heading">Cons</p>
+                  <ul>
+                    {product.cons.map(c => <li>{c}</li>)}
+                  </ul>
+                </div>
+              </div>
+              <div class="product-cta-wrap">
+                <a href={product.placeholder_url} class="product-cta product-cta--placeholder">
+                  Check Price [placeholder]
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="section-converter-cta">
+          <a
+            href={ROUTES.trackingTop}
+            class="converter-cta-btn"
+            data-track="collector_to_converter_click"
+            data-from-page={pageSlug}
+            data-to-page={ROUTES.trackingTop}
+            data-link-position="products-section"
+          >
+            Compare Garmin vs cellular vs Bluetooth →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trade-offs -->
+    <section class="content-section content-section--alt" id="tradeoffs">
+      <div class="section-inner">
+        <h2>Real Trade-offs to Know</h2>
+        <p class="section-intro">
+          Garmin off-grid systems are the right tool for remote terrain — but they come with genuine trade-offs. Know what you're signing up for.
+        </p>
+
+        <div class="tradeoff-list">
+          <div class="tradeoff-item">
+            <h3 class="tradeoff-heading">High upfront cost</h3>
+            <p class="tradeoff-body">
+              A full Alpha 300 system (handheld + collar) costs significantly more than a cellular tracker. There's no monthly subscription, but the barrier to entry is higher. If you only hike occasionally, consider whether you'd use it enough to justify the cost.
+            </p>
+          </div>
+          <div class="tradeoff-item">
+            <h3 class="tradeoff-heading">Bulkier collar</h3>
+            <p class="tradeoff-body">
+              Field collars are heavier and more substantial than lifestyle collars like Fi. They're built for hunting dogs and rugged terrain, not slim city wear. For small dogs or low-activity breeds, the bulk may be impractical.
+            </p>
+          </div>
+          <div class="tradeoff-item">
+            <h3 class="tradeoff-heading">Dedicated handheld required</h3>
+            <p class="tradeoff-body">
+              Location shows on the Garmin handheld device, not your phone. You need to carry the handheld. For some users this is fine (hunters already carry GPS units). For casual hikers, it's extra gear.
+            </p>
+          </div>
+          <div class="tradeoff-item">
+            <h3 class="tradeoff-heading">Steeper learning curve</h3>
+            <p class="tradeoff-body">
+              Setup, pairing, and operation require more steps than a simple smartphone app. Garmin's ecosystem is designed for experienced field users. There are tutorials and solid documentation, but expect to spend time learning the system.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who It's For -->
+    <section class="content-section" id="who-its-for">
+      <div class="section-inner">
+        <h2>Who Should Use a Garmin System</h2>
+
+        <div class="verdict-grid">
+          <div class="verdict-card verdict-card--yes">
+            <h3 class="verdict-heading">Good fit</h3>
+            <ul class="verdict-list">
+              <li>Hunters working dogs in rural or wilderness terrain</li>
+              <li>Hikers who regularly go into backcountry or off-trail terrain</li>
+              <li>Owners in areas with poor or inconsistent cell coverage</li>
+              <li>Anyone who has experienced a tracker failure due to no signal</li>
+              <li>Multi-dog handlers who need to track several dogs simultaneously</li>
+            </ul>
+          </div>
+          <div class="verdict-card verdict-card--no">
+            <h3 class="verdict-heading">Not the right fit</h3>
+            <ul class="verdict-list">
+              <li>City or suburban dogs on daily leashed walks</li>
+              <li>Owners who only hike popular, well-covered trails</li>
+              <li>Small or low-activity dogs where collar bulk is impractical</li>
+              <li>Budget-first shoppers — Fi or AirTag serve lighter use cases for less</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section-converter-cta">
+          <a
+            href={ROUTES.trackingTop}
+            class="converter-cta-btn"
+            data-track="collector_to_converter_click"
+            data-from-page={pageSlug}
+            data-to-page={ROUTES.trackingTop}
+            data-link-position="who-its-for"
+          >
+            See the full GPS tracker comparison →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <FAQ faqs={faqs} heading="Garmin Dog Tracking FAQ" />
+    </section>
+
+    <Disclosure />
+
+    <InternalLinkStrip
+      heading="More Dog Tracking Guides"
+      links={[
+        { label: 'All GPS Trackers', href: ROUTES.trackingTop },
+        { label: 'Fi Collar Review', href: ROUTES.fiCollarReview },
+        { label: 'AirTag for Dogs', href: ROUTES.airtagForDogs },
+        { label: 'When Rhys Ran Away', href: ROUTES.rhysRanAway },
+        { label: 'Dog Ran Away Guide', href: ROUTES.dogRanAwaySafety },
+      ]}
+      fromPage={pageSlug}
+    />
+  </div>
+</BaseLayout>
+
+<style>
+  .collector-content {
+    padding-bottom: var(--space-2xl);
+  }
+
+  .content-section {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+
+  .content-section--alt {
+    background: var(--color-bg-alt);
+  }
+
+  .section-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .section-inner > h2 {
+    font-size: var(--text-2xl);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-md);
+  }
+
+  .section-intro {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    max-width: var(--max-width-prose);
+    margin-bottom: var(--space-xl);
+  }
+
+  .section-body {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    max-width: var(--max-width-prose);
+    margin-bottom: var(--space-md);
+  }
+
+  /* Story link block */
+  .story-link-block {
+    background: var(--color-bg-alt);
+    border-left: 3px solid var(--color-primary);
+    padding: var(--space-md) var(--space-lg);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    max-width: var(--max-width-prose);
+    margin-top: var(--space-xl);
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+  }
+
+  .story-link-block p {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .story-link {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--color-primary);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .story-link:hover {
+    text-decoration: underline;
+  }
+
+  /* Tech grid */
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+  }
+
+  .tech-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+  }
+
+  .tech-heading {
+    font-size: var(--text-base);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-sm);
+  }
+
+  .tech-body {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+  }
+
+  /* Callout */
+  .callout {
+    max-width: var(--max-width-prose);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg) var(--space-xl);
+  }
+
+  .callout--note {
+    background: #f0f4ff;
+    border-left: 4px solid var(--color-sky);
+  }
+
+  .callout-heading {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-sky);
+    margin-bottom: var(--space-sm);
+  }
+
+  .callout-body {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+  }
+
+  /* Product grid */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+  }
+
+  .product-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .product-card-name {
+    font-size: var(--text-lg);
+    font-weight: var(--weight-bold);
+    margin: 0;
+  }
+
+  .product-card-use {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 0;
+  }
+
+  .product-bullets {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .product-bullets li {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-normal);
+    padding-left: var(--space-md);
+    position: relative;
+    margin-bottom: var(--space-xs);
+  }
+
+  .product-bullets li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: var(--weight-bold);
+  }
+
+  .product-meta {
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .product-signal,
+  .product-best-for {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .product-signal strong,
+  .product-best-for strong {
+    color: var(--color-text);
+  }
+
+  .product-pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-md);
+  }
+
+  .pros-heading,
+  .cons-heading {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: var(--space-sm);
+  }
+
+  .pros-heading { color: var(--color-sage); }
+  .cons-heading { color: var(--color-terracotta); }
+
+  .pros ul, .cons ul {
+    margin: 0; padding: 0; list-style: none;
+  }
+
+  .pros ul li, .cons ul li {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    line-height: var(--leading-normal);
+    margin-bottom: var(--space-xs);
+    padding-left: var(--space-md);
+    position: relative;
+  }
+
+  .pros ul li::before { content: '+'; position: absolute; left: 0; color: var(--color-sage); font-weight: var(--weight-bold); }
+  .cons ul li::before { content: '−'; position: absolute; left: 0; color: var(--color-terracotta); font-weight: var(--weight-bold); }
+
+  .product-cta-wrap { margin-top: auto; }
+
+  .product-cta {
+    display: inline-block;
+    font-weight: var(--weight-semibold);
+    padding: var(--space-sm) var(--space-xl);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-size: var(--text-sm);
+    width: 100%;
+    text-align: center;
+  }
+
+  .product-cta--placeholder {
+    background: var(--color-bg-alt);
+    color: var(--color-text-muted);
+    border: 1px dashed var(--color-border);
+    cursor: default;
+  }
+
+  /* Trade-offs */
+  .tradeoff-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    max-width: var(--max-width-prose);
+  }
+
+  .tradeoff-item {
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--color-terracotta);
+  }
+
+  .tradeoff-heading {
+    font-size: var(--text-base);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-sm);
+  }
+
+  .tradeoff-body {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+  }
+
+  /* Verdict grid */
+  .verdict-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+  }
+
+  .verdict-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+  }
+
+  .verdict-card--yes { border-top: 3px solid var(--color-sage); }
+  .verdict-card--no { border-top: 3px solid var(--color-terracotta); }
+
+  .verdict-heading {
+    font-size: var(--text-base);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-md);
+  }
+
+  .verdict-card--yes .verdict-heading { color: var(--color-sage); }
+  .verdict-card--no .verdict-heading { color: var(--color-terracotta); }
+
+  .verdict-list {
+    margin: 0; padding: 0; list-style: none;
+  }
+
+  .verdict-list li {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    padding-left: var(--space-md);
+    position: relative;
+    margin-bottom: var(--space-sm);
+  }
+
+  .verdict-card--yes .verdict-list li::before { content: '✓'; position: absolute; left: 0; color: var(--color-sage); font-weight: var(--weight-bold); }
+  .verdict-card--no .verdict-list li::before { content: '✗'; position: absolute; left: 0; color: var(--color-terracotta); font-weight: var(--weight-bold); }
+
+  /* CTA */
+  .section-converter-cta { margin-top: var(--space-xl); }
+
+  .converter-cta-btn {
+    display: inline-block;
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+    font-weight: var(--weight-semibold);
+    padding: var(--space-sm) var(--space-xl);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: background var(--transition-fast);
+  }
+
+  .converter-cta-btn:hover {
+    background: var(--color-primary-hover);
+    color: var(--color-text-inverse);
+  }
+
+  @media (max-width: 1024px) {
+    .tech-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 768px) {
+    .product-grid, .verdict-grid { grid-template-columns: 1fr; }
+    .product-pros-cons { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 640px) {
+    .content-section { padding: var(--space-xl) var(--space-md); }
+  }
+</style>
