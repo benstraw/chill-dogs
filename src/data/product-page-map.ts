@@ -67,7 +67,7 @@ export function buildProductPageMap(): ProductPageMap {
 
   // Relaxation converter pages: blocks contain explicit product IDs
   for (const [slug, config] of Object.entries(relaxationConverterPages)) {
-    const href = `/comfort/${slug}/`;
+    const href = `/comforting/${slug}/`;
     for (const block of config.blocks) {
       if (block.kind === 'product_section') {
         for (const id of block.productIds) {
