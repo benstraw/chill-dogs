@@ -81,7 +81,7 @@ This site is a **modular conversion system** governed by `docs/web-systems-adven
 ## Content Guardrails
 
 - Do not describe products or picks as "vet-recommended," "vet-approved," or similar unless the site has real, documented veterinarian sourcing for that exact claim.
-- Do not imply chill-dogs consulted veterinarians, commissioned veterinary reviews, or gathered veterinary endorsements when that did not happen.
+- Do not imply Chill-Dogs consulted veterinarians, commissioned veterinary reviews, or gathered veterinary endorsements when that did not happen.
 - Prefer grounded language like `researched`, `compared`, `curated`, `popular`, or `practical` instead of medical-authority framing.
 
 ## Project Overview

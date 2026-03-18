@@ -54,7 +54,7 @@ describe('llms utilities', () => {
 
   it('builds markdown with absolute links and grouped sections', () => {
     const markdown = buildLlmsMarkdown({
-      siteName: 'chill-dogs',
+      siteName: 'Chill-Dogs',
       description: 'Test description',
       shortParagraph: 'Quick summary paragraph.',
       baseUrl: 'https://www.chill-dogs.com/',
@@ -66,7 +66,7 @@ describe('llms utilities', () => {
       maxLinks: 40,
     });
 
-    expect(markdown).toContain('# chill-dogs');
+    expect(markdown).toContain('# Chill-Dogs');
     expect(markdown).toContain('> Test description');
     expect(markdown).toContain('## Core Pages');
     expect(markdown).toContain('## Cooling Guides');
@@ -78,7 +78,7 @@ describe('llms utilities', () => {
 
   it('respects maxLinks and omits paragraph when not supplied', () => {
     const markdown = buildLlmsMarkdown({
-      siteName: 'chill-dogs',
+      siteName: 'Chill-Dogs',
       description: 'Test',
       baseUrl: 'https://www.chill-dogs.com/',
       links: [
@@ -103,12 +103,12 @@ describe('llms utilities', () => {
 
   it('produces header and description only for empty links', () => {
     const markdown = buildLlmsMarkdown({
-      siteName: 'chill-dogs',
+      siteName: 'Chill-Dogs',
       description: 'Test',
       baseUrl: 'https://www.chill-dogs.com/',
       links: [],
     });
-    expect(markdown).toContain('# chill-dogs');
+    expect(markdown).toContain('# Chill-Dogs');
     expect(markdown).toContain('> Test');
     expect(markdown).not.toContain('## ');
   });
