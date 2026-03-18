@@ -11,7 +11,7 @@ import { ROUTES } from '@data/routes';
 
 const title = 'How to Keep a Dog Cool in a Car';
 const description =
-  'The back seat gets hotter than you think — even with AC running. Here\'s what actually works to keep your dog comfortable on any drive.';
+  'The back seat gets hotter than you think — even with the AC running. These products help keep your dog comfortable on any drive.';
 const pageSlug = 'keep-dog-cool-in-car';
 
 const carProducts = getProductsByCategory('car-cooling');
@@ -33,7 +33,7 @@ const articleSchema = {
 
 const tocHeadings = [
   { label: 'Why the back seat gets so hot', anchor: 'back-seat-heat' },
-  { label: 'Quick fixes for every drive', anchor: 'quick-fixes' },
+  { label: 'Products that help keep your dog cool', anchor: 'quick-fixes' },
   { label: 'When to add a vest or bandana', anchor: 'vest-bandana' },
   { label: 'Planning longer drives', anchor: 'longer-drives' },
   { label: 'Signs your dog is overheating in the car', anchor: 'overheating-signs' },
@@ -58,12 +58,12 @@ const faqs = [
   {
     question: 'How do I cool down a dog who is overheating in the car?',
     answer:
-      'Pull over immediately and get your dog out of the car into shade. Offer cool (not ice cold) water to drink and apply tepid water to the paws, neck, and belly. Do not wrap in wet towels — AAHA notes this traps heat. Fan the dog and contact a vet as soon as possible.',
+      'Pull over immediately and get your dog out of the car and into shade. Offer cool (not ice cold) water to drink and apply tepid water to the paws, neck, and belly. Do not wrap in wet towels — AAHA notes this traps heat. Fan the dog and contact a vet as soon as possible.',
   },
   {
     question: 'Are some dogs at higher risk of overheating in the car?',
     answer:
-      'Yes. Brachycephalic breeds (Bulldogs, Pugs, Boston Terriers, Boxers) have restricted airways and overheat faster. Overweight dogs, senior dogs, puppies, and dark or double-coated dogs are also at elevated risk. These dogs need extra airflow and shorter drive windows.',
+      'Yes. Brachycephalic breeds (Bulldogs, Pugs, Boston Terriers, Boxers) have restricted airways and overheat faster. Overweight dogs, senior dogs, puppies, and dark or double-coated dogs are also at elevated risk. These dogs need extra airflow and shorter drive windows.  Consider using a cooling vest or bandana.',
   },
 ];
 
@@ -97,7 +97,7 @@ const internalLinks = [
       <p>
         Sun angle compounds the problem. Rear side windows face directly into afternoon sun on most routes, and
         glass doesn't block infrared heat. Dark upholstery and vinyl seats absorb and radiate additional warmth.
-        According to AKC, even a parked car on a mild 60°F day can reach 100°F inside within minutes — the physics
+        According to AKC, on a mild 60°F day, temperatures inside a car can reach 100°F within minutes.  The physics
         of heat buildup work against your dog before you've even merged onto the highway.
       </p>
       <p>
@@ -106,11 +106,10 @@ const internalLinks = [
         process slows down. A dog that looks calm may already be working hard to stay cool.
       </p>
 
-      <h2 id="quick-fixes">Quick fixes for every drive</h2>
+      <h2 id="quick-fixes">Products that help keep your dog cool</h2>
       <p>
-        The most effective car cooling setups combine three things: block incoming sun before it becomes heat,
-        keep air moving in the back seat, and give your dog a cooler surface to rest on. Here are the practical
-        tools that address each problem.
+        The most effective car cooling setups do three things: block incoming sun before it becomes heat,
+        keep air moving in the back seat, and allow your dog to stay hydrated. These products help to keep your dog cool and comfortable.
       </p>
 
       {carProducts.slice(0, 3).map((product, i) => (
@@ -138,30 +137,31 @@ const internalLinks = [
       <p>
         A <a href={ROUTES.coolingVests} data-track="collector_to_converter_click" data-from-page={pageSlug} data-to-page={ROUTES.coolingVests} data-link-position="section"><strong>cooling vest</strong></a> covers more surface area and lasts longer. Evaporative vests (soak, wring,
         wear) work well in drier climates; in high humidity, they're less effective since evaporation is slower.
-        If your dog will be walking at rest stops or waiting outside in the sun, a vest is worth packing.
+        If your dog will be walking at rest stops or waiting outside in the sun, consider packing a cooling vest for your dog.
       </p>
       <p>
         At-risk dogs — brachycephalic breeds (Bulldogs, Pugs, Boxers, Boston Terriers), overweight dogs, and
-        senior dogs — benefit most from wearable cooling since their natural temperature regulation is less
+        senior dogs — benefit most from wearable cooling products, since their natural temperature regulation is less
         efficient. For these dogs, layering wearable gear on top of good airflow is a practical precaution.
       </p>
 
       <h2 id="longer-drives">Planning longer drives</h2>
       <p>
-        Longer drives introduce hydration as a factor. Dogs lose moisture through panting; in a warm back seat,
+        Longer drives require lots of water. Dogs lose moisture through panting; in a warm back seat,
         that loss adds up quickly. Plan water stops every 1–2 hours, offer cool (not ice-cold) water, and carry
         more than you think you'll need. A collapsible, spill-proof bowl keeps the back seat dry and makes
         rest-stop hydration practical.
       </p>
       <p>
         Scheduling matters too. If you can choose your drive window, early morning or late evening routes avoid
-        peak solar load — the back seat will stay meaningfully cooler. Midday summer driving on east-west routes
+        direct sunlight and the hottest temperatures.  The back seat will stay meaningfully cooler. Midday summer driving on east-west routes
         (where sun hits the rear windows directly) is the hardest scenario for back-seat cooling.
       </p>
       <p>
         For multi-day road trips, the full gear setup — shades, fan, mat, vest, collapsible bowl — is worth
-        the bag space. The <a href={ROUTES.roadTrip} data-track="collector_to_converter_click" data-from-page={pageSlug} data-to-page={ROUTES.roadTrip}>Road Trip Chill Kit guide</a> covers
-        the complete checklist, including calming gear for dogs that get anxious on long drives.
+        the bag space. The <a href={ROUTES.roadTrip} data-track="collector_to_converter_click" data-from-page={pageSlug} data-to-page={ROUTES.roadTrip}>Road Trip Chill Kit Guide</a> covers
+        the complete checklist, including calming gear for dogs that get anxious on long drives.  
+        Leather seats can absorb and radiate heat.  A car seat cover or hammock can provide a cooler surface for your dog to lie on.
       </p>
 
       {carProducts.slice(3).map((product, i) => (
@@ -178,21 +178,21 @@ const internalLinks = [
 
       <h2 id="overheating-signs">Signs your dog is overheating in the car</h2>
       <p>
-        AAHA and AKC both document the progression of heat stress in dogs. Normal body temperature is 100–102.5°F;
-        above 104°F is considered heatstroke territory, and dogs can reach that threshold faster than most owners
+        AAHA and AKC both document the progression of heat stress in dogs. Normal body temperature for a dog is 100–102.5°F.
+        Above 104°F is considered heatstroke territory, and dogs can reach that threshold faster than you might
         expect. Watch for:
       </p>
       <ul>
         <li><strong>Heavy, rapid panting</strong> that doesn't slow down when the dog is at rest</li>
-        <li><strong>Thick, ropey drool</strong> (AAHA notes this as an early warning sign)</li>
+        <li><strong>Thick, ropey drool</strong> (AAHA notes this as an early warning sign of heatstroke)</li>
         <li><strong>Bright red gums</strong> or a very red tongue</li>
         <li><strong>Lethargy, incoordination, or confusion</strong> — difficulty standing or tracking movement</li>
         <li><strong>Vomiting or diarrhea</strong></li>
         <li><strong>Grayish or purple mouth</strong> — according to AKC, this is an emergency signal</li>
       </ul>
       <p>
-        If you see multiple of these signs, pull over immediately. Get your dog out of the car and into shade.
-        Apply tepid (not cold or icy) water to the paws, neck, and belly — AKC and AAHA both note that ice-cold
+        If you see any of these signs, pull over immediately. Get your dog out of the car and into shade.
+        Apply tepid (not cold or icy) water to the paws, neck, and belly.  AKC and AAHA both note that ice-cold
         water can constrict surface blood vessels and actually slow heat dissipation. Do not wrap in wet towels.
         Fan the dog with whatever is available and get to a vet as soon as possible, even if the dog seems to
         improve. Internal organ stress from overheating can develop after symptoms appear to resolve.
