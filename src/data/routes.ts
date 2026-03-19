@@ -15,6 +15,7 @@ export const ROUTES = {
   calmingTop: '/calming/best-calming-products-for-anxious-dogs/',
   calmingAlternatives: '/calming/best-thundershirt-alternatives/',
   calmingCar: '/calming/car-anxiety-for-dogs/',
+  calmingCrateGuide: '/calming/crate-training-for-dogs/',
   roadTrip: '/travel/dog-road-trip-gear/',
   rhysRanAway: '/travel/rhys-ran-away-bishop-peak/',
   // Tracking cluster

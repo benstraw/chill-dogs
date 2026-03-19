@@ -111,6 +111,14 @@ site_system:
         Placeholder product entries (ASINs B0D5B56X9V, B0DTH4195V) need
         to be identified and updated in src/data/relaxation-products.ts.
 
+    - name: "Crate Training for Dogs"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Route crate-training-intent traffic to calming and comfort converters"
+      metric: "collector_to_converter_click to calming and comfort converters"
+      routes:
+        - "/calming/crate-training-for-dogs/"
+
     - name: "Road Trip Chill Kit"
       type: "collector"
       collector_subtype: "article"
