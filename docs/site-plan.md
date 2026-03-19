@@ -1,12 +1,24 @@
 ---
-type: plan
+type: archive
+status: archived
+archived: 2026-03-19
 tags: [strategy, site-plan]
 created: 2026-02-28
+superseded_by:
+  - CONTEXT.md               # live project description — strategy, content, tech, creative
+  - docs/system-definition.yaml  # authoritative machine-readable page/module/route registry
 ---
 
-# Chill-Dogs — Site System Plan
+# Chill-Dogs — Initial Site Plan (Archived)
 
-This document is the concrete application of the
+> **This document is archived.** It reflects the original planning decisions made at project start (2026-02-28) and is preserved as a record of initial intent. It is no longer maintained or authoritative.
+>
+> For current project context, use **CONTEXT.md**.
+> For the live page inventory and system definition, use **docs/system-definition.yaml** and **src/pages/content-sitemap.astro**.
+
+---
+
+This document was the concrete application of the
 [Web Systems Adventure Mode](./web-systems-adventure-mode.md) framework to
 `chill-dogs.com`. It records the strategic decisions made when building the
 site and should be consulted before adding new pages, categories, or features.

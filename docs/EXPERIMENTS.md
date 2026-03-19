@@ -183,23 +183,21 @@ All variants instrument two event surfaces:
 
 ### 2. JavaScript event emission
 
-On every CTA click, the page emits:
+On every CTA click, the page emits via `track()` from `src/scripts/analytics.ts`:
 
 ```js
-// dataLayer (GA4 / GTM compatible)
-window.dataLayer.push({
-  event: 'hero_cta_click',
+import { track } from '@scripts/analytics';
+
+track('hero_cta_click', {
   page: 'cooling' | 'calming',
   variant: 'a' | 'b' | ... | 'g',
   cta: 'primary' | 'secondary',
 });
-
-// also calls gtag() directly if the function is present
-gtag('event', 'hero_cta_click', { page, variant, cta });
 ```
 
-To connect to GA4: configure a custom event trigger in GTM or create a
-GA4 custom event definition for `hero_cta_click` with the three parameters.
+`track()` calls `window.posthog.capture()` when PostHog is loaded, and falls
+back to `console.log` in dev. Do not call `posthog.capture()` directly — always
+go through `track()`.
 
 ---
 
@@ -367,18 +365,23 @@ before they self-select.
 
 ### JavaScript event emission
 
+Via `track()` from `src/scripts/analytics.ts`:
+
 **Impression** (fires once at 50% IntersectionObserver visibility):
 ```js
-{ event: 'hero_impression', variant: 'v1' }
+import { track } from '@scripts/analytics';
+
+track('hero_impression', { variant: 'v1' });
 ```
 
 **CTA click:**
 ```js
-{ event: 'hero_cta_click', variant: 'v1', cta: 'cooling', href: '/cooling/' }
+track('hero_cta_click', { variant: 'v1', cta: 'cooling', href: '/cooling/' });
 ```
 
-Both payloads push to `window.dataLayer` (GA4/GTM compatible) and call `gtag()` directly
-if the function is present. Falls back to `console.info` if neither is available.
+`track()` calls `window.posthog.capture()` when PostHog is loaded, and falls
+back to `console.log` in dev. Do not call `posthog.capture()` directly — always
+go through `track()`.
 
 ---
 

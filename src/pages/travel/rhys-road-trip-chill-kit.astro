@@ -17,7 +17,7 @@ const pageSlug = 'rhys-road-trip-chill-kit';
 const carCoolingProducts = getProductsByCategory('car-cooling');
 const coolingMats = getProductsByCategory('cooling-mats').slice(0, 2);
 const coolingVests = getProductsByCategory('cooling-vests').slice(0, 2);
-const anxietyWraps = getCalmingProductsByCategory('anxiety-wraps');
+const anxietyWraps = getCalmingProductsByCategory('anxiety-wraps').filter(p => p.id === 'thundershirt-classic');
 const calmingTreats = getCalmingProductsByCategory('calming-treats').slice(0, 3);
 const lickMats = getCalmingProductsByCategory('lick-mats');
 
