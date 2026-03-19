@@ -33,6 +33,13 @@
     hsl(155, 50%, 10%);
 }
 
+[data-hero-variant="v1"] .hp-pane--comfort {
+  background:
+    radial-gradient(ellipse 85% 85% at 20% 85%, hsl(345, 50%, 32%) 0%, transparent 62%),
+    radial-gradient(ellipse 60% 55% at 82% 15%, hsl(355, 40%, 22%) 0%, transparent 68%),
+    hsl(350, 42%, 12%);
+}
+
 /* SVG feTurbulence grain via data URI — no external file */
 [data-hero-variant="v1"] .hp-pane::before {
   content: '';
