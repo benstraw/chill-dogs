@@ -224,7 +224,7 @@ function renderOgSvg({ headline, cta, theme }) {
   };
 
   const t = themes[theme] || themes.neutral;
-  const headlineLines = wrapText(escapeXml(headline), 30, 3);
+  const headlineLines = wrapText(escapeXml(headline), 26, 3);
   const lineHeight = 76;
   const headlineY = 255;
 

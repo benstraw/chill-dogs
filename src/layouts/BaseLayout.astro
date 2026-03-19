@@ -17,6 +17,7 @@ import { buildBreadcrumbSchema } from '@utils/breadcrumbs';
 interface Props {
   title: string;
   description?: string;
+  ogTitle?: string;
   ogImage?: string;
   canonicalUrl?: string;
   noindex?: boolean;
@@ -27,6 +28,7 @@ interface Props {
 const {
   title,
   description = 'Curated gear, gift guides, and party ideas for dogs who live the good life.',
+  ogTitle,
   ogImage,
   canonicalUrl,
   noindex = false,
@@ -61,7 +63,7 @@ const breadcrumbSchema = !noindex && !isStaging && Astro.site
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content={siteTitle} />
+    <meta property="og:title" content={ogTitle ?? siteTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={resolvedOgImage} />
     <meta property="og:url" content={resolvedCanonical} />

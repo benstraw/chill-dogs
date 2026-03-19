@@ -388,7 +388,7 @@ export const categoryMeta: Record<ProductCategory, CategoryMeta> = {
   'cooling-vests': {
     title: 'Best Cooling Vests for Dogs (2026)',
     description:
-      'Evaporative cooling vests for hikes, walks, and backyard play. Here are the 3 best options.',
+      'Evaporative cooling vests for hikes, walks, and outdoor play. We compared the best options by fit, cooling power, and durability to find the top picks.',
     heroHeadline: 'The Best Cooling Vests for Active Dogs',
     introCopy:
       'Cooling vests use evaporative technology to pull heat away from your dog\'s body. They\'re ideal for hikes, runs, and any extended time outside. We picked three that balance cooling power, fit, and durability.',

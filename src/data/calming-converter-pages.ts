@@ -148,7 +148,7 @@ export const calmingConverterPages: Record<string, CalmingConverterPageConfig> =
     slug: 'best-calming-products-for-anxious-dogs',
     title: 'Best Calming Products for Anxious Dogs',
     description:
-      'Compare the best calming products for anxious dogs, including ThunderShirt, calming chews, lick mats, and snuffle mats for storms, fireworks, grooming, and separation stress.',
+      'Compare the best calming products for anxious dogs — ThunderShirt, calming chews, lick mats, and snuffle mats for storms, fireworks, and separation stress.',
     pageSlug: 'best-calming-products-for-anxious-dogs',
     hero: {
       title: 'Best Calming Products for Anxious Dogs',
@@ -382,9 +382,9 @@ export const calmingConverterPages: Record<string, CalmingConverterPageConfig> =
 
   'best-thundershirt-alternatives': {
     slug: 'best-thundershirt-alternatives',
-    title: 'Best ThunderShirt Alternatives for Dogs (Anxiety Wraps Compared)',
+    title: 'Best ThunderShirt Alternatives for Dogs',
     description:
-      'Compare 6 anxiety wraps for dogs side by side — ThunderShirt and 5 alternatives with silent fastening, ear coverage, hoods, firmer compression, and budget-friendly options.',
+      'Compare 6 anxiety wraps side by side — ThunderShirt and 5 alternatives with silent fastening, ear coverage, firmer compression, and budget-friendly options.',
     pageSlug: 'best-thundershirt-alternatives',
     hero: {
       title: 'Best ThunderShirt Alternatives: 5 Anxiety Wraps Compared',

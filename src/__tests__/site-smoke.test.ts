@@ -81,8 +81,8 @@ describe('site smoke tests', () => {
     expect(termsDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
       .toContain('/og-default.jpg');
 
-    const homeOg = readFileSync(path.join(distRoot, 'og', 'home.png'));
-    const coolingOg = readFileSync(path.join(distRoot, 'og', 'cooling-cooling-mats.png'));
+    const homeOg = readFileSync(path.join(distRoot, 'og', 'home.jpg'));
+    const coolingOg = readFileSync(path.join(distRoot, 'og', 'cooling-cooling-mats.jpg'));
     expect(homeOg.length).toBeGreaterThan(1024);
     expect(coolingOg.length).toBeGreaterThan(1024);
   });
