@@ -28,6 +28,14 @@ const INFORMER_ROUTES = new Set([
   '/terms/',
 ]);
 
+// Per-route overrides for headline and CTA (keyed by pathname)
+const ROUTE_OVERRIDES = {
+  '/': {
+    ogHeadline: 'Cooling, Calming & Comforting Products for Dogs',
+    ogCta: 'See the Products',
+  },
+};
+
 const THEME_BY_PREFIX = [
   { prefix: '/cooling/', theme: 'cooling' },
   { prefix: '/calming/', theme: 'calming' },
@@ -371,6 +379,7 @@ function buildStaticRouteRecords() {
       title: titleFromPathname(pathname),
       pageType: inferPageType(pathname),
       ogTheme: inferTheme(pathname),
+      ...ROUTE_OVERRIDES[pathname],
     });
   }
 
