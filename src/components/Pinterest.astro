@@ -1,0 +1,56 @@
+---
+/**
+ * Pinterest base tag — loads the Pinterest conversion tag (pintrk) and fires
+ * a page_visit event on every eligible page.
+ *
+ * Skipped entirely on noindex pages (variant URLs, admin, etc.) so Pinterest
+ * does not receive signal from pages that should never appear in search or ads.
+ *
+ * Gated on PUBLIC_PINTEREST_TAG_ID — set this in .env and Vercel environment
+ * variables. If the var is absent the component renders nothing.
+ */
+
+interface Props {
+  noindex?: boolean;
+}
+
+const { noindex = false } = Astro.props;
+const tagId = import.meta.env.PUBLIC_PINTEREST_TAG_ID;
+---
+
+{tagId && !noindex && (
+  <script is:inline define:vars={{ tagId }}>
+    (function () {
+      if (window.pintrk) return;
+      window.pintrk = function () { window.pintrk.queue.push(Array.prototype.slice.call(arguments)); };
+      var p = window.pintrk;
+      p.queue = [];
+      p.version = '3.0';
+
+      function loadPintrk() {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://s.pinimg.com/ct/core.js';
+        var r = document.getElementsByTagName('script')[0];
+        r.parentNode.insertBefore(s, r);
+        pintrk('load', tagId);
+        pintrk('page');
+      }
+
+      if (typeof requestIdleCallback === 'function') {
+        requestIdleCallback(loadPintrk);
+      } else {
+        setTimeout(loadPintrk, 150);
+      }
+    })();
+  </script>
+  <noscript>
+    <img
+      height="1"
+      width="1"
+      style="display:none;"
+      alt=""
+      src={`https://ct.pinterest.com/v3/?event=init&tid=${tagId}&noscript=1`}
+    />
+  </noscript>
+)}
