@@ -7,47 +7,87 @@
  */
 
 /* ═══════════════════════════════════════════════════════════════
-   v1 — Split Screen Gradient + Subtle Grain
-   Two bold multi-radial gradients per pane with an SVG feTurbulence
-   grain overlay via ::before. Hover brightens the hovered pane.
+   v1 — Hub-Style Light Gradient Panes
+   Each pane mirrors the conic-spotlight (variant c) background
+   used on the corresponding hub collector page — a near-white
+   gradient base with a blurred conic colour wash overlay and
+   dark text, matching the lighter look of the hub pages.
    ═══════════════════════════════════════════════════════════════ */
 
 [data-hero-variant="v1"] {
-  --cool-a: hsl(200, 65%, 14%);
-  --cool-b: hsl(190, 55%, 28%);
-  --calm-a: hsl(155, 45%, 13%);
-  --calm-b: hsl(140, 38%, 28%);
+  /* CTA colours adjusted for light pane backgrounds */
+  --hp-btn-cool-bg:     hsl(200, 80%, 28%);
+  --hp-btn-cool-ink:    #ffffff;
+  --hp-btn-calm-bg:     hsl(155, 50%, 26%);
+  --hp-btn-calm-ink:    #ffffff;
+  --hp-btn-comfort-bg:  hsl(345, 38%, 38%);
+  --hp-btn-comfort-ink: #ffffff;
 }
 
 [data-hero-variant="v1"] .hp-pane--cool {
-  background:
-    radial-gradient(ellipse 85% 85% at 20% 85%, hsl(196, 70%, 34%) 0%, transparent 62%),
-    radial-gradient(ellipse 60% 55% at 85% 15%, hsl(210, 60%, 22%) 0%, transparent 68%),
-    hsl(205, 60%, 11%);
+  background: linear-gradient(150deg, hsl(195, 70%, 96%) 0%, hsl(200, 28%, 88%) 100%);
 }
 
 [data-hero-variant="v1"] .hp-pane--calm {
-  background:
-    radial-gradient(ellipse 80% 85% at 80% 85%, hsl(148, 55%, 29%) 0%, transparent 62%),
-    radial-gradient(ellipse 60% 55% at 18% 18%, hsl(165, 44%, 20%) 0%, transparent 68%),
-    hsl(155, 50%, 10%);
+  background: linear-gradient(150deg, hsl(150, 30%, 96%) 0%, hsl(155, 18%, 88%) 100%);
 }
 
 [data-hero-variant="v1"] .hp-pane--comfort {
-  background:
-    radial-gradient(ellipse 85% 85% at 20% 85%, hsl(345, 50%, 32%) 0%, transparent 62%),
-    radial-gradient(ellipse 60% 55% at 82% 15%, hsl(355, 40%, 22%) 0%, transparent 68%),
-    hsl(350, 42%, 12%);
+  background: linear-gradient(150deg, hsl(345, 40%, 97%) 0%, hsl(20, 20%, 90%) 100%);
 }
 
-/* SVG feTurbulence grain via data URI — no external file */
-[data-hero-variant="v1"] .hp-pane::before {
+/* Blurred conic spotlight overlay — mirrors hx--c::before on hub pages */
+[data-hero-variant="v1"] .hp-pane--cool::before,
+[data-hero-variant="v1"] .hp-pane--calm::before,
+[data-hero-variant="v1"] .hp-pane--comfort::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E");
+  inset: -30% -15%;
+  filter: blur(72px);
+  opacity: 0.38;
   pointer-events: none;
-  mix-blend-mode: overlay;
+}
+
+[data-hero-variant="v1"] .hp-pane--cool::before {
+  background: conic-gradient(
+    from 240deg at 50% 120%,
+    transparent        0deg,
+    hsl(195, 65%, 55%) 45deg,
+    hsl(180, 55%, 42%) 90deg,
+    hsl(215, 75%, 28%) 120deg,
+    transparent        160deg
+  );
+}
+
+[data-hero-variant="v1"] .hp-pane--calm::before {
+  background: conic-gradient(
+    from 240deg at 50% 120%,
+    transparent        0deg,
+    hsl(150, 34%, 50%) 45deg,
+    hsl(160, 38%, 30%) 90deg,
+    hsl(268, 24%, 38%) 120deg,
+    transparent        160deg
+  );
+}
+
+[data-hero-variant="v1"] .hp-pane--comfort::before {
+  background: conic-gradient(
+    from 240deg at 50% 120%,
+    transparent        0deg,
+    hsl(345, 42%, 68%) 45deg,
+    hsl(330, 30%, 58%) 90deg,
+    hsl(20,  35%, 52%) 120deg,
+    transparent        160deg
+  );
+}
+
+/* Dark text on light pane backgrounds */
+[data-hero-variant="v1"] .hp-pane-title {
+  color: var(--color-charcoal);
+}
+
+[data-hero-variant="v1"] .hp-pane-sub {
+  color: var(--color-text-muted);
 }
 
 [data-hero-variant="v1"] .hp-pane {
@@ -55,7 +95,7 @@
 }
 
 [data-hero-variant="v1"] .hp-pane:hover {
-  filter: brightness(1.1);
+  filter: brightness(0.96);
 }
 
 /* ═══════════════════════════════════════════════════════════════
