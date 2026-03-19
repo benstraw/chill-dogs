@@ -8,7 +8,7 @@
 
 site_system:
   status: "active"
-  as_of: "2026-03-17"
+  as_of: "2026-03-19"
   owner: "chill-dogs"
   purpose: "Define the website as a modular conversion system and keep implementation aligned."
 
@@ -32,8 +32,11 @@ site_system:
   page_inventory:
     - name: "Home"
       type: "attractor"
-      target_action: "Route visitors into cooling or calming collector paths"
-      metric: "hero_click_cooling + hero_click_calming CTR"
+      target_action: "Route visitors into cooling, calming, or comforting collector paths"
+      metric: "hero_click_cooling + hero_click_calming CTR + comfort block clicks"
+      notes: >
+        Home page includes a dusty rose color block introducing the Comfort & Rest hub
+        with tagline "Settle in." — positioned between HomepageHero and the start-prompt section.
 
     - name: "Cooling"
       type: "collector"
@@ -83,6 +86,15 @@ site_system:
       metric: "collector_to_converter_click to cooling converters"
       routes:
         - "/cooling/how-hot-is-too-hot-for-dogs/"
+
+    - name: "How Much Do Dogs Sleep"
+      type: "collector"
+      collector_subtype: "article"
+      pillar: "comfort"
+      target_action: "Route sleep-intent traffic to calming and orthopedic bed converters"
+      metric: "collector_to_converter_click to comfort converters"
+      routes:
+        - "/comforting/how-much-do-dogs-sleep/"
 
     - name: "Relaxation converters"
       type: "converter"
