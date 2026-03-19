@@ -25,15 +25,15 @@
 }
 
 [data-hero-variant="v1"] .hp-pane--cool {
-  background: linear-gradient(150deg, hsl(195, 70%, 96%) 0%, hsl(200, 28%, 88%) 100%);
+  background: linear-gradient(150deg, hsl(195, 70%, 94%) 0%, hsl(200, 60%, 82%) 100%);
 }
 
 [data-hero-variant="v1"] .hp-pane--calm {
-  background: linear-gradient(150deg, hsl(150, 30%, 96%) 0%, hsl(155, 18%, 88%) 100%);
+  background: linear-gradient(150deg, hsl(150, 40%, 94%) 0%, hsl(155, 44%, 82%) 100%);
 }
 
 [data-hero-variant="v1"] .hp-pane--comfort {
-  background: linear-gradient(150deg, hsl(345, 40%, 97%) 0%, hsl(20, 20%, 90%) 100%);
+  background: linear-gradient(150deg, hsl(345, 50%, 95%) 0%, hsl(345, 52%, 86%) 100%);
 }
 
 /* Blurred conic spotlight overlay — mirrors hx--c::before on hub pages */
@@ -44,7 +44,7 @@
   position: absolute;
   inset: -30% -15%;
   filter: blur(72px);
-  opacity: 0.38;
+  opacity: 0.52;
   pointer-events: none;
 }
 
