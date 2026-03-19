@@ -90,5 +90,5 @@ export function resolveAutoOgImagePath(options: AutoOgOptions): string | null {
     return null;
   }
 
-  return `/og/${ogSlugFromPathname(options.pathname)}.png`;
+  return `/og/${ogSlugFromPathname(options.pathname)}.jpg`;
 }

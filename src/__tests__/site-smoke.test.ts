@@ -73,9 +73,9 @@ describe('site smoke tests', () => {
     const termsDoc = readBuiltPage(path.join('terms', 'index.html'));
 
     expect(homeDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
-      .toContain('/og/home.png');
+      .toContain('/og/home.jpg');
     expect(coolingDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
-      .toContain('/og/cooling-cooling-mats.png');
+      .toContain('/og/cooling-cooling-mats.jpg');
 
     // noindex pages keep the static default fallback
     expect(termsDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
