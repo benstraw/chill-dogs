@@ -2,11 +2,16 @@ import { mkdirSync, readdirSync, readFileSync, writeFileSync, existsSync } from 
 import path from 'node:path';
 import { PAGE_TYPE_CTA } from '../config/og-cta.mjs';
 import { Resvg } from '@resvg/resvg-js';
+import sharp from 'sharp';
 
 const projectRoot = process.cwd();
 const pagesDir = path.join(projectRoot, 'src', 'pages');
-const postsDir = path.join(projectRoot, 'src', 'data', 'posts');
 const outDir = path.join(projectRoot, 'public', 'og');
+const logoPath = path.join(projectRoot, 'public', 'images', 'chill-dogs-logo-padded.png');
+
+const logoDataUri = existsSync(logoPath)
+  ? `data:image/png;base64,${readFileSync(logoPath).toString('base64')}`
+  : null;
 
 const EXCLUDED_STATIC_ROUTES = new Set([
   '/404/',
@@ -23,9 +28,18 @@ const INFORMER_ROUTES = new Set([
   '/terms/',
 ]);
 
+// Per-route overrides for headline and CTA (keyed by pathname)
+const ROUTE_OVERRIDES = {
+  '/': {
+    ogHeadline: 'Cooling, Calming & Comforting Products for Dogs',
+    ogCta: 'See the Products',
+  },
+};
+
 const THEME_BY_PREFIX = [
   { prefix: '/cooling/', theme: 'cooling' },
   { prefix: '/calming/', theme: 'calming' },
+  { prefix: '/comforting/', theme: 'comfort' },
 ];
 
 function normalizeWhitespace(value) {
@@ -47,7 +61,7 @@ function clampText(text, maxChars) {
 }
 
 function deriveHeadline({ title, seoTitle, ogHeadline }) {
-  const raw = ogHeadline || seoTitle || title || 'chill-dogs';
+  const raw = ogHeadline || seoTitle || title || 'Chill-Dogs';
   return clampText(
     normalizeWhitespace(raw)
       .replace(/\s*\|\s*Chill-?Dogs\s*$/i, '')
@@ -70,7 +84,7 @@ function slugFromPathname(pathname) {
 }
 
 function inferTheme(pathname, explicitTheme) {
-  if (explicitTheme === 'cooling' || explicitTheme === 'calming') {
+  if (explicitTheme === 'cooling' || explicitTheme === 'calming' || explicitTheme === 'comfort') {
     return explicitTheme;
   }
 
@@ -87,15 +101,23 @@ function inferPageType(pathname) {
     return 'attractor';
   }
 
-  if (pathname === '/cooling/' || pathname === '/calming/') {
+  if (pathname === '/cooling/' || pathname === '/calming/' || pathname === '/comforting/') {
     return 'collector';
   }
 
-  if (pathname === '/cooling/how-hot-is-too-hot-for-dogs/' || pathname === '/cooling/keep-dog-cool-in-car/' || pathname.startsWith('/travel/')) {
+  if (
+    pathname === '/cooling/how-hot-is-too-hot-for-dogs/' ||
+    pathname === '/cooling/keep-dog-cool-in-car/' ||
+    pathname.startsWith('/travel/')
+  ) {
     return 'collector';
   }
 
-  if (pathname.startsWith('/cooling/') || pathname.startsWith('/calming/')) {
+  if (
+    pathname.startsWith('/cooling/') ||
+    pathname.startsWith('/calming/') ||
+    pathname.startsWith('/comforting/')
+  ) {
     return 'converter';
   }
 
@@ -104,11 +126,11 @@ function inferPageType(pathname) {
 
 function titleFromPathname(pathname) {
   if (pathname === '/') {
-    return 'chill-dogs: Cooling & Calming Picks for Dogs';
+    return 'Chill-Dogs: Cooling & Calming Picks for Dogs';
   }
 
   const clean = pathname.replace(/^\//, '').replace(/\/$/, '');
-  const segment = clean.split('/').pop() || 'chill-dogs';
+  const segment = clean.split('/').pop() || 'Chill-Dogs';
   return segment
     .split('-')
     .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
@@ -160,63 +182,97 @@ function wrapText(text, maxCharsPerLine, maxLines) {
 function renderOgSvg({ headline, cta, theme }) {
   const themes = {
     cooling: {
-      bg1: '#D8EDF5',
-      bg2: '#90C4D9',
+      bg1: '#E4EFF5',
+      bg2: '#A8C8D8',
       ink: '#173746',
       accent: '#1C4A5E',
-      pillBg: '#173746',
+      pillBg: '#1C4A5E',
       pillInk: '#FFFFFF',
+      blobA: '#4A8BAA',
+      blobB: '#A8C8D8',
     },
     calming: {
-      bg1: '#E6EFE6',
-      bg2: '#9FB89B',
+      bg1: '#EBF2EB',
+      bg2: '#AEBFAA',
       ink: '#243528',
       accent: '#2F5B3D',
       pillBg: '#2F5B3D',
       pillInk: '#FFFFFF',
+      blobA: '#4A7A5A',
+      blobB: '#AEBFAA',
+    },
+    comfort: {
+      bg1: '#F7EDEB',
+      bg2: '#C9AAAE',
+      ink: '#3D2226',
+      accent: '#8C4A52',
+      pillBg: '#7A3840',
+      pillInk: '#FFFFFF',
+      blobA: '#A06068',
+      blobB: '#C9AAAE',
     },
     neutral: {
-      bg1: '#F4EEE2',
-      bg2: '#E1D2B8',
-      ink: '#2D2D2D',
-      accent: '#8C5A45',
-      pillBg: '#2D2D2D',
+      bg1: '#F0F0F0',
+      bg2: '#B8B8B8',
+      ink: '#222222',
+      accent: '#555555',
+      pillBg: '#333333',
       pillInk: '#FFFFFF',
+      blobA: '#888888',
+      blobB: '#C4C4C4',
     },
   };
 
-  const selected = themes[theme] || themes.neutral;
-  const headlineLines = wrapText(escapeXml(headline), 30, 3);
+  const t = themes[theme] || themes.neutral;
+  const headlineLines = wrapText(escapeXml(headline), 26, 3);
   const lineHeight = 76;
-  const headlineY = 235;
+  const headlineY = 255;
 
   const headlineSvg = headlineLines
-    .map((line, index) => `<tspan x="72" y="${headlineY + (index * lineHeight)}">${line}</tspan>`)
+    .map((line, index) => `<tspan x="80" y="${headlineY + index * lineHeight}">${line}</tspan>`)
     .join('');
 
+  const logoEl = logoDataUri
+    ? `<image href="${logoDataUri}" x="92" y="52" width="64" height="64" />`
+    : '';
+
   return `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="${escapeXml(headline)}">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="${escapeXml(headline)}">
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0%" stop-color="${selected.bg1}" />
-      <stop offset="100%" stop-color="${selected.bg2}" />
+      <stop offset="0%" stop-color="${t.bg1}" />
+      <stop offset="100%" stop-color="${t.bg2}" />
     </linearGradient>
   </defs>
 
+  <!-- Background -->
   <rect width="1200" height="630" fill="url(#bg)" />
-  <circle cx="1080" cy="120" r="180" fill="${selected.accent}" opacity="0.16" />
-  <circle cx="1120" cy="560" r="240" fill="${selected.accent}" opacity="0.14" />
 
-  <text x="72" y="98" font-size="34" font-family="'Nunito', Arial, sans-serif" fill="${selected.accent}" font-weight="700" letter-spacing="0.4">
-    chill-dogs
+  <!-- Decorative blobs -->
+  <circle cx="1060" cy="100" r="200" fill="${t.blobA}" opacity="0.14" />
+  <circle cx="1130" cy="580" r="260" fill="${t.blobB}" opacity="0.18" />
+  <circle cx="200" cy="580" r="140" fill="${t.blobA}" opacity="0.08" />
+
+  <!-- Header card (frosted) -->
+  <rect x="80" y="42" width="460" height="88" rx="14" fill="white" opacity="0.38" />
+
+  <!-- Header bar: logo + wordmark -->
+  ${logoEl}
+  <text x="168" y="96" font-size="32" font-family="'Nunito', Arial, sans-serif" fill="${t.ink}" font-weight="800" letter-spacing="0.5">
+    Chill-Dogs
   </text>
 
-  <text x="72" y="${headlineY}" font-size="66" font-family="'Nunito', Arial, sans-serif" fill="${selected.ink}" font-weight="800">
+  <!-- Divider line -->
+  <line x1="80" y1="144" x2="540" y2="144" stroke="${t.accent}" stroke-width="2" opacity="0.3" />
+
+  <!-- Headline -->
+  <text x="80" y="${headlineY}" font-size="66" font-family="'Nunito', Arial, sans-serif" fill="${t.ink}" font-weight="800" letter-spacing="-0.5">
     ${headlineSvg}
   </text>
 
-  <rect x="72" y="500" width="520" height="78" rx="39" ry="39" fill="${selected.pillBg}" />
-  <text x="332" y="550" text-anchor="middle" font-size="34" font-family="'Inter', Arial, sans-serif" fill="${selected.pillInk}" font-weight="700">
+  <!-- CTA pill -->
+  <rect x="80" y="470" width="520" height="76" rx="38" ry="38" fill="${t.pillBg}" />
+  <text x="340" y="519" text-anchor="middle" font-size="32" font-family="'Inter', Arial, sans-serif" fill="${t.pillInk}" font-weight="700" letter-spacing="0.2">
     ${escapeXml(clampText(cta, 42))}
   </text>
 </svg>`;
@@ -301,6 +357,10 @@ function pathnameFromAstroFile(filePath) {
     return null;
   }
 
+  if (normalized.startsWith('/admin/')) {
+    return null;
+  }
+
   return normalized;
 }
 
@@ -319,39 +379,7 @@ function buildStaticRouteRecords() {
       title: titleFromPathname(pathname),
       pageType: inferPageType(pathname),
       ogTheme: inferTheme(pathname),
-    });
-  }
-
-  return records;
-}
-
-function buildPostRouteRecords() {
-  const postFiles = walkFiles(postsDir, (filePath) => filePath.endsWith('.md'));
-  const records = [];
-
-  for (const postFile of postFiles) {
-    const relativePath = path.relative(postsDir, postFile).replace(/\\/g, '/');
-    const segments = relativePath.split('/');
-    if (segments.length < 2) {
-      continue;
-    }
-
-    const category = segments[0];
-    const slug = segments[segments.length - 1].replace(/\.md$/, '');
-    const fm = parseFrontmatter(postFile);
-
-    if (fm.draft === true) {
-      continue;
-    }
-
-    records.push({
-      pathname: `/${category}/${slug}/`,
-      title: fm.title || titleFromPathname(`/${category}/${slug}/`),
-      seoTitle: fm.seoTitle,
-      ogHeadline: fm.ogHeadline,
-      ogCta: fm.ogCta,
-      pageType: fm.pageType || 'collector',
-      ogTheme: inferTheme(`/${category}/${slug}/`, fm.ogTheme),
+      ...ROUTE_OVERRIDES[pathname],
     });
   }
 
@@ -373,13 +401,10 @@ function dedupeByPathname(records) {
   return out;
 }
 
-function generateOgImages() {
+async function generateOgImages() {
   mkdirSync(outDir, { recursive: true });
 
-  const records = dedupeByPathname([
-    ...buildStaticRouteRecords(),
-    ...buildPostRouteRecords(),
-  ]);
+  const records = dedupeByPathname(buildStaticRouteRecords());
 
   for (const record of records) {
     const headline = deriveHeadline(record);
@@ -390,7 +415,7 @@ function generateOgImages() {
       theme: inferTheme(record.pathname, record.ogTheme),
     });
 
-    const targetPath = path.join(outDir, `${slugFromPathname(record.pathname)}.png`);
+    const targetPath = path.join(outDir, `${slugFromPathname(record.pathname)}.jpg`);
     const resvg = new Resvg(svg, {
       fitTo: {
         mode: 'width',
@@ -398,7 +423,8 @@ function generateOgImages() {
       },
     });
     const pngData = resvg.render();
-    writeFileSync(targetPath, pngData.asPng());
+    const jpegBuffer = await sharp(pngData.asPng()).jpeg({ quality: 85, mozjpeg: true }).toBuffer();
+    writeFileSync(targetPath, jpegBuffer);
   }
 
   console.log(`[og] generated ${records.length} per-page OG images in public/og`);

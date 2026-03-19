@@ -73,16 +73,16 @@ describe('site smoke tests', () => {
     const termsDoc = readBuiltPage(path.join('terms', 'index.html'));
 
     expect(homeDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
-      .toContain('/og/home.png');
+      .toContain('/og/home.jpg');
     expect(coolingDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
-      .toContain('/og/cooling-cooling-mats.png');
+      .toContain('/og/cooling-cooling-mats.jpg');
 
     // noindex pages keep the static default fallback
     expect(termsDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
       .toContain('/og-default.jpg');
 
-    const homeOg = readFileSync(path.join(distRoot, 'og', 'home.png'));
-    const coolingOg = readFileSync(path.join(distRoot, 'og', 'cooling-cooling-mats.png'));
+    const homeOg = readFileSync(path.join(distRoot, 'og', 'home.jpg'));
+    const coolingOg = readFileSync(path.join(distRoot, 'og', 'cooling-cooling-mats.jpg'));
     expect(homeOg.length).toBeGreaterThan(1024);
     expect(coolingOg.length).toBeGreaterThan(1024);
   });
@@ -353,7 +353,7 @@ describe('site smoke tests', () => {
   it('publishes llms.txt with all sections, key links, and no excluded paths', () => {
     const llmsText = readBuiltAsset('llms.txt');
 
-    expect(llmsText).toContain('# chill-dogs');
+    expect(llmsText).toContain('# Chill-Dogs');
     expect(llmsText).toContain('## Cooling Guides');
     expect(llmsText).toContain('## Calming Guides');
     expect(llmsText).toContain('## Travel Guides');

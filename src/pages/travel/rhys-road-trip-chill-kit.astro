@@ -17,7 +17,7 @@ const pageSlug = 'rhys-road-trip-chill-kit';
 const carCoolingProducts = getProductsByCategory('car-cooling');
 const coolingMats = getProductsByCategory('cooling-mats').slice(0, 2);
 const coolingVests = getProductsByCategory('cooling-vests').slice(0, 2);
-const anxietyWraps = getCalmingProductsByCategory('anxiety-wraps');
+const anxietyWraps = getCalmingProductsByCategory('anxiety-wraps').filter(p => p.id === 'thundershirt-classic');
 const calmingTreats = getCalmingProductsByCategory('calming-treats').slice(0, 3);
 const lickMats = getCalmingProductsByCategory('lick-mats');
 
@@ -84,14 +84,15 @@ const articleSchema = {
   publisher: {
     '@type': 'Organization',
     name: 'Chill-Dogs',
-    logo: { '@type': 'ImageObject', url: 'https://www.chill-dogs.com/og/og-default.png' },
+    logo: { '@type': 'ImageObject', url: 'https://www.chill-dogs.com/images/chill-dogs-logo-padded.png', width: 700, height: 700 },
   },
 };
 ---
 
 <BaseLayout
   title="Rhys's Road Trip Chill Kit: Cooling + Calming Essentials for Long Drives"
-  description="Window fan, magnetic shades, and a cooler of ice — a practical cooling and calming road trip setup built from a real cross-country drive. Shop cooling and calming picks for dogs."
+  ogTitle="Rhys's Road Trip Chill Kit | Dog Cooling & Calming"
+  description="A real cross-country road trip setup for dogs — window fan, magnetic shades, and cooler. Practical cooling and calming picks for long drives with dogs."
 >
   <JsonLd slot="head" schema={articleSchema} />
   <article class="collector-article container">

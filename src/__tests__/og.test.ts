@@ -21,16 +21,16 @@ describe('og utility functions', () => {
 
     expect(
       deriveOgHeadline({
-        seoTitle: 'Best Cooling Mats | chill-dogs',
+        seoTitle: 'Best Cooling Mats | Chill-Dogs',
         title: 'Base Title',
       })
     ).toBe('Best Cooling Mats');
 
-    expect(deriveOgHeadline({ title: 'chill-dogs — Car Cooling Picks' })).toBe('Car Cooling Picks');
+    expect(deriveOgHeadline({ title: 'Chill-Dogs — Car Cooling Picks' })).toBe('Car Cooling Picks');
   });
 
   it('falls back to chill-dogs when no headline props given', () => {
-    expect(deriveOgHeadline({})).toBe('chill-dogs');
+    expect(deriveOgHeadline({})).toBe('Chill-Dogs');
   });
 
   it('clamps long text at word boundary with ellipsis', () => {
@@ -72,7 +72,7 @@ describe('og utility functions', () => {
     expect(isAutoOgEligible({ pathname: '/about/', noindex: true })).toBe(false);
     expect(isAutoOgEligible({ pathname: '/404' })).toBe(false);
 
-    expect(resolveAutoOgImagePath({ pathname: '/cooling/cooling-mats/' })).toBe('/og/cooling-cooling-mats.png');
+    expect(resolveAutoOgImagePath({ pathname: '/cooling/cooling-mats/' })).toBe('/og/cooling-cooling-mats.jpg');
     expect(resolveAutoOgImagePath({ pathname: '/cooling/v/a/' })).toBeNull();
     expect(resolveAutoOgImagePath({ pathname: '/about/', noindex: true })).toBeNull();
   });

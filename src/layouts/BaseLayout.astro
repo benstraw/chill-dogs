@@ -9,6 +9,7 @@ import '@styles/utilities.css';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
 import Analytics from '@components/Analytics.astro';
+import Pinterest from '@components/Pinterest.astro';
 import SpeedInsights from '@vercel/speed-insights/astro';
 import { resolveAutoOgImagePath } from '@utils/og';
 import { buildBreadcrumbSchema } from '@utils/breadcrumbs';
@@ -16,6 +17,7 @@ import { buildBreadcrumbSchema } from '@utils/breadcrumbs';
 interface Props {
   title: string;
   description?: string;
+  ogTitle?: string;
   ogImage?: string;
   canonicalUrl?: string;
   noindex?: boolean;
@@ -26,6 +28,7 @@ interface Props {
 const {
   title,
   description = 'Curated gear, gift guides, and party ideas for dogs who live the good life.',
+  ogTitle,
   ogImage,
   canonicalUrl,
   noindex = false,
@@ -34,8 +37,8 @@ const {
 } = Astro.props;
 
 const siteTitle = title === 'Home'
-  ? 'chill-dogs — Cooling & Calming Products for Dogs'
-  : `${title} | chill-dogs`;
+  ? 'Chill-Dogs — Cooling & Calming Products for Dogs'
+  : `${title} | Chill-Dogs`;
 const autoOgImage = resolveAutoOgImagePath({ pathname: Astro.url.pathname, noindex });
 const resolvedOgImage = new URL(ogImage || autoOgImage || '/og-default.jpg', Astro.site).href;
 const resolvedCanonical = canonicalUrl || Astro.url.href;
@@ -60,11 +63,11 @@ const breadcrumbSchema = !noindex && !isStaging && Astro.site
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content={siteTitle} />
+    <meta property="og:title" content={ogTitle ?? siteTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={resolvedOgImage} />
     <meta property="og:url" content={resolvedCanonical} />
-    <meta property="og:site_name" content="chill-dogs" />
+    <meta property="og:site_name" content="Chill-Dogs" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -82,6 +85,7 @@ const breadcrumbSchema = !noindex && !isStaging && Astro.site
     {breadcrumbSchema && (
       <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
     )}
+    <Pinterest noindex={noindex} />
   </head>
   <body>
     <a href="#main-content" class="sr-only">Skip to content</a>

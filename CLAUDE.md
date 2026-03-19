@@ -78,10 +78,23 @@ This site is a **modular conversion system** governed by `docs/web-systems-adven
 - Run `bun run test` and `bun run build` for substantive page/module changes.
 - Changes to `src/utils/**` or `src/scripts/**` require updated unit tests.
 
+### SEO Meta Tag Rules (enforced by `src/__tests__/seo-meta.test.ts`)
+
+Every indexable page must meet these limits or `bun run test` will fail:
+
+| Tag | Min | Max | Notes |
+|---|---|---|---|
+| `og:title` | 40 chars | 65 chars | Use `ogTitle` prop on `BaseLayout` to set a social-specific title without changing `<title>` |
+| `og:description` (= `description`) | 100 chars | 165 chars | Trim long prose descriptions; expand stub descriptions |
+
+- `og:title` defaults to the `<title>` value (`"Page Title | Chill-Dogs"`). Use `ogTitle` when `<title>` falls outside the range.
+- `og:description` and `<meta name="description">` share the same value — one field, two uses.
+- The test reads from `dist/` and requires a completed build. `bun run test` triggers a build automatically.
+
 ## Content Guardrails
 
 - Do not describe products or picks as "vet-recommended," "vet-approved," or similar unless the site has real, documented veterinarian sourcing for that exact claim.
-- Do not imply chill-dogs consulted veterinarians, commissioned veterinary reviews, or gathered veterinary endorsements when that did not happen.
+- Do not imply Chill-Dogs consulted veterinarians, commissioned veterinary reviews, or gathered veterinary endorsements when that did not happen.
 - Prefer grounded language like `researched`, `compared`, `curated`, `popular`, or `practical` instead of medical-authority framing.
 
 ## Project Overview

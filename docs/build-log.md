@@ -4,7 +4,7 @@ tags: [build, history]
 created: 2026-02-28
 ---
 
-# chill-dogs — Build Log
+# Chill-Dogs — Build Log
 
 A chronological record of how the site was built, what was prioritized at
 each phase, and the reasoning behind key decisions. Synthesized from git
@@ -237,7 +237,7 @@ compliant before launch.
 
 ### Meta tags
 
-- `<title>` — Dynamic with site suffix (e.g. "Best Cooling Mats | chill-dogs")
+- `<title>` — Dynamic with site suffix (e.g. "Best Cooling Mats | Chill-Dogs")
 - `<meta name="description">` — Unique per page
 - `<link rel="canonical">` — Enforced on every page; experiment variants point
   to their canonical hub URL

@@ -306,9 +306,9 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
 
   'best-orthopedic-dog-beds': {
     slug: 'best-orthopedic-dog-beds',
-    title: 'Best Orthopedic Dog Beds — Joint Support for Rest and Recovery',
+    title: 'Best Orthopedic Dog Beds for Large & Older Dogs',
     description:
-      'Compare the best orthopedic dog beds for large dogs, older dogs, and heavy resters — foam beds, full-surround bolsters, and anti-slip options built for sustained daily use.',
+      'Compare the best orthopedic dog beds for large and older dogs — foam beds, full-surround bolsters, and anti-slip options built for sustained daily use.',
     pageSlug: 'best-orthopedic-dog-beds',
     hero: {
       title: 'Best Orthopedic Dog Beds',

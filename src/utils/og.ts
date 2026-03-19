@@ -39,12 +39,12 @@ export function clampOgText(text: string, maxChars: number): string {
 }
 
 export function deriveOgHeadline({ title, seoTitle, ogHeadline }: OgHeadlineOptions): string {
-  const base = ogHeadline || seoTitle || title || 'chill-dogs';
+  const base = ogHeadline || seoTitle || title || 'Chill-Dogs';
   const cleaned = normalizeWhitespace(base)
     .replace(/\s*\|\s*Chill-?Dogs\s*$/i, '')
     .replace(/^Chill-?Dogs\s*[—|-]\s*/i, '');
 
-  return clampOgText(cleaned || 'chill-dogs', 88);
+  return clampOgText(cleaned || 'Chill-Dogs', 88);
 }
 
 export function deriveOgCta({ pageType, ogCta }: OgCtaOptions): string {
@@ -90,5 +90,5 @@ export function resolveAutoOgImagePath(options: AutoOgOptions): string | null {
     return null;
   }
 
-  return `/og/${ogSlugFromPathname(options.pathname)}.png`;
+  return `/og/${ogSlugFromPathname(options.pathname)}.jpg`;
 }

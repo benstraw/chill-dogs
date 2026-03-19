@@ -1,7 +1,7 @@
 ---
 type: context
 tags: [ai-context, strategy, creative]
-updated: 2026-03-12
+updated: 2026-03-19
 ---
 
 # chill-dogs — AI Context File
@@ -12,7 +12,7 @@ This file is the single source of truth for sharing context about `chill-dogs.co
 
 ## 1. What Is chill-dogs?
 
-**chill-dogs** (`chill-dogs.com`) is an Amazon affiliate site focused on dog lifestyle — specifically cooling, calming, and relaxing products. The site earns revenue through the Amazon Associates program. Every design, content, and engineering decision is evaluated against one question: does this drive or support affiliate revenue?
+**Chill-Dogs** (`chill-dogs.com`) is an Amazon affiliate site focused on dog lifestyle — specifically cooling, calming, and relaxing products. The site earns revenue through the Amazon Associates program. Every design, content, and engineering decision is evaluated against one question: does this drive or support affiliate revenue?
 
 ---
 
@@ -76,7 +76,7 @@ The site is organized around three high-intent problem categories:
 
 1. **Cooling** — summer heat relief for dogs. High seasonal intent (May–September peak).
 2. **Calming** — anxiety management for dogs. Evergreen intent year-round.
-3. **Relaxing** *(TBD — in progress)* — relaxation and comfort products for dogs. Scope, pages, and product data are not yet defined. Theme color: Dusty Rose (`--color-rose: #b56f76`).
+3. **Comfort** — rest, recovery, and relaxation products for dogs (beds, orthopedic, calming sleep). Theme color: Dusty Rose (`--color-rose: #b56f76`).
 
 Cooling and calming cross-link naturally (hot dogs are often anxious dogs), which supports internal link equity.
 
@@ -94,31 +94,35 @@ Each category has a pillar collector page that targets broad intent, with cluste
 #### Cooling Category
 | URL | Type | Job |
 |---|---|---|
-| `/cooling/` | attractor | Route to pillar guide (`/cooling/best-cooling-products-for-dogs/`) |
-| `/cooling/best-cooling-products-for-dogs/` | **collector** | Capture "best cooling products for dogs" organic traffic; route to category converters |
+| `/cooling/` | **collector** · hub | Route to converters and pillar guide |
+| `/cooling/best-cooling-products-for-dogs/` | **converter** | Drive affiliate clicks across top cooling categories |
 | `/cooling/cooling-mats/` | **converter** | Drive affiliate clicks for cooling mats |
 | `/cooling/cooling-bandanas/` | **converter** | Drive affiliate clicks for cooling bandanas |
 | `/cooling/cooling-vests/` | **converter** | Drive affiliate clicks for cooling vests |
 | `/cooling/freezable-dog-toys/` | **converter** | Drive affiliate clicks for freezable toys |
 | `/cooling/car-cooling-for-dogs/` | **converter** | Drive affiliate clicks for car cooling gear |
+| `/cooling/keep-dog-cool-in-car/` | **collector** · article | Capture "keep dog cool in car" informational traffic; route to car cooling converters |
+| `/cooling/how-hot-is-too-hot-for-dogs/` | **collector** · article | Capture heat safety queries; route to cooling converters |
 
 #### Calming Category
 | URL | Type | Job |
 |---|---|---|
-| `/calming/` | attractor | Route to pillar guide (`/calming/best-calming-products-for-anxious-dogs/`) |
-| `/calming/best-calming-products-for-anxious-dogs/` | **collector** | Capture "best calming products" organic traffic; route to converters |
-| `/calming/best-thundershirt-alternatives/` | **collector** | Target "thundershirt alternatives" queries; route to anxiety-wrap converters |
+| `/calming/` | **collector** · hub | Route to converters and pillar guide |
+| `/calming/best-calming-products-for-anxious-dogs/` | **converter** | Drive affiliate clicks across top calming categories |
+| `/calming/best-thundershirt-alternatives/` | **converter** | Drive affiliate clicks for anxiety wrap alternatives |
 | `/calming/car-anxiety-for-dogs/` | **converter** | Drive affiliate clicks for travel calming aids |
+
+#### Comfort Category
+| URL | Type | Job |
+|---|---|---|
+| `/comfort/` | **collector** · hub | Route to comfort converters (rest, recovery, relaxation) |
+| `/comfort/best-calming-dog-beds/` | **converter** | Drive affiliate clicks for calming dog beds |
+| `/comfort/best-orthopedic-dog-beds/` | **converter** | Drive affiliate clicks for orthopedic dog beds |
 
 #### Travel / Cross-Category
 | URL | Type | Job |
 |---|---|---|
-| `/travel/rhys-road-trip-chill-kit/` | **collector** | Route to car cooling and car anxiety converters |
-
-#### Relaxing Category *(TBD — in progress)*
-| URL | Type | Job |
-|---|---|---|
-| TBD | TBD | TBD |
+| `/travel/rhys-road-trip-chill-kit/` | **collector** · article | Route to car cooling and car anxiety converters |
 
 #### Informer Pages
 | URL | Type | Purpose |
@@ -262,7 +266,7 @@ Product data for cooling and calming pages lives in strongly-typed TypeScript fi
 
 ### Brand Name
 
-**chill-dogs** (hyphenated, title case). Domain: `chill-dogs.com`.
+**Chill-Dogs** (hyphenated, title case). Domain: `chill-dogs.com`.
 
 ### Tagline
 
@@ -270,13 +274,13 @@ Product data for cooling and calming pages lives in strongly-typed TypeScript fi
 
 ### Color Palette
 
-Seven named brand colors form the palette. Sky blue signals cooling; sage green signals calming; dusty rose signals relaxing.
+Seven named brand colors form the palette. Sky blue signals cooling; sage green signals calming; dusty rose signals comfort.
 
 | Token | Hex | Role |
 |---|---|---|
 | `--color-sky` | `#87b7c7` | Cooling theme primary; primary CTA color |
 | `--color-sage` | `#8fa98b` | Calming theme primary; accent color |
-| `--color-rose` | `#b56f76` | Relaxing theme primary *(TBD — in progress)* |
+| `--color-rose` | `#b56f76` | Comfort theme primary |
 | `--color-sand` | `#e8dcc8` | Warm neutral; secondary surfaces |
 | `--color-cream` | `#f5f0e8` | Light surface; card backgrounds |
 | `--color-terracotta` | `#c4704b` | Warm accent; secondary CTAs |
