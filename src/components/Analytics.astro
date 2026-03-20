@@ -11,6 +11,12 @@ const posthogKey = import.meta.env.PUBLIC_POSTHOG_KEY;
           api_host: 'https://woof.chill-dogs.com',
           ui_host: 'https://us.posthog.com',
           person_profiles: 'always',
+          before_send: function(event) {
+            if (window.location.host.endsWith('-benstraws-projects.vercel.app')) {
+              return null;
+            }
+            return event;
+          },
         });
       }
       if(typeof requestIdleCallback==='function'){requestIdleCallback(loadPostHog)}
