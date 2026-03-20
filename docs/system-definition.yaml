@@ -107,6 +107,14 @@ site_system:
       routes:
         - "/travel/rhys-road-trip-chill-kit/"
 
+    - name: "How Much Do Dogs Sleep"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Route dog sleep intent to comfort converters (calming beds, orthopedic beds)"
+      metric: "collector_to_converter_click to comfort converters"
+      routes:
+        - "/comforting/how-much-do-dogs-sleep/"
+
     - name: "Informer pages"
       type: "informer"
       target_action: "Trust and compliance clarity"

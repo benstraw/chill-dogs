@@ -1,0 +1,287 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Toc from '@components/modules/Toc.astro';
+import FAQ from '@components/modules/FAQ.astro';
+import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
+import Disclosure from '@components/modules/Disclosure.astro';
+import JsonLd from '@components/JsonLd.astro';
+import { ROUTES } from '@data/routes';
+
+const title = 'How Much Do Dogs Sleep? What Rest Really Looks Like';
+const description =
+  'Most adult dogs sleep 12 to 14 hours a day — and sleep quality matters as much as quantity. Here\'s what normal rest looks like, what disrupts it, and how to help.';
+const pageSlug = 'how-much-do-dogs-sleep';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  url: 'https://www.chill-dogs.com/comforting/how-much-do-dogs-sleep/',
+  image: ['https://www.chill-dogs.com/og/comforting-how-much-do-dogs-sleep.png'],
+  author: { '@type': 'Person', name: 'Benjamin Strawbridge', url: 'https://www.benstrawbridge.com/' },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Chill-Dogs',
+    logo: { '@type': 'ImageObject', url: 'https://www.chill-dogs.com/og/og-default.png' },
+  },
+};
+
+const tocHeadings = [
+  { label: 'The short answer', anchor: 'short-answer' },
+  { label: 'Sleep needs change with age', anchor: 'sleep-by-age' },
+  { label: 'Breed and size matters', anchor: 'breed-and-size' },
+  { label: 'Dogs dream', anchor: 'dogs-dream' },
+  { label: "Why your dog can't settle", anchor: 'why-cant-settle' },
+  { label: "Signs your dog isn't sleeping well", anchor: 'sleep-signs' },
+  { label: 'How to help your dog sleep better', anchor: 'help-sleep-better' },
+];
+
+const faqs = [
+  {
+    question: 'Is it normal for my dog to sleep 14 hours a day?',
+    answer:
+      'Yes. Adult dogs typically sleep 12 to 14 hours per day across overnight rest and daytime naps. Larger breeds and senior dogs often sleep even more. If the amount has changed suddenly, or if your dog seems difficult to wake or is unusually lethargic, consult your veterinarian.',
+  },
+  {
+    question: 'Why does my dog twitch and whimper in their sleep?',
+    answer:
+      'Dogs experience REM sleep, the stage associated with dreaming. Twitching, paddling paws, and quiet vocalizations during sleep are normal signs of REM activity. Brief episodes are nothing to worry about. Sustained or violent movements during sleep — or difficulty waking from them — are worth monitoring.',
+  },
+  {
+    question: 'Why won\'t my dog settle at night?',
+    answer:
+      'Common causes include pain or joint discomfort (especially in older dogs), anxiety, a sleeping surface that has lost its support, inadequate exercise or mental stimulation during the day, and changes to routine or environment. Start with the surface: an unsupportive bed is one of the most common and easily fixable causes of nighttime restlessness.',
+  },
+  {
+    question: 'Do dogs sleep better with a routine?',
+    answer:
+      'Yes. Dogs are highly attuned to patterns. Consistent feeding, exercise, and sleep times help regulate their internal clock and make settling at night easier. Changes to routine — new schedules, travel, new people in the home — can temporarily disrupt sleep.',
+  },
+  {
+    question: 'What kind of bed helps a dog sleep better?',
+    answer:
+      'It depends on your dog\'s sleep style and age. Dogs who curl up tightly or press against walls tend to sleep better with a raised-rim or donut-shaped bed. Older dogs, large breeds, and dogs with joint issues benefit most from orthopedic foam that distributes weight evenly and holds its shape over time. A flat, thin, or collapsed bed causes dogs to frequently shift positions, which disrupts their sleep and yours.',
+  },
+];
+
+const internalLinks = [
+  { label: 'Best Calming Dog Beds', href: ROUTES.comfortCalmingBeds },
+  { label: 'Best Orthopedic Dog Beds', href: ROUTES.comfortOrthopedicBeds },
+  { label: 'Comfort & Rest Hub', href: ROUTES.comfortHub },
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <JsonLd slot="head" schema={articleSchema} />
+  <article class="collector-article container">
+    <header class="article-header">
+      <span class="eyebrow">Comfort &amp; Rest</span>
+      <h1>{title}</h1>
+      <p class="lede">
+        Your dog isn't lazy. Dogs need more sleep than you think — and the quality of that sleep matters more than the quantity.
+      </p>
+    </header>
+
+    <Toc headings={tocHeadings} pageSlug={pageSlug} />
+
+    <div class="prose">
+
+      <h2 id="short-answer">The short answer</h2>
+      <p>
+        Most adult dogs sleep <strong>12 to 14 hours per day</strong>. That number surprises a lot of people, but it's normal. Dogs are polyphasic sleepers, meaning they don't consolidate rest into one long block the way humans do. They cycle through shorter periods of sleep and wakefulness throughout the day and night.
+      </p>
+      <p>
+        About 75% of a dog's sleep happens overnight. The rest comes in daytime naps — usually two to four per day, lasting anywhere from 30 minutes to a couple of hours.
+      </p>
+
+      <h2 id="sleep-by-age">Sleep needs change with age</h2>
+      <p>Age is the single biggest factor in how much sleep your dog needs.</p>
+      <p>
+        <strong>Puppies: 18–20 hours per day.</strong> Puppies burn through energy in short bursts, then crash. That's normal — their brains, muscles, immune systems, and nervous systems are developing rapidly, and most of that development happens during sleep.
+      </p>
+      <p>
+        <strong>Adult dogs: 12–14 hours per day.</strong> Healthy adult dogs spend roughly half of every 24-hour cycle asleep. The rest of their time is split between being relaxed but awake (~30%) and genuinely active (~20%). Working breeds and high-energy dogs may land on the lower end; companion breeds and larger dogs trend higher.
+      </p>
+      <p>
+        <strong>Senior dogs: 14–18 hours per day.</strong> Older dogs tire more easily, nap more frequently, and need more recovery time. Age-related conditions like arthritis, cognitive decline, and reduced sensory function all contribute to longer rest periods. If your senior dog's sleep patterns change suddenly, consult your veterinarian.
+      </p>
+
+      <h2 id="breed-and-size">Breed and size matters</h2>
+      <p>
+        Larger breeds generally sleep more than smaller ones. A Great Dane or Mastiff may sleep 16–18 hours a day simply because their bodies expend more energy during activity and need longer to recover. Medium-sized breeds tend to be the most consistently active and often sleep the least.
+      </p>
+      <p>
+        Working and herding breeds — Border Collies, Australian Cattle Dogs, Belgian Malinois — are built for sustained mental and physical effort. They may need only 10–12 hours if they're getting enough stimulation, but they'll sleep poorly without it.
+      </p>
+      <p>
+        Small and toy breeds fall somewhere in between. They tend to take frequent, short naps rather than extended rest sessions, and their dream cycles are shorter but more frequent than those of larger dogs.
+      </p>
+
+      <h2 id="dogs-dream">Dogs dream</h2>
+      <p>
+        Dogs go through the same sleep stages as humans: light sleep, deep (non-REM) sleep, and REM sleep. During REM sleep, their eyes move behind closed lids, their paws twitch, and they sometimes vocalize. That's dreaming.
+      </p>
+      <p>
+        Research from the Hungarian Academy of Sciences used non-invasive EEG recordings to study sleep in companion dogs. They found that dogs experience sleep spindles — brief bursts of brain activity during non-REM sleep — that are associated with memory consolidation, learning, and cognitive health in both humans and rats. This was the first time sleep spindles were studied in detail in dogs.
+      </p>
+      <p>
+        The same research team demonstrated that dogs that slept after learning a new command performed better when retested a week later compared to dogs that did other activities after learning. Sleep wasn't just resting — it was actively packaging what the dog had learned into long-term memory.
+      </p>
+      <p>
+        A separate study found that dogs spend roughly 10% of their total sleep time in REM — compared to about 20–25% for humans. Because dogs wake more frequently and their sleep is more fragmented, they need more total hours to accumulate enough deep and REM sleep for proper recovery.
+      </p>
+
+      <h3>What this means in practice</h3>
+      <p>
+        If your dog is learning new skills, adjusting to a new routine, or recovering from a stressful experience, sleep isn't just helpful — it's where the processing happens. Interrupting rest after training or a big day can genuinely affect how well your dog retains what it learned.
+      </p>
+
+      <h2 id="why-cant-settle">Why your dog can't settle — and what to check</h2>
+      <p>
+        If your dog seems restless, gets up repeatedly, or won't stay in one spot, something is usually off. These are the most common disruptors:
+      </p>
+      <p>
+        <strong>Pain or discomfort.</strong> Arthritis, hip dysplasia, and joint stiffness can make it hard for a dog to find a comfortable position, especially on a surface that doesn't provide enough support. Dogs won't always show obvious signs of pain; restlessness at bedtime can be the first clue.
+      </p>
+      <p>
+        <strong>Anxiety or stress.</strong> Changes in routine, new environments, separation, and noise sensitivity all affect sleep. Dogs who had negative or stressful experiences during the day may show increased REM sleep as their brains work to process those emotions — a pattern researchers have directly observed using EEG recordings.
+      </p>
+      <p>
+        <strong>Inadequate sleeping surface.</strong> The bed matters. A surface that's too flat, too thin, or that's lost its support will cause a dog to frequently shift positions. Temperature plays a role too — dogs sleeping on surfaces that trap heat or on cold floors will wake more often. Research into kennel environments has shown that temperature, light, and noise all measurably alter dogs' sleep patterns and stress responses.
+      </p>
+      <p>
+        <strong>Lack of exercise.</strong> Dogs who don't burn enough energy during the day struggle to settle at night. But it's not just physical: mental stimulation matters as much as walks. A dog that is physically tired but mentally bored may still be restless.
+      </p>
+      <p>
+        <strong>Diet and feeding timing.</strong> Eating too close to bedtime can cause gastrointestinal discomfort. Dogs on low-quality food may also lack the sustained energy that supports consistent sleep patterns.
+      </p>
+
+      <h2 id="sleep-signs">Signs your dog isn't sleeping well</h2>
+      <p>Not every sleep issue is obvious. Watch for these:</p>
+      <ul>
+        <li>Waking up frequently during the night</li>
+        <li>Reluctance to get up in the morning</li>
+        <li>Increased irritability</li>
+        <li>Excessive daytime napping that goes beyond what's typical for your dog's age</li>
+        <li>Loss of interest in activities your dog usually enjoys</li>
+        <li>Prolonged or intense twitching during sleep (occasional twitching is normal; sustained episodes may not be)</li>
+      </ul>
+      <p>
+        If you notice several of these symptoms together, or a sudden change from your dog's normal pattern, consult your veterinarian. Sleep problems can be a symptom of pain, cognitive decline, thyroid issues, or other underlying conditions.
+      </p>
+
+      <h2 id="help-sleep-better">How to help your dog sleep better</h2>
+      <p>
+        <strong>Give them a consistent routine.</strong> Dogs are creatures of habit. Feeding, exercise, and bedtime at predictable times each day help regulate their internal clocks.
+      </p>
+      <p>
+        <strong>Make the sleeping environment work.</strong> A quiet, low-light space away from high-traffic areas reduces nighttime stress. Dogs sleep more deeply in familiar surroundings — one study found that when dogs slept away from home, they were significantly less likely to enter REM sleep after their first non-REM cycle.
+      </p>
+      <p>
+        <strong>Provide the right bed.</strong> Beds should match your dog's size, sleep style, and age:
+      </p>
+      <ul>
+        <li>
+          Dogs who curl up tightly or press against walls need a bed with <strong>raised rims or a donut shape</strong> that gives them something to lean into. →&nbsp;<a href={ROUTES.comfortCalmingBeds} data-track="collector_to_converter_click" data-from-page={pageSlug} data-to-page={ROUTES.comfortCalmingBeds} data-link-position="section">See our calming bed picks</a>
+        </li>
+        <li>
+          Older dogs, larger breeds, and dogs with joint issues need <strong>orthopedic foam</strong> that distributes weight evenly and doesn't collapse over time. →&nbsp;<a href={ROUTES.comfortOrthopedicBeds} data-track="collector_to_converter_click" data-from-page={pageSlug} data-to-page={ROUTES.comfortOrthopedicBeds} data-link-position="section">See our orthopedic bed picks</a>
+        </li>
+      </ul>
+      <p>
+        A bed that has lost its support or doesn't suit your dog's resting position is one of the most common causes of poor sleep.
+      </p>
+      <p>
+        <strong>Don't interrupt post-learning rest.</strong> If your dog has been in a training session, experienced something new, or had a stimulating day, let them nap. Research suggests that sleep immediately after learning contributes to memory consolidation and better long-term retention. Activities like a calm walk or quiet play are fine, but stacking new learning sessions back-to-back may diminish what your dog remembers.
+      </p>
+      <p>
+        <strong>Watch for age-related changes.</strong> Senior dogs may experience fragmented sleep, nighttime restlessness, or confusion upon waking — signs that can overlap with canine cognitive dysfunction. A bed that's easy to get in and out of, placed in a familiar spot, can help reduce nighttime disorientation.
+      </p>
+
+      <h2 id="bottom-line">The bottom line</h2>
+      <p>
+        Dogs spend roughly half their lives asleep. That's not a sign of laziness — it's a biological requirement. Sleep is when their bodies recover, their brains consolidate learning, and their emotional state resets.
+      </p>
+      <p>
+        If your dog isn't settling well, the fix is often simpler than you'd expect: better routine, better environment, better bed. Start with the surface they're sleeping on and work outward from there.
+      </p>
+
+    </div>
+
+    <FAQ faqs={faqs} />
+
+    <InternalLinkStrip links={internalLinks} fromPage={pageSlug} />
+
+    <Disclosure />
+  </article>
+</BaseLayout>
+
+<style>
+  .collector-article {
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-4xl);
+    max-width: var(--max-width-prose);
+  }
+
+  .article-header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-rose);
+    margin-bottom: var(--space-sm);
+  }
+
+  .article-header h1 {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .lede {
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+  }
+
+  .prose h2 {
+    font-size: var(--text-2xl);
+    margin-top: var(--space-2xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .prose h3 {
+    font-size: var(--text-xl);
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-sm);
+  }
+
+  .prose p,
+  .prose ul {
+    margin-bottom: var(--space-md);
+    line-height: 1.7;
+  }
+
+  .prose ul {
+    padding-left: var(--space-lg);
+  }
+
+  .prose li {
+    margin-bottom: var(--space-sm);
+  }
+
+  .prose a {
+    color: var(--color-rose);
+    text-decoration: underline;
+  }
+
+  @media (max-width: 640px) {
+    .article-header h1 {
+      font-size: var(--text-3xl);
+    }
+  }
+</style>
