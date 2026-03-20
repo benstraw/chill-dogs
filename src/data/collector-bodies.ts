@@ -193,6 +193,20 @@ export const comfortCollectorBody: CollectorBodyConfig = {
         },
       ],
     },
+    {
+      heading: 'Sleep & Rest Guides',
+      intro: 'Practical guides on how dogs sleep, what disrupts rest, and how to help your dog settle better.',
+      cards: [
+        {
+          href: ROUTES.comfortSleepArticle,
+          title: 'How Much Do Dogs Sleep?',
+          description: 'What normal rest looks like across life stages, why dogs dream, and what to check when your dog can\'t settle.',
+          linkLabel: 'Read the guide ->',
+          dataToPage: ROUTES.comfortSleepArticle,
+          dataCategory: 'sleep-guide',
+        },
+      ],
+    },
   ],
   disclosureShowSafety: false,
 };
