@@ -1,20 +1,23 @@
 ---
+import { ROUTES } from '@data/routes';
+
 const currentYear = new Date().getFullYear();
 
 const exploreLinks = [
-  { href: '/cooling/', label: 'Cooling' },
-  { href: '/calming/', label: 'Calming' },
+  { href: ROUTES.coolingHub, label: 'Cooling' },
+  { href: ROUTES.calmingHub, label: 'Calming' },
+  { href: ROUTES.comfortHub, label: 'Comforting' },
 ];
 
 const companyLinks = [
-  { href: '/about/', label: 'About' },
-  { href: '/contact/', label: 'Contact' },
+  { href: ROUTES.about, label: 'About' },
+  { href: ROUTES.contact, label: 'Contact' },
 ];
 
 const legalLinks = [
-  { href: '/privacy-policy/', label: 'Privacy Policy' },
-  { href: '/terms/', label: 'Terms of Use' },
-  { href: '/affiliate-disclosure/', label: 'Affiliate Disclosure' },
+  { href: ROUTES.privacyPolicy, label: 'Privacy Policy' },
+  { href: ROUTES.terms, label: 'Terms of Use' },
+  { href: ROUTES.affiliateDisclosure, label: 'Affiliate Disclosure' },
 ];
 ---
 
