@@ -19,7 +19,7 @@ export const ROUTES = {
   comfortHub: '/comforting/',
   comfortCalmingBeds: '/comforting/best-calming-dog-beds/',
   comfortOrthopedicBeds: '/comforting/best-orthopedic-dog-beds/',
-  comfortSleepGuide: '/comforting/how-much-do-dogs-sleep/',
+  comfortSleepArticle: '/comforting/how-much-do-dogs-sleep/',
   affiliateDisclosure: '/affiliate-disclosure/',
   privacyPolicy: '/privacy-policy/',
   terms: '/terms/',
