@@ -40,6 +40,10 @@
   --hp-btn-cool-ink: hsl(210, 55%, 12%);
   --hp-btn-calm-bg: hsl(142, 42%, 57%);
   --hp-btn-calm-ink: hsl(155, 40%, 11%);
+  --comfort-a: hsl(345, 35%, 18%);
+  --comfort-b: hsl(340, 28%, 32%);
+  --hp-btn-comfort-bg: hsl(345, 42%, 58%);
+  --hp-btn-comfort-ink: hsl(350, 40%, 14%);
 
   position: relative;
   overflow: hidden;
@@ -102,6 +106,10 @@
   background: linear-gradient(145deg, var(--calm-a), var(--calm-b));
 }
 
+.hp-pane--comfort {
+  background: linear-gradient(145deg, var(--comfort-a), var(--comfort-b));
+}
+
 /* ─── Pane content ─── */
 
 .hp-pane-title {
@@ -143,6 +151,11 @@
 .hp-cta--calm {
   background: var(--hp-btn-calm-bg);
   color: var(--hp-btn-calm-ink);
+}
+
+.hp-cta--comfort {
+  background: var(--hp-btn-comfort-bg);
+  color: var(--hp-btn-comfort-ink);
 }
 
 .hp-cta:hover {
