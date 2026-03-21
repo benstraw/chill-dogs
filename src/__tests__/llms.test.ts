@@ -21,7 +21,7 @@ describe('llms utilities', () => {
   it('groups routes by section mapping', () => {
     expect(sectionForPath('/cooling/cooling-mats/')).toBe('Cooling Guides');
     expect(sectionForPath('/calming/car-anxiety-for-dogs/')).toBe('Calming Guides');
-    expect(sectionForPath('/travel/rhys-road-trip-chill-kit/')).toBe('Travel Guides');
+    expect(sectionForPath('/travel/dog-road-trip-gear/')).toBe('Travel Guides');
     expect(sectionForPath('/about/')).toBe('About');
     expect(sectionForPath('/contact/')).toBe('About');
     expect(sectionForPath('/unknown/path/')).toBe('Core Pages');
