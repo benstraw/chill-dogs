@@ -87,7 +87,7 @@ const articleSchema = {
   description:
     'Dog road trip gear tested on a 3,000-mile cross-country drive — cooling fan, magnetic shades, water bowl, and calming essentials for long drives with dogs.',
   url: 'https://www.chill-dogs.com/travel/dog-road-trip-gear/',
-  image: ['https://www.chill-dogs.com/og/travel-rhys-road-trip-chill-kit.png'],
+  image: ['https://www.chill-dogs.com/og/travel-dog-road-trip-gear.jpg'],
   author: { '@type': 'Person', name: 'Benjamin Strawbridge', url: 'https://www.benstrawbridge.com/' },
   publisher: {
     '@type': 'Organization',
@@ -99,7 +99,7 @@ const articleSchema = {
 
 <BaseLayout
   title="Dog Road Trip Gear: Cooling & Calming Essentials That Work"
-  ogTitle="Rhys's Road Trip Chill Kit | Dog Cooling & Calming"
+  ogTitle="Dog Road Trip Gear | Cooling & Calming Essentials"
   description="Dog road trip gear tested on a 3,000-mile cross-country drive — cooling fan, magnetic shades, water bowl, and calming essentials for long drives with dogs."
 >
   <JsonLd slot="head" schema={articleSchema} />
@@ -401,11 +401,14 @@ const articleSchema = {
         ))}
       </div>
 
+      <CalmingDisclaimer variant="supplement" />
+
       <h3>4. In-Drive Distraction — Lick Mat</h3>
       <p>
         A loaded lick mat is one of the most reliable ways to get a dog through a rough patch — loud stretches
         of interstate, city traffic, the 45 minutes before a rest stop. Repetitive licking is genuinely
-        calming, and it gives an anxious dog something to focus on during the drive itself, not just before or after.
+        calming — animal behaviorists note it triggers the same self-soothing response as grooming — and it
+        gives an anxious dog something to focus on during the drive itself, not just before or after.
         The LUKITO mat has suction cups that keep it anchored to a smooth surface — practical for car use.
       </p>
       <ul>
@@ -479,6 +482,7 @@ const articleSchema = {
             <li>Clip-on fan (rear headrest)</li>
             <li>Collapsible water bowl + water jug</li>
             <li>Anxiety wrap (if travel stress is an issue)</li>
+            <li>Lick mat (loaded with peanut butter)</li>
             <li>Ice bag for the cooler</li>
           </ul>
           <a
@@ -522,8 +526,6 @@ const articleSchema = {
     </div>
 
     <FAQ faqs={roadTripFaqs} heading="Road Trip FAQ" />
-
-    <CalmingDisclaimer variant="supplement" />
 
     <InternalLinkStrip
       heading="More Dog Travel Guides"
