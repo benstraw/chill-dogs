@@ -83,7 +83,7 @@ export function buildProductPageMap(): ProductPageMap {
   }
 
   // Road trip page: manually mapped based on the imports in that file
-  const roadTripRef: PageRef = { label: 'rhys-road-trip-chill-kit', href: '/travel/rhys-road-trip-chill-kit/' };
+  const roadTripRef: PageRef = { label: 'dog-road-trip-gear', href: '/travel/dog-road-trip-gear/' };
   // car-cooling (all 4)
   for (const p of coolingProducts.filter((p) => p.category === 'car-cooling')) {
     addRef(map, p.id, roadTripRef);

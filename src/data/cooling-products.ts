@@ -317,7 +317,7 @@ export const categoryMeta: Record<ProductCategory, CategoryMeta> = {
       },
     ],
     internalLinks: [
-      { label: 'Road Trip Chill Kit', href: '/travel/rhys-road-trip-chill-kit/' },
+      { label: 'Road Trip Chill Kit', href: '/travel/dog-road-trip-gear/' },
       { label: 'Cooling Mats', href: '/cooling/cooling-mats/' },
       { label: 'Cooling Vests', href: '/cooling/cooling-vests/' },
       { label: 'All Cooling Products', href: '/cooling/best-cooling-products-for-dogs/' },
