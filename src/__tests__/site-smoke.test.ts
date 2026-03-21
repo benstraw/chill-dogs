@@ -50,6 +50,11 @@ function relTokens(link: HTMLAnchorElement): string[] {
     .sort();
 }
 
+/** Returns true for Astro-generated redirect stub pages (no real content). */
+function isRedirectStub(html: string): boolean {
+  return /http-equiv=['"]refresh['"]/i.test(html);
+}
+
 describe('site smoke tests', () => {
   beforeAll(() => {
     buildSite();
@@ -133,7 +138,7 @@ describe('site smoke tests', () => {
   });
 
   it('renders travel converter with affiliate links', () => {
-    const doc = readBuiltPage(path.join('travel', 'rhys-road-trip-chill-kit', 'index.html'));
+    const doc = readBuiltPage(path.join('travel', 'dog-road-trip-gear', 'index.html'));
     const affiliateLinks = getAmazonAffiliateLinks(doc);
 
     expect(affiliateLinks.length).toBeGreaterThan(0);
@@ -184,7 +189,7 @@ describe('site smoke tests', () => {
     expect(sitemap).toContain('<loc>https://www.chill-dogs.com/</loc>');
     expect(sitemap).toContain('/cooling/best-cooling-products-for-dogs/');
     expect(sitemap).toContain('/cooling/car-cooling-for-dogs/');
-    expect(sitemap).toContain('/travel/rhys-road-trip-chill-kit/');
+    expect(sitemap).toContain('/travel/dog-road-trip-gear/');
     expect(sitemap).toContain('/calming/best-calming-products-for-anxious-dogs/');
     expect(sitemap).not.toContain('/cooling/v/');
     expect(sitemap).not.toContain('/calming/v/');
@@ -222,6 +227,7 @@ describe('site smoke tests', () => {
       if (ignored.some((i) => relative.includes(i))) continue;
 
       const html = readFileSync(filePath, 'utf8');
+      if (isRedirectStub(html)) continue;
       const h1Count = (html.match(/<h1[\s>]/gi) || []).length;
       if (h1Count !== 1) {
         failures.push(`${relative} (${h1Count} h1 tags)`);
@@ -253,6 +259,7 @@ describe('site smoke tests', () => {
 
     for (const filePath of htmlFiles) {
       const html = readFileSync(filePath, 'utf8');
+      if (isRedirectStub(html)) continue;
       const descMatch = html.match(/<meta[^>]*name=['"]description['"][^>]*content=['"]([^'"]*)['"]/i);
       if (!descMatch || !descMatch[1].trim()) {
         const relative = path.relative(distRoot, filePath);
@@ -269,6 +276,7 @@ describe('site smoke tests', () => {
 
     for (const filePath of htmlFiles) {
       const html = readFileSync(filePath, 'utf8');
+      if (isRedirectStub(html)) continue;
       const ogMatch = html.match(/<meta[^>]*property=['"]og:image['"][^>]*content=['"]([^'"]*)['"]/i);
       if (!ogMatch || !/^https:\/\/www\.chill-dogs\.com\//.test(ogMatch[1])) {
         const relative = path.relative(distRoot, filePath);
@@ -289,6 +297,7 @@ describe('site smoke tests', () => {
       if (noSchemaExpected.some((i) => relative.includes(i))) continue;
 
       const html = readFileSync(filePath, 'utf8');
+      if (isRedirectStub(html)) continue;
       const ldJsonCount = (html.match(/<script[^>]*type="application\/ld\+json"/gi) || []).length;
       if (ldJsonCount === 0) {
         failures.push(relative);
@@ -359,7 +368,7 @@ describe('site smoke tests', () => {
     expect(llmsText).toContain('## Travel Guides');
     expect(llmsText).toContain('https://www.chill-dogs.com/cooling/');
     expect(llmsText).toContain('https://www.chill-dogs.com/cooling/best-cooling-products-for-dogs/');
-    expect(llmsText).toContain('https://www.chill-dogs.com/travel/rhys-road-trip-chill-kit/');
+    expect(llmsText).toContain('https://www.chill-dogs.com/travel/dog-road-trip-gear/');
     expect(llmsText).not.toContain('/v/a/');
     expect(llmsText).not.toContain('/content-sitemap/');
     expect(llmsText).not.toContain('/privacy-policy/');

@@ -5,6 +5,10 @@ import robotsTxt from 'astro-robots-txt';
 export default defineConfig({
   site: 'https://www.chill-dogs.com',
   trailingSlash: 'ignore',
+  redirects: {
+    '/travel/rhys-road-trip-chill-kit/': '/travel/dog-road-trip-gear/',
+    '/travel/rhys-road-trip-chill-kit': '/travel/dog-road-trip-gear/',
+  },
   integrations: [
     sitemap({
       filter: (page) => !page.includes('/draft') && !page.includes('/v/') && !page.includes('/admin/'),

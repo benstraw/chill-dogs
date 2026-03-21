@@ -117,7 +117,7 @@ site_system:
       target_action: "Route mixed intent to cooling and calming converters"
       metric: "collector_to_converter_click split by destination"
       routes:
-        - "/travel/rhys-road-trip-chill-kit/"
+        - "/travel/dog-road-trip-gear/"
 
     - name: "How Much Do Dogs Sleep"
       type: "collector"
@@ -205,6 +205,15 @@ site_system:
     cms: "None (code-first content/config in repository)"
     hosting: "Static build deployment"
     seo_strategy: "collector captures intent; converter monetizes intent; variant routes remain canonicalized and noindex"
+
+  redirects:
+    # Production: vercel.json → redirects array (true HTTP 301 at Vercel edge).
+    # Local dev/preview: astro.config.mjs → redirects block (meta-refresh fallback).
+    # Add an entry here any time a live/indexed URL is changed.
+    - from: "/travel/rhys-road-trip-chill-kit/"
+      to: "/travel/dog-road-trip-gear/"
+      reason: "Slug updated to target primary keyword 'dog road trip gear'; old URL was indexed."
+      date: "2026-03-20"
 
   analytics:
     primary_events:

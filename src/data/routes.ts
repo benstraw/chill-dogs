@@ -15,7 +15,7 @@ export const ROUTES = {
   calmingTop: '/calming/best-calming-products-for-anxious-dogs/',
   calmingAlternatives: '/calming/best-thundershirt-alternatives/',
   calmingCar: '/calming/car-anxiety-for-dogs/',
-  roadTrip: '/travel/rhys-road-trip-chill-kit/',
+  roadTrip: '/travel/dog-road-trip-gear/',
   comfortHub: '/comforting/',
   comfortCalmingBeds: '/comforting/best-calming-dog-beds/',
   comfortOrthopedicBeds: '/comforting/best-orthopedic-dog-beds/',

@@ -10,7 +10,7 @@ describe('cooling converter page config', () => {
     expect(config.pageSlug).toBe('car-cooling-for-dogs');
     expect(config.columns).toBe(2);
     expect(config.faqHeading).toBe('Car Cooling FAQ');
-    expect(config.secondaryCta?.href).toBe('/travel/rhys-road-trip-chill-kit/');
+    expect(config.secondaryCta?.href).toBe('/travel/dog-road-trip-gear/');
   });
 
   it('throws for unknown slugs', () => {
