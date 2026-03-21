@@ -7,12 +7,14 @@ import FAQ from '@components/modules/FAQ.astro';
 import Disclosure from '@components/modules/Disclosure.astro';
 import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
 import JsonLd from '@components/JsonLd.astro';
-import { getTrackersByType } from '@data/tracking-products';
+import AffiliateLink from '@components/AffiliateLink.astro';
+import { getTrackersByType, accessoryProducts } from '@data/tracking-products';
 
 const pageSlug = 'fi-dog-collar-review';
 
-const fiProducts = getTrackersByType('cellular').filter(p => p.id === 'fi-series-3');
+const fiProducts = getTrackersByType('cellular').filter(p => p.id === 'fi-series-3-plus');
 const fiProduct = fiProducts[0];
+const stuntPuppyCollar = accessoryProducts.find(a => a.id === 'stunt-puppy-fi-collar')!
 
 const tocHeadings = [
   { label: 'What Fi Is', anchor: 'what-fi-is' },
@@ -42,7 +44,7 @@ const faqs = [
   {
     question: 'Is Fi waterproof?',
     answer:
-      'The Fi Series 3 collar is rated IP68 waterproof — it handles rain, mud, and swimming. This is one of the practical advantages over some competing cellular trackers.',
+      'The Fi Series 3+ collar is rated IP68 waterproof — it handles rain, mud, and swimming. This is one of the practical advantages over some competing cellular trackers.',
   },
   {
     question: 'How long does Fi battery last?',
@@ -61,7 +63,7 @@ const articleSchema = {
   '@type': 'Review',
   name: 'Fi Dog Collar Review: Cellular GPS Tracking for Everyday Dogs',
   description:
-    'Honest review of the Fi Series 3 GPS dog collar — cellular tracking, subscription model, what it does well, and where it falls short for remote or off-grid use.',
+    'Honest review of the Fi Series 3+ GPS dog collar — cellular tracking, subscription model, what it does well, and where it falls short for remote or off-grid use.',
   url: 'https://www.chill-dogs.com/gear/fi-dog-collar-review/',
   author: { '@type': 'Person', name: 'Benjamin Strawbridge', url: 'https://www.benstrawbridge.com/' },
   publisher: {
@@ -71,14 +73,15 @@ const articleSchema = {
   },
   itemReviewed: {
     '@type': 'Product',
-    name: 'Fi Series 3 GPS Dog Collar',
+    name: 'Fi Series 3+ GPS Dog Collar',
   },
 };
 ---
 
 <BaseLayout
   title="Fi Dog Collar Review: GPS Tracking for Everyday Dogs (2026)"
-  description="An honest look at Fi Series 3 — cellular GPS tracking, real-time escape alerts, and geofencing. What it does well, what it costs, and where it fails without cell signal."
+  ogTitle="Fi Series 3+ Dog Collar GPS Review (2026)"
+  description="An honest look at Fi Series 3+ — cellular GPS tracking, escape alerts, and geofencing. What it does well, what it costs, and where it fails without cell signal."
 >
   <JsonLd slot="head" schema={articleSchema} />
 
@@ -102,7 +105,7 @@ const articleSchema = {
           Fi is a GPS dog collar that uses the LTE cellular network to report your dog's real-time location to a companion app. The collar includes a built-in GPS chip, an LTE radio, and a step counter. It's designed to work like a fitness tracker for dogs — with the safety layer of real-time location.
         </p>
         <p class="section-body">
-          The Series 3 is the current generation. It's slimmer and lighter than previous versions, with improved battery life and waterproofing. The core value proposition: if your dog gets loose in a city, suburb, or area with LTE coverage, you'll know where they are in near-real-time and get an alert the moment they leave a designated safe zone.
+          The Series 3+ is the current generation. It's slimmer and lighter than previous versions, with improved battery life and waterproofing. The core value proposition: if your dog gets loose in a city, suburb, or area with LTE coverage, you'll know where they are in near-real-time and get an alert the moment they leave a designated safe zone.
         </p>
         <p class="section-body">
           Fi is a good product for what it is. The key is understanding what it is: a cellular tracker. It works where cell service works. It doesn't work where cell service doesn't work. That distinction matters.
@@ -184,6 +187,19 @@ const articleSchema = {
         <p class="section-body">
           Fi is a strong fit for a specific kind of dog and owner.
         </p>
+
+        <div class="fi-buy-cta">
+          <AffiliateLink
+            href={fiProduct?.amazonUrl ?? 'https://www.amazon.com/dp/B0FH8GDBLX?tag=chill-dogs-20'}
+            data-track="amazon_outbound_click"
+            data-asin={fiProduct?.asin ?? 'B0FH8GDBLX'}
+            data-product-name="Fi Series 3+ GPS Collar (12-mo membership)"
+            class="fi-buy-btn"
+          >
+            Shop Fi Series 3+ on Amazon (12-mo membership)
+          </AffiliateLink>
+          <p class="fi-buy-note">Includes 12-month membership — best per-month value for Fi</p>
+        </div>
         <div class="best-for-list">
           <div class="best-for-item best-for-item--yes">
             <span class="bfi-icon">✓</span>
@@ -221,6 +237,26 @@ const articleSchema = {
             </div>
           </div>
         </div>
+
+        <!-- Stunt Puppy Accessory Card -->
+        {stuntPuppyCollar && (
+          <div class="accessory-card">
+            <div class="accessory-card-label">Fi-Ready Collar</div>
+            <div class="accessory-card-body">
+              <p class="accessory-card-name">{stuntPuppyCollar.name}</p>
+              <p class="accessory-card-note">{stuntPuppyCollar.note}</p>
+            </div>
+            <AffiliateLink
+              href={stuntPuppyCollar.amazonUrl}
+              data-track="amazon_outbound_click"
+              data-asin={stuntPuppyCollar.asin}
+              data-product-name={stuntPuppyCollar.name}
+              class="accessory-cta"
+            >
+              Shop on Amazon
+            </AffiliateLink>
+          </div>
+        )}
       </div>
     </section>
 
@@ -532,6 +568,95 @@ const articleSchema = {
     color: var(--color-text-inverse);
   }
 
+  /* Fi buy CTA */
+  .fi-buy-cta {
+    margin-bottom: var(--space-xl);
+  }
+
+  .fi-buy-btn {
+    display: inline-block;
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+    font-weight: var(--weight-semibold);
+    padding: var(--space-sm) var(--space-xl);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-size: var(--text-base);
+    transition: background var(--transition-fast);
+  }
+
+  .fi-buy-btn:hover {
+    background: var(--color-primary-hover);
+    color: var(--color-text-inverse);
+  }
+
+  .fi-buy-note {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-top: var(--space-xs);
+    margin-bottom: 0;
+  }
+
+  /* Accessory card */
+  .accessory-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg) var(--space-xl);
+    margin-top: var(--space-xl);
+    max-width: var(--max-width-prose);
+  }
+
+  .accessory-card-label {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+  }
+
+  .accessory-card-body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .accessory-card-name {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text);
+    margin-bottom: var(--space-xs);
+  }
+
+  .accessory-card-note {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .accessory-cta {
+    display: inline-block;
+    background: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    font-weight: var(--weight-semibold);
+    padding: var(--space-xs) var(--space-lg);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-size: var(--text-sm);
+    white-space: nowrap;
+    transition: background var(--transition-fast), color var(--transition-fast);
+  }
+
+  .accessory-cta:hover {
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+  }
+
   @media (max-width: 1024px) {
     .feature-grid {
       grid-template-columns: repeat(2, 1fr);
@@ -545,6 +670,11 @@ const articleSchema = {
     }
 
     .comparison-cta {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .accessory-card {
       flex-direction: column;
       align-items: flex-start;
     }
