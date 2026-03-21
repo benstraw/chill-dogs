@@ -31,6 +31,7 @@ const waterBowl = carCoolingProducts.filter(p => p.id === 'ohmo-spill-proof-bowl
 const anxietyWraps = getCalmingProductsByCategory('anxiety-wraps').filter(p => p.id === 'thundershirt-classic');
 const greenies = getCalmingProductsByCategory('calming-treats').filter(p => p.id === 'greenies-calming-chews');
 const travelBeds = getRelaxationProductsByCategory('travel-beds').filter(p => p.id === 'onetigris-travel-dog-bed');
+const lickMat = getCalmingProductsByCategory('lick-mats').filter(p => p.id === 'lukito-licking-mat');
 
 const tocHeadings = [
   { label: 'The Real Setup', anchor: 'real-setup' },
@@ -68,6 +69,11 @@ const roadTripFaqs = [
       'Calming chews are generally considered safe for occasional travel use. Give them 30–45 minutes before departure so they have time to work. Consult your vet before introducing supplements, especially if your dog takes other medications or has health conditions.',
   },
   {
+    question: 'Can I use a lick mat in the car?',
+    answer:
+      'Yes — spread peanut butter, plain yogurt, or wet food on the mat and give it to your dog during the drive. Repetitive licking is genuinely calming and helps an anxious dog settle into highway miles. A mat with suction cups (like the LUKITO) stays anchored on a smooth surface, which makes it more practical for car use than a flat mat.',
+  },
+  {
     question: 'What is a good minimal road trip kit for a dog?',
     answer:
       'Start with four items: magnetic window shades (passive cooling), a clip-on fan (active airflow), a collapsible water bowl and ice cooler (hydration at every stop), and an anxiety wrap if your dog shows travel stress. That covers the core problems without overcomplicating the setup.',
@@ -100,7 +106,7 @@ const articleSchema = {
   <article class="collector-article container">
     <header class="article-header">
       <span class="eyebrow">Road Trip Guide</span>
-      <h1>Rhys's Road Trip Gear: Cooling &amp; Calming for Long Drives</h1>
+      <h1>Dog Road Trip Gear: Rhys's Cooling &amp; Calming Kit for Long Drives</h1>
       <p class="lede">Dog road trip gear that actually holds up — cooling and calming essentials from one real 3,000-mile cross-country drive.</p>
     </header>
 
@@ -244,16 +250,19 @@ const articleSchema = {
         <li>Blocks UV and direct sun before it heats the seat — prevention is easier than cooling after the fact</li>
         <li>Installs in seconds with magnetic edges; no adhesive, no suction cups to fail at 75 mph</li>
       </ul>
-      <div class="product-slot">
-        {carCoolingProducts.slice(0, 1).map((product, i) => (
-          <CoolingProductCard
-            product={product}
-            cta={{ label: 'Check Price on Amazon', href: product.amazonUrl, kind: 'amazon' }}
-            position={i + 1}
-            pageType="collector"
-            pageSlug={pageSlug}
-          />
-        ))}
+      <div class="hero-product">
+        <span class="hero-badge">Rhys Approved Product</span>
+        <div class="product-slot">
+          {carCoolingProducts.slice(0, 1).map((product, i) => (
+            <CoolingProductCard
+              product={product}
+              cta={{ label: 'Check Price on Amazon', href: product.amazonUrl, kind: 'amazon' }}
+              position={i + 1}
+              pageType="collector"
+              pageSlug={pageSlug}
+            />
+          ))}
+        </div>
       </div>
       <p>
         <a href={ROUTES.coolingCar} data-track="collector_to_converter_click" data-from-page={pageSlug} data-to-page={ROUTES.coolingCar} data-link-position="section">
@@ -302,10 +311,6 @@ const articleSchema = {
       </div>
 
       <div class="geo-callout">
-        <p><strong>Stop every 2 hours, without exception.</strong> Dogs can't regulate body temperature as efficiently as humans during sustained car travel. A structured stop every 2 hours — water first, short walk, a few minutes to decompress — significantly reduces heat buildup and anxiety over a multi-day drive.</p>
-      </div>
-
-      <div class="geo-callout">
         <p><strong>Ice cubes are enrichment, not just hydration.</strong> Many dogs that refuse water at rest stops will eagerly crunch ice. The physical act of crunching provides enrichment that reduces restlessness during the next leg — and delivers hydration at the same time.</p>
       </div>
 
@@ -314,10 +319,6 @@ const articleSchema = {
         The core problem: heat and anxiety compound each other on the road. A hot dog gets anxious faster;
         an anxious dog pants more and overheats faster. Addressing both together is more effective than treating
         them separately.
-      </p>
-      <p>
-        Car anxiety and heat stress feed each other. A hot dog gets anxious faster; an anxious dog pants more
-        and heats up faster. Address both. Here's the calming toolkit.
       </p>
 
       <figure class="trip-photo">
@@ -377,6 +378,10 @@ const articleSchema = {
         <figcaption>When we stop for coffee, Rhys stops for H₂O. Every stop, same routine.</figcaption>
       </figure>
 
+      <div class="geo-callout">
+        <p><strong>Stop every 2 hours, without exception.</strong> Dogs can't regulate body temperature as efficiently as humans during sustained car travel. A structured stop every 2 hours — water first, short walk, a few minutes to decompress — significantly reduces both heat buildup and travel anxiety over a multi-day drive.</p>
+      </div>
+
       <h3>3. Just-in-Case Treats — Calming Chews</h3>
       <p>
         Rhys didn't need these every day, but having them on hand mattered. A particularly rough stretch of
@@ -390,6 +395,28 @@ const articleSchema = {
           <CalmingProductCard
             product={product}
             position={i + 2}
+            pageType="collector"
+            pageSlug={pageSlug}
+          />
+        ))}
+      </div>
+
+      <h3>4. In-Drive Distraction — Lick Mat</h3>
+      <p>
+        A loaded lick mat is one of the most reliable ways to get a dog through a rough patch — loud stretches
+        of interstate, city traffic, the 45 minutes before a rest stop. Repetitive licking is genuinely
+        calming, and it gives an anxious dog something to focus on during the drive itself, not just before or after.
+        The LUKITO mat has suction cups that keep it anchored to a smooth surface — practical for car use.
+      </p>
+      <ul>
+        <li>Works <em>during</em> the drive — not just a pre-trip or post-trip tool</li>
+        <li>Spread with peanut butter, plain yogurt, or wet food; freeze the night before for longer engagement</li>
+      </ul>
+      <div class="product-slot">
+        {lickMat.map((product, i) => (
+          <CalmingProductCard
+            product={product}
+            position={i + 3}
             pageType="collector"
             pageSlug={pageSlug}
           />
@@ -474,6 +501,7 @@ const articleSchema = {
             <li>Collapsible water bowl + ice cooler</li>
             <li>Anxiety wrap</li>
             <li>Calming chews (just in case)</li>
+            <li>Lick mat (loaded and frozen the night before)</li>
             <li>OneTigris travel bed (packs to the size of a water bottle)</li>
             <li>Dog's regular blanket or worn clothing for scent comfort</li>
             <li>Portable chew toy or snuffle mat for rest stops</li>
