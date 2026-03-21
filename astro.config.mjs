@@ -13,7 +13,9 @@ export default defineConfig({
           item.priority = 1.0;
         } else if (
           item.url.includes('/cooling/') ||
-          item.url.includes('/calming/')
+          item.url.includes('/calming/') ||
+          item.url.includes('/gear/') ||
+          item.url.includes('/safety/')
         ) {
           item.priority = 0.9;
         } else {
