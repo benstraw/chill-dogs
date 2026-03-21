@@ -9,9 +9,11 @@ import CalmingDisclaimer from '@components/modules/CalmingDisclaimer.astro';
 import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
 import CoolingProductCard from '@components/modules/CoolingProductCard.astro';
 import CalmingProductCard from '@components/modules/CalmingProductCard.astro';
+import RelaxationProductCard from '@components/modules/RelaxationProductCard.astro';
 import JsonLd from '@components/JsonLd.astro';
 import { getProductsByCategory } from '@data/cooling-products';
 import { getCalmingProductsByCategory } from '@data/calming-products';
+import { getRelaxationProductsByCategory } from '@data/relaxation-products';
 
 import imgOldCar from '../../images/rhys-road-trip/20250629_131343.jpg';
 import imgFanCooler from '../../images/rhys-road-trip/20250630_164216~2.jpg';
@@ -29,12 +31,14 @@ const waterBowl = carCoolingProducts.filter(p => p.id === 'ohmo-spill-proof-bowl
 const anxietyWraps = getCalmingProductsByCategory('anxiety-wraps').filter(p => p.id === 'thundershirt-classic');
 const greenies = getCalmingProductsByCategory('calming-treats').filter(p => p.id === 'greenies-calming-chews');
 const lickMats = getCalmingProductsByCategory('lick-mats');
+const travelBeds = getRelaxationProductsByCategory('travel-beds').filter(p => p.id === 'onetigris-travel-dog-bed');
 
 const tocHeadings = [
   { label: 'The Real Setup', anchor: 'real-setup' },
   { label: 'Problem → Solution Map', anchor: 'problem-solution' },
   { label: 'Cooling the Car', anchor: 'cooling' },
   { label: 'Calming the Dog', anchor: 'calming' },
+  { label: 'Comfort Off the Road', anchor: 'comfort' },
   { label: 'Road Trip Checklist', anchor: 'checklist' },
 ];
 
@@ -149,6 +153,11 @@ const articleSchema = {
           <strong>A spill-proof collapsible water bowl.</strong>
           Car rides are bumpy. A regular bowl becomes a wet-seat problem fast. The OHMO bowl holds its water
           over rough roads, collapses flat between stops, and fits in any door panel or bag.
+        </li>
+        <li>
+          <strong>A packable travel bed for every stop.</strong>
+          Hotel floors, rest-stop grass, a friend's spare room — the OneTigris bed rolls out in seconds anywhere.
+          Rhys settles faster when he lands on something that smells and feels like his own surface, no matter where we stopped.
         </li>
         <li>
           <strong>A stop-every-2-hours rule.</strong>
@@ -322,16 +331,6 @@ const articleSchema = {
         </a>
       </p>
 
-      <figure class="trip-photo">
-        <Image
-          src={imgSnuggled}
-          alt="Rhys snuggled up with his dog blanket and travel bed in the back seat"
-          width={900}
-          quality={80}
-        />
-        <figcaption>His blanket from home. Familiar scent, familiar surface.</figcaption>
-      </figure>
-
       <h3>2. Routine &amp; Predictability</h3>
       <p>
         Predictability is one of the most effective calming tools for anxious dogs — and it's free. Use the same
@@ -395,6 +394,34 @@ const articleSchema = {
         ))}
       </div>
 
+      <h2 id="comfort">Comfort When You Get Off the Road</h2>
+      <p>
+        Driving is the hard part, but rest stops matter just as much. After a long day of highway miles, Rhys
+        needs somewhere that feels like his. Not a hotel carpet, not a folded blanket — somewhere consistent.
+        The OneTigris travel bed packs to the size of a water bottle and rolls out in seconds. By night two,
+        he was walking straight to it as soon as we checked in.
+      </p>
+
+      <figure class="trip-photo">
+        <Image
+          src={imgSnuggled}
+          alt="Rhys snuggled up with his travel bed and dog blanket at a road trip stop"
+          width={900}
+          quality={80}
+        />
+        <figcaption>Same bed, every stop. Familiar surface makes a big difference after long days in the car.</figcaption>
+      </figure>
+
+      <div class="product-slot">
+        {travelBeds.map((product, i) => (
+          <RelaxationProductCard
+            product={product}
+            position={i + 1}
+            pageSlug={pageSlug}
+          />
+        ))}
+      </div>
+
       <figure class="trip-photo">
         <Image
           src={imgNowhere}
@@ -440,6 +467,7 @@ const articleSchema = {
             <li>Anxiety wrap</li>
             <li>Calming chews (just in case)</li>
             <li>Lick mat (loaded and frozen the night before)</li>
+            <li>OneTigris travel bed (packs to the size of a water bottle)</li>
             <li>Dog's regular blanket or worn clothing for scent comfort</li>
             <li>Portable chew toy or snuffle mat for rest stops</li>
           </ul>

@@ -1,4 +1,4 @@
-export type RelaxationProductCategory = 'calming-beds' | 'orthopedic-beds' | 'crates';
+export type RelaxationProductCategory = 'calming-beds' | 'orthopedic-beds' | 'crates' | 'travel-beds';
 
 export interface RelaxationProduct {
   id: string;
@@ -202,6 +202,27 @@ export const relaxationProducts: RelaxationProduct[] = [
     considerIf:
       'Your dog prefers a medium-depth sleeping bowl over a flat mat or a fully raised donut bed',
     image: { src: 'https://m.media-amazon.com/images/I/51pzu55J+1L._SL500_.jpg', alt: 'Carolina Pet Company Microfiber Tipped Bolster Bed Large' },
+  },
+
+  // ── Travel Beds ───────────────────────────────────────────────────────────
+
+  {
+    id: 'onetigris-travel-dog-bed',
+    asin: 'B0B6YYPYC4',
+    name: 'OneTigris Travel Dog Bed',
+    category: 'travel-beds',
+    amazonUrl: 'https://www.amazon.com/dp/B0B6YYPYC4/?tag=chill-dogs-20',
+    bullets: [
+      'Sleeping-bag style packs down to near water-bottle size — fits in any bag, suitcase, or cargo area',
+      'Waterproof, anti-slip base stays put on hotel floors, tent floors, and hard surfaces',
+      'Cushioned plush interior gives dogs a consistent, familiar sleep surface at every stop',
+    ],
+    bestFor: 'Dogs who travel frequently and need a packable but genuinely comfortable off-road sleep surface',
+    whyItWorks:
+      'A consistent sleep surface at every stop reduces novelty stress — dogs settle faster when their bed smells and feels the same whether it\'s night 1 or night 10',
+    considerIf:
+      'You want a travel bed that takes up almost no space but still gives your dog a proper sleep surface instead of a folded blanket',
+    image: { src: 'https://m.media-amazon.com/images/I/71riy3hJGtL._SL500_.jpg', alt: 'OneTigris Travel Dog Bed' },
   },
 
   // ── Crates (future page) ─────────────────────────────────────────────────

@@ -1,0 +1,136 @@
+{
+  "search_metadata": {
+    "id": "69be37ae7d6e70a5fb8d2c88",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/QYuHxIZVPHVMYyhiQySsXA/69be37ae7d6e70a5fb8d2c88.json",
+    "created_at": "2026-03-21 06:16:14 UTC",
+    "processed_at": "2026-03-21 06:16:14 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0B6YYPYC4/?",
+    "raw_html_file": "https://serpapi.com/searches/QYuHxIZVPHVMYyhiQySsXA/69be37ae7d6e70a5fb8d2c88.html",
+    "total_time_taken": 10.93
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0B6YYPYC4",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0B6YYPYC4",
+    "title": "ONETIGRIS Travel Dog Bed - Portable, Washable, Waterproof Anti-Slip Dog Camping Bed, 3.6ft by 2.2ft Outdoor Indoor Bed Mat Cushioned Plush Warm Puppy Mattresses",
+    "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A2YJP7T52R1Z3W&asin=B0B6YYPYC4&ref_=dp_merchant_link&isAmazonFulfilled=1",
+    "link_clean": "https://www.amazon.com/dp/B0B6YYPYC4/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0B6YYPYC4&device=desktop&engine=amazon_product",
+    "variants": [
+      {
+        "title": "Color",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0B6YYPYC4",
+            "name": "Thickened Version - Green",
+            "image": "https://m.media-amazon.com/images/I/41TohdnJ9iL._SS64_.jpg",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0B6YYPYC4&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0B6ZJWBZ3",
+            "name": "Thickened Version - Grey",
+            "image": "https://m.media-amazon.com/images/I/41UsULCBBaL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0B6ZJWBZ3&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the ONETIGRIS Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/71riy3hJGtL._AC_SY300_SX300_QL70_ML2_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/71riy3hJGtL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71YyTbOQi8L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71DVHz3KkoL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/811oiOvndAL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71zXyr09eRL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71D8oQyBEFL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81azNIa+tbL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71th0VbeNQL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.6,
+    "reviews": 202,
+    "price": "$39.99",
+    "extracted_price": 39.99,
+    "prime": true,
+    "delivery": [
+      "FREE delivery Wednesday, March 25",
+      "Or Prime members get FREE delivery Sunday, March 22. Order within 43 mins. Join Prime"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$39.99",
+      "extracted_price": 39.99,
+      "delivery": [
+        "FREE delivery Wednesday, March 25",
+        "Or Prime members get FREE delivery Sunday, March 22. Order within 43 mins. Join Prime"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "BARRIER PET",
+          "details": {
+            "heading": "Sold by",
+            "content": "BARRIER PET"
+          },
+          "link": {
+            "text": "BARRIER PET",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A2YJP7T52R1Z3W&asin=B0B6YYPYC4&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement",
+            "content": "This item can be returned in its original condition for a full refund or replacement within 30 days of receipt."
+          },
+          "link": {
+            "text": "Read full return policy",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GKM69DUUYKQWKWX7&ref_=dp_ret_policy"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "brand": "ONETIGRIS",
+    "breed_recommendation": "Water Resistant and non-slip",
+    "special_feature": "PVC Fabric, Velvet, Polyester Cotton Filling",
+    "material": "Cotton, Polyester, Polyvinyl Chloride",
+    "product_dimensions": "43\"L x 27\"W x 1.4\"Th"
+  },
+  "about_item": [
+    "Premium Durable Dog Pad: Polyester cotton filling to provide comfort and warmth both indoors and out,the front side is skin-friendly, extra soft velvet, guaranteeing a excellent rest, and the layered polyester cotton filling wonderfully cushions the post-zoomie pet after a long day in the wild and indoor. No rustling,super quiet, sleep at ease",
+    "Waterproof and Anti-Slip Travel Dog Bed: We’ve tweaked our previous dog camping mat designs for that waterproof functionality you need. PVC fabric bottom side that’s waterproof, doesn’t slide, and is grease/abrasion resistant for use in the outdoors",
+    "Large Dog Bed Crate Pad Mat: Measures at 43” by 27” to fit most pet sizes including medium to large dogs, giving them their own space to rest.Please Allow 0.4 to 0.8 Inch Differs Due to Manual Measurement. Designed to fit most dog , ideal for large breeds or several dogs to share.Folded Dimensions: 13”(L)*7”(D)",
+    "Portable Camping Dog Bed:Spreads out easily via UTX-Duraflex quick-release buckles and rolls up small for efficient storage; comes with a grab handle for hassle-free transportation.Suitable for travels, hiking, camping and other outdoor activities with your pet, as well as indoor use as a pet bed",
+    "Onetigris High Quality Thickened Dog Sleeping Mat: Tight seams,won't leak padding,The front side is skin-friendly, extra soft velvet that create a cozy den for your pet. And this dog mat is easy ro clean,clean by hand with water, mild detergent and a wet cloth, and hang to dry. Avoid direct sunlight."
+  ]
+}
