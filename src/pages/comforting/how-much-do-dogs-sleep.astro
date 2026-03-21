@@ -39,6 +39,16 @@ const tocHeadings = [
 
 const faqs = [
   {
+    question: 'Why does my dog sleep so much?',
+    answer:
+      'Dogs are polyphasic sleepers — built for short bursts of activity followed by rest, not a single consolidated block of sleep like humans. Adult dogs need 12 to 14 hours per day to accumulate enough deep and REM sleep, since their sleep cycles are more fragmented than ours. Large breeds and senior dogs routinely sleep even more. If the amount has increased suddenly or your dog seems unusually hard to rouse, that warrants a vet visit.',
+  },
+  {
+    question: 'Is it normal for dogs to sleep all day?',
+    answer:
+      'Mostly, yes. What looks like sleeping all day is usually normal polyphasic rest: overnight sleep plus two to four daytime naps. A dog sleeping 16 to 18 hours is likely a large breed, a senior, or a puppy — all of which have higher sleep requirements. It becomes a concern if the dog is difficult to wake, unusually unresponsive, or has changed patterns suddenly rather than gradually.',
+  },
+  {
     question: 'Is it normal for my dog to sleep 14 hours a day?',
     answer:
       'Yes. Adult dogs typically sleep 12 to 14 hours per day across overnight rest and daytime naps. Larger breeds and senior dogs often sleep even more. If the amount has changed suddenly, or if your dog seems difficult to wake or is unusually lethargic, consult your veterinarian.',
@@ -79,7 +89,7 @@ const internalLinks = [
       <span class="eyebrow">Comfort &amp; Rest</span>
       <h1>{title}</h1>
       <p class="lede">
-        Your dog isn't lazy. Dogs need more sleep than you think — and the quality of that sleep matters more than the quantity.
+        Most adult dogs sleep 12 to 14 hours a day — more than most owners expect. That's not laziness; it's biology. Here's what healthy sleep looks like by age and breed, what disrupts it, and how to help your dog rest better.
       </p>
     </header>
 
@@ -123,7 +133,7 @@ const internalLinks = [
         Dogs go through the same sleep stages as humans: light sleep, deep (non-REM) sleep, and REM sleep. During REM sleep, their eyes move behind closed lids, their paws twitch, and they sometimes vocalize. That's dreaming.
       </p>
       <p>
-        Research from the Hungarian Academy of Sciences used non-invasive EEG recordings to study sleep in companion dogs. They found that dogs experience sleep spindles — brief bursts of brain activity during non-REM sleep — that are associated with memory consolidation, learning, and cognitive health in both humans and rats. This was the first time sleep spindles were studied in detail in dogs.
+        Research from the <a href="https://www.scientificamerican.com/blog/dog-spies/memory-wins-when-dogs-sleep/" rel="noopener noreferrer" target="_blank">Hungarian Academy of Sciences</a> used non-invasive EEG recordings to study sleep in companion dogs. They found that dogs experience sleep spindles — brief bursts of brain activity during non-REM sleep — that are associated with memory consolidation, learning, and cognitive health in both humans and rats. This was the first time sleep spindles were studied in detail in dogs.
       </p>
       <p>
         The same research team demonstrated that dogs that slept after learning a new command performed better when retested a week later compared to dogs that did other activities after learning. Sleep wasn't just resting — it was actively packaging what the dog had learned into long-term memory.
@@ -186,7 +196,7 @@ const internalLinks = [
           Dogs who curl up tightly or press against walls need a bed with <strong>raised rims or a donut shape</strong> that gives them something to lean into. →&nbsp;<a href={ROUTES.comfortCalmingBeds} data-track="collector_to_converter_click" data-from-page={pageSlug} data-to-page={ROUTES.comfortCalmingBeds} data-link-position="section">See our calming bed picks</a>
         </li>
         <li>
-          Older dogs, larger breeds, and dogs with joint issues need <strong>orthopedic foam</strong> that distributes weight evenly and doesn't collapse over time. →&nbsp;<a href={ROUTES.comfortOrthopedicBeds} data-track="collector_to_converter_click" data-from-page={pageSlug} data-to-page={ROUTES.comfortOrthopedicBeds} data-link-position="section">See our orthopedic bed picks</a>
+          Older dogs and larger breeds need <strong>foam that distributes weight evenly and holds its shape</strong> — a collapsed flat bed is one of the most common and fixable causes of restless nights. →&nbsp;<a href={ROUTES.comfortOrthopedicBeds} data-track="collector_to_converter_click" data-from-page={pageSlug} data-to-page={ROUTES.comfortOrthopedicBeds} data-link-position="section">See our orthopedic bed picks</a>
         </li>
       </ul>
       <p>
@@ -198,22 +208,17 @@ const internalLinks = [
       <p>
         <strong>Watch for age-related changes.</strong> Senior dogs may experience fragmented sleep, nighttime restlessness, or confusion upon waking — signs that can overlap with canine cognitive dysfunction. A bed that's easy to get in and out of, placed in a familiar spot, can help reduce nighttime disorientation.
       </p>
-
-      <h2 id="bottom-line">The bottom line</h2>
       <p>
-        Dogs spend roughly half their lives asleep. That's not a sign of laziness — it's a biological requirement. Sleep is when their bodies recover, their brains consolidate learning, and their emotional state resets.
-      </p>
-      <p>
-        If your dog isn't settling well, the fix is often simpler than you'd expect: better routine, better environment, better bed. Start with the surface they're sleeping on and work outward from there.
+        Dogs spend roughly half their lives asleep — not as a sign of laziness, but as a biological requirement. If your dog isn't settling well, the fix is usually simpler than you'd expect. <a href={ROUTES.comfortOrthopedicBeds} data-track="collector_to_converter_click" data-from-page={pageSlug} data-to-page={ROUTES.comfortOrthopedicBeds} data-link-position="section">Start with the surface they're sleeping on and work outward from there.</a>
       </p>
 
     </div>
 
     <FAQ faqs={faqs} />
 
-    <InternalLinkStrip links={internalLinks} fromPage={pageSlug} />
+    <InternalLinkStrip heading="More Comforting Guides" links={internalLinks} fromPage={pageSlug} />
 
-    <Disclosure />
+    <Disclosure showSafety={false} />
   </article>
 </BaseLayout>
 
