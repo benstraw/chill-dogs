@@ -8,133 +8,140 @@ export interface TrackerProduct {
   pros: string[];
   cons: string[];
   best_for: string;
-  placeholder_url: string;
+  affiliateUrl: string;
   /** Short bullets for cards (3 items) */
   bullets: [string, string, string];
   /** One-line signal / range summary */
   signalNote: string;
   /** Monthly fee if any */
   subscriptionNote?: string;
+  /** Optional badge label (e.g. "Best Value") */
+  badge?: string;
 }
 
 export const trackerProducts: TrackerProduct[] = [
   // ── Cellular ──────────────────────────────────────────────────────────────
   {
     id: 'fi-series-3',
-    name: 'Fi Series 3 GPS Collar',
+    name: 'Fi Series 3+ GPS Collar',
     type: 'cellular',
     use_case: 'Everyday city and suburban use, travel, dog parks',
     pros: [
       'Real-time location on LTE nationwide network',
       'Escape alerts and safe-zone geofencing',
-      'Slim, lightweight, waterproof',
-      'Step counting and activity data included',
+      'Slim, lightweight, waterproof (IP68)',
+      'Step counting, activity data, and health monitoring included',
+      '12-month membership included — best value for year-one cost',
     ],
     cons: [
       'Requires cell signal — unreliable in remote or no-service areas',
-      'Monthly subscription required',
-      'Battery life shorter in heavy-tracking mode',
+      'Annual or monthly subscription required after first year',
+      'Battery life shorter in heavy real-time tracking mode',
     ],
-    best_for: 'Dogs in cities, suburbs, or areas with reliable cell coverage',
-    placeholder_url: '#fi-series-3',
+    best_for: 'Dogs in cities, suburbs, or areas with reliable cell coverage — the best value GPS + LTE collar for most owners',
+    affiliateUrl: 'https://www.amazon.com/dp/B0FH8GDBLX/?tag=chill-dogs-20',
     bullets: [
       'LTE cellular tracking with nationwide coverage',
       'Real-time escape alerts and geofence zones',
-      'Subscription required; not reliable off-grid',
+      '12-month membership included; not reliable off-grid',
     ],
     signalNote: 'Requires LTE cell signal',
-    subscriptionNote: 'Monthly subscription required',
+    subscriptionNote: 'Annual subscription required (12-month membership included)',
+    badge: 'Best Value',
   },
   {
-    id: 'whistle-go-explore',
-    name: 'Whistle Go Explore',
+    id: 'fi-mini',
+    name: 'Fi Mini GPS Tracker',
     type: 'cellular',
-    use_case: 'Everyday tracking with health monitoring',
+    use_case: 'Lightweight everyday tracking for smaller or active dogs',
     pros: [
-      'GPS + LTE tracking with nationwide coverage',
-      'Health and activity monitoring built in',
-      'Escape alerts',
-      'Works well for suburban and urban dogs',
+      'Compact collar attachment — lighter than full collar',
+      'LTE GPS tracking with escape alerts',
+      'Virtual fences and step tracking',
+      'Waterproof; 6-month membership included',
     ],
     cons: [
-      'Requires cell signal — fails in remote terrain',
-      'Monthly subscription required',
-      'Bulkier than Fi on smaller dogs',
+      'Requires cell signal — no off-grid capability',
+      'Subscription required after included membership',
+      'Collar attachment style may not suit all collar types',
     ],
-    best_for: 'Owners who want both tracking and health data in one device',
-    placeholder_url: '#whistle-go-explore',
+    best_for: 'Owners who want GPS tracking with a lighter, more compact form factor',
+    affiliateUrl: 'https://www.amazon.com/dp/B0FMGRT8YK/?tag=chill-dogs-20',
     bullets: [
-      'GPS + LTE tracking plus health monitoring',
-      'Nationwide coverage; subscription required',
-      'Not suited for no-signal backcountry trips',
+      'Compact GPS collar attachment — not a full collar',
+      'LTE tracking, escape alerts, virtual fences',
+      '6-month membership included; requires subscription after',
     ],
     signalNote: 'Requires LTE cell signal',
-    subscriptionNote: 'Monthly subscription required',
+    subscriptionNote: 'Subscription required (6-month membership included)',
   },
   // ── Off-Grid ──────────────────────────────────────────────────────────────
   {
-    id: 'garmin-alpha-300',
-    name: 'Garmin Alpha 300 System',
+    id: 'garmin-alpha-tt25',
+    name: 'Garmin Alpha TT 25 Tracking Collar',
     type: 'off-grid',
     use_case: 'Hiking, hunting, backcountry, remote wilderness',
     pros: [
       'GPS + VHF radio — works with zero cell signal',
       'Tracks up to 20 dogs simultaneously',
       'Range up to 9 miles line-of-sight',
-      'Dedicated handheld display device',
+      'Pairs with Garmin Alpha handheld for full off-grid system',
       'No monthly subscription after purchase',
     ],
     cons: [
-      'High upfront cost (collar + handheld bundle)',
-      'Heavier collar than cellular options',
-      'Requires a handheld device — not just a phone app',
+      'High upfront cost (collar + handheld purchased separately)',
+      'Heavier collar than cellular lifestyle options',
+      'Requires compatible Garmin handheld device — not phone-only',
       'Learning curve for setup and pairing',
     ],
-    best_for: 'Hunters, hikers, and anyone who takes dogs into true wilderness',
-    placeholder_url: '#garmin-alpha-300',
+    best_for: 'Hunters, hikers, and anyone who takes dogs into true wilderness with no cell signal',
+    affiliateUrl: 'https://www.amazon.com/dp/B0BYGGBLKM/?tag=chill-dogs-20',
     bullets: [
       'GPS + VHF radio; works with no cell signal at all',
-      'Up to 9-mile range; tracks up to 20 dogs',
+      'Up to 9-mile range; pairs with Alpha 300i handheld',
       'No subscription; requires dedicated handheld device',
     ],
     signalNote: 'GPS satellite + VHF radio — no cell required',
   },
   {
-    id: 'garmin-trex-plus',
-    name: 'Garmin T&REx Plus Collar',
+    id: 'garmin-alpha-300i',
+    name: 'Garmin Alpha 300i Handheld',
     type: 'off-grid',
-    use_case: 'Hunting dogs, field trials, remote hiking',
+    use_case: 'Off-grid dog tracking controller with inReach satellite messaging',
     pros: [
-      'Long battery life (up to 80 hours)',
-      'Rugged and waterproof for field conditions',
-      'Works with Garmin Alpha handheld units',
-      'No subscription required',
+      'GPS + VHF radio handheld with inReach satellite technology',
+      'Two-way satellite messaging from anywhere — no cell required',
+      'Controls Alpha TT 25 collar for complete off-grid system',
+      'Tracks up to 20 dogs on one display',
+      'No monthly tracking subscription (inReach plan separate)',
     ],
     cons: [
-      'Requires compatible Garmin handheld to display location',
-      'Larger and heavier than lifestyle collars',
-      'Premium price for the full system',
+      'High upfront cost for the complete system (collar sold separately)',
+      'inReach messaging requires a separate Garmin satellite plan',
+      'Larger and heavier than a smartphone',
+      'Overkill for casual hiking near populated trails',
     ],
-    best_for: 'Hunting dogs and working dogs in remote terrain',
-    placeholder_url: '#garmin-trex-plus',
+    best_for: 'Remote wilderness and backcountry use where both dog tracking and human safety communication matter',
+    affiliateUrl: 'https://www.amazon.com/dp/B0BW4X784G/?tag=chill-dogs-20',
     bullets: [
-      'Up to 80-hour battery life in the field',
-      'Works with Garmin Alpha handheld for off-grid tracking',
-      'No subscription; designed for serious outdoor use',
+      'VHF + inReach satellite handheld — the off-grid tracking controller',
+      'Two-way satellite messaging in true wilderness',
+      'Pairs with Alpha TT 25 collar; no cell required',
     ],
-    signalNote: 'GPS satellite + VHF radio — no cell required',
+    signalNote: 'GPS satellite + VHF radio + inReach satellite — no cell required',
   },
   // ── Bluetooth ─────────────────────────────────────────────────────────────
   {
     id: 'apple-airtag',
-    name: 'Apple AirTag',
+    name: 'Apple AirTag (2nd Generation)',
     type: 'bluetooth',
     use_case: 'Backup tag for city use, supplemental tracking',
     pros: [
-      'Very affordable (~$25–$35 per tag)',
+      'Very affordable per tag',
       'Uses Apple Find My network (crowd-sourced)',
       'Tiny and light — fits in a collar pouch or tag holder',
       'No subscription required',
+      'Up to 1.5× Precision Finding range (2nd gen)',
     ],
     cons: [
       'Not real GPS — only updates when near Apple devices',
@@ -143,8 +150,8 @@ export const trackerProducts: TrackerProduct[] = [
       'Android users cannot use the Find My network',
       'Requires a separate collar attachment',
     ],
-    best_for: 'City dogs as a backup, or supplementing an existing collar setup',
-    placeholder_url: '#apple-airtag',
+    best_for: 'City dogs as a backup layer, or supplementing an existing GPS collar setup',
+    affiliateUrl: 'https://www.amazon.com/dp/B0GJTFXNRX/?tag=chill-dogs-20',
     bullets: [
       'Crowd-sourced Bluetooth via Apple Find My — not true GPS',
       'Reliable only in populated areas with Apple devices nearby',
@@ -154,13 +161,13 @@ export const trackerProducts: TrackerProduct[] = [
   },
   {
     id: 'tile-mate',
-    name: 'Tile Mate',
+    name: 'Life360 Tile Bluetooth Tracker',
     type: 'bluetooth',
     use_case: 'Backup tag for Android and mixed-platform households',
     pros: [
       'Works on both iOS and Android',
       'Affordable with no required subscription',
-      'Uses Tile community network',
+      'Uses Tile / Life360 community network',
       'Small and light',
     ],
     cons: [
@@ -170,7 +177,7 @@ export const trackerProducts: TrackerProduct[] = [
       'Not useful in remote or rural areas',
     ],
     best_for: 'Android users wanting a simple backup tag for city use',
-    placeholder_url: '#tile-mate',
+    affiliateUrl: 'https://www.amazon.com/dp/B0D63573CF/?tag=chill-dogs-20',
     bullets: [
       'Bluetooth crowd-sourced; works on iOS and Android',
       'Smaller network than AirTag — less reliable in sparse areas',
@@ -192,14 +199,14 @@ export const trackerCategoryMeta: Record<
     title: 'Cellular GPS Trackers',
     description: 'Real-time LTE tracking for dogs in areas with cell coverage.',
     intro:
-      'Cellular trackers use the nationwide LTE network to show real-time location on your phone. They work great in cities, suburbs, and most parks — but they depend entirely on cell signal. No signal means no tracking.',
+      'Cellular trackers use the nationwide LTE network to show real-time location on your phone. They work great in cities, suburbs, and most parks — and Fi is the best value option for most owners. They depend entirely on cell signal though: no signal means no tracking.',
   },
   'off-grid': {
     title: 'Off-Grid GPS Systems (Garmin)',
     description:
       'GPS + radio tracking that works in true wilderness with no cell signal required.',
     intro:
-      "Off-grid systems like Garmin's Alpha and TRex lines combine GPS satellites with VHF radio to track dogs regardless of cell coverage. They require a dedicated handheld device but will work anywhere you can see the sky.",
+      "Garmin's Alpha system combines GPS satellites with VHF radio to track dogs regardless of cell coverage. The Alpha TT 25 collar pairs with the Alpha 300i handheld for a complete off-grid system. They require dedicated hardware but will work anywhere you can see the sky.",
   },
   bluetooth: {
     title: 'Bluetooth Tags (AirTag / Tile)',

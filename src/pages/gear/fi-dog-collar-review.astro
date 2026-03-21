@@ -7,7 +7,9 @@ import FAQ from '@components/modules/FAQ.astro';
 import Disclosure from '@components/modules/Disclosure.astro';
 import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
 import JsonLd from '@components/JsonLd.astro';
+import AffiliateLink from '@components/AffiliateLink.astro';
 import { getTrackersByType } from '@data/tracking-products';
+import { extractAsin } from '@utils/affiliate';
 
 const pageSlug = 'fi-dog-collar-review';
 
@@ -42,7 +44,7 @@ const faqs = [
   {
     question: 'Is Fi waterproof?',
     answer:
-      'The Fi Series 3 collar is rated IP68 waterproof — it handles rain, mud, and swimming. This is one of the practical advantages over some competing cellular trackers.',
+      'The Fi Series 3+ collar is rated IP68 waterproof — it handles rain, mud, and swimming. This is one of the practical advantages over some competing cellular trackers.',
   },
   {
     question: 'How long does Fi battery last?',
@@ -61,7 +63,7 @@ const articleSchema = {
   '@type': 'Review',
   name: 'Fi Dog Collar Review: Cellular GPS Tracking for Everyday Dogs',
   description:
-    'Honest review of the Fi Series 3 GPS dog collar — cellular tracking, subscription model, what it does well, and where it falls short for remote or off-grid use.',
+    'Honest review of the Fi Series 3+ GPS dog collar — cellular tracking, subscription model, what it does well, and where it falls short for remote or off-grid use.',
   url: 'https://www.chill-dogs.com/gear/fi-dog-collar-review/',
   author: { '@type': 'Person', name: 'Benjamin Strawbridge', url: 'https://www.benstrawbridge.com/' },
   publisher: {
@@ -71,22 +73,22 @@ const articleSchema = {
   },
   itemReviewed: {
     '@type': 'Product',
-    name: 'Fi Series 3 GPS Dog Collar',
+    name: 'Fi Series 3+ GPS Dog Collar',
   },
 };
 ---
 
 <BaseLayout
   title="Fi Dog Collar Review: GPS Tracking for Everyday Dogs (2026)"
-  description="An honest look at Fi Series 3 — cellular GPS tracking, real-time escape alerts, and geofencing. What it does well, what it costs, and where it fails without cell signal."
+  description="An honest look at Fi Series 3+ — cellular GPS tracking, real-time escape alerts, and geofencing. What it does well, what it costs, and where it fails without cell signal."
 >
   <JsonLd slot="head" schema={articleSchema} />
 
   <Hero
-    title="Fi Dog Collar Review"
-    subtitle="Cellular GPS tracking for everyday dogs — city walks, parks, travel. Here's what it does well, what it costs, and where it stops working."
-    primaryCta={{ label: 'See All GPS Trackers', href: ROUTES.trackingTop }}
-    secondaryCta={{ label: 'Off-Grid Alternative (Garmin)', href: ROUTES.garminTracking }}
+    title="Fi Series 3+ Dog Collar Review"
+    subtitle="The best value GPS + LTE collar for most dogs. Real-time tracking, escape alerts, and geofencing — here's what it does well, what it costs, and where it stops working."
+    primaryCta={{ label: 'Check Price on Amazon', href: fiProduct?.affiliateUrl ?? ROUTES.trackingTop }}
+    secondaryCta={{ label: 'See All GPS Trackers', href: ROUTES.trackingTop }}
     pageSlug={pageSlug}
   />
 
@@ -102,7 +104,7 @@ const articleSchema = {
           Fi is a GPS dog collar that uses the LTE cellular network to report your dog's real-time location to a companion app. The collar includes a built-in GPS chip, an LTE radio, and a step counter. It's designed to work like a fitness tracker for dogs — with the safety layer of real-time location.
         </p>
         <p class="section-body">
-          The Series 3 is the current generation. It's slimmer and lighter than previous versions, with improved battery life and waterproofing. The core value proposition: if your dog gets loose in a city, suburb, or area with LTE coverage, you'll know where they are in near-real-time and get an alert the moment they leave a designated safe zone.
+          The Series 3+ is the current generation. It's slimmer and lighter than previous versions, with improved battery life and waterproofing. The core value proposition: if your dog gets loose in a city, suburb, or area with LTE coverage, you'll know where they are in near-real-time and get an alert the moment they leave a designated safe zone.
         </p>
         <p class="section-body">
           Fi is a good product for what it is. The key is understanding what it is: a cellular tracker. It works where cell service works. It doesn't work where cell service doesn't work. That distinction matters.
@@ -221,10 +223,25 @@ const articleSchema = {
             </div>
           </div>
         </div>
+
+        {fiProduct?.affiliateUrl && (
+          <div class="buy-cta">
+            <p class="buy-cta-text">
+              <strong>Best value GPS + LTE collar for most dogs.</strong> 12-month membership included with purchase.
+            </p>
+            <AffiliateLink
+              href={fiProduct.affiliateUrl}
+              class="buy-cta-btn"
+              data-track="amazon_outbound_click"
+              data-asin={extractAsin(fiProduct.affiliateUrl)}
+              data-product-name={fiProduct.name}
+            >
+              Check Price on Amazon →
+            </AffiliateLink>
+          </div>
+        )}
       </div>
     </section>
-
-    <!-- Limitations -->
     <section class="content-section" id="limitations">
       <div class="section-inner">
         <h2>Where Fi Falls Short</h2>
@@ -528,6 +545,44 @@ const articleSchema = {
   }
 
   .converter-cta-btn:hover {
+    background: var(--color-primary-hover);
+    color: var(--color-text-inverse);
+  }
+
+  /* Buy CTA */
+  .buy-cta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+    margin-top: var(--space-xl);
+    padding: var(--space-lg) var(--space-xl);
+    background: var(--color-surface);
+    border: 2px solid var(--color-sage);
+    border-radius: var(--radius-lg);
+    max-width: var(--max-width-prose);
+  }
+
+  .buy-cta-text {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    margin: 0;
+    flex: 1;
+  }
+
+  .buy-cta-btn {
+    display: inline-block;
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+    font-weight: var(--weight-semibold);
+    padding: var(--space-sm) var(--space-xl);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: background var(--transition-fast);
+    white-space: nowrap;
+  }
+
+  .buy-cta-btn:hover {
     background: var(--color-primary-hover);
     color: var(--color-text-inverse);
   }
