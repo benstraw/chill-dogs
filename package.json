@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "prebuild": "node src/scripts/generate-og-images.mjs",
+    "prebuild": "node src/scripts/watermark-images.mjs && node src/scripts/generate-og-images.mjs",
     "build": "astro build && node scripts/indexnow-submit.mjs",
     "preview": "astro preview",
     "astro": "astro",

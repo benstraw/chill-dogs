@@ -7,6 +7,9 @@ dist/
 public/og/
 .vercel/
 
+# watermarked images (generated at build time)
+src/images/watermarked/
+
 # env
 .env
 .env.development.local
