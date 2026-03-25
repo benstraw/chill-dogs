@@ -16,6 +16,7 @@ export interface CoolingProduct {
   coolingMethod?: string;
   sizingNote?: string;
   image?: { src: string; alt: string };
+  rhysApproved?: boolean;
 }
 
 export interface CategoryMeta {
@@ -64,6 +65,24 @@ export const coolingProducts: CoolingProduct[] = [
     coolingMethod: 'Water-based absorption',
     sizingNote: 'Comes in S through XL — XL fits dogs up to 100 lbs',
     image: { src: 'https://m.media-amazon.com/images/I/61xAcMN3KJL._SL500_.jpg', alt: 'K&H Cool Bed III' },
+  },
+  {
+    id: 'k9-ballistics-elevated-cooling-bed',
+    asin: 'B0FHRNDP6F',
+    name: 'K9 Ballistics Chew Proof Elevated Cooling Bed',
+    category: 'cooling-mats',
+    amazonUrl:
+      'https://www.amazon.com/K9-Ballistics-Proof-Elevated-Cooling/dp/B0FHRNDP6F/?tag=chill-dogs-20',
+    bullets: [
+      'Chew-proof aluminum frame and 1200D ripstop ballistic fabric — built to outlast anxious chewers and diggers',
+      'Elevated design lifts dogs off hot floors for passive airflow cooling beneath their body',
+      'Pre-assembled and crate-ready — slides through a wire crate door at an angle, no tools needed',
+    ],
+    bestFor: 'Aggressive chewers who need an indestructible elevated bed with passive cooling',
+    coolingMethod: 'Elevated airflow — no padding, heat escapes underneath',
+    sizingNote: 'S through XXL — check your crate\'s inner dimensions before ordering',
+    image: { src: 'https://m.media-amazon.com/images/I/51U85OKm+1L._SL500_.jpg', alt: 'K9 Ballistics Chew Proof Elevated Cooling Dog Bed' },
+    rhysApproved: true,
   },
   {
     id: 'arf-pets-self-cooling-mat',

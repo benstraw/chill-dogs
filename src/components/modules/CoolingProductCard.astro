@@ -17,6 +17,9 @@ const trackEvent = isAmazon ? 'amazon_outbound_click' : 'collector_to_converter_
 ---
 
 <div class="cp-card">
+  {product.rhysApproved && (
+    <div class="cp-rhys-badge">Rhys Approved Product</div>
+  )}
   <div class="cp-image">
     {product.image ? (
       <img
@@ -91,6 +94,24 @@ const trackEvent = isAmazon ? 'amazon_outbound_click' : 'collector_to_converter_
     box-shadow: var(--shadow-md);
     overflow: hidden;
     transition: box-shadow var(--transition-base);
+    position: relative;
+  }
+
+  .cp-rhys-badge {
+    position: absolute;
+    top: var(--space-sm);
+    left: var(--space-sm);
+    display: inline-block;
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-terracotta, #b85c38);
+    background: color-mix(in srgb, var(--color-terracotta, #b85c38) 10%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-terracotta, #b85c38) 30%, transparent);
+    padding: 3px var(--space-sm);
+    border-radius: var(--radius-full, 999px);
+    z-index: 1;
   }
 
   .cp-card:hover {

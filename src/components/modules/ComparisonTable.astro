@@ -37,6 +37,9 @@ const { products, pageSlug = '' } = Astro.props;
               />
             )}
             <span class="ct-product-name">{product.name}</span>
+            {product.rhysApproved && (
+              <span class="ct-rhys-badge">Rhys Approved Product</span>
+            )}
           </td>
           <td>{product.bestFor}</td>
           <td>{product.coolingMethod || '—'}</td>
@@ -77,6 +80,9 @@ const { products, pageSlug = '' } = Astro.props;
           width="120"
           height="120"
         />
+      )}
+      {product.rhysApproved && (
+        <span class="ct-rhys-badge">Rhys Approved Product</span>
       )}
       <h3 class="ct-mobile-name">{product.name}</h3>
       <dl class="ct-mobile-dl">
@@ -160,6 +166,20 @@ const { products, pageSlug = '' } = Astro.props;
     font-weight: var(--weight-semibold);
     white-space: normal;
     line-height: var(--leading-tight);
+  }
+
+  .ct-rhys-badge {
+    display: inline-block;
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-terracotta, #b85c38);
+    background: color-mix(in srgb, var(--color-terracotta, #b85c38) 10%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-terracotta, #b85c38) 30%, transparent);
+    padding: 3px var(--space-sm);
+    border-radius: var(--radius-full, 999px);
+    margin-top: var(--space-xs);
   }
 
   .ct-cta-col {
