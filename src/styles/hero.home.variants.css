@@ -297,10 +297,9 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   v6 — Logo + Wordmark Split
-   Large paw-print logo on the left, "chill-dogs" wordmark on the
-   right, each cell centered both vertically and horizontally
-   in a 50/50 grid.
+   v6 — Logo left / Slogan + Pane cards right
+   Large paw-print logo centered in the left 50%; headline slogan
+   and three stacked colored pane cards in the right 50%.
    ═══════════════════════════════════════════════════════════════ */
 
 [data-hero-variant="v6"] {
@@ -327,19 +326,12 @@
   width: 100%;
 }
 
-[data-hero-variant="v6"] .hp-v6-logo,
-[data-hero-variant="v6"] .hp-v6-wordmark {
+/* ── Left: logo cell ── */
+[data-hero-variant="v6"] .hp-v6-logo {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: var(--space-3xl);
-}
-
-[data-hero-variant="v6"] .hp-v6-wordmark-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-xl);
 }
 
 [data-hero-variant="v6"] .hp-v6-logo-img {
@@ -349,53 +341,92 @@
   display: block;
 }
 
-[data-hero-variant="v6"] .hp-v6-name {
-  font-family: var(--font-heading);
-  font-size: clamp(2.75rem, 7vw, 5.5rem);
-  font-weight: var(--weight-extrabold);
-  color: var(--color-charcoal);
-  letter-spacing: -0.03em;
-  line-height: 1;
+/* ── Right: slogan + panes cell ── */
+[data-hero-variant="v6"] .hp-v6-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-3xl) var(--space-2xl) var(--space-3xl) var(--space-xl);
+  gap: var(--space-xl);
 }
 
-[data-hero-variant="v6"] .hp-v6-ctas {
+[data-hero-variant="v6"] .hp-v6-slogan {
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: var(--weight-extrabold);
+  color: var(--color-charcoal);
+  line-height: var(--leading-tight);
+  margin: 0;
+}
+
+/* ── Stacked pane cards ── */
+[data-hero-variant="v6"] .hp-v6-panes {
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
 }
 
-[data-hero-variant="v6"] .hp-v6-cta {
-  font-family: var(--font-heading);
-  font-size: var(--text-base);
-  font-weight: var(--weight-semibold);
-  color: var(--color-charcoal);
+[data-hero-variant="v6"] .hp-v6-pane {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-md);
   text-decoration: none;
-  opacity: 0.7;
-  transition: opacity var(--transition-fast);
+  transition: filter var(--transition-fast), transform var(--transition-fast);
 }
 
-[data-hero-variant="v6"] .hp-v6-cta:hover {
-  opacity: 1;
+[data-hero-variant="v6"] .hp-v6-pane:hover {
+  filter: brightness(0.95);
+  transform: translateY(-1px);
 }
 
-[data-hero-variant="v6"] .hp-v6-cta:focus-visible {
+[data-hero-variant="v6"] .hp-v6-pane:focus-visible {
   outline: 3px solid var(--color-charcoal);
   outline-offset: 3px;
-  opacity: 1;
 }
 
+[data-hero-variant="v6"] .hp-v6-pane--cool {
+  background: linear-gradient(145deg, var(--cool-a), var(--cool-b));
+}
+
+[data-hero-variant="v6"] .hp-v6-pane--calm {
+  background: linear-gradient(145deg, var(--calm-a), var(--calm-b));
+}
+
+[data-hero-variant="v6"] .hp-v6-pane--comfort {
+  background: linear-gradient(145deg, var(--comfort-a), var(--comfort-b));
+}
+
+[data-hero-variant="v6"] .hp-v6-pane-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-extrabold);
+  color: var(--hero-ink);
+  line-height: var(--leading-tight);
+}
+
+[data-hero-variant="v6"] .hp-v6-pane-sub {
+  font-size: var(--text-sm);
+  color: var(--hero-ink-muted);
+  line-height: var(--leading-relaxed);
+}
+
+/* ── Mobile: single column ── */
 @media (max-width: 640px) {
   [data-hero-variant="v6"] .hp-v6 {
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
   }
 
-  [data-hero-variant="v6"] .hp-v6-logo,
-  [data-hero-variant="v6"] .hp-v6-wordmark {
-    padding: var(--space-2xl) var(--space-lg);
+  [data-hero-variant="v6"] .hp-v6-logo {
+    padding: var(--space-2xl) var(--space-lg) var(--space-md);
   }
 
   [data-hero-variant="v6"] .hp-v6-logo-img {
-    max-width: 260px;
+    max-width: 200px;
+  }
+
+  [data-hero-variant="v6"] .hp-v6-right {
+    padding: var(--space-md) var(--space-lg) var(--space-2xl);
   }
 }
