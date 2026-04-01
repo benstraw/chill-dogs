@@ -153,7 +153,7 @@ export const calmingConverterPages: Record<string, CalmingConverterPageConfig> =
     hero: {
       title: 'Best Calming Products for Anxious Dogs',
       subtitle:
-        'If your dog gets shaky during storms, paces before fireworks, struggles with separation, or melts down during grooming, the right calming tool can make those moments more manageable. Some products work through gentle pressure, some through nutritional support, some through licking, and some by giving anxious dogs a job for their nose.',
+        'If your dog gets shaky during thunderstorms, paces due to fireworks, struggles with separation, or melts down during grooming, the right calming tools can help. Some products work by providing gentle pressure, others through nutritional support.  Some dogs benefit from postive distractions, like licking or sniffing.  ',
       disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
       primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
       secondaryCta: { label: 'ThunderShirt Alternatives', href: ROUTES.calmingAlternatives },
