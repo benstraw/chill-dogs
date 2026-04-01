@@ -13,7 +13,7 @@ const pageSlug = 'rhys-ran-away-bishop-peak';
 const tocHeadings = [
   { label: 'The Summit Incident', anchor: 'summit-incident' },
   { label: 'The 30-Minute Search', anchor: 'search' },
-  { label: 'What We Learned', anchor: 'lessons' },
+  { label: 'Four Things We Learned', anchor: 'lessons' },
   { label: 'Tracker Types Explained', anchor: 'tracker-types' },
   { label: 'Which Tracker to Choose', anchor: 'decision-guide' },
   { label: 'FAQ', anchor: 'faq' },
@@ -23,17 +23,17 @@ const faqs = [
   {
     question: 'Do GPS dog trackers work on hiking trails?',
     answer:
-      'It depends on the type. Cellular GPS trackers (like Fi) require LTE signal and will fail in remote or no-service areas. Garmin off-grid systems use GPS satellites and VHF radio — they work anywhere you can see the sky, including deep wilderness. Know your terrain before you hike.',
+      'It depends on the type. Cellular GPS trackers like Fi require LTE signal and will fail in remote or no-service areas. Garmin off-grid systems use GPS satellites and VHF radio.  They work anywhere you can see the sky, including deep wilderness. Know your terrain before you hike.',
   },
   {
     question: 'Will an AirTag help me find my dog in the mountains?',
     answer:
-      'Unlikely. AirTags use crowd-sourced Bluetooth through the Apple Find My network. If your dog runs far from other hikers with Apple devices, the tag will not update. They work reasonably well in cities but are not reliable in remote terrain.',
+      'Unlikely. AirTags use crowd-sourced Bluetooth through the Apple Find My network. If your dog runs far away from anyone with an Apple device, the tag will not update. They work reasonably well in cities but are not reliable in remote terrain.',
   },
   {
     question: 'What is the best GPS tracker for hiking with dogs?',
     answer:
-      'For true hiking and wilderness use, Garmin off-grid systems (Alpha 300, T&REx) are the reliable choice — they use GPS and radio with no cell dependency. For moderate trails near civilization, a cellular tracker like Fi is more convenient but depends on coverage.',
+      'For true hiking and wilderness use, Garmin off-grid systems (Alpha 300, T&REx) are the reliable choice.  They use GPS and radio with no cell dependency. For moderate trails near civilization, a cellular tracker like Fi is more convenient but depends on cellular coverage.',
   },
   {
     question: 'How far can a dog run before a tracker stops working?',
@@ -43,19 +43,19 @@ const faqs = [
   {
     question: 'Should I use a GPS tracker even if my dog is leashed?',
     answer:
-      'If you hike in areas with wildlife, a tracker is worth considering even for leashed dogs. Leashes can be dropped, pulled free, or break — and it only takes a second. A tracker gives you a head start if the worst happens.',
+      'If you hike in areas with wildlife, a tracker is worth considering even for leashed dogs. Leashes can be dropped or break, and it only takes a second. A tracker gives you a head start if the worst happens.',
   },
   {
-    question: 'Can I use Fi collar off-grid?',
+    question: 'Can I use a Fi collar off-grid?',
     answer:
-      'No. Fi uses LTE cellular tracking. Without cell signal — on remote trails, in canyons, or in wilderness areas — the collar cannot report location. If you regularly hike off-grid, pair Fi with a Garmin system or switch to a Garmin for those trips.',
+      'No. Fi uses LTE cellular tracking. Without cell signal — on remote trails, in canyons, or in wilderness areas — the collar cannot report a location. If you regularly hike off-grid, pair Fi with a Garmin system or switch to a Garmin for those trips.',
   },
 ];
 
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'When Rhys Ran Away on Bishop Peak: What We Learned About Dog Tracking',
+  headline: 'The Day Rhys Ran Off on Bishop Peak: What We Learned About Dog Tracking',
   description:
     'A real story about losing a dog on a fog-covered summit and what it taught us about GPS trackers, cellular coverage gaps, and which tracking systems actually work off-grid.',
   url: 'https://www.chill-dogs.com/travel/rhys-ran-away-bishop-peak/',
@@ -70,15 +70,15 @@ const articleSchema = {
 ---
 
 <BaseLayout
-  title="When Rhys Ran Away on Bishop Peak: What We Learned About Dog Tracking"
-  ogTitle="When Rhys Ran Away: What We Learned About Dog Tracking"
+  title="The Day Rhys Ran Off on Bishop Peak: What We Learned About Dog Tracking"
+  ogTitle="The Day Rhys Ran Off: What We Learned About Dog Tracking"
   description="A real story about losing a dog on a fog-covered summit and what it taught us about GPS dog trackers, cellular gaps, and which system actually works off-grid."
 >
   <JsonLd slot="head" schema={articleSchema} />
 
   <Hero
-    title="When Rhys Ran Away on Bishop Peak"
-    subtitle="What 30 minutes of searching in the fog taught us about dog tracking — and why cell-based trackers fail exactly when you need them most."
+    title="The Day Rhys Ran Off on Bishop Peak"
+    subtitle="What 30 minutes of searching in the fog taught us about dog tracking, and why cell-based trackers fail exactly when you need them the most"
     disclaimer="As an Amazon Associate, we earn from qualifying purchases."
     primaryCta={{ label: 'Compare GPS Trackers', href: ROUTES.trackingTop }}
     secondaryCta={{ label: 'What To Do If Your Dog Runs Away', href: ROUTES.dogRanAwaySafety }}
@@ -97,7 +97,7 @@ const articleSchema = {
           We had done the Bishop Peak hike a dozen times. It's a popular trail outside San Luis Obispo — rocky, a solid 45-minute climb, with a clear view from the summit on good days. That morning was not a good day for visibility.
         </p>
         <p class="section-body">
-          I was hiking with Rhys (my dog, 7-year-old pit bull mix) and Astro, my two-year-old shepherd mix. We made the summit around 8 a.m. Fog had rolled in overnight and hadn't burned off. The summit was a gray-white wall in every direction.
+          I was hiking with my 7-year-old dog Rhys and Astro, my friend's two-year-old shepherd mix. We made the summit around 8 a.m. Fog had rolled in overnight and hadn't burned off. The summit was a gray-white wall in every direction.
         </p>
         <p class="section-body">
           We stopped to give the dogs water. I set my pack down and reached for a bowl. That's when it happened.
@@ -123,22 +123,22 @@ const articleSchema = {
       <div class="section-inner">
         <h2>The 30-Minute Search</h2>
         <p class="section-body">
-          I had a Fi collar on Rhys. I pulled out my phone immediately. No signal. One bar flickering in and out. The app showed Rhys's last known location as the trailhead parking lot — where we'd arrived an hour earlier. The collar had not updated since we lost cell coverage on the ascent.
+          Rhys was wearing a Fi Collar. I pulled out my phone immediately. No signal. One bar flickering in and out. The app showed Rhys's last known location as the trailhead parking lot, where we'd arrived an hour earlier. The collar had not updated since we lost cell coverage on the ascent.
         </p>
         <p class="section-body">
           I called Astro to heel and went down the east side of the ridge calling Rhys's name. Fog made sound direction unreliable. I whistled. I waited. Nothing.
         </p>
         <p class="section-body">
-          At the 20-minute mark, a hiker coming up the west side called out: there was a dog down by the big rock formation, wouldn't come to her. I found Rhys there, about 300 meters down a scramble path, muddy and confused but physically fine.
+          Twenty minutes later, a hiker coming up the west side called out: there was a dog down by the big rock formation.  She tried to call him, but he wouldn't come to her. I found Rhys there, about 300 meters down a scramble path, muddy and confused but physically fine.
         </p>
         <p class="section-body">
-          The Fi collar was useless at altitude on Bishop Peak. Not because Fi is a bad product — it isn't. It was useless because there was no cell signal, and Fi requires cell signal. That's not a bug. It's just what cellular tracking is.
+          The Fi collar was useless at altitude on Bishop Peak. Not because Fi is a bad product — it isn't. It was useless because there was no cell signal, and cellular tracking requires a cell signal.
         </p>
 
         <div class="callout callout--warning">
           <p class="callout-heading">Key point</p>
           <p class="callout-body">
-            Cell-based GPS trackers (Fi, Whistle, and similar) are reliable everyday tools. They are <strong>not reliable in remote, rural, or no-signal environments</strong>. If you regularly hike in wilderness areas, cell coverage maps should be part of your gear planning — and for true off-grid use, you need a different system entirely.
+            Cell-based GPS trackers like Fi and Whistle are reliable everyday tools. They are <strong>not reliable in remote, rural, or no-signal environments</strong>. If you regularly hike in wilderness areas, cell coverage maps should be part of your gear planning.  For true off-grid use, you need an entirely different system.
           </p>
         </div>
       </div>
@@ -147,7 +147,7 @@ const articleSchema = {
     <!-- Lessons -->
     <section class="collector-section" id="lessons">
       <div class="section-inner">
-        <h2>What We Learned</h2>
+        <h2>Four Things We Learned That Day on Bishop Peak</h2>
         <p class="section-intro">
           Four practical things that came out of the Bishop Peak incident.
         </p>
@@ -166,7 +166,7 @@ const articleSchema = {
           </li>
           <li>
             <strong>Off-grid tracking is a different category of gear, not an upgrade.</strong>
-            Garmin's off-grid systems aren't "better" than Fi in the way a premium version is better. They solve a different problem — tracking without cell signal — and come with real trade-offs (cost, bulk, handheld device required). Know which problem you're actually solving.
+            Garmin's off-grid systems aren't "better" than Fi. They solve a different problem — tracking without cell signal — and come with real trade-offs (cost, bulk, handheld device required). Know which problem you are addressing.
           </li>
         </ul>
       </div>
@@ -301,7 +301,7 @@ const articleSchema = {
           <div class="guide-card">
             <h3 class="guide-card-heading">Everyday + city use</h3>
             <p class="guide-card-body">
-              Fi Series 3 is the well-regarded option here — slim collar, real-time LTE, escape alerts, geofencing, activity data. Requires subscription.
+              Fi Series 3 is the well-regarded option here:  slim collar, real-time LTE, escape alerts, geofencing, activity data.  Subscription required.
             </p>
             <a
               href={ROUTES.fiCollarReview}
@@ -375,7 +375,7 @@ const articleSchema = {
     <section class="closing-ctas">
       <div class="closing-inner">
         <h2>Know Your Options Before the Trail</h2>
-        <p>The right tracker for a city dog and the right tracker for a wilderness hike are not the same tool. Start with the comparison and work backward to your terrain.</p>
+        <p>The best tracker for a city walk is not the best tracker for a wilderness hike.</p>
         <div class="closing-buttons">
           <a
             href={ROUTES.trackingTop}
