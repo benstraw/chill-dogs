@@ -1,0 +1,688 @@
+---
+import { ROUTES } from '@data/routes';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/modules/Hero.astro';
+import Toc from '@components/modules/Toc.astro';
+import FAQ from '@components/modules/FAQ.astro';
+import Disclosure from '@components/modules/Disclosure.astro';
+import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
+import JsonLd from '@components/JsonLd.astro';
+import AffiliateLink from '@components/AffiliateLink.astro';
+import { getTrackersByType, accessoryProducts } from '@data/tracking-products';
+
+const pageSlug = 'fi-dog-collar-review';
+
+const fiProducts = getTrackersByType('cellular').filter(p => p.id === 'fi-series-3-plus');
+const fiProduct = fiProducts[0];
+const stuntPuppyCollar = accessoryProducts.find(a => a.id === 'stunt-puppy-fi-collar')!
+
+const tocHeadings = [
+  { label: 'What Fi Is', anchor: 'what-fi-is' },
+  { label: 'How It Works', anchor: 'how-it-works' },
+  { label: 'Pros & Cons', anchor: 'pros-cons' },
+  { label: 'Best For', anchor: 'best-for' },
+  { label: 'Where Fi Falls Short', anchor: 'limitations' },
+  { label: 'FAQ', anchor: 'faq' },
+];
+
+const faqs = [
+  {
+    question: 'Does Fi collar work without WiFi?',
+    answer:
+      'Fi uses LTE cellular, not WiFi. It works anywhere with LTE signal — no home network required. However, without LTE signal (in remote wilderness, mountains, or dead zones) the collar cannot report location.',
+  },
+  {
+    question: 'Does the Fi collar require a subscription?',
+    answer:
+      'Yes. Fi requires a monthly or annual subscription to access the LTE tracking network. The collar hardware is purchased separately. Without a subscription, you lose real-time tracking.',
+  },
+  {
+    question: 'How accurate is Fi GPS tracking?',
+    answer:
+      'Fi GPS accuracy is typically within 10–30 feet under open sky. Accuracy can reduce in dense urban canyons, heavy tree cover, or areas with GPS interference. Real-time updates generally happen every few seconds when the dog is moving.',
+  },
+  {
+    question: 'Is Fi waterproof?',
+    answer:
+      'The Fi Series 3+ collar is rated IP68 waterproof — it handles rain, mud, and swimming. This is one of the practical advantages over some competing cellular trackers.',
+  },
+  {
+    question: 'How long does Fi battery last?',
+    answer:
+      'Battery life varies significantly by tracking mode. In standard mode with moderate use, Fi claims up to 3 months. In heavy real-time tracking mode (continuous updates), battery depletes much faster — often within a few days. Actual life depends heavily on how actively the location is being polled.',
+  },
+  {
+    question: 'Can I use Fi collar for hiking?',
+    answer:
+      'Fi works on hiking trails that have LTE coverage, which includes most popular trails near populated areas. It does not work in true wilderness, backcountry, or remote mountains without cell signal. Before taking Fi on a hiking trip, check the cell coverage map for your specific trail.',
+  },
+];
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Review',
+  name: 'Fi Dog Collar Review: Cellular GPS Tracking for Everyday Dogs',
+  description:
+    'Honest review of the Fi Series 3+ GPS dog collar — cellular tracking, subscription model, what it does well, and where it falls short for remote or off-grid use.',
+  url: 'https://www.chill-dogs.com/gear/fi-dog-collar-review/',
+  author: { '@type': 'Person', name: 'Benjamin Strawbridge', url: 'https://www.benstrawbridge.com/' },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Chill-Dogs',
+    logo: { '@type': 'ImageObject', url: 'https://www.chill-dogs.com/og/og-default.png' },
+  },
+  itemReviewed: {
+    '@type': 'Product',
+    name: 'Fi Series 3+ GPS Dog Collar',
+  },
+};
+---
+
+<BaseLayout
+  title="Fi Dog Collar Review: GPS Tracking for Everyday Dogs (2026)"
+  ogTitle="Fi Series 3+ Dog Collar GPS Review (2026)"
+  description="An honest look at Fi Series 3+ — cellular GPS tracking, escape alerts, and geofencing. What it does well, what it costs, and where it fails without cell signal."
+>
+  <JsonLd slot="head" schema={articleSchema} />
+
+  <Hero
+    title="Fi Dog Collar Review"
+    subtitle="Cellular GPS tracking for everyday dogs — city walks, parks, travel. Here's what it does well, what it costs, and where it stops working."
+    primaryCta={{ label: 'See All GPS Trackers', href: ROUTES.trackingTop }}
+    secondaryCta={{ label: 'Off-Grid Alternative (Garmin)', href: ROUTES.garminTracking }}
+    pageSlug={pageSlug}
+  />
+
+  <div class="converter-content">
+
+    <Toc headings={tocHeadings} pageSlug={pageSlug} />
+
+    <!-- What Fi Is -->
+    <section class="content-section" id="what-fi-is">
+      <div class="section-inner">
+        <h2>What Fi Is</h2>
+        <p class="section-body">
+          Fi is a GPS dog collar that uses the LTE cellular network to report your dog's real-time location to a companion app. The collar includes a built-in GPS chip, an LTE radio, and a step counter. It's designed to work like a fitness tracker for dogs — with the safety layer of real-time location.
+        </p>
+        <p class="section-body">
+          The Series 3+ is the current generation. It's slimmer and lighter than previous versions, with improved battery life and waterproofing. The core value proposition: if your dog gets loose in a city, suburb, or area with LTE coverage, you'll know where they are in near-real-time and get an alert the moment they leave a designated safe zone.
+        </p>
+        <p class="section-body">
+          Fi is a good product for what it is. The key is understanding what it is: a cellular tracker. It works where cell service works. It doesn't work where cell service doesn't work. That distinction matters.
+        </p>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="content-section content-section--alt" id="how-it-works">
+      <div class="section-inner">
+        <h2>How Fi Works</h2>
+
+        <div class="feature-grid">
+          <div class="feature-item">
+            <h3 class="feature-heading">LTE Cellular Tracking</h3>
+            <p class="feature-body">
+              Fi connects to the nationwide LTE network (same towers your phone uses) and reports GPS coordinates to the app. Updates happen continuously when the dog is moving. No WiFi or home network required — just cell coverage.
+            </p>
+          </div>
+          <div class="feature-item">
+            <h3 class="feature-heading">Geofence Safe Zones</h3>
+            <p class="feature-body">
+              Set home, work, dog park — any location as a safe zone. The moment your dog leaves the zone boundary, you get a push notification. This escape-alert feature is the primary safety value for most owners.
+            </p>
+          </div>
+          <div class="feature-item">
+            <h3 class="feature-heading">Live Tracking Mode</h3>
+            <p class="feature-body">
+              When an escape alert fires, you can activate live tracking to follow your dog's movement in near-real-time on the map. Updates increase in frequency during active tracking. This drains battery faster.
+            </p>
+          </div>
+          <div class="feature-item">
+            <h3 class="feature-heading">Activity + Steps</h3>
+            <p class="feature-body">
+              Fi tracks daily steps, activity minutes, and sleep. You can set step goals and see trends over time. Compared to competitors, the activity data is detailed and easy to read in the app.
+            </p>
+          </div>
+          <div class="feature-item">
+            <h3 class="feature-heading">Subscription Model</h3>
+            <p class="feature-body">
+              LTE access requires a monthly or annual subscription. Without it, you lose real-time tracking — the collar reverts to step counting only. Factor the ongoing cost into your decision. Monthly plans are more expensive; annual plans offer a discount.
+            </p>
+          </div>
+          <div class="feature-item">
+            <h3 class="feature-heading">IP68 Waterproof</h3>
+            <p class="feature-body">
+              Rated for swimming and full submersion. Handles rain, mud, beach, and river crossings. The charging dock is magnetic — you don't need to remove the collar for everyday charging.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pros & Cons -->
+    <section class="content-section" id="pros-cons">
+      <div class="section-inner">
+        <h2>Pros & Cons</h2>
+        <div class="pros-cons-grid">
+          <div class="pros-card">
+            <h3 class="pros-heading">What Fi does well</h3>
+            <ul class="verdict-list verdict-list--pros">
+              {fiProduct?.pros.map(p => <li>{p}</li>)}
+            </ul>
+          </div>
+          <div class="cons-card">
+            <h3 class="cons-heading">Trade-offs to know</h3>
+            <ul class="verdict-list verdict-list--cons">
+              {fiProduct?.cons.map(c => <li>{c}</li>)}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Best For -->
+    <section class="content-section content-section--alt" id="best-for">
+      <div class="section-inner">
+        <h2>Best For</h2>
+        <p class="section-body">
+          Fi is a strong fit for a specific kind of dog and owner.
+        </p>
+
+        <div class="fi-buy-cta">
+          <AffiliateLink
+            href={fiProduct?.amazonUrl ?? 'https://www.amazon.com/dp/B0FH8GDBLX?tag=chill-dogs-20'}
+            data-track="amazon_outbound_click"
+            data-asin={fiProduct?.asin ?? 'B0FH8GDBLX'}
+            data-product-name="Fi Series 3+ GPS Collar (12-mo membership)"
+            class="fi-buy-btn"
+          >
+            Shop Fi Series 3+ on Amazon (12-mo membership)
+          </AffiliateLink>
+          <p class="fi-buy-note">Includes 12-month membership — best per-month value for Fi</p>
+        </div>
+        <div class="best-for-list">
+          <div class="best-for-item best-for-item--yes">
+            <span class="bfi-icon">✓</span>
+            <div>
+              <p class="bfi-label">City and suburban dogs</p>
+              <p class="bfi-desc">Where LTE is reliable and escape alerts are the primary concern — neighbor's yard, gate left open, car door moment.</p>
+            </div>
+          </div>
+          <div class="best-for-item best-for-item--yes">
+            <span class="bfi-icon">✓</span>
+            <div>
+              <p class="bfi-label">Dogs who travel to parks, campgrounds, and popular trails</p>
+              <p class="bfi-desc">Most well-visited parks and campgrounds have LTE coverage. Verify your specific destination — Fi works in more places than you might expect.</p>
+            </div>
+          </div>
+          <div class="best-for-item best-for-item--yes">
+            <span class="bfi-icon">✓</span>
+            <div>
+              <p class="bfi-label">Owners who want health + activity data bundled</p>
+              <p class="bfi-desc">If you want step tracking, sleep monitoring, and location in one device, Fi provides all three.</p>
+            </div>
+          </div>
+          <div class="best-for-item best-for-item--no">
+            <span class="bfi-icon bfi-icon--no">✗</span>
+            <div>
+              <p class="bfi-label">Dogs who hike into remote or wilderness terrain</p>
+              <p class="bfi-desc">Fi stops working the moment you leave cell coverage. For backcountry use, you need a Garmin off-grid system instead — or in addition to Fi for city use.</p>
+            </div>
+          </div>
+          <div class="best-for-item best-for-item--no">
+            <span class="bfi-icon bfi-icon--no">✗</span>
+            <div>
+              <p class="bfi-label">Hunting or working dogs in rural terrain</p>
+              <p class="bfi-desc">Rural coverage is inconsistent. Garmin off-grid systems are the standard in this use case for good reason — they work everywhere with no subscription.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stunt Puppy Accessory Card -->
+        {stuntPuppyCollar && (
+          <div class="accessory-card">
+            <div class="accessory-card-label">Fi-Ready Collar</div>
+            <div class="accessory-card-body">
+              <p class="accessory-card-name">{stuntPuppyCollar.name}</p>
+              <p class="accessory-card-note">{stuntPuppyCollar.note}</p>
+            </div>
+            <AffiliateLink
+              href={stuntPuppyCollar.amazonUrl}
+              data-track="amazon_outbound_click"
+              data-asin={stuntPuppyCollar.asin}
+              data-product-name={stuntPuppyCollar.name}
+              class="accessory-cta"
+            >
+              Shop on Amazon
+            </AffiliateLink>
+          </div>
+        )}
+      </div>
+    </section>
+
+    <!-- Limitations -->
+    <section class="content-section" id="limitations">
+      <div class="section-inner">
+        <h2>Where Fi Falls Short</h2>
+        <p class="section-body">
+          The primary limitation isn't a design flaw — it's the nature of cellular technology. LTE only works where towers exist. In remote terrain, mountains, canyons, or rural areas outside network coverage, Fi cannot report location. The collar continues to record steps (passively), but live tracking is unavailable.
+        </p>
+        <p class="section-body">
+          A real example: during the Bishop Peak incident with Astro, a Fi collar was being worn. The summit had no LTE signal. The app showed the last known location as the trailhead parking lot — data from before the ascent. When Astro ran into the fog, the collar was unable to help. Not because it malfunctioned. Because it was the wrong tool for that environment.
+        </p>
+
+        <div class="callout callout--info">
+          <p class="callout-heading">Planning a backcountry hike?</p>
+          <p class="callout-body">
+            Check cell coverage maps (T-Mobile, AT&T, Verizon) for your specific trail before departing. Many popular hiking destinations lose coverage on the ascent before the summit. If coverage is uncertain, consider adding a Garmin off-grid system or leaving Fi at home and renting/borrowing a Garmin for the trip.
+          </p>
+          <a
+            href={ROUTES.garminTracking}
+            class="callout-link"
+            data-track="collector_to_converter_click"
+            data-from-page={pageSlug}
+            data-to-page={ROUTES.garminTracking}
+            data-link-position="limitations-callout"
+          >
+            See Garmin off-grid systems →
+          </a>
+        </div>
+
+        <div class="comparison-cta">
+          <p class="comparison-cta-text">Compare Fi against all tracker types side by side:</p>
+          <a
+            href={ROUTES.trackingTop}
+            class="converter-cta-btn"
+            data-track="collector_to_converter_click"
+            data-from-page={pageSlug}
+            data-to-page={ROUTES.trackingTop}
+            data-link-position="limitations-bottom"
+          >
+            Full GPS Tracker Comparison →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <FAQ faqs={faqs} heading="Fi Collar FAQ" />
+    </section>
+
+    <Disclosure />
+
+    <InternalLinkStrip
+      heading="More Dog Tracking Guides"
+      links={[
+        { label: 'All GPS Trackers', href: ROUTES.trackingTop },
+        { label: 'Garmin Off-Grid Systems', href: ROUTES.garminTracking },
+        { label: 'AirTag for Dogs', href: ROUTES.airtagForDogs },
+        { label: 'When Rhys Ran Away', href: ROUTES.rhysRanAway },
+        { label: 'Dog Ran Away Guide', href: ROUTES.dogRanAwaySafety },
+      ]}
+      fromPage={pageSlug}
+    />
+  </div>
+</BaseLayout>
+
+<style>
+  .converter-content {
+    padding-bottom: var(--space-2xl);
+  }
+
+  .content-section {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+
+  .content-section--alt {
+    background: var(--color-bg-alt);
+  }
+
+  .section-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .section-inner > h2 {
+    font-size: var(--text-2xl);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-lg);
+  }
+
+  .section-body {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    max-width: var(--max-width-prose);
+    margin-bottom: var(--space-md);
+  }
+
+  /* Feature grid */
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .feature-item {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+  }
+
+  .feature-heading {
+    font-size: var(--text-base);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-sm);
+  }
+
+  .feature-body {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+  }
+
+  /* Pros/Cons */
+  .pros-cons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    max-width: var(--max-width-prose);
+  }
+
+  .pros-card,
+  .cons-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+  }
+
+  .pros-heading {
+    font-size: var(--text-base);
+    font-weight: var(--weight-bold);
+    color: var(--color-sage);
+    margin-bottom: var(--space-md);
+  }
+
+  .cons-heading {
+    font-size: var(--text-base);
+    font-weight: var(--weight-bold);
+    color: var(--color-terracotta);
+    margin-bottom: var(--space-md);
+  }
+
+  .verdict-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .verdict-list li {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    padding-left: var(--space-lg);
+    position: relative;
+    margin-bottom: var(--space-sm);
+  }
+
+  .verdict-list--pros li::before {
+    content: '+';
+    position: absolute;
+    left: 0;
+    color: var(--color-sage);
+    font-weight: var(--weight-bold);
+  }
+
+  .verdict-list--cons li::before {
+    content: '−';
+    position: absolute;
+    left: 0;
+    color: var(--color-terracotta);
+    font-weight: var(--weight-bold);
+  }
+
+  /* Best For */
+  .best-for-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    max-width: var(--max-width-prose);
+  }
+
+  .best-for-item {
+    display: flex;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+  }
+
+  .best-for-item--yes {
+    border-left: 3px solid var(--color-sage);
+  }
+
+  .best-for-item--no {
+    border-left: 3px solid var(--color-terracotta);
+  }
+
+  .bfi-icon {
+    font-size: var(--text-lg);
+    font-weight: var(--weight-bold);
+    color: var(--color-sage);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .bfi-icon--no {
+    color: var(--color-terracotta);
+  }
+
+  .bfi-label {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text);
+    margin-bottom: var(--space-xs);
+  }
+
+  .bfi-desc {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+  }
+
+  /* Callout */
+  .callout {
+    max-width: var(--max-width-prose);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg) var(--space-xl);
+    margin-bottom: var(--space-xl);
+  }
+
+  .callout--info {
+    background: #f0f4ff;
+    border-left: 4px solid var(--color-sky);
+  }
+
+  .callout-heading {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-sky);
+    margin-bottom: var(--space-sm);
+  }
+
+  .callout-body {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-md);
+  }
+
+  .callout-link {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .callout-link:hover {
+    text-decoration: underline;
+  }
+
+  /* Comparison CTA */
+  .comparison-cta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+    margin-top: var(--space-xl);
+  }
+
+  .comparison-cta-text {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .converter-cta-btn {
+    display: inline-block;
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+    font-weight: var(--weight-semibold);
+    padding: var(--space-sm) var(--space-xl);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: background var(--transition-fast);
+    white-space: nowrap;
+  }
+
+  .converter-cta-btn:hover {
+    background: var(--color-primary-hover);
+    color: var(--color-text-inverse);
+  }
+
+  /* Fi buy CTA */
+  .fi-buy-cta {
+    margin-bottom: var(--space-xl);
+  }
+
+  .fi-buy-btn {
+    display: inline-block;
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+    font-weight: var(--weight-semibold);
+    padding: var(--space-sm) var(--space-xl);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-size: var(--text-base);
+    transition: background var(--transition-fast);
+  }
+
+  .fi-buy-btn:hover {
+    background: var(--color-primary-hover);
+    color: var(--color-text-inverse);
+  }
+
+  .fi-buy-note {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-top: var(--space-xs);
+    margin-bottom: 0;
+  }
+
+  /* Accessory card */
+  .accessory-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg) var(--space-xl);
+    margin-top: var(--space-xl);
+    max-width: var(--max-width-prose);
+  }
+
+  .accessory-card-label {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+  }
+
+  .accessory-card-body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .accessory-card-name {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text);
+    margin-bottom: var(--space-xs);
+  }
+
+  .accessory-card-note {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .accessory-cta {
+    display: inline-block;
+    background: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    font-weight: var(--weight-semibold);
+    padding: var(--space-xs) var(--space-lg);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-size: var(--text-sm);
+    white-space: nowrap;
+    transition: background var(--transition-fast), color var(--transition-fast);
+  }
+
+  .accessory-cta:hover {
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+  }
+
+  @media (max-width: 1024px) {
+    .feature-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .feature-grid,
+    .pros-cons-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .comparison-cta {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .accessory-card {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .content-section {
+      padding: var(--space-xl) var(--space-md);
+    }
+  }
+</style>
