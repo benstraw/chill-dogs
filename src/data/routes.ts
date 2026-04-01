@@ -27,13 +27,6 @@ export const ROUTES = {
   comfortCalmingBeds: '/comforting/best-calming-dog-beds/',
   comfortOrthopedicBeds: '/comforting/best-orthopedic-dog-beds/',
   comfortSleepArticle: '/comforting/how-much-do-dogs-sleep/',
-  // Tracking cluster
-  rhysRanAway: '/travel/rhys-ran-away-bishop-peak/',
-  trackingTop: '/gear/best-dog-gps-trackers/',
-  fiCollarReview: '/gear/fi-dog-collar-review/',
-  garminTracking: '/gear/garmin-dog-tracking-collars/',
-  airtagForDogs: '/gear/airtag-for-dogs/',
-  dogRanAwaySafety: '/safety/what-to-do-if-your-dog-runs-away/',
   affiliateDisclosure: '/affiliate-disclosure/',
   privacyPolicy: '/privacy-policy/',
   terms: '/terms/',
