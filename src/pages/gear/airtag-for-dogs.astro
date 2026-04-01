@@ -1,0 +1,543 @@
+---
+import { ROUTES } from '@data/routes';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/modules/Hero.astro';
+import Toc from '@components/modules/Toc.astro';
+import FAQ from '@components/modules/FAQ.astro';
+import Disclosure from '@components/modules/Disclosure.astro';
+import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
+import JsonLd from '@components/JsonLd.astro';
+import { getTrackersByType } from '@data/tracking-products';
+
+const pageSlug = 'airtag-for-dogs';
+const bluetoothProducts = getTrackersByType('bluetooth');
+
+const tocHeadings = [
+  { label: 'What AirTag Actually Is', anchor: 'what-it-is' },
+  { label: 'How It Works on Dogs', anchor: 'how-it-works' },
+  { label: 'What It Cannot Do', anchor: 'limitations' },
+  { label: 'When AirTag Makes Sense', anchor: 'when-it-makes-sense' },
+  { label: 'AirTag vs Tile', anchor: 'airtag-vs-tile' },
+  { label: 'FAQ', anchor: 'faq' },
+];
+
+const faqs = [
+  {
+    question: 'Can AirTag track a dog in real time?',
+    answer:
+      'No. AirTag is not a real-time GPS tracker. It updates location only when another Apple device from the Find My network passes within Bluetooth range of the tag. In a dense city, this can happen frequently. In remote or rural areas, it may not happen at all.',
+  },
+  {
+    question: 'Will AirTag work if my dog runs away in the woods?',
+    answer:
+      "Unlikely. If your dog runs into wilderness or rural terrain without other people (and their Apple devices) nearby, the AirTag will not update location. It requires other iPhones or Apple devices to relay its position. Remote areas without foot traffic will not have the network density to reliably detect the tag.",
+  },
+  {
+    question: 'Is AirTag safe to put on a dog collar?',
+    answer:
+      "The AirTag itself is a small disc — it needs a separate holder or attachment designed for dog collars. There are many third-party collar attachment cases available. The tag is lightweight enough for most dogs, but check that the holder won't become a chewing hazard.",
+  },
+  {
+    question: 'Can AirTag replace a GPS dog tracker?',
+    answer:
+      'No. AirTag is a crowd-sourced Bluetooth tag, not a GPS tracker. It cannot provide the real-time tracking, escape alerts, or reliable outdoor performance of a cellular GPS tracker (like Fi) or an off-grid system (like Garmin). It can supplement a GPS setup as a low-cost backup layer.',
+  },
+  {
+    question: 'Does AirTag for dogs need a subscription?',
+    answer:
+      'No. AirTag requires no monthly subscription — just the upfront cost of the tag and a collar attachment. This is one reason it appeals to budget-conscious owners, but the limitations are significant.',
+  },
+  {
+    question: 'What is the best AirTag holder for dogs?',
+    answer:
+      'Several third-party manufacturers make AirTag holders specifically for dog collars — cases that clip onto a standard collar or loop through it. Look for options that are enclosed (so the dog cannot easily chew the tag out), waterproof, and sized for your dog. No specific product can be endorsed without independent testing.',
+  },
+];
+
+const collectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'AirTag for Dogs: What It Can and Cannot Do',
+  description:
+    'Honest assessment of using Apple AirTag for dog tracking — what Bluetooth crowd-sourcing actually means, where it works, and why it is not a replacement for GPS.',
+  url: 'https://www.chill-dogs.com/gear/airtag-for-dogs/',
+};
+---
+
+<BaseLayout
+  title="AirTag for Dogs: What It Can (and Can't) Actually Do"
+  description="AirTag is not a GPS tracker. It uses Bluetooth crowd-sourcing — reliable in cities, unreliable in remote areas. Honest look at when it helps and when it doesn't."
+>
+  <JsonLd slot="head" schema={collectionSchema} />
+
+  <Hero
+    title="AirTag for Dogs: What It Can and Can't Do"
+    subtitle="AirTag is popular, affordable, and widely misunderstood. Here's an honest look at what Bluetooth crowd-sourcing actually means for a dog that runs away."
+    primaryCta={{ label: 'See All GPS Trackers', href: ROUTES.trackingTop }}
+    secondaryCta={{ label: 'Need Real GPS?', href: ROUTES.fiCollarReview }}
+    pageSlug={pageSlug}
+  />
+
+  <div class="collector-content">
+
+    <Toc headings={tocHeadings} pageSlug={pageSlug} />
+
+    <!-- What it is -->
+    <section class="content-section" id="what-it-is">
+      <div class="section-inner">
+        <h2>What AirTag Actually Is</h2>
+        <p class="section-body">
+          AirTag (now in its 2nd generation) is a small Bluetooth-based tracking tag made by Apple. It uses Apple's Find My network — a crowd-sourced system where nearby iPhones and Apple devices anonymously detect the tag and relay its location to the owner through Apple's servers.
+        </p>
+        <p class="section-body">
+          It is not a GPS tracker. It has no GPS chip. It does not connect to satellites. It does not connect to cell towers. Location updates happen only when another Apple device passes close enough to pick up the Bluetooth signal — typically within 30–60 feet.
+        </p>
+        <div class="callout callout--warning">
+          <p class="callout-heading">The core distinction</p>
+          <p class="callout-body">
+            GPS trackers (like Fi or Garmin) know where the dog is. AirTag knows where the tag was, the last time an Apple device was nearby. In a dense city those two things are often close enough. In remote terrain they can be very different.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="content-section content-section--alt" id="how-it-works">
+      <div class="section-inner">
+        <h2>How AirTag Works on a Dog Collar</h2>
+        <p class="section-body">
+          You place the AirTag in a collar-compatible holder (third-party accessories, available widely) and attach it to your dog's collar. The AirTag passively emits a Bluetooth signal. When any iPhone or Apple device comes within range, it detects the signal and anonymously sends the tag's location to Apple's servers, which then update your Find My app.
+        </p>
+        <p class="section-body">
+          In a city neighborhood with many Apple users, this update loop can happen frequently — sometimes every few minutes. The perceived effect is reasonably useful tracking in dense areas: you can see approximately where your dog was recently.
+        </p>
+        <p class="section-body">
+          In areas with fewer Apple devices — rural roads, parks, wilderness areas — updates may be infrequent, hours apart, or nonexistent. The tag itself has no ability to actively transmit location; it's entirely passive.
+        </p>
+      </div>
+    </section>
+
+    <!-- Limitations -->
+    <section class="content-section" id="limitations">
+      <div class="section-inner">
+        <h2>What AirTag Cannot Do</h2>
+        <p class="section-intro">
+          These are not bugs or version limitations — they are fundamental constraints of Bluetooth crowd-sourcing technology.
+        </p>
+
+        <div class="limitation-list">
+          <div class="limitation-item">
+            <h3 class="limitation-heading">No real-time tracking</h3>
+            <p class="limitation-body">
+              AirTag cannot show where your dog is right now. It shows where the tag was last detected by a network device. In active urban environments this lag may be minutes. In quieter environments it can be hours.
+            </p>
+          </div>
+          <div class="limitation-item">
+            <h3 class="limitation-heading">No escape alerts</h3>
+            <p class="limitation-body">
+              AirTag has no geofencing, no safe zones, and no push notifications if your dog leaves your yard. You have to manually open Find My and look. GPS trackers like Fi send immediate alerts when a dog exits a defined zone.
+            </p>
+          </div>
+          <div class="limitation-item">
+            <h3 class="limitation-heading">Fails in remote areas</h3>
+            <p class="limitation-body">
+              If your dog runs into wilderness, a forest, a rural field, or anywhere without other people carrying Apple devices, the AirTag will not update. The last known location will be wherever the tag was when it last touched the network.
+            </p>
+          </div>
+          <div class="limitation-item">
+            <h3 class="limitation-heading">Android users are excluded</h3>
+            <p class="limitation-body">
+              The Find My network is Apple-only. Android devices do not participate. In areas where Android phones are more common (including some international markets), the crowd-sourcing network is thinner and less reliable.
+            </p>
+          </div>
+          <div class="limitation-item">
+            <h3 class="limitation-heading">Not reliable as a standalone solution</h3>
+            <p class="limitation-body">
+              If your dog runs away, the AirTag is most useful after the fact (confirming where the dog ended up, once they're in a populated area) rather than during active real-time search.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- When it makes sense -->
+    <section class="content-section content-section--alt" id="when-it-makes-sense">
+      <div class="section-inner">
+        <h2>When AirTag Makes Sense for Dogs</h2>
+        <p class="section-body">
+          AirTag's limitations are real, but so is its price. At under $35, it can serve a specific, narrow role.
+        </p>
+
+        <div class="use-case-grid">
+          <div class="use-case-card use-case-card--yes">
+            <h3 class="use-case-heading">Useful as a supplemental layer</h3>
+            <p class="use-case-body">
+              If you already have a GPS collar (cellular or off-grid), adding an AirTag as a redundant backup layer costs little. In the unlikely event the GPS collar fails or falls off, the AirTag might provide some last-known location data.
+            </p>
+          </div>
+          <div class="use-case-card use-case-card--yes">
+            <h3 class="use-case-heading">City dogs in dense neighborhoods</h3>
+            <p class="use-case-body">
+              In a dense urban area, AirTag location updates can be frequent enough to be genuinely useful. If your dog escapes in a neighborhood full of iPhone users, you may get reasonably current location data.
+            </p>
+          </div>
+          <div class="use-case-card use-case-card--no">
+            <h3 class="use-case-heading">Not for hiking or outdoor adventures</h3>
+            <p class="use-case-body">
+              AirTag provides no value in remote terrain. If you hike, camp, or take your dog anywhere with sparse foot traffic and Apple device density, do not rely on AirTag for safety.
+            </p>
+          </div>
+          <div class="use-case-card use-case-card--no">
+            <h3 class="use-case-heading">Not a standalone safety tool</h3>
+            <p class="use-case-body">
+              AirTag should not be the primary or only safety layer for a dog who has a history of escaping, or for any dog in environments where real-time tracking matters.
+            </p>
+          </div>
+        </div>
+
+        <div class="section-converter-cta">
+          <a
+            href={ROUTES.trackingTop}
+            class="converter-cta-btn"
+            data-track="collector_to_converter_click"
+            data-from-page={pageSlug}
+            data-to-page={ROUTES.trackingTop}
+            data-link-position="when-it-makes-sense"
+          >
+            Compare AirTag vs cellular vs Garmin →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- AirTag vs Tile -->
+    <section class="content-section" id="airtag-vs-tile">
+      <div class="section-inner">
+        <h2>AirTag vs Tile for Dogs</h2>
+        <p class="section-body">
+          Both AirTag and Tile use crowd-sourced Bluetooth with no monthly subscription. The key differences:
+        </p>
+
+        <div class="comparison-table-wrap">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Apple AirTag (2nd Gen)</th>
+                <th scope="col">Tile 2-Pack</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Network</td>
+                <td>Apple Find My — hundreds of millions of iOS devices</td>
+                <td>Tile community network — smaller global reach</td>
+              </tr>
+              <tr>
+                <td>Platform</td>
+                <td>iPhone / Apple only</td>
+                <td>iOS and Android</td>
+              </tr>
+              <tr>
+                <td>Network density</td>
+                <td>Larger (in Apple-heavy regions)</td>
+                <td>Smaller overall, but Android-inclusive</td>
+              </tr>
+              <tr>
+                <td>Subscription</td>
+                <td>None required</td>
+                <td>None required for basic features</td>
+              </tr>
+              <tr>
+                <td>Best for</td>
+                <td>iPhone users in urban areas</td>
+                <td>Android users or mixed-platform households</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="section-body">
+          Neither is a GPS tracker. Both have the same core limitation: they work where their networks exist and fail where they don't. For most iPhone users, AirTag has the larger network. For Android users, Tile is the practical alternative.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <FAQ faqs={faqs} heading="AirTag for Dogs FAQ" />
+    </section>
+
+    <!-- Closing CTA -->
+    <section class="closing-ctas">
+      <div class="closing-inner">
+        <h2>Need Real GPS Tracking?</h2>
+        <p>If you want real-time location, escape alerts, or reliable outdoor tracking, AirTag is not the answer. Compare the full range of GPS tracker options:</p>
+        <a
+          href={ROUTES.trackingTop}
+          class="closing-btn"
+          data-track="collector_to_converter_click"
+          data-from-page={pageSlug}
+          data-to-page={ROUTES.trackingTop}
+          data-link-position="closing"
+        >
+          Compare All Dog GPS Trackers
+        </a>
+      </div>
+    </section>
+
+    <Disclosure />
+
+    <InternalLinkStrip
+      heading="More Dog Tracking Guides"
+      links={[
+        { label: 'All GPS Trackers', href: ROUTES.trackingTop },
+        { label: 'Fi Collar Review', href: ROUTES.fiCollarReview },
+        { label: 'Garmin Off-Grid Systems', href: ROUTES.garminTracking },
+        { label: 'When Rhys Ran Away', href: ROUTES.rhysRanAway },
+        { label: 'Dog Ran Away Guide', href: ROUTES.dogRanAwaySafety },
+      ]}
+      fromPage={pageSlug}
+    />
+  </div>
+</BaseLayout>
+
+<style>
+  .collector-content {
+    padding-bottom: var(--space-2xl);
+  }
+
+  .content-section {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+
+  .content-section--alt {
+    background: var(--color-bg-alt);
+  }
+
+  .section-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .section-inner > h2 {
+    font-size: var(--text-2xl);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-md);
+  }
+
+  .section-intro {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    max-width: var(--max-width-prose);
+    margin-bottom: var(--space-xl);
+  }
+
+  .section-body {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    max-width: var(--max-width-prose);
+    margin-bottom: var(--space-md);
+  }
+
+  /* Callout */
+  .callout {
+    max-width: var(--max-width-prose);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg) var(--space-xl);
+    margin-top: var(--space-xl);
+  }
+
+  .callout--warning {
+    background: #fff8f0;
+    border-left: 4px solid var(--color-terracotta);
+  }
+
+  .callout-heading {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-terracotta);
+    margin-bottom: var(--space-sm);
+  }
+
+  .callout-body {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+  }
+
+  /* Limitation list */
+  .limitation-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    max-width: var(--max-width-prose);
+  }
+
+  .limitation-item {
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--color-terracotta);
+  }
+
+  .limitation-heading {
+    font-size: var(--text-base);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-sm);
+  }
+
+  .limitation-body {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+  }
+
+  /* Use case grid */
+  .use-case-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+  }
+
+  .use-case-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+  }
+
+  .use-case-card--yes { border-top: 3px solid var(--color-sage); }
+  .use-case-card--no { border-top: 3px solid var(--color-terracotta); }
+
+  .use-case-heading {
+    font-size: var(--text-base);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-sm);
+  }
+
+  .use-case-card--yes .use-case-heading { color: var(--color-sage); }
+  .use-case-card--no .use-case-heading { color: var(--color-terracotta); }
+
+  .use-case-body {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+  }
+
+  /* Comparison table */
+  .comparison-table-wrap {
+    overflow-x: auto;
+    margin-bottom: var(--space-xl);
+  }
+
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--text-sm);
+    min-width: 480px;
+  }
+
+  .comparison-table th {
+    background: var(--color-bg-alt);
+    font-weight: var(--weight-semibold);
+    text-align: left;
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  .comparison-table th:first-child {
+    width: 140px;
+  }
+
+  .comparison-table td {
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: top;
+    line-height: var(--leading-normal);
+    color: var(--color-text-muted);
+  }
+
+  .comparison-table td:first-child {
+    font-weight: var(--weight-semibold);
+    color: var(--color-text);
+  }
+
+  /* Section CTA */
+  .section-converter-cta { margin-top: var(--space-xl); }
+
+  .converter-cta-btn {
+    display: inline-block;
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+    font-weight: var(--weight-semibold);
+    padding: var(--space-sm) var(--space-xl);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: background var(--transition-fast);
+  }
+
+  .converter-cta-btn:hover {
+    background: var(--color-primary-hover);
+    color: var(--color-text-inverse);
+  }
+
+  /* Closing CTA */
+  .closing-ctas {
+    background: var(--color-bg-alt);
+    padding: var(--space-3xl) var(--space-lg);
+    text-align: center;
+  }
+
+  .closing-inner {
+    max-width: var(--max-width-prose);
+    margin: 0 auto;
+  }
+
+  .closing-inner h2 {
+    font-size: var(--text-2xl);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-sm);
+  }
+
+  .closing-inner p {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+  }
+
+  .closing-btn {
+    display: inline-block;
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+    font-weight: var(--weight-semibold);
+    padding: var(--space-sm) var(--space-xl);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-size: var(--text-base);
+    transition: background var(--transition-fast);
+  }
+
+  .closing-btn:hover {
+    background: var(--color-primary-hover);
+    color: var(--color-text-inverse);
+  }
+
+  @media (max-width: 768px) {
+    .use-case-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 640px) {
+    .content-section { padding: var(--space-xl) var(--space-md); }
+    .closing-ctas { padding: var(--space-2xl) var(--space-md); }
+  }
+</style>
