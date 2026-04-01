@@ -1,0 +1,8 @@
+---
+// TODO: Replace with a proper /travel/ collector hub if the travel cluster grows,
+// or fold into a top-level section. For now this redirect exists solely to prevent
+// GSC 404 errors from breadcrumb intermediate-segment URLs.
+// Current travel pages: dog-road-trip-gear, rhys-ran-away-bishop-peak
+export const prerender = true;
+return Astro.redirect('/travel/dog-road-trip-gear/', 301);
+---
