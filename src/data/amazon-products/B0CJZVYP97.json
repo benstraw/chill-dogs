@@ -1,0 +1,252 @@
+{
+  "search_metadata": {
+    "id": "69cd8715f6d5ee0a64369d54",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/czsfZjx231fBEcRjJ7qCkw/69cd8715f6d5ee0a64369d54.json",
+    "created_at": "2026-04-01 20:59:01 UTC",
+    "processed_at": "2026-04-01 20:59:01 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0CJZVYP97/?",
+    "raw_html_file": "https://serpapi.com/searches/czsfZjx231fBEcRjJ7qCkw/69cd8715f6d5ee0a64369d54.html",
+    "total_time_taken": 3.78
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0CJZVYP97",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0CJZVYP97",
+    "title": "Stunt Puppy Dog Collar, Fi Series 3 and 3+ Ready, Pine Blue, Large - Compatible with Fi GPS Device (Not Included)",
+    "link": "https://www.amazon.com/gp/aag/details/?seller=A6IZ9BJJYWN04&sshmPath=shipping-rates",
+    "link_clean": "https://www.amazon.com/dp/B0CJZVYP97/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CJZVYP97&device=desktop&engine=amazon_product",
+    "variants": [
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0CJZL51RC",
+            "name": "Small",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CJZL51RC&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0CJZTVLR9",
+            "name": "Medium",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CJZTVLR9&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0CJZVYP97",
+            "name": "Large",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CJZVYP97&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 4,
+            "asin": "B0CJZM4N9G",
+            "name": "X-Large",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CJZM4N9G&device=desktop&engine=amazon_product"
+          }
+        ]
+      },
+      {
+        "title": "Color",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0CC6VGW7X",
+            "name": "Earthtone",
+            "image": "https://m.media-amazon.com/images/I/310pIjaeUpL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CC6VGW7X&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0CC6TN2VQ",
+            "name": "Fishtail Teal",
+            "image": "https://m.media-amazon.com/images/I/31VXOBKPeQL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CC6TN2VQ&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0CWL5J4VK",
+            "name": "Frolic Fall",
+            "image": "https://m.media-amazon.com/images/I/31-xk-JOqFL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CWL5J4VK&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 4,
+            "asin": "B0CWKWPLF6",
+            "name": "Frolic Summer",
+            "image": "https://m.media-amazon.com/images/I/31fw8-IEbuL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CWKWPLF6&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 5,
+            "asin": "B0CWL24RGV",
+            "name": "Jammin Sea Visions",
+            "image": "https://m.media-amazon.com/images/I/31cgXTHONBL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CWL24RGV&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 6,
+            "asin": "B0CWKT8ZPD",
+            "name": "Jill Kittock Pizza",
+            "image": "https://m.media-amazon.com/images/I/31W3+AOGkML._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CWKT8ZPD&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 7,
+            "asin": "B0CWLDM9GD",
+            "name": "Lumberpup Buffalo",
+            "image": "https://m.media-amazon.com/images/I/31ovyjxp0LL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CWLDM9GD&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 8,
+            "asin": "B0CWL8MDH9",
+            "name": "Lumberpup Smoke",
+            "image": "https://m.media-amazon.com/images/I/3180w4UbkgL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CWL8MDH9&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 9,
+            "asin": "B0CWL5FR1J",
+            "name": "Petri Jade",
+            "image": "https://m.media-amazon.com/images/I/31PNbk9MzuL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CWL5FR1J&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 10,
+            "asin": "B0CJZVYP97",
+            "name": "Pine Blue",
+            "image": "https://m.media-amazon.com/images/I/411gPuiiNVL._SS64_.jpg",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CJZVYP97&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 11,
+            "asin": "B0CJZZMH4N",
+            "name": "Pine Green",
+            "image": "https://m.media-amazon.com/images/I/41pbwCO0J9L._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CJZZMH4N&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 12,
+            "asin": "B0CWL1P2M5",
+            "name": "Pines Orange",
+            "image": "https://m.media-amazon.com/images/I/31tWb+DBXJL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CWL1P2M5&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 13,
+            "asin": "B0CJZYK8SB",
+            "name": "Pride",
+            "image": "https://m.media-amazon.com/images/I/411Hdu92YNL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CJZYK8SB&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 14,
+            "asin": "B0CJZDN3P7",
+            "name": "Rainbow",
+            "image": "https://m.media-amazon.com/images/I/41u+HYxlV7L._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CJZDN3P7&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 15,
+            "asin": "B0CJZWK66V",
+            "name": "Ribbon Skirt",
+            "image": "https://m.media-amazon.com/images/I/41ZvGuZpB9L._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CJZWK66V&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 16,
+            "asin": "B0CJZCNBB1",
+            "name": "Track",
+            "image": "https://m.media-amazon.com/images/I/41rsM7dyKqL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CJZCNBB1&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the Stunt Puppy Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/61xbJD5bMoL._AC_SY300_SX300_QL70_ML2_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/61xbJD5bMoL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/91RYrBeMHKL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81YzkNG2KoL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81tmNWc2z5L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51C3dPZZffL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.5,
+    "reviews": 257,
+    "price": "$49.00",
+    "extracted_price": 49,
+    "price_unit": "$49.00 / count",
+    "extracted_price_unit": 49,
+    "delivery": [
+      "FREE delivery April 9 - 13. Details"
+    ],
+    "stock": "In stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$49.00",
+      "extracted_price": 49,
+      "price_unit": "$49.00 / count",
+      "extracted_price_unit": 49,
+      "delivery": [
+        "FREE delivery April 9 - 13. Details"
+      ],
+      "stock": "In stock Usually ships within 2 to 3 days.",
+      "features": {
+        "shipper_seller": {
+          "text": "Stunt Puppy",
+          "details": {
+            "heading": "Shipper / Seller",
+            "content": "Stunt Puppy"
+          },
+          "link": {
+            "text": "Stunt Puppy",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A6IZ9BJJYWN04&asin=B0CJZVYP97&ref_=dp_merchant_link"
+          }
+        },
+        "returns": {
+          "text": "30-day refund/replacement",
+          "details": {
+            "heading": "30-day refund/replacement",
+            "content": "This item can be returned in its original condition for a full refund or replacement within 30 days of receipt. You may receive a partial or no refund on used, damaged or materially different returns."
+          },
+          "link": {
+            "text": "Read full return policy",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GKM69DUUYKQWKWX7&ref_=dp_ret_policy"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "color": "Pine Blue",
+    "material": "Aluminum, Polyester",
+    "brand": "Stunt Puppy",
+    "closure_type": "Buckle",
+    "product_dimensions": "22\"L x 1\"W"
+  },
+  "about_item": [
+    "Large is 1\" wide and adjusts to fit neck sizes 15.5\" to 20.5\" once the Fi unit is attached. Our Everyday Collars are made with polyester webbing, anodized aluminum hardware and USA-Made Duraflex acetal Buckles.",
+    "This Fi-ready, one-of-a-kind collar features fun patterns to attach to your current Fi GPS unit. Our Fi-Ready Collars are lightweight, colorful, and durable. This collar fits Fi Series 3 and 3+ devices, and the Fi GPS unit is not included. Not intended for tie-out."
+  ]
+}

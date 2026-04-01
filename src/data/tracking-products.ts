@@ -20,6 +20,8 @@ export interface TrackerProduct {
   signalNote: string;
   /** Monthly fee if any */
   subscriptionNote?: string;
+  /** Product image from Amazon CDN */
+  image?: { src: string; alt: string };
 }
 
 export interface AccessoryProduct {
@@ -28,6 +30,7 @@ export interface AccessoryProduct {
   asin: string;
   amazonUrl: string;
   note: string;
+  image?: { src: string; alt: string };
 }
 
 export const trackerProducts: TrackerProduct[] = [
@@ -59,6 +62,10 @@ export const trackerProducts: TrackerProduct[] = [
     ],
     signalNote: 'Requires LTE cell signal',
     subscriptionNote: 'Subscription required after included 12 months',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/718qv1ME25L._AC_SL1500_.jpg',
+      alt: 'Fi Series 3+ GPS dog collar on white background',
+    },
   },
   {
     id: 'fi-mini',
@@ -86,6 +93,10 @@ export const trackerProducts: TrackerProduct[] = [
     ],
     signalNote: 'Requires LTE cell signal',
     subscriptionNote: 'Subscription required after included 6 months',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/61mN2O0yhaL._AC_SL1500_.jpg',
+      alt: 'Fi Mini GPS dog collar on white background',
+    },
   },
   {
     id: 'garmin-alpha-lte',
@@ -113,6 +124,10 @@ export const trackerProducts: TrackerProduct[] = [
     ],
     signalNote: 'LTE cellular + VHF radio fallback',
     subscriptionNote: 'Subscription required for LTE tracking',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/710yMxkF3ML._AC_SL1500_.jpg',
+      alt: 'Garmin Alpha LTE GPS dog tracking collar on white background',
+    },
   },
   // ── Off-Grid ──────────────────────────────────────────────────────────────
   {
@@ -145,15 +160,18 @@ export const trackerProducts: TrackerProduct[] = [
       'No subscription; collar and 300i handheld sold separately',
     ],
     signalNote: 'GPS satellite + VHF radio — no cell required',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/61DPIt365qL._AC_SL1500_.jpg',
+      alt: 'Garmin Alpha TT 25 dog tracking collar and Alpha 300i handheld on white background',
+    },
   },
   // ── Bluetooth ─────────────────────────────────────────────────────────────
   {
     id: 'apple-airtag-2nd-gen',
-    // NOTE: ASIN below is a placeholder — verify 1-pack AirTag 2nd Gen ASIN before publishing
     name: 'Apple AirTag 2nd Generation (1-pack)',
     type: 'bluetooth',
-    asin: 'AIRTAG2G1PK-TBD',
-    amazonUrl: 'https://www.amazon.com/s?k=apple+airtag+2nd+generation+1+pack&tag=chill-dogs-20',
+    asin: 'B0GJTXVN9Z',
+    amazonUrl: 'https://www.amazon.com/dp/B0GJTXVN9Z?tag=chill-dogs-20',
     use_case: 'Backup tag for city use, supplemental tracking',
     pros: [
       'Very affordable — no subscription required',
@@ -175,6 +193,10 @@ export const trackerProducts: TrackerProduct[] = [
       'Best as a backup layer; not a standalone tracker',
     ],
     signalNote: 'Bluetooth + crowd-sourced Apple Find My network',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/611DjYhflAL._AC_SL1500_.jpg',
+      alt: 'Apple AirTag 2nd generation on white background',
+    },
   },
   {
     id: 'tile-2pack',
@@ -203,6 +225,10 @@ export const trackerProducts: TrackerProduct[] = [
       'Affordable backup option; not a GPS replacement',
     ],
     signalNote: 'Bluetooth + crowd-sourced Tile/Life360 network',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/71ZlAqo0ElL._AC_SL1500_.jpg',
+      alt: 'Tile 2-pack Bluetooth trackers on white background',
+    },
   },
 ];
 
@@ -213,6 +239,10 @@ export const accessoryProducts: AccessoryProduct[] = [
     asin: 'B0CJZVYP97',
     amazonUrl: 'https://www.amazon.com/dp/B0CJZVYP97?tag=chill-dogs-20',
     note: 'A collar designed to work with Fi Series 3 and 3+ devices',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/61xbJD5bMoL._AC_SL1500_.jpg',
+      alt: 'Stunt Puppy Fi-Ready dog collar on white background',
+    },
   },
 ];
 

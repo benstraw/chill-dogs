@@ -1,4 +1,8 @@
 ---
+import { Image } from 'astro:assets';
+import imgTrailMarker from '../../images/watermarked/bishop-peak/bishop-peak-expert-trail-marker.jpg';
+import imgRhys from '../../images/watermarked/bishop-peak/bishop-peak-rhsy.jpg';
+import imgGpsTrack from '../../images/watermarked/bishop-peak/bishop-peak-runaway-gps-track.jpg';
 import { ROUTES } from '@data/routes';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Hero from '@components/modules/Hero.astro';
@@ -85,7 +89,7 @@ const articleSchema = {
     pageSlug={pageSlug}
   />
 
-  <div class="collector-content">
+  <div class="collector-content container">
 
     <Toc headings={tocHeadings} pageSlug={pageSlug} />
 
@@ -93,6 +97,17 @@ const articleSchema = {
     <section class="collector-section" id="summit-incident">
       <div class="section-inner">
         <h2>The Summit Incident</h2>
+
+        <figure class="article-photo">
+          <Image
+            src={imgTrailMarker}
+            alt="Expert trail marker sign on the rocky path near Bishop Peak summit, San Luis Obispo"
+            width={900}
+            quality={80}
+          />
+          <figcaption>The "Expert" marker near the summit. On clear days you can see the whole valley. That morning, everything past 20 feet was white.</figcaption>
+        </figure>
+
         <p class="section-body">
           We had done the Bishop Peak hike a dozen times. It's a popular trail outside San Luis Obispo — rocky, a solid 45-minute climb, with a clear view from the summit on good days. That morning was not a good day for visibility.
         </p>
@@ -109,12 +124,15 @@ const articleSchema = {
           Rhys was gone in four seconds. Into the fog, off the summit rocks, direction unknown.
         </p>
 
-        <!-- Placeholder for tracker map screenshot -->
-        <div class="placeholder-image">
-          <div class="placeholder-image-inner">
-            <p class="placeholder-label">[Screenshot placeholder: GPS tracker map showing erratic movement across Bishop Peak summit, 30-minute search pattern]</p>
-          </div>
-        </div>
+        <figure class="article-photo article-photo--screenshot">
+          <Image
+            src={imgGpsTrack}
+            alt="GPS track showing 30 minutes of searching across the top of Bishop Peak in the fog"
+            width={900}
+            quality={85}
+          />
+          <figcaption>My track from the 30-minute search — back and forth across the foggy summit, covering the same ground multiple times before finding him.</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -123,16 +141,27 @@ const articleSchema = {
       <div class="section-inner">
         <h2>The 30-Minute Search</h2>
         <p class="section-body">
-          Rhys was wearing a Fi Collar. I pulled out my phone immediately. No signal. One bar flickering in and out. The app showed Rhys's last known location as the trailhead parking lot, where we'd arrived an hour earlier. The collar had not updated since we lost cell coverage on the ascent.
+          I started searching across the broad foggy mountain top. Fifteen minutes in, I found his collar and harness — somehow pulled off, hanging on a tree.
         </p>
         <p class="section-body">
           I called Astro to heel and went down the east side of the ridge calling Rhys's name. Fog made sound direction unreliable. I whistled. I waited. Nothing.
         </p>
         <p class="section-body">
-          Twenty minutes later, a hiker coming up the west side called out: there was a dog down by the big rock formation.  She tried to call him, but he wouldn't come to her. I found Rhys there, about 300 meters down a scramble path, muddy and confused but physically fine.
+          Twenty minutes later, I heard a distant bark in response to my call. I moved towards it and kept calling — he wasn't moving anymore. This was making me very nervous, but also very hopeful I would find him soon. When I found him, he was trapped in a tree-well, with a steep boulder field behind him and tree branches poking from all sides preventing him from getting out the way he got in. I managed to pull him out and get him calmed down. We were both quite relieved the ordeal was over, and I resolved to get a GPS tracker on him.
         </p>
+
+        <figure class="article-photo">
+          <Image
+            src={imgRhys}
+            alt="Rhys, a 7-year-old pit bull mix, muddy but safe after being found on Bishop Peak"
+            width={900}
+            quality={80}
+          />
+          <figcaption>Muddy, confused, physically fine. Thirty minutes of fog and one very relieved hiker later.</figcaption>
+        </figure>
+
         <p class="section-body">
-          The Fi collar was useless at altitude on Bishop Peak. Not because Fi is a bad product — it isn't. It was useless because there was no cell signal, and cellular tracking requires a cell signal.
+          Rhys wasn't wearing a GPS tracker that day. That's the whole point. After finding him trapped in that tree-well, I went home and bought one.
         </p>
 
         <div class="callout callout--warning">
@@ -434,7 +463,7 @@ const articleSchema = {
   }
 
   .section-inner {
-    max-width: var(--max-width);
+    max-width: var(--max-width-prose);
     margin: 0 auto;
   }
 
@@ -460,29 +489,32 @@ const articleSchema = {
     margin-bottom: var(--space-md);
   }
 
-  /* Placeholder image */
-  .placeholder-image {
+  /* Article photos */
+  .article-photo {
     max-width: var(--max-width-prose);
     margin: var(--space-xl) 0;
-    border: 2px dashed var(--color-border);
+  }
+
+  .article-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
     border-radius: var(--radius-lg);
-    overflow: hidden;
   }
 
-  .placeholder-image-inner {
-    background: var(--color-bg-alt);
-    padding: var(--space-2xl) var(--space-xl);
-    text-align: center;
-    min-height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .article-photo--screenshot img {
+    border: 1px solid var(--color-border);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   }
 
-  .placeholder-label {
+  .article-photo figcaption {
+    margin-top: var(--space-sm);
     font-size: var(--text-sm);
     color: var(--color-text-muted);
     font-style: italic;
+    line-height: var(--leading-relaxed);
+    padding-left: var(--space-sm);
+    border-left: 2px solid var(--color-border);
   }
 
   /* Callout */

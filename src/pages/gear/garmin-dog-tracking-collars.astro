@@ -163,6 +163,11 @@ const collectionSchema = {
         <div class="product-grid">
           {garminProducts.map((product) => (
             <div class="product-card" id={product.id}>
+              {product.image && (
+                <div class="product-card-image">
+                  <img src={product.image.src} alt={product.image.alt} loading="lazy" width="300" height="300" />
+                </div>
+              )}
               <div class="product-card-header">
                 <h3 class="product-card-name">{product.name}</h3>
               </div>
@@ -463,6 +468,27 @@ const collectionSchema = {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-lg);
     margin-bottom: var(--space-xl);
+  }
+
+  .product-card-image {
+    background: #fff;
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-md);
+    min-height: 180px;
+    margin: calc(-1 * var(--space-xl)) calc(-1 * var(--space-xl)) 0;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+
+  .product-card-image img {
+    max-width: 180px;
+    max-height: 180px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
   }
 
   .product-card {

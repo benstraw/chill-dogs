@@ -162,6 +162,36 @@ export const calmingCollectorBody: CollectorBodyConfig = {
         },
       ],
     },
+    {
+      heading: 'When Anxiety Makes Dogs Run',
+      intro: 'Loud sounds, sudden wildlife, unfamiliar terrain — some anxiety triggers cause dogs to bolt before any calming tool can help. These guides cover what happens next.',
+      cards: [
+        {
+          href: ROUTES.rhysRanAway,
+          title: 'The Day Rhys Ran Off on Bishop Peak',
+          description:
+            'A real story about a foggy summit, a 30-minute search, and what it taught us about GPS trackers and why cellular collars fail exactly when you need them.',
+          linkLabel: 'Read the story ->',
+          dataToPage: ROUTES.rhysRanAway,
+        },
+        {
+          href: ROUTES.dogRanAwaySafety,
+          title: 'What To Do If Your Dog Runs Away',
+          description:
+            'Step-by-step action guide for the first 10 minutes, the first hour, and the days after — with practical search and recovery tips.',
+          linkLabel: 'Read the guide ->',
+          dataToPage: ROUTES.dogRanAwaySafety,
+        },
+        {
+          href: ROUTES.trackingTop,
+          title: 'Best Dog GPS Trackers',
+          description:
+            'Cellular, off-grid, and Bluetooth — three categories that solve different problems. Know which type fits your terrain before you need it.',
+          linkLabel: 'Compare trackers ->',
+          dataToPage: ROUTES.trackingTop,
+        },
+      ],
+    },
   ],
   showCalmingDisclaimer: true,
   disclosureShowSafety: false,

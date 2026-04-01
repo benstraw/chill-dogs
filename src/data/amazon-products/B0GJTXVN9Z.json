@@ -1,0 +1,595 @@
+{
+  "search_metadata": {
+    "id": "69cd873449579ade9094943a",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/8neoRZ4W9JFQm86-wYO_Cw/69cd873449579ade9094943a.json",
+    "created_at": "2026-04-01 20:59:32 UTC",
+    "processed_at": "2026-04-01 20:59:32 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0GJTXVN9Z/?",
+    "raw_html_file": "https://serpapi.com/searches/8neoRZ4W9JFQm86-wYO_Cw/69cd873449579ade9094943a.html",
+    "total_time_taken": 3.59
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0GJTXVN9Z",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0GJTXVN9Z",
+    "title": "Apple AirTag (2nd Generation) - 4 Pack: Tracker for Keychain, Wallet, and More; Locator with Sound; Simple One-Tap Setup with iPhone or iPad; Key Finder with up to 1.5X Precision Finding Range*",
+    "link": "https://www.amazon.com/Apple-AirTag-2nd-Generation-Precision/dp/B0GJTXVN9Z/",
+    "link_clean": "https://www.amazon.com/dp/B0GJTXVN9Z/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GJTXVN9Z&device=desktop&engine=amazon_product",
+    "badges": [
+      "Amazon's Choice"
+    ],
+    "variants": [
+      {
+        "title": "Style",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0GJTXVN9Z",
+            "name": "4 Pack",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GJTXVN9Z&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0GJTFXNRX",
+            "name": "1 Pack",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GJTFXNRX&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the Apple Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/611DjYhflAL._AC_SX342_SY445_QL70_ML2_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/611DjYhflAL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61ZePfznQeL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/715TBCOqmZL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71dIf+xR1KL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71EyCQ6QmEL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/819P24ZPFFL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.5,
+    "reviews": 1594,
+    "bought_last_month": "10K+ bought in past month",
+    "price": "$99.00",
+    "extracted_price": 99,
+    "delivery": [
+      "FREE delivery Monday, April 6",
+      "Or Prime members get FREE delivery Friday, April 3. Order within 7 hrs. Join Prime"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$99.00",
+      "extracted_price": 99,
+      "delivery": [
+        "FREE delivery Monday, April 6",
+        "Or Prime members get FREE delivery Friday, April 3. Order within 7 hrs. Join Prime"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "shipper_seller": {
+          "text": "Amazon.com",
+          "details": {
+            "heading": "Shipper / Seller",
+            "content": "Amazon.com"
+          }
+        },
+        "returns": {
+          "text": "FREE 15-day refund/replacement",
+          "details": {
+            "heading": "FREE 15-day refund/replacement",
+            "content": "This item can be returned in its original condition for a full refund or replacement within 15 days of receipt."
+          },
+          "link": {
+            "text": "Read full return policy",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GKM69DUUYKQWKWX7&ref_=dp_ret_policy"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "protection_plan": [
+    {
+      "position": 1,
+      "asin": "B07Q474C34",
+      "link": "https://www.amazon.com/dp/B07Q474C34/",
+      "title": "2-Year Protection Plan",
+      "price": "$9.99",
+      "extracted_price": 9.99
+    },
+    {
+      "position": 2,
+      "asin": "B08JMG11PT",
+      "link": "https://www.amazon.com/dp/B08JMG11PT/",
+      "title": "3-Year Protection Plan",
+      "price": "$13.99",
+      "extracted_price": 13.99
+    },
+    {
+      "position": 3,
+      "asin": "B07RZ3LSHM",
+      "link": "https://www.amazon.com/dp/B07RZ3LSHM/",
+      "title": "Complete Protect: One plan covers all eligible past and future purchases (Best Value)",
+      "price": "$16.99/month",
+      "extracted_price": 16.99
+    }
+  ],
+  "item_specifications": {
+    "brand": "Apple",
+    "are_batteries_included": "Yes",
+    "product_dimensions": "1.26\"L x 1.26\"W x 0.31\"Th",
+    "compatible_devices": "iPhone",
+    "item_weight": "1.44 ounces"
+  },
+  "about_item": [
+    "FIND YOUR ITEMS ON FIND MY — AirTag (2nd generation) helps you keep track of what matters. Attach one to an item you want to keep track of using the Find My app.*",
+    "EXPANDED PRECISION FINDING ON IPHONE AND APPLE WATCH — Get step-by-step directions to your lost item on iPhone and, now, Apple Watch.*",
+    "ENHANCED SPEAKER — With a 50% louder speaker and a new, distinctive chime, it’s easier than ever to hear and find AirTag.*",
+    "PING FROM FAR AND WIDE — Upgraded Ultra Wideband and Bluetooth chips allow you to find your items from even farther away than ever before.*",
+    "SHARE ITEM LOCATION — Share AirTag location access temporarily and securely with trusted contacts, third parties, or over 50 airline partners if you lose something important.",
+    "BATTERY LIFE — AirTag (2nd generation) works for more than a year on a standard battery you can easily replace when your iPhone alerts you.*",
+    "SAFE, SOUND, FOUND — Only you or authorized users can see your AirTag location, and your location data and history are never stored on AirTag itself.",
+    "MORE SUSTAINABLE DESIGN — The latest AirTag features 85% recycled plastic in the enclosure and 100% fiber-based packaging.*",
+    "LEGAL DISCLAIMERS — *Expanded Precision Finding and louder speaker reflect comparison with previous-generation AirTag. Find My requires iOS 14, iPadOS, or macOS Catalina or later and that your device is signed in to iCloud with your Apple Account. Some features are not available in all countries or regions. Improved Precision Finding works with AirTag (2nd generation) paired with iPhone Air or iPhone 15 or later (excluding iPhone 16e); availability varies by region. Precision Finding on Apple Watch requires an Apple Watch Series 9, or later, or Apple Ultra 2, or later, with watchOS 26.2.1.",
+    "LEGAL DISCLAIMERS — Battery testing conducted by Apple in December 2025 using preproduction AirTag (2nd generation) units and software paired with iPhone 17, iPhone 17 Pro, iPhone 17 Pro Max, and iPhone Air units running preproduction software. Battery life based on everyday average usage of playing sound and Precision Finding. Battery life varies with usage, environmental conditions, replacement battery manufacturer, and many other factors; actual results will vary. More sustainable design based on retail packaging as shipped by Apple. Breakdown of U.S. retail packaging by weight. Adhesives, inks, and coatings are excluded from calculations of plastic content and packaging weight."
+  ],
+  "compare_with_similar": [
+    {
+      "position": 1,
+      "asin": "B0GJTFXNRX",
+      "title": "Airtag (2nd generation)",
+      "thumbnail": "https://m.media-amazon.com/images/G/01/apple/airtag_2nd_gen._CB787909441_.png",
+      "link": "https://www.amazon.com/dp/B0GJTFXNRX?ref=amzdv_ucc_dp_lod_B0GJTXVN9Z_B0GJTFXNRX",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GJTFXNRX&device=desktop&engine=amazon_product",
+      "price": "$29.00",
+      "extracted_price": 29,
+      "rating": 4.6,
+      "reviews": 1594,
+      "splash_water_and_dust_resistance": "Rated IP67 (maximum depth of 1 meter up to 30 minutes) under IEC standard 60529",
+      "connectivity": "Bluetooth for proximity finding, Apple-designed, second-generation Ultra Wideband chip and expanded Precision Finding connectivity, NFC tap for Lost Mode",
+      "speaker": "Built-in speaker",
+      "battery": "User-replaceable CR2032 coin cell battery",
+      "sensor": "Accelerometer"
+    },
+    {
+      "position": 2,
+      "asin": "B0GJTXVN9Z",
+      "title": "AirTag (2nd generation) - 4-pack",
+      "thumbnail": "https://m.media-amazon.com/images/G/01/apple/airtag_2nd_gen_4pack._CB787909441_.png",
+      "link": "https://www.amazon.com/dp/B0GJTXVN9Z?ref=amzdv_ucc_dp_lod_B0GJTXVN9Z_B0GJTXVN9Z",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GJTXVN9Z&device=desktop&engine=amazon_product",
+      "price": "$99.00",
+      "extracted_price": 99,
+      "rating": 4.6,
+      "reviews": 1594,
+      "splash_water_and_dust_resistance": "Rated IP67 (maximum depth of 1 meter up to 30 minutes) under IEC standard 60529",
+      "connectivity": "Bluetooth for proximity finding, Apple-designed, second-generation Ultra Wideband chip and expanded Precision Finding connectivity, NFC tap for Lost Mode",
+      "speaker": "Built-in speaker",
+      "battery": "User-replaceable CR2032 coin cell battery",
+      "sensor": "Accelerometer"
+    }
+  ],
+  "product_details": {
+    "size_and_weight": [
+      "Size",
+      "Diameter: 1.26 inches (31.9 mm)",
+      "Height: 0.31 inch (8.0 mm)",
+      "Weight",
+      "0.42 ounce (11.8 grams)"
+    ],
+    "splash_water_and_dust_resistance": [
+      "Rated IP67 (maximum depth of 1 meter up to 30 minutes) under IEC standard 60529"
+    ],
+    "connectivity": [
+      "Bluetooth for proximity finding",
+      "Apple-designed, second-generation Ultra Wideband chip and expanded Precision Finding connectivity",
+      "NFC tap for Lost Mode"
+    ],
+    "speaker": [
+      "Built-in speaker"
+    ],
+    "battery": [
+      "User-replaceable CR2032 coin cell battery"
+    ],
+    "sensor": [
+      "Accelerometer"
+    ],
+    "accessibility": [
+      "The Find My app is compatible with these iPhone accessibility features:",
+      "VoiceOver",
+      "Invert Colors",
+      "Larger Text",
+      "Compatibility with braille displays"
+    ],
+    "system_requirements_and_compatibility": [
+      "Apple Account",
+      "iPhone with iOS 26.0 or later",
+      "iPad models with iPadOS 26.0 or later"
+    ],
+    "environmental_requirements": [
+      "Operating ambient temperature: −4° to 140° F (−20° to 60° C)"
+    ]
+  },
+  "reviews_information": {
+    "summary": {
+      "text": "Customers find the AirTag functions well, with one mentioning it works effectively with Apple Watch, and they appreciate its precision tracking capabilities, particularly for luggage and pets. The device is easy to set up, with one customer noting the simple one-tap iPhone or iPad setup, and customers praise its sound quality, with one mentioning they can actually hear it chirping. While some customers report good battery life, others experience dead batteries upon arrival, and while some find it worth the $10 price, others feel it's not worth the difference in cost. The connectivity receives mixed feedback, with some customers reporting instant iPhone pairing while others struggle with Bluetooth connection issues.",
+      "insights": [
+        {
+          "title": "Functionality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 121,
+            "positive": 100,
+            "negative": 21
+          },
+          "summary": "Customers find that the AirTag functions well, with one customer specifically mentioning its effectiveness with Apple Watch and another noting its success in tracking luggage overseas.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Works great. No subscription needed but it doesn’t up date in real time like a gps tracker.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3A2TNTTEQCHZI"
+            },
+            {
+              "position": 2,
+              "snippet": "Works well, I had to tell the airline where my skis were.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2B7MQVJUZX7XE"
+            },
+            {
+              "position": 3,
+              "snippet": "They work great. Good price too.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3TORZEJD4UVH9"
+            },
+            {
+              "position": 4,
+              "snippet": "...Setup was super easy, and the tracking is accurate and reliable. It’s small, lightweight, and doesn’t get in the way at all....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2PWQ3B7O5CNF8"
+            }
+          ]
+        },
+        {
+          "title": "Accuracy",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 75,
+            "positive": 66,
+            "negative": 9
+          },
+          "summary": "Customers praise the accuracy of the AirTag, particularly its ability to precisely locate objects and track luggage, with one customer noting its reliability through the Find My network.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...The tracking is accurate, and the design is compact and durable. It’s been extremely helpful for keeping track of my belongings....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2L5R3SDCHPS2I"
+            },
+            {
+              "position": 2,
+              "snippet": "Easy to set up and tracks efficiently. As soon as I’m a mile away from the AirTag I get notified.",
+              "link": "https://www.amazon.com/gp/customer-reviews/RS3AUTNJ9ZSVT"
+            },
+            {
+              "position": 3,
+              "snippet": "Good tracking device.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R36EP7EGW2MYED"
+            },
+            {
+              "position": 4,
+              "snippet": "...The tracking is super accurate and updates quickly, which gives me real peace of mind....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3AM9MPFFZOTZ5"
+            }
+          ]
+        },
+        {
+          "title": "Easy to set up",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 63,
+            "positive": 60,
+            "negative": 3
+          },
+          "summary": "Customers find the AirTag easy to set up and use.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Easy to set up and more accurate than the 1st generation. Sound is much louder making things easier to find. Big improvement.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2KK6XD1PXVI15"
+            },
+            {
+              "position": 2,
+              "snippet": "I really like this! I was completely satisfied with it easy to use Gave me peace of mind as it kept track of my most important asset!",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3F3BZKZAYB136"
+            },
+            {
+              "position": 3,
+              "snippet": "Work as as described. Easy setup.",
+              "link": "https://www.amazon.com/gp/customer-reviews/ROLIE901FHV60"
+            },
+            {
+              "position": 4,
+              "snippet": "...It was super easy to set up and gives us some peace of mind. We always leash him but want to be sure if he gets away we can find him.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1D1FSZVAB5R6U"
+            }
+          ]
+        },
+        {
+          "title": "Quality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 58,
+            "positive": 48,
+            "negative": 10
+          },
+          "summary": "Customers find the AirTag to be a high-quality product, noting it's better than the first generation and works well for pets.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...I put them on my dog's collar and I can find them anytime I want. Great product 👍",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2WEDUDZKVYTSH"
+            },
+            {
+              "position": 2,
+              "snippet": "Good product.Gives accurate location while tracking and gives alerta when you find item",
+              "link": "https://www.amazon.com/gp/customer-reviews/R29HLLD48B8KUK"
+            },
+            {
+              "position": 3,
+              "snippet": "Excellent product extremely easy to install. Can’t believe I haven’t bought these years earlier.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3K8DHHMIYKNPY"
+            },
+            {
+              "position": 4,
+              "snippet": "Great. No issues. Use these to track car keys.",
+              "link": "https://www.amazon.com/gp/customer-reviews/RIJK0G8FR2J9Q"
+            }
+          ]
+        },
+        {
+          "title": "Sound quality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 36,
+            "positive": 27,
+            "negative": 9
+          },
+          "summary": "Customers like the sound quality of the AirTag, noting that it is much louder, with one customer mentioning they can actually hear it chirping.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...It's more configurable, has longer range, is louder, it comes with a loop, and has a reverse phone finding button (that's why I take stars off)....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R26ZJ01NOYJHU7"
+            },
+            {
+              "position": 2,
+              "snippet": "Excellent—-better than series one, which I also have. I like tge louder sound and the better tracking features…I just wish it were easier to change...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R37BATHL5WZKEA"
+            },
+            {
+              "position": 3,
+              "snippet": "Nice improvement vs v1’s. They are a little louder but not night and day difference. Apple always makes A+ products.",
+              "link": "https://www.amazon.com/gp/customer-reviews/RR7Z2A6EOFDCF"
+            },
+            {
+              "position": 4,
+              "snippet": "Easy to set up and more accurate than the 1st generation. Sound is much louder making things easier to find. Big improvement.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2KK6XD1PXVI15"
+            }
+          ]
+        },
+        {
+          "title": "Connectivity",
+          "sentiment": "mixed",
+          "mentions": {
+            "total": 47,
+            "positive": 26,
+            "negative": 21
+          },
+          "summary": "Customers have mixed experiences with the AirTag's connectivity, with some reporting easy and instant pairing with one tap, while others face issues with the device not connecting to iPhones at all.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Easy to use, battery life is long. Easy to connect. Very durable.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1A0CIXP90ZZ4P"
+            },
+            {
+              "position": 2,
+              "snippet": "Would not connect to My Iphone after following all tutorials online.",
+              "link": "https://www.amazon.com/gp/customer-reviews/RDWZI9I5MHBGS"
+            },
+            {
+              "position": 3,
+              "snippet": "⭐⭐⭐⭐⭐ Excellent Connectivity and Great Value",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3RH2VDF0TO5LA"
+            },
+            {
+              "position": 4,
+              "snippet": "Showed up completely dead. Will not connect and the cover will not open. What a waste.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2LIDTZ3KUO7NL"
+            }
+          ]
+        },
+        {
+          "title": "Value for money",
+          "sentiment": "mixed",
+          "mentions": {
+            "total": 28,
+            "positive": 18,
+            "negative": 10
+          },
+          "summary": "Customers have mixed opinions about the AirTag's value for money, with some finding it worth $10 while others feel it's not worth the price difference.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...For the price, it’s honestly a great value considering how advanced the tracking feature is....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RCV8KKATM88GY"
+            },
+            {
+              "position": 2,
+              "snippet": "...The upgrade opens up new options. $30 is kinda hurting though",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2YRF6VD4YZJET"
+            },
+            {
+              "position": 3,
+              "snippet": "This connected to my phone with ease. I love this product worth the money. I tried other comparable products and no match....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1V27EKB31MD1J"
+            },
+            {
+              "position": 4,
+              "snippet": "This is 100% worth it, for me especially for travel....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RBXF44ZZNQKZH"
+            }
+          ]
+        },
+        {
+          "title": "Battery life",
+          "sentiment": "mixed",
+          "mentions": {
+            "total": 24,
+            "positive": 13,
+            "negative": 11
+          },
+          "summary": "Customers have mixed experiences with the AirTag's battery life, with some reporting great performance while others find it poor and note that units arrive with dead batteries.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...Other things people usually want to know: * Replaceable battery (simple swap, no charging needed) * No subscription required *...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3SNW54OE7M7UT"
+            },
+            {
+              "position": 2,
+              "snippet": "This is a disappointment. The battery was dead on arrival, and after putting in a new battery that works, the AirTag is not responding on any of my...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1P0G962MV48QJ"
+            },
+            {
+              "position": 3,
+              "snippet": "Easy to use great battery life use it to track my wallet",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2C7EQ4JHT66QX"
+            },
+            {
+              "position": 4,
+              "snippet": "...I wish the batteries recharged rather than having to replace them each year with disposable batteries, but airtags work much better than third party...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R32YPP73ZC7EUM"
+            }
+          ]
+        }
+      ],
+      "images": [
+        "https://m.media-amazon.com/images/I/71ZqyD6wUiL.jpg",
+        "https://m.media-amazon.com/images/I/61T4Wtwg43L.jpg",
+        "https://m.media-amazon.com/images/I/51ne46Sy2xL.jpg",
+        "https://m.media-amazon.com/images/I/61LwG4syBeL.jpg",
+        "https://m.media-amazon.com/images/I/61gVlJSR-FL.jpg",
+        "https://m.media-amazon.com/images/I/81hStFKDy8L.jpg",
+        "https://m.media-amazon.com/images/I/61IsAgzi9JL.jpg",
+        "https://m.media-amazon.com/images/I/81JdyqbnpIL.jpg",
+        "https://m.media-amazon.com/images/I/71IpgNjgjFL.jpg",
+        "https://m.media-amazon.com/images/I/61wpqfrTHgL.jpg",
+        "https://m.media-amazon.com/images/I/71qi0Efvc+L.jpg",
+        "https://m.media-amazon.com/images/I/71kL2D5XrOL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 86,
+        "4 star": 6,
+        "3 star": 2,
+        "2 star": 1,
+        "1 star": 5
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Great Build quality. Classic Apple reliability.",
+        "text": "This is 100% worth it, for me especially for travel. It allows me to track my luggage, it is very portable, the sound quality is good (similar to the first generation however, the battery life is good, very useful, and it is easy to use especially if you have an Iphone.",
+        "rating": 5,
+        "date": "March 30, 2026",
+        "author": "Kevin",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHVBKTP23MKUEANFNZ4XFURHDBAA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "product": {
+          "style": "1 Pack"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Dogs, Keys, Kids… I Track Everything Now 🐾 (Why Didn’t I Buy These Sooner?) Rating: ⭐⭐⭐⭐⭐ (5/5)",
+        "text": "Quick answers:* Does it work with iPhone and iPad? Yes* Is Precision Finding available on all devices? Yes (newer iPhones with U1 chip work best)* How long does the battery last? About 1 year* Can I share location with others? Yes* What’s included in the 4-pack? 4 AirTagsWe bought these mainly for our dogs (paired with the Elevation Lab TagVault collar holder—highly recommend), and now I’m wondering how we ever lived without them.Setup was ridiculously easy—tap, connect, done. They work seamlessly with Find My, and the tracking is impressively accurate. I can see exactly where my dogs are at any time, and the sound feature makes it easy to locate them quickly.We also use one for my husband’s work keys (no more morning panic), and the extra tags have come in handy for random things—backpacks, travel, even keeping tabs on kids in busy places.What I love:* Super easy setup with iPhone/iPad* Accurate location tracking* Sound/chime feature is actually useful* Works great for pets, keys, bags, travel* Peace of mind is unmatchedWe’ve already used them multiple times with great results, and they’ve paid for themselves in saved time and stress.Other things people usually want to know:* Replaceable battery (simple swap, no charging needed)* No subscription required* Small and lightweight* Privacy features built in (alerts for unknown trackers)Bottom line:If you’ve been on the fence—just get them. I regret not trying these sooner. Total game changer for everyday life.",
+        "rating": 5,
+        "date": "March 17, 2026",
+        "author": "Heather",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHTVFPLSISCRLIPOQBWPJJN3SM5A",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "helpful_votes": "67 people found this helpful",
+        "product": {
+          "style": "4 Pack"
+        }
+      },
+      {
+        "position": 3,
+        "title": "⭐⭐⭐⭐⭐ Excellent Connectivity and Great Value",
+        "text": "I absolutely love the Apple AirTag (2nd Generation). Setup was incredibly simple, and it connected to my iPhone instantly through the Find My app. The connectivity is excellent—location updates are quick and accurate, which makes it very easy to track my keys, bag, or anything I attach it to.The Precision Finding feature is one of the best parts. It guides you directly to your item with clear directions, which makes locating things fast and stress-free. Knowing I can quickly find my belongings gives me a lot of peace of mind, especially when traveling or when I misplace my keys around the house.Another big plus is the value for money. For such a small device, it offers powerful tracking, a long-lasting replaceable battery, and seamless integration with Apple devices. It’s durable, reliable, and incredibly useful in everyday life.Overall, the AirTag is a smart, convenient, and affordable way to keep track of your belongings, and I would definitely recommend it to anyone looking for a simple tracking solution. ⭐⭐⭐⭐⭐",
+        "rating": 5,
+        "date": "March 10, 2026",
+        "author": "Placeholder",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGNBEDAOGBR5J7CMNFGEODUQ5BYQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "helpful_votes": "48 people found this helpful",
+        "product": {
+          "style": "1 Pack"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Nice upgrade to a very useful device",
+        "text": "I love Apple devices and smart home appliances. As such, I was a very early adopter of the original AirTags and have used them while traveling (tucked inside of luggage) and in my daily life for years. The second generation of the AirTag represents a small, but worthwhile change to the function of the device.The ability to precisely track an object is noticeably better and the speaker inside pings very so slightly louder (I personally don’t buy the 50% louder claim, but there is a difference). If you’re the type to have keys slip behind couch cushions or get buried under laundry, this is the change you’ve been waiting for.The 2nd generation AirTag keeps the exact same footprint (both weight and size) so it fits perfectly into any existing accessories or holders you might have. Set up is a breeze and the Find My app works like a charm. I was able to see my checked bag move throughout a major airport and its arrival at my destination using the app. You can also disable forgotten item notifications easily if you happen to be leaving luggage in a hotel and don’t want to be pinged if you head out for the day.This AirTag weighs next to nothing and is worth slipping into a bag or attaching to a keychain for peace of mind. It seems just as durable as the first generation which I have toted all over the planet.10/10 for a device that just works. It also has a super long battery life and changing them out is easy (all your settings are maintained).",
+        "rating": 5,
+        "date": "February 20, 2026",
+        "author": "Amazon Customer",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AF42YRWWOJXEOL2WKCT5VO2JRVCQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/71ZqyD6wUiL._SY88.jpg"
+        ],
+        "helpful_votes": "99 people found this helpful",
+        "product": {
+          "style": "1 Pack"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Seamless Setup and Accurate Tracking",
+        "text": "The setup was incredibly simple. It connected to my iPhone instantly with one tap, and within seconds it was ready to use. The precision finding feature is very accurate and makes locating items quick.What I really like is the durability. It feels solid and well built, not like a simple plastic. The size is also perfect is small enough to carry anywhere, whether its on backpack, or inside luggage and my car.For the price, it’s honestly a great value considering how advanced the tracking feature is. The sound alert works well, and the precision range is very far.It’s a small device that offers a lot of functionality and peace of mind. If you’re in the Apple ecosystem, it’s definitely worth it.",
+        "rating": 5,
+        "date": "March 2, 2026",
+        "author": "Daniel Rodríguez",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AE5UKIAHCMFHVPF2CL2CLAVGM6HA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/b432935e-dbda-4e42-8978-5eaabab622d7._CR0%2C0%2C500%2C500_SX460_.jpeg",
+        "images": [
+          "https://m.media-amazon.com/images/I/61gVlJSR-FL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61LwG4syBeL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/51ne46Sy2xL._SY88.jpg"
+        ],
+        "helpful_votes": "62 people found this helpful",
+        "product": {
+          "style": "1 Pack"
+        }
+      }
+    ]
+  }
+}

@@ -165,6 +165,7 @@ export const calmingConverterPages: Record<string, CalmingConverterPageConfig> =
       { label: 'Lick Mats', anchor: 'lick-mats' },
       { label: 'Snuffle Mats', anchor: 'snuffle-mats' },
       { label: 'When To Use Each', anchor: 'when-to-use-each' },
+      { label: 'When Anxiety Makes Dogs Bolt', anchor: 'anxiety-bolting' },
       { label: 'FAQ', anchor: 'faq' },
     ],
     blocks: [
@@ -312,6 +313,16 @@ export const calmingConverterPages: Record<string, CalmingConverterPageConfig> =
         text:
           "These products are best thought of as support tools, not cures. If your dog's anxiety is intense, escalating, or causing self-injury, it is worth getting individualized guidance from a qualified veterinarian.",
       },
+      {
+        kind: 'prose',
+        id: 'anxiety-bolting',
+        heading: 'When Anxiety Makes Dogs Bolt',
+        alt: true,
+        paragraphs: [
+          'Calming products work on the nervous system — they reduce the spike, shorten the recovery, and make high-stress moments more manageable. But some anxiety triggers move faster than any wrap or chew can. A loud crack of thunder, a sudden firework, an unexpected animal on the trail: some dogs bolt before the cortisol even peaks.',
+          'If your dog has a history of running during high-stress events, pairing calming gear with a GPS tracker is the more complete safety setup. A tracker does not prevent the bolt — but it dramatically improves your odds of getting your dog back. <a href="/gear/best-dog-gps-trackers/">Compare GPS trackers for dogs →</a>',
+        ],
+      },
     ],
     faq: {
       heading: 'Calming Products FAQ',
@@ -358,10 +369,12 @@ export const calmingConverterPages: Record<string, CalmingConverterPageConfig> =
     disclaimerVariant: 'supplement',
     disclosureShowSafety: false,
     internalLinkStrip: {
-      heading: 'More Calming Guides',
+      heading: 'More Calming & Safety Guides',
       links: [
         { label: 'Back to Calming Hub', href: ROUTES.calmingHub },
         { label: 'ThunderShirt Alternatives', href: ROUTES.calmingAlternatives },
+        { label: 'GPS Trackers for Dogs', href: ROUTES.trackingTop },
+        { label: 'What To Do If Your Dog Runs Away', href: ROUTES.dogRanAwaySafety },
       ],
     },
     itemListSchema: {
