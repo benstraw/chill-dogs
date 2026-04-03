@@ -16,6 +16,13 @@ export const ROUTES = {
   calmingAlternatives: '/calming/best-thundershirt-alternatives/',
   calmingCar: '/calming/car-anxiety-for-dogs/',
   roadTrip: '/travel/dog-road-trip-gear/',
+  rhysRanAway: '/travel/rhys-ran-away-bishop-peak/',
+  // Tracking cluster
+  trackingTop: '/gear/best-dog-gps-trackers/',
+  fiCollarReview: '/gear/fi-dog-collar-review/',
+  garminTracking: '/gear/garmin-dog-tracking-collars/',
+  airtagForDogs: '/gear/airtag-for-dogs/',
+  dogRanAwaySafety: '/safety/what-to-do-if-your-dog-runs-away/',
   comfortHub: '/comforting/',
   comfortCalmingBeds: '/comforting/best-calming-dog-beds/',
   comfortOrthopedicBeds: '/comforting/best-orthopedic-dog-beds/',

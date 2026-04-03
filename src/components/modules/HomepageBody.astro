@@ -17,6 +17,11 @@ const topGuides = [
     description: 'Supportive beds, cozy blankets, and comforting toys for dogs of every age.',
     href: ROUTES.comfortHub,
   },
+  {
+    title: 'Dog GPS Trackers & Safety',
+    description: 'Cellular, off-grid, and Bluetooth tracking — know which type fits your terrain.',
+    href: ROUTES.trackingTop,
+  },
 ];
 
 const latestGuides = [
@@ -59,6 +64,16 @@ const latestGuides = [
     title: "Rhys's Road Trip Chill Kit",
     description: 'Cooling and calming picks for long drives with dogs.',
     href: ROUTES.roadTrip,
+  },
+  {
+    title: 'The Day Rhys Ran Off on Bishop Peak',
+    description: 'What a foggy summit and a 30-minute search taught us about GPS trackers.',
+    href: ROUTES.rhysRanAway,
+  },
+  {
+    title: 'What To Do If Your Dog Runs Away',
+    description: 'A step-by-step action guide for the first hour and beyond.',
+    href: ROUTES.dogRanAwaySafety,
   },
 ];
 ---
@@ -105,6 +120,10 @@ const latestGuides = [
     gap: var(--space-xl);
   }
 
+  .featured .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .guide-card {
     display: block;
     background: var(--color-surface);
@@ -141,7 +160,8 @@ const latestGuides = [
   }
 
   @media (max-width: 640px) {
-    .cards-grid {
+    .cards-grid,
+    .featured .cards-grid {
       grid-template-columns: 1fr;
     }
   }

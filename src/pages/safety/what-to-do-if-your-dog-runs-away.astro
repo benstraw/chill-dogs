@@ -1,0 +1,797 @@
+---
+import { ROUTES } from '@data/routes';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/modules/Hero.astro';
+import Toc from '@components/modules/Toc.astro';
+import FAQ from '@components/modules/FAQ.astro';
+import Disclosure from '@components/modules/Disclosure.astro';
+import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
+import JsonLd from '@components/JsonLd.astro';
+
+const pageSlug = 'what-to-do-if-your-dog-runs-away';
+
+const tocHeadings = [
+  { label: 'Immediate Steps', anchor: 'immediate' },
+  { label: 'Search Strategy', anchor: 'search' },
+  { label: 'Expand the Search', anchor: 'expand' },
+  { label: 'Prevention: Trackers', anchor: 'prevention' },
+  { label: 'Checklist', anchor: 'checklist' },
+  { label: 'FAQ', anchor: 'faq' },
+];
+
+const faqs = [
+  {
+    question: 'What should I do first if my dog runs away?',
+    answer:
+      'Stay calm and stay put for 1–2 minutes. Call your dog\'s name clearly — excited and happy, not panicked. Many dogs who are startled will stop nearby once the initial trigger passes. If they don\'t return immediately, begin a systematic grid search starting from where you last saw them.',
+  },
+  {
+    question: 'How far do dogs typically run when they escape?',
+    answer:
+      'It varies enormously by breed, temperament, and trigger. Some dogs stop within a block when they realize they\'re lost. Dogs following prey instinct or running from a fear stimulus (fireworks, thunder) can travel miles. Most lost dogs are found within a mile of where they went missing, but the range can extend significantly.',
+  },
+  {
+    question: 'Should I chase my dog if they run away?',
+    answer:
+      "Usually no — chasing tends to make dogs run faster and farther. Instead, run in the opposite direction while calling your dog's name in a playful, excited tone. Many dogs will turn and give chase themselves. If the dog has stopped but won't come, try sitting or lying on the ground, which can trigger a dog's curiosity and draw them closer.",
+  },
+  {
+    question: 'What is the most effective way to find a lost dog?',
+    answer:
+      'Systematic ground search near the escape point, combined with community outreach. Post to local Facebook groups, Nextdoor, and lost pet apps (PawBoost, Finding Rover) immediately. Physical flyers in the area work — many dogs are found because a local person recognized them from a flyer. Check local shelters starting the same day, in person, not just online.',
+  },
+  {
+    question: 'Can a GPS tracker help find a lost dog?',
+    answer:
+      'Yes, if the tracker is already on the dog when they escape. A cellular tracker like Fi gives real-time location in areas with LTE coverage. In remote terrain without signal, a Garmin off-grid system would work. An AirTag provides approximate last-seen location in areas with other Apple users nearby. No tracker helps if it\'s not already on the dog.',
+  },
+  {
+    question: 'How long do lost dogs survive on their own?',
+    answer:
+      'This depends heavily on environment, weather, and the individual dog. Healthy dogs with good survival instincts can manage for weeks in mild conditions.  Some have been known to manage for months.  Urban dogs may be at more immediate risk from traffic. Extreme cold, heat, or lack of water access shortens that window significantly. The priority is always to locate the dog as quickly as possible.',
+  },
+  {
+    question: 'What should I do if my dog runs away during fireworks?',
+    answer:
+      'Fireworks are one of the most common causes of dog escapes — the fear response is strong and immediate. Search close to home first, as fear-driven dogs often find a hiding spot nearby. Leave familiar items (your worn clothing, the dog\'s food bowl) near the escape point — the scent can draw them back. File a lost pet report with local shelters right away.',
+  },
+];
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'What to Do If Your Dog Runs Away',
+  description:
+    'A practical step-by-step guide for the first minutes and hours after a dog escapes — including immediate search steps, community outreach, and prevention with GPS trackers.',
+  url: 'https://www.chill-dogs.com/safety/what-to-do-if-your-dog-runs-away/',
+  step: [
+    { '@type': 'HowToStep', name: 'Stay calm and call their name', text: 'Stay calm. Call your dog\'s name clearly and happily. Panicked calling is less effective.' },
+    { '@type': 'HowToStep', name: 'Stay near the escape point for 1-2 minutes', text: 'Many dogs return on their own within the first few minutes if not chased.' },
+    { '@type': 'HowToStep', name: 'Check immediate surroundings systematically', text: 'Grid search the nearby area — check under porches, behind fences, inside bushes.' },
+    { '@type': 'HowToStep', name: 'Alert neighbors and post on community platforms', text: 'Post to Nextdoor, local Facebook groups, and lost pet apps immediately.' },
+    { '@type': 'HowToStep', name: 'Contact local shelters', text: 'File lost pet reports with all local shelters and check in person starting day one.' },
+    { '@type': 'HowToStep', name: 'Post physical flyers in the area', text: 'Large, clear flyers within a half-mile radius significantly increase find rates.' },
+  ],
+};
+---
+
+<BaseLayout
+  title="What to Do If Your Dog Runs Away: Step-by-Step Guide"
+  description="A practical guide for the minutes and hours after a dog escapes — immediate search steps, community outreach, and how to prevent it with GPS trackers."
+>
+  <JsonLd slot="head" schema={articleSchema} />
+
+  <Hero
+    title="What to Do If Your Dog Runs Away"
+    subtitle="A practical guide for the first minutes and hours — what to do immediately, how to search effectively, and how to prevent it from happening again."
+    primaryCta={{ label: 'Compare GPS Trackers', href: ROUTES.trackingTop }}
+    secondaryCta={{ label: 'Read the Bishop Peak Story', href: ROUTES.rhysRanAway }}
+    pageSlug={pageSlug}
+  />
+
+  <div class="collector-content">
+
+    <!-- Summary block -->
+    <section class="summary-section">
+      <div class="summary-inner">
+        <h2 class="summary-heading">What This Guide Covers</h2>
+        <ul class="summary-list">
+          <li>The first 5 minutes — what to do right now</li>
+          <li>A systematic search approach for the first hour</li>
+          <li>Community outreach that actually works</li>
+          <li>Prevention section: how trackers reduce the risk</li>
+          <li>Printable checklist at the bottom</li>
+        </ul>
+      </div>
+    </section>
+
+    <Toc headings={tocHeadings} pageSlug={pageSlug} />
+
+    <!-- Immediate Steps -->
+    <section class="content-section" id="immediate">
+      <div class="section-inner">
+        <h2>Immediate Steps: The First 5 Minutes</h2>
+        <p class="section-intro">
+          The first few minutes matter most. Stay systematic.
+        </p>
+
+        <ol class="step-list">
+          <li class="step-item">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3 class="step-heading">Stay calm — panic makes it worse</h3>
+              <p class="step-body">
+                A panicked voice triggers a stress response in dogs. Call your dog's name in a clear, happy, excited tone — the same voice you'd use for a treat. Panicked calling often makes a scared dog run farther rather than return.
+              </p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3 class="step-heading">Stay near the escape point for 1–2 minutes</h3>
+              <p class="step-body">
+                Many dogs who bolt from a sudden trigger (sound, animal, person) will stop within 100 yards once the stimulus passes. Give them a short window to return on their own before expanding the search. If they return, reward immediately and calmly.
+              </p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3 class="step-heading">Do not chase</h3>
+              <p class="step-body">
+                Chasing typically causes dogs to run faster and farther. If you spot your dog and they're not coming to you, try running in the opposite direction while calling their name in a playful voice — this triggers many dogs' chase instinct in reverse. Alternatively, sit or crouch down, which reduces your threat profile.
+              </p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3 class="step-heading">Note the direction they ran</h3>
+              <p class="step-body">
+                Before starting a search, take 15 seconds to note the direction and any terrain features — fence lines, roads, water sources. Dogs often follow barriers (fences, walls) rather than crossing them. This helps narrow the search area.
+              </p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-number">5</div>
+            <div class="step-content">
+              <h3 class="step-heading">Leave a scent anchor at the escape point</h3>
+              <p class="step-body">
+                If you have a piece of your worn clothing, your dog's bed, or a water bowl, leave it at the spot where they escaped. The familiar scent draws many dogs back to the origin point, especially if they become disoriented.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Search Strategy -->
+    <section class="content-section content-section--alt" id="search">
+      <div class="section-inner">
+        <h2>Search Strategy: The First Hour</h2>
+        <p class="section-intro">
+          Systematic beats frantic. Here's how to search effectively in the first 60 minutes.
+        </p>
+
+        <div class="strategy-grid">
+          <div class="strategy-card">
+            <h3 class="strategy-heading">Grid search nearby first</h3>
+            <p class="strategy-body">
+              Start within 100–200 meters of the escape point. Search methodically: check under porches, inside shrubs, behind dumpsters, under cars, along fences. Scared dogs hide in tight spaces. Don't assume your dog has run far — many are found within a very short distance of where they escaped.
+            </p>
+          </div>
+          <div class="strategy-card">
+            <h3 class="strategy-heading">Check high-traffic routes</h3>
+            <p class="strategy-body">
+              Dogs often follow roads, paths, and fence lines — the same routes humans use. Check adjacent streets and alleys. In parks, check along the trail edge and fence perimeters. Most dogs don't crash straight through dense terrain.
+            </p>
+          </div>
+          <div class="strategy-card">
+            <h3 class="strategy-heading">Ask people you encounter immediately</h3>
+            <p class="strategy-body">
+              Every person you pass is a potential spotter. Show a photo (use your phone) and describe direction of travel. People often see dogs but don't act unless specifically asked. Ask actively — don't just look.
+            </p>
+          </div>
+          <div class="strategy-card">
+            <h3 class="strategy-heading">Call and listen, don't just look</h3>
+            <p class="strategy-body">
+              A hidden dog may hear you and respond — whimpering, movement in brush, a scratch on a fence. Walk and call, then stop and listen for 15–30 seconds. Especially useful in areas with dense cover where visual search is limited.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expand the Search -->
+    <section class="content-section" id="expand">
+      <div class="section-inner">
+        <h2>Expand the Search: Community Outreach</h2>
+        <p class="section-body">
+          Physical searching has limits. Community outreach multiplies your coverage by an enormous factor. Do this in parallel with searching — not after.
+        </p>
+
+        <div class="outreach-list">
+          <div class="outreach-item">
+            <h3 class="outreach-heading">Post to local Facebook groups</h3>
+            <p class="outreach-body">
+              Search for "[your city/neighborhood] lost and found pets" or similar groups. Post immediately with a clear photo, last seen location, and contact number. These posts spread quickly within neighborhoods.
+            </p>
+          </div>
+          <div class="outreach-item">
+            <h3 class="outreach-heading">Post to Nextdoor</h3>
+            <p class="outreach-body">
+              Nextdoor's neighborhood-specific reach is highly effective for lost pet searches. Your neighbors are the most likely people to spot your dog. Post with a photo and exact location.
+            </p>
+          </div>
+          <div class="outreach-item">
+            <h3 class="outreach-heading">Post to PawBoost and Finding Rover</h3>
+            <p class="outreach-body">
+              Lost pet apps with local alert systems. PawBoost alerts local members when a pet is posted. Finding Rover uses facial recognition to match found dog photos. Both are free to use.
+            </p>
+          </div>
+          <div class="outreach-item">
+            <h3 class="outreach-heading">Contact local shelters in person — same day</h3>
+            <p class="outreach-body">
+              Call and visit local shelters (including animal control) the same day your dog escapes. File a lost pet report at each one. Online databases are not always current.  An in-person visit with a photo ensures staff recognize your dog if they're brought in.
+            </p>
+          </div>
+          <div class="outreach-item">
+            <h3 class="outreach-heading">Post physical flyers</h3>
+            <p class="outreach-body">
+              Large, high-contrast flyers (minimum 8x11, preferably larger) within a half-mile radius. Include a close-up photo, brief description, and phone number only — no personal address. Focus on areas with foot traffic: intersections, coffee shops, grocery stores, parks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prevention -->
+    <section class="content-section content-section--alt" id="prevention">
+      <div class="section-inner">
+        <h2>Prevention: How Trackers Help</h2>
+        <p class="section-body">
+          If you've lost a dog — or come close to losing one — a GPS tracker is worth serious consideration. The right tracker gives you location data in the first moments of a search, dramatically narrowing the area and time required to recover a lost dog.
+        </p>
+        <p class="section-body">
+          The key is matching the tracker to the environment where your dog might escape.
+        </p>
+
+        <div class="tracker-summary">
+          <div class="tracker-summary-card">
+            <h3 class="tracker-summary-heading">City + suburban dogs</h3>
+            <p class="tracker-summary-body">Cellular trackers (Fi, Whistle) provide real-time LTE tracking and escape alerts. Best everyday safety layer for dogs in areas with cell coverage.</p>
+            <a
+              href={ROUTES.fiCollarReview}
+              class="tracker-summary-link"
+              data-track="collector_to_converter_click"
+              data-from-page={pageSlug}
+              data-to-page={ROUTES.fiCollarReview}
+              data-link-position="prevention-section"
+            >
+              Fi Collar Review →
+            </a>
+          </div>
+          <div class="tracker-summary-card">
+            <h3 class="tracker-summary-heading">Hiking + wilderness dogs</h3>
+            <p class="tracker-summary-body">Garmin off-grid systems use GPS + radio — no cell signal needed. Works anywhere with a sky view. Essential for backcountry use where cellular fails.</p>
+            <a
+              href={ROUTES.garminTracking}
+              class="tracker-summary-link"
+              data-track="collector_to_converter_click"
+              data-from-page={pageSlug}
+              data-to-page={ROUTES.garminTracking}
+              data-link-position="prevention-section"
+            >
+              Garmin Dog Tracking Systems →
+            </a>
+          </div>
+          <div class="tracker-summary-card">
+            <h3 class="tracker-summary-heading">Not sure which tracker?</h3>
+            <p class="tracker-summary-body">Compare cellular, off-grid, and Bluetooth options side by side with honest trade-offs for each type.</p>
+            <a
+              href={ROUTES.trackingTop}
+              class="tracker-summary-link tracker-summary-link--primary"
+              data-track="collector_to_converter_click"
+              data-from-page={pageSlug}
+              data-to-page={ROUTES.trackingTop}
+              data-link-position="prevention-section-main"
+            >
+              See the full GPS tracker comparison →
+            </a>
+          </div>
+        </div>
+
+        <div class="story-callout">
+          <p>
+            <strong>Real example:</strong> When Rhys ran off at the summit of Bishop Peak, a cellular tracker was on his collar, but there was no LTE signal at altitude. The tracker was useless in that environment. That experience inspired this guide on tracker types and limitations.
+          </p>
+          <a
+            href={ROUTES.rhysRanAway}
+            class="story-callout-link"
+            data-track="collector_to_converter_click"
+            data-from-page={pageSlug}
+            data-to-page={ROUTES.rhysRanAway}
+            data-link-position="prevention-story-callout"
+          >
+            Read the full Bishop Peak story →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Checklist -->
+    <section class="content-section" id="checklist">
+      <div class="section-inner">
+        <h2>Emergency Checklist: Dog Ran Away</h2>
+        <p class="section-intro">
+          Save or print this. Two phases: immediate actions and expanding the search.
+        </p>
+        <div class="checklist-grid">
+          <div class="checklist-card">
+            <h3>Right Now (First 10 minutes)</h3>
+            <ul class="checklist">
+              <li>Stay calm; call your dog's name in a happy, excited voice</li>
+              <li>Stay near the escape point for a few minutes</li>
+              <li>Note the direction they ran</li>
+              <li>Leave worn clothing or food bowl at escape point</li>
+              <li>Check GPS tracker app if collar is equipped</li>
+              <li>Begin grid search within 200 meters</li>
+              <li>Ask everyone you see — show them a photo of your lost dog</li>
+            </ul>
+          </div>
+          <div class="checklist-card">
+            <h3>Next (10–60 minutes and beyond)</h3>
+            <ul class="checklist">
+              <li>Post to local Facebook lost pet groups</li>
+              <li>Post to Nextdoor</li>
+              <li>Post to PawBoost and/or Finding Rover</li>
+              <li>Call local shelters; visit in person same day</li>
+              <li>Contact animal control</li>
+              <li>Print and post physical flyers near escape point</li>
+              <li>Check back at escape point — dogs often return</li>
+              <li>Post again on social media each morning until found</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <FAQ faqs={faqs} heading="Lost Dog FAQ" />
+    </section>
+
+    <!-- Closing CTA -->
+    <section class="closing-ctas">
+      <div class="closing-inner">
+        <h2>Prevent the Next Escape</h2>
+        <p>A GPS tracker won't prevent a dog from running — but it tells you exactly where they went in the first moments of a search. Compare the options:</p>
+        <div class="closing-buttons">
+          <a
+            href={ROUTES.trackingTop}
+            class="closing-btn closing-btn--primary"
+            data-track="collector_to_converter_click"
+            data-from-page={pageSlug}
+            data-to-page={ROUTES.trackingTop}
+            data-link-position="closing"
+          >
+            Compare GPS Dog Trackers
+          </a>
+          <a
+            href={ROUTES.rhysRanAway}
+            class="closing-btn closing-btn--secondary"
+            data-track="collector_to_converter_click"
+            data-from-page={pageSlug}
+            data-to-page={ROUTES.rhysRanAway}
+            data-link-position="closing"
+          >
+            Read: When Rhys Ran Away
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <Disclosure />
+
+    <InternalLinkStrip
+      heading="Related Dog Safety Guides"
+      links={[
+        { label: 'Best GPS Trackers', href: ROUTES.trackingTop },
+        { label: 'Fi Collar Review', href: ROUTES.fiCollarReview },
+        { label: 'Garmin Dog Tracking', href: ROUTES.garminTracking },
+        { label: 'AirTag for Dogs', href: ROUTES.airtagForDogs },
+        { label: 'When Rhys Ran Away', href: ROUTES.rhysRanAway },
+      ]}
+      fromPage={pageSlug}
+    />
+  </div>
+</BaseLayout>
+
+<style>
+  .collector-content {
+    padding-bottom: var(--space-2xl);
+  }
+
+  /* Summary */
+  .summary-section {
+    padding: var(--space-2xl) var(--space-lg);
+    background: var(--color-bg-alt);
+  }
+
+  .summary-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .summary-heading {
+    font-size: var(--text-xl);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-md);
+  }
+
+  .summary-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    max-width: var(--max-width-prose);
+  }
+
+  .summary-list li {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    padding-left: var(--space-md);
+    position: relative;
+    margin-bottom: var(--space-sm);
+  }
+
+  .summary-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: var(--weight-bold);
+  }
+
+  /* Sections */
+  .content-section {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+
+  .content-section--alt {
+    background: var(--color-bg-alt);
+  }
+
+  .section-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .section-inner > h2 {
+    font-size: var(--text-2xl);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-md);
+  }
+
+  .section-intro {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    max-width: var(--max-width-prose);
+    margin-bottom: var(--space-xl);
+  }
+
+  .section-body {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    max-width: var(--max-width-prose);
+    margin-bottom: var(--space-md);
+  }
+
+  /* Step list */
+  .step-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    max-width: var(--max-width-prose);
+  }
+
+  .step-item {
+    display: flex;
+    gap: var(--space-lg);
+    align-items: flex-start;
+  }
+
+  .step-number {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--weight-bold);
+    font-size: var(--text-base);
+    flex-shrink: 0;
+  }
+
+  .step-content {
+    flex: 1;
+    padding-top: var(--space-xs);
+  }
+
+  .step-heading {
+    font-size: var(--text-base);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-sm);
+  }
+
+  .step-body {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+  }
+
+  /* Strategy grid */
+  .strategy-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .strategy-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+  }
+
+  .strategy-heading {
+    font-size: var(--text-base);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-sm);
+  }
+
+  .strategy-body {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+  }
+
+  /* Outreach list */
+  .outreach-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    max-width: var(--max-width-prose);
+  }
+
+  .outreach-item {
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-primary);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  }
+
+  .outreach-heading {
+    font-size: var(--text-base);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-sm);
+  }
+
+  .outreach-body {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+  }
+
+  /* Tracker summary */
+  .tracker-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+  }
+
+  .tracker-summary-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .tracker-summary-heading {
+    font-size: var(--text-base);
+    font-weight: var(--weight-bold);
+  }
+
+  .tracker-summary-body {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    flex: 1;
+  }
+
+  .tracker-summary-link {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--color-primary);
+    text-decoration: none;
+    margin-top: auto;
+  }
+
+  .tracker-summary-link:hover {
+    text-decoration: underline;
+  }
+
+  .tracker-summary-link--primary {
+    font-size: var(--text-base);
+  }
+
+  /* Story callout */
+  .story-callout {
+    max-width: var(--max-width-prose);
+    background: var(--color-bg-alt);
+    border-left: 3px solid var(--color-terracotta);
+    padding: var(--space-md) var(--space-lg);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+  }
+
+  .story-callout p {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+    flex: 1;
+  }
+
+  .story-callout-link {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--color-primary);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .story-callout-link:hover {
+    text-decoration: underline;
+  }
+
+  /* Checklist */
+  .checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .checklist-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+  }
+
+  .checklist-card h3 {
+    font-size: var(--text-base);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-md);
+  }
+
+  .checklist {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .checklist li {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    padding-left: var(--space-md);
+    position: relative;
+    margin-bottom: var(--space-sm);
+  }
+
+  .checklist li::before {
+    content: '☐';
+    position: absolute;
+    left: 0;
+    color: var(--color-text-muted);
+  }
+
+  /* Closing CTAs */
+  .closing-ctas {
+    background: var(--color-bg-alt);
+    padding: var(--space-3xl) var(--space-lg);
+    text-align: center;
+  }
+
+  .closing-inner {
+    max-width: var(--max-width-prose);
+    margin: 0 auto;
+  }
+
+  .closing-inner h2 {
+    font-size: var(--text-2xl);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-sm);
+  }
+
+  .closing-inner p {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+  }
+
+  .closing-buttons {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .closing-btn {
+    display: inline-block;
+    font-weight: var(--weight-semibold);
+    padding: var(--space-sm) var(--space-xl);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-size: var(--text-base);
+    transition: background var(--transition-fast), color var(--transition-fast);
+  }
+
+  .closing-btn--primary {
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+  }
+
+  .closing-btn--primary:hover {
+    background: var(--color-primary-hover);
+    color: var(--color-text-inverse);
+  }
+
+  .closing-btn--secondary {
+    background: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+  }
+
+  .closing-btn--secondary:hover {
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+  }
+
+  @media (max-width: 1024px) {
+    .tracker-summary { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 768px) {
+    .strategy-grid, .checklist-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 640px) {
+    .content-section { padding: var(--space-xl) var(--space-md); }
+    .summary-section { padding: var(--space-xl) var(--space-md); }
+    .closing-ctas { padding: var(--space-2xl) var(--space-md); }
+    .closing-buttons { flex-direction: column; align-items: center; }
+    .closing-btn { width: 100%; max-width: 320px; text-align: center; }
+    .step-item { gap: var(--space-md); }
+    .step-number { width: 2rem; height: 2rem; font-size: var(--text-sm); }
+  }
+</style>
