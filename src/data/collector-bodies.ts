@@ -168,7 +168,7 @@ export const calmingCollectorBody: CollectorBodyConfig = {
       cards: [
         {
           href: ROUTES.rhysRanAway,
-          title: 'The Day Rhys Ran Off on Bishop Peak',
+          title: 'The Day Rhys Ran Off on Cerro San Luis Obispo',
           description:
             'A real story about a foggy summit, a 30-minute search, and what it taught us about GPS trackers and why cellular collars fail exactly when you need them.',
           linkLabel: 'Read the story ->',

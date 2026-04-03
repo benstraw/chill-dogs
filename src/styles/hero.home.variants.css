@@ -310,7 +310,7 @@
 [data-hero-variant="v6"]::after {
   content: '';
   display: block;
-  height: 4px;
+  height: 8px;
   background: linear-gradient(
     to right,
     var(--color-sky)        0%,
