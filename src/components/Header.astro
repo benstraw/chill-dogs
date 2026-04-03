@@ -4,7 +4,6 @@ import { ROUTES } from '@data/routes';
 import pawLogo from '../../public/images/paw-logo.png';
 
 const navItems = [
-  { href: ROUTES.home, label: 'Home' },
   { href: ROUTES.coolingHub, label: 'Cooling' },
   { href: ROUTES.calmingHub, label: 'Calming' },
   { href: ROUTES.comfortHub, label: 'Comforting' },
@@ -12,7 +11,7 @@ const navItems = [
 ];
 
 const currentPath = Astro.url.pathname;
-const isHome = currentPath === '/';
+const isHome = currentPath === '/' || currentPath.startsWith('/v/');
 ---
 
 <header class="site-header">
