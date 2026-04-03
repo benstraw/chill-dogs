@@ -307,6 +307,20 @@
   overflow: visible;
 }
 
+[data-hero-variant="v6"]::after {
+  content: '';
+  display: block;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    var(--color-sky)        0%,
+    var(--color-sage)       38%,
+    var(--color-sand)       68%,
+    var(--color-terracotta) 100%
+  );
+  opacity: 0.8;
+}
+
 [data-hero-variant="v6"] .hp-v6-sr-only {
   position: absolute;
   width: 1px;
