@@ -782,8 +782,19 @@
   transform: scale(1.07);
 }
 
-/* ── Tablet/mobile: single column, horizontal strip layout ── */
+/* ── Tablet: widen image column, tighten strip padding ── */
 @media (max-width: 900px) {
+  [data-hero-variant="v8"] .hp-v8-strip-content {
+    padding: var(--space-md) var(--space-md) var(--space-md) var(--space-lg);
+  }
+
+  [data-hero-variant="v8"] .hp-v8-strip-img-wrap {
+    width: 42%;
+  }
+}
+
+/* ── Mobile: full single-column stack ── */
+@media (max-width: 640px) {
   [data-hero-variant="v8"] .hp-v8 {
     grid-template-columns: 1fr;
   }
@@ -794,13 +805,5 @@
 
   [data-hero-variant="v8"] .hp-v8-logo-img {
     max-width: 180px;
-  }
-
-  [data-hero-variant="v8"] .hp-v8-strip-content {
-    padding: var(--space-md) var(--space-md) var(--space-md) var(--space-lg);
-  }
-
-  [data-hero-variant="v8"] .hp-v8-strip-img-wrap {
-    width: 42%;
   }
 }
