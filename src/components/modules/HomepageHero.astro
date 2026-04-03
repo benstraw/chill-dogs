@@ -1,7 +1,9 @@
 ---
+import { Image } from 'astro:assets';
 import { ROUTES } from '@data/routes';
+import pawLogo from '/public/images/paw-logo.png';
 
-export type HomepageVariant = 'v1' | 'v2' | 'v3' | 'v4' | 'v5';
+export type HomepageVariant = 'v1' | 'v2' | 'v3' | 'v4' | 'v5' | 'v6' | 'v7' | 'v8';
 
 interface Props {
   variant: HomepageVariant;
@@ -43,51 +45,199 @@ const { variant } = Astro.props;
     </>
   )}
 
-  <div class="hp-top">
-    <h1 class="hp-headline">Temperature or Temperament — We Have You Covered</h1>
-    <p class="hp-subhead">
-      Whether your dog is overheating on a summer walk, overwhelmed by a thunderstorm, or just needs a snuggly spot to spend their downtime, we have the best products for your best friend.
-    </p>
-
-    {variant === 'v4' && (
-      <div class="hp-tabs" role="group" aria-label="Choose a category">
-        <label for="hp-toggle-cool" class="hp-tab" tabindex="0">Temperature</label>
-        <label for="hp-toggle-calm" class="hp-tab" tabindex="0">Temperament</label>
+  {variant === 'v6' ? (
+    <div class="hp-v6">
+      <h1 class="hp-v6-sr-only">Chill-Dogs — Cooling & Calming Products for Dogs</h1>
+      <div class="hp-v6-logo">
+        <Image
+          src={pawLogo}
+          alt="Chill-Dogs paw print"
+          class="hp-v6-logo-img"
+          width={480}
+          height={480}
+        />
       </div>
-    )}
-  </div>
-
-  <div class="hp-split">
-    <div class="hp-pane hp-pane--cool">
-      <h2 class="hp-pane-title">Cool Off</h2>
-      <p class="hp-pane-sub">
-        Cooling mats, vests, and hydration products for hot days and active dogs.
-      </p>
-      <a class="hp-cta hp-cta--cool" href={ROUTES.coolingHub} data-cta="cooling" data-track="hero_click_cooling" data-variant={variant}>
-        Explore cooling picks
-      </a>
+      <div class="hp-v6-right">
+        <p class="hp-v6-slogan">Temperature or Temperament —<br />We Have You Covered</p>
+        <div class="hp-v6-panes">
+          <a class="hp-v6-pane hp-v6-pane--cool" href={ROUTES.coolingHub} data-cta="cooling" data-track="hero_click_cooling" data-variant={variant}>
+            <span class="hp-v6-pane-title">Cool Off</span>
+            <span class="hp-v6-pane-sub">Cooling mats, vests, and hydration products for hot days and active dogs.</span>
+          </a>
+          <a class="hp-v6-pane hp-v6-pane--calm" href={ROUTES.calmingHub} data-cta="calming" data-track="hero_click_calming" data-variant={variant}>
+            <span class="hp-v6-pane-title">Calm Down</span>
+            <span class="hp-v6-pane-sub">Calming aids, wraps, and enrichment tools for anxious or restless dogs.</span>
+          </a>
+          <a class="hp-v6-pane hp-v6-pane--comfort" href={ROUTES.comfortHub} data-cta="comfort" data-track="hero_click_comfort" data-variant={variant}>
+            <span class="hp-v6-pane-title">Settle In</span>
+            <span class="hp-v6-pane-sub">Supportive beds, cozy blankets, and comforting toys for dogs of every age.</span>
+          </a>
+        </div>
+      </div>
     </div>
-
-    <div class="hp-pane hp-pane--calm">
-      <h2 class="hp-pane-title">Calm Down</h2>
-      <p class="hp-pane-sub">
-        Calming aids, wraps, and enrichment tools for anxious or restless dogs.
-      </p>
-      <a class="hp-cta hp-cta--calm" href={ROUTES.calmingHub} data-cta="calming" data-track="hero_click_calming" data-variant={variant}>
-        Explore calming picks
-      </a>
+  ) : variant === 'v7' ? (
+    <div class="hp-v7">
+      <h1 class="hp-v7-sr-only">Chill-Dogs — Cooling & Calming Products for Dogs</h1>
+      <div class="hp-v7-logo">
+        <Image
+          src={pawLogo}
+          alt="Chill-Dogs paw print"
+          class="hp-v7-logo-img"
+          width={480}
+          height={480}
+        />
+      </div>
+      <div class="hp-v7-right">
+        <div class="hp-v7-masthead">
+          <p class="hp-v7-slogan">Temperature or Temperament —<br />We Have You Covered</p>
+        </div>
+        <p class="hp-v7-kicker">From the Guide</p>
+        <div class="hp-v7-articles">
+          <a class="hp-v7-article" href={ROUTES.coolingSafety} data-cta="cooling-article" data-track="hero_click_article" data-variant={variant}>
+            <div class="hp-v7-article-img-wrap">
+              <img src="/og/cooling-how-hot-is-too-hot-for-dogs.jpg" alt="" class="hp-v7-article-img" loading="eager" width="400" height="210" />
+            </div>
+            <div class="hp-v7-article-body">
+              <span class="hp-v7-article-tag hp-v7-tag--cool">Cooling</span>
+              <span class="hp-v7-article-title">How Hot Is Too Hot for Dogs?</span>
+              <span class="hp-v7-article-read">Read →</span>
+            </div>
+          </a>
+          <a class="hp-v7-article" href={ROUTES.calmingCar} data-cta="calming-article" data-track="hero_click_article" data-variant={variant}>
+            <div class="hp-v7-article-img-wrap">
+              <img src="/og/calming-car-anxiety-for-dogs.jpg" alt="" class="hp-v7-article-img" loading="eager" width="400" height="210" />
+            </div>
+            <div class="hp-v7-article-body">
+              <span class="hp-v7-article-tag hp-v7-tag--calm">Calming</span>
+              <span class="hp-v7-article-title">Car Anxiety for Dogs</span>
+              <span class="hp-v7-article-read">Read →</span>
+            </div>
+          </a>
+          <a class="hp-v7-article" href={ROUTES.comfortSleepArticle} data-cta="comfort-article" data-track="hero_click_article" data-variant={variant}>
+            <div class="hp-v7-article-img-wrap">
+              <img src="/og/comforting-how-much-do-dogs-sleep.jpg" alt="" class="hp-v7-article-img" loading="eager" width="400" height="210" />
+            </div>
+            <div class="hp-v7-article-body">
+              <span class="hp-v7-article-tag hp-v7-tag--comfort">Comfort</span>
+              <span class="hp-v7-article-title">How Much Do Dogs Sleep?</span>
+              <span class="hp-v7-article-read">Read →</span>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
-
-    <div class="hp-pane hp-pane--comfort">
-      <h2 class="hp-pane-title">Settle In</h2>
-      <p class="hp-pane-sub">
-        Supportive beds, cozy blankets, and comforting toys for dogs of every age.
-      </p>
-      <a class="hp-cta hp-cta--comfort" href={ROUTES.comfortHub} data-cta="comfort" data-track="hero_click_comfort" data-variant={variant}>
-        Explore comfort picks
-      </a>
+  ) : variant === 'v8' ? (
+    <div class="hp-v8">
+      <h1 class="hp-v8-sr-only">Chill-Dogs — Cooling & Calming Products for Dogs</h1>
+      <div class="hp-v8-logo">
+        <Image
+          src={pawLogo}
+          alt="Chill-Dogs paw print"
+          class="hp-v8-logo-img"
+          width={480}
+          height={480}
+        />
+      </div>
+      <div class="hp-v8-right">
+        <a class="hp-v8-strip hp-v8-strip--cool" href={ROUTES.coolingHub} data-cta="cooling" data-track="hero_click_cooling" data-variant={variant}>
+          <div class="hp-v8-strip-content">
+            <span class="hp-v8-strip-num">01</span>
+            <span class="hp-v8-strip-title">Cool Off</span>
+            <span class="hp-v8-strip-sub">Cooling mats, vests, and hydration for hot days.</span>
+            <span class="hp-v8-strip-cta">Explore picks →</span>
+          </div>
+          <div class="hp-v8-strip-img-wrap">
+            <img
+              src="https://m.media-amazon.com/images/I/71n1Mod8sRL._SL500_.jpg"
+              alt=""
+              class="hp-v8-strip-img"
+              loading="eager"
+            />
+          </div>
+        </a>
+        <a class="hp-v8-strip hp-v8-strip--calm" href={ROUTES.calmingHub} data-cta="calming" data-track="hero_click_calming" data-variant={variant}>
+          <div class="hp-v8-strip-content">
+            <span class="hp-v8-strip-num">02</span>
+            <span class="hp-v8-strip-title">Calm Down</span>
+            <span class="hp-v8-strip-sub">Wraps, enrichment, and calming aids for anxious dogs.</span>
+            <span class="hp-v8-strip-cta">Explore picks →</span>
+          </div>
+          <div class="hp-v8-strip-img-wrap">
+            <img
+              src="https://m.media-amazon.com/images/I/61PxVCtYzUL._SL500_.jpg"
+              alt=""
+              class="hp-v8-strip-img"
+              loading="eager"
+            />
+          </div>
+        </a>
+        <a class="hp-v8-strip hp-v8-strip--comfort" href={ROUTES.comfortHub} data-cta="comfort" data-track="hero_click_comfort" data-variant={variant}>
+          <div class="hp-v8-strip-content">
+            <span class="hp-v8-strip-num">03</span>
+            <span class="hp-v8-strip-title">Settle In</span>
+            <span class="hp-v8-strip-sub">Beds, blankets, and cozy comforts for every dog.</span>
+            <span class="hp-v8-strip-cta">Explore picks →</span>
+          </div>
+          <div class="hp-v8-strip-img-wrap">
+            <img
+              src="https://m.media-amazon.com/images/I/71hPsNDImjL._SL500_.jpg"
+              alt=""
+              class="hp-v8-strip-img"
+              loading="eager"
+            />
+          </div>
+        </a>
+      </div>
     </div>
-  </div>
+  ) : (
+    <>
+      <div class="hp-top">
+        <h1 class="hp-headline">Temperature or Temperament — We Have You Covered</h1>
+        <p class="hp-subhead">
+          Whether your dog is overheating on a summer walk, overwhelmed by a thunderstorm, or just needs a snuggly spot to spend their downtime, we have the best products for your best friend.
+        </p>
+
+        {variant === 'v4' && (
+          <div class="hp-tabs" role="group" aria-label="Choose a category">
+            <label for="hp-toggle-cool" class="hp-tab" tabindex="0">Temperature</label>
+            <label for="hp-toggle-calm" class="hp-tab" tabindex="0">Temperament</label>
+          </div>
+        )}
+      </div>
+
+      <div class="hp-split">
+        <div class="hp-pane hp-pane--cool">
+          <h2 class="hp-pane-title">Cool Off</h2>
+          <p class="hp-pane-sub">
+            Cooling mats, vests, and hydration products for hot days and active dogs.
+          </p>
+          <a class="hp-cta hp-cta--cool" href={ROUTES.coolingHub} data-cta="cooling" data-track="hero_click_cooling" data-variant={variant}>
+            Explore cooling picks
+          </a>
+        </div>
+
+        <div class="hp-pane hp-pane--calm">
+          <h2 class="hp-pane-title">Calm Down</h2>
+          <p class="hp-pane-sub">
+            Calming aids, wraps, and enrichment tools for anxious or restless dogs.
+          </p>
+          <a class="hp-cta hp-cta--calm" href={ROUTES.calmingHub} data-cta="calming" data-track="hero_click_calming" data-variant={variant}>
+            Explore calming picks
+          </a>
+        </div>
+
+        <div class="hp-pane hp-pane--comfort">
+          <h2 class="hp-pane-title">Settle In</h2>
+          <p class="hp-pane-sub">
+            Supportive beds, cozy blankets, and comforting toys for dogs of every age.
+          </p>
+          <a class="hp-cta hp-cta--comfort" href={ROUTES.comfortHub} data-cta="comfort" data-track="hero_click_comfort" data-variant={variant}>
+            Explore comfort picks
+          </a>
+        </div>
+      </div>
+    </>
+  )}
 </section>
 
 <script define:vars={{ hpVariant: variant }}>

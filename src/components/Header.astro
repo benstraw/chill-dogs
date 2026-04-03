@@ -4,7 +4,6 @@ import { ROUTES } from '@data/routes';
 import pawLogo from '../../public/images/paw-logo.png';
 
 const navItems = [
-  { href: ROUTES.home, label: 'Home' },
   { href: ROUTES.coolingHub, label: 'Cooling' },
   { href: ROUTES.calmingHub, label: 'Calming' },
   { href: ROUTES.comfortHub, label: 'Comforting' },
@@ -12,12 +11,15 @@ const navItems = [
 ];
 
 const currentPath = Astro.url.pathname;
+const isHome = currentPath === '/' || currentPath.startsWith('/v/');
 ---
 
 <header class="site-header">
   <div class="container header-inner">
-    <a href={ROUTES.home} class="logo">
-      <Image src={pawLogo} alt="" class="logo-icon" width={32} height={32} />
+    <a href={ROUTES.home} class:list={['logo', { 'logo--home': isHome }]}>
+      {!isHome && (
+        <Image src={pawLogo} alt="" class="logo-icon" width={32} height={32} />
+      )}
       Chill-Dogs
     </a>
     <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
@@ -69,6 +71,7 @@ const currentPath = Astro.url.pathname;
     height: 100%;
   }
 
+  /* ── Default logo: icon + wordmark at normal size ── */
   .logo {
     display: flex;
     align-items: center;
@@ -84,6 +87,13 @@ const currentPath = Astro.url.pathname;
     width: 2rem;
     height: 2rem;
     object-fit: contain;
+  }
+
+  /* ── Homepage logo: no icon, bigger wordmark ── */
+  .logo--home {
+    font-size: clamp(2.5rem, 4.5vw, 4rem);
+    letter-spacing: -0.03em;
+    line-height: 1;
   }
 
   .logo:hover {

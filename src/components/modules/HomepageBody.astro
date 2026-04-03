@@ -1,117 +1,419 @@
 ---
 import { ROUTES } from '@data/routes';
+import type { HomepageVariant } from '@components/modules/HomepageHero.astro';
 
-const topGuides = [
+interface Props {
+  variant?: HomepageVariant;
+}
+
+const { variant } = Astro.props;
+const isV6 = variant === 'v6';
+
+const shopCards = [
   {
     title: 'Best Cooling Products for Dogs',
-    description: 'Mats, vests, bandanas, and frozen enrichment',
+    description: 'Mats, vests, bandanas, and frozen enrichment for hot days.',
     href: ROUTES.coolingTop,
+    label: 'Cooling',
+    color: 'cool',
   },
   {
     title: 'Best Calming Products for Anxious Dogs',
-    description: 'Wraps, chews, lick mats, and snuffle mats',
+    description: 'Wraps, chews, lick mats, and snuffle mats for restless dogs.',
     href: ROUTES.calmingTop,
+    label: 'Calming',
+    color: 'calm',
   },
   {
     title: 'Comfort & Rest for Dogs',
-    description: 'Supportive beds, cozy blankets, and comforting toys for dogs of every age.',
+    description: 'Supportive beds, cozy blankets, and comforting toys for every age.',
     href: ROUTES.comfortHub,
+    label: 'Comfort',
+    color: 'comfort',
   },
   {
     title: 'Dog GPS Trackers & Safety',
     description: 'Cellular, off-grid, and Bluetooth tracking — know which type fits your terrain.',
     href: ROUTES.trackingTop,
+    label: 'Gear',
+    color: 'gear',
   },
 ];
 
-const latestGuides = [
+const featuredArticles = [
   {
-    title: 'How Much Do Dogs Sleep?',
-    description: 'Sleep norms by age and breed, REM research, and what disruptions might mean.',
-    href: ROUTES.comfortSleepArticle,
-  },
-  {
-    title: 'Car Cooling for Dogs',
-    description: 'In-car cooling gear and heat-risk reduction essentials.',
-    href: ROUTES.coolingCar,
+    title: 'How Hot Is Too Hot for Dogs?',
+    description: 'Heat threshold guidance with routes to cooling product pages.',
+    href: ROUTES.coolingSafety,
+    image: '/og/cooling-how-hot-is-too-hot-for-dogs.jpg',
+    label: 'Cooling',
+    color: 'cool',
   },
   {
     title: 'Car Anxiety for Dogs',
     description: 'Practical calming tools for travel stress and restless rides.',
     href: ROUTES.calmingCar,
+    image: '/og/calming-car-anxiety-for-dogs.jpg',
+    label: 'Calming',
+    color: 'calm',
   },
   {
-    title: 'How Hot Is Too Hot for Dogs?',
-    description: 'Heat threshold guidance with routes to cooling product pages.',
-    href: ROUTES.coolingSafety,
+    title: 'How Much Do Dogs Sleep?',
+    description: 'Sleep norms by age and breed, REM research, and what disruptions might mean.',
+    href: ROUTES.comfortSleepArticle,
+    image: '/og/comforting-how-much-do-dogs-sleep.jpg',
+    label: 'Comfort',
+    color: 'comfort',
   },
-  {
-    title: 'Cooling Mats',
-    description: 'Compare pressure-activated and water-based cooling mats.',
-    href: ROUTES.coolingMats,
-  },
-  {
-    title: 'Cooling Vests',
-    description: 'Evaporative cooling vests for active outdoor dogs.',
-    href: ROUTES.coolingVests,
-  },
-  {
-    title: 'Anxiety Vest Alternatives',
-    description: 'When to choose wraps, chews, lick mats, or snuffle mats instead.',
-    href: ROUTES.calmingAlternatives,
-  },
-  {
-    title: "Rhys's Road Trip Chill Kit",
-    description: 'Cooling and calming picks for long drives with dogs.',
-    href: ROUTES.roadTrip,
-  },
-  {
-    title: 'The Day Rhys Ran Off on Bishop Peak',
-    description: 'What a foggy summit and a 30-minute search taught us about GPS trackers.',
-    href: ROUTES.rhysRanAway,
-  },
-  {
-    title: 'What To Do If Your Dog Runs Away',
-    description: 'A step-by-step action guide for the first hour and beyond.',
-    href: ROUTES.dogRanAwaySafety,
-  },
+];
+
+const moreArticles = [
+  { title: 'Car Cooling for Dogs', description: 'In-car cooling gear and heat-risk reduction essentials.', href: ROUTES.coolingCar, color: 'cool' },
+  { title: 'Cooling Mats', description: 'Compare pressure-activated and water-based cooling mats.', href: ROUTES.coolingMats, color: 'cool' },
+  { title: 'Cooling Vests', description: 'Evaporative cooling vests for active outdoor dogs.', href: ROUTES.coolingVests, color: 'cool' },
+  { title: 'Anxiety Vest Alternatives', description: 'When to choose wraps, chews, lick mats, or snuffle mats instead.', href: ROUTES.calmingAlternatives, color: 'calm' },
+  { title: "Rhys's Road Trip Chill Kit", description: 'Cooling and calming picks for long drives with dogs.', href: ROUTES.roadTrip, color: 'calm' },
+  { title: 'The Day Rhys Ran Off on Cerro San Luis Obispo', description: 'What a foggy summit and a 30-minute search taught us about GPS trackers.', href: ROUTES.rhysRanAway, color: 'gear' },
+  { title: 'What To Do If Your Dog Runs Away', description: 'A step-by-step action guide for the first hour and beyond.', href: ROUTES.dogRanAwaySafety, color: 'gear' },
+];
+
+const topGuides = [
+  { title: 'Best Cooling Products for Dogs', description: 'Mats, vests, bandanas, and frozen enrichment', href: ROUTES.coolingTop },
+  { title: 'Best Calming Products for Anxious Dogs', description: 'Wraps, chews, lick mats, and snuffle mats', href: ROUTES.calmingTop },
+  { title: 'Comfort & Rest for Dogs', description: 'Supportive beds, cozy blankets, and comforting toys for dogs of every age.', href: ROUTES.comfortHub },
+  { title: 'Dog GPS Trackers & Safety', description: 'Cellular, off-grid, and Bluetooth tracking — know which type fits your terrain.', href: ROUTES.trackingTop },
+];
+
+const latestGuides = [
+  { title: 'How Much Do Dogs Sleep?', description: 'Sleep norms by age and breed, REM research, and what disruptions might mean.', href: ROUTES.comfortSleepArticle },
+  { title: 'Car Cooling for Dogs', description: 'In-car cooling gear and heat-risk reduction essentials.', href: ROUTES.coolingCar },
+  { title: 'Car Anxiety for Dogs', description: 'Practical calming tools for travel stress and restless rides.', href: ROUTES.calmingCar },
+  { title: 'How Hot Is Too Hot for Dogs?', description: 'Heat threshold guidance with routes to cooling product pages.', href: ROUTES.coolingSafety },
+  { title: 'Cooling Mats', description: 'Compare pressure-activated and water-based cooling mats.', href: ROUTES.coolingMats },
+  { title: 'Cooling Vests', description: 'Evaporative cooling vests for active outdoor dogs.', href: ROUTES.coolingVests },
+  { title: 'Anxiety Vest Alternatives', description: 'When to choose wraps, chews, lick mats, or snuffle mats instead.', href: ROUTES.calmingAlternatives },
+  { title: "Rhys's Road Trip Chill Kit", description: 'Cooling and calming picks for long drives with dogs.', href: ROUTES.roadTrip },
+  { title: 'The Day Rhys Ran Off on Cerro San Luis Obispo', description: 'What a foggy summit and a 30-minute search taught us about GPS trackers.', href: ROUTES.rhysRanAway },
+  { title: 'What To Do If Your Dog Runs Away', description: 'A step-by-step action guide for the first hour and beyond.', href: ROUTES.dogRanAwaySafety },
 ];
 ---
 
-<section class="featured container">
-  <h2 class="section-title">Top Guides</h2>
-  <div class="cards-grid">
-    {topGuides.map((guide) => (
-      <a href={guide.href} class="guide-card" data-track="collector_to_converter_click" data-to-page={guide.href} data-link-position="homepage-top-guides">
-        <h3 class="guide-title">{guide.title}</h3>
-        <p class="guide-description">{guide.description}</p>
-      </a>
-    ))}
-  </div>
-</section>
+{isV6 ? (
+  <>
+    {/* ── Shop by Need ── */}
+    <section class="shop container">
+      <h2 class="section-title">Shop by Need</h2>
+      <div class="shop-grid">
+        {shopCards.map((card) => (
+          <a
+            href={card.href}
+            class={`shop-card shop-card--${card.color}`}
+            data-track="collector_to_converter_click"
+            data-to-page={card.href}
+            data-link-position="homepage-shop"
+          >
+            <span class={`shop-label shop-label--${card.color}`}>{card.label}</span>
+            <h3 class="shop-title">{card.title}</h3>
+            <p class="shop-desc">{card.description}</p>
+            <span class="shop-cta">Explore picks →</span>
+          </a>
+        ))}
+      </div>
+    </section>
 
-<section class="latest container">
-  <h2 class="section-title">Latest Guides</h2>
-  <div class="cards-grid">
-    {latestGuides.map((guide) => (
-      <a href={guide.href} class="guide-card" data-track="collector_to_converter_click" data-to-page={guide.href} data-link-position="homepage-latest-guides">
-        <h3 class="guide-title">{guide.title}</h3>
-        <p class="guide-description">{guide.description}</p>
-      </a>
-    ))}
-  </div>
-</section>
+    {/* ── From the Guide ── */}
+    <section class="guide-section container">
+      <h2 class="section-title">From the Guide</h2>
+      <div class="featured-grid">
+        {featuredArticles.map((article) => (
+          <a
+            href={article.href}
+            class="article-card"
+            data-track="collector_to_converter_click"
+            data-to-page={article.href}
+            data-link-position="homepage-featured-articles"
+          >
+            <div class="article-img-wrap">
+              <img src={article.image} alt="" class="article-img" loading="lazy" width="400" height="210" />
+            </div>
+            <div class="article-body">
+              <span class={`article-label article-label--${article.color}`}>{article.label}</span>
+              <h3 class="article-title">{article.title}</h3>
+              <p class="article-desc">{article.description}</p>
+              <span class="article-read">Read →</span>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <div class="more-grid">
+        {moreArticles.map((article) => (
+          <a
+            href={article.href}
+            class={`more-card more-card--${article.color}`}
+            data-track="collector_to_converter_click"
+            data-to-page={article.href}
+            data-link-position="homepage-more-articles"
+          >
+            <h3 class="more-title">{article.title}</h3>
+            <p class="more-desc">{article.description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  </>
+) : (
+  <>
+    <section class="featured container">
+      <h2 class="section-title">Top Guides</h2>
+      <div class="cards-grid">
+        {topGuides.map((guide) => (
+          <a href={guide.href} class="guide-card" data-track="collector_to_converter_click" data-to-page={guide.href} data-link-position="homepage-top-guides">
+            <h3 class="guide-title">{guide.title}</h3>
+            <p class="guide-description">{guide.description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="latest container">
+      <h2 class="section-title">Latest Guides</h2>
+      <div class="cards-grid">
+        {latestGuides.map((guide) => (
+          <a href={guide.href} class="guide-card" data-track="collector_to_converter_click" data-to-page={guide.href} data-link-position="homepage-latest-guides">
+            <h3 class="guide-title">{guide.title}</h3>
+            <p class="guide-description">{guide.description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  </>
+)}
 
 <style>
-  .featured,
-  .latest {
+  /* ── Shared ── */
+  .section-title {
+    font-size: var(--text-2xl);
+    font-family: var(--font-heading);
+    font-weight: var(--weight-extrabold);
+    text-align: center;
+    margin-bottom: var(--space-xl);
+    color: var(--color-charcoal);
+    letter-spacing: -0.01em;
+  }
+
+  /* ══════════════════════════════════════
+     v6 — Shop by Need
+     ══════════════════════════════════════ */
+
+  .shop {
     padding-block: var(--space-3xl);
   }
 
-  .section-title {
-    font-size: var(--text-2xl);
-    text-align: center;
-    margin-bottom: var(--space-xl);
+  .shop-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+  }
+
+  .shop-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding: var(--space-xl) var(--space-lg);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    color: var(--color-charcoal);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  .shop-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  .shop-card--cool    { background: linear-gradient(150deg, hsl(195, 70%, 96%), hsl(202, 48%, 86%)); }
+  .shop-card--calm    { background: linear-gradient(150deg, hsl(150, 35%, 96%), hsl(158, 36%, 85%)); }
+  .shop-card--comfort { background: linear-gradient(150deg, hsl(345, 45%, 97%), hsl(340, 44%, 87%)); }
+  .shop-card--gear    { background: linear-gradient(150deg, hsl(220, 15%, 95%), hsl(220, 12%, 88%)); }
+
+  .shop-label {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .shop-label--cool    { color: hsl(200, 80%, 28%); }
+  .shop-label--calm    { color: hsl(155, 50%, 26%); }
+  .shop-label--comfort { color: hsl(345, 38%, 38%); }
+  .shop-label--gear    { color: hsl(220, 20%, 35%); }
+
+  .shop-title {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    font-weight: var(--weight-extrabold);
+    line-height: var(--leading-snug);
+    color: var(--color-charcoal);
+  }
+
+  .shop-desc {
+    font-size: var(--text-sm);
+    color: var(--color-charcoal);
+    opacity: 0.65;
+    line-height: var(--leading-relaxed);
+    flex: 1;
+  }
+
+  .shop-cta {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-bold);
+    color: var(--color-charcoal);
+    opacity: 0.8;
+    margin-top: var(--space-xs);
+  }
+
+  /* ══════════════════════════════════════
+     v6 — From the Guide
+     ══════════════════════════════════════ */
+
+  .guide-section {
+    padding-block: var(--space-3xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  /* Featured 3-up with OG images */
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .article-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--color-charcoal);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  .article-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .article-img-wrap {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+
+  .article-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease;
+  }
+
+  .article-card:hover .article-img {
+    transform: scale(1.04);
+  }
+
+  .article-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    padding: var(--space-md) var(--space-lg) var(--space-lg);
+    flex: 1;
+  }
+
+  .article-label {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .article-label--cool    { color: hsl(200, 80%, 28%); }
+  .article-label--calm    { color: hsl(155, 50%, 26%); }
+  .article-label--comfort { color: hsl(345, 38%, 38%); }
+
+  .article-title {
+    font-family: var(--font-heading);
+    font-size: var(--text-base);
+    font-weight: var(--weight-bold);
+    line-height: var(--leading-snug);
+    color: var(--color-charcoal);
+  }
+
+  .article-desc {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    flex: 1;
+  }
+
+  .article-read {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-bold);
+    color: var(--color-charcoal);
+    opacity: 0.6;
+    margin-top: var(--space-xs);
+  }
+
+  /* Compact more-articles grid */
+  .more-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+
+  .more-card {
+    display: block;
+    padding: var(--space-md) var(--space-lg);
+    border-left: 3px solid;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    background: var(--color-surface);
+    text-decoration: none;
+    color: var(--color-charcoal);
+    transition: transform var(--transition-fast);
+  }
+
+  .more-card:hover {
+    transform: translateX(3px);
+  }
+
+  .more-card--cool    { border-color: hsl(200, 60%, 60%); }
+  .more-card--calm    { border-color: hsl(155, 42%, 57%); }
+  .more-card--comfort { border-color: hsl(345, 42%, 65%); }
+  .more-card--gear    { border-color: hsl(220, 20%, 55%); }
+
+  .more-title {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-bold);
+    line-height: var(--leading-snug);
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-xs);
+  }
+
+  .more-desc {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+  }
+
+  /* ══════════════════════════════════════
+     Default (non-v6) layout
+     ══════════════════════════════════════ */
+
+  .featured,
+  .latest {
+    padding-block: var(--space-3xl);
   }
 
   .cards-grid {
@@ -153,13 +455,32 @@ const latestGuides = [
     line-height: var(--leading-normal);
   }
 
+  /* ══════════════════════════════════════
+     Responsive
+     ══════════════════════════════════════ */
+
   @media (max-width: 1024px) {
+    .shop-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
     .cards-grid {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
+  @media (max-width: 768px) {
+    .featured-grid {
+      grid-template-columns: 1fr;
+    }
+    .more-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
   @media (max-width: 640px) {
+    .shop-grid,
+    .featured-grid,
+    .more-grid,
     .cards-grid,
     .featured .cards-grid {
       grid-template-columns: 1fr;

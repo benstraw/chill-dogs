@@ -5,7 +5,7 @@ import HomepageBody from '@components/modules/HomepageBody.astro';
 import type { HomepageVariant } from '@components/modules/HomepageHero.astro';
 
 export function getStaticPaths() {
-  const variants: HomepageVariant[] = ['v1', 'v2', 'v3', 'v4', 'v5'];
+  const variants: HomepageVariant[] = ['v1', 'v2', 'v3', 'v4', 'v5', 'v6', 'v7', 'v8'];
   return variants.map((v) => ({ params: { variant: v } }));
 }
 
@@ -27,5 +27,5 @@ const canonicalUrl = new URL('/', Astro.site).href;
   <meta slot="head" name="robots" content="noindex, follow" />
 
   <HomepageHero variant={variant} />
-  <HomepageBody />
+  <HomepageBody variant={variant} />
 </BaseLayout>
