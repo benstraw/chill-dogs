@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import { ROUTES } from '@data/routes';
 import pawLogo from '/public/images/paw-logo.png';
 
-export type HomepageVariant = 'v1' | 'v2' | 'v3' | 'v4' | 'v5' | 'v6';
+export type HomepageVariant = 'v1' | 'v2' | 'v3' | 'v4' | 'v5' | 'v6' | 'v7';
 
 interface Props {
   variant: HomepageVariant;
@@ -71,6 +71,57 @@ const { variant } = Astro.props;
           <a class="hp-v6-pane hp-v6-pane--comfort" href={ROUTES.comfortHub} data-cta="comfort" data-track="hero_click_comfort" data-variant={variant}>
             <span class="hp-v6-pane-title">Settle In</span>
             <span class="hp-v6-pane-sub">Supportive beds, cozy blankets, and comforting toys for dogs of every age.</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  ) : variant === 'v7' ? (
+    <div class="hp-v7">
+      <h1 class="hp-v7-sr-only">Chill-Dogs — Cooling & Calming Products for Dogs</h1>
+      <div class="hp-v7-logo">
+        <Image
+          src={pawLogo}
+          alt="Chill-Dogs paw print"
+          class="hp-v7-logo-img"
+          width={480}
+          height={480}
+        />
+      </div>
+      <div class="hp-v7-right">
+        <div class="hp-v7-masthead">
+          <p class="hp-v7-slogan">Temperature or Temperament —<br />We Have You Covered</p>
+        </div>
+        <p class="hp-v7-kicker">From the Guide</p>
+        <div class="hp-v7-articles">
+          <a class="hp-v7-article" href={ROUTES.coolingSafety} data-cta="cooling-article" data-track="hero_click_article" data-variant={variant}>
+            <div class="hp-v7-article-img-wrap">
+              <img src="/og/cooling-how-hot-is-too-hot-for-dogs.jpg" alt="" class="hp-v7-article-img" loading="eager" width="400" height="210" />
+            </div>
+            <div class="hp-v7-article-body">
+              <span class="hp-v7-article-tag hp-v7-tag--cool">Cooling</span>
+              <span class="hp-v7-article-title">How Hot Is Too Hot for Dogs?</span>
+              <span class="hp-v7-article-read">Read →</span>
+            </div>
+          </a>
+          <a class="hp-v7-article" href={ROUTES.calmingCar} data-cta="calming-article" data-track="hero_click_article" data-variant={variant}>
+            <div class="hp-v7-article-img-wrap">
+              <img src="/og/calming-car-anxiety-for-dogs.jpg" alt="" class="hp-v7-article-img" loading="eager" width="400" height="210" />
+            </div>
+            <div class="hp-v7-article-body">
+              <span class="hp-v7-article-tag hp-v7-tag--calm">Calming</span>
+              <span class="hp-v7-article-title">Car Anxiety for Dogs</span>
+              <span class="hp-v7-article-read">Read →</span>
+            </div>
+          </a>
+          <a class="hp-v7-article" href={ROUTES.comfortSleepArticle} data-cta="comfort-article" data-track="hero_click_article" data-variant={variant}>
+            <div class="hp-v7-article-img-wrap">
+              <img src="/og/comforting-how-much-do-dogs-sleep.jpg" alt="" class="hp-v7-article-img" loading="eager" width="400" height="210" />
+            </div>
+            <div class="hp-v7-article-body">
+              <span class="hp-v7-article-tag hp-v7-tag--comfort">Comfort</span>
+              <span class="hp-v7-article-title">How Much Do Dogs Sleep?</span>
+              <span class="hp-v7-article-read">Read →</span>
+            </div>
           </a>
         </div>
       </div>
