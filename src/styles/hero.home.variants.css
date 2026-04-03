@@ -782,8 +782,8 @@
   transform: scale(1.07);
 }
 
-/* ── Mobile: single column, horizontal strip layout ── */
-@media (max-width: 640px) {
+/* ── Tablet/mobile: single column, horizontal strip layout ── */
+@media (max-width: 900px) {
   [data-hero-variant="v8"] .hp-v8 {
     grid-template-columns: 1fr;
   }
