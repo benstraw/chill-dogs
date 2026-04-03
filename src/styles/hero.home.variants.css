@@ -545,7 +545,7 @@
 }
 
 [data-hero-variant="v7"] .hp-v7-article-img-wrap {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
 }
 
@@ -765,7 +765,7 @@
 
 /* ── Right: product photo bleeds to edge ── */
 [data-hero-variant="v8"] .hp-v8-strip-img-wrap {
-  width: 150px;
+  width: 210px;
   flex-shrink: 0;
   overflow: hidden;
 }
@@ -801,6 +801,6 @@
   }
 
   [data-hero-variant="v8"] .hp-v8-strip-img-wrap {
-    width: 110px;
+    width: 42%;
   }
 }
