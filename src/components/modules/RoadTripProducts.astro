@@ -1,0 +1,96 @@
+---
+import { getProductsByCategory } from '@data/cooling-products';
+import { getCalmingProductsByCategory } from '@data/calming-products';
+import { getRelaxationProductsByCategory } from '@data/relaxation-products';
+import CoolingProductCard from '@components/modules/CoolingProductCard.astro';
+import CalmingProductCard from '@components/modules/CalmingProductCard.astro';
+import RelaxationProductCard from '@components/modules/RelaxationProductCard.astro';
+
+interface Props {
+  section: 'window-shade' | 'fan' | 'water-bowl' | 'anxiety-wrap' | 'calming-chews' | 'lick-mat' | 'travel-bed';
+  pageSlug: string;
+}
+
+const { section, pageSlug } = Astro.props;
+
+const carCoolingProducts = getProductsByCategory('car-cooling');
+const windowShade = carCoolingProducts.slice(0, 1);
+const fan = carCoolingProducts.slice(1, 2);
+const waterBowl = carCoolingProducts.filter(p => p.id === 'ohmo-spill-proof-bowl');
+const anxietyWraps = getCalmingProductsByCategory('anxiety-wraps').filter(p => p.id === 'thundershirt-classic');
+const greenies = getCalmingProductsByCategory('calming-treats').filter(p => p.id === 'greenies-calming-chews');
+const lickMat = getCalmingProductsByCategory('lick-mats').filter(p => p.id === 'lukito-licking-mat');
+const travelBeds = getRelaxationProductsByCategory('travel-beds').filter(p => p.id === 'onetigris-travel-dog-bed');
+---
+{section === 'window-shade' && windowShade.map((product, i) => (
+  <div class="product-slot">
+    <CoolingProductCard
+      product={product}
+      cta={{ label: 'Check Price on Amazon', href: product.amazonUrl, kind: 'amazon' }}
+      position={i + 1}
+      pageType="collector"
+      pageSlug={pageSlug}
+    />
+  </div>
+))}
+{section === 'fan' && fan.map((product, i) => (
+  <div class="product-slot">
+    <CoolingProductCard
+      product={product}
+      cta={{ label: 'Check Price on Amazon', href: product.amazonUrl, kind: 'amazon' }}
+      position={i + 2}
+      pageType="collector"
+      pageSlug={pageSlug}
+    />
+  </div>
+))}
+{section === 'water-bowl' && waterBowl.map((product, i) => (
+  <div class="product-slot">
+    <CoolingProductCard
+      product={product}
+      cta={{ label: 'Check Price on Amazon', href: product.amazonUrl, kind: 'amazon' }}
+      position={i + 3}
+      pageType="collector"
+      pageSlug={pageSlug}
+    />
+  </div>
+))}
+{section === 'anxiety-wrap' && anxietyWraps.map((product, i) => (
+  <div class="product-slot">
+    <CalmingProductCard
+      product={product}
+      position={i + 1}
+      pageType="collector"
+      pageSlug={pageSlug}
+    />
+  </div>
+))}
+{section === 'calming-chews' && greenies.map((product, i) => (
+  <div class="product-slot">
+    <CalmingProductCard
+      product={product}
+      position={i + 2}
+      pageType="collector"
+      pageSlug={pageSlug}
+    />
+  </div>
+))}
+{section === 'lick-mat' && lickMat.map((product, i) => (
+  <div class="product-slot">
+    <CalmingProductCard
+      product={product}
+      position={i + 3}
+      pageType="collector"
+      pageSlug={pageSlug}
+    />
+  </div>
+))}
+{section === 'travel-bed' && travelBeds.map((product, i) => (
+  <div class="product-slot">
+    <RelaxationProductCard
+      product={product}
+      position={i + 1}
+      pageSlug={pageSlug}
+    />
+  </div>
+))}

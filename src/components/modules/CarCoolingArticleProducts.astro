@@ -1,0 +1,25 @@
+---
+import { getProductsByCategory } from '@data/cooling-products';
+import CoolingProductCard from '@components/modules/CoolingProductCard.astro';
+
+interface Props {
+  slice: 'first' | 'rest';
+  pageSlug: string;
+}
+
+const { slice, pageSlug } = Astro.props;
+const products = getProductsByCategory('car-cooling');
+const items = slice === 'first' ? products.slice(0, 3) : products.slice(3);
+const startPosition = slice === 'first' ? 1 : 4;
+---
+{items.map((product, i) => (
+  <div class="product-slot">
+    <CoolingProductCard
+      product={product}
+      cta={{ label: 'See on Amazon', href: product.amazonUrl, kind: 'amazon' }}
+      position={startPosition + i}
+      pageType="collector"
+      pageSlug={pageSlug}
+    />
+  </div>
+))}

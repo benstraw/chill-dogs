@@ -1,0 +1,128 @@
+---
+title: 'How Hot Is Too Hot for Dogs?'
+description: 'A practical temperature guide for dog owners: when heat is safe, when to take caution, and how to protect your dog from overheating.'
+pubDate: 2026-03-10
+canonicalPath: '/cooling/how-hot-is-too-hot-for-dogs/'
+---
+
+import FAQ from '@components/modules/FAQ.astro';
+import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
+import TemperatureChart from '@components/modules/TemperatureChart.astro';
+
+export const faqs = [
+  {
+    question: 'Is 85 °F too hot to walk a dog?',
+    answer: 'It can be, depending on the conditions. At 85 °F with direct sun, high humidity, or hot pavement, the risk for many dogs increases significantly. If you do walk at this temperature, keep it short, stick to shaded routes, and watch closely for early signs of overheating.',
+  },
+  {
+    question: 'Is 90 °F too hot for dogs?',
+    answer: 'For most dogs, yes. At 90 °F or above, outdoor activity should be limited to brief bathroom breaks. Prolonged exposure at this temperature — especially with sun or humidity — puts dogs at real risk of heat exhaustion. Keep dogs indoors in air conditioning as much as possible.',
+  },
+  {
+    question: 'What temperature do dogs overheat?',
+    answer: "Many dogs begin to struggle once temperatures reach roughly 85–90 °F, particularly in direct sun or high humidity. Brachycephalic (flat-faced) breeds, senior dogs, and overweight dogs may show signs of heat stress at lower temperatures. No single threshold applies to every dog — knowing your individual dog's limits matters.",
+  },
+];
+
+export const internalLinks = [
+  { label: 'Best Cooling Mats', href: '/cooling/cooling-mats/' },
+  { label: 'Best Cooling Vests', href: '/cooling/cooling-vests/' },
+  { label: 'Best Cooling Bandanas', href: '/cooling/cooling-bandanas/' },
+  { label: 'Freezable Dog Toys', href: '/cooling/freezable-dog-toys/' },
+];
+
+<article class="collector-article container">
+  <header class="article-header">
+    <span class="eyebrow">Cooling &amp; Safety</span>
+    <h1>How Hot Is Too Hot for Dogs?</h1>
+    <p class="lede">A practical temperature guide for dog owners: when heat is safe, when to take caution, and how to protect your dog from overheating.</p>
+  </header>
+
+  <div class="prose">
+    <p>
+      Many dog owners ask the same question during summer: how hot is too hot for dogs? Understanding
+      temperature risks can help prevent heat exhaustion and keep your dog safe during warm weather.
+    </p>
+
+    <h2>Why dogs overheat faster than humans</h2>
+    <p>
+      Dogs can't cool themselves the way humans do. We sweat across the entire surface of our skin;
+      dogs primarily pant and release heat through their paw pads. That's a much smaller surface area,
+      which means heat builds up quickly — especially in humid weather when panting becomes less effective.
+      Flat-faced breeds (like Bulldogs and Pugs), older dogs, overweight dogs, and very young puppies
+      are at even higher risk because their airways are narrower or their temperature regulation is less efficient.
+    </p>
+
+    <h2>Temperature risk chart</h2>
+    <p>
+      Outdoor air temperature is a useful starting point. Humidity, sun exposure, and activity level all
+      increase the real feel for your dog. Use this as a general guide:
+    </p>
+
+    <TemperatureChart />
+
+    <h2>Humidity makes heat more dangerous</h2>
+    <p>
+      Air temperature alone doesn't tell the full story. Dogs rely almost entirely on panting to regulate
+      body temperature — and panting works by evaporating moisture from the respiratory tract. When
+      humidity is high, that evaporation slows down significantly, making panting far less effective.
+    </p>
+    <p>
+      A day in the low 80s with high humidity can be more stressful for a dog than a dry day at 90 °F.
+      If it feels muggy to you, it's worth shortening your walk and watching your dog closely for early
+      signs of overheating.
+    </p>
+
+    <h2>Pavement temperature warning</h2>
+    <p>
+      Air temperature does not tell the whole story. Asphalt and concrete absorb and radiate heat far beyond
+      ambient air temperature. When it's 85 °F outside, blacktop can reach <strong>135 °F</strong> — hot
+      enough to cause burns in under a minute.
+    </p>
+    <p>
+      A simple test: press the back of your hand against the pavement for seven seconds. If you can't hold it
+      there comfortably, it's too hot for your dog's paws. Walk on grass where possible, or stick to early
+      morning and late evening walks.
+    </p>
+
+    <h2>Signs your dog is overheating</h2>
+    <ul>
+      <li><strong>Heavy, rapid panting</strong> that doesn't slow down with rest</li>
+      <li><strong>Excessive drooling</strong> or thick, sticky saliva</li>
+      <li><strong>Bright red gums or tongue</strong></li>
+      <li><strong>Lethargy or weakness</strong> — stumbling or reluctance to move</li>
+      <li><strong>Vomiting or diarrhea</strong></li>
+      <li><strong>Glazed or unfocused eyes</strong></li>
+    </ul>
+    <p>
+      If you see multiple signs at once, move your dog to a cool, shaded area immediately, offer small amounts
+      of cool (not ice-cold) water, and contact your vet. Heatstroke can escalate quickly and requires
+      prompt professional care.
+    </p>
+
+    <h2>How to keep your dog cool</h2>
+    <p>
+      Several simple habits go a long way on hot days:
+    </p>
+    <ul>
+      <li>Walk dogs during early morning or evening hours when temperatures are lower.</li>
+      <li>Avoid hot pavement — opt for grass or shaded paths whenever possible.</li>
+      <li>Always bring fresh water and offer it frequently during any outdoor activity.</li>
+      <li>Provide shaded rest areas and limit intense exercise when temperatures are high.</li>
+    </ul>
+    <p>
+      When temperatures rise, specialized cooling gear can also help dogs regulate body temperature
+      during walks or outdoor activity. These popular options are worth considering:
+    </p>
+    <ul>
+      <li><strong>Cooling mats</strong> — pressure-activated gel pads designed for indoor or outdoor use.</li>
+      <li><strong>Cooling vests</strong> — evaporative or reflective wraps intended to lower body temperature during walks.</li>
+      <li><strong>Cooling bandanas</strong> — a lightweight, budget-friendly option for shorter outings.</li>
+      <li><strong>Freezable toys</strong> — frozen treat dispensers that provide enrichment and help with internal cooling.</li>
+    </ul>
+  </div>
+
+  <FAQ faqs={faqs} />
+
+  <InternalLinkStrip links={internalLinks} fromPage="how-hot-is-too-hot-for-dogs" />
+</article>
