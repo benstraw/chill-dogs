@@ -58,6 +58,14 @@ const legalLinks = [
 
     <div class="footer-bottom">
       <p>&copy; {currentYear} Chill-Dogs. All rights reserved.</p>
+      <a href="/rss.xml" aria-label="RSS Feed" class="rss-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false">
+          <circle cx="2.5" cy="13.5" r="1.5"/>
+          <path d="M1 7.5A6.5 6.5 0 0 1 7.5 14H9a8 8 0 0 0-8-8v1.5z"/>
+          <path d="M1 3A11 11 0 0 1 12 14h1.5A12.5 12.5 0 0 0 1 1.5V3z"/>
+        </svg>
+        RSS
+      </a>
     </div>
   </div>
 </footer>
@@ -116,9 +124,29 @@ const legalLinks = [
     max-width: 600px;
   }
 
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+  }
+
   .footer-bottom p {
     font-size: var(--text-xs);
     color: rgba(240, 244, 246, 0.6);
+  }
+
+  .rss-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: var(--text-xs);
+    color: rgba(240, 244, 246, 0.6);
+    transition: color var(--transition-fast);
+  }
+
+  .rss-link:hover {
+    color: var(--color-text-inverse);
   }
 
   @media (max-width: 640px) {
