@@ -1,0 +1,103 @@
+---
+// Temperature risk chart for "How Hot Is Too Hot for Dogs?" article
+---
+<div class="temp-chart" role="table" aria-label="Dog heat risk by temperature">
+  <div class="temp-row temp-row--header" role="row">
+    <span role="columnheader">Temperature</span>
+    <span role="columnheader">Risk level</span>
+    <span role="columnheader">Guidance</span>
+  </div>
+  <div class="temp-row temp-row--safe" role="row">
+    <span role="cell"><strong>70–80 °F</strong></span>
+    <span role="cell" class="badge badge--safe">Safe</span>
+    <span role="cell">Normal outdoor activity is generally fine. Provide water and shade.</span>
+  </div>
+  <div class="temp-row temp-row--caution" role="row">
+    <span role="cell"><strong>80–85 °F</strong></span>
+    <span role="cell" class="badge badge--caution">Caution</span>
+    <span role="cell">Shorten exercise and avoid peak afternoon sun.</span>
+  </div>
+  <div class="temp-row temp-row--high" role="row">
+    <span role="cell"><strong>85–90 °F</strong></span>
+    <span role="cell" class="badge badge--high">High risk</span>
+    <span role="cell">Limit activity to early morning or evening and consider cooling gear.</span>
+  </div>
+  <div class="temp-row temp-row--danger" role="row">
+    <span role="cell"><strong>90 °F+</strong></span>
+    <span role="cell" class="badge badge--danger">Dangerous</span>
+    <span role="cell">Keep dogs indoors with air conditioning when possible.</span>
+  </div>
+</div>
+
+<style>
+  .temp-chart {
+    display: grid;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: var(--space-xl);
+    font-size: var(--text-sm);
+  }
+
+  .temp-row {
+    display: grid;
+    grid-template-columns: 9rem 8rem 1fr;
+    gap: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+    align-items: center;
+  }
+
+  .temp-row--header {
+    font-weight: 700;
+    font-size: var(--text-xs);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--color-bg-alt);
+    color: var(--color-text-muted);
+  }
+
+  .temp-row:not(.temp-row--header) {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: var(--text-xs);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .badge--safe {
+    background: rgba(104, 160, 133, 0.16);
+    color: #2e6448;
+  }
+
+  .badge--caution {
+    background: rgba(201, 185, 82, 0.22);
+    color: #7a6200;
+  }
+
+  .badge--high {
+    background: rgba(201, 138, 82, 0.18);
+    color: #8a4e1d;
+  }
+
+  .badge--danger {
+    background: rgba(200, 70, 70, 0.14);
+    color: #8b1a1a;
+  }
+
+  @media (max-width: 640px) {
+    .temp-row {
+      grid-template-columns: 1fr;
+      gap: var(--space-xs);
+    }
+
+    .temp-row--header {
+      display: none;
+    }
+  }
+</style>

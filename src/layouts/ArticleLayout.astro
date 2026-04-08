@@ -1,0 +1,37 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import JsonLd from '@components/JsonLd.astro';
+import '@styles/collector-article.css';
+import '@styles/article-components.css';
+
+interface Props {
+  title: string;
+  description: string;
+  ogTitle?: string;
+  canonicalPath: string;
+  ogImage?: string;
+  navAccent?: string;
+}
+
+const { title, description, ogTitle, canonicalPath, ogImage, navAccent } = Astro.props;
+const canonicalUrl = `https://www.chill-dogs.com${canonicalPath}`;
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  url: canonicalUrl,
+  image: [ogImage ?? `https://www.chill-dogs.com/og${canonicalPath.replace(/\/$/, '')}.png`],
+  author: { '@type': 'Person', name: 'Benjamin Strawbridge', url: 'https://www.benstrawbridge.com/' },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Chill-Dogs',
+    logo: { '@type': 'ImageObject', url: 'https://www.chill-dogs.com/images/chill-dogs-logo-padded.png', width: 700, height: 700 },
+  },
+};
+---
+<BaseLayout {title} {description} {ogTitle} canonicalUrl={canonicalUrl} {navAccent}>
+  <JsonLd slot="head" schema={articleSchema} />
+  <slot />
+</BaseLayout>

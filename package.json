@@ -18,6 +18,7 @@
     "pre-commit": "npm test && npm run test:smoke"
   },
   "dependencies": {
+    "@astrojs/mdx": "^5.0.3",
     "@astrojs/rss": "^4.0.17",
     "@astrojs/sitemap": "^3.7.0",
     "@fontsource-variable/nunito": "^5.2.7",
