@@ -64,7 +64,7 @@ const legalLinks = [
           <path d="M1 7.5A6.5 6.5 0 0 1 7.5 14H9a8 8 0 0 0-8-8v1.5z"/>
           <path d="M1 3A11 11 0 0 1 12 14h1.5A12.5 12.5 0 0 0 1 1.5V3z"/>
         </svg>
-        RSS
+        Feed
       </a>
     </div>
   </div>
@@ -141,12 +141,13 @@ const legalLinks = [
     align-items: center;
     gap: 4px;
     font-size: var(--text-xs);
-    color: rgba(240, 244, 246, 0.6);
+    color: rgba(240, 244, 246, 0.6) !important;
+    text-decoration: none;
     transition: color var(--transition-fast);
   }
 
   .rss-link:hover {
-    color: var(--color-text-inverse);
+    color: var(--color-text-inverse) !important;
   }
 
   @media (max-width: 640px) {
