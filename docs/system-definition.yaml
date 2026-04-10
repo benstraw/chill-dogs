@@ -245,7 +245,7 @@ site_system:
     cooling_products: "src/data/cooling-products.ts — 15 products with ASIN, affiliate URL, and image thumbnails"
     calming_products: "src/data/calming-products.ts — 13 products with ASIN, affiliate URL, and image thumbnails"
     relaxation_products: "src/data/relaxation-products.ts — 13 products (calming beds, orthopedic beds, crates) with ASIN, affiliate URL, and image thumbnails"
-    tracking_products: "src/data/tracking-products.ts — 6 tracker products and 1 accessory product across cellular/off-grid/bluetooth/accessory types"
+    tracking_products: "src/data/tracking-products.ts — 8 tracker products and 1 accessory product across cellular/off-grid/bluetooth/accessory types"
     raw_api_cache: "src/data/amazon-products/*.json — full SearchAPI Amazon Product responses per ASIN"
 
   architecture:
