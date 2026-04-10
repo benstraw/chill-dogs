@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 import { categoryMeta } from '@data/cooling-products';
+import { getCollection } from 'astro:content';
 
 interface SitemapPage {
   title: string;
@@ -14,6 +15,16 @@ interface SitemapSection {
   description: string;
   pages: SitemapPage[];
 }
+
+const articleEntries = await getCollection('articles');
+const articlePages: SitemapPage[] = articleEntries
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .map((e) => ({
+    title: e.data.title,
+    href: e.data.canonicalPath,
+    pageType: 'collector' as const,
+    collectorSubtype: 'article' as const,
+  }));
 
 // Keep this list explicit so editors can review the current hand-authored routes in one place.
 const staticSections: SitemapSection[] = [
@@ -40,14 +51,6 @@ const staticSections: SitemapSection[] = [
     ],
   },
   {
-    title: 'Cooling Guides',
-    description: 'Article collectors that capture informational intent and route readers to cooling converters.',
-    pages: [
-      { title: 'How to Keep a Dog Cool in a Car', href: '/cooling/keep-dog-cool-in-car/', pageType: 'collector', collectorSubtype: 'article' },
-      { title: 'How Hot Is Too Hot for Dogs?', href: '/cooling/how-hot-is-too-hot-for-dogs/', pageType: 'collector', collectorSubtype: 'article' },
-    ],
-  },
-  {
     title: 'Calming Converters',
     description: 'Commercial product pages for anxiety and calming intent.',
     pages: [
@@ -64,14 +67,6 @@ const staticSections: SitemapSection[] = [
     ],
   },
   {
-    title: 'Travel Guides',
-    description: 'Article collectors for road trip and travel intent — span both cooling and calming conversion paths.',
-    pages: [
-      { title: "Rhys's Road Trip Chill Kit: Cooling + Calming Essentials for Long Drives", href: '/travel/rhys-road-trip-chill-kit/', pageType: 'collector', collectorSubtype: 'article' },
-      { title: "Rhys Ran Away at Cerro San Luis Obispo: What We Learned About Dog Safety", href: '/travel/rhys-ran-away-bishop-peak/', pageType: 'collector', collectorSubtype: 'article' },
-    ],
-  },
-  {
     title: 'Tracking & Safety',
     description: 'GPS tracker converters and safety collectors — route lost-dog and tracking intent to affiliate product pages.',
     pages: [
@@ -79,7 +74,6 @@ const staticSections: SitemapSection[] = [
       { title: 'Fi Dog Collar Review', href: '/gear/fi-dog-collar-review/', pageType: 'converter' },
       { title: 'Garmin Dog Tracking Collars', href: '/gear/garmin-dog-tracking-collars/', pageType: 'collector', collectorSubtype: 'article' },
       { title: 'AirTag for Dogs', href: '/gear/airtag-for-dogs/', pageType: 'collector', collectorSubtype: 'article' },
-      { title: 'What to Do If Your Dog Runs Away', href: '/safety/what-to-do-if-your-dog-runs-away/', pageType: 'collector', collectorSubtype: 'article' },
     ],
   },
   {
@@ -88,7 +82,6 @@ const staticSections: SitemapSection[] = [
     pages: [
       { title: 'Best Calming Dog Beds', href: '/comforting/best-calming-dog-beds/', pageType: 'converter' },
       { title: 'Best Orthopedic Dog Beds', href: '/comforting/best-orthopedic-dog-beds/', pageType: 'converter' },
-      { title: 'How Much Do Dogs Sleep? What Rest Really Looks Like', href: '/comforting/how-much-do-dogs-sleep/', pageType: 'collector', collectorSubtype: 'article' },
     ],
   },
   {
@@ -104,7 +97,13 @@ const staticSections: SitemapSection[] = [
   },
 ];
 
-const allSections = staticSections;
+const articlesSection: SitemapSection = {
+  title: 'Articles (from collection)',
+  description: 'Article collectors auto-discovered from the MDX content collection — sorted by publish date.',
+  pages: articlePages,
+};
+
+const allSections = [staticSections[0], articlesSection, ...staticSections.slice(1)];
 const totalPages = allSections.reduce((count, section) => count + section.pages.length, 0);
 ---
 

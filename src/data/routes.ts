@@ -17,7 +17,7 @@ export const ROUTES = {
   calmingCar: '/calming/car-anxiety-for-dogs/',
   calmingCrateGuide: '/calming/crate-training-for-dogs/',
   roadTrip: '/travel/dog-road-trip-gear/',
-  rhysRanAway: '/travel/rhys-ran-away-bishop-peak/',
+  rhysRanAway: '/travel/rhys-ran-away-cerro-san-luis-obispo/',
   // Tracking cluster
   trackingTop: '/gear/best-dog-gps-trackers/',
   fiCollarReview: '/gear/fi-dog-collar-review/',

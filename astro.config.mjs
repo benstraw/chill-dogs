@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import robotsTxt from 'astro-robots-txt';
 
@@ -10,6 +11,7 @@ export default defineConfig({
     '/travel/rhys-road-trip-chill-kit': '/travel/dog-road-trip-gear/',
   },
   integrations: [
+    mdx(),
     sitemap({
       filter: (page) => !page.includes('/draft') && !page.includes('/v/') && !page.includes('/admin/'),
       serialize: (item) => {

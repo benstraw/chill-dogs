@@ -12,8 +12,13 @@ describe('route constants', () => {
     const alternativesCard = calmingCollectorBody.sections[0].cards.find(
       (card) => card.title === 'Best ThunderShirt Alternatives for Dogs'
     );
+    const carAnxietyCard = calmingCollectorBody.sections[0].cards.find(
+      (card) => card.title === 'Car Anxiety for Dogs'
+    );
 
     expect(alternativesCard?.href).toBe(ROUTES.calmingAlternatives);
     expect(alternativesCard?.dataToPage).toBe(ROUTES.calmingAlternatives);
+    expect(carAnxietyCard?.href).toBe(ROUTES.calmingCar);
+    expect(carAnxietyCard?.dataToPage).toBe(ROUTES.calmingCar);
   });
 });
