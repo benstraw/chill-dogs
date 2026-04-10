@@ -8,7 +8,7 @@
 
 site_system:
   status: "active"
-  as_of: "2026-03-20"
+  as_of: "2026-04-08"
   owner: "chill-dogs"
   purpose: "Define the website as a modular conversion system and keep implementation aligned."
 
@@ -49,6 +49,7 @@ site_system:
       collector_subtype: "hub"
       target_action: "Route anxiety-intent traffic to calming converters"
       metric: "collector_to_converter_click to calming converters"
+      notes: "Collector routes directly to general calming picks, ThunderShirt alternatives, and the travel-focused car-anxiety converter."
 
     - name: "Cooling converters"
       type: "converter"

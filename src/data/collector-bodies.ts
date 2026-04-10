@@ -145,6 +145,14 @@ export const calmingCollectorBody: CollectorBodyConfig = {
           dataToPage: ROUTES.calmingAlternatives,
         },
         {
+          href: ROUTES.calmingCar,
+          title: 'Car Anxiety for Dogs',
+          description:
+            'Travel-focused calming picks for dogs who pant, pace, or struggle to settle once the drive starts.',
+          linkLabel: 'See travel picks ->',
+          dataToPage: ROUTES.calmingCar,
+        },
+        {
           href: ROUTES.roadTrip,
           title: 'Road Trip Chill Kit',
           description:
