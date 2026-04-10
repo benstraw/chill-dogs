@@ -157,7 +157,7 @@ const collectionSchema = {
       <div class="section-inner">
         <h2>Garmin Dog Tracking Products</h2>
         <p class="section-intro">
-          The Alpha TT 25 collar pairs with the Alpha 300i handheld to form a complete off-grid tracking system. Both are sold separately — the collar goes on the dog; the handheld displays real-time location in the field. No cell signal required.
+          The Alpha TT 25 collar pairs with the Alpha 300i handheld to form a complete off-grid tracking system. Both are sold separately — the collar goes on the dog; the handheld displays real-time location in the field. No cell signal required. If you already have compatible collars, the Alpha 300i can also be bought as the standalone handheld.
         </p>
 
         <div class="product-grid">
@@ -201,7 +201,7 @@ const collectionSchema = {
                   data-product-name={product.name}
                   class="product-cta"
                 >
-                  Shop Alpha TT 25 Collar on Amazon
+                  {product.ctaLabel ?? 'Shop Alpha TT 25 Collar on Amazon'}
                 </AffiliateLink>
                 {product.secondaryUrl && (
                   <AffiliateLink

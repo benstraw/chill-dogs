@@ -44,6 +44,7 @@ Repository guidance for coding agents working in `/Volumes/wanderer/dev/solo/chi
 - Verify modularity (no repeated section scaffolding where a shared module/config pattern exists).
 - Run `bun run test` and `bun run build` for substantive page/module changes.
 - For `src/utils/**` or `src/scripts/**` changes, add/update unit tests in `src/__tests__/`.
+- Whenever any product is added or changed in `src/data/**`, ensure `/admin/products/` stays complete via data imports. Products must flow through shared product data/catalog modules, not hardcoded rows in the admin page.
 
 ## Content Guardrails
 

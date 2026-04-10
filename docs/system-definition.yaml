@@ -189,11 +189,13 @@ site_system:
       target_action: "Trust and compliance clarity"
       metric: "No conversion obstruction"
       routes:
+        - "/admin/products/"
         - "/about/"
         - "/contact/"
         - "/privacy-policy/"
         - "/terms/"
         - "/affiliate-disclosure/"
+      notes: "/admin/products/ is the canonical product inventory review page. Every product in any product data file must flow into this page through src/data/product-catalog.ts; do not hardcode product rows in the admin route."
 
   modules:
     workhorse:
@@ -252,10 +254,11 @@ site_system:
       - "Collector pages without clear converter paths"
 
   product_data:
+    product_catalog: "src/data/product-catalog.ts — normalized admin inventory across every product data source; /admin/products/ must consume this data module and remain complete whenever products are added"
     cooling_products: "src/data/cooling-products.ts — 15 products with ASIN, affiliate URL, and image thumbnails"
     calming_products: "src/data/calming-products.ts — 13 products with ASIN, affiliate URL, and image thumbnails"
     relaxation_products: "src/data/relaxation-products.ts — 24 products (calming beds, orthopedic beds, crates, travel beds) with ASIN, affiliate URL, and image thumbnails"
-    tracking_products: "src/data/tracking-products.ts — 6 tracker products across cellular/off-grid/bluetooth types; placeholder URLs pending affiliate setup"
+    tracking_products: "src/data/tracking-products.ts — 8 tracker products and 1 accessory product across cellular/off-grid/bluetooth/accessory types"
     raw_api_cache: "src/data/amazon-products/*.json — full SearchAPI Amazon Product responses per ASIN"
 
   architecture:

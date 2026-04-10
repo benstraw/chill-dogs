@@ -6,6 +6,7 @@ import sharp from 'sharp';
 
 const projectRoot = process.cwd();
 const pagesDir = path.join(projectRoot, 'src', 'pages');
+const articlesDir = path.join(projectRoot, 'src', 'content', 'articles');
 const outDir = path.join(projectRoot, 'public', 'og');
 const logoPath = path.join(projectRoot, 'public', 'images', 'chill-dogs-logo-padded.png');
 
@@ -386,6 +387,31 @@ function buildStaticRouteRecords() {
   return records;
 }
 
+function buildArticleRouteRecords() {
+  const articleFiles = walkFiles(articlesDir, (filePath) => /\.(md|mdx)$/.test(filePath));
+  const records = [];
+
+  for (const articleFile of articleFiles) {
+    const frontmatter = parseFrontmatter(articleFile);
+    const pathname = frontmatter.canonicalPath;
+
+    if (!pathname || typeof pathname !== 'string') {
+      continue;
+    }
+
+    records.push({
+      pathname,
+      title: frontmatter.title || titleFromPathname(pathname),
+      seoTitle: frontmatter.seoTitle,
+      ogHeadline: frontmatter.ogTitle || frontmatter.ogHeadline,
+      pageType: 'collector',
+      ogTheme: inferTheme(pathname, frontmatter.ogTheme),
+    });
+  }
+
+  return records;
+}
+
 function dedupeByPathname(records) {
   const seen = new Set();
   const out = [];
@@ -404,7 +430,10 @@ function dedupeByPathname(records) {
 async function generateOgImages() {
   mkdirSync(outDir, { recursive: true });
 
-  const records = dedupeByPathname(buildStaticRouteRecords());
+  const records = dedupeByPathname([
+    ...buildStaticRouteRecords(),
+    ...buildArticleRouteRecords(),
+  ]);
 
   for (const record of records) {
     const headline = deriveHeadline(record);

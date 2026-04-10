@@ -6,6 +6,7 @@
 import { coolingProducts, type ProductCategory } from './cooling-products';
 import { calmingProducts } from './calming-products';
 import { relaxationProducts } from './relaxation-products';
+import { accessoryProducts, trackerProducts } from './tracking-products';
 import { coolingConverterPageConfigs } from './cooling-converter-pages';
 import { calmingConverterPages } from './calming-converter-pages';
 import { relaxationConverterPages } from './relaxation-converter-pages';
@@ -32,6 +33,8 @@ export function buildProductPageMap(): ProductPageMap {
   for (const p of coolingProducts) map[p.id] = [];
   for (const p of calmingProducts) map[p.id] = [];
   for (const p of relaxationProducts) map[p.id] = [];
+  for (const p of trackerProducts) map[p.id] = [];
+  for (const p of accessoryProducts) map[p.id] = [];
 
   // Cooling converter pages: each config maps a category to a page
   for (const [slug, config] of Object.entries(coolingConverterPageConfigs)) {
@@ -109,6 +112,20 @@ export function buildProductPageMap(): ProductPageMap {
   for (const p of calmingProducts.filter((p) => p.category === 'lick-mats')) {
     addRef(map, p.id, roadTripRef);
   }
+
+  const trackerComparisonRef: PageRef = { label: 'best-dog-gps-trackers', href: '/gear/best-dog-gps-trackers/' };
+  for (const p of trackerProducts) {
+    addRef(map, p.id, trackerComparisonRef);
+  }
+
+  const garminTrackingRef: PageRef = { label: 'garmin-dog-tracking-collars', href: '/gear/garmin-dog-tracking-collars/' };
+  for (const p of trackerProducts.filter((product) => product.type === 'off-grid')) {
+    addRef(map, p.id, garminTrackingRef);
+  }
+
+  const fiReviewRef: PageRef = { label: 'fi-dog-collar-review', href: '/gear/fi-dog-collar-review/' };
+  addRef(map, 'fi-series-3-plus', fiReviewRef);
+  addRef(map, 'stunt-puppy-fi-collar', fiReviewRef);
 
   return map;
 }

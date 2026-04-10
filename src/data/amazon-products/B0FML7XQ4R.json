@@ -1,0 +1,578 @@
+{
+  "search_metadata": {
+    "id": "search_mOgBEZe50gHnGwWEykzwL3jW",
+    "status": "Success",
+    "created_at": "2026-04-10T08:34:56Z",
+    "request_time_taken": 2.53,
+    "parsing_time_taken": 0.16,
+    "total_time_taken": 2.69,
+    "request_url": "https://www.amazon.com/dp/B0FML7XQ4R?th=1&psc=1",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_mOgBEZe50gHnGwWEykzwL3jW.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_mOgBEZe50gHnGwWEykzwL3jW"
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0FML7XQ4R",
+    "amazon_domain": "amazon.com",
+    "delivery_country": "us"
+  },
+  "product": {
+    "asin": "B0FML7XQ4R",
+    "title": "Halo Collar 5 Wireless Dog Fence & GPS Dog Collar, Keep Your Dog Safely Contained Outdoors with App-Controlled Boundaries and Real-Time Tracking, One Size, Blaze",
+    "brand_store": {
+      "id": "7A3E4E89-75B5-417D-A2E7-36349C09B3F7",
+      "text": "Visit the Halo Store",
+      "link": "https://www.amazon.com/stores/Halo/page/7A3E4E89-75B5-417D-A2E7-36349C09B3F7?lp_asin=B0FML7XQ4R&ref_=ast_bln&store_ref=bl_ast_dp_brandlogo_sto"
+    },
+    "marketplace_id": "ATVPDKIKX0DER",
+    "link": "https://www.amazon.com/s?k=halo+dog+collar",
+    "rating": 4,
+    "reviews": 351,
+    "bought_past_month": "1K+ bought in past month",
+    "attributes": [
+      {
+        "name": "Pattern",
+        "value": "Solid"
+      },
+      {
+        "name": "Color",
+        "value": "Blaze"
+      },
+      {
+        "name": "Material",
+        "value": "Nylon"
+      },
+      {
+        "name": "Brand",
+        "value": "Halo"
+      },
+      {
+        "name": "Closure Type",
+        "value": "Adjustable Fit"
+      }
+    ],
+    "feature_bullets": [
+      "#1 Most Dogs Protected: Powered by PrecisionGPS technology, Halo Collar 5 connects to six satellite constellations using dual-frequency L1 and L5 signals to deliver accuracy within 1.4 feet. AI-driven software filters interference from buildings and trees, while advanced drift prevention keeps your dog’s location precise, even when standing still.",
+      "Subscription required to activate GPS & fence features: Your Halo membership unlocks GPS tracking, unlimited cellular data, virtual fence creation, training guidance, live support, and activity reports. Choose your plan after purchase to enable tracking and containment.",
+      "Know where your dog is the moment it matters: Know your dog's exact location 24/7 with AlwaysOn GPS that comes standard with every plan and never stops tracking your dog. Get instant smartphone alerts if they approach or cross a boundary.",
+      "Built for all yard sizes, rural properties, and wide-open spaces: Advanced GPS technology works with Wi-Fi, Bluetooth, and cellular connections to keep your dog's location updated 20 times per second. Create and store multiple fences, even on rural properties, hiking trails, and remote locations where other GPS collars fail.",
+      "Professional training guidance built-in: An exclusive training program by Cesar Millan teaches any dog to understand the automatic sound, vibration, and static (optional) warnings they receive as they approach a boundary.",
+      "Longer battery, faster charging: Upgraded 48-hour battery life keeps your dog safely contained longer between charges. Rapid charging restores up to two full days of protection in about 1 hour.",
+      "Fits small, medium & large dogs (10 lbs and up): Adjustable 8–30 inch collar ensures a secure fit for most breeds. Waterproof (IP67) and built for active dogs who run, swim, and explore.",
+      "Works without wires or base stations: Unlike traditional wireless dog fences that need a plug-in transmitter, Halo Collar is entirely self-contained and works using satellite and cellular connectivity. Take it anywhere without hauling equipment. Create a new fence in seconds from your phone (with sizes ranging from 900 sq. ft. to 1,200 sq. miles), whether you're at home, a friend's house, or a campsite."
+    ],
+    "variants": [
+      {
+        "asin": "B0FML7XQ4R",
+        "title": "Blaze One Size",
+        "link": "https://www.amazon.com/dp/B0FML7XQ4R?th=1&pcs=1",
+        "is_current_product": true,
+        "dimensions": [
+          {
+            "name": "Color",
+            "value": "Blaze"
+          },
+          {
+            "name": "Size",
+            "value": "One Size"
+          }
+        ]
+      },
+      {
+        "asin": "B0FMLD4YH2",
+        "title": "Orchid One Size",
+        "link": "https://www.amazon.com/dp/B0FMLD4YH2?th=1&pcs=1",
+        "dimensions": [
+          {
+            "name": "Color",
+            "value": "Orchid"
+          },
+          {
+            "name": "Size",
+            "value": "One Size"
+          }
+        ]
+      },
+      {
+        "asin": "B0GGTRSHF7",
+        "title": "Realtree Camo One Size",
+        "link": "https://www.amazon.com/dp/B0GGTRSHF7?th=1&pcs=1",
+        "dimensions": [
+          {
+            "name": "Color",
+            "value": "Realtree Camo"
+          },
+          {
+            "name": "Size",
+            "value": "One Size"
+          }
+        ]
+      },
+      {
+        "asin": "B0FMLBSLHW",
+        "title": "Midnight One Size",
+        "link": "https://www.amazon.com/dp/B0FMLBSLHW?th=1&pcs=1",
+        "dimensions": [
+          {
+            "name": "Color",
+            "value": "Midnight"
+          },
+          {
+            "name": "Size",
+            "value": "One Size"
+          }
+        ]
+      },
+      {
+        "asin": "B0FMLGHHJ7",
+        "title": "Graphite One Size",
+        "link": "https://www.amazon.com/dp/B0FMLGHHJ7?th=1&pcs=1",
+        "dimensions": [
+          {
+            "name": "Color",
+            "value": "Graphite"
+          },
+          {
+            "name": "Size",
+            "value": "One Size"
+          }
+        ]
+      },
+      {
+        "asin": "B0FMLQH6Y3",
+        "title": "Sunburst One Size",
+        "link": "https://www.amazon.com/dp/B0FMLQH6Y3?th=1&pcs=1",
+        "dimensions": [
+          {
+            "name": "Color",
+            "value": "Sunburst"
+          },
+          {
+            "name": "Size",
+            "value": "One Size"
+          }
+        ]
+      }
+    ],
+    "search_alias": {
+      "title": "Pet Supplies",
+      "value": "pets"
+    },
+    "buybox": {
+      "price": {
+        "raw": "$524.00",
+        "value": 524,
+        "symbol": "$",
+        "currency": "USD"
+      },
+      "original_price": {
+        "raw": "$599.00",
+        "value": 599,
+        "symbol": "$",
+        "currency": "USD"
+      },
+      "price_per": {
+        "raw": "$524.00 / count",
+        "value": 524,
+        "symbol": "$",
+        "currency": "USD",
+        "unit": "count"
+      },
+      "save": {
+        "percentage": 13
+      },
+      "maximum_order_quantity": 30,
+      "offer_listing_id": "pcuCCYoxLguY%2FskseikvPkgXB7PI3Coqe6%2BJHcyX2TStmwCgyN5dVsFN3yWG8IOsp3zTTjpwo6geY3GfzHJerfLyZ%2FvsI857VWxQBkLDR7%2BWb9ZoYETg7A5RYeKvEGAhF2eRDG1j8h5RFRcqNbOQsJMb6x6stNs9CiW7wrdHrDUjaSp%2F9mDb4Fo%2B8%2BjgNj6f",
+      "fulfillment": {
+        "standard_delivery": {
+          "text": "FREE delivery Wednesday, April 15",
+          "type": "FREE",
+          "date": "Wednesday, April 15"
+        },
+        "fastest_delivery": {
+          "text": "Or Prime members get FREE delivery Tomorrow, April 11. Join Prime",
+          "type": "FREE",
+          "date": "Tomorrow, April 11"
+        },
+        "third_party_seller": {
+          "id": "A2MIQ4WDVLBE4J",
+          "name": "Halo Collar",
+          "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A2MIQ4WDVLBE4J&asin=B0FML7XQ4R&ref_=dp_merchant_link&isAmazonFulfilled=1"
+        },
+        "ships_from": "Amazon",
+        "sold_by": "Halo Collar",
+        "is_sold_by_amazon": true
+      },
+      "availability": "In Stock"
+    },
+    "specifications": [
+      {
+        "name": "Brand Name",
+        "value": "Halo"
+      },
+      {
+        "name": "Key Product Features",
+        "value": "#1 Most Dogs Protected: Powered by PrecisionGPS technology, Halo Collar 5 connects to six satellite constellations using dual-frequency L1 and L5 signals to deliver accuracy within 1.4 feet. AI-driven software filters interference from buildings and trees, while advanced drift prevention keeps your dog’s location precise, even when standing still., Built for all yard sizes, rural properties, and wide-open spaces: Advanced GPS technology works with Wi-Fi, Bluetooth, and cellular connections to keep your dog's location updated 20 times per second. Create and store multiple fences, even on rural properties, hiking trails, and remote locations where other GPS collars fail., Fits small, medium & large dogs (10 lbs and up): Adjustable 8–30 inch collar ensures a secure fit for most breeds. Waterproof (IP67) and built for active dogs who run, swim, and explore., Know where your dog is the moment it matters: Know your dog's exact location 24/7 with AlwaysOn GPS that comes standard with every plan and never stops tracking your dog. Get instant smartphone alerts if they approach or cross a boundary., Longer battery, faster charging: Upgraded 48-hour battery life keeps your dog safely contained longer between charges. Rapid charging restores up to two full days of protection in about 1 hour., Professional training guidance built-in: An exclusive training program by Cesar Millan teaches any dog to understand the automatic sound, vibration, and static (optional) warnings they receive as they approach a boundary., Subscription required to activate GPS & fence features: Your Halo membership unlocks GPS tracking, unlimited cellular data, virtual fence creation, training guidance, live support, and activity reports. Choose your plan after purchase to enable tracking and containment., Works without wires or base stations: Unlike traditional wireless dog fences that need a plug-in transmitter, Halo Collar is entirely self-contained and works using satellite and cellular connectivity. Take it anywhere without hauling equipment. Create a new fence in seconds from your phone (with sizes ranging from 900 sq. ft. to 1,200 sq. miles), whether you're at home, a friend's house, or a campsite."
+      },
+      {
+        "name": "Title",
+        "value": "Halo Collar 5 Wireless Dog Fence & GPS Dog Collar, Keep Your Dog Safely Contained Outdoors with App-Controlled Boundaries and Real-Time Tracking, One Size, Blaze"
+      },
+      {
+        "name": "List Price",
+        "value": "599.00"
+      },
+      {
+        "name": "Breed Recommendation",
+        "value": "All Breeds"
+      },
+      {
+        "name": "Included Components",
+        "value": "Contact Tips, Halo Collar 5, Halo Pro Case, Magnetic Charger, Perfect Fit Kit"
+      },
+      {
+        "name": "Dog Breed Size",
+        "value": "Large, Medium, Small"
+      },
+      {
+        "name": "Animal Collar Type",
+        "value": "Electronic Training Collar"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "PAWS LLC"
+      },
+      {
+        "name": "Pet Type",
+        "value": "Dog"
+      },
+      {
+        "name": "UPC",
+        "value": "850035906743"
+      },
+      {
+        "name": "Model Name",
+        "value": "Halo Collar 5"
+      },
+      {
+        "name": "Manufacturer Part Number",
+        "value": "850035906743"
+      },
+      {
+        "name": "Model Number",
+        "value": "850035906743"
+      },
+      {
+        "name": "Item Weight",
+        "value": "0.26 Pounds"
+      },
+      {
+        "name": "Age Range Description",
+        "value": "adult and senior"
+      },
+      {
+        "name": "Warranty Description",
+        "value": "1-year warranty"
+      },
+      {
+        "name": "ASIN",
+        "value": "B0FML7XQ4R"
+      },
+      {
+        "name": "Number of Items",
+        "value": "1"
+      },
+      {
+        "name": "Unit Count",
+        "value": "1 Count"
+      },
+      {
+        "name": "Width Fit Type",
+        "value": "Adjustable"
+      },
+      {
+        "name": "Size",
+        "value": "One Size"
+      },
+      {
+        "name": "Item Weight",
+        "value": "0.26 Pounds"
+      },
+      {
+        "name": "Package Weight",
+        "value": "0.52 Kilograms"
+      },
+      {
+        "name": "Package Quantity",
+        "value": "1"
+      },
+      {
+        "name": "Item Dimensions",
+        "value": "6.93 x 1.1 x 1.3 inches"
+      },
+      {
+        "name": "Pattern",
+        "value": "Solid"
+      },
+      {
+        "name": "Color",
+        "value": "Blaze"
+      },
+      {
+        "name": "Product Style",
+        "value": "Classic"
+      },
+      {
+        "name": "Material Type",
+        "value": "Nylon"
+      },
+      {
+        "name": "Closure Type",
+        "value": "Adjustable Fit"
+      },
+      {
+        "name": "Product Dimensions",
+        "value": "6.93 x 1.1 x 1.3 inches; 4.16 ounces"
+      },
+      {
+        "name": "Item model number",
+        "value": "850035906743"
+      },
+      {
+        "name": "Batteries",
+        "value": "1 Lithium Ion batteries required. (included)"
+      },
+      {
+        "name": "Date First Available",
+        "value": "August 24, 2025"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "PAWS LLC"
+      },
+      {
+        "name": "ASIN",
+        "value": "B0FML7XQ4R"
+      }
+    ],
+    "bestsellers_rank": [
+      {
+        "name": "See Top 100 in Pet Supplies",
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies"
+      },
+      {
+        "name": "Dog Wireless Fences",
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/2975424011/ref=pd_zg_hrsr_pet-supplies"
+      },
+      {
+        "name": "See Top 100 in Pet Supplies",
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "rank": 2286
+      },
+      {
+        "name": "Dog Wireless Fences",
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/2975424011/ref=pd_zg_hrsr_pet-supplies",
+        "rank": 2
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/81Ya8CXFCKL.jpg",
+    "images": [
+      {
+        "link": "https://m.media-amazon.com/images/I/81Ya8CXFCKL.jpg",
+        "variant": "MAIN"
+      },
+      {
+        "link": "https://m.media-amazon.com/images/I/71oeWdlapPL.jpg",
+        "variant": "PT01"
+      },
+      {
+        "link": "https://m.media-amazon.com/images/I/7197ZQNgUgL.jpg",
+        "variant": "PT02"
+      },
+      {
+        "link": "https://m.media-amazon.com/images/I/81SUbnevPSL.jpg",
+        "variant": "PT03"
+      },
+      {
+        "link": "https://m.media-amazon.com/images/I/71EBABQrIIL.jpg",
+        "variant": "PT04"
+      },
+      {
+        "link": "https://m.media-amazon.com/images/I/81nZDnAY99L.jpg",
+        "variant": "PT05"
+      },
+      {
+        "link": "https://m.media-amazon.com/images/I/71tdGM72Q2L.jpg",
+        "variant": "PT06"
+      }
+    ]
+  },
+  "frequently_bought_together": {
+    "total_price": {
+      "raw": "$531.99",
+      "value": 531.99,
+      "symbol": "$",
+      "currency": "USD"
+    },
+    "products": [
+      {
+        "asin": "B0FML7XQ4R",
+        "title": "Halo Collar 5 Wireless Dog Fence & GPS Dog Collar, Keep Your Dog Safely Contained Outdoors with App-Controlled Boundaries and Real-Time Tracking, One Size, Blaze",
+        "link": "https://www.amazon.com/dp/B0FML7XQ4R",
+        "price": {
+          "symbol": "$",
+          "currency": "USD",
+          "value": 524,
+          "raw": "$524.00"
+        },
+        "image": "https://images-na.ssl-images-amazon.com/images/I/81Ya8CXFCKL.jpg"
+      },
+      {
+        "asin": "B0CHY3SQMB",
+        "title": "Zozen 50Pack Fluorescent Orange Marking Flags, Writable/15x4x5 Inch, Yard Flags for Lawn & Irrigation & Landscape & Sprinkler & Survey & Dog Training.",
+        "link": "https://www.amazon.com/Zozen-50Pack-Fluorescent-Orange-Writable/dp/B0CHY3SQMB/ref=pd_bxgy_thbs_d_sccl_1/137-1275861-8218953?pd_rd_w=r2LqN&content-id=amzn1.sym.9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_p=9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_r=TCHYGM1YXP480H1Z4142&pd_rd_wg=zIE5p&pd_rd_r=362a9545-4396-47a5-adfb-6ed63dae2ca1&pd_rd_i=B0CHY3SQMB&psc=1",
+        "price": {
+          "symbol": "$",
+          "currency": "USD",
+          "value": 7.99,
+          "raw": "$7.99"
+        },
+        "image": "https://images-na.ssl-images-amazon.com/images/I/61GFh+d+E8L.jpg"
+      }
+    ]
+  },
+  "review_results": {
+    "local": [
+      {
+        "id": "R107B0NX633PZK",
+        "asin": "R107B0NX633PZK",
+        "title": "Loving this Collar!",
+        "link": "https://www.amazon.com/gp/customer-reviews/R107B0NX633PZK/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8",
+        "text": "This collar has been such a great investment for us. We have an unfenced yard, and while our dog was okay off-leash for short periods, she would often wander when she got distracted. Since using the wireless dog fence, we’ve seen a huge improvement in her behavior. She understands her boundaries much better now and is way more responsive when we call her back. It’s made letting her roam feel a lot less stressful and a lot more enjoyable for everyone. The battery life has been solid so far and hasn’t been an issue with our daily use.",
+        "rating": 5,
+        "date": "Reviewed in the United States on March 23, 2026",
+        "extracted_date": "2026-03-23",
+        "profile": {
+          "id": "AHVKOQP45WOFAOKPOOEBPW7VPGTQ",
+          "name": "Natalie Gutierrez",
+          "link": "https://www.amazon.com/gp/profile/amzn1.account.AHVKOQP45WOFAOKPOOEBPW7VPGTQ"
+        },
+        "helpful_votes": 4,
+        "is_verified_purchase": true
+      },
+      {
+        "id": "R3H3QHH6MF9WQL",
+        "asin": "R3H3QHH6MF9WQL",
+        "title": "BEST WIRELESS DOG FENCE ON THE MARKET!",
+        "link": "https://www.amazon.com/gp/customer-reviews/R3H3QHH6MF9WQL/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8",
+        "text": "This collar has been a game changer! I have a very clever German Shephard that consistently finds new ways to escape my backyard. After numerous times of her getting out and being picked up by animal control we decided to invest in the Halo invisible wireless dog fence and we are so happy that we did. We can leave our dog in the backyard worry free. She is less anxious and behaves better because she has more freedom and we have peace of mind. This collar is 100% worth the cost and is very high quality. I was very impressed with the easy setup and how quickly my dog responded to the trainings and how many trainings are on the app. I fully believe that the value will continue to increase as I use it and my dogs training and behavior will continue to improve. I've tried other wireless dog fences and they are unreliable and inconsistent, it's worth it to invest in a high quality one like the Halo system.",
+        "rating": 5,
+        "date": "Reviewed in the United States on March 26, 2026",
+        "extracted_date": "2026-03-26",
+        "profile": {
+          "id": "AFGXVJXEE5DHE64BANZQ7R5BXUKA",
+          "name": "Kaylee",
+          "link": "https://www.amazon.com/gp/profile/amzn1.account.AFGXVJXEE5DHE64BANZQ7R5BXUKA"
+        },
+        "helpful_votes": 4,
+        "images": [
+          "https://m.media-amazon.com/images/I/81J1MBSL91L.jpg",
+          "https://m.media-amazon.com/images/I/81R3qSgIbxL.jpg",
+          "https://m.media-amazon.com/images/I/81TtnTf+O-L.jpg",
+          "https://m.media-amazon.com/images/I/61pfbbRJpEL.jpg",
+          "https://m.media-amazon.com/images/I/81l5COR4dcL.jpg"
+        ],
+        "is_verified_purchase": true
+      },
+      {
+        "id": "R22JDD13G1ZEAZ",
+        "asin": "R22JDD13G1ZEAZ",
+        "title": "Game-Changer for Safe, Stress-Free Freedom",
+        "link": "https://www.amazon.com/gp/customer-reviews/R22JDD13G1ZEAZ/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8",
+        "text": "The media could not be loaded. We should have had this collar before we had a tragic accident and our dog passed. I now have so much peace of mind. Getting a second for our new puppy and can put them on the same app! We’ve been extremely impressed with this collar. The GPS tracking is accurate and gives real peace of mind, especially if your dog likes to roam. Works where our WiFi doesn’t. Setting up boundaries was much easier than we expected, and the app is very user-friendly. The collar feels sturdy and well-made, and the battery life has been solid for daily use. What we love most is being able to let our dog enjoy more freedom without constantly worrying about safety. Plus it fits her comfortably and not too tight and she is so smart that she nearly instantly learned the collar and boundaries! Helps us keep her with the chickens when we want her to stay there It’s definitely an investment, but for us the reliability and features make it worth it. Highly recommend for anyone wanting a safer, more flexible alternative to traditional fencing.",
+        "rating": 5,
+        "date": "Reviewed in the United States on March 9, 2026",
+        "extracted_date": "2026-03-09",
+        "profile": {
+          "id": "AFGV4TG4DDMBS6VG7ZLUCOBF3PVQ",
+          "name": "Nina Roxanne",
+          "link": "https://www.amazon.com/gp/profile/amzn1.account.AFGV4TG4DDMBS6VG7ZLUCOBF3PVQ"
+        },
+        "helpful_votes": 8,
+        "is_verified_purchase": true
+      },
+      {
+        "id": "R34VZVABUYCXT8",
+        "asin": "R34VZVABUYCXT8",
+        "title": "Not worth the money",
+        "link": "https://www.amazon.com/gp/customer-reviews/R34VZVABUYCXT8/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8",
+        "text": "If I could give the product zero stars I would . The very first couple of days since purchasing the product we noticed issues with getting a full 48 hours worth of charge. Contacted halo support several times and tried many of their diagnostics recommendations with now our collars life average being about 26 hours. My dog has gotten out the yard several times because the collar died before expected or the signal didnt work so neither did the buzz or shock methods. When I originally wanted to return the item amazon told me to go through halo . And of course as soon as the 30 day warranty was up halo told me I had to go through Amazon which no longer will offer me a refund only a replacement which I really dont want because they cant find any issues with the collar on their end. So why would I want another one that probably wont work either. Anyways very very disappointed and will warn anyone of you have an issue with your collar IMMEDIATELY return it and get your money back.",
+        "rating": 1,
+        "date": "Reviewed in the United States on April 6, 2026",
+        "extracted_date": "2026-04-06",
+        "profile": {
+          "id": "AEAZJFC3E64A5AHWXUCSGAI5U2CA",
+          "name": "Brooke",
+          "link": "https://www.amazon.com/gp/profile/amzn1.account.AEAZJFC3E64A5AHWXUCSGAI5U2CA"
+        },
+        "helpful_votes": 2,
+        "images": [
+          "https://m.media-amazon.com/images/I/61OZNCNzVbL.jpg"
+        ],
+        "is_verified_purchase": true
+      },
+      {
+        "id": "RJFJ5ZKJDU58S",
+        "asin": "RJFJ5ZKJDU58S",
+        "title": "It works even without cell signal in rural, wooded areas.",
+        "link": "https://www.amazon.com/gp/customer-reviews/RJFJ5ZKJDU58S/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8",
+        "text": "I bought this system for my 8 month old lab and I’ve gotta admit it works pretty darn good. We live in a rural area with little to no cell service and spotty signal on our gps but this system works well for the most part. We do have an area in our lower yard that we lose connection with the collar if live tracking our dogs location but the gps still works and keeps her contained. My two complaints are, why do I have to spend this kind of money and still have to pay a monthly subscription fee? Cmon man! Second, the correction zone is like 300yds wide and from what I see there’s no way to adjust it. Doesn’t seem like a big deal but I created multiple fences on our farm and realized the correction zones were all overlapping so it would confuse the collar. Overall it works in our yard, pond, pasture, wooded areas etc even though we have no cell service. Training was easy and I bought little marker flags to give visual clues of where the boundary was.",
+        "rating": 4,
+        "date": "Reviewed in the United States on April 6, 2026",
+        "extracted_date": "2026-04-06",
+        "profile": {
+          "id": "AGCPRRXL3QA2JFAKPW5D4L5QIHUA",
+          "name": "Mark Johnson",
+          "link": "https://www.amazon.com/gp/profile/amzn1.account.AGCPRRXL3QA2JFAKPW5D4L5QIHUA"
+        },
+        "images": [
+          "https://m.media-amazon.com/images/I/91SzcsxSMkL.jpg"
+        ],
+        "is_verified_purchase": true
+      },
+      {
+        "id": "R5AGCW3K0IHSV",
+        "asin": "R5AGCW3K0IHSV",
+        "title": "Best Investment for Our Dogs!!!",
+        "link": "https://www.amazon.com/gp/customer-reviews/R5AGCW3K0IHSV/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8",
+        "text": "I am sooo loving this collar! Bought 2 for my Gerberian Shepskys who LOVE to run and explore. Knowing this system will keep my dogs contained to our land without being able to roll in the muddy swamp area or go onto the neighbor's land is such a relief! I have the collars set to only vibrate when they cross the border; it is enough deterrant to bring them back. Love the collars and am recommending them to everyone I know who is looking for a dog containment system!!!",
+        "rating": 5,
+        "date": "Reviewed in the United States on April 4, 2026",
+        "extracted_date": "2026-04-04",
+        "profile": {
+          "id": "AFRFOL6FDAQOCYXRWLMZHSXUO4HQ",
+          "name": "music",
+          "link": "https://www.amazon.com/gp/profile/amzn1.account.AFRFOL6FDAQOCYXRWLMZHSXUO4HQ"
+        },
+        "is_verified_purchase": true
+      },
+      {
+        "id": "R2KBCN0T36R0HC",
+        "asin": "R2KBCN0T36R0HC",
+        "title": "Worth the investment for escape artists!",
+        "link": "https://www.amazon.com/gp/customer-reviews/R2KBCN0T36R0HC/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8",
+        "text": "My dog Bo has been an escape artist for 7 years. Once I got him trained with the easy to use app he has gotten use to the boundaries and stays within them. I swear this collar has changed our lives so far! It’s been almost a month and he escaped once at the beginning and the collar corrected the behavior and he has not escaped since. I can leave the dog door open on short trips away and check his location and he stays in the house. It’s definitely been worth the investment!",
+        "rating": 5,
+        "date": "Reviewed in the United States on March 15, 2026",
+        "extracted_date": "2026-03-15",
+        "profile": {
+          "id": "AGCDYO2B2776UWPYXD6FTXZX2MJQ",
+          "name": "Bonnie Lindler",
+          "link": "https://www.amazon.com/gp/profile/amzn1.account.AGCDYO2B2776UWPYXD6FTXZX2MJQ"
+        },
+        "helpful_votes": 2,
+        "is_verified_purchase": true
+      }
+    ]
+  }
+}
