@@ -72,6 +72,17 @@ describe('site smoke tests', () => {
     expect(canonical?.getAttribute('href')).toBe('https://www.chill-dogs.com/');
   });
 
+  it('links the homepage into crate training and road trip crate paths', () => {
+    const doc = readBuiltPage('index.html');
+
+    const links = Array.from(doc.querySelectorAll<HTMLAnchorElement>('a')).map((link) =>
+      link.getAttribute('href')
+    );
+
+    expect(links).toContain('/calming/crate-training-for-dogs/');
+    expect(links).toContain('/comforting/best-travel-crates-for-road-trips/');
+  });
+
   it('publishes generated per-page OG assets and metadata references', () => {
     const homeDoc = readBuiltPage('index.html');
     const coolingDoc = readBuiltPage(path.join('cooling', 'cooling-mats', 'index.html'));
@@ -217,8 +228,18 @@ describe('site smoke tests', () => {
     expect(sitemap).toContain('/cooling/car-cooling-for-dogs/');
     expect(sitemap).toContain('/travel/dog-road-trip-gear/');
     expect(sitemap).toContain('/calming/best-calming-products-for-anxious-dogs/');
+    expect(sitemap).toContain('/comforting/best-puppy-crates/');
+    expect(sitemap).toContain('/comforting/best-anxiety-dog-crates/');
+    expect(sitemap).toContain('/comforting/best-travel-crates-for-road-trips/');
     expect(sitemap).not.toContain('/cooling/v/');
     expect(sitemap).not.toContain('/calming/v/');
+  });
+
+  it('publishes article collection entries in rss feed', () => {
+    const rssXml = readBuiltAsset('rss.xml');
+
+    expect(rssXml).toContain('/calming/crate-training-for-dogs/');
+    expect(rssXml).toContain('How to Crate Train Your Dog');
   });
 
   it('does not render escaped HTML tags as visible text on any page', () => {

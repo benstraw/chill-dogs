@@ -210,8 +210,8 @@ export const comfortCollectorBody: CollectorBodyConfig = {
   accent: 'terracotta',
   sections: [
     {
-      heading: 'Shop by Bed Type',
-      intro: 'Two types of beds for two different needs — calming beds for dogs who seek security and enclosure, orthopedic beds for dogs who need joint support.',
+      heading: 'Shop by Rest Setup',
+      intro: 'Beds and crates for different rest needs — calming beds for dogs who seek security, orthopedic beds for joint support, and puppy crates for training.',
       cards: [
         {
           href: ROUTES.comfortCalmingBeds,
@@ -228,6 +228,30 @@ export const comfortCollectorBody: CollectorBodyConfig = {
           linkLabel: 'See our picks ->',
           dataToPage: ROUTES.comfortOrthopedicBeds,
           dataCategory: 'orthopedic-beds',
+        },
+        {
+          href: ROUTES.comfortPuppyCrates,
+          title: 'Best Puppy Crates',
+          description: 'Divider-based wire crates for housebreaking, quiet-time practice, and a first crate-training setup.',
+          linkLabel: 'See our picks ->',
+          dataToPage: ROUTES.comfortPuppyCrates,
+          dataCategory: 'crates',
+        },
+        {
+          href: ROUTES.comfortAnxietyCrates,
+          title: 'Best Dog Crates for Anxiety',
+          description: 'Wire, enclosed, and heavy-duty crates for different anxiety and escape-risk patterns.',
+          linkLabel: 'Compare options ->',
+          dataToPage: ROUTES.comfortAnxietyCrates,
+          dataCategory: 'crates',
+        },
+        {
+          href: ROUTES.comfortTravelCrates,
+          title: 'Best Travel Crates for Road Trips',
+          description: 'Hard-sided and soft folding crates for car travel, hotels, and road trip setup.',
+          linkLabel: 'Compare travel crates ->',
+          dataToPage: ROUTES.comfortTravelCrates,
+          dataCategory: 'crates',
         },
       ],
     },
