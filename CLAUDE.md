@@ -18,7 +18,7 @@ bun run preview   # Preview built site
 
 ## Content Sitemap
 
-- `src/pages/content-sitemap.astro` is the live page inventory. **Every new page must be added to it before the work is considered done.** This includes hub collectors, article collectors, converters, and attractor pages — not just informer pages.
+- `src/pages/content-sitemap.astro` is the live page inventory. **Every new page must be added to it before the work is considered done.** This includes section collectors, article collectors, converters, and attractor pages — not just informer pages.
 - When adding a page: add it to the correct section (or create a new section if the pillar is new), set the correct `pageType` and `collectorSubtype` where applicable.
 
 ## Governing Principles
@@ -57,7 +57,7 @@ This site is a **modular conversion system** governed by `docs/web-systems-adven
 - `collector` pages must route users to relevant `converter` pages.
 - `collector` pages should aggregate and route intent; avoid duplicating full converter-style comparison implementations.
 
-#### Hub collectors (`/cooling/`, `/calming/`)
+#### Section collectors (`/cooling/`, `/calming/`)
 - Use `CollectorBody` module with card grid config
 - Must have above-the-fold route to a converter
 - No prose content — pure routing intent
@@ -77,6 +77,7 @@ This site is a **modular conversion system** governed by `docs/web-systems-adven
 - Validate modularity (no repeated scaffolding where shared module/config patterns should be used).
 - Run `bun run test` and `bun run build` for substantive page/module changes.
 - Changes to `src/utils/**` or `src/scripts/**` require updated unit tests.
+- Product inventory changes must keep `/admin/products/` complete. Add products to shared data/catalog modules and let the admin page consume those data files; do not hardcode product rows directly in the admin route.
 
 ### SEO Meta Tag Rules (enforced by `src/__tests__/seo-meta.test.ts`)
 

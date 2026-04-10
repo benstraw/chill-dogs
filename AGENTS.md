@@ -42,8 +42,9 @@ Repository guidance for coding agents working in `/Volumes/wanderer/dev/solo/chi
 
 - Verify internal route integrity (no dead or malformed links).
 - Verify modularity (no repeated section scaffolding where a shared module/config pattern exists).
-- Run `npm test` and `npm run build` for substantive page/module changes.
+- Run `bun run test` and `bun run build` for substantive page/module changes.
 - For `src/utils/**` or `src/scripts/**` changes, add/update unit tests in `src/__tests__/`.
+- Whenever any product is added or changed in `src/data/**`, ensure `/admin/products/` stays complete via data imports. Products must flow through shared product data/catalog modules, not hardcoded rows in the admin page.
 
 ## Content Guardrails
 
@@ -75,9 +76,9 @@ Repository guidance for coding agents working in `/Volumes/wanderer/dev/solo/chi
 
 - **All new features and changes to utility/script modules must include unit tests.**
 - Tests live in `src/__tests__/` and use [Vitest](https://vitest.dev/).
-- Run tests: `npm test` (alias: `bun run test`).
-- Run coverage: `npm run test:coverage` (alias: `bun run test:coverage`).
-- A pre-commit git hook runs `npm test` automatically — commits are blocked if any test fails.
+- Run tests: `bun run test`.
+- Run coverage: `bun run test:coverage`.
+- A pre-commit git hook runs `bun run test` automatically — commits are blocked if any test fails.
 - Target: keep statement coverage ≥ 90% for `src/utils/**` and `src/scripts/**`.
 - The `astro:content` virtual module is stubbed in `src/__mocks__/astro-content.ts` so helpers that call `getCollection` can be tested without the Astro build context.
 

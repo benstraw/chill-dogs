@@ -1,17 +1,10 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
-import { coolingProducts } from '../../data/cooling-products';
-import { calmingProducts } from '../../data/calming-products';
-import { comfortProducts } from '../../data/comfort-products';
+import { productCatalogItems } from '../../data/product-catalog';
 import { buildProductPageMap } from '../../data/product-page-map';
 
 const pageMap = buildProductPageMap();
-
-const allProducts = [
-  ...coolingProducts.map((p) => ({ ...p, pillar: 'cooling' as const, howItHelps: undefined as string | undefined, considerIf: undefined as string | undefined, whyItWorks: undefined as string | undefined })),
-  ...calmingProducts.map((p) => ({ ...p, pillar: 'calming' as const, coolingMethod: undefined as string | undefined, sizingNote: undefined as string | undefined, whyItWorks: undefined as string | undefined })),
-  ...comfortProducts.map((p) => ({ ...p, pillar: 'comfort' as const, coolingMethod: undefined as string | undefined, sizingNote: undefined as string | undefined, howItHelps: undefined as string | undefined })),
-];
+const allProducts = productCatalogItems;
 
 const pillars = [...new Set(allProducts.map((p) => p.pillar))];
 const categories = [...new Set(allProducts.map((p) => p.category))];
@@ -114,6 +107,28 @@ const categories = [...new Set(allProducts.map((p) => p.category))];
                           <span class="meta-value">{p.considerIf}</span>
                         </div>
                       )}
+                      {p.signalNote && (
+                        <div class="meta-item">
+                          <span class="meta-label">Signal</span>
+                          <span class="meta-value">{p.signalNote}</span>
+                        </div>
+                      )}
+                      {p.subscriptionNote && (
+                        <div class="meta-item">
+                          <span class="meta-label">Subscription</span>
+                          <span class="meta-value">{p.subscriptionNote}</span>
+                        </div>
+                      )}
+                      {p.note && (
+                        <div class="meta-item">
+                          <span class="meta-label">Note</span>
+                          <span class="meta-value">{p.note}</span>
+                        </div>
+                      )}
+                      <div class="meta-item">
+                        <span class="meta-label">Source</span>
+                        <span class="meta-value meta-value--mono">{p.source}</span>
+                      </div>
                     </div>
                     <div class="detail-ids">
                       <div class="meta-item">
@@ -124,6 +139,16 @@ const categories = [...new Set(allProducts.map((p) => p.category))];
                         <div class="meta-item">
                           <span class="meta-label">ASIN</span>
                           <span class="meta-value meta-value--mono">{p.asin}</span>
+                        </div>
+                      )}
+                      {p.secondaryUrl && (
+                        <div class="meta-item">
+                          <span class="meta-label">Secondary Link</span>
+                          <span class="meta-value">
+                            <a href={p.secondaryUrl} target="_blank" rel="nofollow noopener">
+                              {p.secondaryLabel ?? 'Secondary product'}
+                            </a>
+                          </span>
                         </div>
                       )}
                     </div>

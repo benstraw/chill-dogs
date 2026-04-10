@@ -16,7 +16,7 @@
     "indexnow:submit": "node scripts/indexnow-submit.mjs"
   },
   "simple-git-hooks": {
-    "pre-commit": "npm test && npm run test:smoke"
+    "pre-commit": "bun run test && bun run test:smoke"
   },
   "dependencies": {
     "@astrojs/mdx": "^5.0.3",

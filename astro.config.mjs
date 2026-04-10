@@ -8,7 +8,6 @@ export default defineConfig({
   trailingSlash: 'ignore',
   redirects: {
     '/travel/rhys-road-trip-chill-kit/': '/travel/dog-road-trip-gear/',
-    '/travel/rhys-road-trip-chill-kit': '/travel/dog-road-trip-gear/',
   },
   integrations: [
     mdx(),

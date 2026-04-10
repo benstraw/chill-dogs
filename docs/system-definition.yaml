@@ -8,7 +8,7 @@
 
 site_system:
   status: "active"
-  as_of: "2026-04-08"
+  as_of: "2026-04-10"
   owner: "chill-dogs"
   purpose: "Define the website as a modular conversion system and keep implementation aligned."
 
@@ -35,18 +35,18 @@ site_system:
       target_action: "Route visitors into cooling, calming, or comforting collector paths"
       metric: "hero_click_cooling + hero_click_calming CTR + comfort block clicks"
       notes: >
-        Home page includes a dusty rose color block introducing the Comfort & Rest hub
+        Home page includes a dusty rose color block introducing the Comfort & Rest collector
         with tagline "Settle in." — positioned between HomepageHero and the start-prompt section.
 
     - name: "Cooling"
       type: "collector"
-      collector_subtype: "hub"
+      collector_subtype: "section"
       target_action: "Route heat-intent traffic to cooling converters"
       metric: "collector_to_converter_click to cooling converters"
 
     - name: "Calming"
       type: "collector"
-      collector_subtype: "hub"
+      collector_subtype: "section"
       target_action: "Route anxiety-intent traffic to calming converters"
       metric: "collector_to_converter_click to calming converters"
       notes: "Collector routes directly to general calming picks, ThunderShirt alternatives, and the travel-focused car-anxiety converter."
@@ -176,11 +176,13 @@ site_system:
       target_action: "Trust and compliance clarity"
       metric: "No conversion obstruction"
       routes:
+        - "/admin/products/"
         - "/about/"
         - "/contact/"
         - "/privacy-policy/"
         - "/terms/"
         - "/affiliate-disclosure/"
+      notes: "/admin/products/ is the canonical product inventory review page. Every product in any product data file must flow into this page through src/data/product-catalog.ts; do not hardcode product rows in the admin route."
 
   modules:
     workhorse:
@@ -239,10 +241,11 @@ site_system:
       - "Collector pages without clear converter paths"
 
   product_data:
+    product_catalog: "src/data/product-catalog.ts — normalized admin inventory across every product data source; /admin/products/ must consume this data module and remain complete whenever products are added"
     cooling_products: "src/data/cooling-products.ts — 15 products with ASIN, affiliate URL, and image thumbnails"
     calming_products: "src/data/calming-products.ts — 13 products with ASIN, affiliate URL, and image thumbnails"
-    relaxation_products: "src/data/relaxation-products.ts — 11 products (calming beds, orthopedic beds, crates) with ASIN and affiliate URL. 2 placeholder entries (B0D5B56X9V, B0DTH4195V) need identification."
-    tracking_products: "src/data/tracking-products.ts — 6 tracker products across cellular/off-grid/bluetooth types; placeholder URLs pending affiliate setup"
+    relaxation_products: "src/data/relaxation-products.ts — 13 products (calming beds, orthopedic beds, crates) with ASIN, affiliate URL, and image thumbnails"
+    tracking_products: "src/data/tracking-products.ts — 6 tracker products and 1 accessory product across cellular/off-grid/bluetooth/accessory types"
     raw_api_cache: "src/data/amazon-products/*.json — full SearchAPI Amazon Product responses per ASIN"
 
   architecture:

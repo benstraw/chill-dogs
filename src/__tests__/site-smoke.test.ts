@@ -20,7 +20,7 @@ function collectHtmlFiles(dir: string): string[] {
 }
 
 function buildSite() {
-  execFileSync('npm', ['run', 'build'], {
+  execFileSync('bun', ['run', 'build'], {
     cwd: projectRoot,
     stdio: 'pipe',
   });
@@ -90,6 +90,22 @@ describe('site smoke tests', () => {
     const coolingOg = readFileSync(path.join(distRoot, 'og', 'cooling-cooling-mats.jpg'));
     expect(homeOg.length).toBeGreaterThan(1024);
     expect(coolingOg.length).toBeGreaterThan(1024);
+  });
+
+  it('publishes homepage featured article images', () => {
+    const homeDoc = readBuiltPage('index.html');
+    const featuredImages = Array.from(
+      homeDoc.querySelectorAll<HTMLImageElement>('.article-card img[src^="/og/"], .hp-v7-article-img[src^="/og/"]')
+    );
+
+    expect(featuredImages.length).toBeGreaterThan(0);
+
+    for (const image of featuredImages) {
+      const src = image.getAttribute('src');
+      expect(src).toBeTruthy();
+      const asset = readFileSync(path.join(distRoot, src!.replace(/^\//, '')));
+      expect(asset.length).toBeGreaterThan(1024);
+    }
   });
 
   it('injects BreadcrumbList schema on indexable pages only', () => {
@@ -166,7 +182,17 @@ describe('site smoke tests', () => {
     expect(affiliateDoc.body.textContent).toContain('no additional cost to you');
   });
 
-  it('collector hub pages are indexable with correct canonical', () => {
+  it('renders the admin product catalog from all product data files', () => {
+    const doc = readBuiltPage(path.join('admin', 'products', 'index.html'));
+
+    expect(doc.body.textContent).toContain('Fi Series 3+ GPS Collar');
+    expect(doc.body.textContent).toContain('Stunt Puppy Fi-Ready Collar');
+    expect(doc.body.textContent).toContain('The Green Pet Shop Cooling Pet Pad');
+    expect(doc.body.textContent).toContain('ThunderShirt Classic Dog Anxiety Jacket');
+    expect(doc.body.textContent).toContain('src/data/tracking-products.ts');
+  });
+
+  it('collector section pages are indexable with correct canonical', () => {
     const coolingDoc = readBuiltPage(path.join('cooling', 'index.html'));
     const calmingDoc = readBuiltPage(path.join('calming', 'index.html'));
 
