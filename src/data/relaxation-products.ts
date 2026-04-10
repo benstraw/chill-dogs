@@ -225,7 +225,152 @@ export const relaxationProducts: RelaxationProduct[] = [
     image: { src: 'https://m.media-amazon.com/images/I/71riy3hJGtL._SL500_.jpg', alt: 'OneTigris Travel Dog Bed' },
   },
 
-  // ── Crates (future page) ─────────────────────────────────────────────────
+  // ── Crates ───────────────────────────────────────────────────────────────
+
+  {
+    id: 'midwest-icrate',
+    asin: 'B000QFT1RC',
+    name: 'MidWest iCrate Dog Crate',
+    category: 'crates',
+    amazonUrl: 'https://www.amazon.com/dp/B000QFT1RC/?tag=chill-dogs-20',
+    bullets: [
+      'Includes a divider panel so the usable crate space can grow with a puppy',
+      'Folding wire design is easy to move, store, or reposition around the house',
+      'A practical budget-friendly starting point for standard puppy crate training',
+    ],
+    bestFor: 'Most puppies who need a straightforward first wire crate with a divider',
+    whyItWorks:
+      'The divider lets you size the sleeping area smaller during housebreaking, then open up more room as the puppy grows',
+    considerIf:
+      'You want the simpler, lighter Midwest option and do not need the heavier-gauge Life Stages build',
+    image: { src: 'https://m.media-amazon.com/images/I/916OE0sVPqL.jpg', alt: 'MidWest iCrate Dog Crate' },
+  },
+  {
+    id: 'midwest-life-stages-crate',
+    asin: 'B0002AT3ME',
+    name: 'MidWest Life Stages Dog Crate',
+    category: 'crates',
+    amazonUrl: 'https://www.amazon.com/dp/B0002AT3ME/?tag=chill-dogs-20',
+    bullets: [
+      'Includes multiple sizes and a divider panel for puppy-to-adult crate setup',
+      'Heavier-gauge steel than the iCrate line for a sturdier wire-crate feel',
+      'A stronger choice when the price gap is small or the puppy is especially active',
+    ],
+    bestFor: 'Owners who want a sturdier wire crate for a strong or active puppy',
+    whyItWorks:
+      'It keeps the same divider-based training logic as iCrate but uses a heavier build for extra durability',
+    considerIf:
+      'You do not mind extra weight and want the crate that feels more solid between the two Midwest options',
+    image: { src: 'https://m.media-amazon.com/images/I/91NBxSDchXL.jpg', alt: 'MidWest Life Stages Dog Crate' },
+  },
+  {
+    id: 'petmate-training-retreat-kennel',
+    asin: 'B005U6UOEQ',
+    name: 'Petmate Training Retreat Kennel',
+    category: 'crates',
+    amazonUrl: 'https://www.amazon.com/dp/B005U6UOEQ/?tag=chill-dogs-20',
+    bullets: [
+      'Two-door layout gives you more placement options in bedrooms, kitchens, or living rooms',
+      'Wire construction keeps airflow and visibility high during early crate introduction',
+      'Useful alternative if the room layout makes a single front door awkward',
+    ],
+    bestFor: 'Puppy owners who want flexible door access for different room setups',
+    whyItWorks:
+      'A second access point can make daily crate routines easier when the crate sits beside furniture or against a wall',
+    considerIf:
+      'You want a wire training crate but need side-door access more than the sturdier Life Stages build',
+    image: { src: 'https://m.media-amazon.com/images/I/81abUgMp5uL.jpg', alt: 'Petmate Training Retreat Kennel' },
+  },
+  {
+    id: 'impact-high-anxiety-crate',
+    asin: 'B0CV4KXTPR',
+    name: 'Impact High Anxiety Dog Crate',
+    category: 'crates',
+    amazonUrl: 'https://www.amazon.com/dp/B0CV4KXTPR/?tag=chill-dogs-20',
+    bullets: [
+      'Powder-coated aluminum crate built for dogs who damage standard wire crates',
+      'Zinc steel paddle latch plus four butterfly latches add multiple security points',
+      'Small circular ventilation holes are designed to limit tooth access while preserving airflow',
+    ],
+    bestFor: 'Escape artists who have already bent wire crates or injured themselves trying to get out',
+    whyItWorks:
+      'The heavier enclosure, reinforced latching, and smaller ventilation openings are aimed at containment when standard crates are not enough',
+    considerIf:
+      'Your dog has a proven escape history and you are using the crate as part of a broader safety and behavior plan',
+    image: { src: 'https://m.media-amazon.com/images/I/71PqD1QxTFL.jpg', alt: 'Impact High Anxiety Dog Crate' },
+  },
+  {
+    id: 'petmate-sky-kennel',
+    asin: 'B003E6YYYK',
+    name: 'Petmate Sky Kennel',
+    category: 'crates',
+    amazonUrl: 'https://www.amazon.com/dp/B003E6YYYK/?tag=chill-dogs-20',
+    bullets: [
+      'Enclosed plastic shell reduces visual stimulation compared with open wire crates',
+      '360-degree ventilation and tie-down holes support travel use',
+      'Includes travel-prep accessories such as live-animal stickers, cup, ID stickers, and absorbent pad',
+    ],
+    bestFor: 'Anxious dogs who settle better with a more enclosed den-like crate',
+    whyItWorks:
+      'The plastic shell creates a quieter, more contained environment while still allowing ventilation from all sides',
+    considerIf:
+      'Your dog is crate-trained but gets overstimulated by open wire visibility or needs a travel-ready kennel',
+    image: { src: 'https://m.media-amazon.com/images/I/71HTfabbQ3L.jpg', alt: 'Petmate Sky Kennel' },
+  },
+  {
+    id: 'petsafe-happy-ride-travel-crate',
+    asin: 'B09T1P2B7J',
+    name: 'PetSafe Happy Ride Collapsible Travel Crate',
+    category: 'crates',
+    amazonUrl: 'https://www.amazon.com/dp/B09T1P2B7J/?tag=chill-dogs-20',
+    bullets: [
+      'Designed around car travel with seat belt straps and a headrest loop for back-seat setup',
+      'Collapsible soft-sided format folds flat for storage between road trips',
+      'Mesh windows, dual side doors, storage pockets, and waterproof fleece pad support long-drive convenience',
+    ],
+    bestFor: 'Road trips where you want a travel-specific crate that is easier to pack than a standard indoor crate',
+    whyItWorks:
+      'It is built around car-use details rather than house-training, making it the cleanest all-around road trip pick',
+    considerIf:
+      'Your dog is calm enough for a soft travel crate and you want a crate that packs down between drives',
+    image: { src: 'https://m.media-amazon.com/images/I/81LvTZeUnwL.jpg', alt: 'PetSafe Happy Ride Collapsible Travel Crate' },
+  },
+  {
+    id: 'elitefield-three-door-soft-crate',
+    asin: 'B01HKF4AQW',
+    name: 'EliteField 3-Door Folding Soft Dog Crate',
+    category: 'crates',
+    amazonUrl: 'https://www.amazon.com/dp/B01HKF4AQW/?tag=chill-dogs-20',
+    bullets: [
+      'Three mesh doors on top, front, and side make access easier in cars, hotels, and temporary setups',
+      'Folds down to a low profile and includes a carrying bag and fleece bed',
+      'Steel-tube frame with fabric and mesh cover is convenient for trained dogs who settle calmly',
+    ],
+    bestFor: 'Crate-trained dogs who travel well and benefit from multiple access points',
+    whyItWorks:
+      'The three-door layout makes placement more flexible when a crate is moving between the car, hotel room, and campsite',
+    considerIf:
+      'Your dog is already calm in a crate and you want a soft folding crate with more door options than most',
+    image: { src: 'https://m.media-amazon.com/images/I/81eoHEQHU3L.jpg', alt: 'EliteField 3-Door Folding Soft Dog Crate' },
+  },
+  {
+    id: 'lesure-soft-collapsible-crate',
+    asin: 'B0G3PBR7XS',
+    name: 'Lesure Soft Collapsible Dog Crate',
+    category: 'crates',
+    amazonUrl: 'https://www.amazon.com/dp/B0G3PBR7XS/?tag=chill-dogs-20',
+    bullets: [
+      'Soft collapsible frame folds into a compact package with included storage bag',
+      'Quick setup and disassembly make it practical for travel stops and temporary rooms',
+      'Four-sided breathable mesh and removable mat keep the setup light and easy to maintain',
+    ],
+    bestFor: 'Calm, trained dogs whose owners prioritize the lightest, most portable soft crate setup',
+    whyItWorks:
+      'The compact folding design favors convenience and fast setup over hard-sided structure',
+    considerIf:
+      'You want easy carry-and-store travel convenience and your dog will not chew, claw, or push at soft crate walls',
+    image: { src: 'https://m.media-amazon.com/images/I/8111DM2a0KL.jpg', alt: 'Lesure Soft Collapsible Dog Crate' },
+  },
 
   {
     id: 'kindtail-collapsible-crate',

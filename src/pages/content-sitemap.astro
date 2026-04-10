@@ -7,7 +7,7 @@ interface SitemapPage {
   title: string;
   href: string;
   pageType: 'converter' | 'collector' | 'attractor' | 'informer';
-  collectorSubtype?: 'hub' | 'article';
+  collectorSubtype?: 'section' | 'article';
 }
 
 interface SitemapSection {
@@ -30,12 +30,12 @@ const articlePages: SitemapPage[] = articleEntries
 const staticSections: SitemapSection[] = [
   {
     title: 'Entry Points',
-    description: 'The attractor and hub collectors that absorb traffic and route it into conversion paths.',
+    description: 'The attractor and collector sections that absorb traffic and route it into conversion paths.',
     pages: [
       { title: 'Home Page', href: '/', pageType: 'attractor' },
-      { title: 'Cooling Relief', href: '/cooling/', pageType: 'collector', collectorSubtype: 'hub' },
-      { title: 'Calm & Comfort', href: '/calming/', pageType: 'collector', collectorSubtype: 'hub' },
-      { title: 'Comfort & Rest', href: '/comforting/', pageType: 'collector', collectorSubtype: 'hub' },
+      { title: 'Cooling Relief', href: '/cooling/', pageType: 'collector', collectorSubtype: 'section' },
+      { title: 'Calm & Comfort', href: '/calming/', pageType: 'collector', collectorSubtype: 'section' },
+      { title: 'Comfort & Rest', href: '/comforting/', pageType: 'collector', collectorSubtype: 'section' },
     ],
   },
   {
@@ -60,13 +60,6 @@ const staticSections: SitemapSection[] = [
     ],
   },
   {
-    title: 'Calming Guides',
-    description: 'Article collectors that capture informational calming intent and route readers to calming and comfort converters.',
-    pages: [
-      { title: 'How to Crate Train Your Dog', href: '/calming/crate-training-for-dogs/', pageType: 'collector', collectorSubtype: 'article' },
-    ],
-  },
-  {
     title: 'Tracking & Safety',
     description: 'GPS tracker converters and safety collectors — route lost-dog and tracking intent to affiliate product pages.',
     pages: [
@@ -78,10 +71,13 @@ const staticSections: SitemapSection[] = [
   },
   {
     title: 'Comfort',
-    description: 'Rest, Recovery, Relaxation pillar — hub collector, dog bed converter pages, and sleep guides.',
+    description: 'Rest, Recovery, Relaxation pillar — collector path, dog bed converter pages, crate converter pages, and sleep guides.',
     pages: [
       { title: 'Best Calming Dog Beds', href: '/comforting/best-calming-dog-beds/', pageType: 'converter' },
       { title: 'Best Orthopedic Dog Beds', href: '/comforting/best-orthopedic-dog-beds/', pageType: 'converter' },
+      { title: 'Best Puppy Crates', href: '/comforting/best-puppy-crates/', pageType: 'converter' },
+      { title: 'Best Dog Crates for Anxiety', href: '/comforting/best-anxiety-dog-crates/', pageType: 'converter' },
+      { title: 'Best Travel Crates for Road Trips', href: '/comforting/best-travel-crates-for-road-trips/', pageType: 'converter' },
     ],
   },
   {
@@ -270,7 +266,7 @@ const totalPages = allSections.reduce((count, section) => count + section.pages.
     color: #2e6448;
   }
 
-  .page-type--collector-hub {
+  .page-type--collector-section {
     background: rgba(104, 160, 133, 0.16);
     color: #2e6448;
   }
