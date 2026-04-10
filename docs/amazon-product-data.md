@@ -26,7 +26,7 @@ Both return the same general structure. The key field we use is `product.main_im
 
 ### What it does
 
-1. Reads all ASINs from product data files, including cooling, calming, relaxation, tracking, and accessory products
+1. Reads all ASINs from `src/data/cooling-products.ts` and `src/data/calming-products.ts`
 2. Checks each ASIN against the local cache (`src/data/amazon-products/{ASIN}.json`)
 3. Fetches only uncached ASINs from the selected provider
 4. Saves the full JSON response to the cache directory
@@ -61,7 +61,7 @@ bun run scripts/fetch-amazon-data.ts --help
 
 ## How to Add a New Product
 
-1. **Add the product** to the appropriate product data file with its ASIN
+1. **Add the product** to the appropriate data file (`src/data/cooling-products.ts` or `src/data/calming-products.ts`) with its ASIN
 2. **Run the fetch script** for just that ASIN:
    ```bash
    bun run scripts/fetch-amazon-data.ts --asin B0NEWASIN

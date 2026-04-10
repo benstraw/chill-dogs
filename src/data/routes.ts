@@ -15,7 +15,6 @@ export const ROUTES = {
   calmingTop: '/calming/best-calming-products-for-anxious-dogs/',
   calmingAlternatives: '/calming/best-thundershirt-alternatives/',
   calmingCar: '/calming/car-anxiety-for-dogs/',
-  calmingCrateGuide: '/calming/crate-training-for-dogs/',
   roadTrip: '/travel/dog-road-trip-gear/',
   rhysRanAway: '/travel/rhys-ran-away-cerro-san-luis-obispo/',
   // Tracking cluster
@@ -27,9 +26,6 @@ export const ROUTES = {
   comfortHub: '/comforting/',
   comfortCalmingBeds: '/comforting/best-calming-dog-beds/',
   comfortOrthopedicBeds: '/comforting/best-orthopedic-dog-beds/',
-  comfortPuppyCrates: '/comforting/best-puppy-crates/',
-  comfortAnxietyCrates: '/comforting/best-anxiety-dog-crates/',
-  comfortTravelCrates: '/comforting/best-travel-crates-for-road-trips/',
   comfortSleepArticle: '/comforting/how-much-do-dogs-sleep/',
   affiliateDisclosure: '/affiliate-disclosure/',
   privacyPolicy: '/privacy-policy/',

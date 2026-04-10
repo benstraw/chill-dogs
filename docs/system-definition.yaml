@@ -32,13 +32,11 @@ site_system:
   page_inventory:
     - name: "Home"
       type: "attractor"
-      target_action: "Route visitors into cooling, calming, comforting, crate-training, and road-trip crate paths"
+      target_action: "Route visitors into cooling, calming, or comforting collector paths"
       metric: "hero_click_cooling + hero_click_calming CTR + comfort block clicks"
       notes: >
         Home page includes a dusty rose color block introducing the Comfort & Rest collector
         with tagline "Settle in." — positioned between HomepageHero and the start-prompt section.
-        The latest/guide lists include How to Crate Train Your Dog and Best Travel Crates for Road Trips
-        to connect informational crate intent with the new crate converter path.
 
     - name: "Cooling"
       type: "collector"
@@ -103,27 +101,16 @@ site_system:
       type: "converter"
       pillar: "comfort"
       pillar_tagline: "Rest. Recovery. Relaxation."
-      target_action: "Drive affiliate outbound clicks on dog beds and dog crates"
+      target_action: "Drive affiliate outbound clicks on dog beds"
       metric: "amazon_outbound_click rate"
       routes:
         - "/comforting/best-calming-dog-beds/"
         - "/comforting/best-orthopedic-dog-beds/"
-        - "/comforting/best-puppy-crates/"
-        - "/comforting/best-anxiety-dog-crates/"
-        - "/comforting/best-travel-crates-for-road-trips/"
       notes: >
-        Comfort collector routes to calming beds, orthopedic beds, puppy crates, anxiety crates, and travel crates.
-        Additional crate-related converters may be added as the crate-training cluster expands.
+        Relaxation pillar is in early build-out. Collector page and additional
+        converters (dog crates, etc.) are planned but not yet live.
         Placeholder product entries (ASINs B0D5B56X9V, B0DTH4195V) need
         to be identified and updated in src/data/relaxation-products.ts.
-
-    - name: "Crate Training for Dogs"
-      type: "collector"
-      collector_subtype: "article"
-      target_action: "Route crate-training-intent traffic to calming and comfort converters"
-      metric: "collector_to_converter_click to calming and comfort converters"
-      routes:
-        - "/calming/crate-training-for-dogs/"
 
     - name: "Road Trip Chill Kit"
       type: "collector"
@@ -257,7 +244,7 @@ site_system:
     product_catalog: "src/data/product-catalog.ts — normalized admin inventory across every product data source; /admin/products/ must consume this data module and remain complete whenever products are added"
     cooling_products: "src/data/cooling-products.ts — 15 products with ASIN, affiliate URL, and image thumbnails"
     calming_products: "src/data/calming-products.ts — 13 products with ASIN, affiliate URL, and image thumbnails"
-    relaxation_products: "src/data/relaxation-products.ts — 24 products (calming beds, orthopedic beds, crates, travel beds) with ASIN, affiliate URL, and image thumbnails"
+    relaxation_products: "src/data/relaxation-products.ts — 13 products (calming beds, orthopedic beds, crates) with ASIN, affiliate URL, and image thumbnails"
     tracking_products: "src/data/tracking-products.ts — 8 tracker products and 1 accessory product across cellular/off-grid/bluetooth/accessory types"
     raw_api_cache: "src/data/amazon-products/*.json — full SearchAPI Amazon Product responses per ASIN"
 
