@@ -308,7 +308,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
     slug: 'best-puppy-crates',
     title: 'Best Puppy Crates for Crate Training',
     description:
-      'Compare puppy crates for crate training, including Midwest iCrate, Midwest Life Stages, and Petmate Training Retreat Kennel options with dividers.',
+      'Compare puppy crates for crate training, including KindTail PAWD, Midwest iCrate, Midwest Life Stages, and Petmate Training Retreat Kennel options.',
     pageSlug: 'best-puppy-crates',
     hero: {
       title: 'Best Puppy Crates',
@@ -331,23 +331,31 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         id: 'quick-picks',
         heading: 'Quick Picks',
         intro:
-          'Start with the crate that matches your actual constraint: budget, build quality, or room layout. All three picks are practical for puppy crate training, but they solve slightly different problems.',
+          'Start with the crate that matches your actual constraint: finished home setup, budget, build quality, or room layout. These picks are practical for puppy crate training, but they solve slightly different problems.',
         items: [
           {
-            label: 'Best Budget First Crate',
-            title: 'MidWest iCrate Dog Crate',
+            label: 'Top Pick for Puppy Crate Training',
+            title: 'KindTail PAWD Collapsible Dog Crate',
             description:
-              'The simple pick for most puppies: lighter, usually cheaper, and built around the divider-panel setup that makes puppy housebreaking easier.',
-            productId: 'midwest-icrate',
+              'The featured pick if you want a cleaner-looking puppy crate that collapses for storage and includes a washable bed.',
+            productId: 'kindtail-pawd-collapsible-crate',
             position: 'quick-picks-1',
           },
           {
+            label: 'Best Budget First Crate',
+            title: 'MidWest iCrate Dog Crate (18-Inch)',
+            description:
+              'The simple pick for tiny-breed puppies: lighter, usually cheaper, and built around the divider-panel setup that makes puppy housebreaking easier.',
+            productId: 'midwest-icrate-puppy',
+            position: 'quick-picks-2',
+          },
+          {
             label: 'Best Sturdier Wire Crate',
-            title: 'MidWest Life Stages Dog Crate',
+            title: 'MidWest Life Stages Dog Crate (22-Inch)',
             description:
               'The one to lean toward if the price gap is small. Life Stages uses heavier-gauge steel than iCrate and feels more solid for active puppies.',
-            productId: 'midwest-life-stages-crate',
-            position: 'quick-picks-2',
+            productId: 'midwest-life-stages-puppy-crate',
+            position: 'quick-picks-3',
           },
           {
             label: 'Best Flexible Door Layout',
@@ -355,7 +363,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
             description:
               'A useful alternative when side-door access matters. The two-door layout can make daily crate routines easier in tight bedrooms or living rooms.',
             productId: 'petmate-training-retreat-kennel',
-            position: 'quick-picks-3',
+            position: 'quick-picks-4',
           },
         ],
       },
@@ -367,7 +375,12 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         columns: 3,
         intro:
           'For crate training, prioritize fit and daily usability over extras. A divider matters because puppies should not start with a crate that is so large they can sleep on one side and potty on the other.',
-        productIds: ['midwest-icrate', 'midwest-life-stages-crate', 'petmate-training-retreat-kennel'],
+        productIds: [
+          'kindtail-pawd-collapsible-crate',
+          'midwest-icrate-puppy',
+          'midwest-life-stages-puppy-crate',
+          'petmate-training-retreat-kennel',
+        ],
       },
       {
         kind: 'prose',
@@ -464,7 +477,12 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
     itemListSchema: {
       name: 'Best Puppy Crates',
       url: 'https://www.chill-dogs.com/comforting/best-puppy-crates/',
-      productIds: ['midwest-icrate', 'midwest-life-stages-crate', 'petmate-training-retreat-kennel'],
+      productIds: [
+        'kindtail-pawd-collapsible-crate',
+        'midwest-icrate-puppy',
+        'midwest-life-stages-puppy-crate',
+        'petmate-training-retreat-kennel',
+      ],
     },
   },
 

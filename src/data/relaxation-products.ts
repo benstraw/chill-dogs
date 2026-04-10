@@ -228,6 +228,60 @@ export const relaxationProducts: RelaxationProduct[] = [
   // ── Crates ───────────────────────────────────────────────────────────────
 
   {
+    id: 'kindtail-pawd-collapsible-crate',
+    asin: 'B0CWNXMYW1',
+    name: 'KindTail PAWD Collapsible Dog Crate',
+    category: 'crates',
+    amazonUrl: 'https://www.amazon.com/dp/B0CWNXMYW1/?tag=chill-dogs-20',
+    bullets: [
+      'Collapsible panel design folds flat for storage or moving around the house',
+      'Includes a washable padded bed for a more finished puppy rest setup',
+      'Medium size is listed for small-to-medium pets between 15 and 25 pounds',
+    ],
+    bestFor: 'Puppy owners who want a cleaner-looking, portable indoor crate instead of a standard wire crate',
+    whyItWorks:
+      'The collapsible hard-panel format gives puppies a defined resting space while feeling more like home furniture than a basic wire crate',
+    considerIf:
+      'You want the featured puppy-crate pick and your puppy fits the listed medium size range',
+    image: { src: 'https://m.media-amazon.com/images/I/71+6X5mSFIL.jpg', alt: 'KindTail PAWD Collapsible Dog Crate' },
+  },
+  {
+    id: 'midwest-icrate-puppy',
+    asin: 'B000TZ59ES',
+    name: 'MidWest iCrate Dog Crate (18-Inch)',
+    category: 'crates',
+    amazonUrl: 'https://www.amazon.com/dp/B000TZ59ES/?tag=chill-dogs-20',
+    bullets: [
+      '18-inch iCrate size is listed for tiny breeds up to 10 pounds',
+      'Includes a divider panel so the usable crate space can grow with a small puppy',
+      'Folding wire design is easy to move, store, or reposition around the house',
+    ],
+    bestFor: 'Tiny-breed puppies who need a small, straightforward first wire crate with a divider',
+    whyItWorks:
+      'The smaller puppy-specific size keeps the crate from starting too large while preserving the divider-based housebreaking setup',
+    considerIf:
+      'You want the simpler, lighter Midwest option for a tiny puppy and do not need the heavier-gauge Life Stages build',
+    image: { src: 'https://m.media-amazon.com/images/I/81Cpkz5lEPL.jpg', alt: 'MidWest iCrate 18-Inch Dog Crate' },
+  },
+  {
+    id: 'midwest-life-stages-puppy-crate',
+    asin: 'B0002TKBU8',
+    name: 'MidWest Life Stages Dog Crate (22-Inch)',
+    category: 'crates',
+    amazonUrl: 'https://www.amazon.com/dp/B0002TKBU8/?tag=chill-dogs-20',
+    bullets: [
+      '22-inch Life Stages size is listed for extra-small breeds up to 15 pounds',
+      'Includes a divider panel for puppy-to-adult crate setup in a smaller footprint',
+      'Heavier-gauge steel than the iCrate line for a sturdier wire-crate feel',
+    ],
+    bestFor: 'Extra-small puppies when you want the sturdier Midwest wire crate in a puppy-sized model',
+    whyItWorks:
+      'It keeps the same divider-based training logic as iCrate but uses a heavier build for extra durability',
+    considerIf:
+      'You do not mind extra weight and want the sturdier Midwest option for a small puppy',
+    image: { src: 'https://m.media-amazon.com/images/I/91Xxqc6WtBL.jpg', alt: 'MidWest Life Stages 22-Inch Dog Crate' },
+  },
+  {
     id: 'midwest-icrate',
     asin: 'B000QFT1RC',
     name: 'MidWest iCrate Dog Crate',

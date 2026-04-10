@@ -13,8 +13,9 @@ describe('relaxation converter page config', () => {
     expect(config.pageSlug).toBe('best-puppy-crates');
     expect(config.hero.secondaryCta?.href).toBe('/calming/crate-training-for-dogs/');
     expect(config.itemListSchema?.productIds).toEqual([
-      'midwest-icrate',
-      'midwest-life-stages-crate',
+      'kindtail-pawd-collapsible-crate',
+      'midwest-icrate-puppy',
+      'midwest-life-stages-puppy-crate',
       'petmate-training-retreat-kennel',
     ]);
   });
@@ -57,13 +58,16 @@ describe('relaxation converter page config', () => {
     const schema = buildRelaxationItemListSchema(config.itemListSchema!);
 
     expect(schema['@type']).toBe('ItemList');
-    expect(schema.numberOfItems).toBe(3);
+    expect(schema.numberOfItems).toBe(4);
   });
 
   it('keeps puppy crate products in the crates category', () => {
     const productIds = getRelaxationProductsByCategory('crates').map((product) => product.id);
 
     expect(productIds).toEqual(expect.arrayContaining([
+      'kindtail-pawd-collapsible-crate',
+      'midwest-icrate-puppy',
+      'midwest-life-stages-puppy-crate',
       'midwest-icrate',
       'midwest-life-stages-crate',
       'petmate-training-retreat-kennel',
