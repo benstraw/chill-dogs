@@ -290,7 +290,7 @@ export const relaxationProducts: RelaxationProduct[] = [
     bullets: [
       'Includes a divider panel so the usable crate space can grow with a puppy',
       'Folding wire design is easy to move, store, or reposition around the house',
-      'A practical budget-friendly starting point for standard puppy crate training',
+      'A practical, budget-friendly starting point for standard puppy crate training',
     ],
     bestFor: 'Most puppies who need a straightforward first wire crate with a divider',
     whyItWorks:
@@ -308,7 +308,7 @@ export const relaxationProducts: RelaxationProduct[] = [
     bullets: [
       'Includes multiple sizes and a divider panel for puppy-to-adult crate setup',
       'Heavier-gauge steel than the iCrate line for a sturdier wire-crate feel',
-      'A stronger choice when the price gap is small or the puppy is especially active',
+      'A stronger choice for an active puppy',
     ],
     bestFor: 'Owners who want a sturdier wire crate for a strong or active puppy',
     whyItWorks:

@@ -313,7 +313,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
     hero: {
       title: 'Best Puppy Crates',
       subtitle:
-        'A first puppy crate needs to do one job well: make housebreaking and quiet-time practice easier without forcing you to buy another crate in a month. For most puppies, that means a wire crate with a divider panel, enough size options, and a door layout that fits the room where training actually happens.',
+        'A puppy\'s first crate should make housebreaking and quiet-time practice easier without forcing you to buy another crate in a month. For most puppies, that means a wire crate with a divider panel and a door layout that fits the room where training actually happens.',
       disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
       primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
       secondaryCta: { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
@@ -331,7 +331,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         id: 'quick-picks',
         heading: 'Quick Picks',
         intro:
-          'Start with the crate that matches your actual constraint: finished home setup, budget, build quality, or room layout. These picks are practical for puppy crate training, but they solve slightly different problems.',
+          'Start with the crate that best fits your budget and best matches your room layout. All three picks are practical for puppy crate training, but they solve different problems.',
         items: [
           {
             label: 'Top Pick for Puppy Crate Training',
@@ -353,7 +353,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
             label: 'Best Sturdier Wire Crate',
             title: 'MidWest Life Stages Dog Crate (22-Inch)',
             description:
-              'The one to lean toward if the price gap is small. Life Stages uses heavier-gauge steel than iCrate and feels more solid for active puppies.',
+              'Life Stages uses heavier-gauge steel than iCrate and feels more solid for active puppies.',
             productId: 'midwest-life-stages-puppy-crate',
             position: 'quick-picks-3',
           },
@@ -361,7 +361,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
             label: 'Best Flexible Door Layout',
             title: 'Petmate Training Retreat Kennel',
             description:
-              'A useful alternative when side-door access matters. The two-door layout can make daily crate routines easier in tight bedrooms or living rooms.',
+              'A useful alternative when side-door access is needed. The two-door layout can make daily crate routines easier in tight bedrooms or living rooms.',
             productId: 'petmate-training-retreat-kennel',
             position: 'quick-picks-4',
           },
@@ -374,7 +374,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         positionOffset: 0,
         columns: 3,
         intro:
-          'For crate training, prioritize fit and daily usability over extras. A divider matters because puppies should not start with a crate that is so large they can sleep on one side and potty on the other.',
+          'For crate training, prioritize fit and daily usability. A divider is useful because puppies should not start with a crate so large that they can sleep on one side and potty on the other.',
         productIds: [
           'kindtail-pawd-collapsible-crate',
           'midwest-icrate-puppy',
@@ -387,9 +387,9 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         id: 'icrate-vs-life-stages',
         heading: 'MidWest iCrate vs Life Stages',
         paragraphs: [
-          'The iCrate and Life Stages lines look similar because they solve the same core problem: a wire crate with multiple size options and a divider panel. The practical difference is build and handling.',
+          'The iCrate and Life Stages lines are both wire crates with multiple size options and a divider panel. The difference is build and handling.',
           'iCrate is the lighter, simpler, usually more budget-friendly option. It is easier to move around and makes sense for standard puppy crate training when your dog is not especially strong or hard on gear.',
-          'Life Stages uses heavier-gauge steel and is built to feel sturdier. Some iCrate sizes are also slightly narrower and lower than comparable Life Stages models. If the price gap is small, Life Stages is the one I would lean toward for a stronger or more active puppy.',
+          'Life Stages uses heavier-gauge steel and is built to feel more sturdy. Some Life Stages crates are wider and higher than comparable iCrate models. Life Stages are appropriate for stronger, more active puppies.',
         ],
         alt: true,
       },
@@ -397,29 +397,29 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         kind: 'decision_columns',
         id: 'which-crate',
         left: {
-          heading: 'Get iCrate when',
+          heading: 'Get iCrate When',
           items: [
-            'You want the simpler budget-friendly option.',
-            'You plan to move the crate around the house often.',
-            'Your puppy is average-strength and you mainly need a divider-based training setup.',
-            'Lower crate weight matters more than a sturdier wire frame.',
+            'You want the simpler, more budget-friendly option',
+            'You plan to move the crate around the house often',
+            'Your puppy is of average strength and you need a divider-based training setup',
+            'A lighter crate matters more than a sturdier wire frame',
           ],
         },
         right: {
-          heading: 'Get Life Stages when',
+          heading: 'Get Life Stages When',
           items: [
-            'You want the sturdier Midwest option.',
-            'Your puppy is strong, active, or likely to push against the crate.',
-            'You do not mind extra crate weight.',
-            'The price difference is small enough that durability is worth prioritizing.',
+            'You want the sturdier Midwest option',
+            'Your puppy is strong, active, or likely to push against the crate',
+            'You do not mind a heavier crate',
+            'Durability is your first priority',
           ],
         },
       },
       {
         kind: 'note',
-        heading: 'Where Petmate Fits',
+        heading: 'Get Petmate Training Retreat Kennel When',
         text:
-          'The Petmate Training Retreat Kennel is less about beating the Midwest crates on build and more about room fit. If a side door would make the crate easier to use every day, it can be the more practical choice.',
+          'A side door makes the crate easier to use in a specific room',
         alt: true,
       },
     ],
@@ -439,7 +439,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         {
           question: 'Why does a puppy crate need a divider?',
           answer:
-            'A divider prevents the crate from being too large at the beginning. Puppies are more likely to keep a correctly sized sleeping area clean, while an oversized crate can let them sleep in one corner and potty in another.',
+            'A divider prevents the crate from being too large at the start of training. Puppies are more likely to keep a smaller sleeping area clean, while an oversized crate can allow them sleep in one corner and potty in another.',
         },
         {
           question: 'Is a two-door crate worth it?',
@@ -461,7 +461,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
           href: ROUTES.comfortCalmingBeds,
           title: 'Best Calming Dog Beds',
           description:
-            'If your puppy settles better with soft edges and a defined rest area, compare calming beds and bolster beds next.',
+            'If your puppy settles better with soft edges and a defined rest area, compare calming beds and bolster beds.',
         },
       ],
     },
