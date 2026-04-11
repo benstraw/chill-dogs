@@ -20,6 +20,15 @@ describe('track', () => {
     delete (window as any).posthog;
     expect(() => track('test_event', {})).not.toThrow();
   });
+
+  it('does not log analytics events when posthog is absent', () => {
+    const log = vi.spyOn(console, 'log').mockImplementation(() => {});
+    delete (window as any).posthog;
+
+    track('test_event', {});
+
+    expect(log).not.toHaveBeenCalled();
+  });
 });
 
 describe('init — click tracking', () => {
