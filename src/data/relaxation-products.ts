@@ -308,13 +308,11 @@ export const relaxationProducts: RelaxationProduct[] = [
     bullets: [
       'Includes multiple sizes and a divider panel for puppy-to-adult crate setup',
       'Heavier-gauge steel than the iCrate line for a sturdier wire-crate feel',
-      'A stronger choice for an active puppy',
-    ],
-    bestFor: 'Owners who want a sturdier wire crate for a strong or active puppy',
+      'A stronger choice for an especially active puppy',
     whyItWorks:
       'It keeps the same divider-based training logic as iCrate but uses a heavier build for extra durability',
     considerIf:
-      'You do not mind extra weight and want the crate that feels more solid between the two Midwest options',
+      'You do not mind a heavier crate that feels more solid',
     image: { src: 'https://m.media-amazon.com/images/I/91NBxSDchXL.jpg', alt: 'MidWest Life Stages Dog Crate' },
   },
   {
@@ -360,7 +358,7 @@ export const relaxationProducts: RelaxationProduct[] = [
     category: 'crates',
     amazonUrl: 'https://www.amazon.com/dp/B003E6YYYK/?tag=chill-dogs-20',
     bullets: [
-      'Enclosed plastic shell reduces visual stimulation compared with open wire crates',
+      'Enclosed plastic shell reduces visual stimulation compared to open wire crates',
       '360-degree ventilation and tie-down holes support travel use',
       'Includes travel-prep accessories such as live-animal stickers, cup, ID stickers, and absorbent pad',
     ],

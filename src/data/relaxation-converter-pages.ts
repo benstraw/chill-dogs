@@ -495,7 +495,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
     hero: {
       title: 'Best Dog Crates for Anxiety',
       subtitle:
-        'An anxiety crate should match the dog, not the label. Some dogs settle in a familiar wire crate. Some do better with an enclosed kennel that blocks visual stimulation. And some escape artists need a heavy-duty crate only as part of a broader safety plan.',
+        'Some dogs settle in a familiar wire crate. Others do better with an enclosed kennel that blocks visual stimulation. And some escape artists need a heavy-duty crate to help keep them safe.',
       disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
       primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
       secondaryCta: { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
@@ -535,7 +535,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
             label: 'Best Heavy-Duty Crate',
             title: 'Impact High Anxiety Dog Crate',
             description:
-              'The heavy-duty option for dogs with a real escape history, bent wire crates, or injury risk from standard crate attempts.',
+              'The heavy-duty option for dogs with a real escape history, who have bent wire crates, or who risk injury from standard crate escape attempts.',
             productId: 'impact-high-anxiety-crate',
             position: 'quick-picks-3',
           },
@@ -546,9 +546,9 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         id: 'safety-first',
         heading: 'Safety First: A Crate Is Not a Separation Anxiety Cure',
         paragraphs: [
-          'A crate can be a useful management tool for some anxious dogs, but it is not a treatment for separation anxiety by itself. <a href="https://www.humaneworld.org/resources/separation-anxiety-dogs">Humane World</a> specifically advises creating a safe space instead of defaulting to a crate for separation anxiety because dogs can continue panicking inside confinement and may injure themselves trying to escape.',
+          'A crate can be a useful management tool for some anxious dogs, but it is not a treatment for separation anxiety by itself. <a href="https://www.humaneworld.org/resources/separation-anxiety-dogs">Humane World</a> specifically advises creating a safe space instead of defaulting to a crate for separation anxiety. Dogs can continue panicking inside a confined space and may injure themselves trying to escape.',
           '<a href="https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/separation-anxiety">ASPCA separation-anxiety guidance</a> and <a href="https://www.oregonhumane.org/portland-training/crate-training-your-dog/">Oregon Humane crate-training guidance</a> make the same practical point: watch the dog’s actual pattern. If confinement makes panic worse, use a room, pen, veterinary behavior support, and gradual training rather than trying to solve the problem with a stronger crate.',
-          'So this page frames crates as management choices: wire for mild anxiety in dogs who already tolerate crates, enclosed plastic for dogs who need less visual stimulation, and heavy-duty containment only when escape risk makes standard crates unsafe.',
+          'Choose wire for dogs with mild anxiety who already tolerate crates, enclosed plastic for dogs who need less visual stimulation, and heavy-duty containment only when escape risk makes standard crates unsafe.',
         ],
         alt: true,
       },
@@ -559,28 +559,28 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         positionOffset: 0,
         columns: 3,
         intro:
-          'These three picks cover different anxiety patterns. Do not size down for containment. Your dog still needs room to stand, turn around, and lie down naturally.',
+          'These three picks address different anxiety issues. Do not size down for containment. Your dog still needs room to stand, turn around, and lie down naturally.',
         productIds: ['midwest-life-stages-crate', 'petmate-sky-kennel', 'impact-high-anxiety-crate'],
       },
       {
         kind: 'decision_columns',
         id: 'which-crate',
         left: {
-          heading: 'Use Life Stages or Sky Kennel when',
+          heading: 'Use Life Stages or Sky Kennel When',
           items: [
-            'Your dog is already crate-trained and does not panic in confinement.',
-            'The anxiety is mild, situational, or linked to overstimulation.',
-            'Your goal is a predictable rest space, not brute-force containment.',
-            'You can monitor the dog’s response and change course if distress escalates.',
+            'Your dog is already crate-trained and does not panic in confined spaces',
+            'The anxiety is mild, situational, or linked to overstimulation',
+            'Your goal is a predictable rest space',
+            'You can monitor the dog’s response and change course if distress escalates',
           ],
         },
         right: {
-          heading: 'Consider Impact only when',
+          heading: 'Consider Impact When',
           items: [
-            'Your dog has escaped from or damaged standard crates.',
-            'Wire bars create tooth, paw, or latch-injury risk for this specific dog.',
-            'You are also working on the underlying anxiety with training or professional support.',
-            'You need containment as harm reduction, not as the whole behavior plan.',
+            'Your dog has escaped from or damaged standard crates',
+            'Wire bars create tooth, paw, or latch-injury risk',
+            'You are also working on underlying anxiety issues with training or professional support',
+            'You need containment as harm reduction',
           ],
         },
       },
