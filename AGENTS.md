@@ -2,6 +2,15 @@
 
 Repository guidance for coding agents working in `/Volumes/wanderer/dev/solo/chill-dogs`.
 
+## Bootstrap
+
+- Required runtime: `bun@1.3.6` (see `package.json#packageManager`).
+- Install dependencies: `bun install --frozen-lockfile`
+- Run tests: `bun run test`
+- Run build: `bun run build`
+- For substantive page/module changes, validate both test and build before finishing.
+- Leave untracked marketing assets alone unless the task explicitly asks for them.
+
 ## Priority
 
 - The keystone metric is Amazon affiliate revenue.
