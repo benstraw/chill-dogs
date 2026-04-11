@@ -309,6 +309,8 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Includes multiple sizes and a divider panel for puppy-to-adult crate setup',
       'Heavier-gauge steel than the iCrate line for a sturdier wire-crate feel',
       'A stronger choice for an especially active puppy',
+    ],
+    bestFor: 'Owners who want a sturdier wire crate for a strong or active puppy',
     whyItWorks:
       'It keeps the same divider-based training logic as iCrate but uses a heavier build for extra durability',
     considerIf:
