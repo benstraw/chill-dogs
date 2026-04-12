@@ -1,6 +1,10 @@
 ---
+import { Image } from 'astro:assets';
 import { ROUTES } from '@data/routes';
 import type { HomepageVariant } from '@components/modules/HomepageHero.astro';
+import coolingSafetyOg from '/public/og/cooling-how-hot-is-too-hot-for-dogs.jpg';
+import calmingCarOg from '/public/og/calming-car-anxiety-for-dogs.jpg';
+import comfortSleepOg from '/public/og/comforting-how-much-do-dogs-sleep.jpg';
 
 interface Props {
   variant?: HomepageVariant;
@@ -45,7 +49,7 @@ const featuredArticles = [
     title: 'How Hot Is Too Hot for Dogs?',
     description: 'Heat threshold guidance with routes to cooling product pages.',
     href: ROUTES.coolingSafety,
-    image: '/og/cooling-how-hot-is-too-hot-for-dogs.jpg',
+    image: coolingSafetyOg,
     label: 'Cooling',
     color: 'cool',
   },
@@ -53,7 +57,7 @@ const featuredArticles = [
     title: 'Car Anxiety for Dogs',
     description: 'Practical calming tools for travel stress and restless rides.',
     href: ROUTES.calmingCar,
-    image: '/og/calming-car-anxiety-for-dogs.jpg',
+    image: calmingCarOg,
     label: 'Calming',
     color: 'calm',
   },
@@ -61,7 +65,7 @@ const featuredArticles = [
     title: 'How Much Do Dogs Sleep?',
     description: 'Sleep norms by age and breed, REM research, and what disruptions might mean.',
     href: ROUTES.comfortSleepArticle,
-    image: '/og/comforting-how-much-do-dogs-sleep.jpg',
+    image: comfortSleepOg,
     label: 'Comfort',
     color: 'comfort',
   },
@@ -138,7 +142,14 @@ const latestGuides = [
             data-link-position="homepage-featured-articles"
           >
             <div class="article-img-wrap">
-              <img src={article.image} alt="" class="article-img" loading="lazy" width="400" height="210" />
+              <Image
+                src={article.image}
+                alt=""
+                class="article-img"
+                width={400}
+                height={210}
+                loading="lazy"
+              />
             </div>
             <div class="article-body">
               <span class={`article-label article-label--${article.color}`}>{article.label}</span>

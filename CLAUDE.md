@@ -124,6 +124,17 @@ Amazon Associates Program Policies (operating agreement): <https://affiliate-pro
 
 All local images **must** use the `<Image>` component from `astro:assets` — never raw `<img>` tags. Astro optimizes local images at build time (format conversion, compression, responsive sizing). Use raw `<img>` only for external URLs (e.g. Amazon CDN) that cannot be optimized at build time.
 
+#### Watermarking (original photos only — NOT Amazon product images)
+
+All original site photography **must** be watermarked before use. The pipeline:
+
+1. **Add source photos** to `src/images/<subfolder>/` (e.g. `src/images/rhys-road-trip/`).
+2. **Run the build** (or `node src/scripts/watermark-images.mjs` directly). The script finds every `.jpg`/`.png` under `src/images/`, skips `src/images/watermarked/`, and writes watermarked versions to `src/images/watermarked/<subfolder>/` with the same filename. It auto-corrects EXIF rotation, stamps the Chill-Dogs logo at 10% of image width, 70% opacity, bottom-right corner with 20px padding.
+3. **Import in MDX/Astro from the watermarked path**: `src/images/watermarked/<subfolder>/filename.jpg` — never from the unwatermarked source path.
+4. The watermark asset lives at `public/images/chill-dogs-watermark.png`.
+
+This rule applies to all personal/original photography. Amazon CDN product images are external URLs and are never watermarked.
+
 ### Path Aliases
 
 `@components/`, `@layouts/`, `@styles/`, `@data/`, `@utils/` — configured in tsconfig.json.

@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import AffiliateLink from '@components/AffiliateLink.astro';
 import type { CalmingProduct } from '@data/calming-products';
 
@@ -15,13 +16,12 @@ const { product, position = 0, pageType = 'collector', pageSlug = '' } = Astro.p
 <div class="calm-card">
   <div class="calm-card-image">
     {product.image ? (
-      <img
+      <Image
         src={product.image.src}
         alt={product.image.alt}
+        width={400}
+        height={300}
         loading="lazy"
-        decoding="async"
-        width="400"
-        height="300"
         onerror="this.style.display='none';this.parentElement.classList.add('calm-card-image--fallback')"
       />
     ) : (

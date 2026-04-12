@@ -106,7 +106,7 @@ describe('site smoke tests', () => {
   it('publishes homepage featured article images', () => {
     const homeDoc = readBuiltPage('index.html');
     const featuredImages = Array.from(
-      homeDoc.querySelectorAll<HTMLImageElement>('.article-card img[src^="/og/"], .hp-v7-article-img[src^="/og/"]')
+      homeDoc.querySelectorAll<HTMLImageElement>('.article-card img, .hp-v7-article-img')
     );
 
     expect(featuredImages.length).toBeGreaterThan(0);
@@ -114,6 +114,7 @@ describe('site smoke tests', () => {
     for (const image of featuredImages) {
       const src = image.getAttribute('src');
       expect(src).toBeTruthy();
+      expect(src === null ? '' : /^(\/og\/|\/_assets\/)/.test(src)).toBe(true);
       const asset = readFileSync(path.join(distRoot, src!.replace(/^\//, '')));
       expect(asset.length).toBeGreaterThan(1024);
     }

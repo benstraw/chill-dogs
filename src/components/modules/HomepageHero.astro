@@ -55,6 +55,8 @@ const { variant } = Astro.props;
           class="hp-v6-logo-img"
           width={480}
           height={480}
+          loading="eager"
+          fetchpriority="high"
         />
       </div>
       <div class="hp-v6-right">
@@ -85,6 +87,8 @@ const { variant } = Astro.props;
           class="hp-v7-logo-img"
           width={480}
           height={480}
+          loading="eager"
+          fetchpriority="high"
         />
       </div>
       <div class="hp-v7-right">
@@ -136,6 +140,8 @@ const { variant } = Astro.props;
           class="hp-v8-logo-img"
           width={480}
           height={480}
+          loading="eager"
+          fetchpriority="high"
         />
       </div>
       <div class="hp-v8-right">
@@ -147,12 +153,7 @@ const { variant } = Astro.props;
             <span class="hp-v8-strip-cta">Explore picks →</span>
           </div>
           <div class="hp-v8-strip-img-wrap">
-            <img
-              src="https://m.media-amazon.com/images/I/71n1Mod8sRL._SL500_.jpg"
-              alt=""
-              class="hp-v8-strip-img"
-              loading="eager"
-            />
+            <img src="https://m.media-amazon.com/images/I/71n1Mod8sRL._SL500_.jpg" alt="" class="hp-v8-strip-img" loading="eager" width="210" height="210" />
           </div>
         </a>
         <a class="hp-v8-strip hp-v8-strip--calm" href={ROUTES.calmingHub} data-cta="calming" data-track="hero_click_calming" data-variant={variant}>
@@ -163,12 +164,7 @@ const { variant } = Astro.props;
             <span class="hp-v8-strip-cta">Explore picks →</span>
           </div>
           <div class="hp-v8-strip-img-wrap">
-            <img
-              src="https://m.media-amazon.com/images/I/61PxVCtYzUL._SL500_.jpg"
-              alt=""
-              class="hp-v8-strip-img"
-              loading="eager"
-            />
+            <img src="https://m.media-amazon.com/images/I/61PxVCtYzUL._SL500_.jpg" alt="" class="hp-v8-strip-img" loading="eager" width="210" height="210" />
           </div>
         </a>
         <a class="hp-v8-strip hp-v8-strip--comfort" href={ROUTES.comfortHub} data-cta="comfort" data-track="hero_click_comfort" data-variant={variant}>
@@ -179,12 +175,7 @@ const { variant } = Astro.props;
             <span class="hp-v8-strip-cta">Explore picks →</span>
           </div>
           <div class="hp-v8-strip-img-wrap">
-            <img
-              src="https://m.media-amazon.com/images/I/71hPsNDImjL._SL500_.jpg"
-              alt=""
-              class="hp-v8-strip-img"
-              loading="eager"
-            />
+            <img src="https://m.media-amazon.com/images/I/71hPsNDImjL._SL500_.jpg" alt="" class="hp-v8-strip-img" loading="eager" width="210" height="210" />
           </div>
         </a>
       </div>
