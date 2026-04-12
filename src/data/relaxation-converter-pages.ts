@@ -365,6 +365,14 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
             productId: 'petmate-training-retreat-kennel',
             position: 'quick-picks-4',
           },
+          {
+            label: 'Best Color Option',
+            title: "Internet's Best Double Door Wire Dog Kennel (Blue)",
+            description:
+              'A small wire puppy crate that does the basic training job but comes in color, which makes it stand out from the usual black-crate lineup.',
+            productId: 'internets-best-small-wire-crate',
+            position: 'quick-picks-5',
+          },
         ],
       },
       {
@@ -380,6 +388,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
           'midwest-icrate-puppy',
           'midwest-life-stages-puppy-crate',
           'petmate-training-retreat-kennel',
+          'internets-best-small-wire-crate',
         ],
       },
       {
@@ -421,6 +430,12 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         text:
           'A side door makes the crate easier to use in a specific room',
         alt: true,
+      },
+      {
+        kind: 'note',
+        heading: "Get Internet's Best When",
+        text:
+          'You want a small puppy wire crate that still feels practical, but you also care about having something other than the usual all-black crate look.',
       },
     ],
     faq: {
@@ -482,6 +497,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         'midwest-icrate-puppy',
         'midwest-life-stages-puppy-crate',
         'petmate-training-retreat-kennel',
+        'internets-best-small-wire-crate',
       ],
     },
   },
@@ -745,6 +761,8 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
           'petmate-sky-kennel',
           'elitefield-three-door-soft-crate',
           'lesure-soft-collapsible-crate',
+          'collapsible-hard-sided-travel-crate',
+          'zomisia-collapsible-steel-crate',
         ],
       },
       {
@@ -778,6 +796,23 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         paragraphs: [
           'Choose Lesure if you want the lightest, most portable soft-sided option. Its appeal is fast setup, compact storage, breathable mesh, and easy carry for road trip stops or temporary rooms.',
           'Like any soft-sided folding dog crate for travel, it is best for calm, trained dogs. If containment strength matters more than portability, choose Petmate instead.',
+        ],
+        alt: true,
+      },
+      {
+        kind: 'prose',
+        heading: 'Collapsible Hard-Sided Travel Crate',
+        paragraphs: [
+          'Choose this style if you like the idea of a collapsible crate but want something that looks and feels more structured than a soft mesh setup. It gives you a different visual style and a more substantial shell without fully committing to a fixed hard-sided kennel.',
+          'That makes it a useful middle ground for road trips where you still care about fold-flat storage and easier transport.',
+        ],
+      },
+      {
+        kind: 'prose',
+        heading: 'ZOMISIA Collapsible Steel Dog Crate',
+        paragraphs: [
+          'Choose ZOMISIA if you want a foldable road-trip crate with a more enclosed, steel-framed look. It is still about portability, but it feels more structured and less fabric-forward than soft travel crates.',
+          'This is the better fit when you want a collapsible crate that looks different from both basic wire crates and standard soft-sided travel options.',
         ],
         alt: true,
       },
@@ -877,6 +912,8 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         'petmate-sky-kennel',
         'elitefield-three-door-soft-crate',
         'lesure-soft-collapsible-crate',
+        'collapsible-hard-sided-travel-crate',
+        'zomisia-collapsible-steel-crate',
       ],
     },
   },
@@ -1158,6 +1195,14 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
             productId: 'oranland-heavy-duty-furniture-crate',
             position: 'quick-picks-4',
           },
+          {
+            label: 'Best Charging Station Feature',
+            title: 'Modern Dog Crate Furniture with Charging Station',
+            description:
+              'The standout pick if you want the crate to function like a real side table or nightstand, not just decorative furniture.',
+            productId: 'charging-station-furniture-crate',
+            position: 'quick-picks-5',
+          },
         ],
       },
       {
@@ -1186,10 +1231,21 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
           'internets-best-decorative-kennel',
           'lyromix-dog-crate-furniture',
           'easycom-foldable-dog-crate-furniture',
+          'rotating-bowl-furniture-crate',
           'ironck-extra-large-dog-crate-furniture',
           'bifanuo-dog-crate-furniture',
+          'charging-station-furniture-crate',
           'oranland-heavy-duty-furniture-crate',
         ],
+      },
+      {
+        kind: 'prose',
+        heading: 'Furniture Crates with Extra Utility',
+        paragraphs: [
+          'Some furniture crates earn their spot because they do more than just hide the crate. The rotating-bowl model adds built-in feeding convenience, while the charging-station model is genuinely useful as a nightstand or side table.',
+          'That kind of practical utility matters if the crate is going to live in a visible room every day and compete with real furniture for space.',
+        ],
+        alt: true,
       },
       {
         kind: 'decision_columns',
@@ -1282,8 +1338,10 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         'internets-best-decorative-kennel',
         'lyromix-dog-crate-furniture',
         'easycom-foldable-dog-crate-furniture',
+        'rotating-bowl-furniture-crate',
         'ironck-extra-large-dog-crate-furniture',
         'bifanuo-dog-crate-furniture',
+        'charging-station-furniture-crate',
         'oranland-heavy-duty-furniture-crate',
       ],
     },

@@ -282,6 +282,24 @@ export const relaxationProducts: RelaxationProduct[] = [
     image: { src: 'https://m.media-amazon.com/images/I/91Xxqc6WtBL.jpg', alt: 'MidWest Life Stages 22-Inch Dog Crate' },
   },
   {
+    id: 'internets-best-small-wire-crate',
+    asin: 'B01LZXRF98',
+    name: "Internet's Best Double Door Wire Dog Kennel (Blue)",
+    category: 'crates',
+    amazonUrl: 'https://www.amazon.com/dp/B01LZXRF98/?tag=chill-dogs-20',
+    bullets: [
+      'Small 24-inch double-door wire crate for puppies, cats, or small dogs',
+      'Blue finish gives it a different look from the all-black wire crates that dominate this category',
+      'Front and side doors keep placement flexible in bedrooms, offices, or living spaces',
+    ],
+    bestFor: 'Owners who want a small puppy wire crate with a bit more personality than the standard black look',
+    whyItWorks:
+      'It covers the same basic wire-crate training job while giving color-conscious buyers a real alternative to the usual black crate format',
+    considerIf:
+      'You want a functional puppy wire crate but care about color and room fit instead of settling for another plain black crate',
+    image: { src: 'https://m.media-amazon.com/images/I/81MsY7MTquL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: "Internet's Best Double Door Wire Dog Kennel Blue" },
+  },
+  {
     id: 'midwest-icrate',
     asin: 'B000QFT1RC',
     name: 'MidWest iCrate Dog Crate',
@@ -424,6 +442,42 @@ export const relaxationProducts: RelaxationProduct[] = [
     considerIf:
       'You want easy carry-and-store travel convenience and your dog will not chew, claw, or push at soft crate walls',
     image: { src: 'https://m.media-amazon.com/images/I/8111DM2a0KL.jpg', alt: 'Lesure Soft Collapsible Dog Crate' },
+  },
+  {
+    id: 'collapsible-hard-sided-travel-crate',
+    asin: 'B0FPF6VZJ7',
+    name: 'Collapsible Hard-Sided Travel Crate',
+    category: 'crates',
+    amazonUrl: 'https://www.amazon.com/dp/B0FPF6VZJ7/?tag=chill-dogs-20',
+    bullets: [
+      'Hard-sided collapsible design gives a different look and feel than soft folding travel crates',
+      'No-tool folding format and wheels are built around easier carry and storage',
+      'Works as a middle-ground option when you want more structure than fabric without a full fixed kennel',
+    ],
+    bestFor: 'Road-trip buyers who want a more structured collapsible crate without jumping to a full fixed hard-sided kennel',
+    whyItWorks:
+      'It sits between soft folding crates and fully rigid kennels, which makes it useful for buyers who want both structure and portability',
+    considerIf:
+      'You like the convenience of a collapsible crate but want a more substantial look and shell than a mesh-heavy soft crate',
+    image: { src: 'https://m.media-amazon.com/images/I/712Iv0QSn0L._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Collapsible Hard-Sided Travel Crate' },
+  },
+  {
+    id: 'zomisia-collapsible-steel-crate',
+    asin: 'B0FDPVJH5Q',
+    name: 'ZOMISIA Collapsible Steel Dog Crate',
+    category: 'crates',
+    amazonUrl: 'https://www.amazon.com/dp/B0FDPVJH5Q/?tag=chill-dogs-20',
+    bullets: [
+      'Fold-flat steel-sided crate gives a more structured look than fabric travel crates',
+      'Wheels and no-tool setup make it easier to move and store between trips',
+      'Beige finish and enclosed frame feel different from both basic wire crates and soft travel crates',
+    ],
+    bestFor: 'Owners who want a collapsible road-trip crate with a more enclosed, furniture-like look than a standard soft crate',
+    whyItWorks:
+      'It gives you portability and fold-flat storage while still feeling more substantial than the typical soft-sided travel crate',
+    considerIf:
+      'You want a travel crate with a different visual style and more structure than soft mesh options usually provide',
+    image: { src: 'https://m.media-amazon.com/images/I/81YdRCpJqKL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'ZOMISIA Collapsible Steel Dog Crate' },
   },
   {
     id: 'sportpet-airline-compliant-kennel',
@@ -588,6 +642,24 @@ export const relaxationProducts: RelaxationProduct[] = [
     image: { src: 'https://m.media-amazon.com/images/I/81s6bZdJqIL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Easycom Foldable Dog Crate Furniture' },
   },
   {
+    id: 'rotating-bowl-furniture-crate',
+    asin: 'B0G5PLC4JY',
+    name: 'Folding Furniture Crate with Rotating Bowls',
+    category: 'crates',
+    amazonUrl: 'https://www.amazon.com/dp/B0G5PLC4JY/?tag=chill-dogs-20',
+    bullets: [
+      'Furniture-style crate includes 360-degree rotating bowls for built-in feeding convenience',
+      'Folding format makes it more flexible than fixed decorative crate furniture',
+      'Wood-and-metal build gives it a more substantial feel than lightweight decorative options',
+    ],
+    bestFor: 'Owners who like furniture-crate styling but want integrated feeding convenience and foldable setup',
+    whyItWorks:
+      'The rotating bowls and foldable format give it a more functional day-to-day setup than decorative crates that focus only on appearance',
+    considerIf:
+      'You want furniture styling plus practical home-use features instead of just a crate that looks like an end table',
+    image: { src: 'https://m.media-amazon.com/images/I/71-oYVgYdTL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Folding Furniture Crate with Rotating Bowls' },
+  },
+  {
     id: 'ironck-extra-large-dog-crate-furniture',
     asin: 'B0FH69ZJQX',
     name: 'IRONCK Extra Large Dog Crate Furniture',
@@ -622,6 +694,24 @@ export const relaxationProducts: RelaxationProduct[] = [
     considerIf:
       'You want a smaller furniture-style crate and do not need a heavier wood-and-steel build',
     image: { src: 'https://m.media-amazon.com/images/I/71eX3avmroL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Bifanuo Dog Crate Furniture' },
+  },
+  {
+    id: 'charging-station-furniture-crate',
+    asin: 'B0GCK3SXGH',
+    name: 'Modern Dog Crate Furniture with Charging Station',
+    category: 'crates',
+    amazonUrl: 'https://www.amazon.com/dp/B0GCK3SXGH/?tag=chill-dogs-20',
+    bullets: [
+      'Built-in charging station is the clear standout feature for nightstand or living-room placement',
+      'Modern furniture styling is designed to function as both kennel and side table',
+      'Flip-up hidden acrylic door gives it a more polished furniture look than many decorative crates',
+    ],
+    bestFor: 'Owners who want a furniture crate that doubles as a real usable side table with charging access',
+    whyItWorks:
+      'The charging station turns it into genuinely useful room furniture instead of a decorative crate that only looks the part',
+    considerIf:
+      'You want the crate in a bedroom or living room and the charging-station feature would actually get used every day',
+    image: { src: 'https://m.media-amazon.com/images/I/71iS8C25R0L._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Modern Dog Crate Furniture with Charging Station' },
   },
   {
     id: 'oranland-heavy-duty-furniture-crate',

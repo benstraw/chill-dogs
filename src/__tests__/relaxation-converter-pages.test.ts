@@ -17,6 +17,7 @@ describe('relaxation converter page config', () => {
       'midwest-icrate-puppy',
       'midwest-life-stages-puppy-crate',
       'petmate-training-retreat-kennel',
+      'internets-best-small-wire-crate',
     ]);
   });
 
@@ -46,6 +47,8 @@ describe('relaxation converter page config', () => {
       'petmate-sky-kennel',
       'elitefield-three-door-soft-crate',
       'lesure-soft-collapsible-crate',
+      'collapsible-hard-sided-travel-crate',
+      'zomisia-collapsible-steel-crate',
     ]);
     expect(config.blocks.some((block) => (
       block.kind === 'prose' &&
@@ -78,8 +81,10 @@ describe('relaxation converter page config', () => {
       'internets-best-decorative-kennel',
       'lyromix-dog-crate-furniture',
       'easycom-foldable-dog-crate-furniture',
+      'rotating-bowl-furniture-crate',
       'ironck-extra-large-dog-crate-furniture',
       'bifanuo-dog-crate-furniture',
+      'charging-station-furniture-crate',
       'oranland-heavy-duty-furniture-crate',
     ]);
   });
@@ -104,7 +109,7 @@ describe('relaxation converter page config', () => {
     const schema = buildRelaxationItemListSchema(config.itemListSchema!);
 
     expect(schema['@type']).toBe('ItemList');
-    expect(schema.numberOfItems).toBe(4);
+    expect(schema.numberOfItems).toBe(5);
   });
 
   it('keeps puppy crate products in the crates category', () => {
@@ -117,11 +122,14 @@ describe('relaxation converter page config', () => {
       'midwest-icrate',
       'midwest-life-stages-crate',
       'petmate-training-retreat-kennel',
+      'internets-best-small-wire-crate',
       'petmate-sky-kennel',
       'impact-high-anxiety-crate',
       'petsafe-happy-ride-travel-crate',
       'elitefield-three-door-soft-crate',
       'lesure-soft-collapsible-crate',
+      'collapsible-hard-sided-travel-crate',
+      'zomisia-collapsible-steel-crate',
       'sportpet-airline-compliant-kennel',
       'amazon-basics-hard-sided-carrier',
       'petmate-two-door-kennel',
@@ -131,8 +139,10 @@ describe('relaxation converter page config', () => {
       'internets-best-decorative-kennel',
       'lyromix-dog-crate-furniture',
       'easycom-foldable-dog-crate-furniture',
+      'rotating-bowl-furniture-crate',
       'ironck-extra-large-dog-crate-furniture',
       'bifanuo-dog-crate-furniture',
+      'charging-station-furniture-crate',
       'oranland-heavy-duty-furniture-crate',
       'oranland-heavy-duty-dog-crate',
       'kokotangs-heavy-duty-dog-crate',
