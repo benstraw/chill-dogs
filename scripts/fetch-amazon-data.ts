@@ -12,6 +12,7 @@
 
 import { coolingProducts } from '../src/data/cooling-products';
 import { calmingProducts } from '../src/data/calming-products';
+import { relaxationProducts } from '../src/data/relaxation-products';
 import { trackerProducts, accessoryProducts } from '../src/data/tracking-products';
 import { writeFile, mkdir, access } from 'fs/promises';
 import { join } from 'path';
@@ -99,6 +100,7 @@ await mkdir(OUT_DIR, { recursive: true });
 const allProducts = [
   ...coolingProducts.map((p) => ({ asin: p.asin, name: p.name })),
   ...calmingProducts.map((p) => ({ asin: p.asin, name: p.name })),
+  ...relaxationProducts.map((p) => ({ asin: p.asin, name: p.name })),
   ...trackerProducts.map((p) => ({ asin: p.asin, name: p.name })),
   ...accessoryProducts.map((p) => ({ asin: p.asin, name: p.name })),
 ];

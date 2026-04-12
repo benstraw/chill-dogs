@@ -1,0 +1,8 @@
+---
+import RelaxationConverterPage from '@components/modules/RelaxationConverterPage.astro';
+import { getRelaxationConverterPageConfig } from '@data/relaxation-converter-pages';
+
+const config = getRelaxationConverterPageConfig('best-anxiety-dog-crates');
+---
+
+<RelaxationConverterPage config={config} />

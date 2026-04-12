@@ -304,6 +304,569 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
     },
   },
 
+  'best-puppy-crates': {
+    slug: 'best-puppy-crates',
+    title: 'Best Puppy Crates for Crate Training',
+    description:
+      'Compare puppy crates for crate training, including KindTail PAWD, Midwest iCrate, Midwest Life Stages, and Petmate Training Retreat Kennel options.',
+    pageSlug: 'best-puppy-crates',
+    hero: {
+      title: 'Best Puppy Crates',
+      subtitle:
+        'A puppy\'s first crate should make housebreaking and quiet-time practice easier without forcing you to buy another crate in a month. For most puppies, that means a wire crate with a divider panel and a door layout that fits the room where training actually happens.',
+      disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
+      primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
+      secondaryCta: { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
+    },
+    toc: [
+      { label: 'Quick Picks', anchor: 'quick-picks' },
+      { label: 'Puppy Crate Picks', anchor: 'puppy-crates' },
+      { label: 'iCrate vs Life Stages', anchor: 'icrate-vs-life-stages' },
+      { label: 'Which Crate Fits Your Puppy', anchor: 'which-crate' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    blocks: [
+      {
+        kind: 'quick_picks',
+        id: 'quick-picks',
+        heading: 'Quick Picks',
+        intro:
+          'Start with the crate that best fits your budget and best matches your room layout. All three picks are practical for puppy crate training, but they solve different problems.',
+        items: [
+          {
+            label: 'Top Pick for Puppy Crate Training',
+            title: 'KindTail PAWD Collapsible Dog Crate',
+            description:
+              'The featured pick if you want a cleaner-looking puppy crate that collapses for storage and includes a washable bed.',
+            productId: 'kindtail-pawd-collapsible-crate',
+            position: 'quick-picks-1',
+          },
+          {
+            label: 'Best Budget First Crate',
+            title: 'MidWest iCrate Dog Crate (18-Inch)',
+            description:
+              'The simple pick for tiny-breed puppies: lighter, usually cheaper, and built around the divider-panel setup that makes puppy housebreaking easier.',
+            productId: 'midwest-icrate-puppy',
+            position: 'quick-picks-2',
+          },
+          {
+            label: 'Best Sturdier Wire Crate',
+            title: 'MidWest Life Stages Dog Crate (22-Inch)',
+            description:
+              'Life Stages uses heavier-gauge steel than iCrate and feels more solid for active puppies.',
+            productId: 'midwest-life-stages-puppy-crate',
+            position: 'quick-picks-3',
+          },
+          {
+            label: 'Best Flexible Door Layout',
+            title: 'Petmate Training Retreat Kennel',
+            description:
+              'A useful alternative when side-door access is needed. The two-door layout can make daily crate routines easier in tight bedrooms or living rooms.',
+            productId: 'petmate-training-retreat-kennel',
+            position: 'quick-picks-4',
+          },
+        ],
+      },
+      {
+        kind: 'product_section',
+        id: 'puppy-crates',
+        heading: 'Puppy Crate Picks',
+        positionOffset: 0,
+        columns: 3,
+        intro:
+          'For crate training, prioritize fit and daily usability. A divider is useful because puppies should not start with a crate so large that they can sleep on one side and potty on the other.',
+        productIds: [
+          'kindtail-pawd-collapsible-crate',
+          'midwest-icrate-puppy',
+          'midwest-life-stages-puppy-crate',
+          'petmate-training-retreat-kennel',
+        ],
+      },
+      {
+        kind: 'prose',
+        id: 'icrate-vs-life-stages',
+        heading: 'MidWest iCrate vs Life Stages',
+        paragraphs: [
+          'The iCrate and Life Stages lines are both wire crates with multiple size options and a divider panel. The difference is build and handling.',
+          'iCrate is the lighter, simpler, usually more budget-friendly option. It is easier to move around and makes sense for standard puppy crate training when your dog is not especially strong or hard on gear.',
+          'Life Stages uses heavier-gauge steel and is built to feel more sturdy. Some Life Stages crates are wider and higher than comparable iCrate models. Life Stages are appropriate for stronger, more active puppies.',
+        ],
+        alt: true,
+      },
+      {
+        kind: 'decision_columns',
+        id: 'which-crate',
+        left: {
+          heading: 'Get iCrate When',
+          items: [
+            'You want the simpler, more budget-friendly option',
+            'You plan to move the crate around the house often',
+            'Your puppy is of average strength and you need a divider-based training setup',
+            'A lighter crate matters more than a sturdier wire frame',
+          ],
+        },
+        right: {
+          heading: 'Get Life Stages When',
+          items: [
+            'You want the sturdier Midwest option',
+            'Your puppy is strong, active, or likely to push against the crate',
+            'You do not mind a heavier crate',
+            'Durability is your first priority',
+          ],
+        },
+      },
+      {
+        kind: 'note',
+        heading: 'Get Petmate Training Retreat Kennel When',
+        text:
+          'A side door makes the crate easier to use in a specific room',
+        alt: true,
+      },
+    ],
+    faq: {
+      heading: 'Puppy Crate FAQ',
+      items: [
+        {
+          question: 'What type of crate is best for a puppy?',
+          answer:
+            'For most puppies, a wire crate with a divider panel is the easiest starting point. The divider lets you create a smaller sleeping area during housebreaking, then expand the space as your puppy grows.',
+        },
+        {
+          question: 'Should I get iCrate or Life Stages?',
+          answer:
+            'Get iCrate if you want the lighter, usually cheaper option for standard puppy crate training. Get Life Stages if you want the sturdier Midwest crate and do not mind extra weight. If the price gap is small, Life Stages is the stronger pick.',
+        },
+        {
+          question: 'Why does a puppy crate need a divider?',
+          answer:
+            'A divider prevents the crate from being too large at the start of training. Puppies are more likely to keep a smaller sleeping area clean, while an oversized crate can allow them sleep in one corner and potty in another.',
+        },
+        {
+          question: 'Is a two-door crate worth it?',
+          answer:
+            'A two-door crate is useful when the crate sits beside furniture, in a bedroom corner, or anywhere a single front door would be inconvenient. If the crate will sit in an open area, one door is usually enough.',
+        },
+      ],
+    },
+    relatedGuides: {
+      heading: 'More Crate Training Help',
+      guides: [
+        {
+          href: ROUTES.calmingCrateGuide,
+          title: 'How to Crate Train Your Dog',
+          description:
+            'Step-by-step crate training guidance for puppies, anxious dogs, travel, and common mistakes to avoid.',
+        },
+        {
+          href: ROUTES.comfortCalmingBeds,
+          title: 'Best Calming Dog Beds',
+          description:
+            'If your puppy settles better with soft edges and a defined rest area, compare calming beds and bolster beds.',
+        },
+      ],
+    },
+    disclosureShowSafety: false,
+    internalLinkStrip: {
+      heading: 'More Puppy Comfort Guides',
+      links: [
+        { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
+        { label: 'Calming Dog Beds', href: ROUTES.comfortCalmingBeds },
+        { label: 'Comfort & Rest', href: ROUTES.comfortHub },
+      ],
+    },
+    itemListSchema: {
+      name: 'Best Puppy Crates',
+      url: 'https://www.chill-dogs.com/comforting/best-puppy-crates/',
+      productIds: [
+        'kindtail-pawd-collapsible-crate',
+        'midwest-icrate-puppy',
+        'midwest-life-stages-puppy-crate',
+        'petmate-training-retreat-kennel',
+      ],
+    },
+  },
+
+  'best-anxiety-dog-crates': {
+    slug: 'best-anxiety-dog-crates',
+    title: 'Best Dog Crates for Anxiety Management',
+    description:
+      'Compare dog crates for anxiety management, including wire, enclosed plastic, and heavy-duty options for different dog patterns.',
+    pageSlug: 'best-anxiety-dog-crates',
+    hero: {
+      title: 'Best Dog Crates for Anxiety',
+      subtitle:
+        'Some dogs settle in a familiar wire crate. Others do better with an enclosed kennel that blocks visual stimulation. And some escape artists need a heavy-duty crate to help keep them safe.',
+      disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
+      primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
+      secondaryCta: { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
+    },
+    toc: [
+      { label: 'Quick Picks', anchor: 'quick-picks' },
+      { label: 'Safety First', anchor: 'safety-first' },
+      { label: 'Anxiety Crate Picks', anchor: 'anxiety-crates' },
+      { label: 'Which Crate Fits the Pattern', anchor: 'which-crate' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    blocks: [
+      {
+        kind: 'quick_picks',
+        id: 'quick-picks',
+        heading: 'Quick Picks',
+        intro:
+          'Use these as management categories, not anxiety cures. The right choice depends on whether your dog is mildly unsettled, overstimulated by visibility, or actively trying to escape.',
+        items: [
+          {
+            label: 'Best Wire Crate for Mild Anxiety',
+            title: 'MidWest Life Stages Dog Crate',
+            description:
+              'A sturdy wire option for dogs who are already crate-trained and need a familiar, ventilated place to settle during mild stress.',
+            productId: 'midwest-life-stages-crate',
+            position: 'quick-picks-1',
+          },
+          {
+            label: 'Best Enclosed Crate',
+            title: 'Petmate Sky Kennel',
+            description:
+              'The enclosed plastic shell can reduce visual stimulation for dogs who settle better when the world is partly blocked out.',
+            productId: 'petmate-sky-kennel',
+            position: 'quick-picks-2',
+          },
+          {
+            label: 'Best Heavy-Duty Crate',
+            title: 'Impact High Anxiety Dog Crate',
+            description:
+              'The heavy-duty option for dogs with a real escape history, who have bent wire crates, or who risk injury from standard crate escape attempts.',
+            productId: 'impact-high-anxiety-crate',
+            position: 'quick-picks-3',
+          },
+        ],
+      },
+      {
+        kind: 'prose',
+        id: 'safety-first',
+        heading: 'Safety First: A Crate Is Not a Separation Anxiety Cure',
+        paragraphs: [
+          'A crate can be a useful management tool for some anxious dogs, but it is not a treatment for separation anxiety by itself. <a href="https://www.humaneworld.org/resources/separation-anxiety-dogs">Humane World</a> specifically advises creating a safe space instead of defaulting to a crate for separation anxiety. Dogs can continue panicking inside a confined space and may injure themselves trying to escape.',
+          '<a href="https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/separation-anxiety">ASPCA separation-anxiety guidance</a> and <a href="https://www.oregonhumane.org/portland-training/crate-training-your-dog/">Oregon Humane crate-training guidance</a> make the same practical point: watch the dog’s actual pattern. If confinement makes panic worse, use a room, pen, veterinary behavior support, and gradual training rather than trying to solve the problem with a stronger crate.',
+          'Choose wire for dogs with mild anxiety who already tolerate crates, enclosed plastic for dogs who need less visual stimulation, and heavy-duty containment only when escape risk makes standard crates unsafe.',
+        ],
+        alt: true,
+      },
+      {
+        kind: 'product_section',
+        id: 'anxiety-crates',
+        heading: 'Anxiety Crate Picks',
+        positionOffset: 0,
+        columns: 3,
+        intro:
+          'These three picks address different anxiety issues. Do not size down for containment. Your dog still needs room to stand, turn around, and lie down naturally.',
+        productIds: ['midwest-life-stages-crate', 'petmate-sky-kennel', 'impact-high-anxiety-crate'],
+      },
+      {
+        kind: 'decision_columns',
+        id: 'which-crate',
+        left: {
+          heading: 'Use Life Stages or Sky Kennel When',
+          items: [
+            'Your dog is already crate-trained and does not panic in confined spaces',
+            'The anxiety is mild, situational, or linked to overstimulation',
+            'Your goal is a predictable rest space',
+            'You can monitor the dog’s response and change course if distress escalates',
+          ],
+        },
+        right: {
+          heading: 'Consider Impact When',
+          items: [
+            'Your dog has escaped from or damaged standard crates',
+            'Wire bars create tooth, paw, or latch-injury risk',
+            'You are also working on underlying anxiety issues with training or professional support',
+            'You need containment as harm reduction',
+          ],
+        },
+      },
+      {
+        kind: 'note',
+        heading: 'When No Crate Is the Better Choice',
+        text:
+          'If your dog drools, thrashes, screams, urinates, or injures itself when confined, a stronger crate may only make the panic more dangerous. In that case, use a safer room or pen setup and talk with a veterinarian or qualified separation-anxiety trainer.',
+        alt: true,
+      },
+    ],
+    faq: {
+      heading: 'Anxiety Crate FAQ',
+      items: [
+        {
+          question: 'Can a crate help with dog anxiety?',
+          answer:
+            'Sometimes, but only for dogs who already feel safe in a crate. For mild anxiety, a familiar crate can reduce pacing and provide predictability. For true separation anxiety or confinement panic, a crate can make distress worse.',
+        },
+        {
+          question: 'What is the best crate for mild anxiety?',
+          answer:
+            'For mild anxiety in a dog who tolerates wire crates, MidWest Life Stages is the practical pick because it is sturdier than lighter wire crates while still offering airflow, visibility, and a divider panel.',
+        },
+        {
+          question: 'Is an enclosed crate better for anxious dogs?',
+          answer:
+            'An enclosed plastic crate like the Petmate Sky Kennel can help dogs who settle better with less visual stimulation. It is not automatically better for every anxious dog, especially dogs who panic when confined.',
+        },
+        {
+          question: 'When does a heavy-duty anxiety crate make sense?',
+          answer:
+            'A heavy-duty crate makes sense when a dog has a real escape history and standard crates create injury risk. It should still be part of a broader plan that addresses the underlying anxiety.',
+        },
+      ],
+    },
+    relatedGuides: {
+      heading: 'More Anxiety & Crate Training Help',
+      guides: [
+        {
+          href: ROUTES.calmingCrateGuide,
+          title: 'How to Crate Train Your Dog',
+          description:
+            'Crate training basics, puppy setup, anxiety cautions, travel use, and common mistakes to avoid.',
+        },
+        {
+          href: ROUTES.calmingTop,
+          title: 'Best Calming Products for Anxious Dogs',
+          description:
+            'Compare wraps, chews, lick mats, and snuffle mats for dogs who need support beyond crate management.',
+        },
+      ],
+    },
+    disclosureShowSafety: true,
+    internalLinkStrip: {
+      heading: 'More Anxiety Guides',
+      links: [
+        { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
+        { label: 'Puppy Crates', href: ROUTES.comfortPuppyCrates },
+        { label: 'Best Calming Products', href: ROUTES.calmingTop },
+      ],
+    },
+    itemListSchema: {
+      name: 'Best Dog Crates for Anxiety',
+      url: 'https://www.chill-dogs.com/comforting/best-anxiety-dog-crates/',
+      productIds: ['midwest-life-stages-crate', 'petmate-sky-kennel', 'impact-high-anxiety-crate'],
+    },
+  },
+
+  'best-travel-crates-for-road-trips': {
+    slug: 'best-travel-crates-for-road-trips',
+    title: 'Best Travel Crates for Road Trips',
+    description:
+      'Compare the best travel crates for road trips, including collapsible dog crates, hard-sided kennels, and soft folding crates for car travel.',
+    pageSlug: 'best-travel-crates-for-road-trips',
+    hero: {
+      title: 'Best Travel Crates for Road Trips',
+      subtitle:
+        'For road trips, the best dog travel crate depends less on price and more on how your dog actually travels. Some dogs do well in a lightweight folding crate that is easy to pack and set up. Others need a sturdier, hard-sided kennel with more structure that makes it harder for them to claw their way out.',
+      disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
+      primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
+      secondaryCta: { label: 'Road Trip Gear', href: ROUTES.roadTrip },
+    },
+    toc: [
+      { label: 'Quick Picks', anchor: 'quick-picks' },
+      { label: 'Hard-Sided vs Soft Folding', anchor: 'hard-sided-vs-soft' },
+      { label: 'Travel Crate Comparison', anchor: 'travel-crates' },
+      { label: 'Which One Should You Buy', anchor: 'which-one' },
+      { label: 'Bottom Line', anchor: 'bottom-line' },
+    ],
+    blocks: [
+      {
+        kind: 'quick_picks',
+        id: 'quick-picks',
+        heading: 'Quick Answer: Top Picks',
+        intro:
+          'If you already know how your dog behaves in a crate, the choice is simple. Prioritize portability for calm, crate-trained dogs. Prioritize structure for dogs who push boundaries.',
+        items: [
+          {
+            label: 'Best Overall for Road Trips',
+            title: 'PetSafe Happy Ride Collapsible Travel Crate',
+            description:
+              'The best all-around road trip pick because it is specifically built around travel use, car setup, and collapsible storage.',
+            productId: 'petsafe-happy-ride-travel-crate',
+            position: 'quick-picks-1',
+          },
+          {
+            label: 'Best Hard-Sided Travel Crate',
+            title: 'Petmate Sky Kennel',
+            description:
+              'The better hard-sided choice when your dog needs more structure, more enclosure, or a sturdier alternative to soft folding travel crates.',
+            productId: 'petmate-sky-kennel',
+            position: 'quick-picks-2',
+          },
+          {
+            label: 'Best Soft Folding Crate',
+            title: 'EliteField 3-Door Folding Soft Dog Crate',
+            description:
+              'A strong, soft-sided option for trained dogs, hotel stays, and temporary setup when the three-door layout is useful.',
+            productId: 'elitefield-three-door-soft-crate',
+            position: 'quick-picks-3',
+          },
+          {
+            label: 'Best Lightweight Soft Crate',
+            title: 'Lesure Soft Collapsible Dog Crate',
+            description:
+              'The lightweight convenience pick for calm, trained dogs when easy carry, quick setup, and compact storage matter most.',
+            productId: 'lesure-soft-collapsible-crate',
+            position: 'quick-picks-4',
+          },
+        ],
+      },
+      {
+        kind: 'prose',
+        id: 'hard-sided-vs-soft',
+        heading: 'Hard-Sided vs Soft Folding Travel Crates',
+        paragraphs: [
+          'Choosing a travel crate for car use is not the same as choosing a puppy house-training crate or an airline crate. For road trips, the tradeoff is usually structure versus portability.',
+          'Hard-sided dog crates are usually the better choice for dogs that need more containment, more enclosure, and fewer soft surfaces to scratch and chew. They take up more room and are less convenient to store, but they give you a more structured setup.',
+          'A collapsible dog crate is easier to pack, carry, and set up in hotels or temporary spaces. Soft dog crates are best for dogs that are already crate trained, calm in confinement, and not likely to chew, claw, or push hard against the walls.',
+          '<strong>Important:</strong> Soft folding crates are convenient for road trips, hotel stays, and calm crate-trained dogs, but they are not indestructible. A determined dog can claw, chew, or push out of one much more easily than from a hard-sided crate. Do not use a soft crate for dogs with serious anxiety, destructive behavior, or strong escape tendencies.',
+        ],
+        alt: true,
+      },
+      {
+        kind: 'product_section',
+        id: 'travel-crates',
+        heading: 'Product Comparison',
+        positionOffset: 0,
+        columns: 2,
+        intro:
+          'These crate picks are for road trips, not for general indoor use or for airline travel. They prioritize car convenience, realistic containment, and easy setup when you reach the next stop.',
+        productIds: [
+          'petsafe-happy-ride-travel-crate',
+          'petmate-sky-kennel',
+          'elitefield-three-door-soft-crate',
+          'lesure-soft-collapsible-crate',
+        ],
+      },
+      {
+        kind: 'prose',
+        heading: 'PetSafe Happy Ride Collapsible Travel Crate',
+        paragraphs: [
+          'Choose PetSafe Happy Ride if you want the best all-around road trip travel crate. It is framed around car travel rather than indoor crate training, with a collapsible format, mesh visibility, dual side access, storage pockets, and back-seat setup details.',
+          'This is the pick for owners who want a travel-specific crate that packs down between trips and feels more purpose-built for long drives than a standard indoor wire crate.',
+        ],
+      },
+      {
+        kind: 'prose',
+        heading: 'Petmate Sky Kennel',
+        paragraphs: [
+          'Choose Petmate if your dog needs a harder-sided, more secure setup. The plastic shell is more enclosed than a soft folding crate with no mesh surfaces to chew, claw, or push through.',
+          'It is the better fit for dogs who need more structure on road trips, but it is less compact than a soft folding travel crate. That is the tradeoff: more structure, less packability.',
+        ],
+        alt: true,
+      },
+      {
+        kind: 'prose',
+        heading: 'EliteField 3-Door Folding Soft Dog Crate',
+        paragraphs: [
+          'Choose EliteField if you want a soft folding crate for a trained dog and like the three-door setup. Top, front, and side access is convenient when the crate moves between a car, hotel room, campsite, or temporary sleeping area.',
+          'This is good for dogs who already settle calmly in a crate. It is not the right choice for dogs who panic, chew, claw, or test crate walls.',
+        ],
+      },
+      {
+        kind: 'prose',
+        heading: 'Lesure Soft Collapsible Dog Crate',
+        paragraphs: [
+          'Choose Lesure if you want the lightest, most portable soft-sided option. Its appeal is fast setup, compact storage, breathable mesh, and easy carry for road trip stops or temporary rooms.',
+          'Like any soft-sided folding dog crate for travel, it is best for calm, trained dogs. If containment strength matters more than portability, choose Petmate instead.',
+        ],
+        alt: true,
+      },
+      {
+        kind: 'decision_columns',
+        id: 'which-one',
+        left: {
+          heading: 'Choose hard-sided when',
+          items: [
+            'Your dog needs more structure or enclosure during car travel',
+            'Your dog paws at doors, pushes against crate walls, or gets overstimulated by visibility',
+            'Your dog needs stronger containment than fabric and mesh',
+            'Packability matters less than a sturdier travel crate',
+          ],
+        },
+        right: {
+          heading: 'Choose soft folding when',
+          items: [
+            'Your dog is already crate-trained and calm in confinement',
+            'You need a folding dog crate for travel, hotel stays, or temporary setup',
+            'You need the convenience of lightweight carry and compact storage',
+            'Your dog will not chew, claw, or try to escape',
+          ],
+        },
+      },
+      {
+        kind: 'note',
+        heading: 'Bottom Line',
+        text:
+          'PetSafe Happy Ride is the best overall road trip pick because it is built around travel use. Petmate is the better hard-sided choice for dogs that need more structure. EliteField and Lesure are strong soft-sided options for calm, crate-trained dogs, with EliteField winning on access and Lesure winning on lightweight portability.',
+        alt: true,
+      },
+    ],
+    faq: {
+      heading: 'Travel Crate FAQ',
+      items: [
+        {
+          question: 'What is the best travel crate for road trips?',
+          answer:
+            'PetSafe Happy Ride is the best overall road trip pick because it is designed around travel use and collapses for storage. If your dog needs more structure, choose a hard-sided kennel like Petmate.',
+        },
+        {
+          question: 'Are soft dog crates good for car travel?',
+          answer:
+            'Soft dog crates can work well for car travel with calm, crate-trained dogs. They are convenient and portable, but they are not escape-proof and should not be used for dogs that panic, chew, or try hard to escape.',
+        },
+        {
+          question: 'Is a travel crate the same as crash-tested vehicle safety gear?',
+          answer:
+            'No. This page focuses on road trip containment, portability, and temporary travel setup. Road trip convenience is different from crash-tested vehicle safety. If crash protection is the priority, look specifically for products tested for that purpose.',
+        },
+        {
+          question: 'Should I use a hard-sided or soft folding travel crate?',
+          answer:
+            'Use a hard-sided crate if your dog needs more structure or containment. Use a soft folding crate if your dog is already calm in a crate and you care most about portability, hotel setup, and easy storage.',
+        },
+      ],
+    },
+    relatedGuides: {
+      heading: 'More Road Trip & Crate Help',
+      guides: [
+        {
+          href: ROUTES.roadTrip,
+          title: "Rhys's Road Trip Chill Kit",
+          description:
+            'A road trip setup that combines cooling, calming, hydration, and rest gear for long drives with dogs.',
+        },
+        {
+          href: ROUTES.calmingCrateGuide,
+          title: 'How to Crate Train Your Dog',
+          description:
+            'Crate training guidance for puppies, anxious dogs, travel, and common crate mistakes.',
+        },
+      ],
+    },
+    disclosureShowSafety: false,
+    internalLinkStrip: {
+      heading: 'More Travel & Crate Guides',
+      links: [
+        { label: 'Road Trip Gear', href: ROUTES.roadTrip },
+        { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
+        { label: 'Anxiety Crates', href: ROUTES.comfortAnxietyCrates },
+      ],
+    },
+    itemListSchema: {
+      name: 'Best Travel Crates for Road Trips',
+      url: 'https://www.chill-dogs.com/comforting/best-travel-crates-for-road-trips/',
+      productIds: [
+        'petsafe-happy-ride-travel-crate',
+        'petmate-sky-kennel',
+        'elitefield-three-door-soft-crate',
+        'lesure-soft-collapsible-crate',
+      ],
+    },
+  },
+
   'best-orthopedic-dog-beds': {
     slug: 'best-orthopedic-dog-beds',
     title: 'Best Orthopedic Dog Beds for Large & Older Dogs',
