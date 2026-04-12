@@ -228,6 +228,7 @@ describe('site smoke tests', () => {
     expect(sitemap).toContain('/cooling/car-cooling-for-dogs/');
     expect(sitemap).toContain('/travel/dog-road-trip-gear/');
     expect(sitemap).toContain('/calming/best-calming-products-for-anxious-dogs/');
+    expect(sitemap).toContain('/calming/how-to-prepare-a-calm-room-for-fireworks-night/');
     expect(sitemap).toContain('/comforting/best-puppy-crates/');
     expect(sitemap).toContain('/comforting/best-anxiety-dog-crates/');
     expect(sitemap).toContain('/comforting/best-travel-crates-for-road-trips/');
@@ -240,6 +241,8 @@ describe('site smoke tests', () => {
 
     expect(rssXml).toContain('/calming/crate-training-for-dogs/');
     expect(rssXml).toContain('How to Crate Train Your Dog');
+    expect(rssXml).toContain('/calming/how-to-prepare-a-calm-room-for-fireworks-night/');
+    expect(rssXml).toContain('How to Prepare a Calm Room for Fireworks Night');
   });
 
   it('does not render escaped HTML tags as visible text on any page', () => {
