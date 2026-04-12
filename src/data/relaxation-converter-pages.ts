@@ -632,6 +632,12 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
           description:
             'Compare wraps, chews, lick mats, and snuffle mats for dogs who need support beyond crate management.',
         },
+        {
+          href: ROUTES.comfortHeavyDutyCrates,
+          title: 'Best Heavy-Duty Dog Crates',
+          description:
+            'See reinforced crate options when you already know a standard wire setup is not enough.',
+        },
       ],
     },
     disclosureShowSafety: true,
@@ -639,6 +645,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       heading: 'More Anxiety Guides',
       links: [
         { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
+        { label: 'Heavy-Duty Crates', href: ROUTES.comfortHeavyDutyCrates },
         { label: 'Puppy Crates', href: ROUTES.comfortPuppyCrates },
         { label: 'Best Calming Products', href: ROUTES.calmingTop },
       ],
@@ -844,6 +851,12 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
           description:
             'Crate training guidance for puppies, anxious dogs, travel, and common crate mistakes.',
         },
+        {
+          href: ROUTES.comfortAirlineCrates,
+          title: 'Best Airline Crates for Flying With Your Dog',
+          description:
+            'Compare rigid airline-style kennels separately from soft road-trip and hotel-travel crate picks.',
+        },
       ],
     },
     disclosureShowSafety: false,
@@ -851,6 +864,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       heading: 'More Travel & Crate Guides',
       links: [
         { label: 'Road Trip Gear', href: ROUTES.roadTrip },
+        { label: 'Airline Crates', href: ROUTES.comfortAirlineCrates },
         { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
         { label: 'Anxiety Crates', href: ROUTES.comfortAnxietyCrates },
       ],
@@ -863,6 +877,600 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         'petmate-sky-kennel',
         'elitefield-three-door-soft-crate',
         'lesure-soft-collapsible-crate',
+      ],
+    },
+  },
+
+  'best-airline-crates-for-flying-with-your-dog': {
+    slug: 'best-airline-crates-for-flying-with-your-dog',
+    title: 'Best Airline Crates for Flying With Your Dog',
+    description:
+      'Compare the best hard-sided airline crates for flying with your dog, including rigid kennels for cargo travel, airport handling, and airline-prep needs.',
+    pageSlug: 'best-airline-crates-for-flying-with-your-dog',
+    hero: {
+      title: 'Best Airline Crates for Flying With Your Dog',
+      subtitle:
+        'Flying with a dog is a different crate decision than road trips or house-training. For flights, prioritize rigid construction, ventilation, hardware, and a kennel size that actually matches airline rules for your dog and route.',
+      disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
+      primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
+      secondaryCta: { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
+    },
+    toc: [
+      { label: 'Quick Picks', anchor: 'quick-picks' },
+      { label: 'Airline Crates vs Road-Trip Crates', anchor: 'airline-vs-road-trip' },
+      { label: 'Airline Crate Picks', anchor: 'airline-crates' },
+      { label: 'Which One Should You Buy', anchor: 'which-one' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    blocks: [
+      {
+        kind: 'quick_picks',
+        id: 'quick-picks',
+        heading: 'Quick Picks',
+        intro:
+          'For flying, rigid hard-sided kennels are the default. The right choice depends on your dog’s size, how flight-specific the crate needs to be, and whether you need a smaller rigid carrier or a larger cargo-style kennel.',
+        items: [
+          {
+            label: 'Best Overall Airline-Style Kennel',
+            title: 'Petmate Sky Kennel',
+            description:
+              'The clearest starting point for a rigid, enclosed kennel that already fits into the travel-and-flight conversation better than a standard home crate.',
+            productId: 'petmate-sky-kennel',
+            position: 'quick-picks-1',
+          },
+          {
+            label: 'Best Flight-Focused Pick',
+            title: 'SportPet Airline Compliant Travel Kennel',
+            description:
+              'A more flight-specific kennel with removable wheels, bowls, and airline-oriented hardware details built into the format.',
+            productId: 'sportpet-airline-compliant-kennel',
+            position: 'quick-picks-2',
+          },
+          {
+            label: 'Best Budget Hard-Sided Carrier',
+            title: 'Amazon Basics Hard-Sided Pet Travel Carrier',
+            description:
+              'A basic rigid carrier for small pets when you need a simpler hard-sided transport option without paying for a larger cargo-style kennel.',
+            productId: 'amazon-basics-hard-sided-carrier',
+            position: 'quick-picks-3',
+          },
+          {
+            label: 'Best Small-Pet Loading Option',
+            title: 'Petmate Two-Door Kennel',
+            description:
+              'Top and front access can make small-pet loading easier than a standard front-door-only kennel.',
+            productId: 'petmate-two-door-kennel',
+            position: 'quick-picks-4',
+          },
+        ],
+      },
+      {
+        kind: 'prose',
+        id: 'airline-vs-road-trip',
+        heading: 'Airline Crates vs Road-Trip Crates',
+        paragraphs: [
+          'Road-trip crates and airline crates solve different problems. Road-trip pages can include collapsible formats, soft-sided setups, and hotel-friendly convenience. Airline travel does not.',
+          'For flying, the default is a rigid, hard-sided kennel with strong hardware, proper ventilation, and enough room for your dog to stand, turn, and lie down naturally. Soft folding crates are convenient for cars and hotels, but they are not the right recommendation for flights.',
+          '<strong>Important:</strong> Airline crate rules vary by carrier, aircraft, route, destination, and pet size. Use this page to narrow the field, then confirm the exact requirements with your airline before buying. Do not assume any crate is universally accepted just because it is marketed as airline-ready.',
+        ],
+        alt: true,
+      },
+      {
+        kind: 'product_section',
+        id: 'airline-crates',
+        heading: 'Airline Crate Picks',
+        positionOffset: 0,
+        columns: 2,
+        intro:
+          'These are rigid travel kennels for flight prep and structured transport. They are not soft road-trip crates and they are not meant to replace crate-training work ahead of travel.',
+        productIds: [
+          'petmate-sky-kennel',
+          'sportpet-airline-compliant-kennel',
+          'amazon-basics-hard-sided-carrier',
+          'petmate-two-door-kennel',
+        ],
+      },
+      {
+        kind: 'prose',
+        heading: 'Petmate Sky Kennel',
+        paragraphs: [
+          'Choose Petmate Sky Kennel if you want the best overall airline-style starting point. It is enclosed, ventilation-heavy, and already positioned more naturally for travel than a standard wire or house-training crate.',
+          'This is the better default when you want a rigid kennel that also crosses over into anxiety-sensitive or den-like travel use, not just airport handling.',
+        ],
+      },
+      {
+        kind: 'prose',
+        heading: 'SportPet Airline Compliant Travel Kennel',
+        paragraphs: [
+          'Choose SportPet if you want the most flight-oriented pick on this page. The removable wheels, bowls, and airline-specific framing make it feel closer to a true airport-prep kennel than a generic hard-sided carrier.',
+          'It is a stronger fit when flying is the main use case rather than a secondary possibility.',
+        ],
+        alt: true,
+      },
+      {
+        kind: 'prose',
+        heading: 'Amazon Basics Hard-Sided Pet Travel Carrier',
+        paragraphs: [
+          'Choose Amazon Basics if your pet is small and you want the simplest rigid carrier at a lower cost. It is more of a basic hard-sided transport solution than a feature-heavy cargo-travel kennel.',
+          'That makes it more appropriate for smaller pets and lighter-duty transport needs than for larger flight setups.',
+        ],
+      },
+      {
+        kind: 'prose',
+        heading: 'Petmate Two-Door Kennel',
+        paragraphs: [
+          'Choose Petmate Two-Door if top access matters. Some small pets load more easily from above than from a single front door, especially when they hesitate at the crate entrance.',
+          'This is the convenience pick for smaller rigid-kennel use, not the most airline-specialized option on the page.',
+        ],
+        alt: true,
+      },
+      {
+        kind: 'decision_columns',
+        id: 'which-one',
+        left: {
+          heading: 'Choose a larger airline-style kennel when',
+          items: [
+            'Flying is the primary use case',
+            'Your dog needs a rigid enclosed kennel rather than a soft or collapsible crate',
+            'You need more travel-specific hardware and prep details',
+            'You want a crate that fits the cargo-flight conversation more naturally than a home crate',
+          ],
+        },
+        right: {
+          heading: 'Choose a smaller rigid carrier when',
+          items: [
+            'Your pet is small enough for the listed size range',
+            'You want a simpler hard-sided transport option',
+            'Top or front-loading convenience matters more than flight-specific extras',
+            'You do not need the scale of a larger cargo-style kennel',
+          ],
+        },
+      },
+      {
+        kind: 'note',
+        heading: 'Bottom Line',
+        text:
+          'Petmate Sky Kennel is the best default airline-style pick because it balances enclosed structure, ventilation, and realistic travel use. SportPet is the more flight-specific option when flying is the main job. Amazon Basics and Petmate Two-Door work better as smaller rigid carrier choices.',
+        alt: true,
+      },
+    ],
+    faq: {
+      heading: 'Airline Crate FAQ',
+      items: [
+        {
+          question: 'What type of crate do I need to fly with a dog?',
+          answer:
+            'For flights, the default is a rigid hard-sided kennel with strong hardware and proper ventilation. Exact requirements vary by airline, so always confirm your carrier’s current crate rules before buying.',
+        },
+        {
+          question: 'Can I use a soft travel crate for flying?',
+          answer:
+            'No. Soft travel crates are useful for road trips and hotel stays with calm dogs, but they are not the right recommendation for flight use.',
+        },
+        {
+          question: 'Is an airline-marketed kennel automatically accepted by every airline?',
+          answer:
+            'No. Marketing language is not the same as universal acceptance. Airlines can differ on sizing, bolts, ventilation, wheels, and route-specific requirements.',
+        },
+        {
+          question: 'Which airline crate is the best starting point?',
+          answer:
+            'Petmate Sky Kennel is the clearest general starting point on this page, while SportPet is the better fit if you specifically want a more flight-oriented kennel format.',
+        },
+      ],
+    },
+    relatedGuides: {
+      heading: 'More Travel & Crate Help',
+      guides: [
+        {
+          href: ROUTES.calmingCrateGuide,
+          title: 'How to Crate Train Your Dog',
+          description:
+            'Build crate comfort before any major trip so the flight crate is not the first stressful confinement experience.',
+        },
+        {
+          href: ROUTES.comfortTravelCrates,
+          title: 'Best Travel Crates for Road Trips',
+          description:
+            'Compare hard-sided and soft folding road-trip crates separately from flight-focused kennels.',
+        },
+      ],
+    },
+    disclosureShowSafety: false,
+    internalLinkStrip: {
+      heading: 'More Travel & Crate Guides',
+      links: [
+        { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
+        { label: 'Road Trip Crates', href: ROUTES.comfortTravelCrates },
+        { label: 'Anxiety Crates', href: ROUTES.comfortAnxietyCrates },
+      ],
+    },
+    itemListSchema: {
+      name: 'Best Airline Crates for Flying With Your Dog',
+      url: 'https://www.chill-dogs.com/comforting/best-airline-crates-for-flying-with-your-dog/',
+      productIds: [
+        'petmate-sky-kennel',
+        'sportpet-airline-compliant-kennel',
+        'amazon-basics-hard-sided-carrier',
+        'petmate-two-door-kennel',
+      ],
+    },
+  },
+
+  'best-furniture-dog-crates': {
+    slug: 'best-furniture-dog-crates',
+    title: 'Best Furniture Dog Crates for Indoor Use',
+    description:
+      'Compare the best furniture dog crates for indoor use, including decorative crate tables, end-table kennels, and sturdier furniture-style options for visible rooms.',
+    pageSlug: 'best-furniture-dog-crates',
+    hero: {
+      title: 'Best Furniture Dog Crates',
+      subtitle:
+        'Furniture dog crates are for people who want a crate that fits into the room instead of fighting it. The right pick depends on dog size, room placement, and whether you want a decorative table-style crate or a sturdier furniture build.',
+      disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
+      primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
+      secondaryCta: { label: 'Comfort & Rest', href: ROUTES.comfortHub },
+    },
+    toc: [
+      { label: 'Quick Picks', anchor: 'quick-picks' },
+      { label: 'Furniture Crates vs Standard Crates', anchor: 'furniture-vs-standard' },
+      { label: 'Furniture Crate Picks', anchor: 'furniture-crates' },
+      { label: 'Which One Should You Buy', anchor: 'which-one' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    blocks: [
+      {
+        kind: 'quick_picks',
+        id: 'quick-picks',
+        heading: 'Quick Picks',
+        intro:
+          'Decorative crates solve different problems than puppy crates, anxiety crates, or road-trip crates. Use them when visual fit and indoor placement matter, not when you need maximum containment strength.',
+        items: [
+          {
+            label: 'Best Simple Furniture Pick',
+            title: 'Amazon Basics Furniture Style Dog Crate',
+            description:
+              'The easiest mainstream starting point if you want furniture styling without overcomplicating the choice.',
+            productId: 'amazon-basics-furniture-style-crate',
+            position: 'quick-picks-1',
+          },
+          {
+            label: 'Best for Visible Living Spaces',
+            title: 'DWANTON Dog Crate Furniture',
+            description:
+              'A classic decorative crate-table option when the kennel needs to look intentional in a bedroom or living room.',
+            productId: 'dwanton-dog-crate-furniture',
+            position: 'quick-picks-2',
+          },
+          {
+            label: 'Best for Large Dogs',
+            title: 'IRONCK Extra Large Dog Crate Furniture',
+            description:
+              'A stronger oversized furniture-crate option for owners who need more space without dropping back to a plain wire crate.',
+            productId: 'ironck-extra-large-dog-crate-furniture',
+            position: 'quick-picks-3',
+          },
+          {
+            label: 'Best Sturdier Furniture Build',
+            title: 'Oranland Heavy Duty Dog Crate Furniture',
+            description:
+              'A better fit when you like the furniture look but want more structure than lightweight decorative crates usually provide.',
+            productId: 'oranland-heavy-duty-furniture-crate',
+            position: 'quick-picks-4',
+          },
+        ],
+      },
+      {
+        kind: 'prose',
+        id: 'furniture-vs-standard',
+        heading: 'Furniture Crates vs Standard Crates',
+        paragraphs: [
+          'A furniture crate is a room-integration choice first. It is for owners who want the crate to live in a visible space without looking like a garage or utility-room kennel.',
+          'That makes furniture crates a different category from puppy training crates, road-trip crates, or heavy-duty anxiety crates. Decorative styling, table surfaces, and home-friendly finishes are the point. Maximum escape-proof containment usually is not.',
+          '<strong>Important:</strong> Do not treat decorative crate furniture as a substitute for a heavy-duty crate if your dog panics, chews through materials, or already has an escape history. Furniture styling and serious containment are not the same thing.',
+        ],
+        alt: true,
+      },
+      {
+        kind: 'product_section',
+        id: 'furniture-crates',
+        heading: 'Furniture Crate Picks',
+        positionOffset: 0,
+        columns: 3,
+        intro:
+          'These picks cover small decorative kennels, larger table-style crates, and sturdier furniture builds for dogs that still need a more home-friendly setup than a plain wire crate.',
+        productIds: [
+          'amazon-basics-furniture-style-crate',
+          'dwanton-dog-crate-furniture',
+          'rehomerance-dog-crate-furniture',
+          'internets-best-decorative-kennel',
+          'lyromix-dog-crate-furniture',
+          'easycom-foldable-dog-crate-furniture',
+          'ironck-extra-large-dog-crate-furniture',
+          'bifanuo-dog-crate-furniture',
+          'oranland-heavy-duty-furniture-crate',
+        ],
+      },
+      {
+        kind: 'decision_columns',
+        id: 'which-one',
+        left: {
+          heading: 'Choose decorative furniture style when',
+          items: [
+            'The crate will sit in a visible room every day',
+            'You care about end-table or nightstand styling',
+            'Your dog does not need true escape-proof containment',
+            'Home fit matters as much as basic crate function',
+          ],
+        },
+        right: {
+          heading: 'Choose the sturdier furniture options when',
+          items: [
+            'Your dog is larger and needs more structure',
+            'You want furniture styling but lighter decorative crates feel too flimsy',
+            'You still want the crate to look room-friendly',
+            'You need a middle ground between decorative and fully heavy-duty',
+          ],
+        },
+      },
+      {
+        kind: 'note',
+        heading: 'Bottom Line',
+        text:
+          'Amazon Basics is the easiest simple starting point. DWANTON is the cleaner decorative living-room option. IRONCK works better for larger dogs, and Oranland is the strongest choice when you want furniture styling without dropping all the way to a lightweight decorative build.',
+        alt: true,
+      },
+    ],
+    faq: {
+      heading: 'Furniture Crate FAQ',
+      items: [
+        {
+          question: 'What is a furniture dog crate?',
+          answer:
+            'A furniture dog crate is an indoor kennel designed to blend into the room like an end table, nightstand, or decorative cabinet rather than looking like a standard wire crate.',
+        },
+        {
+          question: 'Are furniture dog crates good for anxious dogs?',
+          answer:
+            'They can be fine for calm crate-trained dogs, but they are not the best choice for dogs with true confinement panic or a proven escape history. In those cases, stronger containment matters more than decor.',
+        },
+        {
+          question: 'What size dog works best with a furniture crate?',
+          answer:
+            'That depends on the specific crate, but the key is the same as any kennel: your dog still needs enough room to stand, turn, and lie down comfortably. Decorative styling should not come at the cost of fit.',
+        },
+        {
+          question: 'What is the best furniture dog crate on this page?',
+          answer:
+            'Amazon Basics is the easiest all-around starting point, while DWANTON is the stronger decorative pick for visible indoor spaces. For larger dogs, IRONCK is the better furniture-style option.',
+        },
+      ],
+    },
+    relatedGuides: {
+      heading: 'More Crate & Comfort Help',
+      guides: [
+        {
+          href: ROUTES.calmingCrateGuide,
+          title: 'How to Crate Train Your Dog',
+          description:
+            'Crate comfort still matters even when the crate is chosen mainly for indoor furniture fit.',
+        },
+        {
+          href: ROUTES.comfortHeavyDutyCrates,
+          title: 'Best Heavy-Duty Dog Crates',
+          description:
+            'If your dog needs stronger containment than decorative crate furniture can realistically provide, start there instead.',
+        },
+      ],
+    },
+    disclosureShowSafety: false,
+    internalLinkStrip: {
+      heading: 'More Crate Guides',
+      links: [
+        { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
+        { label: 'Heavy-Duty Crates', href: ROUTES.comfortHeavyDutyCrates },
+        { label: 'Puppy Crates', href: ROUTES.comfortPuppyCrates },
+      ],
+    },
+    itemListSchema: {
+      name: 'Best Furniture Dog Crates',
+      url: 'https://www.chill-dogs.com/comforting/best-furniture-dog-crates/',
+      productIds: [
+        'amazon-basics-furniture-style-crate',
+        'dwanton-dog-crate-furniture',
+        'rehomerance-dog-crate-furniture',
+        'internets-best-decorative-kennel',
+        'lyromix-dog-crate-furniture',
+        'easycom-foldable-dog-crate-furniture',
+        'ironck-extra-large-dog-crate-furniture',
+        'bifanuo-dog-crate-furniture',
+        'oranland-heavy-duty-furniture-crate',
+      ],
+    },
+  },
+
+  'best-heavy-duty-dog-crates': {
+    slug: 'best-heavy-duty-dog-crates',
+    title: 'Best Heavy-Duty Dog Crates for Escape Artists',
+    description:
+      'Compare the best heavy-duty dog crates for escape artists, stronger large dogs, and dogs that have already overpowered standard wire crates.',
+    pageSlug: 'best-heavy-duty-dog-crates',
+    hero: {
+      title: 'Best Heavy-Duty Dog Crates',
+      subtitle:
+        'Heavy-duty crates are not for every dog. They make sense when a standard crate is no longer enough because the dog bends bars, breaks latches, or creates injury risk trying to get out. The goal here is stronger containment, not a cure.',
+      disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
+      primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
+      secondaryCta: { label: 'Anxiety Crate Guide', href: ROUTES.comfortAnxietyCrates },
+    },
+    toc: [
+      { label: 'Quick Picks', anchor: 'quick-picks' },
+      { label: 'When Heavy-Duty Makes Sense', anchor: 'when-heavy-duty-makes-sense' },
+      { label: 'Heavy-Duty Crate Picks', anchor: 'heavy-duty-crates' },
+      { label: 'Which One Should You Buy', anchor: 'which-one' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    blocks: [
+      {
+        kind: 'quick_picks',
+        id: 'quick-picks',
+        heading: 'Quick Picks',
+        intro:
+          'These picks are for dogs that have already shown you a normal crate is not enough. Choose based on dog size, how enclosed you want the crate to feel, and how serious the escape problem has become.',
+        items: [
+          {
+            label: 'Best Overall Heavy-Duty Pick',
+            title: 'Impact High Anxiety Dog Crate',
+            description:
+              'The clearest premium option for dogs that have already damaged standard crates or put themselves at risk trying to escape.',
+            productId: 'impact-high-anxiety-crate',
+            position: 'quick-picks-1',
+          },
+          {
+            label: 'Best Large-Dog Value',
+            title: 'Oranland Heavy Duty Indestructible Dog Crate',
+            description:
+              'A strong large-dog alternative when you need reinforced containment without stepping straight into the most premium crate on the page.',
+            productId: 'oranland-heavy-duty-dog-crate',
+            position: 'quick-picks-2',
+          },
+          {
+            label: 'Best for Smaller Escape Artists',
+            title: 'Gardner Pet Heavy Duty Dog Crate',
+            description:
+              'A useful option when the dog is small but still capable of defeating ordinary small wire crates.',
+            productId: 'gardner-pet-heavy-duty-crate',
+            position: 'quick-picks-3',
+          },
+          {
+            label: 'Best XXL Size Option',
+            title: 'Heavy Duty Dog Crate XXL',
+            description:
+              'A better fit when you need both reinforced structure and true oversized interior room for a very large dog.',
+            productId: 'xxl-heavy-duty-dog-crate',
+            position: 'quick-picks-4',
+          },
+        ],
+      },
+      {
+        kind: 'prose',
+        id: 'when-heavy-duty-makes-sense',
+        heading: 'When a Heavy-Duty Crate Actually Makes Sense',
+        paragraphs: [
+          'A stronger crate is not a treatment for separation anxiety by itself. If your dog is in true panic, the right answer may be a safer room setup, behavior work, veterinary support, or a different management plan altogether.',
+          'Heavy-duty crates make sense when standard crates create injury or escape risk. That includes dogs that bend wire, break latches, bloody their mouths, or repeatedly force their way out of ordinary kennels.',
+          'Think of these crates as containment and harm-reduction tools. Use them when you already know a regular crate is failing, not because the words heavy duty sound more reassuring.',
+        ],
+        alt: true,
+      },
+      {
+        kind: 'product_section',
+        id: 'heavy-duty-crates',
+        heading: 'Heavy-Duty Crate Picks',
+        positionOffset: 0,
+        columns: 2,
+        intro:
+          'These picks range from fully enclosed high-anxiety crates to heavier wire-style or steel-frame options that sit between standard crates and the most serious reinforced enclosures.',
+        productIds: [
+          'impact-high-anxiety-crate',
+          'oranland-heavy-duty-dog-crate',
+          'kokotangs-heavy-duty-dog-crate',
+          'gardner-pet-heavy-duty-crate',
+          'xxl-heavy-duty-dog-crate',
+          'hiwokk-large-dog-crate',
+        ],
+      },
+      {
+        kind: 'decision_columns',
+        id: 'which-one',
+        left: {
+          heading: 'Choose fully enclosed heavy-duty when',
+          items: [
+            'Your dog has already damaged or escaped standard crates',
+            'Latch strength and harder walls are the priority',
+            'You want fewer obvious bite and paw points than a standard wire crate',
+            'Containment failure is already a real safety issue',
+          ],
+        },
+        right: {
+          heading: 'Choose reinforced large-crate style when',
+          items: [
+            'You want stronger hardware but a more familiar crate layout',
+            'Your dog needs a step up from standard wire without going fully enclosed',
+            'Large-dog room and mobility features still matter',
+            'You are balancing stronger containment with a more familiar day-to-day format',
+          ],
+        },
+      },
+      {
+        kind: 'note',
+        heading: 'Bottom Line',
+        text:
+          'Impact is the premium heavy-duty benchmark. Oranland is the practical large-dog value pick. Gardner Pet covers the smaller-dog escape case, and the XXL crate is the better choice when size is part of the problem as well as strength.',
+        alt: true,
+      },
+    ],
+    faq: {
+      heading: 'Heavy-Duty Crate FAQ',
+      items: [
+        {
+          question: 'Who needs a heavy-duty dog crate?',
+          answer:
+            'Dogs that have already escaped, bent bars, damaged latches, or injured themselves in a standard crate are the clearest candidates for a heavy-duty model.',
+        },
+        {
+          question: 'Will a heavy-duty crate fix separation anxiety?',
+          answer:
+            'No. It can reduce escape and injury risk, but it is not treatment by itself. If the dog is in real panic, behavior support still matters.',
+        },
+        {
+          question: 'What is the best heavy-duty crate on this page?',
+          answer:
+            'Impact is the clearest premium benchmark. Oranland is the stronger value-oriented large-dog alternative.',
+        },
+        {
+          question: 'Are heavy-duty crates only for big dogs?',
+          answer:
+            'No. Some small dogs are persistent enough to need reinforced containment too, which is why smaller heavy-duty options can still make sense.',
+        },
+      ],
+    },
+    relatedGuides: {
+      heading: 'More Anxiety & Crate Help',
+      guides: [
+        {
+          href: ROUTES.comfortAnxietyCrates,
+          title: 'Best Dog Crates for Anxiety',
+          description:
+            'Use the anxiety page when you are still deciding between wire, enclosed, and heavy-duty containment categories.',
+        },
+        {
+          href: ROUTES.calmingCrateGuide,
+          title: 'How to Crate Train Your Dog',
+          description:
+            'Keep the broader crate-training and anxiety cautions in view before treating a stronger crate as the only answer.',
+        },
+      ],
+    },
+    disclosureShowSafety: true,
+    internalLinkStrip: {
+      heading: 'More Crate Guides',
+      links: [
+        { label: 'Anxiety Crates', href: ROUTES.comfortAnxietyCrates },
+        { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
+        { label: 'Furniture Crates', href: ROUTES.comfortFurnitureCrates },
+      ],
+    },
+    itemListSchema: {
+      name: 'Best Heavy-Duty Dog Crates',
+      url: 'https://www.chill-dogs.com/comforting/best-heavy-duty-dog-crates/',
+      productIds: [
+        'impact-high-anxiety-crate',
+        'oranland-heavy-duty-dog-crate',
+        'kokotangs-heavy-duty-dog-crate',
+        'gardner-pet-heavy-duty-crate',
+        'xxl-heavy-duty-dog-crate',
+        'hiwokk-large-dog-crate',
       ],
     },
   },

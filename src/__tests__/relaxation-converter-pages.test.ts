@@ -53,6 +53,52 @@ describe('relaxation converter page config', () => {
     ))).toBe(true);
   });
 
+  it('returns airline crates converter config with rigid travel product logic', () => {
+    const config = getRelaxationConverterPageConfig('best-airline-crates-for-flying-with-your-dog');
+
+    expect(config.pageSlug).toBe('best-airline-crates-for-flying-with-your-dog');
+    expect(config.hero.secondaryCta?.href).toBe('/calming/crate-training-for-dogs/');
+    expect(config.itemListSchema?.productIds).toEqual([
+      'petmate-sky-kennel',
+      'sportpet-airline-compliant-kennel',
+      'amazon-basics-hard-sided-carrier',
+      'petmate-two-door-kennel',
+    ]);
+  });
+
+  it('returns furniture crates converter config with decorative indoor product logic', () => {
+    const config = getRelaxationConverterPageConfig('best-furniture-dog-crates');
+
+    expect(config.pageSlug).toBe('best-furniture-dog-crates');
+    expect(config.hero.secondaryCta?.href).toBe('/comforting/');
+    expect(config.itemListSchema?.productIds).toEqual([
+      'amazon-basics-furniture-style-crate',
+      'dwanton-dog-crate-furniture',
+      'rehomerance-dog-crate-furniture',
+      'internets-best-decorative-kennel',
+      'lyromix-dog-crate-furniture',
+      'easycom-foldable-dog-crate-furniture',
+      'ironck-extra-large-dog-crate-furniture',
+      'bifanuo-dog-crate-furniture',
+      'oranland-heavy-duty-furniture-crate',
+    ]);
+  });
+
+  it('returns heavy-duty crates converter config with reinforced containment product logic', () => {
+    const config = getRelaxationConverterPageConfig('best-heavy-duty-dog-crates');
+
+    expect(config.pageSlug).toBe('best-heavy-duty-dog-crates');
+    expect(config.hero.secondaryCta?.href).toBe('/comforting/best-anxiety-dog-crates/');
+    expect(config.itemListSchema?.productIds).toEqual([
+      'impact-high-anxiety-crate',
+      'oranland-heavy-duty-dog-crate',
+      'kokotangs-heavy-duty-dog-crate',
+      'gardner-pet-heavy-duty-crate',
+      'xxl-heavy-duty-dog-crate',
+      'hiwokk-large-dog-crate',
+    ]);
+  });
+
   it('builds item list schema for puppy crates', () => {
     const config = getRelaxationConverterPageConfig('best-puppy-crates');
     const schema = buildRelaxationItemListSchema(config.itemListSchema!);
@@ -76,6 +122,23 @@ describe('relaxation converter page config', () => {
       'petsafe-happy-ride-travel-crate',
       'elitefield-three-door-soft-crate',
       'lesure-soft-collapsible-crate',
+      'sportpet-airline-compliant-kennel',
+      'amazon-basics-hard-sided-carrier',
+      'petmate-two-door-kennel',
+      'amazon-basics-furniture-style-crate',
+      'dwanton-dog-crate-furniture',
+      'rehomerance-dog-crate-furniture',
+      'internets-best-decorative-kennel',
+      'lyromix-dog-crate-furniture',
+      'easycom-foldable-dog-crate-furniture',
+      'ironck-extra-large-dog-crate-furniture',
+      'bifanuo-dog-crate-furniture',
+      'oranland-heavy-duty-furniture-crate',
+      'oranland-heavy-duty-dog-crate',
+      'kokotangs-heavy-duty-dog-crate',
+      'gardner-pet-heavy-duty-crate',
+      'xxl-heavy-duty-dog-crate',
+      'hiwokk-large-dog-crate',
     ]));
   });
 

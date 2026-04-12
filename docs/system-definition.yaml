@@ -111,9 +111,13 @@ site_system:
         - "/comforting/best-puppy-crates/"
         - "/comforting/best-anxiety-dog-crates/"
         - "/comforting/best-travel-crates-for-road-trips/"
+        - "/comforting/best-airline-crates-for-flying-with-your-dog/"
+        - "/comforting/best-furniture-dog-crates/"
+        - "/comforting/best-heavy-duty-dog-crates/"
       notes: >
-        Comfort collector routes to calming beds, orthopedic beds, puppy crates, anxiety crates, and travel crates.
-        Additional crate-related converters may be added as the crate-training cluster expands.
+        Comfort collector routes to calming beds, orthopedic beds, puppy crates, anxiety crates, travel crates,
+        airline crates, furniture crates, and heavy-duty crates.
+        The crate-training collector article now routes into the airline, furniture, and heavy-duty crate paths as well.
         Placeholder product entries (ASINs B0D5B56X9V, B0DTH4195V) need
         to be identified and updated in src/data/relaxation-products.ts.
 
@@ -257,7 +261,7 @@ site_system:
     product_catalog: "src/data/product-catalog.ts — normalized admin inventory across every product data source; /admin/products/ must consume this data module and remain complete whenever products are added"
     cooling_products: "src/data/cooling-products.ts — 15 products with ASIN, affiliate URL, and image thumbnails"
     calming_products: "src/data/calming-products.ts — 13 products with ASIN, affiliate URL, and image thumbnails"
-    relaxation_products: "src/data/relaxation-products.ts — 24 products (calming beds, orthopedic beds, crates, travel beds) with ASIN, affiliate URL, and image thumbnails"
+    relaxation_products: "src/data/relaxation-products.ts — 41 products (calming beds, orthopedic beds, crates, travel beds) with ASIN, affiliate URL, and image thumbnails"
     tracking_products: "src/data/tracking-products.ts — 8 tracker products and 1 accessory product across cellular/off-grid/bluetooth/accessory types"
     raw_api_cache: "src/data/amazon-products/*.json — full SearchAPI Amazon Product responses per ASIN"
 

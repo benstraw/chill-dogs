@@ -256,6 +256,36 @@ export const comfortCollectorBody: CollectorBodyConfig = {
       ],
     },
     {
+      heading: 'More Crate Paths',
+      intro: 'Different crate jobs call for different pages — flying, decorative indoor placement, and stronger reinforced containment all need a separate decision.',
+      cards: [
+        {
+          href: ROUTES.comfortAirlineCrates,
+          title: 'Best Airline Crates for Flying With Your Dog',
+          description: 'Rigid hard-sided kennels for flight prep, airline requirements, and cargo-style travel decisions.',
+          linkLabel: 'Compare airline crates ->',
+          dataToPage: ROUTES.comfortAirlineCrates,
+          dataCategory: 'crates',
+        },
+        {
+          href: ROUTES.comfortFurnitureCrates,
+          title: 'Best Furniture Dog Crates',
+          description: 'Decorative crate tables and room-friendly indoor kennel options for homes where the crate stays visible.',
+          linkLabel: 'See furniture crates ->',
+          dataToPage: ROUTES.comfortFurnitureCrates,
+          dataCategory: 'crates',
+        },
+        {
+          href: ROUTES.comfortHeavyDutyCrates,
+          title: 'Best Heavy-Duty Dog Crates',
+          description: 'Reinforced crate options for escape artists and dogs that overpower standard wire crates.',
+          linkLabel: 'See heavy-duty picks ->',
+          dataToPage: ROUTES.comfortHeavyDutyCrates,
+          dataCategory: 'crates',
+        },
+      ],
+    },
+    {
       heading: 'Sleep & Rest Guides',
       intro: 'Practical guides on how dogs sleep, what disrupts rest, and how to help your dog settle better.',
       cards: [
