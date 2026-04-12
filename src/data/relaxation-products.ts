@@ -378,13 +378,13 @@ export const relaxationProducts: RelaxationProduct[] = [
     category: 'crates',
     amazonUrl: 'https://www.amazon.com/dp/B09T1P2B7J/?tag=chill-dogs-20',
     bullets: [
-      'Designed around car travel with seat belt straps and a headrest loop for back-seat setup',
+      'Designed for car travel with seat belt straps and a headrest loop for back-seat setup',
       'Collapsible soft-sided format folds flat for storage between road trips',
-      'Mesh windows, dual side doors, storage pockets, and waterproof fleece pad support long-drive convenience',
+      'Mesh windows, dual side doors, storage pockets, and waterproof fleece pad for long-drive convenience',
     ],
     bestFor: 'Road trips where you want a travel-specific crate that is easier to pack than a standard indoor crate',
     whyItWorks:
-      'It is built around car-use details rather than house-training, making it the cleanest all-around road trip pick',
+      'It is built around for car use rather than house-training, making it great for road trips',
     considerIf:
       'Your dog is calm enough for a soft travel crate and you want a crate that packs down between drives',
     image: { src: 'https://m.media-amazon.com/images/I/81LvTZeUnwL.jpg', alt: 'PetSafe Happy Ride Collapsible Travel Crate' },
@@ -400,7 +400,7 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Folds down to a low profile and includes a carrying bag and fleece bed',
       'Steel-tube frame with fabric and mesh cover is convenient for trained dogs who settle calmly',
     ],
-    bestFor: 'Crate-trained dogs who travel well and benefit from multiple access points',
+    bestFor: 'Crate-trained dogs who travel well',
     whyItWorks:
       'The three-door layout makes placement more flexible when a crate is moving between the car, hotel room, and campsite',
     considerIf:

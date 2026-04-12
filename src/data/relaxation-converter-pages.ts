@@ -659,7 +659,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
     hero: {
       title: 'Best Travel Crates for Road Trips',
       subtitle:
-        'For road trips, the best dog travel crate depends less on price and more on how your dog actually travels. Some dogs do well in a lightweight folding crate that is easy to pack and set up. Others need a sturdier hard-sided kennel with more structure and fewer opportunities to claw their way out.',
+        'For road trips, the best dog travel crate depends less on price and more on how your dog actually travels. Some dogs do well in a lightweight folding crate that is easy to pack and set up. Others need a sturdier, hard-sided kennel with more structure that makes it harder for them to claw their way out.',
       disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
       primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
       secondaryCta: { label: 'Road Trip Gear', href: ROUTES.roadTrip },
@@ -677,7 +677,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         id: 'quick-picks',
         heading: 'Quick Answer: Top Picks',
         intro:
-          'If you already know how your dog behaves in a crate, the choice gets simple. Prioritize structure for dogs who push boundaries. Prioritize portability only for calm, crate-trained dogs.',
+          'If you already know how your dog behaves in a crate, the choice is simple. Prioritize portability for calm, crate-trained dogs. Prioritize structure for dogs who push boundaries.',
         items: [
           {
             label: 'Best Overall for Road Trips',
@@ -699,7 +699,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
             label: 'Best Soft Folding Crate',
             title: 'EliteField 3-Door Folding Soft Dog Crate',
             description:
-              'A strong soft-sided option for trained dogs, hotel stays, and temporary setup when the three-door layout is useful.',
+              'A strong, soft-sided option for trained dogs, hotel stays, and temporary setup when the three-door layout is useful.',
             productId: 'elitefield-three-door-soft-crate',
             position: 'quick-picks-3',
           },
@@ -718,9 +718,9 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         id: 'hard-sided-vs-soft',
         heading: 'Hard-Sided vs Soft Folding Travel Crates',
         paragraphs: [
-          'A dog travel crate for car use is not the same decision as a puppy house-training crate or an airline crate. For road trips, the tradeoff is usually structure versus portability.',
-          'Hard-sided dog crates for road trips are usually the better choice for dogs that need more containment, more enclosure, or fewer soft surfaces to scratch and chew. They take up more room and are less convenient to store, but they give you a more structured setup.',
-          'A collapsible dog crate for road trips is easier to pack, carry, and set up in hotels or temporary spaces. Soft dog crates for car travel are best for dogs that are already crate trained, calm in confinement, and not likely to chew, claw, or push hard against the walls.',
+          'Choosing a travel crate for car use is not the same as choosing a puppy house-training crate or an airline crate. For road trips, the tradeoff is usually structure versus portability.',
+          'Hard-sided dog crates are usually the better choice for dogs that need more containment, more enclosure, and fewer soft surfaces to scratch and chew. They take up more room and are less convenient to store, but they give you a more structured setup.',
+          'A collapsible dog crate is easier to pack, carry, and set up in hotels or temporary spaces. Soft dog crates are best for dogs that are already crate trained, calm in confinement, and not likely to chew, claw, or push hard against the walls.',
           '<strong>Important:</strong> Soft folding crates are convenient for road trips, hotel stays, and calm crate-trained dogs, but they are not indestructible. A determined dog can claw, chew, or push out of one much more easily than from a hard-sided crate. Do not use a soft crate for dogs with serious anxiety, destructive behavior, or strong escape tendencies.',
         ],
         alt: true,
@@ -732,7 +732,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         positionOffset: 0,
         columns: 2,
         intro:
-          'These are road-trip crate picks, not general indoor crates or airline-crate rankings. The goal is quick fit: car convenience, realistic containment, and easy setup when you reach the next stop.',
+          'These crate picks are for road trips, not for general indoor use or for airline travel. They prioritize car convenience, realistic containment, and easy setup when you reach the next stop.',
         productIds: [
           'petsafe-happy-ride-travel-crate',
           'petmate-sky-kennel',
@@ -752,7 +752,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         kind: 'prose',
         heading: 'Petmate Sky Kennel',
         paragraphs: [
-          'Choose Petmate if your dog needs a harder-sided, more secure setup. The plastic shell is more enclosed than a soft folding crate and gives dogs fewer fabric or mesh surfaces to chew, claw, or push through.',
+          'Choose Petmate if your dog needs a harder-sided, more secure setup. The plastic shell is more enclosed than a soft folding crate with no mesh surfaces to chew, claw, or push through.',
           'It is the better fit for dogs who need more structure on road trips, but it is less compact than a soft folding travel crate. That is the tradeoff: more structure, less packability.',
         ],
         alt: true,
@@ -761,8 +761,8 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         kind: 'prose',
         heading: 'EliteField 3-Door Folding Soft Dog Crate',
         paragraphs: [
-          'Choose EliteField if you want a soft folding crate for a trained dog and like the three-door setup. Top, front, and side access can make a real difference when the crate moves between a car, hotel room, campsite, or temporary sleeping area.',
-          'This is a convenience pick for dogs who already settle calmly in a crate. It is not the right choice for dogs who panic, chew, claw, or test crate walls.',
+          'Choose EliteField if you want a soft folding crate for a trained dog and like the three-door setup. Top, front, and side access is convenient when the crate moves between a car, hotel room, campsite, or temporary sleeping area.',
+          'This is good for dogs who already settle calmly in a crate. It is not the right choice for dogs who panic, chew, claw, or test crate walls.',
         ],
       },
       {
@@ -780,19 +780,19 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         left: {
           heading: 'Choose hard-sided when',
           items: [
-            'Your dog needs more structure or enclosure during car travel.',
-            'Your dog paws at doors, pushes against crate walls, or gets overstimulated by visibility.',
-            'You want a more realistic containment setup than fabric and mesh.',
-            'Packability matters less than a sturdier travel crate.',
+            'Your dog needs more structure or enclosure during car travel',
+            'Your dog paws at doors, pushes against crate walls, or gets overstimulated by visibility',
+            'Your dog needs stronger containment than fabric and mesh',
+            'Packability matters less than a sturdier travel crate',
           ],
         },
         right: {
           heading: 'Choose soft folding when',
           items: [
-            'Your dog is already crate-trained and calm in confinement.',
-            'You need a folding dog crate for travel, hotel stays, or temporary setup.',
-            'Lightweight carry and compact storage matter most.',
-            'Your dog will not chew, claw, or try hard to escape.',
+            'Your dog is already crate-trained and calm in confinement',
+            'You need a folding dog crate for travel, hotel stays, or temporary setup',
+            'You need the convenience of lightweight carry and compact storage',
+            'Your dog will not chew, claw, or try to escape',
           ],
         },
       },
