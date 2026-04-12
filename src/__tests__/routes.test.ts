@@ -8,6 +8,12 @@ describe('route constants', () => {
     expect(ROUTES.calmingAlternatives).toBe('/calming/best-thundershirt-alternatives/');
   });
 
+  it('uses canonical fireworks calm room route', () => {
+    expect(ROUTES.calmingFireworksRoom).toBe(
+      '/calming/how-to-prepare-a-calm-room-for-fireworks-night/'
+    );
+  });
+
   it('uses canonical puppy crates route', () => {
     expect(ROUTES.comfortPuppyCrates).toBe('/comforting/best-puppy-crates/');
   });

@@ -16,6 +16,7 @@ export const ROUTES = {
   calmingAlternatives: '/calming/best-thundershirt-alternatives/',
   calmingCar: '/calming/car-anxiety-for-dogs/',
   calmingCrateGuide: '/calming/crate-training-for-dogs/',
+  calmingFireworksRoom: '/calming/how-to-prepare-a-calm-room-for-fireworks-night/',
   roadTrip: '/travel/dog-road-trip-gear/',
   rhysRanAway: '/travel/rhys-ran-away-cerro-san-luis-obispo/',
   // Tracking cluster
