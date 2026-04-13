@@ -927,7 +927,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
     hero: {
       title: 'Best Airline Crates for Flying With Your Dog',
       subtitle:
-        'Flying with a dog is a different crate decision than road trips or house-training. For flights, prioritize rigid construction, ventilation, hardware, and a kennel size that actually matches airline rules for your dog and route.',
+        'Flying with a dog is a different crate decision than road trips or house-training. For flights, prioritize rigid construction, ventilation, hardware, and a kennel size that follows airline rules for your dog and route.',
       disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
       primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
       secondaryCta: { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
@@ -951,7 +951,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
             label: 'Best Overall Airline-Style Kennel',
             title: 'Petmate Sky Kennel',
             description:
-              'The clearest starting point for a rigid, enclosed kennel that already fits into the travel-and-flight conversation better than a standard home crate.',
+              'The clearest starting point for a rigid, enclosed kennel suitable for airline travel.',
             productId: 'petmate-sky-kennel',
             position: 'quick-picks-1',
           },
@@ -959,7 +959,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
             label: 'Best Flight-Focused Pick',
             title: 'SportPet Airline Compliant Travel Kennel',
             description:
-              'A more flight-specific kennel with removable wheels, bowls, and airline-oriented hardware details built into the format.',
+              'A more flight-specific kennel with removable wheels, bowls, and airline-oriented hardware details.',
             productId: 'sportpet-airline-compliant-kennel',
             position: 'quick-picks-2',
           },
@@ -967,7 +967,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
             label: 'Best Budget Hard-Sided Carrier',
             title: 'Amazon Basics Hard-Sided Pet Travel Carrier',
             description:
-              'A basic rigid carrier for small pets when you need a simpler hard-sided transport option without paying for a larger cargo-style kennel.',
+              'A rigid carrier for small pets when you need a simple, hard-sided transport option without paying for a larger cargo-style kennel.',
             productId: 'amazon-basics-hard-sided-carrier',
             position: 'quick-picks-3',
           },
@@ -986,8 +986,8 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         id: 'airline-vs-road-trip',
         heading: 'Airline Crates vs Road-Trip Crates',
         paragraphs: [
-          'Road-trip crates and airline crates solve different problems. Road-trip pages can include collapsible formats, soft-sided setups, and hotel-friendly convenience. Airline travel does not.',
-          'For flying, the default is a rigid, hard-sided kennel with strong hardware, proper ventilation, and enough room for your dog to stand, turn, and lie down naturally. Soft folding crates are convenient for cars and hotels, but they are not the right recommendation for flights.',
+          'Road-trip crates and airline crates solve different problems. Road-trip crates can include collapsible formats, soft-sided setups, and hotel-friendly convenience. Airline travel crates don\'t.',
+          'For flying, the default is a rigid, hard-sided kennel with strong hardware, proper ventilation, and enough room for your dog to stand, turn, and lie down comfortably. Soft folding crates are convenient for cars and hotels, but they are not recommended for airline travel.',
           '<strong>Important:</strong> Airline crate rules vary by carrier, aircraft, route, destination, and pet size. Use this page to narrow the field, then confirm the exact requirements with your airline before buying. Do not assume any crate is universally accepted just because it is marketed as airline-ready.',
         ],
         alt: true,
@@ -1011,16 +1011,16 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         kind: 'prose',
         heading: 'Petmate Sky Kennel',
         paragraphs: [
-          'Choose Petmate Sky Kennel if you want the best overall airline-style starting point. It is enclosed, ventilation-heavy, and already positioned more naturally for travel than a standard wire or house-training crate.',
-          'This is the better default when you want a rigid kennel that also crosses over into anxiety-sensitive or den-like travel use, not just airport handling.',
+          'Choose Petmate Sky Kennel if you want the best overall airline travel crate. It is enclosed, ventilation-heavy, and airline travel compliant.',
+          'This is the better choice when you want a rigid kennel that also crosses over into anxiety-sensitive or den-like travel use, not just airport handling.',
         ],
       },
       {
         kind: 'prose',
         heading: 'SportPet Airline Compliant Travel Kennel',
         paragraphs: [
-          'Choose SportPet if you want the most flight-oriented pick on this page. The removable wheels, bowls, and airline-specific framing make it feel closer to a true airport-prep kennel than a generic hard-sided carrier.',
-          'It is a stronger fit when flying is the main use case rather than a secondary possibility.',
+          'Choose SportPet if you want the most flight-oriented travel crate. The removable wheels, bowls, and airline-specific framing make it a more airport-prep kennel than a generic hard-sided carrier.',
+          'It is a better choice when flying is the main use for the crate.',
         ],
         alt: true,
       },
@@ -1037,7 +1037,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         heading: 'Petmate Two-Door Kennel',
         paragraphs: [
           'Choose Petmate Two-Door if top access matters. Some small pets load more easily from above than from a single front door, especially when they hesitate at the crate entrance.',
-          'This is the convenience pick for smaller rigid-kennel use, not the most airline-specialized option on the page.',
+          'This is the convenient pick for smaller rigid-kennel use, but it is not the most airline-specialized option.',
         ],
         alt: true,
       },
@@ -1045,21 +1045,21 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         kind: 'decision_columns',
         id: 'which-one',
         left: {
-          heading: 'Choose a larger airline-style kennel when',
+          heading: 'Choose a Larger Airline-Style Kennel When',
           items: [
-            'Flying is the primary use case',
+            'Flying is the primary use',
             'Your dog needs a rigid enclosed kennel rather than a soft or collapsible crate',
             'You need more travel-specific hardware and prep details',
-            'You want a crate that fits the cargo-flight conversation more naturally than a home crate',
+            'You need a crate that fits airline specifications',
           ],
         },
         right: {
-          heading: 'Choose a smaller rigid carrier when',
+          heading: 'Choose a Smaller Rigid Carrier When',
           items: [
             'Your pet is small enough for the listed size range',
-            'You want a simpler hard-sided transport option',
+            'You want a simple hard-sided transport option',
             'Top or front-loading convenience matters more than flight-specific extras',
-            'You do not need the scale of a larger cargo-style kennel',
+            'You do not need a larger cargo-style kennel',
           ],
         },
       },
@@ -1067,7 +1067,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         kind: 'note',
         heading: 'Bottom Line',
         text:
-          'Petmate Sky Kennel is the best default airline-style pick because it balances enclosed structure, ventilation, and realistic travel use. SportPet is the more flight-specific option when flying is the main job. Amazon Basics and Petmate Two-Door work better as smaller rigid carrier choices.',
+          'Petmate Sky Kennel is the best default airline travel crate because it balances enclosed structure, ventilation, and realistic travel use. SportPet is the more flight-specific option when flying is the main use. Amazon Basics and Petmate Two-Door work better as smaller rigid carrier choices.',
         alt: true,
       },
     ],
@@ -1092,7 +1092,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         {
           question: 'Which airline crate is the best starting point?',
           answer:
-            'Petmate Sky Kennel is the clearest general starting point on this page, while SportPet is the better fit if you specifically want a more flight-oriented kennel format.',
+            'Petmate Sky Kennel is the best overall pick, while SportPet is the better choice if you want a more flight-oriented kennel.',
         },
       ],
     },
@@ -1103,7 +1103,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
           href: ROUTES.calmingCrateGuide,
           title: 'How to Crate Train Your Dog',
           description:
-            'Build crate comfort before any major trip so the flight crate is not the first stressful confinement experience.',
+            'Build crate comfort before any major trip so the flight crate is not a stressful confinement experience.',
         },
         {
           href: ROUTES.comfortTravelCrates,

@@ -508,7 +508,7 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Secure ventilation and carry handle make it practical for short travel and transport',
       'Straightforward budget-friendly option when you need a rigid small-pet carrier',
     ],
-    bestFor: 'Smaller pets when you want a basic rigid carrier without spending much',
+    bestFor: 'Smaller pets who need a basic rigid carrier',
     whyItWorks:
       'The rigid shell gives you more structure than a soft carrier while keeping the format simple and portable',
     considerIf:
