@@ -3,6 +3,7 @@ import { describe, expect, it } from 'vitest';
 import {
   buildRelaxationItemListSchema,
   getRelaxationConverterPageConfig,
+  resolveRelaxationDisplayProducts,
 } from '../data/relaxation-converter-pages';
 import { getRelaxationProductsByCategory } from '../data/relaxation-products';
 
@@ -67,6 +68,79 @@ describe('relaxation converter page config', () => {
       'amazon-basics-hard-sided-carrier',
       'petmate-two-door-kennel',
     ]);
+  });
+
+  it('resolves plain product refs to canonical display products', () => {
+    const [product] = resolveRelaxationDisplayProducts(['petmate-sky-kennel']);
+
+    expect(product.id).toBe('petmate-sky-kennel');
+    expect(product.bullets).toEqual([
+      'Enclosed plastic shell reduces visual stimulation compared to open wire crates',
+      '360-degree ventilation and tie-down holes support travel use',
+      'Includes travel-prep accessories such as live-animal stickers, cup, ID stickers, and absorbent pad',
+    ]);
+  });
+
+  it('supports hiding and appending product bullets per page', () => {
+    const [product] = resolveRelaxationDisplayProducts([
+      {
+        id: 'petmate-sky-kennel',
+        hideBullets: [0],
+        appendBullets: ['Verify airline-specific hardware and size rules before flying.'],
+      },
+    ]);
+
+    expect(product.bullets).toEqual([
+      '360-degree ventilation and tie-down holes support travel use',
+      'Includes travel-prep accessories such as live-animal stickers, cup, ID stickers, and absorbent pad',
+      'Verify airline-specific hardware and size rules before flying.',
+    ]);
+  });
+
+  it('supports full bullet replacement and copy overrides per page', () => {
+    const [product] = resolveRelaxationDisplayProducts([
+      {
+        id: 'petmate-sky-kennel',
+        bullets: ['Rigid kennel shape fits airline-style flight prep better than soft or collapsible travel crates.'],
+        bestFor: 'Flight prep when you want a hard-sided kennel with strong airline-travel familiarity',
+        considerIf: 'You want a rigid kennel for flight prep rather than a soft or collapsible travel crate',
+      },
+    ]);
+
+    expect(product.bullets).toEqual([
+      'Rigid kennel shape fits airline-style flight prep better than soft or collapsible travel crates.',
+    ]);
+    expect(product.bestFor).toBe(
+      'Flight prep when you want a hard-sided kennel with strong airline-travel familiarity'
+    );
+    expect(product.considerIf).toBe(
+      'You want a rigid kennel for flight prep rather than a soft or collapsible travel crate'
+    );
+    expect(product.whyItWorks).toBe(
+      'The plastic shell creates a quieter, more contained environment while still allowing ventilation from all sides'
+    );
+  });
+
+  it('hides the wire-comparison bullet on the airline crates page only', () => {
+    const config = getRelaxationConverterPageConfig('best-airline-crates-for-flying-with-your-dog');
+    const airlineBlock = config.blocks.find(
+      (block) => block.kind === 'product_section' && block.id === 'airline-crates'
+    );
+
+    expect(airlineBlock?.kind).toBe('product_section');
+
+    const resolved = resolveRelaxationDisplayProducts(
+      airlineBlock?.kind === 'product_section' ? airlineBlock.productIds : []
+    );
+    const petmate = resolved.find((product) => product.id === 'petmate-sky-kennel');
+    const [canonicalPetmate] = resolveRelaxationDisplayProducts(['petmate-sky-kennel']);
+
+    expect(petmate?.bullets).not.toContain(
+      'Enclosed plastic shell reduces visual stimulation compared to open wire crates'
+    );
+    expect(canonicalPetmate.bullets).toContain(
+      'Enclosed plastic shell reduces visual stimulation compared to open wire crates'
+    );
   });
 
   it('returns furniture crates converter config with decorative indoor product logic', () => {

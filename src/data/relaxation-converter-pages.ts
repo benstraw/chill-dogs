@@ -36,7 +36,7 @@ export interface ProseBlock {
 export interface ProductSectionBlock {
   kind: 'product_section';
   heading: string;
-  productIds: string[];
+  productIds: ProductSectionProductRef[];
   positionOffset: number;
   columns: 1 | 2 | 3;
   id?: string;
@@ -67,6 +67,22 @@ export interface QuickPicksBlock {
   items: QuickPickItem[];
   id?: string;
   alt?: boolean;
+}
+
+export interface ProductSectionProductOverride {
+  id: string;
+  bullets?: string[];
+  hideBullets?: number[];
+  appendBullets?: string[];
+  bestFor?: string;
+  whyItWorks?: string;
+  considerIf?: string;
+}
+
+export type ProductSectionProductRef = string | ProductSectionProductOverride;
+
+export interface RelaxationDisplayProduct extends Omit<RelaxationProduct, 'bullets'> {
+  bullets: string[];
 }
 
 export type RelaxationBlock =
@@ -111,6 +127,46 @@ function getRequiredProduct(id: string): RelaxationProduct {
 
 export function getRequiredProducts(ids: string[]): RelaxationProduct[] {
   return ids.map((id) => getRequiredProduct(id));
+}
+
+export function resolveRelaxationDisplayProducts(
+  refs: ProductSectionProductRef[]
+): RelaxationDisplayProduct[] {
+  return refs.map((ref) => {
+    const base = getRequiredProduct(typeof ref === 'string' ? ref : ref.id);
+
+    if (typeof ref === 'string') {
+      return {
+        ...base,
+        bullets: [...base.bullets],
+      };
+    }
+
+    const {
+      id: _id,
+      bullets,
+      hideBullets,
+      appendBullets,
+      bestFor,
+      whyItWorks,
+      considerIf,
+    } = ref;
+
+    const resolvedBullets = bullets
+      ? [...bullets]
+      : [
+          ...base.bullets.filter((_, index) => !hideBullets?.includes(index)),
+          ...(appendBullets ?? []),
+        ];
+
+    return {
+      ...base,
+      bullets: resolvedBullets,
+      bestFor: bestFor ?? base.bestFor,
+      whyItWorks: whyItWorks ?? base.whyItWorks,
+      considerIf: considerIf ?? base.considerIf,
+    };
+  });
 }
 
 export function buildRelaxationItemListSchema(
@@ -1001,7 +1057,10 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         intro:
           'These are rigid travel kennels for flight prep and structured transport. They are not soft road-trip crates and they are not meant to replace crate-training work ahead of travel.',
         productIds: [
-          'petmate-sky-kennel',
+          {
+            id: 'petmate-sky-kennel',
+            hideBullets: [0],
+          },
           'sportpet-airline-compliant-kennel',
           'amazon-basics-hard-sided-carrier',
           'petmate-two-door-kennel',
