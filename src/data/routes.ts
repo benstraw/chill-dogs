@@ -34,4 +34,6 @@ export const ROUTES = {
   affiliateDisclosure: '/affiliate-disclosure/',
   privacyPolicy: '/privacy-policy/',
   terms: '/terms/',
+  subscribeThanks: '/subscribe/thanks/',
+  subscribeConfirmed: '/subscribe/confirmed/',
 } as const;

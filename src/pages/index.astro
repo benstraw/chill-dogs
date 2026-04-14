@@ -2,6 +2,7 @@
 import { ROUTES } from '@data/routes';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import ComingSoon from '@components/ComingSoon.astro';
+import EmailSignup from '@components/EmailSignup.astro';
 import HomepageHero from '@components/modules/HomepageHero.astro';
 import HomepageBody from '@components/modules/HomepageBody.astro';
 import JsonLd from '@components/JsonLd.astro';
@@ -49,5 +50,19 @@ const orgSchema = {
     <HomepageHero variant="v6" />
 
     <HomepageBody variant="v6" />
+    <section class="container homepage-signup">
+      <EmailSignup
+        placement="homepage_inline"
+        pageSlug={ROUTES.home}
+        pageType="attractor"
+        category="general"
+      />
+    </section>
   </BaseLayout>
 )}
+
+<style>
+  .homepage-signup {
+    padding-bottom: var(--space-3xl);
+  }
+</style>

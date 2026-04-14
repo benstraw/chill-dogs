@@ -83,6 +83,21 @@ describe('site smoke tests', () => {
     expect(links).toContain('/comforting/best-travel-crates-for-road-trips/');
   });
 
+  it('renders the inline signup on the homepage and excludes the footer signup from attractor and converter pages', () => {
+    const homeDoc = readBuiltPage('index.html');
+    const converterDoc = readBuiltPage(path.join('cooling', 'cooling-mats', 'index.html'));
+
+    expect(
+      homeDoc.querySelector('[data-email-signup-placement="homepage_inline"]')
+    ).not.toBeNull();
+    expect(
+      homeDoc.querySelector('[data-email-signup-placement="footer"]')
+    ).toBeNull();
+    expect(
+      converterDoc.querySelector('[data-email-signup-placement="footer"]')
+    ).toBeNull();
+  });
+
   it('publishes generated per-page OG assets and metadata references', () => {
     const homeDoc = readBuiltPage('index.html');
     const coolingDoc = readBuiltPage(path.join('cooling', 'cooling-mats', 'index.html'));
@@ -190,8 +205,25 @@ describe('site smoke tests', () => {
     expect(
       privacyDoc.querySelector('meta[name="robots"]')?.getAttribute('content')
     ).toBe('noindex, nofollow');
+    expect(privacyDoc.body.textContent).toContain('Buttondown');
     expect(affiliateDoc.body.textContent).toContain('Amazon Services LLC Associates Program');
     expect(affiliateDoc.body.textContent).toContain('no additional cost to you');
+  });
+
+  it('renders subscribe flow pages without site chrome and keeps them noindex', () => {
+    const thanksDoc = readBuiltPage(path.join('subscribe', 'thanks', 'index.html'));
+    const confirmedDoc = readBuiltPage(path.join('subscribe', 'confirmed', 'index.html'));
+
+    expect(thanksDoc.querySelector('meta[name="robots"]')?.getAttribute('content'))
+      .toBe('noindex, nofollow');
+    expect(confirmedDoc.querySelector('meta[name="robots"]')?.getAttribute('content'))
+      .toBe('noindex, nofollow');
+    expect(thanksDoc.querySelector('header.site-header')).toBeNull();
+    expect(thanksDoc.querySelector('footer.site-footer')).toBeNull();
+    expect(confirmedDoc.querySelector('header.site-header')).toBeNull();
+    expect(confirmedDoc.querySelector('footer.site-footer')).toBeNull();
+    expect(confirmedDoc.body.textContent).toContain('Cooling Picks');
+    expect(confirmedDoc.body.textContent).toContain('Hot Weather Guide');
   });
 
   it('renders the admin product catalog from all product data files', () => {
@@ -234,6 +266,11 @@ describe('site smoke tests', () => {
     expect(sitemap).toContain('/comforting/best-travel-crates-for-road-trips/');
     expect(sitemap).not.toContain('/cooling/v/');
     expect(sitemap).not.toContain('/calming/v/');
+    expect(sitemap).not.toContain('/content-sitemap/');
+    expect(sitemap).not.toContain('/privacy-policy/');
+    expect(sitemap).not.toContain('/terms/');
+    expect(sitemap).not.toContain('/subscribe/thanks/');
+    expect(sitemap).not.toContain('/subscribe/confirmed/');
   });
 
   it('publishes article collection entries in rss feed', () => {
@@ -336,7 +373,7 @@ describe('site smoke tests', () => {
   });
 
   it('content pages have at least one JSON-LD script', () => {
-    const noSchemaExpected = ['404.html', 'privacy-policy', 'terms', 'content-sitemap', 'admin/'];
+    const noSchemaExpected = ['404.html', 'privacy-policy', 'terms', 'content-sitemap', 'admin/', 'subscribe/'];
     const htmlFiles = collectHtmlFiles(distRoot);
     const failures: string[] = [];
 
