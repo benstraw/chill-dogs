@@ -1,6 +1,7 @@
 ---
 import { ROUTES } from '@data/routes';
 import BaseLayout from '@layouts/BaseLayout.astro';
+import SubscribeFlowHeader from '@components/SubscribeFlowHeader.astro';
 
 const title = "You're Subscribed";
 const description = 'You are subscribed to Chill-Dogs. Get practical tips on keeping your dog cool, calm, and comfortable delivered to your inbox.';
@@ -36,6 +37,7 @@ const routingCards = [
   noindex={true}
   hideChrome={true}
 >
+  <SubscribeFlowHeader />
   <section class="subscribe-flow container">
     <div class="subscribe-panel">
       <p class="eyebrow">Confirmed</p>
@@ -59,7 +61,7 @@ const routingCards = [
 
 <style>
   .subscribe-flow {
-    padding-top: var(--space-4xl);
+    padding-top: var(--space-2xl);
     padding-bottom: var(--space-4xl);
   }
 

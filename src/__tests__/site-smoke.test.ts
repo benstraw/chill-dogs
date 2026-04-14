@@ -222,6 +222,10 @@ describe('site smoke tests', () => {
     expect(thanksDoc.querySelector('footer.site-footer')).toBeNull();
     expect(confirmedDoc.querySelector('header.site-header')).toBeNull();
     expect(confirmedDoc.querySelector('footer.site-footer')).toBeNull();
+    expect(thanksDoc.querySelector('.subscribe-flow-header a[href="/"]')?.textContent)
+      .toContain('Chill-Dogs');
+    expect(confirmedDoc.querySelector('.subscribe-flow-header a[href="/"]')?.textContent)
+      .toContain('Chill-Dogs');
     expect(confirmedDoc.body.textContent).toContain('Cooling Picks');
     expect(confirmedDoc.body.textContent).toContain('Hot Weather Guide');
   });

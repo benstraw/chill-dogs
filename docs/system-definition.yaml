@@ -268,7 +268,8 @@ site_system:
       - "pageview:/subscribe/confirmed/"
     notes: >
       Converters intentionally exclude the footer signup so affiliate pages stay single-purpose.
-      /subscribe/thanks/ and /subscribe/confirmed/ are informer pages, noindex, and excluded from sitemap discovery.
+      /subscribe/thanks/ and /subscribe/confirmed/ are informer pages, noindex, excluded from sitemap discovery,
+      and include a minimal Chill-Dogs logo link back to the homepage without restoring full site chrome.
 
   product_data:
     product_catalog: "src/data/product-catalog.ts — normalized admin inventory across every product data source; /admin/products/ must consume this data module and remain complete whenever products are added"

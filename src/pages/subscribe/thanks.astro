@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
+import SubscribeFlowHeader from '@components/SubscribeFlowHeader.astro';
 
 const title = 'Check Your Email';
 const description = 'Check your inbox for a confirmation email. Click the link to confirm your Chill-Dogs subscription and start getting practical tips.';
@@ -12,6 +13,7 @@ const description = 'Check your inbox for a confirmation email. Click the link t
   noindex={true}
   hideChrome={true}
 >
+  <SubscribeFlowHeader />
   <section class="subscribe-flow container">
     <div class="subscribe-panel">
       <p class="eyebrow">Almost there</p>
@@ -28,10 +30,10 @@ const description = 'Check your inbox for a confirmation email. Click the link t
 
 <style>
   .subscribe-flow {
-    min-height: 100vh;
+    min-height: calc(100vh - 4.5rem);
     display: grid;
     place-items: center;
-    padding-top: var(--space-4xl);
+    padding-top: var(--space-2xl);
     padding-bottom: var(--space-4xl);
   }
 
