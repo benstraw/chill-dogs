@@ -83,7 +83,7 @@ describe('site smoke tests', () => {
     expect(links).toContain('/comforting/best-travel-crates-for-road-trips/');
   });
 
-  it('renders signup blocks on the homepage and excludes the footer signup from converter pages', () => {
+  it('renders the inline signup on the homepage and excludes the footer signup from attractor and converter pages', () => {
     const homeDoc = readBuiltPage('index.html');
     const converterDoc = readBuiltPage(path.join('cooling', 'cooling-mats', 'index.html'));
 
@@ -92,7 +92,7 @@ describe('site smoke tests', () => {
     ).not.toBeNull();
     expect(
       homeDoc.querySelector('[data-email-signup-placement="footer"]')
-    ).not.toBeNull();
+    ).toBeNull();
     expect(
       converterDoc.querySelector('[data-email-signup-placement="footer"]')
     ).toBeNull();

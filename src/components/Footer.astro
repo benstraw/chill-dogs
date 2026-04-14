@@ -65,7 +65,7 @@ function inferCategory(pathname: string): string {
   return 'general';
 }
 
-const shouldShowSignup = !converterPaths.has(currentPath);
+const shouldShowSignup = !converterPaths.has(currentPath) && currentPath !== ROUTES.home;
 const footerPageType = inferPageType(currentPath);
 const footerCategory = inferCategory(currentPath);
 ---
