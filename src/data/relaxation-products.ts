@@ -540,11 +540,11 @@ export const relaxationProducts: RelaxationProduct[] = [
     category: 'crates',
     amazonUrl: 'https://www.amazon.com/dp/B0DR7TWYBN/?tag=chill-dogs-20',
     bullets: [
-      'Furniture-style crate blends a wood-look finish with an indoor dog kennel layout',
+      'Blends a wood-look finish with an indoor dog kennel layout',
       'Includes two bowls for an all-in-one home setup',
       'A practical decorative option when you want the crate to fit a visible room',
     ],
-    bestFor: 'Owners who want a simple furniture-style crate from a familiar mainstream brand',
+    bestFor: 'Owners who want a simple furniture-style crate in a classic design',
     whyItWorks:
       'It gives you the visual upgrade of crate furniture without jumping straight to the most expensive decorative options',
     considerIf:
@@ -562,9 +562,9 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Double-door layout gives more flexibility for room placement',
       'Comes with a cushion for a more finished indoor setup',
     ],
-    bestFor: 'Homes where the crate needs to read like furniture instead of equipment',
+    bestFor: 'Homes where the crate needs to blend in with the other furniture in the room',
     whyItWorks:
-      'The end-table form factor helps the crate blend into bedrooms and living rooms more naturally than wire setups',
+      'The end-table form helps the crate blend into bedrooms and living rooms more naturally than all-wire setups',
     considerIf:
       'You care as much about how the crate looks in the room as how it functions for daily use',
     image: { src: 'https://m.media-amazon.com/images/I/81Q3DMv-W7L._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'DWANTON Dog Crate Furniture' },
@@ -670,7 +670,7 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Reinforced metal construction is sturdier than lightweight decorative crates',
       'Aimed at large dogs that still need an indoor crate with a finished look',
     ],
-    bestFor: 'Large dogs when you want furniture styling without dropping to a small decorative kennel',
+    bestFor: 'Large dogs when you want furniture styling',
     whyItWorks:
       'It keeps the visual upgrade of crate furniture while offering more space and stronger structure for larger breeds',
     considerIf:

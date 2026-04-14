@@ -1202,7 +1202,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
     hero: {
       title: 'Best Furniture Dog Crates',
       subtitle:
-        'Furniture dog crates are for people who want a crate that fits into the room instead of fighting it. The right pick depends on dog size, room placement, and whether you want a decorative table-style crate or a sturdier furniture build.',
+        'Furniture dog crates are for people who want a crate that matches their home\'s decor and helps to make a room more functional. The right pick depends on dog size, room placement, and whether you want a decorative table-style crate or a sturdier furniture build.',
       disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
       primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
       secondaryCta: { label: 'Comfort & Rest', href: ROUTES.comfortHub },
@@ -1220,13 +1220,13 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         id: 'quick-picks',
         heading: 'Quick Picks',
         intro:
-          'Decorative crates solve different problems than puppy crates, anxiety crates, or road-trip crates. Use them when visual fit and indoor placement matter, not when you need maximum containment strength.',
+          'Decorative crates solve different problems than puppy crates, anxiety crates, or road-trip crates. Use them when you want a crate that looks like it belongs in your home and fits your design style.',
         items: [
           {
-            label: 'Best Simple Furniture Pick',
+            label: 'Best Simple Furniture Crate',
             title: 'Amazon Basics Furniture Style Dog Crate',
             description:
-              'The easiest mainstream starting point if you want furniture styling without overcomplicating the choice.',
+              'Classic furniture styling that complements most home decor.',
             productId: 'amazon-basics-furniture-style-crate',
             position: 'quick-picks-1',
           },
@@ -1234,7 +1234,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
             label: 'Best for Visible Living Spaces',
             title: 'DWANTON Dog Crate Furniture',
             description:
-              'A classic decorative crate-table option when the kennel needs to look intentional in a bedroom or living room.',
+              'A rustic decorative crate-table option when the kennel needs to look intentional in a bedroom or living room.',
             productId: 'dwanton-dog-crate-furniture',
             position: 'quick-picks-2',
           },
@@ -1242,7 +1242,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
             label: 'Best for Large Dogs',
             title: 'IRONCK Extra Large Dog Crate Furniture',
             description:
-              'A stronger oversized furniture-crate option for owners who need more space without dropping back to a plain wire crate.',
+              'A stronger, oversized furniture-crate option for owners who need more space for a bigger dog.',
             productId: 'ironck-extra-large-dog-crate-furniture',
             position: 'quick-picks-3',
           },
@@ -1269,9 +1269,9 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         id: 'furniture-vs-standard',
         heading: 'Furniture Crates vs Standard Crates',
         paragraphs: [
-          'A furniture crate is a room-integration choice first. It is for owners who want the crate to live in a visible space without looking like a garage or utility-room kennel.',
+          'A furniture crate is a room-integration choice first. It is for owners who want to keep the crate in a visible space without looking like a garage or utility-room kennel.',
           'That makes furniture crates a different category from puppy training crates, road-trip crates, or heavy-duty anxiety crates. Decorative styling, table surfaces, and home-friendly finishes are the point. Maximum escape-proof containment usually is not.',
-          '<strong>Important:</strong> Do not treat decorative crate furniture as a substitute for a heavy-duty crate if your dog panics, chews through materials, or already has an escape history. Furniture styling and serious containment are not the same thing.',
+          '<strong>Important:</strong> Do not treat decorative crate furniture as a substitute for a heavy-duty crate if your dog panics, chews through materials, or already has an escape history. Furniture styling does not always provide maximum containment',
         ],
         alt: true,
       },
@@ -1282,7 +1282,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         positionOffset: 0,
         columns: 3,
         intro:
-          'These picks cover small decorative kennels, larger table-style crates, and sturdier furniture builds for dogs that still need a more home-friendly setup than a plain wire crate.',
+          'These picks cover small decorative kennels, larger table-style crates, and sturdier furniture builds for owners who want a more stylish crate that matches their home\'s decor.',
         productIds: [
           'amazon-basics-furniture-style-crate',
           'dwanton-dog-crate-furniture',
@@ -1310,21 +1310,21 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         kind: 'decision_columns',
         id: 'which-one',
         left: {
-          heading: 'Choose decorative furniture style when',
+          heading: 'Choose Decorative Furniture Style When',
           items: [
             'The crate will sit in a visible room every day',
             'You care about end-table or nightstand styling',
             'Your dog does not need true escape-proof containment',
-            'Home fit matters as much as basic crate function',
+            'Home decor fit matters as much as basic crate function',
           ],
         },
         right: {
-          heading: 'Choose the sturdier furniture options when',
+          heading: 'Choose the Sturdier Furniture Options When',
           items: [
             'Your dog is larger and needs more structure',
             'You want furniture styling but lighter decorative crates feel too flimsy',
-            'You still want the crate to look room-friendly',
-            'You need a middle ground between decorative and fully heavy-duty',
+            'You still want the crate to match your home\'s decor',
+            'You need a middle ground between form and function',
           ],
         },
       },
@@ -1332,7 +1332,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         kind: 'note',
         heading: 'Bottom Line',
         text:
-          'Amazon Basics is the easiest simple starting point. DWANTON is the cleaner decorative living-room option. IRONCK works better for larger dogs, and Oranland is the strongest choice when you want furniture styling without dropping all the way to a lightweight decorative build.',
+          'Amazon Basics is the easiest starting point. DWANTON is the more decorative living-room option. IRONCK works better for larger dogs, and Oranland is the strongest choice when you want furniture styling with a sturdier build.',
         alt: true,
       },
     ],
@@ -1347,7 +1347,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         {
           question: 'Are furniture dog crates good for anxious dogs?',
           answer:
-            'They can be fine for calm crate-trained dogs, but they are not the best choice for dogs with true confinement panic or a proven escape history. In those cases, stronger containment matters more than decor.',
+            'They are fine for calm, crate-trained dogs, but they are not the best choice for dogs with true confinement panic or a proven escape history. In those cases, stronger containment matters more than furniture design.',
         },
         {
           question: 'What size dog works best with a furniture crate?',
