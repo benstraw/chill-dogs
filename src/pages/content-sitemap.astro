@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 import { categoryMeta } from '@data/cooling-products';
+import { ROUTES } from '@data/routes';
 import { getCollection } from 'astro:content';
 
 interface SitemapPage {
@@ -89,6 +90,8 @@ const staticSections: SitemapSection[] = [
       { title: 'Contact', href: '/contact/', pageType: 'informer' },
       { title: 'Affiliate Disclosure', href: '/affiliate-disclosure/', pageType: 'informer' },
       { title: 'Privacy Policy', href: '/privacy-policy/', pageType: 'informer' },
+      { title: 'Subscribe — Thanks', href: ROUTES.subscribeThanks, pageType: 'informer' },
+      { title: 'Subscribe — Confirmed', href: ROUTES.subscribeConfirmed, pageType: 'informer' },
       { title: 'Terms of Use', href: '/terms/', pageType: 'informer' },
     ],
   },

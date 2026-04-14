@@ -1,4 +1,10 @@
 const PAGES_PREFIX = 'src/pages/';
+const EXCLUDED_EXACT_ROUTES = new Set([
+  '404',
+  'content-sitemap',
+  'privacy-policy',
+  'terms',
+]);
 
 export function isProductionVercelEnv(env = process.env) {
   return String(env.VERCEL_ENV || '').toLowerCase() === 'production';
@@ -16,9 +22,9 @@ export function mapPageFileToUrl(filePath, origin = 'https://www.chill-dogs.com'
   const routePath = filePath.slice(PAGES_PREFIX.length, -'.astro'.length);
 
   if (!routePath || routePath.includes('[') || routePath.includes(']')) return null;
-  if (routePath === 'content-sitemap') return null;
+  if (EXCLUDED_EXACT_ROUTES.has(routePath)) return null;
   if (routePath.startsWith('admin/')) return null;
-  if (routePath === '404') return null;
+  if (routePath.startsWith('subscribe/')) return null;
   if (routePath.includes('/v/')) return null;
 
   let pathname;

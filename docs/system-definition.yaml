@@ -8,7 +8,7 @@
 
 site_system:
   status: "active"
-  as_of: "2026-04-10"
+  as_of: "2026-04-14"
   owner: "chill-dogs"
   purpose: "Define the website as a modular conversion system and keep implementation aligned."
 
@@ -39,6 +39,7 @@ site_system:
         with tagline "Settle in." — positioned between HomepageHero and the start-prompt section.
         The latest/guide lists include How to Crate Train Your Dog and Best Travel Crates for Road Trips
         to connect informational crate intent with the new crate converter path.
+        A homepage-inline email signup block sits below HomepageBody as a secondary capture path.
 
     - name: "Cooling"
       type: "collector"
@@ -195,6 +196,8 @@ site_system:
         - "/privacy-policy/"
         - "/terms/"
         - "/affiliate-disclosure/"
+        - "/subscribe/thanks/"
+        - "/subscribe/confirmed/"
       notes: "/admin/products/ is the canonical product inventory review page. Every product in any product data file must flow into this page through src/data/product-catalog.ts; do not hardcode product rows in the admin route."
 
   modules:
@@ -238,7 +241,8 @@ site_system:
       - "Explore: cooling, calming, comforting"
       - "Company: about, contact"
       - "Legal: privacy-policy, terms, affiliate-disclosure"
-    final_cta: "Persistent affiliate disclosure and trust reinforcement"
+      - "Newsletter signup on non-converter pages only"
+    final_cta: "Persistent affiliate disclosure, trust reinforcement, and secondary email capture on non-converter pages"
 
   conversion_flow:
     steps:
@@ -252,6 +256,19 @@ site_system:
       - "Duplicated page scaffolding that drifts over time"
       - "Unused modules that create implementation confusion"
       - "Collector pages without clear converter paths"
+
+  email_capture_flow:
+    scope: "Homepage inline signup + footer signup on non-converter pages"
+    provider: "Buttondown"
+    events:
+      - "email_signup_view"
+      - "email_signup_start"
+      - "email_signup_submit"
+      - "pageview:/subscribe/thanks/"
+      - "pageview:/subscribe/confirmed/"
+    notes: >
+      Converters intentionally exclude the footer signup so affiliate pages stay single-purpose.
+      /subscribe/thanks/ and /subscribe/confirmed/ are informer pages, noindex, and excluded from sitemap discovery.
 
   product_data:
     product_catalog: "src/data/product-catalog.ts — normalized admin inventory across every product data source; /admin/products/ must consume this data module and remain complete whenever products are added"
