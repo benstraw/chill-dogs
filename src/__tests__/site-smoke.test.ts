@@ -237,7 +237,25 @@ describe('site smoke tests', () => {
     expect(doc.body.textContent).toContain('Stunt Puppy Fi-Ready Collar');
     expect(doc.body.textContent).toContain('The Green Pet Shop Cooling Pet Pad');
     expect(doc.body.textContent).toContain('ThunderShirt Classic Dog Anxiety Jacket');
+    expect(doc.body.textContent).toContain('SportPet Airline Compliant Travel Kennel');
+    expect(doc.body.textContent).toContain('Amazon Basics Furniture Style Dog Crate');
+    expect(doc.body.textContent).toContain('Oranland Heavy Duty Indestructible Dog Crate');
     expect(doc.body.textContent).toContain('src/data/tracking-products.ts');
+  });
+
+  it('renders new crate converter pages with affiliate links', () => {
+    const airlineDoc = readBuiltPage(path.join('comforting', 'best-airline-crates-for-flying-with-your-dog', 'index.html'));
+    const furnitureDoc = readBuiltPage(path.join('comforting', 'best-furniture-dog-crates', 'index.html'));
+    const heavyDutyDoc = readBuiltPage(path.join('comforting', 'best-heavy-duty-dog-crates', 'index.html'));
+
+    for (const doc of [airlineDoc, furnitureDoc, heavyDutyDoc]) {
+      const affiliateLinks = getAmazonAffiliateLinks(doc);
+      expect(affiliateLinks.length).toBeGreaterThan(0);
+      for (const link of affiliateLinks) {
+        expect(relTokens(link)).toEqual(['noopener', 'noreferrer', 'sponsored']);
+        expect(link.href).toContain('tag=chill-dogs-20');
+      }
+    }
   });
 
   it('collector section pages are indexable with correct canonical', () => {
@@ -268,6 +286,9 @@ describe('site smoke tests', () => {
     expect(sitemap).toContain('/comforting/best-puppy-crates/');
     expect(sitemap).toContain('/comforting/best-anxiety-dog-crates/');
     expect(sitemap).toContain('/comforting/best-travel-crates-for-road-trips/');
+    expect(sitemap).toContain('/comforting/best-airline-crates-for-flying-with-your-dog/');
+    expect(sitemap).toContain('/comforting/best-furniture-dog-crates/');
+    expect(sitemap).toContain('/comforting/best-heavy-duty-dog-crates/');
     expect(sitemap).not.toContain('/cooling/v/');
     expect(sitemap).not.toContain('/calming/v/');
     expect(sitemap).not.toContain('/content-sitemap/');

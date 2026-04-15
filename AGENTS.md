@@ -31,6 +31,7 @@ Repository guidance for coding agents working in `/Volumes/wanderer/dev/solo/chi
 - Every new page must declare one page type (`converter`, `collector`, `attractor`, `informer`) in the implementation context before coding.
 - If 2+ pages share structure, use one reusable composer/module and data/config inputs instead of duplicating page scaffolding.
 - Keep per-page differences in centralized data/config objects (copy, category keys, CTA targets, FAQ sets, section toggles).
+- If the same product appears on multiple converter pages, assume copy edits should update the canonical product record in `src/data/**` unless the instruction clearly says the change is only for one page or context. Use page-level presentation overrides only for explicitly page-specific changes.
 - Do not hardcode internal routes in page bodies when route constants are available.
 - Reuse existing modules first; only create a new module when no current module can satisfy the page type and conversion goal.
 

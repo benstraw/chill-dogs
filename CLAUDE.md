@@ -42,6 +42,7 @@ This site is a **modular conversion system** governed by `docs/web-systems-adven
 - Every new page must have one declared page type before implementation.
 - If two or more pages share structure, use one reusable composer/module plus config inputs instead of duplicating page scaffolding.
 - Keep page-level differences in centralized data/config objects (copy, category keys, CTA targets, FAQ sets, section toggles).
+- When a shared product appears on multiple converter pages, assume copy edits should update the canonical product data unless the instruction clearly says the change is page-specific. Use page-level presentation overrides only when the request explicitly limits the change to one page or context.
 - Avoid hardcoded internal route strings in page bodies when centralized route constants exist.
 - Reuse existing modules first; introduce new modules only when no existing module can satisfy page goals.
 
