@@ -37,6 +37,15 @@ function readBuiltAsset(relativePath: string): string {
   return readFileSync(path.join(distRoot, relativePath), 'utf8');
 }
 
+function firstMainImageAbsolute(doc: Document): string | null {
+  const image = doc.querySelector<HTMLImageElement>('main img');
+  const src = image?.getAttribute('src');
+  if (!src) return null;
+  if (src.startsWith('data:')) return null;
+  if (src.startsWith('//')) return `https:${src}`;
+  return new URL(src, 'https://www.chill-dogs.com').href;
+}
+
 function getAmazonAffiliateLinks(doc: Document): HTMLAnchorElement[] {
   return Array.from(
     doc.querySelectorAll<HTMLAnchorElement>('a[data-affiliate="true"][href*="amazon."]')
@@ -101,16 +110,28 @@ describe('site smoke tests', () => {
   it('publishes generated per-page OG assets and metadata references', () => {
     const homeDoc = readBuiltPage('index.html');
     const coolingDoc = readBuiltPage(path.join('cooling', 'cooling-mats', 'index.html'));
+    const travelDoc = readBuiltPage(path.join('travel', 'dog-road-trip-gear', 'index.html'));
+    const contactDoc = readBuiltPage(path.join('contact', 'index.html'));
     const termsDoc = readBuiltPage(path.join('terms', 'index.html'));
 
     expect(homeDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
-      .toContain('/og/home.jpg');
+      .toBe(firstMainImageAbsolute(homeDoc));
+    expect(homeDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
+      .toBe(homeDoc.querySelector('meta[name="twitter:image"]')?.getAttribute('content'));
+
     expect(coolingDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
       .toContain('/og/cooling-cooling-mats.jpg');
+    expect(travelDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
+      .toBe(firstMainImageAbsolute(travelDoc));
+    expect(travelDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
+      .toBe(travelDoc.querySelector('meta[name="twitter:image"]')?.getAttribute('content'));
 
     // noindex pages keep the static default fallback
     expect(termsDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
       .toContain('/og-default.jpg');
+    // image-less indexable pages keep route-based generated OG assets
+    expect(contactDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
+      .toContain('/og/contact.jpg');
 
     const homeOg = readFileSync(path.join(distRoot, 'og', 'home.jpg'));
     const coolingOg = readFileSync(path.join(distRoot, 'og', 'cooling-cooling-mats.jpg'));
