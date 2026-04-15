@@ -1415,14 +1415,14 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
     hero: {
       title: 'Best Heavy-Duty Dog Crates',
       subtitle:
-        'Heavy-duty crates are not for every dog. They make sense when a standard crate is no longer enough because the dog bends bars, breaks latches, or creates injury risk trying to get out. The goal here is stronger containment, not a cure.',
+        'Not every dog needs a heavy-duty crate. They make sense when a standard crate is not sufficient because the dog bends bars, breaks latches, or risks injury trying to get out.',
       disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
       primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
       secondaryCta: { label: 'Anxiety Crate Guide', href: ROUTES.comfortAnxietyCrates },
     },
     toc: [
       { label: 'Quick Picks', anchor: 'quick-picks' },
-      { label: 'When Heavy-Duty Makes Sense', anchor: 'when-heavy-duty-makes-sense' },
+      { label: 'When to Use a Heavy-Duty Crate', anchor: 'when-heavy-duty-makes-sense' },
       { label: 'Heavy-Duty Crate Picks', anchor: 'heavy-duty-crates' },
       { label: 'Which One Should You Buy', anchor: 'which-one' },
       { label: 'FAQ', anchor: 'faq' },
@@ -1447,7 +1447,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
             label: 'Best Large-Dog Value',
             title: 'Oranland Heavy Duty Indestructible Dog Crate',
             description:
-              'A strong large-dog alternative when you need reinforced containment without stepping straight into the most premium crate on the page.',
+              'A strong large-dog alternative when you need reinforced containment.',
             productId: 'oranland-heavy-duty-dog-crate',
             position: 'quick-picks-2',
           },
@@ -1472,11 +1472,11 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       {
         kind: 'prose',
         id: 'when-heavy-duty-makes-sense',
-        heading: 'When a Heavy-Duty Crate Actually Makes Sense',
+        heading: 'When to Use a Heavy-Duty Crate',
         paragraphs: [
-          'A stronger crate is not a treatment for separation anxiety by itself. If your dog is in true panic, the right answer may be a safer room setup, behavior work, veterinary support, or a different management plan altogether.',
-          'Heavy-duty crates make sense when standard crates create injury or escape risk. That includes dogs that bend wire, break latches, bloody their mouths, or repeatedly force their way out of ordinary kennels.',
-          'Think of these crates as containment and harm-reduction tools. Use them when you already know a regular crate is failing, not because the words heavy duty sound more reassuring.',
+          'A stronger crate is not a treatment for separation anxiety. If your dog is in true panic when placed in a crate, consider a safe room setup, behavioral training, or veterinary support.',
+          'Heavy-duty crates make sense when a dog risks injury or escape from a standard crate. That includes dogs that bend wire, break latches, bloody their mouths chewing, or repeatedly force their way out of ordinary kennels.',
+          'Think of these crates as containment and harm-reduction tools. Use them when you already know a regular crate is not sufficient.',
         ],
         alt: true,
       },
@@ -1487,7 +1487,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         positionOffset: 0,
         columns: 2,
         intro:
-          'These picks range from fully enclosed high-anxiety crates to heavier wire-style or steel-frame options that sit between standard crates and the most serious reinforced enclosures.',
+          'These range from fully enclosed, high-anxiety crates to heavier wire-style or steel-frame options.',
         productIds: [
           'impact-high-anxiety-crate',
           'oranland-heavy-duty-dog-crate',
@@ -1501,21 +1501,21 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         kind: 'decision_columns',
         id: 'which-one',
         left: {
-          heading: 'Choose fully enclosed heavy-duty when',
+          heading: 'Choose Fully Enclosed Heavy-Duty When',
           items: [
             'Your dog has already damaged or escaped standard crates',
             'Latch strength and harder walls are the priority',
-            'You want fewer obvious bite and paw points than a standard wire crate',
+            'You want fewer bite and paw points than a standard wire crate',
             'Containment failure is already a real safety issue',
           ],
         },
         right: {
-          heading: 'Choose reinforced large-crate style when',
+          heading: 'Choose Reinforced Large-Crate Style When',
           items: [
-            'You want stronger hardware but a more familiar crate layout',
+            'You need stronger hardware',
             'Your dog needs a step up from standard wire without going fully enclosed',
-            'Large-dog room and mobility features still matter',
-            'You are balancing stronger containment with a more familiar day-to-day format',
+            'Your large dog requires more room',
+            'You want stronger containment with a more familiar crate layout',
           ],
         },
       },
@@ -1523,7 +1523,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         kind: 'note',
         heading: 'Bottom Line',
         text:
-          'Impact is the premium heavy-duty benchmark. Oranland is the practical large-dog value pick. Gardner Pet covers the smaller-dog escape case, and the XXL crate is the better choice when size is part of the problem as well as strength.',
+          'Impact is the premium heavy-duty crate. Oranland is the best value for large dogs. Gardner Pet is best for smaller escape artists, and the XXL crate is best for larger dogs who require more room.',
         alt: true,
       },
     ],
@@ -1538,17 +1538,17 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         {
           question: 'Will a heavy-duty crate fix separation anxiety?',
           answer:
-            'No. It can reduce escape and injury risk, but it is not treatment by itself. If the dog is in real panic, behavior support still matters.',
+            'No. It can reduce escape and injury risk, but it is not a treatment by itself. If the dog is in real panic, consider behavior training or veterinary support.',
         },
         {
           question: 'What is the best heavy-duty crate on this page?',
           answer:
-            'Impact is the clearest premium benchmark. Oranland is the stronger value-oriented large-dog alternative.',
+            'Impact is the premium benchmark. Oranland is the better value for large dogs.',
         },
         {
           question: 'Are heavy-duty crates only for big dogs?',
           answer:
-            'No. Some small dogs are persistent enough to need reinforced containment too, which is why smaller heavy-duty options can still make sense.',
+            'No. Some small dogs are persistent enough to need reinforced containment.',
         },
       ],
     },
@@ -1559,13 +1559,13 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
           href: ROUTES.comfortAnxietyCrates,
           title: 'Best Dog Crates for Anxiety',
           description:
-            'Use the anxiety page when you are still deciding between wire, enclosed, and heavy-duty containment categories.',
+            'When you are still deciding between wire, enclosed, and heavy-duty containment categories.',
         },
         {
           href: ROUTES.calmingCrateGuide,
           title: 'How to Crate Train Your Dog',
           description:
-            'Keep the broader crate-training and anxiety cautions in view before treating a stronger crate as the only answer.',
+            'Consider crate-training tips and anxiety mitigation before investing in a stronger crate.',
         },
       ],
     },

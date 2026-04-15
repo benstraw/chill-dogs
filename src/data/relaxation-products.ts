@@ -739,14 +739,14 @@ export const relaxationProducts: RelaxationProduct[] = [
     amazonUrl: 'https://www.amazon.com/dp/B0DCFRJTP4/?tag=chill-dogs-20',
     bullets: [
       'Heavy steel build and reinforced base are designed for large dogs that overpower standard crates',
-      'Double-door layout and wheels make management easier despite the stronger frame',
+      'Double-door layout and wheels make for easier management',
       'A stronger containment option than ordinary wire or decorative crates',
     ],
     bestFor: 'Large dogs that need reinforced containment beyond a standard wire crate',
     whyItWorks:
-      'The heavier frame and reinforced base are built around dogs that push, paw, or damage lighter crates',
+      'The heavier frame and reinforced base are built for dogs that push, paw, or damage lighter crates',
     considerIf:
-      'You already know a normal crate is not holding up and need a more serious containment upgrade',
+      'You already know a normal crate is not sufficient and your dog needs more serious containment',
     image: { src: 'https://m.media-amazon.com/images/I/81aSK08xZWL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Oranland Heavy Duty Indestructible Dog Crate' },
   },
   {
@@ -756,9 +756,9 @@ export const relaxationProducts: RelaxationProduct[] = [
     category: 'crates',
     amazonUrl: 'https://www.amazon.com/dp/B0CRS489BJ/?tag=chill-dogs-20',
     bullets: [
-      'Heavy steel construction is positioned as chew-proof and escape-resistant',
-      'Double-door access, sturdy locks, and tray target daily management practicality',
-      'Large-format sizing makes it relevant for bigger or stronger dogs',
+      'Heavy steel construction is chew-proof and escape-resistant',
+      'Double-door access, sturdy locks, and sliding tray',
+      'Large sizing suits bigger or stronger dogs',
     ],
     bestFor: 'Larger dogs that need more security points and more structure than a basic crate offers',
     whyItWorks:
@@ -775,7 +775,7 @@ export const relaxationProducts: RelaxationProduct[] = [
     amazonUrl: 'https://www.amazon.com/dp/B0FWJVHFJN/?tag=chill-dogs-20',
     bullets: [
       'Stackable small-dog heavy-duty crate uses thicker steel than standard small wire crates',
-      'Triple-door access and removable tray make it easier to manage day to day',
+      'Triple-door access and removable tray',
       'Built for small dogs with escape or chewing issues rather than general puppy training',
     ],
     bestFor: 'Small dogs that still need reinforced containment instead of a basic wire crate',
@@ -798,7 +798,7 @@ export const relaxationProducts: RelaxationProduct[] = [
     ],
     bestFor: 'Very large dogs that need both oversized space and reinforced containment',
     whyItWorks:
-      'It addresses the common failure point where extra-large dogs outgrow both the size and strength of standard crates',
+      'It addresses the needs of extra-large dogs who outgrow the size and strength of standard crates',
     considerIf:
       'You need true XXL sizing and a stronger build at the same time',
     image: { src: 'https://m.media-amazon.com/images/I/81JfbDGBGSL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Heavy Duty Dog Crate XXL' },
