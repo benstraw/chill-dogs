@@ -1,9 +1,10 @@
 ---
+import { Image } from 'astro:assets';
 import AffiliateLink from '@components/AffiliateLink.astro';
-import type { RelaxationProduct } from '@data/relaxation-products';
+import type { RelaxationDisplayProduct } from '@data/relaxation-converter-pages';
 
 interface Props {
-  product: RelaxationProduct;
+  product: RelaxationDisplayProduct;
   position?: number;
   pageSlug?: string;
 }
@@ -14,13 +15,12 @@ const { product, position = 0, pageSlug = '' } = Astro.props;
 <div class="rx-card">
   <div class="rx-card-image">
     {product.image ? (
-      <img
+      <Image
         src={product.image.src}
         alt={product.image.alt}
+        width={400}
+        height={300}
         loading="lazy"
-        decoding="async"
-        width="400"
-        height="300"
         onerror="this.style.display='none';this.parentElement.classList.add('rx-card-image--fallback')"
       />
     ) : (

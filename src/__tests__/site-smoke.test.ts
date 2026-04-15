@@ -72,6 +72,32 @@ describe('site smoke tests', () => {
     expect(canonical?.getAttribute('href')).toBe('https://www.chill-dogs.com/');
   });
 
+  it('links the homepage into crate training and road trip crate paths', () => {
+    const doc = readBuiltPage('index.html');
+
+    const links = Array.from(doc.querySelectorAll<HTMLAnchorElement>('a')).map((link) =>
+      link.getAttribute('href')
+    );
+
+    expect(links).toContain('/calming/crate-training-for-dogs/');
+    expect(links).toContain('/comforting/best-travel-crates-for-road-trips/');
+  });
+
+  it('renders the inline signup on the homepage and excludes the footer signup from attractor and converter pages', () => {
+    const homeDoc = readBuiltPage('index.html');
+    const converterDoc = readBuiltPage(path.join('cooling', 'cooling-mats', 'index.html'));
+
+    expect(
+      homeDoc.querySelector('[data-email-signup-placement="homepage_inline"]')
+    ).not.toBeNull();
+    expect(
+      homeDoc.querySelector('[data-email-signup-placement="footer"]')
+    ).toBeNull();
+    expect(
+      converterDoc.querySelector('[data-email-signup-placement="footer"]')
+    ).toBeNull();
+  });
+
   it('publishes generated per-page OG assets and metadata references', () => {
     const homeDoc = readBuiltPage('index.html');
     const coolingDoc = readBuiltPage(path.join('cooling', 'cooling-mats', 'index.html'));
@@ -95,7 +121,7 @@ describe('site smoke tests', () => {
   it('publishes homepage featured article images', () => {
     const homeDoc = readBuiltPage('index.html');
     const featuredImages = Array.from(
-      homeDoc.querySelectorAll<HTMLImageElement>('.article-card img[src^="/og/"], .hp-v7-article-img[src^="/og/"]')
+      homeDoc.querySelectorAll<HTMLImageElement>('.article-card img, .hp-v7-article-img')
     );
 
     expect(featuredImages.length).toBeGreaterThan(0);
@@ -103,6 +129,7 @@ describe('site smoke tests', () => {
     for (const image of featuredImages) {
       const src = image.getAttribute('src');
       expect(src).toBeTruthy();
+      expect(src === null ? '' : /^(\/og\/|\/_assets\/)/.test(src)).toBe(true);
       const asset = readFileSync(path.join(distRoot, src!.replace(/^\//, '')));
       expect(asset.length).toBeGreaterThan(1024);
     }
@@ -178,8 +205,29 @@ describe('site smoke tests', () => {
     expect(
       privacyDoc.querySelector('meta[name="robots"]')?.getAttribute('content')
     ).toBe('noindex, nofollow');
+    expect(privacyDoc.body.textContent).toContain('Buttondown');
     expect(affiliateDoc.body.textContent).toContain('Amazon Services LLC Associates Program');
     expect(affiliateDoc.body.textContent).toContain('no additional cost to you');
+  });
+
+  it('renders subscribe flow pages without site chrome and keeps them noindex', () => {
+    const thanksDoc = readBuiltPage(path.join('subscribe', 'thanks', 'index.html'));
+    const confirmedDoc = readBuiltPage(path.join('subscribe', 'confirmed', 'index.html'));
+
+    expect(thanksDoc.querySelector('meta[name="robots"]')?.getAttribute('content'))
+      .toBe('noindex, nofollow');
+    expect(confirmedDoc.querySelector('meta[name="robots"]')?.getAttribute('content'))
+      .toBe('noindex, nofollow');
+    expect(thanksDoc.querySelector('header.site-header')).toBeNull();
+    expect(thanksDoc.querySelector('footer.site-footer')).toBeNull();
+    expect(confirmedDoc.querySelector('header.site-header')).toBeNull();
+    expect(confirmedDoc.querySelector('footer.site-footer')).toBeNull();
+    expect(thanksDoc.querySelector('.subscribe-flow-header a[href="/"]')?.textContent)
+      .toContain('Chill-Dogs');
+    expect(confirmedDoc.querySelector('.subscribe-flow-header a[href="/"]')?.textContent)
+      .toContain('Chill-Dogs');
+    expect(confirmedDoc.body.textContent).toContain('Cooling Picks');
+    expect(confirmedDoc.body.textContent).toContain('Hot Weather Guide');
   });
 
   it('renders the admin product catalog from all product data files', () => {
@@ -189,7 +237,25 @@ describe('site smoke tests', () => {
     expect(doc.body.textContent).toContain('Stunt Puppy Fi-Ready Collar');
     expect(doc.body.textContent).toContain('The Green Pet Shop Cooling Pet Pad');
     expect(doc.body.textContent).toContain('ThunderShirt Classic Dog Anxiety Jacket');
+    expect(doc.body.textContent).toContain('SportPet Airline Compliant Travel Kennel');
+    expect(doc.body.textContent).toContain('Amazon Basics Furniture Style Dog Crate');
+    expect(doc.body.textContent).toContain('Oranland Heavy Duty Indestructible Dog Crate');
     expect(doc.body.textContent).toContain('src/data/tracking-products.ts');
+  });
+
+  it('renders new crate converter pages with affiliate links', () => {
+    const airlineDoc = readBuiltPage(path.join('comforting', 'best-airline-crates-for-flying-with-your-dog', 'index.html'));
+    const furnitureDoc = readBuiltPage(path.join('comforting', 'best-furniture-dog-crates', 'index.html'));
+    const heavyDutyDoc = readBuiltPage(path.join('comforting', 'best-heavy-duty-dog-crates', 'index.html'));
+
+    for (const doc of [airlineDoc, furnitureDoc, heavyDutyDoc]) {
+      const affiliateLinks = getAmazonAffiliateLinks(doc);
+      expect(affiliateLinks.length).toBeGreaterThan(0);
+      for (const link of affiliateLinks) {
+        expect(relTokens(link)).toEqual(['noopener', 'noreferrer', 'sponsored']);
+        expect(link.href).toContain('tag=chill-dogs-20');
+      }
+    }
   });
 
   it('collector section pages are indexable with correct canonical', () => {
@@ -217,8 +283,26 @@ describe('site smoke tests', () => {
     expect(sitemap).toContain('/cooling/car-cooling-for-dogs/');
     expect(sitemap).toContain('/travel/dog-road-trip-gear/');
     expect(sitemap).toContain('/calming/best-calming-products-for-anxious-dogs/');
+    expect(sitemap).toContain('/comforting/best-puppy-crates/');
+    expect(sitemap).toContain('/comforting/best-anxiety-dog-crates/');
+    expect(sitemap).toContain('/comforting/best-travel-crates-for-road-trips/');
+    expect(sitemap).toContain('/comforting/best-airline-crates-for-flying-with-your-dog/');
+    expect(sitemap).toContain('/comforting/best-furniture-dog-crates/');
+    expect(sitemap).toContain('/comforting/best-heavy-duty-dog-crates/');
     expect(sitemap).not.toContain('/cooling/v/');
     expect(sitemap).not.toContain('/calming/v/');
+    expect(sitemap).not.toContain('/content-sitemap/');
+    expect(sitemap).not.toContain('/privacy-policy/');
+    expect(sitemap).not.toContain('/terms/');
+    expect(sitemap).not.toContain('/subscribe/thanks/');
+    expect(sitemap).not.toContain('/subscribe/confirmed/');
+  });
+
+  it('publishes article collection entries in rss feed', () => {
+    const rssXml = readBuiltAsset('rss.xml');
+
+    expect(rssXml).toContain('/calming/crate-training-for-dogs/');
+    expect(rssXml).toContain('How to Crate Train Your Dog');
   });
 
   it('does not render escaped HTML tags as visible text on any page', () => {
@@ -314,7 +398,7 @@ describe('site smoke tests', () => {
   });
 
   it('content pages have at least one JSON-LD script', () => {
-    const noSchemaExpected = ['404.html', 'privacy-policy', 'terms', 'content-sitemap', 'admin/'];
+    const noSchemaExpected = ['404.html', 'privacy-policy', 'terms', 'content-sitemap', 'admin/', 'subscribe/'];
     const htmlFiles = collectHtmlFiles(distRoot);
     const failures: string[] = [];
 

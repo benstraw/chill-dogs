@@ -12,6 +12,7 @@ import RelaxationProductCard from '@components/modules/RelaxationProductCard.ast
 import {
   buildRelaxationItemListSchema,
   getRequiredProducts,
+  resolveRelaxationDisplayProducts,
   type RelaxationBlock,
   type RelaxationConverterPageConfig,
   type QuickPickItem,
@@ -105,7 +106,7 @@ function quickPickProduct(item: QuickPickItem) {
             {block.intro && <p class="section-intro">{block.intro}</p>}
             {block.copyHtml && <p class="section-copy" set:html={block.copyHtml} />}
             <div class={`product-grid product-grid--${block.columns}`}>
-              {getRequiredProducts(block.productIds).map((product, i) => (
+              {resolveRelaxationDisplayProducts(block.productIds).map((product, i) => (
                 <RelaxationProductCard
                   product={product}
                   position={block.positionOffset + i + 1}
@@ -198,7 +199,7 @@ function quickPickProduct(item: QuickPickItem) {
   }
 
   .section-copy a {
-    color: var(--color-sky);
+    color: var(--color-link);
     text-decoration: underline;
   }
 

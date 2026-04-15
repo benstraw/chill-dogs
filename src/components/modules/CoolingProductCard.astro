@@ -25,10 +25,10 @@ const trackEvent = isAmazon ? 'amazon_outbound_click' : 'collector_to_converter_
       <img
         src={product.image.src}
         alt={product.image.alt}
-        loading="lazy"
-        decoding="async"
         width="400"
         height="300"
+        loading="lazy"
+        decoding="async"
         onerror="this.style.display='none';this.parentElement.classList.add('cp-image--fallback')"
       />
     ) : (

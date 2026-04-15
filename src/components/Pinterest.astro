@@ -6,9 +6,11 @@
  * Skipped entirely on noindex pages (variant URLs, admin, etc.) so Pinterest
  * does not receive signal from pages that should never appear in search or ads.
  *
- * Gated on PUBLIC_PINTEREST_TAG_ID — set this in .env and Vercel environment
- * variables. If the var is absent the component renders nothing.
+ * Gated on PUBLIC_PINTEREST_TAG_ID and VERCEL_ENV=production. If either is
+ * absent, the component renders nothing to keep local and preview consoles quiet.
  */
+
+import { shouldLoadPinterestTag } from '@utils/third-party';
 
 interface Props {
   noindex?: boolean;
@@ -16,9 +18,14 @@ interface Props {
 
 const { noindex = false } = Astro.props;
 const tagId = import.meta.env.PUBLIC_PINTEREST_TAG_ID;
+const shouldRenderPinterest = shouldLoadPinterestTag({
+  tagId,
+  noindex,
+  vercelEnv: import.meta.env.VERCEL_ENV,
+});
 ---
 
-{tagId && !noindex && (
+{shouldRenderPinterest && (
   <script is:inline define:vars={{ tagId }}>
     (function () {
       if (window.pintrk) return;

@@ -16,6 +16,8 @@ export interface TrackerProduct {
   best_for: string;
   /** Short bullets for cards (3 items) */
   bullets: [string, string, string];
+  /** Override default page CTA text when the product is not a collar. */
+  ctaLabel?: string;
   /** One-line signal / range summary */
   signalNote: string;
   /** Monthly fee if any */
@@ -129,6 +131,39 @@ export const trackerProducts: TrackerProduct[] = [
       alt: 'Garmin Alpha LTE GPS dog tracking collar on white background',
     },
   },
+  {
+    id: 'halo-collar-5',
+    name: 'Halo Collar 5 Wireless Dog Fence & GPS Collar',
+    type: 'cellular',
+    asin: 'B0FML7XQ4R',
+    amazonUrl: 'https://www.amazon.com/dp/B0FML7XQ4R?tag=chill-dogs-20',
+    use_case: 'Cellular GPS tracking plus app-controlled boundary management',
+    pros: [
+      'Combines GPS location tracking with virtual fence boundaries',
+      'Designed for yards, rural properties, campsites, and open outdoor spaces',
+      'App alerts when a dog approaches or crosses a configured boundary',
+      'Adjustable collar fit for a wide range of dogs',
+      'Rechargeable collar with a stated battery-life focus',
+    ],
+    cons: [
+      'Requires an active Halo membership to use GPS and fence features',
+      'Boundary training is required — it is not a simple clip-on tracker',
+      'Still depends on satellite/cellular/app connectivity and proper setup',
+      'More expensive and more involved than a basic cellular location tracker',
+    ],
+    best_for: 'Owners who want cellular GPS tracking plus virtual boundary tools',
+    bullets: [
+      'GPS dog collar with app-controlled wireless fence features',
+      'Best for owners who want tracking plus boundary management',
+      'Membership required; training and setup matter',
+    ],
+    signalNote: 'GPS + cellular/app connectivity for tracking and boundaries',
+    subscriptionNote: 'Halo membership required for GPS and fence features',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/81Ya8CXFCKL._SL500_.jpg',
+      alt: 'Halo Collar 5 wireless dog fence and GPS collar on white background',
+    },
+  },
   // ── Off-Grid ──────────────────────────────────────────────────────────────
   {
     id: 'garmin-alpha-tt25-system',
@@ -163,6 +198,40 @@ export const trackerProducts: TrackerProduct[] = [
     image: {
       src: 'https://m.media-amazon.com/images/I/61DPIt365qL._AC_SL1500_.jpg',
       alt: 'Garmin Alpha TT 25 dog tracking collar and Alpha 300i handheld on white background',
+    },
+  },
+  {
+    id: 'garmin-alpha-300i-handheld',
+    name: 'Garmin Alpha 300i Handheld',
+    type: 'off-grid',
+    asin: 'B0BW4X784G',
+    amazonUrl: 'https://www.amazon.com/dp/B0BW4X784G?tag=chill-dogs-20',
+    use_case: 'Dedicated handheld receiver for Garmin off-grid dog tracking systems',
+    pros: [
+      'Purpose-built handheld for compatible Garmin dog tracking collars',
+      'Tracks up to 20 dogs with compatible collars',
+      'Sunlight-readable touchscreen plus physical button controls',
+      'Built-in inReach satellite communication features',
+      'Useful as the field display for an Alpha TT 25 setup',
+    ],
+    cons: [
+      'Requires a compatible Garmin dog collar to track a dog',
+      'High upfront cost compared with phone-based trackers',
+      'inReach satellite messaging requires an active subscription',
+      'More device setup and learning curve than a cellular app collar',
+    ],
+    best_for: 'Handlers building a Garmin off-grid system around compatible collars',
+    bullets: [
+      'Standalone Alpha handheld for compatible Garmin collars',
+      'Tracks up to 20 dogs; built for field use',
+      'inReach features need a separate subscription',
+    ],
+    ctaLabel: 'Shop Alpha 300i Handheld on Amazon',
+    signalNote: 'Receives GPS collar location over Garmin radio system',
+    subscriptionNote: 'No subscription for dog tracking; inReach features require a plan',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/51hAFi77UnL._SL500_.jpg',
+      alt: 'Garmin Alpha 300i handheld on white background',
     },
   },
   // ── Bluetooth ─────────────────────────────────────────────────────────────
@@ -258,7 +327,7 @@ export const trackerCategoryMeta: Record<
     title: 'Cellular GPS Trackers',
     description: 'Real-time LTE tracking for dogs in areas with cell coverage.',
     intro:
-      'Cellular trackers use the nationwide LTE network to show real-time location on your phone. They work great in cities, suburbs, and most parks — but they depend entirely on cell signal. No signal means no tracking. Fi makes the most popular cellular collars; Garmin Alpha LTE adds a VHF radio fallback for mixed-terrain use.',
+      'Cellular trackers use the nationwide LTE network to show real-time location on your phone. They work great in cities, suburbs, and most parks — but they depend entirely on cell signal. No signal means no tracking. Fi is a straightforward everyday GPS collar, Halo adds wireless fence features, and Garmin Alpha LTE adds a VHF radio fallback for mixed-terrain use.',
   },
   'off-grid': {
     title: 'Off-Grid GPS Systems (Garmin)',

@@ -1,7 +1,7 @@
 /**
  * Lightweight analytics utility for chill-dogs.
  * Uses event delegation on [data-track] attributes.
- * Sends events to PostHog when available, falls back to console logging in dev.
+ * Sends events to PostHog when available.
  */
 
 declare global {
@@ -18,8 +18,6 @@ export function track(eventName: string, props: Record<string, any>): void {
 
   if (window.posthog && typeof window.posthog.capture === 'function') {
     window.posthog.capture(eventName, props);
-  } else if (import.meta.env.DEV) {
-    console.log(`[analytics] ${eventName}`, props);
   }
 }
 

@@ -118,6 +118,11 @@ export function buildProductPageMap(): ProductPageMap {
     addRef(map, p.id, trackerComparisonRef);
   }
 
+  const garminTrackingRef: PageRef = { label: 'garmin-dog-tracking-collars', href: '/gear/garmin-dog-tracking-collars/' };
+  for (const p of trackerProducts.filter((product) => product.type === 'off-grid')) {
+    addRef(map, p.id, garminTrackingRef);
+  }
+
   const fiReviewRef: PageRef = { label: 'fi-dog-collar-review', href: '/gear/fi-dog-collar-review/' };
   addRef(map, 'fi-series-3-plus', fiReviewRef);
   addRef(map, 'stunt-puppy-fi-collar', fiReviewRef);

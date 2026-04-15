@@ -41,6 +41,17 @@ describe('admin product catalog data', () => {
   it('tracks gear products in the page map', () => {
     const pageMap = buildProductPageMap();
 
+    expect(pageMap['halo-collar-5']).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ href: '/gear/best-dog-gps-trackers/' }),
+      ])
+    );
+    expect(pageMap['garmin-alpha-300i-handheld']).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ href: '/gear/best-dog-gps-trackers/' }),
+        expect.objectContaining({ href: '/gear/garmin-dog-tracking-collars/' }),
+      ])
+    );
     expect(pageMap['fi-series-3-plus']).toEqual(
       expect.arrayContaining([
         expect.objectContaining({ href: '/gear/best-dog-gps-trackers/' }),

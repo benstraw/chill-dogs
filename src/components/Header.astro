@@ -18,7 +18,7 @@ const isHome = currentPath === '/' || currentPath.startsWith('/v/');
   <div class="container header-inner">
     <a href={ROUTES.home} class:list={['logo', { 'logo--home': isHome }]}>
       {!isHome && (
-        <Image src={pawLogo} alt="" class="logo-icon" width={32} height={32} />
+        <Image src={pawLogo} alt="" class="logo-icon" width={32} height={32} loading="eager" fetchpriority="high" />
       )}
       Chill-Dogs
     </a>

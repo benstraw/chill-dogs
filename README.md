@@ -18,6 +18,16 @@ Amazon Associates affiliate site for dog cooling, calming, and relaxing products
 
 ---
 
+## Setup
+
+This project requires `bun@1.3.6`.
+
+```bash
+bun install --frozen-lockfile
+```
+
+---
+
 ## Commands
 
 ```bash

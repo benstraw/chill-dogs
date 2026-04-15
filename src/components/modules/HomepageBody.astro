@@ -1,6 +1,10 @@
 ---
+import { Image } from 'astro:assets';
 import { ROUTES } from '@data/routes';
 import type { HomepageVariant } from '@components/modules/HomepageHero.astro';
+import coolingSafetyOg from '/public/og/cooling-how-hot-is-too-hot-for-dogs.jpg';
+import calmingCarOg from '/public/og/calming-car-anxiety-for-dogs.jpg';
+import comfortSleepOg from '/public/og/comforting-how-much-do-dogs-sleep.jpg';
 
 interface Props {
   variant?: HomepageVariant;
@@ -45,7 +49,7 @@ const featuredArticles = [
     title: 'How Hot Is Too Hot for Dogs?',
     description: 'Heat threshold guidance with routes to cooling product pages.',
     href: ROUTES.coolingSafety,
-    image: '/og/cooling-how-hot-is-too-hot-for-dogs.jpg',
+    image: coolingSafetyOg,
     label: 'Cooling',
     color: 'cool',
   },
@@ -53,7 +57,7 @@ const featuredArticles = [
     title: 'Car Anxiety for Dogs',
     description: 'Practical calming tools for travel stress and restless rides.',
     href: ROUTES.calmingCar,
-    image: '/og/calming-car-anxiety-for-dogs.jpg',
+    image: calmingCarOg,
     label: 'Calming',
     color: 'calm',
   },
@@ -61,7 +65,7 @@ const featuredArticles = [
     title: 'How Much Do Dogs Sleep?',
     description: 'Sleep norms by age and breed, REM research, and what disruptions might mean.',
     href: ROUTES.comfortSleepArticle,
-    image: '/og/comforting-how-much-do-dogs-sleep.jpg',
+    image: comfortSleepOg,
     label: 'Comfort',
     color: 'comfort',
   },
@@ -72,7 +76,9 @@ const moreArticles = [
   { title: 'Cooling Mats', description: 'Compare pressure-activated and water-based cooling mats.', href: ROUTES.coolingMats, color: 'cool' },
   { title: 'Cooling Vests', description: 'Evaporative cooling vests for active outdoor dogs.', href: ROUTES.coolingVests, color: 'cool' },
   { title: 'Anxiety Vest Alternatives', description: 'When to choose wraps, chews, lick mats, or snuffle mats instead.', href: ROUTES.calmingAlternatives, color: 'calm' },
+  { title: 'How to Crate Train Your Dog', description: 'Crate training for puppies, anxious dogs, and travel routines.', href: ROUTES.calmingCrateGuide, color: 'calm' },
   { title: "Rhys's Road Trip Chill Kit", description: 'Cooling and calming picks for long drives with dogs.', href: ROUTES.roadTrip, color: 'calm' },
+  { title: 'Travel Crates for Road Trips', description: 'Hard-sided and soft folding crates for dogs who travel by car.', href: ROUTES.comfortTravelCrates, color: 'comfort' },
   { title: 'The Day Rhys Ran Off on Cerro San Luis Obispo', description: 'What a foggy summit and a 30-minute search taught us about GPS trackers.', href: ROUTES.rhysRanAway, color: 'gear' },
   { title: 'What To Do If Your Dog Runs Away', description: 'A step-by-step action guide for the first hour and beyond.', href: ROUTES.dogRanAwaySafety, color: 'gear' },
 ];
@@ -92,7 +98,9 @@ const latestGuides = [
   { title: 'Cooling Mats', description: 'Compare pressure-activated and water-based cooling mats.', href: ROUTES.coolingMats },
   { title: 'Cooling Vests', description: 'Evaporative cooling vests for active outdoor dogs.', href: ROUTES.coolingVests },
   { title: 'Anxiety Vest Alternatives', description: 'When to choose wraps, chews, lick mats, or snuffle mats instead.', href: ROUTES.calmingAlternatives },
+  { title: 'How to Crate Train Your Dog', description: 'Crate training for puppies, anxious dogs, and travel routines.', href: ROUTES.calmingCrateGuide },
   { title: "Rhys's Road Trip Chill Kit", description: 'Cooling and calming picks for long drives with dogs.', href: ROUTES.roadTrip },
+  { title: 'Travel Crates for Road Trips', description: 'Hard-sided and soft folding crates for dogs who travel by car.', href: ROUTES.comfortTravelCrates },
   { title: 'The Day Rhys Ran Off on Cerro San Luis Obispo', description: 'What a foggy summit and a 30-minute search taught us about GPS trackers.', href: ROUTES.rhysRanAway },
   { title: 'What To Do If Your Dog Runs Away', description: 'A step-by-step action guide for the first hour and beyond.', href: ROUTES.dogRanAwaySafety },
 ];
@@ -134,7 +142,14 @@ const latestGuides = [
             data-link-position="homepage-featured-articles"
           >
             <div class="article-img-wrap">
-              <img src={article.image} alt="" class="article-img" loading="lazy" width="400" height="210" />
+              <Image
+                src={article.image}
+                alt=""
+                class="article-img"
+                width={400}
+                height={210}
+                loading="lazy"
+              />
             </div>
             <div class="article-body">
               <span class={`article-label article-label--${article.color}`}>{article.label}</span>

@@ -15,12 +15,8 @@
 }
 
 .prose a {
-  color: var(--color-primary);
+  color: var(--color-link);
   font-weight: var(--weight-semibold);
-  text-decoration: none;
-}
-
-.prose a:hover {
   text-decoration: underline;
 }
 

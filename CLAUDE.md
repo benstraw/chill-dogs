@@ -42,6 +42,7 @@ This site is a **modular conversion system** governed by `docs/web-systems-adven
 - Every new page must have one declared page type before implementation.
 - If two or more pages share structure, use one reusable composer/module plus config inputs instead of duplicating page scaffolding.
 - Keep page-level differences in centralized data/config objects (copy, category keys, CTA targets, FAQ sets, section toggles).
+- When a shared product appears on multiple converter pages, assume copy edits should update the canonical product data unless the instruction clearly says the change is page-specific. Use page-level presentation overrides only when the request explicitly limits the change to one page or context.
 - Avoid hardcoded internal route strings in page bodies when centralized route constants exist.
 - Reuse existing modules first; introduce new modules only when no existing module can satisfy page goals.
 
@@ -123,6 +124,17 @@ Amazon Associates Program Policies (operating agreement): <https://affiliate-pro
 ### Images
 
 All local images **must** use the `<Image>` component from `astro:assets` — never raw `<img>` tags. Astro optimizes local images at build time (format conversion, compression, responsive sizing). Use raw `<img>` only for external URLs (e.g. Amazon CDN) that cannot be optimized at build time.
+
+#### Watermarking (original photos only — NOT Amazon product images)
+
+All original site photography **must** be watermarked before use. The pipeline:
+
+1. **Add source photos** to `src/images/<subfolder>/` (e.g. `src/images/rhys-road-trip/`).
+2. **Run the build** (or `node src/scripts/watermark-images.mjs` directly). The script finds every `.jpg`/`.png` under `src/images/`, skips `src/images/watermarked/`, and writes watermarked versions to `src/images/watermarked/<subfolder>/` with the same filename. It auto-corrects EXIF rotation, stamps the Chill-Dogs logo at 10% of image width, 70% opacity, bottom-right corner with 20px padding.
+3. **Import in MDX/Astro from the watermarked path**: `src/images/watermarked/<subfolder>/filename.jpg` — never from the unwatermarked source path.
+4. The watermark asset lives at `public/images/chill-dogs-watermark.png`.
+
+This rule applies to all personal/original photography. Amazon CDN product images are external URLs and are never watermarked.
 
 ### Path Aliases
 
