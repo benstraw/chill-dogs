@@ -11,14 +11,15 @@ import Footer from '@components/Footer.astro';
 import Analytics from '@components/Analytics.astro';
 import Pinterest from '@components/Pinterest.astro';
 import SpeedInsights from '@vercel/speed-insights/astro';
-import { resolveAutoOgImagePath } from '@utils/og';
+import type { ImageMetadata } from 'astro';
+import { resolveAutoOgImagePath, resolveProvidedOgImagePath } from '@utils/og';
 import { buildBreadcrumbSchema } from '@utils/breadcrumbs';
 
 interface Props {
   title: string;
   description?: string;
   ogTitle?: string;
-  ogImage?: string;
+  ogImage?: string | ImageMetadata;
   canonicalUrl?: string;
   noindex?: boolean;
   navAccent?: string;
@@ -40,7 +41,10 @@ const siteTitle = title === 'Home'
   ? 'Chill-Dogs — Cooling & Calming Products for Dogs'
   : `${title} | Chill-Dogs`;
 const autoOgImage = resolveAutoOgImagePath({ pathname: Astro.url.pathname, noindex });
-const resolvedOgImage = new URL(ogImage || autoOgImage || '/og-default.jpg', Astro.site).href;
+const resolvedOgImage = new URL(
+  resolveProvidedOgImagePath(ogImage) || autoOgImage || '/og-default.jpg',
+  Astro.site
+).href;
 const resolvedCanonical = canonicalUrl || Astro.url.href;
 const isStaging = import.meta.env.VERCEL_ENV === 'preview' || import.meta.env.VERCEL_ENV === 'development';
 const breadcrumbSchema = !noindex && !isStaging && Astro.site

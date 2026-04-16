@@ -139,8 +139,9 @@ This runs automatically via the `prebuild` script before `astro build`.
 
 ### Default behavior
 
-- Every indexable route gets an OG PNG at `/og/<route-slug>.png`.
-- `og:image` and `twitter:image` are auto-resolved from the current pathname.
+- Every indexable route gets a generated OG JPEG at `/og/<route-slug>.jpg`.
+- After build, pages that render images in `<main>` automatically set `og:image` and `twitter:image` to the first on-page image.
+- If no image is rendered in `<main>`, metadata falls back to the generated route OG image.
 - Routes with `noindex`, `/v/` experiment variants, and `404` are excluded from auto OG and fall back to `/og-default.jpg`.
 
 ### Frontmatter overrides (posts collection)
@@ -157,7 +158,7 @@ ogImage: "/og/my-manual-image.jpg" # explicit override, bypasses auto route imag
 Override priority:
 
 1. `ogImage` (explicit image path)
-2. Auto-generated route image (`/og/<route-slug>.png`) when eligible
+2. Auto-generated route image (`/og/<route-slug>.jpg`) when eligible
 3. `/og-default.jpg` fallback
 
 Text priority:
