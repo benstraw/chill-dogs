@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "astro dev",
     "prebuild": "node src/scripts/watermark-images.mjs && node src/scripts/generate-og-images.mjs",
-    "build": "astro build && node scripts/apply-first-page-image-og.mjs && node scripts/indexnow-submit.mjs",
+    "build": "astro build && node scripts/apply-first-page-image-og.mjs && node scripts/apply-content-sitemap-share-preview.mjs && node scripts/indexnow-submit.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "test": "vitest run",

@@ -139,6 +139,39 @@ describe('site smoke tests', () => {
     expect(coolingOg.length).toBeGreaterThan(1024);
   });
 
+  it('renders the content sitemap with share preview metadata', () => {
+    const sitemapDoc = readBuiltPage(path.join('content-sitemap', 'index.html'));
+
+    const contactRow = sitemapDoc.querySelector('[data-share-preview-row][data-href="/contact/"]');
+    const roadTripRow = sitemapDoc.querySelector('[data-share-preview-row][data-href="/travel/dog-road-trip-gear/"]');
+    const termsRow = sitemapDoc.querySelector('[data-share-preview-row][data-href="/terms/"]');
+
+    expect(contactRow?.querySelector('[data-share-title]')?.textContent)
+      .toContain('Contact Chill-Dogs | Questions & Feedback Welcome');
+    expect(contactRow?.querySelector('[data-share-description]')?.textContent)
+      .toContain('Have a question, feedback, or a partnership inquiry?');
+    expect(contactRow?.querySelector('[data-share-image]')?.getAttribute('src'))
+      .toContain('/og/contact.jpg');
+
+    expect(roadTripRow?.querySelector('[data-share-title]')?.textContent)
+      .toContain('Dog Road Trip Gear | Cooling & Calming Essentials');
+    expect(roadTripRow?.querySelector('[data-share-description]')?.textContent)
+      .toContain('Dog road trip gear tested on a 6,000-mile cross-country drive');
+    expect(roadTripRow?.querySelector('[data-share-image]')?.getAttribute('src'))
+      .toContain('/_assets/20250629_131343');
+
+    const rhysRow = sitemapDoc.querySelector('[data-share-preview-row][data-href="/travel/rhys-ran-away-cerro-san-luis-obispo/"]');
+    expect(rhysRow?.querySelector('[data-share-title]')?.textContent)
+      .toContain('The Day Rhys Ran Off: What We Learned About Dog Tracking');
+    expect(rhysRow?.querySelector('[data-share-image]')?.getAttribute('src'))
+      .toContain('/_assets/bishop-peak-expert-trail-marker');
+
+    expect(termsRow?.querySelector('[data-share-title]')?.textContent)
+      .toContain('Terms of Use | Chill-Dogs');
+    expect(termsRow?.querySelector('[data-share-image]')?.getAttribute('src'))
+      .toContain('/og-default.jpg');
+  });
+
   it('publishes homepage featured article images', () => {
     const homeDoc = readBuiltPage('index.html');
     const featuredImages = Array.from(

@@ -195,6 +195,7 @@ site_system:
       metric: "No conversion obstruction"
       routes:
         - "/admin/products/"
+        - "/content-sitemap/"
         - "/about/"
         - "/contact/"
         - "/privacy-policy/"
@@ -202,7 +203,7 @@ site_system:
         - "/affiliate-disclosure/"
         - "/subscribe/thanks/"
         - "/subscribe/confirmed/"
-      notes: "/admin/products/ is the canonical product inventory review page. Every product in any product data file must flow into this page through src/data/product-catalog.ts; do not hardcode product rows in the admin route."
+      notes: "/admin/products/ is the canonical product inventory review page. Every product in any product data file must flow into this page through src/data/product-catalog.ts; do not hardcode product rows in the admin route. /content-sitemap/ is a hidden editor page that previews each listed route with final built share metadata, including post-build OG image rewrites."
 
   modules:
     workhorse:
