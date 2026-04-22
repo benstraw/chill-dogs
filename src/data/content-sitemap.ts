@@ -148,6 +148,12 @@ export const staticSitemapSections: SitemapSection[] = [
         href: ROUTES.coolingToys,
         pageType: 'converter',
       }),
+      createSitemapPage({
+        baseTitle: categoryMeta['hydration'].title,
+        description: categoryMeta['hydration'].description,
+        href: ROUTES.coolingHydration,
+        pageType: 'converter',
+      }),
     ],
   },
   {
