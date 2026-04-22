@@ -92,6 +92,10 @@ Repository guidance for coding agents working in `/Volumes/wanderer/dev/solo/chi
 - Target: keep statement coverage ≥ 90% for `src/utils/**` and `src/scripts/**`.
 - The `astro:content` virtual module is stubbed in `src/__mocks__/astro-content.ts` so helpers that call `getCollection` can be tested without the Astro build context.
 
+## Git & GitHub Rules
+
+- **Never merge, close, or squash a pull request without explicit confirmation.** Phrases like "push the PR up", "put it up for review", or "send it up" mean push the branch and open/update the PR — NOT merge it. Only run `gh pr merge` when the user says exactly that.
+
 ## Workflow
 
 - Read [CLAUDE.md](/Volumes/wanderer/dev/solo/chill-dogs/CLAUDE.md) when repo-specific product, content, or conversion rules matter.

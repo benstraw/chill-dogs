@@ -12,6 +12,10 @@ bun run check:asins          # Check all product ASINs are still live on Amazon
 bun run check:asins -- --quiet  # Same, issues only
 ```
 
+## Git & GitHub Rules
+
+- **Never merge, close, or squash a pull request without explicit confirmation.** Phrases like "push the PR up", "put it up for review", or "send it up" mean push the branch and open/update the PR — NOT merge it. Only run `gh pr merge` when the user says exactly that.
+
 ## Source Of Truth
 
 - `docs/system-definition.yaml` defines this project as a modular conversion system.
