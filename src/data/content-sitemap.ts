@@ -254,6 +254,12 @@ export const staticSitemapSections: SitemapSection[] = [
         pageType: 'converter',
       }),
       createSitemapPage({
+        baseTitle: relaxationConverterPages['best-airline-approved-dog-carriers'].title,
+        description: relaxationConverterPages['best-airline-approved-dog-carriers'].description,
+        href: ROUTES.comfortAirlineCarriers,
+        pageType: 'converter',
+      }),
+      createSitemapPage({
         baseTitle: relaxationConverterPages['best-furniture-dog-crates'].title,
         description: relaxationConverterPages['best-furniture-dog-crates'].description,
         href: ROUTES.comfortFurnitureCrates,
