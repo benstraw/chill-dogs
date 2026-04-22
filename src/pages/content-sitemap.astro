@@ -1,105 +1,22 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
-import { categoryMeta } from '@data/cooling-products';
-import { ROUTES } from '@data/routes';
 import { getCollection } from 'astro:content';
-
-interface SitemapPage {
-  title: string;
-  href: string;
-  pageType: 'converter' | 'collector' | 'attractor' | 'informer';
-  collectorSubtype?: 'section' | 'article';
-}
-
-interface SitemapSection {
-  title: string;
-  description: string;
-  pages: SitemapPage[];
-}
+import { createSitemapPage, staticSitemapSections, type SitemapSection } from '@data/content-sitemap';
 
 const articleEntries = await getCollection('articles');
-const articlePages: SitemapPage[] = articleEntries
+const articlePages = articleEntries
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .map((e) => ({
-    title: e.data.title,
-    href: e.data.canonicalPath,
-    pageType: 'collector' as const,
-    collectorSubtype: 'article' as const,
-  }));
-
-// Keep this list explicit so editors can review the current hand-authored routes in one place.
-const staticSections: SitemapSection[] = [
-  {
-    title: 'Entry Points',
-    description: 'The attractor and collector sections that absorb traffic and route it into conversion paths.',
-    pages: [
-      { title: 'Home Page', href: '/', pageType: 'attractor' },
-      { title: 'Cooling Relief', href: '/cooling/', pageType: 'collector', collectorSubtype: 'section' },
-      { title: 'Calm & Comfort', href: '/calming/', pageType: 'collector', collectorSubtype: 'section' },
-      { title: 'Comfort & Rest', href: '/comforting/', pageType: 'collector', collectorSubtype: 'section' },
-    ],
-  },
-  {
-    title: 'Cooling Converters',
-    description: 'Commercial product pages. Each page has one job: drive an affiliate outbound click.',
-    pages: [
-      { title: '10 Best Cooling Products for Dogs (2026)', href: '/cooling/best-cooling-products-for-dogs/', pageType: 'converter' },
-      { title: categoryMeta['car-cooling'].title, href: '/cooling/car-cooling-for-dogs/', pageType: 'converter' },
-      { title: categoryMeta['cooling-mats'].title, href: '/cooling/cooling-mats/', pageType: 'converter' },
-      { title: categoryMeta['cooling-bandanas'].title, href: '/cooling/cooling-bandanas/', pageType: 'converter' },
-      { title: categoryMeta['cooling-vests'].title, href: '/cooling/cooling-vests/', pageType: 'converter' },
-      { title: categoryMeta['freezable-dog-toys'].title, href: '/cooling/freezable-dog-toys/', pageType: 'converter' },
-    ],
-  },
-  {
-    title: 'Calming Converters',
-    description: 'Commercial product pages for anxiety and calming intent.',
-    pages: [
-      { title: 'Best Calming Products for Anxious Dogs', href: '/calming/best-calming-products-for-anxious-dogs/', pageType: 'converter' },
-      { title: 'Best ThunderShirt Alternatives for Dogs', href: '/calming/best-thundershirt-alternatives/', pageType: 'converter' },
-      { title: 'Best Calming Products for Car Anxiety in Dogs', href: '/calming/car-anxiety-for-dogs/', pageType: 'converter' },
-    ],
-  },
-  {
-    title: 'Tracking & Safety',
-    description: 'GPS tracker converters and safety collectors — route lost-dog and tracking intent to affiliate product pages.',
-    pages: [
-      { title: 'Best Dog GPS Trackers', href: '/gear/best-dog-gps-trackers/', pageType: 'converter' },
-      { title: 'Fi Dog Collar Review', href: '/gear/fi-dog-collar-review/', pageType: 'converter' },
-      { title: 'Garmin Dog Tracking Collars', href: '/gear/garmin-dog-tracking-collars/', pageType: 'collector', collectorSubtype: 'article' },
-      { title: 'AirTag for Dogs', href: '/gear/airtag-for-dogs/', pageType: 'collector', collectorSubtype: 'article' },
-    ],
-  },
-  {
-    title: 'Comfort',
-    description: 'Rest, Recovery, Relaxation pillar — collector path, dog bed converter pages, crate converter pages, and sleep guides.',
-    pages: [
-      { title: 'Best Calming Dog Beds', href: '/comforting/best-calming-dog-beds/', pageType: 'converter' },
-      { title: 'Best Orthopedic Dog Beds', href: '/comforting/best-orthopedic-dog-beds/', pageType: 'converter' },
-      { title: 'Best Puppy Crates', href: '/comforting/best-puppy-crates/', pageType: 'converter' },
-      { title: 'Best Dog Crates for Anxiety', href: '/comforting/best-anxiety-dog-crates/', pageType: 'converter' },
-      { title: 'Best Travel Crates for Road Trips', href: '/comforting/best-travel-crates-for-road-trips/', pageType: 'converter' },
-      { title: 'Best Airline Crates for Flying With Your Dog', href: '/comforting/best-airline-crates-for-flying-with-your-dog/', pageType: 'converter' },
-      { title: 'Best Airline-Approved Soft-Sided Dog Carriers', href: '/comforting/best-airline-approved-dog-carriers/', pageType: 'converter' },
-      { title: 'Best Furniture Dog Crates', href: '/comforting/best-furniture-dog-crates/', pageType: 'converter' },
-      { title: 'Best Heavy-Duty Dog Crates', href: '/comforting/best-heavy-duty-dog-crates/', pageType: 'converter' },
-    ],
-  },
-  {
-    title: 'Admin & Legal',
-    description: 'Informer pages — compliance, trust, contact, and product inventory review. New products must flow into Product Catalog via data files, not hardcoded admin rows.',
-    pages: [
-      { title: 'Product Catalog', href: '/admin/products/', pageType: 'informer' },
-      { title: 'About', href: '/about/', pageType: 'informer' },
-      { title: 'Contact', href: '/contact/', pageType: 'informer' },
-      { title: 'Affiliate Disclosure', href: '/affiliate-disclosure/', pageType: 'informer' },
-      { title: 'Privacy Policy', href: '/privacy-policy/', pageType: 'informer' },
-      { title: 'Subscribe — Thanks', href: ROUTES.subscribeThanks, pageType: 'informer' },
-      { title: 'Subscribe — Confirmed', href: ROUTES.subscribeConfirmed, pageType: 'informer' },
-      { title: 'Terms of Use', href: '/terms/', pageType: 'informer' },
-    ],
-  },
-];
+  .map((entry) =>
+    createSitemapPage({
+      baseTitle: entry.data.title,
+      ogTitle: entry.data.ogTitle,
+      description: entry.data.description,
+      ogImage: entry.data.ogImage,
+      href: entry.data.canonicalPath,
+      pageType: 'collector',
+      collectorSubtype: 'article',
+    })
+  );
 
 const articlesSection: SitemapSection = {
   title: 'Articles (from collection)',
@@ -107,7 +24,7 @@ const articlesSection: SitemapSection = {
   pages: articlePages,
 };
 
-const allSections = [staticSections[0], articlesSection, ...staticSections.slice(1)];
+const allSections = [staticSitemapSections[0], articlesSection, ...staticSitemapSections.slice(1)];
 const totalPages = allSections.reduce((count, section) => count + section.pages.length, 0);
 ---
 
@@ -136,9 +53,19 @@ const totalPages = allSections.reduce((count, section) => count + section.pages.
 
           <ul class="page-list">
             {section.pages.map((page) => (
-              <li class="page-row">
+              <li class="page-row" data-share-preview-row data-href={page.href}>
+                <a href={page.href} class="page-thumb-link" aria-hidden="true" tabindex="-1">
+                  <img
+                    src={page.preview.image}
+                    alt=""
+                    loading="lazy"
+                    class="page-thumb"
+                    data-share-image
+                  />
+                </a>
                 <div class="page-copy">
-                  <a href={page.href}>{page.title}</a>
+                  <a href={page.href} data-share-title>{page.preview.title}</a>
+                  <p class="page-preview-description" data-share-description>{page.preview.description}</p>
                   <code>{page.href}</code>
                 </div>
                 <span class={`page-type page-type--${page.pageType}${page.collectorSubtype ? `-${page.collectorSubtype}` : ''}`}>
@@ -223,7 +150,6 @@ const totalPages = allSections.reduce((count, section) => count + section.pages.
   .page-row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: var(--space-md);
     padding-top: var(--space-md);
     border-top: 1px solid var(--color-border);
@@ -234,9 +160,27 @@ const totalPages = allSections.reduce((count, section) => count + section.pages.
     border-top: 0;
   }
 
+  .page-thumb-link {
+    flex-shrink: 0;
+    width: 10rem;
+    text-decoration: none;
+  }
+
+  .page-thumb {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1.91 / 1;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    background: linear-gradient(180deg, rgba(135, 183, 199, 0.14), rgba(245, 240, 232, 0.9));
+  }
+
   .page-copy {
     display: grid;
     gap: 0.25rem;
+    min-width: 0;
+    flex: 1 1 auto;
   }
 
   .page-copy a {
@@ -248,6 +192,12 @@ const totalPages = allSections.reduce((count, section) => count + section.pages.
   .page-copy a:hover,
   .page-copy a:focus-visible {
     text-decoration: underline;
+  }
+
+  .page-preview-description {
+    margin: 0;
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
   }
 
   code {
@@ -295,10 +245,14 @@ const totalPages = allSections.reduce((count, section) => count + section.pages.
     color: #3f4a56;
   }
 
-  @media (max-width: 720px) {
+  @media (max-width: 800px) {
     .page-row {
       align-items: flex-start;
       flex-direction: column;
+    }
+
+    .page-thumb-link {
+      width: min(14rem, 100%);
     }
   }
 </style>
