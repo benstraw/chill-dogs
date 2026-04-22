@@ -299,6 +299,23 @@ export const coolingProducts: CoolingProduct[] = [
   // ── Hydration ─────────────────────────────────────────────────────────
 
   {
+    id: 'ohmo-spill-proof-dog-bowl',
+    asin: 'B0C9TX38RZ',
+    name: 'OHMO Spill Proof Collapsible Dog Water Bowl',
+    category: 'hydration',
+    amazonUrl: 'https://www.amazon.com/dp/B0C9TX38RZ/?tag=chill-dogs-20',
+    bullets: [
+      'Raised inner lip catches sloshing water and returns it to the bowl — less mess in cars and on bumpy trails',
+      'Collapses flat for packing but holds its shape fully open under a dog\'s muzzle',
+      '24 oz capacity handles most medium to large dogs between water stops',
+    ],
+    bestFor: 'Car travel and moving situations where a standard bowl tips or sloshes',
+    coolingMethod: 'Spill-resistant collapsible bowl; 24 oz capacity',
+    sizingNote: '24 oz; single size',
+    rhysApproved: true,
+    image: { src: 'https://m.media-amazon.com/images/I/61rhiId91LL._SL500_.jpg', alt: 'OHMO Spill Proof Collapsible Dog Water Bowl' },
+  },
+  {
     id: 'springer-flip-dog-water-bottle',
     asin: 'B0C15FWR7J',
     name: 'Springer Flip Portable Dog Water Bottle',
@@ -393,23 +410,6 @@ export const coolingProducts: CoolingProduct[] = [
     coolingMethod: 'Collapsible flexible plastic; rolls flat when empty',
     sizingNote: '34 oz; also available in smaller sizes',
     image: { src: 'https://m.media-amazon.com/images/I/51ufvu1A7+L._SL500_.jpg', alt: 'Vapur Collapsible Water Bottle' },
-  },
-  {
-    id: 'ohmo-spill-proof-dog-bowl',
-    asin: 'B0C9TX38RZ',
-    name: 'OHMO Spill Proof Collapsible Dog Water Bowl',
-    category: 'hydration',
-    amazonUrl: 'https://www.amazon.com/dp/B0C9TX38RZ/?tag=chill-dogs-20',
-    bullets: [
-      'Raised inner lip catches sloshing water and returns it to the bowl — less mess in cars and on bumpy trails',
-      'Collapses flat for packing but holds its shape fully open under a dog\'s muzzle',
-      '24 oz capacity handles most medium to large dogs between water stops',
-    ],
-    bestFor: 'Car travel and moving situations where a standard bowl tips or sloshes',
-    coolingMethod: 'Spill-resistant collapsible bowl; 24 oz capacity',
-    sizingNote: '24 oz; single size',
-    rhysApproved: true,
-    image: { src: 'https://m.media-amazon.com/images/I/61rhiId91LL._SL500_.jpg', alt: 'OHMO Spill Proof Collapsible Dog Water Bowl' },
   },
   {
     id: 'kurgo-zippy-collapsible-bowl',
