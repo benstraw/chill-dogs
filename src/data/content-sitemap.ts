@@ -260,6 +260,12 @@ export const staticSitemapSections: SitemapSection[] = [
         pageType: 'converter',
       }),
       createSitemapPage({
+        baseTitle: relaxationConverterPages['best-dog-travel-bags-for-flying'].title,
+        description: relaxationConverterPages['best-dog-travel-bags-for-flying'].description,
+        href: ROUTES.comfortTravelBags,
+        pageType: 'converter',
+      }),
+      createSitemapPage({
         baseTitle: relaxationConverterPages['best-furniture-dog-crates'].title,
         description: relaxationConverterPages['best-furniture-dog-crates'].description,
         href: ROUTES.comfortFurnitureCrates,
