@@ -152,13 +152,16 @@ describe('relaxation converter page config', () => {
       'amazon-basics-furniture-style-crate',
       'dwanton-dog-crate-furniture',
       'rehomerance-dog-crate-furniture',
+      'feandrea-furniture-crate',
       'internets-best-decorative-kennel',
       'lyromix-dog-crate-furniture',
+      'ironck-small-furniture-crate',
       'easycom-foldable-dog-crate-furniture',
       'rotating-bowl-furniture-crate',
       'ironck-extra-large-dog-crate-furniture',
       'bifanuo-dog-crate-furniture',
       'charging-station-furniture-crate',
+      'saksun-furniture-crate',
       'oranland-heavy-duty-furniture-crate',
     ]);
   });

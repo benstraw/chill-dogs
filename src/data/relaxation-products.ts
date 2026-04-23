@@ -732,6 +732,60 @@ export const relaxationProducts: RelaxationProduct[] = [
     image: { src: 'https://m.media-amazon.com/images/I/81VFBYh3TmL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Oranland Heavy Duty Dog Crate Furniture' },
   },
   {
+    id: 'ironck-small-furniture-crate',
+    asin: 'B0DNDT7Z55',
+    name: 'IRONCK Furniture Dog Crate with Flip-Top Drawer',
+    category: 'crates',
+    amazonUrl: 'https://www.amazon.com/dp/B0DNDT7Z55/?tag=chill-dogs-20',
+    bullets: [
+      'Flip-top drawer adds a functional surface for keys, remotes, or a lamp above the kennel',
+      'Built-in charging station makes it a practical nightstand or side table for small-dog owners',
+      'Steel-tube and wood construction in a rustic brown finish that reads as indoor furniture',
+    ],
+    bestFor: 'Small-dog owners who want a furniture crate that earns its place as a real functional side table',
+    whyItWorks:
+      'The flip-top drawer and charging station make it genuinely useful as furniture, not just decorative — which matters when the crate lives in a bedroom or living room full-time',
+    considerIf:
+      'Your dog is small, the crate will sit in a visible room, and you want the surface to actually be usable as a nightstand or side table',
+    image: { src: 'https://m.media-amazon.com/images/I/81RbcLjaKsL._SL500_.jpg', alt: 'IRONCK Furniture Dog Crate with Flip-Top Drawer' },
+  },
+  {
+    id: 'feandrea-furniture-crate',
+    asin: 'B0GJCYKK3X',
+    name: 'Feandrea Modern Furniture Dog Crate with Charging Station',
+    category: 'crates',
+    amazonUrl: 'https://www.amazon.com/dp/B0GJCYKK3X/?tag=chill-dogs-20',
+    bullets: [
+      'Natural walnut finish and flip-up hidden acrylic door give it a cleaner, more modern furniture look than most rustic-style crates',
+      'Built-in charging station makes the top surface usable as a side table with power access',
+      'Sized for small and medium dogs up to 45 lb with a side-table footprint that fits most rooms',
+    ],
+    bestFor: 'Owners who want a modern, polished furniture crate rather than a rustic wood look — and will actually use the charging station',
+    whyItWorks:
+      'The walnut finish and hidden acrylic door make it look more like intentional furniture than a crate in disguise, which matters for visible bedroom or living-room placement',
+    considerIf:
+      'Your dog is under 45 lb, your home leans toward modern or Scandinavian styling, and the charging station would genuinely get daily use',
+    image: { src: 'https://m.media-amazon.com/images/I/816kOPz+6rL._SL500_.jpg', alt: 'Feandrea Modern Furniture Dog Crate with Charging Station' },
+  },
+  {
+    id: 'saksun-furniture-crate',
+    asin: 'B0FYD4WQJG',
+    name: 'SAKSUN Furniture Dog Crate with Sliding Barn Door',
+    category: 'crates',
+    amazonUrl: 'https://www.amazon.com/dp/B0FYD4WQJG/?tag=chill-dogs-20',
+    bullets: [
+      'Sliding barn door and multi-point locking system add more closure security than most standard decorative crate furniture',
+      'Available in 32", 39", and 44" to give medium dogs more sizing options within the furniture-crate format',
+      '360-degree rotating feed rack and two-door layout keep daily access practical in different room setups',
+    ],
+    bestFor: 'Owners who want furniture styling with more closure security than lightweight decorative crates typically provide',
+    whyItWorks:
+      'The multi-lock barn door makes it a more credible option for dogs who have pushed past simpler latch mechanisms — without requiring a full switch to a utility-style heavy-duty crate',
+    considerIf:
+      'You like the furniture look but your dog has tested the latches on lighter crates, and you still want something that fits a visible room',
+    image: { src: 'https://m.media-amazon.com/images/I/81NGP7WR7dL._SL500_.jpg', alt: 'SAKSUN Furniture Dog Crate with Sliding Barn Door' },
+  },
+  {
     id: 'oranland-heavy-duty-dog-crate',
     asin: 'B0DCFRJTP4',
     name: 'Oranland Heavy Duty Indestructible Dog Crate',
