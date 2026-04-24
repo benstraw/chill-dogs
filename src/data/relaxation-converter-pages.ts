@@ -1388,6 +1388,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
         { label: 'Heavy-Duty Crates', href: ROUTES.comfortHeavyDutyCrates },
         { label: 'Puppy Crates', href: ROUTES.comfortPuppyCrates },
+        { label: 'Double-Door Furniture Crates', href: ROUTES.comfortDoubleFurnitureCrates },
       ],
     },
     itemListSchema: {
@@ -1904,6 +1905,133 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         'siivton-4way-expandable-carrier',
         'henkelion-airline-carrier',
         'vceoa-soft-sided-carrier',
+      ],
+    },
+  },
+
+  'best-double-furniture-dog-crates': {
+    slug: 'best-double-furniture-dog-crates',
+    title: 'Best Double-Door Furniture Dog Crates',
+    description:
+      'Compare furniture dog crates with double-door access or dual-compartment designs — for two-dog homes or large dogs who need more entry options.',
+    pageSlug: 'best-double-furniture-dog-crates',
+    hero: {
+      title: 'Best Double-Door Furniture Dog Crates',
+      subtitle:
+        'These furniture crates either include two separate crated compartments for two dogs, or double-door access that makes daily use easier for one large dog. The right pick depends on whether you need to house two dogs or just want better access to one.',
+      disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
+      primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
+      secondaryCta: { label: 'All Furniture Crates', href: ROUTES.comfortFurnitureCrates },
+    },
+    toc: [
+      { label: 'Quick Picks', anchor: 'quick-picks' },
+      { label: 'What "Double" Means Here', anchor: 'what-double-means' },
+      { label: 'All Picks', anchor: 'double-furniture-crates' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    blocks: [
+      {
+        kind: 'quick_picks',
+        id: 'quick-picks',
+        heading: 'Quick Picks',
+        intro:
+          'Three picks covering the main use cases — a true two-dog crate with compartments, a large single crate with mobility and privacy features, and a compact wire end-table for smaller dogs.',
+        items: [
+          {
+            label: 'Best for Two Dogs',
+            title: 'Rovibek Double Dog Crate Furniture',
+            description:
+              'An 86-inch furniture crate designed specifically to house two dogs in separate compartments, with a removable divider that converts to one large shared space.',
+            productId: 'rovibek-double-dog-crate-furniture',
+            position: 'quick-picks-1',
+          },
+          {
+            label: 'Best with Mobility and Privacy Features',
+            title: 'HugCoz Double-Door Dog Crate Furniture',
+            description:
+              'A large single furniture crate with lockable caster wheels, a privacy curtain, and a space-saving upward-opening door — practical features most decorative crates skip.',
+            productId: 'hugcoz-double-furniture-dog-crate',
+            position: 'quick-picks-2',
+          },
+          {
+            label: 'Best Compact Wire End-Table',
+            title: 'PawHut Double-Door Wire Furniture Dog Crate',
+            description:
+              'A wire mesh end-table crate for small and medium dogs — front and side door access at a lower price point than solid-panel wood furniture crates.',
+            productId: 'pawhut-furniture-dog-crate-double',
+            position: 'quick-picks-3',
+          },
+        ],
+      },
+      {
+        kind: 'prose',
+        id: 'what-double-means',
+        heading: 'What "Double" Means in Furniture Crates',
+        paragraphs: [
+          'The word "double" applies to two different furniture crate features that are easy to confuse when shopping.',
+          '<strong>Double compartment</strong> means the crate is large enough to house two dogs in separate sections — with a divider between them. The Rovibek on this page is that type. It is designed specifically for two-dog households and needs significant floor space (86 inches long).',
+          '<strong>Double door</strong> means the crate has two entry points — usually front and side, or a two-panel front design — for one dog. This makes it easier to reach bedding, guide the dog in from different angles, or position the crate in a corner without losing access. The HugCoz and PawHut on this page are that type.',
+          'If you only have one dog, a double-door single-compartment crate is the more practical fit. If you have two dogs, the Rovibek is built for that use case specifically.',
+        ],
+        alt: true,
+      },
+      {
+        kind: 'product_section',
+        id: 'double-furniture-crates',
+        heading: 'All Picks',
+        positionOffset: 0,
+        columns: 3,
+        intro:
+          'Three furniture crates covering multi-dog housing, large-dog mobility, and compact wire end-table formats for smaller dogs.',
+        productIds: [
+          'rovibek-double-dog-crate-furniture',
+          'hugcoz-double-furniture-dog-crate',
+          'pawhut-furniture-dog-crate-double',
+        ],
+      },
+    ],
+    faq: {
+      heading: 'Double Furniture Crate FAQ',
+      items: [
+        {
+          question: 'Can two dogs share the same furniture crate?',
+          answer:
+            'Yes, if the crate is designed for it. The Rovibek on this page is built as a dual-compartment crate with a removable divider — each dog gets their own section. Standard single-compartment furniture crates, even large ones, are not designed for two dogs to be crated separately at the same time.',
+        },
+        {
+          question: 'What does "double door" mean on a furniture crate?',
+          answer:
+            'It means the crate has two entry points — typically a front door and a side door, or two panels on the front. This makes it easier to position the crate in a corner, reach the interior from different angles, or guide a dog in from whichever side is more convenient. It has nothing to do with the number of dogs the crate can house.',
+        },
+        {
+          question: 'How much floor space does a double dog crate take up?',
+          answer:
+            'Dual-compartment crates are large pieces of furniture. The Rovibek measures 86 inches long — over seven feet. Make sure you have that floor length available before ordering. Single-crate furniture options with double doors are more compact, typically 38–46 inches wide.',
+        },
+        {
+          question: 'Are furniture crates suitable for two dogs who do not get along?',
+          answer:
+            'A divided crate keeps dogs physically separated, but it does not eliminate visual and audio contact. If your dogs have aggression issues, a divided furniture crate is not a substitute for proper separation. In those cases, fully separate crates in different rooms are a more appropriate setup.',
+        },
+      ],
+    },
+    disclosureShowSafety: false,
+    internalLinkStrip: {
+      heading: 'More Crate & Comfort Guides',
+      links: [
+        { label: 'All Furniture Crates', href: ROUTES.comfortFurnitureCrates },
+        { label: 'Heavy-Duty Crates', href: ROUTES.comfortHeavyDutyCrates },
+        { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
+        { label: 'Anxiety Crates', href: ROUTES.comfortAnxietyCrates },
+      ],
+    },
+    itemListSchema: {
+      name: 'Best Double-Door Furniture Dog Crates',
+      url: 'https://www.chill-dogs.com/comforting/best-double-furniture-dog-crates/',
+      productIds: [
+        'rovibek-double-dog-crate-furniture',
+        'hugcoz-double-furniture-dog-crate',
+        'pawhut-furniture-dog-crate-double',
       ],
     },
   },

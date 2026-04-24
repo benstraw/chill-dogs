@@ -786,6 +786,60 @@ export const relaxationProducts: RelaxationProduct[] = [
     image: { src: 'https://m.media-amazon.com/images/I/81NGP7WR7dL._SL500_.jpg', alt: 'SAKSUN Furniture Dog Crate with Sliding Barn Door' },
   },
   {
+    id: 'rovibek-double-dog-crate-furniture',
+    asin: 'B0D9JBY7X5',
+    name: 'Rovibek Double Dog Crate Furniture',
+    category: 'crates',
+    amazonUrl: 'https://www.amazon.com/dp/B0D9JBY7X5/?tag=chill-dogs-20',
+    bullets: [
+      '86-inch double-crate design fits two dogs up to 70 lbs each, with a removable divider that converts to one large open space',
+      'Engineered-wood build with iron reinforcement supports over 400 lbs on top, suitable for use as a TV stand or console table',
+      'Can be arranged in an L-shape corner configuration, side-by-side, or split into two separate crates depending on room layout',
+    ],
+    bestFor: 'Two-dog households that want a single furniture-style piece that keeps both dogs in their own crated space',
+    whyItWorks:
+      'The removable divider gives each dog their own separate section while the single footprint keeps the room organized — no two standalone crates taking up twice the floor space',
+    considerIf:
+      'You have two dogs that do fine in separate spaces and want to avoid two individual crates sitting side by side in the same room',
+    image: { src: 'https://m.media-amazon.com/images/I/81y29uEOExL._SL500_.jpg', alt: 'Rovibek Double Dog Crate Furniture' },
+  },
+  {
+    id: 'hugcoz-double-furniture-dog-crate',
+    asin: 'B0FQ56N8ZT',
+    name: 'HugCoz Double-Door Dog Crate Furniture',
+    category: 'crates',
+    amazonUrl: 'https://www.amazon.com/dp/B0FQ56N8ZT/?tag=chill-dogs-20',
+    bullets: [
+      'Lift-and-push front door opens upward rather than outward, saving floor space around the crate and reducing tripping risk',
+      'Four lockable caster wheels let you roll the crate between rooms for cleaning, repositioning, or following sunlight',
+      'Includes a removable blackout curtain that attaches or removes easily for privacy during naps or busy household moments',
+    ],
+    bestFor: 'Large-dog owners who want a furniture crate they can reposition across the house and close off for naptime privacy',
+    whyItWorks:
+      'Wheel mobility and the blackout curtain make daily crate management more practical — two features that most decorative wood-panel crates skip entirely',
+    considerIf:
+      'Your large dog rests well with downtime and you want a crate-table that can easily move from room to room without heavy lifting',
+    image: { src: 'https://m.media-amazon.com/images/I/81eV2cWZNWL._SL500_.jpg', alt: 'HugCoz Double-Door Dog Crate Furniture' },
+  },
+  {
+    id: 'pawhut-furniture-dog-crate-double',
+    asin: 'B09T92J9SB',
+    name: 'PawHut Double-Door Wire Furniture Dog Crate',
+    category: 'crates',
+    amazonUrl: 'https://www.amazon.com/dp/B09T92J9SB/?tag=chill-dogs-20',
+    bullets: [
+      'Wire mesh end-table design for small and medium dogs keeps the interior visible and well-ventilated compared to solid-panel wood crates',
+      'Front and side double-door layout makes it easier to direct a dog in or reach bedding without moving the whole crate',
+      'Compact end-table footprint keeps the scale realistic for smaller living rooms or bedrooms where a large crate-table would feel oversized',
+    ],
+    bestFor: 'Small or medium dog owners who want an end-table furniture crate with open wire visibility rather than a fully enclosed wood panel design',
+    whyItWorks:
+      'The wire end-table format sits at a lower price point than solid-panel wood furniture crates while still looking more intentional than a standard wire crate in a visible room',
+    considerIf:
+      'Your dog is small enough for an end-table crate and does better with the open-air feel of wire over the more enclosed environment of a solid-panel wood kennel',
+    image: { src: 'https://m.media-amazon.com/images/I/61O8jnv+AOL._SL500_.jpg', alt: 'PawHut Double-Door Wire Furniture Dog Crate' },
+  },
+  {
     id: 'oranland-heavy-duty-dog-crate',
     asin: 'B0DCFRJTP4',
     name: 'Oranland Heavy Duty Indestructible Dog Crate',
