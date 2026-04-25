@@ -162,6 +162,9 @@ describe('relaxation converter page config', () => {
       'bifanuo-dog-crate-furniture',
       'charging-station-furniture-crate',
       'saksun-furniture-crate',
+      'rovibek-double-dog-crate-furniture',
+      'hugcoz-double-furniture-dog-crate',
+      'pawhut-furniture-dog-crate-double',
       'oranland-heavy-duty-furniture-crate',
     ]);
   });
@@ -178,6 +181,9 @@ describe('relaxation converter page config', () => {
       'gardner-pet-heavy-duty-crate',
       'xxl-heavy-duty-dog-crate',
       'hiwokk-large-dog-crate',
+      'hzuaneri-furniture-dog-crate',
+      'rexwelten-furniture-dog-crate',
+      'petrova-furniture-dog-crate',
     ]);
   });
 

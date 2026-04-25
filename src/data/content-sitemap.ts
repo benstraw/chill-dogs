@@ -271,19 +271,6 @@ export const staticSitemapSections: SitemapSection[] = [
         href: ROUTES.comfortHeavyDutyCrates,
         pageType: 'converter',
       }),
-      createSitemapPage({
-        baseTitle: relaxationConverterPages['best-double-furniture-dog-crates'].title,
-        description: relaxationConverterPages['best-double-furniture-dog-crates'].description,
-        href: ROUTES.comfortDoubleFurnitureCrates,
-        pageType: 'converter',
-      }),
-      createSitemapPage({
-        baseTitle: relaxationConverterPages['best-heavy-duty-furniture-dog-crates-for-escape-artists'].title,
-        ogTitle: relaxationConverterPages['best-heavy-duty-furniture-dog-crates-for-escape-artists'].ogTitle,
-        description: relaxationConverterPages['best-heavy-duty-furniture-dog-crates-for-escape-artists'].description,
-        href: ROUTES.comfortHeavyDutyFurnitureCrates,
-        pageType: 'converter',
-      }),
     ],
   },
   {
