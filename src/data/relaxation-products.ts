@@ -786,6 +786,60 @@ export const relaxationProducts: RelaxationProduct[] = [
     image: { src: 'https://m.media-amazon.com/images/I/81NGP7WR7dL._SL500_.jpg', alt: 'SAKSUN Furniture Dog Crate with Sliding Barn Door' },
   },
   {
+    id: 'hzuaneri-furniture-dog-crate',
+    asin: 'B0D4HM56TR',
+    name: 'Hzuaneri Anti-Chew Furniture Dog Crate with Barn Door',
+    category: 'crates',
+    amazonUrl: 'https://www.amazon.com/dp/B0D4HM56TR/?tag=chill-dogs-20',
+    bullets: [
+      '0.4-inch steel tubes with double-welded joints form the cage structure, and the board edges are recessed so dogs cannot access them for chewing',
+      'Sliding barn door with a multi-lock closure addresses the single-latch failure mode common in lighter decorative furniture crates',
+      'Chipboard panels with wear-resistant surface and steel-tube framing support up to 220 lbs on top, giving it real table-surface utility',
+    ],
+    bestFor: 'Small to medium dogs up to 44 lbs that have pushed past basic single-latch mechanisms — the anti-chew edge treatment and double-welded steel address persistent but not extreme escape behavior',
+    whyItWorks:
+      'The recessed board edges remove the easiest chewing targets, and the multi-lock barn door addresses the sliding or pawing-open failure modes in standard decorative crate latches',
+    considerIf:
+      'Your small or medium dog works at latch edges or chews at crate openings, and you want a furniture-style option before stepping up to a heavier utility crate',
+    image: { src: 'https://m.media-amazon.com/images/I/810zxDD9MdL._SL500_.jpg', alt: 'Hzuaneri Anti-Chew Furniture Dog Crate with Barn Door' },
+  },
+  {
+    id: 'rexwelten-furniture-dog-crate',
+    asin: 'B0GJS5BV3Z',
+    name: 'REXWELTEN Heavy-Duty Enclosed Furniture Dog Crate',
+    category: 'crates',
+    amazonUrl: 'https://www.amazon.com/dp/B0GJS5BV3Z/?tag=chill-dogs-20',
+    bullets: [
+      'Enclosed panel design with 0.5-inch ventilation holes replaces open bar construction — no exposed bars for dogs to grip, bite, or use as lever points',
+      'High-quality steel and reinforced particleboard build with an upgraded double-door lock system designed to hold back dogs that push standard latches',
+      'Removable metal floor panel cleans more easily than wire floors and provides stable paw support for dogs that pace or shift weight while inside',
+    ],
+    bestFor: 'Medium to large dogs that target the bars themselves — the enclosed panel approach removes the primary gripping and chewing surface that persistent escape artists find on open-bar furniture crates',
+    whyItWorks:
+      'Switching from bar-grid to enclosed panel removes the most accessible chewing and gripping surfaces, which is what many persistent dogs find first on standard furniture crates',
+    considerIf:
+      'Your dog targets the bars or mesh rather than the door latch — the enclosed panel format changes what they can physically grab onto, rather than just adding more locks to the same vulnerable structure',
+    image: { src: 'https://m.media-amazon.com/images/I/71Hbp8TTNUL._SL500_.jpg', alt: 'REXWELTEN Heavy-Duty Enclosed Furniture Dog Crate' },
+  },
+  {
+    id: 'petrova-furniture-dog-crate',
+    asin: 'B0F9NXMGQM',
+    name: 'Petrova Heavy-Duty Furniture Dog Crate with Sliding Door',
+    category: 'crates',
+    amazonUrl: 'https://www.amazon.com/dp/B0F9NXMGQM/?tag=chill-dogs-20',
+    bullets: [
+      '0.4-inch thick steel bars on a sliding front door plus two hinged side doors — three total access points without sacrificing bar gauge',
+      'Sized at 46.5 inches for large-breed dogs while still functioning as a TV stand or end table with a stable wood base for daily use',
+      'Sliding front door eliminates the outward swing gap that hinged doors create — useful for corner or tight-wall placement where door swing is a problem',
+    ],
+    bestFor: 'Large dog owners who want strong steel bars, three access options, and a sliding front door that closes differently than a hinged design in a corner room placement',
+    whyItWorks:
+      'The sliding door mechanism has less swing-out gap and less torque leverage than a hinged door, which reduces the failure mode of dogs repeatedly nosing or pawing a swinging door open',
+    considerIf:
+      'You need a crate in a corner or against a wall, want a large-dog furniture crate with stronger steel bars rather than lightweight decorative framing, and still want it to read as furniture in a visible room',
+    image: { src: 'https://m.media-amazon.com/images/I/71RxdhVH0zL._SL500_.jpg', alt: 'Petrova Heavy-Duty Furniture Dog Crate with Sliding Door' },
+  },
+  {
     id: 'rovibek-double-dog-crate-furniture',
     asin: 'B0D9JBY7X5',
     name: 'Rovibek Double Dog Crate Furniture',

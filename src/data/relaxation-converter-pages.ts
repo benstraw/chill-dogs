@@ -95,6 +95,7 @@ export type RelaxationBlock =
 export interface RelaxationConverterPageConfig {
   slug: string;
   title: string;
+  ogTitle?: string;
   description: string;
   pageSlug: string;
   hero: HeroConfig;
@@ -1389,6 +1390,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         { label: 'Heavy-Duty Crates', href: ROUTES.comfortHeavyDutyCrates },
         { label: 'Puppy Crates', href: ROUTES.comfortPuppyCrates },
         { label: 'Double-Door Furniture Crates', href: ROUTES.comfortDoubleFurnitureCrates },
+        { label: 'Heavy-Duty Furniture Crates', href: ROUTES.comfortHeavyDutyFurnitureCrates },
       ],
     },
     itemListSchema: {
@@ -2032,6 +2034,177 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         'rovibek-double-dog-crate-furniture',
         'hugcoz-double-furniture-dog-crate',
         'pawhut-furniture-dog-crate-double',
+      ],
+    },
+  },
+
+  'best-heavy-duty-furniture-dog-crates-for-escape-artists': {
+    slug: 'best-heavy-duty-furniture-dog-crates-for-escape-artists',
+    title: 'Best Heavy-Duty Furniture Dog Crates for Escape Artists',
+    ogTitle: 'Best Heavy-Duty Furniture Dog Crates | Chill-Dogs',
+    description:
+      'Compare furniture dog crates with reinforced frames, stronger locks, and anti-chew builds for dogs that challenge standard crates.',
+    pageSlug: 'best-heavy-duty-furniture-dog-crates-for-escape-artists',
+    hero: {
+      title: 'Best Heavy-Duty Furniture Dog Crates for Escape Artists',
+      subtitle:
+        'These furniture crates are built with stronger frames, thicker bars, multi-lock doors, and anti-chew construction. They are for dogs that push, paw, or work at door latches — not for dogs with true severe escape behavior, but for the large middle ground between "restless" and "truly determined."',
+      disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
+      primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
+      secondaryCta: { label: 'All Furniture Crates', href: ROUTES.comfortFurnitureCrates },
+    },
+    toc: [
+      { label: 'Quick Picks', anchor: 'quick-picks' },
+      { label: 'What Makes a Furniture Crate More Escape-Conscious', anchor: 'what-makes-it-stronger' },
+      { label: 'All Picks', anchor: 'escape-artist-crates' },
+      { label: 'When a Furniture Crate May Not Be Enough', anchor: 'when-not-enough' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    blocks: [
+      {
+        kind: 'quick_picks',
+        id: 'quick-picks',
+        heading: 'Quick Picks',
+        intro:
+          'Five picks covering different failure modes — door-latch issues, bar-gripping behavior, chewed edges, and corner placement. No single crate handles every situation, so the right pick depends on how your dog actually tests the crate.',
+        items: [
+          {
+            label: 'Best for Dogs That Push Door Latches',
+            title: 'rehomerance Heavy Duty Dog Crate Furniture',
+            description:
+              'Steel-frame furniture crate with sliding latches on both front and side doors — a sturdier starting point than lighter decorative furniture options.',
+            productId: 'rehomerance-dog-crate-furniture',
+            position: 'quick-picks-1',
+          },
+          {
+            label: 'Best Multi-Lock Barn Door',
+            title: 'SAKSUN Furniture Dog Crate with Sliding Barn Door',
+            description:
+              'Multi-point locking system on a sliding barn door — addresses single-latch failure on standard decorative crates with a more secure closure mechanism.',
+            productId: 'saksun-furniture-crate',
+            position: 'quick-picks-2',
+          },
+          {
+            label: 'Best Anti-Chew for Small Dogs',
+            title: 'Hzuaneri Anti-Chew Furniture Dog Crate',
+            description:
+              'Recessed board edges and double-welded steel tubes aim to remove the easiest chewing targets on a standard bar-and-panel furniture crate.',
+            productId: 'hzuaneri-furniture-dog-crate',
+            position: 'quick-picks-3',
+          },
+          {
+            label: 'Best Enclosed Panel Approach',
+            title: 'REXWELTEN Heavy-Duty Enclosed Furniture Dog Crate',
+            description:
+              'Replaces open bar construction with enclosed panels and ventilation holes — removes the gripping and biting surface that open-bar crates expose.',
+            productId: 'rexwelten-furniture-dog-crate',
+            position: 'quick-picks-4',
+          },
+          {
+            label: 'Best Sliding Door for Large Dogs',
+            title: 'Petrova Furniture Dog Crate with Sliding Door',
+            description:
+              'Three access doors including a sliding front, 0.4-inch steel bars, and large-breed sizing — useful for corner placement where outward door swing is a problem.',
+            productId: 'petrova-furniture-dog-crate',
+            position: 'quick-picks-5',
+          },
+        ],
+      },
+      {
+        kind: 'prose',
+        id: 'what-makes-it-stronger',
+        heading: 'What Makes a Furniture Crate More Escape-Conscious',
+        paragraphs: [
+          'Most decorative furniture crates are built primarily around aesthetics. A heavier-duty furniture crate still looks like home furniture but changes the underlying construction in ways that matter for persistent dogs.',
+          '<strong>Bar gauge and frame construction:</strong> Thicker steel tubes and welded joints resist bending and prying better than thin decorative rod. Look for bar diameter specs (0.4" or thicker) and welded rather than press-fit joins.',
+          '<strong>Latch design:</strong> Single-latch hinged doors are the weakest point on most furniture crates. Sliding barn doors with multi-point locks, or double sliding latches on swing doors, are meaningfully harder for dogs to manipulate than a single magnetic or single-bolt closure.',
+          '<strong>Edge treatment:</strong> Dogs that chew crates often start at exposed edges — corners, door frames, and panel edges where they can get purchase. Recessed edges and non-exposed panel borders remove the most accessible targets.',
+          '<strong>Panel vs. bar construction:</strong> Enclosed panel designs replace exposed bars with solid or perforated panels. This removes the grip surface dogs use to bite, hang, and apply leverage. Ventilation holes are too small to grip.',
+          'None of these changes make a furniture crate into a true heavy-duty utility crate. They raise the difficulty floor for dogs that test crates — they do not eliminate it.',
+        ],
+        alt: true,
+      },
+      {
+        kind: 'product_section',
+        id: 'escape-artist-crates',
+        heading: 'All Picks',
+        positionOffset: 0,
+        columns: 3,
+        intro:
+          'Five furniture crates chosen for stronger frames, better latch designs, or anti-chew construction — covering small dogs through large breeds and different escape behavior profiles.',
+        productIds: [
+          {
+            id: 'rehomerance-dog-crate-furniture',
+            bullets: [
+              'Heavy-duty corrosion-resistant steel frame with sliding latches on both front and side doors — specifically noted to resist high-anxiety dogs opening them',
+              'Metal coating and bar surfaces are non-toxic if a dog chews or licks the crate structure',
+              'Rustic furniture finish keeps it room-appropriate for visible common-area placement without the fragile lacquered build of lighter decorative crates',
+            ],
+            bestFor: 'Medium to large dog owners who want a steel-frame furniture crate with dual sliding latches as a sturdier starting point before committing to a fully enclosed or utility-style crate',
+            considerIf: 'Your dog pushes at doors occasionally and you want a steel-bar furniture option that is sturdier than standard decorative pieces — but your dog has not yet escalated to full escape attempts',
+          },
+          'saksun-furniture-crate',
+          'hzuaneri-furniture-dog-crate',
+          'rexwelten-furniture-dog-crate',
+          'petrova-furniture-dog-crate',
+        ],
+      },
+      {
+        kind: 'prose',
+        id: 'when-not-enough',
+        heading: 'When a Furniture Crate May Not Be Enough',
+        paragraphs: [
+          'These crates are stronger than standard decorative furniture options, but they are not designed for every dog.',
+          'Dogs with confirmed severe separation distress — ones that injure themselves attempting escape, destroy crate material, or have a documented escape history from reinforced crates — may outmatch what any furniture-style crate can provide. Furniture construction, by definition, prioritizes home integration over maximum containment.',
+          '<strong>If your dog has already escaped or seriously damaged a heavy-duty wire crate,</strong> the next step is probably a welded-steel utility crate (like an impact or roll-formed steel kennel) rather than a furniture-style alternative. Furniture crates and true escape-proof utility crates are different categories.',
+          'The crates on this page are appropriate for dogs that test doors, chew at edges, or persistently work at latches — not for dogs with extreme containment-related distress. If you are unsure which category your dog falls into, a trainer or veterinary behaviorist can help assess the situation before you invest in equipment.',
+        ],
+      },
+    ],
+    faq: {
+      heading: 'Heavy-Duty Furniture Crate FAQ',
+      items: [
+        {
+          question: 'Are these crates truly escape-proof?',
+          answer:
+            'No furniture crate can be called truly escape-proof in all situations. These options are built with stronger frames, better latches, and anti-chew features than standard decorative furniture crates — but a sufficiently determined dog, or one with severe separation distress, can still get through furniture-style construction. Think of these as a meaningful step up from lightweight decorative crates, not as a replacement for heavy-duty utility crates.',
+        },
+        {
+          question: 'My dog chews the bars — which pick is best?',
+          answer:
+            'The REXWELTEN enclosed panel design removes the bars entirely, replacing them with solid panels and ventilation holes that are too small to grip. That is the most direct answer to bar-chewing behavior. The Hzuaneri uses anti-chew edge treatment and double-welded steel to make the structure harder to damage, but still has a bar-style framing. If bar-gripping is the primary behavior, the enclosed panel format changes the problem more fundamentally.',
+        },
+        {
+          question: 'What is the difference between a heavy-duty furniture crate and a standard decorative furniture crate?',
+          answer:
+            'The main differences are bar gauge (heavier steel), latch design (multi-lock or sliding rather than single-bolt), frame construction (welded joints rather than press-fit), and how panel edges are finished. Standard decorative furniture crates are designed primarily for aesthetics and light indoor use. Heavy-duty furniture crates use similar visual styling but with construction decisions that favor containment over minimal weight or cost.',
+        },
+        {
+          question: 'When should I skip furniture crates and use a utility crate instead?',
+          answer:
+            'If your dog has already escaped a standard or reinforced crate, has a documented history of self-injury during confinement, or has destroyed wire or wood-panel crates in the past, a furniture-style crate is probably not the right tool. Dogs in that situation are better served by welded-steel utility crates built explicitly for containment — or by working with a professional to address the underlying behavior before crating again.',
+        },
+      ],
+    },
+    disclosureShowSafety: false,
+    internalLinkStrip: {
+      heading: 'More Crate & Comfort Guides',
+      links: [
+        { label: 'All Furniture Crates', href: ROUTES.comfortFurnitureCrates },
+        { label: 'Heavy-Duty Utility Crates', href: ROUTES.comfortHeavyDutyCrates },
+        { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
+        { label: 'Anxiety Crates', href: ROUTES.comfortAnxietyCrates },
+      ],
+    },
+    itemListSchema: {
+      name: 'Best Heavy-Duty Furniture Dog Crates for Escape Artists',
+      url: 'https://www.chill-dogs.com/comforting/best-heavy-duty-furniture-dog-crates-for-escape-artists/',
+      productIds: [
+        'rehomerance-dog-crate-furniture',
+        'saksun-furniture-crate',
+        'hzuaneri-furniture-dog-crate',
+        'rexwelten-furniture-dog-crate',
+        'petrova-furniture-dog-crate',
       ],
     },
   },
