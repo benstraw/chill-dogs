@@ -101,6 +101,61 @@ describe('relaxation converter page config', () => {
     ))).toBe(true);
   });
 
+  it('returns orthopedic beds converter config with grouped support sections', () => {
+    const config = getRelaxationConverterPageConfig('best-orthopedic-dog-beds');
+
+    expect(config.pageSlug).toBe('best-orthopedic-dog-beds');
+    expect(config.hero.secondaryCta?.href).toBe('/comforting/');
+    expect(config.itemListSchema?.productIds).toEqual([
+      'dogbed4less-xl-memory-foam-bed',
+      'furhaven-luxe-lounger-orthopedic',
+      'eheyciga-xl-orthopedic-sofa',
+      'bedsure-supportmax-orthopedic-sofa',
+      'rainmr-memory-foam-bed',
+      'eheyciga-xl-memory-foam-couch',
+      'wnpethome-waterproof-orthopedic-bed',
+      'furtime-xl-orthopedic-bed',
+      'noah-paw-denim-orthopedic-bed',
+      'casa-paw-waterproof-xl-bed',
+      'bfpethome-waterproof-orthopedic-sofa',
+      'bedsure-comfyfleece-orthopedic',
+      'cwawz-orthopedic-bolster',
+      'friends-forever-orthopedic-sofa',
+      'comfort-expression-bolster-bed',
+      'cozy-kiss-xl-bolster-bed',
+      'bedsure-crate-orthopedic-mat',
+      'ksiia-crate-orthopedic-bed',
+      'dog-bed-wont-go-flat-crate-bed',
+      'nupida-xl-crate-bed',
+      'eheyciga-medium-crate-sofa',
+      'liorce-xxl-orthopedic-bed',
+      'veehoo-xxl-memory-foam-bed',
+      'laifug-xxl-memory-foam-bed',
+      'noah-paw-giant-orthopedic-bed',
+      'invenho-xl-orthopedic-sofa',
+      'bedsure-flat-orthopedic-bed',
+      'ohgeni-orthopedic-bed',
+      'sunheir-orthopedic-crate-bed',
+      'wnpethome-xl-orthopedic-sofa',
+    ]);
+    expect(config.blocks.some((block) => (
+      block.kind === 'comparison_table' &&
+      block.heading === 'Orthopedic Bed Comparison Table'
+    ))).toBe(true);
+    expect(config.blocks.some((block) => (
+      block.kind === 'product_section' &&
+      block.id === 'waterproof-beds'
+    ))).toBe(true);
+    expect(config.blocks.some((block) => (
+      block.kind === 'product_section' &&
+      block.id === 'crate-beds'
+    ))).toBe(true);
+    expect(config.blocks.some((block) => (
+      block.kind === 'product_section' &&
+      block.id === 'budget-beds'
+    ))).toBe(true);
+  });
+
   it('returns airline crates converter config with rigid travel product logic', () => {
     const config = getRelaxationConverterPageConfig('best-airline-crates-for-flying-with-your-dog');
 
@@ -267,6 +322,40 @@ describe('relaxation converter page config', () => {
       'gardner-pet-heavy-duty-crate',
       'xxl-heavy-duty-dog-crate',
       'hiwokk-large-dog-crate',
+    ]));
+  });
+
+  it('keeps orthopedic bed products in the orthopedic-beds category', () => {
+    const productIds = getRelaxationProductsByCategory('orthopedic-beds').map((product) => product.id);
+
+    expect(productIds).toEqual(expect.arrayContaining([
+      'dogbed4less-xl-memory-foam-bed',
+      'furhaven-luxe-lounger-orthopedic',
+      'eheyciga-xl-orthopedic-sofa',
+      'bedsure-supportmax-orthopedic-sofa',
+      'rainmr-memory-foam-bed',
+      'eheyciga-xl-memory-foam-couch',
+      'wnpethome-waterproof-orthopedic-bed',
+      'furtime-xl-orthopedic-bed',
+      'noah-paw-denim-orthopedic-bed',
+      'casa-paw-waterproof-xl-bed',
+      'bfpethome-waterproof-orthopedic-sofa',
+      'friends-forever-orthopedic-sofa',
+      'comfort-expression-bolster-bed',
+      'cozy-kiss-xl-bolster-bed',
+      'bedsure-crate-orthopedic-mat',
+      'dog-bed-wont-go-flat-crate-bed',
+      'nupida-xl-crate-bed',
+      'eheyciga-medium-crate-sofa',
+      'liorce-xxl-orthopedic-bed',
+      'veehoo-xxl-memory-foam-bed',
+      'laifug-xxl-memory-foam-bed',
+      'noah-paw-giant-orthopedic-bed',
+      'invenho-xl-orthopedic-sofa',
+      'bedsure-flat-orthopedic-bed',
+      'ohgeni-orthopedic-bed',
+      'sunheir-orthopedic-crate-bed',
+      'wnpethome-xl-orthopedic-sofa',
     ]));
   });
 

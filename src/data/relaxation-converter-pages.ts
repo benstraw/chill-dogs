@@ -1655,16 +1655,20 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
     hero: {
       title: 'Best Orthopedic Dog Beds',
       subtitle:
-        'Older dogs, larger breeds, and heavy daily resters need more than a padded surface. Orthopedic beds use denser foam to distribute body weight more evenly — reducing pressure on joints over the hours dogs spend resting each day. The right bed does that without sliding across the floor or collapsing after a few weeks.',
+        'Orthopedic dog beds vary more than the labels suggest. Some focus on flat memory-foam support, some add bolsters for dogs that like an edge to lean on, and others prioritize waterproof liners, washable covers, crate-friendly sizing, or extra room for large and XXL breeds. This guide compares researched picks across those use cases so you can narrow the format first, then choose the bed that fits your dog and your space.',
       disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
       primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
-      secondaryCta: { label: 'Calming Beds', href: ROUTES.comfortCalmingBeds },
+      secondaryCta: { label: 'Comfort Hub', href: ROUTES.comfortHub },
     },
     toc: [
       { label: 'Quick Picks', anchor: 'quick-picks' },
-      { label: 'Orthopedic Support Beds', anchor: 'support-beds' },
-      { label: 'Orthopedic Bolster Beds', anchor: 'bolster-beds' },
-      { label: 'Which Bed Fits Your Dog', anchor: 'which-bed' },
+      { label: 'Comparison Table', anchor: 'comparison-table' },
+      { label: 'Best Overall', anchor: 'overall-beds' },
+      { label: 'Waterproof Beds', anchor: 'waterproof-beds' },
+      { label: 'Bolster Beds', anchor: 'bolster-beds' },
+      { label: 'Crate-Friendly Beds', anchor: 'crate-beds' },
+      { label: 'Large & XXL Beds', anchor: 'large-beds' },
+      { label: 'Budget Beds', anchor: 'budget-beds' },
       { label: 'FAQ', anchor: 'faq' },
     ],
     blocks: [
@@ -1673,76 +1677,259 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         id: 'quick-picks',
         heading: 'Quick Picks',
         intro:
-          'Three clear starting points depending on what your dog needs most — full-body bolster support, straightforward flat orthopedic foam, or extra surface area for larger breeds.',
+          'Start with the use case first. These are the clearest picks if you want one best overall option, a waterproof bed, a bolster couch, a crate-friendly mat, more XXL space, or a lower-cost orthopedic upgrade.',
         items: [
           {
-            label: 'Best Full-Surround',
-            title: 'CWAWZ Orthopedic Dog Bed with Full-Surround Bolsters',
+            label: 'Best Overall',
+            title: 'Dogbed4less Extra Large Orthopedic Memory Foam Dog Bed',
             description:
-              'Raised edges on all four sides mean your dog always has something to lean against regardless of how it positions itself. The dual-sided design adds practical longevity.',
-            productId: 'cwawz-orthopedic-bolster',
+              'Dense memory foam, waterproof inner protection, washable cover, and a crate-friendly footprint make this the strongest all-around orthopedic pick on the page.',
+            productId: 'dogbed4less-xl-memory-foam-bed',
             position: 'quick-picks-1',
           },
           {
-            label: 'Best Value Flat Bed',
-            title: 'INVENHO Washable Orthopedic Dog Bed',
+            label: 'Best Waterproof',
+            title: 'WNPETHOME Orthopedic Waterproof Extra Large Dogs Bed',
             description:
-              'Orthopedic foam base, fully washable, anti-slip bottom. Straightforward construction that covers the basics at a practical price point for dogs who need daily support.',
-            productId: 'invenho-orthopedic-bed',
+              'A flatter waterproof orthopedic bed that works well when easy cleanup matters more than extra-thick bolsters or decorative styling.',
+            productId: 'wnpethome-waterproof-orthopedic-bed',
             position: 'quick-picks-2',
           },
           {
-            label: 'Best for Large Dogs',
-            title: 'ZOMISIA Orthopedic Dog Bed for Large Dogs',
+            label: 'Best Bolster',
+            title: 'CWAWZ Orthopedic Dog Bed with Full-Surround Bolsters',
             description:
-              'Large-format foam that gives bigger dogs room to stretch fully without losing support at the edges — sized for breeds where most standard beds just are not long enough.',
-            productId: 'zomisia-orthopedic-bed',
+              'Full-surround bolsters give dogs an edge to lean on from every angle while still keeping a supportive orthopedic base underneath.',
+            productId: 'cwawz-orthopedic-bolster',
             position: 'quick-picks-3',
+          },
+          {
+            label: 'Best Crate-Friendly',
+            title: 'Dog Bed That Won’t Go Flat',
+            description:
+              'A heavier-duty memory-foam option sized for big crates and giant breeds when you want more support than a thin kennel pad can deliver.',
+            productId: 'dog-bed-wont-go-flat-crate-bed',
+            position: 'quick-picks-4',
+          },
+          {
+            label: 'Best for XXL Dogs',
+            title: 'LIORCE Orthopedic Memory Foam XXL Dog Bed',
+            description:
+              'Six inches of foam and a roomy XXL footprint make it a strong pick when standard large beds feel too short or too shallow.',
+            productId: 'liorce-xxl-orthopedic-bed',
+            position: 'quick-picks-5',
+          },
+          {
+            label: 'Best Budget',
+            title: 'Bedsure Large Flat Orthopedic Bed',
+            description:
+              'A simple flat foam bed with a washable cover and a huge review base, which makes it an easy entry point for a first orthopedic upgrade.',
+            productId: 'bedsure-flat-orthopedic-bed',
+            position: 'quick-picks-6',
           },
         ],
       },
       {
+        kind: 'comparison_table',
+        id: 'comparison-table',
+        heading: 'Orthopedic Bed Comparison Table',
+        intro:
+          'Use the table to narrow the format first: flat lounger, waterproof sofa, enclosed bolster, crate mat, oversized XXL bed, or lower-cost starter option.',
+        items: [
+          {
+            productId: 'dogbed4less-xl-memory-foam-bed',
+            bestFor: 'Best overall support',
+            style: 'Flat memory-foam bed',
+            focus: 'All-around support + crate-friendly sizing',
+            care: 'Waterproof inner case + washable cover',
+          },
+          {
+            productId: 'wnpethome-waterproof-orthopedic-bed',
+            bestFor: 'Waterproof practicality',
+            style: 'Flat orthopedic bed',
+            focus: 'Easy cleanup + straightforward footprint',
+            care: 'Removable washable waterproof cover',
+          },
+          {
+            productId: 'cwawz-orthopedic-bolster',
+            bestFor: 'Dogs that lean on edges',
+            style: 'Full-surround bolster sofa',
+            focus: 'Orthopedic base + perimeter support',
+            care: 'Washable cover + waterproof build',
+          },
+          {
+            productId: 'bedsure-crate-orthopedic-mat',
+            bestFor: 'Everyday crate use',
+            style: 'Low-profile crate mat',
+            focus: 'Easier fit inside crates',
+            care: 'Removable machine-washable cover',
+          },
+          {
+            productId: 'dog-bed-wont-go-flat-crate-bed',
+            bestFor: 'Heavy dogs in big crates',
+            style: 'Heavy-duty flat bed',
+            focus: '45D memory foam + 54-inch crate fit',
+            care: 'Waterproof liner + washable cover',
+          },
+          {
+            productId: 'liorce-xxl-orthopedic-bed',
+            bestFor: 'XXL dogs',
+            style: 'Deep flat memory-foam bed',
+            focus: 'Six-inch foam + roomy footprint',
+            care: 'Waterproof removable cover',
+          },
+          {
+            productId: 'noah-paw-giant-orthopedic-bed',
+            bestFor: 'Giant-breed sprawl room',
+            style: 'Giant orthopedic sofa',
+            focus: '55-by-45-inch footprint',
+            care: 'Waterproof layers + washable cover',
+          },
+          {
+            productId: 'bedsure-flat-orthopedic-bed',
+            bestFor: 'Lower-cost upgrade',
+            style: 'Budget flat orthopedic bed',
+            focus: 'Simple support without a huge spend',
+            care: 'Washable cover + non-slip bottom',
+          },
+        ],
+      },
+      {
+        kind: 'prose',
+        id: 'what-to-look-for',
+        heading: 'What to Look for in an Orthopedic Dog Bed',
+        paragraphs: [
+          'Foam thickness matters, but so does format. Flat slab or egg-crate beds preserve more usable sleeping area, while sofa and bolster beds trade some center space for edges that dogs can lean against.',
+          'Waterproof liners and removable covers are worth paying attention to on orthopedic beds because the foam core is the part you want to protect long term. A washable outer cover is helpful, but a waterproof inner layer does more to keep the support material in better shape over time.',
+          'Crate-friendly beds are usually thinner and flatter so they fit cleanly inside the crate without wasting space. XXL and giant-breed beds push the opposite direction: more foam depth and more length so big dogs are not hanging off the ends or compressing the base too quickly.',
+        ],
+      },
+      {
         kind: 'product_section',
-        id: 'support-beds',
-        heading: 'Orthopedic Support Beds',
+        id: 'overall-beds',
+        heading: 'Best Overall Orthopedic Dog Beds',
         positionOffset: 0,
         columns: 3,
         intro:
-          'These beds prioritize the foam base. The focus is consistent support across the full sleeping surface — particularly useful for heavier dogs or dogs who spend long stretches resting in the same spot.',
-        productIds: ['invenho-orthopedic-bed', 'invenho-orthopedic-couch-bed', 'zomisia-orthopedic-bed', 'anti-anxiety-orthopedic-bed', 'bedsure-comfyfleece-orthopedic'],
+          'These are the strongest all-around orthopedic picks when you want supportive foam first and clear everyday usability second. They cover flat loungers, roomy sofas, and large-dog-friendly formats without drifting into travel mats or plush-only beds.',
+        productIds: [
+          'dogbed4less-xl-memory-foam-bed',
+          'furhaven-luxe-lounger-orthopedic',
+          'eheyciga-xl-orthopedic-sofa',
+          'bedsure-supportmax-orthopedic-sofa',
+          'rainmr-memory-foam-bed',
+          'eheyciga-xl-memory-foam-couch',
+        ],
+      },
+      {
+        kind: 'product_section',
+        id: 'waterproof-beds',
+        heading: 'Best Waterproof Orthopedic Dog Beds',
+        positionOffset: 4,
+        columns: 3,
+        alt: true,
+        intro:
+          'Waterproof orthopedic beds make more sense for dogs that track in mess, drool heavily, have occasional accidents, or simply use the same bed hard every day. The goal here is to protect the foam core without giving up support.',
+        productIds: [
+          'wnpethome-waterproof-orthopedic-bed',
+          'furtime-xl-orthopedic-bed',
+          'noah-paw-denim-orthopedic-bed',
+          'casa-paw-waterproof-xl-bed',
+          'bfpethome-waterproof-orthopedic-sofa',
+        ],
       },
       {
         kind: 'product_section',
         id: 'bolster-beds',
-        heading: 'Orthopedic Bolster Beds',
-        positionOffset: 3,
-        columns: 2,
+        heading: 'Best Bolster Orthopedic Dog Beds',
+        positionOffset: 7,
+        columns: 3,
+        intro:
+          'Bolster orthopedic beds work well for dogs that like to rest their head on an edge or feel more settled with a defined perimeter. The tradeoff is a little less open sleeping area than a flat lounger gives you.',
+        productIds: [
+          'bedsure-comfyfleece-orthopedic',
+          'cwawz-orthopedic-bolster',
+          'friends-forever-orthopedic-sofa',
+          'comfort-expression-bolster-bed',
+          'cozy-kiss-xl-bolster-bed',
+        ],
+      },
+      {
+        kind: 'product_section',
+        id: 'crate-beds',
+        heading: 'Best Crate-Friendly Orthopedic Beds',
+        positionOffset: 10,
+        columns: 3,
         alt: true,
         intro:
-          'Bolster beds add raised edges to an orthopedic base — useful for dogs who need joint support and like having something to lean against. These suit dogs who shift between flat resting and head-on-edge positions.',
-        productIds: ['cwawz-orthopedic-bolster', 'carolina-pet-bolster-lg'],
+          'Crate-friendly orthopedic beds keep the format flatter and more space-efficient. That helps preserve usable crate room while still giving your dog more support than a thin plush kennel pad.',
+        productIds: [
+          'bedsure-crate-orthopedic-mat',
+          'ksiia-crate-orthopedic-bed',
+          'dog-bed-wont-go-flat-crate-bed',
+          'nupida-xl-crate-bed',
+          'eheyciga-medium-crate-sofa',
+        ],
+      },
+      {
+        kind: 'product_section',
+        id: 'large-beds',
+        heading: 'Best Orthopedic Beds for Large and XXL Dogs',
+        positionOffset: 13,
+        columns: 3,
+        intro:
+          'Once your dog gets into true large, XL, or giant-breed territory, the sizing problem changes. You need enough length and enough foam depth that the bed still feels supportive when the dog fully stretches out.',
+        productIds: [
+          'liorce-xxl-orthopedic-bed',
+          'veehoo-xxl-memory-foam-bed',
+          'laifug-xxl-memory-foam-bed',
+          'noah-paw-giant-orthopedic-bed',
+          'invenho-xl-orthopedic-sofa',
+        ],
+      },
+      {
+        kind: 'product_section',
+        id: 'budget-beds',
+        heading: 'Best Budget Orthopedic Dog Beds',
+        positionOffset: 17,
+        columns: 3,
+        alt: true,
+        intro:
+          'Budget orthopedic beds are usually thinner and simpler, but they can still be a real upgrade over loose fiber fill. These make the most sense when you want supportive foam and washable covers without paying for oversized premium builds.',
+        productIds: [
+          'bedsure-flat-orthopedic-bed',
+          'ohgeni-orthopedic-bed',
+          'sunheir-orthopedic-crate-bed',
+          'wnpethome-xl-orthopedic-sofa',
+        ],
       },
       {
         kind: 'decision_columns',
         id: 'which-bed',
         left: {
-          heading: 'Flat orthopedic bed makes sense when',
+          heading: 'Flat or crate-style orthopedic bed makes sense when',
           items: [
-            'Your dog stretches out fully to sleep rather than curling.',
-            'You want maximum surface area for less money.',
-            'The bed will go inside a crate or against a wall where bolsters would be in the way.',
-            'Your dog tends to step onto the bed from one specific side.',
+            'Your dog stretches out fully and does not care about having edges to lean on.',
+            'You want the most usable sleeping area for the money.',
+            'The bed needs to fit inside a crate, along a wall, or in a tighter room footprint.',
+            'You care more about simple washing and easier placement than about a couch-style look.',
           ],
         },
         right: {
-          heading: 'Bolster orthopedic bed makes sense when',
+          heading: 'Bolster or sofa orthopedic bed makes sense when',
           items: [
-            'Your dog regularly repositions to lean its head against a surface.',
-            'You want one bed that supports both flat resting and chin-on-edge positions.',
-            'Your dog tends to feel more settled with a defined perimeter around it.',
-            'You want the joint support of foam plus the enclosed feel of a bolster.',
+            'Your dog regularly rests its head on a bed edge, pillow, or couch arm.',
+            'You want one bed that feels more settled and furniture-like in a living space.',
+            'Your dog curls and leans instead of only sprawling flat.',
+            'You are comfortable giving up some center sleeping area in exchange for more perimeter support.',
           ],
         },
+      },
+      {
+        kind: 'note',
+        heading: 'A Quick Reality Check on “Orthopedic” Labels',
+        text:
+          'Orthopedic on Amazon can describe everything from flat egg-crate mats to thick memory-foam sofas with bolsters. The label matters less than the actual build: foam thickness, washable layers, waterproof protection, and whether the shape matches how your dog really sleeps.',
       },
     ],
     faq: {
@@ -1759,19 +1946,29 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
             'Standard dog beds typically use polyester fiber fill, which compresses over time and provides less consistent support. Orthopedic beds use denser foam — similar to memory foam — that distributes weight more evenly across the sleeping surface and holds its shape longer with regular use.',
         },
         {
+          question: 'Are waterproof liners worth it on an orthopedic dog bed?',
+          answer:
+            'Usually, yes. The washable outer cover handles day-to-day dirt, but the waterproof layer is what helps protect the foam core from accidents, drool, or repeated dampness. That matters because once the foam absorbs moisture, the bed gets harder to clean and less pleasant to keep using.',
+        },
+        {
+          question: 'Can an orthopedic dog bed go inside a crate?',
+          answer:
+            'Yes, but flat and lower-profile orthopedic beds tend to work better than thick bolster sofas inside crates. Check the usable crate floor size and compare it to the bed\'s actual sleeping surface, not just the outside dimensions listed in the title.',
+        },
+        {
           question: 'How do I pick the right size orthopedic bed?',
           answer:
             'Measure your dog from nose to base of tail when fully stretched. The sleeping surface of the bed should match or slightly exceed that length. For bolster beds, measure the inner sleeping area, not the full bed dimension including the bolster edge.',
         },
         {
+          question: 'Are bolster orthopedic beds better than flat beds?',
+          answer:
+            'Not automatically. Bolsters are better for dogs that like leaning on an edge or feel more settled with a defined perimeter. Flat beds are often a better fit for crate use, sprawling sleepers, and shoppers who want maximum sleeping area for the money.',
+        },
+        {
           question: 'How long do orthopedic dog beds last?',
           answer:
             'A well-constructed orthopedic bed typically holds its support for one to three years with regular use, depending on your dog\'s weight and how much time it spends resting there. Dual-sided beds extend useful life by giving you a fresh surface when one side compresses.',
-        },
-        {
-          question: 'Can I wash an orthopedic dog bed?',
-          answer:
-            'All beds listed here have machine washable covers. Foam inserts are typically spot-cleaned or surface-washed — avoid machine washing foam as it can damage the structure. Check the product care label before washing any component you are unsure about.',
         },
       ],
     },
@@ -1779,10 +1976,22 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       heading: 'More Rest & Recovery',
       guides: [
         {
+          href: ROUTES.comfortHub,
+          title: 'Comfort Hub',
+          description:
+            'Browse the full comfort pillar for calming beds, orthopedic beds, chew-resistant beds, travel beds, and crate-focused sleep setups.',
+        },
+        {
           href: ROUTES.comfortCalmingBeds,
           title: 'Best Calming Dog Beds',
           description:
             'Donut beds, cuddler beds, and bolster beds for dogs who need extra comfort and security — not just a supportive surface.',
+        },
+        {
+          href: ROUTES.comfortChewResistantBeds,
+          title: 'Best Chew-Resistant Dog Beds',
+          description:
+            'Tougher beds, elevated cots, and crate mats for dogs that destroy softer bedding before support is the main problem.',
         },
         {
           href: ROUTES.calmingTop,
@@ -1796,22 +2005,47 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
     internalLinkStrip: {
       heading: 'More Relaxation Guides',
       links: [
+        { label: 'Comfort Hub', href: ROUTES.comfortHub },
         { label: 'Calming Dog Beds', href: ROUTES.comfortCalmingBeds },
+        { label: 'Chew-Resistant Dog Beds', href: ROUTES.comfortChewResistantBeds },
         { label: 'Best Calming Products', href: ROUTES.calmingTop },
-        { label: 'Calming Hub', href: ROUTES.calmingHub },
+        { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
       ],
     },
     itemListSchema: {
       name: 'Best Orthopedic Dog Beds',
       url: 'https://www.chill-dogs.com/comforting/best-orthopedic-dog-beds/',
       productIds: [
-        'invenho-orthopedic-bed',
-        'invenho-orthopedic-couch-bed',
-        'zomisia-orthopedic-bed',
-        'anti-anxiety-orthopedic-bed',
+        'dogbed4less-xl-memory-foam-bed',
+        'furhaven-luxe-lounger-orthopedic',
+        'eheyciga-xl-orthopedic-sofa',
+        'bedsure-supportmax-orthopedic-sofa',
+        'rainmr-memory-foam-bed',
+        'eheyciga-xl-memory-foam-couch',
+        'wnpethome-waterproof-orthopedic-bed',
+        'furtime-xl-orthopedic-bed',
+        'noah-paw-denim-orthopedic-bed',
+        'casa-paw-waterproof-xl-bed',
+        'bfpethome-waterproof-orthopedic-sofa',
         'bedsure-comfyfleece-orthopedic',
         'cwawz-orthopedic-bolster',
-        'carolina-pet-bolster-lg',
+        'friends-forever-orthopedic-sofa',
+        'comfort-expression-bolster-bed',
+        'cozy-kiss-xl-bolster-bed',
+        'bedsure-crate-orthopedic-mat',
+        'ksiia-crate-orthopedic-bed',
+        'dog-bed-wont-go-flat-crate-bed',
+        'nupida-xl-crate-bed',
+        'eheyciga-medium-crate-sofa',
+        'liorce-xxl-orthopedic-bed',
+        'veehoo-xxl-memory-foam-bed',
+        'laifug-xxl-memory-foam-bed',
+        'noah-paw-giant-orthopedic-bed',
+        'invenho-xl-orthopedic-sofa',
+        'bedsure-flat-orthopedic-bed',
+        'ohgeni-orthopedic-bed',
+        'sunheir-orthopedic-crate-bed',
+        'wnpethome-xl-orthopedic-sofa',
       ],
     },
   },
