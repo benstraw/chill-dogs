@@ -360,21 +360,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'You want a roomy orthopedic bed with more foam depth than typical three- or four-inch mats provide',
   }),
   createFetchedRelaxationProduct({
-    id: 'bedsure-oval-bolster-orthopedic',
-    asin: 'B0GF5ZRQSP',
-    category: 'orthopedic-beds',
-    bullets: [
-      '360-degree oval bolster creates a more enclosed sleeping pocket than standard three-sided couch beds',
-      'Waterproof washable cover helps keep the softer fleece-topped surface practical for regular use',
-      '35-inch size works well for medium or large dogs that like curling while still getting orthopedic foam underneath',
-    ],
-    bestFor: 'Dogs who curl up and want a more enclosed orthopedic bolster bed rather than a wide-open lounger',
-    whyItWorks:
-      'The oval surround gives dogs a defined place to settle while the orthopedic base keeps the center more supportive than a plush cuddler bed',
-    considerIf:
-      'Your dog likes to nest into a defined space and you want that feel without giving up washable orthopedic support',
-  }),
-  createFetchedRelaxationProduct({
     id: 'casa-paw-waterproof-xl-bed',
     asin: 'B0BXY2VRNX',
     category: 'orthopedic-beds',
