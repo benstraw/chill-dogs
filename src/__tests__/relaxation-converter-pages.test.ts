@@ -78,6 +78,29 @@ describe('relaxation converter page config', () => {
     ))).toBe(true);
   });
 
+  it('returns chew-resistant beds converter config with toughness-specific product logic', () => {
+    const config = getRelaxationConverterPageConfig('best-chew-resistant-dog-beds');
+
+    expect(config.pageSlug).toBe('best-chew-resistant-dog-beds');
+    expect(config.hero.secondaryCta?.href).toBe('/comforting/');
+    expect(config.itemListSchema?.productIds).toEqual([
+      'k9-ballistics-armored-crate-bed',
+      'k9-ballistics-elevated-cooling-bed',
+      'fxw-titannest-elevated-bed',
+      'veehoo-chewproof-elevated-bed',
+      'k9-ballistics-ripstop-oval-bolster-bed',
+      'k9-ballistics-rectangle-pillow-bed',
+      'vivifying-chew-resistant-crate-pad',
+      'sytopia-orthopedic-chew-resistant-bed',
+      'sytopia-elevated-chew-resistant-bed',
+      'brands1231-chew-resistant-crate-mat',
+    ]);
+    expect(config.blocks.some((block) => (
+      block.kind === 'comparison_table' &&
+      block.heading === 'Chew-Resistant Bed Comparison Table'
+    ))).toBe(true);
+  });
+
   it('returns airline crates converter config with rigid travel product logic', () => {
     const config = getRelaxationConverterPageConfig('best-airline-crates-for-flying-with-your-dog');
 
@@ -259,6 +282,22 @@ describe('relaxation converter page config', () => {
       'kurgo-loft-wander-bed',
       'yofang-extra-large-travel-bed',
       'bingpet-outdoor-travel-bed',
+    ]));
+  });
+
+  it('keeps chew-resistant bed products in the chew-resistant-beds category', () => {
+    const productIds = getRelaxationProductsByCategory('chew-resistant-beds').map((product) => product.id);
+
+    expect(productIds).toEqual(expect.arrayContaining([
+      'k9-ballistics-armored-crate-bed',
+      'fxw-titannest-elevated-bed',
+      'veehoo-chewproof-elevated-bed',
+      'k9-ballistics-ripstop-oval-bolster-bed',
+      'k9-ballistics-rectangle-pillow-bed',
+      'vivifying-chew-resistant-crate-pad',
+      'sytopia-orthopedic-chew-resistant-bed',
+      'sytopia-elevated-chew-resistant-bed',
+      'brands1231-chew-resistant-crate-mat',
     ]));
   });
 

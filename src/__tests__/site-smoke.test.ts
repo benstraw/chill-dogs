@@ -248,6 +248,20 @@ describe('site smoke tests', () => {
     }
   });
 
+  it('renders comfort chew-resistant converter pages with tagged Amazon affiliate links', () => {
+    const doc = readBuiltPage(path.join('comforting', 'best-chew-resistant-dog-beds', 'index.html'));
+    const affiliateLinks = getAmazonAffiliateLinks(doc);
+
+    expect(affiliateLinks.length).toBeGreaterThan(0);
+
+    for (const link of affiliateLinks) {
+      expect(relTokens(link)).toEqual(['noopener', 'noreferrer', 'sponsored']);
+      expect(link.getAttribute('target')).toBe('_blank');
+      expect(link.getAttribute('data-track')).toBe('amazon_outbound_click');
+      expect(link.href).toContain('tag=chill-dogs-20');
+    }
+  });
+
   it('renders travel converter with affiliate links', () => {
     const doc = readBuiltPage(path.join('travel', 'dog-road-trip-gear', 'index.html'));
     const affiliateLinks = getAmazonAffiliateLinks(doc);

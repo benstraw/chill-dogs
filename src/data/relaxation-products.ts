@@ -1,6 +1,12 @@
 import { buildAmazonAffiliateUrl, getAmazonProductMetadata } from './amazon-product-metadata';
 
-export type RelaxationProductCategory = 'calming-beds' | 'orthopedic-beds' | 'crates' | 'travel-beds' | 'carriers';
+export type RelaxationProductCategory =
+  | 'calming-beds'
+  | 'orthopedic-beds'
+  | 'chew-resistant-beds'
+  | 'crates'
+  | 'travel-beds'
+  | 'carriers';
 
 export interface RelaxationProduct {
   id: string;
@@ -15,15 +21,14 @@ export interface RelaxationProduct {
   image?: { src: string; alt: string };
 }
 
-function createTravelBedProduct(
-  config: Omit<RelaxationProduct, 'name' | 'amazonUrl' | 'image' | 'category'> & { category?: 'travel-beds' }
+function createFetchedRelaxationProduct(
+  config: Omit<RelaxationProduct, 'name' | 'amazonUrl' | 'image'> & { category: RelaxationProductCategory }
 ): RelaxationProduct {
   const fetched = getAmazonProductMetadata(config.asin);
 
   return {
     ...config,
     name: fetched.title,
-    category: 'travel-beds',
     amazonUrl: buildAmazonAffiliateUrl(config.asin),
     image: fetched.image,
   };
@@ -220,11 +225,12 @@ export const relaxationProducts: RelaxationProduct[] = [
     image: { src: 'https://m.media-amazon.com/images/I/51pzu55J+1L._SL500_.jpg', alt: 'Carolina Pet Company Microfiber Tipped Bolster Bed Large' },
   },
 
-  // ── Crates ───────────────────────────────────────────────────────────────
+  // ── Travel Beds ───────────────────────────────────────────────────────────
 
-  createTravelBedProduct({
+  createFetchedRelaxationProduct({
     id: 'furhaven-outdoor-travel-dog-bed',
     asin: 'B08FNVH7VB',
+    category: 'travel-beds',
     bullets: [
       'Lightweight pillow-style mat with a stuff sack keeps packed size reasonable for road trips and camping bins',
       'Machine-washable construction is practical when the bed picks up dirt, sand, or hotel-floor grime',
@@ -236,9 +242,10 @@ export const relaxationProducts: RelaxationProduct[] = [
     considerIf:
       'You want a travel bed that stays easy to carry but still gives your dog more cushion than an ultrathin roll-up mat',
   }),
-  createTravelBedProduct({
+  createFetchedRelaxationProduct({
     id: 'chuckit-travel-bed',
     asin: 'B00027466A',
+    category: 'travel-beds',
     bullets: [
       'Water-resistant shell and raised pillow-style edge make it feel more finished than a bare travel mat',
       '39-by-30-inch size works for a wide range of medium and large dogs on hotel floors, patios, or campsites',
@@ -250,9 +257,10 @@ export const relaxationProducts: RelaxationProduct[] = [
     considerIf:
       'You want one travel bed that can move between the car, hotel room, patio, and campsite without feeling flimsy',
   }),
-  createTravelBedProduct({
+  createFetchedRelaxationProduct({
     id: 'coleman-roll-up-travel-bed',
     asin: 'B01MSZJ3IX',
+    category: 'travel-beds',
     bullets: [
       'Roll-up design is straightforward to pack, stow, and carry between the car and each overnight stop',
       'Padded construction gives a little more insulation from hard or cool ground than the thinnest mats',
@@ -264,9 +272,10 @@ export const relaxationProducts: RelaxationProduct[] = [
     considerIf:
       'You care more about easy pack-and-go storage than about the plushest surface in the category',
   }),
-  createTravelBedProduct({
+  createFetchedRelaxationProduct({
     id: 'kindtail-nomad-nap-mat',
     asin: 'B0F2GFMG74',
+    category: 'travel-beds',
     bullets: [
       'Folds to a compact travel size and weighs about 1.5 pounds, which is unusually easy to carry through hotels or vacation rentals',
       'Water-resistant washable build makes it practical for airport waiting areas, destination floors, and repeated travel days',
@@ -278,9 +287,10 @@ export const relaxationProducts: RelaxationProduct[] = [
     considerIf:
       'You want a compact mat for travel routines, but do not need the thicker cushion of a larger camping-style bed',
   }),
-  createTravelBedProduct({
+  createFetchedRelaxationProduct({
     id: 'onetigris-travel-dog-bed',
     asin: 'B0B6ZJWBZ3',
+    category: 'travel-beds',
     bullets: [
       'Waterproof anti-slip base helps it stay put on tent floors, slick hotel surfaces, and outdoor patios',
       'Plush interior gives dogs a warmer, more familiar resting surface than bare nylon camping mats',
@@ -292,9 +302,10 @@ export const relaxationProducts: RelaxationProduct[] = [
     considerIf:
       'You want one of the more camping-friendly options but do not want to give up all the softness of a true bed',
   }),
-  createTravelBedProduct({
+  createFetchedRelaxationProduct({
     id: 'kurgo-loft-wander-bed',
     asin: 'B01JFEAL1O',
+    category: 'travel-beds',
     bullets: [
       'Large 48-by-36-inch size gives bigger dogs more room to stretch out at camp, in cabins, or on hotel floors',
       'Durable water-resistant top and non-slip bottom suit repeated road-trip and campsite use',
@@ -306,9 +317,10 @@ export const relaxationProducts: RelaxationProduct[] = [
     considerIf:
       'You have the cargo space for a larger roll-up bed and want more room and durability than the lighter travel mats offer',
   }),
-  createTravelBedProduct({
+  createFetchedRelaxationProduct({
     id: 'yofang-extra-large-travel-bed',
     asin: 'B0FXTTLYSX',
+    category: 'travel-beds',
     bullets: [
       '47-by-32-inch footprint is one of the better size options here for larger dogs',
       'Waterproof ripstop nylon and anti-slip backing make it better suited to wet grass, campsite dirt, and harder outdoor surfaces',
@@ -320,9 +332,10 @@ export const relaxationProducts: RelaxationProduct[] = [
     considerIf:
       'Your dog is large, messy, or likely to use the bed on damp ground and outdoor surfaces instead of only inside hotels',
   }),
-  createTravelBedProduct({
+  createFetchedRelaxationProduct({
     id: 'bingpet-outdoor-travel-bed',
     asin: 'B0DQCV6CF9',
+    category: 'travel-beds',
     bullets: [
       'Carry-bag format keeps the setup simple for budget-minded road trips, camping kits, and trunk storage',
       'Portable washable design covers the main travel-bed basics without pushing into premium pricing',
@@ -335,7 +348,145 @@ export const relaxationProducts: RelaxationProduct[] = [
       'You want a lower-cost travel mat for occasional trips and do not need the thickest cushioning in the category',
   }),
 
-  // ── Travel Beds ───────────────────────────────────────────────────────────
+  // ── Chew-Resistant Beds ──────────────────────────────────────────────────
+
+  createFetchedRelaxationProduct({
+    id: 'k9-ballistics-armored-crate-bed',
+    asin: 'B0FHS4FGS8',
+    category: 'chew-resistant-beds',
+    bullets: [
+      'Armored padded crate-bed format gives dogs a tougher sleeping surface without exposed plush seams or loose stuffing',
+      'Easy-clean ripstop ballistic polyester is better suited to repeated scratching, nesting, and moderate bed destruction than standard fabric beds',
+      'Orthopedic-style padding makes it a stronger premium option when you need both toughness and actual sleep support',
+    ],
+    bestFor: 'A premium crate-safe bed when you want the toughest overall padded option on the page',
+    whyItWorks:
+      'It takes the crate-bed route instead of the plush-home-bed route, which removes a lot of the weak points that attract dogs to softer bedding',
+    considerIf:
+      'You want a tougher padded bed for crate use, but still understand that a highly determined chewer may need supervision or a harder setup',
+  }),
+  createFetchedRelaxationProduct({
+    id: 'fxw-titannest-elevated-bed',
+    asin: 'B0D5QZ1RCV',
+    category: 'chew-resistant-beds',
+    bullets: [
+      'Elevated cot style removes stuffing, bolsters, and loose seams that many dogs target first',
+      'Washable raised design works indoors, outdoors, and on trips where the bed needs to dry fast and stay cleaner',
+      'Extra-large footprint makes it a realistic option for bigger dogs that destroy smaller soft beds',
+    ],
+    bestFor: 'Large dogs when you want an elevated washable cot-style bed instead of another stuffed bed experiment',
+    whyItWorks:
+      'Cot beds reduce the soft edges and fill material that make standard plush beds easy targets for shredding',
+    considerIf:
+      'Your dog destroys stuffed beds quickly, but is likely to accept a raised cot instead of a more nest-like bed shape',
+  }),
+  createFetchedRelaxationProduct({
+    id: 'veehoo-chewproof-elevated-bed',
+    asin: 'B0DY49VGG7',
+    category: 'chew-resistant-beds',
+    bullets: [
+      'Budget-friendlier elevated design still removes stuffing and pillow edges that invite chewing',
+      'Breathable mesh surface is useful for dogs that also run warm on dense padded beds',
+      'Washable, non-slip cot format works for indoor use, patios, and covered outdoor setups',
+    ],
+    bestFor: 'The lower-cost elevated option when you want to stop replacing soft beds every few weeks',
+    whyItWorks:
+      'It leans on cot structure rather than thick padding, which gives chewers fewer obvious targets than a standard stuffed bed',
+    considerIf:
+      'You want to try an elevated chew-resistant format first without paying premium K9 Ballistics pricing',
+  }),
+  createFetchedRelaxationProduct({
+    id: 'k9-ballistics-ripstop-oval-bolster-bed',
+    asin: 'B0CW5963B8',
+    category: 'chew-resistant-beds',
+    bullets: [
+      'Rip-stop cover is tougher than plush upholstery for scratching, digging, and moderate chewing',
+      'Machine-washable construction is practical when the bed also needs to survive muddy paws and repeated cleanup',
+      'Oval den-style shape gives dogs a more enclosed feel than flat cot beds, which matters for dogs that still want a nest-like sleep spot',
+    ],
+    bestFor: 'Moderate chewers that still settle best in a round or den-style washable bed',
+    whyItWorks:
+      'It offers a tougher cover than standard comfort beds while still preserving the curled-up shape some dogs prefer',
+    considerIf:
+      'Your dog likes enclosed bed shapes, but you can supervise enough to know bolsters and raised seams may still be tempting chew targets',
+  }),
+  createFetchedRelaxationProduct({
+    id: 'k9-ballistics-rectangle-pillow-bed',
+    asin: 'B00D7GEKI2',
+    category: 'chew-resistant-beds',
+    bullets: [
+      'Rectangular tougher-cover format avoids some of the extra edges and corners of more decorative plush beds',
+      'Removable washable cover and water-resistant build make it more practical than standard big stuffed beds',
+      'XL size works for bigger home setups where a crate mat or cot may not be the right sleep format',
+    ],
+    bestFor: 'Big dogs that need a tougher floor bed at home, not just a crate pad or raised cot',
+    whyItWorks:
+      'It gives heavy resters a more familiar padded floor-bed experience while using tougher materials than standard plush rectangle beds',
+    considerIf:
+      'You want a home-bed format for a larger dog, but still need something tougher and easier to clean than a typical soft bed',
+  }),
+  createFetchedRelaxationProduct({
+    id: 'vivifying-chew-resistant-crate-pad',
+    asin: 'B0GK66SQWG',
+    category: 'chew-resistant-beds',
+    bullets: [
+      'Low-profile waterproof kennel-mat style keeps loose edges and exposed stuffing to a minimum',
+      'Machine-washable build fits the practical reality of crate use, accidents, and repeated cleanup',
+      'Indoor-outdoor format makes it usable as a simple pad in crates, kennels, or travel setups',
+    ],
+    bestFor: 'A washable waterproof crate pad when you need something simpler and flatter than a full bed',
+    whyItWorks:
+      'Flat crate-pad formats tend to give bed destroyers fewer obvious starting points than plush pillows and bolstered beds',
+    considerIf:
+      'You mainly need a kennel or crate pad for moderate chewers, not a plush home bed for unsupervised severe destruction',
+  }),
+  createFetchedRelaxationProduct({
+    id: 'sytopia-orthopedic-chew-resistant-bed',
+    asin: 'B0GJ2LKC1M',
+    category: 'chew-resistant-beds',
+    bullets: [
+      'Orthopedic-style flat bed gives you a more supportive at-home option than most crate pads or elevated cots',
+      'Waterproof easy-clean build is useful for dogs that are rough on bedding and messy at the same time',
+      'Lower-profile design is a better fit than bolsters for dogs that chew raised edges first',
+    ],
+    bestFor: 'An orthopedic-style flat bed when you want more support without moving back to a plush seam-heavy bed',
+    whyItWorks:
+      'It aims for the middle ground between support and toughness, which is often what heavy resters need when cots alone are not the right fit',
+    considerIf:
+      'You want a flatter supportive bed for home use and can accept that even tougher padded beds are not a guarantee against a determined destroyer',
+  }),
+  createFetchedRelaxationProduct({
+    id: 'sytopia-elevated-chew-resistant-bed',
+    asin: 'B0GCH5Q4PK',
+    category: 'chew-resistant-beds',
+    bullets: [
+      'Breathable raised-cot setup keeps the chew-resistant strategy simple: fewer seams, no stuffing, more airflow',
+      'Large 47-inch footprint makes it a real option for bigger dogs that overheat or flatten smaller beds',
+      'Waterproof easy-clean format fits indoor, patio, and travel-adjacent use',
+    ],
+    bestFor: 'A breathable elevated option for larger dogs when airflow and reduced chew targets both matter',
+    whyItWorks:
+      'Raised mesh cots strip the sleep surface down to the essentials, which often works better for destroyers than padded beds with more edges to attack',
+    considerIf:
+      'You want an elevated alternative to stuffed beds and your dog is likely to rest well on a firmer breathable surface',
+  }),
+  createFetchedRelaxationProduct({
+    id: 'brands1231-chew-resistant-crate-mat',
+    asin: 'B0G1CMH3QM',
+    category: 'chew-resistant-beds',
+    bullets: [
+      'Purpose-built crate-mat format is a better match than a fluffy bed when the real use case is kennel bedding',
+      'Machine-washable ripstop Oxford construction is more practical than plush fill for chewers that shred crate bedding',
+      'Soft-but-flatter design keeps comfort in the picture without adding the same seam and stuffing targets as a pillow bed',
+    ],
+    bestFor: 'The crate-mat pick when your dog destroys kennel bedding but still needs something softer than a bare tray',
+    whyItWorks:
+      'It stays focused on crate use instead of pretending to be a full decorative home bed, which makes it a better match for dogs that chew bedding in confinement',
+    considerIf:
+      'Your dog mainly destroys bedding inside the crate and you need a lower-profile crate liner rather than another stuffed bed',
+  }),
+
+  // ── Crates ───────────────────────────────────────────────────────────────
 
   {
     id: 'kindtail-pawd-collapsible-crate',

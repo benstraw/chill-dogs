@@ -75,4 +75,15 @@ describe('admin product catalog data', () => {
       ])
     );
   });
+
+  it('tracks the shared K9 elevated cot on both cooling and chew-resistant converters', () => {
+    const pageMap = buildProductPageMap();
+
+    expect(pageMap['k9-ballistics-elevated-cooling-bed']).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ href: '/cooling/cooling-mats/' }),
+        expect.objectContaining({ href: '/comforting/best-chew-resistant-dog-beds/' }),
+      ])
+    );
+  });
 });

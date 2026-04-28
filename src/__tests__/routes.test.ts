@@ -16,6 +16,10 @@ describe('route constants', () => {
     expect(ROUTES.comfortAnxietyCrates).toBe('/comforting/best-anxiety-dog-crates/');
   });
 
+  it('uses canonical chew-resistant beds route', () => {
+    expect(ROUTES.comfortChewResistantBeds).toBe('/comforting/best-chew-resistant-dog-beds/');
+  });
+
   it('uses canonical travel beds route', () => {
     expect(ROUTES.comfortTravelBeds).toBe('/comforting/best-dog-travel-beds/');
   });
@@ -51,6 +55,9 @@ describe('route constants', () => {
     const anxietyCratesCard = comfortCollectorBody.sections[0].cards.find(
       (card) => card.title === 'Best Dog Crates for Anxiety'
     );
+    const chewResistantBedsCard = comfortCollectorBody.sections[0].cards.find(
+      (card) => card.title === 'Best Chew-Resistant Dog Beds'
+    );
     const travelBedsCard = comfortCollectorBody.sections[0].cards.find(
       (card) => card.title === 'Best Dog Travel Beds'
     );
@@ -62,6 +69,8 @@ describe('route constants', () => {
     expect(puppyCratesCard?.dataToPage).toBe(ROUTES.comfortPuppyCrates);
     expect(anxietyCratesCard?.href).toBe(ROUTES.comfortAnxietyCrates);
     expect(anxietyCratesCard?.dataToPage).toBe(ROUTES.comfortAnxietyCrates);
+    expect(chewResistantBedsCard?.href).toBe(ROUTES.comfortChewResistantBeds);
+    expect(chewResistantBedsCard?.dataToPage).toBe(ROUTES.comfortChewResistantBeds);
     expect(travelBedsCard?.href).toBe(ROUTES.comfortTravelBeds);
     expect(travelBedsCard?.dataToPage).toBe(ROUTES.comfortTravelBeds);
     expect(travelCratesCard?.href).toBe(ROUTES.comfortTravelCrates);

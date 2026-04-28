@@ -1,4 +1,5 @@
 import { relaxationProducts, type RelaxationProduct } from './relaxation-products';
+import { coolingProducts } from './cooling-products';
 import { ROUTES } from './routes';
 
 export type RelaxationPageType = 'converter';
@@ -53,6 +54,27 @@ export interface DecisionColumnsBlock {
   alt?: boolean;
 }
 
+export interface ComparisonTableBlock {
+  kind: 'comparison_table';
+  heading: string;
+  items: Array<{
+    productId: string;
+    bestFor: string;
+    style: string;
+    focus: string;
+    care: string;
+  }>;
+  headings?: {
+    bestFor?: string;
+    style?: string;
+    focus?: string;
+    care?: string;
+  };
+  id?: string;
+  intro?: string;
+  alt?: boolean;
+}
+
 export interface NoteBlock {
   kind: 'note';
   heading: string;
@@ -81,14 +103,24 @@ export interface ProductSectionProductOverride {
 
 export type ProductSectionProductRef = string | ProductSectionProductOverride;
 
-export interface RelaxationDisplayProduct extends Omit<RelaxationProduct, 'bullets'> {
+export interface RelaxationDisplayProduct {
+  id: string;
+  asin?: string;
+  name: string;
+  category: string;
+  amazonUrl: string;
   bullets: string[];
+  bestFor: string;
+  whyItWorks: string;
+  considerIf: string;
+  image?: { src: string; alt: string };
 }
 
 export type RelaxationBlock =
   | ProseBlock
   | ProductSectionBlock
   | DecisionColumnsBlock
+  | ComparisonTableBlock
   | NoteBlock
   | QuickPicksBlock;
 
@@ -118,15 +150,39 @@ export interface RelaxationConverterPageConfig {
   };
 }
 
-function getRequiredProduct(id: string): RelaxationProduct {
-  const product = relaxationProducts.find((p) => p.id === id);
-  if (!product) {
-    throw new Error(`Missing relaxation product: ${id}`);
+function getRequiredProduct(id: string): RelaxationDisplayProduct {
+  const relaxationProduct = relaxationProducts.find((p) => p.id === id);
+  if (relaxationProduct) {
+    return {
+      ...relaxationProduct,
+      bullets: [...relaxationProduct.bullets],
+    };
   }
-  return product;
+
+  const coolingProduct = coolingProducts.find((p) => p.id === id);
+  if (coolingProduct) {
+    return {
+      id: coolingProduct.id,
+      asin: coolingProduct.asin,
+      name: coolingProduct.name,
+      category: coolingProduct.category,
+      amazonUrl: coolingProduct.amazonUrl,
+      bullets: [...coolingProduct.bullets],
+      bestFor: coolingProduct.bestFor,
+      whyItWorks: coolingProduct.coolingMethod
+        ? `Cooling method: ${coolingProduct.coolingMethod}.`
+        : 'Cooling-focused elevated design gives dogs a more durable surface with fewer soft chew targets.',
+      considerIf: coolingProduct.sizingNote
+        ? `You need a tougher setup and can work within this sizing note: ${coolingProduct.sizingNote}`
+        : 'You want a tougher elevated bed and your dog settles well on a firmer sleeping surface.',
+      image: coolingProduct.image,
+    };
+  }
+
+  throw new Error(`Missing relaxation product: ${id}`);
 }
 
-export function getRequiredProducts(ids: string[]): RelaxationProduct[] {
+export function getRequiredProducts(ids: string[]): RelaxationDisplayProduct[] {
   return ids.map((id) => getRequiredProduct(id));
 }
 
@@ -137,10 +193,7 @@ export function resolveRelaxationDisplayProducts(
     const base = getRequiredProduct(typeof ref === 'string' ? ref : ref.id);
 
     if (typeof ref === 'string') {
-      return {
-        ...base,
-        bullets: [...base.bullets],
-      };
+      return base;
     }
 
     const {
@@ -1759,6 +1812,338 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         'bedsure-comfyfleece-orthopedic',
         'cwawz-orthopedic-bolster',
         'carolina-pet-bolster-lg',
+      ],
+    },
+  },
+
+  'best-chew-resistant-dog-beds': {
+    slug: 'best-chew-resistant-dog-beds',
+    title: 'Best Chew-Resistant Dog Beds for Dogs Who Destroy Soft Beds',
+    ogTitle: 'Best Chew-Resistant Dog Beds for Chewers',
+    description:
+      'Compare chew-resistant dog beds, elevated cot-style beds, washable rip-stop beds, waterproof options, and crate mats for dogs who chew bedding.',
+    pageSlug: 'best-chew-resistant-dog-beds',
+    hero: {
+      title: 'Best Chew-Resistant Dog Beds for Dogs Who Destroy Soft Beds',
+      subtitle:
+        'This guide compares tougher beds, elevated cot-style beds, rip-stop covers, waterproof options, and crate mats for dogs that chew bedding. The goal is not to promise miracles. It is to help you choose formats that give destroyers fewer easy targets than a standard plush bed.',
+      disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
+      primaryCta: { label: 'See Quick Summary', href: '#quick-summary' },
+      secondaryCta: { label: 'Comfort & Rest', href: ROUTES.comfortHub },
+    },
+    toc: [
+      { label: 'Quick Summary', anchor: 'quick-summary' },
+      { label: 'What Chew-Resistant Means', anchor: 'what-chew-resistant-means' },
+      { label: 'Comparison Table', anchor: 'comparison-table' },
+      { label: 'Elevated Beds', anchor: 'elevated-beds' },
+      { label: 'Washable & Padded Beds', anchor: 'washable-beds' },
+      { label: 'Crate Mats', anchor: 'crate-mats' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    blocks: [
+      {
+        kind: 'quick_picks',
+        id: 'quick-summary',
+        heading: 'Quick Summary',
+        intro:
+          'If your dog destroys plush beds, start by choosing the right format before choosing the prettiest bed. Elevated cots remove stuffing. Flat crate mats remove bolsters and soft edges. Tougher washable covers help with moderate chewers, but they still are not a guarantee for every dog.',
+        items: [
+          {
+            label: 'Best Overall',
+            title: 'K9 Ballistics Armored Crate Bed',
+            description:
+              'The clearest premium starting point if you want the strongest padded option and are specifically trying to move away from flimsy plush beds.',
+            productId: 'k9-ballistics-armored-crate-bed',
+            position: 'quick-picks-1',
+          },
+          {
+            label: 'Best Elevated Option',
+            title: 'K9 Ballistics Chew Proof Elevated Cooling Bed',
+            description:
+              'An elevated cot removes stuffing and soft corners while adding airflow, which makes it a strong fit for destroyers that also run hot.',
+            productId: 'k9-ballistics-elevated-cooling-bed',
+            position: 'quick-picks-2',
+          },
+          {
+            label: 'Best Budget Elevated',
+            title: 'Veehoo Chewproof Elevated Dog Bed',
+            description:
+              'The lower-cost way to try the raised-cot strategy before spending premium K9 Ballistics money.',
+            productId: 'veehoo-chewproof-elevated-bed',
+            position: 'quick-picks-3',
+          },
+          {
+            label: 'Best Washable Tough Bed',
+            title: 'K9 Ballistics Tough Ripstop Oval Bolster Dog Bed',
+            description:
+              'A better fit for moderate chewers that still want a den-like sleeping shape instead of a flat cot.',
+            productId: 'k9-ballistics-ripstop-oval-bolster-bed',
+            position: 'quick-picks-4',
+          },
+          {
+            label: 'Best Crate Mat',
+            title: '1231 Brands Dog Crate Mat',
+            description:
+              'The best crate-liner style pick when your dog destroys kennel bedding but still needs something softer than a bare plastic tray.',
+            productId: 'brands1231-chew-resistant-crate-mat',
+            position: 'quick-picks-5',
+          },
+        ],
+      },
+      {
+        kind: 'prose',
+        id: 'what-chew-resistant-means',
+        heading: 'What “Chew-Resistant” Really Means',
+        paragraphs: [
+          'No soft bed is guaranteed against every determined chewer. Some dogs destroy bedding because they are bored. Some do it because they are anxious. Some simply love pulling at seams, corners, and stuffing. A tougher bed can reduce easy failure points, but it does not erase behavior, supervision needs, or ingestion risk.',
+          '<strong>Elevated cot beds</strong> are often the clearest format change because they remove the stuffing, pillow edges, and plush corners that many dogs attack first. <strong>Rip-stop and tougher covers</strong> are better suited to scratching, digging, and moderate chewing than standard soft upholstery, but they still are not magic if your dog is committed to destroying fabric.',
+          '<strong>Bolsters and plush seams</strong> deserve extra caution. They can be comforting for some dogs, but they also create chew targets. That is why these are better framed as tougher-than-standard options for moderate chewers, not as universally safe picks for unsupervised destroyers. Crate mats require the same honesty: if a dog shreds bedding and swallows pieces, a flatter crate-safe setup and closer supervision usually matter more than marketing language.',
+        ],
+        alt: true,
+      },
+      {
+        kind: 'comparison_table',
+        id: 'comparison-table',
+        heading: 'Chew-Resistant Bed Comparison Table',
+        intro:
+          'Use the table to narrow the format first: elevated cot, tougher washable floor bed, orthopedic-style flat bed, or crate-focused liner.',
+        headings: {
+          bestFor: 'Best For',
+          style: 'Style',
+          focus: 'Chew-Resistance Angle',
+          care: 'Washability / Waterproof',
+        },
+        items: [
+          {
+            productId: 'k9-ballistics-armored-crate-bed',
+            bestFor: 'Premium padded pick',
+            style: 'Armored padded crate bed',
+            focus: 'Tougher shell with fewer weak plush points',
+            care: 'Easy-clean surface; crate-focused build',
+          },
+          {
+            productId: 'k9-ballistics-elevated-cooling-bed',
+            bestFor: 'Aggressive cot-style chewers',
+            style: 'Elevated cooling cot',
+            focus: 'No stuffing or soft corners to grab',
+            care: 'Raised wipe-clean format',
+          },
+          {
+            productId: 'fxw-titannest-elevated-bed',
+            bestFor: 'Large dogs and washable cots',
+            style: 'Elevated padded cot',
+            focus: 'Raised design removes common plush targets',
+            care: 'Washable and waterproof',
+          },
+          {
+            productId: 'veehoo-chewproof-elevated-bed',
+            bestFor: 'Budget elevated test run',
+            style: 'Elevated mesh cot',
+            focus: 'Simple raised surface with fewer chew targets',
+            care: 'Washable breathable mesh',
+          },
+          {
+            productId: 'k9-ballistics-ripstop-oval-bolster-bed',
+            bestFor: 'Moderate chewers that like a nest shape',
+            style: 'Rip-stop oval bolster bed',
+            focus: 'Tougher cover than standard plush',
+            care: 'Machine washable',
+          },
+          {
+            productId: 'k9-ballistics-rectangle-pillow-bed',
+            bestFor: 'Big home-bed setup',
+            style: 'Tough rectangle floor bed',
+            focus: 'Durable cover over a familiar floor-bed format',
+            care: 'Washable removable cover; water resistant',
+          },
+          {
+            productId: 'sytopia-orthopedic-chew-resistant-bed',
+            bestFor: 'Flatter supportive bed',
+            style: 'Orthopedic flat bed',
+            focus: 'Lower-profile padded bed with fewer edge targets',
+            care: 'Waterproof easy-clean build',
+          },
+          {
+            productId: 'sytopia-elevated-chew-resistant-bed',
+            bestFor: 'Breathable elevated support',
+            style: 'Elevated mesh cot',
+            focus: 'No stuffing plus strong airflow',
+            care: 'Waterproof easy clean',
+          },
+          {
+            productId: 'vivifying-chew-resistant-crate-pad',
+            bestFor: 'Simple waterproof kennel pad',
+            style: 'Flat crate pad',
+            focus: 'Low-profile format reduces chewable edges',
+            care: 'Machine washable and waterproof',
+          },
+          {
+            productId: 'brands1231-chew-resistant-crate-mat',
+            bestFor: 'Crate liner for chewers',
+            style: 'Ripstop crate mat',
+            focus: 'Crate-focused bedding without plush bulk',
+            care: 'Machine washable; water resistant',
+          },
+        ],
+      },
+      {
+        kind: 'product_section',
+        id: 'elevated-beds',
+        heading: 'Best Elevated Chew-Resistant Beds',
+        positionOffset: 0,
+        columns: 2,
+        intro:
+          'Elevated beds are often the cleanest answer for destroyers because they remove stuffing, pillow seams, and many of the edges dogs like to grab first. They also work well for dogs that run warm.',
+        productIds: [
+          {
+            id: 'k9-ballistics-elevated-cooling-bed',
+            bestFor: 'Aggressive chewers that do better on a firmer elevated cot than on any stuffed bed',
+            whyItWorks:
+              'The aluminum-frame elevated format removes the plush seams and loose fill many destroyers target first while also improving airflow underneath the dog',
+            considerIf:
+              'You want the strongest elevated option and your dog can rest comfortably on a firmer cot-style surface',
+          },
+          'fxw-titannest-elevated-bed',
+          'veehoo-chewproof-elevated-bed',
+          'sytopia-elevated-chew-resistant-bed',
+        ],
+      },
+      {
+        kind: 'product_section',
+        id: 'washable-beds',
+        heading: 'Best Washable and Padded Tougher Beds',
+        positionOffset: 4,
+        columns: 2,
+        alt: true,
+        intro:
+          'These are for dogs that still want a bed shape closer to a traditional floor bed. They are tougher than standard plush options, but they are still best framed as chew-resistant choices for moderate destroyers, not guaranteed solutions for every aggressive chewer.',
+        productIds: [
+          'k9-ballistics-armored-crate-bed',
+          'k9-ballistics-ripstop-oval-bolster-bed',
+          'k9-ballistics-rectangle-pillow-bed',
+          'sytopia-orthopedic-chew-resistant-bed',
+        ],
+        copyHtml:
+          'Bolsters, raised seams, and thicker padding can still be tempting for some dogs. If your dog targets edges first, the elevated section above is usually the safer starting point.',
+      },
+      {
+        kind: 'product_section',
+        id: 'crate-mats',
+        heading: 'Best Crate Mats for Chewers',
+        positionOffset: 8,
+        columns: 2,
+        intro:
+          'When the real problem is destroyed crate bedding, a lower-profile crate mat often makes more sense than trying to wedge a plush bed into the kennel. The flatter the setup, the fewer grab points your dog gets.',
+        productIds: [
+          'brands1231-chew-resistant-crate-mat',
+          'vivifying-chew-resistant-crate-pad',
+        ],
+      },
+      {
+        kind: 'prose',
+        heading: 'What to Avoid if Your Dog Destroys Beds',
+        paragraphs: [
+          'Avoid assuming that more fluff equals more comfort for a destructive chewer. Deep plush fill, decorative piping, exposed zippers, loose liners, and soft raised corners can all become chew targets quickly. Those designs may be great for gentle sleepers, but they are often the exact opposite of what destroyers need.',
+          'Also avoid buying purely on the word “indestructible.” Product names can tell you what the brand is aiming for, but the better question is what the bed removes: stuffing, seam exposure, soft corners, or easy pull points. Formats matter more than slogans.',
+        ],
+      },
+      {
+        kind: 'note',
+        heading: 'When a Chew-Resistant Bed Is Not Enough',
+        text:
+          'If your dog destroys every bed, swallows fabric or stuffing, or only chews bedding when left alone, the bed itself may not be the whole problem. You may need more supervision, crate-training changes, a flatter crate-safe setup, or a heavy-duty confinement plan rather than a softer “better” bed.',
+        alt: true,
+      },
+    ],
+    faq: {
+      heading: 'Chew-Resistant Dog Bed FAQ',
+      items: [
+        {
+          question: 'Are chew-proof dog beds really chew-proof?',
+          answer:
+            'Not for every dog. Some beds are clearly tougher than standard plush beds, and elevated cots often remove the easiest chew targets, but no soft or fabric-based bed is a guaranteed solution for every determined destroyer.',
+        },
+        {
+          question: 'Are elevated dog beds better for chewers?',
+          answer:
+            'Often, yes. Elevated beds remove stuffing, bolsters, and many soft corners, which gives destroyers fewer obvious places to start. They are a strong first format to try when plush beds keep failing.',
+        },
+        {
+          question: 'What kind of bed is best for a dog who eats stuffing?',
+          answer:
+            'A flat crate mat or elevated cot is usually safer than another stuffed pillow bed because there is less loose fill and fewer exposed seams. If your dog swallows bedding, supervision and crate-safe setup decisions matter as much as the bed itself.',
+        },
+        {
+          question: 'Are crate mats safe for dogs who chew?',
+          answer:
+            'They can be a better option than plush beds because they stay flatter and simpler, but they are not automatically safe for a dog that shreds and ingests fabric. If chewing becomes a swallowing risk, you may need to remove bedding entirely unless supervised.',
+        },
+        {
+          question: 'Should anxious dogs use chew-resistant beds?',
+          answer:
+            'Sometimes, especially if they destroy bedding during stressed alone-time or crate-time. Just remember that a tougher bed helps with durability, not with the underlying anxiety. Dogs that chew from stress may also need training, management, and calming support.',
+        },
+        {
+          question: 'What should I do if my dog destroys every bed?',
+          answer:
+            'Start by changing the format, not just the brand: try an elevated cot or flatter crate mat, remove plush seam-heavy bedding, and supervise closely if your dog ingests fabric. If destruction is severe or linked to panic, revisit crate setup, enrichment, and anxiety management instead of assuming another bed will fix it alone.',
+        },
+      ],
+    },
+    relatedGuides: {
+      heading: 'More Comfort & Behavior Help',
+      guides: [
+        {
+          href: ROUTES.comfortHub,
+          title: 'Comfort & Rest',
+          description:
+            'Browse the full comfort pillar for calming beds, orthopedic beds, travel beds, and crate paths built around different rest problems.',
+        },
+        {
+          href: ROUTES.comfortCalmingBeds,
+          title: 'Best Calming Dog Beds',
+          description:
+            'For dogs that want to curl and lean into a raised edge, compare calming bed shapes separately from tougher chew-resistant formats.',
+        },
+        {
+          href: ROUTES.comfortOrthopedicBeds,
+          title: 'Best Orthopedic Dog Beds',
+          description:
+            'If support is the main issue rather than destruction, compare the orthopedic options that prioritize foam and daily joint comfort.',
+        },
+        {
+          href: ROUTES.calmingCrateGuide,
+          title: 'How to Crate Train Your Dog',
+          description:
+            'Useful when bedding destruction is tied to confinement, routine, or stress rather than simple rough play.',
+        },
+      ],
+    },
+    disclosureShowSafety: false,
+    internalLinkStrip: {
+      heading: 'More Rest, Crate, and Calming Guides',
+      links: [
+        { label: 'Comfort & Rest', href: ROUTES.comfortHub },
+        { label: 'Calming Dog Beds', href: ROUTES.comfortCalmingBeds },
+        { label: 'Orthopedic Dog Beds', href: ROUTES.comfortOrthopedicBeds },
+        { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
+        { label: 'Best Calming Products', href: ROUTES.calmingTop },
+      ],
+    },
+    itemListSchema: {
+      name: 'Best Chew-Resistant Dog Beds',
+      url: 'https://www.chill-dogs.com/comforting/best-chew-resistant-dog-beds/',
+      productIds: [
+        'k9-ballistics-armored-crate-bed',
+        'k9-ballistics-elevated-cooling-bed',
+        'fxw-titannest-elevated-bed',
+        'veehoo-chewproof-elevated-bed',
+        'k9-ballistics-ripstop-oval-bolster-bed',
+        'k9-ballistics-rectangle-pillow-bed',
+        'vivifying-chew-resistant-crate-pad',
+        'sytopia-orthopedic-chew-resistant-bed',
+        'sytopia-elevated-chew-resistant-bed',
+        'brands1231-chew-resistant-crate-mat',
       ],
     },
   },

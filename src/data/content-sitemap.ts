@@ -230,6 +230,13 @@ export const staticSitemapSections: SitemapSection[] = [
         pageType: 'converter',
       }),
       createSitemapPage({
+        baseTitle: relaxationConverterPages['best-chew-resistant-dog-beds'].title,
+        description: relaxationConverterPages['best-chew-resistant-dog-beds'].description,
+        href: ROUTES.comfortChewResistantBeds,
+        pageType: 'converter',
+        ogTitle: relaxationConverterPages['best-chew-resistant-dog-beds'].ogTitle,
+      }),
+      createSitemapPage({
         baseTitle: relaxationConverterPages['best-dog-travel-beds'].title,
         description: relaxationConverterPages['best-dog-travel-beds'].description,
         href: ROUTES.comfortTravelBeds,
