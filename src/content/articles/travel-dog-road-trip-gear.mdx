@@ -15,6 +15,7 @@ import AffiliateDisclosure from '@components/AffiliateDisclosure.astro';
 import CalmingDisclaimer from '@components/modules/CalmingDisclaimer.astro';
 import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
 import RoadTripProducts from '@components/modules/RoadTripProducts.astro';
+import { ROUTES } from '@data/routes';
 
 import imgOldCar from '../../images/watermarked/rhys-road-trip/20250629_131343.jpg';
 import imgFanCooler from '../../images/watermarked/rhys-road-trip/20250630_164216~2.jpg';
@@ -358,6 +359,10 @@ export const roadTripFaqs = [
       <span class="hero-badge">Rhys Approved Product</span>
       <RoadTripProducts section="travel-bed" pageSlug="dog-road-trip-gear" />
     </div>
+    <p>
+      If you want more portable bed options for hotels, camping, patios, and destination stops, compare our{' '}
+      <a href={ROUTES.comfortTravelBeds} data-track="collector_to_converter_click" data-from-page="dog-road-trip-gear" data-to-page={ROUTES.comfortTravelBeds} data-link-position="section">dog travel bed picks</a>.
+    </p>
 
     <figure class="trip-photo">
       <Image
@@ -428,10 +433,11 @@ export const roadTripFaqs = [
   <InternalLinkStrip
     heading="More Dog Travel Guides"
     links={[
-      { label: 'Travel Crates for Road Trips', href: '/comforting/best-travel-crates-for-road-trips/' },
-      { label: 'Car Cooling Picks', href: '/cooling/car-cooling-for-dogs/' },
-      { label: 'Car Anxiety Picks', href: '/calming/car-anxiety-for-dogs/' },
-      { label: 'All Calming Products', href: '/calming/best-calming-products-for-anxious-dogs/' },
+      { label: 'Travel Beds for Dogs', href: ROUTES.comfortTravelBeds },
+      { label: 'Travel Crates for Road Trips', href: ROUTES.comfortTravelCrates },
+      { label: 'Car Cooling Picks', href: ROUTES.coolingCar },
+      { label: 'Car Anxiety Picks', href: ROUTES.calmingCar },
+      { label: 'All Calming Products', href: ROUTES.calmingTop },
     ]}
     fromPage="dog-road-trip-gear"
   />

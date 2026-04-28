@@ -27,6 +27,7 @@ export const ROUTES = {
   comfortHub: '/comforting/',
   comfortCalmingBeds: '/comforting/best-calming-dog-beds/',
   comfortOrthopedicBeds: '/comforting/best-orthopedic-dog-beds/',
+  comfortTravelBeds: '/comforting/best-dog-travel-beds/',
   comfortPuppyCrates: '/comforting/best-puppy-crates/',
   comfortAnxietyCrates: '/comforting/best-anxiety-dog-crates/',
   comfortTravelCrates: '/comforting/best-travel-crates-for-road-trips/',

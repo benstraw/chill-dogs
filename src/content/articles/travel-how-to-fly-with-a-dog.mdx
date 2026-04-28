@@ -10,6 +10,7 @@ import Toc from '@components/modules/Toc.astro';
 import FAQ from '@components/modules/FAQ.astro';
 import Disclosure from '@components/modules/Disclosure.astro';
 import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
+import { ROUTES } from '@data/routes';
 
 export const tocHeadings = [
   { label: 'Cabin, cargo, or service dog?', anchor: 'category' },
@@ -170,8 +171,9 @@ export const faqs = [
     <h3>Comfort from home</h3>
     <p>
       A dog that travels well is a dog that feels anchored to something familiar. An unwashed T-shirt with your scent, a small blanket the dog already sleeps on, or a calming insert from their usual bed routine all do more than any branded "calming carrier" product. If your dog already responds to a specific bed or insert at home, bring that rather than something new. Our{' '}
-      <a href="/comforting/best-calming-dog-beds/" data-track="collector_to_converter_click" data-from-page="how-to-fly-with-a-dog" data-to-page="/comforting/best-calming-dog-beds/" data-link-position="section">calming bed picks</a>
-      {' '}are the same category I would draw a travel insert from.
+      <a href={ROUTES.comfortCalmingBeds} data-track="collector_to_converter_click" data-from-page="how-to-fly-with-a-dog" data-to-page={ROUTES.comfortCalmingBeds} data-link-position="section">calming bed picks</a>
+      {' '}are the same category I would draw a travel insert from. If you want a portable option specifically for airport downtime, hotel floors, or settling at the destination, compare our{' '}
+      <a href={ROUTES.comfortTravelBeds} data-track="collector_to_converter_click" data-from-page="how-to-fly-with-a-dog" data-to-page={ROUTES.comfortTravelBeds} data-link-position="section">dog travel bed picks</a>.
     </p>
 
     <h2 id="prep">How to prepare your dog for the crate and the flight</h2>
@@ -287,11 +289,12 @@ export const faqs = [
   <InternalLinkStrip
     heading="Related dog travel and calming guides"
     links={[
-      { label: 'Best Airline-Approved Carriers', href: '/comforting/best-airline-approved-dog-carriers/' },
-      { label: 'Best Airline Crates', href: '/comforting/best-airline-crates-for-flying-with-your-dog/' },
-      { label: 'Best Calming Products for Anxious Dogs', href: '/calming/best-calming-products-for-anxious-dogs/' },
-      { label: 'Car Anxiety Picks', href: '/calming/car-anxiety-for-dogs/' },
-      { label: 'Dog Road Trip Gear', href: '/travel/dog-road-trip-gear/' },
+      { label: 'Best Airline-Approved Carriers', href: ROUTES.comfortAirlineCarriers },
+      { label: 'Best Airline Crates', href: ROUTES.comfortAirlineCrates },
+      { label: 'Dog Travel Beds', href: ROUTES.comfortTravelBeds },
+      { label: 'Best Calming Products for Anxious Dogs', href: ROUTES.calmingTop },
+      { label: 'Car Anxiety Picks', href: ROUTES.calmingCar },
+      { label: 'Dog Road Trip Gear', href: ROUTES.roadTrip },
     ]}
     fromPage="how-to-fly-with-a-dog"
   />

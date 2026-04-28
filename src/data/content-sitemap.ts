@@ -230,6 +230,13 @@ export const staticSitemapSections: SitemapSection[] = [
         pageType: 'converter',
       }),
       createSitemapPage({
+        baseTitle: relaxationConverterPages['best-dog-travel-beds'].title,
+        description: relaxationConverterPages['best-dog-travel-beds'].description,
+        href: ROUTES.comfortTravelBeds,
+        pageType: 'converter',
+        ogTitle: relaxationConverterPages['best-dog-travel-beds'].ogTitle,
+      }),
+      createSitemapPage({
         baseTitle: relaxationConverterPages['best-puppy-crates'].title,
         description: relaxationConverterPages['best-puppy-crates'].description,
         href: ROUTES.comfortPuppyCrates,

@@ -57,6 +57,27 @@ describe('relaxation converter page config', () => {
     ))).toBe(true);
   });
 
+  it('returns travel beds converter config with travel-specific product logic', () => {
+    const config = getRelaxationConverterPageConfig('best-dog-travel-beds');
+
+    expect(config.pageSlug).toBe('best-dog-travel-beds');
+    expect(config.hero.secondaryCta?.href).toBe('/travel/dog-road-trip-gear/');
+    expect(config.itemListSchema?.productIds).toEqual([
+      'chuckit-travel-bed',
+      'coleman-roll-up-travel-bed',
+      'furhaven-outdoor-travel-dog-bed',
+      'kindtail-nomad-nap-mat',
+      'onetigris-travel-dog-bed',
+      'kurgo-loft-wander-bed',
+      'bingpet-outdoor-travel-bed',
+      'yofang-extra-large-travel-bed',
+    ]);
+    expect(config.blocks.some((block) => (
+      block.kind === 'note' &&
+      block.heading === 'Important Flight Note'
+    ))).toBe(true);
+  });
+
   it('returns airline crates converter config with rigid travel product logic', () => {
     const config = getRelaxationConverterPageConfig('best-airline-crates-for-flying-with-your-dog');
 
@@ -223,6 +244,21 @@ describe('relaxation converter page config', () => {
       'gardner-pet-heavy-duty-crate',
       'xxl-heavy-duty-dog-crate',
       'hiwokk-large-dog-crate',
+    ]));
+  });
+
+  it('keeps travel bed products in the travel-beds category', () => {
+    const productIds = getRelaxationProductsByCategory('travel-beds').map((product) => product.id);
+
+    expect(productIds).toEqual(expect.arrayContaining([
+      'furhaven-outdoor-travel-dog-bed',
+      'chuckit-travel-bed',
+      'coleman-roll-up-travel-bed',
+      'kindtail-nomad-nap-mat',
+      'onetigris-travel-dog-bed',
+      'kurgo-loft-wander-bed',
+      'yofang-extra-large-travel-bed',
+      'bingpet-outdoor-travel-bed',
     ]));
   });
 

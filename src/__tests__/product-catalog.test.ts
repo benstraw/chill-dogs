@@ -64,4 +64,15 @@ describe('admin product catalog data', () => {
       ])
     );
   });
+
+  it('tracks the featured travel bed on both the road trip article and travel-bed converter', () => {
+    const pageMap = buildProductPageMap();
+
+    expect(pageMap['onetigris-travel-dog-bed']).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ href: '/travel/dog-road-trip-gear/' }),
+        expect.objectContaining({ href: '/comforting/best-dog-travel-beds/' }),
+      ])
+    );
+  });
 });

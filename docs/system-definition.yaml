@@ -8,7 +8,7 @@
 
 site_system:
   status: "active"
-  as_of: "2026-04-14"
+  as_of: "2026-04-27"
   owner: "chill-dogs"
   purpose: "Define the website as a modular conversion system and keep implementation aligned."
 
@@ -109,6 +109,7 @@ site_system:
       routes:
         - "/comforting/best-calming-dog-beds/"
         - "/comforting/best-orthopedic-dog-beds/"
+        - "/comforting/best-dog-travel-beds/"
         - "/comforting/best-puppy-crates/"
         - "/comforting/best-anxiety-dog-crates/"
         - "/comforting/best-travel-crates-for-road-trips/"
@@ -117,8 +118,8 @@ site_system:
         - "/comforting/best-furniture-dog-crates/"
         - "/comforting/best-heavy-duty-dog-crates/"
       notes: >
-        Comfort collector routes to calming beds, orthopedic beds, puppy crates, anxiety crates, travel crates,
-        airline crates, furniture crates, and heavy-duty crates.
+        Comfort collector routes to calming beds, orthopedic beds, travel beds, puppy crates, anxiety crates,
+        travel crates, airline crates, furniture crates, and heavy-duty crates.
         The crate-training collector article now routes into the airline, furniture, and heavy-duty crate paths as well.
         Placeholder product entries (ASINs B0D5B56X9V, B0DTH4195V) need
         to be identified and updated in src/data/relaxation-products.ts.
@@ -134,19 +135,20 @@ site_system:
     - name: "Road Trip Chill Kit"
       type: "collector"
       collector_subtype: "article"
-      target_action: "Route mixed intent to cooling and calming converters"
+      target_action: "Route mixed intent to cooling, calming, and comfort travel-bed converters"
       metric: "collector_to_converter_click split by destination"
       routes:
         - "/travel/dog-road-trip-gear/"
+      notes: "Routes road-trip comfort intent to the dog travel bed converter as well as cooling and calming pages."
 
     - name: "How to Fly With a Dog"
       type: "collector"
       collector_subtype: "article"
-      target_action: "Route air-travel intent to calming converters and comfort bed converters"
+      target_action: "Route air-travel intent to calming converters and comfort bed/travel-bed converters"
       metric: "collector_to_converter_click to calming and comfort converters"
       routes:
         - "/travel/how-to-fly-with-a-dog/"
-      notes: "Informational air-travel guide; attributes facts to TSA, USDA APHIS, AVMA, DOT, CDC, and AAHA. No product roundup. Internal links to calming and comfort converters."
+      notes: "Informational air-travel guide; attributes facts to TSA, USDA APHIS, AVMA, DOT, CDC, and AAHA. No product roundup. Internal links to calming, carrier, and comfort travel-bed converters."
 
     - name: "How Much Do Dogs Sleep"
       type: "collector"

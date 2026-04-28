@@ -1,3 +1,5 @@
+import { buildAmazonAffiliateUrl, getAmazonProductMetadata } from './amazon-product-metadata';
+
 export type RelaxationProductCategory = 'calming-beds' | 'orthopedic-beds' | 'crates' | 'travel-beds' | 'carriers';
 
 export interface RelaxationProduct {
@@ -11,6 +13,20 @@ export interface RelaxationProduct {
   whyItWorks: string;
   considerIf: string;
   image?: { src: string; alt: string };
+}
+
+function createTravelBedProduct(
+  config: Omit<RelaxationProduct, 'name' | 'amazonUrl' | 'image' | 'category'> & { category?: 'travel-beds' }
+): RelaxationProduct {
+  const fetched = getAmazonProductMetadata(config.asin);
+
+  return {
+    ...config,
+    name: fetched.title,
+    category: 'travel-beds',
+    amazonUrl: buildAmazonAffiliateUrl(config.asin),
+    image: fetched.image,
+  };
 }
 
 export const relaxationProducts: RelaxationProduct[] = [
@@ -204,28 +220,122 @@ export const relaxationProducts: RelaxationProduct[] = [
     image: { src: 'https://m.media-amazon.com/images/I/51pzu55J+1L._SL500_.jpg', alt: 'Carolina Pet Company Microfiber Tipped Bolster Bed Large' },
   },
 
-  // ── Travel Beds ───────────────────────────────────────────────────────────
-
-  {
-    id: 'onetigris-travel-dog-bed',
-    asin: 'B0B6YYPYC4',
-    name: 'OneTigris Travel Dog Bed',
-    category: 'travel-beds',
-    amazonUrl: 'https://www.amazon.com/dp/B0B6YYPYC4/?tag=chill-dogs-20',
-    bullets: [
-      'Sleeping-bag style packs down to near water-bottle size — fits in any bag, suitcase, or cargo area',
-      'Waterproof, anti-slip base stays put on hotel floors, tent floors, and hard surfaces',
-      'Cushioned plush interior gives dogs a consistent, familiar sleep surface at every stop',
-    ],
-    bestFor: 'Dogs who travel frequently and need a packable but genuinely comfortable off-road sleep surface',
-    whyItWorks:
-      'A consistent sleep surface at every stop reduces novelty stress — dogs settle faster when their bed smells and feels the same whether it\'s night 1 or night 10',
-    considerIf:
-      'You want a travel bed that takes up almost no space but still gives your dog a proper sleep surface instead of a folded blanket',
-    image: { src: 'https://m.media-amazon.com/images/I/71riy3hJGtL._SL500_.jpg', alt: 'OneTigris Travel Dog Bed' },
-  },
-
   // ── Crates ───────────────────────────────────────────────────────────────
+
+  createTravelBedProduct({
+    id: 'furhaven-outdoor-travel-dog-bed',
+    asin: 'B08FNVH7VB',
+    bullets: [
+      'Lightweight pillow-style mat with a stuff sack keeps packed size reasonable for road trips and camping bins',
+      'Machine-washable construction is practical when the bed picks up dirt, sand, or hotel-floor grime',
+      '39-by-27-inch footprint gives larger dogs more real sleeping room than the thinnest travel mats',
+    ],
+    bestFor: 'Large dogs when you want a packable bed that still feels more like a real sleep surface than a thin pad',
+    whyItWorks:
+      'The quilted, low-profile shape gives dogs a familiar place to settle without demanding much cargo space between stops',
+    considerIf:
+      'You want a travel bed that stays easy to carry but still gives your dog more cushion than an ultrathin roll-up mat',
+  }),
+  createTravelBedProduct({
+    id: 'chuckit-travel-bed',
+    asin: 'B00027466A',
+    bullets: [
+      'Water-resistant shell and raised pillow-style edge make it feel more finished than a bare travel mat',
+      '39-by-30-inch size works for a wide range of medium and large dogs on hotel floors, patios, or campsites',
+      'High review count makes it one of the more established travel-bed picks in this category',
+    ],
+    bestFor: 'Travelers who want the clearest all-around pick for road trips, hotel stops, patios, and casual camping',
+    whyItWorks:
+      'It balances portability, washable outdoor-friendly materials, and enough structure to feel like a real bed at the destination',
+    considerIf:
+      'You want one travel bed that can move between the car, hotel room, patio, and campsite without feeling flimsy',
+  }),
+  createTravelBedProduct({
+    id: 'coleman-roll-up-travel-bed',
+    asin: 'B01MSZJ3IX',
+    bullets: [
+      'Roll-up design is straightforward to pack, stow, and carry between the car and each overnight stop',
+      'Padded construction gives a little more insulation from hard or cool ground than the thinnest mats',
+      'Coleman travel focus makes it a natural fit for camp setups and road-trip gear bins',
+    ],
+    bestFor: 'Owners who specifically want a simple roll-up bed they can keep ready for road trips and campground stops',
+    whyItWorks:
+      'The packed roll format makes this bed easy to treat like travel gear instead of a bulky spare bed that lives loose in the cargo area',
+    considerIf:
+      'You care more about easy pack-and-go storage than about the plushest surface in the category',
+  }),
+  createTravelBedProduct({
+    id: 'kindtail-nomad-nap-mat',
+    asin: 'B0F2GFMG74',
+    bullets: [
+      'Folds to a compact travel size and weighs about 1.5 pounds, which is unusually easy to carry through hotels or vacation rentals',
+      'Water-resistant washable build makes it practical for airport waiting areas, destination floors, and repeated travel days',
+      'Sized for pets up to 50 pounds, so it works best when you want a portable familiar mat rather than a sprawling XL bed',
+    ],
+    bestFor: 'Small-to-medium dogs that need a lightweight familiar mat for hotels, airport downtime, and destination settling',
+    whyItWorks:
+      'Its very low packed size makes it easy to bring along even when luggage space is limited, which means your dog is more likely to actually get the same resting surface each trip',
+    considerIf:
+      'You want a compact mat for travel routines, but do not need the thicker cushion of a larger camping-style bed',
+  }),
+  createTravelBedProduct({
+    id: 'onetigris-travel-dog-bed',
+    asin: 'B0B6ZJWBZ3',
+    bullets: [
+      'Waterproof anti-slip base helps it stay put on tent floors, slick hotel surfaces, and outdoor patios',
+      'Plush interior gives dogs a warmer, more familiar resting surface than bare nylon camping mats',
+      'Portable format makes it realistic to keep in the car instead of leaving it behind between trips',
+    ],
+    bestFor: 'Dogs who travel often and need a portable bed that still feels cozy enough for real overnight use',
+    whyItWorks:
+      'The combination of travel-friendly packed size and a softer sleep surface makes it easier for dogs to settle quickly in unfamiliar places',
+    considerIf:
+      'You want one of the more camping-friendly options but do not want to give up all the softness of a true bed',
+  }),
+  createTravelBedProduct({
+    id: 'kurgo-loft-wander-bed',
+    asin: 'B01JFEAL1O',
+    bullets: [
+      'Large 48-by-36-inch size gives bigger dogs more room to stretch out at camp, in cabins, or on hotel floors',
+      'Durable water-resistant top and non-slip bottom suit repeated road-trip and campsite use',
+      'Roll-up travel format keeps it portable despite being one of the roomier picks in the group',
+    ],
+    bestFor: 'Travelers who want a more premium large-format bed for longer trips, camp setups, or bigger dogs',
+    whyItWorks:
+      'It gives larger dogs a destination bed that feels substantial while still packing as intentional travel gear rather than a bulky home bed',
+    considerIf:
+      'You have the cargo space for a larger roll-up bed and want more room and durability than the lighter travel mats offer',
+  }),
+  createTravelBedProduct({
+    id: 'yofang-extra-large-travel-bed',
+    asin: 'B0FXTTLYSX',
+    bullets: [
+      '47-by-32-inch footprint is one of the better size options here for larger dogs',
+      'Waterproof ripstop nylon and anti-slip backing make it better suited to wet grass, campsite dirt, and harder outdoor surfaces',
+      'Machine-washable build helps when the bed is doing both car-duty and outdoor-duty on the same trip',
+    ],
+    bestFor: 'Large dogs that need a more weather-friendly mat for camping, patios, and rougher road-trip stops',
+    whyItWorks:
+      'The larger waterproof platform gives big dogs a defined place to settle outside without relying on a bulky full-home bed',
+    considerIf:
+      'Your dog is large, messy, or likely to use the bed on damp ground and outdoor surfaces instead of only inside hotels',
+  }),
+  createTravelBedProduct({
+    id: 'bingpet-outdoor-travel-bed',
+    asin: 'B0DQCV6CF9',
+    bullets: [
+      'Carry-bag format keeps the setup simple for budget-minded road trips, camping kits, and trunk storage',
+      'Portable washable design covers the main travel-bed basics without pushing into premium pricing',
+      '43-by-26-inch size works for many medium dogs and lighter large dogs that do not need a thicker mattress',
+    ],
+    bestFor: 'Budget-focused shoppers who want a straightforward portable mat for road trips, car use, and campground stops',
+    whyItWorks:
+      'It covers the practical travel-bed requirements of portability, washability, and familiar destination setup without costing as much as the premium outdoor picks',
+    considerIf:
+      'You want a lower-cost travel mat for occasional trips and do not need the thickest cushioning in the category',
+  }),
+
+  // ── Travel Beds ───────────────────────────────────────────────────────────
 
   {
     id: 'kindtail-pawd-collapsible-crate',

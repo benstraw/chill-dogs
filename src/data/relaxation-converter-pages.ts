@@ -95,6 +95,7 @@ export type RelaxationBlock =
 export interface RelaxationConverterPageConfig {
   slug: string;
   title: string;
+  ogTitle?: string;
   description: string;
   pageSlug: string;
   hero: HeroConfig;
@@ -1758,6 +1759,272 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         'bedsure-comfyfleece-orthopedic',
         'cwawz-orthopedic-bolster',
         'carolina-pet-bolster-lg',
+      ],
+    },
+  },
+
+  'best-dog-travel-beds': {
+    slug: 'best-dog-travel-beds',
+    title: 'Best Dog Travel Beds for Road Trips, Hotels, and Camping',
+    ogTitle: 'Best Dog Travel Beds for Road Trips & Hotels',
+    description:
+      'Compare portable dog travel beds for road trips, hotels, camping, and travel days. See foldable, washable, and water-resistant options for dogs on the go.',
+    pageSlug: 'best-dog-travel-beds',
+    hero: {
+      title: 'Best Dog Travel Beds for Road Trips, Hotels, and Camping',
+      subtitle:
+        'A dog travel bed gives your dog a familiar place to settle when you are away from home. For road trips, hotels, camping, patios, and long travel days, the best options are portable, washable, water-resistant, and easy to pack.',
+      disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
+      primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
+      secondaryCta: { label: 'Road Trip Gear', href: ROUTES.roadTrip },
+    },
+    toc: [
+      { label: 'Quick Picks', anchor: 'quick-picks' },
+      { label: 'Travel Bed Comparison', anchor: 'travel-bed-comparison' },
+      { label: 'What to Look For', anchor: 'what-to-look-for' },
+      { label: 'Road Trips vs Flights vs Camping', anchor: 'trip-type-guide' },
+      { label: 'Thin vs Padded', anchor: 'thin-vs-padded' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    blocks: [
+      {
+        kind: 'note',
+        heading: 'Important Flight Note',
+        text:
+          'For flying, a travel bed is not a replacement for an airline-approved carrier. It is more useful at the airport, in the hotel, at your destination, or as a familiar mat during car travel.',
+      },
+      {
+        kind: 'quick_picks',
+        id: 'quick-picks',
+        heading: 'Quick Picks',
+        intro:
+          'These are the clearest starting points depending on how you actually travel with your dog: hotel-heavy trips, camping, large-dog setups, or a simple mat that can live in the car between weekends away.',
+        items: [
+          {
+            label: 'Best Overall Travel Bed',
+            title: 'Chuckit! Outdoor Travel Bed',
+            description:
+              'A strong all-around pick because it balances portability, washable materials, and enough structure to feel like a real destination bed instead of just a blanket substitute.',
+            productId: 'chuckit-travel-bed',
+            position: 'quick-picks-1',
+          },
+          {
+            label: 'Best Roll-Up Travel Bed',
+            title: 'Coleman Roll-Up Travel Bed',
+            description:
+              'The simplest roll-up choice for people who want a travel bed that packs like camping gear and is easy to grab for every stop.',
+            productId: 'coleman-roll-up-travel-bed',
+            position: 'quick-picks-2',
+          },
+          {
+            label: 'Best Lightweight Packable Bed',
+            title: 'FurHaven Outdoor Travel Dog Bed',
+            description:
+              'A practical lighter bed for people who want more sleeping surface than the thinnest mats without giving up easy packing.',
+            productId: 'furhaven-outdoor-travel-dog-bed',
+            position: 'quick-picks-3',
+          },
+          {
+            label: 'Best Waterproof Outdoor Bed',
+            title: 'ONETIGRIS Travel Dog Bed',
+            description:
+              'Useful when the bed needs to work on hotel floors one night and tent floors or patios the next, with better grip than a basic mat.',
+            productId: 'onetigris-travel-dog-bed',
+            position: 'quick-picks-4',
+          },
+          {
+            label: 'Best Hotel / Vacation Rental Mat',
+            title: 'KindTail Nomad Nap Mat',
+            description:
+              'An easy mat to carry through hotels and rentals when your dog mainly needs a familiar place to settle, not a big camping bed.',
+            productId: 'kindtail-nomad-nap-mat',
+            position: 'quick-picks-5',
+          },
+          {
+            label: 'Best Camping Bed',
+            title: 'Kurgo Loft Wander Dog Bed',
+            description:
+              'A roomier premium option for longer trips and outdoor setups where your dog will actually sleep on it for full nights.',
+            productId: 'kurgo-loft-wander-bed',
+            position: 'quick-picks-6',
+          },
+          {
+            label: 'Best Budget Travel Mat',
+            title: 'BINGPET Outdoor Travel Dog Bed',
+            description:
+              'A straightforward lower-cost choice that still covers the core travel-bed job: portability, washability, and a familiar destination surface.',
+            productId: 'bingpet-outdoor-travel-bed',
+            position: 'quick-picks-7',
+          },
+          {
+            label: 'Best for Large Dogs',
+            title: 'YOFANG Extra Large Outdoor Travel Dog Bed Mat',
+            description:
+              'One of the better large-dog options here when you need a bigger waterproof footprint for camp, patio, or road-trip stops.',
+            productId: 'yofang-extra-large-travel-bed',
+            position: 'quick-picks-8',
+          },
+        ],
+      },
+      {
+        kind: 'product_section',
+        id: 'travel-bed-comparison',
+        heading: 'Dog Travel Bed Comparison',
+        positionOffset: 0,
+        columns: 2,
+        intro:
+          'These picks focus on portable dog beds and mats for road trips, hotels, campgrounds, patios, crates at the destination, and keeping a familiar resting spot in the car. They are not meant to replace an airline carrier during transport.',
+        productIds: [
+          'chuckit-travel-bed',
+          'coleman-roll-up-travel-bed',
+          'furhaven-outdoor-travel-dog-bed',
+          'kindtail-nomad-nap-mat',
+          'onetigris-travel-dog-bed',
+          'kurgo-loft-wander-bed',
+          'bingpet-outdoor-travel-bed',
+          'yofang-extra-large-travel-bed',
+        ],
+      },
+      {
+        kind: 'prose',
+        id: 'what-to-look-for',
+        heading: 'What to Look for in a Dog Travel Bed',
+        paragraphs: [
+          'Start with <strong>packability</strong>. A travel bed only helps if you actually bring it. Thin mats and roll-up beds are easiest to keep in the car, toss into a hotel bag, or stash in camping gear. Thicker options are more comfortable once you arrive, but they cost you more cargo space.',
+          'Next, pay attention to <strong>water resistance and washability</strong>. Travel beds end up on car seats, motel floors, campsites, patios, and rental homes. A washable construction or removable washable shell matters more here than it might for a bed that never leaves the house.',
+          'A <strong>non-slip bottom</strong> is worth having when the bed will land on tile, vinyl, tent floors, or sealed wood. A mat that skates across the floor every time your dog circles before lying down is less useful as a familiar “place” cue.',
+          'Finally, compare the <strong>open size versus packed size</strong>. Some mats open wide enough for medium and large dogs but still fold down neatly; others prioritize thickness or plushness and become bulkier in the car. If you also want to use the bed in a crate, measure the crate floor and check that the travel bed can do both jobs.',
+        ],
+        alt: true,
+      },
+      {
+        kind: 'prose',
+        id: 'trip-type-guide',
+        heading: 'Road Trips vs Flights vs Camping',
+        paragraphs: [
+          '<strong>Road trips:</strong> Prioritize washable, non-slip, car-friendly mats that are easy to shake out and put back in the vehicle. If the bed will stay in the cargo area between trips, lighter packable designs are easier to live with.',
+          '<strong>Flights:</strong> Use the travel bed at the airport, hotel, or destination, not as a carrier replacement. If your dog already settles on a specific mat at home, bringing a familiar travel bed can help the destination feel less novel after a long day of transport.',
+          '<strong>Hotels and vacation rentals:</strong> A travel bed can help with place training and settling because it gives your dog the same surface every night instead of whatever flooring the room happens to have. Easy-clean materials matter when the bed touches carpet, tile, lobbies, patios, and elevators in the same trip.',
+          '<strong>Camping:</strong> Put extra weight on water resistance, packed size, and whether the bottom can handle damp grass, dirt, tent floors, or rougher surfaces. Outdoor-friendly mats are usually thinner than home beds, which is the tradeoff that makes them easier to pack.',
+        ],
+      },
+      {
+        kind: 'decision_columns',
+        id: 'thin-vs-padded',
+        left: {
+          heading: 'Choose a thinner travel mat when',
+          items: [
+            'Cargo space is tight and the bed needs to live in the car full time.',
+            'You mostly need a familiar “place” cue for hotels, rentals, or airport downtime.',
+            'Your dog already rests comfortably on lower-profile mats or crate pads.',
+            'Quick drying, easier washing, and lighter carry matter more than plushness.',
+          ],
+        },
+        right: {
+          heading: 'Choose more padding when',
+          items: [
+            'Your dog will sleep on the bed for full nights, not just short settles and breaks.',
+            'You plan to use it on hard floors, patios, campsites, or cool ground.',
+            'Your dog is larger and benefits from more separation from the surface underneath.',
+            'You have enough room in the car for a bed that packs bulkier but feels more substantial.',
+          ],
+        },
+      },
+      {
+        kind: 'note',
+        heading: 'Bottom Line',
+        text:
+          'Chuckit! is the clearest all-around starting point. Coleman is the best roll-up format, KindTail is the easiest hotel-friendly mat, OneTigris and YOFANG lean outdoor, and Kurgo is the stronger premium pick when you want a roomier bed for bigger travel plans.',
+        alt: true,
+      },
+    ],
+    faq: {
+      heading: 'Dog Travel Bed FAQ',
+      items: [
+        {
+          question: 'Do dogs need a travel bed?',
+          answer:
+            'Not every dog needs one, but many dogs settle faster when they have the same familiar surface on each trip. A portable bed is especially useful for road trips, hotel stays, camping, patios, and destination downtime where the floor changes every night.',
+        },
+        {
+          question: 'Can a dog travel bed go inside an airline carrier?',
+          answer:
+            'Sometimes a very thin mat can be used inside a carrier if it still leaves enough space for the dog to stand, turn, and lie down naturally, but the carrier is still doing the transport job. A travel bed is not a substitute for an airline-approved carrier.',
+        },
+        {
+          question: 'What is the best dog bed for road trips?',
+          answer:
+            'Chuckit! is the best overall starting point for most road trips because it balances portability, washable materials, and enough structure to work well in hotels, patios, and destination stops. If you want a more camping-specific setup, look at Kurgo, OneTigris, or YOFANG instead.',
+        },
+        {
+          question: 'Are waterproof dog travel beds worth it?',
+          answer:
+            'Yes, especially if the bed will touch damp grass, patios, muddy campsites, or the car after outdoor stops. Waterproof or water-resistant materials make cleanup easier and help the bed stay usable through repeated travel days.',
+        },
+        {
+          question: 'What size travel bed should I buy?',
+          answer:
+            'Check both the open dimensions and the packed footprint. Your dog should be able to lie down comfortably when the bed is open, but the bed still needs to fit the car, luggage, crate floor, or travel setup you actually use.',
+        },
+        {
+          question: 'Can I use a regular dog bed for travel?',
+          answer:
+            'You can, but most home beds are bulkier, slower to dry, and harder to clean on the go. A dedicated travel bed is usually easier to pack, easier to wash, and better suited to cars, hotels, patios, and campsites.',
+        },
+      ],
+    },
+    relatedGuides: {
+      heading: 'More Travel & Rest Help',
+      guides: [
+        {
+          href: ROUTES.roadTrip,
+          title: 'Dog Road Trip Gear',
+          description:
+            'Cooling, calming, hydration, and rest gear for long drives when your dog needs more than a bowl and a blanket.',
+        },
+        {
+          href: ROUTES.travelFlyWithDog,
+          title: 'How to Fly With a Dog',
+          description:
+            'Carrier rules, airport prep, anxiety planning, and what to ask before air travel enters the picture.',
+        },
+        {
+          href: ROUTES.comfortCalmingBeds,
+          title: 'Best Calming Dog Beds',
+          description:
+            'If your dog settles best with raised edges and more enclosed sleep shapes, compare calming beds separately from travel mats.',
+        },
+        {
+          href: ROUTES.calmingCar,
+          title: 'Car Anxiety for Dogs',
+          description:
+            'Travel beds help with settling at the destination, but anxious car rides often need a separate calming strategy too.',
+        },
+      ],
+    },
+    disclosureShowSafety: false,
+    internalLinkStrip: {
+      heading: 'More Dog Travel & Rest Guides',
+      links: [
+        { label: 'Dog Road Trip Gear', href: ROUTES.roadTrip },
+        { label: 'How to Fly With a Dog', href: ROUTES.travelFlyWithDog },
+        { label: 'Car Anxiety for Dogs', href: ROUTES.calmingCar },
+        { label: 'Best Calming Dog Beds', href: ROUTES.comfortCalmingBeds },
+        { label: 'Best Orthopedic Dog Beds', href: ROUTES.comfortOrthopedicBeds },
+      ],
+    },
+    itemListSchema: {
+      name: 'Best Dog Travel Beds',
+      url: 'https://www.chill-dogs.com/comforting/best-dog-travel-beds/',
+      productIds: [
+        'chuckit-travel-bed',
+        'coleman-roll-up-travel-bed',
+        'furhaven-outdoor-travel-dog-bed',
+        'kindtail-nomad-nap-mat',
+        'onetigris-travel-dog-bed',
+        'kurgo-loft-wander-bed',
+        'bingpet-outdoor-travel-bed',
+        'yofang-extra-large-travel-bed',
       ],
     },
   },
