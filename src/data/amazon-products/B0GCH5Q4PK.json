@@ -1,0 +1,629 @@
+{
+  "search_metadata": {
+    "id": "69f052553882c50ea491972a",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/lRGM6Wa5JzoWI9Z0a7JtBQ/69f052553882c50ea491972a.json",
+    "created_at": "2026-04-28 06:23:17 UTC",
+    "processed_at": "2026-04-28 06:23:17 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0GCH5Q4PK/?",
+    "raw_html_file": "https://serpapi.com/searches/lRGM6Wa5JzoWI9Z0a7JtBQ/69f052553882c50ea491972a.html",
+    "total_time_taken": 1.91
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0GCH5Q4PK",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0GCH5Q4PK",
+    "title": "Sytopia 47'' Indestructible Outdoor Elevated Dog Bed for Large Dogs, Chew-Proof Pet Camping Raised Cot with Breathable Mesh - Durable Frame, Cooling Hammock Bed, Non-Slip Feet, Waterproof, Easy Clean",
+    "link": "https://www.amazon.com/Sytopia-Indestructible-Elevated-Chew-Proof-Breathable/dp/B0GCH5Q4PK/",
+    "link_clean": "https://www.amazon.com/dp/B0GCH5Q4PK/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GCH5Q4PK&device=desktop&engine=amazon_product",
+    "variants": [
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0GCGKX7NB",
+            "name": "Large",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GCGKX7NB&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0GCH5Q4PK",
+            "name": "X-Large",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GCH5Q4PK&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the Sytopia Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/81pDJym-bKL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/81pDJym-bKL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81bFVQ6WYUL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81bhXAUBUKL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81-pp+df5CL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81G5Fjj3W0L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71Kw0pykisL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/715NKX+3OWL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81Q59T7sVpL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71GPsV5WQeL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.5,
+    "reviews": 6,
+    "price": "$139.99",
+    "extracted_price": 139.99,
+    "prime": true,
+    "delivery": [
+      "FREE delivery Sunday, May 3",
+      "Or Prime members get FREE delivery Tomorrow, April 29. Order within 13 hrs 6 mins. Join Prime"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$139.99",
+      "extracted_price": 139.99,
+      "delivery": [
+        "FREE delivery Sunday, May 3",
+        "Or Prime members get FREE delivery Tomorrow, April 29. Order within 13 hrs 6 mins. Join Prime"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "Mastery Mart",
+          "details": {
+            "heading": "Sold by",
+            "content": "Mastery Mart"
+          },
+          "link": {
+            "text": "Mastery Mart",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=AXFH78FOPZXBC&asin=B0GCH5Q4PK&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "30-day refund / replacement",
+          "details": {
+            "heading": "30-day refund / replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "brand": "Sytopia",
+    "breed_recommendation": "Extra Large",
+    "special_feature": "Waterproof",
+    "material": "Polyester",
+    "product_dimensions": "47\"L x 32\"W x 6.35\"Th"
+  },
+  "about_item": [
+    "🦴 Chew-Proof & Built to Last – Aluminum Frame + Premium Teslin Mesh Crafted with octagonal aluminum tubes, reinforced corners, and premium Teslin fabric, this elevated dog bed is chew-proof, rust-resistant, and designed for long-term use. The upgraded Teslin mesh provides enhanced durability and comfort—ideal for aggressive chewers.",
+    "❄️ XL Stability for Large & Giant Dogs – Non-Slip, Rock-Solid Support Our XL dog cot measures 47.0\"L × 32.0\"W × 6.4\"H and supports up to 280 lbs. Non-slip feet help keep it steady on any surface—indoors or outdoors—making it great for large breeds or multi-pet households.",
+    "🐕 All-Season Cooling Comfort – Breathable, Elevated Mesh Design The Teslin mesh mat boosts airflow to keep pets cool in summer while staying comfortable year-round. Raised off the ground, it offers a clean, dry, supportive surface—perfect for camping, outdoor trips, or relaxing in the backyard.",
+    "💤 Joint-Friendly Orthopedic Support – Comfort for Puppies to Seniors By lifting pets off hard floors, this raised bed helps reduce pressure on hips and joints. From energetic puppies to senior dogs, the ergonomic design supports better mobility and promotes deeper, more restful sleep.",
+    "🛠️ Secure Setup & Easy Cleaning – Waterproof, Scratch-Resistant Fabric Assembly requires careful steps to ensure maximum stability and durability. Once installed, the waterproof, scratch-resistant Teslin fabric wipes clean easily or can be rinsed with a hose to keep the bed fresh and odor-free."
+  ],
+  "related_products": [
+    {
+      "position": 1,
+      "asin": "B0G561FWGX",
+      "title": "Sytopia 42 Inch Canvas Indestructible Outdoor Dog Bed for Extra Large Dogs, Chew Proof Dog Bed with Waterproof Washable Removable Cover, Indoor Patio Pet Pad for Crate, Green",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTozMzg5NjY2NDIwMTU3NDE2OjE3NzczNTczOTc6c3BfZGV0YWlsOjMwMTIwODQzMzU4NTIwMjo6Ojo&url=%2Fdp%2FB0G561FWGX%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0G561FWGX%26pd_rd_w%3DjeLDo%26content-id%3Damzn1.sym.613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_p%3D613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_r%3DMVHG23GCJ6SB63CS53BM%26pd_rd_wg%3D8RVbB%26pd_rd_r%3D301b8745-05a5-458e-a574-882c453db762%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw",
+      "link_clean": "https://www.amazon.com/dp/B0G561FWGX/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G561FWGX&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81KvmXGNV7L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 3.2,
+      "reviews": 199,
+      "price": "$59.99",
+      "extracted_price": 59.99,
+      "price_unit": "$59.99 / count",
+      "extracted_price_unit": 59.99,
+      "prime": true,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 2,
+      "asin": "B0F4H82FRQ",
+      "title": "Sytopia 47'' Outdoor Elevated Dog Bed for Extra Large Dogs, Chew-Proof Pet Camping Raised Cot with Breathable Mesh - Durable Frame, Cooling Hammock Bed, Non-Slip Feet, Waterproof, Easy Clean",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTozMzg5NjY2NDIwMTU3NDE2OjE3NzczNTczOTc6c3BfZGV0YWlsOjMwMDk0MjM5Nzk3NTUwMjo6Ojo&url=%2Fdp%2FB0F4H82FRQ%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0F4H82FRQ%26pd_rd_w%3DjeLDo%26content-id%3Damzn1.sym.613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_p%3D613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_r%3DMVHG23GCJ6SB63CS53BM%26pd_rd_wg%3D8RVbB%26pd_rd_r%3D301b8745-05a5-458e-a574-882c453db762%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw",
+      "link_clean": "https://www.amazon.com/dp/B0F4H82FRQ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F4H82FRQ&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81KPsGN4kHL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 39,
+      "price": "$129.99",
+      "extracted_price": 129.99,
+      "prime": true,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 3,
+      "asin": "B0G4C9B3K9",
+      "title": "Large Elevated Dog Bed, Chew Proof Aluminum Alloy Frame, Indestructible Dog Cot wit...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTozMzg5NjY2NDIwMTU3NDE2OjE3NzczNTczOTc6c3BfZGV0YWlsOjMwMTIwMjM3MDk1NDEwMjo6Ojo&url=%2Fdp%2FB0G4C9B3K9%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0G4C9B3K9%26pd_rd_w%3DjeLDo%26content-id%3Damzn1.sym.613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_p%3D613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_r%3DMVHG23GCJ6SB63CS53BM%26pd_rd_wg%3D8RVbB%26pd_rd_r%3D301b8745-05a5-458e-a574-882c453db762%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw",
+      "link_clean": "https://www.amazon.com/dp/B0G4C9B3K9/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G4C9B3K9&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/61Na-DUeu1L._AC_UF480,480_SR480,480_.jpg",
+      "price": "$199.99",
+      "extracted_price": 199.99,
+      "prime": true
+    },
+    {
+      "position": 4,
+      "asin": "B0F5PYJX65",
+      "title": "FXW TitanNest Chew-Proof Elevated Dog Bed, Raised Cot for Indoor/Outdoor/Camping Use, Durable & Washable Padded Pet Bed for Large Dogs, 47.0\" L x 29.0\" W x 7.3\" H, Gray",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTozMzg5NjY2NDIwMTU3NDE2OjE3NzczNTczOTc6c3BfZGV0YWlsOjMwMTE2NjczNzk4NzgwMjo6Ojo&url=%2Fdp%2FB0F5PYJX65%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0F5PYJX65%26pd_rd_w%3DjeLDo%26content-id%3Damzn1.sym.613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_p%3D613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_r%3DMVHG23GCJ6SB63CS53BM%26pd_rd_wg%3D8RVbB%26pd_rd_r%3D301b8745-05a5-458e-a574-882c453db762%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw",
+      "link_clean": "https://www.amazon.com/dp/B0F5PYJX65/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F5PYJX65&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Amazon's Choice"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/81Cpq1NgAhL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.7,
+      "reviews": 62,
+      "price": "$129.99",
+      "extracted_price": 129.99,
+      "prime": true
+    },
+    {
+      "position": 5,
+      "asin": "B0GCCR5BQC",
+      "title": "Sytopia 42 Inch Indestructible Dog Beds for Large Dogs, XL Canvas Outdoor Chew Proof Dog Bed, Waterproof & Washable Orthopedic Crate Bed with Non-Slip Bottom, Dark Grey",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTozMzg5NjY2NDIwMTU3NDE2OjE3NzczNTczOTc6c3BfZGV0YWlsOjMwMTE5NDc5NjE3NTEwMjo6Ojo&url=%2Fdp%2FB0GCCR5BQC%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0GCCR5BQC%26pd_rd_w%3DjeLDo%26content-id%3Damzn1.sym.613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_p%3D613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_r%3DMVHG23GCJ6SB63CS53BM%26pd_rd_wg%3D8RVbB%26pd_rd_r%3D301b8745-05a5-458e-a574-882c453db762%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw",
+      "link_clean": "https://www.amazon.com/dp/B0GCCR5BQC/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GCCR5BQC&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81FX4OXT3IL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.3,
+      "reviews": 31,
+      "price": "$59.99",
+      "extracted_price": 59.99,
+      "prime": true,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 6,
+      "asin": "B08GLY4BCF",
+      "title": "Veehoo Chew Proof Elevated Dog Bed - Cooling Raised Pet Cot - Silver Aluminum Frame and Durable Textilene Mesh Fabric, Unique Designed No-Slip Feet for Indoor or Outdoor Use, Grey, Large, CWC2003",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTozMzg5NjY2NDIwMTU3NDE2OjE3NzczNTczOTc6c3BfZGV0YWlsOjMwMDk4MzYzOTk4ODkwMjo6Ojo&url=%2Fdp%2FB08GLY4BCF%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB08GLY4BCF%26pd_rd_w%3DjeLDo%26content-id%3Damzn1.sym.613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_p%3D613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_r%3DMVHG23GCJ6SB63CS53BM%26pd_rd_wg%3D8RVbB%26pd_rd_r%3D301b8745-05a5-458e-a574-882c453db762%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw",
+      "link_clean": "https://www.amazon.com/dp/B08GLY4BCF/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B08GLY4BCF&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81UQTC92t8L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.2,
+      "reviews": 2771,
+      "discount": "-10%",
+      "price": "$62.99",
+      "extracted_price": 62.99,
+      "old_price": "$69.99",
+      "extracted_old_price": 69.99,
+      "prime": true
+    },
+    {
+      "position": 7,
+      "asin": "B0CHZZFH5T",
+      "title": "K9 Ballistics Chew Proof Elevated Cooling Outdoor Cot Bed for Small Dogs & Puppies - Virtually Indestructible, Preassembled, Withstands Aggressive Chewers - S, Black Mesh",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTozMzg5NjY2NDIwMTU3NDE2OjE3NzczNTczOTc6c3BfZGV0YWlsOjMwMTIyOTI5OTg4MTcwMjo6Ojo&url=%2Fdp%2FB0CHZZFH5T%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0CHZZFH5T%26pd_rd_w%3DjeLDo%26content-id%3Damzn1.sym.613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_p%3D613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_r%3DMVHG23GCJ6SB63CS53BM%26pd_rd_wg%3D8RVbB%26pd_rd_r%3D301b8745-05a5-458e-a574-882c453db762%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw",
+      "link_clean": "https://www.amazon.com/dp/B0CHZZFH5T/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CHZZFH5T&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/51PTBwweN6L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.6,
+      "reviews": 1911,
+      "price": "$110.00",
+      "extracted_price": 110,
+      "price_unit": "$110.00 / count",
+      "extracted_price_unit": 110
+    },
+    {
+      "position": 8,
+      "asin": "B0GCCR5BQC",
+      "title": "Sytopia 42 Inch Indestructible Dog Beds for Large Dogs, XL Canvas Outdoor Chew Proof Dog Bed, Waterproof & Washable Orthopedic Crate Bed with Non-Slip Bottom, Dark Grey",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0OTYxNTEzMDI3NjQ3MDA1OjE3NzczNTczOTc6c3BfZGV0YWlsMjozMDExOTQ3OTYxNzUxMDI6Ojo6&url=%2Fdp%2FB0GCCR5BQC%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0GCCR5BQC%26pd_rd_w%3DVJGmQ%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DMVHG23GCJ6SB63CS53BM%26pd_rd_wg%3D8RVbB%26pd_rd_r%3D301b8745-05a5-458e-a574-882c453db762%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0GCCR5BQC/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GCCR5BQC&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81FX4OXT3IL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.3,
+      "reviews": 31,
+      "price": "$59.99",
+      "extracted_price": 59.99,
+      "prime": true,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 9,
+      "asin": "B08DD4R19Q",
+      "title": "Lassie Dog Car Seat Covers for Back Seat with 2 Seat Belts, Waterproof Dog Car Hammock with Mesh Window Durable Scratch Proof Nonslip Pet Carseat Covers Universal Fit Protector for Cars, Trucks & SUVs",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0OTYxNTEzMDI3NjQ3MDA1OjE3NzczNTczOTc6c3BfZGV0YWlsMjoyMDAwNDkzOTE1ODEyODE6Ojo6&url=%2Fdp%2FB08DD4R19Q%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB08DD4R19Q%26pd_rd_w%3DVJGmQ%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DMVHG23GCJ6SB63CS53BM%26pd_rd_wg%3D8RVbB%26pd_rd_r%3D301b8745-05a5-458e-a574-882c453db762%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B08DD4R19Q/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B08DD4R19Q&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71WQ4aWPleL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.6,
+      "reviews": 7854,
+      "price": "$29.96",
+      "extracted_price": 29.96,
+      "prime": true,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 10,
+      "asin": "B0GLN6YKJK",
+      "title": "SERENEDWELLING Chew Proof Dog Crate Pad for Aggressive Chewers, Indestructible Dog Bed Mat with Tear-Resistant Fabric, Waterproof & Washable Kennel Pad, Durable Dog Bed for Large Medium Dogs",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0OTYxNTEzMDI3NjQ3MDA1OjE3NzczNTczOTc6c3BfZGV0YWlsMjozMDEyNDc3MTc4MDM0MDI6Ojo6&url=%2Fdp%2FB0GLN6YKJK%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0GLN6YKJK%26pd_rd_w%3DVJGmQ%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DMVHG23GCJ6SB63CS53BM%26pd_rd_wg%3D8RVbB%26pd_rd_r%3D301b8745-05a5-458e-a574-882c453db762%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0GLN6YKJK/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GLN6YKJK&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71V1I5-47gL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 5,
+      "reviews": 1,
+      "price": "$69.99",
+      "extracted_price": 69.99,
+      "prime": true
+    },
+    {
+      "position": 11,
+      "asin": "B0D3H1P49N",
+      "title": "Elevated Dog Bed Raised Outdoor Dog Cot for Large Dogs, Installation Requires No Tools, Frame with Washable Cooling Breathable Mesh Anti-Slip Feet, Indoor Pet Bed, Black, 43.3 Inches",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0OTYxNTEzMDI3NjQ3MDA1OjE3NzczNTczOTc6c3BfZGV0YWlsMjozMDA3NDQyNTc3ODE1MDI6Ojo6&url=%2Fdp%2FB0D3H1P49N%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0D3H1P49N%26pd_rd_w%3DVJGmQ%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DMVHG23GCJ6SB63CS53BM%26pd_rd_wg%3D8RVbB%26pd_rd_r%3D301b8745-05a5-458e-a574-882c453db762%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0D3H1P49N/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0D3H1P49N&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Amazon's Choice"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/81l40818g9L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 1580,
+      "discount": "-15%",
+      "price": "$33.99",
+      "extracted_price": 33.99,
+      "price_unit": "$33.99 / count",
+      "extracted_price_unit": 33.99,
+      "old_price": "$39.99",
+      "extracted_old_price": 39.99,
+      "prime": true,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 12,
+      "asin": "B0G561FWGX",
+      "title": "Sytopia 42 Inch Canvas Indestructible Outdoor Dog Bed for Extra Large Dogs, Chew Proof Dog Bed with Waterproof Washable Removable Cover, Indoor Patio Pet Pad for Crate, Green",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0OTYxNTEzMDI3NjQ3MDA1OjE3NzczNTczOTc6c3BfZGV0YWlsMjozMDEyMDg0MzM1ODUyMDI6Ojo6&url=%2Fdp%2FB0G561FWGX%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0G561FWGX%26pd_rd_w%3DVJGmQ%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DMVHG23GCJ6SB63CS53BM%26pd_rd_wg%3D8RVbB%26pd_rd_r%3D301b8745-05a5-458e-a574-882c453db762%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0G561FWGX/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G561FWGX&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81KvmXGNV7L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 3.2,
+      "reviews": 199,
+      "price": "$59.99",
+      "extracted_price": 59.99,
+      "price_unit": "$59.99 / count",
+      "extracted_price_unit": 59.99,
+      "prime": true,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 13,
+      "asin": "B0F4H82FRQ",
+      "title": "Sytopia 47'' Outdoor Elevated Dog Bed for Extra Large Dogs, Chew-Proof Pet Camping Raised Cot with Breathable Mesh - Durable Frame, Cooling Hammock Bed, Non-Slip Feet, Waterproof, Easy Clean",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0OTYxNTEzMDI3NjQ3MDA1OjE3NzczNTczOTc6c3BfZGV0YWlsMjozMDA5MDI5NjEyMjMyMDI6Ojo6&url=%2Fdp%2FB0F4H82FRQ%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0F4H82FRQ%26pd_rd_w%3DVJGmQ%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DMVHG23GCJ6SB63CS53BM%26pd_rd_wg%3D8RVbB%26pd_rd_r%3D301b8745-05a5-458e-a574-882c453db762%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0F4H82FRQ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F4H82FRQ&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81KPsGN4kHL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 39,
+      "price": "$129.99",
+      "extracted_price": 129.99,
+      "prime": true,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 14,
+      "asin": "B0F5PYJX65",
+      "title": "FXW TitanNest Chew-Proof Elevated Dog Bed, Raised Cot for Indoor/Outdoor/Camping Use, Durable & Washable Padded Pet Bed for Large Dogs, 47.0\" L x 29.0\" W x 7.3\" H, Gray",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0OTYxNTEzMDI3NjQ3MDA1OjE3NzczNTczOTc6c3BfZGV0YWlsMjozMDExNjY3Mzc5ODc4MDI6Ojo6&url=%2Fdp%2FB0F5PYJX65%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0F5PYJX65%26pd_rd_w%3DVJGmQ%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DMVHG23GCJ6SB63CS53BM%26pd_rd_wg%3D8RVbB%26pd_rd_r%3D301b8745-05a5-458e-a574-882c453db762%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0F5PYJX65/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F5PYJX65&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81Cpq1NgAhL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.7,
+      "reviews": 62,
+      "price": "$129.99",
+      "extracted_price": 129.99,
+      "prime": true
+    }
+  ],
+  "sustainability_features": {
+    "summary": "This product has sustainability features recognized by trusted certifications.",
+    "climate_pledge_friendly": true,
+    "learn_more_link": "https://www.amazon.com/climatepledgefriendly",
+    "features": [
+      {
+        "position": 1,
+        "title": "Safer chemicals",
+        "text": "Made with chemicals safer for human health and the environment.",
+        "certified_by": [
+          {
+            "name": "OEKO-TEX STANDARD 100",
+            "logo": "https://m.media-amazon.com/images/I/51YvKwF01yL._SS144_.jpg",
+            "description": "OEKO-TEX® STANDARD 100 certified products require every component of a textiles production including all thread, buttons, and trims to be tested against a list of more than 1,000 regulated and unregulated chemicals which may be harmful to human health. The assessment process is globally standardised, independently conducted, and updated at least once per year based on new scientific information or regulatory requirements.",
+            "link": "https://www.oeko-tex.com/en/our-standards/standard-100-by-oeko-tex"
+          }
+        ]
+      }
+    ]
+  },
+  "product_description": [
+    {
+      "position": 1,
+      "title": "1",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/b35f9983-baa1-4489-831e-47cb3d81beaa.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 2,
+      "title": "1",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/8374c1a9-cdd8-464d-b2b2-b662c6a8e321.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 3,
+      "title": "1",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/667d64ca-5a40-4740-9cf8-1e2f7f6edce2.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 4,
+      "title": "1",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/39654837-dbe2-44f6-9bf7-dd0671b6f3be.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 5,
+      "title": "1",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/8d94748d-d4bf-4060-923a-bcea1aa3de29.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 6,
+      "title": "1",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/a5aa3b71-7e96-465e-b927-b183d85e8b55.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 7,
+      "title": "1",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/aa70d36c-3397-46a8-8f48-e5def4a80561.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    }
+  ],
+  "product_details": {
+    "product_dimensions": "47 x 32 x 6.35 inches; 11.57 Pounds",
+    "date_first_available": "December 25, 2025",
+    "manufacturer": "Sytopia Inc.",
+    "asin": "B0GCH5Q4PK",
+    "best_sellers_rank": [
+      {
+        "text": "#135,495 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 135495,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#1,658 in Dog Beds",
+        "extracted_rank": 1658,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/2975330011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Beds"
+      }
+    ],
+    "customer_reviews": "4.5 out of 5 stars",
+    "rating": 4.5,
+    "reviews": 6,
+    "breed_recommendation": "Extra Large",
+    "other_special_features_of_the_product": "Waterproof",
+    "maximum_weight_recommendation": "280 Pounds",
+    "recommended_uses_for_product": "Outdoor",
+    "dog_breed_size": "All",
+    "product_benefits": "Durable and stable, providing year-round cooling comfort for large dogs",
+    "material_type": "Polyester",
+    "fill_material": "Polyester Fiber",
+    "cover_material": "Polyester",
+    "item_dimensions_l_x_w_x_thickness": "47\"L x 32\"W x 6.35\"Th",
+    "size": "X-Large",
+    "brand_name": "Sytopia",
+    "pet_type": "Cat, Dog",
+    "unit_count": "1.00 Count",
+    "target_species": "Dog",
+    "color": "DR",
+    "item_shape": "Rectangular",
+    "item_form": "Elevated Hammock"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0G1BBT75D",
+      "title": "Sytopia 42 Inch Waterproof Indestructible Canvas Outdoor Dog Bed for Extra Large Dogs, Chew Proof Dog Crate Bed with Washable Removable Cover, Indoor Outdoor Patio Pet Pad, Dark Grey",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JPROLgD22jHSohFhpMkM9jIAAAGd0sGg9wEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICAt5YRR/clv1c_ek-wxXM3KrbWDbHe9of5wS5po9Y10vKWbtq6Tfri3tue-MmUHsYTvKAH0WB39_COeJT2VfwMsRkwetxwSEOHMvC8F_94tEy7k-xmCtveOI2WCHkDmctKBG3Swlk3IIBl8pJXLk6xr9Yg4V3cn4KRGpFZo8H0NlUPskdzyROQDO53CXMYBYfqkqQSJrn07Q160MzYnuOrv0ZOm2P5r9Jt2vCRIVW1gmm6wPtnQJcT6cT9AEqHbX5Mf3A3JaaqhorVOA909ieKXaqt9M_dj_JBvAmI0TN0UaCm_80tzMTyR_6wSMsCfvjhCSppgfE8n27JB7oa36uFRRCBTM-H4Cx5o3OFU99TLPOzTtDTPMwo8NxGo9y3Xf6bPmM0xfkk4ZOgJQsfaav4ki5AUQyFcj_MgNxuVMsGmQm1ubv1z_5farVqCxxq0Nd6fR204mxFH3DzfLZr0hvFus6Jt2FqwrHVQC-S-s_CBSSUidu50ytN_p0XP1OD5wIAVTULI6Eg2dfI6tYbdOW3Ig-rZtbl1n0_5cZZGwXENy02c5cMSFNeaJxvvsDTNSMymqAwCpNpy-RCUgiPtS8vVCj5g757ZC6bsavwE93U7io_-P4B67QmRd5FdQDjFPe2h_jObkJNUTByob3FkQ1w8sf32ORirDKLI5ecf6sy7BWNL45VB98nmZznH-ZZwyyN_y8zpD0nKpG6n-Bs1OKfx_J0kAEBe6Der1nau5jfTrLbZdEC4xVl5hkxv76XgHLY_82LPsKfZzhtvknO53kXVl1599uHY_0QBDelWnOdEBpIu4pwkN7xBODILO3sXEvqtVd_Rfv6MSVmFH60cZ7g6U2863PgacTuNKgSBOj9lRlDXcqTY5DLM1djehOEg-pw4XEgKFRwid-ymDGeTi9a5LjhYYrgFtPoqcODLm8mpr8_Pi3_x2eIxHo0L7nU5Jy9RhPUWshXY8D6Kt9YPHQKlnbOYoXQsisQXqCuoUEl7y8jl2ROPmLG_MZmrTRnCbqCxvspLQo3f-Cx2ocWfS8HC1R1uhDTA79faOLJ_syBkGo1oMuVso7X6qp2-7m5oea2U9_nOrCULCAjEg40BedfJ5sb9ZyZAzSBfBOT5leCsTZftW1I02a1JnGkrRdNaDCb-GovfepYq_l2tkYZL0qpLVdTkUvX1NLHRQO9V8ALZaOWsrkbK7GNCU2Ry_uoyKBNUVqkvI7YcpexiOXJs_ap5NgRymOgbtUdNU2XX29RwfLLPPoSp_P98gHn1wTxH3U9FcCIwb6MuDYNK2S0mH-Nyj1A6U7oc0k0jNyPdWj-IzaqxRteZQ4fsZveGKtYoaa6OwfnRvUp5PopxeG0svfw2bRXaSJqMaRfE92KEunJ2QS8_jNXVRt-qQd2OzegVLKgtMT_61dnyQSGbJ5v4r0lWhjQ6MmlcvgPbrzMP94Q_YgS6OW-04Pipxs1SpZwLuuGXJNN5zQ2PtFGF5NC24Tocm8Ti-5skBnsKSBsIK6DFhawzdPuD-3T8LitN-TGvVd2oMDnVjQw3EXvL-qBMa0rznIQ0dcOedLiIi5BY9g/https://www.amazon.com/dp/B0G1BBT75D/?_encoding=UTF8&pd_rd_i=B0G1BBT75D&pd_rd_i=B0G1BBT75D&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=3XGKm&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=MVHG23GCJ6SB63CS53BM&pd_rd_wg=8RVbB&pd_rd_r=301b8745-05a5-458e-a574-882c453db762",
+      "link_clean": "https://www.amazon.com/dp/B0G1BBT75D/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G1BBT75D&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51LuBrwUbqL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/f9ad293c-0422-46d0-985f-250639b622d5.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/f9ad293c-0422-46d0-985f-250639b622d5.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 3.3,
+      "reviews": 66,
+      "price": "$66.99",
+      "extracted_price": 66.99
+    },
+    {
+      "position": 2,
+      "asin": "B0F5PYJX65",
+      "title": "FXW TitanNest Chew-Proof Elevated Dog Bed, Raised Cot for Indoor/Outdoor/Camping Use, Durable & Washable Padded Pet Bed for Large Dogs, 47.0\" L x 29.0\" W x 7.3\" H, Gray",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JLJwtuQbtGdOYZDwaWWtmVEAAAGd0sGg-AEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICB-Ofoh/clv1c_ek-IBXfXLcTWXWxht_VwyXszSZsVi57qgXZcjnBm_axrezWRpuBlcBSRHzuWGStJjAUdWAQ175ajb9fsPo0Cw_DXXfi9MLgLG9jBXPy-1E4mD0HKIEINtQZ6ZfNMPuKQ60HpUkG46IqY-n-yw9puT9vQquU8Flb8mtL0f-cqjYMTXG6XsiYS4jrdDEM9JRQq8RtuYBuKXYTESOL0_1yDYH6CWXsbgQ6CBetN5oz6Gv5DN46xKn4OULD3yM5t1pxi5o6nlPpoZA3dYwAS780kfmdoX6rPIMP9fgDyVcJtwcU3Ht4xVC8AiU5mRrIKvQm82f7apWdrDzzQes7GJadZ4gbdfFwocAaen_3XJ9QSKvmOlqLdESTPXKY9XTMuKFiDT-KsXu8nz38hQf9cDreLpA7FuPPnxYpSw6VfNh-Imf9ntjZ9g8nqSiwCojP_5yRhycoL1bIzUwArsOrLB52qQhUhT0zZqm6nGguysGYqvDlus50fjrslpiG_aU6gADtGbpxmCoDn7QAyPRjD5lhRhWYMXW9FhOcsMjRhxa-8c67U7anfM9jOFXRDPshyd9M6YKzbYWDV5BYqhRdejg7kuOJjATZui-e3lfSfRs8XvhEmZ_6MZaR_RSUmmOmgyiOda1RcKL0h_yv_mETz0OBVkFEX3mAZRh26mDYWNreM5wWy4MZ7J0Rs9Y3p8Gfvl442Wy4Z61xG-JDbh6LNkrwDRs2WpooORRugmGxiZWLEYQN_WJ9fX-68UMaQ8MELUuZdOKc4WBGvbOCX9LsDKrXUv60LbLrycwE57OxzbHDU4kK1C4vLBU6PfmEHXtBv6ZD30S5wsLnAb7e0E-rucVnxkjFtRjCFMAuRNViGbcgZBcbj6BL-46VvK6jgQmaz10DdYcUKiPhT_i2ZH1qECEog3uBZS2NVTufPWmRRNZxsgub7TBE3Wo3EJO16vzWjjej0Y_daMoB530r2JxuA3GXmhzzM5AGmLwAQ35Zfe4gExrBgm2Yl8ffpOWGFXifj_yQNsmzMWqzRPbIE4Mmg-pqrnFAd5HOpOrcIWnWP3iSeVBeVfpEiiAQ17avPTtkrVOBfV4BUAaa-C9Vcb8L6fUXHJRdUAvKfnuG_ZqzswLqMLeUW-qsfLc0wOr7nPrWJSRAdGhtP2OlMpKWHsKAIDOjhHkaC4AvzzypmVNLZMgQpKaG2qkEN3mJt5ZLx21t9gPhj2sCsutRAN1fDphNTTHvka6YOSYDHOHuyNEhPyFigFxaCZxWShTbbX3AxDnXjHxOLngCXgXh8Zps2haTXIQ2lELzo2veW1R9Y31KjCMQcyHnCI_Yh5TUo_ElqNe_1aogn9hErK_ReB2URSOzVZpRZeFCXpHIdY9ZQz8yrT5tH7iCWQwWqJ59E4M7J6FEDbop1giLpck2lEJPb1BKGID--H1PURgZ58BTsS1pERg9KNLb3SxHE9AbGPa0mdPJClstR9dXMyIb9aYzAvC-qo4K9KlkH_cXqxhHly2cC0EksevIpffLZy9I1u-fdm4-b9p-F8Bu2Fehgzwrl_1ki1D0hrC_4/https://www.amazon.com/dp/B0F5PYJX65/?_encoding=UTF8&pd_rd_i=B0F5PYJX65&pd_rd_i=B0F5PYJX65&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=3XGKm&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=MVHG23GCJ6SB63CS53BM&pd_rd_wg=8RVbB&pd_rd_r=301b8745-05a5-458e-a574-882c453db762",
+      "link_clean": "https://www.amazon.com/dp/B0F5PYJX65/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F5PYJX65&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51Vs2-A+EdL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/2e6b2b9b-5bd0-47db-bf8f-9b31521d6485.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/2e6b2b9b-5bd0-47db-bf8f-9b31521d6485.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.7,
+      "reviews": 62,
+      "price": "$129.99",
+      "extracted_price": 129.99
+    },
+    {
+      "position": 3,
+      "asin": "B0GVDZYJHQ",
+      "title": "Summer Cooling Dog Bed, 2026 New Pet Cooling Mats for Dogs Cats Pet Cooling Mat with Anti-Slip Bottom Waterproof Self-Cooling Dog Pad for Dog Beds, Car, Indoor, Outdoor (Blue Dog Paws, 20“x16”)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JKnsSUsGpZEt7GbDvjVmAvEAAAGd0sGg-QEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICC9Ezaf/clv1c_ek-wxfHXFbbWDfHXL5v2ofBwCsUHE2jpm21C-ghCt_eMnE3qBusVUIM9YbvEtpNWypvEsxQWBxYaE_mm2bo-P8Qm5aBf7mW28QVrLqEm7dYyvZ1vlq5HVHxY4PNOwlpugrrTu2i-yxMCJBQBQNS7fNXSvM1clljyicXc-5c6zcdd22nDj3LluE05F93dtIJB7bAP4mETd5dpBsX8OSzreMyZkteX5b4lN-DERvMVic2_4NDG0eVFvJjTAc6jff3rBNFDSs20Y5JOVeOGd0LDPda_CEYPmeTybHZ6E-f5rTnOJk_SCml31Z5Ig_VG_KBc7EPmzPlOdtrWhoezHNra3Ajx68QEdKQWzZg2GlhZm0ulnVUa5YgHR0hceCqDVCbf183xsSqWnuLfijiUXaxDr-EBmU-sXb5lR4TphHT5hAeXL8WYCih4VthPEHtfdN7Uf2MhLxrDqudPsleWnOM3nUNUg6xxKhF63Jk0czG9gi0CCLEzdYQQpQyHILqbYdGqXLF2_qWi0X3hFgla6UZWk7z538gQGoe4xCLzP3RNEa7ib-qM3uuz76QdzItKR3O5KqPt1QQ1bViw87llmPuEwu0eAIEWCdM0r-FxaYrOj1Z4_lh89EFmdYuRWC1eteHbzbFVnI-L5P842_unCr6mhTs_oL5V0ReZbWDEudE211gvzhUJYszIPUQVrsqgqD3x9lYgbi1t_YpQGo6Gw8hxEYRYE66mH84aqQUcfxxxMyyQi_7NSV5TZiJys19j6vrYHgESTewBu0HLCncW7KzDyZrcDVmF441Rvyabe3HjXQrdB3f6zBHTT-VhalybJBh3isbX9vD3EtFwWLleixN-lNmSCDmZSfwRTA0uZEZxqKBZWqx75laKbFkgT7NpqlrzC_JEMfJ2y1yUtZamWIXQkxal22217GuUGulLxEvwV3PAkH-edtaAj06CWfNLBH15IWTaASjAeeqcXxxI80A1kW7DShMor9cpz911YSVSBz5Vu_wQ_HwF-fepKno2f-CNQsQWfS0HA1R1slHTwb5fcGLJ5q6BEHMW9UNWrud0xjYUwvPtcDu301Fad1jC5Ic-QdoREKEYe14nyd1HTeZ0QOxXIo4mbmR3mmrfS_Qn7ju6hQLoH-qZtoKuTm0HPDWX-6Du5TC3Q5avFI1_FuNTsXBKStdOGjPHQn-XckpKAuNVGffoLkNQsOfMRJjvdvtIACxgwngn9VhQNJDJxj-zozGcZ_dKtrS9fNjquqW0T3lLDKe86pONaUCiMXP0PqJuaKG2OSl3gEhyvMNIvYfoW5vcX5m9hpk7CIf_yXhWpcz6UJfafVay_SezVO5wZiNT1uhrbEk0e8TOOrv_GRjfyKDVvOw7gdR7A0hW9IBmwgCjYBOUAtOfIj-1ZiLwb2G-RKkcYmZThG7PKFubeNC3ckRxj9pOjKSTIoSkcOiwj2M_G6jg67BYcaZcNXK8_AsLFwi_faA4rPVRCCEdPq7dUDCyTeUtdpHwTM9nAhr7OHP0J-REg-i348vkVxysXOUW5VUxNPihQDgFVmdyzf5WrHPnDhnJ/https://www.amazon.com/dp/B0GVDZYJHQ/?_encoding=UTF8&pd_rd_i=B0GVDZYJHQ&pd_rd_i=B0GVDZYJHQ&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=3XGKm&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=MVHG23GCJ6SB63CS53BM&pd_rd_wg=8RVbB&pd_rd_r=301b8745-05a5-458e-a574-882c453db762",
+      "link_clean": "https://www.amazon.com/dp/B0GVDZYJHQ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GVDZYJHQ&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41oGo1EeR4L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/2f6e5c15-1940-447a-a48c-f8e0ed654663.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/2f6e5c15-1940-447a-a48c-f8e0ed654663.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 5,
+      "reviews": 2,
+      "price": "$11.99",
+      "extracted_price": 11.99
+    },
+    {
+      "position": 4,
+      "asin": "B0GHRNRCV7",
+      "title": "Pecute Foldable Elevated Dog Bed with Sturdy Wire Frame,Portable Folding Pet Cot for Small Dog,Breathable Outdoor Dog Bed with No-Slip Feet & Cooling Mat,Chew-Proof,Travel,Patios, Outdoor,Indoor,M",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JNKjZiRqmmWly_wVyU1r-KAAAAGd0sGg-gEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICBefM4a/clv1c_ek-wxXPXLbbWDbHelp-RAdv9ByKImlFxMW2LPJ_jHUueyBR2lE1QBCy70tuGJhkWxYvlMv_R-y7gSf4FBB-bb2HUfdKVfBuxOvnuCSHNrAS1S_G7es8mWX_khrk1IXrYvnIP9qLon0SLSwWhNdDv6hBYpNaYphXpVIHyxDKCmMZPCUvIbm_I2vJH3Y-6BaSSKPyFeEpSMxNAhf3ttw-xpj9MnRh50j9OVV1QKtiW2V5fN5ByebC5MuYVRPd6S4yxYIYVUrsU7BuAHfJ_ju3BvymEUzPwMJy4f8wlzMwxx_GzSIsanvvhCSppofG_b27XB5oanquFRTCBSs-H5Ax5o2OFUR9rJPGTXiDTuM0g8NwGozo0sCcgbtIApf-u1aZ5ShMCSl7bupXXIUc5QZoEEDTql6j9h_u5V7gYB9hUlKuYzyt2_G9f3vAI0MhktMVnF8quwhKad7Syhggcsa4y3UHk3fENq8DTRMOLrSHDkWLJrFlxk6QWdpr9pwPUVz1DTBAYC9_opxNMkDw7GVdPR_X5Sd7objqoVa8cCElc5tVN8a_t1F5-aJ4Bv2a3oL87Q4TyrqS2F8zsZ7at0sJO0tL6jmmykMyhKxbCgHfux_GPE2d--LRRli4bs79wSGomIIl-ANsxxAUNOAPlQhuGgr_VTxxpGAzGGDFRriocI2BKgu6rnSn42DllyW1lZHp8_X1vXufL4XRbADqK_giG-NhRwMaV6J4afaSuGrP78SODKTP4pSm-FwawZQwz9DZy_Z-Go82CdLbheRkprQxGVfZYkyUh7UiDIsLbA__4rCtvI-YbNOWg0wai9Re7OIbcQkvyzUrivc8TSWiKAbPuJJhxun2ysnI4NM0E2q5STR43bhM47XPMkZOyqCN6HgMS-hxshxCcTNC8X3HbLM0ku2R2QBbOQeTfP847oynugVLk7Csc8vvECBDmWcEh0GMeCdqnpLWBzGiSEa-vwknnRQLepBXDyVVEbuF5OW2hXKiNDVUtoKqOMSf7VvnhFQ_TRrkN2R6QQI1dTktySLSFi0cDiS__49Mtssr2eLtRrm_UVVtw3TH7Eli3BiiDppLviFTOG9MY-ZQYXlIZI2ZqW3l9JWTtB9RALRLIKfSSITJX90JC9Z8OQE0WxXvNE866CVCSZl9ZGu5IyW1bBaLVf7nq4upj4Z8pTCHp-cZhJU9Zd5KdjTtZtGORNaub3ui1sLMzvkFKNUmXpNuOcOrykVLttJtpGB_KULD2bhFBUGK0t-BeS8poKQd7W_2CEApU3iyQJdgl8SDxPxmjA5DxJshvhYcs5MF2qhEqD-ahN7GWmsMTJKXeraBZ6OJ5mfqngXCXhmLWmaxdDf2YgAHtKBDUhtDbVEmGGo9MZp4RehwlnehaUSo2qF__md2OScewQcwPordSvfLfuPPeMlfdhULLVKVETtWb5J8laKizJbAhx8GdFCOYR72iwV0e2zp82LmoW2B39tsln_8SgT6m49nh6Vs54wGDHY4Y-o4h04HBOtHf-bNyu7PpwiSCIG4BSUhlLb-LANLTWO8Kcrobk_Oa6FwGKtx0/https://www.amazon.com/dp/B0GHRNRCV7/?_encoding=UTF8&pd_rd_i=B0GHRNRCV7&pd_rd_i=B0GHRNRCV7&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=3XGKm&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=MVHG23GCJ6SB63CS53BM&pd_rd_wg=8RVbB&pd_rd_r=301b8745-05a5-458e-a574-882c453db762",
+      "link_clean": "https://www.amazon.com/dp/B0GHRNRCV7/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GHRNRCV7&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41W3H+zmJHL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/89ff8602-32c2-44a7-a2ed-a3dfddf47f75.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/89ff8602-32c2-44a7-a2ed-a3dfddf47f75.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.4,
+      "reviews": 9,
+      "price": "$69.99",
+      "extracted_price": 69.99
+    },
+    {
+      "position": 5,
+      "asin": "B0FYXGVS5R",
+      "title": "32\" Camouflage Canvas Outdoor Dog House Weatherproof,360° Visibility and Breathable Design,2-in-1 Dog Tent for Large Breeds with Removable Waterproof Cover,Elevated Dog Cot Bed with Canopy (S)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JHhz3iji0kQIQu0YprrGaWYAAAGd0sGg-wEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICBvKc0k/clv1c_ek-wxXHXLbbSDfHK4IcjnoLaPoteCpPLMmkLVonsj4-vheZjJOvb9F__lWm-Ho9fe_XF2ME7YzRE3xIHO1reWiIPLMKVzKt_DasFGCwJx7yroRmnLaWUAABLwrtxsn75h6Y5qAGqtYpphu39iaF8HwJYpcSghpXqn9z73ivebNYe2G0QlE2tocljhA8fz2ov1ldocuhVR68odaf7BMzEyl7Qiwo6ACrSgcHegPM5kITBcMo1jBTFJ-tOfJ85CQvVOeMOtrjAAxZfJlCl5p5D1MFk54pish32hxNVyWF_lGs66acVrYKDfteZyCRJ43ecGM0ZXpjsD5WIWGqEEZPmZC48PkhPgfpsTGYLkJluGqZF7PfSrNbVWMn2S85jlCCoMNM-dMNhVXjkKW9a3Y658CNP2phLItSTzJ_w_2KFuamu_jl2Ags27HSuD-1IY1XlyuajUMxOvrJ_XGAYk3F6SJjki_6HjCPq-Tkh2eHsHWiZzgRk33p6yazxLYKcQyDCRixthsOshw273G-A6QJ0TyXXWddBH3ekfrv0Q7taXe6eXkfYFFhtfdheC9vG-ubHxJyH7H3PNpVuMfI5uT8MjiHLKAvRnvT9yidiSp-7ZQZp5AquPnDpuAW89i_QF6548jccYV1URbxKMNsu3BYvfvFqOyEd-GqFM8drc3dnHbbT4oUcDQTHJD5_ydQmqUp1wapCg9KyYhbuXixAfzLiHejYuGVHVVrnsbThRQWzoY__6G02g4dCcbBiOFRUqY58RunG3QZhzDBRuHfeMOK049i0OUWZm8d4Hxo_DaPQZXBIW62AWO4Xq_gxRSvmRof3uIv-_H2cuNHbPFdgOaGG-Ilu77b_FywQVAk-ZEZNqOBJWrN_ZJxC3usDz1aczHNK5YvO7KfQtkxnh6a_C4mmul5rAlbBq_NmNJzxNH7IilvOwkr99Jw7wfXh13BjTTSTa2JQgvh662h-CsZjt9AuYy2vbkIor9Nm_eYik_e1sMlWj46JlUd8Xhx7Nh4F3mKIw4qNaREqGorEOPFyeu_izvv4Z4Mw3_6A0wYwAVen6HcjwMaLX3Cbkls2GsbbwPNrE2q-HEd5OFLdcxfFa3JP-t54d7pTxQccjBLLoFXLmmbC2d7Dc1Z4Hl8LJmU1U09ZXzfXFvoFnmadL8NdLqvv1F9uC5lZlBrMZq6eHLLT2RN-435P_mCgtzr5bPiw7Md4q-TjSsBio0MzyHbl7BmslOdH317_TgB_JH8rm7ZFfPyI9P1jb04cfA5NWOQg-v-GHyZxB1xWob3X9xEidanJDG2Cmb6K_TIOvQ44pvvBFGGjqexNfccMKxZisMJ975vOe5EAbb3TSpRLEZWAJLINo0r1CXcojzWuffqTReneQqPuBcE7DnHQZkkLb6yv3FROjLTty8wXS3gHl_sGBXr5ldAY1tEIKlArZGDsVg_IKbaBl6Q4o4iGmvsEVZKwOlg2KdUJaGdwbEgmmuB_SqQHYQDkHqYT5Yu4HE2xPp-hfz9nmuebbt4l75k5io3aC0lZmRakjVpXiszmeB0jC8w50PdNHufuXw/https://www.amazon.com/dp/B0FYXGVS5R/?_encoding=UTF8&pd_rd_i=B0FYXGVS5R&pd_rd_i=B0FYXGVS5R&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=3XGKm&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=MVHG23GCJ6SB63CS53BM&pd_rd_wg=8RVbB&pd_rd_r=301b8745-05a5-458e-a574-882c453db762",
+      "link_clean": "https://www.amazon.com/dp/B0FYXGVS5R/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FYXGVS5R&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51EC6FGaPAL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/381471d3-93ab-4c71-8a26-c0a6a37b6773.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/381471d3-93ab-4c71-8a26-c0a6a37b6773.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 3,
+      "price": "$99.99",
+      "extracted_price": 99.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "images": [
+        "https://m.media-amazon.com/images/I/71SYNRzomCL.jpg",
+        "https://m.media-amazon.com/images/I/71J2oCh0x2L.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 52,
+        "4 star": 48,
+        "3 star": 0,
+        "2 star": 0,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Great dog bed option. Versatile and looks great!",
+        "text": "This is a great dog bed!I love the simple design and look of it, it blends in seamlessly with the house, I've always been one to gravitate towards a neutral look so won't buy anything too frilly or where colors could clash. I'd say that's the main highlight for me!It was easy to put together and exactly as described. The indestructible feature is one of the most important as I am a dog sitter and have different kinds over all the time and some are major chewers! I wanted a dog bed that had no fluff that could be torn apart and cause stomach issues or a mess. But I also wanted something that was a separate space they could claim as their own. Some gravitate towards it naturally and some don't use it but that's OK for my purposes. I can see why if you're spending this kind of money you want to make sure it gets use so you kind of just need to know your dog's preferences and be aware it might be a miss for them potentially.The size is great because it accommodates such a range and that's exactly what I need as the breeds that come in/out vary greatly.I have had this both indoors and out, love the versatility! A little tricky to move just due to the size but the materials mean it's definitely transferable and lightweight enough.I love that it can be so easily cleaned. I can hose it off or wipe down as needed.Overall this is a great dog bed, and my toddler honestly loves it too so there's yet another pro😁",
+        "rating": 5,
+        "date": "April 8, 2026",
+        "author": "Kirsten Fell",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFICOIXT47TWMMQOVDIOZT3CJOKQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "product": {
+          "size": "X-Large",
+          "color": "DR"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Sturdy Elevated Pet Bed That’s a Clear Upgrade (Even My Feral Cat Approved It Instantly)",
+        "text": "I’m really impressed with how sturdy this feels. It’s the 42 inch size and rated up to 220 lbs, and I can easily lay on it comfortably, so it definitely feels solid and well supported. I could use it as a small bed in a pinch! I can't believe there is an even bigger one!!I got this for a feral cat I’ve been caring for (Miss Jill), who already loves raised beds. I was a little worried about switching her to a new one, so I kept her old bed out as an option. She didn’t hesitate at all though, she knew right away this was an upgrade and hasn’t looked back since!The breathable Teslin mesh is great here in Texas because it allows airflow and keeps things cooler, especially in the heat. She uses both the top and underneath, and this one actually gives her more space underneath, which she seems to really enjoy. She loves the shade these provide for her.The frame design stands out to me. The upgraded pole structure and reinforced frame make it feel more stable than older versions I’ve used. It has a slight bit of give from the bottom support bar, but overall it feels stronger and more durable than typical raised pet beds. The aluminum frame and mesh material also seem like they’ll hold up well over time and be easy to clean.There was a slight chemical smell at first, but it’s already fading.If your pet already has a raised bed like this, I think they’ll adjust to this one easily and probably enjoy the upgrade. If this is your first time using one, here are a few tips to help it actually get used:Let your pet approach it on their own. It's large and may make some shyer pets a little time to get used to.Don’t force them onto itSit near it or place something familiar on itReassure them if they seem unsure of the height or movementI’ve seen beds like this go unused simply because pets weren’t given time to get comfortable with them. Once they feel safe, most animals end up loving them.Overall, this is a sturdy, breathable, elevated bed that works really well for outdoor or garage setups. It stays cool, feels durable, and has been a clear upgrade in our case.",
+        "rating": 4,
+        "date": "March 22, 2026",
+        "author": "Littles",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AENV3XQL7ZYDNW35RSIEXD4ZA3WA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/1c949ccd-b521-4de3-a7a1-54b87ed25d9f._CR0%2C0%2C500%2C500_SX460_.jpg",
+        "product": {
+          "size": "Large",
+          "color": "DR"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Durable elevated bed that holds up to large dogs and outdoor use",
+        "text": "This elevated dog bed has been a great investment, especially for a larger dog. The 47 inch size provides plenty of space to stretch out comfortably, and the overall build feels strong and reliable.The frame is sturdy and truly feels chew resistant, which is a big plus for dogs that tend to be rough on their beds. The breathable mesh keeps airflow moving underneath, helping keep my dog cool even on warmer days.It’s perfect for both indoor and outdoor use. The waterproof material makes it easy to clean, and dirt or hair wipes off quickly. The non slip feet keep it stable, even on smooth surfaces or when the dog jumps on and off.Assembly was simple and didn’t take long at all. Once set up, it feels solid and holds weight without sagging.Overall, this is a tough, well made bed that combines comfort and durability. Great for large dogs and especially useful for outdoor or camping use. Highly recommend.",
+        "rating": 5,
+        "date": "April 6, 2026",
+        "author": "Silas",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AF3X62I52UKFTOAPN2IQ7KFLSC3Q",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "product": {
+          "size": "X-Large",
+          "color": "DR"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Lightweight, Easy to Assemble, and Nicely Supported",
+        "text": "Title: Lightweight, Easy to Assemble, and Nicely SupportedRating: ⭐⭐⭐⭐☆ (4/5)This elevated dog bed was very easy to put together and didn’t take much time to assemble. The frame pieces fit together well, and the instructions were straightforward enough that the setup process was pretty smooth.One thing I like about this bed is that it’s lightweight but still feels sturdy once assembled. It’s also a good size, especially for larger dogs, and provides plenty of room for them to stretch out comfortably.I also noticed that this design includes extra support bars on the bottom, which you don’t always see with “floating” style raised pet beds like this. That added support makes the bed feel more stable and less likely to sag in the middle over time.The mesh material should also help with airflow, which is nice if you’re using it outdoors or in warmer climates.The listing describes it as chew-proof, but I can’t fully speak to that yet since we haven’t had it long enough to see how it holds up against determined chewers. So far though, it seems well made and durable.Overall, it’s a lightweight, comfortable raised bed that’s easy to assemble and offers solid support, especially compared to some similar designs.Ads do not influence the answers you get from ChatGPT. Your chats stay private.Learn about ads and personalization",
+        "rating": 4,
+        "date": "March 16, 2026",
+        "author": "Haley",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGGJWR4GW6Y2X3D42QCMXDI7QITA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "product": {
+          "size": "X-Large",
+          "color": "DR"
+        }
+      }
+    ]
+  }
+}
