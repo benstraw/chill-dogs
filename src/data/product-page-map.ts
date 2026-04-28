@@ -96,6 +96,10 @@ export function buildProductPageMap(): ProductPageMap {
   for (const id of roadTripProductIds) {
     addRef(map, id, roadTripRef);
   }
+  const roadTripBed = relaxationProducts.filter((p) => p.id === 'onetigris-travel-dog-bed');
+  for (const p of roadTripBed) {
+    addRef(map, p.id, roadTripRef);
+  }
 
   // Keep in sync with src/components/modules/CarCoolingArticleProducts.astro
   const keepCoolInCarRef: PageRef = {
