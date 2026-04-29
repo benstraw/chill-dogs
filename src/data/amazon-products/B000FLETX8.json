@@ -1,0 +1,1234 @@
+{
+  "search_metadata": {
+    "id": "69e1c7e652acc6ca39b4e4c5",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/mtp2P_tBbOCq0W1d5MKTPA/69e1c7e652acc6ca39b4e4c5.json",
+    "created_at": "2026-04-17 05:40:54 UTC",
+    "processed_at": "2026-04-17 05:40:54 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B000FLETX8/?",
+    "raw_html_file": "https://serpapi.com/searches/mtp2P_tBbOCq0W1d5MKTPA/69e1c7e652acc6ca39b4e4c5.html",
+    "total_time_taken": 2.84
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B000FLETX8",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B000FLETX8",
+    "title": "Sherpa Original Deluxe Travel Pet Carrier, Airline Approved & Guaranteed On Board - Black, Medium",
+    "link": "https://www.amazon.com/gp/aag/details/?seller=A1JFF9K75C1ROM&sshmPath=shipping-rates",
+    "link_clean": "https://www.amazon.com/dp/B000FLETX8/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B000FLETX8&device=desktop&engine=amazon_product",
+    "variants": [
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B00063433G",
+            "name": "15.0\"L x 10.0\"W x 8.5\"H",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B00063433G&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B000FLETX8",
+            "name": "17.0\"L x 11.0\"W x 10.5\"H",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B000FLETX8&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0002YHWAU",
+            "name": "19.0\"L x 11.8\"W x 11.5\"H",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0002YHWAU&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the Sherpa Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/81gqQnt7waL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/81gqQnt7waL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81RbIRnRdBL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81YJCJgPwRL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81Sbqbq673L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71OZUsuJRcL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61poQxxxa6L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81D02W352ZL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71CWOHzrj+L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61RZgkCgOAL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81JMKHxL9BL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/815u-fUw5ML._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71R2AhQn41L._AC_SL1500_.jpg"
+    ],
+    "rating": 4.6,
+    "reviews": 8436,
+    "bought_last_month": "400+ bought in past month",
+    "discount": "-46%",
+    "price": "$39.99",
+    "extracted_price": 39.99,
+    "old_price": "$73.50",
+    "extracted_old_price": 73.5,
+    "prime": true,
+    "delivery": [
+      "FREE delivery Friday, April 24"
+    ],
+    "stock": "Only 2 left in stock - order soon."
+  },
+  "purchase_options": {
+    "buy_new": {
+      "caption": "Buy New",
+      "price": "$39.99",
+      "extracted_price": 39.99,
+      "delivery": [
+        "FREE delivery Friday, April 24"
+      ],
+      "stock": "Only 2 left in stock - order soon.",
+      "features": {
+        "shipper_seller": {
+          "text": "MARR Products, LLC",
+          "details": {
+            "heading": "Shipper / Seller",
+            "content": "MARR Products, LLC"
+          },
+          "link": {
+            "text": "MARR Products, LLC",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A1JFF9K75C1ROM&asin=B000FLETX8&ref_=dp_merchant_link"
+          }
+        },
+        "returns": {
+          "text": "30-day refund/replacement",
+          "details": {
+            "heading": "30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    },
+    "buy_used": {
+      "caption": "Used - Very Good",
+      "price": "$30.18",
+      "extracted_price": 30.18,
+      "delivery": [
+        "FREE delivery Wednesday, April 22 on orders shipped by Amazon over $35"
+      ],
+      "stock": "Only 1 left in stock - order soon.",
+      "features": {
+        "ships_from": "Amazon",
+        "sold_by": "Amazon Resale"
+      }
+    }
+  },
+  "item_specifications": {
+    "color": "Original Black",
+    "brand": "Sherpa",
+    "product_dimensions": "17\"L x 11\"W x 10.5\"H",
+    "material": "Polyester",
+    "special_feature": "Airline Approved"
+  },
+  "about_item": [
+    "AIRLINE APPROVED: The Sherpa Original Deluxe Pet Carrier is airline approved and part of our Guaranteed On Board program, which provides comfort and peace of mind to pets and their owners; it's perfect for traveling by air, bus, car, or train",
+    "IN-CABIN FRIENDLY: Our patented spring wire frame allows the rear end of the carrier to be pushed down several inches to easily fit under airplane seats in compliance with most major airline requirements and FAA regulations",
+    "PERFECT FOR TRAVEL: Features mesh panels for ventilation, escape-proof locking zippers, top and side entries for easy and comfortable loading, waterproof interior base, and a removable machine washable cozy base liner",
+    "VERSATILE DESIGN: Can be carried by hand with the padded top handle, or over the shoulder using the included detachable carrying strap and integrated metal D-rings - whichever suits your comfort and convenience",
+    "MULTIFUNCTIONAL: The pet carrier can also be used a soft-sided crate for regular outings and vet visits with cats and small dogs; includes a large storage pocket, and a luggage strap that doubles as a seatbelt security pass-through for car rides",
+    "PRODUCT DETAILS: Black, Medium, 17\" x 11\" x 10.5\"; fits pets up to 16 pounds",
+    "CHOOSING THE RIGHT SIZE: Choose the perfect carrier size based on your pet's measurements, followed by their weight; make sure not to exceed the maximum weight limit, and allow enough space for your pet to change positions inside the carrier"
+  ],
+  "bought_together": [
+    {
+      "position": 1,
+      "title": "Sherpa Original Deluxe Travel Pet Carrier, Airline Approved & Guaranteed On Board - Black, Medium",
+      "link": "https://www.amazon.com/product-reviews/B000FLETX8/ref=sspa_dk_detail_sbb_d_sccl_3_cr/132-5756412-8889304?pd_rd_w=iAe4v&content-id=amzn1.sym.55c0153f-1fb7-42ff-8241-d1c0f3732289&pf_rd_p=55c0153f-1fb7-42ff-8241-d1c0f3732289&pf_rd_r=JH8ASBNCD344YDEXBYRS&pd_rd_wg=yUlmv&pd_rd_r=c4ee49fb-917f-435f-a659-b8ca3857f3bc&pd_rd_i=B000FLETX8",
+      "asin": "B000FLETX8",
+      "link_clean": "https://www.amazon.com/product-reviews/B000FLETX8/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B000FLETX8&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81gqQnt7waL._AC_UL116_SR116,116_.jpg",
+      "rating": 4.6,
+      "reviews": 4.6,
+      "discount": "-46%",
+      "price": "$39.99",
+      "extracted_price": 39.99,
+      "old_price": "$73.50",
+      "extracted_old_price": 73.5,
+      "stock": "Only 2 left in stock - order soon."
+    },
+    {
+      "position": 2,
+      "title": "Sherpa Pet Carrier Airline Approved with Spring Wire Frame - Cat Carrier and Dog Carriers for Airline Travel and Vet Visits, Mesh Ventilation, Locking Zippers - Charcoal Grey, Large",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo1NDMzMTQ5NjEwMTMzMjc0OjE3NzY0MDQ0NTQ6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDcyMjc5NDM2MDMwMjo6MDo6&url=%2FSherpa-Original-Airline-Approved-Charcoal%2Fdp%2FB07D5DJNCB%3Fpsc%3D1%26pd_rd_w%3DiAe4v%26content-id%3Damzn1.sym.55c0153f-1fb7-42ff-8241-d1c0f3732289%26pf_rd_p%3D55c0153f-1fb7-42ff-8241-d1c0f3732289%26pf_rd_r%3DJH8ASBNCD344YDEXBYRS%26pd_rd_wg%3DyUlmv%26pd_rd_r%3Dc4ee49fb-917f-435f-a659-b8ca3857f3bc%26ref_%3Dsspa_dk_detail_sbb_img_0%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM%3D",
+      "asin": "B07D5DJNCB",
+      "link_clean": "https://www.amazon.com/dp/B07D5DJNCB/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07D5DJNCB&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81PYkX0UY2L._AC_UL116_SR116,116_.jpg",
+      "rating": 4.6,
+      "reviews": 4.6,
+      "price": "$69.99",
+      "extracted_price": 69.99,
+      "prime": true,
+      "stock": "In Stock"
+    },
+    {
+      "position": 3,
+      "title": "Sherpa on Wheels Indoor Pet Dog Carrier, Black Large for All Breed Sizes",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo1NDMzMTQ5NjEwMTMzMjc0OjE3NzY0MDQ0NTQ6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTE3MzE0NzY3MjMwMjo6MTo6&url=%2FSherpa-Wheels-Pet-Carrier-Black%2Fdp%2FB01M0XNQ0Q%3Fpsc%3D1%26pd_rd_w%3DiAe4v%26content-id%3Damzn1.sym.55c0153f-1fb7-42ff-8241-d1c0f3732289%26pf_rd_p%3D55c0153f-1fb7-42ff-8241-d1c0f3732289%26pf_rd_r%3DJH8ASBNCD344YDEXBYRS%26pd_rd_wg%3DyUlmv%26pd_rd_r%3Dc4ee49fb-917f-435f-a659-b8ca3857f3bc%26ref_%3Dsspa_dk_detail_sbb_img_1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM%3D",
+      "asin": "B01M0XNQ0Q",
+      "link_clean": "https://www.amazon.com/dp/B01M0XNQ0Q/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B01M0XNQ0Q&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/515RwZR3ikL._AC_UL116_SR116,116_.jpg",
+      "rating": 4.2,
+      "reviews": 4.2,
+      "price": "$78.99",
+      "extracted_price": 78.99,
+      "prime": true,
+      "stock": "In Stock"
+    }
+  ],
+  "related_products": [
+    {
+      "position": 1,
+      "asin": "B07D5FTGP7",
+      "title": "Sherpa Original Deluxe Travel Pet Carrier, Airline Approved & Guaranteed On Board - Charcoal Gray, Medium",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo4Mjg0OTE1MzA1NTYxNjI0OjE3NzY0MDQ0NTQ6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDcyMjc5NDM2MDIwMjo6Ojo&url=%2Fdp%2FB07D5FTGP7%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB07D5FTGP7%26pd_rd_w%3DzHPJj%26content-id%3Damzn1.sym.bbb3fb5e-28ad-4062-a3ba-1f7b9f2e4371%26pf_rd_p%3Dbbb3fb5e-28ad-4062-a3ba-1f7b9f2e4371%26pf_rd_r%3DJH8ASBNCD344YDEXBYRS%26pd_rd_wg%3DyUlmv%26pd_rd_r%3Dc4ee49fb-917f-435f-a659-b8ca3857f3bc%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B07D5FTGP7/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07D5FTGP7&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71-4kxS18uL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.6,
+      "reviews": 4482,
+      "price": "$69.99",
+      "extracted_price": 69.99,
+      "prime": true
+    },
+    {
+      "position": 2,
+      "asin": "B01M0XNQ0Q",
+      "title": "Sherpa on Wheels Indoor Pet Dog Carrier, Black Large for All Breed Sizes",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo4Mjg0OTE1MzA1NTYxNjI0OjE3NzY0MDQ0NTQ6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTE3MTkwMjMxMDgwMjo6Ojo&url=%2Fdp%2FB01M0XNQ0Q%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB01M0XNQ0Q%26pd_rd_w%3DzHPJj%26content-id%3Damzn1.sym.bbb3fb5e-28ad-4062-a3ba-1f7b9f2e4371%26pf_rd_p%3Dbbb3fb5e-28ad-4062-a3ba-1f7b9f2e4371%26pf_rd_r%3DJH8ASBNCD344YDEXBYRS%26pd_rd_wg%3DyUlmv%26pd_rd_r%3Dc4ee49fb-917f-435f-a659-b8ca3857f3bc%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B01M0XNQ0Q/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B01M0XNQ0Q&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/515RwZR3ikL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.2,
+      "reviews": 1055,
+      "price": "$78.99",
+      "extracted_price": 78.99,
+      "prime": true
+    },
+    {
+      "position": 3,
+      "asin": "B0CBMCKSFP",
+      "title": "Petskd Top-Expandable Pet Carrier 17x11x9.5 Inches Alaska Airline Approved, Soft-Sided Carrier for Small Cats and Dogs with Locking Safety Zippers and Anti-Scratch Mesh(Blue)",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo4Mjg0OTE1MzA1NTYxNjI0OjE3NzY0MDQ0NTQ6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDA2OTAxNDUzMDkwMjo6Ojo&url=%2Fdp%2FB0CBMCKSFP%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0CBMCKSFP%26pd_rd_w%3DzHPJj%26content-id%3Damzn1.sym.bbb3fb5e-28ad-4062-a3ba-1f7b9f2e4371%26pf_rd_p%3Dbbb3fb5e-28ad-4062-a3ba-1f7b9f2e4371%26pf_rd_r%3DJH8ASBNCD344YDEXBYRS%26pd_rd_wg%3DyUlmv%26pd_rd_r%3Dc4ee49fb-917f-435f-a659-b8ca3857f3bc%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0CBMCKSFP/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CBMCKSFP&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/816OsQg4mmL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.7,
+      "reviews": 295,
+      "discount": "-24%",
+      "price": "$49.95",
+      "extracted_price": 49.95,
+      "price_unit": "$49.95 / count",
+      "extracted_price_unit": 49.95,
+      "old_price": "$65.95",
+      "extracted_old_price": 65.95,
+      "prime": true
+    },
+    {
+      "position": 4,
+      "asin": "B0G91LBJHV",
+      "title": "Petskd Top and Side Expandable Pet Carrier with Wheels 18x11x11 Inches Delta United Airline Approved, Soft-Sided Carrier for Small Cats and Dogs with Locking Safety Zippers and Anti-Scratch Mesh(Blue)",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo4Mjg0OTE1MzA1NTYxNjI0OjE3NzY0MDQ0NTQ6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTE2MzcyNjA1ODgwMjo6Ojo&url=%2Fdp%2FB0G91LBJHV%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0G91LBJHV%26pd_rd_w%3DzHPJj%26content-id%3Damzn1.sym.bbb3fb5e-28ad-4062-a3ba-1f7b9f2e4371%26pf_rd_p%3Dbbb3fb5e-28ad-4062-a3ba-1f7b9f2e4371%26pf_rd_r%3DJH8ASBNCD344YDEXBYRS%26pd_rd_wg%3DyUlmv%26pd_rd_r%3Dc4ee49fb-917f-435f-a659-b8ca3857f3bc%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0G91LBJHV/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G91LBJHV&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/712f71E2J1L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 5,
+      "reviews": 5,
+      "discount": "-13%",
+      "price": "$139.95",
+      "extracted_price": 139.95,
+      "old_price": "$159.95",
+      "extracted_old_price": 159.95,
+      "prime": true
+    },
+    {
+      "position": 5,
+      "asin": "B0CB43D4X8",
+      "title": "Cat, Dog Carrier for Small Medium Pet Carriers Up to15Lbs, Cats Carrier Soft- Sided Puppy Dogs Bag Portable Foldable Airline Approved Carrier Travel (Green 18 * 11 * 11)",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo4Mjg0OTE1MzA1NTYxNjI0OjE3NzY0MDQ0NTQ6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTE5NTczMzU1NzIwMjo6Ojo&url=%2Fdp%2FB0CB43D4X8%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0CB43D4X8%26pd_rd_w%3DzHPJj%26content-id%3Damzn1.sym.bbb3fb5e-28ad-4062-a3ba-1f7b9f2e4371%26pf_rd_p%3Dbbb3fb5e-28ad-4062-a3ba-1f7b9f2e4371%26pf_rd_r%3DJH8ASBNCD344YDEXBYRS%26pd_rd_wg%3DyUlmv%26pd_rd_r%3Dc4ee49fb-917f-435f-a659-b8ca3857f3bc%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0CB43D4X8/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CB43D4X8&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Amazon's Choice"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/81a359RS8qL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.6,
+      "reviews": 1356,
+      "discount": "-8%",
+      "price": "$21.99",
+      "extracted_price": 21.99,
+      "price_unit": "$21.99 / count",
+      "extracted_price_unit": 21.99,
+      "old_price": "$23.98",
+      "extracted_old_price": 23.98,
+      "prime": true
+    },
+    {
+      "position": 6,
+      "asin": "B002Z5VSB8",
+      "title": "Sleepypod Air in-Cabin Pet Carrier, Strawberry Red",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo4Mjg0OTE1MzA1NTYxNjI0OjE3NzY0MDQ0NTQ6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTEzMzA0MzE3ODEwMjo6Ojo&url=%2Fdp%2FB002Z5VSB8%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB002Z5VSB8%26pd_rd_w%3DzHPJj%26content-id%3Damzn1.sym.bbb3fb5e-28ad-4062-a3ba-1f7b9f2e4371%26pf_rd_p%3Dbbb3fb5e-28ad-4062-a3ba-1f7b9f2e4371%26pf_rd_r%3DJH8ASBNCD344YDEXBYRS%26pd_rd_wg%3DyUlmv%26pd_rd_r%3Dc4ee49fb-917f-435f-a659-b8ca3857f3bc%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B002Z5VSB8/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B002Z5VSB8&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81el40QfaDL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.5,
+      "reviews": 969,
+      "price": "$199.99",
+      "extracted_price": 199.99
+    },
+    {
+      "position": 7,
+      "asin": "B0G6JXCDJY",
+      "title": "Pecute Top Side Expandable Pet Carrier Airline Approved Dog Cat Carrier, Breathable Soft-Sided with Locking Zippers, Pet Travel Bag for Small Dog Cat Leakproof Pee Pad (Olive Green)",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo4Mjg0OTE1MzA1NTYxNjI0OjE3NzY0MDQ0NTQ6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTE4MzMwMjgzNTkwMjo6Ojo&url=%2Fdp%2FB0G6JXCDJY%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0G6JXCDJY%26pd_rd_w%3DzHPJj%26content-id%3Damzn1.sym.bbb3fb5e-28ad-4062-a3ba-1f7b9f2e4371%26pf_rd_p%3Dbbb3fb5e-28ad-4062-a3ba-1f7b9f2e4371%26pf_rd_r%3DJH8ASBNCD344YDEXBYRS%26pd_rd_wg%3DyUlmv%26pd_rd_r%3Dc4ee49fb-917f-435f-a659-b8ca3857f3bc%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0G6JXCDJY/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G6JXCDJY&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81xRjbith4L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 9,
+      "price": "$69.99",
+      "extracted_price": 69.99,
+      "prime": true,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 8,
+      "asin": "B0G24Z559P",
+      "title": "Morpilot Top and Side Expandable Cat Carrier, Collapsible Soft-Sided Pet Carrier for Large Cats and Puppies up to 20lbs for Car Rides and Vet Visits, with Dual-Sided Cushion& Bowl (Dark Gray)",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo5MDg0NjU3MDE4MTIxMzk6MTc3NjQwNDQ1NDpzcF9kZXRhaWwyOjMwMTIzNzk1MzUwMTEwMjo6Ojo&url=%2Fdp%2FB0G24Z559P%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0G24Z559P%26pd_rd_w%3DTc2G1%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DJH8ASBNCD344YDEXBYRS%26pd_rd_wg%3DyUlmv%26pd_rd_r%3Dc4ee49fb-917f-435f-a659-b8ca3857f3bc%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0G24Z559P/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G24Z559P&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/9106gJreB-L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 5,
+      "reviews": 4,
+      "price": "$49.99",
+      "extracted_price": 49.99,
+      "save_with_coupon": "Save 10%",
+      "prime": true
+    },
+    {
+      "position": 9,
+      "asin": "B0C61W9FVW",
+      "title": "Petskd Top-Expandable Pet Carrier 18x13x9.5 Inches Southwest Airline Approved, Soft-Sided Carrier for Small Cats and Dogs with Locking Safety Zippers and Anti-Scratch Mesh(Pink)",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo5MDg0NjU3MDE4MTIxMzk6MTc3NjQwNDQ1NDpzcF9kZXRhaWwyOjMwMDAwNDcxOTQ1NTcwMjo6Ojo&url=%2Fdp%2FB0C61W9FVW%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0C61W9FVW%26pd_rd_w%3DTc2G1%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DJH8ASBNCD344YDEXBYRS%26pd_rd_wg%3DyUlmv%26pd_rd_r%3Dc4ee49fb-917f-435f-a659-b8ca3857f3bc%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0C61W9FVW/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0C61W9FVW&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81oxUg3LQkL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.6,
+      "reviews": 302,
+      "discount": "-24%",
+      "price": "$49.95",
+      "extracted_price": 49.95,
+      "price_unit": "$49.95 / count",
+      "extracted_price_unit": 49.95,
+      "old_price": "$65.95",
+      "extracted_old_price": 65.95,
+      "prime": true
+    },
+    {
+      "position": 10,
+      "asin": "B0D22TY3H8",
+      "title": "Lekereise Large Cat Carrier for 2 Cats, 2-in-1 Cat Travel Carrier with Litter Box, (17.7\" x2) x16.5\"x13\" Pet Carrier with Zipper Locks for Moving Across The Country (No Hammock) - Grey",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo5MDg0NjU3MDE4MTIxMzk6MTc3NjQwNDQ1NDpzcF9kZXRhaWwyOjMwMTE4ODk2MTYxNDgwMjo6Ojo&url=%2Fdp%2FB0D22TY3H8%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0D22TY3H8%26pd_rd_w%3DTc2G1%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DJH8ASBNCD344YDEXBYRS%26pd_rd_wg%3DyUlmv%26pd_rd_r%3Dc4ee49fb-917f-435f-a659-b8ca3857f3bc%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0D22TY3H8/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0D22TY3H8&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/81b9QjwsoZL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 439,
+      "discount": "-10%",
+      "price": "$62.99",
+      "extracted_price": 62.99,
+      "old_price": "$69.99",
+      "extracted_old_price": 69.99,
+      "prime": true
+    },
+    {
+      "position": 11,
+      "asin": "B07MS8CD6N",
+      "title": "Morpilot Cat Carrier - Cat Carrier Soft for Medium or Large Cats up to 20lbs, with Dual-Sided Cushion, Secure Buckle and Foldable Bowl, Dog Carriers for Small Dogs - Pet Carrier (Dark Gray)",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo5MDg0NjU3MDE4MTIxMzk6MTc3NjQwNDQ1NDpzcF9kZXRhaWwyOjMwMTEwMjYwMTA4MTUwMjo6Ojo&url=%2Fdp%2FB07MS8CD6N%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB07MS8CD6N%26pd_rd_w%3DTc2G1%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DJH8ASBNCD344YDEXBYRS%26pd_rd_wg%3DyUlmv%26pd_rd_r%3Dc4ee49fb-917f-435f-a659-b8ca3857f3bc%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B07MS8CD6N/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07MS8CD6N&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Amazon's Choice"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/71tp7JhkKKL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.6,
+      "reviews": 36756,
+      "discount": "-25%",
+      "price": "$29.99",
+      "extracted_price": 29.99,
+      "old_price": "$39.99",
+      "extracted_old_price": 39.99,
+      "prime": true,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 12,
+      "asin": "B07D5FTGP7",
+      "title": "Sherpa Original Deluxe Travel Pet Carrier, Airline Approved & Guaranteed On Board - Charcoal Gray, Medium",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo5MDg0NjU3MDE4MTIxMzk6MTc3NjQwNDQ1NDpzcF9kZXRhaWwyOjMwMDcyMjc5NDM2MDIwMjo6Ojo&url=%2Fdp%2FB07D5FTGP7%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB07D5FTGP7%26pd_rd_w%3DTc2G1%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DJH8ASBNCD344YDEXBYRS%26pd_rd_wg%3DyUlmv%26pd_rd_r%3Dc4ee49fb-917f-435f-a659-b8ca3857f3bc%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B07D5FTGP7/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07D5FTGP7&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71-4kxS18uL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.6,
+      "reviews": 4482,
+      "price": "$69.99",
+      "extracted_price": 69.99,
+      "prime": true
+    },
+    {
+      "position": 13,
+      "asin": "B000633ZOY",
+      "title": "Sherpa Delta Airlines Travel Pet Carrier, Airline Approved & Guaranteed On Board - Black, Medium",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo5MDg0NjU3MDE4MTIxMzk6MTc3NjQwNDQ1NDpzcF9kZXRhaWwyOjIwMDAzMzY2MjU0OTc5ODo6Ojo&url=%2Fdp%2FB000633ZOY%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB000633ZOY%26pd_rd_w%3DTc2G1%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DJH8ASBNCD344YDEXBYRS%26pd_rd_wg%3DyUlmv%26pd_rd_r%3Dc4ee49fb-917f-435f-a659-b8ca3857f3bc%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B000633ZOY/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B000633ZOY&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71dbhI8209L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.5,
+      "reviews": 4282,
+      "price": "$49.99",
+      "extracted_price": 49.99,
+      "prime": true
+    },
+    {
+      "position": 14,
+      "asin": "B09XHPLPY6",
+      "title": "PETSFIT Portable Dog Crate, Travel Dog Crate - 19 Inch Lightweight, Roomy, Easy to Set Up, Sturdy Collapsible Dog Kennel with Thick Mat, Khaki",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo5MDg0NjU3MDE4MTIxMzk6MTc3NjQwNDQ1NDpzcF9kZXRhaWwyOjMwMTI0MzQ3MzM3ODcwMjo6Ojo&url=%2Fdp%2FB09XHPLPY6%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB09XHPLPY6%26pd_rd_w%3DTc2G1%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DJH8ASBNCD344YDEXBYRS%26pd_rd_wg%3DyUlmv%26pd_rd_r%3Dc4ee49fb-917f-435f-a659-b8ca3857f3bc%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B09XHPLPY6/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09XHPLPY6&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71xXIwZakVL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 187,
+      "price": "$59.59",
+      "extracted_price": 59.59,
+      "prime": true,
+      "climate_pledge_friendly": true
+    }
+  ],
+  "videos": [
+    {
+      "position": 1,
+      "title": "Honest Review of Sherpa Travel Carrier",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/68961426-442d-4fdf-8840-37ca343a1c34/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/B1skv4AVh6L.png",
+      "duration": "1:41",
+      "vendor": "Stacy",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/A1KwUBMlZHL._CR0,0,2316,2316_._FMjpg_._SL34_.jpg",
+      "date": "Mar 18, 2026"
+    },
+    {
+      "position": 2,
+      "title": "Sherpa dog carrier perfect for Southwest airlines!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/2d6c7626-6d5a-4aec-ac22-41eca3f0afdd/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/B13S2b-NE8L.png",
+      "duration": "0:48",
+      "vendor": "Alvin Desir",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/91kMxLb26-L._CR135,77,465,466_._FMjpg_._SL34_.jpg",
+      "date": "Apr 12, 2023"
+    },
+    {
+      "position": 3,
+      "title": "You can wash the inside liner",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/decfcddf-c6dc-49e3-80f7-15e352251001/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61GAFPJjf4L.jpg",
+      "duration": "1:09",
+      "vendor": "Should I Get It Reviews",
+      "vendor_thumbnail": "https://images-na.ssl-images-amazon.com/images/S/influencer-profile-image-prod/logo/shouldigetit_1639285092809_original._CR475,0,1634,1634_._FMjpg_._SL34_.jpeg",
+      "date": "Mar 3, 2023"
+    },
+    {
+      "position": 4,
+      "title": "Airport Carrier for Meatball!!!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/3e5c26e2-ade6-434c-9bfd-9c055059d3cb/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61Fj-lT7f8L.jpg",
+      "duration": "1:30",
+      "vendor": "The Weens",
+      "vendor_thumbnail": "https://images-na.ssl-images-amazon.com/images/S/influencer-profile-image-prod/logo/influencer-b2f7e777_1638639161277_original._CR370,725,2178,2178_._FMjpg_._SL34_.jpeg",
+      "date": "Apr 28, 2023"
+    },
+    {
+      "position": 5,
+      "title": "Sherpa Deluxe - Best Value For a Reason!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/a10da797-ea0f-42e0-b3ad-60160a6e9c72/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/91IML4nRhxL.jpg",
+      "duration": "2:52",
+      "vendor": "Three Monkeys Media",
+      "vendor_thumbnail": "https://images-na.ssl-images-amazon.com/images/S/influencer-profile-image-prod/logo/maksfs_1678340791687_original._FMjpg_._SL34_.jpeg",
+      "date": "Mar 26, 2021"
+    },
+    {
+      "position": 6,
+      "title": "Premium carrier for your small animals!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/1306535c-8ecf-47fa-9289-1cbc1ba55716/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61bPQus22jL.jpg",
+      "duration": "1:05",
+      "vendor": "Sara Pariseau",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/61Jm4TxNovL._CR0,0,470,470_._FMjpg_._SL34_.jpg",
+      "date": "Sep 1, 2025"
+    },
+    {
+      "position": 7,
+      "title": "Sherpa Pet Carrier",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/71e781f1-8c11-4e2b-8b17-78de2eaedcc2/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/81dSKW+FM7L.jpg",
+      "duration": "0:31",
+      "vendor": "Tools. Electro. DIY",
+      "vendor_thumbnail": "https://images-na.ssl-images-amazon.com/images/S/influencer-profile-image-prod/logo/fastunboxer_1614355395424_original._CR0,0,2560,2560_._FMjpg_._SL34_.png",
+      "date": "Jan 18, 2022"
+    },
+    {
+      "position": 8,
+      "title": "Very Well Made Carrier that Works Perfect for Flights",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/8a0f9346-0bda-40cc-939e-300d161a01bc/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/51qoO2zFW3L.jpg",
+      "duration": "1:59",
+      "vendor": "Suzy & Justin",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/81P9453ED4L._CR0,0,998,998_._FMjpg_._SL34_.jpg",
+      "date": "Mar 1, 2026"
+    },
+    {
+      "position": 9,
+      "title": "You need this for your small pet!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/968d5e26-24b8-4501-8685-f3e5bff521a0/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/81FGkJDkUyL.jpg",
+      "duration": "1:25",
+      "vendor": "Cole Shaffner",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/81rTrAMvgfL._CR0,0,983,983_._FMjpg_._SL34_.jpg",
+      "date": "Oct 13, 2022"
+    },
+    {
+      "position": 10,
+      "title": "Large Size Black Sherpa Carrier For My Dog",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/9b14566e-e47e-4da5-83cf-0f9af9ab6920/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/A1H4k2WHn5L.png",
+      "duration": "2:17",
+      "vendor": "Sheryl Desir",
+      "vendor_thumbnail": "https://images-na.ssl-images-amazon.com/images/S/influencer-profile-image-prod/logo/holasheryl_1677300866952_original._FMjpg_._SL34_.jpeg",
+      "date": "Apr 10, 2023"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": "sherpa_banner",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/7ae39cdc-f83e-410a-95ed-071cf5bd4b1e.__CR0,0,970,300_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 2,
+      "features": [
+        {
+          "position": 1,
+          "title": "Original Deluxe Pet Carrier",
+          "text": "The Original Deluxe Pet Carrier is an airline approved carrier that lets your pet travel comfortably, whether you are on the go, in your car, or talking a walk. Easy to use and durable enough to keep your pets contained and protected.",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/8791d82b-f8c0-4354-adbf-c79773b42c73.__CR0,0,2000,2000_PT0_SX300_V1___.jpg"
+        },
+        {
+          "position": 2,
+          "title": "Fits Under Most Airline Seats",
+          "text": "The spring-wire frame allows the rear end of the carrier to be pushed down several inches to fit under most airline seats in compliance with airline requirements and FAA regulations, designating the pet carrier as in-cabin friendly* and airline approved.",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/c276d60b-60b1-44be-9ae6-d41227228a31.__CR0,0,2000,2000_PT0_SX300_V1___.jpg"
+        },
+        {
+          "position": 3,
+          "title": "Multiple Features",
+          "text": "Features included are mesh panels for ventilation, top and side entries, locking zippers for added safety, and a seatbelt safety strap.",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/87e8cad3-383d-4c69-8e2a-d36c563369f2.__CR0,0,2000,2000_PT0_SX300_V1___.jpg"
+        }
+      ]
+    },
+    {
+      "position": 3,
+      "features": [
+        {
+          "position": 1,
+          "title": "Guaranteed on Board",
+          "text": "Working with major airlines, we made sure to provide you and your pet with a carrier that is Guaranteed On Board*. The G.O.B. program provides all the information you will need for your future travels with your pet.",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/f8e9a780-746a-4773-aef5-c6ac78f20a43.__CR0,0,2000,2000_PT0_SX300_V1___.jpg"
+        },
+        {
+          "position": 2,
+          "title": "Folds Flat",
+          "text": "The carrier is collapsible for extra convenience, allowing for easy storage and portability.",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/7cb1c608-23d1-47fa-98fc-d27f4dcbf980.__CR0,0,2000,2000_PT0_SX300_V1___.jpg"
+        },
+        {
+          "position": 3,
+          "title": "Size & Weight Limits",
+          "text": "Small: 8lbs (Weight); 13\" (Length); 7.5\" (Height)",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/f1c77536-cb10-4c8c-b75e-d42a32580204.__CR0,0,2000,2000_PT0_SX300_V1___.jpg"
+        }
+      ]
+    },
+    {
+      "position": 4,
+      "title": "travel with peace of mind",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/d6dc3ad9-b993-4d78-a69f-70221e7152e8.__CR0,0,970,600_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 5,
+      "compare_with_similar": [
+        {
+          "position": 1,
+          "asin": "B08TCLK685",
+          "title": "2-in-1 Backpack Pet Carrier",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/afde4fe8-673c-49dd-a3f4-7f76684143d5.__CR0,0,450,900_PT0_SX150_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B08TCLK685?ref=emc_s_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B08TCLK685&device=desktop&engine=amazon_product",
+          "rating": 3.9,
+          "reviews": 390,
+          "price": "— no data",
+          "features": "Multipurpose, airline-approved, removable liner",
+          "guaranteed_on_board": "Yes",
+          "multiple_sizes": "One Size",
+          "multiple_colors": "No"
+        },
+        {
+          "position": 2,
+          "asin": "B00MEKF5HC",
+          "title": "American Airlines Pet Carrier",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/38b655fd-a69d-41f9-9921-857e76e499c5.__CR0,0,450,900_PT0_SX150_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B00MEKF5HC?ref=emc_s_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B00MEKF5HC&device=desktop&engine=amazon_product",
+          "rating": 4.3,
+          "reviews": 462,
+          "price": "$56.28",
+          "extracted_price": 56.28,
+          "features": "Official airline carrier, airline-approved, removable liner",
+          "guaranteed_on_board": "Yes",
+          "multiple_sizes": "No",
+          "multiple_colors": "No"
+        },
+        {
+          "position": 3,
+          "asin": "B000633ZOY",
+          "title": "Delta Airlines Pet Carrier",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/5fe66932-7efa-44c4-b42c-01783160286a.__CR0,0,450,900_PT0_SX150_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B000633ZOY?ref=emc_s_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B000633ZOY&device=desktop&engine=amazon_product",
+          "rating": 4.5,
+          "reviews": 4282,
+          "price": "$49.99",
+          "extracted_price": 49.99,
+          "features": "Official airline carrier, airline-approved, removable liner",
+          "guaranteed_on_board": "Yes",
+          "multiple_sizes": "No",
+          "multiple_colors": "No"
+        },
+        {
+          "position": 4,
+          "asin": "B085VSDTF6",
+          "title": "Element Travel Pet Carrier",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/29a04a97-1d32-46ec-9184-6ca55d7ee703.__CR0,0,1875,3750_PT0_SX150_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B085VSDTF6?ref=emc_s_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B085VSDTF6&device=desktop&engine=amazon_product",
+          "rating": 3.9,
+          "reviews": 92,
+          "price": "— no data",
+          "features": "Stay Clean Technology, airline-approved, removable liner",
+          "guaranteed_on_board": "Yes",
+          "multiple_sizes": "One Size",
+          "multiple_colors": "No"
+        },
+        {
+          "position": 5,
+          "asin": "B01M0XNQ0Q",
+          "title": "Ultimate On-Wheels Pet Carrier",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/70793fd8-57d9-4d9c-a0ee-f77320620796.__CR0,0,1875,3750_PT0_SX150_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B01M0XNQ0Q?ref=emc_s_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B01M0XNQ0Q&device=desktop&engine=amazon_product",
+          "rating": 4.2,
+          "reviews": 1055,
+          "price": "$78.99",
+          "extracted_price": 78.99,
+          "features": "Wheeled, airline-approved, removable liner",
+          "guaranteed_on_board": "Yes",
+          "multiple_sizes": "No",
+          "multiple_colors": "No"
+        }
+      ]
+    }
+  ],
+  "product_details": {
+    "is_discontinued_by_manufacturer": "No",
+    "product_dimensions": "17 x 11 x 10.5 inches; 3 Pounds",
+    "item_model_number": "55231",
+    "date_first_available": "October 31, 2004",
+    "manufacturer": "PetWise, Inc.",
+    "asin": "B000FLETX8",
+    "best_sellers_rank": [
+      {
+        "text": "#9,819 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 9819,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#16 in Dog Soft-Sided Carriers",
+        "extracted_rank": 16,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/3024188011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Soft-Sided Carriers"
+      }
+    ],
+    "customer_reviews": "4.6 out of 5 stars",
+    "rating": 4.6,
+    "reviews": 8436,
+    "brand_name": "Sherpa",
+    "target_audience": "Cat, Dog",
+    "target_species": "Dog",
+    "upc": "743723552318",
+    "global_trade_identification_number": "00743723552318",
+    "item_type_name": "Pet Carrier",
+    "included_components": "Pet Carrier, Strap, Liner",
+    "unit_count": "1 Count",
+    "warranty_description": "Satisfaction Guarantee (Only applicable to products purchased from an authorized seller)",
+    "material_type": "Polyester",
+    "item_dimensions_l_x_w_x_h": "17\"L x 11\"W x 10.5\"H",
+    "item_weight": "3 Pounds",
+    "size": "17.0\"L x 11.0\"W x 10.5\"H",
+    "additional_features": "Airline Approved",
+    "compatible_with_vehicle_type": "Airplane, Car",
+    "closure_type": "Zipper",
+    "dog_breed_size": "Medium",
+    "color": "Original Black",
+    "product_style": "Guaranteed On Board - Original Deluxe Carrier",
+    "maximum_weight_recommendation": "16 Pounds",
+    "recommended_uses_for_product": "Traveling"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0F4DFF24G",
+      "title": "Top and 2 Sides Expandable Pet Carrier 17x11x9.5, TSA Airline Approved Small Dog Carriers for Small Dogs, Soft-Sided Cat Carrier with Self-Locking Zippers for Kitten,Rabbit, Puppy, Guinea Pig Black",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JK9hTvZG929qS0fV0M9sCAUAAAGdmfTgAQEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICC4Q__I/clv1c_ek-wBQfWbcbaXT1XZzuQgo-tjwzCf_swHyexxhNovZAuljffcpM82b2fchQ0kmnuN7yvKGhiVVszQNvrRD_L0Kifccsi84zMxzvnSebpX4-6CavtkPHxrG_62K0c0LCDxvkeozzlXhoMz_U1lGc0u9LR6B0dlsFrltr2_5-qbyZfmpWKT806L7Qll6l4D8tbBnjJ4URINUvCwSStmw0RpooCUVK0dxYcHy49GpMNFo9J5chRg0JvWwWdJbxy932fXYsL7aDPc1DuG9BaMSslq29CQsSgFk6YryDfpKOLxv7SGReeoj6kAfU92FfzcQfLGL5hCFpMnoisxbR9DEEK83y-dIuiihVfaIXOVvjkwTS6mWLqqMg1rwzwpnHh9BvKn4u1bwtFTQ_JHllQbwMofmkH9AgxySUvF6koySFpW8j7QIODxBUgq7xri8OIPObMP7jPA2XCfa8GIPzn8vQNvSWE4JRYykyWBZuMtNNOx8yO-zrKUDVODHAiR57-teGFdzPt992M1UGHS8MZGiTGPXz_JaE9pbruXYDODr3e6uSDrQb6BRWaBEkWynRaK2EIwKGytDOrTbj3U_v57HKzdvwRC9xL71Mmk0egSSNdLzKujv4E91qinK5EtXywuneviRgF-nqHSWOMd6t3udNZzLAmRMyzJ5-ws3UHeBWg7tqua9A_QnYP_lgWabErPW1UW1vRdauOpe_wEXcQmvJL8S8s-d551rjNh-DcUSzUh3xWLi_v4Cv0J-1OVzV5DJP7wYD0rZlS4uHQ9rGS3jPNFQqJUBxCFPKyMG3dZ6EazeBDIJXzgO0lMwdwMvEcv-SVVU8hPlbKCWRu2oVJiTEpOJkaT26Z2cy-ZUJdBW7zt-VQZkzdmQxOCwY7oycJ0_xc5P3275Ug6jOyukV6GMbe4_q9c3YtUdBExOYGfIDY3buCw_MbbVsHpaPS2m_VHgGoBK7O5ImL_bXa3n6C8buLb-3GttBffe5LtwyuK_8UpQpCdZbLVDNOE7D4CypRdSPtcrlGIP484SnnAG3raug9LaXW1rlBDm4nqi2UQe5Aigopad_ITowo5huLz8lN62ie4yMJpOx7k0zdiY18_dnqmsG-KfJZHSADtQUL18EEVeRCV9jnKbGxzoq_aPO5TGo2PhsNyUs6_aqhXJG1LlGIxpG2JquOPZIzFViUIPsePouhdnK0y7l2mR_c-pOjA2-wmMKxYKYKdNIi5wK13Cxf7hKerWPlmw03WcOW7SJAhk0uq1FOQI9s5KMwUBj75X5jrJ5bZOXfYLiRa6vyfTa6uBK1wJOulxkpZYW7DxtH9mB7lZjIVEVpxZ4SKL4xqfrBWu3tGfnr38BDHcOd_aZvruimYnqAfmtLzle3K3F3hqcdlg8hIlTIx74BKwbwsIZYXNCa2bZ-GY4geDzj2tfrECz0oUhVn2KlzeaHxQYjnzO7WxiuxD_3brEFLSAN5m39NazzyPrzEA43OzlaiDQUW45eb6UL2BPEW_8IZqzIdKjt1Bsrbgg1kKwoiASBHg/https://www.amazon.com/dp/B0F4DFF24G/?_encoding=UTF8&pd_rd_i=B0F4DFF24G&pd_rd_i=B0F4DFF24G&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=udnRG&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=JH8ASBNCD344YDEXBYRS&pd_rd_wg=yUlmv&pd_rd_r=c4ee49fb-917f-435f-a659-b8ca3857f3bc",
+      "link_clean": "https://www.amazon.com/dp/B0F4DFF24G/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F4DFF24G&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51ip9q5jAjL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/0ce42974-59bb-42ba-8449-4b77e196c1b8.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/0ce42974-59bb-42ba-8449-4b77e196c1b8.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.5,
+      "reviews": 78,
+      "price": "$48.99",
+      "extracted_price": 48.99
+    },
+    {
+      "position": 2,
+      "asin": "B0F53N17ZZ",
+      "title": "Lekereise Top-Expandable Pet Carrier 17x11x9.5 Inch Alaska Hawaiian Airline Approved Soft Sided Underseat to 12lbs Travel Carriers for Small Cats and Dogs with Locking Safety Zippers Anti-Scratch Mesh",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JJFzEnEy5oatb2XPXMYXlfoAAAGdmfTgAgEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICDgBCcO/clv1c_ek-wxQfWLbbSDRHUVp4p3gLJ7TlWSpMXB23TQwnll4nGsurUUHXE9F9_gFllGbNfe90YAtjKb4P3eQdalv00OvLX4AFqWDJMcqtOCDmxNPBQkwvYIEINtQa6YvNcPuKQjxncDUAJ0--qWMZAKrqHGWuZp9j0NtXqgLTmzQ_CDCQd2-kfW_sc8fdilYnV1kCMMozRyFxdNT-gRUUulklGkKCpTF6uyWik3A3lhAFq1YwNij7HiUcZUh2KdXVp-795UgpiVIs5sSjcMTefY8pEPnVGslifobIvVddabVra92oslZeD2bAnpR6oW-7_wVl4hTu2PFIRDL17UqiWAsKEGYDLgJwYW0_5HlcnEPXxNuJ3FFGhqzL5BXfV-7k_yJvETz0-V1ZxmEFw-_krCpBgAE9t3OjeFTlIAw7XRznKWnccOKhXp-dy6WGTSTM7n4mJaPsW37ZTTegIuVzNt_q2HeIhh304TiggKdWhNGZiIBga53aVg6FLZSGIsPi7t--kTSg-VE3D3oDMnOzPJRXCB0awUqJmiOhqa42P2JCSX1g7GYbAUrWO_P7tNBKmWjmVZL9tyvEXFMgjMFKUQ5dqef9CwjfkZcME8MWy3n-QAj214KiGTh9Ci0x3pCBu1QiPhZVJ3BPR06PjOiU8NVBbtogI81I0bSoVCDlgHq1iuJebU5VgfK4T0091jddbFryRur-MPXRvQSpk9LYawgxYMXor5cmED0uSPEc-H0D1XsE_28QpQU_SJmemfSwW7Ev-G9aR0a0E7xo_gUgRcLVDEZzCUN7A4kxggZQ91xoC02r5OvKoMJ6vKZavNkm1uKuzFbxZuDysS-d_JVvSuXEonCYb2HhGCOeY9wjeBYIxr6A-naCkNsIO8fB_JQq54NXyG4Pv0ZJG4-BcS44NW7vQ3Yiasp_8I86pti_UUK8GPs2WREn4ZivuCCR29LNm88svPGfnXfw8YrfM0osjCAotiU0be8iu9ilc5q55ud53HRnFZdlHqz51WwSqQjmILOSPM2zh2TQ7CIiu2n_-m-ezGgHPw34d15x33nScJ4ehL3tctAnD8DZFWy_xAZ05ET-kTdzAGSem54QveyblE86KsUO7bb3jXjhS95XSX8CuTMoXPKeRfYL1E62cBcj2839TLkq140OQRlwBeb_E4eqWKG2WSENryGyqGb73cF1orUw0uKCldy-ySiFh0x2xBl4kJB6qePRXBHcuYbBSApY5UjtLDTHF6fiRKp0dHTpHXhdIRM9r_i79gnjO7nh_bpH53AdMO0GdO23L-Gy2q4LDCdydgk4FDybwT1glNeQOv5-c_qgJOdCwQKKbX-rCw5bKMMGYQyM1uPUfPW1eHCrFqe3F8vnv9YlSqWxu999XMHtQaPe_BMp6W0bJ4oxKPKr3kwoAF6c8OJIbZhfQ4248aa1nmkeMxjDTBue9-B3fOUO4cBKrpWKLrjOcyAS_28hFH1NRb_ox4nh1ZKVapYWaI1B1mXaOG2Ve4KZ3v4YCFVj0NfpClvW3k02oTi2kJnDFuOqb1yU7MVvI5F0J1JxUBT7uQW5gqC0/https://www.amazon.com/dp/B0F53N17ZZ/?_encoding=UTF8&pd_rd_i=B0F53N17ZZ&pd_rd_i=B0F53N17ZZ&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=udnRG&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=JH8ASBNCD344YDEXBYRS&pd_rd_wg=yUlmv&pd_rd_r=c4ee49fb-917f-435f-a659-b8ca3857f3bc",
+      "link_clean": "https://www.amazon.com/dp/B0F53N17ZZ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F53N17ZZ&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41gQMpflwXL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/2466bcc5-c35b-47b5-9912-f8e772416a7d.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/2466bcc5-c35b-47b5-9912-f8e772416a7d.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.5,
+      "reviews": 193,
+      "price": "$30.77",
+      "extracted_price": 30.77,
+      "old_price": "$36.09",
+      "extracted_old_price": 36.09
+    },
+    {
+      "position": 3,
+      "asin": "B0G3M9NDXK",
+      "title": "Dog, Cat Carrier for Pets Up to 12 Lbs, Airline Approved Collapsible Soft-Sided Pet Travel Bag with Locking Zippers, Breathable Mesh and 4 Large Pockets, Removable Fleece Pad (Dark Grey)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JIUnyNW0AHxYt5dICAn9O4gAAAGdmfTgAwEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICDHIVM0/clv1c_ek-YBQfWFcbSDn0nItMgDzrZjBAPnkYZji3yiHTSuwG56EORmkje59Werxvr0S71rVSXO2OmIXJq67LAID8TRtwkDezxVv95W2nvDz-iLNwEyHeJDkzUPaF64uQEltNzZDqVqo9MQr60TvrSQfSDmleZo9jE9tXoiIzmq0eaTMEZVWIUhNm_fQyhz8wcFH21A7FP8CqZv4RL1PHbukLQukyVunUftpecCu41vL4X-ioqUQd4Mtai4izjA_OZw9RftDhDcd5gwymQCsc6vmtrKFoCJyt8x8hPtZt4I6XcYPyeEOE7y6wBONygo0DOQ00lYsnn111WYcn-ZorWneXWEwoe1s4YaJIY8_m2l4NHwBBwY4KJiXhohY0hr_BuSJF2z5bxTtrp1eQRnmQCOUCgHTPXgpP-yQuhRTPfpJnrn8Q9eRQN-CtIYSBSKbmOkTb1xroj0OFKeVNLOyrg_nCbKCgWL3dKZpwQduAenIDJEt4DaZgg43o9piGgr28oASsdN6cKjhhJrUKCZ-5oF-xw2feAU2dkDFZtPItoSgsCNg7bdTo9wwzaFbAT31JxqChYyDJz5nuTp00qUOmIUYjus_Af3qRm8ggcvl61h_igGGE5lw0lc1ujtwJPpCjtxaSJhfyj2wtVw6SgJSk9_TF75jbczLDweFkY8RnrY6RYMWvS60BDykN9jwVwx-ojc5cPqOvXtFzaOZfemawZm2H4jtD9vNMkgRQCIrypK386T3_bZi1oIRUOpHXbSJtXfzRowN1-nFP-_2-luBmlVA7W1QyPG6wCLoq8msv6jPOpKs-tKObDJL7M5I3zg5pzCvMKVxzEOOtSarpNs9XNfMyKEuoihlCAC-JqgKbRlrEs9wLoOJjbkXXUhjACpLJm9FatJ--coCgiiIFFZXYP4EGxEhNeKIXUuid6JhLiPef9Phf71zFPQM7li2Zwr9WtwH8Eb02YVxiOi_qj0a7g8S56L4gVA-jGWp4tI-br4trEUcsjylwvsYiJ3kH_hvCxRw__dwsC2OmXoemnEtclXtIk3BhdbDmIuqykL-wMsy3f8hTtr14Rur_cTCXCsTMZ135zh1aeMT1UwMh0VMOVt3Ucd0S3BRGp4-qExDF72eChu0ZaEgCpxC7fas48UeMdB598DGfySP46CiDB8X8HS6CXffe62RZLZVT_omatKQMS17_wA6jviOoCgJHQO7YIpDYvzqXn3PmuduRzvbK5ACUPZLsOLapTxzV3wrqrgIy448LR58x65om8rt3tiiGUYQsgCa7PU-Txa6ucGYWRDIvRk632I7Lejb2I14ZujPO7eqBK5pMgZo1lhErv9U3wMfSYDaG_OXFv5y73oI6lsYJX9lGmboFyh3EpHClY8psJMrDy4pvBst6Aqnt19jl3giTY4K7wbPcHOxhQnk7SudEwqVV0TsaMUOHpnRv3VIXq85m-1ddy3WMK68OzN3gqoRxxXZhvYS_ZMpzsutRGnYTVqyZHcgWhHsUtftN_csWRZuKx1fZZcBJgT2FA8QCO2AphJAFVbuLfwwcC/https://www.amazon.com/dp/B0G3M9NDXK/?_encoding=UTF8&pd_rd_i=B0G3M9NDXK&pd_rd_i=B0G3M9NDXK&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=udnRG&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=JH8ASBNCD344YDEXBYRS&pd_rd_wg=yUlmv&pd_rd_r=c4ee49fb-917f-435f-a659-b8ca3857f3bc",
+      "link_clean": "https://www.amazon.com/dp/B0G3M9NDXK/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G3M9NDXK&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/415lhcss-oL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/ecf10eaa-16b5-4cee-adc4-1e4c43026d92.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/ecf10eaa-16b5-4cee-adc4-1e4c43026d92.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.8,
+      "reviews": 20,
+      "price": "$49.98",
+      "extracted_price": 49.98,
+      "old_price": "$59.97",
+      "extracted_old_price": 59.97
+    },
+    {
+      "position": 4,
+      "asin": "B0DJ5DV5SQ",
+      "title": "PETUX Airline Approved Pet Carrier - 17x11x9.5 in, Underseat, Top & Side Entry, Soft Sided Cat Dog Carrier for Small Cat & Dog Up to 12 lbs with Breathable Anti-Scratch Mesh for Travel & Vet - Black",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JOKDk_C_ZFosVtLcqnDbeeYAAAGdmfTgBAEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICCIuYXZ/clv1c_ek-wxYXWbcbWTBXUV5oo3gDJ7TJWToMXp_60Jr-qzu8GptwKzGMApoJukS_08WVf8kNeTDN8inJq67LaW8lc9dskje1wjpjKD-z23tnMuMT3q5f7L92XUVnZov9g6hZ5gdioB7AzHtMGcpEMRe06h4dCAN2RgkWqkAp1yDCvlNJfCTs9b4g8yYVNN6dfe2GvFX_Eh_gqP4RLV-hovlnw5jnKlXW3TAbylue2fDwUmioi08f6YTeYtM1Htvb5o9qdgbNGYXVlZ11NZ0XQyipzLBNfLLiJajNxPA_E_S5ECwiFYckTBVZR9GRLu0Tu2zoW9L4g913ura0yGiUsdSPNTREZVxcUtXfVFiI5-e0mANW8oTFG1-xtvxFUYTcdRKTHuxRjDWHzdyazG3d1zBFwUhwTHYmbWcxMpwC1C64jnBF8E2zcmSMjnhsv2WfMco1Xl7Sc1IbIQrJ4FTUdqQlPPSm9W3TqEri7VMUTwcOnJSiF6G56y3P5sKkDh46bAtY9tqA1SS38vWHUPO6zsqDSl2_G76iCPiAwAertTWjjHu6gOCO1W9fYBXCyzVxKJ7QgG2rw_dZG2C_fuAIl-WM8D4AB9pB_USw-CrMzh-_JgGYTmQUsuxyiJ6MlDVP-Tf2l8H8n1V1YIzQ9HBZr-FnBVgiRE7A-sike7HYqoPWsqcNVIb8fxmkMi0ZT4DnaIwQipOZushRo3fdmqhfZmLzKJqieBXc9zEpO_VncTHA2qevx0LmQxLA3RDmBep84xwSx-hRVeHHvTaocS1LMSpNaccq_JnqOin7e9UOyO91m03oTyCUNIHOt3x1PIXmaxv7AVheCE6o8d01qZSKZ_b19w3zWMjIyIc8_sWcbOpUsKwNCHblOWXfj-dXMntnxSXiWOxRUSpcPDQENmZlhED9SDxVuZlujP9bPGkE7_26WMjSg5dw8enVUFhuwARDIFjerl5lfFYku8WlFZq_Cn-gnLRfaxZlMIx9cLg3164sTYQ8RX0SVaJQl7YvtORYjJf0DuhXzFWbKybu9lYwGkLI92JWGtlU6B7P45qUO3099NC_uKm38YVTLUL92AQJIf7o4npbZB6WvJ4UvdybFE86KsUObrTzjXjhS-XXSX8KvTMoXPKdxTpbsdghGOMSjmXgnAX_7vTdfmVSzm_pumIKYSZF7TWwj4-6bvF9H-pRhErQM8t8QLH3GGCF0jLhnOlo3I-Sq-PdXBHMoYbC-AZY5MjsrDTHl-fiR6podBT5HXhd2RM9r_i6Ngni-7nh_bhFWiOZPBUGdb68eyxjF-MvhJG8vrywRDybwT0glDYRRjLWW18kXEVm2dIfu9SLJqxuH4MfJOY8ngZffXUV4eeRbzYIPaD4JYzjzHyJ6FCtgH8wq0fh-utqsy0_ybSabgzX9sozIaGU5R_ONmrg0hfzuiuxnmk-OxjDRZvu9OB0fMyhj3k3MhReNH94oQXCAHbvOZMx3SYTTTIUbtSJbkywep4RMi5aOWwdUKlDqw0TbyXa5HDZAxacydc3vXiJopBRVnuOX-BA58Ri15AsMqMCHCEbL-XrFgtw/https://www.amazon.com/dp/B0DJ5DV5SQ/?_encoding=UTF8&pd_rd_i=B0DJ5DV5SQ&pd_rd_i=B0DJ5DV5SQ&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=udnRG&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=JH8ASBNCD344YDEXBYRS&pd_rd_wg=yUlmv&pd_rd_r=c4ee49fb-917f-435f-a659-b8ca3857f3bc",
+      "link_clean": "https://www.amazon.com/dp/B0DJ5DV5SQ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DJ5DV5SQ&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41czJDxmiyL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/1144479a-0f02-48aa-8505-ff32836cc50a.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/1144479a-0f02-48aa-8505-ff32836cc50a.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 145,
+      "price": "$49.99",
+      "extracted_price": 49.99
+    },
+    {
+      "position": 5,
+      "asin": "B0FSSGMWNS",
+      "title": "FOXFOCUS Pet Carrier Airline Approved 17x11x9.5 in - Underseat, Top & Side Entry Soft Dog Cat Travel Carrier with Safety Zippers ＆ Anti-Scratch Mesh for Small Cat and Dog for Pets Up to 10 Lb - Grey",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JF4IR6YRN5Lk5eIpj8Swf5gAAAGdmfTgBQEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICATm4RY/clv1c_ek-wxYHXLbbWDfHOAIfj8e5gSokx4vL44UXj-pLjHUurjsmmLTy70ETQsWsZ1xN4w5jhkQVEoXk57QbXKCi8y_m8F9rf7mWS-QRrLnkmLfwwCnBnqBLmo7XoQvl-oFb5sdgpZrAzHtMKcqwMTe87B0AygN6RgkWqkJoxTLSg4Kw_cUONMUzsn0aKdPig5qGj2sRYvtZFGhucnYQvlkpGkCIJP9y_iOKmHAVj84kVblK6eqSfLeaA91zSWKgkjC-HDCvgVAk4sQjQ8zeXY4kkdm9oX4orVwyyWz0xelLyFxEcFVcEpLCrhb21F17zNZ-k-h1sVzfGp8pyU8iWQrv03aN3I4WcuJQqsYpabJqpnqrTJVL8fhUlqDT34oVk4x0mPBX2kpUl6IeplnIsepD6Vw8O1OjeGTnYDLGXVRtDoiaVEdf_hgU-_xtLTxPmTLUt8mITlR_qlWhafNibEoTJRASF_enfzOQ8qnFbCb9gBR6jL_wS8dkGJuUONrShCAsBM5gGioBOroIyvVgrr63pOf1mDhvMJmRu_WopTquNda7W_bffE9hP7F_ZA--nhyC4eUm16J1SoEtfQ3QzNI8_F9PDYvpgFRc6y4ZhXe9a0pDEqpTCQBRTkmSD_F37MbVzFnrhxrt-M22hDQKoclu2Bv3l64dR7WnXZZs4rjrGneeVx3PLJw-9fCSxqz-hvZMuCaxHhNqaZJsU16BZmyHPPFm9whjls_JCHnmsfYwM7WOLq1NwIRP0wHpxcDq4svCgTQlsTZrryO3clRZZ8UXb_8IVOBpX6IlUZ481c_e5cCivgfmQRwy7HFgxn2Dv8yK1gi22sSVU0tS9z9LrswVx4t6c8qbZHDlQBT3kDE3cKs9srdRMOlQZYSJM7Kuxy4kV-GVteVbW95aL9L8wkQpsUPA6V_KJYfIommZv64V36XeQ6CSf7-0NBhinVAo34n2rbMcQnBJDKECOpqd5Pq7M9RKsvWhO9y98EGxM-3N99mHof3tFlsbseYEi1pTGvBuF3VBfBXVCasXLzXVdVQc6OUe5qxNAFZKs9QKcumWAQhuhIXko3bVoRvHjASWd3XtqJHjAK4Ql72w_f2ORjTOOg1gu1tudE_GBQ7tImkky9j1s69fuKe5NAkic7-ziF73tGvj8Hz3bifuJv-AsSp8BjEuKct3om5Wtg_3MJQc76WsQKBfCNF7venmm328usEkgTscqdzQvXAOjxyf2iSTgbEPItE11oaPTUo5q1sWuyHOEIjWqk4T36lu14iDM8J0PL0auxwd_J_qAPiaXlPYMWKw6EVMG-jFLKUxetJj7mb-djwSK5iRonaOdE91hLBF1r6_SwNA_Wta-JJeA5CQK2MRugvOGsVcKtPyT80by9X5XChRmIK3hcIXHgclQ8iaajJYSxfOrRALyW9Cocf28IWGP071KbWNINizLKyta_EfQIrwOKTkUKGhgYr_JDUwrE9t2z2cE4jyqi6hxHMEal9-isTiumLGuAp0vUBUin3unRfI8tdVHpk7jcVbMpOSUEBlvAFgZw8hp2lkYe9UKuHT6Biv7Gw/https://www.amazon.com/dp/B0FSSGMWNS/?_encoding=UTF8&pd_rd_i=B0FSSGMWNS&pd_rd_i=B0FSSGMWNS&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=udnRG&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=JH8ASBNCD344YDEXBYRS&pd_rd_wg=yUlmv&pd_rd_r=c4ee49fb-917f-435f-a659-b8ca3857f3bc",
+      "link_clean": "https://www.amazon.com/dp/B0FSSGMWNS/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FSSGMWNS&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41s8MmpU1sL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/a342cbdc-c0ae-4310-84dd-7865014aa77d.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/a342cbdc-c0ae-4310-84dd-7865014aa77d.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 38,
+      "price": "$31.99",
+      "extracted_price": 31.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "text": "Customers find this pet carrier to be well-made and sturdy, with one mentioning steel-reinforced corners and reinforced stitching on the straps. The carrier fits great under the seat and is comfortable to carry through the airport, while being spacious enough for various animals, from small dogs to large cats. They appreciate its functionality for both air travel and car rides, and one customer notes it worked perfectly for a 14-year-old pet.",
+      "insights": [
+        {
+          "title": "Quality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 927,
+            "positive": 880,
+            "negative": 47
+          },
+          "summary": "Customers find the pet carrier to be of good quality.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Great carrier! Received exactly as pictured and described. Perfect fit for my 14 lb. cat, it’s sturdy and has an easy access zippered top opening....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RL4P4IY0PA200"
+            },
+            {
+              "position": 2,
+              "snippet": "...So this product was very sturdy, much more then I imagined because my little guy is pretty strong for his size so I expected him to rip it apart out...",
+              "link": "https://www.amazon.com/gp/customer-reviews/RF1986896LHXN"
+            },
+            {
+              "position": 3,
+              "snippet": "...Great product!",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1WT6STZ87A4L9"
+            },
+            {
+              "position": 4,
+              "snippet": "The product was way to small, seems to be good quality but I'm not sure of any animal that would want to ride in this thing. I had to give it away.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1AENO9LFFIN9E"
+            }
+          ]
+        },
+        {
+          "title": "Size",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 620,
+            "positive": 452,
+            "negative": 168
+          },
+          "summary": "Customers appreciate the carrier's size, finding it perfect for small dogs and large cats, with plenty of room for movement.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Taking our dog on an airplane trip, perfect size, nice quality, fast shipping and much cheaper than for the same quality than at the local petco and...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1C1F3ATPXZ3W6"
+            },
+            {
+              "position": 2,
+              "snippet": "Very easy to carry,, lightweight. Great size. My cat seems to enjoy it more than any other carrier. Easy in and out. Nice soft interior pad.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1TUG557FWZHBD"
+            },
+            {
+              "position": 3,
+              "snippet": "...shame on you Sherpa. Too hot for him. Broke immediately. Too small for anything more than a 12-15 pound dog. Will never use this again....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1Q5RZXH1V4XHY"
+            },
+            {
+              "position": 4,
+              "snippet": "...Spacious yet not too big for hauling around. (3) Very happy with the purchase, as to the merchandise and seller as well. Dat LUONG",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1SV4HTUXQZW04"
+            }
+          ]
+        },
+        {
+          "title": "Fit",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 556,
+            "positive": 486,
+            "negative": 70
+          },
+          "summary": "Customers are satisfied with how the pet carrier fits, particularly noting that it works well under the seat.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...It also fit under the seat in front of me on the plane (I don't think the large one would have). I wish I would have bought this carrier years ago!",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2BJWXS5VDVL6J"
+            },
+            {
+              "position": 2,
+              "snippet": "...It was the perfect fit for my approx. 16 lb. dachshund. Additionally, he didn't seem to mind the bag either....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1MJXXHIM27Z69"
+            },
+            {
+              "position": 3,
+              "snippet": "...when we flew, as it is \"Guaranteed On Board.\" It fit perfectly under the seat. Anything bigger would not have worked. Our dog loves it....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R6SBNC32FSFWP"
+            },
+            {
+              "position": 4,
+              "snippet": "...It fits under the seat, and the top loading feature makes it easy to stick the cat in, even when it REALLY REALLY REALLY doesn't want to be in there....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R5LPPY9FQSAEP"
+            }
+          ]
+        },
+        {
+          "title": "Sturdiness",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 436,
+            "positive": 358,
+            "negative": 78
+          },
+          "summary": "Customers find the pet carrier sturdy, with one mentioning its steel-reinforced corners and another noting it should last a long time.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...The Sherpa Carrier is well designed and sturdy,, but allows ample screened apertures for your pet to feel secure about what is going on in the...",
+              "link": "https://www.amazon.com/gp/customer-reviews/RR7M73BLKGV6O"
+            },
+            {
+              "position": 2,
+              "snippet": "...Great sturdy carrier but because of the weight of our dog, unless you can place it on top of something with wheels, it moved around a lot over our...",
+              "link": "https://www.amazon.com/gp/customer-reviews/RY4NJIP17M5WS"
+            },
+            {
+              "position": 3,
+              "snippet": "...Very durable...will meet airline requirements if you are stowing your cat under your seat. I was happy with purchase, especially on a small budget. :)",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3IJHLZ63QR708"
+            },
+            {
+              "position": 4,
+              "snippet": "...of room, it is washable, lots of mesh for breathing but nice and strong. I like that there is a place to hook the seatbelt through....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RAHAE1FR6OPY9"
+            }
+          ]
+        },
+        {
+          "title": "Comfort",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 386,
+            "positive": 359,
+            "negative": 27
+          },
+          "summary": "Customers find the pet carrier comfortable, particularly noting it's easy to carry through the airport, and one customer mentions their pet travels well in the car.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...Carrier was allowed, even though he needed the Large size, he was comfortable, both the carrier and our Pup were easy to manage. If you fly--- buy !...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3E3IEIA6AOODO"
+            },
+            {
+              "position": 2,
+              "snippet": "Great carrier - very plush and easy to carry. My kitten was very comfortable in the one my sister bought me and I was so impressed with the quality,...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3PI3A1BDZGI12"
+            },
+            {
+              "position": 3,
+              "snippet": "...I think the thick sherpa liner help keep him warm and comfy. But this 5 star raking is all because,Sprocket Rocket, who is a rowdy cat, loved it.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1DVH53V5E6Y65"
+            },
+            {
+              "position": 4,
+              "snippet": "...I can get her into the case without a struggle and she’s calm and cozy (if not happy) as we travel. I highly recommend this carrier to any pet owner.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R56JMNE7S7YSK"
+            }
+          ]
+        },
+        {
+          "title": "Functionality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 320,
+            "positive": 300,
+            "negative": 20
+          },
+          "summary": "Customers find the pet carrier works well, particularly for cats and small dogs like Yorkies and Bichon/Shih Tzu mixes, with one customer mentioning it was perfect for a 14-year-old dog.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Works great, I flew with my 19lb Bichon, and it does fit under a Southwest aisle seat even though it's bigger than Southwest's carrier measurements,...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1JW3ORA07Z8I5"
+            },
+            {
+              "position": 2,
+              "snippet": "...Had a change of planes enroute. Worked great! Ample room for her to turn around and sturdy enough for toting thru the airport....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3L4CATJJ6REYH"
+            },
+            {
+              "position": 3,
+              "snippet": "Works well. A little on the small side for an average sized cat, but it is about the largest you can carry on an airline....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2GU0P8N0BC0UY"
+            },
+            {
+              "position": 4,
+              "snippet": "I had to use this for air travel and it worked great! My cat was able to turn around and lay down comfortably in there, and she's a fat little thing",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3DZSRE5C9TBHS"
+            }
+          ]
+        },
+        {
+          "title": "Travel-friendly",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 311,
+            "positive": 302,
+            "negative": 9
+          },
+          "summary": "Customers find the pet carrier excellent for travel, particularly mentioning its suitability for flights and car rides, as well as its compatibility with public transportation like subways.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Great for travel. My little girl did get anxious and chewed through the mesh though. I would recommend this for short trips.",
+              "link": "https://www.amazon.com/gp/customer-reviews/RSB9QC9JP7QZG"
+            },
+            {
+              "position": 2,
+              "snippet": "Great for traveling! I have a rather larger toy poodle. He is 12 lbs and quite tall, so about twice as big as the average breed size....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2Q7CC4HE2GQSM"
+            },
+            {
+              "position": 3,
+              "snippet": "Well built, lightweight and strong carrier. Perfect for airline travel with my 6 lb. Maltese....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3EJ18IUYL0TLA"
+            },
+            {
+              "position": 4,
+              "snippet": "Our second one. It’s perfect for air travel. Well made.",
+              "link": "https://www.amazon.com/gp/customer-reviews/RF6AU6YG9DZV5"
+            }
+          ]
+        },
+        {
+          "title": "Construction",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 292,
+            "positive": 264,
+            "negative": 28
+          },
+          "summary": "Customers find the pet carrier well-made, with one customer specifically noting the reinforced stitching on the straps.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...The carrier seems well made and my dog made no attempt to chew out of it (although I'm sure this is possible). UPDATE 3/18. My dog grew!...",
+              "link": "https://www.amazon.com/gp/customer-reviews/RF3CPEVEIUZX4"
+            },
+            {
+              "position": 2,
+              "snippet": "...2: it is very well made (best one I've owned) 3: lots of mesh. Airflow is super important for the critter when they are already stuck under the seat....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2ZX8LB3AR564B"
+            },
+            {
+              "position": 3,
+              "snippet": "The Sherpa carriers are just wonderful. Well constructed, very durable, good ventilation, convenient to carry, attractive and comfortable for our...",
+              "link": "https://www.amazon.com/gp/customer-reviews/RD134LRKB83V9"
+            },
+            {
+              "position": 4,
+              "snippet": "Solid products that's ideal for small puppy and/or dog. It's well built and was offered at a competitive price. I'd recommend this product.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R14HN767ANVN6K"
+            }
+          ]
+        }
+      ],
+      "images": [
+        "https://m.media-amazon.com/images/I/51ptOSR46SL.jpg",
+        "https://m.media-amazon.com/images/I/71Avv8CBRIL.jpg",
+        "https://m.media-amazon.com/images/I/61pZB8UROFL.jpg",
+        "https://m.media-amazon.com/images/I/71ZHmFtxrgL.jpg",
+        "https://m.media-amazon.com/images/I/71Rd2fVaLbL.jpg",
+        "https://m.media-amazon.com/images/I/7148kVruI7L.jpg",
+        "https://m.media-amazon.com/images/I/71GI3TwZdEL.jpg",
+        "https://m.media-amazon.com/images/I/71Y3NclHFqL.jpg",
+        "https://m.media-amazon.com/images/I/81nJoc40vgL.jpg",
+        "https://m.media-amazon.com/images/I/81xVMLYW70L.jpg",
+        "https://m.media-amazon.com/images/I/61j2yRP7blL.jpg",
+        "https://m.media-amazon.com/images/I/71vMUkR4NnL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 78,
+        "4 star": 11,
+        "3 star": 5,
+        "2 star": 2,
+        "1 star": 4
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Perfect for air travel with Westie",
+        "text": "This carrier worked perfectly for flying my 14-year old, 16-pound Westie from San Diego to Milwaukee (and back) during the Thanksgiving holiday. We flew US Airways and despite the large size being slightly bigger than required dimensions, we had zero problems whatsoever. Here are a few answers to questions I had before flying that may help ease your concerns:1. US Air did not check that he could stand up or turn around2. It was tight, but he could, in fact, stand up and turn around3. US Air did not check any health certificates- all I had to do each way was sign a short form that the person at the counter filled out on my behalf. Although I was very nervous about getting turned away due to the size of the carrier, I acted like we had done this a million times (unlike the woman in line next to me with a dog that did not stop barking/squealing for the entire 15 min I was next to her). We both had a large Sherpa carrier and we both got through.4. The strap is extremely sturdy and my dog felt comfortable with me holding him through the airport5. I brought a blanket with me to cover the carrier in case it didn't fit completely under the seat. The carrier DID fit with a little squishing and maneuvering, but since the flight atttendants on some of the flights were very strict, I used it to be able to pull the carrier out from under the seat mid-flight and give my little guy some reassuring pats on the head. The blanket was also helpful when my late night flight had all the lights on- I wanted my dog to sleep and be relaxed, so I covered the holes. When it got very warm mid-flight, I threw him a few ice cubes to rehydrate.6. TRAINING: To get my Westie ready for his first flight, I bought the carrier about 2 weeks before. The first day or two, I motioned with treats and he walked in himself. I left the top open so he wouldn't feel claustrophobic. Once he was comfortable with the \"box\" (as we called it), I started closing the front door and placing him in the top hole (again, always with treats). I didn't let him walk out on his own after this part of the training; I wanted him to know that once he was in his box, he couldn't leave without me taking him out. Once he became comfortable sitting in the box, I put a treat on the bottom and as soon as he put his head down to get it, I zipped the lid and let him enjoy his treat in there. I expected him to freak out the first time (my dog is not well-trained by any means; he will not even sit on command most days), but he stayed calm, so after about 5 minutes of me sitting by his box, I picked it up, did a few laps around the apartment, went down the elevator, loaded him up in the car and took a short drive to the pet store. He didn't mind at all. After I saw that, we toned down the training to every couple of days. Some nights after work, I would put him in his box (always through the top and always with a treat before the lid was closed) and put him at my feet while I watched TV for an hour or two. I would never walk away from the box and occasionally gave him reassuring pats or words of encouragement every 30 mins or so. Due to time constraints, we never trained for staying in the box longer than 2 hours, despite us having about a 7 hour trip time with the layovers. A few training tips: buy soft treats and use VERY tiny pieces. Especially at the beginning, you will likely be going through quite a few treats, so the smaller, the better. You don't want your dog throwing up in there (or expecting large treats on the plane!) Also, never give in to your dog if he/she tries to bite its way out of the bag. Stop the behavior and do not let it out of the carrier until the behavior has stopped and some time has passed. This is not fun to deal with mid-flight, so stop the behavior before you get in the air.7. To help with his ears popping, I brought several nylabones on the plane (the pocket on the carrier is perfect for a few treats, a collapsible water bowl, a potty pad for layovers if you don't have time to take your dog out between flights, and a Kindle for yourself). During takeoff, I handed him a bone (I put PB on them so he would lick and bite) as I pet him. He's used to car rides, so this didn't phase him much.8. Every so often throughout the flight, I would unzip a tiny hole (he did want to escape, so I had to be careful) and give him a small piece of treat to check on him.9. The mesh on this carrier is STURDY. My dog has a bite similar to a pitbull, and the determination of a 6 year old trying to reach a giant piece of candy that was put just out of reach, so when he started trying to eat his way out of the carrier during the last 30 mins of the flight, every scenario of him running through the aisles like a mad man started running through my head. Luckily, however, the mesh held up and we landed safely shortly thereafter. I was left with a bruised hand due to the struggle, but the bag was just fine.10. Day of flight: check in with plenty of time to spare. This is not the time to add stress. Once your bags are checked in and your dog has the \"ok\" to fly, check out the security line. If it's short, I recommend walking out of the airport and giving your dog some last-minute fresh air, one last bathroom stop, and a moment for the vet-recommended Benadryl to kick in. When the time comes to go through security, you'll put the carrier through (I also had a backpack with the blanket tied to it and a large coat) and carry your dog through the x-ray machine. I put my dog back in the carrier at this point, but if your dog's leash is easily accessible, you could probably get away with walking it on its leash to the gate (at least that seemed to be the case at SAN, PHX & MKE). You'll want to be one of the last to board (you won't have luggage, so carry on space won't be a concern). If you have a layover, check out potty areas ahead of time. Few airports have potty areas behind security (SAN is one), so you'll need to know what your options are and if you'll have time. During our short layover, I had planned to take my dog to the bathroom stall and lay out a potty pad. Since he had just gone about 90 min prior however, we spent our 20 mins between flights with his head poking out of the carrier while he observed the craziness of Thanksgiving travel. If I could do this again, I would have taken him on a quick walk in the airport to burn off some energy.All in all, flying with my Westie was much less stressful for him than boarding. The large Sherpa was great and I would highly recommend it. The only thing I would change would be adding mesh on the top of the carrier, but not a big deal.",
+        "rating": 5,
+        "date": "December 14, 2014",
+        "author": "Kellyc",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFIKL76427SPUQFUKTZ56EU5Q4SA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "helpful_votes": "798 people found this helpful",
+        "product": {
+          "size": "19.0\"L x 11.8\"W x 11.5\"H"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Good bag. Will fly again. Dog didn't seem to mind.",
+        "text": "Qualifier- For me, the purpose of buying this bag was strictly to transport my dog as carry-on in cabin on a plane. I have no intention to use this as a regular crate for daily or frequent use. The collapsible soft sides are perfect to squish to fit tight spaces that it was intended for.Nice bag, I bought the large one for my 15.8 lb dog. It has a soft fleecy fake sheepskin floor mounted on a 1/8\" or 3/16\" rigid board, so your pet has a solid floor. I have used it on three flights so far, seems to hold up well. Zipper fits tight, zips tight. Small flat pocket on the side for treats, poop bags and I fit in some flat folded paper towels in case there is a leak (from my dog). It fits well under any of the seats of a Boeing 737-400. The first two photos were taken on a brand new 737-800 on Southwest in a 3-aisle-3 configuration, I'm sitting in the window seat.My 10 year old daughter wanted to have our 15.8 lb long haired dachshund in front of her, but he started to fuss a bit mid flight, so I moved the bag under the seat in front of me which is a window seat. The middle seat has the most foot room with slightly more generous width between the bench seat support. The window seat has the least room due to the curvature of the fuselage eating back into the floor space. I also flew on an older Air Canada Airbus A319, (photo 3 and photo 7) and that time it was an aisle seat, also not a problem. I wear size 9 shoes, 145 lbs and 5'8\" so not that big, your mileage, as they say, may vary, especially if you have a big guy sitting next to you. I believe the aisle seat also offers the best ventilation / air circulation. The foot traffic may keep you pet more entertained, at the very least.Photo 4 shows how the top zippers open and your pet can have a look around. If he's not too squirrelly it allows the head to look around and still keep most of the body in there.Photo 5 and 6 I took to show that carrying around a 22lb bag-of-dog (the bag itself weighs around 4.7 lbs) plus all your other stuff through long airports runs does get taxing quickly and I had some success mounting it on my rolley carry on.",
+        "rating": 5,
+        "date": "May 23, 2015",
+        "author": "Chris",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEVXE6M5IBB7EP3QDXGEUM7OHPCQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/81QJAppLN7L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71vMUkR4NnL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71-D8D5EBNL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71Y3NclHFqL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81nJoc40vgL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71wvYhqzhRL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71QGz8uEEhL._SY88.jpg"
+        ],
+        "helpful_votes": "1,739 people found this helpful",
+        "product": {
+          "size": "19.0\"L x 11.8\"W x 11.5\"H"
+        }
+      }
+    ],
+    "other_countries_reviews": [
+      {
+        "position": 1,
+        "title": "Great quality materials and hardware",
+        "text": "Amazing quality and well worth the higher price. The back top has a spring that pushes down the carrier to fit under the seat on plane. Lots of room for my 6kg Chinese crested girlie. Haven't flown with it yet but don't expect any issues based on other reviews. Height is 29cm but with spring in top easily folds down to 23cm requirement by airline.",
+        "rating": 5,
+        "date": "January 22, 2026",
+        "author": "Carolyn Morley",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "product": {
+          "size": "19.0\"L x 11.8\"W x 11.5\"H"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Great quality bag for my dog!",
+        "text": "Really happy with this bag. The quality of the material is great and my dog seems to love it!Also great service, as my first bag got lost somewhere during shipping, and after 1 email they immediately sent me a new bag.Thanks!",
+        "rating": 5,
+        "date": "March 9, 2019",
+        "author": "RocknRolf",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/8267384b-0548-425a-9077-e785e8a60148._CR0%2C0%2C500%2C500_SX460_.jpg",
+        "product": {
+          "size": "17.0\"L x 11.0\"W x 10.5\"H"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Stabil och bra storlek.",
+        "text": "Perfekt för vår lilla hund.",
+        "rating": 5,
+        "date": "March 6, 2026",
+        "author": "Katarina Lundquist",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "product": {
+          "size": "17.0\"L x 11.0\"W x 10.5\"H"
+        },
+        "country": {
+          "code": "SE",
+          "name": "Sweden"
+        },
+        "language": {
+          "code": "sv",
+          "name": "Swedish"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Estrutura",
+        "text": "Excelente",
+        "rating": 5,
+        "date": "March 11, 2026",
+        "author": "laura Alves Coelho",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "product": {
+          "size": "17.0\"L x 11.0\"W x 10.5\"H"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Perfecta para transportar a tu mascota en avión, debajo del asiento. Calidad 10/10",
+        "text": "Bueno producto de calidad 10/10. Calidad de materiales y perfecta Iara llevar a ti mascota debajo del asiento del avión, tren etc. Tiene una barra/arco de metal para que no se aplaste al transportar. Compra recomendada.",
+        "rating": 5,
+        "date": "March 27, 2025",
+        "author": "Rafa Rueda",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/29b5c17a-d7ae-42b8-89a8-5dc7c196a641._CR0%2C0%2C375%2C375_UX460_.jpg",
+        "product": {
+          "size": "17.0\"L x 11.0\"W x 10.5\"H"
+        },
+        "country": {
+          "code": "ES",
+          "name": "Spain"
+        },
+        "language": {
+          "code": "es",
+          "name": "Spanish (Spain)"
+        }
+      }
+    ]
+  }
+}

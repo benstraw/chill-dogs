@@ -1,0 +1,1034 @@
+{
+  "search_metadata": {
+    "id": "69f0486dff596e5ab3456a57",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/YJCOv5yaZwB2ouh_2d687Q/69f0486dff596e5ab3456a57.json",
+    "created_at": "2026-04-28 05:41:01 UTC",
+    "processed_at": "2026-04-28 05:41:01 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B07H7TTVYX/?",
+    "raw_html_file": "https://serpapi.com/searches/YJCOv5yaZwB2ouh_2d687Q/69f0486dff596e5ab3456a57.html",
+    "total_time_taken": 2
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B07H7TTVYX",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B07H7TTVYX",
+    "title": "Kurgo Explorer Dog Carrier - Comfortable Carrier for Travel - Water-Resistant Armorsole Base - Airline Compliant - Storage Pocket - for Cats & Small Dogs up to 20 lb - Black/Yellow",
+    "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A2A02U6YIW6LGE&asin=B07H7TTVYX&ref_=dp_merchant_link&isAmazonFulfilled=1",
+    "link_clean": "https://www.amazon.com/dp/B07H7TTVYX/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07H7TTVYX&device=desktop&engine=amazon_product",
+    "variants": [
+      {
+        "title": "Color",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B07D4NXRYC",
+            "name": "Barn Red/Coastal Blue",
+            "image": "https://m.media-amazon.com/images/I/51JU8P6YHCL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07D4NXRYC&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B07H7TTVYX",
+            "name": "Black/Yellow",
+            "image": "https://m.media-amazon.com/images/I/415BksMCKxL._SS64_.jpg",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07H7TTVYX&device=desktop&engine=amazon_product"
+          }
+        ]
+      },
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B07H7TTVYX",
+            "name": "20.0\"L x 10.0\"W x 11.5\"H",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07H7TTVYX&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B07D4NXRYC",
+            "name": "18.0\"L x 11.0\"W x 20.0\"H",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07D4NXRYC&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the Kurgo Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/81io-iyi-FL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/81io-iyi-FL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/91KjXIDp4DL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71rH5ohZ7NL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81KRnF1NW2L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81RXZi8K7AL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81ZFvm7SCXL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71bMlAIzUAL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.3,
+    "reviews": 108,
+    "price": "$76.81",
+    "extracted_price": 76.81,
+    "prime": true,
+    "delivery": [
+      "FREE delivery Sunday, May 3",
+      "Or fastest delivery Friday, May 1"
+    ],
+    "stock": "Only 1 left in stock - order soon."
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$76.81",
+      "extracted_price": 76.81,
+      "delivery": [
+        "FREE delivery Sunday, May 3",
+        "Or fastest delivery Friday, May 1"
+      ],
+      "stock": "Only 1 left in stock - order soon.",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "One Way Pet",
+          "details": {
+            "heading": "Sold by",
+            "content": "One Way Pet"
+          },
+          "link": {
+            "text": "One Way Pet",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A2A02U6YIW6LGE&asin=B07H7TTVYX&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "color": "Black/Yellow",
+    "brand": "Kurgo",
+    "product_dimensions": "20\"L x 10\"W x 11.5\"H",
+    "material": "Polyvinyl Chloride (PVC)",
+    "special_feature": "Breathable, Durable, Lightweight"
+  },
+  "about_item": [
+    "Comfort & Convenience: The Kurgo Explorer Dog Carrier is a comfortable carrier for travel built with breathable mesh sides and padded handles for all-day support and airflow",
+    "Durable & Easy to Clean: Made with a muck proof bottom and armorsole base, this soft-sided pet carrier resists moisture and dirt and is easy to wipe clean after messy trips",
+    "Safe & Functional Travel Features: Designed with an attached interior tether for harness security, it attaches to the car seat belt and includes a zippered storage pocket for small items",
+    "Designed for Real-World Adventures: Kurgo gear is built to solve everyday challenges with dogs, making travel, walks, and outdoor play safer, easier, and more fun for both of you",
+    "Durable Gear, Lifetime Promise: Engineered for longevity and reliability, every Kurgo product is crafted with rugged materials and backed by our industry-leading lifetime warranty"
+  ],
+  "related_products": [
+    {
+      "position": 1,
+      "asin": "B0FXYFBYWW",
+      "title": "Dog Purse Carrier for Small Dogs, Cats and Puppies – Soft-Sided Foldable Pet Travel Bag with Multi Pockets, 3-Sided Mesh & Rollable Cover for Nervous Cats, Fits Pets up to 15 lbs (Beige)",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo3NjI1MzQ3MzM4NTI3MTEyOjE3NzczNTQ4NjI6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTExMTI1MzAzMzMwMjo6Ojo&url=%2Fdp%2FB0FXYFBYWW%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0FXYFBYWW%26pd_rd_w%3D3NeIM%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DJ5HNS3C7TW1HZEMT8N9B%26pd_rd_wg%3DmDVZ4%26pd_rd_r%3Dbf3cb74a-cec9-412a-b51c-e0ea2ea893fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0FXYFBYWW/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FXYFBYWW&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/71peMsrmesL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.9,
+      "reviews": 27,
+      "discount": "-61%",
+      "price": "$21.98",
+      "extracted_price": 21.98,
+      "old_price": "$55.98",
+      "extracted_old_price": 55.98,
+      "prime": true
+    },
+    {
+      "position": 2,
+      "asin": "B0FVXGFPLQ",
+      "title": "Pecute Cat Backpack Carrier, Large Space Cat Bubble Backpack, Breathable Cat Carrier, Shaded Dog Backpack Carrier, Ergonomic 3D Design for Travel, Hiking, Walk, Suitable for Shopping, Car, Vet, Pink",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo3NjI1MzQ3MzM4NTI3MTEyOjE3NzczNTQ4NjI6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTA5NTA3ODQyMTEwMjo6Ojo&url=%2Fdp%2FB0FVXGFPLQ%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0FVXGFPLQ%26pd_rd_w%3D3NeIM%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DJ5HNS3C7TW1HZEMT8N9B%26pd_rd_wg%3DmDVZ4%26pd_rd_r%3Dbf3cb74a-cec9-412a-b51c-e0ea2ea893fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0FVXGFPLQ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FVXGFPLQ&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/81CZO8bGuXL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 5,
+      "reviews": 5,
+      "discount": "-23%",
+      "price": "$35.39",
+      "extracted_price": 35.39,
+      "old_price": "$45.99",
+      "extracted_old_price": 45.99,
+      "prime": true,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 3,
+      "asin": "B0CSK8C9LS",
+      "title": "GAPZER Small Dog Carrier for Puppy Yorkshire Softshell Car Transport Chihuahua Carry Cage 18-inch Collapsible Doggie Vet Visit Crate Easy Load Roomy Pet Carrier Bag Kennel Dog Essentials Teal",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo3NjI1MzQ3MzM4NTI3MTEyOjE3NzczNTQ4NjI6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTI0NDQ0ODI5MzkwMjo6Ojo&url=%2Fdp%2FB0CSK8C9LS%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0CSK8C9LS%26pd_rd_w%3D3NeIM%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DJ5HNS3C7TW1HZEMT8N9B%26pd_rd_wg%3DmDVZ4%26pd_rd_r%3Dbf3cb74a-cec9-412a-b51c-e0ea2ea893fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0CSK8C9LS/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CSK8C9LS&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Amazon's Choice",
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/81sHkzx9WwL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.5,
+      "reviews": 10087,
+      "discount": "-25%",
+      "price": "$29.98",
+      "extracted_price": 29.98,
+      "old_price": "$39.99",
+      "extracted_old_price": 39.99,
+      "prime": true
+    },
+    {
+      "position": 4,
+      "asin": "B0DRV65TCG",
+      "title": "Dog Car Seat for Small Dogs Adjustable Portable Center Console Dog Car Seat Removable Cat Booster Cars Seats - Safety Belt with Cushion Anti-Collapse for Puppy Kitten Up to 15 Lb",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo3NjI1MzQ3MzM4NTI3MTEyOjE3NzczNTQ4NjI6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTE0MDU2MDkyMTEwMjo6Ojo&url=%2Fdp%2FB0DRV65TCG%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0DRV65TCG%26pd_rd_w%3D3NeIM%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DJ5HNS3C7TW1HZEMT8N9B%26pd_rd_wg%3DmDVZ4%26pd_rd_r%3Dbf3cb74a-cec9-412a-b51c-e0ea2ea893fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0DRV65TCG/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DRV65TCG&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/81PkaF+3qZL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.6,
+      "reviews": 381,
+      "discount": "-10%",
+      "price": "$30.59",
+      "extracted_price": 30.59,
+      "price_unit": "$30.59 / count",
+      "extracted_price_unit": 30.59,
+      "old_price": "$33.99",
+      "extracted_old_price": 33.99,
+      "prime": true
+    },
+    {
+      "position": 5,
+      "asin": "B0BXF9YYZD",
+      "title": "Yipincover, Cat Dog Carriers Soft-Sided, Pet Travel Carrier for Small Cats Dogs Under to15lbs, Soft-Solid Collapsible Carrier,(Medium,Green)",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo3NjI1MzQ3MzM4NTI3MTEyOjE3NzczNTQ4NjI6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTIwNzQ5OTY3NjcwMjo6Ojo&url=%2Fdp%2FB0BXF9YYZD%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0BXF9YYZD%26pd_rd_w%3D3NeIM%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DJ5HNS3C7TW1HZEMT8N9B%26pd_rd_wg%3DmDVZ4%26pd_rd_r%3Dbf3cb74a-cec9-412a-b51c-e0ea2ea893fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0BXF9YYZD/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0BXF9YYZD&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/71JFeUOkzlL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.7,
+      "reviews": 859,
+      "discount": "-10%",
+      "price": "$19.79",
+      "extracted_price": 19.79,
+      "price_unit": "$19.79 / count",
+      "extracted_price_unit": 19.79,
+      "old_price": "$21.99",
+      "extracted_old_price": 21.99,
+      "prime": true
+    },
+    {
+      "position": 6,
+      "asin": "B09BCXKWN2",
+      "title": "NextFri Soft Sided Carrier for Small Medium Cats Dogs,Removable Pad Collapsible Travel Pet Carrier Large Blue",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo3NjI1MzQ3MzM4NTI3MTEyOjE3NzczNTQ4NjI6c3BfZGV0YWlsX3RoZW1hdGljOjIwMDA1MTgzMzU2NTg5ODo6Ojo&url=%2Fdp%2FB09BCXKWN2%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB09BCXKWN2%26pd_rd_w%3D3NeIM%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DJ5HNS3C7TW1HZEMT8N9B%26pd_rd_wg%3DmDVZ4%26pd_rd_r%3Dbf3cb74a-cec9-412a-b51c-e0ea2ea893fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B09BCXKWN2/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09BCXKWN2&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/81JsXwqzSPL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.7,
+      "reviews": 905,
+      "discount": "-20%",
+      "price": "$31.98",
+      "extracted_price": 31.98,
+      "old_price": "$39.98",
+      "extracted_old_price": 39.98,
+      "prime": true
+    },
+    {
+      "position": 7,
+      "asin": "B09C28DK85",
+      "title": "Petsfit 19\"X12\" X12\" Expandable Pet Carrier, Square Expansion Reduces Pet Anxiety, Escape-Proof Self-Locking Zippers, 3 Easy-Access Entrances, for Cats & Small Dogs up to 18 lbs",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo3NjI1MzQ3MzM4NTI3MTEyOjE3NzczNTQ4NjI6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDEwNjQzMjcxNzAwMjo6Ojo&url=%2Fdp%2FB09C28DK85%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB09C28DK85%26pd_rd_w%3D3NeIM%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DJ5HNS3C7TW1HZEMT8N9B%26pd_rd_wg%3DmDVZ4%26pd_rd_r%3Dbf3cb74a-cec9-412a-b51c-e0ea2ea893fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B09C28DK85/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09C28DK85&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/81N+xHK4lYL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.6,
+      "reviews": 468,
+      "discount": "-20%",
+      "price": "$47.99",
+      "extracted_price": 47.99,
+      "old_price": "$59.99",
+      "extracted_old_price": 59.99,
+      "prime": true,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 8,
+      "asin": "B0F39N253S",
+      "title": "Traveler's Choice Argo Pawsport to Adventure Pet Carrier, Tan",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToxOTE1MTU4MDQ5NzgxNjk6MTc3NzM1NDg2MjpzcF9kZXRhaWwyOjMwMTAwMzI2NDA0NDAwMjo6Ojo&url=%2Fdp%2FB0F39N253S%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0F39N253S%26pd_rd_w%3DqiGes%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DJ5HNS3C7TW1HZEMT8N9B%26pd_rd_wg%3DmDVZ4%26pd_rd_r%3Dbf3cb74a-cec9-412a-b51c-e0ea2ea893fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0F39N253S/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F39N253S&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81KSLKpgtkL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.5,
+      "reviews": 13,
+      "price": "$149.99",
+      "extracted_price": 149.99,
+      "prime": true
+    },
+    {
+      "position": 9,
+      "asin": "B0GCQL9SM1",
+      "title": "Soft-Sided Dog & Pet Carrier | for Car Rides, Trains, Errands & Daily Outings | Fit...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToxOTE1MTU4MDQ5NzgxNjk6MTc3NzM1NDg2MjpzcF9kZXRhaWwyOjMwMTIyODAxMzE3MjUwMjo6Ojo&url=%2Fdp%2FB0GCQL9SM1%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0GCQL9SM1%26pd_rd_w%3DqiGes%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DJ5HNS3C7TW1HZEMT8N9B%26pd_rd_wg%3DmDVZ4%26pd_rd_r%3Dbf3cb74a-cec9-412a-b51c-e0ea2ea893fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0GCQL9SM1/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GCQL9SM1&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81pliaz2T9L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 13,
+      "price": "$167.00",
+      "extracted_price": 167,
+      "prime": true
+    },
+    {
+      "position": 10,
+      "asin": "B0DT15X3LB",
+      "title": "3-in-1 Crash-Tested Cat & Small Dog Car Seat (5-Star CPS Certified) | Indoor Cat Be...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToxOTE1MTU4MDQ5NzgxNjk6MTc3NzM1NDg2MjpzcF9kZXRhaWwyOjMwMDc4ODc3NTk4OTkwMjo6Ojo&url=%2Fdp%2FB0DT15X3LB%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0DT15X3LB%26pd_rd_w%3DqiGes%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DJ5HNS3C7TW1HZEMT8N9B%26pd_rd_wg%3DmDVZ4%26pd_rd_r%3Dbf3cb74a-cec9-412a-b51c-e0ea2ea893fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0DT15X3LB/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DT15X3LB&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81dUyae7S1L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.3,
+      "reviews": 139,
+      "price": "$138.99",
+      "extracted_price": 138.99,
+      "price_unit": "$138.99 / count",
+      "extracted_price_unit": 138.99,
+      "prime": true
+    },
+    {
+      "position": 11,
+      "asin": "B0FSKRVGNK",
+      "title": "Soft-Sided Cat Carrier Expandable Pet Carrier Airline Approved Mesh Travel Carrier ...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToxOTE1MTU4MDQ5NzgxNjk6MTc3NzM1NDg2MjpzcF9kZXRhaWwyOjMwMTIyNTg1MDg0OTkwMjo6Ojo&url=%2Fdp%2FB0FSKRVGNK%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0FSKRVGNK%26pd_rd_w%3DqiGes%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DJ5HNS3C7TW1HZEMT8N9B%26pd_rd_wg%3DmDVZ4%26pd_rd_r%3Dbf3cb74a-cec9-412a-b51c-e0ea2ea893fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0FSKRVGNK/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FSKRVGNK&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81320pVtQfL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 5,
+      "reviews": 4,
+      "price": "$32.39",
+      "extracted_price": 32.39,
+      "price_unit": "$32.39 / count",
+      "extracted_price_unit": 32.39,
+      "prime": true
+    },
+    {
+      "position": 12,
+      "asin": "B0FM8QVSK8",
+      "title": "Cat & Dog Travel Bag, Soft-Sided Dog and Kitty Carrier with Breathable Mesh Panels,...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToxOTE1MTU4MDQ5NzgxNjk6MTc3NzM1NDg2MjpzcF9kZXRhaWwyOjMwMTE3MzEyNTM5NzkwMjo6Ojo&url=%2Fdp%2FB0FM8QVSK8%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0FM8QVSK8%26pd_rd_w%3DqiGes%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DJ5HNS3C7TW1HZEMT8N9B%26pd_rd_wg%3DmDVZ4%26pd_rd_r%3Dbf3cb74a-cec9-412a-b51c-e0ea2ea893fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0FM8QVSK8/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FM8QVSK8&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/61f1YYYKv6L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 25,
+      "discount": "-8%",
+      "price": "$54.99",
+      "extracted_price": 54.99,
+      "price_unit": "$54.99 / count",
+      "extracted_price_unit": 54.99,
+      "old_price": "$59.99",
+      "extracted_old_price": 59.99,
+      "prime": true
+    },
+    {
+      "position": 13,
+      "asin": "B0BRNZV1S2",
+      "title": "LeftPine x P.L.A.Y. Deluxe Dog Carrier Purse - Soft Sided Pet Travel Tote for Small...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToxOTE1MTU4MDQ5NzgxNjk6MTc3NzM1NDg2MjpzcF9kZXRhaWwyOjMwMDEzMDc1NTczMTMwMjo6Ojo&url=%2Fdp%2FB0BRNZV1S2%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0BRNZV1S2%26pd_rd_w%3DqiGes%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DJ5HNS3C7TW1HZEMT8N9B%26pd_rd_wg%3DmDVZ4%26pd_rd_r%3Dbf3cb74a-cec9-412a-b51c-e0ea2ea893fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0BRNZV1S2/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0BRNZV1S2&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Amazon's Choice"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/61gUlLKRN4L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.2,
+      "reviews": 58,
+      "discount": "-37%",
+      "price": "$49.95",
+      "extracted_price": 49.95,
+      "price_unit": "$49.95 / count",
+      "extracted_price_unit": 49.95,
+      "old_price": "$79.00",
+      "extracted_old_price": 79,
+      "prime": true
+    },
+    {
+      "position": 14,
+      "asin": "B0CCRQ4YW8",
+      "title": "ONECUTE Soft and Comfortable Pet Carrier and Business Backpack with Strong Support - Ideal for Business, Travel, and Outings with Small Dogs and Cats (Kahki,15.7\" L x 5.5\" W x 9.8\" H，up to 16lbs",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToxOTE1MTU4MDQ5NzgxNjk6MTc3NzM1NDg2MjpzcF9kZXRhaWwyOjMwMTA2MDE3ODU5MjYwMjo6Ojo&url=%2Fdp%2FB0CCRQ4YW8%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0CCRQ4YW8%26pd_rd_w%3DqiGes%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DJ5HNS3C7TW1HZEMT8N9B%26pd_rd_wg%3DmDVZ4%26pd_rd_r%3Dbf3cb74a-cec9-412a-b51c-e0ea2ea893fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0CCRQ4YW8/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CCRQ4YW8&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71piQCb9VbL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.1,
+      "reviews": 20,
+      "price": "$60.00",
+      "extracted_price": 60,
+      "price_unit": "$60.00 / count",
+      "extracted_price_unit": 60,
+      "prime": true
+    }
+  ],
+  "videos": [
+    {
+      "position": 1,
+      "title": "Kurgo Explorer Dog Carrier",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/4a51ed50-ac7f-4b24-af74-26dcc1318bef/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61NSQCatYkL.jpg",
+      "duration": "0:40",
+      "vendor": "Rhonda Ann",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/71Lg2j+AdJL._CR0,0,1200,1200_._FMjpg_._SL34_.jpg",
+      "date": "Mar 21, 2023"
+    },
+    {
+      "position": 2,
+      "title": "Bring your pet with you in comfort and style.",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/369c9316-5e42-42f1-9709-6dae642d71c4/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/91-rYGDO7hL.jpg",
+      "duration": "2:25",
+      "vendor": "YoursTrulyCandisLee",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/A16EM+UgKJL._CR0,0,2205,2205_._FMjpg_._SL34_.jpg",
+      "date": "May 15, 2023"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": "Kurgo Explorer Carrier. Sometimes, big adventure calls for a smaller package.",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/4ddafcf9-cb79-46fb-8167-b2eec8326b61.__CR0,0,971,300_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 2,
+      "title": "Kurgo Explorer Carrier has a breathable mesh and waterproof Armorsole bottom.",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/69d81fb2-21d0-4807-aa19-9adb176fa921.__CR0,0,971,300_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 3,
+      "compare_with_similar": [
+        {
+          "position": 1,
+          "asin": "B07CRS4FWW",
+          "title": "Kurgo G-Train Backpack",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media/vc/e6b540a5-5b8a-4731-91b4-8a77e75d391e.__CR0,0,150,300_PT0_SX150_V1___.png",
+          "link": "https://www.amazon.com/dp/B07CRS4FWW?ref=emc_s_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07CRS4FWW&device=desktop&engine=amazon_product",
+          "rating": 4.4,
+          "reviews": 865,
+          "price": "$84.99",
+          "extracted_price": 84.99,
+          "more_ways_to_go_together": "Built for adventures, dog carrying backpack is rugged, yet comfortable enough for a daily commute. Available in Red or Black."
+        },
+        {
+          "position": 2,
+          "asin": "B08VQ2JPXZ",
+          "title": "Kurgo Metro Carrier",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/6e2237b2-0e40-4803-81b6-16286d6a074e.__CR33,0,533,1065_PT0_SX150_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B08VQ2JPXZ?ref=emc_s_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B08VQ2JPXZ&device=desktop&engine=amazon_product",
+          "rating": 4.2,
+          "reviews": 15,
+          "price": "— no data",
+          "more_ways_to_go_together": "Kurgo’s Metro Dog Carrier is a modern, stylish take on the classic dog carrier."
+        },
+        {
+          "position": 3,
+          "asin": "B07QNZFWHL",
+          "title": "Kurgo K9 Rucksack Backpack",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media/vc/4295210a-2000-47f3-9d55-dfc0ce701a59.__CR0,0,150,300_PT0_SX150_V1___.png",
+          "link": "https://www.amazon.com/dp/B07QNZFWHL?ref=emc_s_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07QNZFWHL&device=desktop&engine=amazon_product",
+          "rating": 4.2,
+          "reviews": 516,
+          "price": "$122.99",
+          "extracted_price": 122.99,
+          "more_ways_to_go_together": "A stylish solution to carrying your little pooch around without needing to worry about their safety."
+        },
+        {
+          "position": 4,
+          "asin": "B001JPI9N0",
+          "title": "Kurgo Wander Carrier",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media/vc/84a0df8a-6264-42ee-b44f-fb7ac7ad9370.__CR0,0,150,300_PT0_SX150_V1___.png",
+          "link": "https://www.amazon.com/dp/B001JPI9N0?ref=emc_s_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B001JPI9N0&device=desktop&engine=amazon_product",
+          "rating": 4.2,
+          "reviews": 166,
+          "price": "— no data",
+          "more_ways_to_go_together": "With Kurgo’s Wander Pet Carrier, taking your small dog or cat with you is no longer a challenge."
+        }
+      ]
+    },
+    {
+      "position": 4,
+      "title": "Kurgo is committed to quality.",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/25936107-0488-4523-9e6b-a41ba363af59.__CR0,0,971,300_PT0_SX970_V1___.jpg"
+    }
+  ],
+  "product_details": {
+    "is_discontinued_by_manufacturer": "No",
+    "language": "English",
+    "product_dimensions": "20 x 10 x 11.5 inches; 2.8 Pounds",
+    "item_model_number": "K01836",
+    "date_first_available": "September 10, 2018",
+    "manufacturer": "Radio Systems Corporation",
+    "asin": "B07H7TTVYX",
+    "best_sellers_rank": [
+      {
+        "text": "#204,851 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 204851,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#489 in Dog Soft-Sided Carriers",
+        "extracted_rank": 489,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/3024188011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Soft-Sided Carriers"
+      }
+    ],
+    "customer_reviews": "4.3 out of 5 stars",
+    "rating": 4.3,
+    "reviews": 108,
+    "brand_name": "Kurgo",
+    "model_name": "Kurgo Explorer Dog Carrier, Black, Large",
+    "upc": "813146018361",
+    "global_trade_identification_number": "00813146018361",
+    "model_number": "K01836",
+    "manufacturer_part_number": "K01836",
+    "item_type_name": "Dog Carrier",
+    "warranty_description": "Lifetime warranty when purchased new from authorized seller.",
+    "target_species": "Dog",
+    "included_components": "1 Dog Carrier",
+    "unit_count": "1 Count",
+    "target_audience": "Cat, Dog",
+    "item_dimensions_l_x_w_x_h": "20\"L x 10\"W x 11.5\"H",
+    "item_weight": "1.27 Kilograms",
+    "size": "20.0\"L x 10.0\"W x 11.5\"H",
+    "additional_features": "Breathable, Durable, Lightweight",
+    "closure_type": "Zipper",
+    "dog_breed_size": "Medium",
+    "compatible_with_vehicle_type": "Airplane, Car",
+    "color": "Black/Yellow",
+    "product_style": "Large",
+    "recommended_uses_for_product": "Traveling",
+    "maximum_weight_recommendation": "9 Kilograms",
+    "material_type": "Polyvinyl Chloride (PVC)"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0BY8V6SGQ",
+      "title": "Petskd Top-Expandable Pet Carrier 18x13x9.5 Inches Southwest Airline Approved, Soft-Sided Carrier for Small Cats and Dogs with Locking Safety Zippers and Anti-Scratch Mesh(Black)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JHbkbgcZPGBo22fNrJz4XwQAAAGd0prwwwEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICBmGlcG/clv1c_ek-wBXfWKrTSnuvbk7bok6bZ7Rk-2ErEGBaj03fDSxbzxE2LoAQfTj94ZnER536q1Sr3jxXJ_WmhGPbp-CbubEiyLK45dwf8e-jEKuJnWZwjIVc6-s8mmH_61jm1JHCEniUvRtRmzH_tUPpctrCr596PYF2YlC1KmOCAH7bpy5wSVMGc6TGZkI-atcUi7mTstA570nF_b9dpVal6u2Ra3OApGU01jgKWjibUoZbnwbxdsxvAAgNHwbfi1IJndoESoLr9x8s7tbRwBG6zL2lp9UYwxH_xTQgfCJmAywKwzKithdR3TwIxoB5Ci8Tu144VlS7VsfFoja0yjhR37QnSJuKcFs7-x899H_4XB1RTqvqOlpJDiBlxxQ3GLkgYOUHUPfvPIz3oc5e-GKnfx65GZ4rr1WVCFQDbTljcQy_Pk-eRtcCkzdt8X0koOHg3FfTk6KMejILusbkzQ-S2S5TMVsujq815e2yf2atp_TtvrXuzWzc9NwEgxJLERYBwGAXN3K1a7xtA72EEeGDJUu1o_2hodxZIbWmxGAjScROUSo2gIs_3MwnOmbUpbeD2INXFTXn7qlkTs4cpTZO9synMWEVNGoxN29aETsm_j4CV4Vk-wvi4ydJdJLKK_XfSHdr75ihLSe4eU4sbnx5sEF8GdWYWYJGR5SxGbi4C_hrWvReqvr5Zs-7Dd4PJreHwM4f3OMzW03TNNuR4AMasiHJFw-Bw_KE3GA3f5a4dZBdpVPSgisKzeT0_9mgTJ4guENlPVN-R_u7DSSruXQhtFUl7ShHsZlci41ae_RaHh53BcLgwViHP2lUB3v6HH6ufpOsn1UB0kZPwW2_Wt4UW5Zq5lWKkrPwna3Q3CHldqpoojZDPMNHkJzDvtMSQ5nHtDOnf4gOBW-OoS3HOFEoVBrGH7WHG7xNS1k7zBN-Dy2Wo1RqpYFAVoXZg9rcjMTtPpaYvV8Y8NIV4xUFdE-HJ52iqHP8Y0blL6LEyAGtp3bv32VTEcP_W7LjsuVks5wBYuJs4URRCemMBmHVijOTedF6FaCOkGhvSwVTY4DLUrfvg56kodlv2jXsWbmYjc-TDMLGgmidAV9Y8dJdVFHbh4HbLxDG8EiVy4wq0g91ZCoRn_yzxNXzWq329qFThJWn94hzmo5GwUK35vDBbUeNYwlIs1ARodTx1OFtWnV-5sJY3kb9Q93Ac74UOZBYHF5EdhzTTMW54x06IOW-2cuVKsKlUoOhPCv5IuH9A6bUz-inWxqL1gDyeynQcaNLbpS-1xK6ictWuOEQorWMtccI-mEfa3lq-uzeAHrmEb5FYszmR17K3rqWd-GHV_j5MhZPDaCXGJq1p8FBfRuUvsxfJ-ZLusbejbjPGYp0dQgpV_I7k-m_Xl6eB218_XmkCEUpd9CreEk0M5uSxqRrgxzwVZcKGpqeGv0l2lTBwloQbXFnFi8wZ7H0_6rxt-G7yq_IWMv26aHjiw_l9IGoSEtRjQBwk3Ms3IlgjDbWaKM8rfHM7AD1-YKmBauQubg/https://www.amazon.com/dp/B0BY8V6SGQ/?_encoding=UTF8&pd_rd_i=B0BY8V6SGQ&pd_rd_i=B0BY8V6SGQ&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=FWXq1&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=J5HNS3C7TW1HZEMT8N9B&pd_rd_wg=mDVZ4&pd_rd_r=bf3cb74a-cec9-412a-b51c-e0ea2ea893fb",
+      "link_clean": "https://www.amazon.com/dp/B0BY8V6SGQ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0BY8V6SGQ&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51nrAjrSBRL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/14e92c28-b9c5-4904-ad49-466a7d512632.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/14e92c28-b9c5-4904-ad49-466a7d512632.mp4/r/THUMBNAIL_1080P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 754,
+      "price": "$49.95",
+      "extracted_price": 49.95,
+      "old_price": "$65.95",
+      "extracted_old_price": 65.95
+    },
+    {
+      "position": 2,
+      "asin": "B0DJ59NWWM",
+      "title": "PETUX Airline Approved Pet Carrier - 17x11x9.5 in, Underseat, Top & Side Entry, Soft Sided Cat Dog Carrier for Small Cat & Dog Up to 12 lbs with Breathable Anti-Scratch Mesh for Travel & Vet - Blue",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JDCxWArNvPcc3BfyCl2IPfAAAAGd0prwxwEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICDSVkIP/clv1c_ek-wxfHXFbbWDfHXL5v2ofBwCvCxcgP44G1TA9jpiw5ydBdzlHd6H1Vd13z6cc3BpHZ9ey0SGyVr4QVIK7BhsGWwdq2I9YAQeCGxgVrgXS2XK99lB4-l5ex56-wu9QmDTyyY25Flgb84_8icOs9yu1HbvIW8r10K8sRzxT-gxjKbqzanROAd6qtWyA6i13KSkML_lnvr3WOK1O445VxC-EipL15wGBLDVefIBJMK-XjEna-zdkods1jvcuG-lvpOUy9OjzC7EQs53h8LtHlumvR4vHfpR3VhX3JrjGYfWn41gaYlYml-DbKH7aaF8fRq2dTUhKUzytUvcpLeDeFltECzdKsqD4AIE_evuQ4T_Wvbsjh4azUMWKJvBh8NipIN44ewcL5VTX1Yf2-5SOcGVpTvXJJPEl3c4mRCOU9r4Sd86M8vP8z4-j-Pfy83H8-PuEpx4FIAfqf8bQbI8sWNTkSFKJgjfoz9lThmOn2bIBbgAbXJ0B1cU8J_L12ZNO2W2XbyotqC6vIi6W6LL31jyXH-1k84cQmhoKHr82nbhX0bQS0pKCHxGsQrz1Cro5taaA6P4v8lXse2Xwb8HsXME8dyJVGoY3BgdcMNQklwao7UujiKu2u-0QlEsVozlMo4IEOpdaiJINJI1HDv8AjhOfRBw_CofXVZEydo4zCDI9RCP0qvIM7pP1FvZ5mV5UiiPSP-rX3EywhguoDf-qI-sAnQos2neL0qc4fjHyznSR7Dif0axYD9PYICxMwOBxjmw8EDGHwu4c07LGY8w-s4JLGHB85A5-s1cYU4oln7shX8q9wWzGu3wynhlz9Ix3PvP_GymY7CVs4nqo6MyQeUAh7SGYAQMrGZlhNCX8ADZcd27urjv2n3fSCHPQ2-e6WbYrRmojEHbNooArnK8G2z9y4op51e5nHuhpMLZzsinIPRnL3cL7xcVUnM_PLtgnjJSVHjXP08q442eJJs6Q7HVXLb4ortuEmiZ0pnE64P8EzfQ7CN3rx6BN3QsmBIGfAAu6Tiw6IpYgcU3-SgUUAotRmpkJbkU_62ggz3IvhELKyvgSjNKChlTpFNRM81T7hQg1W_s11_YshSTxcDLzrTXT_UBz1d5XJ8yaiQGsFLftd2Z3CH9LuA5qJF0fK-5HK000vhOJMF26ltYHt4Wj-S0OGgFk-mXASiJba9qavljJb7coZ2K4is3dWT1tGFqTyzHMbjJw7vrvy7rWsto_84ESJt2HZRTHfosE4mdM_Eqt5-WN9mES04oCWbV-D8cCDvaBNeHuAIVThplqaYb9jYwUr3liTNABkXewjY-MT8e9eGGFYgzdPMrFiGYdHjkN4vdSSI-im3x2_tkyIF95oHsifhyGYlvIBmJBGZvCkFQEWBI0gDUxCdtSgFk8QDZkp2giIOai2Vw5K-ocPWlwCDxB-suqYL_orYBq6CFzk1CScTLNxjPXQ0d9ARwHvDZjyCixHf95NsoOctKwbYfSdQnz4YyAQLHNIIYW04S0OcHLPP38ZCmNvGD_2pzCdoL-7w1PbqW5srY0c-pfq08oR9PmA/https://www.amazon.com/dp/B0DJ59NWWM/?_encoding=UTF8&pd_rd_i=B0DJ59NWWM&pd_rd_i=B0DJ59NWWM&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=FWXq1&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=J5HNS3C7TW1HZEMT8N9B&pd_rd_wg=mDVZ4&pd_rd_r=bf3cb74a-cec9-412a-b51c-e0ea2ea893fb",
+      "link_clean": "https://www.amazon.com/dp/B0DJ59NWWM/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DJ59NWWM&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41L8AUsIHmL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/180df826-8f61-4b1b-898f-609070349dee.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/180df826-8f61-4b1b-898f-609070349dee.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 149,
+      "price": "$49.99",
+      "extracted_price": 49.99
+    },
+    {
+      "position": 3,
+      "asin": "B0FSSGMWNS",
+      "title": "FOXFOCUS Pet Carrier Airline Approved 17x11x9.5 in - Underseat, Top & Side Entry Soft Dog Cat Travel Carrier with Safety Zippers ＆ Anti-Scratch Mesh for Small Cat and Dog for Pets Up to 10 Lb - Grey",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JI0UnRoDbvIYKRw1hJne_jAAAAGd0prwygEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICDHHZy_/clv1c_ek-wBXfWLcTSnuvbk7bok6bZ7Rk-2DpEo7MJuxzqujrGw3Qo0KDS-zl4FqfaeGZmcqy_cE1K9KggPFUwMCV-1lPsX14dMuLzdAw8445OdtycoQsRxlCTT-j--uEkBkSIUJOCxjB8w28KVnvbe3cHutbPqB0dk2etksPt10PqHFa_M9UqDBjqjvpI7_in6-D-OKet0jubvocBUejpLWmJ1nOfCUstlXLmcYvh8JuTlGoK8psZ2K6B8NSqUl14V9l5_OcuTrhpWiavgnjD2hAR3MgRUsfuSHz62GMU8gcMaCs-n1K7Yb8Mwzf1XNkUA4hrinPIsdsIc4EHoTe9XunGVTJrEmGUMhxUc9AcOAuDIFBGSkqBbBbukMN774b_z5XfinUDrIWLWklbuEfb4vGmTL4ZjzAbYqOU0oU9nt8meH8LS41FfqoYxYZ7KTg7TQT2EAjoRYCXabQcAR1pkIrE3eORoMGhrT5vLzVvqKJAu-mUP5LiWCXNT26svMMmCPx5dD-D6oL6XqjD7hbR_gQYLsCTBjGseDCrPdlnUG85PmSTTItTIYyL22SBLdX6CLckRGKUC_asqrzDNEIjznVeRgYCb7051hzxLtuDF9NHNhWVoAHODYZf32yTpShoBO9y3zbHCS1yu0mO4JORLOKfo1oa2RiMGVeVz2EnR7rQK8hLclamkm5N38YfUQFHqmVR9ozm5Lmsz5IECpDKEchGw-Bw_oE3Gd2hHXxyWnGiQqaWtsBqdbOG0bSYzaGecLngtUHONoEhZK6hfc1OFImHxy36RbUbhrUkz99XIPkX4iNc6lbjkkfxZeNPz45WwnN_5NZgYoq3AGwwRl6ju0a8HD-SjLQ0dh_mPdxtICV-f0SBjZ7zdw01-OZ_mLV2whFioPaszJ8ET2_V9Ahy4Pza_2LKu7NOlR0yBcTYKT-geM9D-OEl0uY-hfpJ0aqIvE1MvzKGDhel1-GwAXESnoma_RPr3IONdlOOQCneCucNZSWyr1dYfgJKKCjaiJPuH1PLpb8t8FIyxByUqbTZESORL9G7yODRRNz18IzXJUpyMmo5kijWctde3mzCJ-Actb2wZLpO1ss1VeqMvccfTl_vreZ2Xun4toft-CnIuUWFtFErs3BCD0Bm_x1kMEC_76H2G0shrLmAJVrnwy06PFEo2B51JGe8CU2YF53AY86pQQEeHtAs8qgcuxL2V9Dkanox8knyW_zpJnsn-n-NOIF6Nu8tlgGM_tc-BbHdR4E6xmmboFRXUhrB7GWYOeS0cnFxGz9_E2BG70gfD5bAmXO27eNvl8xoSzbzeoLVuiZWfkfhnQszeyoLU9eoD9LcVA2uhB7YIgF7sOzKYFbF-8NxT-zMiNUf7cIXbGbI10DYI-mICKV162m0B_kgpFADwwjMLabseKaTNMs0m7Qh-Bd5pIVOse1IiNm7RHCp2RPLbWLAiaUju5AtZsrq9DMBcweS3D2ZiEIUFcIG75H8Bv2WiYPNMttyZreriHyme9YYnPqDBy64XHa1oespc7d-5MPmY-g9hEioy6CWN-fgh_w/https://www.amazon.com/dp/B0FSSGMWNS/?_encoding=UTF8&pd_rd_i=B0FSSGMWNS&pd_rd_i=B0FSSGMWNS&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=FWXq1&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=J5HNS3C7TW1HZEMT8N9B&pd_rd_wg=mDVZ4&pd_rd_r=bf3cb74a-cec9-412a-b51c-e0ea2ea893fb",
+      "link_clean": "https://www.amazon.com/dp/B0FSSGMWNS/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FSSGMWNS&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41s8MmpU1sL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/a342cbdc-c0ae-4310-84dd-7865014aa77d.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/a342cbdc-c0ae-4310-84dd-7865014aa77d.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 38,
+      "price": "$31.99",
+      "extracted_price": 31.99
+    },
+    {
+      "position": 4,
+      "asin": "B0FKNJYWNZ",
+      "title": "Dog Purse Carrier for Small Dogs, Cats, and Puppies – Soft-Sided Travel Pet Tote Bag with 4 Large Pockets, Foldable, Lightweight, Fits Pets up to 15 lbs, for Travel, Outings (Beige)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JKiQPv5d5DIIoL1NcLNsVAQAAAGd0prwywEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICCvS57a/clv1c_ek-wxYHXErbWDXHEa4vrJ16WpAySuUbHCZoIIEfCl21bDdvXuyWi962VVz9Z1Ww_fqYnzXIJsl03ptfJiL6xILE_3i_eP0J5e6ud7XWnvA8G23YsvLvDeaw4YvPZj09v27IV2JFkn5cdMCOnB8gCu1HbvIW85RGaokWxyjOswO4PSy3Q8Hm7DdNY_qfqMnlKfOhjBisJGpTJ0MzlEWTT5nrLTVdH5i6dn9DzjXwW1p3nwb-a6kxnx_d7An8lH3myndzcyzF78KCBtf-7PBNWnSh4YyxFGMCML1X0IgWi2Wb14F-Apf15dRru6Vf_dVbT2uBSEem5UFK0M3MyxVAJwkP70Je939gMZY-B7Cy0UF9WF7Rg2fk0VbYJjrMYRFjFUal0Hjqvvt_TphYespyMjCKv5KcF_bHYz7MQlxmMDFUVJy93ICVXEJ7H8ZuGsUmqtr0z_VFNBlJZinehLTZMqi48sh7wofzL1Pt0g4rZvuXSRk_IXOxfQ8RPD52eVf2W2HaTwsJE6_6i5u07IH1ry3B-13E4AQmjoF7r83bc5X0TIS3aKCECWtwszFEqnFO5CA5t4n-kfgs1Xwr-AUKNDc-SG13offBYesMRToqwrU3sujuIu2ledlP15gabJ_8GooZRuJ7XkjD7AmKICRuG7g0DMDf0Dm-LYXgrtmYICdsGrP5kTE6OcepTkRzxlgYQMLQ0l-qeZug3wYxmG2UTL-48_L-Rd8rIOJge7zfuBgdKOvbZ-sXSgzZRAEjfaOBBuF8qoxW8ivLKeF3kbd76JLWHB9ZExxs0ccQ4oLkoa7gxuOaSvGyprJQX4zH0e278_pi1lKR3fjme6-xdqsxVqukExTWWMI47Vad6nzLSPcQC-hzIo-584TEgCFR0adCymDGejC9a-EDhaYvglPMoKPLxZWPK8fsvgNB6w31EwW0Xx15qo8ilWUB-VOIWISsFg_bfFjGYzM0wK7eVGf7vwRDbYF2W05wTtvSMekq_HFr-FhWdUQ6g_qnDue-JwKel5HiX9C1oMH9jxw1k1pKOCDfJKvTTj5dfdbeJRoTQTj_zJEbrP7-u6V-bnGQHX0ExPcdJGT-9NK2r8pvLiR1BGe0_0n0Gk0aDBLWENdZRR9P_vIJ-dIox6YxKHTqnMesNDoVHZI65FtxxfzcU1stfy9Iu2KrO5pkakVJojVK1AFTPHth8MtfYdCUo24j247wzkBKJtrxlj8BCyeahdgxeq4Z6OtZtAryuMTActFrqfz2P5CQd8IbUcJY-P6GxtkD-6Arztcbh72kwSrlw22UfBNeFavZrFroKpKEh4mfZ26xaYgw-HqFzbkN8NiSNF0shgD650lrsvqGD18w1cpIKFagRQTIVwWvWqQCqqMyANuJ2DvpX4r6KvQ3YkNav5wregilpaVy_sQGbdyH5dykmT7XIBdGIm61yPmXLfFeO9yaRbsChzswlKENT7UD-eici35c0KhkNtS7CT9nfmh8f2g0NBjPxRi4GGgfCaUy0RIq3sMxi9YOuB0zgu6sz6haNoagqElaokEkSm3mFcBTW/https://www.amazon.com/dp/B0FKNJYWNZ/?_encoding=UTF8&pd_rd_i=B0FKNJYWNZ&pd_rd_i=B0FKNJYWNZ&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=FWXq1&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=J5HNS3C7TW1HZEMT8N9B&pd_rd_wg=mDVZ4&pd_rd_r=bf3cb74a-cec9-412a-b51c-e0ea2ea893fb",
+      "link_clean": "https://www.amazon.com/dp/B0FKNJYWNZ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FKNJYWNZ&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/413LgvnVT+L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/ad2eef25-d23a-476c-9ce6-746148724cbd.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/ad2eef25-d23a-476c-9ce6-746148724cbd.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.1,
+      "reviews": 89,
+      "price": "$33.99",
+      "extracted_price": 33.99,
+      "old_price": "$48.99",
+      "extracted_old_price": 48.99
+    },
+    {
+      "position": 5,
+      "asin": "B096FFCY3P",
+      "title": "FUKUMARU Cat Carrier, Soft-Sided Small Dog Carrier, Large Cat Travel Bag with 4 Mesh Windows, Under 15 lb Airline Approved Pet Carrier with 4 Storage Pockets, Rollable Cover for Nervous Cats, Grey",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JBKtrf3A8fb5g5VaRCkDnncAAAGd0prwzQEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICBtkHNQ/clv1c_ek-wBXfWbcbWXy5XY7vi_kTDcP0DV0Z-wpdgLreqzu9-etnKkZpzojp49pTgBIhRJkDeRRP93N_RULL8sCmNFM6azRr9RbH2jdnBWHqz5Jhjo_nzmUsqBGX-Qpk2JazVycMXNQ7bs2J67WzFER5j-fjbo9OEphVaAuWQzbqrxLwlrWfFMXGKww3skVJB7D3i0FIN7khJOTNQ2Uy9FdNSVqK7v_4W9Ip3AuMCfSja-g7lZREhuCrMC0k7Gm3r-M1A_9L5b1YUIEmPfU2wIV5t3LqxPMN8YqrnEx3sS6yoU9C-acUhv8g831rGSiVUqkhruQoT2SwQCQ4e4mz8t1gNsV8BhfCJcRVl41MZUQwXrOaR1etiSRW36IRdIkW7rP0YI6fK73Qk8rCAcYjEck250Omo8BeMIbkt61ekAF7b2vg74_I0ZKdksSUAU1mTYdEt9Ux86j4SqxdFCJhq1aktQ7sO2Cq-K7q1pirG_ZUZj_3BLeKMVKKM0Cpb1VSfQ1iXh3DkMzNIOqql3QgIUPfHNjN-JcV3IvWOum-rl89RoIV-LOBnyhLbJtyn3eRka--tWn5WQNpEoNdxMHyusyfl1os06PUBKXwT6AoTTU4T11rioWOAC5CFsHwqI874ytfa79yaBU-LR3NhlI2GVfXYR_EWfFt0cXCk-4x3Y3E2CdsKrocXVMaP6d00pLmLMe98yPkn-KcxJvV0FmRabJeGP27Auf4XF9ouBAe-xmEj7IJrWAk7EUzS8U4_3JdTFB7uT4Cwcnwa_ceHfDvOGlmEA29_AylBJUDnYSpclzZZQxshaWb-CBzCcUuJ66YdvwgIDWyn4ReAEjF2vsNJuDF0CHIFQYJ4J_lVjywOM_pHcvvoyJD2HnkqY3YqoTOeqFqFnd_cD5x1du_266jVQ0ja6bQoS2dJzO2spooPweLijxOn5xNoUJUdFhYq1AVJmXkRtf77NO-YnKf95_dFR0VzkzHjmZ4UzIRhF4-Y37hPma7HUT8NDGb96CfPO9GEjpgNcVHNnWEb6E6P_-ERgujVEbRzUeXq9y215icldA1VmMPy-qXuBQydOFxr4cWmEZNqStOF2A9Q-fUev9h9fTVZVoADb_xzvuGed5L-3n6HaILLwwlo8XeCGuRq4ZxmY-Vi4-kJOGYLXSv6cSE-9MWpsTbckLmvBurjgH6JOA1vpZJANBJ-OMPNRmsJ46tnfUkKxoQpM_0dIWWYUAdfpo5tJg3bN5xmz2uNXP58fJ286-FQeJ6ZHMI8uD0W6yql2KobRHDx7YFofL1kKL8oFsaaEUcvtOWIMbe57u10hhnTbOU4rLT3k-Gs6Q7-rX6lCuq5TyvFu5rAW4xCycXGr7J1fIATWzGXfMtLykxqLyFSeusn1Perv-428Nu_9UKX7I_MmZKPTGWswMrVyNKYlH4QVMqpTHzN87RyOfUO9dHcP-NWGglWSuHq7Ggj9ml2-dc8S3CkkHVdiY1QjIddIY-nW0Daa51tVL0E7-CWkTkKoYO9EVCvZdavASp0MA/https://www.amazon.com/dp/B096FFCY3P/?_encoding=UTF8&pd_rd_i=B096FFCY3P&pd_rd_i=B096FFCY3P&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=FWXq1&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=J5HNS3C7TW1HZEMT8N9B&pd_rd_wg=mDVZ4&pd_rd_r=bf3cb74a-cec9-412a-b51c-e0ea2ea893fb",
+      "link_clean": "https://www.amazon.com/dp/B096FFCY3P/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B096FFCY3P&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41PXQB2P6WL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/2f4640d4-0829-46a5-88ba-d3d41e41da12.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/2f4640d4-0829-46a5-88ba-d3d41e41da12.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 1677,
+      "price": "$39.79",
+      "extracted_price": 39.79
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "text": "Customers find the dog carrier to be of great quality and sturdy, with one mentioning its rubber bottom. The comfort and size receive mixed feedback, with some finding it comfortable while others say it's slightly uncomfortable, and several noting it's a bit small.",
+      "insights": [
+        {
+          "title": "Material quality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 8,
+            "positive": 8,
+            "negative": 0
+          },
+          "summary": "Customers praise the material quality of the dog carrier.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "I got the large for a 12 lb. dog. The kurgo is definitely sturdy and well made, but it is also bulky and thick and awkward to use....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2HFXK98A598PH"
+            },
+            {
+              "position": 2,
+              "snippet": "I’m this bag looks very sturdy and comfortable; however I returned....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R113AR3I0GBD11"
+            },
+            {
+              "position": 3,
+              "snippet": "...easily to travel with (carrying and under the airline seat) and has a super sturdy bottom made of rubber....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3RAFJ0TOTLCN2"
+            },
+            {
+              "position": 4,
+              "snippet": "I loved the style , the quality materials and enough room for my dog to be comfortable inside and comfortable to carry around or take in plane....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1HY8WOOY6M8QQ"
+            }
+          ]
+        },
+        {
+          "title": "Sturdiness",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 6,
+            "positive": 5,
+            "negative": 1
+          },
+          "summary": "Customers find the carrier sturdy, with one mentioning its durable bottom made of rubber.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "I got the large for a 12 lb. dog. The kurgo is definitely sturdy and well made, but it is also bulky and thick and awkward to use....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2HFXK98A598PH"
+            },
+            {
+              "position": 2,
+              "snippet": "...This bag has breathable netting that is made of strong and thick fabric....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RZLKGMDFCL1SV"
+            },
+            {
+              "position": 3,
+              "snippet": "This was too small for my 10.6 pound dog. It seems sturdy enough to hold 12 pounds as stated, but I would have had to cram him in there and he would...",
+              "link": "https://www.amazon.com/gp/customer-reviews/RNI2CHO3FG4XR"
+            },
+            {
+              "position": 4,
+              "snippet": "...with (carrying and under the airline seat) and has a super sturdy bottom made of rubber....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3RAFJ0TOTLCN2"
+            }
+          ]
+        },
+        {
+          "title": "Comfort",
+          "sentiment": "mixed",
+          "mentions": {
+            "total": 6,
+            "positive": 4,
+            "negative": 2
+          },
+          "summary": "Customers have mixed opinions about the carrier's comfort, with some finding it comfortable while others report discomfort, including one customer mentioning that the bag digs into their hip.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...style , the quality materials and enough room for my dog to be comfortable inside and comfortable to carry around or take in plane....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1HY8WOOY6M8QQ"
+            },
+            {
+              "position": 2,
+              "snippet": "...It was slightly uncomfortable walking my dog in it as the hard bottom would bounce off my leg. Couldn't get it adjusted right to not avoid that....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RAWG97GQDI853"
+            },
+            {
+              "position": 3,
+              "snippet": "I’m this bag looks very sturdy and comfortable; however I returned....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R113AR3I0GBD11"
+            },
+            {
+              "position": 4,
+              "snippet": "...well made with a solid base and structure yet is so comfortable for our fur baby....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RZLKGMDFCL1SV"
+            }
+          ]
+        },
+        {
+          "title": "Size",
+          "sentiment": "mixed",
+          "mentions": {
+            "total": 5,
+            "positive": 3,
+            "negative": 2
+          },
+          "summary": "Customers have mixed opinions about the carrier's size, with some finding it too small.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "I loved the style , the quality materials and enough room for my dog to be comfortable inside and comfortable to carry around or take in plane....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1HY8WOOY6M8QQ"
+            },
+            {
+              "position": 2,
+              "snippet": "...I just noticed the large was only 11 inches tall…. I couldn’t zip him in and he would fall out if left open....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R221QZ363UKWKK"
+            },
+            {
+              "position": 3,
+              "snippet": "...The bag is spacious, well made with a solid base and structure yet is so comfortable for our fur baby....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RZLKGMDFCL1SV"
+            },
+            {
+              "position": 4,
+              "snippet": "This was too small for my 10.6 pound dog....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RNI2CHO3FG4XR"
+            }
+          ]
+        }
+      ],
+      "customer_reviews": {
+        "5 star": 68,
+        "4 star": 11,
+        "3 star": 13,
+        "2 star": 2,
+        "1 star": 6
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Strong, durable, and so comfortable!",
+        "text": "My 9.5 lb chihuahua grey hound mix has chewed or scratched through every pet carrier bag we have purchased except for this one. This bag has breathable netting that is made of strong and thick fabric. The bag is spacious, well made with a solid base and structure yet is so comfortable for our fur baby. Perfect for us frequent flyers and traveler - long flights 6hr+ and cross country road trips. Highly recommend!",
+        "rating": 5,
+        "date": "May 25, 2025",
+        "author": "KC",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGZVRYJAS5VOIJCQRLVC5UVD2KAA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "helpful_votes": "2 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Black/Yellow",
+          "size": "20.0\"L x 10.0\"W x 11.5\"H"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Love this carrier!",
+        "text": "It’s the perfect size, easily to travel with (carrying and under the airline seat) and has a super sturdy bottom made of rubber. Kurgo makes the best products for our pets… I’ve been using their crash tested hardnesses for 8 years. Only wish… there’s was another pocket on the other side. Thanks Kurgo! ❤️",
+        "rating": 5,
+        "date": "May 3, 2023",
+        "author": "Stephanie Cemo",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHLNWYSCZR7F5IBTJILDDSRLSYUA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/46c28741-9d75-4b04-83a3-45fb6cc95c1d._CR0%2C0%2C497%2C497_SX460_.jpg",
+        "helpful_votes": "5 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Barn Red/Coastal Blue",
+          "size": "18.0\"L x 11.0\"W x 20.0\"H"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Great product",
+        "text": "I love the durability and features. Well made. Do wish it were available in cute colors though.",
+        "rating": 4,
+        "date": "March 29, 2024",
+        "author": "Nicole",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFACNNKI6UUXYSANY5MDOIGVT2BQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Black/Yellow",
+          "size": "20.0\"L x 10.0\"W x 11.5\"H"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Fit an Australian Terrier",
+        "text": "I was dubious about the size of the bag, but the big bag is big enough to fit my Australian Terrier. He is 1 year and 7 months old, and weights 9 kg. He is tight inside the bag, but not uncomfortable. He is able to turn and stand up. We had our first flight yesterday. It was a short trip, less than an hour. He is a barker, but inside the bag, he was quiet and still, nobody notice we were traveling with a dog. So far so good. I am happy with the carrier.",
+        "rating": 5,
+        "date": "March 18, 2022",
+        "author": "Ele",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEFL4KPHUVSXVP7RPTFUMFJK2HLA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "helpful_votes": "4 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Black/Yellow",
+          "size": "20.0\"L x 10.0\"W x 11.5\"H"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Awkward and bulky",
+        "text": "I got the large for a 12 lb. dog. The kurgo is definitely sturdy and well made, but it is also bulky and thick and awkward to use. When you zip up the top the flap zips all the way down to enclose the opening of the head. So either you zip it all the way or don’t zip it at all because there is no way to fold back the flap. Its summertime now and the bulky-ness bugs me, I may like it better in the winter. I am keeping it because it does the job and in case I need an emergency tote. But I am looking for another tote to use regularly.",
+        "rating": 3,
+        "date": "June 5, 2023",
+        "author": "SyllieC",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEKMFWCBVQFLODZAHFLQUXCTGWDA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "helpful_votes": "4 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Black/Yellow",
+          "size": "20.0\"L x 10.0\"W x 11.5\"H"
+        }
+      },
+      {
+        "position": 6,
+        "title": "Innovative and functional",
+        "text": "I loved the style , the quality materials and enough room for my dog to be comfortable inside and comfortable to carry around or take in plane. I am very pleased with the brand and would consider other products by Kurgo.",
+        "rating": 5,
+        "date": "October 8, 2021",
+        "author": "Owney1",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AE77TH4JXJ4NIHPII45LEJDW2LEA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/956f5283-33ea-4c8e-9984-a443af693400._CR80%2C0%2C206%2C206_UX460_.gif",
+        "helpful_votes": "2 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Barn Red/Coastal Blue",
+          "size": "18.0\"L x 11.0\"W x 20.0\"H"
+        }
+      },
+      {
+        "position": 7,
+        "title": "great carry-on",
+        "text": "Easy to take on the airplane.",
+        "rating": 5,
+        "date": "June 26, 2024",
+        "author": "Eddie Tsai",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEBYAJI2ZVXLRLLFCMIOJCN6OHNQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Black/Yellow",
+          "size": "20.0\"L x 10.0\"W x 11.5\"H"
+        }
+      },
+      {
+        "position": 8,
+        "title": "Well designed but slightly uncomfortable",
+        "text": "A lot of nice features. Removable pad on the hard bottom that can be washed, the opening can be zipped partway and velcrod to have an opening if your dog prefers looking out and the strap is adjustable. It was slightly uncomfortable walking my dog in it as the hard bottom would bounce off my leg. Couldn't get it adjusted right to not avoid that. Shorter walks this wasn't an issue, but my other dog likes long walks and taking my puppy along wasn't ideal. Would recommend still for most cases.",
+        "rating": 4,
+        "date": "April 12, 2024",
+        "author": "Hoa N.",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AG47ZSZ44MJGQ6TDB6K2HGBNARYA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "helpful_votes": "2 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Black/Yellow",
+          "size": "20.0\"L x 10.0\"W x 11.5\"H"
+        }
+      }
+    ],
+    "other_countries_reviews": [
+      {
+        "position": 1,
+        "title": "Bellissimo",
+        "text": "Sebbene l'abbia restituito perché il mio gatto non ci entrava, è un prodotto fatto veramente bene. Però è adatto ad animale che non vada oltre i 4,5 kg. La mia gatta di poco più di 5kg era troppo schiacciata all'interno. Ho preso la versione più grande, anche se il colore era più bello questo.",
+        "rating": 4,
+        "date": "May 13, 2023",
+        "author": "Cliente Amazon",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Barn Red/Coastal Blue",
+          "size": "18.0\"L x 11.0\"W x 20.0\"H"
+        },
+        "country": {
+          "code": "IT",
+          "name": "Italy"
+        },
+        "language": {
+          "code": "it",
+          "name": "Italian (Italy)"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Very sturdy and good quality",
+        "text": "Really pleased with this product. Can't wait to take my buddy out in it.",
+        "rating": 5,
+        "date": "January 2, 2024",
+        "author": "M S.",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Black/Yellow",
+          "size": "20.0\"L x 10.0\"W x 11.5\"H"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Solide et pratique",
+        "text": "Assez grand pour qu'un petit chien ou un chat y soit à l'aise. Solide et pratique, la coque qui correspond au fond du sac évite de salir la voiture ou le siège en cas d'accident.",
+        "rating": 5,
+        "date": "March 5, 2025",
+        "author": "Bidule",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Barn Red/Coastal Blue",
+          "size": "18.0\"L x 11.0\"W x 20.0\"H"
+        },
+        "country": {
+          "code": "FR",
+          "name": "France"
+        },
+        "language": {
+          "code": "fr",
+          "name": "French (France)"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Gute Reisetasche für Mini-Hunde",
+        "text": "Positiv: wasserdichte Unterseite, geringes Gewicht, Schultergurt lang genug zum diagonal-tragen, Verarbeitung erscheint wertig. Leider fällt das „Dach“ nach unten, wenn man es einklappt, da es relativ schwer ist. Damit fällt es dem Hund nicht leicht, selbständig von außen in die Tasche einzusteigen. Größer als ein normal großer Chihuahua sollte der Hund nicht sein, da es dann in der Tasche recht eng wird. Insgesamt jedoch für meinen Hund passend, für das geplante Reiseziel als Körbchen absolut ideal.Daher von mir eine Empfehlung.Update:Nach mehreren Reisen und im Dauergebrauch daheim immer noch absolut in Ordnung. Die abwaschbare Unterseite der Tasche hat sich schon auf der Fähre im Regen bewährt…",
+        "rating": 5,
+        "date": "July 18, 2020",
+        "author": "Fatma",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Barn Red/Coastal Blue",
+          "size": "18.0\"L x 11.0\"W x 20.0\"H"
+        },
+        "country": {
+          "code": "DE",
+          "name": "Germany"
+        },
+        "language": {
+          "code": "de",
+          "name": "German (Germany)"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Great option for miniature dachshund",
+        "text": "Good quality construction and the L is the perfect length for my miniature dachshund to lay down. The bottom is supportive and has soft lining so he feels comfortable. Carrying straps are comfortable for me as well, weight is well distributed. Great alternative to backpack carriers.",
+        "rating": 5,
+        "date": "August 14, 2023",
+        "author": "Nikki",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Black/Yellow",
+          "size": "20.0\"L x 10.0\"W x 11.5\"H"
+        }
+      }
+    ]
+  }
+}
