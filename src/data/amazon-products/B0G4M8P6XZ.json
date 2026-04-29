@@ -1,0 +1,906 @@
+{
+  "search_metadata": {
+    "id": "69f0658e8976f79bcf4d9b3e",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/K4pYY-KxFktk0bj_vH3pOQ/69f0658e8976f79bcf4d9b3e.json",
+    "created_at": "2026-04-28 07:45:18 UTC",
+    "processed_at": "2026-04-28 07:45:18 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0G4M8P6XZ/?",
+    "raw_html_file": "https://serpapi.com/searches/K4pYY-KxFktk0bj_vH3pOQ/69f0658e8976f79bcf4d9b3e.html",
+    "total_time_taken": 7.36
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0G4M8P6XZ",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0G4M8P6XZ",
+    "title": "XL Orthopedic Dog Beds for Extra Large Dogs 44x32in, Waterproof Memory Foam Big Size Pet Bed with Sides, Comfort Thick Egg-Crate Foam, Dog Crate Pad & Couch Bed,Washable Cover & Non-Slip Bottom,Grey",
+    "link": "https://www.amazon.com/Orthopedic-Dog-Large-Waterproof-Egg-Crate/dp/B0G4M8P6XZ/",
+    "link_clean": "https://www.amazon.com/dp/B0G4M8P6XZ/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G4M8P6XZ&device=desktop&engine=amazon_product",
+    "variants": [
+      {
+        "title": "Color",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0G4M8P6XZ",
+            "name": "Grey",
+            "image": "https://m.media-amazon.com/images/I/41SKPBLYECL._SS64_.jpg",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G4M8P6XZ&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0G4M8T58Q",
+            "name": "Light Grey",
+            "image": "https://m.media-amazon.com/images/I/4176uZQcGbL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G4M8T58Q&device=desktop&engine=amazon_product"
+          }
+        ]
+      },
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0G4M72BLH",
+            "name": "M: 28\" L × 23\" W × 6.5\" H",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G4M72BLH&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0G4M67RQ4",
+            "name": "L: 36\" L × 27\" W × 6.5\" H",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G4M67RQ4&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0G4M8P6XZ",
+            "name": "XL: 44\" L × 32\" W × 7\" H",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G4M8P6XZ&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the aodisman Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/71G7NwQ-m2L._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/71G7NwQ-m2L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/91XcB5z6yXL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71YUWtPH6WL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81364XPW7FL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81KUkuqvq+L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81uJpvnB3pL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81aHLTLrwwL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/91C-4suV6gL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71P9zeI1eSL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.5,
+    "reviews": 16,
+    "bought_last_month": "50+ bought in past month",
+    "discount": "-7%",
+    "price": "$39.99",
+    "extracted_price": 39.99,
+    "price_unit": "$39.99 / count",
+    "extracted_price_unit": 39.99,
+    "old_price": "$42.99",
+    "extracted_old_price": 42.99,
+    "offers": [
+      "Save 5%"
+    ],
+    "prime": true,
+    "delivery": [
+      "FREE delivery Sunday, May 3"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "buy_new": {
+      "caption": "Regular Price",
+      "price": "$42.99",
+      "extracted_price": 42.99,
+      "price_unit": "$42.99 / count",
+      "extracted_price_unit": 42.99,
+      "delivery": [
+        "FREE delivery Sunday, May 3"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "aodisman",
+          "details": {
+            "heading": "Sold by",
+            "content": "aodisman"
+          },
+          "link": {
+            "text": "aodisman",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=AR51K02TI28TE&asin=B0G4M8P6XZ&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "brand": "aodisman",
+    "breed_recommendation": "Large dog, medium dog",
+    "special_feature": "Lightweight, Orthopedic, Removable Cover, Washable",
+    "material": "Memory Foam, Polyester, Support foam",
+    "product_dimensions": "44\"L x 32\"W x 7\"Th"
+  },
+  "about_item": [
+    "ORTHOPEDIC SUPPORT DOG BED：This orthopedic dog bed is made with thick, high-density egg-crate foam that evenly distributes weight and helps relieve pressure on joints and muscles. Ideal for large dogs, senior dogs, and pets with arthritis, it provides reliable daily support and promotes deeper, more comfortable sleep",
+    "SAFE & COMFORTABLE WITH SIDE BOLSTERS：The three-sided cushion design provides secure and comfortable support for your dog’s head and neck. Soft, generously filled bolsters allow pets to settle into various cozy positions, creating a calm and relaxing sleeping environment",
+    "WATERPROOF LINER & WASHABLE COVER：This dog sofa features a waterproof inner liner that helps protect the foam from accidental stains, drool, and liquid spills. The soft outer cover is fully removable and machine washable for easy, hassle-free cleaning",
+    "PET-SAFE MATERIALS WITH NON-SLIP BASE：Made with soft flannel fabric, this comfortable dog bed provides soothing comfort and is suitable for year-round use. The non-skid bottom keeps the bed securely in place on hardwood, tile, or carpet floors",
+    "MULTI-SIZE DOG BED FOR HOME & CRATE USE：Available in Medium (28\" x 23\"), Large (36\" x 27\"), and Extra Large (44\" x 32\") to fit dogs of all sizes. This dog sofa bed is suitable for all dog breeds, from small to extra-large, and also works well for cats of all ages, from kittens to seniors",
+    "REBOUND INSTRUCTIONS: This dog bed is vacuum-packed for shipping. After opening the package, gently pat the cushions, lay the foam base flat, and allow up to 48 hours for the bed to fully expand and regain its optimal shape and fluffiness"
+  ],
+  "related_products": [
+    {
+      "position": 1,
+      "asin": "B0F1CM5RHT",
+      "title": "Bedsure SupportMax™ XL Orthopedic Dog Beds Large Sized Dog - Extra Thick Supportive Dogs Couch with Waterproof Washable Cover, Extra Large Comfort Pet Sofa with Soft Sherpa & Nonskid Bottom, Grey, 42\"",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToyNjUyMzI4NjA3MzI2MzI0OjE3NzczNjIzMjQ6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTE2MTc2ODMwNDMwMjo6Ojo&url=%2Fdp%2FB0F1CM5RHT%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0F1CM5RHT%26pd_rd_w%3Dhl1FO%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DBMD16EZRANYRRVXF6EBA%26pd_rd_wg%3DNJnME%26pd_rd_r%3Dac9036f2-5a4d-425c-8e2e-0df10cc3d439%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0F1CM5RHT/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F1CM5RHT&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/91hiXf+9+HL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.6,
+      "reviews": 1142,
+      "discount": "-20%",
+      "price": "$49.59",
+      "extracted_price": 49.59,
+      "old_price": "$61.99",
+      "extracted_old_price": 61.99,
+      "prime": true,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 2,
+      "asin": "B0BDLGZCTY",
+      "title": "EHEYCIGA Orthopedic Dog Beds for Extra Large Dogs 44x32Inch, Waterproof Memory Foam XL Pet Bed with Sides, Non-Slip and Egg-Crate Foam Big Dog Couch Bed with Washable Removable Cover, Grey",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToyNjUyMzI4NjA3MzI2MzI0OjE3NzczNjIzMjQ6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDE3NDc0Njg0NTUwMjo6Ojo&url=%2Fdp%2FB0BDLGZCTY%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0BDLGZCTY%26pd_rd_w%3Dhl1FO%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DBMD16EZRANYRRVXF6EBA%26pd_rd_wg%3DNJnME%26pd_rd_r%3Dac9036f2-5a4d-425c-8e2e-0df10cc3d439%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0BDLGZCTY/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0BDLGZCTY&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "#1 Best Seller",
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/61E5+Tg-R9L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.5,
+      "reviews": 20231,
+      "discount": "-20%",
+      "price": "$39.98",
+      "extracted_price": 39.98,
+      "old_price": "$49.99",
+      "extracted_old_price": 49.99,
+      "prime": true,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 3,
+      "asin": "B0BRZT6LB7",
+      "title": "WNPETHOME Orthopedic XXL Dog Beds Large Sized Dog, Waterproof Extra Large Dogs Bed with Removable Washable Cover, Multi-Needle Quilting Dogs Crate Bed",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToyNjUyMzI4NjA3MzI2MzI0OjE3NzczNjIzMjQ6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTExODQyOTA1ODMwMjo6Ojo&url=%2Fdp%2FB0BRZT6LB7%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0BRZT6LB7%26pd_rd_w%3Dhl1FO%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DBMD16EZRANYRRVXF6EBA%26pd_rd_wg%3DNJnME%26pd_rd_r%3Dac9036f2-5a4d-425c-8e2e-0df10cc3d439%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0BRZT6LB7/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0BRZT6LB7&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/81SOTemnh9L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 6157,
+      "discount": "-30%",
+      "price": "$39.98",
+      "extracted_price": 39.98,
+      "old_price": "$56.99",
+      "extracted_old_price": 56.99,
+      "prime": true,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 4,
+      "asin": "B0FH68D8JF",
+      "title": "JOEJOY Dog Bed Medium Size Dog, Removable Washable Cover Orthopedic Soft Pet Bed, Anti-Slip Fluffy Plush Faux Rabbit Fur Puppy Bed, 30\"x24\"x8\", Leopard Print, Grey",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToyNjUyMzI4NjA3MzI2MzI0OjE3NzczNjIzMjQ6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTAzNTY5NTQ0OTgwMjo6Ojo&url=%2Fdp%2FB0FH68D8JF%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0FH68D8JF%26pd_rd_w%3Dhl1FO%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DBMD16EZRANYRRVXF6EBA%26pd_rd_wg%3DNJnME%26pd_rd_r%3Dac9036f2-5a4d-425c-8e2e-0df10cc3d439%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0FH68D8JF/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FH68D8JF&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Ends in"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/71RA6oRCQoL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.6,
+      "reviews": 333,
+      "discount": "-40%",
+      "price": "$23.99",
+      "extracted_price": 23.99,
+      "price_unit": "$23.99 / count",
+      "extracted_price_unit": 23.99,
+      "old_price": "$39.99",
+      "extracted_old_price": 39.99,
+      "prime": true
+    },
+    {
+      "position": 5,
+      "asin": "B0DFY9V7P5",
+      "title": "BFPETHOME Orthopedic Dog Beds for Extra Large Dogs, Waterproof Sofa XXL Pet Bed with Sides, Non-Slip Bottom and Egg-Crate Foam Big Dog Couch Bed with Washable Removable Cover,Pet Bed for Large Dogs",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToyNjUyMzI4NjA3MzI2MzI0OjE3NzczNjIzMjQ6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDg3MDQ2Njg2MDUwMjo6Ojo&url=%2Fdp%2FB0DFY9V7P5%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0DFY9V7P5%26pd_rd_w%3Dhl1FO%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DBMD16EZRANYRRVXF6EBA%26pd_rd_wg%3DNJnME%26pd_rd_r%3Dac9036f2-5a4d-425c-8e2e-0df10cc3d439%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0DFY9V7P5/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DFY9V7P5&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Ends in"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/71Glb77vr1L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.5,
+      "reviews": 4724,
+      "discount": "-22%",
+      "price": "$53.98",
+      "extracted_price": 53.98,
+      "price_unit": "$53.98 / count",
+      "extracted_price_unit": 53.98,
+      "old_price": "$68.99",
+      "extracted_old_price": 68.99,
+      "prime": true,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 6,
+      "asin": "B0CRL57GX7",
+      "title": "FURTIME Orthopedic Dog Bed for Extra Large Dogs - XL Waterproof Dog Sofa Bed, Ultra Comfy Supportive Foam Pet Bed with Removable Washable Cover, Jumbo Dog Bed with Nonskid Bottom",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToyNjUyMzI4NjA3MzI2MzI0OjE3NzczNjIzMjQ6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTEyOTI1NDc3NjcwMjo6Ojo&url=%2Fdp%2FB0CRL57GX7%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0CRL57GX7%26pd_rd_w%3Dhl1FO%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DBMD16EZRANYRRVXF6EBA%26pd_rd_wg%3DNJnME%26pd_rd_r%3Dac9036f2-5a4d-425c-8e2e-0df10cc3d439%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0CRL57GX7/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CRL57GX7&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/618zXDm+9BL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.6,
+      "reviews": 1483,
+      "discount": "-33%",
+      "price": "$59.99",
+      "extracted_price": 59.99,
+      "old_price": "$89.99",
+      "extracted_old_price": 89.99,
+      "prime": true
+    },
+    {
+      "position": 7,
+      "asin": "B0CQN31N68",
+      "title": "LE SURE Cute Large Dog Bed for Crate-Thick Shredded Chopped Foam Pet Bed Indoor with Removable Washable Cover, Modern Fuzzy Plush & Anti Slip Bottom, Blue",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToyNjUyMzI4NjA3MzI2MzI0OjE3NzczNjIzMjQ6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDE2ODYyMjY1NTIwMjo6Ojo&url=%2Fdp%2FB0CQN31N68%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0CQN31N68%26pd_rd_w%3Dhl1FO%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DBMD16EZRANYRRVXF6EBA%26pd_rd_wg%3DNJnME%26pd_rd_r%3Dac9036f2-5a4d-425c-8e2e-0df10cc3d439%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0CQN31N68/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CQN31N68&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Ends in"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/81xWvWM6kML._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.6,
+      "reviews": 855,
+      "discount": "-15%",
+      "price": "$36.54",
+      "extracted_price": 36.54,
+      "old_price": "$42.99",
+      "extracted_old_price": 42.99,
+      "prime": true,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 8,
+      "asin": "B0GG8QXBJX",
+      "title": "Sytopia Chew Proof Dog Bed for Large Dogs Washable, 42 Inch Orthopedic Extra Large Dog Bed with Washable Removable Cover and Anti-Slip Bottom – XL",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo1NDk2Mjg2ODUwODYwMjU6MTc3NzM2MjMyNDpzcF9kZXRhaWwyOjMwMTI1MjI0MDQwMDAwMjo6Ojo&url=%2Fdp%2FB0GG8QXBJX%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0GG8QXBJX%26pd_rd_w%3DedQ6V%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DBMD16EZRANYRRVXF6EBA%26pd_rd_wg%3DNJnME%26pd_rd_r%3Dac9036f2-5a4d-425c-8e2e-0df10cc3d439%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0GG8QXBJX/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GG8QXBJX&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71lgNfgO26L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.3,
+      "reviews": 24,
+      "price": "$59.99",
+      "extracted_price": 59.99,
+      "prime": true
+    },
+    {
+      "position": 9,
+      "asin": "B0FP9JGRKL",
+      "title": "Orthopaedic Round Dog Beds for Large Dogs Washable with Removable Cover,Extra Comfo...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo1NDk2Mjg2ODUwODYwMjU6MTc3NzM2MjMyNDpzcF9kZXRhaWwyOjMwMTA0OTczMjQyMDgwMjo6Ojo&url=%2Fdp%2FB0FP9JGRKL%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0FP9JGRKL%26pd_rd_w%3DedQ6V%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DBMD16EZRANYRRVXF6EBA%26pd_rd_wg%3DNJnME%26pd_rd_r%3Dac9036f2-5a4d-425c-8e2e-0df10cc3d439%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0FP9JGRKL/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FP9JGRKL&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71UHKSxWUOL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.6,
+      "reviews": 62,
+      "discount": "-10%",
+      "price": "$69.59",
+      "extracted_price": 69.59,
+      "old_price": "$76.99",
+      "extracted_old_price": 76.99,
+      "save_with_coupon": "Save 10%",
+      "prime": true,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 10,
+      "asin": "B0GDWLNF3B",
+      "title": "Sytopia 42 Inch Indestructible Dog Beds for Large Dogs, Big Chew Proof Orthopedic Egg Crate Foam Pet Bed with Washable Removable Cover and Anti-Slip Bottom, Grey",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo1NDk2Mjg2ODUwODYwMjU6MTc3NzM2MjMyNDpzcF9kZXRhaWwyOjMwMTE5MTc0NzY4ODIwMjo6Ojo&url=%2Fdp%2FB0GDWLNF3B%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0GDWLNF3B%26pd_rd_w%3DedQ6V%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DBMD16EZRANYRRVXF6EBA%26pd_rd_wg%3DNJnME%26pd_rd_r%3Dac9036f2-5a4d-425c-8e2e-0df10cc3d439%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0GDWLNF3B/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GDWLNF3B&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71X2CgkEWRL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 2.9,
+      "reviews": 32,
+      "discount": "-8%",
+      "price": "$59.99",
+      "extracted_price": 59.99,
+      "old_price": "$64.99",
+      "extracted_old_price": 64.99,
+      "prime": true,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 11,
+      "asin": "B0FWK2NL79",
+      "title": "Washable Dog Couch Bed, Pet Sofa with Removable Cushion & Non-Slip Bottom, Orthoped...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo1NDk2Mjg2ODUwODYwMjU6MTc3NzM2MjMyNDpzcF9kZXRhaWwyOjMwMTIyMTE3MzcwNjUwMjo6Ojo&url=%2Fdp%2FB0FWK2NL79%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0FWK2NL79%26pd_rd_w%3DedQ6V%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DBMD16EZRANYRRVXF6EBA%26pd_rd_wg%3DNJnME%26pd_rd_r%3Dac9036f2-5a4d-425c-8e2e-0df10cc3d439%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0FWK2NL79/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FWK2NL79&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/61-0ufvV83L._AC_UF480,480_SR480,480_.jpg",
+      "price": "$29.99",
+      "extracted_price": 29.99,
+      "prime": true
+    },
+    {
+      "position": 12,
+      "asin": "B089RGDQBB",
+      "title": "Bedsure Orthopedic Dog Beds Large Sized Dog - Washable Large Dog Cat Bed Waterproof, Comfort Dogs Couch Sofa with Washable Removable Cover, Pet Bed with Nonskid Bottom, Grey, 35\"",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo1NDk2Mjg2ODUwODYwMjU6MTc3NzM2MjMyNDpzcF9kZXRhaWwyOjMwMTEyMzczMzI3MzkwMjo6Ojo&url=%2Fdp%2FB089RGDQBB%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB089RGDQBB%26pd_rd_w%3DedQ6V%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DBMD16EZRANYRRVXF6EBA%26pd_rd_wg%3DNJnME%26pd_rd_r%3Dac9036f2-5a4d-425c-8e2e-0df10cc3d439%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B089RGDQBB/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B089RGDQBB&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "#1 Best Seller"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/81LrJEODtrL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.5,
+      "reviews": 50900,
+      "discount": "-33%",
+      "price": "$39.99",
+      "extracted_price": 39.99,
+      "old_price": "$59.99",
+      "extracted_old_price": 59.99,
+      "prime": true,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 13,
+      "asin": "B0GF6LBXNH",
+      "title": "Bedsure XL Orthopedic Dog Beds Large Sized Dog - 360° Oval Bolster Large Dogs Bed for Senior Dogs with Waterproof Washable Cover, Extra Large Comfort Pet Sofa Couch with Ultra-Soft Fleece, Brown, 42\"",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo1NDk2Mjg2ODUwODYwMjU6MTc3NzM2MjMyNDpzcF9kZXRhaWwyOjMwMTIyMzE4NTc0MzgwMjo6Ojo&url=%2Fdp%2FB0GF6LBXNH%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0GF6LBXNH%26pd_rd_w%3DedQ6V%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DBMD16EZRANYRRVXF6EBA%26pd_rd_wg%3DNJnME%26pd_rd_r%3Dac9036f2-5a4d-425c-8e2e-0df10cc3d439%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0GF6LBXNH/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GF6LBXNH&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "#1 New Release"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/81QVqyDDAIL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.7,
+      "reviews": 69,
+      "discount": "-44%",
+      "price": "$44.99",
+      "extracted_price": 44.99,
+      "price_unit": "$44.99 / count",
+      "extracted_price_unit": 44.99,
+      "old_price": "$79.99",
+      "extracted_old_price": 79.99,
+      "prime": true
+    },
+    {
+      "position": 14,
+      "asin": "B0GVYTCPGM",
+      "title": "DUMOS Orthopedic Dog Beds for XL Large Sized Dogs, 42x32 in Machine Washable Cover Pet Bed, Anti-Slip Waterproof Memory Foam Couch Bed for Indoor Dogs and Cats, Grey",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo1NDk2Mjg2ODUwODYwMjU6MTc3NzM2MjMyNDpzcF9kZXRhaWwyOjMwMTI1MjY0MzY0MjQwMjo6Ojo&url=%2Fdp%2FB0GVYTCPGM%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0GVYTCPGM%26pd_rd_w%3DedQ6V%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DBMD16EZRANYRRVXF6EBA%26pd_rd_wg%3DNJnME%26pd_rd_r%3Dac9036f2-5a4d-425c-8e2e-0df10cc3d439%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0GVYTCPGM/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GVYTCPGM&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/61eaIzm5pFL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 106,
+      "price": "$54.99",
+      "extracted_price": 54.99,
+      "save_with_coupon": "Save 25%",
+      "prime": true
+    }
+  ],
+  "videos": [
+    {
+      "position": 1,
+      "title": "Honest Review of XL Orthopedic Dog Bed",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/40a28768-ae58-4b85-ad43-a565272cbd2c/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/B1gSzLAegIL.jpg",
+      "duration": "3:50",
+      "vendor": "CandaceCantCloseTheBook",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/81flDXB4tmL._CR0,0,1365,1365_._FMjpg_._SL34_.jpg",
+      "date": "Feb 15, 2026"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": "dog beds for large dogs",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/bfb780c3-411a-4ab0-9ac3-7baaa24748ca.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 2
+    },
+    {
+      "position": 3,
+      "title": "pet beds for large dogs",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/192fb6ae-82e6-49a2-be71-35474692d1d5.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 4,
+      "title": "comfort dog bed",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/de77fafc-6fd9-4510-8fa2-60a61b6ab480.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 5,
+      "title": "pet beds for medium dogs",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/5e722da4-f06a-4f6d-923c-163248487e30.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 6,
+      "title": "calming dog beds for medium dogs",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/f0a650cd-da3a-40ef-8069-7d305548dca2.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 7,
+      "compare_with_similar": [
+        {
+          "position": 1,
+          "asin": "B0G4M8P6XZ",
+          "title": "Dog Beds Large Sized Dog",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/ba9c7912-2e81-42a4-a11b-6ec439b4a096.__AC_SR200,225___.jpg",
+          "link": "https://www.amazon.com/dp/B0G4M8P6XZ?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G4M8P6XZ&device=desktop&engine=amazon_product",
+          "rating": 4.5,
+          "reviews": 16,
+          "price": "$39.99",
+          "extracted_price": 39.99,
+          "material": "Egg-crate Foam & Memory Foam",
+          "pet_types": "Medium & Large Dog",
+          "washable": "✔",
+          "waterproof": "✔",
+          "color": "Grey"
+        },
+        {
+          "position": 2,
+          "asin": "B0G4M67RQ4",
+          "title": "Memory Foam Dog Bed",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/fe8563d6-5494-46ca-9945-787851afbccb.__AC_SR200,225___.jpg",
+          "link": "https://www.amazon.com/dp/B0G4M67RQ4?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G4M67RQ4&device=desktop&engine=amazon_product",
+          "rating": 4.5,
+          "reviews": 16,
+          "price": "$35.99",
+          "extracted_price": 35.99,
+          "material": "Egg-crate Foam & Memory Foam",
+          "pet_types": "Medium & Large Dog",
+          "washable": "✔",
+          "waterproof": "✔",
+          "color": "Grey"
+        },
+        {
+          "position": 3,
+          "asin": "B0G1LY72PQ",
+          "title": "Dog Stairs for Large Dogs",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/32a80bac-77cb-4602-b4c9-231fbebdb969.__AC_SR200,225___.jpg",
+          "link": "https://www.amazon.com/dp/B0G1LY72PQ?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G1LY72PQ&device=desktop&engine=amazon_product",
+          "rating": 4.1,
+          "reviews": 38,
+          "price": "$79.99",
+          "extracted_price": 79.99,
+          "material": "Supporting foam",
+          "pet_types": "Medium & Large Dog",
+          "washable": "✔",
+          "waterproof": "✘",
+          "color": "Grey"
+        },
+        {
+          "position": 4,
+          "asin": "B0BLKN98V6",
+          "title": "Dog ramp for Small Dogs",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/4b7e53b2-b542-4d73-966f-96ec3e705bbe.__AC_SR200,225___.jpg",
+          "link": "https://www.amazon.com/dp/B0BLKN98V6?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0BLKN98V6&device=desktop&engine=amazon_product",
+          "rating": 4.5,
+          "reviews": 4522,
+          "price": "$28.48",
+          "extracted_price": 28.48,
+          "material": "Supporting foam",
+          "pet_types": "Small Dogs & Cats",
+          "washable": "✔",
+          "waterproof": "✘",
+          "color": "Grey"
+        },
+        {
+          "position": 5,
+          "asin": "B0G1MC8TPQ",
+          "title": "Dog Step for Small Dogs",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/10ed4a99-77a7-441c-8341-b3037054238c.__AC_SR200,225___.jpg",
+          "link": "https://www.amazon.com/dp/B0G1MC8TPQ?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G1MC8TPQ&device=desktop&engine=amazon_product",
+          "rating": 4.5,
+          "reviews": 50,
+          "price": "$29.99",
+          "extracted_price": 29.99,
+          "material": "Supporting foam",
+          "pet_types": "Small Dogs & Cats",
+          "washable": "✔",
+          "waterproof": "✘",
+          "color": "Grey"
+        },
+        {
+          "position": 6,
+          "asin": "B0DPKLNGLT",
+          "title": "Pet Stairs for Small Dogs",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/c8efa370-4452-46c2-9107-9961603734ba.__AC_SR200,225___.jpg",
+          "link": "https://www.amazon.com/dp/B0DPKLNGLT?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DPKLNGLT&device=desktop&engine=amazon_product",
+          "rating": 4.6,
+          "reviews": 622,
+          "price": "$29.99",
+          "extracted_price": 29.99,
+          "material": "Supporting foam",
+          "pet_types": "Small Dogs & Cats",
+          "washable": "✔",
+          "waterproof": "✘",
+          "color": "Beige"
+        }
+      ]
+    }
+  ],
+  "product_details": {
+    "product_dimensions": "44 x 32 x 7 inches; 11.29 Pounds",
+    "item_model_number": "Dog sofa Large (Gray)",
+    "date_first_available": "December 1, 2025",
+    "manufacturer": "aodisman",
+    "asin": "B0G4M8P6XZ",
+    "best_sellers_rank": [
+      {
+        "text": "#39,300 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 39300,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#27 in Dog Sofas & Chairs",
+        "extracted_rank": 27,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/2975331011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Sofas & Chairs"
+      }
+    ],
+    "customer_reviews": "4.5 out of 5 stars",
+    "rating": 4.5,
+    "reviews": 16,
+    "breed_recommendation": "Large dog, medium dog",
+    "other_special_features_of_the_product": "Lightweight, Orthopedic, Removable Cover, Washable",
+    "recommended_uses_for_product": "Indoor",
+    "dog_breed_size": "Giant, Large, Medium",
+    "product_benefits": "Memory foam, Orthopedic Egg-Crate Foam, Pet bed with sides, Waterproof and non-slip, large dog bed washable",
+    "material_type": "Memory Foam, Polyester, Support foam",
+    "fill_material": "Memory Foam, foam",
+    "product_care_instructions": "Machine Wash",
+    "cover_material": "Plush",
+    "color": "Grey",
+    "item_shape": "Rectangular",
+    "pattern": "Solid",
+    "item_form": "Bolster, Sofa",
+    "brand_name": "aodisman",
+    "customer_package_type": "Standard Packaging",
+    "pet_type": "Cat, Dog",
+    "model_number": "Dog sofa Large (Gray)",
+    "unit_count": "1 Count",
+    "included_components": "Large dog bed",
+    "item_dimensions_l_x_w_x_thickness": "44\"L x 32\"W x 7\"Th",
+    "item_weight": "5.12 Kilograms",
+    "size": "XL: 44\" L × 32\" W × 7\" H"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0FWJF462S",
+      "title": "Extra Large Dog Bed, Orthopedic XL Washable Memory Foam Bed for Big Dogs Waterproof Pet Couch Sofa Bolster with Removable Cover, Non-Slip Bottom, Tennis Ball Toy, 42x30",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JJwvPqumtNWvStbU7H85FfAAAAGd0wzMGgEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDEgICBibcDM/clv1c_ek-wBYHXFcbWDn2nI-MgDzpZHJmQrgh4dXiqnRVCmEI4g9FQ0wbRoch6dSISknGFS4QBi27h2kqGYNnjSY2pJ7Mt_z_qeoy1S5GS7hfXukhm23YsfLvzeSw5ZvM5wmARhVMnTKH7PhsixBIDQF9g6sT7INiOjpXSnrTAT3GvyIMawyF4buGdI3CarehUf2hepT7oNurInAbd8_n3V2Bm3nmPDc6vDDZU1NhQFFP0yVrdN65-vbG1NkcNQOcF_-XHWmxHMroW-JxorskOlNrtMRROMASzpkqyKKwZgCvOCpdIqBYhP9Y_3fmxYNIijflwnU5o4fIioNkJwoDyUJe7Nt4UCo61AN6LM4JaY5h5V3oVyrzIg5W4oXe0_YrU_cuESynoo2LIRkzp6wP8t23W-Q9Ky0jgpYo6qmupz63mCrA_dSKjY1R3EJZq255Dg_lbOhg3lwbISrJ4EzYdoQnvFi-92xXKDrC7VMXTea93BGiV4G56M79sUykgkvef4vGlGv8_AyP0qOjcnOzHJSWqVJl6CZNmiOhWY20JANiCRNJSFJlAUrWO9P7sPBKmamMdflsGmAb6Wbe8h9bO-B-gnniiOgB2c6mA48fmC3IG3fviWCCo8ky7FFs0thVLHkVt6pluJ5tNJjG2GhCEJJ30q7jsP2i3VeeBOHUm5RTZdMoYGcaOtRnb9UP9VXmH1BxbWyYoJ19HNJNbhqLNusp25Vhhpo5uRRkAI43N2gbIdzoHWh_jyn5QWU7fyA0OMm-pgx2aZf4nEzTczBRL4PfJPcbUHlIa5T6LAzBq1bJhXwkm_HPujgC2O_wOe_vA7SKreoYxYPnDSUOgWffnnEQs9x771zCyYORdhKqlTMxjZfGFACQA_vlF7TcnhdDgcH626A_kC4touAiKpG9AMg5qxUeYJ1bBqvNHOPzp3MholEtGqXf99J4DzQ445ha5RO4PgT1PIfISysts5sefPq48tRW8SWhS3y9cksOUpyL505sB-E9Hwr1ZD0p5-UcXou9MWQjNaLuTgB67xIVUhGkdeEFTLURWBn5WAFLCLJZrG2VDnMiHhDjw6uGF1_ZK0fIXGjno68TehFh6tuJI2XztuJ8y3-JRBhzydsIuxsYC3pRePDPCaYlsJtwt70CMKj45vJeASp9S0expSfc2jYx3olRzxGRqEA3WJXHWoTdFl-PIVGkAjzawtZ2gfhIHqPmTPk5Qvov_rbp4FEKR5lRwKSKAykXl3NLR7gkVznhFc96KFdwhALBnhQHmvh2GZsJt7mq2iH-N-j1DuEboc02y3MJqecckb1nZQJBgihlanAyL3JR649U9DJB-V-kwpdltIlKmtj4wGtBBJALFXZiLQmGK2EJEtk8OLcKXWzBeGroGmWcPy7Unr66eBkJQ6D90w70HwTMfnRnzls9t88Rxv5Vu3p3k8Jzp_eSCeqPuGNvD5fMP3H8aSOfvVtajRUQkcR7lh4r8kDsFmkinYhzYk1clH4P2Gy7gHwGTinCq3DsUHOe4BNQe8_0p6OyYEWLVnwyPlwavgqJROPJ-CArgBE9941g/https://www.amazon.com/dp/B0FWJF462S/?_encoding=UTF8&pd_rd_i=B0FWJF462S&pd_rd_i=B0FWJF462S&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=tv2Zq&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=BMD16EZRANYRRVXF6EBA&pd_rd_wg=NJnME&pd_rd_r=ac9036f2-5a4d-425c-8e2e-0df10cc3d439",
+      "link_clean": "https://www.amazon.com/dp/B0FWJF462S/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FWJF462S&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/31H7OAeLUaL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/09f2f231-88f4-4d56-bcd6-f28f4e6aadc8.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/09f2f231-88f4-4d56-bcd6-f28f4e6aadc8.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.5,
+      "reviews": 1152,
+      "price": "$46.78",
+      "extracted_price": 46.78,
+      "old_price": "$59.97",
+      "extracted_old_price": 59.97
+    },
+    {
+      "position": 2,
+      "asin": "B0F1DBZ41H",
+      "title": "MEKIY Large Dog Bed - XL Orthopedic Egg-Crate Memory Foam Dog Beds with Removable Washable Cover, Waterproof Pet Beds with Non-Slip Bottom, Grey",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JB5U3WkMA7PsDbP5qRYEaYcAAAGd0wzMGwEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDEgICCTkuQo/clv1c_ek-wxYHXLbbWDfHOAIfj8e5gSssXIXbp8TaZcWyij3M_ak3qBusB3H9Eu-1K0MBIWlY_6aIRWkTORveDo23X0WWRa8jFMLL3Cink9Fhh7cQ66DUP85k0iWT1ssnU5ucgokBBJsPT0nsfCOKpNFDLKbGapt_EttTrHkfwwQ16BAY_eCq46qDVf4j9XsKt3nZBJHXlzZuLXoDK8-fPVwB2WICBFQORio25CmiEsacdKuRFpKGPhEzVKWuVxdw6lV9LriFhnh-KXepnFFExITw8qHZ3TtW_wvo39VEsx1kqHWW90JB5rIfvx1oSy6wjx4TFe5tHkRxClW0MTI6H4AxxuDTCf-yDMCkgSbQgNxgRLOVPszy0-PAgLm2EO0Oxk9n5TNIRN0dVPh9jEsc5SRo88UGJ_xJKoFAVdzDviQR5vRN91xLuvelzbWNK6rmGECbzpgJBugKztNumzr1KsqjVLpIxg3q7tGSH6gpRRCireCO1sSiGAOG9Z21tW0tjUgOw1mrOzS-DCryB40dPCKxxnltdS2dFCJTMm9tRL4A6Uqi9g9bzv3UkgorsrCXnuHk3grtmQwDCb3lwobbdW_a_TiCl_3S7phYVsn2tCO8vwQEVt14SICNwKA9H3ccC-r_BAXNZXIyIs0KnpdPkjtTqAbdS9WvkLMewGKu32RuMjD2yr79ZL-nDd4cpkfMVJ1j3MMxyYbo4yrJ7346JfzB1w5h0PKk1GI5nFAfaBGFyPaBpVFvQJFMMX2iDHgVgxPXeqyJMwCwQvcHjNYWxIg8UJNYDJwNBc7bg17QvhNYZXlVh_2eyS_C0aGFfHYBRNyzkRavyyTJINKwYu1OTj30QSVy9GQGZB9GclKHCytVrWE2jHzp7U72fsoYLp76N2SBxs5-DbsJT2wzuARxFKtkObTd7YT869zsknog2cg4AkK-2yoiVZi6sDZneA8G-jwEdorPsjbKeB7POI2HJVUNAUJPFpHKgsFEpiK5Y5TMC1wze_dypSpJ6DsMReFNy2Afh-JFAKp5VIvdYgzkl-hWFLTxMqpnV9PUdmK-prffR5Fr94NPs51LA80M4Ab-LR407fxdXzJmoq1bOe-AATLb-miA3WXvBB62xiDHi2ySpAQKjYpEX91sZwyINlVUuaGr5ThuG5x0UNVcUTJTao6-Y9OGVWaBOZCijLb4SbNof86-Fg8YCgUPTHHJpuVHJqQyiBCkLyn_drfGTv2aNdnwNSd4SiiHNo161-xKQYRslBeEl7TzBo6omySUBP5HxSmAPb-yos070YrwqtrOxe96iGIJUZ1uiFhMyyA30cqOXAYKWBYndQp2hN6MQ_s_CAsK4h_rLavjgn23088sJv53dKI2Yli5J86e4jzd29NDR01i36CMZgdvR3Y2IAJo0kUT90NhrX7nqEaB70gxGhnzfZU3wP8xI0H818757Kdm-1cHbdRfZlcdmdCQuxSJWUSQtuUihP44sL7_Q0oHpSsLryLrSA0ZI_nTXDcRVQ-UQtn5w3MEIRXe14EvnUbaY85bC_NgA5yLEHSLajtPrPH-8BUM0/https://www.amazon.com/dp/B0F1DBZ41H/?_encoding=UTF8&pd_rd_i=B0F1DBZ41H&pd_rd_i=B0F1DBZ41H&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=tv2Zq&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=BMD16EZRANYRRVXF6EBA&pd_rd_wg=NJnME&pd_rd_r=ac9036f2-5a4d-425c-8e2e-0df10cc3d439",
+      "link_clean": "https://www.amazon.com/dp/B0F1DBZ41H/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F1DBZ41H&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41IqWWgVeFL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/23daed56-0c7d-4f3e-a9a8-2d5b2078aa69.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/23daed56-0c7d-4f3e-a9a8-2d5b2078aa69.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.5,
+      "reviews": 309,
+      "price": "$41.98",
+      "extracted_price": 41.98,
+      "old_price": "$55.98",
+      "extracted_old_price": 55.98
+    },
+    {
+      "position": 3,
+      "asin": "B0FRMKZPWH",
+      "title": "JOEJOY XL Orthopedic Dog Bed for Large Dogs Up to 80lbs - Extra Thick Foam Pet Bed Sofa with Bolster Sides, Large Sized Dog Couch Bed with Removable Washable Cover, Non-Slip Bottom, Grey (42\"x30\")",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JBo48YkIrlmFA71Ogf9LRNwAAAGd0wzMHAEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDEgICDeT45r/clv1c_ek-wBXfWbcbSXg5XY7vi_kTDsESxt6Dp2-Vcptr22r0erDeuU8Dt2JFLIzGqcl_PbA2Uq7X7yvmRJmBYe-fgMGQyGZFqOnjYMoSPqX62fWY-kesHks6jjWbQelEkohY0YeQfC4v6zn2Qh_8RPuNs1_iboNa4ptU_2iRQzrqkxJwFzactmtGgMrsV4pT56loKxrXYR8nImQ1V3_2NgxtS5nPfCUu6RPquJoPhkpuTcP2TTwK3_AcEnFTQgc6zmRzLUVtieswQOZY3pMMeAPLkaqCy06ezrU4G2WtUpcNDC6_-iCY6LMov3zSBppJT3bfS3R-LDh9CFddtx_LihnncRtoZFfwi9LtrboJqIeZRJeZiPuQOzl4QHK5TnNl0NBTBBgX9RmUehXwZZ-zWwytT-TiK4ccRwIUPF2XIU7TEOnjsk4sjl2GissU8AP-nvVqcdq46EFcGeC-zIUmHHS8A9DlhU8FoSRiB4Ro2mzHm3zxCeTnKMPC3-sP2k_zy_20Oz4KSgsJE6o7t5-2CrLF-yx8tGrt8JiE-fAWvOUv-6uJkxSiZDXQ89ue7_ACmuyBAX6WWGOpWPb2ghVLsSK9askBqDj5G2y32E4Z42sOD8Pd33lpLtg6PDz3pTJj6cdLKUW1G4bZQBVS8TpDgQutQ-qQou-VVyhbN8PBUY6lt9njjHSIPQKb3K9bwyioWnG4oaB8enrmX7QT3Qrg7vwlMwSL_vfUVkbrRkej8xkO9Y6T9SZwGVnX9uLKYzPriU_urUpM61wM14bt4sGdEBzbHJGgonM7hdaSHJ-B7_BkDG8h5Ap_HQogA9GGEXP8Jg5lqz9M8eU_iHmygHX0zuKlrQme8ol7SsYmrQHZ-HQFF0s8dljhzsHBxra6xRSEZbg3V4Argy0Sa6Y7sOhTjmX59bFkIdoOCHMqq-2hyXy3lkjrKoGVtt65gsWojMSdIy1hJF8K8NeUJzUddk_nHx2iqbKqcQiTo-VH609ihs5SUUTs_QQY9GUFHB_z0l-w_tiNGnpclgLXw0ni_7oXE9WKBYGCNnaCnvQ-QHmivLLhg35zBQqGoIvyevRUK6kklxStpTZP_XUV1Nh8zeOQmcccg6q8ZdsEWWW3LLJEYeEYUgn1VRgSoqrUwgv8IDNup7U9-MEF5eOkZ7dTHZzk1582zoXDycNIG8GXJrSI0Bq7e7NCx4c863lpyufszceZFWWGihM4UDpAGqKFYLhs63SRasJ8AftVnzbcWL-PC4ZUMlGPqhka-wythZPqIxotFgNlLa08mUjudCGQJ2oi84V3N93we5q61jWbIREuxRF3wPaiM-xn503O_IfErIMYtouayhg_xDzJNwRKV7xTb91XqitkFLr_bAzm5b5LWpcRMP2_RdX6bPuWB6qw2pBAF5PRXtBPRO8cOfFol6ZcI9SNOUQaLs7UgtZ0lQ1qNUSx6BXj_aqGn2IwQSfjp9R-mhKyFotW1KZXIxy7qT9mHkh8fmimTcO1pRt90eI-BVkOy-ZO2uMhe9aNeB47us-qz5cwkUTnaGNWbAKZV5vFz0WRl/https://www.amazon.com/dp/B0FRMKZPWH/?_encoding=UTF8&pd_rd_i=B0FRMKZPWH&pd_rd_i=B0FRMKZPWH&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=tv2Zq&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=BMD16EZRANYRRVXF6EBA&pd_rd_wg=NJnME&pd_rd_r=ac9036f2-5a4d-425c-8e2e-0df10cc3d439",
+      "link_clean": "https://www.amazon.com/dp/B0FRMKZPWH/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FRMKZPWH&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51QFSaEknjL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/42161dc8-369e-4e0c-9c84-bb59ef13a262.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/42161dc8-369e-4e0c-9c84-bb59ef13a262.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.5,
+      "reviews": 308,
+      "price": "$59.99",
+      "extracted_price": 59.99
+    },
+    {
+      "position": 4,
+      "asin": "B0FR4KJMNY",
+      "title": "Cozila Dog Beds for Large Sized Dog, Orthopedic Pet Bed with Waterproof Lining, Soft Short Plush Surface & Egg Crate Foam, Machine Washable Pet Bed with Removable Cover & Anti Slip Bottom",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JBhZ79wBwGGmuNUneRSOFLwAAAGd0wzMHQEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDEgICD7Vjwc/clv1c_ek-YBfHXbcbWXixXZFvu-lwLsHSxs2DpR3iG9BNo2ZMGrDUMvzSaPQMV-T5_pDm4X7mv_E77gYFpcC_eTJ4BNkUa3nJgVvCNLGug3xC-7Y6820E86tzqDxg4I31-6zZjNtINKHhLMGKSVHnAueM1GpDaqqU8F1ZI08D3zG_-DNZP-Y6YmKmHnC-RiLV1S4F2fNotZEVFGVNQwPDd5mSZpH-LjM5qGJDQvID6TnM1gcyU2ZvcMjTzZbkeVzgfyY-w3j0cEiTSC7wl1byhFN38Mi1v8epgrTAIoXW-iih7NcSeuFMn4u4xG3WJJNND_bshzRPKHp2cdt9uJc0kp_GXF8vo_eJHvsUpmzRXcKkmY2yvWYapZBjpnzShjmbofQoMN5EkxDg7VOwcqjCKGjXDteIBiUvtq2GjEVxuU0qzgT-p16N-rnJ7JqlEHHkHoLQnkAqjwhddTBJYuoFWW-M3GhpKW6tRItGZZMlmyz1NAKZJnFm1ZcSIp_tTAAy7y3ehtbLcR9UbuF3982tK4bu0y4wZHyWQH8UzXLQMylMed5xXjsyTOSECnCHA0ukH3Di3IViCxk_cOnPR7qJOyKyn5oBceUtQnQVYx8x_is9B17mj7nEJtWZa1cvUXOMMWk6-ePAB_0N2TEwzKub7BEulCwV6iJ_u1q4wcVIkBtKmvhZ6FT_LhM0TN6V89Eo_q4VfYOD_MCZSD6W12iWfFUSD8u5C02A5LrBYZy_ZTjHM6t7jWxi7l6nGyohrqhmjYB9naCwKY5SplaOK-AoAWE6QVbqa2M7sbT0sq_Bu3rm5fLpKgEYq-wZtaeLeVQKjTPiJ_pcH-TsReRRAW0lgp-eDtaB0EIC0sxTeg16v1kfkcr7kb1f3qFj7uh40_cvkIAHN3UqWF1tdIw5StG0Ikh3sdJ8C6eyqysFo1hNmGr62Lev5QW25YMnOwH81NlcMrh-Du_T0Gq_foqQLy-swsRSwjqYHyRHLeemHK6UoNjSP4qUSLiRL_OmZkcXls35hfVCp78baFj1AvmXvdXIhsY8cDGVqWO0lglQRdWDrHSsuX6aKzqj1unbRsVGv5tABaq6KC6P0_RwwbpBTP5VochX07JmB1trcfP0pEzGP98YhM_5GEsSEkhHwU4GOVSo01fE-pSWV_OO_CExnPRfpVS3UQ_bauDfcZrdE5eoltfiZsT8vUUbbguvor_CgtNbOxUAB-2RXmAi5S613eqYI9osGZCGwQf13eWr_ciNBtZ_RjBVT51mu7f-HKbKzx_yv-fymxhLYrzs9BaMtMEdpi2h15KrGaIA0KfVYnsxdvtyznBu4oNytHtRh_R3CV3jiHSIzfPnj9RVHJMnoKbvUepISdnG7WY5MvLU-0W2OwINiKJm8QfF1OwmOTPewAWJxzwJ7xdBqoYwN7BXQzqdDbzcH_QiEk-zflcWRQ_h3C00fqGmNftGecKJWwXsQE-2i3gRIE_rxlfXWo6ING8Qkj7c2m43d6mT6FOMnWBWqVa6geQbBmCy3IFMjMEbw3gYpqxsn_87T-w/https://www.amazon.com/dp/B0FR4KJMNY/?_encoding=UTF8&pd_rd_i=B0FR4KJMNY&pd_rd_i=B0FR4KJMNY&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=tv2Zq&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=BMD16EZRANYRRVXF6EBA&pd_rd_wg=NJnME&pd_rd_r=ac9036f2-5a4d-425c-8e2e-0df10cc3d439",
+      "link_clean": "https://www.amazon.com/dp/B0FR4KJMNY/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FR4KJMNY&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41ZuAA0wOyL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/12c260ee-e372-4a19-aa00-c915da7280e8.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/12c260ee-e372-4a19-aa00-c915da7280e8.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 257,
+      "price": "$29.74",
+      "extracted_price": 29.74,
+      "old_price": "$34.99",
+      "extracted_old_price": 34.99
+    },
+    {
+      "position": 5,
+      "asin": "B0FP9YD318",
+      "title": "XL Orthopedic Dog Bed for Large Dogs Cooling Gel Memory Foam & Egg Crate Foam,Waterproof Removable Washable Cover with Bolster Sides,42.0\"X30.0\"X9.0\" Grey",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JFwAh-Ny53gjXWMtbAgRn60AAAGd0wzMHgEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDEgICAdDe56/clv1c_ek-YBfHXLcTWXmxht_VwyXszSZsVi56aqh3xk0b4usXxeDWRujBK-IhrKiC7qS9wN91syvjj33CpYMkNA6BJT7bDForZWrTMUXz4tM7NmoQngfsH8s6jjWLAeqnVLzobq0H4v58vwHlhx88evqJMx_ibodKo5hXagwUxzyG__JILMexLjNjhygcGGbv74BIXreWcpUxMHC2Ez_Dd5mSZpH-LRHMqgzkmgRnm0asd840fEWJJMVdYmsvl1NKEWrs3c9OyOsw8oEanjvjCFJ3qncyVUkMNMEByFHdllab2LQKuxPb2ko5bM_xl3szTE3Rx48snRcsI43TrJJSCVklW_HQibdNQpivQjRf1Cq51W4AHu3ekt_YSXHWk1u7isc_cwGiXZMjBQQdYf2uXXSxy8Xiq7yRuWL7XvjKN1tbK8Mn_OZEZaWInXjihwHYXOZbY-WYqexn9dvl2jlZ0w3aISY-yKmEN45MLEKuYolHBOezRQkiXUzRxVjwtgtFRDUfFrxCWrgbjwboB13KCIB0m_-ucV1ZBm4G6hKxXDpL9Xg9-zAjhYPSdMMvH0ukH3Di38ThDIHmODM_iOsP1wK5a8_-I69wN65Gh7hV03vsB-YWRzb5Lu6bhEBcP99DIz1jT_sUjH_LXhhaKArX78NkRxc_3QlF-oPTEWTSGSNqX6X3TwmRqDPx5jQRuYXmoHeHK99rUqWBgKrAjMlMH4ypYnrxUxpqMzcnjPGWoZfOsKMXi2OgF3aiTlhVdl6U7z6TYnVt4-8qKSh9ABAZLsu7V7_mOsRIr4GH3ZQpdS0Ng1yI7S1yspN_jZqpNuEPjCVGOgaQTCPiTvWQ2_iqJhVju3O2p7N3Sat1eIStIjzZ9zoiYNBjYlgKauO0zns6QuPM8r-tTFsVZ_mDsBLJTKvpFR8gnzqRpdNdzxfl7VDxyVFaE63chsFXpQd2MOCjUlDktGCaXTIR8fl2e3G7fkP4r470yHiFsOuvAn-mkK-AFcYMjT5pfxrZ25vCdDV7ZM9lm2hcv3ZTFf3uTvLuzvgxkhje1O1DvMfgcM7W2n-6pPSCTWT5t_HCzsVZOZM1S5TVVun8NMVa36LV-RpCWEj2EO7Hhm0ow3Qu0hYYEbTQ-vhBFX-WyqRjsJ_Y1iK4m0wk_r8ykDMGeWcxxSL_3svMHAT7vuMSCTsqPKA3RSET385xdbCOXJrvKH3tIDnLVExliK5uQtplE1zgUmlL-jxXjORteXEpXWcdJZ5xXT0lCy2ZgqmIGY6uHqc7ekRnv0RZa4OQgHt2Pb0lB60vp483IHVHJiQfzcvk4Ru9IredLmXI9LJM6i6F73tKg-mJkWObwb8cDUh5DGufDDyiM-tmZg6ia4uTqDqPqWED-Q3PI-7c0m2Rd0qMDGZmo7I5-P-i1F-XbJJOXzcn3ZVWzbZFOGiE-aFWAF8x5sW7zaO41TnsZlThuIZgSkIncxHln-et_kK0MvwjfHhSVIgDhoV2X1fjzAidmUUKfFUtAOLF5rBTsL1y_AywvN3rQYm3VwaY/https://www.amazon.com/dp/B0FP9YD318/?_encoding=UTF8&pd_rd_i=B0FP9YD318&pd_rd_i=B0FP9YD318&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=tv2Zq&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=BMD16EZRANYRRVXF6EBA&pd_rd_wg=NJnME&pd_rd_r=ac9036f2-5a4d-425c-8e2e-0df10cc3d439",
+      "link_clean": "https://www.amazon.com/dp/B0FP9YD318/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FP9YD318&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/31odcl1QxmL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/5e3c1ad4-ca32-45a0-bca5-bd60da56bbf0.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/5e3c1ad4-ca32-45a0-bca5-bd60da56bbf0.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 43,
+      "price": "$79.99",
+      "extracted_price": 79.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "images": [
+        "https://m.media-amazon.com/images/I/71x0IZkaD5L.jpg",
+        "https://m.media-amazon.com/images/I/71oDYX5qyCL.jpg",
+        "https://m.media-amazon.com/images/I/71NHLznCaqL.jpg",
+        "https://m.media-amazon.com/images/I/716eQpzwj+L.jpg",
+        "https://m.media-amazon.com/images/I/71oqNTS3w1L.jpg",
+        "https://m.media-amazon.com/images/I/81OPco3GupL.jpg",
+        "https://m.media-amazon.com/images/I/71eGVv3VzoL.jpg",
+        "https://m.media-amazon.com/images/I/811awjVbrfL.jpg",
+        "https://m.media-amazon.com/images/I/81DSPqhLInL.jpg",
+        "https://m.media-amazon.com/images/I/71-rINyFfXL.jpg",
+        "https://m.media-amazon.com/images/I/71v5FNMBCFL.jpg",
+        "https://m.media-amazon.com/images/I/613kF9ZMjaL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 72,
+        "4 star": 17,
+        "3 star": 0,
+        "2 star": 11,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "La mejor",
+        "text": "Mi perro amó esta cama, tanto que no permite que nadie de suba en ella.Es muy acolchada y algo que me encanto es que el protector lo puedes sacar muy fácil para lavar... esta ha sido una de las mejores compras para mi bebe perruno.",
+        "rating": 5,
+        "date": "April 5, 2026",
+        "author": "Pamela Isabel",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGFM45XKI4FYNBPPEKFJCMTIWUIA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Grey",
+          "size": "XL: 44\" L × 32\" W × 7\" H"
+        },
+        "country": {
+          "code": "US",
+          "name": "United States"
+        },
+        "language": {
+          "code": "es",
+          "name": "Spanish (United States)"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Great!",
+        "text": "My dog loooooooves this bed. Immediately began enjoying it & it looks great, too!",
+        "rating": 5,
+        "date": "April 3, 2026",
+        "author": "lac",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFZVXAJG25IONSSMIFESX6YBR57A",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Light Grey",
+          "size": "M: 28\" L × 23\" W × 6.5\" H"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Easy to clean",
+        "text": "As my dog enters his golden years, I realized his old fiber filled beds just wasn’t cutting it anymore for his aching joints. I decided to upgrade him to this Orthopedic Dog Bed by Aodisman to give his joints the extra relief and cushioning they need. When it first arrived vacuum sealed, I was worried it might stay thin and flat but after letting it expand for a couple of days, the foam fluffed up into a good supportive base.The egg crate foam layer inside does a solid job of making sure he isn't sinking into one spot which helps him wake up feeling less stiff. Since he’s a larger dog, I can tell the foam makes a noticeable difference in how easy he gets up after a long nap. And he’s definitely more comfortable because he’s no longer tossing and turning for twenty minutes before finally settling down.The three sided bolster worked well for him. He really like to use the raised edges as a pillow and the surrounding cushions seem to give him a sense of security while also keeping his head and neck at a comfortable angle.Maintenance is straightforward because when the cover eventually gets dirty, I can simply unzip it and toss it into the washing machine. Also the fabric lining has a waterproof coating that serves as a barrier, protecting the orthopedic foam from the inevitable drool, accidental spills or stains that come with daily pet life.All in all, I recommend this orthopedic bed for owners of senior dogs who require extra joint support and a dedicated headrest. It’s a durable, well designed and easy to maintain sleep solution that provides adequate comfort and support.",
+        "rating": 4,
+        "date": "April 14, 2026",
+        "author": "Taco_Not a Pro",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AG4KEWBFGEWIO4FJLP6KY2FWQDZQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/71eGVv3VzoL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71NHLznCaqL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/613kF9ZMjaL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71-rINyFfXL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71v5FNMBCFL._SY88.jpg"
+        ],
+        "product": {
+          "color": "Light Grey",
+          "size": "L: 36\" L × 27\" W × 6.5\" H"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Its perfect",
+        "text": "👍",
+        "rating": 5,
+        "date": "April 1, 2026",
+        "author": "Karen",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFA72N2M2E3WTQWOKECV6JA64IGA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Grey",
+          "size": "L: 36\" L × 27\" W × 6.5\" H"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Large size",
+        "text": "Its great the dogs live em",
+        "rating": 5,
+        "date": "March 16, 2026",
+        "author": "Ken",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AERLCWUTK3WYHFHHDSDB24G3IWRQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Grey",
+          "size": "XL: 44\" L × 32\" W × 7\" H"
+        }
+      },
+      {
+        "position": 6,
+        "title": "Big & Nice",
+        "text": "NICE and BIG, but the Cats are still not using it...!",
+        "rating": 2,
+        "date": "April 21, 2026",
+        "author": "C. Wilke",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHP3SED6PYPZOWXAWTGNLS4S6AVQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Light Grey",
+          "size": "L: 36\" L × 27\" W × 6.5\" H"
+        }
+      },
+      {
+        "position": 7,
+        "title": "Comfortable bed with good support",
+        "text": "This dog bed has been a nice upgrade. The foam feels supportive without being too firm, and the bolstered sides give a good spot for a dog to rest its head.The cover feels soft and the overall bed seems well made. The non slip bottom helps keep it in place, and the washable cover is a practical feature for everyday use.It has a cozy feel while still offering support, especially for dogs that like to lean against the sides. Overall, a solid bed that seems comfortable and thoughtfully designed.",
+        "rating": 5,
+        "date": "April 22, 2026",
+        "author": "Peter",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFGTAOT6J6UP33LS27ZQ4VRIBXKQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "product": {
+          "color": "Light Grey",
+          "size": "M: 28\" L × 23\" W × 6.5\" H"
+        }
+      },
+      {
+        "position": 8,
+        "title": "Your fur babies will thank you!",
+        "text": "Great pet bed and my Lab says so too! It came perfectly packaged and double wrapped in thick plastic inside of a box. It was vacuum sealed and instantly began to take shape when I opened. That process didn’t take long, no more than 24 hours. There was a slight scent that was not overpowering at all but that comes with every vacuum sealed item I’ve ever bought and it did fade within about 30 minutes. This pet bed is very supportive with the sides along the perimeters and Orthopedic memory foam bottom. I appreciate that is fully washable, easy to take the cover on and off. The Gray color doesn’t appear to show dirt easily which is a plus. Its every well made and nice quality, no loose stitching and the zipper appears to be sewn in nicely. My big pups for some reason love to share it and the sides are very supportive for their necks and heads. I chose the large and there is plenty of room for my 9 month old lab and 4 year old bulldog to get comfortable! Definitely worth the price and I’m sure it would work out great for your fur babies as well!",
+        "rating": 5,
+        "date": "February 11, 2026",
+        "author": "Jami",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AG5TK5VNJBOCKQ4XKFNXBZA4EO2Q",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "helpful_votes": "One person found this helpful",
+        "product": {
+          "color": "Grey",
+          "size": "L: 36\" L × 27\" W × 6.5\" H"
+        }
+      }
+    ]
+  }
+}
