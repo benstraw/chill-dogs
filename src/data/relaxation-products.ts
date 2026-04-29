@@ -873,7 +873,7 @@ export const relaxationProducts: RelaxationProduct[] = [
     bestFor: 'Delta flyers who want a carrier confirmed to match Delta\'s specific under-seat dimensions',
     whyItWorks: 'Built to Delta\'s published dimensions, which differ from many other carriers — eliminates the guesswork of measuring and converting',
     considerIf: 'You fly Delta regularly and want a carrier purpose-built for their specific size requirements',
-    image: { src: 'https://m.media-amazon.com/images/I/71dbhI8209L._SL500_.jpg', alt: 'Sherpa Delta Airlines Travel Pet Carrier Medium' },
+    image: { src: 'https://m.media-amazon.com/images/I/81ucY2o1GlL._AC_SL1500_.jpg', alt: 'Sherpa Delta Airlines Travel Pet Carrier Medium' },
   },
   {
     id: 'mr-peanuts-expandable-carrier',
