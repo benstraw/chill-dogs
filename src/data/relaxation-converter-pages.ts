@@ -1308,7 +1308,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         kind: 'prose',
         heading: 'Furniture Crates with Extra Utility',
         paragraphs: [
-          'Some furniture crates earn their spot because they do more than just hide the crate. The rotating-bowl model adds built-in feeding convenience, while the charging-station model is genuinely useful as a nightstand or side table.',
+          'Some furniture crates earn their spot because they do more than just complement home decor. The rotating-bowl model adds built-in feeding convenience, while the charging-station model is genuinely useful as a nightstand or side table.',
           'That kind of practical utility matters if the crate is going to live in a visible room every day and compete with real furniture for space.',
         ],
         alt: true,

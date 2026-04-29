@@ -631,12 +631,12 @@ export const relaxationProducts: RelaxationProduct[] = [
     amazonUrl: 'https://www.amazon.com/dp/B0FGY2SYPJ/?tag=chill-dogs-20',
     bullets: [
       'No-assembly foldable furniture crate is designed for quick setup right out of the box',
-      'Decorative wood look is easier to live with than a basic wire crate',
-      'Adjustable bowls and name tag add home-use convenience details',
+      'Decorative wood looks more like furniture than a basic wire crate',
+      'Adjustable bowls are convenient for dog feeding',
     ],
     bestFor: 'Owners who want furniture-crate styling without a long assembly process',
     whyItWorks:
-      'The foldable no-assembly format removes one of the biggest friction points in buying crate furniture',
+      'The foldable format is easier to assemble than standard crate furniture',
     considerIf:
       'You want the furniture look but still care about being able to move, store, or set up the crate quickly',
     image: { src: 'https://m.media-amazon.com/images/I/81s6bZdJqIL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Easycom Foldable Dog Crate Furniture' },
@@ -654,9 +654,9 @@ export const relaxationProducts: RelaxationProduct[] = [
     ],
     bestFor: 'Owners who like furniture-crate styling but want integrated feeding convenience and foldable setup',
     whyItWorks:
-      'The rotating bowls and foldable format give it a more functional day-to-day setup than decorative crates that focus only on appearance',
+      'The rotating bowls and foldable format are more functional than standard decorative crates',
     considerIf:
-      'You want furniture styling plus practical home-use features instead of just a crate that looks like an end table',
+      'You want furniture styling plus practical home-use features',
     image: { src: 'https://m.media-amazon.com/images/I/71-oYVgYdTL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Folding Furniture Crate with Rotating Bowls' },
   },
   {
@@ -668,13 +668,13 @@ export const relaxationProducts: RelaxationProduct[] = [
     bullets: [
       'Extra-large decorative crate adds storage and hooks for a more built-in furniture feel',
       'Reinforced metal construction is sturdier than lightweight decorative crates',
-      'Aimed at large dogs that still need an indoor crate with a finished look',
+      'Suitable for large dogs',
     ],
     bestFor: 'Large dogs when you want furniture styling',
     whyItWorks:
       'It keeps the visual upgrade of crate furniture while offering more space and stronger structure for larger breeds',
     considerIf:
-      'You need a larger indoor crate that still has storage and room-friendly furniture styling',
+      'You need a larger indoor crate with room-friendly furniture styling',
     image: { src: 'https://m.media-amazon.com/images/I/91-pfSgJ5dL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'IRONCK Extra Large Dog Crate Furniture' },
   },
   {
@@ -684,13 +684,13 @@ export const relaxationProducts: RelaxationProduct[] = [
     category: 'crates',
     amazonUrl: 'https://www.amazon.com/dp/B0GJ66SX32/?tag=chill-dogs-20',
     bullets: [
-      'Small decorative crate is framed as both pet house and side table',
+      'Small decorative crate is both a kennel and a side table',
       'Lockable enclosure supports indoor or sheltered outdoor placement',
       'Plastic-heavy decorative build gives it a different feel than wood furniture crates',
     ],
-    bestFor: 'Small-dog owners who want a compact decorative kennel with a side-table footprint',
+    bestFor: 'Small-dog owners who want a compact decorative kennel that can be used as a side table',
     whyItWorks:
-      'It blends basic containment with a lighter decorative form factor for compact spaces',
+      'It blends containment with a lighter decorative form for compact spaces',
     considerIf:
       'You want a smaller furniture-style crate and do not need a heavier wood-and-steel build',
     image: { src: 'https://m.media-amazon.com/images/I/71eX3avmroL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Bifanuo Dog Crate Furniture' },
@@ -708,9 +708,9 @@ export const relaxationProducts: RelaxationProduct[] = [
     ],
     bestFor: 'Owners who want a furniture crate that doubles as a real usable side table with charging access',
     whyItWorks:
-      'The charging station turns it into genuinely useful room furniture instead of a decorative crate that only looks the part',
+      'The charging station turns it into genuinely useful room furniture instead of just a crate',
     considerIf:
-      'You want the crate in a bedroom or living room and the charging-station feature would actually get used every day',
+      'You want the crate in a bedroom or living room and want charging capabilities',
     image: { src: 'https://m.media-amazon.com/images/I/71iS8C25R0L._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Modern Dog Crate Furniture with Charging Station' },
   },
   {
@@ -726,9 +726,9 @@ export const relaxationProducts: RelaxationProduct[] = [
     ],
     bestFor: 'Owners who want furniture styling but need a sturdier crate than most decorative options',
     whyItWorks:
-      'It sits between standard crate furniture and true heavy-duty crates, giving more structure without abandoning the decorative look',
+      'It sits between standard crate furniture and true heavy-duty crates, providing more structure while still looking decorative',
     considerIf:
-      'Your dog needs more strength than a lightweight furniture crate but you still want the crate to fit a finished room',
+      'Your dog needs a stronger kennel than a lightweight furniture crate, but you still want the crate to complement home decor',
     image: { src: 'https://m.media-amazon.com/images/I/81VFBYh3TmL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Oranland Heavy Duty Dog Crate Furniture' },
   },
   {
@@ -740,11 +740,11 @@ export const relaxationProducts: RelaxationProduct[] = [
     bullets: [
       'Flip-top drawer adds a functional surface for keys, remotes, or a lamp above the kennel',
       'Built-in charging station makes it a practical nightstand or side table for small-dog owners',
-      'Steel-tube and wood construction in a rustic brown finish that reads as indoor furniture',
+      'Steel-tube and wood construction in a rustic brown finish complements home decor',
     ],
-    bestFor: 'Small-dog owners who want a furniture crate that earns its place as a real functional side table',
+    bestFor: 'Small-dog owners who want a furniture crate that functions as a side table',
     whyItWorks:
-      'The flip-top drawer and charging station make it genuinely useful as furniture, not just decorative — which matters when the crate lives in a bedroom or living room full-time',
+      'The flip-top drawer and charging station make it genuinely useful as furniture, not just as a kennel, especially in a bedroom or living room',
     considerIf:
       'Your dog is small, the crate will sit in a visible room, and you want the surface to actually be usable as a nightstand or side table',
     image: { src: 'https://m.media-amazon.com/images/I/81RbcLjaKsL._SL500_.jpg', alt: 'IRONCK Furniture Dog Crate with Flip-Top Drawer' },
@@ -776,11 +776,11 @@ export const relaxationProducts: RelaxationProduct[] = [
     bullets: [
       'Sliding barn door and multi-point locking system add more closure security than most standard decorative crate furniture',
       'Available in 32", 39", and 44" to give medium dogs more sizing options within the furniture-crate format',
-      '360-degree rotating feed rack and two-door layout keep daily access practical in different room setups',
+      '360-degree rotating feed rack and two-door layout allow practical access in different room setups',
     ],
     bestFor: 'Owners who want furniture styling with more closure security than lightweight decorative crates typically provide',
     whyItWorks:
-      'The multi-lock barn door makes it a more credible option for dogs who have pushed past simpler latch mechanisms — without requiring a full switch to a utility-style heavy-duty crate',
+      'The multi-lock barn door makes it a more credible option for dogs who have pushed past simpler latch mechanisms, without requiring a full switch to a utility-style heavy-duty crate',
     considerIf:
       'You like the furniture look but your dog has tested the latches on lighter crates, and you still want something that fits a visible room',
     image: { src: 'https://m.media-amazon.com/images/I/81NGP7WR7dL._SL500_.jpg', alt: 'SAKSUN Furniture Dog Crate with Sliding Barn Door' },
@@ -852,7 +852,7 @@ export const relaxationProducts: RelaxationProduct[] = [
     ],
     bestFor: 'Two-dog households that want a single furniture-style piece that keeps both dogs in their own crated space',
     whyItWorks:
-      'The removable divider gives each dog their own separate section while the single footprint keeps the room organized — no two standalone crates taking up twice the floor space',
+      'The removable divider gives each dog their own separate section, while the single footprint keeps the room organized',
     considerIf:
       'You have two dogs that do fine in separate spaces and want to avoid two individual crates sitting side by side in the same room',
     image: { src: 'https://m.media-amazon.com/images/I/81y29uEOExL._SL500_.jpg', alt: 'Rovibek Double Dog Crate Furniture' },
@@ -870,9 +870,9 @@ export const relaxationProducts: RelaxationProduct[] = [
     ],
     bestFor: 'Large-dog owners who want a furniture crate they can reposition across the house and close off for naptime privacy',
     whyItWorks:
-      'Wheel mobility and the blackout curtain make daily crate management more practical — two features that most decorative wood-panel crates skip entirely',
+      'Wheel mobility and the blackout curtain are two practical features that most decorative wood-panel crates skip entirely',
     considerIf:
-      'Your large dog rests well with downtime and you want a crate-table that can easily move from room to room without heavy lifting',
+      'Your large dog settles better without visual stimulation and you want a crate-table that can easily move from room to room without heavy lifting',
     image: { src: 'https://m.media-amazon.com/images/I/81eV2cWZNWL._SL500_.jpg', alt: 'HugCoz Double-Door Dog Crate Furniture' },
   },
   {
@@ -882,13 +882,13 @@ export const relaxationProducts: RelaxationProduct[] = [
     category: 'crates',
     amazonUrl: 'https://www.amazon.com/dp/B09T92J9SB/?tag=chill-dogs-20',
     bullets: [
-      'Wire mesh end-table design for small and medium dogs keeps the interior visible and well-ventilated compared to solid-panel wood crates',
-      'Front and side double-door layout makes it easier to direct a dog in or reach bedding without moving the whole crate',
+      'Wire mesh end-table design keeps the interior visible and well-ventilated compared to solid-panel wood crates',
+      'Front and side double-door layout provides convenient access',
       'Compact end-table footprint keeps the scale realistic for smaller living rooms or bedrooms where a large crate-table would feel oversized',
     ],
     bestFor: 'Small or medium dog owners who want an end-table furniture crate with open wire visibility rather than a fully enclosed wood panel design',
     whyItWorks:
-      'The wire end-table format sits at a lower price point than solid-panel wood furniture crates while still looking more intentional than a standard wire crate in a visible room',
+      'The wire end-table is less expensive than a solid-panel wood furniture crate while still looking more intentional than a standard wire crate in a visible room',
     considerIf:
       'Your dog is small enough for an end-table crate and does better with the open-air feel of wire over the more enclosed environment of a solid-panel wood kennel',
     image: { src: 'https://m.media-amazon.com/images/I/61O8jnv+AOL._SL500_.jpg', alt: 'PawHut Double-Door Wire Furniture Dog Crate' },
