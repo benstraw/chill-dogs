@@ -3,7 +3,8 @@ export type ProductCategory =
   | 'cooling-bandanas'
   | 'cooling-vests'
   | 'freezable-dog-toys'
-  | 'car-cooling';
+  | 'car-cooling'
+  | 'hydration';
 
 export interface CoolingProduct {
   id: string;
@@ -295,6 +296,186 @@ export const coolingProducts: CoolingProduct[] = [
     image: { src: 'https://m.media-amazon.com/images/I/81ypdd26KKL._SL500_.jpg', alt: '4Knines Dog Seat Cover Hammock' },
   },
 
+  // ── Hydration ─────────────────────────────────────────────────────────
+
+  {
+    id: 'ohmo-spill-proof-dog-bowl',
+    asin: 'B0C9TX38RZ',
+    name: 'OHMO Spill Proof Collapsible Dog Water Bowl',
+    category: 'hydration',
+    amazonUrl: 'https://www.amazon.com/dp/B0C9TX38RZ/?tag=chill-dogs-20',
+    bullets: [
+      'Raised inner lip catches sloshing water and returns it to the bowl — less mess in cars and on bumpy trails',
+      'Collapses flat for packing but holds its shape fully open under a dog\'s muzzle',
+      '24 oz capacity handles most medium to large dogs between water stops',
+    ],
+    bestFor: 'Car travel and moving situations where a standard bowl tips or sloshes',
+    coolingMethod: 'Spill-resistant collapsible bowl; 24 oz capacity',
+    sizingNote: '24 oz; single size',
+    rhysApproved: true,
+    image: { src: 'https://m.media-amazon.com/images/I/61rhiId91LL._SL500_.jpg', alt: 'OHMO Spill Proof Collapsible Dog Water Bowl' },
+  },
+  {
+    id: 'springer-flip-dog-water-bottle',
+    asin: 'B0C15FWR7J',
+    name: 'Springer Flip Portable Dog Water Bottle',
+    category: 'hydration',
+    amazonUrl: 'https://www.amazon.com/dp/B0C15FWR7J/?tag=chill-dogs-20',
+    bullets: [
+      'Foldable silicone bowl flips out from the bottom of the bottle — no loose parts to lose on a trail',
+      'Squeeze-to-dispense design fills the built-in bowl without pouring or wasting water',
+      '20 oz capacity covers most dogs for a 30–60 minute walk in warm weather',
+    ],
+    bestFor: 'Active dogs on walks, hikes, and travel where a one-handed setup is useful',
+    coolingMethod: 'Squeeze bottle with integrated foldable silicone bowl',
+    sizingNote: '20 oz standard; also available in 25 oz',
+    image: { src: 'https://m.media-amazon.com/images/I/71JwQQqdF2L._SL500_.jpg', alt: 'Springer Flip Portable Dog Water Bottle' },
+  },
+  {
+    id: 'malsipree-dog-water-bottle',
+    asin: 'B07C79C5BT',
+    name: 'MalsiPree Dog Water Bottle Dispenser',
+    category: 'hydration',
+    amazonUrl: 'https://www.amazon.com/dp/B07C79C5BT/?tag=chill-dogs-20',
+    bullets: [
+      'One-touch button releases water into the built-in trough; release button returns unused water to the bottle',
+      'Leak-proof seal tested to 24 hours on its side — no wet bag on transit days',
+      'BPA-free Tritan plastic; dishwasher-safe components for easy cleaning after use',
+    ],
+    bestFor: 'Travel days where water conservation and leak-proof carry matter most',
+    coolingMethod: 'One-touch dispenser with return-water trough',
+    sizingNote: '12 oz standard; also available in 20 oz',
+    image: { src: 'https://m.media-amazon.com/images/I/71GjkitcmOL._SL500_.jpg', alt: 'MalsiPree Dog Water Bottle Dispenser' },
+  },
+  {
+    id: 'highwave-autodogmug',
+    asin: 'B00YNK9VPI',
+    name: 'Highwave AutoDogMug',
+    category: 'hydration',
+    amazonUrl: 'https://www.amazon.com/dp/B00YNK9VPI/?tag=chill-dogs-20',
+    bullets: [
+      'Squeeze the bottle to fill the top bowl — no buttons or latches; simplest operation available',
+      'Top opening is deep enough for most dog muzzles, including longer snouts',
+      'BPA-free and leak-resistant; widely used by hikers and dog owners for over a decade',
+    ],
+    bestFor: 'Dogs who drink from a wide bowl and owners who prefer the simplest possible mechanism',
+    coolingMethod: 'Squeeze bottle with fixed top bowl',
+    sizingNote: '20 oz; no other sizes',
+    image: { src: 'https://m.media-amazon.com/images/I/61G7Jn3SxxL._SL500_.jpg', alt: 'Highwave AutoDogMug Portable Dog Water Bottle' },
+  },
+  {
+    id: 'ollydog-ollybottle',
+    asin: 'B0G52NDRZC',
+    name: 'OllyDog OllyBottle',
+    category: 'hydration',
+    amazonUrl: 'https://www.amazon.com/dp/B0G52NDRZC/?tag=chill-dogs-20',
+    bullets: [
+      'Silicone bowl detaches from the bottle and packs flat for easy storage in any bag pocket',
+      'Leak-proof lid with a carabiner clip attaches to a pack or leash handle without a separate clip',
+      'Double-wall stainless steel keeps water cooler longer on warm days than plastic alternatives',
+    ],
+    bestFor: 'Hikers and travelers who want a premium bottle with a detachable, packable bowl',
+    coolingMethod: 'Bottle with detachable silicone bowl; stainless steel insulation',
+    sizingNote: 'Available in multiple sizes; check current listing',
+    image: { src: 'https://m.media-amazon.com/images/I/71gEYgCwZVL._SL500_.jpg', alt: 'OllyDog OllyBottle with Detachable Bowl' },
+  },
+  {
+    id: 'asobu-buddy-bottle',
+    asin: 'B085F39N2J',
+    name: 'Asobu Buddy Bottle',
+    category: 'hydration',
+    amazonUrl: 'https://www.amazon.com/dp/B085F39N2J/?tag=chill-dogs-20',
+    bullets: [
+      'Insulated stainless steel body keeps water cold for hours in warm weather',
+      'Removable bowl is attached to the bottle bottom — no loose components to pack separately',
+      'Dual-use design means both the dog and owner can drink from the same bottle',
+    ],
+    bestFor: 'Warm-weather outings where keeping water cold throughout the day matters',
+    coolingMethod: 'Insulated stainless steel with attached bowl',
+    sizingNote: '27 oz; single size',
+    image: { src: 'https://m.media-amazon.com/images/I/61cL-UIATpL._SL500_.jpg', alt: 'Asobu Buddy Bottle Insulated with Bowl' },
+  },
+  {
+    id: 'vapur-collapsible-dog-bottle',
+    asin: 'B00BI9AM3C',
+    name: 'Vapur Collapsible Water Bottle',
+    category: 'hydration',
+    amazonUrl: 'https://www.amazon.com/dp/B00BI9AM3C/?tag=chill-dogs-20',
+    bullets: [
+      'Rolls flat when empty — takes up almost no bag space during transit to the trailhead or airport',
+      'Wide-mouth opening makes filling from a water fountain or stream fast without a funnel',
+      'Carabiner clip attaches to a pack strap or leash handle for hands-free carry',
+    ],
+    bestFor: 'Travelers and hikers who want a packable bottle that disappears when empty',
+    coolingMethod: 'Collapsible flexible plastic; rolls flat when empty',
+    sizingNote: '34 oz; also available in smaller sizes',
+    image: { src: 'https://m.media-amazon.com/images/I/51ufvu1A7+L._SL500_.jpg', alt: 'Vapur Collapsible Water Bottle' },
+  },
+  {
+    id: 'kurgo-zippy-collapsible-bowl',
+    asin: 'B0GH81LJY9',
+    name: 'Collapsible Travel Dog Bowl with Carabiner',
+    category: 'hydration',
+    amazonUrl: 'https://www.amazon.com/dp/B0GH81LJY9/?tag=chill-dogs-20',
+    bullets: [
+      'Silicone collapses to under 1 inch thick — fits in any pocket or clipped to a leash handle',
+      'Carabiner clip included; no separate hardware needed to attach to a pack or bag',
+      'Dishwasher-safe and holds its shape under normal use without flipping or tipping',
+    ],
+    bestFor: 'Pairing with any water bottle as a lightweight, packable travel bowl',
+    coolingMethod: 'Travel bowl; use with any portable water source',
+    sizingNote: 'Single bowl; check listing for current capacity',
+    image: { src: 'https://m.media-amazon.com/images/I/61+lG34h3IL._SL500_.jpg', alt: 'Collapsible Travel Dog Bowl with Carabiner' },
+  },
+  {
+    id: 'slson-collapsible-dog-bowl',
+    asin: 'B0FPX7YVDM',
+    name: 'SLSON Collapsible Dog Bowl 2-Pack',
+    category: 'hydration',
+    amazonUrl: 'https://www.amazon.com/dp/B0FPX7YVDM/?tag=chill-dogs-20',
+    bullets: [
+      'Two-pack lets you keep one for water and one for food during full travel days',
+      'Macaron color silicone collapses flat and stacks for compact storage in any bag',
+      'Soft silicone walls flex under a dog\'s nose without tipping the bowl',
+    ],
+    bestFor: 'Owners who want a water bowl and food bowl in one packable 2-pack',
+    coolingMethod: 'Travel bowls; 2-pack includes water and food bowl options',
+    sizingNote: 'Check current listing for available sizes',
+    image: { src: 'https://m.media-amazon.com/images/I/61Bvzu5fHnL._SL500_.jpg', alt: 'SLSON Collapsible Dog Bowl 2-Pack' },
+  },
+  {
+    id: 'petbonus-silicone-dog-bowls',
+    asin: 'B0136OTK3Y',
+    name: 'PetBonus 2-Pack Silicone Collapsible Dog Bowls',
+    category: 'hydration',
+    amazonUrl: 'https://www.amazon.com/dp/B0136OTK3Y/?tag=chill-dogs-20',
+    bullets: [
+      'Flat-fold design collapses to less than half an inch — takes no meaningful bag space',
+      'Carabiner on each bowl clips directly to a leash, bag strap, or belt loop',
+      'BPA-free food-grade silicone; safe for both water and food service throughout a trip',
+    ],
+    bestFor: 'Keeping a dedicate water and food bowl clipped directly to your gear at all times',
+    coolingMethod: 'Flat-fold collapsible silicone bowls with carabiner clips',
+    sizingNote: '2-pack; multiple color options',
+    image: { src: 'https://m.media-amazon.com/images/I/61ZllHjCBFL._SL500_.jpg', alt: 'PetBonus 2-Pack Silicone Collapsible Dog Bowls' },
+  },
+  {
+    id: 'kytely-collapsible-dog-bowls',
+    asin: 'B0GK1C7BLF',
+    name: 'Kytely Large Collapsible Dog Bowls 2-Pack',
+    category: 'hydration',
+    amazonUrl: 'https://www.amazon.com/dp/B0GK1C7BLF/?tag=chill-dogs-20',
+    bullets: [
+      'Larger bowl diameter fits big dogs who need a wide drinking surface on rest stops',
+      'Thick silicone walls keep the bowl open under a dog\'s muzzle without collapsing mid-drink',
+      'Two-pack provides separate water and food bowls without buying two different products',
+    ],
+    bestFor: 'Medium to large dogs who need a wider, more stable collapsible bowl',
+    coolingMethod: 'Large-diameter collapsible silicone bowls; 2-pack',
+    sizingNote: 'Large; check listing for exact diameter',
+    image: { src: 'https://m.media-amazon.com/images/I/61zFNvTfdbL._SL500_.jpg', alt: 'Kytely Large Collapsible Dog Bowls 2-Pack' },
+  },
+
 ];
 
 // ─── Helpers ─────────────────────────────────────────────────────────
@@ -468,6 +649,42 @@ export const categoryMeta: Record<ProductCategory, CategoryMeta> = {
       { label: 'Cooling Mats', href: '/cooling/cooling-mats/' },
       { label: 'Cooling Bandanas', href: '/cooling/cooling-bandanas/' },
       { label: 'Cooling Vests', href: '/cooling/cooling-vests/' },
+      { label: 'All Cooling Products', href: '/cooling/best-cooling-products-for-dogs/' },
+    ],
+  },
+  hydration: {
+    title: 'Best Dog Water Bottles and Travel Bowls (2026)',
+    description:
+      'Compare the best portable dog water bottles, squeeze dispensers, and collapsible travel bowls for walks, hikes, and travel days. Top picks for every carry style.',
+    heroHeadline: 'Portable Dog Water Bottles and Travel Bowls',
+    introCopy:
+      'Keeping your dog hydrated on walks, hikes, and travel days comes down to having water accessible — not buried in a bag. Portable bottles with built-in dispensers and collapsible bowls solve that problem without adding meaningful weight or bulk.',
+    faqs: [
+      {
+        question: 'What is the easiest type of dog water bottle to use on a walk?',
+        answer:
+          'Squeeze bottles with an integrated bowl — like the Springer Flip or MalsiPree — are the simplest one-handed option. You squeeze, the bowl fills, your dog drinks, you release to return unused water. No separate bowl to carry or manage. The Highwave AutoDogMug works the same way with a fixed top bowl. If you already have a water bottle you like, a carabiner-clip collapsible bowl paired with it achieves the same result at lower cost.',
+      },
+      {
+        question: 'How much water does a dog need on a walk or hike?',
+        answer:
+          'A general baseline is about 1 oz of water per pound of body weight per day, but active dogs in warm weather need significantly more. On a summer hike, a 40 lb dog may drink 16–24 oz or more. Offer water at every rest stop rather than waiting for your dog to show signs of thirst — panting and seeking shade are signs they\'re already behind on fluids.',
+      },
+      {
+        question: 'Can I use a human water bottle for my dog?',
+        answer:
+          'You can share water from a human bottle, but you\'ll need a separate bowl for most dogs to drink from effectively. Wide-mouth bottles like Vapur or Nalgene work when paired with a collapsible bowl. Bottles with integrated dispensers remove the need for a separate bowl entirely.',
+      },
+      {
+        question: 'Do I need a collapsible bowl if my water bottle already has a dispenser?',
+        answer:
+          'Not necessarily. Built-in dispenser bottles (Springer Flip, MalsiPree, Highwave) handle both the water carry and the drinking surface in one unit. A separate collapsible bowl is most useful if you carry a standard bottle or want to offer water from a stream, tap, or water fountain without bringing a dispenser bottle.',
+      },
+    ],
+    internalLinks: [
+      { label: 'How to Fly With a Dog', href: '/travel/how-to-fly-with-a-dog/' },
+      { label: 'Dog Road Trip Gear', href: '/travel/dog-road-trip-gear/' },
+      { label: 'Car Cooling for Dogs', href: '/cooling/car-cooling-for-dogs/' },
       { label: 'All Cooling Products', href: '/cooling/best-cooling-products-for-dogs/' },
     ],
   },

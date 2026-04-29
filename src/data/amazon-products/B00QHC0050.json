@@ -1,0 +1,1026 @@
+{
+  "search_metadata": {
+    "id": "69f0484be22fed2f8305f4f1",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/nq_W7vEcQjsPwBCWnrJgrA/69f0484be22fed2f8305f4f1.json",
+    "created_at": "2026-04-28 05:40:27 UTC",
+    "processed_at": "2026-04-28 05:40:27 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B00QHC0050/?",
+    "raw_html_file": "https://serpapi.com/searches/nq_W7vEcQjsPwBCWnrJgrA/69f0484be22fed2f8305f4f1.html",
+    "total_time_taken": 2.01
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B00QHC0050",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B00QHC0050",
+    "title": "Amazon Basics Airline Approved Soft-Sided Mesh Pet Travel Carrier with Shoulder Strap, Portable, Washable Removable Fleece Pad for Dog, Cat, up to 16 pounds, 16.5\" L x 10.6\" W x 11\" H, Black",
+    "link": "https://www.amazon.com/hp/wlp/pipeline/membersignup?ref=primedp_ventures_desktopBelowThreshold&primeCampaignId=primedp_ventures_desktopBelowThreshold",
+    "link_clean": "https://www.amazon.com/dp/B00QHC0050/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B00QHC0050&device=desktop&engine=amazon_product",
+    "badges": [
+      "Amazon's Choice"
+    ],
+    "variants": [
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B00QHC0050",
+            "name": "16.5\"L x 11.0\"W x 11.0\"H",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B00QHC0050&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B00QHC01C2",
+            "name": "20.0\"L x 12.0\"W x 12.0\"H",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B00QHC01C2&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the Amazon Basics Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/719971mj1eL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/719971mj1eL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71E71cYVe1L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71rdWcWJ1ZL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/7104C2hkZIL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81COqHE39uS._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81aNNcArS5S._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61uiurzloYL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.4,
+    "reviews": 28808,
+    "bought_last_month": "300+ bought in past month",
+    "discount": "-23%",
+    "price": "$20.99",
+    "extracted_price": 20.99,
+    "offers": [
+      "Prime Savings Save 10%"
+    ],
+    "prime": true,
+    "delivery": [
+      "FREE delivery Saturday, May 2 on orders shipped by Amazon over $35"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "buy_new": {
+      "caption": "Buy New",
+      "price": "$20.99",
+      "extracted_price": 20.99,
+      "delivery": [
+        "FREE delivery Saturday, May 2 on orders shipped by Amazon over $35"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "shipper_seller": {
+          "text": "Amazon.com",
+          "details": {
+            "heading": "Shipper / Seller",
+            "content": "Amazon.com"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "packaging": {
+          "text": "Ships in product packaging",
+          "details": {
+            "heading": "Ships in product packaging",
+            "content": "This item has been tested to certify it can ship safely in its original box or bag to avoid unnecessary packaging. Since 2015, we have reduced the weight of outbound packaging per shipment by 41% on average, that’s over 2 million tons of packaging material.If you still require Amazon packaging for this item, choose \"Ship in Amazon packaging\" at checkout. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/sipp_home"
+          }
+        }
+      }
+    },
+    "buy_used": {
+      "caption": "Used - Very Good",
+      "price": "$16.10",
+      "extracted_price": 16.1,
+      "delivery": [
+        "FREE delivery Monday, May 4 on orders shipped by Amazon over $35"
+      ],
+      "stock": "Only 4 left in stock - order soon.",
+      "features": {
+        "ships_from": "Amazon",
+        "sold_by": "Amazon Resale"
+      }
+    }
+  },
+  "item_specifications": {
+    "color": "Black",
+    "brand": "Amazon Basics",
+    "product_dimensions": "16.5\"L x 11\"W x 11\"H",
+    "material": "Polyester",
+    "special_feature": "Adjustable,Zippers"
+  },
+  "about_item": [
+    "Soft sided carrier for keeping a pet comfortably contained when traveling or heading to the vet",
+    "Includes a Medium soft-sided carrier with a removable, machine washable fleece pad",
+    "Mesh ventilation panels provide comfortable air flow and visibility",
+    "Front and top openings for easy loading and access; sturdy zippers ensure secure closure",
+    "2 connecting top handles and an adjustable shoulder strap for convenient carrying",
+    "Wash carrier separately in cool water with mild detergent and line dry completely before use; reshape if needed",
+    "Recommended max load of 16 pounds; note: please choose carrier size by referencing animal's length and height. If the animal is heavy, choose a size larger",
+    "Before purchasing, please measure pet's length (neck to base of tail) and height (floor to top of shoulder)",
+    "Conforms to under-seat dimensions of most airlines"
+  ],
+  "bought_together": [
+    {
+      "position": 1,
+      "title": "Amazon Basics Airline Approved Soft-Sided Mesh Pet Travel Carrier with Shoulder Strap, Portable, Washable Removable Fleece Pad for Dog, Cat, up to 16 pounds, 16.5\" L x 10.6\" W x 11\" H, Black",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/719971mj1eL._AC_UL116_SR116,116_.jpg",
+      "price": "$20.99",
+      "extracted_price": 20.99,
+      "delivery": [
+        "Get it as soon as Saturday, May 2"
+      ],
+      "stock": "In Stock"
+    },
+    {
+      "position": 2,
+      "title": "MeoHui Cat Toys for Indoor Cats, Interactive Cat Toy 2PCS Retractable Wand Toy and 9PCS Cat Feather Toys Refills, Funny Kitten Toys Cat Fishing Pole Toy for Bored Indoor Cats Chase and Exercise",
+      "link": "https://www.amazon.com/Feather-Retractable-Assorted-Interactive-Exerciser/dp/B07F45GGPT/ref=pd_bxgy_thbs_d_sccl_1/147-9541744-5002030?pd_rd_w=lvPSB&content-id=amzn1.sym.9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_p=9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_r=6VMYXFKRW3W5JVKAT400&pd_rd_wg=lFy2x&pd_rd_r=dd8f28fe-25da-4981-8b2d-7615c40d8336&pd_rd_i=B07F45GGPT&psc=1",
+      "asin": "B07F45GGPT",
+      "link_clean": "https://www.amazon.com/Feather-Retractable-Assorted-Interactive-Exerciser/dp/B07F45GGPT/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07F45GGPT&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/615Ccf+wziL._AC_UL116_SR116,116_.jpg",
+      "price": "$9.78",
+      "extracted_price": 9.78,
+      "price_unit": "$9.78/count",
+      "extracted_price_unit": 9.78,
+      "delivery": [
+        "Get it as soon as Saturday, May 2"
+      ],
+      "stock": "In Stock"
+    }
+  ],
+  "related_products": [
+    {
+      "position": 1,
+      "title": "Henkelion Cat Carriers Dog Carrier Pet Carrier For Small / Medium Cats Dogs Puppies (Up To 15lbs), TSA Airline Approved Small",
+      "link": "https://www.amazon.com/Henkelion-Carrier-Approved-Carriers-Collapsible/dp/B07JZ31KX9/ref=pd_sbs_d_sccl_1_1/147-9541744-5002030?pd_rd_w=vVvez&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=6VMYXFKRW3W5JVKAT400&pd_rd_wg=lFy2x&pd_rd_r=dd8f28fe-25da-4981-8b2d-7615c40d8336&pd_rd_i=B07JZ31KX9&psc=1",
+      "asin": "B07JZ31KX9",
+      "link_clean": "https://www.amazon.com/Henkelion-Carrier-Approved-Carriers-Collapsible/dp/B07JZ31KX9/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07JZ31KX9&device=desktop&engine=amazon_product",
+      "badges": [
+        "#1 Best Seller"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/813v3252ylL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.6,
+      "reviews": 52408,
+      "price": "$22.48",
+      "extracted_price": 22.48,
+      "delivery": [
+        "Get it as soon as Saturday, May 2"
+      ]
+    },
+    {
+      "position": 2,
+      "title": "Vceoa 17.5x11x11 Inches Cat, Dog Carrier for Pets Up to 16 Lbs, Soft-Sided Cat Bag Animal Carriers Travel Puppy Carry As a To",
+      "link": "https://www.amazon.com/Vceoa-Airline-Approved-Soft-Sided-Carrier/dp/B07ZPPSR2L/ref=pd_sbs_d_sccl_1_2/147-9541744-5002030?pd_rd_w=vVvez&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=6VMYXFKRW3W5JVKAT400&pd_rd_wg=lFy2x&pd_rd_r=dd8f28fe-25da-4981-8b2d-7615c40d8336&pd_rd_i=B07ZPPSR2L&psc=1",
+      "asin": "B07ZPPSR2L",
+      "link_clean": "https://www.amazon.com/Vceoa-Airline-Approved-Soft-Sided-Carrier/dp/B07ZPPSR2L/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07ZPPSR2L&device=desktop&engine=amazon_product",
+      "badges": [
+        "Amazon's Choice"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/612Kkc5U+nL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.8,
+      "reviews": 37401,
+      "price": "$19.99",
+      "extracted_price": 19.99,
+      "price_unit": "$19.99/count",
+      "extracted_price_unit": 19.99,
+      "delivery": [
+        "Get it as soon as Saturday, May 2"
+      ]
+    },
+    {
+      "position": 3,
+      "title": "GAPZER Pet Carrier for Large Cats, Soft-Sided Cat Carrier for Medium Big Cats and Puppy up to 20lbs, Washable Dog Carrier Pri",
+      "link": "https://www.amazon.com/GAPZER-Carrier-Soft-Sided-Carriers-Protection/dp/B09MJ131L5/ref=pd_sbs_d_sccl_1_3/147-9541744-5002030?pd_rd_w=vVvez&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=6VMYXFKRW3W5JVKAT400&pd_rd_wg=lFy2x&pd_rd_r=dd8f28fe-25da-4981-8b2d-7615c40d8336&pd_rd_i=B09MJ131L5&psc=1",
+      "asin": "B09MJ131L5",
+      "link_clean": "https://www.amazon.com/GAPZER-Carrier-Soft-Sided-Carriers-Protection/dp/B09MJ131L5/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09MJ131L5&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81XUjPV9YqL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.5,
+      "reviews": 10087,
+      "discount": "25% off",
+      "price": "$29.98",
+      "extracted_price": 29.98,
+      "price_unit": "List: $39.99",
+      "extracted_price_unit": 39.99,
+      "old_price": "$39.99",
+      "extracted_old_price": 39.99,
+      "delivery": [
+        "Get it as soon as Saturday, May 2"
+      ]
+    },
+    {
+      "position": 4,
+      "title": "Lekereise Top-Expandable Pet Carrier 17x11x9.5 Inch Alaska Hawaiian Airline Approved Soft Sided Underseat to 12lbs Travel Car",
+      "link": "https://www.amazon.com/Lekereise-Top-Expandable-Pet-Carrier-Anti-Scratch/dp/B0F53N17ZZ/ref=pd_sbs_d_sccl_1_4/147-9541744-5002030?pd_rd_w=vVvez&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=6VMYXFKRW3W5JVKAT400&pd_rd_wg=lFy2x&pd_rd_r=dd8f28fe-25da-4981-8b2d-7615c40d8336&pd_rd_i=B0F53N17ZZ&psc=1",
+      "asin": "B0F53N17ZZ",
+      "link_clean": "https://www.amazon.com/Lekereise-Top-Expandable-Pet-Carrier-Anti-Scratch/dp/B0F53N17ZZ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F53N17ZZ&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81MjgtZtakL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.5,
+      "reviews": 199,
+      "price": "$37.99",
+      "extracted_price": 37.99,
+      "price_unit": "$37.99/count",
+      "extracted_price_unit": 37.99,
+      "delivery": [
+        "Get it as soon as Saturday, May 2"
+      ]
+    },
+    {
+      "position": 5,
+      "title": "Wakytu TSA Approved Pet Carrier for Small Cats Dogs, Travel Bag with Adequate Ventilation, 5 Mesh Windows, 3 Entrance, Lockin",
+      "link": "https://www.amazon.com/wakytu-Approved-Adequate-Ventilation-Entrance/dp/B08VNJ51TW/ref=pd_sbs_d_sccl_1_5/147-9541744-5002030?pd_rd_w=vVvez&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=6VMYXFKRW3W5JVKAT400&pd_rd_wg=lFy2x&pd_rd_r=dd8f28fe-25da-4981-8b2d-7615c40d8336&pd_rd_i=B08VNJ51TW&psc=1",
+      "asin": "B08VNJ51TW",
+      "link_clean": "https://www.amazon.com/wakytu-Approved-Adequate-Ventilation-Entrance/dp/B08VNJ51TW/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B08VNJ51TW&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71c-txmbTeL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.5,
+      "reviews": 2130,
+      "price": "$32.99",
+      "extracted_price": 32.99,
+      "delivery": [
+        "Get it as soon as Saturday, May 2"
+      ]
+    },
+    {
+      "position": 6,
+      "title": "Adkyop Large Cat Carriers Dog Soft Sided Carriers Cat Soft Sided Carriers Airline Approved Kitten Carrier Reptile Carrier Squ",
+      "link": "https://www.amazon.com/Adkyop-Carriers-Approved-Squirrel-Large_Blue/dp/B0C1C9ZMSZ/ref=pd_sbs_d_sccl_1_6/147-9541744-5002030?pd_rd_w=vVvez&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=6VMYXFKRW3W5JVKAT400&pd_rd_wg=lFy2x&pd_rd_r=dd8f28fe-25da-4981-8b2d-7615c40d8336&pd_rd_i=B0C1C9ZMSZ&psc=1",
+      "asin": "B0C1C9ZMSZ",
+      "link_clean": "https://www.amazon.com/Adkyop-Carriers-Approved-Squirrel-Large_Blue/dp/B0C1C9ZMSZ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0C1C9ZMSZ&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/91GjNQ491JL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.7,
+      "reviews": 806,
+      "price": "$23.99",
+      "extracted_price": 23.99,
+      "price_unit": "$23.99/count",
+      "extracted_price_unit": 23.99,
+      "delivery": [
+        "Get it as soon as Saturday, May 2"
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "position": 1,
+      "title": "Amazon Basics Pet Carrier Honest Review",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/3d62ab23-fcdc-4536-88d9-ad58d3e865bb/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61HZfkcK5BL.jpg",
+      "duration": "0:22",
+      "vendor": "Hey It’s David",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/91dXGxStgyL._CR0,28,828,828_._FMjpg_._SL34_.jpg",
+      "date": "Nov 2, 2023"
+    },
+    {
+      "position": 2,
+      "title": "Review: Amazon Basics Soft-Sided Mesh Pet Travel Carrier",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/1950b72f-3292-4638-88ab-9d45ae31c3f0/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/A1uJ50zCjyL.jpg",
+      "duration": "2:08",
+      "vendor": "PD Reviews",
+      "vendor_thumbnail": "https://images-na.ssl-images-amazon.com/images/S/influencer-profile-image-prod/logo/populardoodle_1678677490101_original._FMjpg_._SL34_.jpeg",
+      "date": "May 8, 2023"
+    },
+    {
+      "position": 3,
+      "title": "What Is Nice About this Pet Carrier",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/988ee509-93e9-46d7-bfae-cc63810249a7/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/A1WXKlKGjlL.jpg",
+      "duration": "1:53",
+      "vendor": "Just Jules Reviews",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/71axYHBiyZL._CR0,173,480,480_._FMjpg_._SL34_.jpg",
+      "date": "Aug 10, 2023"
+    },
+    {
+      "position": 4,
+      "title": "MUST WATCH before buying this amazing pet travel carrier",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/fb1f6f88-9472-4202-abe7-d8ab9a36ea42/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/71yyTo7TWYL.png",
+      "duration": "0:31",
+      "vendor": "The Arbilduas Saavedra",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/81P1lzOYyXL._CR117,6,344,343_._FMjpg_._SL34_.jpg",
+      "date": "Jul 30, 2024"
+    },
+    {
+      "position": 5,
+      "title": "Little dog carrier! Comes in 3 different sizes!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/91cfe799-f33c-4baa-9b9f-4110ff19a7b4/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61K9iPvxbgL.jpg",
+      "duration": "0:26",
+      "vendor": "Kilee Dobson",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/B1gGLmmUC3L._CR341,181,1546,1546_._FMjpg_._SL34_.jpg",
+      "date": "Sep 30, 2023"
+    },
+    {
+      "position": 6,
+      "title": "Must watch review of Amazon basics pet carrier",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/794696f8-08cd-4e20-ba74-5bd57b3e4206/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/51xbpL++-7L.jpg",
+      "duration": "0:37",
+      "vendor": "Linds’ Favourite Finds",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/71QCzVM9j5L._CR0,0,1080,1080_._FMjpg_._SL34_.jpg",
+      "date": "Dec 1, 2023"
+    },
+    {
+      "position": 7,
+      "title": "i was worried because usually all the cats i’ve had have hated their carriers and been afraid of th",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/v2/770527af-261c-5dcb-972d-c5f464e82b85/ShortForm-Generic-480p-16-9-1409173089793-rpcbe5.mp4",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/A1dgma+05dL.png",
+      "duration": "0:41",
+      "vendor": "Allie Tokarski",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SL34_.png",
+      "date": "Jun 2, 2018"
+    },
+    {
+      "position": 8,
+      "title": "Pet Rat Basics",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/v2/cc89caa4-d183-5e91-b5b4-7b2e0ef53b91/ShortForm-Generic-480p-16-9-1409173089793-rpcbe5.mp4",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/51N3YDv5o0L.jpg",
+      "duration": "2:55",
+      "vendor": "eHow",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/S/amazon-avatars-global/f36700cc-5312-411d-a7a5-d860a1ffda40._CR0%2C0%2C1000%2C1000_SX460_._SL34_.jpg",
+      "date": "May 13, 2016"
+    },
+    {
+      "position": 9,
+      "title": "Puppy to Adult Dog Time-Tested and Approved!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/7650c90b-e41d-4b22-ac7e-854b2a42a012/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/A1DWouUmqxL.jpg",
+      "duration": "2:02",
+      "vendor": "Katalina 👠",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/B1F0YbUqZyL._CR0,0,3024,3024_._FMjpg_._SL34_.jpg",
+      "date": "Apr 26, 2026"
+    },
+    {
+      "position": 10,
+      "title": "Honest Review of Mesh Pet Carrier (Cats or Dogs)",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/4300ea30-e694-4cca-994a-a4a026dfbd5d/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/A10gGtx-88L.jpg",
+      "duration": "1:46",
+      "vendor": "Matt & Bryce Heskett",
+      "vendor_thumbnail": "https://images-na.ssl-images-amazon.com/images/S/influencer-profile-image-prod/logo/mattheskett-marketmonetize_1666267095655_original._CR68,736,2199,2198_._FMjpg_._SL34_.jpeg",
+      "date": "Dec 19, 2022"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1
+    },
+    {
+      "position": 2
+    },
+    {
+      "position": 3
+    },
+    {
+      "position": 4
+    },
+    {
+      "position": 5
+    }
+  ],
+  "product_details": {
+    "is_discontinued_by_manufacturer": "No",
+    "product_dimensions": "16.5 x 11 x 11 inches; 2.4 Pounds",
+    "item_model_number": "YE202529-M",
+    "date_first_available": "April 1, 2015",
+    "manufacturer": "Amazon",
+    "asin": "B00QHC0050",
+    "best_sellers_rank": [
+      {
+        "text": "#8,876 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 8876,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#13 in Cat Soft-Sided Carriers",
+        "extracted_rank": 13,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/3024133011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Cat Soft-Sided Carriers"
+      }
+    ],
+    "customer_reviews": "4.4 out of 5 stars",
+    "rating": 4.4,
+    "reviews": 28808,
+    "brand_name": "Amazon Basics",
+    "upc": "841710106671",
+    "global_trade_identification_number": "00841710106671",
+    "model_number": "YE202529-M",
+    "manufacturer_part_number": "YE202529-M",
+    "target_species": "Dog, Cat",
+    "unit_count": "1 Count",
+    "target_audience": "Cat",
+    "material_type": "Polyester",
+    "item_dimensions_l_x_w_x_h": "16.5\"L x 11\"W x 11\"H",
+    "item_weight": "2.4 Pounds",
+    "size": "16.5\"L x 11.0\"W x 11.0\"H",
+    "additional_features": "Adjustable,Zippers",
+    "closure_type": "Zipper",
+    "dog_breed_size": "All",
+    "compatible_with_vehicle_type": "Car",
+    "color": "Black",
+    "product_style": "Without Wheels",
+    "recommended_uses_for_product": "Travelling, Camping, Hiking, Walking, Overnight Stays",
+    "maximum_weight_recommendation": "16 Pounds"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B09MJ131L5",
+      "title": "GAPZER Pet Carrier for Large Cats, Soft-Sided Cat Carrier for Medium Big Cats and Puppy up to 20lbs, Washable Dog Carrier Privacy Protection for Home Outdoor Travel",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JObCrFXZts8GU4RZT0qUsIoAAAGd0ppptAEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICBAeiNX/clv1c_ek-wxYHXErbWDXHEa4sesmPkMDERPfs6iy2DUS7gm0pB5PIibfhFsAvbYwGBsdAIJ-OeXA4pipU08bjhIG4SQaO3H9PN_8SsOsmHDqvhwG9369KDwgOCpmnx5FkU5vG_gmmwlp4PBlQCEr_ckHnLKXVarOXMFlThls_6969qbIWd322At4D7chNi-NL_XwD8PGJZZkNIA0ugtTZdtcGmONgxnd-9pqy_h9v3SQz4EYw-Q9HwtkI77QYrlc5l1hrXqAAKhEH_QtTb6Yh_ANgwqMH6eENLLZDW2V5xZ2wNXlDOjielzSZFl9K_gPMwJ1Wtpk944ZyRZ-neMZ4uKHC8yt3sE1azbU_7Hu9Y96_iMuJplGGugTEPqzmRBAO6iYCBN56g6i6HdiHPhDJKxt9ntRON-RNGCMgbYml-X-QKMSpZkRkf3JmDYCPWY01dHxHzeDdL3s0jpKZz5_V6PiRsyCkJXS7Qn6n0SgI9Zom4kHr0Kg0a8wUUfoVElsMk3VHp8lZaS_JdwLfP37H6-t0w5J7ArSjlBy02c5UMylNed5gXvsyTOaECnOEQBlEcnSbTz6wEOdc5STEuPZwJ47Cupqe9fHauwk2niJfxXTYZc_dwC8wkc9cKHXK3ktudae2CI7amgqHuOLfolLORapOfZdu0zuWCzmgTW11ch1fxp8Q1NkSSzgPDuIPc9I11F1z3KOplY7mU_Ll4x46JfrBFCM9lxQe91KKjFYfjBAFyvZlhdJsuOriSU8l7rEpZk5prSr2gWUcEWT8BttJFr1iLoDR6OPdq0WS636G8PqHQwkf3d4YrqnwYXvK8AeP56RhJ1u0Xsf3DyBkVvx7FfBZYAjU8oiZ_BqX49x5bvFaKqeBJWrN5Zq9C3utzqRYg6RY6E5rOWPL089yKUamhOYnhgxa920tJYGgL0j5ei7sN0kegZgXcAX0py-mYI_C7W2FzzGxYEWO_adxWx_0I3s1H3BEcQhh1KCNfbjMofwQaCrwxnTexcineZKlomYO4uImvDM7Xj0MkStybe3oZqUzsQ-gd2gJ4o-wa9kJgvv1fl39RuBLz3Tn7Ali3FiibWBPvkFSOG9PQf0SAPtwpI2Zi72XnuBzKD1RAKdX5ITTT3M4Wh0KXQoaEyFcHtOFHzBduZJsLEmK-tbb-bqCtzMBsH8En_-TSGvhDa5diQG-3mBFEjvyv95j_-uC-M_LJURL-KCwpsMOKROfpfbapNivQIIcl5GZuIyy7Vzl-nJ86ozKUrb_8If7tEufR9gLZwfcVrmC-PkrF0qEbHIVwHZAHCHadZm8Vi0KeFc8OqCxZhNaW18kXEdi21DH4rePEN3AefAyBcb3XapR_BZdgpTTIwEwvHjDmrtAWsA9fxeQZR6UAFQJbVGFmXAOYIj02RII1Q2iWz7Z-9JjSZ1Su04fomUMuBSWI6i1DmyjBI1Fspe2Sr7TSs_k8iWA4BA-0Swf6N56j5LA2pwyiIQhzU9dAH7wKfEqn_D39YYEzQR8iS8ETFWb6rTc_tKWdm-87z0AYVWmYgxc66byrWapcZi0Iokdh12ltG48/https://www.amazon.com/dp/B09MJ131L5/?_encoding=UTF8&pd_rd_i=B09MJ131L5&pd_rd_i=B09MJ131L5&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=fXQoG&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=6VMYXFKRW3W5JVKAT400&pd_rd_wg=lFy2x&pd_rd_r=dd8f28fe-25da-4981-8b2d-7615c40d8336",
+      "link_clean": "https://www.amazon.com/dp/B09MJ131L5/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09MJ131L5&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51vCG0gYKFL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/9003ee72-bd05-4266-9003-e4c114859f88.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/9003ee72-bd05-4266-9003-e4c114859f88.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.5,
+      "reviews": 10087,
+      "price": "$29.98",
+      "extracted_price": 29.98,
+      "old_price": "$39.99",
+      "extracted_old_price": 39.99
+    },
+    {
+      "position": 2,
+      "asin": "B0FXXLM71R",
+      "title": "DSDCDJ Cat Carrier - Cat Carrier Soft with Plush Pad & Cooling Mat, Easy-Load 4-Side Zipper & 3-Side Mesh Ventilation, Pet Carrier Airline Approved for Cats/Dogs Up to 16 lbs, Blue",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JOKsfa7xGBUH2wxcGW6XeSQAAAGd0ppptQEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICCZ_N9u/clv1c_ek-wxfXXFbbSTbHXb5s-oTBwCfCycgP-q9oWIE_1t4HGsuqUUKXK9lz_1lllmR1Fe33F2KVLfSnhUHI_WBc6P8RTq0yDlwcLrATvEi8JizwK7THTTJwVXGUhYvF39kKRlj-LJiPzNW0ii1K_WPj3TVwPwl6QrgVqk8_0wD2SVEa_WumbGN20wAUJt2qV3cuNbTYRAoVGxzcIFGD7kVPqYgIhMcwqFB7mXKoM72yZ__LCq9CoLFsXyG4u6G4DtZ_hEMAI8vCAej-0nhsuMnrujdMpY82-tstW6hefV5EqWz0lynKrQExQYqknEF56BA1eNKDflu-KKqIaahFj3ZzOXynYfQ3ozT9rrKP79cdX0dQXm0IN09MGM-gvdZ0taQKW7Shmzg1s-7mSlzc_V7oO55E1meYXjOwIYRVIF7-A0SgURLOeuU1pvznqufQMyAFV51WBM0znUjlA9H2SvmvR66q1dTr_Dx8kk9BJMP0j_0Ku-EQcIl65TRRYfUUgyd9Wk1-Dxq1W14KAKw6_IwFdKp3yeE12o-nZI6y__RZCGUrMH8TWTah1tWPavU4zgRKDOLjei5Q6S0zv5vwQQzCP9-8A9V2-3ABdHxTVieTXvcEYUya99ViCpZ8Ykts4ZkxFDFhTJ24GZ-DSnVq8BtyL827fsP5jnKGmLfG4WhH3xtae0Bo6q8iwvPvj6vPk1hqqOhic7guI9RkCPmBSQ0TxXx7cWGV_SQvnP5htGfWE5sYjblup3NDRZBZnocqLiXenbA6CGAsnnYrZ85-ORy8wZtnTwGlS4PQCziQw8zlBLfK16mZk5gQq7dBqHL_nSYlLWoLYacNrNac_CgUx3u4u7J3OCtAgnBr5RLWdabQLNb45BsQIHvTCMfPeMUQ3I5gyJEzpByYe8b7kMYmfsCk_iDzWrh3NcaHsEbpoRmpAAyt31Gk064WdYwSAbXaZHONVbEexMluEA6Q5RB3o2e35SDfTmjiNjahdbhOgn6Y5gv03T802FvCMSp0kV_HhtOMl3GE6ExBNWLFDiShiLrQI6gVmV8DR6R7a8ECgS_13iBw6acdPRRruLJ-uAzgYmqmzdiANQ1DdgK9pVP03sZtAfHL9AaYvuHTDLcwxAjM0QkpXPMyXPoy1DSycHcDOeyFjKEI17ENhR2COgb_k8WwoKAgW7VBPrbr-M0WPiXjtsigJHSx3qBoII6Hjvw7eP9N60Opl2931bzT6aHCePZ3kXUVQkUSOHIoOzJmF4j-w4rBUWZ56slHvcHDcpxZVeZOp82_uAfrtbvdzw1dUPsHuyuh6VfjPO0suhXMSebajsYMGm5JjMYNCJPdcTnVcHXNXZg6_5W4N25QbnE3ruSErLhAsrS47ibd3Af0L5fYUVZjX8Olx9nyH6FzKNUufmMDLdGBdakYL342iNKSpXpvpNmw-R-yZCLR3X6z1BgN4rNeLytDq5v8oKG5Hicmn8yt3-0HRL771o-LeqiKb59BgAI0ijkSBBN99DW-rhNZdLtoNC81dn17kJovuVhKiQJTVHRFOYls3R_EZ-ApdzWBkQOgQt76ZTA/https://www.amazon.com/dp/B0FXXLM71R/?_encoding=UTF8&pd_rd_i=B0FXXLM71R&pd_rd_i=B0FXXLM71R&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=fXQoG&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=6VMYXFKRW3W5JVKAT400&pd_rd_wg=lFy2x&pd_rd_r=dd8f28fe-25da-4981-8b2d-7615c40d8336",
+      "link_clean": "https://www.amazon.com/dp/B0FXXLM71R/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FXXLM71R&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51TfeGu6mUL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/06d41f3d-328a-4ccd-b0b1-5da2ae076c1e.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/06d41f3d-328a-4ccd-b0b1-5da2ae076c1e.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 37,
+      "price": "$26.39",
+      "extracted_price": 26.39,
+      "old_price": "$27.89",
+      "extracted_old_price": 27.89
+    },
+    {
+      "position": 3,
+      "asin": "B0F4DFF24G",
+      "title": "Top and 2 Sides Expandable Pet Carrier 17x11x9.5, TSA Airline Approved Small Dog Carriers for Small Dogs, Soft-Sided Cat Carrier with Self-Locking Zippers for Kitten,Rabbit, Puppy, Guinea Pig Black",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JO7-zmuYmKI6iMEz3ze-xMkAAAGd0ppptgEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICBOqXtT/clv1c_ek-wBQfWUsba3XwmJtIgDjrZjZAPnw5m4nFU8vDKRe6EnXkB0P5Rk2iskynhNJk-bCW4wxgiV2M5QNnjRIkkpT-Dy2f7oecV8H4n_sEAvby-uiGMvTLoCHrYgjn0j9vpfmMc9-RwsK-0sOPseis1utbX6J0dl-lolMXGH6-qr-bfHf2Nl56UslYhjxtdDsM1GHh472dDr2ZInGHzs87lOcCZH0Wljs7FRJtRB0Ad4UidNi3vZlAUAfAmf3UawQkAQm2dAlgW4Jgp_kHON2v9daNYWzNIQTsJLNQ3oItmBW8gq2v-Yui_kfLxyPrwBYFd75U4y1hCLX99lDjUTIvxeMDBsbKj1VCLHW5l_1RW-ugWt7QzIUtsPOb5EqPYdCC0C04yKYG_0WmpF8YpOVuefWON-VJeJAEXoUni_AO8Dd2e0ff_92-0JsgQUAl8tFwJOyMn08gV-PzOMx1kKtcUwU_A48L5E6KrAJHRqJ56IqlPboxkorAQJCXHbzTRTFxeFAVW3F22pL2-xsf6w-ISlVOq4FkYl1f8-1h8LpA4aMTfr3ci2oTbBXAT19QxEB4JJwLD3YUINXY5SfRWzJ_Vfv3GRDg4ox21qyxbO4erA_-0PE7D3OkJCuWQ7C9XyQz-aB3dzma2Qx86KvNcthNFPrYAGnvXPTKjoOiAExqFI00ZKK-Q3M3SOE919pf0NxKbmyBcy0wllW5YvzUK0qDajykjgcwMVhiiFtFh46FCWfldA54ugP304Z8rXNJ4ppRUSMnQB3rSXO_200Xim292Y5TUOxJpSC3M18bPWu5q4aiv95uX10_Osdxh8hkFFg_BcIT5hQ0hK0txRj3mUn9IqWEvNTbrSIlv2omI1JNXgvXrVInk48sn6cGBvZZdwhCwsAVr9WANtdnYPDBOsN4x2F8CWHgP89DJvUNhLmOcBhhl4Oc_zYRYQRfJGf66-phgvsno58ug8c73nliLy37xyvg_FggtYNgqsigli0ciCRHV1B0YeYYLfjARwqlmpGXrr8EAe8TJ2sbe6uBA12DKYporQJYpuYSbI-5Rslb4tM4Vn5-x3-_cwKWisGFlgesemKLYKvyJYy1kJa9bhq1_RMxnWAFnYZhtAWH3L-XTAMzYAL58uRLHIxa03lbxLGNLwJx2XWVSRTJwla4M2n2Ke9-jmBihZDiGf6y4qxJD-ngE3lrGxaYiVz8tr1JETIIAV8XBMhCN0hD5oKFSEmWsOK4yNIdXpMKm_OkSZRA55Xyhl0gUEU1ACdezCJL0yvW338NteTiHjo9X1l69mRphaGktQED6Zh93yqqgBxM3lmBzlRjLbEWJxe68BOtBzrDRUzIHLr5dePG_HMWBaL5Lip0pVJVTr-7AyXRkoFntbLOxLU9GN5II3-eKSAdcSi-7MplzbSU_JEFtCMsbrRgXt9fTtFJG-yq7prcRBYPukjkh_aJmMVHP4MTRLhljyLQWka2Mh2cIRlo5e-QSAjXnqEiZZroD8i91mQ9XNh96ERVDyv89eem_AZqvR5ymqjY/https://www.amazon.com/dp/B0F4DFF24G/?_encoding=UTF8&pd_rd_i=B0F4DFF24G&pd_rd_i=B0F4DFF24G&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=fXQoG&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=6VMYXFKRW3W5JVKAT400&pd_rd_wg=lFy2x&pd_rd_r=dd8f28fe-25da-4981-8b2d-7615c40d8336",
+      "link_clean": "https://www.amazon.com/dp/B0F4DFF24G/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F4DFF24G&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51ip9q5jAjL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/0ce42974-59bb-42ba-8449-4b77e196c1b8.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/0ce42974-59bb-42ba-8449-4b77e196c1b8.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.4,
+      "reviews": 87,
+      "price": "$48.99",
+      "extracted_price": 48.99
+    },
+    {
+      "position": 4,
+      "asin": "B0FS1CSZCS",
+      "title": "VeluXanipyr Expandable Airline Approved Pet Carrier, Soft-Sided Travel Bag for Small Cats Dogs with Hard Shell Base, Removable Fleece Pad, Ventilated Mesh, Gray (Blue Trim)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JE-Y9KZdLDjDj4GFWynkB84AAAGd0ppptwEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICBtWDF1/clv1c_ek-YBXfWVcba3TK2Z2JsQWs_gJ85b12D2ZNZ7PHILTrcMMI3jqoDWeufchQq8hXQ2ViMZaPlkJld9vafXONDkGBEYh0ZE_HOkcjwHtrxWq0-DTGNHlw4fKF86uoEltPyF7HjBvt8MAubCE3aYLrWFwp8I9-4phXqndD7xQ_yDCcc3-0bPWxhmCeF5PJa4kNBLnRnYmeL3APP3t6RjXxgI0bCS0ovVR7ill8H_WW7jgucpL9HAqRUal5_prBDWGoS-7J8SJtFf2CQmvkn_1hIayuArVwC30cNu0xR9__4dmRm5iMvTVh_JB1xfCWsTXiSWlFc4bDAePy73uuGCREbxx0Yj9UjqucADMXdrB9TTNOdhFqbuu26msEI7ks1w0nXyEl7in2yFSgLSLI7Vy-G5GmS1dAmB4sNIXVmAscF3pBy57JQ1QJL8vxRI9-cDWFbZhhfk8aKDRfmjXy4UG12QzvIqf48g3rEGQZ5kDlHHAjBIdZU4h-72ISh_R5__edBOIAV7Nh0N_yUMFjxhipS41NdXPHJwbvLkl1layp1kS-0nDZHtEAAkt65S1j6lgAtV5En-DY-iD7-Qf8-83toRTyhFi6FX1w8-7iyDT_5weVszA1e1ZR0PHhU01_mtxlQbUDloca9TEGe6UT7H9HyH8cYwNKFJ7TSVlwgKiscIzhFKLC6HFngXg_7SAPvjMs0E-ZL-R3dJTbhkc3kSjr0jtDlvNcFgZbSIZymKnM6UUMbokxoqdYOWnTLTuuNbZF0QWPUGuCwfqp-_P3eMPaMP5cMex1g_eE-WstJ5gc6HlFIW-ZcCbcdoeQDQQRxY_UKzpsq57QB6dLcgzhHM4yaeC2I9tiMo7Cu8IKU7How7uD68sBfDUx9plb6RFBJ8t4D-Gdb-BZDI3dJSwSHBo_RQlKn2AAOty9y-61ep34D1y5i6oNQLFYbq_8_3SvNMCa0o3WOdeZ4zaUxgw8xFNJu8dgGlrkT4RH1d3NUBG0MaxbNoOxDQOXIvt6kLLlYmYwTSqGp0FhllXQt9Bp6gmBqDScFlWZxzc6jBgjcH2WC5tYf15xV8dCatUapT9dmRcY-c0PBovoE64fdHEsXLb9f75qtkFh22Q2wKHQjFFdy25Nj056TVrWPPC7Ycn1g5mbxW9TBVWxzLSBajxQKR-edltZ3DFWRiabxB0FrvuucT1FQRRzq_dE2e-a2a0I0XAtzNloPbJGXUBazAnDX17Cbf3bMSsvfLKfLdagKRutCmrUdLaGbfxytthtOibHYSssl00OoVBB_MUy0i-FGW1EVTemc7MpJOQ1Gqmjghzho5fpnpr2yqlHuFUCwC1ZJsS7jY9htmkurF2mI4wzpkvzI1q4y8kKqAGJRwAExEylpB3Om7OQ8K8w6gwJFr8e-b-qQpTtc1O3qc4eDHekQYWUww9ycNKULoZ7xinoSmPUu2pwYHbnJU2XuW-SbCrgCgETeXVsrgl4TC7oxqNjZDa28af9hpp-FdWO30QUPuyYQP3yyB6oYcshHQTQjmdifSp3JLa8SdXml3iMY/https://www.amazon.com/dp/B0FS1CSZCS/?_encoding=UTF8&pd_rd_i=B0FS1CSZCS&pd_rd_i=B0FS1CSZCS&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=fXQoG&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=6VMYXFKRW3W5JVKAT400&pd_rd_wg=lFy2x&pd_rd_r=dd8f28fe-25da-4981-8b2d-7615c40d8336",
+      "link_clean": "https://www.amazon.com/dp/B0FS1CSZCS/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FS1CSZCS&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41Fa3c2rb4L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/b2c12b64-1e99-4da3-83f2-3aa2e1aee99d.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/b2c12b64-1e99-4da3-83f2-3aa2e1aee99d.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 5,
+      "reviews": 9,
+      "price": "$35.99",
+      "extracted_price": 35.99
+    },
+    {
+      "position": 5,
+      "asin": "B0G3MBHKB9",
+      "title": "Dog, Cat Carrier for Pets Up to 12 Lbs, Airline Approved Collapsible Soft-Sided Pet Travel Bag with Locking Zippers, Breathable Mesh and 4 Large Pockets, Removable Fleece Pad (Beige)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JE0uMhRaCe_clyTDqvc1sOMAAAGd0pppuAEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICASqErM/clv1c_ek-YBfHXUsbWHn2mJkKPYYizA5Pba0RgH1z2rMVANxBzuJeG553aIH-9kwVttbp6VLkv80IVuDhT9pKPmPpHEQCgc2tDWdOPUqJOW-jIGsRXDwVKi2dvZkqcenn3q283md5UevlLAsaQD43R7hsDLUvVuk1cllTWwtGkP4cqj4ETVGab-fNV4unt7g0BRLOyJQQlLlsqnYDNyNLgrZio9Ou7Vn-cpIbyBgtscck1YNKacqAeDfaA1kzWACw5OUyAaugPmn1z3edhQXHe2_tzXCHb7WlFcsnJR4K_Fy88A_-FYWZzb82LWmooW0rTxGkteTU9DSm-hCygcyiGCFmIDtl60nxo7klH4I5KlAnZv0ol9Cpa3fm-7taKg6pHhJ8-IX4WcNyA44J_ZG-1fTc0nMMBcsBP6tPpiu65XFLJ2gn7_2GEN2QA8VGDmUzviBSR71aA6rmUtsuqZJAkpfhznP7AjxR92Oqbj9S4smZqKK7dNAhm9f6lZiqVW0l-FnwFxOK-LUM3n8DcKEdR8h9ERM0tIpN4LnaDfyqAfqIdxrzzkdqxW1d338NF2mZo88SVPbLEg6fLAwJ48THh3SIpOON7TWm_f9AtsSbHlwGZg8Y4P2hO4StsTke_JH3_cqgzK1aw0Pcer6wsE80lL5T7_mvsp3zofT1NdWOXeIqNd4oYmfh7wQSKXCB5vtHOOYJnqGlCh44TssdHB9xtHkJDlwkj1kxpTLRgETnMGR5C2lW2846WGaIA4d6QF46FCt1oIKf5O8-eVaiyTdWCviz-jUp0-ouKzOOsncuuyuKK7BlLf41UwDraDmRo_0V3dvQKzps2psZ2x4yMgQKqW3lNlB0CFbjOAzb6diblca9XrKudFWXH9P5M6OW0TvvaZpSj8QCyHVZUrie3h4l6_Y0PABUqiBWyn0sjF0Na4e7YbOQvUMCOgqnPbleemUPLGxhnpO8MdRupqjn0RHUbFDYkwOgLrpVyF49yVtr8JXx27IpyoQ2ed8dGErva16K5Gjt8oQB1RYp4lRJG2czIKccczVQ1bSaTT1xLDl6tqIsFJ9rbPVIQ7iLsdVlvxdHbTlydETnogZhIIP74Vyd0ThH15C-Zd9YPS5ZA3JE1qP4eJ55AM6wqu3GRUBZHY-r6y-KpAoai3A4h2yTm1dcZBsvYN84R0xcqTUMTBSFEATzBy14zs37Tg-hoygiAvBTuzbMR-DwepfP-Q3uNf-gmaELjAsDlCM9iTe4yL89jf62aTCf1NQd9q9ofNG7sJ8rZO8nIK5MWpeebLLiQ88aN-w1r6Vx_IPyfYnoSgto13dBjYHQx7ZSm2NHUP_jb5gmKtn92aTcOMFNNmOb3FkPURlrTecu7O0duyNGQCsDdvoNiqpYog_P6AVxt4O2xAP83Wonc0PuRaqUedfasJF3KtABsy506gEcZid0EZkXwO00TqWmtcvHUd7pWwHk895xUVh4ltBYaSCt5bgyxdjOzDbGeoPxPSuOz0W-fARtvMseZYyubzC5e83bgnzGQ-yunW9V4NEs9RQ/https://www.amazon.com/dp/B0G3MBHKB9/?_encoding=UTF8&pd_rd_i=B0G3MBHKB9&pd_rd_i=B0G3MBHKB9&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=fXQoG&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=6VMYXFKRW3W5JVKAT400&pd_rd_wg=lFy2x&pd_rd_r=dd8f28fe-25da-4981-8b2d-7615c40d8336",
+      "link_clean": "https://www.amazon.com/dp/B0G3MBHKB9/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G3MBHKB9&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41j1NSU8AUL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/ecf10eaa-16b5-4cee-adc4-1e4c43026d92.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/ecf10eaa-16b5-4cee-adc4-1e4c43026d92.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.8,
+      "reviews": 21,
+      "price": "$59.98",
+      "extracted_price": 59.98
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "text": "Customers find this pet carrier to be of good quality, sturdy, and comfortable, with one mentioning it's suitable for an 8-pound dog. The carrier fits well under airplane seats and is easy to fold for storage. They appreciate its functionality, particularly for trips to the vet and flights, and consider it good value for money. The size receives mixed feedback, with some finding it spacious while others say it's super small.",
+      "insights": [
+        {
+          "title": "Quality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 974,
+            "positive": 909,
+            "negative": 65
+          },
+          "summary": "Customers find the pet carrier to be of good quality.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "recommend this carrier - it is well made and pet can see in all directions which my critters love - size is great for my 12 lb bengal - can actually...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3BTTO4E7QYBTE"
+            },
+            {
+              "position": 2,
+              "snippet": "In my case the bag is seems like a good quality but im sad because even thought i brought a large size it seems more like a medium or small i have a...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2Q5VDQQK7AQJN"
+            },
+            {
+              "position": 3,
+              "snippet": "...Otherwise, it is a great product and very easy to clean. Both cats enjoy sleeping in the carriers at home, we keep them out for them all the time.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2BPPAC869A0VX"
+            },
+            {
+              "position": 4,
+              "snippet": "This was a great carrier for the short time it lasted, but my chihuahua managed to chew through the top zipper as we were boarding our first flight....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1MX7D1F98S8PT"
+            }
+          ]
+        },
+        {
+          "title": "Durability",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 680,
+            "positive": 497,
+            "negative": 183
+          },
+          "summary": "Customers find the pet carrier extremely sturdy.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...They are sturdy, well constructed, stay upright and the cats like them. So 4 stars but could be five if just a tad bigger (large was not available).",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1OHZQYZUPBKQG"
+            },
+            {
+              "position": 2,
+              "snippet": "We’ve had a few of these and they’re durable, last long, and seem comfortable for the cats, with space for our 13 lb cat to turn around, stand and...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2QP9FXMFTUH0K"
+            },
+            {
+              "position": 3,
+              "snippet": "...Granted its all in the product description but its pretty small and flimsy. My two 4 week kittens could not fit comfortable in this together....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1GP9GRDB93M3M"
+            },
+            {
+              "position": 4,
+              "snippet": "...This is a sturdy carrier for my needs, my dog tried to chew the mesh side, but let's face it, what can a tiny little rat dog do to this?...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1CGF5IKM1RSXF"
+            }
+          ]
+        },
+        {
+          "title": "Fit",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 385,
+            "positive": 300,
+            "negative": 85
+          },
+          "summary": "Customers find that the pet carrier fits well, particularly noting that it accommodates cats comfortably and can be placed under the seat.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "It's large enough for my Norwegian Forest cat, 13lbs, to fit comfortably, Handles are strong and the shoulder strap is comfortable....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2IEPE7WBUL0UW"
+            },
+            {
+              "position": 2,
+              "snippet": "Bought this for my 17 pound bischon for our upcoming flight. It fits perfectly and she can turn around in it easily. It’s well made and sturdy.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R255CD6AIYO0NG"
+            },
+            {
+              "position": 3,
+              "snippet": "...It was perfect. I flew with it on Southwest and it fit perfectly under the seat. She was happy in it so I was happy and we had a great flight.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2ILN2TNGGGOCL"
+            },
+            {
+              "position": 4,
+              "snippet": "...This was the best for a ten pound dog. It still did not fit under the seat in a Delta flight. I sat yoga position in my tiny seat....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2BEFL053NTWVR"
+            }
+          ]
+        },
+        {
+          "title": "Value for money",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 374,
+            "positive": 342,
+            "negative": 32
+          },
+          "summary": "Customers find the pet carrier to be good value for money, with several noting it offers nice quality for the price, and one mentioning it's a cost-effective solution for small pet transport.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...Great price, arrived fast, and great quality from what I can tell so far. Just need to place a heating pad at one end and I'm all set for trips....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1IQ9PCSQ0AA6C"
+            },
+            {
+              "position": 2,
+              "snippet": "...Would definitely recommend this product. Great value, we only used it twice so I’m not sure how well it would hold up with lots of use, seems like...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2M26ARMFLGFY6"
+            },
+            {
+              "position": 3,
+              "snippet": "Nice. Good price. A little less roomy than expected for a \"large.\" Will carry two 4-5 lb. cats, but is really better suited for one animal.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2LS55VZR3NGMG"
+            },
+            {
+              "position": 4,
+              "snippet": "...found the need for a large size carrier and this bag seemed like a good value. Save money spend more get a better bag.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R27G3YG2BZWQZ6"
+            }
+          ]
+        },
+        {
+          "title": "Comfort",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 316,
+            "positive": 281,
+            "negative": 35
+          },
+          "summary": "Customers find the pet carrier comfortable, describing it as cozy with a good size, and one customer mentions their pet enjoys sitting in it.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...chonky cat and this carrier is big enough to fit him so that he is comfortable. I also like that it is see through so that he can see outside of it....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2TI6VIGV75UR9"
+            },
+            {
+              "position": 2,
+              "snippet": "This is perfect for my new puppy! She is cozy and comfy and can see everything while we travel. She only weighs 3 pounds,so fits with room to spare.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R9AHLWOYNXZV7"
+            },
+            {
+              "position": 3,
+              "snippet": "...My cat is very comfortable in it and spent most the day in it with out any issues when I was chasing the Petco Vets all over the state of Michigan...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R14FW6UF5K4FAH"
+            },
+            {
+              "position": 4,
+              "snippet": "Cozy and easy to travel with. Wish it was a little taller. I like that it has a zipper on the front as well as on the top.",
+              "link": "https://www.amazon.com/gp/customer-reviews/RU841RC0TR0VY"
+            }
+          ]
+        },
+        {
+          "title": "Functionality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 280,
+            "positive": 269,
+            "negative": 11
+          },
+          "summary": "Customers find that the pet carrier works well for various purposes, including trips to the vet, flights, and transporting overweight cats and new kittens.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...with the one I was using before and, let me just say, this one works great. I ordered a large for my 18lbs, pretty big cat and he fit comfortably....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2LYKEV6YE6T0V"
+            },
+            {
+              "position": 2,
+              "snippet": "...My rabbit is about 5 pounds. It works well and has plenty of room with good ventilation. I love that you can open it from the side or the top....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RR97FA7EZT4Z1"
+            },
+            {
+              "position": 3,
+              "snippet": "This worked great and transported my cat to her new home. The liner is removable and washed out very well after she had peed in it from being upset....",
+              "link": "https://www.amazon.com/gp/customer-reviews/REFKY75V027KW"
+            },
+            {
+              "position": 4,
+              "snippet": "Functional and durable. The only thing I don't like is the collar clip that hangs down from the top....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3AUMXNQ1ND4HO"
+            }
+          ]
+        },
+        {
+          "title": "Portability",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 276,
+            "positive": 256,
+            "negative": 20
+          },
+          "summary": "Customers appreciate the carrier's portability, as it folds up nicely for storage and is easy to carry in and out.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...It comes with a strap for over the shoulder and also is easy to carry and the shorter carrying straps fit well over the handle of our carry on as we...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1HTBTQ7J229TN"
+            },
+            {
+              "position": 2,
+              "snippet": "This carrier is so convenient and easy to wipe down. I just got to kittens and they fit comfortably and light accidents were very easy to clean.",
+              "link": "https://www.amazon.com/gp/customer-reviews/RO9TSMHC19747"
+            },
+            {
+              "position": 3,
+              "snippet": "...carrier was sturdy and I like the zippers on the top and side, for easy access. He likes it so much, I've caught him sleeping in it a couple times.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R20BX8IOG2J262"
+            },
+            {
+              "position": 4,
+              "snippet": "love this, its collapsible. Its easy to clean and store, 2 vet visits later and my cat trying to tear it apart and its still in perfect condition.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2FMSQ3IOTSIG3"
+            }
+          ]
+        },
+        {
+          "title": "Size",
+          "sentiment": "mixed",
+          "mentions": {
+            "total": 1000,
+            "positive": 627,
+            "negative": 446
+          },
+          "summary": "Customers have mixed opinions about the carrier's size, with some finding it spacious and good for fat cats, while others describe it as super small.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...I will note that the medium appears to be the perfect size for my small cat (~7 lbs) so I would imagine that the small would be cramped for most pets.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3P3DG3I08XE0Y"
+            },
+            {
+              "position": 2,
+              "snippet": "The tote in all was nice, but just too small for my 25 lb mini golden doodle. Had to return as she won't fit in any size they provide in this carrier.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R4LGCLGTHJX1Y"
+            },
+            {
+              "position": 3,
+              "snippet": "Nice quality, nice and roomy for my 15 pound cat. Haven't had to use it yet but he likes to sleep in it, and it seems very sturdy and easy to carry....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1DIXKMQ347XI0"
+            },
+            {
+              "position": 4,
+              "snippet": "Sturdy, appears quality made- However- its very small- My 6 pd Yorkie is snug inside- No space for a water container when traveling- No move around...",
+              "link": "https://www.amazon.com/gp/customer-reviews/RLGWP98JU2E00"
+            }
+          ]
+        }
+      ],
+      "images": [
+        "https://m.media-amazon.com/images/I/71HAhGb02hL.jpg",
+        "https://m.media-amazon.com/images/I/811ZrhE3mwL.jpg",
+        "https://m.media-amazon.com/images/I/61uzEuwQWgL.jpg",
+        "https://m.media-amazon.com/images/I/71KBKE9Lf3L.jpg",
+        "https://m.media-amazon.com/images/I/71nP1QwkGyL.jpg",
+        "https://m.media-amazon.com/images/I/71SCR0V2ACL.jpg",
+        "https://m.media-amazon.com/images/I/71hezMACmlL.jpg",
+        "https://m.media-amazon.com/images/I/81k0Z54CUjL.jpg",
+        "https://m.media-amazon.com/images/I/71znX+j01tL.jpg",
+        "https://m.media-amazon.com/images/I/811HpVjIrcL.jpg",
+        "https://m.media-amazon.com/images/I/81SgrqNfD6L.jpg",
+        "https://m.media-amazon.com/images/I/71k4L2Hsl0L.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 72,
+        "4 star": 13,
+        "3 star": 8,
+        "2 star": 2,
+        "1 star": 5
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "After 3 years: Sturdy and cat loves it",
+        "text": "3 YEAR UPDATE: I can't believe I've had my kitty almost 3 years. I still have this carrier and still LOVE it. She still naps in it sometimes and she likes to jump in and out of it while playing. The carrier hasn't shown any signs of damage! It was a great buy that I highly recommend. The only drawback is that she's heavier so it's not as easy to carry her with the shoulder strap, but that's not the carrier's fault.Edited to add: It's been a few months and I still LOVE this carrier. My cat plays in it all the time and scratches at the sides but it doesn't show any sign of damage. I took her to the vet and liked how she could see her surroundings well while being secure in the carrier. I also walked to the vet and it was easy to carry using the shoulder strap. I really am very glad i bought this and my mom has one now for her cats to play in.Original review: I bought this to bring my new cat home from my mom's house, which involved a six hour car ride. I took it to my mom's and set it open on the floor, hoping the new kitty would get used to it and not be scared to go inside. Well, it was a huge hit with all 4 of the cats in the home. They took turns napping in it, and they played with each other through the mesh sides. I was a bit concerned how the mesh would hold up because the kitten seems to think it's a scratching posts, but so far it's fine.It was easy to coax her in after she had spend a few days with The carrier. The kitten didn't enjoy the long car ride and much meowing and scratching ensued, but the carrier was good and fit perfectly behind the front seats. Now we're home and ever though it's only been one day since her harrowing experience, she's already back to napping in the carrier. I guess it's her safe spot, which is great.I plan on buying another for my mom's cats because they loved the thing. I'll update of it doesn't hold up long tem, but it seems well built.",
+        "rating": 5,
+        "date": "December 29, 2017",
+        "author": "Shellie",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEGSDBOLO5XPYYQWMDZ6DLDICFSA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/cb2f0cab-ab8f-4cde-b22d-2df894753cf3._CR0%2C0%2C388%2C388_UX460_.jpg",
+        "images": [
+          "https://m.media-amazon.com/images/I/61uzEuwQWgL._SY88.jpg"
+        ],
+        "helpful_votes": "34 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "size": "20.0\"L x 12.0\"W x 12.0\"H",
+          "style": "Without Wheels"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Made well",
+        "text": "Sturdy.Great product@",
+        "rating": 5,
+        "date": "March 19, 2026",
+        "author": "Marshabrowning",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGUGP6VFMZOEBKINV2PP3ARUNMPQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "size": "20.0\"L x 12.0\"W x 12.0\"H",
+          "style": "Without Wheels"
+        }
+      },
+      {
+        "position": 3,
+        "title": "I'd give it 10 stars if there's such option",
+        "text": "I was taking my 5-year-old-to-be 19lbs schnauzer to Europe for her birthday and shopping for a good travel carrier that she would actually go in and remain inside. She's a support dog so she's never been in any carrier during US domestic travels and she's been pretty much everywhere in the US. However, while she is allowed to travel in cabin w/o being inside of a carrier, she's required to have tickets when we ride trains together. The cost is about $37 a day, quite hefty. However, as long as she remains in a bag or basket then she rides for free. Before I ended up getting this carrier, i tried at least two other types from Amazon, both are the backpack type and failed. She would fight her life not going in, let along stay in. Finally, came across this crate carrier and was complete life saver, arrived really quickly and surprisingly sturdy as hell. Took about 2 tries to get her go in and quickly became comfortable with it. She would even go in on her own, waiting for treat. The crate has a very firm base and very comfy to sit in. It’s very lightweight and spacious to use as a travel bag when she doesn’t need to be inside. So I ended up using it as my overnighter a lot on this trip. I ran into people at the airport carrying exactly the same bag. This thing rocks, and way underpriced. I paid $28 for it and I believe it should’ve been double the cost considering the material and quality of this bag. Highly recommended.",
+        "rating": 5,
+        "date": "January 5, 2020",
+        "author": "Niko417",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFEHCRX34FYRTCO23UG7FGN3564A",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/b088f4a4-85fc-40ec-b831-dfc7b49b5666._CR0%2C0%2C236%2C236_UX460_.jpg",
+        "images": [
+          "https://m.media-amazon.com/images/I/81cZcFjFPwL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71YMhkq5zaL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71fjTMuH70L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71f9iZCPDfL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71FIwPapFGL._SY88.jpg"
+        ],
+        "helpful_votes": "100 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "size": "20.0\"L x 12.0\"W x 12.0\"H",
+          "style": "Without Wheels"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Sturdy comfy but a little small?",
+        "text": "This carrier is very sturdy and worked well for my cat, who is about 12 and a half pounds. It looked a little small when it first arrived, but once I put him inside, he was actually able to lay down comfortably. I do wish it was slightly wider, and I still do feel like it’s on the small side if it’s supposed to hold 22lbs. but it still functions well and feels secure during use. The mesh allows for good airflow and visibility, which is great for pets. My cat is a big body, but this carrier is stable enough for him, the color and the design are accurate and the zipper quality seems good so far! The shoulder strap is comfortable. For the price, the quality and durability make it a really good value overall.",
+        "rating": 4,
+        "date": "March 26, 2026",
+        "author": "Gianna",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFYWXYDTPPJG7XF7U7O3O2WCIEOA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/21094ba8-d5c3-4d9f-bd56-d9e2643a43f2._CR0%2C0%2C500%2C500_SX460_.jpeg",
+        "images": [
+          "https://m.media-amazon.com/images/I/71KBKE9Lf3L._SY88.jpg"
+        ],
+        "verified_purchase": true,
+        "product": {
+          "size": "20.0\"L x 12.0\"W x 12.0\"H",
+          "style": "Without Wheels"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Muy bonita ami gatita le encanta",
+        "text": "Excelente producto",
+        "rating": 5,
+        "date": "March 27, 2026",
+        "author": "Cliente de Amazon",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEVI266N7CROYJLRAFANRZXVVS7Q",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "20.0\"L x 12.0\"W x 12.0\"H",
+          "style": "Without Wheels"
+        }
+      },
+      {
+        "position": 6,
+        "title": "I Love it and My Cat Does Too",
+        "text": "This carrier is great! It's roomy enough for a small cat or dog (though if your pet is more than 12 lbs, I suggest the next size up). It's sturdy, but light, and easy to lift and store. The shoulder strap is handy, but not overly long and the padding around the handle is comfortable even with the add weight of your pet. The mesh screen keeps your pet comfy, but is not easy to break through (granted our cats were calm enough not to claw or bite at it (you may need extra lining if your pet is really determined to bust out). I love the dual openings. The top flap is great for when I need to place my cat in or lift her out on trips to the vet or groomer, and when I'm okay with her taking her time she can walk in or out herself through the front opening. I like having a short leash built in so I can clip her harness in and know she can't run off the moment I open the cage. (You can even clip your pet's leash to them first before unclipping them from the carrier to keep pets prone to running extra safe). The fleece lined bottom is soft enough that our cats like to nap on it, and easy to remove and wash. These carriers aren't too bulky, so storage is easy, but they can't be collapsed, so you will need a fair bit of closet space to stash them in (you could always keep other per supplies inside them or just leave them out and open for your pet to sleep in. If you drape a blanket over them, these carriers make good kitty caves). I would highly recommend these. They are so much better than those awful plastic pet crates.",
+        "rating": 5,
+        "date": "May 28, 2017",
+        "author": "Amazon Customer",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGBNUEJHJKWBGRUDBKUUQEUFFO7Q",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "size": "20.0\"L x 12.0\"W x 12.0\"H",
+          "style": "Without Wheels"
+        }
+      }
+    ],
+    "other_countries_reviews": [
+      {
+        "position": 1,
+        "title": "Nice & Large",
+        "text": "Good quality, it fits my 3 cats (2 kittens & 1 adult)",
+        "rating": 5,
+        "date": "January 17, 2022",
+        "author": "Enas",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "20.0\"L x 12.0\"W x 12.0\"H",
+          "style": "Without Wheels"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Nice quality",
+        "text": "Seems well constructed and durable, but yet to be tested. The carrier feels roomy for its small size. This is the perfect size for many airlines",
+        "rating": 5,
+        "date": "March 18, 2026",
+        "author": "Ade Rian",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "16.5\"L x 11.0\"W x 11.0\"H",
+          "style": "Without Wheels"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Buen tamaño y calidad",
+        "text": "Buenísimo muy burna calidad y tamaño, su manejo y forma de guardar es práctico lo recomiendo",
+        "rating": 5,
+        "date": "December 7, 2025",
+        "author": "Adán",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/92e452a9-4216-4693-81e5-96ddb7624bf2._CR0%2C50%2C233%2C233_UX460_.jpg",
+        "verified_purchase": true,
+        "product": {
+          "size": "20.0\"L x 12.0\"W x 12.0\"H",
+          "style": "Without Wheels"
+        },
+        "country": {
+          "code": "MX",
+          "name": "Mexico"
+        },
+        "language": {
+          "code": "es",
+          "name": "Spanish (Mexico)"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Good Product",
+        "text": "Good Product",
+        "rating": 4,
+        "date": "December 19, 2025",
+        "author": "Rita Lourido",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "20.0\"L x 12.0\"W x 12.0\"H",
+          "style": "Without Wheels"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Net groot genoeg voor mijn volwassen kater",
+        "text": "Mijn kat (een potige volwassen kater van 15) heeft deze tas (de grote variant) inmiddels als vaste slaapplek geconfisqueerd. Hij ligt er graag in en dat past prima. Maar: het zal wat lastiger worden om je kat in de tas te krijgen als hij/zij zich er van nature niet zo in thuis voelt. Want écht groot is 'ie niet.",
+        "rating": 5,
+        "date": "May 5, 2021",
+        "author": "Jasper",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "20.0\"L x 12.0\"W x 12.0\"H",
+          "style": "Without Wheels"
+        },
+        "country": {
+          "code": "NL",
+          "name": "Netherlands"
+        },
+        "language": {
+          "code": "nl",
+          "name": "Dutch"
+        }
+      }
+    ]
+  }
+}
