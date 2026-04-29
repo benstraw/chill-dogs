@@ -27,9 +27,9 @@ const shopCards = [
     color: 'calm',
   },
   {
-    title: 'Comfort & Rest for Dogs',
-    description: 'Supportive beds, cozy blankets, and comforting toys for every age.',
-    href: ROUTES.comfortHub,
+    title: 'Best Calming Dog Beds',
+    description: 'Supportive beds for rest, recovery, and relaxation — curated for anxious dogs.',
+    href: ROUTES.comfortCalmingBeds,
     label: 'Comfort',
     color: 'comfort',
   },
@@ -61,27 +61,6 @@ const pinnedGuideRoutes = [
 
 {isV6 ? (
   <>
-    {/* ── Shop by Need ── */}
-    <section class="shop container">
-      <h2 class="section-title">Shop by Need</h2>
-      <div class="shop-grid">
-        {shopCards.map((card) => (
-          <a
-            href={card.href}
-            class={`shop-card shop-card--${card.color}`}
-            data-track="collector_to_converter_click"
-            data-to-page={card.href}
-            data-link-position="homepage-shop"
-          >
-            <span class={`shop-label shop-label--${card.color}`}>{card.label}</span>
-            <h3 class="shop-title">{card.title}</h3>
-            <p class="shop-desc">{card.description}</p>
-            <span class="shop-cta">Explore picks →</span>
-          </a>
-        ))}
-      </div>
-    </section>
-
     {/* ── From the Guide ── */}
     <section class="guide-section container">
       <h2 class="section-title">From the Guide</h2>
@@ -127,6 +106,30 @@ const pinnedGuideRoutes = [
           >
             <h3 class="more-title">{article.title}</h3>
             <p class="more-desc">{article.description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    {/* ── Newsletter (injected from parent) ── */}
+    <slot name="newsletter" />
+
+    {/* ── Shop by Need ── */}
+    <section class="shop container">
+      <h2 class="section-title">Shop by Need</h2>
+      <div class="shop-grid">
+        {shopCards.map((card) => (
+          <a
+            href={card.href}
+            class={`shop-card shop-card--${card.color}`}
+            data-track="collector_to_converter_click"
+            data-to-page={card.href}
+            data-link-position="homepage-shop"
+          >
+            <span class={`shop-label shop-label--${card.color}`}>{card.label}</span>
+            <h3 class="shop-title">{card.title}</h3>
+            <p class="shop-desc">{card.description}</p>
+            <span class="shop-cta">Explore picks →</span>
           </a>
         ))}
       </div>

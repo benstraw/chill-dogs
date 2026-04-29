@@ -52,15 +52,16 @@ const orgSchema = {
     <JsonLd slot="head" schema={orgSchema} />
     <HomepageHero variant="v6" />
 
-    <HomepageBody variant="v6" articleFeed={articleFeed} />
-    <section class="container homepage-signup">
-      <EmailSignup
-        placement="homepage_inline"
-        pageSlug={ROUTES.home}
-        pageType="attractor"
-        category="general"
-      />
-    </section>
+    <HomepageBody variant="v6" articleFeed={articleFeed}>
+      <section slot="newsletter" class="container homepage-signup">
+        <EmailSignup
+          placement="homepage_inline"
+          pageSlug={ROUTES.home}
+          pageType="attractor"
+          category="general"
+        />
+      </section>
+    </HomepageBody>
   </BaseLayout>
 )}
 
