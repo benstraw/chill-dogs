@@ -8,7 +8,7 @@
 
 site_system:
   status: "active"
-  as_of: "2026-04-14"
+  as_of: "2026-04-27"
   owner: "chill-dogs"
   purpose: "Define the website as a modular conversion system and keep implementation aligned."
 
@@ -37,8 +37,10 @@ site_system:
       notes: >
         Home page includes a dusty rose color block introducing the Comfort & Rest collector
         with tagline "Settle in." — positioned between HomepageHero and the start-prompt section.
-        The latest/guide lists include How to Crate Train Your Dog and Best Travel Crates for Road Trips
-        to connect informational crate intent with the new crate converter path.
+        The homepage guide section now auto-discovers entries from the MDX articles collection,
+        sorts them by pubDate descending, features the three newest posts with images, and renders
+        the remaining articles in a compact recency list so newly published articles land on the
+        home page automatically.
         A homepage-inline email signup block sits below HomepageBody as a secondary capture path.
 
     - name: "Cooling"

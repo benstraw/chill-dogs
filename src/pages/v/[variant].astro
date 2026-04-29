@@ -1,8 +1,10 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import HomepageHero from '@components/modules/HomepageHero.astro';
 import HomepageBody from '@components/modules/HomepageBody.astro';
 import type { HomepageVariant } from '@components/modules/HomepageHero.astro';
+import { buildHomepageArticleFeed } from '@utils/homepage-articles';
 
 export function getStaticPaths() {
   const variants: HomepageVariant[] = ['v1', 'v2', 'v3', 'v4', 'v5', 'v6', 'v7', 'v8'];
@@ -10,6 +12,7 @@ export function getStaticPaths() {
 }
 
 const { variant } = Astro.params as { variant: HomepageVariant };
+const articleFeed = buildHomepageArticleFeed(await getCollection('articles'));
 
 /**
  * Variant pages are experiment copies of /.
@@ -27,5 +30,5 @@ const canonicalUrl = new URL('/', Astro.site).href;
   <meta slot="head" name="robots" content="noindex, follow" />
 
   <HomepageHero variant={variant} />
-  <HomepageBody variant={variant} />
+  <HomepageBody variant={variant} articleFeed={articleFeed} />
 </BaseLayout>
