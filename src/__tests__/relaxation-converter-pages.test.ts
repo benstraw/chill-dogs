@@ -57,6 +57,105 @@ describe('relaxation converter page config', () => {
     ))).toBe(true);
   });
 
+  it('returns travel beds converter config with travel-specific product logic', () => {
+    const config = getRelaxationConverterPageConfig('best-dog-travel-beds');
+
+    expect(config.pageSlug).toBe('best-dog-travel-beds');
+    expect(config.hero.secondaryCta?.href).toBe('/travel/dog-road-trip-gear/');
+    expect(config.itemListSchema?.productIds).toEqual([
+      'chuckit-travel-bed',
+      'coleman-roll-up-travel-bed',
+      'furhaven-outdoor-travel-dog-bed',
+      'kindtail-nomad-nap-mat',
+      'onetigris-travel-dog-bed',
+      'kurgo-loft-wander-bed',
+      'bingpet-outdoor-travel-bed',
+      'yofang-extra-large-travel-bed',
+    ]);
+    expect(config.blocks.some((block) => (
+      block.kind === 'note' &&
+      block.heading === 'Important Flight Note'
+    ))).toBe(true);
+  });
+
+  it('returns chew-resistant beds converter config with toughness-specific product logic', () => {
+    const config = getRelaxationConverterPageConfig('best-chew-resistant-dog-beds');
+
+    expect(config.pageSlug).toBe('best-chew-resistant-dog-beds');
+    expect(config.hero.secondaryCta?.href).toBe('/comforting/');
+    expect(config.itemListSchema?.productIds).toEqual([
+      'k9-ballistics-armored-crate-bed',
+      'k9-ballistics-elevated-cooling-bed',
+      'fxw-titannest-elevated-bed',
+      'veehoo-chewproof-elevated-bed',
+      'k9-ballistics-ripstop-oval-bolster-bed',
+      'k9-ballistics-rectangle-pillow-bed',
+      'vivifying-chew-resistant-crate-pad',
+      'sytopia-orthopedic-chew-resistant-bed',
+      'sytopia-elevated-chew-resistant-bed',
+      'brands1231-chew-resistant-crate-mat',
+    ]);
+    expect(config.blocks.some((block) => (
+      block.kind === 'comparison_table' &&
+      block.heading === 'Chew-Resistant Bed Comparison Table'
+    ))).toBe(true);
+  });
+
+  it('returns orthopedic beds converter config with grouped support sections', () => {
+    const config = getRelaxationConverterPageConfig('best-orthopedic-dog-beds');
+
+    expect(config.pageSlug).toBe('best-orthopedic-dog-beds');
+    expect(config.hero.secondaryCta?.href).toBe('/comforting/');
+    expect(config.itemListSchema?.productIds).toEqual([
+      'dogbed4less-xl-memory-foam-bed',
+      'furhaven-luxe-lounger-orthopedic',
+      'eheyciga-xl-orthopedic-sofa',
+      'bedsure-supportmax-orthopedic-sofa',
+      'rainmr-memory-foam-bed',
+      'eheyciga-xl-memory-foam-couch',
+      'wnpethome-waterproof-orthopedic-bed',
+      'furtime-xl-orthopedic-bed',
+      'noah-paw-denim-orthopedic-bed',
+      'casa-paw-waterproof-xl-bed',
+      'bfpethome-waterproof-orthopedic-sofa',
+      'bedsure-comfyfleece-orthopedic',
+      'cwawz-orthopedic-bolster',
+      'friends-forever-orthopedic-sofa',
+      'comfort-expression-bolster-bed',
+      'cozy-kiss-xl-bolster-bed',
+      'bedsure-crate-orthopedic-mat',
+      'ksiia-crate-orthopedic-bed',
+      'dog-bed-wont-go-flat-crate-bed',
+      'nupida-xl-crate-bed',
+      'eheyciga-medium-crate-sofa',
+      'liorce-xxl-orthopedic-bed',
+      'veehoo-xxl-memory-foam-bed',
+      'laifug-xxl-memory-foam-bed',
+      'noah-paw-giant-orthopedic-bed',
+      'invenho-xl-orthopedic-sofa',
+      'bedsure-flat-orthopedic-bed',
+      'ohgeni-orthopedic-bed',
+      'sunheir-orthopedic-crate-bed',
+      'wnpethome-xl-orthopedic-sofa',
+    ]);
+    expect(config.blocks.some((block) => (
+      block.kind === 'comparison_table' &&
+      block.heading === 'Orthopedic Bed Comparison Table'
+    ))).toBe(true);
+    expect(config.blocks.some((block) => (
+      block.kind === 'product_section' &&
+      block.id === 'waterproof-beds'
+    ))).toBe(true);
+    expect(config.blocks.some((block) => (
+      block.kind === 'product_section' &&
+      block.id === 'crate-beds'
+    ))).toBe(true);
+    expect(config.blocks.some((block) => (
+      block.kind === 'product_section' &&
+      block.id === 'budget-beds'
+    ))).toBe(true);
+  });
+
   it('returns airline crates converter config with rigid travel product logic', () => {
     const config = getRelaxationConverterPageConfig('best-airline-crates-for-flying-with-your-dog');
 
@@ -223,6 +322,71 @@ describe('relaxation converter page config', () => {
       'gardner-pet-heavy-duty-crate',
       'xxl-heavy-duty-dog-crate',
       'hiwokk-large-dog-crate',
+    ]));
+  });
+
+  it('keeps orthopedic bed products in the orthopedic-beds category', () => {
+    const productIds = getRelaxationProductsByCategory('orthopedic-beds').map((product) => product.id);
+
+    expect(productIds).toEqual(expect.arrayContaining([
+      'dogbed4less-xl-memory-foam-bed',
+      'furhaven-luxe-lounger-orthopedic',
+      'eheyciga-xl-orthopedic-sofa',
+      'bedsure-supportmax-orthopedic-sofa',
+      'rainmr-memory-foam-bed',
+      'eheyciga-xl-memory-foam-couch',
+      'wnpethome-waterproof-orthopedic-bed',
+      'furtime-xl-orthopedic-bed',
+      'noah-paw-denim-orthopedic-bed',
+      'casa-paw-waterproof-xl-bed',
+      'bfpethome-waterproof-orthopedic-sofa',
+      'friends-forever-orthopedic-sofa',
+      'comfort-expression-bolster-bed',
+      'cozy-kiss-xl-bolster-bed',
+      'bedsure-crate-orthopedic-mat',
+      'dog-bed-wont-go-flat-crate-bed',
+      'nupida-xl-crate-bed',
+      'eheyciga-medium-crate-sofa',
+      'liorce-xxl-orthopedic-bed',
+      'veehoo-xxl-memory-foam-bed',
+      'laifug-xxl-memory-foam-bed',
+      'noah-paw-giant-orthopedic-bed',
+      'invenho-xl-orthopedic-sofa',
+      'bedsure-flat-orthopedic-bed',
+      'ohgeni-orthopedic-bed',
+      'sunheir-orthopedic-crate-bed',
+      'wnpethome-xl-orthopedic-sofa',
+    ]));
+  });
+
+  it('keeps travel bed products in the travel-beds category', () => {
+    const productIds = getRelaxationProductsByCategory('travel-beds').map((product) => product.id);
+
+    expect(productIds).toEqual(expect.arrayContaining([
+      'furhaven-outdoor-travel-dog-bed',
+      'chuckit-travel-bed',
+      'coleman-roll-up-travel-bed',
+      'kindtail-nomad-nap-mat',
+      'onetigris-travel-dog-bed',
+      'kurgo-loft-wander-bed',
+      'yofang-extra-large-travel-bed',
+      'bingpet-outdoor-travel-bed',
+    ]));
+  });
+
+  it('keeps chew-resistant bed products in the chew-resistant-beds category', () => {
+    const productIds = getRelaxationProductsByCategory('chew-resistant-beds').map((product) => product.id);
+
+    expect(productIds).toEqual(expect.arrayContaining([
+      'k9-ballistics-armored-crate-bed',
+      'fxw-titannest-elevated-bed',
+      'veehoo-chewproof-elevated-bed',
+      'k9-ballistics-ripstop-oval-bolster-bed',
+      'k9-ballistics-rectangle-pillow-bed',
+      'vivifying-chew-resistant-crate-pad',
+      'sytopia-orthopedic-chew-resistant-bed',
+      'sytopia-elevated-chew-resistant-bed',
+      'brands1231-chew-resistant-crate-mat',
     ]));
   });
 

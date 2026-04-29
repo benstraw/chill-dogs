@@ -230,6 +230,20 @@ export const staticSitemapSections: SitemapSection[] = [
         pageType: 'converter',
       }),
       createSitemapPage({
+        baseTitle: relaxationConverterPages['best-chew-resistant-dog-beds'].title,
+        description: relaxationConverterPages['best-chew-resistant-dog-beds'].description,
+        href: ROUTES.comfortChewResistantBeds,
+        pageType: 'converter',
+        ogTitle: relaxationConverterPages['best-chew-resistant-dog-beds'].ogTitle,
+      }),
+      createSitemapPage({
+        baseTitle: relaxationConverterPages['best-dog-travel-beds'].title,
+        description: relaxationConverterPages['best-dog-travel-beds'].description,
+        href: ROUTES.comfortTravelBeds,
+        pageType: 'converter',
+        ogTitle: relaxationConverterPages['best-dog-travel-beds'].ogTitle,
+      }),
+      createSitemapPage({
         baseTitle: relaxationConverterPages['best-puppy-crates'].title,
         description: relaxationConverterPages['best-puppy-crates'].description,
         href: ROUTES.comfortPuppyCrates,
@@ -251,6 +265,12 @@ export const staticSitemapSections: SitemapSection[] = [
         baseTitle: relaxationConverterPages['best-airline-crates-for-flying-with-your-dog'].title,
         description: relaxationConverterPages['best-airline-crates-for-flying-with-your-dog'].description,
         href: ROUTES.comfortAirlineCrates,
+        pageType: 'converter',
+      }),
+      createSitemapPage({
+        baseTitle: relaxationConverterPages['best-airline-approved-dog-carriers'].title,
+        description: relaxationConverterPages['best-airline-approved-dog-carriers'].description,
+        href: ROUTES.comfortAirlineCarriers,
         pageType: 'converter',
       }),
       createSitemapPage({

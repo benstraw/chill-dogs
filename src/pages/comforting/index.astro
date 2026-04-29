@@ -9,10 +9,12 @@ const collectionSchema = {
   '@type': 'CollectionPage',
   name: 'Comfort & Rest for Dogs',
   url: 'https://www.chill-dogs.com/comforting/',
-  description: 'Calming beds, orthopedic beds, and rest gear for dogs who need more than a mat on the floor.',
+  description: 'Calming beds, orthopedic beds, chew-resistant beds, travel beds, and rest gear for dogs who need more than a mat on the floor.',
   hasPart: [
     { '@type': 'WebPage', name: 'Best Calming Dog Beds', url: 'https://www.chill-dogs.com/comforting/best-calming-dog-beds/' },
     { '@type': 'WebPage', name: 'Best Orthopedic Dog Beds', url: 'https://www.chill-dogs.com/comforting/best-orthopedic-dog-beds/' },
+    { '@type': 'WebPage', name: 'Best Chew-Resistant Dog Beds', url: 'https://www.chill-dogs.com/comforting/best-chew-resistant-dog-beds/' },
+    { '@type': 'WebPage', name: 'Best Dog Travel Beds', url: 'https://www.chill-dogs.com/comforting/best-dog-travel-beds/' },
   ],
 };
 ---
@@ -20,7 +22,7 @@ const collectionSchema = {
 <BaseLayout
   title="Comfort & Rest"
   ogTitle="Dog Beds for Comfort & Rest | Calming & Orthopedic Picks"
-  description="Calming beds, orthopedic beds, and rest gear for dogs who need more than a mat on the floor. Browse our top picks for rest and recovery at home."
+  description="Calming beds, orthopedic beds, chew-resistant beds, travel beds, and rest gear for dogs who need more than a mat on the floor."
 >
   <JsonLd slot="head" schema={collectionSchema} />
   <HeroExperiment

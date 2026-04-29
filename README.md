@@ -232,6 +232,31 @@ Pre-commit runs both the Vitest suite and the smoke tests, so broken rendered ou
 
 ---
 
+## ASIN validity check
+
+Products can go out of stock or be removed from Amazon without warning. The ASIN check script hits `amazon.com/dp/{ASIN}` directly for every product in the catalog and reports any that are unavailable or gone.
+
+```bash
+bun run check:asins           # check all ~92 ASINs, print full table
+bun run check:asins -- --quiet  # issues only (clean output for periodic checks)
+```
+
+No API key required. Takes about 75 seconds (800ms delay between requests to avoid rate limiting). Exits with code `1` if any issues are found.
+
+**Status meanings:**
+
+| Status | Meaning |
+|---|---|
+| `OK` | Product page found with title |
+| `UNAVAILABLE` | Page exists but item can't be bought |
+| `REMOVED` | 404 or redirected off the product page |
+| `RATE LIMITED` | Amazon throttled the request — re-run in a few minutes |
+| `UNKNOWN` | 200 response but couldn't confirm product title (CAPTCHA likely) |
+
+Run this after adding new products or periodically to catch stale affiliate links before they affect revenue.
+
+---
+
 ## Affiliate links
 
 All Amazon links must use the `AffiliateLink` component — never a plain `<a>` tag:

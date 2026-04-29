@@ -64,4 +64,26 @@ describe('admin product catalog data', () => {
       ])
     );
   });
+
+  it('tracks the featured travel bed on both the road trip article and travel-bed converter', () => {
+    const pageMap = buildProductPageMap();
+
+    expect(pageMap['onetigris-travel-dog-bed']).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ href: '/travel/dog-road-trip-gear/' }),
+        expect.objectContaining({ href: '/comforting/best-dog-travel-beds/' }),
+      ])
+    );
+  });
+
+  it('tracks the shared K9 elevated cot on both cooling and chew-resistant converters', () => {
+    const pageMap = buildProductPageMap();
+
+    expect(pageMap['k9-ballistics-elevated-cooling-bed']).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ href: '/cooling/cooling-mats/' }),
+        expect.objectContaining({ href: '/comforting/best-chew-resistant-dog-beds/' }),
+      ])
+    );
+  });
 });

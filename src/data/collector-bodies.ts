@@ -211,7 +211,7 @@ export const comfortCollectorBody: CollectorBodyConfig = {
   sections: [
     {
       heading: 'Shop by Rest Setup',
-      intro: 'Beds and crates for different rest needs — calming beds for dogs who seek security, orthopedic beds for joint support, and puppy crates for training.',
+      intro: 'Beds and crates for different rest needs — calming beds for dogs who seek security, orthopedic beds for joint support, chew-resistant beds for destroyers, portable travel beds for life on the go, and puppy crates for training.',
       cards: [
         {
           href: ROUTES.comfortCalmingBeds,
@@ -228,6 +228,22 @@ export const comfortCollectorBody: CollectorBodyConfig = {
           linkLabel: 'See our picks ->',
           dataToPage: ROUTES.comfortOrthopedicBeds,
           dataCategory: 'orthopedic-beds',
+        },
+        {
+          href: ROUTES.comfortChewResistantBeds,
+          title: 'Best Chew-Resistant Dog Beds',
+          description: 'Tougher beds, elevated cots, washable rip-stop options, and crate mats for dogs that destroy soft bedding.',
+          linkLabel: 'Compare tough beds ->',
+          dataToPage: ROUTES.comfortChewResistantBeds,
+          dataCategory: 'chew-resistant-beds',
+        },
+        {
+          href: ROUTES.comfortTravelBeds,
+          title: 'Best Dog Travel Beds',
+          description: 'Portable, foldable, washable dog beds and mats for road trips, hotels, camping, patios, and destination settling.',
+          linkLabel: 'Compare travel beds ->',
+          dataToPage: ROUTES.comfortTravelBeds,
+          dataCategory: 'travel-beds',
         },
         {
           href: ROUTES.comfortPuppyCrates,

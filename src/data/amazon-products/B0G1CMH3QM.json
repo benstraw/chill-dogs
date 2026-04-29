@@ -1,0 +1,530 @@
+{
+  "search_metadata": {
+    "id": "69f05258d0a88f3af08c77f3",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/QCDRQdCeC6NB1qAA3r4h-Q/69f05258d0a88f3af08c77f3.json",
+    "created_at": "2026-04-28 06:23:20 UTC",
+    "processed_at": "2026-04-28 06:23:20 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0G1CMH3QM/?",
+    "raw_html_file": "https://serpapi.com/searches/QCDRQdCeC6NB1qAA3r4h-Q/69f05258d0a88f3af08c77f3.html",
+    "total_time_taken": 1.87
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0G1CMH3QM",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0G1CMH3QM",
+    "title": "Dog Crate Mat – Chew Resistant Dog Bed for Crate, Soft Yet Durable Crate Pad Chew Proof, Machine Washable Dog Bed for Chewers, Multiple Sizes (Xtra-Large)",
+    "link": "https://www.amazon.com/1231-Brands-Dog-Crate-Mat/dp/B0G1CMH3QM/",
+    "link_clean": "https://www.amazon.com/dp/B0G1CMH3QM/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G1CMH3QM&device=desktop&engine=amazon_product",
+    "variants": [
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0G1CJCTXL",
+            "name": "Small",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G1CJCTXL&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0G1CP95SQ",
+            "name": "Medium",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G1CP95SQ&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0G1CMC77V",
+            "name": "Large",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G1CMC77V&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 4,
+            "asin": "B0G1CMH3QM",
+            "name": "X-Large",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G1CMH3QM&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Brand: 1231 Brands",
+    "thumbnail": "https://m.media-amazon.com/images/I/8172O-yMagL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/8172O-yMagL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81x+pGGff2L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81c69fr5qjL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/911jSDgU8CL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81ls-5aMKpL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/91NXOmCr3gL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81vuzhzu01L._AC_SL1500_.jpg"
+    ],
+    "rating": 5,
+    "reviews": 8,
+    "price": "$74.99",
+    "extracted_price": 74.99,
+    "price_unit": "$74.99 / ounce",
+    "extracted_price_unit": 74.99,
+    "prime": true,
+    "delivery": [
+      "FREE delivery Sunday, May 3",
+      "Or Prime members get FREE delivery Thursday, April 30. Join Prime"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$74.99",
+      "extracted_price": 74.99,
+      "price_unit": "$74.99 / ounce",
+      "extracted_price_unit": 74.99,
+      "delivery": [
+        "FREE delivery Sunday, May 3",
+        "Or Prime members get FREE delivery Thursday, April 30. Join Prime"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "1231 Brands",
+          "details": {
+            "heading": "Sold by",
+            "content": "1231 Brands"
+          },
+          "link": {
+            "text": "1231 Brands",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A3OFZ9WHI5MKG7&asin=B0G1CMH3QM&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "packaging": {
+          "text": "Ships in product packaging",
+          "details": {
+            "heading": "Ships in product packaging",
+            "content": "This item has been tested to certify it can ship safely in its original box or bag to avoid unnecessary packaging. Since 2015, we have reduced the weight of outbound packaging per shipment by 41% on average, that’s over 2 million tons of packaging material.If you still require Amazon packaging for this item, choose \"Ship in Amazon packaging\" at checkout. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/sipp_home"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "brand": "1231 Brands",
+    "breed_recommendation": "All breeds",
+    "special_feature": "Chew Resistant, Portable, Scratch Resistant, Washable, Water Resistant",
+    "material": "Riptop Oxford Fabric",
+    "product_dimensions": "41\"L x 28\"W x 2.5\"Th"
+  },
+  "about_item": [
+    "CHEW-RESISTANT PROTECTION – Built for determined pups, this dog crate bed chew proof design helps resist scratching, digging, and light to moderate chewing. A dependable chew resistant dog bed for crate training, travel, or everyday home use.",
+    "SOFT COMFORT WITHOUT COMPROMISE – Tough on the outside, cozy on the inside. This dog bed for chewers delivers a soft, supportive surface that keeps your dog relaxed while maintaining a durable chew proof style construction.",
+    "INDUSTRIAL-INSPIRED DURABILITY – Crafted to last longer than standard bedding, this dog bed indestructible inspired design helps reduce wear and tear, making it ideal for active, anxious, or teething dogs",
+    "MACHINE WASHABLE CONVENIENCE – Accidents happen. Simply toss this crate pad chew proof like into the washing machine for quick, hassle-free cleaning and a fresher crate environment.",
+    "MULTIPLE SIZES FOR A PERFECT FIT – Available in a range of sizes to suit most standard kennels, these indestructible dog beds chew proof options fit snugly inside crates, creating a secure and comfortable retreat your dog will love."
+  ],
+  "related_products": [
+    {
+      "position": 1,
+      "title": "Veehoo Indestructible Dog Bed for Crate, Chew Proof Dog Crate Pad with Reinforced Corners, Large Washable Chew Resistant Pet",
+      "link": "https://www.amazon.com/Veehoo-Indestructible-Reinforced-Washable-Resistant/dp/B0GHR96LF6/ref=pd_sbs_d_sccl_1_1/132-6151799-6264408?pd_rd_w=xz6KH&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=32V9Q8CDJR3H8KMD3G2D&pd_rd_wg=fX95x&pd_rd_r=42d313b4-d5e8-4e8d-a9ed-8a634ba50624&pd_rd_i=B0GHR96LF6&psc=1",
+      "asin": "B0GHR96LF6",
+      "link_clean": "https://www.amazon.com/Veehoo-Indestructible-Reinforced-Washable-Resistant/dp/B0GHR96LF6/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GHR96LF6&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81+60Aql3RL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.2,
+      "reviews": 22,
+      "price": "$54.99",
+      "extracted_price": 54.99,
+      "delivery": [
+        "Get it as soon as Sunday, May 3"
+      ]
+    },
+    {
+      "position": 2,
+      "title": "Vivifying Chew Proof Dog Bed for Aggressive Chewers, Waterproof Crate Pad for Small & Medium Dogs, Machine Washable Indoor Ou",
+      "link": "https://www.amazon.com/Vivifying-Aggressive-Chewers-Waterproof-Washable/dp/B0GK66SQWG/ref=pd_sbs_d_sccl_1_2/132-6151799-6264408?pd_rd_w=xz6KH&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=32V9Q8CDJR3H8KMD3G2D&pd_rd_wg=fX95x&pd_rd_r=42d313b4-d5e8-4e8d-a9ed-8a634ba50624&pd_rd_i=B0GK66SQWG&psc=1",
+      "asin": "B0GK66SQWG",
+      "link_clean": "https://www.amazon.com/Vivifying-Aggressive-Chewers-Waterproof-Washable/dp/B0GK66SQWG/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GK66SQWG&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71WM+pYKNML._AC_UL165_SR165,165_.jpg",
+      "rating": 4.6,
+      "reviews": 6,
+      "price": "$65.99",
+      "extracted_price": 65.99,
+      "delivery": [
+        "Get it as soon as Sunday, May 3"
+      ]
+    },
+    {
+      "position": 3,
+      "title": "SHEENLULU Chew Proof Dog Bed, Chew Resistant Dog Crate Pad for Aggressive Chewers, Machine Washable Kennel Mat for Small Dogs",
+      "link": "https://www.amazon.com/SHEENLULU-Resistant-Aggressive-Chewers-Washable/dp/B0GLDYPDWM/ref=pd_sbs_d_sccl_1_3/132-6151799-6264408?pd_rd_w=xz6KH&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=32V9Q8CDJR3H8KMD3G2D&pd_rd_wg=fX95x&pd_rd_r=42d313b4-d5e8-4e8d-a9ed-8a634ba50624&pd_rd_i=B0GLDYPDWM&psc=1",
+      "asin": "B0GLDYPDWM",
+      "link_clean": "https://www.amazon.com/SHEENLULU-Resistant-Aggressive-Chewers-Washable/dp/B0GLDYPDWM/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GLDYPDWM&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81ORUrj0G5L._AC_UL165_SR165,165_.jpg",
+      "rating": 5,
+      "reviews": 1,
+      "price": "$35.99",
+      "extracted_price": 35.99,
+      "price_unit": "$35.99/count",
+      "extracted_price_unit": 35.99,
+      "delivery": [
+        "Get it as soon as Sunday, May 3"
+      ]
+    },
+    {
+      "position": 4,
+      "title": "Dog Bed for Crate High Resilience Foam Crate Pad Mat for Medium Large Dogs Washable Anti-Slip,35\" x 22\",Dark Gray",
+      "link": "https://www.amazon.com/WAYIMPRESS-Resilience-Anti-Slip-Washable-Medium/dp/B0D9GDQHSS/ref=pd_sbs_d_sccl_1_4/132-6151799-6264408?pd_rd_w=xz6KH&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=32V9Q8CDJR3H8KMD3G2D&pd_rd_wg=fX95x&pd_rd_r=42d313b4-d5e8-4e8d-a9ed-8a634ba50624&pd_rd_i=B0D9GDQHSS&psc=1",
+      "asin": "B0D9GDQHSS",
+      "link_clean": "https://www.amazon.com/WAYIMPRESS-Resilience-Anti-Slip-Washable-Medium/dp/B0D9GDQHSS/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0D9GDQHSS&device=desktop&engine=amazon_product",
+      "badges": [
+        "Amazon's Choice"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/61wZ-fejruL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.3,
+      "reviews": 1102,
+      "price": "$15.99",
+      "extracted_price": 15.99,
+      "price_unit": "$15.99/count",
+      "extracted_price_unit": 15.99,
+      "delivery": [
+        "Get it as soon as Sunday, May 3"
+      ]
+    },
+    {
+      "position": 5,
+      "title": "Veehoo Chew Proof Dog Crate Pad, Indestructible Dog Bed Crate Mat with Reinforced Stitching, Large Chew Resistant Kennel Pad",
+      "link": "https://www.amazon.com/Veehoo-Indestructible-Reinforced-Stitching-Aggressive/dp/B0GJSMLNST/ref=pd_sbs_d_sccl_1_5/132-6151799-6264408?pd_rd_w=xz6KH&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=32V9Q8CDJR3H8KMD3G2D&pd_rd_wg=fX95x&pd_rd_r=42d313b4-d5e8-4e8d-a9ed-8a634ba50624&pd_rd_i=B0GJSMLNST&psc=1",
+      "asin": "B0GJSMLNST",
+      "link_clean": "https://www.amazon.com/Veehoo-Indestructible-Reinforced-Stitching-Aggressive/dp/B0GJSMLNST/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GJSMLNST&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81COtdptHyL._AC_UL165_SR165,165_.jpg",
+      "rating": 3.8,
+      "reviews": 19,
+      "price": "$46.99",
+      "extracted_price": 46.99,
+      "delivery": [
+        "Get it as soon as Sunday, May 3"
+      ]
+    },
+    {
+      "position": 6,
+      "title": "ZAKAPAWS Chew Proof Dog Mat - Indestructible Durable Kennel Mat for Aggressive Chewers, Machine Washable, Chew Proof Dog Crat",
+      "link": "https://www.amazon.com/ZAKAPAWS-Chew-Proof-Dog-Indestructible/dp/B0GGR7NTD8/ref=pd_sbs_d_sccl_1_6/132-6151799-6264408?pd_rd_w=xz6KH&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=32V9Q8CDJR3H8KMD3G2D&pd_rd_wg=fX95x&pd_rd_r=42d313b4-d5e8-4e8d-a9ed-8a634ba50624&pd_rd_i=B0GGR7NTD8&psc=1",
+      "asin": "B0GGR7NTD8",
+      "link_clean": "https://www.amazon.com/ZAKAPAWS-Chew-Proof-Dog-Indestructible/dp/B0GGR7NTD8/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GGR7NTD8&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/810U5+XQqsL._AC_UL165_SR165,165_.jpg",
+      "rating": 3.5,
+      "reviews": 30,
+      "price": "$49.99",
+      "extracted_price": 49.99,
+      "price_unit": "$49.99/count",
+      "extracted_price_unit": 49.99,
+      "delivery": [
+        "Get it as soon as Sunday, May 3"
+      ]
+    }
+  ],
+  "product_details": {
+    "product_dimensions": "41 x 28 x 2.5 inches; 4.98 Pounds",
+    "item_model_number": "chew proof dog crate pad",
+    "date_first_available": "March 23, 2026",
+    "manufacturer": "1231 Brands",
+    "asin": "B0G1CMH3QM",
+    "best_sellers_rank": [
+      {
+        "text": "#42,578 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 42578,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#12 in Dog Crate Pads",
+        "extracted_rank": 12,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/23764006011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Crate Pads"
+      }
+    ],
+    "customer_reviews": "5.0 out of 5 stars",
+    "rating": 5,
+    "reviews": 8,
+    "breed_recommendation": "All breeds",
+    "other_special_features_of_the_product": "Chew Resistant, Portable, Scratch Resistant, Washable, Water Resistant",
+    "recommended_uses_for_product": "Indoor",
+    "dog_breed_size": "Giant, Large",
+    "product_benefits": "Provides durable, comfortable, and easy-to-clean rest for pets.",
+    "material_type": "Riptop Oxford Fabric",
+    "fill_material": "Polyester Fiber",
+    "item_shape": "Rectangular",
+    "item_form": "Rectangular",
+    "brand_name": "1231 Brands",
+    "pet_type": "Dog",
+    "model_number": "chew proof dog crate pad",
+    "unit_count": "1 Ounce",
+    "included_components": "Chew proof dog crate pad",
+    "item_dimensions_l_x_w_x_thickness": "41\"L x 28\"W x 2.5\"Th",
+    "size": "X-Large"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0GGYL5QC3",
+      "title": "Mora Pets Reversible Dog Bed for Small Medium Dogs Large Cat Bed Washable - Cool & Warm 2-in-1 Anti Anxiety Calming Pet Bed for Summer, Rectangle Puppy Bed with Fluffy Grey Rose (25''x21''x7'')",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JH_yX4fPjoo7sO-crFoSglcAAAGd0sGrNQEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICAgsFIo/clv1c_ek-wBffXbcbSXQ5XY7vi_kTD8ESxt6CZ3xIO-0jLFedR2z-LB15w1pFLI6mNVUL_bA2ctxgkAReZMXoGm3G1EqSXzTp9CYRBl4jBWN6-jJl3jkQ7-n8h22falnk1IXj8vdODg1pHqDRouVNEGfkr8txLoNiAjvXr8eVySDa-9qZ3MbuV8kzF7HzMz-haAnHuGu0y6m-j_2aIUC19tUxa26ExH2MVrsSRTOKDiVMR57AlwwLY1FUSb-jasZWD4lUT9qWtxAjHjatLnhQ-v_JDaud0X2iALJbd8HgxOPdt3N8LKWS30YTtpR26XCb3rfju-9mswc1wayDBnErF7JeXIC7C59PVdP3EJVRG4-xw2gH2SPCcVtTBl2MP_pQ6UIzrYvartgsymm3gX4M0bdppH7nqFEnKNYj0wVfI57mau2k9z0piwg7qMcmVYlXeVtzaCuOTpdJC-WmboekYCq4j1UPEhUXvuMyrXIGHeWqMeirEi583-AUAV_MrI97CgjwXS8Mr6Abya74k-7Xtn9n_rTluedwApH4RTpyRLMCZPlZs8fMKXXLlIwiM3Y0KZ0HXHZvn5mq-dIqry8dM7Z57Cef0UqmbGl5htUdcj0NVIrj34aOD4Hf8vjCVkvmrfk6nVMQWOAPPCVlyw-4lXjWL0JBsdBjQih-iHFOfSPBUtycv7WLtIHq4HyRvzj2o3XOiuRBswvs0E8UGa7Zdxj_YrKUo7lQga1Q2OcYMn_eEwinRSGGsrtjiNr1QZqXyHHKz_8Bcqtm38XHVliduSFHg54Ct2v6nxx85T3qIBXRV31JWdLPLVy2vb088wjc-RZuwJPYHRLp1eBstVYaKbvz8R3VA6VadbdgHIUuYUEItTMFm7OpD-Ea9CacLtYTg8U4QOQKMuqkvOdR6umrhSUg0T2gjjj8tidQdB-SjIN1CjVuMeLEiRV3YNiLlgUB3fWSkl1IhfdPej_GqTp4FOyOfxjX8BpK2l1_egA-TNfuGpf6hZQr9WkmBGLFw-frQGH2traNKc-4-71mTlLEiei8ht-_1jNWClW5b-GyyPVb4dPIVna9xxGf4byXRp8vxc-pPN5MoFhjRdeZYMTEO-ualPude5k8UnjowJjzhL-Ggpvn00Dk8Oc1VP5K1AghvJyrHdLaj8m09vQV0AKJ7MFeENfS56FSFelYUemwIXB5pyWqME1qvBbOn37ULqQ6h04ltukKMOOE_Bj1ZLxUGDfmQKRWYekz0QbhBkeumDAboIi-oGxnA7zznh6rM0TyjJXkXSn9h4pmZxT_PYkl4ooXfqx_v_NiLTgcRfIVw1e8uYJHV_rlEpTyUpSJk0k0zdSF7bvMYKDPV2b1-OZWorM0kzU4TBB44INFEuptGKU2ELm8sbS-0jmxlSfdolTFfdh3DXUosLGY1T1njRwhMm-S7WQXYdgLsXG_h9mQDgjH2F0bg74j2aaQLedjnf4LLJjH1M91BckOwEA7XG71GkyEH2EFVeKNVzONnXePYTqvA6sji-PHOxbimGHcq6UteZA/https://www.amazon.com/dp/B0GGYL5QC3/?_encoding=UTF8&pd_rd_i=B0GGYL5QC3&pd_rd_i=B0GGYL5QC3&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=JrHPX&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=32V9Q8CDJR3H8KMD3G2D&pd_rd_wg=fX95x&pd_rd_r=42d313b4-d5e8-4e8d-a9ed-8a634ba50624",
+      "link_clean": "https://www.amazon.com/dp/B0GGYL5QC3/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GGYL5QC3&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41afGqAZOrL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/594bb345-98c9-4747-93c2-3309e96ecbc8.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/594bb345-98c9-4747-93c2-3309e96ecbc8.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.5,
+      "reviews": 31,
+      "price": "$42.99",
+      "extracted_price": 42.99
+    },
+    {
+      "position": 2,
+      "asin": "B0FQJK7WT4",
+      "title": "Orthopedic Dog Bed for Large Dog, Waterproof Pet Bed,Non-Slip Bottom and Egg-Crate Foam with Removable Washable Cover Crate Bed,Cream,36\"x27\"x3\"",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JNfIbo1Ko9nimWlriji2B4AAAAGd0sGrNgEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICDtsim2/clv1c_ek-IBfHXEsTW3uLbkyNnvRM8JRJx4-ErKYdJ2xZKROimTdNtn8iNo19ABY2jRoJoMi2Usww8jxdr87LezWfzfPgqyYEkfeorw3vM5MGHUPx0AXFJpSaKCyjgYnp5q8h0-FsJwFN7fgKzyJ3v1rcqX1LdpA1clVLOn87Il_cIz4AMf58blEl689rcyUngSPr9ssWn1E9hE3d4dSVb9U3KVEMRr1sNLuT6tFQuOjoQ-xqs8Df41AdsX5wfi_b4EaajmL3bu8XUrfNjVVRr1kWN6Nb3qZpgr8HJ69PC0klYEDBpIXk-z_E2qnD3Kc5xochR9DBG8AOHo-zyDy8LF5Ni5T48fkDzK_yV7pD_w5G78Ma2aaWk7HwigrX2VPaObR5ml_4srkq0pxV4quh3O3a3K6q874LLxgAd5IVma6-X5F1zurRBS6rqbiqCr5EbDTmJKEqI6kf0H0ClZDNbsCljnP8IiPQNwA5FA2uidlli-F-J-zUu5ynQ7lfxryh0QfngDipsXMpbEA56QV7bwS-9LYRQ5MZJ6z_nODhB91yF140YyMhAbikCpKX_tN5A9C2yct7nZmuItr0tSKwr-KHCg22uRLki1PPXsdflEWHZ--UWQhbm-17zgCuMEzwqhaSPwA3AQSoDmfaDiNBtaFMGSWC1MOdlDFQO9QxQ3e3wuUYUNmrCWXrP-CIH2bJe9A0Libqv5-HlE-JAPAAAcLuntn8kuyuh1qqkFAHDFOF1J-HdNWhWaR_8NaJ6aKighjnRSb4vIOH4-QHDDhcXuml6xx8OihKKQ1PMlT35CS-xp_t7pPKBA-apwx0xpokAERDzCBQeUXN4XL4LU8ydfRQCsUOQ1dWxUVex4OGUB5TVqpTPTcxzZmIJ5CiWK226U9qKyPb0Tq1EbYCD1eAEawGxzu47i9xSGxC5HmeaEfk4aLe89yjxnJE16XeLRNALAiAu5XUV7__Zgc2NdusIXSoQfthfA9zrXDwHgmjJZiAGFKNye9nT0jRP4j7wG1U4GKhOtN52vm_Hi1CLkjO2WZ39_7ZKqsbcgDXNOOl8wv5fYW409JNp2ljOF3D8JCvjm6ToKbmo10JA5KgjronWJAOsy06znJ-FbL2Q2lB78uynnuYnFdmHW8tJIPke12wB-3v4Plu57IM8BD1QadMLvR0696fkbRxoHrApHZ1QGbZNrSqdtST5AWcOlqWibqnEsfP1jc2gIhg_5CdffSNheHGYXWtgVkjpqpQ7oM8_7_3PchZg6guxrNkbpw44E6EChyClS3xSz2IMYV-nzy121xqJG1zv-S2AccSBjSxNHzfkCLgOr58KUGqEZWRFS68CWUHDDFeR9t4AuGYsh7Nysgx5GwOohZzLGh3m4j7WErfRI6HPjk6rKc8FtAByWQUT1Zr3gmDBjollF_XL7tj_ZQrg4wvPQ8u2AEH_SJYxmyBONJbEE9xrLSTZb5ceirfgLgLf8JIcXtdHAXr7BBAMVfha2mJMdgkFdsUzsRGiMa7DKNqmtfBoZbe34ErsbULY82OW8uGqNTUCCQi6uo6VDcYhic0m/https://www.amazon.com/dp/B0FQJK7WT4/?_encoding=UTF8&pd_rd_i=B0FQJK7WT4&pd_rd_i=B0FQJK7WT4&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=JrHPX&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=32V9Q8CDJR3H8KMD3G2D&pd_rd_wg=fX95x&pd_rd_r=42d313b4-d5e8-4e8d-a9ed-8a634ba50624",
+      "link_clean": "https://www.amazon.com/dp/B0FQJK7WT4/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FQJK7WT4&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41MofJnFxbL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/f4ffc9c0-38bc-475d-9269-92f51281d8b8.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/f4ffc9c0-38bc-475d-9269-92f51281d8b8.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 145,
+      "price": "$29.90",
+      "extracted_price": 29.9
+    },
+    {
+      "position": 3,
+      "asin": "B0GJ2X7TGJ",
+      "title": "Sytopia 42 Inch Indestructible Canvas Outdoor Dog Bed for Extra Large Dogs, Chew Proof Waterproof Pet Bed with Machine Washable Removable Cover, Durable Indoor Patio Pet Pad for Crate, Dark Grey",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JMu4gurst33iuwifDkukw0IAAAGd0sGrNwEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICAmo603/clv1c_ek-wxfHXFbbWDbHXL5scrhfcuXaZLo8nmm2oAyVjPTt48XwT3tgnHtoqcg1G1hN4Q5jhwYW1zVW_f4Dl8kP7wegoK56Xddu9PrigDy3r5Iq1y5aKigdvoHqcCnn0p2erEjZZPbgyRphQzV3gJuHo8uRLodiejvXr8eVxSD6-9kYvOSsOjodsDsME3gMmQhn_tuGHeVkKnQnW87DN3hjAdQtRr_W_hMQcdodV5Yhedt_aNaSdySiItNKDy0CqSWYR-Ohnz1NKJl3NbspAgSpUveuLaALtUi1PKjAXJfX5iQMfu0s64RE36tT6KfFNFAceIs5yoctdYB2ga6jCQTGPWZU1oVXI5wpEZh9Ym_kSm7gkwxNG2MalRkavtZF2VWCi0qFREvlqH2DFLSQ417GpsM10HCF2sFYKmmd8AMQAkt8_vDk2uxSwNhZpKr3YOrf1nvZHPMh1R9J4E3YdrX2TNEPG606VkqRqLEMIDwVMOAXf3ZS1z1odRg_eaWmvsQ4VM-cKCiBBvnbVV-L-o1R2p1aa4Aa-P049L5vXv0CNWlmEMMXxoe-C_sa_9qMvK3TjpawUHsN5omyWWD0ZsM3-21KwCHQFpvsbLY1C-DrxgjRTSc-UQKS0HsoFgMvIZtjzAh6wsLjVBTA1jc49NaCUufGr1a-yQGLaNpDadxkjD4k54zTUHPy470VgqWA5uX17jR9s3fu1DUUGFY7dGCjTkI0o7lhha9Io-ccAnfd2-u2IRCPog2X55qAycXoEPZOsz9nQ308lTPOI3ELujQ9z_aeCeVuL-Q9HoSOLckhEK-cmeYYqGvUajtP0bnyFp12skFfAgBjBH_WLz5MvPDGT8n_j86cAuoP8FxpAcxxcx_2lAMQB_n1mD_3gVUp0g0eC5NzFC-pkuAfe0idYTstbnOQnY0317GPXUp7xNEqo6EfNZJDsrYXQOhAcWcoV_XUr68R2O3vfnvU7wiaoo-EoQ9oOGPyx6S_c0Q31CgZS7nRmsjwynjPceSEm7sHdDwuZj94nWBLpurCzKgA3C0ii8qaaDnarBnYWDlLmg-moUdHQqqKR4OrDMWKM1oauSfIVGjvgy8TajOTrAlaZcDkYQ0UlDZqLmHeQUAROg6sLpqzezgjPrI0x2Nwtr0CPulocab4JeTN8Opf-sIHb8j1qYvIKStdGmwNDfnjtVns6JJ1VWOeoJoFxiOvOVG_veffKACxhwEZvMh8UG_Av16O5DazCltdMsbTpJTcNlOjCoQz7b9mmK8ldqQgpkzyej5dM6zuS9xJDYtx9-wQTaAFSdgz2tJl995HDCbeCn1TI0vSKHMRfIHeT8KsEx3uzbKWx5o3xmqaxWBVP9VtnB2Rt7h-n2EF8tk8GLkJ5TTVeGroG3zgnpHkzyYudBoAQ9B50BLYHx4OXARgPWkXnpSY2QFKxRQYLlCAgOXAYWvm7vXtQPMKWU3qsMO1swv7YmYfyoJD5YYAJXysUTrq-hSdJMWuGYjI5MM2H-o0pv8qeQQ8elc4gT9Mkurnhox7ZD1e1lUKPJbSp3h5VffNg0m5G0cXvt6c/https://www.amazon.com/dp/B0GJ2X7TGJ/?_encoding=UTF8&pd_rd_i=B0GJ2X7TGJ&pd_rd_i=B0GJ2X7TGJ&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=JrHPX&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=32V9Q8CDJR3H8KMD3G2D&pd_rd_wg=fX95x&pd_rd_r=42d313b4-d5e8-4e8d-a9ed-8a634ba50624",
+      "link_clean": "https://www.amazon.com/dp/B0GJ2X7TGJ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GJ2X7TGJ&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/515kMNWR7fL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/f9ad293c-0422-46d0-985f-250639b622d5.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/f9ad293c-0422-46d0-985f-250639b622d5.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.1,
+      "reviews": 25,
+      "price": "$64.99",
+      "extracted_price": 64.99
+    },
+    {
+      "position": 4,
+      "asin": "B0FX3WB5CV",
+      "title": "HOMBYS Chew Proof Foam Dog Bed 41\"x28\" with 14 Reinforced Metal Rivets, Indestructible Crate Pad for Large Dogs, Super Chew Resistant Fabric & Water Washable Kennel Mat, Black",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JM0QPevf1Z2ymE0IkoWegUAAAAGd0sGrOQEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICAvThsc/clv1c_ek-YBffXLcTSXU6htmnxSfo_zZoFS56bqjn2kEag0WnreJtbjdDseHCxHycjmuIHHgYdqBs0ixO-X6jXcHquzl0PMTm8sKYvOcs1XILi8GQcq7lBAgBK7sf968MUxjG0sWryroVc-wvbXZOwUwxBcZjiyF2fk0la0nTRTLCrwKy_cUPNroFjqvsRCGL_RkNfZGlGhM9ya_f4dSYxFkhJkCIJP9yziOKm3R1l80kVblK6dqQfDPaA10zUWJYi6g14kHlJTqKYF4PqhGrGhDRx4jEMMHz8ScOVXDXDeqry92oslZYB2KynpJ5fgHxF0lx4hDu2fNETDL1VCSe8j5VCPbiBAUdDQm0cPefc9ifhIuJnFHGhg7i8YIfoQ6zu-cpmAmQEEWgg5lBeckpE7fajKy-8nfUnjf5djQABWmyuFJS1rGolm3zaZSRQI4rZdxEzhhJjs_5OePfpGBSxaOwaGDZEnjUvwO1lA2RpXIdYTM5YXVeV4jFQ7nfzbjv01Jn88gsQSrewqY4sm12kcSltvL1PZd4Qp74PRt0QyHZcpko8xHWPbfKcM8jwEEoLe0Etq1eeRBs_VyhmlpF_lyTK_KI4Momf6K7GazdjcEF1zDupSSYt6bU1fyD_xtX5EffglLDdNKKwWyiW70N1n_OYElaXApevcT1tdWIXGYq8d36q4MbLZe3r7BNAvtFyuHt3qhVayUwvle43N9RhXot6w1phpo4ORRmgmGziZGLEYYPDiTdq7TcuIq7oqdc8oOhnoBt8I8--lSiXdrsLKiE6kgQFQR7kKDMoc73v636GoacqQtFzh1v9YKSGNKDsoNtM10K3krli0wNMPS0k_dvabNSLVWnBTxIOSavo6NQhn35SNWHqnzrQoDr-D93-Td9i0FV1X6Xxs1j4flpJiVzqU76p4uQ_9KCbVK30DA0hXmNrr3RMdaHHv9EfqvL0q0m0Jq01AmPsxsuP1cLVLE97dhuGZu5JqJTVfvkJeauexqAC9p-S8YQr7AHNa_9wY84XfkXA4-Y6yLSU30hyk32xVl88Lr0HF2-3ukvTbdhUHKbTrdXD28OMNz3Jhv2IvBTJqOsMeLrLrv85Kklpja_6-_NCqT6cqZ4A4HNpppwgKDPx23kdz0kOyio06qYC0n9oEEkTz5u441V2jTwSHNNQ3SWEBI9iAbQvKThtr9r_QV5p5xQSg3wbu9Dezt2JtsGL0UhA2I7scd2_6C122_a7iIEXhrEmr94qEDeOCya4f57sZYU6G1J8Z04bVruVkf4tAvTgsSGPxPchgLmvLm_86WGlvQIZBlC0s_q6ZdzYh5D-65zdHk7MdJHqiyFgXyQ4N_e4Bgs93Ak2S7y3Zp4TYMsaTVJz8vmaIqCGBOu1DhJSAfTo0iR2HvZkfMg3UKjDQ9RipU6tpOaEw5jfGtrk3wVtATYZNT2_NNHqmY4RIWb1iNW184OalCpLRVvyj2f8yTbZXOI2v74SWRIUBqsf16wjQM4jWUmzXV-nM4SUnFSC0euBZBLmXZksb4bIoSzd8R5-/https://www.amazon.com/dp/B0FX3WB5CV/?_encoding=UTF8&pd_rd_i=B0FX3WB5CV&pd_rd_i=B0FX3WB5CV&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=JrHPX&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=32V9Q8CDJR3H8KMD3G2D&pd_rd_wg=fX95x&pd_rd_r=42d313b4-d5e8-4e8d-a9ed-8a634ba50624",
+      "link_clean": "https://www.amazon.com/dp/B0FX3WB5CV/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FX3WB5CV&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41IXEOM2lzL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/9e29a7ad-c096-4276-a7a5-5387036526a2.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/9e29a7ad-c096-4276-a7a5-5387036526a2.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 3.9,
+      "reviews": 38,
+      "price": "$89.99",
+      "extracted_price": 89.99
+    },
+    {
+      "position": 5,
+      "asin": "B0FJ196M55",
+      "title": "FURTIME Washable Dog Bed Large Sized Dogs, Deluxe Dog Crate Beds Comfy Fluffy Kennel Pad Anti-Slip Pet Sleeping Mat, Machine Washable Dogs Pillow, 35\"x23\"x3.5\", Gray",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JGZYffmfYi2GRO_W0Lzp5jMAAAGd0sGrOgEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICA_iptn/clv1c_ek-wBYHXKsTWnuvbkwYTr1GUIUJX0stiBswEudBYQuaSDS4zhMa_8auKiJ9Jo-BxWXuuTPwLchiAA9u2SCl-UKEHTmsOcoKT1U3cgOcg1O-SAZdVLB6_Hc357O9gDrYHJFGn_qIzuGX9cp8KbY7GetrfcB2fkTHjm9iEr-arj8Wc4-yDqfsyxq27N3pNZqkqiu5bJgrMHTHF57SVDWAK4CKzNW2hZO78shIkoatrCb5U5QEyg0hBQLafxYyqmJ5090oYPFHIbDvTVa6cktnHoqFS-cusQiGC_ze8TUxo9h36isAiC6FVCF7ctQzH7TiZn4dqtrGn6QBB3Vkwr8IchVqBZLoSwwIMNOg0v5saJsvRHkYhipZtFAL5Ypu-TUk2CzPgxT3hPU_DudnJ5QuF6d3Yj5ajk2rwvNgLQgeZCQcPqS8NcgcQJXIqO2Wt0Egv8mCaXaLHKMf6Gl_NVrH0BFJElQsBeJzhGXs2pnhLLqGRaOSo2OqChMey8BmebkP1T0qH6IOgSVkof-mmWelDCXXySUvUpwyaUB_rsX4YkO8YHD4F1X3y2-Kj-q9EFM3xgP07h0DEMxnTqhj_7esrOlG9vU9RVYXQMfCx2F79-IUBCX04J5cxdj0AngGfW6TLJY1VFxLqQdnu79pJ5qtFyC94Y0c8tiQknBxyeNCW6X-i3ALKZ65dFCFI2s6pfV-AlIFRqblOqkfrI14v9AqZ3-3kQIWwScoxid7oCIMT8CWMYZ38cd-UgZ23zujsDcgfqS6QMgY-trkiz-44CT__rVUPglX9_MyeMDO9tJgNtaC7KCyOaVPycT88giiBF-3M0_5ue6U6nNTN7z3z4xtVX3269JnARtGU9mg8PWPZKBfSycFP5IXFaA7wg52mFif8Y0aIWXRkjtI3RJa7NALqq8aysA2XFvuqHOuQjsuq0KLt-d0EYPn0nF32eqssIS5kEvhL9rt4aK78WlnkybC3_LBEZcEz_MO3iFTtFouY5McQkmv_1qzov2u2jwGAz_q85_6852zl8e-_YAcTOx_6yla5PdRZXFUur-3RjKgniDeoUR96ncJIIYZ-ggwfDDl6EQ6EID4aa8NGFN_Tq3iiuAHf1lt_Wv22L9uDMfS-Q8JB8zce7Z03WiMI2W4mrHRn6GmoGQh5ihdFyYpAKt3zksSGMEVWvZxafZGJAoU0icJbTxLIftajlMqZfxOWM9zbgoy9fY5IiL8hotje1jCSIkaOXqFX_r2c8UdoVGyLoMjRXc6kFaU7R0PxVQGRqHSrj7WibtxO-OLVNKbXo1zSLTHVge3-wa8GyUxZUT33Zs-jpql02GM9AUHfIts4Msa6hliZDwrJsQ4Xzxyatn9K3fmHPhtX4zi559XPQSzYHmbqxaCoeDOCN68WeDsiAYC7PSXcdKRVfEB_ZMyubxZY0zYTvNc-qtF0l3XbbP3QWvjfWsUqVKEl5RoRr4Tf5N4lvaOnYuW33B5Onu8onzWESuUSJlaodnaiHdQa8YZzcf2H1abaylA4oRVptTL65nxZ6DnixMIhkVyMx6udjZPY/https://www.amazon.com/dp/B0FJ196M55/?_encoding=UTF8&pd_rd_i=B0FJ196M55&pd_rd_i=B0FJ196M55&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=JrHPX&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=32V9Q8CDJR3H8KMD3G2D&pd_rd_wg=fX95x&pd_rd_r=42d313b4-d5e8-4e8d-a9ed-8a634ba50624",
+      "link_clean": "https://www.amazon.com/dp/B0FJ196M55/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FJ196M55&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/31LeLv4cIlL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/5221302e-e25e-40cf-8813-97893ec420bf.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/5221302e-e25e-40cf-8813-97893ec420bf.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.4,
+      "reviews": 455,
+      "price": "$19.77",
+      "extracted_price": 19.77,
+      "old_price": "$26.99",
+      "extracted_old_price": 26.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "images": [
+        "https://m.media-amazon.com/images/I/71+pXO8X66L.jpg",
+        "https://m.media-amazon.com/images/I/81QDybI3YvL.jpg",
+        "https://m.media-amazon.com/images/I/81BWGjwXlFL.jpg",
+        "https://m.media-amazon.com/images/I/71z2Q-04ZDL.jpg",
+        "https://m.media-amazon.com/images/I/714YwMKqMrL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 100,
+        "4 star": 0,
+        "3 star": 0,
+        "2 star": 0,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Picky Pup Approved!",
+        "text": "This pet bed has been a total win in our house! One of my dogs is extremely picky about where they’ll sleep, so I wasn’t sure how this would go—but both dogs instantly climbed on, settled in, and completely relaxed. That alone says everything!The quality is excellent, and it’s clear the bed is made with comfort in mind. It’s soft, supportive, and feels durable enough to hold up well over time. Seeing both of my pups so content and cozy on it has been the best part.Highly recommend this bed if you’re looking for something comfortable, well-made, and even approved by the pickiest of dogs!",
+        "rating": 5,
+        "date": "April 10, 2026",
+        "author": "Kristen",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEMRTZZZ2WICV5OA2PGPU76IPKNQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/71+pXO8X66L._SY88.jpg"
+        ],
+        "verified_purchase": true,
+        "product": {
+          "size": "Large"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Quality Dog Bed",
+        "text": "My dog typically tears up anything in his kennel but so far not even a thread out on this one. I also really like that it is easy to clean, my dog is a dusty boy. I can literally just beat the dust off the bed outside or wipe it down with some water and a paper towel.",
+        "rating": 5,
+        "date": "April 11, 2026",
+        "author": "Arielle",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFYFZQQZL6KYQRBRBK5ARPBMUBIQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/81QDybI3YvL._SY88.jpg"
+        ],
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "size": "Large"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Comfortable bedding",
+        "text": "My dog loves the bed as it’s cool and smooth and big enough for her to lay in. The padding is firm yet comfortable for her to lay in. I like that it doesn’t bunch up so that it is uniform all cross",
+        "rating": 5,
+        "date": "April 12, 2026",
+        "author": "garner61",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEXI6BO3MAYYCWMIUOWLJLNUEXVQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/051aebc6-5f2a-4283-a252-ae7bc73662ca._CR62%2C0%2C375%2C375_SX460_.jpg",
+        "images": [
+          "https://m.media-amazon.com/images/I/81BWGjwXlFL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71z2Q-04ZDL._SY88.jpg"
+        ],
+        "verified_purchase": true,
+        "product": {
+          "size": "X-Large"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Get it!",
+        "text": "This bed is awesome! My dog instantly loved it. The material feels sturdy.",
+        "rating": 5,
+        "date": "April 10, 2026",
+        "author": "Pamela Zavala",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHIQBNGOZFOYACELKFOTB4DPBJRA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "Large"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Great Quality, sturdy material",
+        "text": "Worth the cost. Will last for a long time and be comfortable for our older husky mix.",
+        "rating": 5,
+        "date": "April 6, 2026",
+        "author": "Theresa Stites",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEQXBVMZYHIJVOSOURZMUTU6SWAA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/714YwMKqMrL._SY88.jpg"
+        ],
+        "verified_purchase": true,
+        "product": {
+          "size": "X-Large"
+        }
+      },
+      {
+        "position": 6,
+        "title": "Lightweight, durable, easy to clean, Dogs love it",
+        "text": "Our dogs have loved this since we pulled it out of the box. We’re using it just as an available bed/lazy spot for them, but the ability to easily slide this inside a crate will come in handy as well. It’s tough and durable and, my favorite, easy to clean. 10/10",
+        "rating": 5,
+        "date": "April 10, 2026",
+        "author": "Rosalynn",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEJZ32O2PUTQAIG2QCJ35UBX7D4A",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "X-Large"
+        }
+      },
+      {
+        "position": 7,
+        "title": "Great service, great quality!",
+        "text": "My dogs love this new bed!!! My 3 little dogs cuddle up on it, so cute!!",
+        "rating": 5,
+        "date": "April 25, 2026",
+        "author": "Brittany",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFJR2SS3HYBHYNBD3CAHRZK5UTEQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "Large"
+        }
+      },
+      {
+        "position": 8,
+        "title": "Dog and cat approved",
+        "text": "My dog is loving his new bed. Ive also caught both my cats sleeping on it as well lol. The material feels tough and the cushion is soft",
+        "rating": 5,
+        "date": "April 9, 2026",
+        "author": "Erynne",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGRXHN3WPYXWJRXBLSXPXJKCY3EQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "Large"
+        }
+      }
+    ]
+  }
+}

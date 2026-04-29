@@ -34,7 +34,12 @@ function quickPickProduct(item: QuickPickItem) {
 }
 ---
 
-<BaseLayout title={config.title} description={config.description} navAccent="var(--color-sky)">
+<BaseLayout
+  title={config.title}
+  ogTitle={config.ogTitle}
+  description={config.description}
+  navAccent="var(--color-sky)"
+>
   {schema && <JsonLd slot="head" schema={schema} />}
 
   <div class="relaxation-theme">
@@ -113,6 +118,115 @@ function quickPickProduct(item: QuickPickItem) {
                   pageSlug={config.pageSlug}
                 />
               ))}
+            </div>
+          </div>
+        </section>
+      ) : block.kind === 'comparison_table' ? (
+        <section class={sectionClass(block)} id={block.id}>
+          <div class="converter-inner">
+            <h2>{block.heading}</h2>
+            {block.intro && <p class="section-intro">{block.intro}</p>}
+            <div class="comparison-table-wrapper">
+              <table class="comparison-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">{block.headings?.bestFor ?? 'Best For'}</th>
+                    <th scope="col">{block.headings?.style ?? 'Style'}</th>
+                    <th scope="col">{block.headings?.focus ?? 'Focus'}</th>
+                    <th scope="col">{block.headings?.care ?? 'Care Notes'}</th>
+                    <th scope="col" class="comparison-table__cta-col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {block.items.map((item, index) => {
+                    const product = getRequiredProducts([item.productId])[0];
+                    return (
+                      <tr>
+                        <td class="comparison-table__product-cell">
+                          {product.image && (
+                            <img
+                              src={product.image.src}
+                              alt=""
+                              class="comparison-table__thumb"
+                              loading="lazy"
+                              decoding="async"
+                              width="72"
+                              height="72"
+                            />
+                          )}
+                          <span class="comparison-table__product-name">{product.name}</span>
+                        </td>
+                        <td>{item.bestFor}</td>
+                        <td>{item.style}</td>
+                        <td>{item.focus}</td>
+                        <td>{item.care}</td>
+                        <td class="comparison-table__cta-cell">
+                          <AffiliateLink
+                            href={product.amazonUrl}
+                            class="comparison-table__cta"
+                            data-track="amazon_outbound_click"
+                            data-page-type="converter"
+                            data-page-slug={config.pageSlug}
+                            data-product-name={product.name}
+                            data-product-category={product.category}
+                            data-position={`table-${index + 1}`}
+                            data-destination="amazon.com"
+                            data-table="true"
+                          >
+                            Check Price
+                          </AffiliateLink>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+            <div class="comparison-table-mobile">
+              {block.items.map((item, index) => {
+                const product = getRequiredProducts([item.productId])[0];
+                return (
+                  <article class="comparison-table-mobile__card">
+                    {product.image && (
+                      <img
+                        src={product.image.src}
+                        alt=""
+                        class="comparison-table-mobile__thumb"
+                        loading="lazy"
+                        decoding="async"
+                        width="112"
+                        height="112"
+                      />
+                    )}
+                    <h3>{product.name}</h3>
+                    <dl class="comparison-table-mobile__list">
+                      <dt>{block.headings?.bestFor ?? 'Best For'}</dt>
+                      <dd>{item.bestFor}</dd>
+                      <dt>{block.headings?.style ?? 'Style'}</dt>
+                      <dd>{item.style}</dd>
+                      <dt>{block.headings?.focus ?? 'Focus'}</dt>
+                      <dd>{item.focus}</dd>
+                      <dt>{block.headings?.care ?? 'Care Notes'}</dt>
+                      <dd>{item.care}</dd>
+                    </dl>
+                    <AffiliateLink
+                      href={product.amazonUrl}
+                      class="comparison-table__cta"
+                      data-track="amazon_outbound_click"
+                      data-page-type="converter"
+                      data-page-slug={config.pageSlug}
+                      data-product-name={product.name}
+                      data-product-category={product.category}
+                      data-position={`table-${index + 1}`}
+                      data-destination="amazon.com"
+                      data-table="true"
+                    >
+                      Check Price on Amazon
+                    </AffiliateLink>
+                  </article>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -307,6 +421,124 @@ function quickPickProduct(item: QuickPickItem) {
     outline-offset: 2px;
   }
 
+  .comparison-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--text-sm);
+    background: var(--color-surface);
+  }
+
+  .comparison-table th {
+    background: var(--color-bg-alt);
+    font-weight: var(--weight-semibold);
+    text-align: left;
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 2px solid var(--color-border);
+    white-space: nowrap;
+  }
+
+  .comparison-table td {
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: top;
+    line-height: var(--leading-normal);
+  }
+
+  .comparison-table__product-cell {
+    min-width: 220px;
+  }
+
+  .comparison-table__thumb {
+    display: block;
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-xs);
+  }
+
+  .comparison-table__product-name {
+    font-weight: var(--weight-semibold);
+  }
+
+  .comparison-table__cta-col {
+    width: 130px;
+  }
+
+  .comparison-table__cta-cell {
+    text-align: center;
+  }
+
+  .comparison-table-mobile {
+    display: none;
+  }
+
+  .comparison-table-mobile__card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-md);
+  }
+
+  .comparison-table-mobile__thumb {
+    display: block;
+    width: 112px;
+    height: 112px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: var(--radius-sm);
+    margin: 0 auto var(--space-sm);
+  }
+
+  .comparison-table-mobile__card h3 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-sm);
+    text-align: center;
+  }
+
+  .comparison-table-mobile__list {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-xs) var(--space-md);
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-md);
+  }
+
+  .comparison-table-mobile__list dt {
+    font-weight: var(--weight-semibold);
+    color: var(--color-text-muted);
+  }
+
+  :global(.comparison-table__cta) {
+    display: inline-block;
+    background: var(--color-sky);
+    color: var(--color-charcoal) !important;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background var(--transition-fast);
+  }
+
+  :global(.comparison-table__cta:hover) {
+    background: var(--color-sky-hover);
+    color: var(--color-charcoal) !important;
+  }
+
+  :global(.comparison-table__cta:focus-visible) {
+    outline: 2px solid var(--color-sky);
+    outline-offset: 2px;
+  }
+
   .decision-card ul {
     margin: 0;
     padding-left: 1.125rem;
@@ -362,6 +594,14 @@ function quickPickProduct(item: QuickPickItem) {
   @media (max-width: 640px) {
     .converter-section {
       padding: var(--space-xl) var(--space-md);
+    }
+
+    .comparison-table-wrapper {
+      display: none;
+    }
+
+    .comparison-table-mobile {
+      display: block;
     }
 
     .quick-picks-grid,

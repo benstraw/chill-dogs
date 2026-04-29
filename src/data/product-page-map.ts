@@ -112,6 +112,10 @@ export function buildProductPageMap(): ProductPageMap {
   for (const p of calmingProducts.filter((p) => p.category === 'lick-mats')) {
     addRef(map, p.id, roadTripRef);
   }
+  const roadTripBed = relaxationProducts.filter((p) => p.id === 'onetigris-travel-dog-bed');
+  for (const p of roadTripBed) {
+    addRef(map, p.id, roadTripRef);
+  }
 
   const trackerComparisonRef: PageRef = { label: 'best-dog-gps-trackers', href: '/gear/best-dog-gps-trackers/' };
   for (const p of trackerProducts) {
