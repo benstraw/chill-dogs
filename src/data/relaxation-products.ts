@@ -796,11 +796,11 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Sliding barn door with a multi-lock closure addresses the single-latch failure mode common in lighter decorative furniture crates',
       'Chipboard panels with wear-resistant surface and steel-tube framing support up to 220 lbs on top, giving it real table-surface utility',
     ],
-    bestFor: 'Small to medium dogs up to 44 lbs that have pushed past basic single-latch mechanisms — the anti-chew edge treatment and double-welded steel address persistent but not extreme escape behavior',
+    bestFor: 'Small to medium dogs up to 44 lbs that have pushed past basic single-latch mechanisms.  The anti-chew edge treatment and double-welded steel address persistent but not extreme escape behavior',
     whyItWorks:
       'The recessed board edges remove the easiest chewing targets, and the multi-lock barn door addresses the sliding or pawing-open failure modes in standard decorative crate latches',
     considerIf:
-      'Your small or medium dog works at latch edges or chews at crate openings, and you want a furniture-style option before stepping up to a heavier utility crate',
+      'Your small or medium dog works at latch edges or chews at crate openings, and you want a furniture-style option instead of a heavier utility crate',
     image: { src: 'https://m.media-amazon.com/images/I/810zxDD9MdL._SL500_.jpg', alt: 'Hzuaneri Anti-Chew Furniture Dog Crate with Barn Door' },
   },
   {
@@ -810,15 +810,15 @@ export const relaxationProducts: RelaxationProduct[] = [
     category: 'crates',
     amazonUrl: 'https://www.amazon.com/dp/B0GJS5BV3Z/?tag=chill-dogs-20',
     bullets: [
-      'Enclosed panel design with 0.5-inch ventilation holes replaces open bar construction — no exposed bars for dogs to grip, bite, or use as lever points',
-      'High-quality steel and reinforced particleboard build with an upgraded double-door lock system designed to hold back dogs that push standard latches',
+      'Enclosed panel design with 0.5-inch ventilation holes replaces open bar construction.  There are no exposed bars for dogs to grip, bite, or use as lever points',
+      'High-quality steel and reinforced particleboard build with an upgraded double-door lock system designed to contain dogs that push standard latches',
       'Removable metal floor panel cleans more easily than wire floors and provides stable paw support for dogs that pace or shift weight while inside',
     ],
-    bestFor: 'Medium to large dogs that target the bars themselves — the enclosed panel approach removes the primary gripping and chewing surface that persistent escape artists find on open-bar furniture crates',
+    bestFor: 'Medium to large dogs that target the bars themselves. The enclosed panel approach removes the primary gripping and chewing surface that persistent escape artists find on open-bar furniture crates',
     whyItWorks:
       'Switching from bar-grid to enclosed panel removes the most accessible chewing and gripping surfaces, which is what many persistent dogs find first on standard furniture crates',
     considerIf:
-      'Your dog targets the bars or mesh rather than the door latch — the enclosed panel format changes what they can physically grab onto, rather than just adding more locks to the same vulnerable structure',
+      'Your dog targets the bars or mesh rather than the door latch.  An enclosed panel means there is nothing for the dog to physically grab onto, rather than just adding more locks to the same vulnerable structure',
     image: { src: 'https://m.media-amazon.com/images/I/71Hbp8TTNUL._SL500_.jpg', alt: 'REXWELTEN Heavy-Duty Enclosed Furniture Dog Crate' },
   },
   {
@@ -828,15 +828,15 @@ export const relaxationProducts: RelaxationProduct[] = [
     category: 'crates',
     amazonUrl: 'https://www.amazon.com/dp/B0F9NXMGQM/?tag=chill-dogs-20',
     bullets: [
-      '0.4-inch thick steel bars on a sliding front door plus two hinged side doors — three total access points without sacrificing bar gauge',
-      'Sized at 46.5 inches for large-breed dogs while still functioning as a TV stand or end table with a stable wood base for daily use',
-      'Sliding front door eliminates the outward swing gap that hinged doors create — useful for corner or tight-wall placement where door swing is a problem',
+      '0.4-inch thick steel bars on a sliding front door plus two hinged side doors.',
+      'Sized at 46.5 inches for large-breed dogs.  Can function as a TV stand or end table with a stable wood base',
+      'Sliding front door eliminates the outward swing of a hinged door.  Useful for placement in the corner of a room',
     ],
-    bestFor: 'Large dog owners who want strong steel bars, three access options, and a sliding front door that closes differently than a hinged design in a corner room placement',
+    bestFor: 'Large dog owners who want strong steel bars, three access options, and a sliding front door',
     whyItWorks:
-      'The sliding door mechanism has less swing-out gap and less torque leverage than a hinged door, which reduces the failure mode of dogs repeatedly nosing or pawing a swinging door open',
+      'The sliding door mechanism has less swing-out gap and less torque leverage than a hinged door, which reduces the chance of a dog escaping by repeatedly nosing or pawing a swinging door open',
     considerIf:
-      'You need a crate in a corner or against a wall, want a large-dog furniture crate with stronger steel bars rather than lightweight decorative framing, and still want it to read as furniture in a visible room',
+      'You need a crate in a corner or against a wall.  You want a large-dog furniture crate with stronger steel bars rather than lightweight decorative framing.  You want a crate that looks and functions as furniture',
     image: { src: 'https://m.media-amazon.com/images/I/71RxdhVH0zL._SL500_.jpg', alt: 'Petrova Heavy-Duty Furniture Dog Crate with Sliding Door' },
   },
   {
@@ -962,7 +962,7 @@ export const relaxationProducts: RelaxationProduct[] = [
     whyItWorks:
       'It addresses the needs of extra-large dogs who outgrow the size and strength of standard crates',
     considerIf:
-      'You need true XXL sizing and a stronger build at the same time',
+      'You need true XXL sizing and a stronger build',
     image: { src: 'https://m.media-amazon.com/images/I/81JfbDGBGSL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Heavy Duty Dog Crate XXL' },
   },
   {
