@@ -41,14 +41,6 @@ export const coolingConverterPageConfigs: Record<string, CoolingConverterPageCon
     faqHeading: 'Car Cooling FAQ',
     linkStripHeading: 'More Cooling Guides',
   },
-  'dog-travel-hydration': {
-    category: 'hydration',
-    pageSlug: 'dog-travel-hydration',
-    columns: 3,
-    secondaryCta: { label: 'Flying With a Dog Guide', href: ROUTES.travelFlyWithDog },
-    faqHeading: 'Dog Hydration FAQ',
-    linkStripHeading: 'More Travel Guides',
-  },
 };
 
 export function getCoolingConverterPageConfig(pageSlug: string): CoolingConverterPageConfig {
