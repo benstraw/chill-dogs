@@ -1967,7 +1967,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
     hero: {
       title: 'Best Dog Travel Bags for Flying',
       subtitle:
-        'A dedicated bag keeps food, documents, leash, collapsible bowl, and waste supplies organized and accessible from check-in to landing — so you\'re not digging through a general bag at the gate.',
+        'A dedicated bag keeps documents, food and water, leash, collapsible bowl, and waste supplies organized and accessible from check-in to landing, so you\'re not digging through a general bag at the gate.',
       disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
       primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
       secondaryCta: { label: 'Flying With a Dog Guide', href: ROUTES.travelFlyWithDog },
@@ -1983,13 +1983,13 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         kind: 'quick_picks',
         id: 'quick-picks',
         heading: 'Quick Picks',
-        intro: 'The best option depends on how long you\'re traveling and whether you prefer a backpack or tote carry style.',
+        intro: 'The best option depends on how long you\'re traveling, and whether you prefer a backpack or a tote.',
         items: [
           {
             label: 'Best Overall',
             title: 'DELOMO Dog Travel Backpack',
             description:
-              'Six dedicated compartments with labeled sections for food, treats, bowls, leash, and paperwork. Insulated food pocket and luggage strap handle airport transit well.',
+              'Six dedicated compartments with labeled sections for food, treats, bowls, leash, and paperwork. Insulated food pocket and luggage strap handle are convenient for airline travel.',
             productId: 'delomo-dog-travel-backpack',
             position: '1',
           },
@@ -1997,7 +1997,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
             label: 'Best for a Week Away',
             title: 'Mobile Dog Gear Week Away Bag',
             description:
-              'Full-week capacity with included collapsible bowls, treat bag, and waste dispenser in a single organized duffel system.',
+              'Full-week capacity with included collapsible bowls, treat bag, and waste dispenser in a single organized duffel bag.',
             productId: 'mobile-dog-gear-week-away',
             position: '2',
           },
@@ -2005,7 +2005,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
             label: 'Best Budget',
             title: 'Mancro Dog Travel Bag',
             description:
-              'No-frills tote that covers the essentials — bowl, leash, treats, waste bags — at a price that makes keeping one pre-packed and ready practical.',
+              'One tote that covers the essentials: bowl, leash, treats, waste bags.',
             productId: 'mancro-dog-travel-bag',
             position: '3',
           },
@@ -2013,7 +2013,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
             label: 'Best Tote',
             title: 'Mobile Dog Gear Day Tote',
             description:
-              'Tote format with included accessories: collapsible silicone bowl, water bottle, treat bag, and waste bag dispenser. Pre-organized and ready to grab.',
+              'Tote bag with included accessories: collapsible silicone bowl, water bottle, treat bag, and waste bag dispenser. Pre-organized and ready to grab.',
             productId: 'mobile-dog-gear-day-tote',
             position: '4',
           },
@@ -2022,12 +2022,12 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       {
         kind: 'prose',
         id: 'backpack-vs-tote',
-        heading: 'Backpack or tote — which fits your trip?',
+        heading: 'Backpack or tote: which fits your trip?',
         alt: true,
         paragraphs: [
-          'Backpacks work well for longer transit days where you\'re walking through large airports, riding trains, or navigating between gates. Padded straps and luggage pass-through handles keep your hands free and distribute weight across your back rather than one shoulder. Most backpack-style bags also offer more compartment structure, which helps when you\'re carrying food, a collapsible bowl, a leash, documents, and waste supplies together.',
-          'Totes are a better fit when you\'re traveling light, your transit day is short, or you prefer being able to drop and pick up your bag quickly. They slide under airline seats as easily as a backpack, and the Mobile Dog Gear options come pre-stocked with useful accessories. If you dislike the feeling of backpack straps during long days, a quality tote removes that friction entirely.',
-          'Trip length is the other variable. For a single day or overnight, most backpacks have more capacity than you need — a tote or compact bag may be a better size match. For a week or longer, the Mobile Dog Gear Week Away bag is sized for the full duration with dedicated storage for a week\'s worth of food and gear.',
+          'Backpacks work well for longer transit days where you\'re walking through large airports, riding trains, or navigating between gates. Padded straps and luggage pass-through handles keep your hands free and distribute weight across your back rather than one shoulder. Most backpack-style bags also offer more compartment structure, which helps when you\'re carrying documents, food and water, a collapsible bowl, a leash, and waste supplies.',
+          'Totes are a better fit when you\'re traveling light, your transit day is short, or you prefer being able to drop and pick up your bag quickly. They slide under airline seats as easily as a backpack, and the Mobile Dog Gear options come pre-stocked with useful accessories. If you dislike the feeling of backpack straps during long travel days, a quality tote is a better choice.',
+          'Trip length is the other variable. For a single day or overnight, a tote or compact bag may be better, because most backpacks have more capacity than you need. For a week or longer, the Mobile Dog Gear Week Away bag is sized for the full duration with dedicated storage for a week\'s worth of food and gear.',
         ],
       },
       {
@@ -2061,17 +2061,17 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         {
           question: 'What should I pack in a dog travel bag for a flight?',
           answer:
-            'Focus on what you\'ll need accessible during transit, not your entire trip supply. Essentials: health certificate or vaccination records, leash and collar, a small amount of food or treats for calming, a collapsible bowl and small water bottle for layovers, waste bags, and any medications your dog takes regularly. Skip heavy supplies like full bags of food — buy or ship those to your destination. A well-organized travel bag should feel light enough to carry comfortably through a full transit day.',
+            'Focus on what you\'ll need accessible during transit. Essentials: health certificate or vaccination records, leash and collar, a small amount of food or treats for calming, a collapsible bowl and small water bottle for layovers, waste bags, and any medications your dog takes regularly. Skip heavy supplies like full bags of food. If necessary, buy dog food at your destination. A well-organized travel bag should feel light enough to carry comfortably through a full transit day.',
         },
         {
           question: 'Do I need a separate travel bag if I already have a carrier?',
           answer:
-            'A carrier holds your dog. A travel bag holds your dog\'s supplies. You\'ll need somewhere to carry food, documents, a leash, and waste bags that is easily accessible during transit — not buried in checked luggage. Most travelers end up improvising with a general backpack or tote, which works fine but lacks the compartment organization that makes a dedicated bag useful. If you fly with your dog more than a couple of times a year, a dedicated bag usually pays for itself in reduced friction at check-in and boarding.',
+            'A carrier holds your dog. A travel bag holds your dog\'s supplies. You\'ll need somewhere to carry documents, food and water, a leash, and waste bags that is easily accessible during transit, not buried in your checked luggage. Most travelers end up improvising with a general backpack or tote, which works fine but lacks the compartment organization that makes a dedicated bag useful. If you regularly fly with your dog, a dedicated travel bag is usually worth investing in.',
         },
         {
           question: 'What\'s the difference between a day tote and a week-away bag?',
           answer:
-            'Capacity and included accessories. A day tote is sized for one travel day — enough for a collapsible bowl, treats, a leash, and documents. The Mobile Dog Gear Day Tote includes accessories for that use case. A week-away bag is sized for extended travel, with enough storage for a full week of food, multiple bowls, and all the gear you\'d otherwise need to purchase or pack separately. If you\'re traveling for more than a night or two, the week-away bag removes the need to source supplies at the destination.',
+            'Capacity and included accessories. A day tote is sized for the travel day. It has enough room for a collapsible bowl, a small amount of food and water, treats, a leash, and documents. A week-away bag is sized for extended travel, with enough storage for a full week of food, multiple bowls, and all the gear you\'d otherwise need to purchase or pack separately. If you\'re traveling for more than a night or two, the week-away bag has room for everything you need, so you don\'t have to shop once you reach your destination.',
         },
       ],
     },
