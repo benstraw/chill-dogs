@@ -1761,6 +1761,351 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       ],
     },
   },
+
+  'best-airline-approved-dog-carriers': {
+    slug: 'best-airline-approved-dog-carriers',
+    title: 'Best Airline-Approved Soft-Sided Dog Carriers',
+    description:
+      'Compare soft-sided in-cabin dog carriers, from Sherpa-style basics to expandable, compact, and tote-style options for small dogs.',
+    pageSlug: 'best-airline-approved-dog-carriers',
+    hero: {
+      title: 'Best Airline-Approved Soft-Sided Dog Carriers',
+      subtitle:
+        'For in-cabin travel, the right carrier fits under the seat, meets your airline\'s dimensions, and keeps your dog comfortable during the full flight — not just at the gate.',
+      disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
+      primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
+      secondaryCta: { label: 'Flying With a Dog Guide', href: ROUTES.travelFlyWithDog },
+    },
+    toc: [
+      { label: 'Quick Picks', anchor: 'quick-picks' },
+      { label: 'How to Choose a Carrier', anchor: 'expandable-vs-standard' },
+      { label: 'Classic Soft-Sided Carriers', anchor: 'classic-soft-sided' },
+      { label: 'Expandable In-Cabin Carriers', anchor: 'expandable-carriers' },
+      { label: 'Compact Carrier Picks', anchor: 'compact-carriers' },
+      { label: 'Tote-Style Carriers', anchor: 'tote-style-carriers' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    blocks: [
+      {
+        kind: 'quick_picks',
+        id: 'quick-picks',
+        heading: 'Quick Picks',
+        intro:
+          'Most in-cabin travelers will do fine with the Sherpa Original. If your dog needs more room mid-flight, any of the expandable options are worth comparing against your specific airline\'s published dimensions.',
+        items: [
+          {
+            label: 'Best Overall',
+            title: 'Sherpa Original Deluxe, Medium',
+            description: 'The most established in-cabin carrier, with a Guaranteed On Board program that replaces it if any airline rejects it at the gate.',
+            productId: 'sherpa-original-deluxe-carrier-medium',
+            position: 'quick-picks-1',
+          },
+          {
+            label: 'Best Expandable',
+            title: 'Siivton 4-Way Expandable',
+            description: 'Opens on top, both sides, and the front — the most expansion options available for dogs who need room to move once airborne.',
+            productId: 'siivton-4way-expandable-carrier',
+            position: 'quick-picks-2',
+          },
+          {
+            label: 'Best Budget',
+            title: 'Amazon Basics Soft-Sided Airline Carrier',
+            description: 'A simple researched pick with a compact footprint, washable fleece pad, and the standard front-plus-top entry layout.',
+            productId: 'amazon-basics-soft-sided-carrier',
+            position: 'quick-picks-3',
+          },
+          {
+            label: 'Best for Delta Flights',
+            title: 'Sherpa Delta Airlines Carrier, Medium',
+            description: 'Purpose-built to Delta\'s specific under-seat dimensions, which differ from most other carriers\' published requirements.',
+            productId: 'sherpa-delta-airlines-carrier-medium',
+            position: 'quick-picks-4',
+          },
+          {
+            label: 'Best for Budget Airlines',
+            title: 'pidipiti Frontier & Allegiant Carrier',
+            description: 'A lower-profile top-expandable carrier worth comparing when you fly tighter under-seat routes with a genuinely tiny dog.',
+            productId: 'pidipiti-budget-airline-carrier',
+            position: 'quick-picks-5',
+          },
+        ],
+      },
+      {
+        kind: 'prose',
+        id: 'expandable-vs-standard',
+        heading: 'How to Choose Between Standard, Expandable, Compact, and Tote-Style Carriers',
+        paragraphs: [
+          'Standard soft-sided carriers are the default for most in-cabin travel. They keep the footprint simple, fit under seats more predictably, and work well for small dogs that already settle quickly once the flight starts.',
+          'Expandable carriers are for dogs that fit the boarding dimensions but benefit from extra room once the plane is cruising. The expansion is for comfort after takeoff, not a workaround for boarding with an oversized bag. Check your airline\'s current under-seat dimensions before flying and only unzip after the seat-belt sign is off.',
+          'Compact carriers matter most for very small dogs, regional jets, and budget-airline-style seat spaces. Tote-style carriers are useful when you want a softer handbag profile, but they are usually best for tiny dogs because the shape is narrower than a standard rectangular carrier.',
+          '<strong>Important:</strong> “Airline approved” is still marketing language, not a universal approval. Soft-sided carriers are often easier to fit under seats than hard crates, but every airline, aircraft, and seat row can differ. Always verify your route\'s current published dimensions before buying.',
+        ],
+        alt: true,
+      },
+      {
+        kind: 'product_section',
+        id: 'classic-soft-sided',
+        heading: 'Best Classic Soft-Sided Carriers',
+        positionOffset: 0,
+        columns: 3,
+        intro:
+          'These are the best starting points when you want a straightforward in-cabin carrier without relying on expansion panels or a purse-style layout. They are practical picks for small dogs that already travel calmly and just need a well-ventilated soft-sided bag.',
+        productIds: [
+          'sherpa-original-deluxe-carrier-medium',
+          'sherpa-delta-airlines-carrier-medium',
+          'amazon-basics-soft-sided-carrier',
+          'henkelion-airline-carrier',
+          'vceoa-soft-sided-carrier',
+        ],
+      },
+      {
+        kind: 'product_section',
+        id: 'expandable-carriers',
+        heading: 'Best Expandable In-Cabin Carriers',
+        positionOffset: 5,
+        columns: 3,
+        intro:
+          'Expandable carriers are useful when your dog fits the boarding size but appreciates more room once the bag is stowed. Compare the closed dimensions first, then use the expansion panel only after boarding and only if your seat setup allows it.',
+        productIds: [
+          'mr-peanuts-expandable-carrier',
+          'petskd-top-side-expandable-carrier',
+          'petskd-top-expandable-carrier',
+          'lekereise-top-expandable-carrier',
+          'lekereise-frontier-southwest-carrier',
+          'siivton-4way-expandable-carrier',
+        ],
+      },
+      {
+        kind: 'product_section',
+        id: 'compact-carriers',
+        heading: 'Best Compact Carriers for Tighter Under-Seat Limits',
+        positionOffset: 11,
+        columns: 3,
+        intro:
+          'These are the tighter-footprint picks for very small dogs, shallower under-seat spaces, or flights where a standard 18-by-11-by-11 carrier feels like too much of a gamble. They are best for genuinely small dogs, not just lighter dogs.',
+        productIds: [
+          'petsfit-soft-sided-airline-carrier',
+          'pidipiti-budget-airline-carrier',
+          'jespet-compact-airline-carrier',
+        ],
+      },
+      {
+        kind: 'product_section',
+        id: 'tote-style-carriers',
+        heading: 'Best Tote-Style Carriers',
+        positionOffset: 14,
+        columns: 2,
+        intro:
+          'Tote-style carriers work best for tiny dogs and owners who want a softer handbag-style profile. The tradeoff is that these bags are narrower, so check shoulder height and body length carefully before assuming the look is worth the fit.',
+        productIds: [
+          'petami-dog-purse-carrier',
+          'lasaviin-dog-carrier-purse',
+        ],
+      },
+    ],
+    faq: {
+      heading: 'Airline Carrier FAQ',
+      items: [
+        {
+          question: 'What does "airline approved" actually mean on a soft-sided carrier?',
+          answer:
+            'It means the manufacturer designed the carrier to fit within the range of dimensions most major U.S. airlines publish for under-seat pet travel. It is not a certification issued by the FAA, TSA, or any airline. Individual airlines set their own size requirements, and those requirements vary — sometimes by aircraft type on the same airline. A carrier that works on United may not fit on a regional jet operated under the same ticket. Always verify the current published dimensions for your specific airline and route before buying.',
+        },
+        {
+          question: 'Can I unzip the expansion panel during the flight?',
+          answer:
+            'Only after the fasten seat belt sign has turned off and the carrier is fully stowed under the seat in front of you. The expansion is for your dog\'s in-flight comfort — it is not intended as a way to bring a carrier that does not fit the under-seat space at boarding. If the carrier cannot compress to fit during takeoff and landing, it does not meet the requirement regardless of what the unzipped dimensions are.',
+        },
+        {
+          question: 'How do I know which size to buy?',
+          answer:
+            'Your dog needs to be able to stand, turn around, and lie down comfortably inside the carrier when it is in its compressed (non-expanded) configuration. Most carriers list a maximum pet weight, but weight is a rough proxy — a long-bodied dog at 14 lb may need a larger carrier than a compact 14 lb dog. Measure your dog\'s length from nose to base of tail and height from the ground to the top of their shoulders, then compare to the carrier\'s interior dimensions, not the exterior ones.',
+        },
+        {
+          question: 'Is a soft-sided carrier ever acceptable for cargo travel?',
+          answer:
+            'No. Airline cargo and checked baggage programs require rigid, hard-sided kennels that meet IATA container requirements. Soft-sided carriers are designed for in-cabin travel only. If your dog is too large for the cabin, see our airline crates page for hard-sided kennel options.',
+        },
+      ],
+    },
+    internalLinkStrip: {
+      heading: 'Related dog travel guides',
+      links: [
+        { label: 'How to Fly With a Dog', href: ROUTES.travelFlyWithDog },
+        { label: 'Best Dog Travel Bags', href: ROUTES.comfortTravelBags },
+        { label: 'Best Airline Crates', href: ROUTES.comfortAirlineCrates },
+        { label: 'Best Calming Products', href: ROUTES.calmingTop },
+        { label: 'Dog Road Trip Gear', href: ROUTES.roadTrip },
+      ],
+    },
+    itemListSchema: {
+      name: 'Best Airline-Approved Soft-Sided Dog Carriers',
+      url: 'https://www.chill-dogs.com/comforting/best-airline-approved-dog-carriers/',
+      productIds: [
+        'sherpa-original-deluxe-carrier-medium',
+        'sherpa-delta-airlines-carrier-medium',
+        'amazon-basics-soft-sided-carrier',
+        'henkelion-airline-carrier',
+        'vceoa-soft-sided-carrier',
+        'mr-peanuts-expandable-carrier',
+        'petskd-top-side-expandable-carrier',
+        'petskd-top-expandable-carrier',
+        'lekereise-top-expandable-carrier',
+        'lekereise-frontier-southwest-carrier',
+        'siivton-4way-expandable-carrier',
+        'petsfit-soft-sided-airline-carrier',
+        'pidipiti-budget-airline-carrier',
+        'jespet-compact-airline-carrier',
+        'petami-dog-purse-carrier',
+        'lasaviin-dog-carrier-purse',
+      ],
+    },
+  },
+
+  'best-dog-travel-bags-for-flying': {
+    slug: 'best-dog-travel-bags-for-flying',
+    title: 'Best Dog Travel Bags for Flying',
+    description:
+      'Compare the best dog travel bags for flying — organized backpacks and totes to carry food, gear, and documents through airports and onto flights.',
+    pageSlug: 'best-dog-travel-bags-for-flying',
+    hero: {
+      title: 'Best Dog Travel Bags for Flying',
+      subtitle:
+        'A dedicated bag keeps documents, food and water, leash, collapsible bowl, and waste supplies organized and accessible from check-in to landing, so you\'re not digging through a general bag at the gate.',
+      disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
+      primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
+      secondaryCta: { label: 'Flying With a Dog Guide', href: ROUTES.travelFlyWithDog },
+    },
+    toc: [
+      { label: 'Quick Picks', anchor: 'quick-picks' },
+      { label: 'Backpack vs Tote', anchor: 'backpack-vs-tote' },
+      { label: 'All Picks', anchor: 'all-picks' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    blocks: [
+      {
+        kind: 'quick_picks',
+        id: 'quick-picks',
+        heading: 'Quick Picks',
+        intro: 'The best option depends on how long you\'re traveling, and whether you prefer a backpack or a tote.',
+        items: [
+          {
+            label: 'Best Overall',
+            title: 'DELOMO Dog Travel Backpack',
+            description:
+              'Six dedicated compartments with labeled sections for food, treats, bowls, leash, and paperwork. Insulated food pocket and luggage strap handle are convenient for airline travel.',
+            productId: 'delomo-dog-travel-backpack',
+            position: '1',
+          },
+          {
+            label: 'Best for a Week Away',
+            title: 'Mobile Dog Gear Week Away Bag',
+            description:
+              'Full-week capacity with included collapsible bowls, treat bag, and waste dispenser in a single organized duffel bag.',
+            productId: 'mobile-dog-gear-week-away',
+            position: '2',
+          },
+          {
+            label: 'Best Budget',
+            title: 'Mancro Dog Travel Bag',
+            description:
+              'One tote that covers the essentials: bowl, leash, treats, waste bags.',
+            productId: 'mancro-dog-travel-bag',
+            position: '3',
+          },
+          {
+            label: 'Best Tote',
+            title: 'Mobile Dog Gear Day Tote',
+            description:
+              'Tote bag with included accessories: collapsible silicone bowl, water bottle, treat bag, and waste bag dispenser. Pre-organized and ready to grab.',
+            productId: 'mobile-dog-gear-day-tote',
+            position: '4',
+          },
+        ],
+      },
+      {
+        kind: 'prose',
+        id: 'backpack-vs-tote',
+        heading: 'Backpack or tote: which fits your trip?',
+        alt: true,
+        paragraphs: [
+          'Backpacks work well for longer transit days where you\'re walking through large airports, riding trains, or navigating between gates. Padded straps and luggage pass-through handles keep your hands free and distribute weight across your back rather than one shoulder. Most backpack-style bags also offer more compartment structure, which helps when you\'re carrying documents, food and water, a collapsible bowl, a leash, and waste supplies.',
+          'Totes are a better fit when you\'re traveling light, your transit day is short, or you prefer being able to drop and pick up your bag quickly. They slide under airline seats as easily as a backpack, and the Mobile Dog Gear options come pre-stocked with useful accessories. If you dislike the feeling of backpack straps during long travel days, a quality tote is a better choice.',
+          'Trip length is the other variable. For a single day or overnight, a tote or compact bag may be better, because most backpacks have more capacity than you need. For a week or longer, the Mobile Dog Gear Week Away bag is sized for the full duration with dedicated storage for a week\'s worth of food and gear.',
+        ],
+      },
+      {
+        kind: 'product_section',
+        id: 'all-picks',
+        heading: 'All Dog Travel Bag Picks',
+        positionOffset: 0,
+        columns: 3,
+        productIds: [
+          'delomo-dog-travel-backpack',
+          'petami-dog-travel-backpack',
+          'fct-dog-travel-backpack',
+          'mobile-dog-gear-week-away',
+          'mobile-dog-gear-day-tote',
+          'baglher-dog-travel-backpack',
+          'igolumon-dog-travel-bag',
+          'clawist-dog-travel-bag',
+          'anild-dog-travel-backpack',
+          'mancro-dog-travel-bag',
+        ],
+      },
+    ],
+    faq: {
+      heading: 'Dog Travel Bag FAQ',
+      items: [
+        {
+          question: 'Does a dog travel bag count as my personal item on a flight?',
+          answer:
+            'It depends on what else you\'re bringing. If your dog is flying in-cabin, the carrier counts as your personal item on most airlines. That means a dog travel bag — even a backpack — may need to fit in the overhead bin or count as your one carry-on. Check your airline\'s current policy before boarding. Some airlines are more lenient when the second bag is clearly a pet supply bag; others enforce the rule strictly. When in doubt, pack the travel bag inside a carry-on or choose a slim profile bag that fits under the seat alongside the carrier.',
+        },
+        {
+          question: 'What should I pack in a dog travel bag for a flight?',
+          answer:
+            'Focus on what you\'ll need accessible during transit. Essentials: health certificate or vaccination records, leash and collar, a small amount of food or treats for calming, a collapsible bowl and small water bottle for layovers, waste bags, and any medications your dog takes regularly. Skip heavy supplies like full bags of food. If necessary, buy dog food at your destination. A well-organized travel bag should feel light enough to carry comfortably through a full transit day.',
+        },
+        {
+          question: 'Do I need a separate travel bag if I already have a carrier?',
+          answer:
+            'A carrier holds your dog. A travel bag holds your dog\'s supplies. You\'ll need somewhere to carry documents, food and water, a leash, and waste bags that is easily accessible during transit, not buried in your checked luggage. Most travelers end up improvising with a general backpack or tote, which works fine but lacks the compartment organization that makes a dedicated bag useful. If you regularly fly with your dog, a dedicated travel bag is usually worth investing in.',
+        },
+        {
+          question: 'What\'s the difference between a day tote and a week-away bag?',
+          answer:
+            'Capacity and included accessories. A day tote is sized for the travel day. It has enough room for a collapsible bowl, a small amount of food and water, treats, a leash, and documents. A week-away bag is sized for extended travel, with enough storage for a full week of food, multiple bowls, and all the gear you\'d otherwise need to purchase or pack separately. If you\'re traveling for more than a night or two, the week-away bag has room for everything you need, so you don\'t have to shop once you reach your destination.',
+        },
+      ],
+    },
+    internalLinkStrip: {
+      heading: 'Related dog travel guides',
+      links: [
+        { label: 'How to Fly With a Dog', href: ROUTES.travelFlyWithDog },
+        { label: 'Best Airline-Approved Carriers', href: ROUTES.comfortAirlineCarriers },
+        { label: 'Best Airline Crates', href: ROUTES.comfortAirlineCrates },
+        { label: 'Best Calming Products', href: ROUTES.calmingTop },
+        { label: 'Dog Road Trip Gear', href: ROUTES.roadTrip },
+      ],
+    },
+    itemListSchema: {
+      name: 'Best Dog Travel Bags for Flying',
+      url: 'https://www.chill-dogs.com/comforting/best-dog-travel-bags-for-flying/',
+      productIds: [
+        'fct-dog-travel-backpack',
+        'igolumon-dog-travel-bag',
+        'delomo-dog-travel-backpack',
+        'mancro-dog-travel-bag',
+        'baglher-dog-travel-backpack',
+        'petami-dog-travel-backpack',
+        'mobile-dog-gear-day-tote',
+        'mobile-dog-gear-week-away',
+        'clawist-dog-travel-bag',
+        'anild-dog-travel-backpack',
+      ],
+    },
+  },
 };
 
 export function getRelaxationConverterPageConfig(slug: string): RelaxationConverterPageConfig {

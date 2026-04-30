@@ -148,6 +148,12 @@ export const staticSitemapSections: SitemapSection[] = [
         href: ROUTES.coolingToys,
         pageType: 'converter',
       }),
+      createSitemapPage({
+        baseTitle: categoryMeta['hydration'].title,
+        description: categoryMeta['hydration'].description,
+        href: ROUTES.coolingHydration,
+        pageType: 'converter',
+      }),
     ],
   },
   {
@@ -254,6 +260,18 @@ export const staticSitemapSections: SitemapSection[] = [
         pageType: 'converter',
       }),
       createSitemapPage({
+        baseTitle: relaxationConverterPages['best-airline-approved-dog-carriers'].title,
+        description: relaxationConverterPages['best-airline-approved-dog-carriers'].description,
+        href: ROUTES.comfortAirlineCarriers,
+        pageType: 'converter',
+      }),
+      createSitemapPage({
+        baseTitle: relaxationConverterPages['best-dog-travel-bags-for-flying'].title,
+        description: relaxationConverterPages['best-dog-travel-bags-for-flying'].description,
+        href: ROUTES.comfortTravelBags,
+        pageType: 'converter',
+      }),
+      createSitemapPage({
         baseTitle: relaxationConverterPages['best-furniture-dog-crates'].title,
         description: relaxationConverterPages['best-furniture-dog-crates'].description,
         href: ROUTES.comfortFurnitureCrates,
@@ -264,6 +282,21 @@ export const staticSitemapSections: SitemapSection[] = [
         description: relaxationConverterPages['best-heavy-duty-dog-crates'].description,
         href: ROUTES.comfortHeavyDutyCrates,
         pageType: 'converter',
+      }),
+    ],
+  },
+  {
+    title: 'Travel',
+    description: 'Air and road travel articles routing intent to travel and comfort converter pages.',
+    pages: [
+      createSitemapPage({
+        baseTitle: 'How to Fly With a Dog: Carrier Rules, Anxiety Prep, and What to Ask Your Vet',
+        ogTitle: 'How to Fly With a Dog: Carriers, Anxiety, and Vet Questions',
+        description:
+          'A practical guide to flying with your dog, including airline carrier rules, anxiety prep, what to ask your vet, and airport security screening.',
+        href: ROUTES.travelFlyWithDog,
+        pageType: 'collector',
+        collectorSubtype: 'article',
       }),
     ],
   },
