@@ -1,13 +1,16 @@
 ---
 import { ROUTES } from '@data/routes';
+import { getCollection } from 'astro:content';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import ComingSoon from '@components/ComingSoon.astro';
 import EmailSignup from '@components/EmailSignup.astro';
 import HomepageHero from '@components/modules/HomepageHero.astro';
 import HomepageBody from '@components/modules/HomepageBody.astro';
 import JsonLd from '@components/JsonLd.astro';
+import { buildHomepageArticleFeed } from '@utils/homepage-articles';
 
 const maintenanceMode = !!import.meta.env.MAINTENANCE_MODE;
+const articleFeed = buildHomepageArticleFeed(await getCollection('articles'));
 
 const websiteSchema = {
   '@context': 'https://schema.org',
@@ -49,15 +52,16 @@ const orgSchema = {
     <JsonLd slot="head" schema={orgSchema} />
     <HomepageHero variant="v6" />
 
-    <HomepageBody variant="v6" />
-    <section class="container homepage-signup">
-      <EmailSignup
-        placement="homepage_inline"
-        pageSlug={ROUTES.home}
-        pageType="attractor"
-        category="general"
-      />
-    </section>
+    <HomepageBody variant="v6" articleFeed={articleFeed}>
+      <section slot="newsletter" class="container homepage-signup">
+        <EmailSignup
+          placement="homepage_inline"
+          pageSlug={ROUTES.home}
+          pageType="attractor"
+          category="general"
+        />
+      </section>
+    </HomepageBody>
   </BaseLayout>
 )}
 
