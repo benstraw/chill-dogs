@@ -31,6 +31,8 @@ export const ROUTES = {
   comfortAnxietyCrates: '/comforting/best-anxiety-dog-crates/',
   comfortTravelCrates: '/comforting/best-travel-crates-for-road-trips/',
   comfortAirlineCrates: '/comforting/best-airline-crates-for-flying-with-your-dog/',
+  comfortTravelBags: '/comforting/best-dog-travel-bags-for-flying/',
+  travelFlyWithDog: '/travel/how-to-fly-with-a-dog/',
   comfortFurnitureCrates: '/comforting/best-furniture-dog-crates/',
   comfortHeavyDutyCrates: '/comforting/best-heavy-duty-dog-crates/',
   comfortSleepArticle: '/comforting/how-much-do-dogs-sleep/',

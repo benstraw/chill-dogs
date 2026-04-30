@@ -1761,6 +1761,149 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       ],
     },
   },
+  'best-dog-travel-bags-for-flying': {
+    slug: 'best-dog-travel-bags-for-flying',
+    title: 'Best Dog Travel Bags for Flying',
+    description:
+      'Compare the best dog travel bags for flying — organized backpacks and totes to carry food, gear, and documents through airports and onto flights.',
+    pageSlug: 'best-dog-travel-bags-for-flying',
+    hero: {
+      title: 'Best Dog Travel Bags for Flying',
+      subtitle:
+        'A dedicated bag keeps documents, food and water, leash, collapsible bowl, and waste supplies organized and accessible from check-in to landing, so you\'re not digging through a general bag at the gate.',
+      disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
+      primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
+      secondaryCta: { label: 'Flying With a Dog Guide', href: ROUTES.travelFlyWithDog },
+    },
+    toc: [
+      { label: 'Quick Picks', anchor: 'quick-picks' },
+      { label: 'Backpack vs Tote', anchor: 'backpack-vs-tote' },
+      { label: 'All Picks', anchor: 'all-picks' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    blocks: [
+      {
+        kind: 'quick_picks',
+        id: 'quick-picks',
+        heading: 'Quick Picks',
+        intro: 'The best option depends on how long you\'re traveling, and whether you prefer a backpack or a tote.',
+        items: [
+          {
+            label: 'Best Overall',
+            title: 'DELOMO Dog Travel Backpack',
+            description:
+              'Six dedicated compartments with labeled sections for food, treats, bowls, leash, and paperwork. Insulated food pocket and luggage strap handle are convenient for airline travel.',
+            productId: 'delomo-dog-travel-backpack',
+            position: '1',
+          },
+          {
+            label: 'Best for a Week Away',
+            title: 'Mobile Dog Gear Week Away Bag',
+            description:
+              'Full-week capacity with included collapsible bowls, treat bag, and waste dispenser in a single organized duffel bag.',
+            productId: 'mobile-dog-gear-week-away',
+            position: '2',
+          },
+          {
+            label: 'Best Budget',
+            title: 'Mancro Dog Travel Bag',
+            description:
+              'One tote that covers the essentials: bowl, leash, treats, waste bags.',
+            productId: 'mancro-dog-travel-bag',
+            position: '3',
+          },
+          {
+            label: 'Best Tote',
+            title: 'Mobile Dog Gear Day Tote',
+            description:
+              'Tote bag with included accessories: collapsible silicone bowl, water bottle, treat bag, and waste bag dispenser. Pre-organized and ready to grab.',
+            productId: 'mobile-dog-gear-day-tote',
+            position: '4',
+          },
+        ],
+      },
+      {
+        kind: 'prose',
+        id: 'backpack-vs-tote',
+        heading: 'Backpack or tote: which fits your trip?',
+        alt: true,
+        paragraphs: [
+          'Backpacks work well for longer transit days where you\'re walking through large airports, riding trains, or navigating between gates. Padded straps and luggage pass-through handles keep your hands free and distribute weight across your back rather than one shoulder. Most backpack-style bags also offer more compartment structure, which helps when you\'re carrying documents, food and water, a collapsible bowl, a leash, and waste supplies.',
+          'Totes are a better fit when you\'re traveling light, your transit day is short, or you prefer being able to drop and pick up your bag quickly. They slide under airline seats as easily as a backpack, and the Mobile Dog Gear options come pre-stocked with useful accessories. If you dislike the feeling of backpack straps during long travel days, a quality tote is a better choice.',
+          'Trip length is the other variable. For a single day or overnight, a tote or compact bag may be better, because most backpacks have more capacity than you need. For a week or longer, the Mobile Dog Gear Week Away bag is sized for the full duration with dedicated storage for a week\'s worth of food and gear.',
+        ],
+      },
+      {
+        kind: 'product_section',
+        id: 'all-picks',
+        heading: 'All Dog Travel Bag Picks',
+        positionOffset: 0,
+        columns: 3,
+        productIds: [
+          'delomo-dog-travel-backpack',
+          'petami-dog-travel-backpack',
+          'fct-dog-travel-backpack',
+          'mobile-dog-gear-week-away',
+          'mobile-dog-gear-day-tote',
+          'baglher-dog-travel-backpack',
+          'igolumon-dog-travel-bag',
+          'clawist-dog-travel-bag',
+          'anild-dog-travel-backpack',
+          'mancro-dog-travel-bag',
+        ],
+      },
+    ],
+    faq: {
+      heading: 'Dog Travel Bag FAQ',
+      items: [
+        {
+          question: 'Does a dog travel bag count as my personal item on a flight?',
+          answer:
+            'It depends on what else you\'re bringing. If your dog is flying in-cabin, the carrier counts as your personal item on most airlines. That means a dog travel bag — even a backpack — may need to fit in the overhead bin or count as your one carry-on. Check your airline\'s current policy before boarding. Some airlines are more lenient when the second bag is clearly a pet supply bag; others enforce the rule strictly. When in doubt, pack the travel bag inside a carry-on or choose a slim profile bag that fits under the seat alongside the carrier.',
+        },
+        {
+          question: 'What should I pack in a dog travel bag for a flight?',
+          answer:
+            'Focus on what you\'ll need accessible during transit. Essentials: health certificate or vaccination records, leash and collar, a small amount of food or treats for calming, a collapsible bowl and small water bottle for layovers, waste bags, and any medications your dog takes regularly. Skip heavy supplies like full bags of food. If necessary, buy dog food at your destination. A well-organized travel bag should feel light enough to carry comfortably through a full transit day.',
+        },
+        {
+          question: 'Do I need a separate travel bag if I already have a carrier?',
+          answer:
+            'A carrier holds your dog. A travel bag holds your dog\'s supplies. You\'ll need somewhere to carry documents, food and water, a leash, and waste bags that is easily accessible during transit, not buried in your checked luggage. Most travelers end up improvising with a general backpack or tote, which works fine but lacks the compartment organization that makes a dedicated bag useful. If you regularly fly with your dog, a dedicated travel bag is usually worth investing in.',
+        },
+        {
+          question: 'What\'s the difference between a day tote and a week-away bag?',
+          answer:
+            'Capacity and included accessories. A day tote is sized for the travel day. It has enough room for a collapsible bowl, a small amount of food and water, treats, a leash, and documents. A week-away bag is sized for extended travel, with enough storage for a full week of food, multiple bowls, and all the gear you\'d otherwise need to purchase or pack separately. If you\'re traveling for more than a night or two, the week-away bag has room for everything you need, so you don\'t have to shop once you reach your destination.',
+        },
+      ],
+    },
+    internalLinkStrip: {
+      heading: 'Related dog travel guides',
+      links: [
+        { label: 'How to Fly With a Dog', href: ROUTES.travelFlyWithDog },
+        { label: 'Best Airline Crates', href: ROUTES.comfortAirlineCrates },
+        { label: 'Best Calming Products', href: ROUTES.calmingTop },
+        { label: 'Dog Road Trip Gear', href: ROUTES.roadTrip },
+      ],
+    },
+    itemListSchema: {
+      name: 'Best Dog Travel Bags for Flying',
+      url: 'https://www.chill-dogs.com/comforting/best-dog-travel-bags-for-flying/',
+      productIds: [
+        'fct-dog-travel-backpack',
+        'igolumon-dog-travel-bag',
+        'delomo-dog-travel-backpack',
+        'mancro-dog-travel-bag',
+        'baglher-dog-travel-backpack',
+        'petami-dog-travel-backpack',
+        'mobile-dog-gear-day-tote',
+        'mobile-dog-gear-week-away',
+        'clawist-dog-travel-bag',
+        'anild-dog-travel-backpack',
+      ],
+    },
+  },
 };
 
 export function getRelaxationConverterPageConfig(slug: string): RelaxationConverterPageConfig {

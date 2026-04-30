@@ -115,6 +115,7 @@ site_system:
         - "/comforting/best-anxiety-dog-crates/"
         - "/comforting/best-travel-crates-for-road-trips/"
         - "/comforting/best-airline-crates-for-flying-with-your-dog/"
+        - "/comforting/best-dog-travel-bags-for-flying/"
         - "/comforting/best-furniture-dog-crates/"
         - "/comforting/best-heavy-duty-dog-crates/"
       notes: >
@@ -139,6 +140,15 @@ site_system:
       metric: "collector_to_converter_click split by destination"
       routes:
         - "/travel/dog-road-trip-gear/"
+
+    - name: "How to Fly With a Dog"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Route air-travel intent to calming converters and comfort bed converters"
+      metric: "collector_to_converter_click to calming and comfort converters"
+      routes:
+        - "/travel/how-to-fly-with-a-dog/"
+      notes: "Informational air-travel guide; attributes facts to TSA, USDA APHIS, AVMA, DOT, CDC, and AAHA. No product roundup. Internal links to calming and comfort converters."
 
     - name: "How Much Do Dogs Sleep"
       type: "collector"
