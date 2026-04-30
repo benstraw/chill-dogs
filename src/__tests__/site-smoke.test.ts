@@ -37,6 +37,29 @@ function readBuiltAsset(relativePath: string): string {
   return readFileSync(path.join(distRoot, relativePath), 'utf8');
 }
 
+function readArticlePublishOrder(): string[] {
+  const articlesRoot = path.join(projectRoot, 'src', 'content', 'articles');
+
+  return readdirSync(articlesRoot)
+    .filter((entry) => entry.endsWith('.mdx'))
+    .map((entry) => {
+      const contents = readFileSync(path.join(articlesRoot, entry), 'utf8');
+      const pubDate = contents.match(/^pubDate:\s*([0-9-]+)/m)?.[1];
+      const canonicalPath = contents.match(/^canonicalPath:\s*'([^']+)'/m)?.[1];
+
+      if (!pubDate || !canonicalPath) {
+        throw new Error(`Missing pubDate or canonicalPath in ${entry}`);
+      }
+
+      return {
+        canonicalPath,
+        pubDate: new Date(pubDate),
+      };
+    })
+    .sort((a, b) => b.pubDate.valueOf() - a.pubDate.valueOf())
+    .map((article) => article.canonicalPath);
+}
+
 function firstMainImageAbsolute(doc: Document): string | null {
   const image = doc.querySelector<HTMLImageElement>('main img');
   const src = image?.getAttribute('src');
@@ -90,6 +113,16 @@ describe('site smoke tests', () => {
 
     expect(links).toContain('/calming/crate-training-for-dogs/');
     expect(links).toContain('/comforting/best-travel-crates-for-road-trips/');
+  });
+
+  it('orders homepage article cards by article publish date', () => {
+    const doc = readBuiltPage('index.html');
+    const renderedArticleLinks = [
+      ...Array.from(doc.querySelectorAll<HTMLAnchorElement>('.featured-grid [data-home-article="true"]')),
+      ...Array.from(doc.querySelectorAll<HTMLAnchorElement>('.more-grid [data-home-article="true"]')),
+    ].map((link) => link.getAttribute('href'));
+
+    expect(renderedArticleLinks).toEqual(readArticlePublishOrder());
   });
 
   it('renders the inline signup on the homepage and excludes the footer signup from attractor and converter pages', () => {
