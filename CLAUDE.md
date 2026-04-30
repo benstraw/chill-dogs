@@ -8,6 +8,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 bun run dev       # Start dev server at localhost:4321
 bun run build     # Static build to dist/
 bun run preview   # Preview built site
+bun run check:asins          # Check all product ASINs are still live on Amazon
+bun run check:asins -- --quiet  # Same, issues only
 ```
 
 ## Source Of Truth

@@ -95,6 +95,7 @@ export type RelaxationBlock =
 export interface RelaxationConverterPageConfig {
   slug: string;
   title: string;
+  ogTitle?: string;
   description: string;
   pageSlug: string;
   hero: HeroConfig;
@@ -1287,13 +1288,19 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
           'amazon-basics-furniture-style-crate',
           'dwanton-dog-crate-furniture',
           'rehomerance-dog-crate-furniture',
+          'feandrea-furniture-crate',
           'internets-best-decorative-kennel',
           'lyromix-dog-crate-furniture',
+          'ironck-small-furniture-crate',
           'easycom-foldable-dog-crate-furniture',
           'rotating-bowl-furniture-crate',
           'ironck-extra-large-dog-crate-furniture',
           'bifanuo-dog-crate-furniture',
           'charging-station-furniture-crate',
+          'saksun-furniture-crate',
+          'rovibek-double-dog-crate-furniture',
+          'hugcoz-double-furniture-dog-crate',
+          'pawhut-furniture-dog-crate-double',
           'oranland-heavy-duty-furniture-crate',
         ],
       },
@@ -1301,7 +1308,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         kind: 'prose',
         heading: 'Furniture Crates with Extra Utility',
         paragraphs: [
-          'Some furniture crates earn their spot because they do more than just hide the crate. The rotating-bowl model adds built-in feeding convenience, while the charging-station model is genuinely useful as a nightstand or side table.',
+          'Some furniture crates earn their spot because they do more than just complement home decor. The rotating-bowl model adds built-in feeding convenience, while the charging-station model is genuinely useful as a nightstand or side table.',
           'That kind of practical utility matters if the crate is going to live in a visible room every day and compete with real furniture for space.',
         ],
         alt: true,
@@ -1394,13 +1401,19 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         'amazon-basics-furniture-style-crate',
         'dwanton-dog-crate-furniture',
         'rehomerance-dog-crate-furniture',
+        'feandrea-furniture-crate',
         'internets-best-decorative-kennel',
         'lyromix-dog-crate-furniture',
+        'ironck-small-furniture-crate',
         'easycom-foldable-dog-crate-furniture',
         'rotating-bowl-furniture-crate',
         'ironck-extra-large-dog-crate-furniture',
         'bifanuo-dog-crate-furniture',
         'charging-station-furniture-crate',
+        'saksun-furniture-crate',
+        'rovibek-double-dog-crate-furniture',
+        'hugcoz-double-furniture-dog-crate',
+        'pawhut-furniture-dog-crate-double',
         'oranland-heavy-duty-furniture-crate',
       ],
     },
@@ -1495,6 +1508,9 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
           'gardner-pet-heavy-duty-crate',
           'xxl-heavy-duty-dog-crate',
           'hiwokk-large-dog-crate',
+          'hzuaneri-furniture-dog-crate',
+          'rexwelten-furniture-dog-crate',
+          'petrova-furniture-dog-crate',
         ],
       },
       {
@@ -1588,6 +1604,9 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         'gardner-pet-heavy-duty-crate',
         'xxl-heavy-duty-dog-crate',
         'hiwokk-large-dog-crate',
+        'hzuaneri-furniture-dog-crate',
+        'rexwelten-furniture-dog-crate',
+        'petrova-furniture-dog-crate',
       ],
     },
   },
@@ -1761,6 +1780,147 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       ],
     },
   },
+
+  'best-airline-approved-dog-carriers': {
+    slug: 'best-airline-approved-dog-carriers',
+    title: 'Best Airline-Approved Soft-Sided Dog Carriers',
+    description:
+      'Compare the best soft-sided airline-approved dog carriers for in-cabin travel, including expandable options, budget picks, and airline-specific fits.',
+    pageSlug: 'best-airline-approved-dog-carriers',
+    hero: {
+      title: 'Best Airline-Approved Soft-Sided Dog Carriers',
+      subtitle:
+        'For in-cabin travel, the right carrier fits under the seat, meets your airline\'s dimensions, and keeps your dog comfortable during the full flight — not just at the gate.',
+      disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
+      primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
+      secondaryCta: { label: 'Flying With a Dog Guide', href: ROUTES.travelFlyWithDog },
+    },
+    toc: [
+      { label: 'Quick Picks', anchor: 'quick-picks' },
+      { label: 'Expandable vs. Standard', anchor: 'expandable-vs-standard' },
+      { label: 'All Carrier Picks', anchor: 'carrier-picks' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    blocks: [
+      {
+        kind: 'quick_picks',
+        id: 'quick-picks',
+        heading: 'Quick Picks',
+        intro:
+          'Most in-cabin travelers will do fine with the Sherpa Original. If your dog needs more room mid-flight, any of the expandable options are worth comparing against your specific airline\'s published dimensions.',
+        items: [
+          {
+            label: 'Best Overall',
+            title: 'Sherpa Original Deluxe, Medium',
+            description: 'The most established in-cabin carrier, with a Guaranteed On Board program that replaces it if any airline rejects it at the gate.',
+            productId: 'sherpa-original-deluxe-carrier-medium',
+            position: 'quick-picks-1',
+          },
+          {
+            label: 'Best Expandable',
+            title: 'Siivton 4-Way Expandable',
+            description: 'Opens on top, both sides, and the front — the most expansion options available for dogs who need room to move once airborne.',
+            productId: 'siivton-4way-expandable-carrier',
+            position: 'quick-picks-2',
+          },
+          {
+            label: 'Best Budget',
+            title: 'Henkelion Pet Carrier',
+            description: 'Covers the basics — correct dimensions, mesh ventilation, two-door loading — at a price that makes sense for occasional travelers.',
+            productId: 'henkelion-airline-carrier',
+            position: 'quick-picks-3',
+          },
+          {
+            label: 'Best for Delta Flights',
+            title: 'Sherpa Delta Airlines Carrier, Medium',
+            description: 'Purpose-built to Delta\'s specific under-seat dimensions, which differ from most other carriers\' published requirements.',
+            productId: 'sherpa-delta-airlines-carrier-medium',
+            position: 'quick-picks-4',
+          },
+        ],
+      },
+      {
+        kind: 'prose',
+        id: 'expandable-vs-standard',
+        heading: 'Expandable vs. Standard Carriers',
+        paragraphs: [
+          'Standard carriers have fixed dimensions throughout the flight. They need to fit under the seat at boarding — and stay that size for the duration. For most short-to-medium domestic flights, a well-ventilated standard carrier is enough.',
+          'Expandable carriers compress to meet under-seat requirements at boarding, then unzip to give your dog more room once the plane is cruising. The expansion is for your dog\'s comfort in-flight, not a way to board a larger carrier than your airline allows. Use it only after the fasten seat belt sign turns off.',
+          '<strong>Important:</strong> Airline carrier rules vary by carrier, aircraft, route, and seat configuration. The under-seat space on a regional jet is meaningfully smaller than on a wide-body. Always verify your specific carrier\'s current published dimensions before buying, and measure the actual space under your seat type if you can.',
+        ],
+        alt: true,
+      },
+      {
+        kind: 'product_section',
+        id: 'carrier-picks',
+        heading: 'All Carrier Picks',
+        positionOffset: 0,
+        columns: 3,
+        productIds: [
+          'sherpa-original-deluxe-carrier-medium',
+          'sherpa-delta-airlines-carrier-medium',
+          'mr-peanuts-expandable-carrier',
+          'petskd-top-side-expandable-carrier',
+          'petskd-top-expandable-carrier',
+          'lekereise-top-expandable-carrier',
+          'siivton-4way-expandable-carrier',
+          'henkelion-airline-carrier',
+          'vceoa-soft-sided-carrier',
+        ],
+      },
+    ],
+    faq: {
+      heading: 'Airline Carrier FAQ',
+      items: [
+        {
+          question: 'What does "airline approved" actually mean on a soft-sided carrier?',
+          answer:
+            'It means the manufacturer designed the carrier to fit within the range of dimensions most major U.S. airlines publish for under-seat pet travel. It is not a certification issued by the FAA, TSA, or any airline. Individual airlines set their own size requirements, and those requirements vary — sometimes by aircraft type on the same airline. A carrier that works on United may not fit on a regional jet operated under the same ticket. Always verify the current published dimensions for your specific airline and route before buying.',
+        },
+        {
+          question: 'Can I unzip the expansion panel during the flight?',
+          answer:
+            'Only after the fasten seat belt sign has turned off and the carrier is fully stowed under the seat in front of you. The expansion is for your dog\'s in-flight comfort — it is not intended as a way to bring a carrier that does not fit the under-seat space at boarding. If the carrier cannot compress to fit during takeoff and landing, it does not meet the requirement regardless of what the unzipped dimensions are.',
+        },
+        {
+          question: 'How do I know which size to buy?',
+          answer:
+            'Your dog needs to be able to stand, turn around, and lie down comfortably inside the carrier when it is in its compressed (non-expanded) configuration. Most carriers list a maximum pet weight, but weight is a rough proxy — a long-bodied dog at 14 lb may need a larger carrier than a compact 14 lb dog. Measure your dog\'s length from nose to base of tail and height from the ground to the top of their shoulders, then compare to the carrier\'s interior dimensions, not the exterior ones.',
+        },
+        {
+          question: 'Is a soft-sided carrier ever acceptable for cargo travel?',
+          answer:
+            'No. Airline cargo and checked baggage programs require rigid, hard-sided kennels that meet IATA container requirements. Soft-sided carriers are designed for in-cabin travel only. If your dog is too large for the cabin, see our airline crates page for hard-sided kennel options.',
+        },
+      ],
+    },
+    internalLinkStrip: {
+      heading: 'Related dog travel guides',
+      links: [
+        { label: 'How to Fly With a Dog', href: ROUTES.travelFlyWithDog },
+        { label: 'Best Airline Crates', href: ROUTES.comfortAirlineCrates },
+        { label: 'Best Calming Products', href: ROUTES.calmingTop },
+        { label: 'Car Anxiety Picks', href: ROUTES.calmingCar },
+        { label: 'Dog Road Trip Gear', href: ROUTES.roadTrip },
+      ],
+    },
+    itemListSchema: {
+      name: 'Best Airline-Approved Soft-Sided Dog Carriers',
+      url: 'https://www.chill-dogs.com/comforting/best-airline-approved-dog-carriers/',
+      productIds: [
+        'sherpa-original-deluxe-carrier-medium',
+        'sherpa-delta-airlines-carrier-medium',
+        'mr-peanuts-expandable-carrier',
+        'petskd-top-side-expandable-carrier',
+        'petskd-top-expandable-carrier',
+        'lekereise-top-expandable-carrier',
+        'siivton-4way-expandable-carrier',
+        'henkelion-airline-carrier',
+        'vceoa-soft-sided-carrier',
+      ],
+    },
+  },
+
   'best-dog-travel-bags-for-flying': {
     slug: 'best-dog-travel-bags-for-flying',
     title: 'Best Dog Travel Bags for Flying',
@@ -1904,6 +2064,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       ],
     },
   },
+
 };
 
 export function getRelaxationConverterPageConfig(slug: string): RelaxationConverterPageConfig {

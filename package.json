@@ -16,7 +16,8 @@
     "test:smoke": "vitest run src/__tests__/site-smoke.test.ts",
     "test:coverage": "vitest run --coverage",
     "prepare": "simple-git-hooks",
-    "indexnow:submit": "node scripts/indexnow-submit.mjs"
+    "indexnow:submit": "node scripts/indexnow-submit.mjs",
+    "check:asins": "bun run scripts/check-asin-validity.ts"
   },
   "simple-git-hooks": {
     "pre-commit": "bun run test && bun run test:smoke"

@@ -8,7 +8,7 @@
 
 site_system:
   status: "active"
-  as_of: "2026-04-27"
+  as_of: "2026-04-14"
   owner: "chill-dogs"
   purpose: "Define the website as a modular conversion system and keep implementation aligned."
 
@@ -37,10 +37,8 @@ site_system:
       notes: >
         Home page includes a dusty rose color block introducing the Comfort & Rest collector
         with tagline "Settle in." — positioned between HomepageHero and the start-prompt section.
-        The homepage guide section now auto-discovers entries from the MDX articles collection,
-        sorts them by pubDate descending, features the three newest posts with images, and renders
-        the remaining articles in a compact recency list so newly published articles land on the
-        home page automatically.
+        The latest/guide lists include How to Crate Train Your Dog and Best Travel Crates for Road Trips
+        to connect informational crate intent with the new crate converter path.
         A homepage-inline email signup block sits below HomepageBody as a secondary capture path.
 
     - name: "Cooling"
@@ -115,12 +113,15 @@ site_system:
         - "/comforting/best-anxiety-dog-crates/"
         - "/comforting/best-travel-crates-for-road-trips/"
         - "/comforting/best-airline-crates-for-flying-with-your-dog/"
+        - "/comforting/best-airline-approved-dog-carriers/"
         - "/comforting/best-dog-travel-bags-for-flying/"
         - "/comforting/best-furniture-dog-crates/"
         - "/comforting/best-heavy-duty-dog-crates/"
       notes: >
         Comfort collector routes to calming beds, orthopedic beds, puppy crates, anxiety crates, travel crates,
-        airline crates, furniture crates, and heavy-duty crates.
+        airline crates, airline carriers, furniture crates, and heavy-duty crates.
+        The furniture crates page includes double-compartment and multi-door picks alongside standard furniture options.
+        The heavy-duty crates page includes reinforced furniture-style options alongside utility wire crates.
         The crate-training collector article now routes into the airline, furniture, and heavy-duty crate paths as well.
         Placeholder product entries (ASINs B0D5B56X9V, B0DTH4195V) need
         to be identified and updated in src/data/relaxation-products.ts.
