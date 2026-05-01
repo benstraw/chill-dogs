@@ -1,0 +1,930 @@
+{
+  "search_metadata": {
+    "id": "69e87d93ff7aa2a755fb79f9",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/Vn0hPh7K9Y2bq9u6H563jA/69e87d93ff7aa2a755fb79f9.json",
+    "created_at": "2026-04-22 07:49:39 UTC",
+    "processed_at": "2026-04-22 07:49:39 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0D1C7LTPF/?",
+    "raw_html_file": "https://serpapi.com/searches/Vn0hPh7K9Y2bq9u6H563jA/69e87d93ff7aa2a755fb79f9.html",
+    "total_time_taken": 3.01
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0D1C7LTPF",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0D1C7LTPF",
+    "title": "IGOLUMON Dog Travel Bag Large Pet Travel Bags Set for Supplies Weekend Travel Kit Tote Organizer Multi-Pockets Food Travel Bag with 2 Extra Large Food Containers, 2 Dog Bowls, 1 Feeding Mat",
+    "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A2SKUVP66UXG4S&asin=B0D1C7LTPF&ref_=dp_merchant_link&isAmazonFulfilled=1",
+    "link_clean": "https://www.amazon.com/dp/B0D1C7LTPF/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0D1C7LTPF&device=desktop&engine=amazon_product",
+    "badges": [
+      "Amazon's Choice"
+    ],
+    "variants": [
+      {
+        "title": "Color",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0D1C7LTPF",
+            "name": "Black",
+            "image": "https://m.media-amazon.com/images/I/41z9WDuB6GL._SS64_.jpg",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0D1C7LTPF&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0DPK35HG2",
+            "name": "Purple",
+            "image": "https://m.media-amazon.com/images/I/51BVsqkPRgL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DPK35HG2&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the IGOLUMON Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/81rNHYHsJaL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/81rNHYHsJaL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/812HVCIVg5L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71TpbKLPs2L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81QL5NlVngL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81BlHKFo5RL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71fj4pwmFEL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71W3jsDHgHL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81ToMO9Vb0L._AC_SL1500_.jpg"
+    ],
+    "rating": 4.7,
+    "reviews": 162,
+    "bought_last_month": "50+ bought in past month",
+    "price": "$39.99",
+    "extracted_price": 39.99,
+    "price_unit": "$39.99 / count",
+    "extracted_price_unit": 39.99,
+    "delivery": [
+      "FREE delivery Monday, April 27"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$39.99",
+      "extracted_price": 39.99,
+      "price_unit": "$39.99 / count",
+      "extracted_price_unit": 39.99,
+      "delivery": [
+        "FREE delivery Monday, April 27"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "GANFX",
+          "details": {
+            "heading": "Sold by",
+            "content": "GANFX"
+          },
+          "link": {
+            "text": "GANFX",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A2SKUVP66UXG4S&asin=B0D1C7LTPF&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "packaging": {
+          "text": "Ships in product packaging",
+          "details": {
+            "heading": "Ships in product packaging",
+            "content": "This item has been tested to certify it can ship safely in its original box or bag to avoid unnecessary packaging. Since 2015, we have reduced the weight of outbound packaging per shipment by 41% on average, that’s over 2 million tons of packaging material.If you still require Amazon packaging for this item, choose \"Ship in Amazon packaging\" at checkout. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/sipp_home"
+          }
+        }
+      }
+    }
+  },
+  "about_item": [
+    "【Large Capacity Dog Travel Bag】The dog travel bag is spacious and well-organized, with a 25L capacity to store all your dog's gear while traveling. It comes with 2 extra large food storage containers (5L capacity x 2), which can feed dogs for 1 week. It also includes two silicone collapsible dog bowls with carabiners and 1 pet placemat. This pet travel bag is perfect for dogs of all sizes and is easy to feed while out. It is suitable for weekend outings, travel, temporary boarding, etc.",
+    "【Multiple Pockets & well-organized】Our dog bags for traveling has ample compartments for storing all your pet's needs in one place. With large compartments for dog toys, treats, diapers, and more, as well as side pockets for storing poop bags, it offers convenient storage solutions for all dog sizes. The bag features multi-function pockets and an adjustable divider for flexible storage and organization.",
+    "【Reliable & Durable Quality】We always put the health of our pets first. This large dog travel food bag is made of waterproof Oxford fabric and features durable, high-quality zippers for a long-lasting user experience. The food container features a waterproof lining to keep dog food dry and fresh. These dog travel accessories are made with durable and safe materials, environmentally friendly and non-toxic materials, and safe for pets. This makes it a great gift for dog owners.",
+    "【Airline Approved & Easy to Carry】This dog travel kit is airline approved and fits under most seats, allowing you and your pet to travel with full comfort and style. It comes with a handle, padded shoulder strap, and luggage belt, so it can be used as a handbag, shoulder bag, or slid over luggage handles. The thoughtful and convenient design makes transporting your pet effortless, making it a must-have for dog travel.",
+    "【Convenient Design】The pet travel bag features a top drawstring and front adjustable straps for storing extra dog blankets or a feeding mat. Ideal for car trips, beach vacations, camping excursions, air travel, and all outdoor adventures with your pet, this dog overnight bag is a must-have for any pet owner. It's also a perfect gift for dog lovers and new pet parents on holidays and special occasions."
+  ],
+  "bought_together": [
+    {
+      "position": 1,
+      "title": "IGOLUMON Dog Travel Bag Large Pet Travel Bags Set for Supplies Weekend Travel Kit Tote Organizer Multi-Pockets Food Travel Bag with 2 Extra Large Food Containers, 2 Dog Bowls, 1 Feeding Mat",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81rNHYHsJaL._AC_UL116_SR116,116_.jpg",
+      "price": "$39.99",
+      "extracted_price": 39.99,
+      "price_unit": "$39.99/count",
+      "extracted_price_unit": 39.99,
+      "delivery": [
+        "Get it as soon as Monday, Apr 27"
+      ],
+      "stock": "In Stock"
+    },
+    {
+      "position": 2,
+      "title": "ARCA PET Cat & Dog First Aid Kit for Car - Pet Emergency Kit for Home Office Travel – Dog Camping Essentials with Digital Thermometer, Muzzle & Mini First Aid Pouch",
+      "link": "https://www.amazon.com/ARCA-PET-Office-Travel-Emergency/dp/B07WRPCLYR/ref=pd_bxgy_thbs_d_sccl_1/140-1160853-1399346?pd_rd_w=irEFh&content-id=amzn1.sym.9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_p=9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_r=WTV4S561E0E19CQR71N2&pd_rd_wg=MMp3W&pd_rd_r=41d2cafd-7391-49fe-924f-a4e9d366a4b9&pd_rd_i=B07WRPCLYR&psc=1",
+      "asin": "B07WRPCLYR",
+      "link_clean": "https://www.amazon.com/ARCA-PET-Office-Travel-Emergency/dp/B07WRPCLYR/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07WRPCLYR&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/919bY8axD4L._AC_UL116_SR116,116_.jpg",
+      "price": "$35.90",
+      "extracted_price": 35.9,
+      "price_unit": "$35.90/count",
+      "extracted_price_unit": 35.9,
+      "delivery": [
+        "Get it as soon as Monday, Apr 27"
+      ],
+      "stock": "In Stock"
+    },
+    {
+      "position": 3,
+      "title": "lesotc Portable Dog Travel Water Bottle, 77oz Large Travel Water Bowl for Dogs Camping Hiking Beach Hunting Essentials, Big Pet Bottles Bowl Water Dispenser for On The Go Park Car Walking Accessories",
+      "link": "https://www.amazon.com/lesotc-Portable-Dispenser-Pull-Out-Drinking/dp/B09B4YTZKM/ref=pd_bxgy_thbs_d_sccl_2/140-1160853-1399346?pd_rd_w=irEFh&content-id=amzn1.sym.9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_p=9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_r=WTV4S561E0E19CQR71N2&pd_rd_wg=MMp3W&pd_rd_r=41d2cafd-7391-49fe-924f-a4e9d366a4b9&pd_rd_i=B09B4YTZKM&psc=1",
+      "asin": "B09B4YTZKM",
+      "link_clean": "https://www.amazon.com/lesotc-Portable-Dispenser-Pull-Out-Drinking/dp/B09B4YTZKM/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09B4YTZKM&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81c2oc8jJKL._AC_UL116_SR116,116_.jpg",
+      "price": "$26.88",
+      "extracted_price": 26.88,
+      "delivery": [
+        "Get it as soon as Monday, Apr 27"
+      ],
+      "stock": "In Stock"
+    }
+  ],
+  "related_products": [
+    {
+      "position": 1,
+      "title": "Mancro Dual Layers Dog Travel Bag, Pet Travel Bags with 2 Extra Large Food Containers, 2 Collapsible Dog Bowls, Multi-Pockets",
+      "link": "https://www.amazon.com/Containers-Collapsible-Multi-Pockets-Organizer-Essentials/dp/B0BQ6R7SDB/ref=pd_sbs_d_sccl_1_1/140-1160853-1399346?pd_rd_w=d3dCU&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=WTV4S561E0E19CQR71N2&pd_rd_wg=MMp3W&pd_rd_r=41d2cafd-7391-49fe-924f-a4e9d366a4b9&pd_rd_i=B0BQ6R7SDB&psc=1",
+      "asin": "B0BQ6R7SDB",
+      "link_clean": "https://www.amazon.com/Containers-Collapsible-Multi-Pockets-Organizer-Essentials/dp/B0BQ6R7SDB/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0BQ6R7SDB&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81ILyFK9lxL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.7,
+      "reviews": 362,
+      "price": "$29.99",
+      "extracted_price": 29.99,
+      "price_unit": "$29.99/count",
+      "extracted_price_unit": 29.99,
+      "delivery": [
+        "Get it as soon as Monday, Apr 27"
+      ]
+    },
+    {
+      "position": 2,
+      "title": "Abrimelodi 6 Set Dog Travel Bag, Large Pet Travel Kit for Supplies Includes 2 Food Containers, 1 Pet Organizer for Dogs, 2 Co",
+      "link": "https://www.amazon.com/Abrimelodi-Approved-Organizer-Accessories-Traveling/dp/B08XJ2QLZ2/ref=pd_sbs_d_sccl_1_2/140-1160853-1399346?pd_rd_w=d3dCU&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=WTV4S561E0E19CQR71N2&pd_rd_wg=MMp3W&pd_rd_r=41d2cafd-7391-49fe-924f-a4e9d366a4b9&pd_rd_i=B08XJ2QLZ2&psc=1",
+      "asin": "B08XJ2QLZ2",
+      "link_clean": "https://www.amazon.com/Abrimelodi-Approved-Organizer-Accessories-Traveling/dp/B08XJ2QLZ2/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B08XJ2QLZ2&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81j3kuiv+pL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.8,
+      "reviews": 1181,
+      "price": "$29.99",
+      "extracted_price": 29.99,
+      "delivery": [
+        "Get it as soon as Monday, Apr 27"
+      ]
+    },
+    {
+      "position": 3,
+      "title": "Modoker Dog Travel Bag, Weekend Pet Travel Set for Dog and Cat, Airline Approved Tote Organizer with Multi-Function Pockets,",
+      "link": "https://www.amazon.com/Modoker-Weekend-Approved-Organizer-Multi-Function/dp/B08CTTX2FP/ref=pd_sbs_d_sccl_1_3/140-1160853-1399346?pd_rd_w=d3dCU&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=WTV4S561E0E19CQR71N2&pd_rd_wg=MMp3W&pd_rd_r=41d2cafd-7391-49fe-924f-a4e9d366a4b9&pd_rd_i=B08CTTX2FP&psc=1",
+      "asin": "B08CTTX2FP",
+      "link_clean": "https://www.amazon.com/Modoker-Weekend-Approved-Organizer-Multi-Function/dp/B08CTTX2FP/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B08CTTX2FP&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81ZOSB14BTL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.8,
+      "reviews": 6245,
+      "price": "$43.99",
+      "extracted_price": 43.99,
+      "price_unit": "$43.99/count",
+      "extracted_price_unit": 43.99,
+      "delivery": [
+        "Get it as soon as Monday, Apr 27"
+      ]
+    },
+    {
+      "position": 4,
+      "title": "Pmpete Dog Travel Bag for Traveling| Week Away/Overnight Dog Travel Accessories with Multi-Function Pockets| Travel Set for D",
+      "link": "https://www.amazon.com/Traveling-Overnight-Accessories-Multi-Function-Pockets/dp/B09HQMNKMM/ref=pd_sbs_d_sccl_1_4/140-1160853-1399346?pd_rd_w=d3dCU&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=WTV4S561E0E19CQR71N2&pd_rd_wg=MMp3W&pd_rd_r=41d2cafd-7391-49fe-924f-a4e9d366a4b9&pd_rd_i=B09HQMNKMM&psc=1",
+      "asin": "B09HQMNKMM",
+      "link_clean": "https://www.amazon.com/Traveling-Overnight-Accessories-Multi-Function-Pockets/dp/B09HQMNKMM/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09HQMNKMM&device=desktop&engine=amazon_product",
+      "badges": [
+        "Amazon's Choice"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81a2KD6TpoL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.8,
+      "reviews": 481,
+      "price": "$29.95",
+      "extracted_price": 29.95,
+      "delivery": [
+        "Get it as soon as Monday, Apr 27"
+      ]
+    },
+    {
+      "position": 5,
+      "title": "The Original Doggy Bag™ - Complete Dog Travel Bag for Supplies with 2 BPA-Free Travel Dog Bowls & 2 Pet Food Containers - Tra",
+      "link": "https://www.amazon.com/Dog-Travel-Bag-Supplies-Collapsible-Dog-Bowls/dp/B09GQRK5GL/ref=pd_sbs_d_sccl_1_5/140-1160853-1399346?pd_rd_w=d3dCU&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=WTV4S561E0E19CQR71N2&pd_rd_wg=MMp3W&pd_rd_r=41d2cafd-7391-49fe-924f-a4e9d366a4b9&pd_rd_i=B09GQRK5GL&psc=1",
+      "asin": "B09GQRK5GL",
+      "link_clean": "https://www.amazon.com/Dog-Travel-Bag-Supplies-Collapsible-Dog-Bowls/dp/B09GQRK5GL/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09GQRK5GL&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/816pcUO2QqL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.8,
+      "reviews": 2337,
+      "price": "$50.95",
+      "extracted_price": 50.95,
+      "delivery": [
+        "Get it as soon as Monday, Apr 27"
+      ]
+    },
+    {
+      "position": 6,
+      "title": "PetAmi Dog Travel Bag, Travel Pet Bag Organizer, Dog Food Travel Bag with Food Container and Bowls, Dog Travel Supplies Gift",
+      "link": "https://www.amazon.com/PetAmi-Organizer-Multi-Function-Container-Collapsible/dp/B07Z9QFB6Z/ref=pd_sbs_d_sccl_1_6/140-1160853-1399346?pd_rd_w=d3dCU&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=WTV4S561E0E19CQR71N2&pd_rd_wg=MMp3W&pd_rd_r=41d2cafd-7391-49fe-924f-a4e9d366a4b9&pd_rd_i=B07Z9QFB6Z&psc=1",
+      "asin": "B07Z9QFB6Z",
+      "link_clean": "https://www.amazon.com/PetAmi-Organizer-Multi-Function-Container-Collapsible/dp/B07Z9QFB6Z/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07Z9QFB6Z&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/91uJfGBknoL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.9,
+      "reviews": 4800,
+      "price": "$34.99",
+      "extracted_price": 34.99,
+      "delivery": [
+        "Get it as soon as Monday, Apr 27"
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "position": 1,
+      "title": "Great quality and capacity at a great price!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/c57f62be-de88-421a-a890-f375cc388781/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/51deBdsNw7L.jpg",
+      "duration": "2:09",
+      "vendor": "Jillian Lyons",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SL34_.png",
+      "date": "Jun 23, 2025"
+    },
+    {
+      "position": 2,
+      "title": "IGOLUMON Dog Travel Bag Set",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/63a7837d-e777-4e17-bb26-df3bd8b47185/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/A1+5bsuMMeL.jpg",
+      "duration": "1:27",
+      "vendor": "GANFX",
+      "date": "May 31, 2024"
+    },
+    {
+      "position": 3,
+      "title": "Bag Tour + Answering Your Questions",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/57c581bb-4933-49b3-a177-0a9e7bbaa612/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/91N6taNPOmL.jpg",
+      "duration": "3:24",
+      "vendor": "SCO SHOW",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/81XNR3ghNKL._CR0,0,2000,2000_._FMjpg_._SL34_.jpg",
+      "date": "Sep 29, 2024"
+    },
+    {
+      "position": 4,
+      "title": "My first impressions of this spacious dog travel bag",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/95706464-04b0-4d0d-beb9-b301593ba7e1/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/A1-eWuhNCHL.png",
+      "duration": "1:39",
+      "vendor": "The SLVRBCK Troop",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/812kcpoilML._CR0,0,2100,2100_._FMjpg_._SL34_.jpg",
+      "date": "Jun 26, 2024"
+    },
+    {
+      "position": 5,
+      "title": "IGOLUMON Large Pet Travel Bag",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/83acfe37-4bc3-4870-8e8e-23fe78264a35/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/81wgqMk5stL.jpg",
+      "duration": "0:44",
+      "vendor": "GANFX",
+      "date": "May 31, 2024"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "carousel_images": [
+        {
+          "position": 1,
+          "title": "Dog Travel Bag",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/fac04aa4-0497-4e5c-b614-42c02f4a62e6.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 2,
+          "title": "Pet Travel Bag",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/592e03a2-ca64-4e0b-806e-5512cb212f72.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        }
+      ]
+    },
+    {
+      "position": 2,
+      "carousel_images": [
+        {
+          "position": 1,
+          "title": "Dog Travel Bag",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/0ae64513-da55-401e-acb1-ac9b1d0471ea.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 2,
+          "title": "Dog Travel Bag",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/1b7b9e1d-6a47-4813-85bc-6d27625fb0d9.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        }
+      ]
+    },
+    {
+      "position": 3,
+      "carousel_images": [
+        {
+          "position": 1,
+          "title": "Dog Travel Accessories",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/23017317-8ef2-4b6b-b656-d3cb6b7ab3bf.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 2,
+          "title": "Dog Travel Bag",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/9ebb0b26-1fa1-4031-b47a-88dfc0b36ab6.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        }
+      ]
+    },
+    {
+      "position": 4,
+      "carousel_images": [
+        {
+          "position": 1,
+          "title": "Dog Travel Bag",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/8b651d90-f4db-4253-83b6-3a2ed1fed490.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 2,
+          "title": "Dog Travel Bag",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/b15112bf-00da-4333-b901-95da72838a05.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 3,
+          "title": "Dog Travel Bag",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/00016f67-98d5-48d7-8d00-6ca293b8e5b6.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 4,
+          "title": "Dog Travel Bag",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/3cf79636-13b4-4430-97ca-3f886cf8e77e.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        }
+      ]
+    },
+    {
+      "position": 5
+    },
+    {
+      "position": 6,
+      "carousel_images": [
+        {
+          "position": 1,
+          "title": "Dog Travel Bag",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/301257dd-3856-478d-a524-4a958155b4dd.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 2,
+          "title": "dog food travel bag",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/7310578c-8c6a-46d4-bfe3-986fd8702461.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        }
+      ]
+    },
+    {
+      "position": 7
+    }
+  ],
+  "product_details": {
+    "closure_type": "Zipper",
+    "capacity": "25 Liters",
+    "strap_type": "Adjustable",
+    "pocket_description": "[MULTIPLE]",
+    "handle_type": "Standard",
+    "number_of_compartments": "3",
+    "color": "Black",
+    "style_name": "Travel",
+    "pattern": "Solid",
+    "item_dimensions_l_x_w_x_h": "14.96\"L x 12.2\"W x 8.66\"H",
+    "item_weight": "2.86 Pounds",
+    "brand_name": "IGOLUMON",
+    "manufacturer": "IGOLUMON",
+    "item_type_name": "Luggage- Carry-On Luggage",
+    "included_components": "1 x Dog Travel bag, 1 x Placemat, 2 x Food Containers, 2 x Dog Bowls",
+    "unit_count": "1.00 Count",
+    "manufacturer_warranty_description": "1 year warranty",
+    "best_sellers_rank": [
+      {
+        "text": "#44,287 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 44287,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#100 in Dog Travel Bowls",
+        "extracted_rank": 100,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/3024201011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Travel Bowls"
+      }
+    ],
+    "asin": "B0D1C7LTPF",
+    "rating": 4.7,
+    "reviews": 162,
+    "material_type": "Polyester",
+    "product_dimensions": "14.96 x 8.66 x 12.2 inches; 2.86 Pounds",
+    "item_model_number": "5658",
+    "department": "Unisex Adult",
+    "date_first_available": "June 11, 2024"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0GJ6848ST",
+      "title": "Yipetor 2-in-1 Slow Feeder Dog Bowls & Lick Mat for Semi-Moist Treats, Silicone Dog Food Bowl Collapsible Funnel-Center, Anti-Choking Dog Licking Mat for Large Medium Small Fast Eaters, Easy to Clean",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JPyjrK0saZ61bOUN1BAxz8AAAAGdtCqQVgEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICDCncvC/clv1c_ek-wBfHXbcbWXixXZLvu-lwLMH0Cd0b4AX8iamywi1KbYm9gFMFlxVUMp5jhV1Pn6duQ-xgiYTvHRoSAH54BtkQYvqdw3PvHcnx44JDuv4k-sfvx8s6gjWrwCqnUhFPIEFu_OM4uA3SI6NGBg6VU9vR7Id-TsvWm2iSQz7ag_PL3CTINfdmyrsIiWMIrYs80BmijNOvKnAbN8-nP15jNu0hT3fyfFL5yXRxrrPypJgGlehrF1JNA7QYvlMJ90JrXqKHNhWCkH8L1iHX0fnGWbMORzJ29ttb4FuKNYmnIX18Kj6eVzSZEk9KvgvPwno0GtVNBqmaJxSWmGX6stojwfom3VPrF2dtCbGHFVNETlcvl-WKG3UOXMxus8_61c1xwu3kUDS3hZObnGZFprR32kv2CacY1I2SPJVwz-e8kSV3oIegvifxQpi4IGVdk2l9EF7SQ1zPVhbhKsOmYElbwVICw65bUzb0cCEBb93wgPQ7r498cBdsGJuUeNIRpFVRqj4SVu4TjaGgJX10SYDDElIWisWxVoLgRSJ2RjNfZJpZs_6Os3N3yN4iQk1L355KFByfVfbsRTyr9qh8PljYvgANtSgkrxlnUoqOwRdPBhBFF1gPMdMguUubCDt_ocIgYxAJQC32pwJQzSlpB_k0Wd5syZHzGxVVo3k44Y7tGCXdZWH9vRdoMbFJX8mGksZI6U2TPyzUX5wLQ4KIIqYxx9puoUkRiNJXv75aUWnXtpY_2XM7LB8eX0ZSOzYCahbLORCuR-r6zBI2vfR30d--u_0Eb39bEZxx0o_Buxjm273yKlnc6AevVN0x49rJ_cJSV6isKgdKb1mWhoFFShKWm-PbEFfMWbf2w7W1lalBrUpErAXlZ0e58B3YrSVR0HFFTEAdGMBPMam2MCyTpLncF-_TzW54RVUP8X9MhmHujSSO71NiSaV10OPPI4xNFZEkuNF_r3S03l0b7nmnjZ4Fez73l9gZJ76-km2ZRPrFTCxgoLVujw_0000o1wn4F3lcKby3eZ48nGst4RbHJw-w-cGbg964oH3QW_UGGcp7b0TZ4x4mhvubcUh9BRMPmz64ehYal8zq90Dre8x1OLR1cetLzmTPFkZ7xRflXwO7NHnGyzlbPYEJau2onHeZ5tPlxtnKjPyHNlNcVWzM9sxL-s1uZu20QUJyJNIebSkpiv3rdFxXYkjHpPkI-Nwy1TpcmIJ4s9dB6kaNSNKk7bq9UC3t9xDVrY715qieTc-UOhT9rcPOsU8ldswRrcGn1n9jnhyEOiwvsY6Nw75O_Gm-9E9xL3KYwMdywEpkLxPDUDQXSeWpx0RrlgfpgR8Xf5frAxeXk0jfw2dxDbGsuJRFmTJ7AVB4CsoT1CAeYnCRx_tSs-D9iwwaTm-4U3kwxnaT-uCJByC4FbG_dIZcCnCnBQ31b9SVkGtt7KvuBACvsWH25GSnI-3bbCJbcN3K8zBsN18incWUIoPNRDCEV8ryTzC2KLCfD0caIEiMeep9q-OtNadIcsaY0KcfzM3qArIYR8abUOJ8djR4t5MYfgtFe3NRkUo9P/https://www.amazon.com/dp/B0GJ6848ST/?_encoding=UTF8&pd_rd_i=B0GJ6848ST&pd_rd_i=B0GJ6848ST&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=FXopK&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=WTV4S561E0E19CQR71N2&pd_rd_wg=MMp3W&pd_rd_r=41d2cafd-7391-49fe-924f-a4e9d366a4b9",
+      "link_clean": "https://www.amazon.com/dp/B0GJ6848ST/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GJ6848ST&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41SwJ4WnQPL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/0c7a0236-74d6-49a5-ada6-a191e476b17e.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/0c7a0236-74d6-49a5-ada6-a191e476b17e.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 3.9,
+      "reviews": 17,
+      "price": "$8.99",
+      "extracted_price": 8.99
+    },
+    {
+      "position": 2,
+      "asin": "B0CYLGD7MD",
+      "title": "Petskd Dog Travel Bag for Supplies, 27L Large Space Pet Organizer Backpack, Airline Approved Weekend Bag with Multi-Function Pockets for Overnight Camping with 2 Food Containers, 2 Bowls (Grey)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JNb3-A3l4ch1KjuqtctDKzAAAAGdtCqQVwEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICD-7JmI/clv1c_ek-wBXfWbcbS3lYJGlWWgc2FhGqbDBiM7y9Zrr-qzg-sYc9nQavgSDp49sRLDbEaQwFVR9vH5IW8KNP2mi4YlA-pQ2oVN_RR2g2x81G2yWa8SVH2N__sRbz55_pekjZ1qGProxowxEuVxNkxQQ8CsdHpkJ0fkV_ahKCA_7buyYIZVQMIEE7k7ec77fleNqqewDyxxA9Oa3f4dGak90ncdEPSl1M9Nvz0tNRuGjQYeTqkknfkxAekvV5_JvFDXnYRO7J8KIoBAxZeCsndNJxD9OFg58piJu_Jg2Hpqpl-RvzekwaC3RNyDWP8tPPhBlZAVVXe2LwiWHQU788GCUxcLszu8wjV452vfPpTaI2oPOnn2reFTsyuEddM3EMul3FNwe686yg9TryIzrfcr2z5aZWWfULsrQWTt2FXCWs5-zg3TFL2GdYOV-8rjaf0QqMETusxudDO_I8vS_2sidx_ClKPylgi8E5RT2HMgx7hZt-0Ahdzbvu5Z22VekFiWqkMs30t1E8JiA3JrBqh0Vz7q_xu2lflqF1ghubW5tSfED-MjrIOdM_M7N-YI9FB-GRHIQbvWRnQ2IzH802NSB8i34uKuDEzT0kYWoMstQjGvWtwGn4MtuFUjv_H269PHL7hN-BPtQJOthVtD9PuMlDC39RFwbE-wfFxc4hPZ3CLYeRC6PJjHMzpX0lgZ6s3NfxTAaV_Hvu7a6rF0SCaNoZi8KLcypjxyATaUFiLXSxVGbEMPAjrhx4TB82z4CKXq4ThpUHWUrGR4r2pfS3oX6gxSM00hjICgaYUCN5JKxYjMPQ_KjFPq2-U2jTC6066ZXkt9GhqgN_End-o1QWIO2UrcUaCSE1aT9B5gP8WS1bHc1mp_yDemmpxrUqwRaIZCfmxYL5iMpT7OXi5VQc2agDltYrwlEbex9PyGoMKaPgo8tLgLNY0d0r4f0COLhqXFrTB32wDLhGFTHLWmLa_Oaw7i2BsYr2o9Ff60xmhc5WUXUsfQVyavRGKE8UdPKdPtJn4URRaVulX6SL6L7oFXsVAPJFYApVRXB_IPJMF9ZQynfPGicbBfmHCEm6xhccubXCtUi5EjzrqPOJlHFeUR6fT2WPreevF4g0brNpyJCipDBTcXNqYG2qElXX_RzUsCXkzS8Ecpta17CpGIau-Ngk9a8dHFwra9-PodS4SFpbGJsX1YmhLr2toCHxDV7KBku24Irqs_mmOCXjusKxMbN19U0SY3uJlWgMVxJDquzEGbs-uUOCSWMHKjALwWU1e_JLr6X4jCjU4Ys25TS8nihq9M3wkXqPaBz48diMTO0A18T_-FsTDpL4oUzHB4YOPDwqCSNxi_8NnzkE5m-gisHtOqMq2i3gKz3CbSmAyh-DXVVHD4LHmnacm9-vhOwCla0LeaCIhvaJJtAMWmC4bB1scrZ1GQxIztd0lQ1qNUSx6hXj_aqWm2OwQTWuRj_0MM4luBO7F6v3nPE6vwg-LgA1wi9UCIBkFHXKf_eBswqeZPPC_aRaZLhUyqoFptHMr52iTw8BCupSIrwpuiC19GMD_/https://www.amazon.com/dp/B0CYLGD7MD/?_encoding=UTF8&pd_rd_i=B0CYLGD7MD&pd_rd_i=B0CYLGD7MD&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=FXopK&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=WTV4S561E0E19CQR71N2&pd_rd_wg=MMp3W&pd_rd_r=41d2cafd-7391-49fe-924f-a4e9d366a4b9",
+      "link_clean": "https://www.amazon.com/dp/B0CYLGD7MD/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CYLGD7MD&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/510llflwPBL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/d52cc1b5-0119-471f-b305-2cdc93cbb78c.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/d52cc1b5-0119-471f-b305-2cdc93cbb78c.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.7,
+      "reviews": 78,
+      "price": "$27.98",
+      "extracted_price": 27.98,
+      "old_price": "$34.97",
+      "extracted_old_price": 34.97
+    },
+    {
+      "position": 3,
+      "asin": "B0DXN4B9VS",
+      "title": "Extra Large Dog Bowl Pet Collapsible Bowls, 2 Pack Collapsible Dog Water Bowls for Large Dogs Portable Pet Feeding Water Dish for Walking Parking Traveling with 2 Carabiners (Blue+Green, Jumbo)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JF5E7JNTPiGl65weVFrAAF4AAAGdtCqQWAEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICBatkLh/clv1c_ek-YBfHXFbbWzjK3YkNvQ2gziJMxf0XDTRu-0QhCt-_WNPqciHd1xxIZ4eCl6v0wtXI2TdvP-Ho3hr2qs4Q0EPFlVCDfO_I78CJt6sigdNQVD8E7TW-0Hn6MojjwrH8gBiM1rbMYKGXVC8Lz7JRUYkpYotFMhtXoHsHp8zuKHYdeGuirS4_7ZUK1fpPeljFJXJ01xwlMEATiGfj3VyBG1nv-DQ5vjEpk1Btr0PypJgGleuLFy5NA0wYvlM5d1pzXtEAUrT-3QhahF2BJCB2yu3IGstyeLWkIW9guL5b9lKy5oHEjzlLqDSopsT1Hng7RB6pOeSEUp6xGUugDT70DSH1DYzFfYZUC-GDE2q-za4YdqrzMcPmmpcrtMss8iDExWi_dzmwXGU1EauBBuMm2M_m5fxfmUHQaZNO6dxtQ4ACvOft9XiytHkFjXdaaIdiRy63G7d1TOElCUtmck4BvLZ3CQO3oGGnzSgoC7jFKv7EXP1gCAweUj-RYlMqvyX7nPSFy4pL43YABvQWs9gaDdECsdr9YH_x3T6QMt8NdJVz7mks0n2lgZTz48lWycmbJUKdijK9o4pkDwPNevbhB1DnbfEXY49u1kiOqFeK9_FgWl8MChrRPpkY-LT4CgRjfTAVIa-5YptvPjORMa5zCTw4bMMnE-1Xeo2BTHK1bdl-f3zXtoEJBZT8Ueh-xngQw_DP5rW3Di_LKhwYDiiSr7xsiLMQ-Zz0qf6fv6zeKFwhkev0YDXtnTMSfvHE9tfoqkplQbw0v28xRHwKcbtweXlsrQuyzSVsZbVjkrkc_2xnM8Oz6t97j_qs3pHESEKnrimEHGmjrnm_LN0SlDq7z6rlWrKc-3Vgv4MU_ldRc0IilO6yQ-Ogs-1NSmbV_4pmTe2n367XLn1bY_6ZUIrTDQioF2Rf8GyrpmkxlptE3muMQvEx1iNo-glkmd0vkeGXCmP-zCmv9wNEM79tawCjw1H1vOaZon_PSMXzORzJQTOPPQU5Y5bwKRpnKhU-gzuhMRbFLKGVP_HoN4TkMJdDSuzLbrBTw4xXDT7m9RGPq6GTkusR-umarb7DfzL_14mrp2baBPo0oJN41L9cn6W-dnIj9FbZENyHZWt2PaBTng383bBlaYMy35DfWthgqtmCL7rN-Pmo1rtUR0BkB8LOLcI4ZR4X3r0VGHEmMqPMmGuemC_KoqDs0veCIOuT2zgqA5nOMcn7Y4jMGKwGJsCU0uD7RiWaqrRBQ5E3MBHtKusA1l0V49-3OpIVmElAi_-rlxvnWx-kUhQCeI5_L8uCf5r7bfboWlMUq9nK8v4RTsPpmB3-ISfowOKZzyxU3pc1l8GSVWfJua1lFS7TTEsmTTSSLSeiVJSxJy3diwtNEhQVfVT8ugBxl7m-Lgj-ZzIpYzK4Gc91rfd9y5haPXVVNagAQaBWAd9x59W7z7KduWKi3rMiur8hi8yUtLrx1ZWBe0JU0rncJwjND6pEDkbfD2sxherfxtcOrSuuEyqp2R9zSDsVn8pAI4nh6Bzfbyw/https://www.amazon.com/dp/B0DXN4B9VS/?_encoding=UTF8&pd_rd_i=B0DXN4B9VS&pd_rd_i=B0DXN4B9VS&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=FXopK&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=WTV4S561E0E19CQR71N2&pd_rd_wg=MMp3W&pd_rd_r=41d2cafd-7391-49fe-924f-a4e9d366a4b9",
+      "link_clean": "https://www.amazon.com/dp/B0DXN4B9VS/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DXN4B9VS&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/416sgBFTktL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/1bb5955d-d821-490f-9439-597a076abe19.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/1bb5955d-d821-490f-9439-597a076abe19.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.7,
+      "reviews": 30476,
+      "price": "$19.99",
+      "extracted_price": 19.99
+    },
+    {
+      "position": 4,
+      "asin": "B0C73XLG74",
+      "title": "DDMOMMY 20-23 Lbs Dog Food Storage Container - Collapsible Dog Food Container with Attachable Casters and Scoop,Travel Silicone Bowl, Pet Food Storage Containers to Keep Dry Food Fresh,Easy to Move",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JCqMQBta7hxC7bRaVQLNbhAAAAGdtCqQWQEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICCiV5T1/clv1c_ek-IBfHXbcbWXixXZLvu-lwLMH0Cd0b4Z14DJ5NzPYN-YG-LxeZlgHsEsqgy6gzE9qxji21qu6U8ujXvgkHwQIInfDne7zBe7nmw77dq7I68K7Ilq8XHCQR4YfBxjFCTqCRjtUXGae2KrZOgP9Tvp1HZvG18FlRok83cw5f7zQURREFZnJDIw9RviBhaj2zQsdMzRMlNCQHcTfGZl-lbYM5TPX0cLzY0Eayd2JOciarbl_PzNvYCIZHs0mC_SWNZM0tiLO6bFcNbwznxtjbywvED0PxUFP_iBQAVVMJt3S22JtIxTKcDiE4XVrA6JTa8-f64hWdrD4HXRoZaYv3S6qIN4WIV8b6oz-3WFl5sNJh69VlKox87Rx45E1cLAJtol-JWeVhDwQ7j7J5pzR3wdOZQBSGGsFqieeBrYc8QPR2J7LUfO582be4aq3aMaSpAKoMws6IwyWmagekaMlYInhWJx7ncLeg4inFb_7ygRWIlUv0SorMVfnr-jwf5RD8DZBQrCPWDKHANb1ESYHDEABMgUEnhiDSJtJ23v0DNVFmEMsTxpd9Cfd5fteDF9gWb81xfjK4Utu3E2N62iHJpFXapA7mKmTUeXEcC4cgw8e2DVuxc_i56BmNNhzvThn1y5KIVoDCnNsjQ6SJ0USnP8mznBEIJxu_7tQFb-2yM7zAtBMrIJoLonxDARtWixK525NCt4f4GPTiyr5EOqYxx8pqo0kTiFJnv4xSUXnVB6Rzw3GMevcnRg8fLmhc0ADw8_3dwwCfqdgUWp7bULXnTSAti5Vgz0pGrFPQbkH44X9A7fK30KxhoGTqQrynIDTzo4RMphZNeXpR9ZooCcXPkTuWrOH9GJvlR9hwPc_i8UNtEqF6xHV5VjSTn56PKD4jn5AOFe-fq23aNCmTj5IJrMvovpYgXzrVkTdtGwlMJ_HyW-sboD5IXE-syFC6X32pnVQdHnopJIVS0rC1b-U0yTEza9YqxGYnGoEB3ER8Z80x1R7z7BX8Z6faYiwrOtcy9FtF3Vtj-SqIXJEpw4V2LHblPkPW5OgmO2Mr4oOiCI97PFAJr_33MihybHf1QCjQYjyMPilHUYZ-3nRyJ222wYa0I4XYxCinGZJR8GkJdP33R_mXsyUdHi92582sbmvzODGxr3ujO14zSB3rVhb-ULbMe0ZFPlQz7D84Ug0SxxQdqhlaroTZvPhpZ7GQ94t1mUryVL5deVH5kscYS6WNEB0J0sU5eq6YHPpBQGDb2Gnlq3TpR_fylsuUifLc1VvhPRpVX6WlX99N9yF8waWrB7swcFpqb_xfEgT_8aJXLxnMbazBxYkoNnc0NvNkW4xY3XITKdR6B6Qjvrm5x_nHLKyoBYVyGssMcwZWvO1AqhR76RK1B00b7Bnl0hd5V5KUvMETICkokC90z2W936ZoH6OWoIC-9TMFgHvr82RN-dNTl3Olikwi2gr99cO_Ig977YIvd_2Ru36XtoLNz-v6GE9opKjM9twOtJCGNb9jweX69O_4MlXf1ozleHMUF5IcoqVkC8D-6_sofMf9y8Q/https://www.amazon.com/dp/B0C73XLG74/?_encoding=UTF8&pd_rd_i=B0C73XLG74&pd_rd_i=B0C73XLG74&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=FXopK&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=WTV4S561E0E19CQR71N2&pd_rd_wg=MMp3W&pd_rd_r=41d2cafd-7391-49fe-924f-a4e9d366a4b9",
+      "link_clean": "https://www.amazon.com/dp/B0C73XLG74/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0C73XLG74&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41UEUDejpuL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/3ad629c2-ebdc-4eab-adeb-d77003eb6ad5.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/3ad629c2-ebdc-4eab-adeb-d77003eb6ad5.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.3,
+      "reviews": 2058,
+      "price": "$21.99",
+      "extracted_price": 21.99,
+      "old_price": "$29.99",
+      "extracted_old_price": 29.99
+    },
+    {
+      "position": 5,
+      "asin": "B0FKRLJG28",
+      "title": "rubyloo Puffer Dog Travel Bag for Dog Moms – Doggy Diaper Bag with Pet Bowls & Food Storage or Everyday Puffy Tote – Doggy Mom Gifts for Women – Lightweight, Travel-Ready Gift for Pet Lovers - Black",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JOHcOpzckQGUwMA1ncZL54AAAAGdtCqQWgEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICBcRT32/clv1c_ek-wBXfWbcbS3lYJGhWWgc2FhGqbDBiMwj8J-0nLFbsruG1y-5mKDnCxUyi6ezdQ4_bLi22KY_MYGLdQFR_OEDHuR4i1zPCVXoiLyVJMjJkijmTlZpvAT2_s7tEkt2OyNNtIZt4-Mgq4u9eGL9bu3hgboNCCvpUCAgSxyCW_3JIL8V9GWpKSNF8Djk2MFz6zN6ajR8rIEQIEx9Ydn-7k21iT1Zc1CiGF8IkI3XzmJVKGvZNMFiTz5fjLG33u-6f5UZoXpJBtBg8YlefuSmiS0Dqx3MJ8KlEGo3sUpWd3ZnW9x3YgoZjgqmgPfnVc7bfS3ROLDoPOfNdtxc3q5nNhZZvEGGprT9mPtJqAhJ4036lq2sIxYQeQhs02xp_DJK4_Y_eACpyI19yuOfFacp0LUzjsJbB3BuYH9OvHjhdPh9T8qzQEEqsXJJnGR8EeAVgSk2rgvCdbThJ4soJG869-KCuUxjPwIVG6v5Wye_qqAKdF7El2dYSIpz2yg7TgqCznURHG-7R0JhBLN3OOQh3BHimYV1rDGoZahSFPf16FdGKmZFP9-O-O_HrI0ueytEGy5EcyOAz4xtvz8X6HNxwyx7mqVE0IvPUWXc9lz-_HvgMykldrrwfvE7qeQRh8sxaGQVhk3_VheVWcTpDwQppQ9iQou-RVykg2j-D3iZYtnTVQZiR2IDzakNb44qfyZRrcwPl7PRQkl-_WQrg7TzlMwTqHvfI0kboRcs8AC5IO-gcYqAJ9OhVTLMIWlPaiKO5AsvUjKc7mW4S0ShakTXzhYWOOf-w0sp7T7wkC6W7EXA1bzBbdMzLU7TijbsvB2CZZ0la7HX2yuHoK0rPs8FZfmfpxSXDScYo3THa-niE1kOSXPoSM4zf5Lu76tPyYtIczYt9qc5R_BHBOVQc-aHnltYoQc2bAhFtzBoBKcPowkF3jNFIVgcr4f0COfre8p1zUzJKCVwKGdO0Vn-pdXhhw1c7goM1wbJC1Anvu3qPzcAZ9Gt7dBOxQwnCaNv3SKzfXDWWY5JaSPXapg_eG8Mo6sXjswXi1hAOvRkEzJbW5dQfPE9FjYKofyFObo88KXvtuCgaO3aiAugc5XNmpSWTT0dLrscrDIiwTK9t9RympMJS9VFrAF-i4k7XvQBWgP39kMyLdw3hN0XGWYYWJtlUExGbvDPIzCO5l-UiJjKu782A9-XKI9vK9oW7mq92j1tG6CuMV759SGGakPOZjxwkG8sorlmimFDSvB_LKtUoqCGGI2cgUDPENlV8fCQ_Z6vSnz48E5q8OgeqsSye-javkXyZs6FD9a_ItrVqYwbXq3c1gWbFbmihDUybx5ClOSZSvGWARCCSW6meDbcenDfHamstW0eLuv912RGMyxODd1kHD4NHam9YK9y_hOwCla0LeSC4iFG7zR9O_gEY7p9Edrd3AumG9omsJWIwakzNgE68QyD_bI2C8uXh8fWkmawASALqMbmOxCNVU9EVaEEL3PwJJkBQFA1u1Bkv-1YFxFdvnfMHXh8oCl8wXvxxz1mar6GBrqP2NtWD5W1lg_o8/https://www.amazon.com/dp/B0FKRLJG28/?_encoding=UTF8&pd_rd_i=B0FKRLJG28&pd_rd_i=B0FKRLJG28&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=FXopK&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=WTV4S561E0E19CQR71N2&pd_rd_wg=MMp3W&pd_rd_r=41d2cafd-7391-49fe-924f-a4e9d366a4b9",
+      "link_clean": "https://www.amazon.com/dp/B0FKRLJG28/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FKRLJG28&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51O0OyOA4jL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/3fda8370-0657-4ee8-ae3a-1371359ed3c8.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/3fda8370-0657-4ee8-ae3a-1371359ed3c8.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.9,
+      "reviews": 85,
+      "price": "$48.95",
+      "extracted_price": 48.95
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "text": "Customers find the pet travel bag spacious, with one mentioning it holds 12 cups of dry kibble, and appreciate its organization with lots of pockets. The bag is well-built and easy to carry, making it perfect for traveling with pets. They like its functionality, with one customer noting the plastic bag inside the pouch works great for storing kibble, and consider it good value for money.",
+      "insights": [
+        {
+          "title": "Size",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 29,
+            "positive": 24,
+            "negative": 5
+          },
+          "summary": "Customers find the travel bag spacious, holding more than expected, with one customer noting that each bag can accommodate 12 cups of dry kibble.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "This holds everything we need to take our dog on the road. Easy to carry, too.",
+              "link": "https://www.amazon.com/gp/customer-reviews/RAE0WRKJBFROQ"
+            },
+            {
+              "position": 2,
+              "snippet": "Perfect size, storage space is amazing! Does the job! Very sturdy. Smells brand new but not a bad smell and the strap works well!",
+              "link": "https://www.amazon.com/gp/customer-reviews/R19GH9H2BC7DUB"
+            },
+            {
+              "position": 3,
+              "snippet": "...Storage capacity: Great size...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2LE393MFV2J9D"
+            },
+            {
+              "position": 4,
+              "snippet": "Love this bag for my pups. It can hold A LOT of stuff from dog food to poop bags to wipes to toys....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3RH65MD5UXIF8"
+            }
+          ]
+        },
+        {
+          "title": "Quality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 26,
+            "positive": 26,
+            "negative": 0
+          },
+          "summary": "Customers find the pet travel bag to be of high quality, describing it as perfect pet luggage.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Excellent quality and incredibly easy to install on my own.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1U6K5VF4ETV65"
+            },
+            {
+              "position": 2,
+              "snippet": "...We still had room in it if we needed it. Great suitcase!",
+              "link": "https://www.amazon.com/gp/customer-reviews/R11A4RX94XEJ9X"
+            },
+            {
+              "position": 3,
+              "snippet": "Bag is outstanding. Well made and is very spacious. Allows you to be better organized. The bowls and pad are included.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3T2S9L64QTUBJ"
+            },
+            {
+              "position": 4,
+              "snippet": "Perfect size, storage space is amazing! Does the job! Very sturdy. Smells brand new but not a bad smell and the strap works well!",
+              "link": "https://www.amazon.com/gp/customer-reviews/R19GH9H2BC7DUB"
+            }
+          ]
+        },
+        {
+          "title": "Travelability",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 19,
+            "positive": 18,
+            "negative": 1
+          },
+          "summary": "Customers find the pet carrier bag easy to carry and perfect for traveling with their pets, with one customer mentioning it worked well during a beach trip.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...Easy to carry and doesn’t take up a lot of space, great ammount of pockets and storage compartments. Good for the price!",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2Q8RZ5DLJNPSF"
+            },
+            {
+              "position": 2,
+              "snippet": "Makes a great travel bag for your pet! We use the small bags often for trips to other houses.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2D2Q37ZPR91RY"
+            },
+            {
+              "position": 3,
+              "snippet": "...Travelability: Very easy to maneuver while we went on vacation. Storage capacity: Great size...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2LE393MFV2J9D"
+            },
+            {
+              "position": 4,
+              "snippet": "Worked great for travel",
+              "link": "https://www.amazon.com/gp/customer-reviews/RCPVD5ST6FSJF"
+            }
+          ]
+        },
+        {
+          "title": "Organization",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 15,
+            "positive": 15,
+            "negative": 0
+          },
+          "summary": "Customers appreciate the bag's organization features, with lots of pockets and storage space, and one customer specifically mentions the separate compartments for food and water containers.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "This bag does it all! It is so spacious and has so many compartments for all your pet's needs while traveling....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3KCB6OWZGAKRR"
+            },
+            {
+              "position": 2,
+              "snippet": "...It also has several pockets I didn't take much consideration to when I was purchasing but really liked those in use....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RMYGYCPW27W8F"
+            },
+            {
+              "position": 3,
+              "snippet": "Seems sturdy- lots of storage.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2Y36LAFGY0ODO"
+            },
+            {
+              "position": 4,
+              "snippet": "...If you travel with pets, this bag is a must-have. Functional, organized, and backed by great support. I absolutely love it!",
+              "link": "https://www.amazon.com/gp/customer-reviews/R30F7GU11D0CPZ"
+            }
+          ]
+        },
+        {
+          "title": "Durability",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 10,
+            "positive": 10,
+            "negative": 0
+          },
+          "summary": "Customers find the dog travel bag well built, with one customer noting its heavy-duty carry handles and carabiner clips.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...chose this one over 3 others because of the upper compartment, overall sturdy, quality sewing and separate stirage gor food and water...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R39SCSYL5EF40K"
+            },
+            {
+              "position": 2,
+              "snippet": "...It’s very well made and isn’t so big that it takes up a lot of room. I’m considering buying one for my personal use…it’s the size for weekend trips!...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3RH65MD5UXIF8"
+            },
+            {
+              "position": 3,
+              "snippet": "Seems sturdy- lots of storage.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2Y36LAFGY0ODO"
+            },
+            {
+              "position": 4,
+              "snippet": "...Exterior is heavy duty nylon, heavy duty zippers, heavy duty rings for carabiner clips, bungee cord on top, heavy duty carry handles and strap...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2RASC5UOWIBWB"
+            }
+          ]
+        },
+        {
+          "title": "Value for money",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 7,
+            "positive": 7,
+            "negative": 0
+          },
+          "summary": "Customers find the travel bag to be worth the price.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...High quality. Makes traveling with dogs so much easier. Definitely worth the money!",
+              "link": "https://www.amazon.com/gp/customer-reviews/R9KM7Z54D2CC0"
+            },
+            {
+              "position": 2,
+              "snippet": "...Very nice quality had a really good price. I got this to go on a few trips this year with the dog....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1E826PQM0J89G"
+            },
+            {
+              "position": 3,
+              "snippet": "...Good for the price!",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2Q8RZ5DLJNPSF"
+            },
+            {
+              "position": 4,
+              "snippet": "...It looks and feels like a QUALITY item and NOT CHEAP LIKE MANY OTHER PET ITEMS. 100% worth every penny!!!...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2RASC5UOWIBWB"
+            }
+          ]
+        },
+        {
+          "title": "Functionality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 6,
+            "positive": 6,
+            "negative": 0
+          },
+          "summary": "Customers find that the bag works well, with one mentioning that the plastic bag inside the pouch is effective for storing kibble.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "The bag worked great! Held way more than I expected!",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1ECJ8N64WKAHW"
+            },
+            {
+              "position": 2,
+              "snippet": "...If you travel with pets, this bag is a must-have. Functional, organized, and backed by great support. I absolutely love it!",
+              "link": "https://www.amazon.com/gp/customer-reviews/R30F7GU11D0CPZ"
+            },
+            {
+              "position": 3,
+              "snippet": "Perfect size, storage space is amazing! Does the job! Very sturdy. Smells brand new but not a bad smell and the strap works well!",
+              "link": "https://www.amazon.com/gp/customer-reviews/R19GH9H2BC7DUB"
+            },
+            {
+              "position": 4,
+              "snippet": "Love the functionality and versatility this bag provides for the dogs on their travels....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RUPX8CMXEH737"
+            }
+          ]
+        }
+      ],
+      "images": [
+        "https://m.media-amazon.com/images/I/71hLXrxjeCL.jpg",
+        "https://m.media-amazon.com/images/I/81eb8brFq3L.jpg",
+        "https://m.media-amazon.com/images/I/713ZFO6Dz5L.jpg",
+        "https://m.media-amazon.com/images/I/81TJtwGW+PL.jpg",
+        "https://m.media-amazon.com/images/I/81hH7vhLXjL.jpg",
+        "https://m.media-amazon.com/images/I/81MorvfQK6L.jpg",
+        "https://m.media-amazon.com/images/I/81aDdAVMAtL.jpg",
+        "https://m.media-amazon.com/images/I/814NwLKgjWL.jpg",
+        "https://m.media-amazon.com/images/I/81tLQZcYh-L.jpg",
+        "https://m.media-amazon.com/images/I/81w9oiHoJRL.jpg",
+        "https://m.media-amazon.com/images/I/814CbhybxQL.jpg",
+        "https://m.media-amazon.com/images/I/71qPs5YsW0L.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 85,
+        "4 star": 9,
+        "3 star": 4,
+        "2 star": 0,
+        "1 star": 2
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "The Ultimate Travel Companion for My Dog's Meal Comfort",
+        "text": "Traveling with my dog has never been easier thanks to this amazing travel bag set It's incredibly well-organized with so many pockets for everything my pup needs. The two extra-large food containers are perfect for storing enough kibble for a weekend getaway, and the included bowls and feeding mat are super convenient. The tote itself is sturdy and well-made. This set has taken the stress out of packing for my dog – I highly recommend it to any pet parent who loves to travel with their four-legged companion.",
+        "rating": 5,
+        "date": "April 29, 2025",
+        "author": "Shamanjc",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFF4VQKHG67L3MQW3ELWDAGKDXKA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Black"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Internal pouches and lots of space",
+        "text": "This is a good little bag that is a decent size. My favorite thing about it is that the inside is lined with a slick kind of material so it's super cleanable. I'm pretty confident it would even hold water for a time. It actually has two separate pouches inside of it for the food but to fit more for our big dog, we just took those out and dumped the food directly into the bag and it works great both ways. Dog food leaves a gross residue but this is highly cleanable. It also has several pockets I didn't take much consideration to when I was purchasing but really liked those in use. It allowed me to store collapsible bowls and long lead. The bowls and a scoop come with it so that's a plus. I would buy this again if needed. It is worth the money",
+        "rating": 5,
+        "date": "August 24, 2025",
+        "author": "Amber",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGPFEG6N7UKSZLLBFIY3Z6ZLFUKQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Black"
+        }
+      },
+      {
+        "position": 3,
+        "title": "THE BEST DOG TRAVEL BAG YOU WILL EVER OWN!!",
+        "text": "THE ONLY WAY THIS BAG COULD BE IMPROVED IS IF IT WAS OFFERED IN ADDITIONAL COLORS SUCH AS BLUE & BLACK and PINK & BLACK (but, even then it might get dirty looking so I’m personally fine with the black and grey). This bag IS 100% QUALITY ALL THE WAY. It looks and feels like a QUALITY item and NOT CHEAP LIKE MANY OTHER PET ITEMS. 100% worth every penny!!! This bag is so good I just bought a second bag for my toy breed. There is an abundance of storage pockets, clips, and even a front buckle. Interior is nylon (wipes clean with damp cloth). Exterior is heavy duty nylon, heavy duty zippers, heavy duty rings for carabiner clips, bungee cord on top, heavy duty carry handles and strap (with shoulder pad). 7 pockets, and exterior buckle straps in for a rolled up blanket or food bowl mat. The interior held 1week plus 1 day worth of food. Plus a dog food bag with about 8 cups of emergency large breed dog kibble. It held 6 large “no hide” and “healthy edible bones”, two leashes (freedom walker leash & 10 ft potty leash), 20 grocery Poop bags , pill box, squeeze cheese, spoons, a food, water bowl, and mat are included but I used my ultra GIANT Breed slopper stoppers bowls because my dog free feeds and the. Included food and water bowls were too small for him (for reference we have a 55lb dog) which fit in this bag no problem. Also, a package of baby wipes, 1 ball, and 3 large “tough” chewer toys. Seller offered me a 20% off coupon on my second bag (BONUS)! Now , each of my dogs has one packed and ready to go for the next time they need to go to the pet sitter. I hope to edit this review with pictures soon.",
+        "rating": 5,
+        "date": "September 12, 2024",
+        "author": "D",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFSECHDGLB2LF7XKMTAR2Q5MT3CQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Black"
+        }
+      },
+      {
+        "position": 4,
+        "title": "erfect Travel Companion for Pet Parents",
+        "text": "This dog travel bag has been a lifesaver! It fits everything I need for my pup—leash, bowls, treats, toys, grooming supplies—so I can keep it packed and ready to go without worrying about forgetting anything.The food container looks small at first, but don’t be fooled—it holds a surprising amount and keeps everything sealed and fresh. I did have a minor issue with the elastic strap for the blanket (it snapped), but customer service was excellent. They sent me a brand new bag within days, no questions asked.If you travel with pets, this bag is a must-have. Functional, organized, and backed by great support. I absolutely love it!",
+        "rating": 5,
+        "date": "June 22, 2025",
+        "author": "Celia",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AF7U62EHB2YZVKUDI4BK7PEQK6KA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Black"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Perfect Pet Luggage",
+        "text": "Taking my pet baby to the sitter's, I needed something that would hold everything; two of his favorite toys, food, eating bowls, treats, and his favorite blanket. This case held everything and had room for more. It seems well built and sturdy, it's definitely pretty, and has a carrying strap if ever I needed to place it on my shoulder. My baby is a 60-lb lab so the feeding bowls that came with the bag were too small for him but an inexpensive purchase remedied that issue quick enough and the pockets in the case were large enough to hold the larger collapsible bowls. The feeding mat was a bonus so there's no mess on the floor from him slurping up his water. I would definitely recommend this to anyone and when needed, will buy another one just like this.",
+        "rating": 5,
+        "date": "July 11, 2025",
+        "author": "Purty_Tex",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AG7FSKK56BAGDFPGWPNZVWDMEL2A",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Black"
+        }
+      },
+      {
+        "position": 6,
+        "title": "Great bag!",
+        "text": "Just as advertised. Loved the product. Made it easy to carry my dogs food.",
+        "rating": 5,
+        "date": "January 20, 2026",
+        "author": "Janet C.",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHHQRNYFGOJPHSDIYQ34BXQRGZAA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Black"
+        }
+      },
+      {
+        "position": 7,
+        "title": "Dog organizer bag",
+        "text": "The size of the bag is great but the water bowls are too small. Love that everything fits into one convenient bag. Dog food containers are big enough for a weekend trip. Color was perfect. Have only used it a few times but the zippers seem pretty sturdy.",
+        "rating": 4,
+        "date": "September 6, 2025",
+        "author": "Betty",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AG7DUEKOSXPT7CMHLJLLRPKXFMDA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Black"
+        }
+      },
+      {
+        "position": 8,
+        "title": "Perfect for travel",
+        "text": "Love being able to keep all of my dogs travel stuff in one place! Two pouches for food which I used for each dog-kibble in plastic bag inside pouch works great. Treats, toys and bowls on the other half, plus pocket on inside of lid. Medications and extras go in outside front pocket. Wish I’d ordered this years ago!!",
+        "rating": 5,
+        "date": "November 12, 2025",
+        "author": "Tracy Myers",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEIMUZFZCOH7VEMUHCEIK72XHZ4A",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Purple"
+        }
+      }
+    ]
+  }
+}

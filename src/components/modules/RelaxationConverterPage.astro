@@ -12,6 +12,7 @@ import RelaxationProductCard from '@components/modules/RelaxationProductCard.ast
 import {
   buildRelaxationItemListSchema,
   getRequiredProducts,
+  resolveRelaxationDisplayProducts,
   type RelaxationBlock,
   type RelaxationConverterPageConfig,
   type QuickPickItem,
@@ -33,7 +34,7 @@ function quickPickProduct(item: QuickPickItem) {
 }
 ---
 
-<BaseLayout title={config.title} description={config.description} navAccent="var(--color-sky)">
+<BaseLayout title={config.title} ogTitle={config.ogTitle} description={config.description} navAccent="var(--color-sky)">
   {schema && <JsonLd slot="head" schema={schema} />}
 
   <div class="relaxation-theme">
@@ -105,7 +106,7 @@ function quickPickProduct(item: QuickPickItem) {
             {block.intro && <p class="section-intro">{block.intro}</p>}
             {block.copyHtml && <p class="section-copy" set:html={block.copyHtml} />}
             <div class={`product-grid product-grid--${block.columns}`}>
-              {getRequiredProducts(block.productIds).map((product, i) => (
+              {resolveRelaxationDisplayProducts(block.productIds).map((product, i) => (
                 <RelaxationProductCard
                   product={product}
                   position={block.positionOffset + i + 1}

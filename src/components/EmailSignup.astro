@@ -1,0 +1,319 @@
+---
+import { ROUTES } from '@data/routes';
+import type { PageType } from '@utils/types';
+
+interface Props {
+  placement: 'footer' | 'homepage_inline';
+  title?: string;
+  body?: string;
+  compact?: boolean;
+  pageSlug?: string;
+  pageType?: PageType;
+  category?: string;
+}
+
+const {
+  placement,
+  title = 'Tips for keeping your dog cool, calm, and comfortable',
+  body = 'Seasonal safety tips, practical gear picks, and helpful guides. Sent occasionally.',
+  compact = false,
+  pageSlug = '',
+  pageType = 'collector',
+  category = 'general',
+} = Astro.props;
+
+function normalizeIdSegment(value: string): string {
+  const trimmed = value.trim();
+  if (!trimmed || trimmed === '/') return 'root';
+
+  return trimmed
+    .replace(/^\/+|\/+$/g, '')
+    .replace(/[^a-zA-Z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .toLowerCase() || 'root';
+}
+
+// `PUBLIC_BUTTONDOWN_FORM_ACTION` should include the full embed URL and optional `?next=...`.
+// When only the username is configured, the Buttondown dashboard controls the redirect flow.
+const buttondownAction = (import.meta.env.PUBLIC_BUTTONDOWN_FORM_ACTION || '').trim();
+const buttondownUsername = (import.meta.env.PUBLIC_BUTTONDOWN_USERNAME || '').trim();
+const fallbackAction = buttondownUsername
+  ? `https://buttondown.com/api/emails/embed-subscribe/${buttondownUsername}`
+  : '';
+const formAction = buttondownAction || fallbackAction;
+const hasLiveAction = Boolean(formAction);
+const formId = `email-signup-${normalizeIdSegment(placement)}-${normalizeIdSegment(pageSlug || category)}`;
+---
+
+<section
+  class:list={[
+    'email-signup',
+    {
+      'email-signup--compact': compact,
+      'email-signup--footer': placement === 'footer',
+      'email-signup--inline': placement === 'homepage_inline',
+      'email-signup--disabled': !hasLiveAction,
+    },
+  ]}
+  data-email-signup
+  data-email-signup-placement={placement}
+  data-email-signup-live={hasLiveAction ? 'true' : 'false'}
+>
+  <div class="email-signup__inner">
+    <div class="email-signup__copy">
+      <h2 class="email-signup__title">{title}</h2>
+      <p class="email-signup__body">{body}</p>
+    </div>
+
+    {hasLiveAction ? (
+      <>
+        <form
+          id={formId}
+          class="email-signup__form"
+          action={formAction}
+          method="post"
+          enctype="application/x-www-form-urlencoded"
+          data-placement={placement}
+          data-page-slug={pageSlug}
+          data-page-type={pageType}
+          data-category={category}
+        >
+          <input type="hidden" name="embed" value="1" />
+          <input type="hidden" name="tag" value={placement} />
+          <input type="hidden" name="metadata__placement" value={placement} />
+          <input type="hidden" name="metadata__page_slug" value={pageSlug} />
+          <input type="hidden" name="metadata__page_type" value={pageType} />
+          <input type="hidden" name="metadata__category" value={category} />
+
+          <label class="email-signup__label" for={`${formId}-email`}>Email address</label>
+          <div class="email-signup__row">
+            <input
+              class="email-signup__input"
+              type="email"
+              id={`${formId}-email`}
+              name="email"
+              autocomplete="email"
+              inputmode="email"
+              required
+            />
+            <button class="email-signup__button" type="submit">Subscribe</button>
+          </div>
+          <p class="email-signup__privacy">
+            No spam. Unsubscribe any time. <a href={ROUTES.privacyPolicy}>Privacy policy.</a>
+          </p>
+        </form>
+
+        <script is:inline>
+          (function () {
+            if (typeof window === 'undefined') return;
+
+            var script = document.currentScript;
+            if (!script) return;
+
+            var form = script.previousElementSibling;
+            if (!form || form.tagName !== 'FORM') return;
+
+            var data = form.dataset || {};
+            var props = {
+              placement: data.placement || '',
+              page_slug: data.pageSlug || '',
+              page_type: data.pageType || '',
+              category: data.category || '',
+            };
+
+            function capture(eventName) {
+              if (window.posthog && typeof window.posthog.capture === 'function') {
+                window.posthog.capture(eventName, props);
+              }
+            }
+
+            var input = form.querySelector('input[type="email"]');
+            var started = false;
+            var viewed = false;
+
+            if (input) {
+              input.addEventListener('focus', function () {
+                if (started) return;
+                started = true;
+                capture('email_signup_start');
+              });
+            }
+
+            form.addEventListener('submit', function () {
+              capture('email_signup_submit');
+            });
+
+            if ('IntersectionObserver' in window) {
+              var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                  if (viewed || !entry.isIntersecting) return;
+                  viewed = true;
+                  capture('email_signup_view');
+                  observer.disconnect();
+                });
+              }, { threshold: 0.35 });
+
+              observer.observe(form);
+              return;
+            }
+
+            capture('email_signup_view');
+          })();
+        </script>
+      </>
+    ) : (
+      <p class="email-signup__fallback" role="status">
+        Newsletter signup will be available soon.
+      </p>
+    )}
+  </div>
+</section>
+
+<style>
+  .email-signup {
+    width: 100%;
+    border-radius: var(--radius-lg);
+  }
+
+  .email-signup--footer {
+    color: var(--color-text-inverse);
+  }
+
+  .email-signup--inline {
+    background: var(--color-cream);
+    border: 1px solid rgba(45, 45, 45, 0.08);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .email-signup__inner {
+    display: grid;
+    gap: var(--space-lg);
+    padding: var(--space-xl);
+  }
+
+  .email-signup--compact .email-signup__inner {
+    padding: var(--space-lg);
+    gap: var(--space-md);
+  }
+
+  .email-signup__copy {
+    display: grid;
+    gap: var(--space-sm);
+  }
+
+  .email-signup__title {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    line-height: var(--leading-tight);
+  }
+
+  .email-signup--compact .email-signup__title {
+    font-size: var(--text-xl);
+  }
+
+  .email-signup__body,
+  .email-signup__privacy,
+  .email-signup__fallback {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+  }
+
+  .email-signup--footer .email-signup__body,
+  .email-signup--footer .email-signup__privacy,
+  .email-signup--footer .email-signup__fallback {
+    color: rgba(240, 244, 246, 0.8);
+  }
+
+  .email-signup__form {
+    display: grid;
+    gap: var(--space-sm);
+  }
+
+  .email-signup__label {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+  }
+
+  .email-signup__row {
+    display: grid;
+    gap: var(--space-sm);
+  }
+
+  .email-signup__input,
+  .email-signup__button {
+    min-height: 44px;
+    border-radius: var(--radius-md);
+  }
+
+  .email-signup__input {
+    width: 100%;
+    padding: 0 var(--space-md);
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    color: var(--color-text);
+    font: inherit;
+  }
+
+  .email-signup--footer .email-signup__input {
+    border-color: rgba(240, 244, 246, 0.25);
+    background: rgba(240, 244, 246, 0.08);
+    color: var(--color-text-inverse);
+  }
+
+  .email-signup__input:focus-visible {
+    outline: 2px solid var(--color-sky);
+    outline-offset: 2px;
+  }
+
+  .email-signup__button {
+    border: 0;
+    padding: 0 var(--space-lg);
+    background: var(--color-sky);
+    color: var(--color-charcoal);
+    font: inherit;
+    font-weight: var(--weight-bold);
+    cursor: pointer;
+    transition: transform var(--transition-fast), background var(--transition-fast);
+  }
+
+  .email-signup__button:hover {
+    background: var(--color-sky-hover);
+    transform: translateY(-1px);
+  }
+
+  .email-signup__button:focus-visible {
+    outline: 2px solid var(--color-charcoal);
+    outline-offset: 2px;
+  }
+
+  .email-signup__privacy a,
+  .email-signup__fallback a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  .email-signup--inline .email-signup__privacy a,
+  .email-signup--inline .email-signup__fallback a {
+    color: var(--color-link);
+  }
+
+  .email-signup__fallback {
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    background: rgba(45, 45, 45, 0.06);
+  }
+
+  .email-signup--footer .email-signup__fallback {
+    background: rgba(240, 244, 246, 0.08);
+  }
+
+  @media (min-width: 500px) {
+    .email-signup__row {
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: end;
+    }
+  }
+</style>

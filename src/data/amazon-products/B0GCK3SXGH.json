@@ -1,0 +1,844 @@
+{
+  "search_metadata": {
+    "id": "69db524671b4920337c495af",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/fVhSzQZrrNxMx9GtDQExcQ/69db524671b4920337c495af.json",
+    "created_at": "2026-04-12 08:05:26 UTC",
+    "processed_at": "2026-04-12 08:05:26 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0GCK3SXGH/?",
+    "raw_html_file": "https://serpapi.com/searches/fVhSzQZrrNxMx9GtDQExcQ/69db524671b4920337c495af.html",
+    "total_time_taken": 1.71
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0GCK3SXGH",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0GCK3SXGH",
+    "title": "Modern Dog Crate Furniture with Charging Station Large Kennel Indoor with Flip-up Hidden Acrylic Door for Large and Medium Breeds up to 110lb Wood Pet End Side Table Cage, Oak",
+    "link": "https://www.amazon.com/Dog-Crate-Furniture-Charging-Station/dp/B0GCK3SXGH/",
+    "link_clean": "https://www.amazon.com/dp/B0GCK3SXGH/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GCK3SXGH&device=desktop&engine=amazon_product",
+    "badges": [
+      "Limited time deal"
+    ],
+    "variants": [
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0GCK5VVX1",
+            "name": "19.9\"L x 25.6\"W x 23.6\"H",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GCK5VVX1&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0GCK3SXGH",
+            "name": "24.2\"L x 36.6\"W x 29.5\"H",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GCK3SXGH&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the GOUUN Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/71iS8C25R0L._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/71iS8C25R0L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71hMwqhmZ1L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71EgZA8oFTL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/7175nKZ7csL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71gZqgGoDHL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/7125dDnZv7L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61xzVIt2nvL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61AqLsuDO0L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61Qaj5phgWL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.4,
+    "reviews": 28,
+    "discount": "-10%",
+    "price": "$179.99",
+    "extracted_price": 179.99,
+    "old_price": "$199.99",
+    "extracted_old_price": 199.99,
+    "offers": [
+      "Save 5%"
+    ],
+    "prime": true,
+    "delivery": [
+      "FREE delivery Friday, April 24. Details"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$179.99",
+      "extracted_price": 179.99,
+      "deal_progress": {
+        "text": "40% claimed",
+        "percent": 40
+      },
+      "delivery": [
+        "FREE delivery Friday, April 24. Details"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "shipper_seller": {
+          "text": "GOUUN",
+          "details": {
+            "heading": "Shipper / Seller",
+            "content": "GOUUN"
+          },
+          "link": {
+            "text": "GOUUN",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A2I15PHVQ810AR&asin=B0GCK3SXGH&ref_=dp_merchant_link"
+          }
+        },
+        "returns": {
+          "text": "30-day refund/replacement",
+          "details": {
+            "heading": "30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "brand": "GOUUN",
+    "product_dimensions": "24.2\"L x 36.6\"W x 29.5\"H",
+    "material": "Acrylic, Engineered Wood, Metal",
+    "specific_uses_for_product": "Indoor",
+    "special_feature": "Chewproof, Comfortable, Easy Assembly, Eco-Friendly, Lockable"
+  },
+  "about_item": [
+    "【A 2-in-1 Haven for You & Your Dog】This stylish modern dog crate is the perfect shared space. It creates a safe, cozy retreat for your furry friend while functioning seamlessly as a chic side table or nightstand—complete with a charging station. It's the furniture that truly fits both your lives",
+    "【Built-in 4-Device Charging Station】This dog kennel indoor stays fully powered with 2 AC outlets, 1 USB-A, and 1 USB-C port. Charge your phone, tablet, and your dog's smart collar or electronic toys—all at once. Convenience is built right in",
+    "【Space-Saving Flip-Up Door】The clear acrylic door features a clever flip-up design that tucks neatly under the top, saving floor space and preventing bumps. When closed, it gives your pet a reassuring view of the room, helping to ease anxiety",
+    "【Safety & Comfort, Engineered In】Crafted from FSC-certified wood, premium pet-safe boards, and durable acrylic, this cage provides a secure and comfortable sanctuary. The smooth, hazard-free interior offers superior comfort compared to traditional wire crates",
+    "【Spacious, Comfort-Fit Interior】Generous interior dimensions (24.2\"L x 36.6\"W x 29.5\"H) provide ample room for dogs up to 110lbs (e.g., French Bulldogs, Corgis) to stand, turn, and rest comfortably. Please measure your dog to confirm the perfect fit",
+    "【40-Minute Assembly】Pre-drilled parts with numbering tags, clear manual for hassle-free assembly. Includes step-by-step video guide in product page - no extra tools required! (Assembly time verified by 1,200+ verified buyers)",
+    "This wood is FSC certified"
+  ],
+  "related_products": [
+    {
+      "position": 1,
+      "title": "DAWNSPACES Solid Wooden Furniture Dog Crate for Medium & Small Dogs, Wooden Puppy Crate Table, Small Decorative Dog Kennel In",
+      "link": "https://www.amazon.com/DAWNSPACES-Furniture-Decorative-Bedroom-Natural/dp/B0GHFJVS38/ref=pd_sbs_d_sccl_1_1/133-0729744-2184005?pd_rd_w=n90IS&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=2R4GPHGH2JWW2SFWCE56&pd_rd_wg=n0R1T&pd_rd_r=999cd50e-1527-471d-93bd-92c1e5fd4e3f&pd_rd_i=B0GHFJVS38&psc=1",
+      "asin": "B0GHFJVS38",
+      "link_clean": "https://www.amazon.com/DAWNSPACES-Furniture-Decorative-Bedroom-Natural/dp/B0GHFJVS38/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GHFJVS38&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/61KgIfF3P2L._AC_UL165_SR165,165_.jpg",
+      "rating": 3.5,
+      "reviews": 5,
+      "price": "$139.99",
+      "extracted_price": 139.99
+    },
+    {
+      "position": 2,
+      "title": "Feandrea Modern Dog Crate Furniture with Charging Station, Medium Kennel Indoor with Flip-up Hidden Acrylic Door, for Small a",
+      "link": "https://www.amazon.com/Feandrea-Furniture-Charging-Station-Flip-up/dp/B0GJCYKK3X/ref=pd_sbs_d_sccl_1_2/133-0729744-2184005?pd_rd_w=n90IS&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=2R4GPHGH2JWW2SFWCE56&pd_rd_wg=n0R1T&pd_rd_r=999cd50e-1527-471d-93bd-92c1e5fd4e3f&pd_rd_i=B0GJCYKK3X&psc=1",
+      "asin": "B0GJCYKK3X",
+      "link_clean": "https://www.amazon.com/Feandrea-Furniture-Charging-Station-Flip-up/dp/B0GJCYKK3X/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GJCYKK3X&device=desktop&engine=amazon_product",
+      "badges": [
+        "Amazon's Choice"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/816kOPz+6rL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.5,
+      "reviews": 75,
+      "price": "$116.99",
+      "extracted_price": 116.99,
+      "price_unit": "List: $129.99",
+      "extracted_price_unit": 129.99,
+      "old_price": "$129.99",
+      "extracted_old_price": 129.99,
+      "delivery": [
+        "Get it as soon as Friday, Apr 17"
+      ]
+    },
+    {
+      "position": 3,
+      "title": "Timechee Wooden Puppy Crates for Small Dogs, Pinewood 30 inch Small Dog Crate Kennel Indoor Cage Furniture Heavy Duty, Pet Ho",
+      "link": "https://www.amazon.com/Timechee-Pinewood-Furniture-Bedroom-Natural/dp/B0FS74NHN4/ref=pd_sbs_d_sccl_1_3/133-0729744-2184005?pd_rd_w=n90IS&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=2R4GPHGH2JWW2SFWCE56&pd_rd_wg=n0R1T&pd_rd_r=999cd50e-1527-471d-93bd-92c1e5fd4e3f&pd_rd_i=B0FS74NHN4&psc=1",
+      "asin": "B0FS74NHN4",
+      "link_clean": "https://www.amazon.com/Timechee-Pinewood-Furniture-Bedroom-Natural/dp/B0FS74NHN4/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FS74NHN4&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81WMBXLm1hL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.4,
+      "reviews": 17,
+      "price": "$119.99",
+      "extracted_price": 119.99
+    },
+    {
+      "position": 4,
+      "title": "Acrylic Transparent Dog Crate for Large Dogs, Dog Box with Movable Panel, Modular Design-Safe Durable Dog Bed Fashionable & C",
+      "link": "https://www.amazon.com/Transparent-Design-Safe-Fashionable-Convenient-Semi-Transparent/dp/B0FP51G7DR/ref=pd_sbs_d_sccl_1_4/133-0729744-2184005?pd_rd_w=n90IS&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=2R4GPHGH2JWW2SFWCE56&pd_rd_wg=n0R1T&pd_rd_r=999cd50e-1527-471d-93bd-92c1e5fd4e3f&pd_rd_i=B0FP51G7DR&psc=1",
+      "asin": "B0FP51G7DR",
+      "link_clean": "https://www.amazon.com/Transparent-Design-Safe-Fashionable-Convenient-Semi-Transparent/dp/B0FP51G7DR/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FP51G7DR&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71GOVn6kPsL._AC_UL165_SR165,165_.jpg",
+      "rating": 4,
+      "reviews": 34,
+      "price": "$169.99",
+      "extracted_price": 169.99,
+      "delivery": [
+        "Get it as soon as Friday, Apr 17"
+      ]
+    },
+    {
+      "position": 5,
+      "title": "PawHut Furniture Style Dog Crate End Table with Removable Door Panel, Dog Crate Bed with Foam Cushion, Safety Lock, Indoor Us",
+      "link": "https://www.amazon.com/PawHut-Furniture-Removable-Cushion-Safety/dp/B09W23NSJW/ref=pd_sbs_d_sccl_1_5/133-0729744-2184005?pd_rd_w=n90IS&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=2R4GPHGH2JWW2SFWCE56&pd_rd_wg=n0R1T&pd_rd_r=999cd50e-1527-471d-93bd-92c1e5fd4e3f&pd_rd_i=B09W23NSJW&psc=1",
+      "asin": "B09W23NSJW",
+      "link_clean": "https://www.amazon.com/PawHut-Furniture-Removable-Cushion-Safety/dp/B09W23NSJW/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09W23NSJW&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71XnlL8aXAL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.2,
+      "reviews": 22
+    },
+    {
+      "position": 6,
+      "title": "Pheifannt 32 Inch Dog Crate Furniture for Medium Small Dogs with 2 Quick-Release Doors, Waterproof Multi-Layer Solid Wood in",
+      "link": "https://www.amazon.com/Pheifannt-Furniture-Quick-Release-Waterproof-Multi-Layer/dp/B0G3F86M8M/ref=pd_sbs_d_sccl_1_6/133-0729744-2184005?pd_rd_w=n90IS&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=2R4GPHGH2JWW2SFWCE56&pd_rd_wg=n0R1T&pd_rd_r=999cd50e-1527-471d-93bd-92c1e5fd4e3f&pd_rd_i=B0G3F86M8M&psc=1",
+      "asin": "B0G3F86M8M",
+      "link_clean": "https://www.amazon.com/Pheifannt-Furniture-Quick-Release-Waterproof-Multi-Layer/dp/B0G3F86M8M/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G3F86M8M&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71r0huFPJTL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.8,
+      "reviews": 7,
+      "price": "$138.00",
+      "extracted_price": 138,
+      "price_unit": "$138.00/count",
+      "extracted_price_unit": 138
+    }
+  ],
+  "sustainability_features": {
+    "summary": "This product has sustainability features recognized by trusted certifications.",
+    "climate_pledge_friendly": true,
+    "learn_more_link": "https://www.amazon.com/climatepledgefriendly",
+    "features": [
+      {
+        "position": 1,
+        "title": "Forestry practices",
+        "text": "Made with materials from well-managed forests, recycled materials, and/or other controlled wood sources.",
+        "certified_by": [
+          {
+            "name": "The Forest Stewardship Council",
+            "logo": "https://m.media-amazon.com/images/I/61LMPVSIgfL._SS144_.png",
+            "description": "Forest Stewardship Council (FSC) certified products are made with materials from well-managed forests, recycled materials and/or other controlled wood sources.",
+            "link": "https://fsc.org/en/page/about-us"
+          }
+        ]
+      }
+    ]
+  },
+  "videos": [
+    {
+      "position": 1,
+      "title": "Watch me unbox this!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/a6332274-972e-440e-b7dc-466f7c9a8d09/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/91eDhB3dukL.png",
+      "duration": "3:13",
+      "vendor": "Michelle's Faves: Tried, Tested, Loved!",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/81Os4TjKfZL._CR0,0,989,989_._FMjpg_._SL34_.jpg",
+      "date": "Jan 7, 2026"
+    },
+    {
+      "position": 2,
+      "title": "Watch to see why you need this!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/1541f3c2-3d89-4aa8-ac1c-42b189c31310/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/91G1ZkOOu0L.png",
+      "duration": "2:55",
+      "vendor": "Michelle's Faves: Tried, Tested, Loved!",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/81Os4TjKfZL._CR0,0,989,989_._FMjpg_._SL34_.jpg",
+      "date": "Jan 8, 2026"
+    },
+    {
+      "position": 3,
+      "title": "Perfect for large dogs",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/536f5064-3c74-4353-a5eb-9131d3627276/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/7119SrUIOfL.jpg",
+      "duration": "1:31",
+      "vendor": "Diamelen Splain",
+      "vendor_thumbnail": "https://images-na.ssl-images-amazon.com/images/S/influencer-profile-image-prod/logo/diamelensplain_1658763666423_original._CR0,11,2316,2316_._FMjpg_._SL34_.jpeg",
+      "date": "Feb 1, 2026"
+    },
+    {
+      "position": 4,
+      "title": "Aesthetic and functional - plus our dog likes it!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/1b20a11a-1b88-455b-8f5e-679197f10ee3/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61VFpmjbGVL.jpg",
+      "duration": "0:48",
+      "vendor": "✅ Dadazon Prime",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/615lTuueO2L._CR0,0,1018,1018_._FMjpg_._SL34_.jpg",
+      "date": "Jan 7, 2026"
+    },
+    {
+      "position": 5,
+      "title": "Modern Dog Crate That Actually Fits Your Home",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/749f2edd-37a5-40ea-a2ae-8018ae35ebdd/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/91MBJwQPrbL.png",
+      "duration": "2:16",
+      "vendor": "Denisse Carolina",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/81P3qu0Ls0L._CR0,0,1242,1242_._FMjpg_._SL34_.jpg",
+      "date": "Jan 3, 2026"
+    },
+    {
+      "position": 6,
+      "title": "Watch to see how awesome this dog crate is!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/f859ea42-8046-4293-bf52-8d6377f3ce3c/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/91PgSTPOX-L.png",
+      "duration": "2:26",
+      "vendor": "Michelle's Faves: Tried, Tested, Loved!",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/81Os4TjKfZL._CR0,0,989,989_._FMjpg_._SL34_.jpg",
+      "date": "Jan 11, 2026"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": "large dog crate",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/3aa4fc7c-c1fa-4eea-87f3-700ed80fd702.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 2
+    },
+    {
+      "position": 3
+    },
+    {
+      "position": 4
+    },
+    {
+      "position": 5,
+      "title": "small dog crate",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/7d79ad21-1e23-495e-8db0-1e46a20badc7.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 6
+    },
+    {
+      "position": 7,
+      "compare_with_similar": [
+        {
+          "position": 1,
+          "asin": "B0GCK5VVX1",
+          "title": "Small Dog Crate - Oak",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/5946aa7f-b1b4-4696-8fd5-139a13309462.__CR89,0,1422,1600_PT0_SX200_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B0GCK5VVX1?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GCK5VVX1&device=desktop&engine=amazon_product",
+          "rating": 4.4,
+          "reviews": 28,
+          "price": "$134.99",
+          "extracted_price": 134.99,
+          "external_dimensions": "19.9\" W x 22.6\" D x 23.6\" H",
+          "internal_dimensions": "18.9\" W x 23.6\" D x 16.5\" H",
+          "recommended_for_dogs": "Small & Medium",
+          "this_wood_is_fsc_certified": "✔",
+          "carb_p2_certified": "✔"
+        },
+        {
+          "position": 2,
+          "asin": "B0GCHKNQYB",
+          "title": "Small Dog Crate - Grey",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/711200c9-010a-442c-a908-b1f9437cd058.__CR89,0,1422,1600_PT0_SX200_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B0GCHKNQYB?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GCHKNQYB&device=desktop&engine=amazon_product",
+          "rating": 4.4,
+          "reviews": 28,
+          "external_dimensions": "19.9\" W x 22.6\" D x 23.6\" H",
+          "internal_dimensions": "18.9\" W x 23.6\" D x 16.5\" H",
+          "recommended_for_dogs": "Small & Medium",
+          "this_wood_is_fsc_certified": "✔",
+          "carb_p2_certified": "✔"
+        },
+        {
+          "position": 3,
+          "asin": "B0GCK3SXGH",
+          "title": "Large Dog Crate - Oak",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/81e2c622-2d70-4dbb-b72a-a6d2839c536c.__CR89,0,1422,1600_PT0_SX200_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B0GCK3SXGH?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GCK3SXGH&device=desktop&engine=amazon_product",
+          "rating": 4.4,
+          "reviews": 28,
+          "price": "$179.99",
+          "extracted_price": 179.99,
+          "external_dimensions": "24.2\" W × 36.6\" D×29.5\" H",
+          "internal_dimensions": "23.2\" W x 34.6\" D x 22.8\" H",
+          "recommended_for_dogs": "Medium & Large",
+          "this_wood_is_fsc_certified": "✔",
+          "carb_p2_certified": "✔"
+        },
+        {
+          "position": 4,
+          "asin": "B0GCJSKV5Y",
+          "title": "Large Dog Crate - Grey",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/7b31ea8b-ca4b-4b27-a23d-a824fe77d91c.__CR89,0,1422,1600_PT0_SX200_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B0GCJSKV5Y?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GCJSKV5Y&device=desktop&engine=amazon_product",
+          "rating": 4.4,
+          "reviews": 28,
+          "external_dimensions": "24.2\" W × 36.6\" D × 29.5\" H",
+          "internal_dimensions": "23.2\" W x 34.6\" D x 22.8\" H",
+          "recommended_for_dogs": "Medium & Large",
+          "this_wood_is_fsc_certified": "✔",
+          "carb_p2_certified": "✔"
+        }
+      ]
+    }
+  ],
+  "product_details": {
+    "product_dimensions": "24.2 x 36.6 x 29.5 inches",
+    "item_model_number": "Dog Crate Furniture",
+    "date_first_available": "December 25, 2025",
+    "manufacturer": "GOUUN",
+    "asin": "B0GCK3SXGH",
+    "best_sellers_rank": [
+      {
+        "text": "#27,568 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 27568,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#37 in Furniture-Style Dog Crates",
+        "extracted_rank": 37,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/17602453011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Furniture-Style Dog Crates"
+      }
+    ],
+    "customer_reviews": "4.4 out of 5 stars",
+    "rating": 4.4,
+    "reviews": 28,
+    "brand_name": "GOUUN",
+    "target_species": "Dog",
+    "specific_uses_for_product": "Indoor",
+    "included_components": "Charging Station, Drawer",
+    "breed_recommendation": "Large, Medium, Small",
+    "dog_breed_size": "Large, Medium, Small",
+    "upc": "717956500033",
+    "unit_count": "1 Count",
+    "additional_features": "Chewproof, Comfortable, Easy Assembly, Eco-Friendly, Lockable",
+    "number_of_levels": "7",
+    "material_type": "Acrylic, Engineered Wood, Metal",
+    "color": "Oak",
+    "item_dimensions_l_x_w_x_h": "24.2\"L x 36.6\"W x 29.5\"H"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0FYD4WQJG",
+      "title": "Dog Crate Furniture with Sliding Barn Door, 44\"/39\"/32\" Decorative Dog Kennel Indoor with 2 Doors, Escape-Proof Multi-Lock Crates for Medium Dogs Indoor, Chewproof Wooden End Table, 360° Feed Rack",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JCv672kqulC1cM4g11wBk7sAAAGdgLlmbQEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICAq8zf9/clv1c_ek-wxQfWLcTaTKXiZGfvuI-tDxJnsuAEB6aIqxzqujray0yJqjADCyh5PDHjl5bkybaxjMFq90b9FqwpCk2MxNgBa30xp6c6UDesFNbsn883hyLn_n2Q2O78_6nEBjDCNAREBSRFARGkck0wbPeOz0bbig3clFPGgojUPwcrjYMbX2d13nOl9gEvKOnsuzqNZpfjT8xcv4RP3PGRrVwAk4I5NRQfpe5-kGwi4R8DIZEa5YSz8mYEHZzf-_ZwcJrrF03JJF4AwyiXI4LbITLNmsDSrKURvrsSm6yNFDd8A_yFeU0TR0hfMmSLICknBjt3HvDQsmHUNZC0GgVta3jQ53iSphMdKivE5zvpZx5KCdG8qS2rutCsVmv-1LMvB65U6wctqCphYKee5kZwtk1COJ_0hVtLRRwzTKbqkFxw1CeJFfb352m0IoIX4WKfULdc_GYaZ2_6exxb5JP1Nx2HqI7Y_fnYTvTMqkUcHAuucFr5qFlyE6MWdno6rw_KfZQ86Zrs_F_2AGCJXlkv2YoSl1aK4AZ-fk49L5vXv0iPWhG1R1fNtxSsxbooT3EyHKqanQtHe-XOa_tLgKofIQFL6Vbbl5ZfzbcmvxBXSsFKuzmb0cqBrvflTfJBWty4x_YDwJ5ZD_Aw5xRNQLB_rSJNIodJ8RveXe1JLU5VBd9EIW7WE-VpxwSCny9jJM8fLZK7n2BsUslUWzyYyyUaUj6bgb7f20xvethe7Mj9FR5C4Dl8gwMV-PAEga9P3AlZcHRgpknS4vlSV13_1ybNxC1RRDGi4T9mBT8MjDUDZI9QumZHUAUdLJ1i0070fRW8tOugja0l6wkZC6QUVNqfXypvIOlU4eSXxLqQ6TAqJsQFDrs1WbmL7XScMkb_xO_B97iG8pfDZkJz1wzhVJpsEqfXTQ4QYpcv0QGuvkyI-rDEyGuwHdnVncXNWBMrLBV6Gn60kcOMfJNketTUUosjqPcuyZ0ad8ii8Slc6q55sR23ezcyT02_5leTn7qg1uxWnwvmA1NnwXZCCqc1txxjxbBePn-9ihvADZrMsEkOmQp_YiikBkw07lMQWQSTQSudHF1mJAnMFmIl9yzP-KlTfLZEDzxPmGpk0dizZP3BRLXL3xS7TrCda00_fCfWaA1Hn308bd5B0STNH9o2VAwnwxBxjFOCc93YiB28jOT-UMLPipHLTkGOjBJVT-E-y9bvExkeyHKAysAkWRVa6VGss6HEtWVY4XxUH-oO_Kt22Y2moXD3XQPS6WjikC9XxkpIr5p28uZRD4JkbXrVu8VF9wPtrrgizucnT6NM9KqX8bav85_Gm6Bjw6BiCBQXqh10aU7efSg8JzzDS_RPKZFghTyIwEofEnDmsdOWc8__njirm0hFCgqN_ZejEEiejx5BQMgGpYwTz5Lva37Hp_uCWEE5Fb4uS0kX-brzX7z9JcP4beeDyZDW5vupqj5Pi9nF66MwXQhkuArdDb9MS6HKx4RZYUOpCnBmpb5py08rk1Y9qdqyI9NdDJeq52xrQi-NKlx1GhWWkFg6zG06w4LacmUN5-P3ks6tdw/https://www.amazon.com/dp/B0FYD4WQJG/?_encoding=UTF8&pd_rd_i=B0FYD4WQJG&pd_rd_i=B0FYD4WQJG&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=6cqvI&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=2R4GPHGH2JWW2SFWCE56&pd_rd_wg=n0R1T&pd_rd_r=999cd50e-1527-471d-93bd-92c1e5fd4e3f",
+      "link_clean": "https://www.amazon.com/dp/B0FYD4WQJG/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FYD4WQJG&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51POvpEq9vL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/75f5b4a1-a66d-4663-9fcd-da89feda7133.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/75f5b4a1-a66d-4663-9fcd-da89feda7133.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 5,
+      "reviews": 4,
+      "price": "$169.00",
+      "extracted_price": 169
+    },
+    {
+      "position": 2,
+      "asin": "B0GSTVY2LJ",
+      "title": "78\" Dog Crate Furniture for 1 or 2 Dogs, Heavy Duty Single/Double Dog Crates for Small/Medium/Large Dogs,Dog Kennel Furniture as TV Stand,Large Size 78.8\" L(30-60 Pounds)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JAKtnwjWGB8suO21maE3piEAAAGdgLlmbgEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICCW6rNw/clv1c_ek-YBXf2FcTW3uu7cOAQGqIaSpmZYvSSQjvAqEagEZgmFsHhiXi88p3EkO7SbCiQAwRMzwI9kcKFYMjWiam0RN4JdF8xtyG5Xz8yFOQFvkAmzZn6OFp7lQK5YPBMfqJQkwEeVLWJdhe2npc2jypEz-WYpNDENtTqjOzK28caTMUZVWIUWM1v6Z7nVUBC6bhUSGmES9psL8YLV-pGMU7kYEPSl1MNJuw0V1VKcRgX7bBDbcveEh__4K3zQzZUe9KVd_H8Q7FV311NR112kZUi90drm8tOXigHeNG2eqryEVECw1RXrC1tk7N3K1myNR8BB69B0PRNHdqEyB2c6b98NoMy0rrel5oZ41uSOAkQ1uvtMNU4aJhBsW_xdPVp2WGlDjVkhuqOaii1OAA_UWO0iMf9RXtFpyM_Tgr-gQQhvMlGNFHd5b-0fg0AXgQ5EL0IGjMjewQVU39JRONSfSZF2BiBcRYm4RcX6BtKSQTJmQ_8erETh-sRIKX2YdJJ_44WMd4sFm7NrXM9nATc5kbAgg8g0HTl-BQJTIG7v7SMWhmU1GzYapM_w3hhK1ExKGD4zIYyhb3E8NSntCn5m74LAk4EqeRD2XrAlxBoOvkyjqH-2PDsLAKzL48Us_Xy84Tb43jlcQLmyXNQBa9PiZCTudPBuMayxjeVj1UkXZls9Xx00DUmEm5L0cMX2TY0J4zf_exmY4EsCJxCu-Nku0Ipsn_w3zD3mToyMe8FAzMTWwhuUL8xNkaa27TJcKDghj5DPBOY5G2yCC4JG3js8H3t8XyTNupTAUtI8btmiPeQopSO4cSAP-s0OWgdagj52nWcrn0Rfk2zBsRbvRIW0w8pRMYnwNWPU4vkXfXQun8wxAK6l5hcVrU7vIw2jnJaYCNexu6pmx8dk1ZZaHreFAs21l3iZSMAV__zy63euw4vNTcn0lxFI3wd8fS5WHcchWOM6PIahlttad3Ql7AYwbHjuR0O1t2lolGft5Tb7kzxKkx-E20_nd6iafGrHll8tDYwtgr8Nty3LnqmckYYRyULCFW1_1x1ayKZRvBsQVWbukOo0y6BIwmaHO-_T3TFFzmWCzgso6G2Q5GKTJSATbUY62-zOFykel8PZ5AlYohLAG740UcZjlz9RK48AimJq24DRstsfG7xXP2TcgEwIAiJjycT3jXfPBfWckdQ3mNI-_Yb9cRnq9rhaDM7cvNJfy6PGXXOcRrifL6INDlsGfHFgtLULdapejlwyWk-DNHWj9eQFfdARLpDyTsKszdcr28LZl76yeosbrQVi3q7h1ctbfTW9Dt9uHCePTj-CpFJvOxllBHOssImdl3RiEqxF6hgrnZrw0RU1i3i5q9Y96NgQYw-YlOt_H3Jerw088xmgzcaHvCyn8PIrYPM4gyCI0yt4n8cRFMBLuJMxiox0iaFVz_KBYFeQWGaR_HDhvelUkMRchF7_K2ky7a3o4sf3bfDcUhAnZNhC5w6QSjipAahX9zcNuPp7P-oVTnnQ9bx-fKs7VlyZKw5Ubv3htaTTuxf8mQao84n/https://www.amazon.com/dp/B0GSTVY2LJ/?_encoding=UTF8&pd_rd_i=B0GSTVY2LJ&pd_rd_i=B0GSTVY2LJ&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=6cqvI&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=2R4GPHGH2JWW2SFWCE56&pd_rd_wg=n0R1T&pd_rd_r=999cd50e-1527-471d-93bd-92c1e5fd4e3f",
+      "link_clean": "https://www.amazon.com/dp/B0GSTVY2LJ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GSTVY2LJ&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/516JBW-fT7L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/34f4bf83-2075-4113-a27a-86a3467d3479.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/34f4bf83-2075-4113-a27a-86a3467d3479.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 5,
+      "reviews": 6,
+      "price": "$299.99",
+      "extracted_price": 299.99
+    },
+    {
+      "position": 3,
+      "asin": "B0FLDK4CDN",
+      "title": "Tiovo 42\" Dog Crate Furniture, Heavy Duty Dog Crates, Dog Kennel Furniture Indoor for Large Dog as TV Stand, Wooden Cage End Table for Indoor Decoration, Name Tag Escape-Proof Locks & Double Door",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JBCoBgi3gSFeHINCUxe8QcEAAAGdgLlmbwEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICCuC-2v/clv1c_ek-wBXfWbcbS3lYJGhWWgc2FhGqbDBiMwpejcW6wi1LFkKvIBPaQLifW-VNKDDHs3RgzWgUWolnbE6QBNNT7Rl8qlXj7MbDydAzQtLbHiEmcKTlDict6DG3-Qpk0JWwM5fbway5LGM9hlcsSi4LFyZRLIduOpjXrPeVzTD6m5qY3cbtUjiBf3AuOwo9ARuGpgrSPbFOIHwDbz3ypHwhgqvg_1X8fJ2XOFk3W9UFqUP0RCKkPLPlCnOFsguQCt8l48IJ2cRhBx11LRl160ZXAkEuyDadTs__C5StJt6Mr5lKZ0NnDa9ICqK6aRtI66TVkYtHnl1vXia0ymBUcg-AZlyeaWOTRwOiRxWTvEPa1WV8xW43SqtbVdLfS3E2paSGlqQcySPEJmKhAl_VkzgJ6l1GL9jfmR2hXklwrqIxgutL4rNRNgrtXZ9jNqj8HI8Z1TsjPxAM8Da82iHi7YG12e2uSQoRePszLWWW9R4iOoGqaIYry5-_j-b8hOa0eAGvMDIZyxMu4ogLbw998e5noFNQwZ6OeR_C_q5X5x63FWSyEqMxff8g56M65ClB6ttBbyzWz5Z1-SxcnBRRrnl-jNIbEu1HdD22lahj7E4NPYD-Tr31oewwjZDwAX6_p0caBugMBOr4xwnasnsydr4S6uTszo_XYki9ltUhZSr18-J8YcxFh_16YZTQdQ9t0CFHRmm2qdECVQuTFYpYD5gz4VN-SHve61UyP8Zn5Lu7c8UuRhe3xyZPNiKcJ9lFstVdqLr5Qm9bzTeW6bVit8wJvZCy_tIyhUQmZV3OIBTH61r64S11tlEwTuT9fIfTb0ZzuZkJTJbzG1AzQBdk_3kZUnv5LjVDwniTiT8S4RSsWoiDm-bNFK_o2t4tn1AEIqpxX56vDf-y2ivmmdp4ws2rFc9dfrNmF0ZAl4gmsZs0W1FGNaVRARc8JXwI3kjayVN5AyS1Gug9oCJlGbxmb367HFJQhNus3wSORsfM4mXv6bg-3H1rm8yH6AQQvb0JmL_YWf9qX5AMfFCB8Z4gzsSdJUOEuOseIo5QJu6yfflEXNhkdnoJYv5IpMo4jvOpvxRkUC0W4vw3VPopfDFvjJJHa_42c4hJZ1VQGf8Ionqs5EJnfYnsvNTrOD3KDzt8SMb4gZEaXimcZbUjZNSA9xop-U91iyz4FX20867naFR0ucENNFmxiTg4eddO05_sEUfNSZGsRuZxqbcOhmNxwfbc3UQ34qZDHnTmdvRiduTIbFNoetbTqT8H9dj_7bnWVovO5qw_psFNGYEabfIp6AR707F16fihnuqOhEciwVNSPwf9nScgXs3-9EMqlPqpjqp-bh9HS6zMpB22989PNMg3EhiRz1jTNSLwxrQoS3dSBNG4RheoH1jB6ltzxOyuq_xxchaJvZCRTt1TuDyGhp-8Gfyk80NsYu1aYTyTXzkyQA---GAHq8PuT9pVU3tFuKhyk_w-y4R1rA6ZF4CqLrs0lBtkpcjYdjQEb7-8mToSdUTOnzMJfpYPmZm4rTyPUjLtSjgUhbBq33LHE_cPuEE0FgdbYmg/https://www.amazon.com/dp/B0FLDK4CDN/?_encoding=UTF8&pd_rd_i=B0FLDK4CDN&pd_rd_i=B0FLDK4CDN&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=6cqvI&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=2R4GPHGH2JWW2SFWCE56&pd_rd_wg=n0R1T&pd_rd_r=999cd50e-1527-471d-93bd-92c1e5fd4e3f",
+      "link_clean": "https://www.amazon.com/dp/B0FLDK4CDN/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FLDK4CDN&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51kbZuxvyML._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/fe15f134-6a3b-4078-9ba7-e8e081a9e92c.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/fe15f134-6a3b-4078-9ba7-e8e081a9e92c.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.7,
+      "reviews": 29,
+      "price": "$141.19",
+      "extracted_price": 141.19,
+      "old_price": "$148.63",
+      "extracted_old_price": 148.63
+    },
+    {
+      "position": 4,
+      "asin": "B0GK6HCYVQ",
+      "title": "Hadulcet Foldable Dog Crate Furniture, No Assembly Indoor Dog Kennel with Storage Top, Wooden Dog Crate Table for Small to Medium Dogs, 27.55” Furniture Style Dog Cage with 2 Bowls Rustic Brown",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JPM9NlMI72V4NuZOgUs1wiQAAAGdgLlmcAEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICD9cu29/clv1c_ek-wBYf3FbbazjM3kDcWe2v7-Llb6wPrmKBWSlFoXR1Y-7PTYVaivb8U1wOSVh0VaeW42xO-54qSKXIzCbQkmjUBK2IdhrTy_SZFxqpaXdRV-1kjmYMsiWj78inU51Vv_f6ACw5ImVcEAVBcP98Sddz5sF2dnEHuhMaIV3eIzwqbXXZcdr-BlQAiR3YTlFL6tUil-00zh9eIcqd4Nyxr2CSYk5L5Zb-Y031OEhbUWc97KREUciT_ZIgOVbw7DqujFAUIciSCurYHVOOex-NpUiwZND8RPqf3FX8grjVDBGk_3RO4wstOodlOjH72m-df0klu_acExkN8TyqlvUhBAMYCU5PwJfRUzJd0bO1RNZZO-ufLq4D9AlfVn-H8IMLkDvQtFKKDDR8Xa8rmbmj_A_YFB-RTKIZil4WrK0iowenzeZEqDGjy49G4xoP1NparfbMqeblT61NBDGNw5P6dCFTdDtPNiMtrqXp8c08aRDQIU22SWA2Dz7wneTVENlD4t4VIYyUBWX2AVAM9jiMxIjrEpcg3NieNk9SKY1hqV0cDao-tKT1z06gd7CtQEPXwacfPvEOcdPuorjJYivyJu4m3PUPjTlcKYKNBUzyilwxace_OuQW6DnkblAMQDcCsBhgqS7pLJR9hbdSQqKz3VLbJIu7WEsDzRjUP6uyM5BFEvHYAWWa38qLwLsWfJOrZjxJjpv5w-MLrg9VGkTONkDnNZlWdn5xBGY2Kg5SC2pN3u-lwZ2hfdi3yh5R7pInWJ5dgV8pLTw9JH0Jf4t_YQwEz6Hu9dy8vHkzGxKnB_-uCdAcHnpx7oTGHVS2HAwt8shXOATvMh_nEKM6wZT2phJ4ifCy1phu7VgglVmtpnWIBB3Kui1LI8C3gbbL3NTeYd84MTwZEabH7nbBK_wcrroZhfel-LwaCSNu3Ou3K7uPwdcUALxLA2ebZYlG0n3DC-VVBufwchW-kSDtzWgPEIqco4FzLhtybkvFfJZF7MJTtnMJ3DHyuxpvQXZM49qKCSmNw4Vt4bt2wxRLcSzrw_jFhJ7Jw8CHQCk8GaVHlD5nulQ2i91MEW5FNWkhBGpMdSfTjpZiTpeMG2h-5PS965fhvSWshzU2430nBm27rvRlYuAS1ux0Nl3QxmjyhX65NqVXklPGUUO40s02xZqXQYwbqBqDUVtlZtQYXQXDk_jsYUYmI-wO7FcLDR2pNhlBxJmBY17OMzsE7oYR6Vxvv4ida7gtmmp64ee4hY7-Aid0ZGab26mUpvtWhlhknFEq1KOpCII81XpRHDGBI8joiqnbnt2WIMNSTfNdXscg93wdSTGxaqDYFbmfopcQHr5ohQid7y9_QewwZlRxHHjVaSKMEa4k0bvgUxk9mKJDzAuHF4SQ1JjwV7Ni_q57QKMqIA47FLa2lbud14ZokIqX-EKn_T5FBQpvW_N30etzZP81I5Yo_Os0u71iCnzXUBidkIUzSLUVLHRh1Jn5WnaYzUwBrI6Y8dCmasuQXimQAOrfob8OohubCrQgM/https://www.amazon.com/dp/B0GK6HCYVQ/?_encoding=UTF8&pd_rd_i=B0GK6HCYVQ&pd_rd_i=B0GK6HCYVQ&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=6cqvI&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=2R4GPHGH2JWW2SFWCE56&pd_rd_wg=n0R1T&pd_rd_r=999cd50e-1527-471d-93bd-92c1e5fd4e3f",
+      "link_clean": "https://www.amazon.com/dp/B0GK6HCYVQ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GK6HCYVQ&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51pK8QrzyuL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/ee23c99f-2bc9-4cb8-b376-e67a4cf5744f.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/ee23c99f-2bc9-4cb8-b376-e67a4cf5744f.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 5,
+      "reviews": 3,
+      "price": "$119.99",
+      "extracted_price": 119.99,
+      "old_price": "$129.99",
+      "extracted_old_price": 129.99
+    },
+    {
+      "position": 5,
+      "asin": "B0FQ56N8ZT",
+      "title": "HugCoz 42\" Large Dog Crate Furniture, Double Door Wooden Indoor Dog Kennel Furniture, Decorative Pet Cage End Table with Wheels for Large Breed Dogs, Size XL, Greige",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JOQ_-HiWKiLsI9cBrZyC3koAAAGdgLlmcQEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICCAvBtD/clv1c_ek-wBXfWFbbSzjO3Y2tRX9r7-FuCmJUm-SW1MV_2GqaWFofjYVaivT8Pu91asdBO8ovlihLI0FLv5r2-_Wry-XP0HcgndJtFWeQEDqtlWwA6kuOLiyZnoGqcenn0oG83PsprcKBcIJrByG3IJNhUaBFK4dmephVrEAS2zTixhNKfOKqfTxKV4jHSNjriym2MwTW5otBPEBT0uQxdhOiBcg-yFx46CkszFKl8tOz6k6TRdKtVgffFZwZOTJ8-OGvZOWM27JxFJWiQmslKU1GH6PY3ewwMcikOOrck6kR4me567iMvPVnifEZ7OkpxuS49AFdiPoht0hUgbfhCYKqgIzFjN5S9FQx5xWzsEO7X2U2jTJep_8zI98H7zILTRTZ2__rbhhG1MiNp9XZTAUa7qwr_hSqCZbE51ByHibavTIGx5JLktLy6_sssj2HXQ1FbTt_M1ANICsel-NkceBPYGX4yVpaW08aY1NdPFIyh_ttwpZUvb2fu1q9xzMO8P5oIhRbstLyk2-gIOsYMhh2Ly7BCDiDovFkE930dPllgjtBvVFQdijZcxHwTGlD67hiuQhHLX75J_lUfuMpauWDzKqc-jn388G8NT888mvOWlcPUUDzhZpowjhKcRm8cL-OcwRlFVSJQWn5qK_FxiS_uGYohiWD6nut9BeG6m82OIVObKG8EtcX5GxZoMHO9OWL7OVJ6EyEZdqgM645n_pTRInfMJVwfENDvrCjsqgDyIiiPt0_0U6NhBiPNr9YcalOHvgvOWz_OltKPzDySKW4SBm5UzJiARPe1IxDG3fzs2a4keUHHdv7hCbKoAH94tLW9X5WMG77by1vJ5fRZuDAz344aDU5BCLSdEqDCzNVrlvquYNHHj9qFkk7PLDzVXnAD4QtR5uo63Gx6WPlSVmEJVi3Fyl6tKtqQ16-tkiV2QSz_giGcNEg8AIucB7RoxqBShYPTIiGgo0xf1JbbZUTIgU2bcylhDKrAlKLAT0DpFZhg2vf6BN7TrOvN2I-N5AXv-NA1zvpcQl5JVmQsUvfWwwreNVzGTC7-dyFgXfrXS-MrkGjAkQmdLTN8uioRhdyZw7YrUT8qpo0T85u82JBZWeKfW2DxZHTBk3rx6jWOcyzKYK6oBNLx2s2DydR1T7BoNQ18-hZ9CIoAtL3m4p0i1P70qliSaxfmQ8GkggvseWM0LxFCZ-OISTAZMk8ZvHNPV8DbLLQvJ37Cpmd81bQjNDA5c3r0hflRkfeujj7oVo_rJJXD77_kOFziibaem-IHJK7XL_lbL7oqCD3EZ6nBZ7oVqk6C1l-MAZr9EFCID-VrYZZxpf0fz2EGRfJRdfa8nMExnAyBJ-QyV3_yAfXUUMIHiGDFPEpD1AKOIdvj5zbzAkWqKNoKnG2ZTcU8H9hqKqFxnBUlmaJVgt_m_crrip0YgrTRdhMtt_-4fiW9729_i7OGpQiXgXNK_Hrm5de-LgAygPnkhFasS-4xu7Vz5xlafrJ1XOsVGAqi8yBflPK0Q3PWvS2Zhr5JPz0ZSNyt/https://www.amazon.com/dp/B0FQ56N8ZT/?_encoding=UTF8&pd_rd_i=B0FQ56N8ZT&pd_rd_i=B0FQ56N8ZT&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=6cqvI&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=2R4GPHGH2JWW2SFWCE56&pd_rd_wg=n0R1T&pd_rd_r=999cd50e-1527-471d-93bd-92c1e5fd4e3f",
+      "link_clean": "https://www.amazon.com/dp/B0FQ56N8ZT/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FQ56N8ZT&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51KAiDmNK0L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/61fa4684-b1ed-48f9-bfb5-05caa6d6e884.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/61fa4684-b1ed-48f9-bfb5-05caa6d6e884.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.3,
+      "reviews": 12,
+      "price": "$159.99",
+      "extracted_price": 159.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "text": "Customers find the dog crate's design aesthetically pleasing and appreciate its great quality and easy assembly. They describe it as spacious, with one customer noting it's suitable for large and medium breeds up to 110 pounds. The value for money receives mixed feedback, with several customers praising the quality relative to the price.",
+      "insights": [
+        {
+          "title": "Design",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 10,
+            "positive": 9,
+            "negative": 1
+          },
+          "summary": "Customers like the design of the dog crate.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Beautiful design and great quality. It took some time to resemble but the finish look is amazing. Absolutely love it.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1UBYG8TG9PREX"
+            },
+            {
+              "position": 2,
+              "snippet": "Surely looks better than a metal crate, but is still visibly very cheap",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3SP1STNGZAYCM"
+            },
+            {
+              "position": 3,
+              "snippet": "The size is fantastic. It looks great in the room and serves as a piece of furniture rather than just a crate....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3KX19LB2YZUEN"
+            },
+            {
+              "position": 4,
+              "snippet": "Looks great and perfect for my puppy....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R21RYVK1WS1B8H"
+            }
+          ]
+        },
+        {
+          "title": "Quality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 7,
+            "positive": 7,
+            "negative": 0
+          },
+          "summary": "Customers find the dog crate to be of great quality.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Beautiful design and great quality. It took some time to resemble but the finish look is amazing. Absolutely love it.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1UBYG8TG9PREX"
+            },
+            {
+              "position": 2,
+              "snippet": "The combination of the nightstand and dog crate is excellent. It is very spacious, and my puppy loves spending time inside....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R21Q701F3GNVA4"
+            },
+            {
+              "position": 3,
+              "snippet": "High quality. Easy to assemble. Nice aesthetic.",
+              "link": "https://www.amazon.com/gp/customer-reviews/RUYPPMJS6XX9Q"
+            },
+            {
+              "position": 4,
+              "snippet": "...Set up instructions were great! Wonderful product that looks MUCH better than your typical crate at a fraction of the designer brand.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3I2O4Z8RZOK8H"
+            }
+          ]
+        },
+        {
+          "title": "Assembly",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 6,
+            "positive": 5,
+            "negative": 1
+          },
+          "summary": "Customers find the assembly of the dog crate easy.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...She’s a year and about 60lbs. It was also very easy to build! I do think the price should be a bit less due to the quality of wood",
+              "link": "https://www.amazon.com/gp/customer-reviews/R35VDTH5GHGVGR"
+            },
+            {
+              "position": 2,
+              "snippet": "High quality. Easy to assemble. Nice aesthetic.",
+              "link": "https://www.amazon.com/gp/customer-reviews/RUYPPMJS6XX9Q"
+            },
+            {
+              "position": 3,
+              "snippet": "...It is very spacious, and my puppy loves spending time inside. Assembly was easy, and the structure feels sturdy and secure, so I am not worried...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R21Q701F3GNVA4"
+            },
+            {
+              "position": 4,
+              "snippet": "...High quality wood, easy assembly, blends perfectly with home decor. My dog loves it and feels safe and comfortable inside daily.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1ZZMC6AAKBW0E"
+            }
+          ]
+        },
+        {
+          "title": "Spacious",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 5,
+            "positive": 5,
+            "negative": 0
+          },
+          "summary": "Customers find the dog crate spacious and appreciate its great size.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "The combination of the nightstand and dog crate is excellent. It is very spacious, and my puppy loves spending time inside....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R21Q701F3GNVA4"
+            },
+            {
+              "position": 2,
+              "snippet": "The size is fantastic. It looks great in the room and serves as a piece of furniture rather than just a crate....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3KX19LB2YZUEN"
+            },
+            {
+              "position": 3,
+              "snippet": "...my pup so far it meshes will with my home already and is spacious for my growing puppy. Also the quality for the price is exceptional!",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3RJAJ55QSWUGQ"
+            },
+            {
+              "position": 4,
+              "snippet": "...The hidden acrylic door is convenient, spacious for large breeds, and the charging station is practical....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1ZZMC6AAKBW0E"
+            }
+          ]
+        },
+        {
+          "title": "Value for money",
+          "sentiment": "mixed",
+          "mentions": {
+            "total": 6,
+            "positive": 4,
+            "negative": 2
+          },
+          "summary": "Customers have mixed opinions about the value for money of the dog crate, with some finding the quality exceptional for the price, while others consider it very cheap.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...Sturdy and very happy with the price and now I have something that looks good rather than an ugly crate...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R21RYVK1WS1B8H"
+            },
+            {
+              "position": 2,
+              "snippet": "Surely looks better than a metal crate, but is still visibly very cheap",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3SP1STNGZAYCM"
+            },
+            {
+              "position": 3,
+              "snippet": "...Also the quality for the price is exceptional!",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3RJAJ55QSWUGQ"
+            },
+            {
+              "position": 4,
+              "snippet": "Ok quality for the price",
+              "link": "https://www.amazon.com/gp/customer-reviews/RCJX6M25QZ2KL"
+            }
+          ]
+        }
+      ],
+      "images": [
+        "https://m.media-amazon.com/images/I/71FcxENHQ9L.jpg",
+        "https://m.media-amazon.com/images/I/613K7m2GN5L.jpg",
+        "https://m.media-amazon.com/images/I/71bcCvSCYiL.jpg",
+        "https://m.media-amazon.com/images/I/71SArnI5BxL.jpg",
+        "https://m.media-amazon.com/images/I/716r6BP014L.jpg",
+        "https://m.media-amazon.com/images/I/71UhaHGwJ-L.jpg",
+        "https://m.media-amazon.com/images/I/71ZmV672n3L.jpg",
+        "https://m.media-amazon.com/images/I/71SABhOTnSL.jpg",
+        "https://m.media-amazon.com/images/I/71M2y0a3WcL.jpg",
+        "https://m.media-amazon.com/images/I/81yqQi4OGpL.jpg",
+        "https://m.media-amazon.com/images/I/813E7s+JtPL.jpg",
+        "https://m.media-amazon.com/images/I/716PSWpQ17L.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 64,
+        "4 star": 23,
+        "3 star": 6,
+        "2 star": 7,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "My puppy loves it",
+        "text": "The combination of the nightstand and dog crate is excellent. It is very spacious, and my puppy loves spending time inside. Assembly was easy, and the structure feels sturdy and secure, so I am not worried about my dog damaging it. The built-in power outlet on the top of the cabinet is also very convenient and thoughtfully designed.",
+        "rating": 5,
+        "date": "January 29, 2026",
+        "author": "Ran Zhu",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHH6JFHCTH35OXMH7AX7INMFFKMA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/71SArnI5BxL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/716r6BP014L._SY88.jpg"
+        ],
+        "helpful_votes": "One person found this helpful"
+      },
+      {
+        "position": 2,
+        "title": "Good purchase",
+        "text": "It’s definitely prettier than many other cages! I did dock a star because it’s made of cheaper wood material :/. The pull out drawer isn’t all wood which I didn’t realize before purchasing. It’s a collapsable drawer. The actual storage part is made out of fabric. however it still works perfectly for my doodle. She’s a year and about 60lbs.It was also very easy to build! I do think the price should be a bit less due to the quality of wood",
+        "rating": 4,
+        "date": "February 3, 2026",
+        "author": "EZZY",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AG7YOFLV3SFY6WLFQ6QF6IMYQXJA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/8f29a6f2-d534-4979-91bc-8c8b9cc1f52e._CR0%2C0%2C398%2C398_UX460_.jpg",
+        "images": [
+          "https://m.media-amazon.com/images/I/71UhaHGwJ-L._SY88.jpg"
+        ],
+        "helpful_votes": "5 people found this helpful",
+        "product": {
+          "color": "Oak",
+          "size": "24.2\"L x 36.6\"W x 29.5\"H"
+        }
+      },
+      {
+        "position": 3,
+        "title": "My dog likes!",
+        "text": "Beautifully designed and sturdy, this modern dog crate doubles as elegant furniture. The hidden acrylic door is convenient, spacious for large breeds, and the charging station is practical. High quality wood, easy assembly, blends perfectly with home decor. My dog loves it and feels safe and comfortable inside daily.",
+        "rating": 5,
+        "date": "January 21, 2026",
+        "author": "Stefani H",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGXHUTC2DIGISZTW2X2AT5GUOVJA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/81yqQi4OGpL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/813E7s+JtPL._SY88.jpg"
+        ],
+        "helpful_votes": "2 people found this helpful",
+        "product": {
+          "color": "Oak",
+          "size": "24.2\"L x 36.6\"W x 29.5\"H"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Great dog crate",
+        "text": "High quality. Easy to assemble. Nice aesthetic.",
+        "rating": 5,
+        "date": "March 29, 2026",
+        "author": "Kelly J Bittner",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGEQX6L7XV7SKKNETEUYZMG3Z6IQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png"
+      },
+      {
+        "position": 5,
+        "title": "Attractive, takes time to set up, would still recommend",
+        "text": "Looks great and perfect for my puppy. If your puppy hates to be alone, then use a different crate for that as I’m not sure how well the door would stay closed for a very determined puppy. Took me some time to set up but each piece was labeled so it easy. Sturdy and very happy with the price and now I have something that looks good rather than an ugly crate (still have one of those in another room/ this one is the bedtime crate)",
+        "rating": 5,
+        "date": "February 6, 2026",
+        "author": "Interrupted Reading",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEKZSAROS5CJV4FPE35S4SLVOKJA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "helpful_votes": "One person found this helpful",
+        "product": {
+          "color": "Oak",
+          "size": "19.9\"L x 25.6\"W x 23.6\"H"
+        }
+      },
+      {
+        "position": 6,
+        "title": "Great product",
+        "text": "put it together by myself in about 2 hrs. it’s very large wish i would of gotten the smaller one even with my 90lb lab. my only complain is that one of the corners came ripped.",
+        "rating": 4,
+        "date": "April 5, 2026",
+        "author": "Kelly Hasten",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AE2BANAB5UUJRKJTRCZ4EVBJCYYQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/613K7m2GN5L._SY88.jpg"
+        ]
+      },
+      {
+        "position": 7,
+        "title": "Stylish and Practical Dog Crate",
+        "text": "We’re really happy with this dog crate night stand. It looks beautiful in our home, feels sturdy, and there is even a hidden door. It gives our pup a cozy space while also working perfectly as a night stand. A lovely mix of style and function.",
+        "rating": 5,
+        "date": "April 7, 2026",
+        "author": "PB",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGFLAG76ENN73YEJDPP3YCEMNLNA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/71bcCvSCYiL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71FcxENHQ9L._SY88.jpg"
+        ],
+        "product": {
+          "color": "Oak",
+          "size": "19.9\"L x 25.6\"W x 23.6\"H"
+        }
+      },
+      {
+        "position": 8,
+        "title": "Great size. Door cracked broken",
+        "text": "Like the size and everything but the door came cracked and ended up splitting in half a week later",
+        "rating": 3,
+        "date": "March 27, 2026",
+        "author": "Jazmin",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFMF3NMGV3MZUW2JG3NJEAGKWZ5A",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png"
+      }
+    ]
+  }
+}

@@ -1,3 +1,4 @@
+import type { ImageMetadata } from 'astro';
 import type { PageType } from '@utils/types';
 import { PAGE_TYPE_CTA as OG_PAGE_TYPE_CTA } from '../config/og-cta.mjs';
 
@@ -16,6 +17,8 @@ interface AutoOgOptions {
   pathname: string;
   noindex?: boolean;
 }
+
+export type OgImageInput = string | ImageMetadata | null | undefined;
 
 const PAGE_TYPE_CTA: Record<PageType, string> = OG_PAGE_TYPE_CTA;
 
@@ -91,4 +94,12 @@ export function resolveAutoOgImagePath(options: AutoOgOptions): string | null {
   }
 
   return `/og/${ogSlugFromPathname(options.pathname)}.jpg`;
+}
+
+export function resolveProvidedOgImagePath(ogImage: OgImageInput): string | null {
+  if (!ogImage) {
+    return null;
+  }
+
+  return typeof ogImage === 'string' ? ogImage : ogImage.src;
 }

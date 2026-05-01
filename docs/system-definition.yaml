@@ -8,7 +8,7 @@
 
 site_system:
   status: "active"
-  as_of: "2026-04-12"
+  as_of: "2026-04-14"
   owner: "chill-dogs"
   purpose: "Define the website as a modular conversion system and keep implementation aligned."
 
@@ -39,6 +39,7 @@ site_system:
         with tagline "Settle in." — positioned between HomepageHero and the start-prompt section.
         The latest/guide lists include How to Crate Train Your Dog and Best Travel Crates for Road Trips
         to connect informational crate intent with the new crate converter path.
+        A homepage-inline email signup block sits below HomepageBody as a secondary capture path.
 
     - name: "Cooling"
       type: "collector"
@@ -111,9 +112,17 @@ site_system:
         - "/comforting/best-puppy-crates/"
         - "/comforting/best-anxiety-dog-crates/"
         - "/comforting/best-travel-crates-for-road-trips/"
+        - "/comforting/best-airline-crates-for-flying-with-your-dog/"
+        - "/comforting/best-airline-approved-dog-carriers/"
+        - "/comforting/best-dog-travel-bags-for-flying/"
+        - "/comforting/best-furniture-dog-crates/"
+        - "/comforting/best-heavy-duty-dog-crates/"
       notes: >
-        Comfort collector routes to calming beds, orthopedic beds, puppy crates, anxiety crates, and travel crates.
-        Additional crate-related converters may be added as the crate-training cluster expands.
+        Comfort collector routes to calming beds, orthopedic beds, puppy crates, anxiety crates, travel crates,
+        airline crates, airline carriers, furniture crates, and heavy-duty crates.
+        The furniture crates page includes double-compartment and multi-door picks alongside standard furniture options.
+        The heavy-duty crates page includes reinforced furniture-style options alongside utility wire crates.
+        The crate-training collector article now routes into the airline, furniture, and heavy-duty crate paths as well.
         Placeholder product entries (ASINs B0D5B56X9V, B0DTH4195V) need
         to be identified and updated in src/data/relaxation-products.ts.
 
@@ -141,6 +150,15 @@ site_system:
       metric: "collector_to_converter_click split by destination"
       routes:
         - "/travel/dog-road-trip-gear/"
+
+    - name: "How to Fly With a Dog"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Route air-travel intent to calming converters and comfort bed converters"
+      metric: "collector_to_converter_click to calming and comfort converters"
+      routes:
+        - "/travel/how-to-fly-with-a-dog/"
+      notes: "Informational air-travel guide; attributes facts to TSA, USDA APHIS, AVMA, DOT, CDC, and AAHA. No product roundup. Internal links to calming and comfort converters."
 
     - name: "How Much Do Dogs Sleep"
       type: "collector"
@@ -199,12 +217,15 @@ site_system:
       metric: "No conversion obstruction"
       routes:
         - "/admin/products/"
+        - "/content-sitemap/"
         - "/about/"
         - "/contact/"
         - "/privacy-policy/"
         - "/terms/"
         - "/affiliate-disclosure/"
-      notes: "/admin/products/ is the canonical product inventory review page. Every product in any product data file must flow into this page through src/data/product-catalog.ts; do not hardcode product rows in the admin route."
+        - "/subscribe/thanks/"
+        - "/subscribe/confirmed/"
+      notes: "/admin/products/ is the canonical product inventory review page. Every product in any product data file must flow into this page through src/data/product-catalog.ts; do not hardcode product rows in the admin route. /content-sitemap/ is a hidden editor page that previews each listed route with final built share metadata, including post-build OG image rewrites."
 
   modules:
     workhorse:
@@ -247,7 +268,8 @@ site_system:
       - "Explore: cooling, calming, comforting"
       - "Company: about, contact"
       - "Legal: privacy-policy, terms, affiliate-disclosure"
-    final_cta: "Persistent affiliate disclosure and trust reinforcement"
+      - "Newsletter signup on non-converter pages only"
+    final_cta: "Persistent affiliate disclosure, trust reinforcement, and secondary email capture on non-converter pages"
 
   conversion_flow:
     steps:
@@ -262,11 +284,25 @@ site_system:
       - "Unused modules that create implementation confusion"
       - "Collector pages without clear converter paths"
 
+  email_capture_flow:
+    scope: "Homepage inline signup + footer signup on non-converter pages"
+    provider: "Buttondown"
+    events:
+      - "email_signup_view"
+      - "email_signup_start"
+      - "email_signup_submit"
+      - "pageview:/subscribe/thanks/"
+      - "pageview:/subscribe/confirmed/"
+    notes: >
+      Converters intentionally exclude the footer signup so affiliate pages stay single-purpose.
+      /subscribe/thanks/ and /subscribe/confirmed/ are informer pages, noindex, excluded from sitemap discovery,
+      and include a minimal Chill-Dogs logo link back to the homepage without restoring full site chrome.
+
   product_data:
     product_catalog: "src/data/product-catalog.ts — normalized admin inventory across every product data source; /admin/products/ must consume this data module and remain complete whenever products are added"
     cooling_products: "src/data/cooling-products.ts — 15 products with ASIN, affiliate URL, and image thumbnails"
     calming_products: "src/data/calming-products.ts — 13 products with ASIN, affiliate URL, and image thumbnails"
-    relaxation_products: "src/data/relaxation-products.ts — 24 products (calming beds, orthopedic beds, crates, travel beds) with ASIN, affiliate URL, and image thumbnails"
+    relaxation_products: "src/data/relaxation-products.ts — 41 products (calming beds, orthopedic beds, crates, travel beds) with ASIN, affiliate URL, and image thumbnails"
     tracking_products: "src/data/tracking-products.ts — 8 tracker products and 1 accessory product across cellular/off-grid/bluetooth/accessory types"
     raw_api_cache: "src/data/amazon-products/*.json — full SearchAPI Amazon Product responses per ASIN"
 

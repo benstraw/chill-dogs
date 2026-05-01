@@ -1,0 +1,605 @@
+{
+  "search_metadata": {
+    "id": "69e87da8a0cb103e2125c14a",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/zl1qhT9h46GorOWMSXujEg/69e87da8a0cb103e2125c14a.json",
+    "created_at": "2026-04-22 07:50:00 UTC",
+    "processed_at": "2026-04-22 07:50:00 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0F5B5VZPG/?",
+    "raw_html_file": "https://serpapi.com/searches/zl1qhT9h46GorOWMSXujEg/69e87da8a0cb103e2125c14a.html",
+    "total_time_taken": 1.7
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0F5B5VZPG",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0F5B5VZPG",
+    "title": "ANILD Dog Travel Bag Backpack, Flight-Ready TSA-Approved Dog Travel Bag with 2 Leak-Proof Food Canisters, 6 Foldable Silicone Bowls, Multi-Compartment Organizer for Hiking, Camping, Dog Mom Essentials",
+    "link": "https://www.amazon.com/ANILD-Flight-Ready-TSA-Approved-Leak-Proof-Multi-Compartment/dp/B0F5B5VZPG/",
+    "link_clean": "https://www.amazon.com/dp/B0F5B5VZPG/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F5B5VZPG&device=desktop&engine=amazon_product",
+    "badges": [
+      "Amazon's Choice"
+    ],
+    "variants": [
+      {
+        "title": "Color",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0F5B5VZPG",
+            "name": "Dark Blue",
+            "image": "https://m.media-amazon.com/images/I/51Ix7YNbcZL._SS64_.jpg",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F5B5VZPG&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0F5BBDD47",
+            "name": "Dark Grey",
+            "image": "https://m.media-amazon.com/images/I/41LOgB3zEmL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F5BBDD47&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0F5B5LXFY",
+            "name": "Black",
+            "image": "https://m.media-amazon.com/images/I/414OFQxqkOL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F5B5LXFY&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 4,
+            "asin": "B0F5B3X4NK",
+            "name": "Light Grey",
+            "image": "https://m.media-amazon.com/images/I/51k8mYWFmdL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F5B3X4NK&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 5,
+            "asin": "B0F5B8VRJ5",
+            "name": "Pink",
+            "image": "https://m.media-amazon.com/images/I/51WRQipBnNL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F5B8VRJ5&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the ANILD Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/81gA-nAEDcL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/81gA-nAEDcL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81LO8oaf7eL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71ydhOH4+gL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71qvd3o3nsL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/818UMGZqnhL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/7165vKwOpJL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81YSzXkYC-L._AC_SL1500_.jpg"
+    ],
+    "rating": 4.6,
+    "reviews": 44,
+    "discount": "-6%",
+    "price": "$22.49",
+    "extracted_price": 22.49,
+    "price_unit": "$22.49 / count",
+    "extracted_price_unit": 22.49,
+    "old_price": "$23.99",
+    "extracted_old_price": 23.99,
+    "delivery": [
+      "FREE delivery Monday, April 27 on orders shipped by Amazon over $35"
+    ],
+    "stock": "Only 12 left in stock - order soon."
+  },
+  "purchase_options": {
+    "buy_new": {
+      "caption": "Regular Price",
+      "price": "$29.99",
+      "extracted_price": 29.99,
+      "price_unit": "$29.99 / count",
+      "extracted_price_unit": 29.99,
+      "delivery": [
+        "FREE delivery Monday, April 27 on orders shipped by Amazon over $35"
+      ],
+      "stock": "Only 12 left in stock - order soon.",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "Weliday",
+          "details": {
+            "heading": "Sold by",
+            "content": "Weliday"
+          },
+          "link": {
+            "text": "Weliday",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A3A5A7W3DO3U57&asin=B0F5B5VZPG&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "about_item": [
+    "★Airline-Compliant & Travel-Ready Design：Meets standard airline-approved dimensions for hassle-free cabin storage. Features 5 collapsible silicone bowls and food containers, aligning with pet travel regulations.",
+    "★Premium Durability & Weather Resistance：Constructed with 600D and 420D waterproof fabric and anti-burst zippers for all-weather protection.Reinforced with 3-8MM pearl cotton padding for impact resistance and pet comfort.",
+    "★Smart Organization & Hygiene Management：Integrated dedicated trash bag dispenser (right side) for quick cleanup during trips. Dual-layer storage: main compartment ，quick-access top pocket, partitioned food zones (magic-separator and cylindrical containers).",
+    "★User-Centric Functional Details:Ergonomic 28mm textured nylon straps and breathable mesh back panel enhance carrying comfort.PEVA-lined inner covers and D-ring attachments (right side) secure accessories like leashes or toys.",
+    "★Lightweight :The compact folding design can minimize the volume and weight, so as to obtain a lighter product, reduce the negative weight, and better meet the needs of customers."
+  ],
+  "related_products": [
+    {
+      "position": 1,
+      "title": "Dog Travel Bag All-in-One Set: DELOMO 25L Airline Approved Dog Travel Backpack with 2 Food Containers + 2 Collapsible Bowls +",
+      "link": "https://www.amazon.com/Dog-Travel-Bag-All-One/dp/B0B7XM2JF4/ref=pd_sbs_d_sccl_1_1/147-1471838-0569345?pd_rd_w=Pbas8&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=7RK7SJVC29M32B3Y8Y7Q&pd_rd_wg=i81pj&pd_rd_r=cf75c948-74e8-4a5f-b021-b9f6f3e478da&pd_rd_i=B0B7XM2JF4&psc=1",
+      "asin": "B0B7XM2JF4",
+      "link_clean": "https://www.amazon.com/Dog-Travel-Bag-All-One/dp/B0B7XM2JF4/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0B7XM2JF4&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81OVQqFgiUL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.7,
+      "reviews": 706,
+      "price": "$29.95",
+      "extracted_price": 29.95,
+      "price_unit": "$29.95/count",
+      "extracted_price_unit": 29.95,
+      "delivery": [
+        "Get it as soon as Monday, Apr 27"
+      ]
+    },
+    {
+      "position": 2,
+      "title": "BAGLHER丨Dog Travel Bag, Airline Approved Pet Supplies Backpack, Dog Travel Backpack Accessories Set with 2 Silicone Collapsib",
+      "link": "https://www.amazon.com/BAGLHER-Approved-Supplies-Backpack-Collapsible/dp/B08CXHLV4C/ref=pd_sbs_d_sccl_1_2/147-1471838-0569345?pd_rd_w=Pbas8&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=7RK7SJVC29M32B3Y8Y7Q&pd_rd_wg=i81pj&pd_rd_r=cf75c948-74e8-4a5f-b021-b9f6f3e478da&pd_rd_i=B08CXHLV4C&psc=1",
+      "asin": "B08CXHLV4C",
+      "link_clean": "https://www.amazon.com/BAGLHER-Approved-Supplies-Backpack-Collapsible/dp/B08CXHLV4C/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B08CXHLV4C&device=desktop&engine=amazon_product",
+      "badges": [
+        "Amazon's Choice"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/714XDoYmSiL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.8,
+      "reviews": 2592,
+      "discount": "16% off",
+      "price": "$26.99",
+      "extracted_price": 26.99,
+      "price_unit": "$26.99/count",
+      "extracted_price_unit": 26.99,
+      "old_price": "$31.99",
+      "extracted_old_price": 31.99,
+      "delivery": [
+        "Get it as soon as Monday, Apr 27"
+      ]
+    },
+    {
+      "position": 3,
+      "title": "PetAmi Dog Travel Bag Backpack, Airline Approved Dog Bags for Traveling, Puppy Diaper Bag Supplies, Pet Camping Essentials Hi",
+      "link": "https://www.amazon.com/PetAmi-Organizer-Dispenser-Container-Collapsible/dp/B08CS2B781/ref=pd_sbs_d_sccl_1_3/147-1471838-0569345?pd_rd_w=Pbas8&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=7RK7SJVC29M32B3Y8Y7Q&pd_rd_wg=i81pj&pd_rd_r=cf75c948-74e8-4a5f-b021-b9f6f3e478da&pd_rd_i=B08CS2B781&psc=1",
+      "asin": "B08CS2B781",
+      "link_clean": "https://www.amazon.com/PetAmi-Organizer-Dispenser-Container-Collapsible/dp/B08CS2B781/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B08CS2B781&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/A1t1j1QO7NL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.8,
+      "reviews": 2071,
+      "price": "$29.99",
+      "extracted_price": 29.99,
+      "delivery": [
+        "Get it as soon as Monday, Apr 27"
+      ]
+    },
+    {
+      "position": 4,
+      "title": "CLAWIST Dog Travel Bag with Treat Pouch, Airline Approved Dog Bags for Traveling, 2 Dog Food Travel Container, 2 Travel Bowls",
+      "link": "https://www.amazon.com/CLAWIST-Approved-Traveling-Container-Accessories/dp/B0B5XFGB5V/ref=pd_sbs_d_sccl_1_4/147-1471838-0569345?pd_rd_w=Pbas8&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=7RK7SJVC29M32B3Y8Y7Q&pd_rd_wg=i81pj&pd_rd_r=cf75c948-74e8-4a5f-b021-b9f6f3e478da&pd_rd_i=B0B5XFGB5V&psc=1",
+      "asin": "B0B5XFGB5V",
+      "link_clean": "https://www.amazon.com/CLAWIST-Approved-Traveling-Container-Accessories/dp/B0B5XFGB5V/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0B5XFGB5V&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81R71YoXn7L._AC_UL165_SR165,165_.jpg",
+      "rating": 4.5,
+      "reviews": 761,
+      "price": "$19.99",
+      "extracted_price": 19.99,
+      "delivery": [
+        "Get it as soon as Monday, Apr 27"
+      ]
+    },
+    {
+      "position": 5,
+      "title": "Dog Travel Bag Airline Approved–Pet Travel Tote with Collapsible Bowls,Food Containers & Feeding Mat–Multi-Pocket Organizer f",
+      "link": "https://www.amazon.com/Approved-Pet-Collapsible-Containers-Mat-Multi-Pocket-Water-Resistant/dp/B0D5GTRQHJ/ref=pd_sbs_d_sccl_1_5/147-1471838-0569345?pd_rd_w=Pbas8&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=7RK7SJVC29M32B3Y8Y7Q&pd_rd_wg=i81pj&pd_rd_r=cf75c948-74e8-4a5f-b021-b9f6f3e478da&pd_rd_i=B0D5GTRQHJ&psc=1",
+      "asin": "B0D5GTRQHJ",
+      "link_clean": "https://www.amazon.com/Approved-Pet-Collapsible-Containers-Mat-Multi-Pocket-Water-Resistant/dp/B0D5GTRQHJ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0D5GTRQHJ&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71-mS+Ged4L._AC_UL165_SR165,165_.jpg",
+      "rating": 4.6,
+      "reviews": 305,
+      "price": "$22.99",
+      "extracted_price": 22.99,
+      "price_unit": "$22.99/count",
+      "extracted_price_unit": 22.99,
+      "delivery": [
+        "Get it as soon as Monday, Apr 27"
+      ]
+    },
+    {
+      "position": 6,
+      "title": "BAGLHER 丨Dog Travel Bag Backpack, Airline Approved Pet Supplies Backpack, Dog Travel Backpack with 2 Silicone Collapsible Bow",
+      "link": "https://www.amazon.com/BAGLHER-Backpack-Approved-Supplies-Collapsible/dp/B099ZKBQSK/ref=pd_sbs_d_sccl_1_6/147-1471838-0569345?pd_rd_w=Pbas8&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=7RK7SJVC29M32B3Y8Y7Q&pd_rd_wg=i81pj&pd_rd_r=cf75c948-74e8-4a5f-b021-b9f6f3e478da&pd_rd_i=B099ZKBQSK&psc=1",
+      "asin": "B099ZKBQSK",
+      "link_clean": "https://www.amazon.com/BAGLHER-Backpack-Approved-Supplies-Collapsible/dp/B099ZKBQSK/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B099ZKBQSK&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/819D9nKPaqL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.8,
+      "reviews": 1667,
+      "discount": "10% off",
+      "price": "$26.99",
+      "extracted_price": 26.99,
+      "price_unit": "Typical: $29.99",
+      "extracted_price_unit": 29.99,
+      "old_price": "$29.99",
+      "extracted_old_price": 29.99,
+      "delivery": [
+        "Get it as soon as Monday, Apr 27"
+      ]
+    }
+  ],
+  "sustainability_features": {
+    "summary": "This product has sustainability features recognized by trusted certifications.",
+    "climate_pledge_friendly": true,
+    "learn_more_link": "https://www.amazon.com/climatepledgefriendly",
+    "features": [
+      {
+        "position": 1,
+        "title": "Recycled materials",
+        "text": "Contains at least 50% recycled material.",
+        "certified_by": [
+          {
+            "name": "Recycled Claim Standard Blended",
+            "logo": "https://m.media-amazon.com/images/I/51-XBqrXUyL._SS144_.png",
+            "description": "Recycled Claim Standard (RCS Blended) certified products contain recycled content (>50%) that has been independently verified at each stage of the supply chain, from the source to the final product. The purchase of Recycled Claim Standard (RCS) certified products demonstrates demand for recycled materials. Climate Pledge Friendly requires the product contain at least 50% certified RCS Blended material by weight.",
+            "link": "https://textileexchange.org/integrity/"
+          }
+        ]
+      }
+    ]
+  },
+  "videos": [
+    {
+      "position": 1,
+      "title": "Dog Travel Bag",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/77127b07-a8a1-4fce-bb02-4de4b39ed30b/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/91+YW-iZT3L.jpg",
+      "duration": "0:52",
+      "vendor": "Weliday",
+      "date": "Sep 11, 2025"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": ".",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/8f4371d9-dd0b-402a-9a8a-09c3f462028d.__CR0,0,2928,1200_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 2,
+      "title": ".",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/d140fad1-c65e-49a8-ae1e-e1e2ff6f6312.__CR0,0,2928,1200_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 3,
+      "title": ".",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/2800ea41-8bf2-4210-990d-041b9c72fe35.__CR0,0,2928,1200_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 4
+    },
+    {
+      "position": 5,
+      "title": ".",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/b3cae124-e445-4a63-8fcc-4fad62f49263.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 6,
+      "title": ".",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/4e8bc962-29be-4619-b3a8-530af29d305f.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    }
+  ],
+  "product_details": {
+    "product_dimensions": "12.9 x 7 x 16.1 inches; 1.87 Pounds",
+    "item_model_number": "1",
+    "date_first_available": "April 17, 2025",
+    "manufacturer": "ANILD",
+    "asin": "B0F5B5VZPG",
+    "best_sellers_rank": [
+      {
+        "text": "#95,568 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 95568,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#200 in Dog Carrier Backpacks",
+        "extracted_rank": 200,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/2975334011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Carrier Backpacks"
+      }
+    ],
+    "customer_reviews": "4.6 out of 5 stars",
+    "rating": 4.6,
+    "reviews": 44,
+    "brand_name": "ANILD",
+    "item_type_name": "Dog Travel Bag",
+    "included_components": "bag",
+    "unit_count": "1.0 Count",
+    "manufacturer_warranty_description": "NO",
+    "color": "Dark Blue",
+    "pattern": "Solid",
+    "item_dimensions_l_x_w_x_h": "13\"L x 7\"W x 16\"H",
+    "item_weight": "0.85 Kilograms",
+    "material_type": "Polyester"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0F644KHS8",
+      "title": "Premium Expandable Cat Carrier Backpack with Car Seat Belt Safety System – Rigid Frame Pet Carrier Backpack for Cats & Small Dogs up to 25 lbs – Breathable, Durable – Includes Bottle & Feeding Bowl",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JEmAxep8kcEO2_LzLd-CWRYAAAGdtCrecwEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICALso8x/clv1c_ek-IBYHXLbbWzlYLEhcvOigzZQt_qgBupqex6NTCL-5Wgz2C88EUUKg8otM90RPKwxkpSLFnHWEJLFTgW4FJawkIhtr9NiiQa82kN96HWEpm23YsHLvjOaw5YvtB__lxUufOSGn_mn3-FuF6iMxUw3AbodbYk0TG5qSgznTrTZxlvfez7FG1jbgIxBvXxMcrV6aI7VZBh1MAlUZlJewI0kq6NCe9iWKN5CRtYgvsNXiO_2D5lE5-rdYO0X4TXrZrpNicyzFbmdWKi0gtidZy09r-e4sPcY0GqDhdmWwIt_6TVsRVwEtUNVnQvb_z5cNMFzQZvY3j83tGZvlCQZiyzWPph5d820UNZUs5n1RXbKSKZ4Y80E-CCUXa_xtLaV6TRse1wWE_0xXICncRohjs7epFVQVG_sCpu0JXKMi3GYIv7T4JkGeg7tBlKn0VwZGE6hVp9yvlZK0TKZibdSdUcMVdntOqSolFvvH0m8Cd4xxC32LZ2y23vMy5dQLa1rQdfi6OM_931sP2f7IuCMReAAzLOImRK-yOuc8vAZVW9VnBe6764LVCxn35rfAD-_in9-aokhFrOI4tsx3s7QrgJdlxEg34y-INf9SpiYL_GURu5twdOP3Tr4AGJ91-5w7U6cuEFydYs8ICIVU9QXSSaslMOtgIMLKNV3SYTtoAhtR6qjILFVhbulwFbNGOZlnCJIZwl6HG5YHAQezW4-rKsXf80smiDfafpbyheoc7eMu4_DB1qglEpkBiaAh1OBfub0jhItmVruVCQS3xr3QsTAkfTfy2w5vipxcXZS1XSpNsfEF0zfeSCGDablR-JDAMhdROkjyHRaQ09QCa_fP-FGqfbbEfcauJqX4MjTj1pldioMpmxNrs58QC2WFM8eiRlTtsbCMIY9FKYiPBbfjArRo5BZGln-8UcinR6mU3kFLjSk4OMpkm2sTdpl3dM4BYWFf4L2b-Ia9hjIohyhGeBpV62zXI-ensCcucogIvY5eWWTIbdUNW7Cxy4CyM4OaGDGliyRRE20itACYw0HbKtfkt5YOOKFxDw9Fbi-R7wGPom5WTgB7LiiiowpnHTvpkIL0MDv5oEX0tUP7BQ7DUP5mlpA41DJml_IlVEn6tRghMxTjRTFs__mzlLc7P4x77q1CDrz1WO9QoIwuP0h6RlpBkSypOKql5gl_gPl8HW7KfjeAgc5u_hdknOlA1mj5D6u8EMslGGK4sgc7K5F_3miuppFTrwGADFYHfnJQxRmCWTvmZHbcAqgA-4SWguvWA-UWKj-gZT5MUTJWzbUMJFbSozWD996e3fYoOf7ApMoZGsSgMMJ9k4k73Xmmh6WWTB_3kXORBFQeHREsgLAnjnoILJVJlW9-lQgtipP9zpg59V7fg8wMqFExOLwpU7ohWiA2ediol_wHDVXmRGIYYC0QnGCCHvfOq_BVXRnUz1GjRblhyM9TiTR6QrbBNk7hg8CGYzsHE_TNztOjc-_1D5Ozi0CM1jdGeY4-X82ZRm_KB7W74DpCzqddxy9CMNa_fJUV0zE005rOdScW0ASBU3g/https://www.amazon.com/dp/B0F644KHS8/?_encoding=UTF8&pd_rd_i=B0F644KHS8&pd_rd_i=B0F644KHS8&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=LjdFy&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=7RK7SJVC29M32B3Y8Y7Q&pd_rd_wg=i81pj&pd_rd_r=cf75c948-74e8-4a5f-b021-b9f6f3e478da",
+      "link_clean": "https://www.amazon.com/dp/B0F644KHS8/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F644KHS8&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51DLLW+iW9L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/dbb44db0-1c13-4782-b6b0-9d55e47057ee.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/dbb44db0-1c13-4782-b6b0-9d55e47057ee.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.9,
+      "reviews": 45,
+      "price": "$154.85",
+      "extracted_price": 154.85
+    },
+    {
+      "position": 2,
+      "asin": "B0CR42S6Z6",
+      "title": "DDMOMMY 20-23 Lbs Dog Food Storage Container, Collapsible Dog Food Container with Transparent Airtight Lid,Multifunctional Pet Food Storage Container for Dog Cat,Rice,Flour,Pet Food Scoop and Dog Bowl",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JO1nMLiedUOjjPHRGp6dmpoAAAGdtCredQEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICAuBSWG/clv1c_ek-wBXfWLcTSnuvbk7Lok6bZkbhWJuG-U7YJH9CyjTAgli6hgI5HLuE2hP5LCIgxdxjaWQAuy_l-57iC6d3p7Sscu4V5rrzRyfMq-4PHiJleY6IIgKHwJ8yYon9mSz-V9NxeY7MCQx4Oe0dxhi5GeNfZnA0cgx0KMsd1wT-epNaPtn_sL2unVy4gz2zIDK_IF2eB6HEvL-5Y1WOb_driceoRt0-3BwPoZCRrYgvkHWiO4Ej5i0p-rVDr8YCx0qkLkeeJlkZY5qBIK0hV-C4pbi9NINy4ejIGrDidmWzM3e6ot8RUpNfGWK_V-HsScohHVQE4tdFu6mUgFkPJMjG9FsPPWLiEKDh_HcKmMCSjzHlpjlJOFhw2j-oYEh5wewXL4x3eXTxfkbh_l9-uIIVcG9P9BxL7lg0AGmNw2pd3JEqVaoOxwkT-nLpaAOOnpltiWQMHKoguyMQOVBQGxiIeb-aTu1Mt8vTofJTkSfQyGpYlxKqnkk1jN68DkSdBTAu7MneU_N861BPtuGieGXpiKIv2jkpPJUclc2fKWCmVxhFwvy254q9KqnYbkEZxB__1ML4CitsHSuermS0YzIhmYjKJnpo-zucqtfqr1gwesGcklp1IamFkiTSB7MnpSKpSSTbst22XWTiaKZuRLrb3SXZxDFuYM7KLvMsQH28fpMgIRDQLFSlstcuZiG_HFNyk1irfjykr46qTtuzWKQ3rKJFsHlYjDfUflmUsHJnSFBFerCNeUHQzTxKu-v1kSozToMStNtUGDa_oHJpVRI-oYPiCyhAqcsKyhO-nGMjnzS9FmG2EXJHFylxv0tJvIfuS0fn0-D1a3TpQPYcd0_FUcosm3GThQzm31l2KIvAfSyGrr3jtUE1ZdF1mTTjxURe4nRwFriZj5Cus43nHaeDfuXfdiCyjkOPYiVpZ5k-_sFqp3CkuC0BuTJQuJBkDkgfB9KbIqfPtHcy3I1AFd236-F-6ohLUHWRvkzspmUHC-7-BopCbW-oU8unBLdJIEfAIv6TpMma63Vb9dx_NRObzxEcCcFo56ZgjA_SqgU5B4TElpEo1PIC4jE2w4oya611Y83POOUEJSfLma8gHTcy4OtPt7iDUwDN6Noqt0B2yccce2SskuYZkg8uMmxVOhM37ELjIFnq7tZq5cCL4LJEQRM7KLFguhvBsLbJ6Bkx2j2qW8IuuFAcNKT4aLRiv_MtaC8zcE8kTwxWPfz--qekvd1yoCnFKhPBbHvGiC_e6hP_rUT0wG2iG9sT-K4M_fSHvZBUeDpHHkJ1NYHTCKyBUQMANVl5UWZb4JPygji1-0Q692Ud9GAZRgeYyWVZaNWSvax3oyqDUh3Eqwa8FcXPtb1jjFnH3oL4E0TsUmXm7BA0y4LzcWgi-g1Qjpm6Fh6D8Din3aXxizwHiT0CnELB0Ww2od55pG7rkm4iaiUm4GfNOU4o3ttEyrqOlw8GJxSNSrasuKNVPtFBtxremUBDokTpoOTFx1wgX1AWOoy44cP9VPdRF-d_ed4zqWM6yCaOUI8Qa9ROZliWoE1Ct1WXR8Q/https://www.amazon.com/dp/B0CR42S6Z6/?_encoding=UTF8&pd_rd_i=B0CR42S6Z6&pd_rd_i=B0CR42S6Z6&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=LjdFy&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=7RK7SJVC29M32B3Y8Y7Q&pd_rd_wg=i81pj&pd_rd_r=cf75c948-74e8-4a5f-b021-b9f6f3e478da",
+      "link_clean": "https://www.amazon.com/dp/B0CR42S6Z6/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CR42S6Z6&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41xfxL+hl1L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/fa0bef12-d81e-4d5e-a5f9-3c198ae6fbfd.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/fa0bef12-d81e-4d5e-a5f9-3c198ae6fbfd.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.5,
+      "reviews": 1055,
+      "price": "$21.99",
+      "extracted_price": 21.99,
+      "old_price": "$29.98",
+      "extracted_old_price": 29.98
+    },
+    {
+      "position": 3,
+      "asin": "B0FKNGWP4K",
+      "title": "Starlink Standard Gen 3 Carrying Case – Lightweight Travel Organizer Bag for Dish & Accessories | Portable Dustproof Nylon Storage with EVA Compartments & Shockproof Protection",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JHO9NTTHamYUBngCgvmT-lEAAAGdtCredgEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICB7TgAS/clv1c_ek-wxQfWFbbaTPHXD5vcKUSh-r1b6wMqpk4S7NVAD6ZONjUX28hiycyUJ9QEZ-u_Jlb22y-7OsEZQO_U-0CsGwnv5F-8-KWL0xb7mfaGLGyVJZ9GPOyJje7255PAkUN2W5NDy7GpoENjbhQ-flam-tHVyB2W3jWLkkH6x0NCnJFNBNZ1XBjXVtARlnyQ4F8HtdA71uuL0ybL27lq0srCzlipHBCjLMQ_NNTUCkmqUPloLGEfs50YB02VvP4dAknmwzo3f6v5cyt58VOAccTNIWulSwrcpe1JH3JnjGYT2Hk2maamYgLIqKce7LYH8HhrXAU4taG3gtf4iquPTkFoOpp3xAs4kf1IikyGMJDErtxDvO55jWffzjr42Po0hCF4mjtJx70vpGizellHYKKeYbWeKeSayqIoYs0LZqNeQNMOIS9zYTWToLBKPyc0H0d7mnIn8HsfQqOWOZjq5SFGgw5rywF1SQ1aNjQWOICNE6btLeMMrJKCUi5SVGw4xmsXx-BUzmSb1jME3ZrziMW2Nnfsfv0q2QUTC2sDY2OmUBY7a_JoJS6L9AFhD8esa8PlkZlbTSODWhWmrqViApv5vz2CnAUT7Hbw8v-dtXdcqM128FLz9_ySR1c81jTBt2HPJUG6e-RdClrXWS7cnhEQuPt0_n-57AW91ULyTypIe-K9AG8oLFgnae5D9kn7KMTvS-MghaWz7QVC3wayc09DWp85B3QHcMTjUEXkjSw-qzoHmJrT3qHrYgi7oAaOBhjHw30aIxSsirPaeHdolyvnA_Fr_pA7RHm-2i4Gvlkmi-3BF5Xsk_TosoLI5D4vB08ZlVZ9WCiNbvp4yyl8OVxtjj6ud7jWNAK4ECmGI0a-k3RPwTrSz8g8jbybw9_kwVTdeWdx1fMH35uNfoLLBRqqRHo4h52e5nqesKFrZ3sivIPQmD3cTJ1YBBbaRxfSmavbGFckoX-uqKd1DqV15MRceF2ZrXEoLQDj0iNIGJ3Tltn071XGfBS-mZYAV96OQ1NWLMywKoLdY_9Ymz0F7pukvW259eBP-Rr0RonYi1gwk9FKygSKvWXP_bZJchiy2LStgbco8MQOWAQMzPKGSa8LjhPnjdFf835CrprQi52V3nSr4v9KNj10QlFqyxNq-tyM6EsxWPRcMjjp9UslaOiciSaYyY1t0DIPAhMScOt3XgK_BxSwR6nKj_R2JyjwbUquDA6pqAbCSvdapHzE1g-itC-EeC_zjHuL-MwgD-j6Q03oJC_e0KLGmsxXnqGnoSEi7ynR1VGz0iir5szURpSWrIAIIzZOYIauBhcP6qCXQYIWJYnd2nJrkjeIGqv4a4gQiwSn67ohIhzm1pPNqjR2v0Fk2T4EAf7w9x28HS0GJe6L2pYE5qR_jbZkNXINyFgihYKPQSaSh9zgCaCB77dpyEKLIdvkYFK01Tw9NQpMNn7gC8RML9-hI40DXVG6s4KQFrTeO2h4TT7j9li7r02sdEe3mJNqRdKmGr351F7odJ_zAbdaBN0s35nx6-yc9CV58Wd_PO20xB7T_VzeiQTluBtp/https://www.amazon.com/dp/B0FKNGWP4K/?_encoding=UTF8&pd_rd_i=B0FKNGWP4K&pd_rd_i=B0FKNGWP4K&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=LjdFy&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=7RK7SJVC29M32B3Y8Y7Q&pd_rd_wg=i81pj&pd_rd_r=cf75c948-74e8-4a5f-b021-b9f6f3e478da",
+      "link_clean": "https://www.amazon.com/dp/B0FKNGWP4K/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FKNGWP4K&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41AKKbhZhFL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/e0055c01-9d52-4631-b07c-33eacdc65d77.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/e0055c01-9d52-4631-b07c-33eacdc65d77.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.7,
+      "reviews": 17,
+      "price": "$94.99",
+      "extracted_price": 94.99
+    },
+    {
+      "position": 4,
+      "asin": "B0CYLGD7MD",
+      "title": "Petskd Dog Travel Bag for Supplies, 27L Large Space Pet Organizer Backpack, Airline Approved Weekend Bag with Multi-Function Pockets for Overnight Camping with 2 Food Containers, 2 Bowls (Grey)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JHrmP6zoN1JCxJqW_cF3ji4AAAGdtCredwEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICAHt84K/clv1c_ek-IBYHXFcbWznynI-MgDzpZHJmQrgCv_VHCnRWizqmKoy5yAFI8Mv_V0h5Q-HCeSwSUa9iQLrJuoO-B6NIePSafaThonKAY4qoW4BTu7Y50FRI4Z6AxDWn16C0Aiw40IIPUjND4pKcxGIwXGU6Ge9DclL2R0uU6E4b2yz6jZgvqQFM_v8nZ3JN7-pLGyxk3lOmnkmPrSJfJklbZ_tlBsS7PbSe4JfUGPqmMmmrJItUUzIjHrALF7BmxsyYb1Sbqnh6pEG7f_Px1ygydi5pzFOLom7vIdnKbh2gTkLx7dtPBVLu4sl4Y_ZgOSdN7teI8mrZJ8xB5SsD8eQrv5vpv0nExtjlsuHuEQWKXxn8KS81QFCeqy-Hvm03SEKXj3QMPtk2kGvxJdtH8aQMkuBWUi9pqWchQwlVvYowAPFpSAQEjtAholm8BjD2Sm1-PbQMof3nCzqSsXDFKxTXF5DKb_328jXGOQEcFUBuW0PU4YzBEhPMLcWPKw5KRIleYNKRYhPRotFplTflke8U0hYdiAoS02xdRsP6ca9qMuMC6QeVQ0SCptS14BOehq8mXdhOpGN9DsVkZLOhVhat3KAp9wVaqBZYci8ike6QTEOS6_qr2rgDIXH9mdpWcI-LrQPCSfYTDQM2Gylf3VwZFPHSvdr0SM224KauT8N4TttXlpuLuHSIzRArVk9f4gqfyZRrewfn5rjmuS5x8ZmLRcRdqoi_swI20GMaLq1j4br8ZPF07lLki3SjTiZVdnyU7QSdGWnp8_-qCix_QxDlEB34ZSGAqXM0hdpSLdjmr9Rw0tlMbOT5WzSKvFYJi7NRca3Sr5iVZ-R-E4nfQTWD7mzE3K4dpWLr9sooAC3qUS2FvPGobI4aNISXqOKbd5ULY8tMHmo1XA6q_dB6VL3KM6ZSbM-QvpIhWzjdVXVtWwlMK3HSU6iaywJ4_b3GagGybf3lrqtXD3SCF6vN3bw6sRZfTxc9RevNPVrQ2FzbG5pVl1tgbSmnbw-J0afgOV5_td5kwp_0nxRw9WUnEVNJrf58tLy8-hiAyz6FPSQNngOnCI17P9AHK8P60hh7bHcXj169InyJvitGUKVHevXaR2a1R2-aCtmYxSiXCZIAsNeSRT7f8BfkHW78NxxnzHiU4EE2LYtRWHA7aM2zhyH9Vb5SSDbMu0ZlP6QzrkL8Bbafz56mYj3nBhkx88E_MAap8-V3GxSX05Aq_cqNmsc5SqWNEt05TVW9WLaYnPi5fGAhmHTl1JL4ioFMSFmx-5-R-lRY-emrJWNMAG9-oiaZyU0vR4doFZerGHKEwwZeV_gTwueQS7B3u3obU2qcXZYBbVICD1-B7n_Zuw7ohjtwxFvAfO21mYH9vRrjLAo1A5vFuva4CvlBPEhgdUyUz_HpJbPkDSJ5VcY-n5Z-qU6BIlTk2Xm4BGYejhzHUXF18yBNN-m0j4-UlARKbk1GK1Oz8OIhThhL_7TlCy4VfjrgX5fDxy6sAkGsg9U0M0XuH70W0SlNXrGfbj-32XvEDRPFwyXdDsPGSTqqS4xbkyjc/https://www.amazon.com/dp/B0CYLGD7MD/?_encoding=UTF8&pd_rd_i=B0CYLGD7MD&pd_rd_i=B0CYLGD7MD&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=LjdFy&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=7RK7SJVC29M32B3Y8Y7Q&pd_rd_wg=i81pj&pd_rd_r=cf75c948-74e8-4a5f-b021-b9f6f3e478da",
+      "link_clean": "https://www.amazon.com/dp/B0CYLGD7MD/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CYLGD7MD&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/510llflwPBL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/d52cc1b5-0119-471f-b305-2cdc93cbb78c.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/d52cc1b5-0119-471f-b305-2cdc93cbb78c.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.7,
+      "reviews": 78,
+      "price": "$27.98",
+      "extracted_price": 27.98,
+      "old_price": "$34.97",
+      "extracted_old_price": 34.97
+    },
+    {
+      "position": 5,
+      "asin": "B0FQCK7RPK",
+      "title": "Pecute Dual Compartment Pet Carrier for Multi-Cat Families & Small Dog Owners, Collapsible Dog Crate with Reinforced Steel Frame, Car Safety Design for Travel, Vet Visits & Home Use, Green",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JNupmgW8KUnp_5-SfDoeV2YAAAGdtCreeAEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICBIHwoJ/clv1c_ek-wxYHXLbbWDfHOAIfj8e5gSssXIXbpcXSCgFPqnVCnLEtNYsIcx6IL0eA1pX-5KFJ-fZOmZ6z9NXeAW4FNy2kYl6r9v7Sca4F66dvkH4901QywByAxDWn76C2EulAy6TI5PsVkKBUE2dOLaEZq5dgr4N7KttdpnNDC73_inM1J6oNGOLgLCBnwtyq7xuS9n-mXkmMrLSfLW4DVvQnFc6G-_dasoyCOWRwTPZbR-xm_1tIMB2KYwPYTNuZWkFXv5jlKh_UMSfZym2MTynqGz9a2KFaRSpjVz_-xCG-Yly-cBuW-Kw_LNqZEZyriPYJwaMl4XhSpMuit67y7Vg0aaraBfUCXovMUFpgR4dCcGjWJgtDZoMSA2SjAG3TInVaOvMYZbN3_gkaBhDaHIkRNOaDCEI2cME4_JG20ehmJEH98wlqdjsFizcQRponkxqW3-3grlyewGIgJ2DKfjPNeiLouEAGIPBSvrZ-z9KsEkBgFsWJQtlbzgNlHv7muFsCSGtejK8-gZzy_eLsmisSqRslrPP2e4EDvS3iffrZxThwcJ45RaYKrXB5elrQ7rGmlsOVij8ajSS8QjBYEUIvlSlHkXWJEnCnShx5qBmRSI6oMWsVvrAfpkHvnkwdNBQhmYjhsWgyJyXpuL_QH6IzsF8NZt1HwZbe4CRGDIBUvn8lPqjByAmiKk5brOUrd1gXQP8ENf5mOuorX81bi9KFQfoA5lZn869AvEOYgSzbUB8_TAb6AyiRPZus4MI3QdFWxWz6lCznQZdOhsG08slPGM96WQEXF6jB6aSJxRJaPNC_Bl3bjK-G_KKgX4zXVf-7ceNi1lKsdVW-Or7qm_3ny6W8HkWXvPv2emMPFk0m-M4TSxNHRz_g8bayfw4d141S1wpDTteeu8Ke6fjyWlcYbmeg9Pb72vsyeQKJR13usw8h9HJEwUmI71_RoZLtyQzR4XVEV3JQa2IZ3zN2MhaGvZmbJ2Goo_1HFRNpOyR-MQulbYQI4uKvXGUV2S-aEiJxX3fwxMk1UXjAaE-juSQia47RPS6HRshWhJio7J1zMPwz2jV1HVkXDVkfyvVi4cSRvI8L1a2elXbtE-iIIu7rDQ2wGJeM-QzqjKwvrdHiQCYMtAhrFoxA35DlZRE82P2DFG3WZltfsBWcJR18mn5ZYtN4KwQPnPjIFVE_ZQ4_vidCgs3FDdSHNSXfB48VcQ98asupvLiUFcBURVtobB1UuS84n5L0goLl_xG6BxiWbQbxN2E88ldfgyqFEhQUpg9FSbieqyebg373dVkztSj4iEt4bssemXGAIWxMqSDeFxkcQLHiG1NoCMVPbS-U0pOFlJqGqLLuwGwTPbiJKtaVLMN0Nk-nH4Ija-YlnmaltfhQgZsTpb574tFodTsAjtSD3_QhNCMbPRig2j2-cxIN4C9hX4QmbOIEvuG7f4kcRAACN6FfJD39xsgEW8h1qnWRGTGYh_lQyaCiAyxhNO3SaVy8qq_lHfUlybh7UJ84uMxx13k9LxbPmhu2qTCPUjLvhiA40AdeOsqC0-KJXkHvE6ZX0LQ/https://www.amazon.com/dp/B0FQCK7RPK/?_encoding=UTF8&pd_rd_i=B0FQCK7RPK&pd_rd_i=B0FQCK7RPK&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=LjdFy&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=7RK7SJVC29M32B3Y8Y7Q&pd_rd_wg=i81pj&pd_rd_r=cf75c948-74e8-4a5f-b021-b9f6f3e478da",
+      "link_clean": "https://www.amazon.com/dp/B0FQCK7RPK/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FQCK7RPK&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41kuPGsQN7L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/bbada68a-6572-4146-b42b-d341ce9f5614.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/bbada68a-6572-4146-b42b-d341ce9f5614.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 81,
+      "price": "$60.99",
+      "extracted_price": 60.99,
+      "old_price": "$89.99",
+      "extracted_old_price": 89.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "images": [
+        "https://m.media-amazon.com/images/I/817X01eonrL.jpg",
+        "https://m.media-amazon.com/images/I/81FnfQ2IzTL.jpg",
+        "https://m.media-amazon.com/images/I/71DZcss57TL.jpg",
+        "https://m.media-amazon.com/images/I/81a9Ji2bZYL.jpg",
+        "https://m.media-amazon.com/images/I/81Z45dFyLqL.jpg",
+        "https://m.media-amazon.com/images/I/719ovntTu2L.jpg",
+        "https://m.media-amazon.com/images/I/718JVvJhq3L.jpg",
+        "https://m.media-amazon.com/images/I/81n2+rY5vkL.jpg",
+        "https://m.media-amazon.com/images/I/71qFSegrX8L.jpg",
+        "https://m.media-amazon.com/images/I/81I19GPVgkL.jpg",
+        "https://m.media-amazon.com/images/I/71gzC7BfrDL.jpg",
+        "https://m.media-amazon.com/images/I/61IJuxwiuiL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 71,
+        "4 star": 14,
+        "3 star": 15,
+        "2 star": 0,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "As expected",
+        "text": "Good product",
+        "rating": 5,
+        "date": "April 12, 2026",
+        "author": "Dixie",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AE5OBI7ICU6I6D5JLW3BCOTF5QTA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Dark Blue"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Excelente",
+        "text": "Es tal como se ve. No hay sorpresas, super cómodo, todo cabe perfectamente.",
+        "rating": 5,
+        "date": "April 1, 2026",
+        "author": "alice caraballo",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGZFLWMZX5YAYF7AUNHSL7LYVEUA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Black"
+        },
+        "country": {
+          "code": "US",
+          "name": "United States"
+        },
+        "language": {
+          "code": "es",
+          "name": "Spanish (United States)"
+        }
+      },
+      {
+        "position": 3,
+        "title": "excellent and super spacious",
+        "text": "This backpack for pets is excellent, super spacious to pack their food, accessories, toys, products for their bath, including a towel to dry them, pads for their pee and everything you need when you take your pet for a trip or to visit your family's house or a getaway to AirBNB and the small plates it brings for food and/or water eliminate another accessory that you must pack, opening up space for other necessary things. perfect!",
+        "rating": 4,
+        "date": "February 5, 2026",
+        "author": "Brakuz",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEZSUIZX26IHX73GPFIJXT7BXYZA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/2a19b6c5-4bb5-4e72-b840-a20178b64ead._CR109%2C0%2C281%2C281_SX460_.jpg",
+        "verified_purchase": true,
+        "product": {
+          "color": "Dark Grey"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Big enough",
+        "text": "Is an awesome backpack",
+        "rating": 5,
+        "date": "March 4, 2026",
+        "author": "Jewel",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFHGP76KJUYY45FRX44ONTQILE5A",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Dark Grey"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Easy to pack",
+        "text": "It is super cute, I was expecting a little bigger.I haven't really tried I was just checking and one of the zipper broke.Easy for trips",
+        "rating": 3,
+        "date": "April 2, 2026",
+        "author": "jaret costa",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHQYH544DRPWTU57UXCEVKVL7HYA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Black"
+        }
+      },
+      {
+        "position": 6,
+        "title": "Lots of room and love the accessories",
+        "text": "This bag checked off allmy dogs needs for traveling. Luv it!",
+        "rating": 5,
+        "date": "December 2, 2025",
+        "author": "Lori C.",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFQVZUT2HLTSDFGGRRXZ72O5ZXXQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Dark Grey"
+        }
+      },
+      {
+        "position": 7,
+        "title": "Good for the price",
+        "text": "Good quality",
+        "rating": 5,
+        "date": "December 16, 2025",
+        "author": "Nicole Chaparro",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFLGN54VD2H4RZW23OLW5O2BKC2Q",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Black"
+        }
+      },
+      {
+        "position": 8,
+        "title": "Seriously get this",
+        "text": "Great backpack. The collapsible bowls are a bit small but they worked while traveling and held 1 cup of food and enough water for my dig to drink in one sitting. She did knock over the bowl so we quickly learned to have it up against something solid such as the tire of the car, a pole, the curb, a brick wall, etc. The bags held a few days of food I didn't measure it out for sure as we were only taking a 1 day trip and only filled 1 bag but I am confident that this would have held enough for a short camping trip for her as she only eats 3 cups a day. The one side held both bags the other side held a 2 liter bottle of water and I also had the bowls, poop bags, treats and a toy for her. There was also plenty of pockets that I could have put my personal things had I needed to and only used the one bag. the nice thick padded shoulder straps make this easy to use. Im not sure how i did this before without one.",
+        "rating": 5,
+        "date": "September 25, 2025",
+        "author": "S. Splain",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFSREIYBFIT7T3NLQJT4U4E6IK3Q",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "product": {
+          "color": "Light Grey"
+        }
+      }
+    ]
+  }
+}

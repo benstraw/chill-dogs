@@ -1,0 +1,704 @@
+{
+  "search_metadata": {
+    "id": "69db5243ae678cf7a8bf0a5f",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/6Z_hrOnlct1XqCo30qTueA/69db5243ae678cf7a8bf0a5f.json",
+    "created_at": "2026-04-12 08:05:23 UTC",
+    "processed_at": "2026-04-12 08:05:23 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0GM672PS3/?",
+    "raw_html_file": "https://serpapi.com/searches/6Z_hrOnlct1XqCo30qTueA/69db5243ae678cf7a8bf0a5f.html",
+    "total_time_taken": 2.02
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0GM672PS3",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0GM672PS3",
+    "title": "Heavy Duty Dog Crate, 54 Inch Indestructible Dog Crate XXL Giant Metal Kennel for Large Dogs, Escape Proof Strong Metal Dog Cage with Wheels & Tray, High Anxiety Indoor Dog House",
+    "link": "https://www.amazon.com/Indestructible-Kennel-Escape-Strong-Anxiety/dp/B0GM672PS3/",
+    "link_clean": "https://www.amazon.com/dp/B0GM672PS3/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GM672PS3&device=desktop&engine=amazon_product",
+    "variants": [
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0GM69JP4X",
+            "name": "Large",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GM69JP4X&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0GM672PS3",
+            "name": "X-Large",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GM672PS3&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0GM6M355N",
+            "name": "XX-Large",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GM6M355N&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 4,
+            "asin": "B0GM5TJFGN",
+            "name": "3X-Large",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GM5TJFGN&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 5,
+            "asin": "B0GM6HCBMB",
+            "name": "37.3\"L x 25.5\"W x 30.4\"H",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GM6HCBMB&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the Ironovacage Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/81JfbDGBGSL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/81JfbDGBGSL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81mSiR5I04L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71+bcgFibtL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/8192tleTXEL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81MHbFtNn5L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81WdMNvzyIL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71bH+bt4jeL._AC_SL1500_.jpg"
+    ],
+    "rating": 5,
+    "reviews": 7,
+    "price": "$199.99",
+    "extracted_price": 199.99,
+    "price_unit": "$199.99 / count",
+    "extracted_price_unit": 199.99,
+    "prime": true,
+    "delivery": [
+      "$29.99 delivery April 15 - 16. Details"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$199.99",
+      "extracted_price": 199.99,
+      "price_unit": "$199.99 / count",
+      "extracted_price_unit": 199.99,
+      "delivery": [
+        "$29.99 delivery April 15 - 16. Details"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "shipper_seller": {
+          "text": "Ironovacage Direct",
+          "details": {
+            "heading": "Shipper / Seller",
+            "content": "Ironovacage Direct"
+          },
+          "link": {
+            "text": "Ironovacage Direct",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A3J8RAAZF9X6I&asin=B0GM672PS3&ref_=dp_merchant_link"
+          }
+        },
+        "returns": {
+          "text": "30-day refund/replacement",
+          "details": {
+            "heading": "30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "brand": "Ironovacage",
+    "product_dimensions": "54.3\"L x 36.2\"W x 44.1\"H",
+    "material": "Metal",
+    "specific_uses_for_product": "Indoor",
+    "special_feature": "Durable, Easy to Clean, Easy to Use"
+  },
+  "about_item": [
+    "【XXL LUXURY SPACE UPGRADE】 Move beyond the cramped 48-inch standard. Our 54\" and 60\" models provide the essential extra headspace and depth that allow large breeds to stand, turn, and stretch out their joints fully. Perfect for long-bodied dogs and active chewers who need a stress-free sanctuary.",
+    "【INDESTRUCTIBLE STEEL CONSTRUCTION】 Built with high-tensile 20-gauge steel square tubes, our kennel is significantly stronger than thin wire crates. The reinforced welding and non-toxic, rust-resistant finish ensure this is the last crate you’ll ever need to buy, even for the most determined \"Houdini\" dogs.",
+    "【DUAL-LOCK ANTI-ESCAPE SYSTEM】 Designed for high-anxiety pets, the heavy-duty latches are positioned outside the dog's reach. The upgraded deadbolt locking mechanism prevents smart dogs from nudging or pawing the door open, keeping your pet secure while you are away.",
+    "【EFFORTLESS CLEANING & MOBILITY】 Despite its massive size, 360° lockable heavy-duty casters allow you to move the crate easily for floor cleaning. Features dual removable slide-out trays that catch debris and accidents, making maintenance a breeze for large-scale messes.",
+    "【PROTECTIVE PACKAGING & RELIABILITY】 We understand that a heavy-duty crate requires heavy-duty protection. Each unit is secured with upgraded multi-layer reinforced packaging and edge protectors to ensure it reaches your home in pristine condition. Our dedicated support team is always ready to provide professional solutions for your giant breed's housing needs."
+  ],
+  "related_products": [
+    {
+      "position": 1,
+      "asin": "B0CQXT89Q7",
+      "title": "BOLDBONE 54 inch Heavy Duty Indestructible and Escape-Proof Dog Crate Cage Kennel for Large Dogs, High Anxiety Dog Crate with Removable Wire Trays and Wheels, Extra Large XL XXL, Black",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo2Mjc1Mjc3NDY2MjAyOTEwOjE3NzU5ODExMjQ6c3BfZGV0YWlsOjMwMDIzMDYxNjg2OTUwMjo6Ojo&url=%2Fdp%2FB0CQXT89Q7%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0CQXT89Q7%26pd_rd_w%3DdPHQM%26content-id%3Damzn1.sym.613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_p%3D613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_r%3DQWRNQ829BXYRYNZ91WDC%26pd_rd_wg%3Ds8wic%26pd_rd_r%3D5a08418d-5f50-433d-a937-3899bd0700fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw",
+      "link_clean": "https://www.amazon.com/dp/B0CQXT89Q7/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CQXT89Q7&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/617TVznQeSL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.7,
+      "reviews": 2333,
+      "price": "$189.99",
+      "extracted_price": 189.99
+    },
+    {
+      "position": 2,
+      "asin": "B0GH8FZMG1",
+      "title": "Dog Play Pen for Outdoor Use - 40'', 12 Panels for Medium and Large Size Dogs - Por...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo2Mjc1Mjc3NDY2MjAyOTEwOjE3NzU5ODExMjQ6c3BfZGV0YWlsOjMwMTE5OTIyNjE5MDcwMjo6Ojo&url=%2Fdp%2FB0GH8FZMG1%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0GH8FZMG1%26pd_rd_w%3DdPHQM%26content-id%3Damzn1.sym.613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_p%3D613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_r%3DQWRNQ829BXYRYNZ91WDC%26pd_rd_wg%3Ds8wic%26pd_rd_r%3D5a08418d-5f50-433d-a937-3899bd0700fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw",
+      "link_clean": "https://www.amazon.com/dp/B0GH8FZMG1/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GH8FZMG1&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71LM1ltsrRL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 5,
+      "reviews": 5,
+      "price": "$208.85",
+      "extracted_price": 208.85
+    },
+    {
+      "position": 3,
+      "asin": "B0CRS5P22G",
+      "title": "KOKOTANGS 54 Inch Heavy Duty Dog Crate Cage with Wheels, Indestructible and Escape Proof Steel Kennel Indoor for High Anxiety Dogs with Sturdy Locks, Double Door and Tray, Extra Large XL XXL",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo2Mjc1Mjc3NDY2MjAyOTEwOjE3NzU5ODExMjQ6c3BfZGV0YWlsOjMwMDIzMzAzMjAyMTAwMjo6Ojo&url=%2Fdp%2FB0CRS5P22G%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0CRS5P22G%26pd_rd_w%3DdPHQM%26content-id%3Damzn1.sym.613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_p%3D613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_r%3DQWRNQ829BXYRYNZ91WDC%26pd_rd_wg%3Ds8wic%26pd_rd_r%3D5a08418d-5f50-433d-a937-3899bd0700fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw",
+      "link_clean": "https://www.amazon.com/dp/B0CRS5P22G/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CRS5P22G&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Amazon's Choice"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/618e4DxKYBL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 133,
+      "price": "$189.99",
+      "extracted_price": 189.99
+    },
+    {
+      "position": 4,
+      "asin": "B0GH8WH3Y4",
+      "title": "Dog Play Pen for Outdoor Use - 40'', 12 Panels for Medium and Large Size Dogs - Por...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo2Mjc1Mjc3NDY2MjAyOTEwOjE3NzU5ODExMjQ6c3BfZGV0YWlsOjMwMTE5ODkyOTk4NjEwMjo6Ojo&url=%2Fdp%2FB0GH8WH3Y4%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0GH8WH3Y4%26pd_rd_w%3DdPHQM%26content-id%3Damzn1.sym.613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_p%3D613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_r%3DQWRNQ829BXYRYNZ91WDC%26pd_rd_wg%3Ds8wic%26pd_rd_r%3D5a08418d-5f50-433d-a937-3899bd0700fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw",
+      "link_clean": "https://www.amazon.com/dp/B0GH8WH3Y4/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GH8WH3Y4&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71qdV8PGLEL._AC_UF480,480_SR480,480_.jpg",
+      "price": "$208.85",
+      "extracted_price": 208.85,
+      "price_unit": "$208.85 / count",
+      "extracted_price_unit": 208.85
+    },
+    {
+      "position": 5,
+      "asin": "B0GSPLXLTN",
+      "title": "54 Inch Heavy Duty Dog Crate, Indestructible Escape-Proof Dog Kennel for High Anxie...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo2Mjc1Mjc3NDY2MjAyOTEwOjE3NzU5ODExMjQ6c3BfZGV0YWlsOjMwMTIxOTc1MDU3MzkwMjo6Ojo&url=%2Fdp%2FB0GSPLXLTN%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0GSPLXLTN%26pd_rd_w%3DdPHQM%26content-id%3Damzn1.sym.613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_p%3D613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_r%3DQWRNQ829BXYRYNZ91WDC%26pd_rd_wg%3Ds8wic%26pd_rd_r%3D5a08418d-5f50-433d-a937-3899bd0700fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw",
+      "link_clean": "https://www.amazon.com/dp/B0GSPLXLTN/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GSPLXLTN&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81OQF9SQ-4L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.7,
+      "reviews": 39,
+      "price": "$279.99",
+      "extracted_price": 279.99,
+      "price_unit": "$279.99 / count",
+      "extracted_price_unit": 279.99,
+      "save_with_coupon": "Save $30.00"
+    },
+    {
+      "position": 6,
+      "asin": "B0GHB553FK",
+      "title": "Dog Playpen w/Octagon Bottom Floor Cover - 24 inch, 8 Panel Portable Grey Metal Pet...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo2Mjc1Mjc3NDY2MjAyOTEwOjE3NzU5ODExMjQ6c3BfZGV0YWlsOjMwMTE5OTMwNzE3NDgwMjo6Ojo&url=%2Fdp%2FB0GHB553FK%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0GHB553FK%26pd_rd_w%3DdPHQM%26content-id%3Damzn1.sym.613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_p%3D613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_r%3DQWRNQ829BXYRYNZ91WDC%26pd_rd_wg%3Ds8wic%26pd_rd_r%3D5a08418d-5f50-433d-a937-3899bd0700fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw",
+      "link_clean": "https://www.amazon.com/dp/B0GHB553FK/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GHB553FK&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71MWRIyF6PL._AC_UF480,480_SR480,480_.jpg",
+      "price": "$94.85",
+      "extracted_price": 94.85,
+      "price_unit": "$94.85 / count",
+      "extracted_price_unit": 94.85
+    },
+    {
+      "position": 7,
+      "asin": "B0GH8XXM33",
+      "title": "Dog Play Pen for Indoor Use - 24'', 8 Panels for Small and Puppy Size Dogs - Portab...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo2Mjc1Mjc3NDY2MjAyOTEwOjE3NzU5ODExMjQ6c3BfZGV0YWlsOjMwMTE5ODk4NTk2MzMwMjo6Ojo&url=%2Fdp%2FB0GH8XXM33%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0GH8XXM33%26pd_rd_w%3DdPHQM%26content-id%3Damzn1.sym.613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_p%3D613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_r%3DQWRNQ829BXYRYNZ91WDC%26pd_rd_wg%3Ds8wic%26pd_rd_r%3D5a08418d-5f50-433d-a937-3899bd0700fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw",
+      "link_clean": "https://www.amazon.com/dp/B0GH8XXM33/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GH8XXM33&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71OUoCB1MzL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 5,
+      "reviews": 3,
+      "price": "$79.85",
+      "extracted_price": 79.85,
+      "price_unit": "$79.85 / count",
+      "extracted_price_unit": 79.85
+    },
+    {
+      "position": 8,
+      "asin": "B0GSPLXLTN",
+      "title": "54 Inch Heavy Duty Dog Crate, Indestructible Escape-Proof Dog Kennel for High Anxie...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0ODk0MTQyNzcwMjI3NTUxOjE3NzU5ODExMjQ6c3BfZGV0YWlsMjozMDEyMTk3NTA1NzM5MDI6Ojo6&url=%2Fdp%2FB0GSPLXLTN%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0GSPLXLTN%26pd_rd_w%3D0ZaDf%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DQWRNQ829BXYRYNZ91WDC%26pd_rd_wg%3Ds8wic%26pd_rd_r%3D5a08418d-5f50-433d-a937-3899bd0700fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0GSPLXLTN/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GSPLXLTN&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81OQF9SQ-4L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.7,
+      "reviews": 39,
+      "price": "$279.99",
+      "extracted_price": 279.99,
+      "price_unit": "$279.99 / count",
+      "extracted_price_unit": 279.99,
+      "save_with_coupon": "Save $30.00"
+    },
+    {
+      "position": 9,
+      "asin": "B0G1PVH7SV",
+      "title": "KOKOTANGS 48\" Dog Crate Furniture, Heavy Duty Dog Kennel Indoor for Large Dogs, Escape-Proof and Chew-Proof Wooden Dog Cage for high Anxiety Dog, Decorate House as TV Stand, End Table",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0ODk0MTQyNzcwMjI3NTUxOjE3NzU5ODExMjQ6c3BfZGV0YWlsMjozMDEyMTkxOTk2MjExMDI6Ojo6&url=%2Fdp%2FB0G1PVH7SV%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0G1PVH7SV%26pd_rd_w%3D0ZaDf%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DQWRNQ829BXYRYNZ91WDC%26pd_rd_wg%3Ds8wic%26pd_rd_r%3D5a08418d-5f50-433d-a937-3899bd0700fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0G1PVH7SV/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G1PVH7SV&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/61G+bkWS6wL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.3,
+      "reviews": 6,
+      "price": "$159.99",
+      "extracted_price": 159.99,
+      "price_unit": "$159.99 / count",
+      "extracted_price_unit": 159.99
+    },
+    {
+      "position": 10,
+      "asin": "B0FG7R3BNF",
+      "title": "64 inches Heavy Duty Dog Crate, Oversize Dog Crate for Giant Dogs, Extra Large Doub...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0ODk0MTQyNzcwMjI3NTUxOjE3NzU5ODExMjQ6c3BfZGV0YWlsMjozMDExMjU1MTUzOTI4MDI6Ojo6&url=%2Fdp%2FB0FG7R3BNF%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0FG7R3BNF%26pd_rd_w%3D0ZaDf%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DQWRNQ829BXYRYNZ91WDC%26pd_rd_wg%3Ds8wic%26pd_rd_r%3D5a08418d-5f50-433d-a937-3899bd0700fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0FG7R3BNF/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FG7R3BNF&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/91MucR2PnWL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 49,
+      "price": "$318.88",
+      "extracted_price": 318.88
+    },
+    {
+      "position": 11,
+      "asin": "B0GVYJJ84L",
+      "title": "GarveeHome 42\" Heavy Duty Metal Dog Crate - Escape Proof Kennel with Wheels, 3-Door Large Dog Cage & Removable Tray for Large and Medium Breed Dogs, Black",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0ODk0MTQyNzcwMjI3NTUxOjE3NzU5ODExMjQ6c3BfZGV0YWlsMjozMDEyMzYyNzc1MTc5MDI6Ojo6&url=%2Fdp%2FB0GVYJJ84L%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0GVYJJ84L%26pd_rd_w%3D0ZaDf%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DQWRNQ829BXYRYNZ91WDC%26pd_rd_wg%3Ds8wic%26pd_rd_r%3D5a08418d-5f50-433d-a937-3899bd0700fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0GVYJJ84L/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GVYJJ84L&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81uzId3O-AL._AC_UF480,480_SR480,480_.jpg",
+      "price": "$129.99",
+      "extracted_price": 129.99,
+      "prime": true
+    },
+    {
+      "position": 12,
+      "asin": "B0CQXT89Q7",
+      "title": "BOLDBONE 54 inch Heavy Duty Indestructible and Escape-Proof Dog Crate Cage Kennel for Large Dogs, High Anxiety Dog Crate with Removable Wire Trays and Wheels, Extra Large XL XXL, Black",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0ODk0MTQyNzcwMjI3NTUxOjE3NzU5ODExMjQ6c3BfZGV0YWlsMjozMDAyMzA2MTY4Njk1MDI6Ojo6&url=%2Fdp%2FB0CQXT89Q7%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0CQXT89Q7%26pd_rd_w%3D0ZaDf%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DQWRNQ829BXYRYNZ91WDC%26pd_rd_wg%3Ds8wic%26pd_rd_r%3D5a08418d-5f50-433d-a937-3899bd0700fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0CQXT89Q7/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CQXT89Q7&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/617TVznQeSL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.7,
+      "reviews": 2333,
+      "price": "$189.99",
+      "extracted_price": 189.99
+    },
+    {
+      "position": 13,
+      "asin": "B0GH8FZMG1",
+      "title": "Dog Play Pen for Outdoor Use - 40'', 12 Panels for Medium and Large Size Dogs - Por...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0ODk0MTQyNzcwMjI3NTUxOjE3NzU5ODExMjQ6c3BfZGV0YWlsMjozMDExOTkyMjYxOTA3MDI6Ojo6&url=%2Fdp%2FB0GH8FZMG1%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0GH8FZMG1%26pd_rd_w%3D0ZaDf%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DQWRNQ829BXYRYNZ91WDC%26pd_rd_wg%3Ds8wic%26pd_rd_r%3D5a08418d-5f50-433d-a937-3899bd0700fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0GH8FZMG1/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GH8FZMG1&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71LM1ltsrRL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 5,
+      "reviews": 5,
+      "price": "$208.85",
+      "extracted_price": 208.85
+    },
+    {
+      "position": 14,
+      "asin": "B0DTHGWD67",
+      "title": "Petony Large Outdoor Dog Enclosure,Heavy Duty Dog Cage with Roof,Galvanized Steel Dog Kennel Fence with Double Safety Locks(6.56'x 6.56')",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0ODk0MTQyNzcwMjI3NTUxOjE3NzU5ODExMjQ6c3BfZGV0YWlsMjozMDExMDQwNTE1OTQ2MDI6Ojo6&url=%2Fdp%2FB0DTHGWD67%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0DTHGWD67%26pd_rd_w%3D0ZaDf%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DQWRNQ829BXYRYNZ91WDC%26pd_rd_wg%3Ds8wic%26pd_rd_r%3D5a08418d-5f50-433d-a937-3899bd0700fb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0DTHGWD67/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DTHGWD67&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Amazon's Choice"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/818dY2DW3sL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.1,
+      "reviews": 211,
+      "price": "$135.99",
+      "extracted_price": 135.99,
+      "save_with_coupon": "Save $20.00"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": "1",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/b43f68de-f8a1-433b-89da-c68b9e247b22.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 2,
+      "title": "1",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/f3eaf23c-2dc3-46ea-bc07-a3235911ae97.__CR0,0,1464,600_PT0_SX1464_V1___.png"
+    },
+    {
+      "position": 3,
+      "carousel_images": [
+        {
+          "position": 1,
+          "title": "1",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/b592ed29-68bc-47fc-8c8b-db16dc30620a.__CR0,0,800,600_PT0_SX800_V1___.png"
+        },
+        {
+          "position": 2,
+          "title": "1",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/80a33e81-46bd-417b-921e-81b6b6cad65e.__CR0,0,800,600_PT0_SX800_V1___.png"
+        },
+        {
+          "position": 3,
+          "title": "1",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/cdc91ff1-6fa5-4b35-b4a1-67d9df4e29f3.__CR0,0,800,600_PT0_SX800_V1___.png"
+        },
+        {
+          "position": 4,
+          "title": "1",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/465bb2c6-efa4-4853-bd57-98e8dd58e5ac.__CR0,0,800,600_PT0_SX800_V1___.png"
+        }
+      ]
+    },
+    {
+      "position": 4
+    },
+    {
+      "position": 5
+    },
+    {
+      "position": 6
+    },
+    {
+      "position": 7,
+      "carousel_images": [
+        {
+          "position": 1,
+          "title": "1",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/5f443c1a-11e2-4222-ae01-b23c4acdd982.__CR0,0,1464,600_PT0_SX1464_V1___.png"
+        },
+        {
+          "position": 2,
+          "title": "1",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/c9c2ba35-8fc4-4392-bc57-786571327181.__CR0,0,1464,600_PT0_SX1464_V1___.png"
+        },
+        {
+          "position": 3,
+          "title": "1",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/cae9b947-1258-4feb-9622-441eb2cf53e2.__CR0,0,1464,600_PT0_SX1464_V1___.png"
+        },
+        {
+          "position": 4,
+          "title": "1",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/518cb089-9444-4fc6-844e-6532eef20de3.__CR0,0,1464,600_PT0_SX1464_V1___.png"
+        }
+      ]
+    }
+  ],
+  "product_details": {
+    "brand_name": "Ironovacage",
+    "target_species": "Dog",
+    "specific_uses_for_product": "Indoor",
+    "included_components": "Heavy Duty Dog Crate",
+    "breed_recommendation": "All Breed Sizes",
+    "dog_breed_size": "All",
+    "manufacturer": "Ironovacage",
+    "unit_count": "1.0 Count",
+    "best_sellers_rank": [
+      {
+        "text": "#69,526 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 69526,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#103 in Dog Enclosures",
+        "extracted_rank": 103,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/23763995011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Enclosures"
+      }
+    ],
+    "asin": "B0GM672PS3",
+    "rating": 5,
+    "reviews": 7,
+    "additional_features": "Durable, Easy to Clean, Easy to Use",
+    "number_of_levels": "1",
+    "material_type": "Metal",
+    "color": "Black",
+    "item_dimensions_l_x_w_x_h": "54.3\"L x 36.2\"W x 44.1\"H",
+    "item_weight": "85 Pounds",
+    "product_dimensions": "54.3 x 36.2 x 44.1 inches; 85 Pounds",
+    "item_model_number": "LXF-DOG-TY-54-CZ-SINGLE-B",
+    "date_first_available": "February 7, 2026"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0GGBQNYRZ",
+      "title": "Pawaboo Heavy Duty Dog Crate, 56 inch Large Metal Dog Cage, Thickened Anti-bite Dogs Kennel with Mat, Dogs Playpen with Secure Top, Pet Cage Crate with Lock Door, Black",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JIvUILzx5dRvtCLq8cFp3Y4AAAGdgLlcywEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICCo92D1/clv1c_ek-YBQfWLbbSTj1Tdz-Qio-tvz6rGnfgTkO1wFPqnfSVEluNIuJoMRYBtxuXVh0WZeUIJgfRdLMc7RY3Qf34xdyO-0Qdo76VentpTrkWTLUmuSLx0EJZZy186NHsNtOZAb5Pq8TlYc7C8vhlX4IQxfSLINyOpjXr9edySDGe9qZ3MTsbNURu75pTM3mVsnSuMUPG5UVhZ29YdNfctsmmONgxnde1rlw-By0q0PQpVx0jTeq-utEUoZDmuMUEz-ljqinkvqeKn8p3Hrm0I4uwhVq1RIAMDgkiRisrPpf9lKqZoEGjTWPq_VwKw6oCK0nPxZfLnsIhDQ7eY2P_uiFkF--8yp4zufAk42MZoOgIFHr2SnAsb6RDobTTWU2fbozZd6Gjz6hjAXegcQjHcs_jxvcVRaS3SgdDRMqe-Demohz5a4tFdig4Q7IuXd0OO5BaabjE3AWq4nVZ6Gqh3wZMrSzYNNrDfYwaijTiOb3Z_-WgVk8JeX5bLzLqz3RfcKKGb0WEKKOoKYn71EfQ0ewCKZGuZvVOF7-Su3qp3n4chZ2cYCEqRvLl8PVZbCsbSxUGg-Ca8MRgST94wFlMJ4eSE9KEbGXRI9SAVRMYPXPcIHRcmtYU2bqTUwQzxOIYwA8UVVyixea1FWa9fhyO2a2AViBScJmV9CN3qC-OTNCezSVUkwUJcsToqsO5BkiVDu1-pR6cTr1qljXD0SFYFpog4wH7NgZzDQQuxZjylacoJC6wA362w9azUB6Q8GpmsuW-aBGX06sAvUPLyHcXSmoS1vTe_Mw2Zbq-0QsyrXZR1UXxTPnovwLDeKRGNIAYkcTHylK2_gu4x4CIusjcyTgZ9iffY8cy8CbPO3ioUmmZzVhkcnCu3XyITvjZlOr2789yPYspf_iydwkIFkBLPC53Ue8IeCiIb9Vruf3r3eapuk_Ja8E8olVYr9fvq_L0q0m8Jq0FAmPszquPp8LVGNV4dsf1w7yYTPL-aHNEKkA7_S4LnBZ29WRCE6Bw_DThFxPQDa5cgj39qDSkCeKSDFzuezALgxvgSTuax6Vjlka7vWPF99UE2oNEdjPKxt2MvPnc1mIqJmiQ1dJ2m7L-m-PwTv_ofZCC2d4A4HN5pNwgKHPxG34tz0kWyWo06qYO0n9oEEkTx5u2421xjbwVHdPwYI8p_G5jAZQvKzhvb39HhLm4MsWioY5cm1g0ci_KdzV0Dst4IhZ6SqxGUsLIsu205nMN4aE0uC6g8suhGMSCtcO7oe5qS3HR-2-y6re6yxQWR1hszQ1nAshShHowvDNGcQMHKvJCRRDJ6KIdJd37wTlaii_z35QtWzUgztpQgzZk8SUqlzfZ6-8yisncWvo89-i2XGjK_Am2hRl3I3babVaZoHM6xat1WAoE9mvJrGQU3COjzquJ5Si07A7nGr5P6GQUksTpKCWHp2AIDPUcRADfLCr7_GDOgvNwBZ2MK48G-TbfWKI2uH8SQRYUBqcf15xfYNYjUU2jXX_X8wWXgNBT2g4khZvfcoX3XCaesLXMtsNK/https://www.amazon.com/dp/B0GGBQNYRZ/?_encoding=UTF8&pd_rd_i=B0GGBQNYRZ&pd_rd_i=B0GGBQNYRZ&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=NUnhR&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=QWRNQ829BXYRYNZ91WDC&pd_rd_wg=s8wic&pd_rd_r=5a08418d-5f50-433d-a937-3899bd0700fb",
+      "link_clean": "https://www.amazon.com/dp/B0GGBQNYRZ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GGBQNYRZ&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51lJaYKDNjL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/e49374bd-c13b-467d-900b-315d980b143a.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/e49374bd-c13b-467d-900b-315d980b143a.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 147,
+      "price": "$129.99",
+      "extracted_price": 129.99,
+      "old_price": "$149.99",
+      "extracted_old_price": 149.99
+    },
+    {
+      "position": 2,
+      "asin": "B0GSTVY2LJ",
+      "title": "78\" Dog Crate Furniture for 1 or 2 Dogs, Heavy Duty Single/Double Dog Crates for Small/Medium/Large Dogs,Dog Kennel Furniture as TV Stand,Large Size 78.8\" L(30-60 Pounds)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JD2f2JaIsR0jfyvoNx0H_WkAAAGdgLlczAEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICA4BdFG/clv1c_ek-YBQf2bcbWXg5XlWcQAF7jRIJ7mUaFXDK02vDKLTrcMFiYQvio88sejUUfd8gd6RN0i9jQZf5SkGls0UdpTnWBV7LcZefRCoy0wvgg1K2ykzDKtSGMAigQYnp5s-hTj-g2sQGG4tSR2xjmigbCl8HvQF2alC1KCswQrjchwJ4NS19ViS3hDNzg58R4B7zdBsfpgwyb3sRI33fzsgDkr_iPBDspT4-l2DgquWzk133Wl5rkZX8vDjattpdH4uV18IWhxsjGka9Jrl3qt5GA_REO8D21YaCmOgWtyPrgk67zONt_Fwxe_9vnj6wbDoGdFY_zKs-cFPV8xMhxVbZ8EpZHIpSzFWAKia-0aLjXdF8ttcwtb9Qxl-wmATuuGewt9kpPcQP96yI93af6A6l_yM8W6Sx-En0SkIV_H28RrNHaDl2pwIXVModG5wtQOHtXnBzG0lCBR3qGnhH0L9yfqE6Cs0Xs4NiDy7QX7AGKZsHk6ARy1d8R6kF-xMb4WjmDeJQqB_fjSGgNR70z8CUhNLyq5j54viLqfrOMDQkd9u24XXY1k4Rx8HHGPcpqdyMg43y0mBCkCUqHLPffSIh_mJdic84g1ebWmaFBztSw_1LS8YE9l4Fa4u5eG7TokiQgEL5g9yhlkQFyqTpwcfH3H1saQF2G_pUUuTAx7Or_YtVDeA2tkAtguZayqjMj_bcJm_dV7eSTgktadRXAY3vDrbFTOe6zD4eJ42h83lUFwv2A4qxXFBZB-XlW1e7vvKNqP-LTasyTLSVyC3DORUc7ftZjc7nA_jEiWpqJH5s4HlZHu-fcYgLqrzfHWqjw_6G-4nABS5Hs4kycqDrB380UiHUPlpCzAVgAh1qCMUpAKknmFhE3KbWo3Ad3VCvhS7v3hiMfNfCzOJh-sHR2-I7UnaQmPKlCHLe-9klJKERvT-JzerP1I2hhHCbmI3Mh8tnvUNcXEILw1NPtZF79lN-tcnv-wK9S2_KiSN9t6mbEZ6gDG4UcNaK0qCtLOumw6MDlnx8khQ4r-s4HPLQ9iZ7UvcfbdjKPHbcGI29ECv2zIHqSYMpchQOFCkNue2G2fDGz4EYMV0u1mOqbUqBInsHreXyOrxjdWcG0kPyQf3bWxRNMc8hvXQgUCtZgkeO7izIV41zBqLjRifqVgN-vMLlmbPM4-lQRHbvuX0ntX72OGNjQB6PI_7HViWMpBy1sIDAvK3O8Ey3XAaJjijmo284NSw3fREkJdIs3FD7Z5YnBx434SmWUp6iujDReA2HVIWQW1OijPiA7obwLHpERiNyxnakprBjqwqpmZTMKtWPHl8fHoyn9_rnuMuPLLB-jp4aFVlPz2ZeGzm-OBMbNvpP3OPJ5tnv5-2gsF59TTtmzmKydpOfx5NWwHFmA909qUp53WF_P_-RbW8NzO9uuwrP36j6qpaL1pueJskUdGoPXBJYCD4Sbj0r976ILbRQ64DTkOTlrGLOXJnZPShE2CKp9SXV8pneGZWNEUC2PmybROH22G4oYcgDcTsfFxLT2oPdZJlJNlQ6YNUaN/https://www.amazon.com/dp/B0GSTVY2LJ/?_encoding=UTF8&pd_rd_i=B0GSTVY2LJ&pd_rd_i=B0GSTVY2LJ&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=NUnhR&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=QWRNQ829BXYRYNZ91WDC&pd_rd_wg=s8wic&pd_rd_r=5a08418d-5f50-433d-a937-3899bd0700fb",
+      "link_clean": "https://www.amazon.com/dp/B0GSTVY2LJ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GSTVY2LJ&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/516JBW-fT7L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/34f4bf83-2075-4113-a27a-86a3467d3479.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/34f4bf83-2075-4113-a27a-86a3467d3479.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 5,
+      "reviews": 6,
+      "price": "$299.99",
+      "extracted_price": 299.99
+    },
+    {
+      "position": 3,
+      "asin": "B0FK568P8N",
+      "title": "Feandrea Collapsible Dog Crate, 48-Inch Portable Dog Travel Crate for Extra Large Dogs, Oxford Fabric Pet Carrier with 4 Mesh Doors, Handles, Storage Pocket, Water Bottle Holder, Ink Black UPDC022BH01",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JFaL6gg02Um1Apfciu1l31cAAAGdgLlczQEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICBc_pNE/clv1c_ek-wxQfWLcTaTKXiZOfuuI-tb5sda_TsQZsYHtCyjTSx7bNaI60DCyj5ajj6l5bkybaxjMFJ492LNrPvgYs80SIGUjvPXtZeWHD7sbeO_EwvzVO1N__Mhbz45_J-8qfrA5IbYPPDcB9SmOgx6yIl-cXDgNyfgF3krrwYjxSpTgIbrHhs3hGnObKz6uMyt0M6463UZE1VJRN4zHT88Hqlqz_b_y1qBj9EAMOUxHDuu1KuLJBKDaZbG7-yTzUbwgbIZA7bOc3czlfcxWwFJbgpTu9Wor89iNGwlX6GTVTa518KbE-LlxjNg2EWrtoeO7FGTjKyxoHKyIKHXZCeTLeyBdnBD2wvqk8T7lx1574a2kLHnQBiwPBB4WxrH5ltYYtfTg1i7HTzR8bKoTSKQS8bCHhoBWT7lWCWtnyjKIIfeq9pLC_h8Xdi3nzI6fItbFWe97E2oMmz4-JPOf-f0ITEXmKxCWJgYYgC65G_ZnA6rC7oyxujWAWqLeC7mpJuQek6qQnwJ9rl9QE1avXvLvCcXQ9Vs3BWeFybsF_-domk123fFUiltFKiWuu8tDOJWniaZPa3gpdhaw6RbPq7MWK67B0FT2OF46tcwH0whQleqPyxSyDQwYwi-Rh6Pz8I-69u1wSAGgFF1flENq8VBiIWiWcX9AAIRDMcsKACnQTPRrWTnB144K7ThSU3hsWu1A0GyK7oWVvT3YrT0SFYFoIvT31q1Gk4_LjDVGQcOyHxrX2WBUMvW35eoc_fSOnWYubrgx26Zd6vEgQYzNRc4P1EjEpBeIkqKNMNjDU7YI--u4bNPJeawvNM8bzQqSBiYuOQGKJhK9cFAL9_BljXaNi_RQp2nFgLjmhn5xzHxt7Y3HmRbr5_NbKE5YkbwkdSs7SOguvGz0LAuU-W44qPAVGxgsq0iw5vI2Tf41Y9RXKn1cISZjh8VwxDx1cyVP_lDPVIgT1PATUtwsrsAd-fLlANxB91dAfc3y98ksOUlyJBAja2T5I-wnGFN5_AbEB4lrT_fK1veFbLXHhzjUs_w5LnkVlipBdATQ5cVydpK4gMuYQgeQhIgmPMLkIUnwaVzsT6ygKykeTctyzPii3a1P-zFzzMuMXfLPel4Ia1D1q2FaE5pcvJTOHNY2iQ7JKDsPLeiRqYWko3BJvD6UQuT6muhO3bw19EVvrXbulbz7LPSm_4xQbt_UDgve25arRFp2UAoOYquSXiXxzDV5XViTz_fvroMsxrraTTUoWlepcgsHyEoiVU0qT_aBsa6o9Otkqha8O_F6KW1MMQbvEsVZuxFt1wSDDDTmtN7KbXJeHlAOPEG6Pl4b7UORYJgES3eoNvdfcK97a8XNTevfzPVzhNwMQenjcIBzau_sqcRSHdQsCuAcErDrHfZsPHYtfUwwbfBAh7guFSRU7DKxqDvQoP5gqDdCKvl807cFbp12nSWJLAcBhdbUctxp6WElTQRJ7T7zbCUkfA4dIbOGhfR0q3hqaTGrm2OKYTe3jCGPDX_xMMSeh8j6Y0IsHPT0pwbMQY6Ze6N8ev8zIwoRXpnkW2JBcLaC1U/https://www.amazon.com/dp/B0FK568P8N/?_encoding=UTF8&pd_rd_i=B0FK568P8N&pd_rd_i=B0FK568P8N&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=NUnhR&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=QWRNQ829BXYRYNZ91WDC&pd_rd_wg=s8wic&pd_rd_r=5a08418d-5f50-433d-a937-3899bd0700fb",
+      "link_clean": "https://www.amazon.com/dp/B0FK568P8N/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FK568P8N&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41ifUGWLLgL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/b360bcda-9f42-4d01-8b74-4985d6231736.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/b360bcda-9f42-4d01-8b74-4985d6231736.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.2,
+      "reviews": 203,
+      "price": "$110.45",
+      "extracted_price": 110.45,
+      "old_price": "$129.99",
+      "extracted_old_price": 129.99
+    },
+    {
+      "position": 4,
+      "asin": "B0FQ56N8ZT",
+      "title": "HugCoz 42\" Large Dog Crate Furniture, Double Door Wooden Indoor Dog Kennel Furniture, Decorative Pet Cage End Table with Wheels for Large Breed Dogs, Size XL, Greige",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JPfKD5tEwLxDn1wiE8g3m8QAAAGdgLlczgEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICBdDwJr/clv1c_ek-wBfv3VcbW3jI2m_XuA8GU-lWGkJmGXDKk7vFIXROsueIHfZwzJkd9M8at7TXF41guT91olc79IG9ypZcd-pqgL7VTSimw9k_rwJTu_0Augmjmk_HxrG_6yK0c3rmwuGgTs481aNfaLLK4oLos29DSuH3cFzLLEkfxywVqhM7PQWMZVn0ghPMPtfVcLQuKX_XADqsrX4KRl-Vy02LKrG8N0JncDHjx4Qbcg5CVFO0AMnXGGeABxJE0wBw11Q5KPCc7nSYSzzZMg4IJZnXJVuEuorvu1rXdoULypS76sR3dyclSiMsqE0qdbBjK5qLF3uxQFvrK6YJULVpUcKI4e8pU0tCW43d0vtt0tfINJmrNHmrMytCa1IfD1YrQrOlSIogx0yZtxnMPmvucpc05XpyQJEfKceFD0qlvBMumwdWkp5ek96ilnqPJyTqSUAuunmaYXVYTFdFmMDwSqIMmcPqEGFNZwmyWvaccx7yB4wjg8TLK0Bw9U0JgLnvqCmmO7ATzotqC2vIfGdsW3j3df10l-ienJbnMXJzKsYLaLqBGf8xVqsaNEMTUxB-PymLCNIQ-PdA6_1rgoc8htsOGi_rN-WkczWFari4gXZXkruKl_SeW6FSMAsoRmolk1AsY8aVL7PKYwr9UWoLw8Po-JawauKAtDu03h_TdeEov0Gco3SJ6I_QOPgeXWbopvE98fQGROoeOpf_wEXcM2vIQ760s-Z95lig60ZfqUS4rfh1Ixqg6wPfWjw8dvfd5G3T4vn3k9NZF4eYxq5EbZ63Q_RFGzNuL0TsRv9hzYR5s_Qp14wQEmkEO1GcD7XZfYBwU-CUKkSJlHr-KXqZg6C3w8OlPrLRdPlP9vvzZ2IGlE8ebSTV-n_uqTTAKvDvUzXph85LHjDJjE92YfQ-GO9ugecc1i35CJa_GpSqdiF_Q-HLIYTlJlwHdJTnl6HdnlhE6kV_vHTiGSfBQd_DABqUD7dXmU5KtM9L3xf_-wYgiNkWI2qx3U-FtmOxJNrkYnNE7FlzFPYCmvKe03ib4rmihSe2a-vcGOItLyyYwf5MYkvokoMuJWKrG4hT44fRw4CVaIWKJ46Trr-tOFeqfQcxnYiqs6_HHkI2tTgX1i8ZR0tXI8ythhoR-HaImNpnfIYrk1ruzXGtuRTpw5RZ9b-y9VBYwAwKMXEcZm0wXZjlTprMFRAl-O-2ZmUBkqJp7EgY9d8R4mHFbgkHaSVVsWXGzqEMQQzxKpMaa_OkSa5AJYUOtB8FJEU1MCXezB5L0KnreQQzf_PusBSu0eWi_NaaI8T67nyLP-bKsoNnDaPSEbRodBZmVyo3CHu48GgsH2M4R4bkBJr_j-fA_CBm_phNOylyZ3p_CfRRLxVe7K3cn62UdlqlDd5Ood0XohIHQdYnfksY0xbLfsOU94BHnIKQpdNRfxZdQbRzjehDJtTH2n4HO01h7wHTN_6PQwOuGMAGMzHsbhxTwKkwN23nD8bt8q6wLQofi1FqDGYLOv3pR5YXq1fZXof_tCi9T00Za/https://www.amazon.com/dp/B0FQ56N8ZT/?_encoding=UTF8&pd_rd_i=B0FQ56N8ZT&pd_rd_i=B0FQ56N8ZT&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=NUnhR&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=QWRNQ829BXYRYNZ91WDC&pd_rd_wg=s8wic&pd_rd_r=5a08418d-5f50-433d-a937-3899bd0700fb",
+      "link_clean": "https://www.amazon.com/dp/B0FQ56N8ZT/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FQ56N8ZT&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51KAiDmNK0L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/61fa4684-b1ed-48f9-bfb5-05caa6d6e884.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/61fa4684-b1ed-48f9-bfb5-05caa6d6e884.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.3,
+      "reviews": 12,
+      "price": "$159.99",
+      "extracted_price": 159.99
+    },
+    {
+      "position": 5,
+      "asin": "B08315PBM4",
+      "title": "LEMBERI 48 Inch Heavy Duty Indestructible Dog Crate, Escape Proof Double Door Dog Kennel with Lockable Wheels, High Anxiety Extra Large Dog Cage Indoor Use, with Removable Tray",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JPyhNl8iXzeNsIbY9hdU6bkAAAGdgLlczwEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICANnD3D/clv1c_ek-YBQf2LcTWXk4hOzIv7vt9-rhWrhuumw2xlkag1mdszD2hgY7_7VSIzqqAM8etoyyXwobN0oP7DbqOGbBAkyVjztr-JIPKJ0BRfV32ukAnyVkjUch6AGXCgpk3I9Rr4b3abPE3qEuRP5l_7GwEsXDaq8l8VlS7U0V3zjuYbM5XiVM9CjW4nKjkCC0tkNFhbM6lZEVVGVNQ2cy9ldFyXkC7Pn2VfIxUvLgX2x36orK-UPDSccWNd_ELYNl5QFdPe8Z0WAIDCUlQckfAQNthFEv1WfqgxSLvDvWEWuBY4hWa45865sq6s44y3suuw-a5qyB6n0cJFlZdf1v_Nt0wIUKC2EI8Dmx_4qkT5s2tizD4d2tNUuEqX7jP7RgEgzN7m2roxsQpIEq6Njvxaosa4mqo7pD9MytiwWicDXgzDdiHO0Qq3Jdqfyxg_6axkCof1CdL1o0rpaZ_Z_R6VYHdhE-K4hkmIc9aC0z32JxsEoZqix8cBg8AxBb0UaY63FDp4tV7S_LZFQJ3pYSZiLiXrg8BLnRnTDcywLrQbtcMJVB98aOM3N9u7N4Jv-cGM-1BTzNWzAEDfik_7vONAJuFA6xjbyOqH4V0DafRrQ-kA_D0yQtVJSPMzaWvN6BuGyM9tYX06nSP15K6jJtAnSjxf4yirOpaGI_2iNJBqyn8q2ILigrXFw-dc0T2j5N8V7AP2-tXzeiwos9LgiUMXv-O-tBdwML05B2qml5q3mwJgi2Du8yvwG_Koub-0e5wydOyQY-Eq04ct4bnPQGhVA5W1_VBlla7OFGw2-cATJ8Nk-yqprHoa2Fvc_9UfoKIyoBE03wF-anvaOu7v-rdDvALBg1toSfW7tsJSQ29die7rq4_pczRPNwFqHnLFdU6uCl3FYKSduZIdaP9f6xanJPUcKWc1MUGnvKvsZUtXdBI21gUI4lvdgapE-k8G8O51Yjw4eNudErdgs5_54kiOm4GIDm1n5i4P0jIv5BWg3nNqI5KmL-8JZSFypbPF4H44jbSQ8Cnk3kbiCjdL5i--AApA_ZXkmx013dyaoLzpvz0mUwvcH0Y6hcSPDQIKoSS7Ih195Mq2khMTspd1cbz-dpRb9ju11cfnIb9zWnrmaFs4RdemobImcaPjr4ymnvb3WYW2Zhg9nupFirDBYgtNK2F-knSHDUMptuaFVv7yDTgfb4jgtoikvJFmUy1iOZGBjRRCwjqI0buY-h7RoTwix15_6gRq37FYAVVJVwwAvifxzzwKaaiYGtxdH0PvWMHPnnxhjZfuJ7guseveCYBndB3nQMK1BZlty9iLkfTppsHroMANzl5LF4t34Gk0Y7gs3hzFxZvSbP-ZnIEkKcSuQ6ELu_9pGGkUpXG264jYcdDZpqmIL0w0VoKnCiZrdaSbOBzB28feQBzoASZV74rQ_YVW3bjopmj6ynqjlMSgb0Eq7WkipI5Fy8WWzq4PGLSoW-8forLKplnI2mAG-MY91nnzzIvJm9ZFkG_QCe3m3ZQ_PJ_NdezoZpOEFTO1jlAbtPF-aakSio/https://www.amazon.com/dp/B08315PBM4/?_encoding=UTF8&pd_rd_i=B08315PBM4&pd_rd_i=B08315PBM4&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=NUnhR&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=QWRNQ829BXYRYNZ91WDC&pd_rd_wg=s8wic&pd_rd_r=5a08418d-5f50-433d-a937-3899bd0700fb",
+      "link_clean": "https://www.amazon.com/dp/B08315PBM4/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B08315PBM4&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51+lqh0jkrL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c2f7795d-0d9c-45cd-a5b6-815b23bc3435.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c2f7795d-0d9c-45cd-a5b6-815b23bc3435.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 3937,
+      "price": "$129.86",
+      "extracted_price": 129.86
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "images": [
+        "https://m.media-amazon.com/images/I/713lIrqZxgL.jpg",
+        "https://m.media-amazon.com/images/I/817ZDGjOKoL.jpg",
+        "https://m.media-amazon.com/images/I/71P7Ex0oFKL.jpg",
+        "https://m.media-amazon.com/images/I/81FmMKVBrYL.jpg",
+        "https://m.media-amazon.com/images/I/715hUpipqhL.jpg",
+        "https://m.media-amazon.com/images/I/81+v26vGwCL.jpg",
+        "https://m.media-amazon.com/images/I/71aUCX3tTdL.jpg",
+        "https://m.media-amazon.com/images/I/71HTkgzD84L.jpg",
+        "https://m.media-amazon.com/images/I/71F9KDxH2ML.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 100,
+        "4 star": 0,
+        "3 star": 0,
+        "2 star": 0,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Extremely Strong and Perfect for Large or Escape-Artist Dogs!",
+        "text": "This heavy-duty dog crate is incredibly sturdy and well-built. The thick carbon steel frame feels much stronger than typical crates, and it gives me real peace of mind for my energetic dog. I love the double-door design—especially the top opening, which makes interacting so much easier. The double locks and anti-pry features are very secure, even for dogs that usually try to escape. Cleaning is simple with the removable tray, and the wheels make it easy to move around when needed. Best of all, my dog actually loves being in it and feels comfortable and secure. Overall, a high-quality, durable crate that’s absolutely worth it for medium to large dogs!",
+        "rating": 5,
+        "date": "April 2, 2026",
+        "author": "E",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHIEQIHXEYTRIOGKMTQK36QYUNYQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/71P7Ex0oFKL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/817ZDGjOKoL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/713lIrqZxgL._SY88.jpg"
+        ],
+        "product": {
+          "size": "37.3\"L x 25.5\"W x 30.4\"H"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Highly recommended",
+        "text": "This dog crate is exactly the style I was looking for. It has a simple design while still being highly practical. The two heavy duty locks add extra security. The top door design makes feeding your dog easier and helps prevent escapes. It also allows me to interact and play with my dog more conveniently. Cleaning the inside is very easy as well. It’s very sturdy, and I highly recommend it to anyone who owns large dogs it’s definitely great value for the price.",
+        "rating": 5,
+        "date": "March 28, 2026",
+        "author": "Maggie",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFMZUL5O4H5UZHMFK7RSGWBSLLHA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/715hUpipqhL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81FmMKVBrYL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81+v26vGwCL._SY88.jpg"
+        ],
+        "product": {
+          "size": "37.3\"L x 25.5\"W x 30.4\"H"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Strong, Secure, and Perfect for High-Anxiety Dogs",
+        "text": "This crate is exactly what I needed for my dog. It’s incredibly sturdy and well-built—much stronger than regular wire crates. My dog used to try escaping, but this one feels truly secure and gives me peace of mind.The metal frame is heavy-duty and doesn’t bend or rattle, even with an anxious or strong dog inside. The lock system is solid, and the overall design feels very safe. The wheels are a great feature too—easy to move around when cleaning, and they lock in place to keep the crate stable.Cleaning is simple with the removable tray, and the size is perfect for a medium to large dog to stand, turn, and rest comfortably. It also looks more modern and fits nicely indoors.If you have a strong or high-anxiety dog that needs a secure space, this crate is absolutely worth it. Durable, practical, and built to last!",
+        "rating": 5,
+        "date": "April 5, 2026",
+        "author": "Rainx",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AE7VBVBXCO7I7OWHV3UFOSGX5GIA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "video": {
+          "link": "https://m.media-amazon.com/images/I/D1nWMFOOAXL.mp4",
+          "thumbnail": "https://m.media-amazon.com/images/I/61wP4S7+UkL._SY256.jpg"
+        },
+        "product": {
+          "size": "37.3\"L x 25.5\"W x 30.4\"H"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Sturdy",
+        "text": "This dog crate is sturdy, well-built, and perfect for my pet. The metal frame feels strong and secure, and the wheels make it easy to move around. Assembly was simple, and the lock works reliably. My dog has plenty of space and stays comfortable inside. The removable tray makes cleaning quick and hassle-free. Great value for the price, highly recommend for anyone needing a durable and convenient crate for home use.",
+        "rating": 5,
+        "date": "March 31, 2026",
+        "author": "togramisme",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGSSTWNFOSPRJYB5RYPIBSKLLSQQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "video": {
+          "link": "https://m.media-amazon.com/images/I/C1Zlu3RhboL.mp4",
+          "thumbnail": "https://m.media-amazon.com/images/I/61CS6CfNGvL._SY256.jpg"
+        },
+        "product": {
+          "size": "37.3\"L x 25.5\"W x 30.4\"H"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Best buy ever! Love the top door!",
+        "text": "Review Content: This crate is a total lifesaver. The dual-door design is amazing—having that top access makes it so much easier to give my dog treats or adjust his bed without him trying to bolt out the front. My dog even likes sticking his head out the top to ask for pets! It also makes cleaning the inside a breeze since I don’t have to crawl in through the front. Super sturdy and well worth the money. If you have a big dog, just get it!",
+        "rating": 5,
+        "date": "February 9, 2026",
+        "author": "GLADYS , Columbus, GA",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AG4SK4VAKRLD6XY5JRKZMKDMUQTA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/61IufxNn1aL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61jLf6JLniL._SY88.jpg"
+        ],
+        "product": {
+          "size": "X-Large"
+        }
+      },
+      {
+        "position": 6,
+        "title": "The Double-door Design is Amazing",
+        "text": "I’m so glad I got this! The two-door setup is exactly what I needed for my high-energy pup. I love using the top door for feeding—it’s much safer than opening the main door when he’s excited. Both doors have super heavy-duty latches that actually stay locked. It’s solid, looks great, and the top lid even stays open on its own for extra airflow. Honestly, the convenience of the second door is a game-changer.",
+        "rating": 5,
+        "date": "February 9, 2026",
+        "author": "Kimberly F.",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHAPKGMNKSK6DFI37N3JRF7R7B2Q",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/61WhYGTAhOL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71TE80GTl3L._SY88.jpg"
+        ],
+        "helpful_votes": "One person found this helpful",
+        "product": {
+          "size": "X-Large"
+        }
+      },
+      {
+        "position": 7,
+        "title": "Good quality and easy to assemble",
+        "text": "This is exactly what I want! It is perfect for small or large size dogs. It’s strong and sturdy. The quality is good. It only takes me 10 mins to assemble it. I think this can be a good choice for people who are not very handy. Highly recommend!",
+        "rating": 5,
+        "date": "April 10, 2026",
+        "author": "Macc",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AG5FK33276Y6DMVVJV7AP5KCLLNA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/71aUCX3tTdL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71HTkgzD84L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71F9KDxH2ML._SY88.jpg"
+        ],
+        "product": {
+          "size": "37.3\"L x 25.5\"W x 30.4\"H"
+        }
+      }
+    ]
+  }
+}

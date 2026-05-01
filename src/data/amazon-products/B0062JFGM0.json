@@ -1,0 +1,1182 @@
+{
+  "search_metadata": {
+    "id": "69db51f5f607a98aa7b93faa",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/1bFflLnztmgXsMBDwLrJpg/69db51f5f607a98aa7b93faa.json",
+    "created_at": "2026-04-12 08:04:05 UTC",
+    "processed_at": "2026-04-12 08:04:05 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0062JFGM0/?",
+    "raw_html_file": "https://serpapi.com/searches/1bFflLnztmgXsMBDwLrJpg/69db51f5f607a98aa7b93faa.html",
+    "total_time_taken": 1.91
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0062JFGM0",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0062JFGM0",
+    "title": "Petmate Dog Crates for Small Dogs & Cat Carriers, Two-Door Plastic Pet Kennel, Top & Front Loading, Made in USA, 24\", Blue",
+    "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B",
+    "link_clean": "https://www.amazon.com/dp/B0062JFGM0/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0062JFGM0&device=desktop&engine=amazon_product",
+    "badges": [
+      "Amazon's Choice"
+    ],
+    "variants": [
+      {
+        "title": "Style",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B09LXSD5HV",
+            "name": "One-door",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09LXSD5HV&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0062JFGM0",
+            "name": "Two-door",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0062JFGM0&device=desktop&engine=amazon_product"
+          }
+        ]
+      },
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B09LXSD5HV",
+            "name": "19.0\"L x 12.5\"W x 10.8\"H",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09LXSD5HV&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0062JFGKW",
+            "name": "19.0\"L x 10.0\"W x 13.0\"H",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0062JFGKW&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B006060VCU",
+            "name": "19.0\"L x 13.0\"W x 10.0\"H",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B006060VCU&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 4,
+            "asin": "B0062JFGFC",
+            "name": "24.0\"L x 16.8\"W x 14.5\"H",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0062JFGFC&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 5,
+            "asin": "B0062JFGM0",
+            "name": "24.1\"L x 16.8\"W x 14.5\"H",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0062JFGM0&device=desktop&engine=amazon_product"
+          }
+        ]
+      },
+      {
+        "title": "Color",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0062JFGM0",
+            "name": "BLUE",
+            "image": "https://m.media-amazon.com/images/I/4102+krX-sL._SS64_.jpg",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0062JFGM0&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B09LXSD5HV",
+            "name": "GREEN",
+            "image": "https://m.media-amazon.com/images/I/41Js4XAN1dL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09LXSD5HV&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0062JFGKW",
+            "name": "PINK",
+            "image": "https://m.media-amazon.com/images/I/51Oj0GqAxRL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0062JFGKW&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 4,
+            "asin": "B09L1K4LDQ",
+            "name": "PURPLE",
+            "image": "https://m.media-amazon.com/images/I/41fqJsCJNYL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09L1K4LDQ&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 5,
+            "asin": "B0062JFGFC",
+            "name": "Pearl Tan",
+            "image": "https://m.media-amazon.com/images/I/41TXdyUVmSL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0062JFGFC&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 6,
+            "asin": "B006060VCU",
+            "name": "WHITE",
+            "image": "https://m.media-amazon.com/images/I/41owWvJhjFL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B006060VCU&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the Petmate Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/71AC0Sv6arL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/71AC0Sv6arL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71qODN-V+fL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71dQkrdvwcL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71xqQJzSMdL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71G1WwNNvJL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.6,
+    "reviews": 21102,
+    "bought_last_month": "900+ bought in past month",
+    "price": "$53.95",
+    "extracted_price": 53.95,
+    "prime": true,
+    "delivery": [
+      "FREE delivery Friday, April 17"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$53.95",
+      "extracted_price": 53.95,
+      "delivery": [
+        "FREE delivery Friday, April 17"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "shipper_seller": {
+          "text": "Amazon.com",
+          "details": {
+            "heading": "Shipper / Seller",
+            "content": "Amazon.com"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "color": "BLUE",
+    "brand": "Petmate",
+    "product_dimensions": "24.05\"L x 16.8\"W x 14.5\"H",
+    "material": "Plastic",
+    "special_feature": "Airy, Comfortable, Secure, top-load"
+  },
+  "about_item": [
+    "SECURE AND COZY DEN: The Petmate Two-Door portable dog crate provides easy access with top or front-loading doors, offering a safe and comfortable space for your pet's natural denning instincts",
+    "AIRLINE-APPROVED: This small dog carrier airline approved meets most airline cargo specs. Ventilation holes provide fresh air and 360-degree visibility for your pet",
+    "IDEAL FOR SMALL PETS: Designed as a puppy carrier for small dogs 0-15 lbs, the 24-inch crate offers room for pets to stand, turn, and lie comfortably; with space for a cushion to enhance comfort",
+    "EASY ASSEMBLY AND MAINTENANCE: The plastic dog crate shell is simple to clean; a stay-dry moat directs fluids away from pets",
+    "CONVENIENT: Featuring steel doors with easy-squeeze latches and a foldable handle, this USA-made pet carrier for dogs & cats provides a less stressful travel experience"
+  ],
+  "bought_together": [
+    {
+      "position": 1,
+      "title": "Petmate Dog Crates for Small Dogs & Cat Carriers, Two-Door Plastic Pet Kennel, Top & Front Loading, Made in USA, 24\", Blue",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71AC0Sv6arL._AC_UL116_SR116,116_.jpg",
+      "price": "$53.95",
+      "extracted_price": 53.95,
+      "delivery": [
+        "Get it as soon as Friday, Apr 17"
+      ],
+      "stock": "In Stock"
+    },
+    {
+      "position": 2,
+      "title": "Dr. Elsey's Ultra UnScented Clumping Clay Cat Litter 40 lb. Bag",
+      "link": "https://www.amazon.com/Dr-Elseys-Premium-Clumping-Litter/dp/B0009X29WK/ref=pd_bxgy_thbs_d_sccl_1/145-2918240-6595504?pd_rd_w=pBg3u&content-id=amzn1.sym.9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_p=9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_r=F3QVQG18MSCPKQE958XJ&pd_rd_wg=B40XE&pd_rd_r=d5551fc1-7735-4580-8512-9ee7c92855de&pd_rd_i=B0009X29WK&psc=1",
+      "asin": "B0009X29WK",
+      "link_clean": "https://www.amazon.com/Dr-Elseys-Premium-Clumping-Litter/dp/B0009X29WK/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0009X29WK&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71gV7T7iW-L._AC_UL116_SR116,116_.jpg",
+      "price": "$20.99",
+      "extracted_price": 20.99,
+      "price_unit": "$0.03/fluid ounce",
+      "extracted_price_unit": 0.03,
+      "delivery": [
+        "Get it as soon as Friday, Apr 17"
+      ],
+      "stock": "In Stock"
+    },
+    {
+      "position": 3,
+      "title": "Stainless Steel Litter Box | XL Enclosed Cat Litter Boxes with Lid for Big Cats | High Sided, Anti-Urine Leakage | Non-Stick Bottom & Includes Litter Mat & Metal Scoop",
+      "link": "https://www.amazon.com/AIPERRO-Stainless-Steel-Cat-Litter/dp/B0CSKG7PYC/ref=pd_bxgy_thbs_d_sccl_2/145-2918240-6595504?pd_rd_w=pBg3u&content-id=amzn1.sym.9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_p=9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_r=F3QVQG18MSCPKQE958XJ&pd_rd_wg=B40XE&pd_rd_r=d5551fc1-7735-4580-8512-9ee7c92855de&pd_rd_i=B0CSKG7PYC&psc=1",
+      "asin": "B0CSKG7PYC",
+      "link_clean": "https://www.amazon.com/AIPERRO-Stainless-Steel-Cat-Litter/dp/B0CSKG7PYC/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CSKG7PYC&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71yAI4gdbSL._AC_UL116_SR116,116_.jpg",
+      "price": "$50.99",
+      "extracted_price": 50.99,
+      "price_unit": "$50.99/count",
+      "extracted_price_unit": 50.99,
+      "delivery": [
+        "Get it as soon as Friday, Apr 17"
+      ],
+      "stock": "In Stock"
+    }
+  ],
+  "related_products": [
+    {
+      "position": 1,
+      "asin": "B0GCJFQP56",
+      "title": "Tomkas Small Dog Sling Carrier - Classic Pocket Classic Strap - for 3-12 lbs Pets(Grey)",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo2NjMyMTU3ODE0Mzc4NTI6MTc3NTk4MTA0NTpzcF9kZXRhaWxfdGhlbWF0aWM6MzAxMjA1MDAwMDM3NTAyOjo6Og&url=%2Fdp%2FB0GCJFQP56%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0GCJFQP56%26pd_rd_w%3DgCnNI%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DF3QVQG18MSCPKQE958XJ%26pd_rd_wg%3DB40XE%26pd_rd_r%3Dd5551fc1-7735-4580-8512-9ee7c92855de%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0GCJFQP56/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GCJFQP56&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/51pTAGQ2AjL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 213,
+      "discount": "-33%",
+      "price": "$15.99",
+      "extracted_price": 15.99,
+      "old_price": "$23.99",
+      "extracted_old_price": 23.99,
+      "prime": true
+    },
+    {
+      "position": 2,
+      "asin": "B0FDPVJH5Q",
+      "title": "ZOMISIA Collapsible Dog Crate for Dogs - 28\" L Heavy Duty Dog Kennel No Tools Required with 4 Sides Steel Foldable Cage for Dogs Indoor Furniture, Portable Carrier with 2 Smooth Wheels, Beige",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo2NjMyMTU3ODE0Mzc4NTI6MTc3NTk4MTA0NTpzcF9kZXRhaWxfdGhlbWF0aWM6MzAxMjAxMDE3NDE2MDAyOjo6Og&url=%2Fdp%2FB0FDPVJH5Q%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0FDPVJH5Q%26pd_rd_w%3DgCnNI%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DF3QVQG18MSCPKQE958XJ%26pd_rd_wg%3DB40XE%26pd_rd_r%3Dd5551fc1-7735-4580-8512-9ee7c92855de%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0FDPVJH5Q/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FDPVJH5Q&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/81YdRCpJqKL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.6,
+      "reviews": 154,
+      "discount": "-10%",
+      "price": "$89.98",
+      "extracted_price": 89.98,
+      "old_price": "$99.99",
+      "extracted_old_price": 99.99,
+      "prime": true
+    },
+    {
+      "position": 3,
+      "asin": "B0FNCD22Q7",
+      "title": "Feandrea Collapsible Dog Crate, Portable Oxford Fabric Pet Travel Crate with 4 Mesh Doors, Handles, Pocket, 24 Inches, for Small Dogs, Ink Black and Dove Gray UPDC026BH01",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo2NjMyMTU3ODE0Mzc4NTI6MTc3NTk4MTA0NTpzcF9kZXRhaWxfdGhlbWF0aWM6MzAxMTczNDg1MDcyMDAyOjo6Og&url=%2Fdp%2FB0FNCD22Q7%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0FNCD22Q7%26pd_rd_w%3DgCnNI%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DF3QVQG18MSCPKQE958XJ%26pd_rd_wg%3DB40XE%26pd_rd_r%3Dd5551fc1-7735-4580-8512-9ee7c92855de%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0FNCD22Q7/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FNCD22Q7&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Amazon's Choice",
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/81RQ9aAzkaL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.5,
+      "reviews": 50,
+      "discount": "-20%",
+      "price": "$43.17",
+      "extracted_price": 43.17,
+      "old_price": "$53.99",
+      "extracted_old_price": 53.99,
+      "prime": true
+    },
+    {
+      "position": 4,
+      "asin": "B0FXVY1DCN",
+      "title": "Dog Purse Carrier for Small Dogs, Cats and Puppies – Soft-Sided Foldable Pet Travel...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo2NjMyMTU3ODE0Mzc4NTI6MTc3NTk4MTA0NTpzcF9kZXRhaWxfdGhlbWF0aWM6MzAxMTM0NTIzOTMyMzAyOjo6Og&url=%2Fdp%2FB0FXVY1DCN%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0FXVY1DCN%26pd_rd_w%3DgCnNI%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DF3QVQG18MSCPKQE958XJ%26pd_rd_wg%3DB40XE%26pd_rd_r%3Dd5551fc1-7735-4580-8512-9ee7c92855de%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0FXVY1DCN/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FXVY1DCN&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/61A0SMHHIbL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.9,
+      "reviews": 26,
+      "discount": "-69%",
+      "price": "$17.49",
+      "extracted_price": 17.49,
+      "old_price": "$55.98",
+      "extracted_old_price": 55.98,
+      "prime": true
+    },
+    {
+      "position": 5,
+      "asin": "B0GRFXKFTC",
+      "title": "Simple Deluxe Collapsible 24 Inch Dog Crate for Small Dogs, Portable Travel Dog Crate 3-Door Foldable Soft Kennel with Durable Mesh Windows for Indoor & Outdoor, Black",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo2NjMyMTU3ODE0Mzc4NTI6MTc3NTk4MTA0NTpzcF9kZXRhaWxfdGhlbWF0aWM6MzAxMTk4MTI1ODI2MDAyOjo6Og&url=%2Fdp%2FB0GRFXKFTC%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0GRFXKFTC%26pd_rd_w%3DgCnNI%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DF3QVQG18MSCPKQE958XJ%26pd_rd_wg%3DB40XE%26pd_rd_r%3Dd5551fc1-7735-4580-8512-9ee7c92855de%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0GRFXKFTC/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GRFXKFTC&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/81tnqMo9bSL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4,
+      "reviews": 1,
+      "discount": "-10%",
+      "price": "$32.39",
+      "extracted_price": 32.39,
+      "old_price": "$35.99",
+      "extracted_old_price": 35.99,
+      "prime": true
+    },
+    {
+      "position": 6,
+      "asin": "B08GSC79ZJ",
+      "title": "Pecute Pet Carrier Backpack, Dog Carrier Backpack, Expandable with Breathable Mesh for Small Dogs Cats Puppies, Pet Backpack Bag for Hiking Travel Camping Outdoor Hold Pets Up to 18 Lbs",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo2NjMyMTU3ODE0Mzc4NTI6MTc3NTk4MTA0NTpzcF9kZXRhaWxfdGhlbWF0aWM6MzAxMjM3MDU2NDg3MzAyOjo6Og&url=%2Fdp%2FB08GSC79ZJ%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB08GSC79ZJ%26pd_rd_w%3DgCnNI%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DF3QVQG18MSCPKQE958XJ%26pd_rd_wg%3DB40XE%26pd_rd_r%3Dd5551fc1-7735-4580-8512-9ee7c92855de%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B08GSC79ZJ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B08GSC79ZJ&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/817V0mJTcZL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.6,
+      "reviews": 1561,
+      "discount": "-10%",
+      "price": "$42.74",
+      "extracted_price": 42.74,
+      "price_unit": "$42.74 / count",
+      "extracted_price_unit": 42.74,
+      "old_price": "$47.49",
+      "extracted_old_price": 47.49,
+      "prime": true,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 7,
+      "asin": "B09N3X2DB2",
+      "title": "YUDODO Pet Sling Carrier for 5-9 lbs Small Dogs & Cats – Hands-Free Puppy Carrier with Safety Hook, Large Zipper Pocket, Soft Breathable Mesh, Adjustable Strap & Reflective Strip (Black 2.0 M)",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo2NjMyMTU3ODE0Mzc4NTI6MTc3NTk4MTA0NTpzcF9kZXRhaWxfdGhlbWF0aWM6MzAxMTU1ODEwMzY0MjAyOjo6Og&url=%2Fdp%2FB09N3X2DB2%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB09N3X2DB2%26pd_rd_w%3DgCnNI%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DF3QVQG18MSCPKQE958XJ%26pd_rd_wg%3DB40XE%26pd_rd_r%3Dd5551fc1-7735-4580-8512-9ee7c92855de%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B09N3X2DB2/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09N3X2DB2&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/61aFtebNi6L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.2,
+      "reviews": 1097,
+      "discount": "-10%",
+      "price": "$28.79",
+      "extracted_price": 28.79,
+      "price_unit": "$28.79 / count",
+      "extracted_price_unit": 28.79,
+      "old_price": "$31.99",
+      "extracted_old_price": 31.99,
+      "prime": true
+    },
+    {
+      "position": 8,
+      "asin": "B000OXAES6",
+      "title": "MidWest Homes for Pets 36-Inch iCrate for Medium-Large Breeds, 41-70 lbs, Single Door Folding Dog Crate with Divider Panel, Leak-Proof Tray & Secure Latches, Portable, Durable & Easy to Assemble",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0ODQwNDAxMzMwNDk2NjY4OjE3NzU5ODEwNDU6c3BfZGV0YWlsMjozMDEwODEzOTI4NjM4MDI6Ojo6&url=%2Fdp%2FB000OXAES6%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB000OXAES6%26pd_rd_w%3DuHKMM%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DF3QVQG18MSCPKQE958XJ%26pd_rd_wg%3DB40XE%26pd_rd_r%3Dd5551fc1-7735-4580-8512-9ee7c92855de%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B000OXAES6/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B000OXAES6&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "#1 Best Seller"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/91-PUDF4KQL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.7,
+      "reviews": 110914,
+      "price": "$68.99",
+      "extracted_price": 68.99,
+      "prime": true
+    },
+    {
+      "position": 9,
+      "asin": "B000H72HD4",
+      "title": "Petmate Pet Porter Fashion Dog Kennel Plastic Crate for Pets 15-20 lbs, Pet Carrier For Home and Travel, Made in USA, 24\" L x 14.5\" H, Pale Aqua and Black",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0ODQwNDAxMzMwNDk2NjY4OjE3NzU5ODEwNDU6c3BfZGV0YWlsMjozMDA1NjczNTUyNzUwMDI6Ojo6&url=%2Fdp%2FB000H72HD4%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB000H72HD4%26pd_rd_w%3DuHKMM%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DF3QVQG18MSCPKQE958XJ%26pd_rd_wg%3DB40XE%26pd_rd_r%3Dd5551fc1-7735-4580-8512-9ee7c92855de%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B000H72HD4/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B000H72HD4&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/718+6Wws1kL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 8771,
+      "discount": "-29%",
+      "price": "$49.99",
+      "extracted_price": 49.99,
+      "old_price": "$69.99",
+      "extracted_old_price": 69.99,
+      "prime": true
+    },
+    {
+      "position": 10,
+      "asin": "B003WQTT1A",
+      "title": "Petmate Sky Kennel For Air and Travel Airline Compliant Dog Crate for Smaller Dog Breeds or Pets up to 15 lbs, Heavy Duty Dog Kennel, Made in the USA- 21\" L",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0ODQwNDAxMzMwNDk2NjY4OjE3NzU5ODEwNDU6c3BfZGV0YWlsMjoyMDAwMDU1NDcwMDExMzE6Ojo6&url=%2Fdp%2FB003WQTT1A%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB003WQTT1A%26pd_rd_w%3DuHKMM%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DF3QVQG18MSCPKQE958XJ%26pd_rd_wg%3DB40XE%26pd_rd_r%3Dd5551fc1-7735-4580-8512-9ee7c92855de%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B003WQTT1A/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B003WQTT1A&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81Mczbe-fdL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 7409,
+      "discount": "-34%",
+      "price": "$46.00",
+      "extracted_price": 46,
+      "old_price": "$69.95",
+      "extracted_old_price": 69.95,
+      "prime": true
+    },
+    {
+      "position": 11,
+      "asin": "B00DJR9X2C",
+      "title": "Petmate Vari Dog Kennel Portable Airline-Friendly Carriers & Crates for Small Dogs and Puppies, Durable Plastic, Pet Carrier For Home and Travel, XS Extra Small 19\" For Dogs Up To 10 Lbs, Taupe",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0ODQwNDAxMzMwNDk2NjY4OjE3NzU5ODEwNDU6c3BfZGV0YWlsMjoyMDAxMjkzMTIwNjMwOTg6Ojo6&url=%2Fdp%2FB00DJR9X2C%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB00DJR9X2C%26pd_rd_w%3DuHKMM%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DF3QVQG18MSCPKQE958XJ%26pd_rd_wg%3DB40XE%26pd_rd_r%3Dd5551fc1-7735-4580-8512-9ee7c92855de%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B00DJR9X2C/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B00DJR9X2C&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/61vY8lpcdPL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.5,
+      "reviews": 7534,
+      "price": "$39.99",
+      "extracted_price": 39.99,
+      "prime": true
+    },
+    {
+      "position": 12,
+      "asin": "B0002DHZLC",
+      "title": "Petmate Ultra Vari Dog Kennel for Small Dogs (Durable, Heavy Duty Dog Travel Crate, Made with Recycled Materials, 21 in. Long) up to 15 lbs, Made in USA",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0ODQwNDAxMzMwNDk2NjY4OjE3NzU5ODEwNDU6c3BfZGV0YWlsMjoyMDAwMzQ5MzI3ODc1MzE6Ojo6&url=%2Fdp%2FB0002DHZLC%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0002DHZLC%26pd_rd_w%3DuHKMM%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DF3QVQG18MSCPKQE958XJ%26pd_rd_wg%3DB40XE%26pd_rd_r%3Dd5551fc1-7735-4580-8512-9ee7c92855de%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0002DHZLC/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0002DHZLC&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71kO7rww+9L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.2,
+      "reviews": 312,
+      "discount": "-28%",
+      "price": "$57.99",
+      "extracted_price": 57.99,
+      "old_price": "$79.99",
+      "extracted_old_price": 79.99,
+      "prime": true
+    }
+  ],
+  "videos": [
+    {
+      "position": 1,
+      "title": "Love the options! Petmate pet carrier kennel closer look",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/b690f157-4b64-49d1-9d9c-15b55034828d/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/A1tB-KDJ37L.jpg",
+      "duration": "0:19",
+      "vendor": "Seas of Wonder",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/717D-5vt9wL._CR0,0,500,500_._FMjpg_._SL34_.jpg",
+      "date": "Jul 1, 2023"
+    },
+    {
+      "position": 2,
+      "title": "Paws-itively Purrfect! Doubles as a holder and Pet Bed",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/e5542dc1-6598-4068-8d7e-e55ecef49bb2/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/A1UedAmBmpL.png",
+      "duration": "1:36",
+      "vendor": "My Honest Opinion",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/916Kpm6P2kL._CR0,0,960,960_._FMjpg_._SL34_.jpg",
+      "date": "Apr 26, 2023"
+    },
+    {
+      "position": 3,
+      "title": "Top doesn't stay open, poor quality",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/d1089e14-0b33-41c0-b44e-1ec7cf3d185a/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/71Fgoih+e-L.jpg",
+      "duration": "0:11",
+      "vendor": "grasp001",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SL34_.png",
+      "date": "Apr 13, 2025"
+    },
+    {
+      "position": 4,
+      "title": "An absolute MUST for cat owners",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/5f6afe8e-5c12-4147-8d2e-7573abd5fdff/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/71CBbg4ZwyL.jpg",
+      "duration": "2:04",
+      "vendor": "Kasey West",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/51loCk34n9L._CR0,0,413,413_._FMjpg_._SL34_.jpg",
+      "date": "Sep 4, 2024"
+    },
+    {
+      "position": 5,
+      "title": "Petmate Two-Door Small Dog and Cat Kennel Review",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/b33c43dd-c74e-4817-bfde-192e3019c495/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/71aqz7EUo5L.jpg",
+      "duration": "0:29",
+      "vendor": "The Lopez Family Review Page",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/51BOzPeABSL._CR13,7,250,250_._FMjpg_._SL34_.jpg",
+      "date": "Jun 23, 2023"
+    },
+    {
+      "position": 6,
+      "title": "I trust my dogs in this 2 door pet carrier from Petmate!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/01a2b62a-01c7-448d-90e9-68908957adee/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/91dujduFGYL.png",
+      "duration": "0:58",
+      "vendor": "Kassidy and Victor Ortega",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/91MtWbt5FsL._CR0,0,1737,1737_._FMjpg_._SL34_.jpg",
+      "date": "Oct 4, 2023"
+    },
+    {
+      "position": 7,
+      "title": "Honest Review of the Petmate Small Animal Carrier",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/a7e33213-62b5-4c64-84e8-35509d033742/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/A19fk9AjznL.png",
+      "duration": "2:41",
+      "vendor": "✨ Real Reviews with Alexis ✨",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/71p-cN0tv7L._CR84,63,341,341_._FMjpg_._SL34_.jpg",
+      "date": "May 22, 2024"
+    },
+    {
+      "position": 8,
+      "title": "Skip the stress. This pet crate makes travel easy.",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/c9fe1e1a-b89e-4eac-a8ba-112db5b843a9/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/A1RzwA96bCL.jpg",
+      "duration": "2:04",
+      "vendor": "Florida Finds and Reviews",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/71+n9u3835L._CR0,0,1024,1024_._FMjpg_._SL34_.jpg",
+      "date": "Apr 7, 2025"
+    },
+    {
+      "position": 9,
+      "title": "Review of our Kennel & Pet bed",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/04a7f46b-d3cb-44cc-9943-ee87335577dd/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61LgwkbzJ4L.jpg",
+      "duration": "1:52",
+      "vendor": "Mary Trejo",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/A1tosnkTjBL._CR0,0,2316,2316_._FMjpg_._SL34_.jpg",
+      "date": "Apr 29, 2025"
+    },
+    {
+      "position": 10,
+      "title": "MUST watch review of this must have pet carrier!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/f822816a-ca56-4b6c-bca5-adba0af3dfe7/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/A1lY+LDDyqL.jpg",
+      "duration": "1:21",
+      "vendor": "Elizabeth Lopez",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/A14OBeeEpmL._CR0,175,1442,1442_._FMjpg_._SL34_.jpg",
+      "date": "Nov 24, 2023"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": "petmate",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/f3950729-e380-4d16-950f-7bcaf565319f.__CR0,0,1940,600_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 2,
+      "title": "Travel with ease",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/44517d5d-3f8d-4553-9a2a-94836e0635fc.__CR0,0,1940,1200_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 3,
+      "title": "2-Door Kennels 3",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/9fd7aa45-e55c-4835-8378-e89439448694.__CR0,0,1940,1200_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 4,
+      "title": "lifestyle module 3",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/dac6d408-9507-4934-8bdc-4b3caee15a30.__CR0,0,1940,600_PT0_SX970_V1___.png"
+    },
+    {
+      "position": 5,
+      "title": "compraison",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/02984834-d44f-4746-9d6a-412630234555.__CR0,0,1940,1200_PT0_SX970_V1___.jpg"
+    }
+  ],
+  "product_details": {
+    "brand_name": "Petmate",
+    "target_audience": "Cat, Dog",
+    "target_species": "Dog, Cat",
+    "manufacturer": "Petmate",
+    "upc": "029695212314",
+    "global_trade_identification_number": "00029695212314",
+    "item_type_name": "Pet Kennel",
+    "included_components": "See Packaging",
+    "unit_count": "1 Count",
+    "warranty_description": "One Year Limited",
+    "best_sellers_rank": [
+      {
+        "text": "#4,595 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 4595,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#2 in Dog Hard-Sided Carriers",
+        "extracted_rank": 2,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/3024187011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Hard-Sided Carriers"
+      }
+    ],
+    "asin": "B0062JFGM0",
+    "customer_reviews": "4.6 out of 5 stars",
+    "rating": 4.6,
+    "reviews": 21102,
+    "material_type": "Plastic",
+    "item_dimensions_l_x_w_x_h": "24.05\"L x 16.8\"W x 14.5\"H",
+    "item_weight": "5.2 Pounds",
+    "size": "24.1\"L x 16.8\"W x 14.5\"H",
+    "additional_features": "Airy, Comfortable, Secure, top-load",
+    "compatible_with_vehicle_type": "Car",
+    "closure_type": "Latch",
+    "dog_breed_size": "Small",
+    "color": "BLUE",
+    "product_style": "Two-door",
+    "maximum_weight_recommendation": "15 Pounds",
+    "recommended_uses_for_product": "Traveling"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0G6TDK1YZ",
+      "title": "Meowker Cat Pet Carrier Soft Sided Bag Airline Approved, Foldable Travel Large Carrier for Small Kittens Medium Cats Up to 13 Lbs, Expandable Carrying Case for Car, Comfortable for Transport",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JM5XQiYinMZbi2HJX-Zi89MAAAGdgLgpJQEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICAR59do/clv1c_ek-wxfHXbcbWDVXQl5qwwd59BF5KfsE4tch4Rmlsi86joNleDuwBkHsEohxYpwlZfgG1BjO-ly5rYwzf0CjPI74pxCXbouyP9u30HtUjtNxmJ1kjUch7AG3SQpk2ILDQQQ2Igf5HMUDmY_dyuh7ysNfeiP2dlUNimObIp_eKzwSbXS4FlVrjLnwcFiwJqQPos-0m6l5XK88YPHT98PrUtznaWRvrdLZzxYHaRvEVic2H_dYmbcWMR_8JAM-jff3rQbNm1rjrDgCqSEcAR9tBGqvVWbuwSm3zbHZyE-b5rQi2Hk_RKmm3yd5Ii_VeFkMAvvc7sLEn6SVpwaIw-d6wHoweEugPqs8rBi1JnoXTAJxSh5GYUFZoNJjMpTr31a_Ec10PjlGYnWADmvtME9TYXpjqvxP7VAAoHnXF-PKfWqko5C7mEScSZ6pPqNqlxPbdl44-gW0XeLeYGZvNZr5PKGGq94IqlI0Mw3Jm4012n1X5KR_eGJTRMBqPTsrvLN_j6CMN_g9_YIiXyERoftb9f1wj3UHMQUT1hK6-OK2FmJGCacJWxoPbv7_ItwQoqxu6UMlSyfSsMf7den8IjdwERLzpH6PysSa5Mo1_8Fw9vfDPGe9KgcW8UDlqFXMeSKsG-pWIxtCCklh2L6Zxxa2bYSccWuiTGg4DmsXzm-GnLGl7dvWazhrLhRMrkfezEynDqmRSCtMPjILCG2TUUKVgnOBWv-ukuZVENIGixEZh1YhxdP2wBGZTRiJys18javvWHgEVTSwAu4HrtXyxIgPcyZacDVmJ440me-6rdzLjXaq2_W8qEDCPtc09MC1_JSP7i-bfxvD3EtFxWLleaMjSSU85AiWFJq348y5bMvbmB0i4zGUUmYh_QlU-rx9MnUH-nZeN5r2Z3MvPHifyEo8donoU71NbiD9X9F2NTl505UfpedP8IXBmrmVwn882sYLATRwGaQMN6u4V2phkSWzMI9CbrXEoKYBXCxaCttP-QAYcIUirm0iDa_wgybmEi-dnWbwuMgFM0jMGEfjpSfhAjfBbx2D-shUBKSo8eFQPIcTLjV1omQecQPMRYUFJPp-tg8nFa-elfTu0bkAYPTszh13v9t6UeEQJeP4CSqcp7Edsww7Xxr9teSGPKnQ4I2BFFHVsl7fg_meJp1iZcx1ZZNkKYBQnLIWW774aDMuupyHltXEQW4G4I5q5ehCVwnKSji_D3_zE0IUpFcTKboX40YQeE6G9oKl1xn7KNJicRR4O4OEB57XbQr2gbOYe1vDo0yZO6wfoa1jJgP5Xhu7M9SaWY7ZUMTx3cqUdlGp0DoXT40DiW7B5Qn0WFMcKZX9Z2OjzK8A8S9BFbGt2MTNmCJ4GBtFaFz6_bxf7nEwfRUeEFoS5-RR7k3Go3kwy5ZjuuDpO2E5sDoREestrILpvGcy59cNgEYhYYR4cvFPKXxLlzRZlsspT7fVob_901XdVMxd4AtvaqCoDl07WaZGFfHdL87e3WumFH71dn0excpM_zf6kj80vqz0hm24fArS67g8d_yXhidiymHrTjoGtfXwL6w/https://www.amazon.com/dp/B0G6TDK1YZ/?_encoding=UTF8&pd_rd_i=B0G6TDK1YZ&pd_rd_i=B0G6TDK1YZ&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=NELj1&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=F3QVQG18MSCPKQE958XJ&pd_rd_wg=B40XE&pd_rd_r=d5551fc1-7735-4580-8512-9ee7c92855de",
+      "link_clean": "https://www.amazon.com/dp/B0G6TDK1YZ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G6TDK1YZ&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51DT2bjQbPL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/57f7523c-36b1-4c14-bacd-d937c081e7e9.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/57f7523c-36b1-4c14-bacd-d937c081e7e9.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.8,
+      "reviews": 9,
+      "price": "$35.99",
+      "extracted_price": 35.99,
+      "old_price": "$49.99",
+      "extracted_old_price": 49.99
+    },
+    {
+      "position": 2,
+      "asin": "B093H4ZDBV",
+      "title": "BurgeonNest Cat Carrier for Large Cats 20 lbs,Medium Pet Under 25 lbs,2 Puppy and Small Dogs with Unique Side Bag,Top Load Pet Carrier Soft-Sided Escape Proof with 4 Ventilated Windows",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JFTSaFrNYBXim27IaBpH27YAAAGdgLgpJwEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICC0MLDs/clv1c_ek-wxXfWbbbaTLVuCCWjH6DZJ7MNkH8nkPmnVjjIyt4Pwlnw5H4VjbJEktIl8sKYbkSTCaORNCpWpL8ZUrjdmXP_jQK8WA8x7lFBatbsn883woF7fW-3Bm7Mojj0pOf2cGpCo2mKepugwbL8prdPZNHp8J2ekHn6zowQbzQpwI4NSz_yuwQGmG5H59Qlk7IHml-e9H87z6ZIHGTxj9pp2m6OGRt7BtCO7WTAfVXmFmFipw-HYSgIDokbCoaqhuv1_TLpJQXDPQie1PniuUiCWFupPMNwYaoH9aGtQ_oq_cSt0Jx51J_vh-8DdoZSC1HPxRe-76WFhWUsJfKspzHEumxDPPfdVWVjVpSl-wgWANc-s9jh1rlwpUYz-T9gqYCte7cZtfbqvkOlYQQFcs_cQLag6XM96TejY0L-PwVyuVIEDbd5dCCGJqjEsnSgxP4KPboGBBhTKEWDu8veNi-JBEghan7zkA5Lq4e_LFKAxtNaU60hjQRCnOKsZxpPabQ9XhIaNFAbuEH9pABL8Ur8kIkmB28jSpUsfNT40F_rX0SBYK-eYJhEmo3qDENJf9NXz0y16XUOH_lzFr2xtT1W1fSRkCyXPyh6JhkUsgq25ULsumj5XcZOOBWYMAU3agmjBr4jdja0h2xn9lVpF0upRQs3GlR-9zSWn_4zw9OGJVgnjDXBqFZMrcPgXXwdxAUGyKopfy3T34oRFs5pwhwPT31qtGk8zLjDtJjyFacoS-AtDkzBdV9eWc_fSOnaAgbd-J-qZd4rEzTYjNRcgP08LvZpFoVnBdsOhN0yoL--u4Y3GJMuBB534hXW8IsDho7slZmKrb27aswVJsY5CdzJ-6e_m1gVF-zgX8BwQaagQrhq0LbJVmCkWbix0WaIt03xlJ18fZFswN7i50tFdO5wx0dB388fsQEuGVf4QADv0BOEFlmPhJRMIEBGStO_PjyD_I-0-Apojd-ZbK8vfYQcdUkMc7Eob96XwV370_Yhi2RUAZ-USg6r3ED1AWr0SnuwWoS2ci1BA9J0shDbwb4nDVvLjMOGplNhmtQDjX2ZxKp2-pmh_uL4Q982GsbWHppMBx-zkxbB2N8TYzTtAzc7zd46d7hj1Qn8rJbI4X7hwoOsTW7PYEKa-lovXeZ4u_9xdkEZ1UqpwSFxRGdN9SLGBda05TJ7qIOSiqk7pLg5Ot4mrbzrJkFo0rQrg1Pb1ACvhmthSoBym1gSeDF1q22HDHtpsMHl3E6VTnvrqbNFnL2I9Pljbyqa5QNUSR2aYJkjV2f2B1xCIdzH_5ASvRWjINeLmXJZsDKKvg4wqnu7SwbReY0PfahEJVR1qER069vOO_cO95a8HNRevVRbbqNn3qrn0YwRJF-2iNEZIi7PjNucJRK3OVY-9cgvZFpis-VyCUhk2Ua937qVZ2scyR51iAV6xaVE46rO7ljoeEuBA7dgC8DlqhzlxIQLwwwhHpUMl8i_dWM4rHFQDDGS8bwTzDlqDCdp2usT8ys5xSQfdtpD1E4o9TUyvdSdu-ZITUcG-cFCNre2BdKYEVxU8uLXHGe3dZ71/https://www.amazon.com/dp/B093H4ZDBV/?_encoding=UTF8&pd_rd_i=B093H4ZDBV&pd_rd_i=B093H4ZDBV&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=NELj1&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=F3QVQG18MSCPKQE958XJ&pd_rd_wg=B40XE&pd_rd_r=d5551fc1-7735-4580-8512-9ee7c92855de",
+      "link_clean": "https://www.amazon.com/dp/B093H4ZDBV/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B093H4ZDBV&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41jQDZy5L9L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/bdae3138-384d-4191-9579-63664b58f411.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/bdae3138-384d-4191-9579-63664b58f411.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 6311,
+      "price": "$29.99",
+      "extracted_price": 29.99
+    },
+    {
+      "position": 3,
+      "asin": "B0F4DFF24G",
+      "title": "Top and 2 Sides Expandable Pet Carrier 17x11x9.5, TSA Airline Approved Small Dog Carriers for Small Dogs, Soft-Sided Cat Carrier with Self-Locking Zippers for Kitten,Rabbit, Puppy, Guinea Pig Black",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JNbxGgbnwAVaAzaTRK99uTMAAAGdgLgpKAEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICBahBBR/clv1c_ek-wBfXWVcba3tYpmFUWfwm2eRdGkMywWQ6NWcFIlejbazfffhkpDYUZ8PLQ7GnuN9i9SbtPP6ZfmER07PvoerVx9GlCE7YSNGuV-pfg_UgWKLNmpMXnSXR4YvN5nPFoB3GO3_BfIG4_xN9v7ujV-dGrYN2ZnGn3oPyE7-aqisOahwsWkULuZuKz5ja0j8tKy4Op6jujz2eehSVe7dpkOqo5vXdHho0myYqTu1wmaiOAB8yJRxvnQ1mpYld6VuUQZvZ8Wd81J00Cf7idnEdCHMpVXoucrhjpRDYH_vJxRB0yhYvxpduptEXia51z2ELXf-i93qh4Q5X9aNwBPU1Ez4f-4B4bYmgfUq4yDapNb3elbzTDARE8FqDSPWoesJIB_Qd4hx6Yd-u6pNGOduCIVVldRBh2n419X7ODsel2rgNUP5lpDOqyPnV5xfxVBO_N62kWO7FHdtmC-s8Eos0gFM9yPYIO4ZtfJpoYXrT8eaxI-RwVWgwifNvPkLnRcEfgVw9v9kWj2T4h33JYxX_8H5mdZlbxeEhqhCLzp67lXjd2pejBZLWNsqsPVwnm0jinE-Nx05_ZgDS5yfBTGI0hwmzidRNAaS5hXRFZWf0lUzJiv4UUnyhyssrwalEjxjaibw72Fj00WH7AmYOQr82AImhE0hYJ4N5d_e6dYaT3_IeYCKMFtcW5u7d5tM8xDrQBmeDEyKknFSzF12btSmnT4W3aq3zHSsDb8Mg-NqAkJwt-P_Q-gJ_64Z8LXMKUpYRUSdkyB3KqXO08B1tZ0QX6f4ESt-kT6UjuAPI7IoxDPiZvSjsykuNr6VQ1Lg94PIrYw01JLoA_gJgM0VM8jxJ02iB_1BeAXQc2yAL2Er4hesGfK0JRV0idpDqIjDNJ25B4KHP28J9Ys8x6FkmcC93Mw3Z1D_zPY4Ep8YUxwfyBHsmCFETdEQdVXgevtqwq0KLTvTIEbaxUxdZnqI0AzxgaAzpz3XR_H3mAV7ehNlwZ5jyjWHNYXsFJqW0glXZ9tm3m8IN1b44CsmZoX29nNwjaJk3bdXvjShI0lQZoxRqLfzMgYFHsRixxbLCeHtFRJDz-xb_gC6R1igAbHGL0usDReEQ3Ul_48Zr-DLzXO9tXjt8w_sNR_JmRUeijO2iU2t3mHHe5-Dc2f6B_GMq3sZD2NE7qjeztp3a7ihnIqVpMBC0IdJ-3OUjpnjR0a5trHAct_IV4mHHuJsw-5-Jmo6256fghWzy-toSDS_x0hUYKIXyhF0gUGUxIi0t2lk6ZjlLDBPXfGHF07IhVdp-9mZth1AbjG67MZAH_UtyBK0BxzlldB6mW-nHFfh50zb_STp1YjAeUshZYQP1elrTK4whdDsQ3jNvwfMilbEYSpeOFGwPg08A_hctOwxE4bhIJurWaOGIyqiZE8_TfPNWQDjiF_fKyaOACM7p9ygYGORDq8Z11-c-7ZKpyIubTqPIownT-dPP54U-0COgAD6VBH19nWs5RZpNVRCKnrTIkvzZcpe79mt_D8_IoT1UMUGIC/https://www.amazon.com/dp/B0F4DFF24G/?_encoding=UTF8&pd_rd_i=B0F4DFF24G&pd_rd_i=B0F4DFF24G&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=NELj1&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=F3QVQG18MSCPKQE958XJ&pd_rd_wg=B40XE&pd_rd_r=d5551fc1-7735-4580-8512-9ee7c92855de",
+      "link_clean": "https://www.amazon.com/dp/B0F4DFF24G/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F4DFF24G&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51ip9q5jAjL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/0ce42974-59bb-42ba-8449-4b77e196c1b8.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/0ce42974-59bb-42ba-8449-4b77e196c1b8.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.5,
+      "reviews": 78,
+      "price": "$48.99",
+      "extracted_price": 48.99
+    },
+    {
+      "position": 4,
+      "asin": "B09TFFZR66",
+      "title": "Prutapet Large Cat Carrier 24\"x16.5\"x16.5\" Portable Dog Crate for Small Medium Dogs Collapsible Traveling Pet Crate with Collapsible Bowl",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JOAiZgpc0etwKz81luUxS7UAAAGdgLgpKQEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICCaXqQd/clv1c_ek-wBYHXFcbWDn2nI-MgDzrZjBAPnkaZW9s0nNZiPc8zh5RXReP85dSe7zu7e3iZZ1SrXA8W2kpG4BltQ1fxRKKfXuC0cqZ7fqH8jVr3HsQHyVN1KXWsBbz55-peknSiB0hxTuFDmnt_pMsey7oA9tqL4N-aurXntrTAT3asyI8WQ8bnZPVVhaNCikyAulHitiyikjt7v8VkdOR804NyWOrTuvRnmIXmqPaLPy066uB4N8QOJgvnR1ihQlP5V_0QYLd8Wd9Eum9Of7hv3CnCAzEQ9auM78dWrA75dyS2rV_OLFioMM0uEyB3vhrK5HgjTDXSkW4sEG8WPJdZgtoPMKl3CiCRYcbqI4sxmPL2RMWG4w3nluYcAxkUmDJ4ofdpjP0znAAhzsnRQYe01AckZHX7_ihME-bdPd5DAil3D9NUuCkZApdyhA2k_HY6bbzriApJ0ivADKQPh9VugLHaQE4EJS_gqPDyv8fb0z1DEIBSA1MS6AMAVTcrU1rijuz_y8Ur-AaC_mkGsLXtr8t27D5kfA2_6jefODZDN24Jlv9chvhCQnSlIwvss6cnYEH2hfQw8EIjVfaS7ev2V994Sua1EHfT7UuYbg1N_RTFPWWlQ-jzzItL7G_jw4fXjTgiufHW8CEVZ4mlssNEg-r2e9R6EJ1DXEtJ2YZNnxmFo5i5wjQUJkj5F0af28uzT2J_nBDu4qsc1zvgUZcQm2GOEt9nwDrW7GW7mg60xYlkT0VbYtBdtRbY21RYZ513XzBZwOewq3HYqUZqjZAeadTBM2gztV_yY4e8h2d4jNwVkWl3bLJPOktZMHWVYsiQ8iDfsY_O0vnUGdaWsA3TipX5wkW6Q45x6UC0NaebEU8_iFVmKf7RJGKFNO-JnG7QfiJl7sfyG1_iLfvgkT_YlTG-i82JKu-qkRB9Gu5IA14ptGzzYKusIbMCG7zyZ-ljGS9eYtvDQl3y6kx-vqqyuLl_Nvnx4Fwk0hd-0eNpIGE2g4tdpbCBljkTLX9mIVzkDYBQSWRB8p7oP6NoHSQaezendlYiD0bfHygqb5hkjEN_Cbs7lGi_SgWvgzIRHdGA6-TnuPigsrwy2DqLYrISerDBNwwJjpMFz35tBaqUcTFF6DxOXGzmdCR5jBGIZZ8AGaWgs1uk2FlF-wDNpgwl5tUV7FezqQqdEZNXEpT6KIaXYF7AqFh0f4lYv9oQ5DCXt5SRyJ1lCsYroT2sAposxw0gxW_WaWh8Kax9hsgoOJsIxadgqJLEexICrC5k7cytUe4tR9nGFxEuXMcHanZ96uQXzrfXCCd6vHr9CzDYL5n1ITPn0YkJUUqIjmISaKY7A7UUC04Lbr2oB221gNvPSx1C_wfhgSMxnEGkj7BAD8rQ5dY9bTY0m_CfHLu15Nj5B-HVHyjGqE_zQ9XfXbQ7qjweZc0wP8JLEGPd8rxzq8m6VSDbbRE9FfdmDKsO9S0qkaQ9tUiAMwgsKIe_fWItaBBZ0vURahkDB-yGot0_IyWCZdmh2sTVgdFOw9VJiCpgBHT_hDPtLXEAJ9T21hdLz9AJlEc/https://www.amazon.com/dp/B09TFFZR66/?_encoding=UTF8&pd_rd_i=B09TFFZR66&pd_rd_i=B09TFFZR66&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=NELj1&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=F3QVQG18MSCPKQE958XJ&pd_rd_wg=B40XE&pd_rd_r=d5551fc1-7735-4580-8512-9ee7c92855de",
+      "link_clean": "https://www.amazon.com/dp/B09TFFZR66/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09TFFZR66&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/416ACT5uqlL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/19cad161-348c-413d-a15f-903bbd4a4630.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/19cad161-348c-413d-a15f-903bbd4a4630.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.8,
+      "reviews": 610,
+      "price": "$59.99",
+      "extracted_price": 59.99,
+      "old_price": "$72.99",
+      "extracted_old_price": 72.99
+    },
+    {
+      "position": 5,
+      "asin": "B0DHXSY2RD",
+      "title": "30 x 21 x 21 Inch Collapsible Soft Dog Crate for Dogs Up to 50 lbs, Portable Travel Pet Kennel with 4 Zip Doors, Foldable Indoor Outdoor Crate with Mat, Carry Bag, Green",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JE-vOvaAbRBRjq3AV3GM0L4AAAGdgLgpKgEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICCQ6BbI/clv1c_ek-wxYHXLbbWDfHOAIfj8e5gSokx4vL44UXjoLfi3qtGAhlEORIeg-cr-MD4eHd4g5jh0VX6eLN87aRYKzCGCdMfNpv9jJray6lrLrkm7dYyPbBLhCmKG2jQYnt1r0C6Sk-X_fgTJJbPGcxxuD7iplLXtE0cl16uF8T-5QcCTCa_GZ0FFsyXR-zNmYN2LU0oV2Oz_mOrv0XKZmD1j8Lhuy6CGTtbJs-CzTxDA-EdbyvtKkTYkrF6scYtwPYba4pzIZ4BEFsU6EpLr0HqhQGnDqZ422kMz_8iBzUp7kpzWXrxSJoSfJnpSdfbVct1rbv-P_gETpjBHJQcRuDjcxcJzL51r4WkFBfppJyChH06Nv5q2eKm7tU0kPokfS5S5QIib3BYxT15eQvhOAv_aYvn-iTv4BeMgx7MLWvRP1tKPhF8s5oR1hCQMhs3xIa5UAoYF6Pa4bUjTQ8ZsKJX4UyVGmmpG1ipWeOYChsTTZRwHqGMmghmhRJQLMaolKpHv2FG-vMYS7e0KK4s27VtKLD2ou91KmhjBRkywCrxD3OFWNfGAUkrAOzL-LmhL7Dy6Ur2NzeiU6-DmttnoRXXVkNDGBSTL-gsRuTBgq0juI5XuzFJeogVvSYJZlHwnlEg9jau6w_-VjwcxHVhHgr8vW32M8hNMiveXq27HirWBHe8723WG-VpxzyC388SpMw_JZC7e2FsVjqV2KVHAsBNvVRanLjfG01pmBhd3MjNFf5cZhk9v66HgFJwiwzeCPXeAgax76M4sHCvDmAd-aMjKmA6e3nY2t7BQ-mlDq6IfwjupAbA4nMMIMV_qRiitTPmva2Nhahbcv1DtCVx6djqFpARq8Q-iaVvc-7JcX1339wAjRdqantJMks-Qm04rDMjVEgPohGszqPwukyHvy68Kw-mul5rA07Bq_dHUOayjD2k5MHIJB1oBcWDkjpdWBbpR4XEit2qM4btxHYTFVX1lrtwsLtDw3LoF9rLOAeOe97-86f5w_9gRW1I7hcNotolZug0jy0bdvSTW0ALcE_J9jphgdALecTwhU-DPRO_WVyMIdDAKcWUPFD-3eWbLClTbN8rOmFIPL4G_p517cjhlhby2H_awq7vWDdyRJTKcPrgCVqscRI8o9J2pDVYRDCkqHTiMM_9-ZO5tUVkY-9e2fgzOcvunnxrtvXxn_Y41JzMiPGssXkCTYC_Y4rZekMvjBPq6upvqKUk5jZn3B8u-3YS5Cx6v5GFb-r-KHuiq2HHeeKiljBpMNnQggSvqMaIFfOW8yXGlmQQlnYTuPmnI50e2l9EwJgHnPdiXDGkYQvatqeIgfAfzbtr02IAprmppeVtJNKiMPuwW-TP7uUQI3l-ONORqU9JAypkgjcXdRtmah1-zY7SE_4plVaszIPtWQGO0IUTkpIdVtuw-K-M9wkPMkg3WNgZM1k6USzX5ubNePMb3yinb7IyTEtjI26r7vmLqo_487NaOW89wUMwO3fIZ_Zpu2hMjQGrFcJpVMJQ29p0LI5L5YPmZm6rTiPUjLtZnw6HQbIRAFL5qEq9mEY_e5oW_A/https://www.amazon.com/dp/B0DHXSY2RD/?_encoding=UTF8&pd_rd_i=B0DHXSY2RD&pd_rd_i=B0DHXSY2RD&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=NELj1&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=F3QVQG18MSCPKQE958XJ&pd_rd_wg=B40XE&pd_rd_r=d5551fc1-7735-4580-8512-9ee7c92855de",
+      "link_clean": "https://www.amazon.com/dp/B0DHXSY2RD/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DHXSY2RD&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/312dcEWealL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7fd73a78-ce56-4284-a835-31f36c434893.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7fd73a78-ce56-4284-a835-31f36c434893.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 3.9,
+      "reviews": 124,
+      "price": "$79.99",
+      "extracted_price": 79.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "text": "Customers find this pet carrier to be well-built and spacious, with plenty of room to move around. The carrier is easy to assemble and disassemble for cleaning, and customers particularly appreciate the top access door. They consider it excellent value for money and suitable for both cats and small dogs, with one customer noting that the second door on top is worth the extra cost.",
+      "insights": [
+        {
+          "title": "Quality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 2200,
+            "positive": 2200,
+            "negative": 77
+          },
+          "summary": "Customers find the pet carrier to be of good quality.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Excellent kennel! Very sturdy plastic, 4-6 extra screws and fasteners provided, top loading feature is great, perfect size for my kitten to grow into...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R21Q0N56QGBE9N"
+            },
+            {
+              "position": 2,
+              "snippet": "What a great carrier. My little cat was simple to drop in and she was so happy. Love the top opening. Will not work well for a fat cat. Great value.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3K1R507EDB7V3"
+            },
+            {
+              "position": 3,
+              "snippet": "...Room for growth and my older cat who is 13 pd fits in it good also. Well made, attractive and so so much easier to load them from the top than the...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R138XGN15PYJ3L"
+            },
+            {
+              "position": 4,
+              "snippet": "Great product, just takes forever to assemble. I had to unscrew several screws in order to get the last two in and secure. It took forever....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R19E3EO3A82KBS"
+            }
+          ]
+        },
+        {
+          "title": "Size",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 1400,
+            "positive": 1060,
+            "negative": 389
+          },
+          "summary": "Customers find the pet carrier spacious, with plenty of room to move around, making it suitable for both cats and small dogs.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Extremely simple to assemble, both doors work perfectly, roomy, sturdy. Just what I needed, and the top door makes entry for pets do much simpler.",
+              "link": "https://www.amazon.com/gp/customer-reviews/RL6IFH8DUFZGD"
+            },
+            {
+              "position": 2,
+              "snippet": "Perfect size. I have two rescue Tuxedo cats. They’d never accept sharing a space, as my 2 Siamese girls did. And it is so easy to load from the top!...",
+              "link": "https://www.amazon.com/gp/customer-reviews/RI37CHD7CTSG0"
+            },
+            {
+              "position": 3,
+              "snippet": "I had to send it back because it was too small, but the color looks fantastic. Very bright and vivid. Sturdy Petmate product of course, well made....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2LKZOKRNLGVH8"
+            },
+            {
+              "position": 4,
+              "snippet": "The kennel is a great size, color was as shown but there is no handle and no water cup as amazon states, also the top loading latch was a bit cracked...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3FW7YYLNZD6HC"
+            }
+          ]
+        },
+        {
+          "title": "Sturdiness",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 1300,
+            "positive": 1292,
+            "negative": 78
+          },
+          "summary": "Customers find the pet carrier sturdy and well-built, with one mentioning that the screws on the side feel secure.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Great looking, sturdy (enough), very convenient, door mechanism works very well, could live without the \"sunroof\" though I seem to recall...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1RLA7FBIOVVXW"
+            },
+            {
+              "position": 2,
+              "snippet": "...It's super easy to put together and it's just all around well built, in my opinion. I have regrets in buying this. The inside is huge!...",
+              "link": "https://www.amazon.com/gp/customer-reviews/RXFULJ9Q66OJZ"
+            },
+            {
+              "position": 3,
+              "snippet": "This is a sturdy carrier....love the top and side entrances. The top is useful if we're waiting at vet. I can open top to pet and comfort my pet....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R6RK9HQ01PPZB"
+            },
+            {
+              "position": 4,
+              "snippet": "This worked very well for a cat that is strong and wants to escape any hold and so is very hard to load in a normal end-opening carrier....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RQPUJVHSD0VWV"
+            }
+          ]
+        },
+        {
+          "title": "Assembly",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 1200,
+            "positive": 1177,
+            "negative": 96
+          },
+          "summary": "Customers find the pet carrier easy to assemble and disassemble for cleaning.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...I love the fact it opens from the top as well. It is sturdy and easy to assemble. They send you extra bolts/screws incase you lose them or need them....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1JFC7H18IWVCD"
+            },
+            {
+              "position": 2,
+              "snippet": "...She seems to like and it was easy to put together. I was not sure if it was going to be to big for my Yorkie, but it work perfectly for what I wanted.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1RE9SM0NEWG6L"
+            },
+            {
+              "position": 3,
+              "snippet": "I love this carrier! It was very easy to assemble. I am pleasantly surprised that the plastic is rather sturdy. It is very spacious....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1EIVVSYBBOW4Q"
+            },
+            {
+              "position": 4,
+              "snippet": "...I was very impressed with the easy assembly: you just screw the top and bottom together, by hand, and the nuts they give you are ergonomic with wide...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2JA7PCIOHCJYQ"
+            }
+          ]
+        },
+        {
+          "title": "Ease of use",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 1100,
+            "positive": 1091,
+            "negative": 93
+          },
+          "summary": "Customers find the pet carrier easy to use, particularly praising how simple it is to load their cats and operate the doors.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...the spring loaded opening mechanism on the top and side doors are easy to use - the spring holds tight, but is not difficult to pinch and hold open...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3V9MD71S5ZYIM"
+            },
+            {
+              "position": 2,
+              "snippet": "The top opening makes loading a reluctant kitty easy and non-traumatic. Comfy enough for a good-sized (not mammoth or grossly overweight) cat....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1KLWLPAXC7X5J"
+            },
+            {
+              "position": 3,
+              "snippet": "Great looking, sturdy (enough), very convenient, door mechanism works very well, could live without the \"sunroof\" though I seem to recall...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1RLA7FBIOVVXW"
+            },
+            {
+              "position": 4,
+              "snippet": "We moved across the country with our cat. This carrier was easy to load, using either the front or top (depending on our cat's mood)....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1F45AG4O6GNT0"
+            }
+          ]
+        },
+        {
+          "title": "Doors",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 663,
+            "positive": 610,
+            "negative": 53
+          },
+          "summary": "Customers appreciate the two-door design of the pet carrier, particularly the top access door.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...I can dry an entire litter in this carrier. I love the top door. It’s easy access to get kittens in and out, and it provides additional ventilation....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R31WWTWEV0JG6C"
+            },
+            {
+              "position": 2,
+              "snippet": "...The thing I love about this carrier though is the top door, it's really easy to pick the cat up and lower her into the cage before she recognizes...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2190AWDRSB0EW"
+            },
+            {
+              "position": 3,
+              "snippet": "I like the kennel it is well made, I think the top door is great for straightening inside kennel removing things or adding to....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RJ689GPB1L1TR"
+            },
+            {
+              "position": 4,
+              "snippet": "...LOVE the door on top - makes loading my cat much easier. I don't have to fight with him to get him into the carrier like I've had to do in the past....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RQWVH8ADVT84O"
+            }
+          ]
+        },
+        {
+          "title": "Value for money",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 656,
+            "positive": 614,
+            "negative": 42
+          },
+          "summary": "Customers find the pet carrier to be excellent value for money, with good quality relative to its price and sturdy construction.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...I have no idea what it is, but I'm not complaining!! It's also a great price, super easy to assemble (seriously, like minutes) and came quickly with...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2DEEFWIC2KA2G"
+            },
+            {
+              "position": 2,
+              "snippet": "...The pet, the vet, the staff & I are less stressed & much happier. Great value & sturdy. Just be sure the top door \" Clicks\" to ensure door is Locked....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3T4HLEE2WBLM6"
+            },
+            {
+              "position": 3,
+              "snippet": "...Good price but not useful, especially small if you put a pad in it too. It may be good for transporting or bed for a hamster but not a cat or dog.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3TEAAHPKNPQ82"
+            },
+            {
+              "position": 4,
+              "snippet": "good buy. if you never had carrier with top loader i highly recommend you get. so much easier to get your pet in there. these is durable....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R375FPCTXKWI78"
+            }
+          ]
+        },
+        {
+          "title": "Suitable for cats",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 622,
+            "positive": 608,
+            "negative": 14
+          },
+          "summary": "Customers find the pet carrier suitable for cats and small dogs, particularly noting it works well for kittens and guinea pigs.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Perfect for my cat (~12 pounds). Nice to have a door at the top of the cage and at the front. Seems to be good quality and love the blue color.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2FG47IRU4XNL"
+            },
+            {
+              "position": 2,
+              "snippet": "This kennel is great for my cat! The 24\" size is quite roomy for a medium size cat, but I'm sure it will be perfect when we travel.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3NSNZRKT2F1AS"
+            },
+            {
+              "position": 3,
+              "snippet": "Perfect for cats. Has top opening door. Even a few feral cats I have had to transport in this. It’s secure, safe perfect size for large cats",
+              "link": "https://www.amazon.com/gp/customer-reviews/R21VC6MLUAFYXN"
+            },
+            {
+              "position": 4,
+              "snippet": "This kennel has been great for my cats. I bought one and ended up purchasing a second one to replace a smaller kennel I already had....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R9352LS2FTLW7"
+            }
+          ]
+        }
+      ],
+      "images": [
+        "https://m.media-amazon.com/images/I/71OTyizHoKL.jpg",
+        "https://m.media-amazon.com/images/I/71UTh9Sqd8L.jpg",
+        "https://m.media-amazon.com/images/I/71A-rUeo97L.jpg",
+        "https://m.media-amazon.com/images/I/71WGpZrCzpL.jpg",
+        "https://m.media-amazon.com/images/I/71a6m4fQQ8L.jpg",
+        "https://m.media-amazon.com/images/I/71GLr6cI2dL.jpg",
+        "https://m.media-amazon.com/images/I/719jfB4JoUL.jpg",
+        "https://m.media-amazon.com/images/I/71eEPT9BuSL.jpg",
+        "https://m.media-amazon.com/images/I/61fQ2iG+FOL.jpg",
+        "https://m.media-amazon.com/images/I/71+cXz501OL.jpg",
+        "https://m.media-amazon.com/images/I/81HVjza1GRL.jpg",
+        "https://m.media-amazon.com/images/I/71bcvPbOfUL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 81,
+        "4 star": 11,
+        "3 star": 4,
+        "2 star": 1,
+        "1 star": 3
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Still Love it!!!",
+        "text": "I bought this crate because I have a large Himalayan cat that weighs about 17 lbs. We had a slightly smaller crate with the plastic door and he is strong enough he pushed the door so hard it flexed and he got out. The handle also broke when we tried to pick him up. We put him in this one and he didn't even get excited, I believe because he had more than enough room. My other cats also like it.The top opening is great or loading because you can drop them right in, instead of having to try and push them in butt first. It is larger than any I have owned before, but it is worth it so the cats can sit up inside instead of having to lay down.It is easy to put together, btw the top wires of the door do not go into the holes, they fit into the 2 points you see at the top corners of the door. I wondered if I too got the wrong size door but it fits perfectly. The instructions could tell you that, they are just line drawings with few details. the side go together with metal bolts and heavy duty plastic nuts. They work well and it seems very sturdy and held my big cat to his satisfaction.It is definitely worth it, especially for my larger cats and especially at the 44% off price.Update: Sadly my Himalayan passed 4 years ago so that give you an idea how long I have owned mine. I just want to say that I still love them, I bought a 2nd one and have them now for a few years and they are still in great shape. I see a couple of people saying their cats noses were scratched, it is a firm plastic, but have never had a kitty injure themselves and it only takes a few seconds to make sure they haven't sustained any damage or have anything that a cat can scratch themselves on, a quick filing can take down any rough spots if you find some, again I have not had that problem. I only use them to take my cats to the vet, but have a few cats so they do get used. I love the 24\", it is big enough that even my very large cats can turn around in them. I have had many other people at the vet's office ask about them and where to find one. The top load is the only way to go, much better than trying to force them into the end door where they can stretch out far to make it hard to put them in. They are great crates.Update: 8 years later and both still look like new and they have transported a lot of cats to the vet and back. Best carriers I have ever owned.",
+        "rating": 5,
+        "date": "January 26, 2014",
+        "author": "tlt",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AF4OJWXO4R5B7XD63NLJBZXG4CFA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "helpful_votes": "57 people found this helpful",
+        "product": {
+          "style": "Two-door",
+          "size": "24.1\"L x 16.8\"W x 14.5\"H",
+          "color": "BLUE"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Versatile N Thoughtfully Designed Pet Carrier for the Comfort and Convenience of Your Furry Friend.",
+        "text": "As a pet owner, finding the right carrier that prioritizes both functionality and the well-being of my pet is crucial. The Petmate Two-Door Small Dog Kennel & Cat Kennel has certainly stood out in meeting these criteria.Dual Entry Options: One of the standout features is the flexibility of dual entry points. Whether utilizing the top-loading option for a stress-free placement or the front-loading entrance for easy access during travel, this kennel ensures convenience for both pet and owner.Ideal Size: With a length of 24 inches, this kennel is perfect for small dogs and cats up to 15 pounds. The size strikes a balance between providing ample space for the pet's comfort and remaining easily manageable for the owner.Sturdy and Environmentally Friendly: The fact that this kennel is made with recycled materials is a commendable aspect. It not only contributes to sustainability but also showcases the manufacturer's commitment to responsible production. The sturdy construction ensures the safety and security of the pet during travel.Ventilation and Visibility: The well-ventilated design promotes air circulation, maintaining a comfortable environment for the pet. Additionally, the kennel provides adequate visibility, reducing anxiety for pets who may feel more at ease when aware of their surroundings.Made in the USA: The 'Made in USA' label is another positive aspect, assuring pet owners of quality craftsmanship and adherence to rigorous standards.Smooth Cleaning: The kennel's design facilitates easy cleaning, an essential feature for pet owners. The smooth surfaces and well-thought-out construction make it hassle-free to maintain cleanliness and hygiene for the pet.In conclusion, the Petmate Two-Door Small Dog Kennel & Cat Kennel has proven to be a reliable and well-designed carrier for my small pet. Its thoughtful features, durability, and commitment to sustainability make it a standout choice among pet carriers. If you're seeking a versatile and pet-friendly travel solution, this kennel is certainly worth considering.",
+        "rating": 5,
+        "date": "February 25, 2024",
+        "author": "David",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGGDB7U2AVQ75ZRMOSLRYQIWFEQQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "video": {
+          "link": "https://m.media-amazon.com/images/I/F1Upgt6qPOL.mp4",
+          "thumbnail": "https://m.media-amazon.com/images/I/71zWQqd18JL._SY256.jpg"
+        },
+        "helpful_votes": "35 people found this helpful",
+        "product": {
+          "style": "Two-door",
+          "size": "24.1\"L x 16.8\"W x 14.5\"H",
+          "color": "BLUE"
+        }
+      }
+    ],
+    "other_countries_reviews": [
+      {
+        "position": 1,
+        "title": "Resiste e prática",
+        "text": "Ótima caixa. O plástico é de qualidade, espaçosa e resistente. Fácil de montar e prática para colocar/tirar o pet.",
+        "rating": 5,
+        "date": "May 17, 2024",
+        "author": "vanderlei Martins",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "product": {
+          "style": "Two-door",
+          "size": "24.1\"L x 16.8\"W x 14.5\"H",
+          "color": "BLUE"
+        },
+        "country": {
+          "code": "BR",
+          "name": "Brazil"
+        },
+        "language": {
+          "code": "pt",
+          "name": "Portuguese (Brazil)"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Une bonne taille mais une poignée de transport manquante",
+        "text": "Une boîte de bonne taille mais la qualité pourrait être meilleure pour le prix. Arrivé sans manette de carrure, si mauvais contrôle de qualité, aucune excuse pour cela. Amazon n'a pas pu obtenir une poignée de remplacement, donc j'ai proposé une solution alternative que j'ai acceptée.J'aurais été 4 ou peut-être 5 étoiles, perdu en raison d'un contrôle de mauvaise qualité et la boîte elle-même juste pour le prix.D'accord, j'espère que ces problèmes ne se produisent pas souvent.",
+        "rating": 3,
+        "date": "April 13, 2017",
+        "author": "Cjohn",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "product": {
+          "style": "Two-door",
+          "size": "24.1\"L x 16.8\"W x 14.5\"H",
+          "color": "BLUE"
+        },
+        "country": {
+          "code": "FR",
+          "name": "France"
+        },
+        "language": {
+          "code": "fr",
+          "name": "French (France)"
+        }
+      },
+      {
+        "position": 3,
+        "title": "高さがあるタイプで低価格",
+        "text": "5キロの柴犬で二回使いました。大きさは充分あるし上側から入れられるところが便利でした。中で一度お漏らししましたが 周りに溝がある為 濡れませんでした。",
+        "rating": 4,
+        "date": "January 11, 2021",
+        "author": "ニッシー",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "product": {
+          "style": "Two-door",
+          "size": "24.0\"L x 16.8\"W x 14.5\"H",
+          "color": "Pearl Tan"
+        },
+        "country": {
+          "code": "JP",
+          "name": "Japan"
+        },
+        "language": {
+          "code": "ja",
+          "name": "Japanese"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Big, sturdy, relatively easy to assemble, opens smoothly and seems like it'd be easy to clean",
+        "text": "I wanted a large, hard sided crate-style carrier to take my cats together to their vet appointments (they're litter mates so they go for their routine appointments at the same time) that they would feel more secure in than a soft sided carrier. This fit the bill nicely! I haven't taken them to the vet in it yet (their next appointment is later this week) but I've practiced putting them in the carrier and carrying them around my apartment in it and they don't seem to get as stressed out or make as many desperate efforts to get out as they have done with their soft-sided carrier. I have high hopes that future trips to the vet, though they won't be stress free, they could be a little less rough on them. The carrier was not too hard to assemble (other than that one of the holes was not neatly drilled to the right size, but I was able to force it through by hammering it in). It's sturdy and the doors are both secure and open and close smoothly. I haven't had to clean it out yet, but it seems like it would be easy to clean up any messes inside thanks to the top-opening door. Happy with this purchase so far.",
+        "rating": 5,
+        "date": "September 21, 2021",
+        "author": "OneLessSN",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "product": {
+          "style": "Two-door",
+          "size": "24.1\"L x 16.8\"W x 14.5\"H",
+          "color": "BLUE"
+        }
+      },
+      {
+        "position": 5,
+        "title": "guter, stabiler Kennel",
+        "text": "sehr gute Verarbeitung wie von Petmate gewohnt, die Lösung mit der Tür auf der Oberseite ist sehr gut verwirklicht, sehr stabil und sehr einfach zu bedienen, bei anderen Kennels mit solch einer Tür lassen sich die Verschlussclips oft nur schwer bedienen und sobald das transportierte Tier etwas schwerer ist biegt sich alles auseinander, ist hier nicht der Fall. Auch die Fronttür ist sehr leicht bedienbar, da klemmt nix. Der Kennel ist voll verschraubt, was ihn sehr stabil macht, aber leider auch ein Auseinandernehmen beim Tierarzt unmöglich. Trotz der stabilen Bauweise ist der Kennel leicht, hält aber trotzdem was aus. Kleine Minuspunkte sind, dass die Tür oben größer sein könnte und insgesamt Platz im Innenraum verschenkt wurde durch die etwas merkwürdige Form und die Aufsatzflächen der 2 Hälften, die verschraubt werden. Ich wollte den Kennel eigentlich für 2 Katzen, dafür ist er aber eigentlich zu klein, die angegebenen Maße täuschen da.",
+        "rating": 4,
+        "date": "May 14, 2017",
+        "author": "Amazon Kunde",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "product": {
+          "style": "Two-door",
+          "size": "24.1\"L x 16.8\"W x 14.5\"H",
+          "color": "BLUE"
+        },
+        "country": {
+          "code": "DE",
+          "name": "Germany"
+        },
+        "language": {
+          "code": "de",
+          "name": "German (Germany)"
+        }
+      }
+    ]
+  }
+}

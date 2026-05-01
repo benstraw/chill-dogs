@@ -1,7 +1,13 @@
 ---
+import EmailSignup from '@components/EmailSignup.astro';
+import { coolingConverterPageConfigs } from '@data/cooling-converter-pages';
+import { calmingConverterPages } from '@data/calming-converter-pages';
+import { relaxationConverterPages } from '@data/relaxation-converter-pages';
 import { ROUTES } from '@data/routes';
+import type { PageType } from '@utils/types';
 
 const currentYear = new Date().getFullYear();
+const currentPath = normalizePath(Astro.url.pathname);
 
 const exploreLinks = [
   { href: ROUTES.coolingHub, label: 'Cooling' },
@@ -19,6 +25,49 @@ const legalLinks = [
   { href: ROUTES.terms, label: 'Terms of Use' },
   { href: ROUTES.affiliateDisclosure, label: 'Affiliate Disclosure' },
 ];
+
+function normalizePath(pathname: string): string {
+  if (!pathname || pathname === '/') return '/';
+  return pathname.endsWith('/') ? pathname : `${pathname}/`;
+}
+
+const converterPaths = new Set<string>([
+  ROUTES.coolingTop,
+  ROUTES.trackingTop,
+  ROUTES.fiCollarReview,
+  ...Object.keys(coolingConverterPageConfigs).map((slug) => `/cooling/${slug}/`),
+  ...Object.keys(calmingConverterPages).map((slug) => `/calming/${slug}/`),
+  ...Object.keys(relaxationConverterPages).map((slug) => `/comforting/${slug}/`),
+]);
+
+const informerPaths = new Set<string>([
+  ROUTES.about,
+  ROUTES.contact,
+  ROUTES.privacyPolicy,
+  ROUTES.terms,
+  ROUTES.affiliateDisclosure,
+  ROUTES.subscribeThanks,
+  ROUTES.subscribeConfirmed,
+  '/content-sitemap/',
+]);
+
+function inferPageType(pathname: string): PageType {
+  if (converterPaths.has(pathname)) return 'converter';
+  if (pathname === ROUTES.home || pathname.startsWith('/v/')) return 'attractor';
+  if (informerPaths.has(pathname) || pathname.startsWith('/admin/')) return 'informer';
+  return 'collector';
+}
+
+function inferCategory(pathname: string): string {
+  if (pathname.startsWith('/cooling/')) return 'cooling';
+  if (pathname.startsWith('/calming/')) return 'calming';
+  if (pathname.startsWith('/comforting/')) return 'comfort';
+  return 'general';
+}
+
+const shouldShowSignup = !converterPaths.has(currentPath) && currentPath !== ROUTES.home;
+const footerPageType = inferPageType(currentPath);
+const footerCategory = inferCategory(currentPath);
 ---
 
 <footer class="site-footer">
@@ -49,6 +98,18 @@ const legalLinks = [
         </ul>
       </div>
     </div>
+
+    {shouldShowSignup && (
+      <div class="footer-signup">
+        <EmailSignup
+          placement="footer"
+          compact={true}
+          pageSlug={currentPath}
+          pageType={footerPageType}
+          category={footerCategory}
+        />
+      </div>
+    )}
 
     <div class="footer-disclosure">
       <p>
@@ -115,6 +176,12 @@ const legalLinks = [
     border-top: 1px solid rgba(240, 244, 246, 0.15);
     padding-top: var(--space-xl);
     margin-bottom: var(--space-lg);
+  }
+
+  .footer-signup {
+    border-top: 1px solid rgba(240, 244, 246, 0.15);
+    padding-block: var(--space-2xl);
+    margin-bottom: var(--space-2xl);
   }
 
   .footer-disclosure p {

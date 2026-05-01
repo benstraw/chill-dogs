@@ -139,8 +139,9 @@ This runs automatically via the `prebuild` script before `astro build`.
 
 ### Default behavior
 
-- Every indexable route gets an OG PNG at `/og/<route-slug>.png`.
-- `og:image` and `twitter:image` are auto-resolved from the current pathname.
+- Every indexable route gets a generated OG JPEG at `/og/<route-slug>.jpg`.
+- After build, pages that render images in `<main>` automatically set `og:image` and `twitter:image` to the first on-page image.
+- If no image is rendered in `<main>`, metadata falls back to the generated route OG image.
 - Routes with `noindex`, `/v/` experiment variants, and `404` are excluded from auto OG and fall back to `/og-default.jpg`.
 
 ### Frontmatter overrides (posts collection)
@@ -157,7 +158,7 @@ ogImage: "/og/my-manual-image.jpg" # explicit override, bypasses auto route imag
 Override priority:
 
 1. `ogImage` (explicit image path)
-2. Auto-generated route image (`/og/<route-slug>.png`) when eligible
+2. Auto-generated route image (`/og/<route-slug>.jpg`) when eligible
 3. `/og-default.jpg` fallback
 
 Text priority:
@@ -228,6 +229,31 @@ The smoke tests are intentionally narrow and stable. They verify:
 - legal and SEO basics like `noindex`, canonical tags, `robots.txt`, and sitemap output
 
 Pre-commit runs both the Vitest suite and the smoke tests, so broken rendered output blocks commits before it reaches `main`.
+
+---
+
+## ASIN validity check
+
+Products can go out of stock or be removed from Amazon without warning. The ASIN check script hits `amazon.com/dp/{ASIN}` directly for every product in the catalog and reports any that are unavailable or gone.
+
+```bash
+bun run check:asins           # check all ~92 ASINs, print full table
+bun run check:asins -- --quiet  # issues only (clean output for periodic checks)
+```
+
+No API key required. Takes about 75 seconds (800ms delay between requests to avoid rate limiting). Exits with code `1` if any issues are found.
+
+**Status meanings:**
+
+| Status | Meaning |
+|---|---|
+| `OK` | Product page found with title |
+| `UNAVAILABLE` | Page exists but item can't be bought |
+| `REMOVED` | 404 or redirected off the product page |
+| `RATE LIMITED` | Amazon throttled the request — re-run in a few minutes |
+| `UNKNOWN` | 200 response but couldn't confirm product title (CAPTCHA likely) |
+
+Run this after adding new products or periodically to catch stale affiliate links before they affect revenue.
 
 ---
 
