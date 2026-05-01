@@ -95,6 +95,7 @@ export type RelaxationBlock =
 export interface RelaxationConverterPageConfig {
   slug: string;
   title: string;
+  ogTitle?: string;
   description: string;
   pageSlug: string;
   hero: HeroConfig;
@@ -1287,13 +1288,19 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
           'amazon-basics-furniture-style-crate',
           'dwanton-dog-crate-furniture',
           'rehomerance-dog-crate-furniture',
+          'feandrea-furniture-crate',
           'internets-best-decorative-kennel',
           'lyromix-dog-crate-furniture',
+          'ironck-small-furniture-crate',
           'easycom-foldable-dog-crate-furniture',
           'rotating-bowl-furniture-crate',
           'ironck-extra-large-dog-crate-furniture',
           'bifanuo-dog-crate-furniture',
           'charging-station-furniture-crate',
+          'saksun-furniture-crate',
+          'rovibek-double-dog-crate-furniture',
+          'hugcoz-double-furniture-dog-crate',
+          'pawhut-furniture-dog-crate-double',
           'oranland-heavy-duty-furniture-crate',
         ],
       },
@@ -1301,7 +1308,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         kind: 'prose',
         heading: 'Furniture Crates with Extra Utility',
         paragraphs: [
-          'Some furniture crates earn their spot because they do more than just hide the crate. The rotating-bowl model adds built-in feeding convenience, while the charging-station model is genuinely useful as a nightstand or side table.',
+          'Some furniture crates earn their spot because they do more than just complement home decor. The rotating-bowl model adds built-in feeding convenience, while the charging-station model is genuinely useful as a nightstand or side table.',
           'That kind of practical utility matters if the crate is going to live in a visible room every day and compete with real furniture for space.',
         ],
         alt: true,
@@ -1394,13 +1401,19 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         'amazon-basics-furniture-style-crate',
         'dwanton-dog-crate-furniture',
         'rehomerance-dog-crate-furniture',
+        'feandrea-furniture-crate',
         'internets-best-decorative-kennel',
         'lyromix-dog-crate-furniture',
+        'ironck-small-furniture-crate',
         'easycom-foldable-dog-crate-furniture',
         'rotating-bowl-furniture-crate',
         'ironck-extra-large-dog-crate-furniture',
         'bifanuo-dog-crate-furniture',
         'charging-station-furniture-crate',
+        'saksun-furniture-crate',
+        'rovibek-double-dog-crate-furniture',
+        'hugcoz-double-furniture-dog-crate',
+        'pawhut-furniture-dog-crate-double',
         'oranland-heavy-duty-furniture-crate',
       ],
     },
@@ -1495,6 +1508,9 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
           'gardner-pet-heavy-duty-crate',
           'xxl-heavy-duty-dog-crate',
           'hiwokk-large-dog-crate',
+          'hzuaneri-furniture-dog-crate',
+          'rexwelten-furniture-dog-crate',
+          'petrova-furniture-dog-crate',
         ],
       },
       {
@@ -1588,6 +1604,9 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         'gardner-pet-heavy-duty-crate',
         'xxl-heavy-duty-dog-crate',
         'hiwokk-large-dog-crate',
+        'hzuaneri-furniture-dog-crate',
+        'rexwelten-furniture-dog-crate',
+        'petrova-furniture-dog-crate',
       ],
     },
   },
@@ -1766,7 +1785,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
     slug: 'best-airline-approved-dog-carriers',
     title: 'Best Airline-Approved Soft-Sided Dog Carriers',
     description:
-      'Compare soft-sided in-cabin dog carriers, from Sherpa-style basics to expandable, compact, and tote-style options for small dogs.',
+      'Compare soft-sided airline-approved dog carriers for in-cabin travel, including Sherpa-style, expandable, compact, budget, and tote-style picks.',
     pageSlug: 'best-airline-approved-dog-carriers',
     hero: {
       title: 'Best Airline-Approved Soft-Sided Dog Carriers',
@@ -1935,6 +1954,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         { label: 'Best Dog Travel Bags', href: ROUTES.comfortTravelBags },
         { label: 'Best Airline Crates', href: ROUTES.comfortAirlineCrates },
         { label: 'Best Calming Products', href: ROUTES.calmingTop },
+        { label: 'Car Anxiety Picks', href: ROUTES.calmingCar },
         { label: 'Dog Road Trip Gear', href: ROUTES.roadTrip },
       ],
     },
@@ -2106,6 +2126,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       ],
     },
   },
+
 };
 
 export function getRelaxationConverterPageConfig(slug: string): RelaxationConverterPageConfig {

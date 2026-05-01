@@ -34,7 +34,7 @@ function quickPickProduct(item: QuickPickItem) {
 }
 ---
 
-<BaseLayout title={config.title} description={config.description} navAccent="var(--color-sky)">
+<BaseLayout title={config.title} ogTitle={config.ogTitle} description={config.description} navAccent="var(--color-sky)">
   {schema && <JsonLd slot="head" schema={schema} />}
 
   <div class="relaxation-theme">
