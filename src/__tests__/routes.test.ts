@@ -62,7 +62,7 @@ describe('route constants', () => {
       (card) => card.title === 'Best Dog Crates for Anxiety'
     );
     const chewResistantBedsCard = comfortCollectorBody.sections[0].cards.find(
-      (card) => card.title === 'Best Chew-Resistant Dog Beds'
+      (card) => card.title === 'Best Indestructible Chew-Proof Dog Beds'
     );
     const travelBedsCard = comfortCollectorBody.sections[0].cards.find(
       (card) => card.title === 'Best Dog Travel Beds'

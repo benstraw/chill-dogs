@@ -231,9 +231,9 @@ export const comfortCollectorBody: CollectorBodyConfig = {
         },
         {
           href: ROUTES.comfortChewResistantBeds,
-          title: 'Best Chew-Resistant Dog Beds',
-          description: 'Tougher beds, elevated cots, washable rip-stop options, and crate mats for dogs that destroy soft bedding.',
-          linkLabel: 'Compare tough beds ->',
+          title: 'Best Indestructible Chew-Proof Dog Beds',
+          description: 'Elevated cots, tough crate pads, rip-stop beds, and K9 Ballistics picks for dogs that destroy soft bedding.',
+          linkLabel: 'Compare chew-proof beds ->',
           dataToPage: ROUTES.comfortChewResistantBeds,
           dataCategory: 'chew-resistant-beds',
         },

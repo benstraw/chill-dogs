@@ -847,6 +847,21 @@ export const relaxationProducts: RelaxationProduct[] = [
       'You want a home-bed format for a larger dog, but still need something tougher and easier to clean than a typical soft bed',
   }),
   createFetchedRelaxationProduct({
+    id: 'k9-ballistics-bolster-nesting-bed',
+    asin: 'B0CFCM6SFF',
+    category: 'chew-resistant-beds',
+    bullets: [
+      'Bolster nesting shape gives smaller dogs a more enclosed comfort bed while using tougher ripstop ballistic polyester',
+      'Removable washable cover and water-resistant construction make cleanup easier than with standard plush bolsters',
+      'Best treated as tough comfort for moderate chewers because raised pillow edges can still become chew targets',
+    ],
+    bestFor: 'Small dogs and moderate chewers that still need a nest-like bolster bed rather than a flat cot or crate pad',
+    whyItWorks:
+      'It keeps the K9 Ballistics tougher-cover approach in a softer comfort shape for dogs that dig or nest more than they attack every edge',
+    considerIf:
+      'Your dog likes bolsters and is not an unsupervised fabric eater; serious destroyers usually need fewer raised edges than this',
+  }),
+  createFetchedRelaxationProduct({
     id: 'vivifying-chew-resistant-crate-pad',
     asin: 'B0GK66SQWG',
     category: 'chew-resistant-beds',
@@ -860,6 +875,21 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Flat crate-pad formats tend to give bed destroyers fewer obvious starting points than plush pillows and bolstered beds',
     considerIf:
       'You mainly need a kennel or crate pad for moderate chewers, not a plush home bed for unsupervised severe destruction',
+  }),
+  createFetchedRelaxationProduct({
+    id: 'couzssyhi-chew-proof-crate-pad',
+    asin: 'B0FLJ7LW79',
+    category: 'chew-resistant-beds',
+    bullets: [
+      'Low-profile crate-pad format is built for dogs that destroy kennel bedding and need fewer loose edges to grab',
+      'Waterproof machine-washable construction fits crate use, accidents, muddy paws, and indoor-outdoor cleanup',
+      'High-strength fabric positioning makes it a better crate-bed comparison point than another plush stuffed pillow',
+    ],
+    bestFor: 'Crate destroyers that need a tougher washable pad rather than a bulky soft bed inside the kennel',
+    whyItWorks:
+      'A flatter crate pad limits the raised seams, bolsters, and exposed fill that many dogs start with when shredding bedding',
+    considerIf:
+      'Your dog chews in the crate and you can remove the pad immediately if they begin swallowing fabric or coating pieces',
   }),
   createFetchedRelaxationProduct({
     id: 'sytopia-orthopedic-chew-resistant-bed',

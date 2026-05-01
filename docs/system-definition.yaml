@@ -138,8 +138,10 @@ site_system:
         - "/comforting/best-furniture-dog-crates/"
         - "/comforting/best-heavy-duty-dog-crates/"
       notes: >
-        Comfort collector routes to calming beds, orthopedic beds, chew-resistant beds, travel beds, puppy crates,
-        anxiety crates, travel crates, airline crates, airline carriers, furniture crates, and heavy-duty crates.
+        Comfort collector routes to calming beds, orthopedic beds, chew-resistant/indestructible beds, travel beds, puppy crates,
+        anxiety crates, travel crates, airline crates, airline carriers, travel bags, furniture crates, and heavy-duty crates.
+        The chew-resistant bed converter owns the indestructible/chew-proof intent and stays on
+        /comforting/best-chew-resistant-dog-beds/ rather than creating a duplicate /comfort/ route.
         The soft-sided airline carrier converter now groups picks into classic, expandable, compact,
         and tote-style sections so the page can expand without turning into a single undifferentiated product wall.
         The furniture crates page includes double-compartment and multi-door picks alongside standard furniture options.
@@ -355,7 +357,11 @@ site_system:
     product_catalog: "src/data/product-catalog.ts — normalized admin inventory across every product data source; /admin/products/ must consume this data module and remain complete whenever products are added"
     cooling_products: "src/data/cooling-products.ts — 25 products with ASIN, affiliate URL, and image thumbnails"
     calming_products: "src/data/calming-products.ts — 13 products with ASIN, affiliate URL, and image thumbnails"
+<<<<<<< HEAD
     relaxation_products: "src/data/relaxation-products.ts — 100+ products (calming beds, orthopedic beds, chew-resistant beds, crates, travel beds, carriers, travel bags) with ASIN, affiliate URL, and image thumbnails"
+=======
+    relaxation_products: "src/data/relaxation-products.ts — 121 products (calming beds, orthopedic beds, chew-resistant beds, crates, travel beds, carriers, travel bags) with ASIN, affiliate URL, and image thumbnails"
+>>>>>>> cefabb0 (Rewrite chew-proof dog bed converter)
     tracking_products: "src/data/tracking-products.ts — 8 tracker products and 1 accessory product across cellular/off-grid/bluetooth/accessory types"
     raw_api_cache: "src/data/amazon-products/*.json — full SerpAPI/SearchAPI Amazon Product responses per ASIN; _index.json sidecar tracks fetchedAt/provider/title/image freshness diagnostics"
 
