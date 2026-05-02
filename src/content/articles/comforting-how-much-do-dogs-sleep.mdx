@@ -3,6 +3,12 @@ title: 'How Much Do Dogs Sleep? What Rest Really Looks Like'
 description: "Most adult dogs sleep 12 to 14 hours a day — and sleep quality matters as much as quantity. Here's what normal rest looks like, what disrupts it, and how to help."
 pubDate: 2026-03-24
 canonicalPath: '/comforting/how-much-do-dogs-sleep/'
+topics: [comfort, sleep, beds]
+pinnedRelated:
+  - '/comforting/best-calming-dog-beds/'
+  - '/comforting/best-orthopedic-dog-beds/'
+  - '/comforting/'
+relatedLabel: 'How Much Do Dogs Sleep?'
 ---
 
 import Toc from '@components/modules/Toc.astro';
@@ -41,12 +47,6 @@ export const faqs = [
     question: 'What kind of bed helps a dog sleep better?',
     answer: "It depends on your dog's sleep style and age. Dogs who curl up tightly or press against walls tend to sleep better with a raised-rim or donut-shaped bed. Older dogs, large breeds, and dogs with joint issues benefit most from orthopedic foam that distributes weight evenly and holds its shape over time. A flat, thin, or collapsed bed causes dogs to frequently shift positions, which disrupts their sleep and yours.",
   },
-];
-
-export const internalLinks = [
-  { label: 'Best Calming Dog Beds', href: '/comforting/best-calming-dog-beds/' },
-  { label: 'Best Orthopedic Dog Beds', href: '/comforting/best-orthopedic-dog-beds/' },
-  { label: 'Comfort & Rest Hub', href: '/comforting/' },
 ];
 
 <article class="collector-article container">
@@ -186,7 +186,7 @@ export const internalLinks = [
 
   <FAQ faqs={faqs} />
 
-  <InternalLinkStrip links={internalLinks} fromPage="how-much-do-dogs-sleep" />
+  <InternalLinkStrip currentHref="/comforting/how-much-do-dogs-sleep/" limit={3} fromPage="how-much-do-dogs-sleep" />
 
   <Disclosure />
 </article>

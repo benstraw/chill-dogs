@@ -5,6 +5,7 @@ const articleEntries = [
     topics: ['travel', 'road-trips'],
     pinnedRelated: ['/cooling/car-cooling-for-dogs/'],
     excludeRelated: ['/privacy-policy/'],
+    relatedLabel: 'Dog Road Trip Gear',
   }),
   createArticle('/travel/rhys-ran-away-cerro-san-luis-obispo/', 'The Day Rhys Ran Off', '2026-03-21'),
   createArticle('/travel/how-to-fly-with-a-dog/', 'How to Fly With a Dog', '2026-04-10'),
@@ -38,6 +39,7 @@ function createArticle(
     topics?: string[];
     pinnedRelated?: string[];
     excludeRelated?: string[];
+    relatedLabel?: string;
   } = {}
 ) {
   return {
@@ -96,6 +98,7 @@ describe('sitemap inventory', () => {
     expect(roadTrip?.topics).toEqual(['travel', 'road-trips']);
     expect(roadTrip?.pinnedRelated).toEqual(['/cooling/car-cooling-for-dogs/']);
     expect(roadTrip?.excludeRelated).toEqual(['/privacy-policy/']);
+    expect(roadTrip?.relatedLabel).toBe('Dog Road Trip Gear');
   });
 
   it('places article collectors after entry points and before remaining static sections', async () => {

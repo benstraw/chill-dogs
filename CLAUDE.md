@@ -30,8 +30,9 @@ bun run check:asins -- --quiet  # Same, issues only
 - New pages should define `topics` when section membership is too broad to rank related pages well, especially Comfort, Travel, Tracking, Cooling, and Calming overlap.
 - Use `pinnedRelated` only for intentional editorial relationships that should outrank algorithmic matches.
 - Use `excludeRelated` to prevent poor, redundant, or conflicting recommendations. Exclusion wins over pinning.
+- Use `relatedLabel` when a derived `InternalLinkStrip` pill needs shorter text than the page title.
 - Keep the official page model: `pageType: 'collector'` plus `collectorSubtype: 'article' | 'section'`. Do not invent fake page types such as `article-collector`.
-- Wave 1 only makes metadata and helper functions available; existing rendered `InternalLinkStrip` and `RelatedGuides` arrays remain in place until the migration wave for that page type.
+- Derived `InternalLinkStrip` is active for migrated article/tracking pages through the `currentHref` prop. Existing manual arrays remain in converter configs and `RelatedGuides` until their migration waves.
 
 ## Governing Principles
 

@@ -53,7 +53,8 @@ Repository guidance for coding agents working in `/Volumes/wanderer/dev/solo/chi
 - Complete sitemap inventory is the source of truth for related links. Static pages register metadata in `src/data/content-sitemap.ts`; article collectors can define metadata in MDX frontmatter.
 - Use `topics` as ranking signals when a section is too broad to infer good relationships.
 - Use `pinnedRelated` only for intentional editorial relationships, and `excludeRelated` for poor or conflicting matches. Exclusion wins over pinning.
-- Related derivation is available through `src/utils/related-pages.ts`, but existing rendered `InternalLinkStrip` and `RelatedGuides` arrays stay in place until their migration wave.
+- Use `relatedLabel` when a derived internal-link pill should be shorter than the page title.
+- Related derivation is active for migrated article/tracking `InternalLinkStrip` instances via `currentHref`. Manual arrays still exist for converter configs and `RelatedGuides` until their migration waves.
 - Keep article pages as `pageType: 'collector'` with `collectorSubtype: 'article'`; do not invent page types.
 
 ### Completion Gates

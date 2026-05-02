@@ -96,9 +96,10 @@ Related metadata may also be added in frontmatter:
 topics: [travel, road-trips, car-cooling]
 pinnedRelated: ['/cooling/car-cooling-for-dogs/']
 excludeRelated: ['/privacy-policy/']
+relatedLabel: 'Road Trip Gear'
 ```
 
-Until the related-content migration reaches article collectors, `InternalLinkStrip` remains manually rendered in the article body. Once migration is active, authors should manage relationship intent through `topics`, `pinnedRelated`, and `excludeRelated`.
+For migrated article collectors, render `InternalLinkStrip` with `currentHref` and keep relationship intent in `topics`, `pinnedRelated`, `excludeRelated`, and `relatedLabel`. Manual `links` arrays may still exist on older converter modules until those migration waves are complete.
 
 **`Disclosure`** — Required on any article that renders inline product cards. Place it after the prose, before or after `FAQ`. If no product cards appear inline, `Disclosure` is optional (the footer disclosure covers it).
 
@@ -222,13 +223,13 @@ Before submitting or shipping an article collector:
 
 - [ ] Page type declared: `collector · article`
 - [ ] Registered in the complete sitemap inventory
-- [ ] Added related metadata in frontmatter where useful: `topics`, `pinnedRelated`, `excludeRelated`
+- [ ] Added related metadata in frontmatter where useful: `topics`, `pinnedRelated`, `excludeRelated`, `relatedLabel`
 - [ ] Added to `docs/system-definition.yaml`
 - [ ] `Article` JSON-LD present with all required fields
 - [ ] `Toc` module included (if 4+ h2 sections) with matching `id` attributes
 - [ ] `FAQ` module included (minimum 3 questions)
 - [ ] `InternalLinkStrip` at the bottom, linking to relevant converters
-- [ ] Manual `InternalLinkStrip` kept in place unless this page type has been migrated to derived related links
+- [ ] `InternalLinkStrip` uses `currentHref` on migrated article collectors; manual `links` arrays are used only where migration has not reached yet
 - [ ] `Disclosure` included if inline product cards are present
 - [ ] No vet-authority language
 - [ ] No "we tested" claims

@@ -466,14 +466,8 @@ const itemListSchema = {
 
     <InternalLinkStrip
       heading="More Dog Tracking + Safety Guides"
-      links={[
-        { label: 'When Rhys Ran Away', href: ROUTES.rhysRanAway },
-        { label: 'Fi Collar Review', href: ROUTES.fiCollarReview },
-        { label: 'Garmin Dog Tracking', href: ROUTES.garminTracking },
-        { label: 'AirTag for Dogs', href: ROUTES.airtagForDogs },
-        { label: 'Dog Ran Away Guide', href: ROUTES.dogRanAwaySafety },
-        { label: 'Road Trip Chill Kit', href: ROUTES.roadTrip },
-      ]}
+      currentHref={ROUTES.trackingTop}
+      limit={6}
       fromPage={pageSlug}
     />
   </div>
