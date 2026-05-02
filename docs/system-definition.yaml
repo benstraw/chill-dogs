@@ -216,7 +216,7 @@ site_system:
         - "/affiliate-disclosure/"
         - "/subscribe/thanks/"
         - "/subscribe/confirmed/"
-      notes: "/admin/products/ is the canonical product inventory review page. Every product in any product data file must flow into this page through src/data/product-catalog.ts; do not hardcode product rows in the admin route. /content-sitemap/ is a hidden editor page that previews each listed route with final built share metadata, including post-build OG image rewrites."
+      notes: "/admin/products/ is the canonical product inventory review page. Every product in any product data file must flow into this page through src/data/product-catalog.ts; do not hardcode product rows in the admin route. /content-sitemap/ is a hidden editor page that previews the complete build-time sitemap inventory from src/data/sitemap-inventory.ts, which merges static pages with article collection pages and final built share metadata, including post-build OG image rewrites."
 
   modules:
     workhorse:
@@ -302,6 +302,7 @@ site_system:
     cms: "None (code-first content/config in repository)"
     hosting: "Static build deployment"
     seo_strategy: "collector captures intent; converter monetizes intent; variant routes remain canonicalized and noindex"
+    sitemap_inventory: "src/data/sitemap-inventory.ts composes staticSitemapSections with article MDX collection entries at build time; future related-content derivation should use the complete inventory instead of static-only sections."
 
   redirects:
     # Production: vercel.json → redirects array (true HTTP 301 at Vercel edge).
