@@ -8,6 +8,33 @@ import { ROUTES } from './routes';
 
 export type SitemapPageType = 'converter' | 'collector' | 'attractor' | 'informer';
 export type SitemapCollectorSubtype = 'section' | 'article';
+export const TOPICS = [
+  'cooling',
+  'heat-safety',
+  'car-cooling',
+  'cooling-mats',
+  'cooling-wearables',
+  'frozen-toys',
+  'calming',
+  'anxiety',
+  'car-anxiety',
+  'crate-training',
+  'fireworks',
+  'comfort',
+  'sleep',
+  'beds',
+  'orthopedic',
+  'crates',
+  'travel',
+  'road-trips',
+  'flying',
+  'carriers',
+  'tracking',
+  'gps-tracking',
+  'lost-dog-safety',
+] as const;
+
+export type SitemapTopic = typeof TOPICS[number];
 
 export interface SitemapPreview {
   title: string;
@@ -19,6 +46,10 @@ export interface SitemapPage {
   href: string;
   pageType: SitemapPageType;
   collectorSubtype?: SitemapCollectorSubtype;
+  topics?: SitemapTopic[];
+  pinnedRelated?: string[];
+  excludeRelated?: string[];
+  noindex?: boolean;
   preview: SitemapPreview;
 }
 
@@ -28,12 +59,15 @@ export interface SitemapSection {
   pages: SitemapPage[];
 }
 
-interface SitemapPageInput {
+export interface SitemapPageInput {
   baseTitle: string;
   description: string;
   href: string;
   pageType: SitemapPageType;
   collectorSubtype?: SitemapCollectorSubtype;
+  topics?: SitemapTopic[];
+  pinnedRelated?: string[];
+  excludeRelated?: string[];
   ogTitle?: string;
   ogImage?: string | ImageMetadata;
   noindex?: boolean;
@@ -58,6 +92,10 @@ export function createSitemapPage(input: SitemapPageInput): SitemapPage {
     href: input.href,
     pageType: input.pageType,
     collectorSubtype: input.collectorSubtype,
+    topics: input.topics,
+    pinnedRelated: input.pinnedRelated,
+    excludeRelated: input.excludeRelated,
+    noindex: input.noindex,
     preview: {
       title: resolveShareTitle(input.baseTitle, input.ogTitle),
       description: input.description,
@@ -86,6 +124,7 @@ export const staticSitemapSections: SitemapSection[] = [
         href: ROUTES.coolingHub,
         pageType: 'collector',
         collectorSubtype: 'section',
+        topics: ['cooling'],
       }),
       createSitemapPage({
         baseTitle: 'Calm & Comfort',
@@ -95,6 +134,7 @@ export const staticSitemapSections: SitemapSection[] = [
         href: ROUTES.calmingHub,
         pageType: 'collector',
         collectorSubtype: 'section',
+        topics: ['calming', 'anxiety'],
       }),
       createSitemapPage({
         baseTitle: 'Comfort & Rest',
@@ -104,6 +144,7 @@ export const staticSitemapSections: SitemapSection[] = [
         href: ROUTES.comfortHub,
         pageType: 'collector',
         collectorSubtype: 'section',
+        topics: ['comfort', 'sleep', 'beds', 'crates'],
       }),
     ],
   },
@@ -117,36 +158,42 @@ export const staticSitemapSections: SitemapSection[] = [
           'Beat the heat with our top picks: cooling mats, bandanas, vests, and freezable toys compared for comfort, durability, and safety all summer.',
         href: ROUTES.coolingTop,
         pageType: 'converter',
+        topics: ['cooling', 'heat-safety'],
       }),
       createSitemapPage({
         baseTitle: categoryMeta['car-cooling'].title,
         description: categoryMeta['car-cooling'].description,
         href: ROUTES.coolingCar,
         pageType: 'converter',
+        topics: ['cooling', 'heat-safety', 'car-cooling', 'travel', 'road-trips'],
       }),
       createSitemapPage({
         baseTitle: categoryMeta['cooling-mats'].title,
         description: categoryMeta['cooling-mats'].description,
         href: ROUTES.coolingMats,
         pageType: 'converter',
+        topics: ['cooling', 'heat-safety', 'cooling-mats', 'comfort'],
       }),
       createSitemapPage({
         baseTitle: categoryMeta['cooling-bandanas'].title,
         description: categoryMeta['cooling-bandanas'].description,
         href: ROUTES.coolingBandanas,
         pageType: 'converter',
+        topics: ['cooling', 'heat-safety', 'cooling-wearables'],
       }),
       createSitemapPage({
         baseTitle: categoryMeta['cooling-vests'].title,
         description: categoryMeta['cooling-vests'].description,
         href: ROUTES.coolingVests,
         pageType: 'converter',
+        topics: ['cooling', 'heat-safety', 'cooling-wearables'],
       }),
       createSitemapPage({
         baseTitle: categoryMeta['freezable-dog-toys'].title,
         description: categoryMeta['freezable-dog-toys'].description,
         href: ROUTES.coolingToys,
         pageType: 'converter',
+        topics: ['cooling', 'heat-safety', 'frozen-toys'],
       }),
     ],
   },
@@ -159,18 +206,21 @@ export const staticSitemapSections: SitemapSection[] = [
         description: calmingConverterPages['best-calming-products-for-anxious-dogs'].description,
         href: ROUTES.calmingTop,
         pageType: 'converter',
+        topics: ['calming', 'anxiety'],
       }),
       createSitemapPage({
         baseTitle: calmingConverterPages['best-thundershirt-alternatives'].title,
         description: calmingConverterPages['best-thundershirt-alternatives'].description,
         href: ROUTES.calmingAlternatives,
         pageType: 'converter',
+        topics: ['calming', 'anxiety'],
       }),
       createSitemapPage({
         baseTitle: calmingConverterPages['car-anxiety-for-dogs'].title,
         description: calmingConverterPages['car-anxiety-for-dogs'].description,
         href: ROUTES.calmingCar,
         pageType: 'converter',
+        topics: ['calming', 'anxiety', 'car-anxiety', 'travel', 'road-trips'],
       }),
     ],
   },
@@ -185,6 +235,7 @@ export const staticSitemapSections: SitemapSection[] = [
           'Compare the top dog GPS trackers — cellular (Fi, Halo, Garmin LTE), off-grid Garmin systems, and Bluetooth tags (AirTag). Honest trade-offs for each.',
         href: ROUTES.trackingTop,
         pageType: 'converter',
+        topics: ['tracking', 'gps-tracking', 'lost-dog-safety'],
       }),
       createSitemapPage({
         baseTitle: 'Fi Dog Collar Review: GPS Tracking for Everyday Dogs (2026)',
@@ -193,6 +244,7 @@ export const staticSitemapSections: SitemapSection[] = [
           'An honest look at Fi Series 3+ — cellular GPS tracking, escape alerts, and geofencing. What it does well, what it costs, and where it fails without cell signal.',
         href: ROUTES.fiCollarReview,
         pageType: 'converter',
+        topics: ['tracking', 'gps-tracking', 'lost-dog-safety'],
       }),
       createSitemapPage({
         baseTitle: 'Garmin Dog Tracking Collars: Off-Grid GPS for Wilderness & Hiking (2026)',
@@ -202,6 +254,7 @@ export const staticSitemapSections: SitemapSection[] = [
         href: ROUTES.garminTracking,
         pageType: 'collector',
         collectorSubtype: 'article',
+        topics: ['tracking', 'gps-tracking', 'lost-dog-safety'],
       }),
       createSitemapPage({
         baseTitle: "AirTag for Dogs: What It Can (and Can't) Actually Do",
@@ -210,6 +263,7 @@ export const staticSitemapSections: SitemapSection[] = [
         href: ROUTES.airtagForDogs,
         pageType: 'collector',
         collectorSubtype: 'article',
+        topics: ['tracking', 'gps-tracking', 'lost-dog-safety'],
       }),
     ],
   },
@@ -222,60 +276,70 @@ export const staticSitemapSections: SitemapSection[] = [
         description: relaxationConverterPages['best-calming-dog-beds'].description,
         href: ROUTES.comfortCalmingBeds,
         pageType: 'converter',
+        topics: ['comfort', 'sleep', 'beds', 'calming', 'anxiety'],
       }),
       createSitemapPage({
         baseTitle: relaxationConverterPages['best-orthopedic-dog-beds'].title,
         description: relaxationConverterPages['best-orthopedic-dog-beds'].description,
         href: ROUTES.comfortOrthopedicBeds,
         pageType: 'converter',
+        topics: ['comfort', 'sleep', 'beds', 'orthopedic'],
       }),
       createSitemapPage({
         baseTitle: relaxationConverterPages['best-puppy-crates'].title,
         description: relaxationConverterPages['best-puppy-crates'].description,
         href: ROUTES.comfortPuppyCrates,
         pageType: 'converter',
+        topics: ['comfort', 'crates', 'crate-training'],
       }),
       createSitemapPage({
         baseTitle: relaxationConverterPages['best-anxiety-dog-crates'].title,
         description: relaxationConverterPages['best-anxiety-dog-crates'].description,
         href: ROUTES.comfortAnxietyCrates,
         pageType: 'converter',
+        topics: ['comfort', 'crates', 'calming', 'anxiety'],
       }),
       createSitemapPage({
         baseTitle: relaxationConverterPages['best-travel-crates-for-road-trips'].title,
         description: relaxationConverterPages['best-travel-crates-for-road-trips'].description,
         href: ROUTES.comfortTravelCrates,
         pageType: 'converter',
+        topics: ['comfort', 'crates', 'travel', 'road-trips'],
       }),
       createSitemapPage({
         baseTitle: relaxationConverterPages['best-airline-crates-for-flying-with-your-dog'].title,
         description: relaxationConverterPages['best-airline-crates-for-flying-with-your-dog'].description,
         href: ROUTES.comfortAirlineCrates,
         pageType: 'converter',
+        topics: ['comfort', 'crates', 'travel', 'flying'],
       }),
       createSitemapPage({
         baseTitle: relaxationConverterPages['best-airline-approved-dog-carriers'].title,
         description: relaxationConverterPages['best-airline-approved-dog-carriers'].description,
         href: ROUTES.comfortAirlineCarriers,
         pageType: 'converter',
+        topics: ['comfort', 'travel', 'flying', 'carriers'],
       }),
       createSitemapPage({
         baseTitle: relaxationConverterPages['best-dog-travel-bags-for-flying'].title,
         description: relaxationConverterPages['best-dog-travel-bags-for-flying'].description,
         href: ROUTES.comfortTravelBags,
         pageType: 'converter',
+        topics: ['comfort', 'travel', 'flying', 'carriers'],
       }),
       createSitemapPage({
         baseTitle: relaxationConverterPages['best-furniture-dog-crates'].title,
         description: relaxationConverterPages['best-furniture-dog-crates'].description,
         href: ROUTES.comfortFurnitureCrates,
         pageType: 'converter',
+        topics: ['comfort', 'crates'],
       }),
       createSitemapPage({
         baseTitle: relaxationConverterPages['best-heavy-duty-dog-crates'].title,
         description: relaxationConverterPages['best-heavy-duty-dog-crates'].description,
         href: ROUTES.comfortHeavyDutyCrates,
         pageType: 'converter',
+        topics: ['comfort', 'crates', 'anxiety'],
       }),
     ],
   },

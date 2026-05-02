@@ -1,7 +1,11 @@
 import { describe, expect, it, vi } from 'vitest';
 
 const articleEntries = [
-  createArticle('/travel/dog-road-trip-gear/', 'Dog Road Trip Gear', '2026-03-31'),
+  createArticle('/travel/dog-road-trip-gear/', 'Dog Road Trip Gear', '2026-03-31', {
+    topics: ['travel', 'road-trips'],
+    pinnedRelated: ['/cooling/car-cooling-for-dogs/'],
+    excludeRelated: ['/privacy-policy/'],
+  }),
   createArticle('/travel/rhys-ran-away-cerro-san-luis-obispo/', 'The Day Rhys Ran Off', '2026-03-21'),
   createArticle('/travel/how-to-fly-with-a-dog/', 'How to Fly With a Dog', '2026-04-10'),
   createArticle('/cooling/how-hot-is-too-hot-for-dogs/', 'How Hot Is Too Hot for Dogs?', '2026-03-10'),
@@ -26,7 +30,16 @@ import {
   getCompleteSitemapSections,
 } from '../data/sitemap-inventory';
 
-function createArticle(canonicalPath: string, title: string, pubDate: string) {
+function createArticle(
+  canonicalPath: string,
+  title: string,
+  pubDate: string,
+  metadata: {
+    topics?: string[];
+    pinnedRelated?: string[];
+    excludeRelated?: string[];
+  } = {}
+) {
   return {
     id: canonicalPath,
     slug: canonicalPath,
@@ -37,6 +50,7 @@ function createArticle(canonicalPath: string, title: string, pubDate: string) {
       description: `${title} description`,
       pubDate: new Date(pubDate),
       canonicalPath,
+      ...metadata,
     },
   };
 }
@@ -73,6 +87,15 @@ describe('sitemap inventory', () => {
     const hrefs = pages.map((page) => page.href);
 
     expect(hrefs).toEqual(expect.arrayContaining(articleEntries.map((entry) => entry.data.canonicalPath)));
+  });
+
+  it('passes article related metadata from frontmatter into sitemap pages', async () => {
+    const pages = await getCompleteSitemapPages();
+    const roadTrip = pages.find((page) => page.href === '/travel/dog-road-trip-gear/');
+
+    expect(roadTrip?.topics).toEqual(['travel', 'road-trips']);
+    expect(roadTrip?.pinnedRelated).toEqual(['/cooling/car-cooling-for-dogs/']);
+    expect(roadTrip?.excludeRelated).toEqual(['/privacy-policy/']);
   });
 
   it('places article collectors after entry points and before remaining static sections', async () => {

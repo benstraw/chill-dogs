@@ -15,6 +15,9 @@ export async function getArticleSitemapSection(): Promise<SitemapSection> {
         href: entry.data.canonicalPath,
         pageType: 'collector',
         collectorSubtype: 'article',
+        topics: entry.data.topics,
+        pinnedRelated: entry.data.pinnedRelated,
+        excludeRelated: entry.data.excludeRelated,
       })
     );
 
