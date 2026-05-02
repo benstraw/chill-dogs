@@ -1,30 +1,8 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
-import { createSitemapPage, staticSitemapSections, type SitemapSection } from '@data/content-sitemap';
+import { getCompleteSitemapSections } from '@data/sitemap-inventory';
 
-const articleEntries = await getCollection('articles');
-const articlePages = articleEntries
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .map((entry) =>
-    createSitemapPage({
-      baseTitle: entry.data.title,
-      ogTitle: entry.data.ogTitle,
-      description: entry.data.description,
-      ogImage: entry.data.ogImage,
-      href: entry.data.canonicalPath,
-      pageType: 'collector',
-      collectorSubtype: 'article',
-    })
-  );
-
-const articlesSection: SitemapSection = {
-  title: 'Articles (from collection)',
-  description: 'Article collectors auto-discovered from the MDX content collection — sorted by publish date.',
-  pages: articlePages,
-};
-
-const allSections = [staticSitemapSections[0], articlesSection, ...staticSitemapSections.slice(1)];
+const allSections = await getCompleteSitemapSections();
 const totalPages = allSections.reduce((count, section) => count + section.pages.length, 0);
 ---
 
