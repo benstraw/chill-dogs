@@ -115,7 +115,7 @@ describe('site smoke tests', () => {
     expect(links).toContain('/comforting/best-travel-crates-for-road-trips/');
   });
 
-  it('renders derived InternalLinkStrip links on migrated article and tracking pages', () => {
+  it('renders derived InternalLinkStrip links on migrated pages', () => {
     const cases = [
       {
         page: path.join('cooling', 'keep-dog-cool-in-car', 'index.html'),
@@ -160,11 +160,58 @@ describe('site smoke tests', () => {
           '/cooling/best-cooling-products-for-dogs/',
         ],
       },
+      {
+        page: path.join('calming', 'best-calming-products-for-anxious-dogs', 'index.html'),
+        expected: [
+          '/travel/dog-road-trip-gear/',
+          '/cooling/best-cooling-products-for-dogs/',
+          '/calming/',
+          '/calming/best-thundershirt-alternatives/',
+          '/gear/best-dog-gps-trackers/',
+          '/safety/what-to-do-if-your-dog-runs-away/',
+        ],
+      },
+      {
+        page: path.join('comforting', 'best-anxiety-dog-crates', 'index.html'),
+        expected: [
+          '/calming/crate-training-for-dogs/',
+          '/calming/best-calming-products-for-anxious-dogs/',
+          '/comforting/best-heavy-duty-dog-crates/',
+          '/comforting/best-puppy-crates/',
+        ],
+      },
     ];
 
     for (const testCase of cases) {
       const doc = readBuiltPage(testCase.page);
       const links = Array.from(doc.querySelectorAll<HTMLAnchorElement>('.ils-link'));
+
+      expect(links.map((link) => link.getAttribute('href'))).toEqual(testCase.expected);
+      for (const link of links) {
+        expect(link.getAttribute('data-track')).toBe('collector_to_converter_click');
+      }
+    }
+  });
+
+  it('renders derived RelatedGuides cards on migrated converter pages', () => {
+    const cases = [
+      {
+        page: path.join('calming', 'best-calming-products-for-anxious-dogs', 'index.html'),
+        expected: ['/travel/dog-road-trip-gear/', '/cooling/best-cooling-products-for-dogs/'],
+      },
+      {
+        page: path.join('comforting', 'best-travel-crates-for-road-trips', 'index.html'),
+        expected: [
+          '/travel/dog-road-trip-gear/',
+          '/calming/crate-training-for-dogs/',
+          '/comforting/best-airline-crates-for-flying-with-your-dog/',
+        ],
+      },
+    ];
+
+    for (const testCase of cases) {
+      const doc = readBuiltPage(testCase.page);
+      const links = Array.from(doc.querySelectorAll<HTMLAnchorElement>('.related-guide-card'));
 
       expect(links.map((link) => link.getAttribute('href'))).toEqual(testCase.expected);
       for (const link of links) {

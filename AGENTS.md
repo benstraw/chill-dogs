@@ -54,7 +54,7 @@ Repository guidance for coding agents working in `/Volumes/wanderer/dev/solo/chi
 - Use `topics` as ranking signals when a section is too broad to infer good relationships.
 - Use `pinnedRelated` only for intentional editorial relationships, and `excludeRelated` for poor or conflicting matches. Exclusion wins over pinning.
 - Use `relatedLabel` when a derived internal-link pill should be shorter than the page title.
-- Related derivation is active for migrated article/tracking and cooling converter `InternalLinkStrip` instances via `currentHref`. Manual arrays still exist for calming/comfort converter configs and `RelatedGuides` until their migration waves.
+- Related derivation is active for `InternalLinkStrip` and `RelatedGuides` in migrated article/tracking and converter flows via `currentHref`. Do not add new manual related arrays.
 - Keep article pages as `pageType: 'collector'` with `collectorSubtype: 'article'`; do not invent page types.
 
 ### Completion Gates

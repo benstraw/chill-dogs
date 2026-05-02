@@ -1,6 +1,6 @@
 # Related Content
 
-This document explains the related-content system. Derived `InternalLinkStrip` rendering is active for migrated article/tracking pages and cooling converters; calming/comfort converter configs and `RelatedGuides` still use manual arrays until later migration waves.
+This document explains the related-content system. Derived `InternalLinkStrip` and `RelatedGuides` rendering is active for migrated article/tracking and converter flows. New related relationships should be managed through sitemap metadata, not manual arrays.
 
 ## Source Of Truth
 
@@ -54,5 +54,5 @@ When adding a page:
 - Add `topics` if the page belongs to a broad section like Comfort, Travel, or Tracking.
 - Add `pinnedRelated` only for editorially important relationships.
 - Add `excludeRelated` when an automatic match would be unhelpful.
-- Use `currentHref` on migrated `InternalLinkStrip` instances instead of passing manual `links`.
-- Keep manual rendered related arrays in place for calming/comfort converter configs and `RelatedGuides` until the relevant migration wave replaces them.
+- Use `currentHref` on migrated `InternalLinkStrip` and `RelatedGuides` instances instead of passing manual `links` or `guides`.
+- Do not add new manual rendered related arrays; encode relationship intent in sitemap metadata.

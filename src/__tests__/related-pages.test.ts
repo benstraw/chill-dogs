@@ -198,6 +198,8 @@ describe('related pages', () => {
         createPage({ href: '/travel/rhys-ran-away-cerro-san-luis-obispo/', pageType: 'collector', collectorSubtype: 'article' }),
         createPage({ href: '/safety/what-to-do-if-your-dog-runs-away/', pageType: 'collector', collectorSubtype: 'article' }),
         createPage({ href: '/travel/dog-road-trip-gear/', pageType: 'collector', collectorSubtype: 'article' }),
+        createPage({ href: '/calming/crate-training-for-dogs/', pageType: 'collector', collectorSubtype: 'article' }),
+        createPage({ href: '/travel/how-to-fly-with-a-dog/', pageType: 'collector', collectorSubtype: 'article' }),
       ]),
     ];
     const pages = sections.flatMap((section) => section.pages);
@@ -212,6 +214,19 @@ describe('related pages', () => {
       '/cooling/cooling-bandanas/',
       '/cooling/cooling-vests/',
       '/cooling/freezable-dog-toys/',
+      '/calming/best-calming-products-for-anxious-dogs/',
+      '/calming/best-thundershirt-alternatives/',
+      '/calming/car-anxiety-for-dogs/',
+      '/comforting/best-calming-dog-beds/',
+      '/comforting/best-orthopedic-dog-beds/',
+      '/comforting/best-puppy-crates/',
+      '/comforting/best-anxiety-dog-crates/',
+      '/comforting/best-travel-crates-for-road-trips/',
+      '/comforting/best-airline-crates-for-flying-with-your-dog/',
+      '/comforting/best-airline-approved-dog-carriers/',
+      '/comforting/best-dog-travel-bags-for-flying/',
+      '/comforting/best-furniture-dog-crates/',
+      '/comforting/best-heavy-duty-dog-crates/',
     ];
 
     for (const href of migratedHrefs) {

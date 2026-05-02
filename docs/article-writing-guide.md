@@ -99,7 +99,7 @@ excludeRelated: ['/privacy-policy/']
 relatedLabel: 'Road Trip Gear'
 ```
 
-For migrated article collectors, render `InternalLinkStrip` with `currentHref` and keep relationship intent in `topics`, `pinnedRelated`, `excludeRelated`, and `relatedLabel`. Manual `links` arrays may still exist on older converter modules until those migration waves are complete.
+For migrated article collectors, render `InternalLinkStrip` with `currentHref` and keep relationship intent in `topics`, `pinnedRelated`, `excludeRelated`, and `relatedLabel`. Do not add new manual related arrays.
 
 **`Disclosure`** — Required on any article that renders inline product cards. Place it after the prose, before or after `FAQ`. If no product cards appear inline, `Disclosure` is optional (the footer disclosure covers it).
 
@@ -229,7 +229,7 @@ Before submitting or shipping an article collector:
 - [ ] `Toc` module included (if 4+ h2 sections) with matching `id` attributes
 - [ ] `FAQ` module included (minimum 3 questions)
 - [ ] `InternalLinkStrip` at the bottom, linking to relevant converters
-- [ ] `InternalLinkStrip` uses `currentHref` on migrated article collectors; manual `links` arrays are used only where migration has not reached yet
+- [ ] `InternalLinkStrip` uses `currentHref` on migrated article collectors
 - [ ] `Disclosure` included if inline product cards are present
 - [ ] No vet-authority language
 - [ ] No "we tested" claims

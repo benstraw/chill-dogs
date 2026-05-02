@@ -26,7 +26,7 @@ site_system:
       - "CLAUDE.md"
 
   related_content:
-    status: "active_for_article_tracking_and_cooling_converter_internal_link_strip"
+    status: "active_for_migrated_internal_link_strip_and_related_guides"
     source_of_truth: "complete build-time sitemap inventory"
     helper: "src/utils/related-pages.ts"
     metadata_fields:
@@ -35,10 +35,11 @@ site_system:
       - "excludeRelated"
       - "relatedLabel"
     notes: >
-      Related-link derivation is active for migrated article/tracking and cooling converter
-      InternalLinkStrip instances via currentHref. Calming/comfort converter configs and
-      RelatedGuides still use existing manual arrays until their migration waves activate
-      the helper.
+      Related-link derivation is active for migrated InternalLinkStrip and RelatedGuides
+      instances via currentHref. New related relationships should be encoded as sitemap
+      metadata rather than manual rendered arrays. Manual related arrays are deprecated
+      now that related-content migration has started; preserve editorial intent with
+      pinnedRelated and excludeRelated instead.
 
   keystone_metrics:
     primary: "Amazon affiliate revenue (qualified outbound clicks to purchases)"
