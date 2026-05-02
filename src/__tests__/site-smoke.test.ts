@@ -142,6 +142,24 @@ describe('site smoke tests', () => {
           '/safety/what-to-do-if-your-dog-runs-away/',
         ],
       },
+      {
+        page: path.join('cooling', 'cooling-mats', 'index.html'),
+        expected: [
+          '/cooling/cooling-bandanas/',
+          '/cooling/cooling-vests/',
+          '/cooling/freezable-dog-toys/',
+          '/cooling/best-cooling-products-for-dogs/',
+        ],
+      },
+      {
+        page: path.join('cooling', 'car-cooling-for-dogs', 'index.html'),
+        expected: [
+          '/travel/dog-road-trip-gear/',
+          '/cooling/cooling-mats/',
+          '/cooling/cooling-vests/',
+          '/cooling/best-cooling-products-for-dogs/',
+        ],
+      },
     ];
 
     for (const testCase of cases) {

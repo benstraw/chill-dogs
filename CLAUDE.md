@@ -32,7 +32,7 @@ bun run check:asins -- --quiet  # Same, issues only
 - Use `excludeRelated` to prevent poor, redundant, or conflicting recommendations. Exclusion wins over pinning.
 - Use `relatedLabel` when a derived `InternalLinkStrip` pill needs shorter text than the page title.
 - Keep the official page model: `pageType: 'collector'` plus `collectorSubtype: 'article' | 'section'`. Do not invent fake page types such as `article-collector`.
-- Derived `InternalLinkStrip` is active for migrated article/tracking pages through the `currentHref` prop. Existing manual arrays remain in converter configs and `RelatedGuides` until their migration waves.
+- Derived `InternalLinkStrip` is active for migrated article/tracking pages and cooling converters through the `currentHref` prop. Existing manual arrays remain in calming/comfort converter configs and `RelatedGuides` until their migration waves.
 
 ## Governing Principles
 

@@ -173,6 +173,12 @@ export const staticSitemapSections: SitemapSection[] = [
         href: ROUTES.coolingCar,
         pageType: 'converter',
         topics: ['cooling', 'heat-safety', 'car-cooling', 'travel', 'road-trips'],
+        pinnedRelated: [
+          ROUTES.roadTrip,
+          ROUTES.coolingMats,
+          ROUTES.coolingVests,
+          ROUTES.coolingTop,
+        ],
         relatedLabel: 'Car Cooling Picks',
       }),
       createSitemapPage({
@@ -181,6 +187,12 @@ export const staticSitemapSections: SitemapSection[] = [
         href: ROUTES.coolingMats,
         pageType: 'converter',
         topics: ['cooling', 'heat-safety', 'cooling-mats', 'comfort'],
+        pinnedRelated: [
+          ROUTES.coolingBandanas,
+          ROUTES.coolingVests,
+          ROUTES.coolingToys,
+          ROUTES.coolingTop,
+        ],
         relatedLabel: 'Best Cooling Mats',
       }),
       createSitemapPage({
@@ -189,6 +201,12 @@ export const staticSitemapSections: SitemapSection[] = [
         href: ROUTES.coolingBandanas,
         pageType: 'converter',
         topics: ['cooling', 'heat-safety', 'cooling-wearables'],
+        pinnedRelated: [
+          ROUTES.coolingMats,
+          ROUTES.coolingVests,
+          ROUTES.coolingToys,
+          ROUTES.coolingTop,
+        ],
         relatedLabel: 'Best Cooling Bandanas',
       }),
       createSitemapPage({
@@ -197,6 +215,12 @@ export const staticSitemapSections: SitemapSection[] = [
         href: ROUTES.coolingVests,
         pageType: 'converter',
         topics: ['cooling', 'heat-safety', 'cooling-wearables'],
+        pinnedRelated: [
+          ROUTES.coolingMats,
+          ROUTES.coolingBandanas,
+          ROUTES.coolingToys,
+          ROUTES.coolingTop,
+        ],
         relatedLabel: 'Best Cooling Vests',
       }),
       createSitemapPage({
@@ -205,6 +229,12 @@ export const staticSitemapSections: SitemapSection[] = [
         href: ROUTES.coolingToys,
         pageType: 'converter',
         topics: ['cooling', 'heat-safety', 'frozen-toys'],
+        pinnedRelated: [
+          ROUTES.coolingMats,
+          ROUTES.coolingBandanas,
+          ROUTES.coolingVests,
+          ROUTES.coolingTop,
+        ],
         relatedLabel: 'Freezable Dog Toys',
       }),
     ],

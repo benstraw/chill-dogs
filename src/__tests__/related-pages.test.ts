@@ -207,6 +207,11 @@ describe('related pages', () => {
       '/gear/fi-dog-collar-review/',
       '/gear/garmin-dog-tracking-collars/',
       '/gear/airtag-for-dogs/',
+      '/cooling/car-cooling-for-dogs/',
+      '/cooling/cooling-mats/',
+      '/cooling/cooling-bandanas/',
+      '/cooling/cooling-vests/',
+      '/cooling/freezable-dog-toys/',
     ];
 
     for (const href of migratedHrefs) {

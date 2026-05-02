@@ -1,6 +1,6 @@
 # Related Content
 
-This document explains the related-content system. Derived `InternalLinkStrip` rendering is active for migrated article and tracking pages; converter config arrays and `RelatedGuides` still use manual arrays until later migration waves.
+This document explains the related-content system. Derived `InternalLinkStrip` rendering is active for migrated article/tracking pages and cooling converters; calming/comfort converter configs and `RelatedGuides` still use manual arrays until later migration waves.
 
 ## Source Of Truth
 
@@ -55,4 +55,4 @@ When adding a page:
 - Add `pinnedRelated` only for editorially important relationships.
 - Add `excludeRelated` when an automatic match would be unhelpful.
 - Use `currentHref` on migrated `InternalLinkStrip` instances instead of passing manual `links`.
-- Keep manual rendered related arrays in place for converter configs and `RelatedGuides` until the relevant migration wave replaces them.
+- Keep manual rendered related arrays in place for calming/comfort converter configs and `RelatedGuides` until the relevant migration wave replaces them.
