@@ -25,6 +25,20 @@ site_system:
       - "AGENTS.md"
       - "CLAUDE.md"
 
+  related_content:
+    status: "metadata_and_helper_available_not_rendering_active"
+    source_of_truth: "complete build-time sitemap inventory"
+    helper: "src/utils/related-pages.ts"
+    metadata_fields:
+      - "topics"
+      - "pinnedRelated"
+      - "excludeRelated"
+    notes: >
+      Related-link derivation is available through sitemap metadata, but public rendering
+      still uses existing manual InternalLinkStrip and RelatedGuides arrays until migration
+      waves activate the helper by page type. Manual related arrays become deprecated only
+      after the relevant migration starts.
+
   keystone_metrics:
     primary: "Amazon affiliate revenue (qualified outbound clicks to purchases)"
     secondary: "collector_to_converter_click rate"

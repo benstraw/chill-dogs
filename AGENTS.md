@@ -48,6 +48,14 @@ Repository guidance for coding agents working in `/Volumes/wanderer/dev/solo/chi
 - At least one above-the-fold path to a `converter` is required.
 - `collector` pages should aggregate, qualify, and route intent, not duplicate full converter comparison implementations.
 
+### Related Content
+
+- Complete sitemap inventory is the source of truth for related links. Static pages register metadata in `src/data/content-sitemap.ts`; article collectors can define metadata in MDX frontmatter.
+- Use `topics` as ranking signals when a section is too broad to infer good relationships.
+- Use `pinnedRelated` only for intentional editorial relationships, and `excludeRelated` for poor or conflicting matches. Exclusion wins over pinning.
+- Related derivation is available through `src/utils/related-pages.ts`, but existing rendered `InternalLinkStrip` and `RelatedGuides` arrays stay in place until their migration wave.
+- Keep article pages as `pageType: 'collector'` with `collectorSubtype: 'article'`; do not invent page types.
+
 ### Completion Gates
 
 - Verify internal route integrity (no dead or malformed links).

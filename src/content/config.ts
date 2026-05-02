@@ -1,4 +1,5 @@
 import { defineCollection, z } from 'astro:content';
+import { TOPICS } from '../data/content-sitemap';
 
 const articles = defineCollection({
   type: 'content',
@@ -10,6 +11,9 @@ const articles = defineCollection({
       pubDate: z.date(),
       canonicalPath: z.string(),
       ogImage: image().optional(),
+      topics: z.array(z.enum(TOPICS)).optional(),
+      pinnedRelated: z.array(z.string()).optional(),
+      excludeRelated: z.array(z.string()).optional(),
     }),
 });
 
