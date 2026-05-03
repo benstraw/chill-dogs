@@ -13,7 +13,7 @@ describe('cooling product data integrity', () => {
     }
   });
 
-  it('every category has complete meta with FAQs and internal links', () => {
+  it('every category has complete meta with FAQs', () => {
     const categories: ProductCategory[] = [
       'cooling-mats',
       'cooling-bandanas',
@@ -28,11 +28,6 @@ describe('cooling product data integrity', () => {
       expect(meta.heroHeadline).toBeTruthy();
       expect(meta.introCopy).toBeTruthy();
       expect(meta.faqs.length).toBeGreaterThan(0);
-
-      for (const link of meta.internalLinks) {
-        expect(link.label).toBeTruthy();
-        expect(link.href).toMatch(/^\//);
-      }
     }
   });
 });

@@ -318,13 +318,8 @@ const articleSchema = {
 
     <InternalLinkStrip
       heading="More Dog Tracking Guides"
-      links={[
-        { label: 'All GPS Trackers', href: ROUTES.trackingTop },
-        { label: 'Garmin Off-Grid Systems', href: ROUTES.garminTracking },
-        { label: 'AirTag for Dogs', href: ROUTES.airtagForDogs },
-        { label: 'When Rhys Ran Away', href: ROUTES.rhysRanAway },
-        { label: 'Dog Ran Away Guide', href: ROUTES.dogRanAwaySafety },
-      ]}
+      currentHref={ROUTES.fiCollarReview}
+      limit={5}
       fromPage={pageSlug}
     />
   </div>

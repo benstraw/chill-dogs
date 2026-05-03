@@ -115,6 +115,111 @@ describe('site smoke tests', () => {
     expect(links).toContain('/comforting/best-travel-crates-for-road-trips/');
   });
 
+  it('renders derived InternalLinkStrip links on migrated pages', () => {
+    const cases = [
+      {
+        page: path.join('cooling', 'keep-dog-cool-in-car', 'index.html'),
+        expected: ['/cooling/car-cooling-for-dogs/', '/cooling/cooling-mats/', '/cooling/cooling-bandanas/', '/travel/dog-road-trip-gear/'],
+      },
+      {
+        page: path.join('travel', 'how-to-fly-with-a-dog', 'index.html'),
+        expected: [
+          '/comforting/best-airline-approved-dog-carriers/',
+          '/comforting/best-dog-travel-bags-for-flying/',
+          '/comforting/best-airline-crates-for-flying-with-your-dog/',
+          '/calming/best-calming-products-for-anxious-dogs/',
+          '/calming/car-anxiety-for-dogs/',
+          '/travel/dog-road-trip-gear/',
+        ],
+      },
+      {
+        page: path.join('gear', 'fi-dog-collar-review', 'index.html'),
+        expected: [
+          '/gear/best-dog-gps-trackers/',
+          '/gear/garmin-dog-tracking-collars/',
+          '/gear/airtag-for-dogs/',
+          '/travel/rhys-ran-away-cerro-san-luis-obispo/',
+          '/safety/what-to-do-if-your-dog-runs-away/',
+        ],
+      },
+      {
+        page: path.join('cooling', 'cooling-mats', 'index.html'),
+        expected: [
+          '/cooling/cooling-bandanas/',
+          '/cooling/cooling-vests/',
+          '/cooling/freezable-dog-toys/',
+          '/cooling/best-cooling-products-for-dogs/',
+        ],
+      },
+      {
+        page: path.join('cooling', 'car-cooling-for-dogs', 'index.html'),
+        expected: [
+          '/travel/dog-road-trip-gear/',
+          '/cooling/cooling-mats/',
+          '/cooling/cooling-vests/',
+          '/cooling/best-cooling-products-for-dogs/',
+        ],
+      },
+      {
+        page: path.join('calming', 'best-calming-products-for-anxious-dogs', 'index.html'),
+        expected: [
+          '/travel/dog-road-trip-gear/',
+          '/cooling/best-cooling-products-for-dogs/',
+          '/calming/',
+          '/calming/best-thundershirt-alternatives/',
+          '/gear/best-dog-gps-trackers/',
+          '/safety/what-to-do-if-your-dog-runs-away/',
+        ],
+      },
+      {
+        page: path.join('comforting', 'best-anxiety-dog-crates', 'index.html'),
+        expected: [
+          '/calming/crate-training-for-dogs/',
+          '/calming/best-calming-products-for-anxious-dogs/',
+          '/comforting/best-heavy-duty-dog-crates/',
+          '/comforting/best-puppy-crates/',
+        ],
+      },
+    ];
+
+    for (const testCase of cases) {
+      const doc = readBuiltPage(testCase.page);
+      const links = Array.from(doc.querySelectorAll<HTMLAnchorElement>('.ils-link'));
+
+      expect(links.map((link) => link.getAttribute('href'))).toEqual(testCase.expected);
+      for (const link of links) {
+        expect(link.getAttribute('data-track')).toBe('collector_to_converter_click');
+      }
+    }
+  });
+
+  it('renders derived RelatedGuides cards on migrated converter pages', () => {
+    const cases = [
+      {
+        page: path.join('calming', 'best-calming-products-for-anxious-dogs', 'index.html'),
+        expected: ['/travel/dog-road-trip-gear/', '/cooling/best-cooling-products-for-dogs/'],
+      },
+      {
+        page: path.join('comforting', 'best-travel-crates-for-road-trips', 'index.html'),
+        expected: [
+          '/travel/dog-road-trip-gear/',
+          '/calming/crate-training-for-dogs/',
+          '/comforting/best-airline-crates-for-flying-with-your-dog/',
+        ],
+      },
+    ];
+
+    for (const testCase of cases) {
+      const doc = readBuiltPage(testCase.page);
+      const links = Array.from(doc.querySelectorAll<HTMLAnchorElement>('.related-guide-card'));
+
+      expect(links.map((link) => link.getAttribute('href'))).toEqual(testCase.expected);
+      for (const link of links) {
+        expect(link.getAttribute('data-track')).toBe('collector_to_converter_click');
+      }
+    }
+  });
+
   it('orders homepage article cards by article publish date', () => {
     const doc = readBuiltPage('index.html');
     const renderedArticleLinks = [
