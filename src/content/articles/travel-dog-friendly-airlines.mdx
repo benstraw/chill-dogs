@@ -4,6 +4,14 @@ description: 'Most airlines only allow small dogs under the seat, but these dog-
 ogTitle: 'Best Dog-Friendly Airlines Where Dogs Fly With You'
 pubDate: 2026-05-01
 canonicalPath: '/travel/dog-friendly-airlines/'
+topics: [travel, flying, carriers, calming, anxiety]
+pinnedRelated:
+  - '/travel/how-to-fly-with-a-dog/'
+  - '/comforting/best-airline-approved-dog-carriers/'
+  - '/comforting/best-dog-travel-bags-for-flying/'
+  - '/calming/car-anxiety-for-dogs/'
+  - '/travel/dog-road-trip-gear/'
+relatedLabel: 'Dog-Friendly Airlines'
 ---
 
 import Toc from '@components/modules/Toc.astro';
@@ -43,14 +51,6 @@ export const dogFriendlyAirlineFaqs = [
     question: 'Are normal airlines included in this list?',
     answer: 'Not as the focus. Delta, Alaska, United, American, JetBlue, and similar carriers mostly use the standard small-dog-in-an-under-seat-carrier model. This guide is about the rarer options where dogs can stay meaningfully closer to their humans in the cabin, including larger-dog possibilities.',
   },
-];
-
-export const relatedLinks = [
-  { label: 'How to Fly With a Dog', href: '/travel/how-to-fly-with-a-dog/' },
-  { label: 'Best Airline-Approved Dog Carriers', href: '/comforting/best-airline-approved-dog-carriers/' },
-  { label: 'Best Dog Travel Bags for Flying', href: '/comforting/best-dog-travel-bags-for-flying/' },
-  { label: 'Calming Help for Travel Anxiety', href: '/calming/car-anxiety-for-dogs/' },
-  { label: 'Dog Road Trip Gear', href: '/travel/dog-road-trip-gear/' },
 ];
 
 <article class="collector-article container">
@@ -248,5 +248,10 @@ export const relatedLinks = [
 
   <FAQ faqs={dogFriendlyAirlineFaqs} />
   <Disclosure />
-  <InternalLinkStrip heading="More Dog Travel Guides" links={relatedLinks} fromPage="dog-friendly-airlines" />
+  <InternalLinkStrip
+    heading="More Dog Travel Guides"
+    currentHref="/travel/dog-friendly-airlines/"
+    limit={5}
+    fromPage="dog-friendly-airlines"
+  />
 </article>
