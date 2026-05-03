@@ -26,7 +26,6 @@ export interface CategoryMeta {
   heroHeadline: string;
   introCopy: string;
   faqs: { question: string; answer: string }[];
-  internalLinks: { label: string; href: string }[];
 }
 
 // ─── Products ────────────────────────────────────────────────────────
@@ -516,12 +515,6 @@ export const categoryMeta: Record<ProductCategory, CategoryMeta> = {
           'Every 1–2 hours is a reasonable baseline, but dogs that are stressed, panting heavily, or in hot weather may need more frequent breaks. Always offer cool (not ice cold) water.',
       },
     ],
-    internalLinks: [
-      { label: 'Road Trip Chill Kit', href: '/travel/dog-road-trip-gear/' },
-      { label: 'Cooling Mats', href: '/cooling/cooling-mats/' },
-      { label: 'Cooling Vests', href: '/cooling/cooling-vests/' },
-      { label: 'All Cooling Products', href: '/cooling/best-cooling-products-for-dogs/' },
-    ],
   },
   'cooling-mats': {
     title: 'Best Cooling Mats for Dogs (2026)',
@@ -547,12 +540,6 @@ export const categoryMeta: Record<ProductCategory, CategoryMeta> = {
           'Absolutely — most mats are designed to fold or trim to fit standard crate sizes. The Arf Pets mat is especially good for crates.',
       },
     ],
-    internalLinks: [
-      { label: 'Cooling Bandanas', href: '/cooling/cooling-bandanas/' },
-      { label: 'Cooling Vests', href: '/cooling/cooling-vests/' },
-      { label: 'Freezable Toys', href: '/cooling/freezable-dog-toys/' },
-      { label: 'All Cooling Products', href: '/cooling/best-cooling-products-for-dogs/' },
-    ],
   },
   'cooling-bandanas': {
     title: 'Best Cooling Bandanas for Dogs (2026)',
@@ -577,12 +564,6 @@ export const categoryMeta: Record<ProductCategory, CategoryMeta> = {
         answer:
           'Yes, as long as the bandana fits snugly without being too tight. Always supervise puppies to prevent chewing.',
       },
-    ],
-    internalLinks: [
-      { label: 'Cooling Mats', href: '/cooling/cooling-mats/' },
-      { label: 'Cooling Vests', href: '/cooling/cooling-vests/' },
-      { label: 'Freezable Toys', href: '/cooling/freezable-dog-toys/' },
-      { label: 'All Cooling Products', href: '/cooling/best-cooling-products-for-dogs/' },
     ],
   },
   'cooling-vests': {
@@ -614,12 +595,6 @@ export const categoryMeta: Record<ProductCategory, CategoryMeta> = {
           'Most can be hand-washed with mild soap and air-dried. Check the label — machine washing can damage evaporative layers.',
       },
     ],
-    internalLinks: [
-      { label: 'Cooling Mats', href: '/cooling/cooling-mats/' },
-      { label: 'Cooling Bandanas', href: '/cooling/cooling-bandanas/' },
-      { label: 'Freezable Toys', href: '/cooling/freezable-dog-toys/' },
-      { label: 'All Cooling Products', href: '/cooling/best-cooling-products-for-dogs/' },
-    ],
   },
   'freezable-dog-toys': {
     title: 'Best Freezable Dog Toys (2026)',
@@ -644,12 +619,6 @@ export const categoryMeta: Record<ProductCategory, CategoryMeta> = {
         answer:
           'A fully frozen KONG can last 20–45 minutes depending on the filling and your dog\'s determination. The Chilly Penguin will usually last 10–20 minutes.',
       },
-    ],
-    internalLinks: [
-      { label: 'Cooling Mats', href: '/cooling/cooling-mats/' },
-      { label: 'Cooling Bandanas', href: '/cooling/cooling-bandanas/' },
-      { label: 'Cooling Vests', href: '/cooling/cooling-vests/' },
-      { label: 'All Cooling Products', href: '/cooling/best-cooling-products-for-dogs/' },
     ],
   },
   hydration: {

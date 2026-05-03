@@ -90,6 +90,17 @@ Optional modules (use when appropriate):
 
 **`InternalLinkStrip`** — Links must point to converter pages (or other article collectors where cross-linking adds value). This is the primary conversion mechanism for articles. It appears at the bottom, after `FAQ`. Labels should be short and descriptive: "Best Cooling Mats" not "Click here for cooling mats."
 
+Related metadata may also be added in frontmatter:
+
+```yaml
+topics: [travel, road-trips, car-cooling]
+pinnedRelated: ['/cooling/car-cooling-for-dogs/']
+excludeRelated: ['/privacy-policy/']
+relatedLabel: 'Road Trip Gear'
+```
+
+For migrated article collectors, render `InternalLinkStrip` with `currentHref` and keep relationship intent in `topics`, `pinnedRelated`, `excludeRelated`, and `relatedLabel`. Do not add new manual related arrays.
+
 **`Disclosure`** — Required on any article that renders inline product cards. Place it after the prose, before or after `FAQ`. If no product cards appear inline, `Disclosure` is optional (the footer disclosure covers it).
 
 ---
@@ -211,12 +222,14 @@ The article's job is to be useful. A genuinely useful article earns the click. T
 Before submitting or shipping an article collector:
 
 - [ ] Page type declared: `collector · article`
-- [ ] Added to `content-sitemap.astro`
+- [ ] Registered in the complete sitemap inventory
+- [ ] Added related metadata in frontmatter where useful: `topics`, `pinnedRelated`, `excludeRelated`, `relatedLabel`
 - [ ] Added to `docs/system-definition.yaml`
 - [ ] `Article` JSON-LD present with all required fields
 - [ ] `Toc` module included (if 4+ h2 sections) with matching `id` attributes
 - [ ] `FAQ` module included (minimum 3 questions)
 - [ ] `InternalLinkStrip` at the bottom, linking to relevant converters
+- [ ] `InternalLinkStrip` uses `currentHref` on migrated article collectors
 - [ ] `Disclosure` included if inline product cards are present
 - [ ] No vet-authority language
 - [ ] No "we tested" claims

@@ -24,8 +24,19 @@ bun run check:asins -- --quiet  # Same, issues only
 
 ## Content Sitemap
 
-- `src/pages/content-sitemap.astro` is the live page inventory. **Every new page must be added to it before the work is considered done.** This includes section collectors, article collectors, converters, and attractor pages — not just informer pages.
+- `src/data/sitemap-inventory.ts` is the complete build-time page inventory. Static registrations live in `src/data/content-sitemap.ts`; article collectors are discovered from MDX frontmatter.
+- `src/pages/content-sitemap.astro` renders that inventory for editorial review. **Every new page must be registered in the inventory before the work is considered done.** This includes section collectors, article collectors, converters, and attractor pages — not just informer pages.
 - When adding a page: add it to the correct section (or create a new section if the pillar is new), set the correct `pageType` and `collectorSubtype` where applicable.
+
+## Related Content
+
+- Related links derive from the complete sitemap inventory through `src/utils/related-pages.ts`; see `docs/related-content.md`.
+- New pages should define `topics` when section membership is too broad to rank related pages well, especially Comfort, Travel, Tracking, Cooling, and Calming overlap.
+- Use `pinnedRelated` only for intentional editorial relationships that should outrank algorithmic matches.
+- Use `excludeRelated` to prevent poor, redundant, or conflicting recommendations. Exclusion wins over pinning.
+- Use `relatedLabel` when a derived `InternalLinkStrip` pill needs shorter text than the page title.
+- Keep the official page model: `pageType: 'collector'` plus `collectorSubtype: 'article' | 'section'`. Do not invent fake page types such as `article-collector`.
+- Derived `InternalLinkStrip` and `RelatedGuides` are active in migrated article/tracking and converter flows through the `currentHref` prop. Do not add new manual related arrays.
 
 ## Governing Principles
 

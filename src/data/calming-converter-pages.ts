@@ -96,16 +96,12 @@ export interface CalmingConverterPageConfig {
   toc?: TocHeading[];
   blocks: CalmingBlock[];
   faq?: { heading: string; items: Array<{ question: string; answer: string }> };
-  relatedGuides?: {
-    heading: string;
-    guides: Array<{ href: string; title: string; description: string }>;
-  };
+  relatedGuidesHeading?: string;
+  relatedGuidesLimit?: number;
   disclaimerVariant?: 'standard' | 'supplement' | 'cbd';
   disclosureShowSafety?: boolean;
-  internalLinkStrip?: {
-    heading: string;
-    links: Array<{ label: string; href: string }>;
-  };
+  internalLinkStripHeading?: string;
+  internalLinkStripLimit?: number;
   itemListSchema?: {
     name: string;
     url: string;
@@ -349,34 +345,12 @@ export const calmingConverterPages: Record<string, CalmingConverterPageConfig> =
         },
       ],
     },
-    relatedGuides: {
-      heading: "Don't Forget the Heat",
-      guides: [
-        {
-          href: ROUTES.roadTrip,
-          title: "Rhys's Road Trip Chill Kit",
-          description:
-            'Taking your dog on a long drive? See how to combine cooling and calming gear — window shades, fans, mats, wraps, and chews — for a cross-country road trip.',
-        },
-        {
-          href: ROUTES.coolingTop,
-          title: 'Best Cooling Products for Dogs',
-          description:
-            'Anxious dogs often overheat faster. If summer heat is part of the problem, our cooling guide covers mats, vests, bandanas, and freezable toys.',
-        },
-      ],
-    },
+    relatedGuidesHeading: "Don't Forget the Heat",
+    relatedGuidesLimit: 2,
     disclaimerVariant: 'supplement',
     disclosureShowSafety: false,
-    internalLinkStrip: {
-      heading: 'More Calming & Safety Guides',
-      links: [
-        { label: 'Back to Calming Hub', href: ROUTES.calmingHub },
-        { label: 'ThunderShirt Alternatives', href: ROUTES.calmingAlternatives },
-        { label: 'GPS Trackers for Dogs', href: ROUTES.trackingTop },
-        { label: 'What To Do If Your Dog Runs Away', href: ROUTES.dogRanAwaySafety },
-      ],
-    },
+    internalLinkStripHeading: 'More Calming & Safety Guides',
+    internalLinkStripLimit: 6,
     itemListSchema: {
       name: 'Best Calming Products for Anxious Dogs',
       url: 'https://www.chill-dogs.com/calming/best-calming-products-for-anxious-dogs/',
@@ -501,13 +475,8 @@ export const calmingConverterPages: Record<string, CalmingConverterPageConfig> =
     },
     disclaimerVariant: 'standard',
     disclosureShowSafety: false,
-    internalLinkStrip: {
-      heading: 'More Calming Guides',
-      links: [
-        { label: 'Calming Hub', href: ROUTES.calmingHub },
-        { label: 'Best Calming Products for Anxious Dogs', href: ROUTES.calmingTop },
-      ],
-    },
+    internalLinkStripHeading: 'More Calming Guides',
+    internalLinkStripLimit: 2,
     itemListSchema: {
       name: 'Best ThunderShirt Alternatives: Anxiety Wraps Compared',
       url: 'https://www.chill-dogs.com/calming/best-thundershirt-alternatives/',
@@ -616,15 +585,8 @@ export const calmingConverterPages: Record<string, CalmingConverterPageConfig> =
     },
     disclaimerVariant: 'supplement',
     disclosureShowSafety: false,
-    internalLinkStrip: {
-      heading: 'More Calming Guides',
-      links: [
-        { label: 'Back to Calming Hub', href: ROUTES.calmingHub },
-        { label: 'All Calming Products', href: ROUTES.calmingTop },
-        { label: 'ThunderShirt Alternatives', href: ROUTES.calmingAlternatives },
-        { label: 'Road Trip Chill Kit', href: ROUTES.roadTrip },
-      ],
-    },
+    internalLinkStripHeading: 'More Calming Guides',
+    internalLinkStripLimit: 4,
   },
 };
 

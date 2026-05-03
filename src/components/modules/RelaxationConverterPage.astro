@@ -159,16 +159,21 @@ function quickPickProduct(item: QuickPickItem) {
       </section>
     )}
 
-    {config.relatedGuides && (
-      <RelatedGuides heading={config.relatedGuides.heading} guides={config.relatedGuides.guides} />
+    {config.relatedGuidesHeading && (
+      <RelatedGuides
+        heading={config.relatedGuidesHeading}
+        currentHref={`/comforting/${config.pageSlug}/`}
+        limit={config.relatedGuidesLimit}
+      />
     )}
 
     <Disclosure showSafety={config.disclosureShowSafety} />
 
-    {config.internalLinkStrip && (
+    {config.internalLinkStripHeading && (
       <InternalLinkStrip
-        heading={config.internalLinkStrip.heading}
-        links={config.internalLinkStrip.links}
+        heading={config.internalLinkStripHeading}
+        currentHref={`/comforting/${config.pageSlug}/`}
+        limit={config.internalLinkStripLimit}
         fromPage={config.pageSlug}
       />
     )}
