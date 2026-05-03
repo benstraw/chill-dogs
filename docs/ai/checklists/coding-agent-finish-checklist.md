@@ -45,6 +45,7 @@ Finishing any coding task — new page, component change, data file update, util
 - [ ] Confirmed build passes for substantive changes
 - [ ] If products were added or changed: `bun run check:asins` passes
 - [ ] If `docs/ai/` files were added or changed: `bun run check:ai-docs` passes
+- [ ] If architecture, routes, analytics, or affiliate rules changed: run `/update-knowledge` to sync the knowledge graph
 
 ---
 
