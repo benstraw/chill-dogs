@@ -124,9 +124,17 @@ function validateFile(filePath) {
     }
   }
 
-  // 3. Check for "## Use this when" section
-  if (!content.includes('## Use this when')) {
+  // 3. Check for "## Use this when" section (plans use "## Context" instead)
+  const isPlan = keys.includes('type') &&
+    (() => {
+      const typeMatch = content.match(/^type:\s*(.+)$/m);
+      return typeMatch && typeMatch[1].trim() === 'plan';
+    })();
+  if (!isPlan && !content.includes('## Use this when')) {
     logIssue(filePath, 'Missing "## Use this when" section');
+  }
+  if (isPlan && !content.includes('## Context')) {
+    logIssue(filePath, 'Plan file missing "## Context" section');
   }
 
   // 4. Check for "## Related knowledge" section
