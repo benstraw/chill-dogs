@@ -10,6 +10,10 @@ bun run build     # Static build to dist/
 bun run preview   # Preview built site
 bun run check:asins          # Check all product ASINs are still live on Amazon
 bun run check:asins -- --quiet  # Same, issues only
+bun run test                 # Run full vitest suite (build first — seo-meta test reads dist/)
+bun run test:smoke           # Smoke tests only; builds the site internally
+bun run test:coverage        # Coverage report for src/utils/**, src/scripts/**, src/data/**
+bun run indexnow:submit      # Manually submit all URLs to IndexNow API
 ```
 
 ## Source Of Truth
@@ -89,8 +93,8 @@ This site is a **modular conversion system** governed by `docs/web-systems-adven
 
 - Validate internal routes (no dead or malformed links).
 - Validate modularity (no repeated scaffolding where shared module/config patterns should be used).
-- Run `bun run test` and `bun run build` for substantive page/module changes.
-- Changes to `src/utils/**` or `src/scripts/**` require updated unit tests.
+- Run `bun run test` and `bun run build` for substantive page/module changes. Use `bun run test:smoke` for a faster check when only page-level HTML is affected.
+- Changes to `src/utils/**`, `src/scripts/**`, or `src/data/**` require updated unit tests in `src/__tests__/`.
 - Product inventory changes must keep `/admin/products/` complete. Add products to shared data/catalog modules and let the admin page consume those data files; do not hardcode product rows directly in the admin route.
 
 ### SEO Meta Tag Rules (enforced by `src/__tests__/seo-meta.test.ts`)
@@ -122,6 +126,41 @@ Amazon affiliate dog lifestyle site built with **Astro 5** (SSG) and **bun**. Re
 - Shared render patterns should be driven by centralized data/config inputs rather than duplicated page markup.
 - The active page model is based on explicit routes and page-type behavior (`converter`, `collector`, `attractor`, `informer`), not freeform category templates.
 
+### Key Data Files
+
+- `src/data/routes.ts` — Central `ROUTES` object for all internal paths. Always import from here; never hardcode route strings.
+- `src/data/content-sitemap.ts` — Static page registry. New non-MDX pages go here.
+- `src/data/sitemap-inventory.ts` — Combines static registry + auto-discovered MDX articles. Source of truth for related content, RSS, and llms.txt.
+- `src/data/product-catalog.ts` — Master product list combining all pillar data files; consumed by `/admin/products/`.
+- `src/data/product-page-map.ts` — Maps product IDs to the converter pages they appear on.
+- `src/data/collector-bodies.ts` — Card grid config for section collector pages.
+- `src/data/amazon-products/` — ASIN-keyed JSON files with SearchAPI metadata. Do not edit manually; fetched via `scripts/fetch-amazon-data.ts`.
+- Converter page configs: `cooling-converter-pages.ts`, `calming-converter-pages.ts`, `relaxation-converter-pages.ts` — per-converter copy, CTA targets, and FAQ sets.
+
+### Content Collections
+
+- `src/content/config.ts` — Astro content collection schema for the `articles` collection.
+- `src/content/articles/` — MDX article files. The `canonicalPath` frontmatter field is the page URL and drives sitemap-inventory article discovery and the RSS feed. New MDX articles are **auto-discovered** — no manual registration in `content-sitemap.ts` needed (unlike all other page types).
+- `topics` frontmatter should match topic values defined in `content-sitemap.ts` to rank related content correctly.
+
+### Build Pipeline
+
+Three phases run automatically via the `build` script:
+
+1. **Pre-build**: `src/scripts/watermark-images.mjs` → `src/scripts/generate-og-images.mjs`
+   - `generate-og-images.mjs` generates `/public/og/<slug>.jpg` for every indexable route using CTA text from `src/config/og-cta.mjs`.
+2. **Astro build**: outputs static HTML to `dist/`
+3. **Post-build** (root `scripts/`): `apply-first-page-image-og.mjs` → `apply-content-sitemap-share-preview.mjs` → `indexnow-submit.mjs`
+
+`src/scripts/` = pre-build scripts. `scripts/` (root level) = post-build scripts. Placing a new script in the wrong directory breaks the pipeline phase.
+
+`src/config/og-cta.mjs` maps each `PageType` to the CTA text used in generated OG images.
+
+### Layouts
+
+- `BaseLayout.astro` — Global layout. Detects staging via `VERCEL_ENV !== 'production'` and injects `noindex, nofollow`. Auto-resolves OG image path. Emits BreadcrumbList JSON-LD on production only.
+- `ArticleLayout.astro` — Wraps article-collector pages rendered from MDX.
+
 ### Styling
 
 Vanilla CSS with custom properties (no Tailwind). Design tokens in `src/styles/tokens.css`. Components use Astro scoped `<style>` blocks. Six-color palette: sand, sage, sky, cream, terracotta, charcoal.
@@ -151,7 +190,7 @@ This rule applies to all personal/original photography. Amazon CDN product image
 
 ### Path Aliases
 
-`@components/`, `@layouts/`, `@styles/`, `@data/`, `@utils/` — configured in tsconfig.json.
+`@components/`, `@layouts/`, `@scripts/`, `@styles/`, `@data/`, `@utils/` — configured in tsconfig.json.
 
 ## Analytics
 
@@ -169,3 +208,20 @@ Event tracking uses `src/scripts/analytics.ts`. The `track(eventName, props)` fu
 3. Set `PUBLIC_POSTHOG_KEY=<your-key>` in `.env` (and in your Vercel environment variables).
 4. Optionally set `PUBLIC_POSTHOG_HOST` — defaults to `https://us.i.posthog.com`; use `https://eu.i.posthog.com` for EU cloud or your self-hosted URL.
 5. PostHog is used for experiments (A/B tests via Feature Flags), funnel analysis, and session recordings.
+
+### Environment Variables
+
+Full reference in `.env.example`.
+
+| Variable | When needed | Purpose |
+|---|---|---|
+| `PUBLIC_POSTHOG_KEY` | Prod | PostHog project API key |
+| `PUBLIC_POSTHOG_HOST` | Optional | PostHog ingest URL (defaults to `https://us.i.posthog.com`) |
+| `PUBLIC_PINTEREST_TAG_ID` | Optional | Pinterest conversion pixel; only loads when `VERCEL_ENV=production` |
+| `PUBLIC_BUTTONDOWN_FORM_ACTION` | Optional | Buttondown embed form URL (EmailSignup component) |
+| `PUBLIC_BUTTONDOWN_USERNAME` | Optional | Buttondown account name |
+| `PUBLIC_SITE_URL` | Build | Site base URL for OG images, canonical URLs, llms.txt |
+| `VERCEL_ENV` | Auto | Set by Vercel (`production`/`preview`/`development`); controls staging noindex and Pinterest loading |
+| `MAINTENANCE_MODE` | Optional | Any truthy value shows maintenance page at `/` |
+| `INDEXNOW_KEY` | Prod | Key for IndexNow URL submission on deploy |
+| `SERP_API_KEY` / `SEARCHAPI_KEY` | Scripts only | Amazon product metadata fetching; not used at runtime |
