@@ -1,4 +1,6 @@
 ---
+import { getRelatedPages, toLinkStripItems } from '@utils/related-pages';
+
 interface LinkItem {
   label: string;
   href: string;
@@ -6,17 +8,20 @@ interface LinkItem {
 
 interface Props {
   heading?: string;
-  links: LinkItem[];
+  links?: LinkItem[];
+  currentHref?: string;
+  limit?: number;
   fromPage?: string;
 }
 
-const { heading = 'More Cooling Guides', links, fromPage = '' } = Astro.props;
+const { heading = 'More Cooling Guides', links, currentHref, limit, fromPage = '' } = Astro.props;
+const resolvedLinks = links ?? (currentHref ? toLinkStripItems(await getRelatedPages({ currentHref, limit })) : []);
 ---
 
 <nav class="ils" aria-label="Related guides">
   <h2 class="ils-heading">{heading}</h2>
   <ul class="ils-list">
-    {links.map((link) => (
+    {resolvedLinks.map((link) => (
       <li>
         <a
           href={link.href}

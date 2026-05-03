@@ -102,15 +102,11 @@ export interface RelaxationConverterPageConfig {
   toc?: TocHeading[];
   blocks: RelaxationBlock[];
   faq?: { heading: string; items: Array<{ question: string; answer: string }> };
-  relatedGuides?: {
-    heading: string;
-    guides: Array<{ href: string; title: string; description: string }>;
-  };
+  relatedGuidesHeading?: string;
+  relatedGuidesLimit?: number;
   disclosureShowSafety?: boolean;
-  internalLinkStrip?: {
-    heading: string;
-    links: Array<{ label: string; href: string }>;
-  };
+  internalLinkStripHeading?: string;
+  internalLinkStripLimit?: number;
   itemListSchema?: {
     name: string;
     url: string;
@@ -323,32 +319,11 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         },
       ],
     },
-    relatedGuides: {
-      heading: 'More Rest & Recovery',
-      guides: [
-        {
-          href: ROUTES.comfortOrthopedicBeds,
-          title: 'Best Orthopedic Dog Beds',
-          description:
-            'For older dogs, large breeds, or heavy resters, orthopedic foam and full-surround bolsters make a real difference in sustained daily comfort.',
-        },
-        {
-          href: ROUTES.calmingTop,
-          title: 'Best Calming Products for Anxious Dogs',
-          description:
-            'If sleep trouble is anxiety-driven, compare anxiety wraps, calming chews, and lick mats that work before and during stressful events.',
-        },
-      ],
-    },
+    relatedGuidesHeading: 'More Rest & Recovery',
+    relatedGuidesLimit: 2,
     disclosureShowSafety: false,
-    internalLinkStrip: {
-      heading: 'More Relaxation Guides',
-      links: [
-        { label: 'Orthopedic Dog Beds', href: ROUTES.comfortOrthopedicBeds },
-        { label: 'Best Calming Products', href: ROUTES.calmingTop },
-        { label: 'Calming Hub', href: ROUTES.calmingHub },
-      ],
-    },
+    internalLinkStripHeading: 'More Relaxation Guides',
+    internalLinkStripLimit: 3,
     itemListSchema: {
       name: 'Best Calming Dog Beds',
       url: 'https://www.chill-dogs.com/comforting/best-calming-dog-beds/',
@@ -520,32 +495,11 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         },
       ],
     },
-    relatedGuides: {
-      heading: 'More Crate Training Help',
-      guides: [
-        {
-          href: ROUTES.calmingCrateGuide,
-          title: 'How to Crate Train Your Dog',
-          description:
-            'Step-by-step crate training guidance for puppies, anxious dogs, travel, and common mistakes to avoid.',
-        },
-        {
-          href: ROUTES.comfortCalmingBeds,
-          title: 'Best Calming Dog Beds',
-          description:
-            'If your puppy settles better with soft edges and a defined rest area, compare calming beds and bolster beds.',
-        },
-      ],
-    },
+    relatedGuidesHeading: 'More Crate Training Help',
+    relatedGuidesLimit: 2,
     disclosureShowSafety: false,
-    internalLinkStrip: {
-      heading: 'More Puppy Comfort Guides',
-      links: [
-        { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
-        { label: 'Calming Dog Beds', href: ROUTES.comfortCalmingBeds },
-        { label: 'Comfort & Rest', href: ROUTES.comfortHub },
-      ],
-    },
+    internalLinkStripHeading: 'More Puppy Comfort Guides',
+    internalLinkStripLimit: 3,
     itemListSchema: {
       name: 'Best Puppy Crates',
       url: 'https://www.chill-dogs.com/comforting/best-puppy-crates/',
@@ -690,39 +644,11 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         },
       ],
     },
-    relatedGuides: {
-      heading: 'More Anxiety & Crate Training Help',
-      guides: [
-        {
-          href: ROUTES.calmingCrateGuide,
-          title: 'How to Crate Train Your Dog',
-          description:
-            'Crate training basics, puppy setup, anxiety cautions, travel use, and common mistakes to avoid.',
-        },
-        {
-          href: ROUTES.calmingTop,
-          title: 'Best Calming Products for Anxious Dogs',
-          description:
-            'Compare wraps, chews, lick mats, and snuffle mats for dogs who need support beyond crate management.',
-        },
-        {
-          href: ROUTES.comfortHeavyDutyCrates,
-          title: 'Best Heavy-Duty Dog Crates',
-          description:
-            'See reinforced crate options when you already know a standard wire setup is not enough.',
-        },
-      ],
-    },
+    relatedGuidesHeading: 'More Anxiety & Crate Training Help',
+    relatedGuidesLimit: 3,
     disclosureShowSafety: true,
-    internalLinkStrip: {
-      heading: 'More Anxiety Guides',
-      links: [
-        { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
-        { label: 'Heavy-Duty Crates', href: ROUTES.comfortHeavyDutyCrates },
-        { label: 'Puppy Crates', href: ROUTES.comfortPuppyCrates },
-        { label: 'Best Calming Products', href: ROUTES.calmingTop },
-      ],
-    },
+    internalLinkStripHeading: 'More Anxiety Guides',
+    internalLinkStripLimit: 4,
     itemListSchema: {
       name: 'Best Dog Crates for Anxiety',
       url: 'https://www.chill-dogs.com/comforting/best-anxiety-dog-crates/',
@@ -928,39 +854,11 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         },
       ],
     },
-    relatedGuides: {
-      heading: 'More Road Trip & Crate Help',
-      guides: [
-        {
-          href: ROUTES.roadTrip,
-          title: "Rhys's Road Trip Chill Kit",
-          description:
-            'A road trip setup that combines cooling, calming, hydration, and rest gear for long drives with dogs.',
-        },
-        {
-          href: ROUTES.calmingCrateGuide,
-          title: 'How to Crate Train Your Dog',
-          description:
-            'Crate training guidance for puppies, anxious dogs, travel, and common crate mistakes.',
-        },
-        {
-          href: ROUTES.comfortAirlineCrates,
-          title: 'Best Airline Crates for Flying With Your Dog',
-          description:
-            'Compare rigid airline-style kennels separately from soft road-trip and hotel-travel crate picks.',
-        },
-      ],
-    },
+    relatedGuidesHeading: 'More Road Trip & Crate Help',
+    relatedGuidesLimit: 3,
     disclosureShowSafety: false,
-    internalLinkStrip: {
-      heading: 'More Travel & Crate Guides',
-      links: [
-        { label: 'Road Trip Gear', href: ROUTES.roadTrip },
-        { label: 'Airline Crates', href: ROUTES.comfortAirlineCrates },
-        { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
-        { label: 'Anxiety Crates', href: ROUTES.comfortAnxietyCrates },
-      ],
-    },
+    internalLinkStripHeading: 'More Travel & Crate Guides',
+    internalLinkStripLimit: 4,
     itemListSchema: {
       name: 'Best Travel Crates for Road Trips',
       url: 'https://www.chill-dogs.com/comforting/best-travel-crates-for-road-trips/',
@@ -1156,32 +1054,11 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         },
       ],
     },
-    relatedGuides: {
-      heading: 'More Travel & Crate Help',
-      guides: [
-        {
-          href: ROUTES.calmingCrateGuide,
-          title: 'How to Crate Train Your Dog',
-          description:
-            'Build crate comfort before any major trip so the flight crate is not a stressful confinement experience.',
-        },
-        {
-          href: ROUTES.comfortTravelCrates,
-          title: 'Best Travel Crates for Road Trips',
-          description:
-            'Compare hard-sided and soft folding road-trip crates separately from flight-focused kennels.',
-        },
-      ],
-    },
+    relatedGuidesHeading: 'More Travel & Crate Help',
+    relatedGuidesLimit: 2,
     disclosureShowSafety: false,
-    internalLinkStrip: {
-      heading: 'More Travel & Crate Guides',
-      links: [
-        { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
-        { label: 'Road Trip Crates', href: ROUTES.comfortTravelCrates },
-        { label: 'Anxiety Crates', href: ROUTES.comfortAnxietyCrates },
-      ],
-    },
+    internalLinkStripHeading: 'More Travel & Crate Guides',
+    internalLinkStripLimit: 3,
     itemListSchema: {
       name: 'Best Airline Crates for Flying With Your Dog',
       url: 'https://www.chill-dogs.com/comforting/best-airline-crates-for-flying-with-your-dog/',
@@ -1368,32 +1245,11 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         },
       ],
     },
-    relatedGuides: {
-      heading: 'More Crate & Comfort Help',
-      guides: [
-        {
-          href: ROUTES.calmingCrateGuide,
-          title: 'How to Crate Train Your Dog',
-          description:
-            'Crate comfort still matters even when the crate is chosen mainly for indoor furniture fit.',
-        },
-        {
-          href: ROUTES.comfortHeavyDutyCrates,
-          title: 'Best Heavy-Duty Dog Crates',
-          description:
-            'If your dog needs stronger containment than decorative crate furniture can realistically provide, start there instead.',
-        },
-      ],
-    },
+    relatedGuidesHeading: 'More Crate & Comfort Help',
+    relatedGuidesLimit: 2,
     disclosureShowSafety: false,
-    internalLinkStrip: {
-      heading: 'More Crate Guides',
-      links: [
-        { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
-        { label: 'Heavy-Duty Crates', href: ROUTES.comfortHeavyDutyCrates },
-        { label: 'Puppy Crates', href: ROUTES.comfortPuppyCrates },
-      ],
-    },
+    internalLinkStripHeading: 'More Crate Guides',
+    internalLinkStripLimit: 3,
     itemListSchema: {
       name: 'Best Furniture Dog Crates',
       url: 'https://www.chill-dogs.com/comforting/best-furniture-dog-crates/',
@@ -1568,32 +1424,11 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         },
       ],
     },
-    relatedGuides: {
-      heading: 'More Anxiety & Crate Help',
-      guides: [
-        {
-          href: ROUTES.comfortAnxietyCrates,
-          title: 'Best Dog Crates for Anxiety',
-          description:
-            'When you are still deciding between wire, enclosed, and heavy-duty containment categories.',
-        },
-        {
-          href: ROUTES.calmingCrateGuide,
-          title: 'How to Crate Train Your Dog',
-          description:
-            'Consider crate-training tips and anxiety mitigation before investing in a stronger crate.',
-        },
-      ],
-    },
+    relatedGuidesHeading: 'More Anxiety & Crate Help',
+    relatedGuidesLimit: 2,
     disclosureShowSafety: true,
-    internalLinkStrip: {
-      heading: 'More Crate Guides',
-      links: [
-        { label: 'Anxiety Crates', href: ROUTES.comfortAnxietyCrates },
-        { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
-        { label: 'Furniture Crates', href: ROUTES.comfortFurnitureCrates },
-      ],
-    },
+    internalLinkStripHeading: 'More Crate Guides',
+    internalLinkStripLimit: 3,
     itemListSchema: {
       name: 'Best Heavy-Duty Dog Crates',
       url: 'https://www.chill-dogs.com/comforting/best-heavy-duty-dog-crates/',
@@ -1740,32 +1575,11 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         },
       ],
     },
-    relatedGuides: {
-      heading: 'More Rest & Recovery',
-      guides: [
-        {
-          href: ROUTES.comfortCalmingBeds,
-          title: 'Best Calming Dog Beds',
-          description:
-            'Donut beds, cuddler beds, and bolster beds for dogs who need extra comfort and security — not just a supportive surface.',
-        },
-        {
-          href: ROUTES.calmingTop,
-          title: 'Best Calming Products for Anxious Dogs',
-          description:
-            'Compare anxiety wraps, calming chews, lick mats, and snuffle mats for dogs who need support beyond a better sleeping setup.',
-        },
-      ],
-    },
+    relatedGuidesHeading: 'More Rest & Recovery',
+    relatedGuidesLimit: 2,
     disclosureShowSafety: false,
-    internalLinkStrip: {
-      heading: 'More Relaxation Guides',
-      links: [
-        { label: 'Calming Dog Beds', href: ROUTES.comfortCalmingBeds },
-        { label: 'Best Calming Products', href: ROUTES.calmingTop },
-        { label: 'Calming Hub', href: ROUTES.calmingHub },
-      ],
-    },
+    internalLinkStripHeading: 'More Relaxation Guides',
+    internalLinkStripLimit: 3,
     itemListSchema: {
       name: 'Best Orthopedic Dog Beds',
       url: 'https://www.chill-dogs.com/comforting/best-orthopedic-dog-beds/',
@@ -1894,16 +1708,8 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         },
       ],
     },
-    internalLinkStrip: {
-      heading: 'Related dog travel guides',
-      links: [
-        { label: 'How to Fly With a Dog', href: ROUTES.travelFlyWithDog },
-        { label: 'Best Airline Crates', href: ROUTES.comfortAirlineCrates },
-        { label: 'Best Calming Products', href: ROUTES.calmingTop },
-        { label: 'Car Anxiety Picks', href: ROUTES.calmingCar },
-        { label: 'Dog Road Trip Gear', href: ROUTES.roadTrip },
-      ],
-    },
+    internalLinkStripHeading: 'Related dog travel guides',
+    internalLinkStripLimit: 5,
     itemListSchema: {
       name: 'Best Airline-Approved Soft-Sided Dog Carriers',
       url: 'https://www.chill-dogs.com/comforting/best-airline-approved-dog-carriers/',
@@ -2038,15 +1844,8 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         },
       ],
     },
-    internalLinkStrip: {
-      heading: 'Related dog travel guides',
-      links: [
-        { label: 'How to Fly With a Dog', href: ROUTES.travelFlyWithDog },
-        { label: 'Best Airline Crates', href: ROUTES.comfortAirlineCrates },
-        { label: 'Best Calming Products', href: ROUTES.calmingTop },
-        { label: 'Dog Road Trip Gear', href: ROUTES.roadTrip },
-      ],
-    },
+    internalLinkStripHeading: 'Related dog travel guides',
+    internalLinkStripLimit: 4,
     itemListSchema: {
       name: 'Best Dog Travel Bags for Flying',
       url: 'https://www.chill-dogs.com/comforting/best-dog-travel-bags-for-flying/',

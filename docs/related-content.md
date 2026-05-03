@@ -1,6 +1,6 @@
 # Related Content
 
-This document explains the Wave 1 related-content system. The helper and metadata are available, but public rendering still uses existing manual `InternalLinkStrip` and `RelatedGuides` arrays until later migration waves.
+This document explains the related-content system. Derived `InternalLinkStrip` and `RelatedGuides` rendering is active for migrated article/tracking and converter flows. New related relationships should be managed through sitemap metadata, not manual arrays.
 
 ## Source Of Truth
 
@@ -24,11 +24,13 @@ pinnedRelated:
   - /cooling/car-cooling-for-dogs/
 excludeRelated:
   - /cooling/freezable-dog-toys/
+relatedLabel: 'Car Cooling Picks'
 ```
 
 - `topics` are ranking signals, not mandatory filters. Use them when a section is too broad to produce good matches.
 - `pinnedRelated` is for intentional editorial relationships that should outrank algorithmic matches.
 - `excludeRelated` prevents poor, redundant, or conflicting recommendations.
+- `relatedLabel` gives derived `InternalLinkStrip` a short pill label without changing page titles or share previews.
 - If a href appears in both `pinnedRelated` and `excludeRelated`, exclusion wins.
 
 ## Ranking
@@ -52,4 +54,5 @@ When adding a page:
 - Add `topics` if the page belongs to a broad section like Comfort, Travel, or Tracking.
 - Add `pinnedRelated` only for editorially important relationships.
 - Add `excludeRelated` when an automatic match would be unhelpful.
-- Keep manual rendered related arrays in place until the relevant migration wave replaces them.
+- Use `currentHref` on migrated `InternalLinkStrip` and `RelatedGuides` instances instead of passing manual `links` or `guides`.
+- Do not add new manual rendered related arrays; encode relationship intent in sitemap metadata.

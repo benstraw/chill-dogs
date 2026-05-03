@@ -3,6 +3,16 @@ title: 'How to Crate Train Your Dog'
 description: "Crate training gives your dog a safe, familiar space. It is a practical tool for housebreaking, anxiety management, and travel. Here's how to do it right."
 pubDate: 2026-04-09
 canonicalPath: '/calming/crate-training-for-dogs/'
+topics: [calming, comfort, crates, crate-training, anxiety]
+pinnedRelated:
+  - '/comforting/best-puppy-crates/'
+  - '/comforting/best-anxiety-dog-crates/'
+  - '/comforting/best-furniture-dog-crates/'
+  - '/comforting/best-heavy-duty-dog-crates/'
+  - '/comforting/best-travel-crates-for-road-trips/'
+  - '/calming/best-calming-products-for-anxious-dogs/'
+  - '/comforting/best-calming-dog-beds/'
+relatedLabel: 'Crate Training Guide'
 ---
 
 import Toc from '@components/modules/Toc.astro';
@@ -49,16 +59,6 @@ export const faqs = [
     answer:
       'For most dogs, yes — a machine-washable pad or blanket makes the crate more comfortable and inviting. However, some puppies or anxious dogs will shred bedding or use it as a potty spot. If that happens, try a bare crate floor or a chew-proof crate mat until the behavior settles.',
   },
-];
-
-export const internalLinks = [
-  { label: 'Best Puppy Crates', href: ROUTES.comfortPuppyCrates },
-  { label: 'Best Anxiety Dog Crates', href: ROUTES.comfortAnxietyCrates },
-  { label: 'Best Furniture Dog Crates', href: ROUTES.comfortFurnitureCrates },
-  { label: 'Best Heavy-Duty Dog Crates', href: ROUTES.comfortHeavyDutyCrates },
-  { label: 'Best Travel Crates', href: ROUTES.comfortTravelCrates },
-  { label: 'Best Calming Products for Anxious Dogs', href: ROUTES.calmingTop },
-  { label: 'Best Calming Dog Beds', href: ROUTES.comfortCalmingBeds },
 ];
 
 <article class="collector-article container">
@@ -231,5 +231,5 @@ export const internalLinks = [
 
   <FAQ faqs={faqs} />
 
-  <InternalLinkStrip links={internalLinks} fromPage={pageSlug} />
+  <InternalLinkStrip currentHref="/calming/crate-training-for-dogs/" limit={7} fromPage={pageSlug} />
 </article>

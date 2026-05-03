@@ -63,7 +63,7 @@ export async function getRelatedPages(options: RelatedPagesOptions): Promise<Sit
 
 export function toLinkStripItems(pages: SitemapPage[]): LinkStripItem[] {
   return pages.map((page) => ({
-    label: cleanPreviewTitle(page.preview.title),
+    label: page.relatedLabel ?? cleanPreviewTitle(page.preview.title),
     href: page.href,
   }));
 }

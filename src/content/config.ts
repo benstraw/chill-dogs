@@ -14,6 +14,7 @@ const articles = defineCollection({
       topics: z.array(z.enum(TOPICS)).optional(),
       pinnedRelated: z.array(z.string()).optional(),
       excludeRelated: z.array(z.string()).optional(),
+      relatedLabel: z.string().optional(),
     }),
 });
 

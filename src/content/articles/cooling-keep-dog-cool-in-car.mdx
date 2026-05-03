@@ -3,6 +3,13 @@ title: 'How to Keep a Dog Cool in a Car'
 description: 'The back seat gets hotter than you think — even with the AC running. These products help keep your dog comfortable on any drive.'
 pubDate: 2026-03-17
 canonicalPath: '/cooling/keep-dog-cool-in-car/'
+topics: [cooling, heat-safety, car-cooling, travel, road-trips]
+pinnedRelated:
+  - '/cooling/car-cooling-for-dogs/'
+  - '/cooling/cooling-mats/'
+  - '/cooling/cooling-bandanas/'
+  - '/travel/dog-road-trip-gear/'
+relatedLabel: 'Keep a Dog Cool in a Car'
 ---
 
 import Toc from '@components/modules/Toc.astro';
@@ -10,7 +17,6 @@ import CarCoolingArticleProducts from '@components/modules/CarCoolingArticleProd
 import FAQ from '@components/modules/FAQ.astro';
 import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
 import Disclosure from '@components/modules/Disclosure.astro';
-import { ROUTES } from '@data/routes';
 
 export const tocHeadings = [
   { label: 'Why the back seat gets so hot', anchor: 'back-seat-heat' },
@@ -41,13 +47,6 @@ export const faqs = [
     question: 'Are some dogs at higher risk of overheating in the car?',
     answer: 'Yes. Brachycephalic breeds (Bulldogs, Pugs, Boston Terriers, Boxers) have restricted airways and overheat faster. Overweight dogs, senior dogs, puppies, and dark or double-coated dogs are also at elevated risk. These dogs need extra airflow and shorter drive windows. Consider using a cooling vest or bandana.',
   },
-];
-
-export const internalLinks = [
-  { label: 'Best Car Cooling Products', href: '/cooling/car-cooling-for-dogs/' },
-  { label: 'Best Cooling Mats', href: '/cooling/cooling-mats/' },
-  { label: 'Best Cooling Bandanas', href: '/cooling/cooling-bandanas/' },
-  { label: 'Road Trip Chill Kit', href: '/travel/dog-road-trip-gear/' },
 ];
 
 <article class="collector-article container">
@@ -155,7 +154,7 @@ export const internalLinks = [
 
   <FAQ faqs={faqs} />
 
-  <InternalLinkStrip links={internalLinks} fromPage="keep-dog-cool-in-car" />
+  <InternalLinkStrip currentHref="/cooling/keep-dog-cool-in-car/" limit={4} fromPage="keep-dog-cool-in-car" />
 
   <Disclosure />
 </article>

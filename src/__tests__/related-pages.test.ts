@@ -12,6 +12,7 @@ function createPage(input: {
   topics?: SitemapTopic[];
   pinnedRelated?: string[];
   excludeRelated?: string[];
+  relatedLabel?: string;
   noindex?: boolean;
 }): SitemapPage {
   const title = input.title ?? input.href;
@@ -23,6 +24,7 @@ function createPage(input: {
     topics: input.topics,
     pinnedRelated: input.pinnedRelated,
     excludeRelated: input.excludeRelated,
+    relatedLabel: input.relatedLabel,
     noindex: input.noindex,
     preview: {
       title,
@@ -170,12 +172,13 @@ describe('related pages', () => {
       createPage({
         href: '/cooling/cooling-mats/',
         title: 'Best Dog Cooling Mats | Chill-Dogs',
+        relatedLabel: 'Cooling Mat Picks',
       }),
     ];
 
     expect(toLinkStripItems(pages)).toEqual([
       {
-        label: 'Best Dog Cooling Mats',
+        label: 'Cooling Mat Picks',
         href: '/cooling/cooling-mats/',
       },
     ]);
@@ -186,6 +189,57 @@ describe('related pages', () => {
         description: 'Best Dog Cooling Mats | Chill-Dogs description',
       },
     ]);
+  });
+
+  it('keeps migrated static related hrefs in the complete sitemap and excludes self', async () => {
+    const sections = [
+      ...await getCompleteSitemapSections(),
+      createSection('Articles', [
+        createPage({ href: '/travel/rhys-ran-away-cerro-san-luis-obispo/', pageType: 'collector', collectorSubtype: 'article' }),
+        createPage({ href: '/safety/what-to-do-if-your-dog-runs-away/', pageType: 'collector', collectorSubtype: 'article' }),
+        createPage({ href: '/travel/dog-road-trip-gear/', pageType: 'collector', collectorSubtype: 'article' }),
+        createPage({ href: '/calming/crate-training-for-dogs/', pageType: 'collector', collectorSubtype: 'article' }),
+        createPage({ href: '/travel/how-to-fly-with-a-dog/', pageType: 'collector', collectorSubtype: 'article' }),
+      ]),
+    ];
+    const pages = sections.flatMap((section) => section.pages);
+    const hrefs = new Set(pages.map((page) => page.href));
+    const migratedHrefs = [
+      '/gear/best-dog-gps-trackers/',
+      '/gear/fi-dog-collar-review/',
+      '/gear/garmin-dog-tracking-collars/',
+      '/gear/airtag-for-dogs/',
+      '/cooling/car-cooling-for-dogs/',
+      '/cooling/cooling-mats/',
+      '/cooling/cooling-bandanas/',
+      '/cooling/cooling-vests/',
+      '/cooling/freezable-dog-toys/',
+      '/calming/best-calming-products-for-anxious-dogs/',
+      '/calming/best-thundershirt-alternatives/',
+      '/calming/car-anxiety-for-dogs/',
+      '/comforting/best-calming-dog-beds/',
+      '/comforting/best-orthopedic-dog-beds/',
+      '/comforting/best-puppy-crates/',
+      '/comforting/best-anxiety-dog-crates/',
+      '/comforting/best-travel-crates-for-road-trips/',
+      '/comforting/best-airline-crates-for-flying-with-your-dog/',
+      '/comforting/best-airline-approved-dog-carriers/',
+      '/comforting/best-dog-travel-bags-for-flying/',
+      '/comforting/best-furniture-dog-crates/',
+      '/comforting/best-heavy-duty-dog-crates/',
+    ];
+
+    for (const href of migratedHrefs) {
+      const page = pages.find((candidate) => candidate.href === href);
+      expect(page?.pinnedRelated?.length).toBeGreaterThan(0);
+
+      const related = await getRelatedPages({ currentHref: href, sections, limit: page?.pinnedRelated?.length });
+      expect(related.map((relatedPage) => relatedPage.href)).not.toContain(href);
+
+      for (const relatedHref of page?.pinnedRelated ?? []) {
+        expect(hrefs.has(relatedHref)).toBe(true);
+      }
+    }
   });
 
   it('resolves only hrefs that exist in the complete sitemap and never resolves self', async () => {

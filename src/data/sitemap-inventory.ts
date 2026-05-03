@@ -18,6 +18,7 @@ export async function getArticleSitemapSection(): Promise<SitemapSection> {
         topics: entry.data.topics,
         pinnedRelated: entry.data.pinnedRelated,
         excludeRelated: entry.data.excludeRelated,
+        relatedLabel: entry.data.relatedLabel,
       })
     );
 

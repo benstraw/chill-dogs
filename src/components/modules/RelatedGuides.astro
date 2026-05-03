@@ -1,4 +1,6 @@
 ---
+import { getRelatedPages, toRelatedGuideCards } from '@utils/related-pages';
+
 interface RelatedGuide {
   href: string;
   title: string;
@@ -7,17 +9,20 @@ interface RelatedGuide {
 
 interface Props {
   heading?: string;
-  guides: RelatedGuide[];
+  guides?: RelatedGuide[];
+  currentHref?: string;
+  limit?: number;
 }
 
-const { heading = 'Related Guides', guides } = Astro.props;
+const { heading = 'Related Guides', guides, currentHref, limit } = Astro.props;
+const resolvedGuides = guides ?? (currentHref ? toRelatedGuideCards(await getRelatedPages({ currentHref, limit })) : []);
 ---
 
 <section class="related-guides">
   <div class="related-guides-inner">
     <h2>{heading}</h2>
     <div class="related-guides-grid">
-      {guides.map(({ href, title, description }) => (
+      {resolvedGuides.map(({ href, title, description }) => (
         <a
           href={href}
           class="related-guide-card"
