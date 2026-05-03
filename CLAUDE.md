@@ -4,8 +4,8 @@ This repo uses a Markdown AI knowledge graph under `docs/ai/`.
 
 ## Start here
 
-1. Read [`docs/ai/AGENT_START.md`](docs/ai/AGENT_START.md) — operating brief
-2. Read [`docs/ai/AI_INDEX.md`](docs/ai/AI_INDEX.md) — task router
+1. Read [`docs/ai/AGENT_START.md`](docs/ai/AGENT_START.md) - operating brief
+2. Read [`docs/ai/AI_INDEX.md`](docs/ai/AI_INDEX.md) - task router
 3. Use [`docs/ai/KNOWLEDGE_GRAPH.md`](docs/ai/KNOWLEDGE_GRAPH.md) to find domain-specific docs
 4. Before finishing, run the relevant checklist in [`docs/ai/checklists/`](docs/ai/checklists/)
 
@@ -17,16 +17,16 @@ Do not skip the task-specific docs.
 - Primary business goal: **Amazon affiliate commission revenue**.
 - Keystone event: `amazon_outbound_click`.
 - Valid page types: `converter`, `collector`, `attractor`, `informer`. Do not invent new types.
-- Do not hardcode internal routes — import from `src/data/routes.ts`.
+- Do not hardcode internal routes - import from `src/data/routes.ts`.
 - Use `AffiliateLink.astro` for all Amazon outbound links.
 - Use the existing related-content system (`src/utils/related-pages.ts`). Do not add manual related arrays.
 - Run relevant tests/build checks before finishing.
 
 ## Source of truth files
 
-- `docs/system-definition.yaml` — keep updated when pages, routes, or page types change.
-- `src/data/sitemap-inventory.ts` — every new non-MDX page must be registered here.
-- `src/data/routes.ts` — all internal route strings live here.
+- `docs/system-definition.yaml` - keep updated when pages, routes, or page types change.
+- `src/data/sitemap-inventory.ts` - every new non-MDX page must be registered here.
+- `src/data/routes.ts` - all internal route strings live here.
 
 ## Commands
 
@@ -34,7 +34,7 @@ Do not skip the task-specific docs.
 bun run dev              # Start dev server at localhost:4321
 bun run build            # Static build to dist/
 bun run preview          # Preview built site
-bun run test             # Run full vitest suite (build first — seo-meta test reads dist/)
+bun run test             # Run full vitest suite (build first; seo-meta test reads dist/)
 bun run test:smoke       # Smoke tests only; builds the site internally
 bun run test:coverage    # Coverage report for src/utils/**, src/scripts/**, src/data/**
 bun run check:asins      # Check all product ASINs are still live on Amazon

@@ -7,9 +7,12 @@ You are the knowledge base notetaker for Chill-Dogs. Your job is to review recen
 ## Step 1: Understand what changed
 
 Run these in parallel:
-- `git log --oneline -10` — recent commits
-- `git diff HEAD~1 --name-only` — files changed in last commit
-- `git diff HEAD~5 --name-only` — broader recent changes (for context)
+- `git log --oneline -10` - recent commits
+- `git status --short` - uncommitted changes in working tree
+- `git diff --name-only` - unstaged changes
+- `git diff --cached --name-only` - staged changes
+- `git diff HEAD~1 --name-only` - files changed in last commit
+- `git diff main...HEAD --name-only` - all changes on this branch vs main
 
 ## Step 2: Map changes to knowledge domains
 
@@ -48,13 +51,17 @@ Do NOT update files just because they are adjacent to the change. Only update if
 
 ## Step 5: Save a plan record
 
-Create a new file in `docs/ai/plans/` named `YYYY-MM-DD-knowledge-sync.md` (use today's date).
+Create a new file in `docs/ai/plans/` using this filename pattern:
+
+`YYYY-MM-DD-HHMM-knowledge-sync.md`
+
+Use today's date and current time (24h format) to avoid same-day collisions. Example: `2026-05-03-1430-knowledge-sync.md`.
 
 Use this frontmatter and structure:
 
 ```markdown
 ---
-title: Knowledge Sync — <brief description of what changed>
+title: Knowledge Sync - <brief description of what changed>
 type: plan
 domain: global
 status: executed
@@ -77,7 +84,7 @@ related:
 
 ## Changes made
 
-<List of docs/ai/ files updated and what was changed in each.>
+<List of docs/ai/ files updated and what was changed in each. If no files needed updating, say so.>
 
 ## Related knowledge
 
@@ -86,14 +93,15 @@ related:
 
 ## Step 6: Validate
 
-Run `bun run check:ai-docs` and fix any issues before committing.
+Run `bun run check:ai-docs` and fix any issues before proceeding.
 
-## Step 7: Commit and push
+## Step 7: Commit behavior
 
-```bash
-git add docs/ai/
-git commit -m "chore: sync knowledge graph with recent changes"
-git push
-```
+**If this command was invoked as a standalone knowledge-sync task** (not as part of a larger coding task):
+- Stage and commit the docs changes: `git add docs/ai/ && git commit -m "chore: sync knowledge graph - <brief description>"`
+- Push to the current branch.
 
-If there were no stale docs to update, say so clearly and skip the commit. Do not create empty or trivial commits.
+**If this command is being run as part of a larger coding task** (e.g. called from the finish checklist mid-task):
+- Do NOT commit separately.
+- Leave the docs changes in the working tree so they are included in the main task commit.
+- Tell the user what was updated so they can include it in their commit message.
