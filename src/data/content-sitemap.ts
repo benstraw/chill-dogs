@@ -44,6 +44,7 @@ export interface SitemapPreview {
 
 export interface SitemapPage {
   href: string;
+  baseTitle: string;
   pageType: SitemapPageType;
   collectorSubtype?: SitemapCollectorSubtype;
   topics?: SitemapTopic[];
@@ -92,6 +93,7 @@ function resolveShareImage(href: string, options: { ogImage?: string | ImageMeta
 export function createSitemapPage(input: SitemapPageInput): SitemapPage {
   return {
     href: input.href,
+    baseTitle: input.baseTitle,
     pageType: input.pageType,
     collectorSubtype: input.collectorSubtype,
     topics: input.topics,
