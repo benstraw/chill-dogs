@@ -1,16 +1,13 @@
 ---
 import { ROUTES } from '@data/routes';
-import type { HomepageVariant } from '@components/modules/HomepageHero.astro';
 import type { HomepageArticleFeed } from '@utils/homepage-articles';
 import { getHomepageConverters } from '@utils/homepage-articles';
 
 interface Props {
-  variant?: HomepageVariant;
   articleFeed: HomepageArticleFeed;
 }
 
-const { variant, articleFeed } = Astro.props;
-const isV6 = variant === 'v6';
+const { articleFeed } = Astro.props;
 const converters = getHomepageConverters();
 
 const shopCards = [
@@ -44,13 +41,6 @@ const shopCards = [
   },
 ];
 
-const topGuides = [
-  { title: 'Best Cooling Products for Dogs', description: 'Mats, vests, bandanas, and frozen enrichment', href: ROUTES.coolingTop },
-  { title: 'Best Calming Products for Anxious Dogs', description: 'Wraps, chews, lick mats, and snuffle mats', href: ROUTES.calmingTop },
-  { title: 'Comfort & Rest for Dogs', description: 'Supportive beds, cozy blankets, and comforting toys for dogs of every age.', href: ROUTES.comfortHub },
-  { title: 'Dog GPS Trackers & Safety', description: 'Cellular, off-grid, and Bluetooth tracking — know which type fits your terrain.', href: ROUTES.trackingTop },
-];
-
 const pinnedGuideRoutes = [
   {
     title: 'Travel Crates for Road Trips',
@@ -61,140 +51,98 @@ const pinnedGuideRoutes = [
 ];
 ---
 
-{isV6 ? (
-  <>
-    {/* ── Shop by Need ── */}
-    <section class="shop container">
-      <h2 class="section-title">Shop by Need</h2>
-      <div class="shop-grid">
-        {shopCards.map((card) => (
-          <a
-            href={card.href}
-            class={`shop-card shop-card--${card.color}`}
-            data-track="collector_to_converter_click"
-            data-to-page={card.href}
-            data-link-position="homepage-shop"
-          >
-            <span class={`shop-label shop-label--${card.color}`}>{card.label}</span>
-            <h3 class="shop-title">{card.title}</h3>
-            <p class="shop-desc">{card.description}</p>
-            <span class="shop-cta">Explore picks →</span>
-          </a>
-        ))}
-      </div>
-    </section>
+{/* ── Shop by Need ── */}
+<section class="shop container">
+  <h2 class="section-title">Shop by Need</h2>
+  <div class="shop-grid">
+    {shopCards.map((card) => (
+      <a
+        href={card.href}
+        class={`shop-card shop-card--${card.color}`}
+        data-track="collector_to_converter_click"
+        data-to-page={card.href}
+        data-link-position="homepage-shop"
+      >
+        <span class={`shop-label shop-label--${card.color}`}>{card.label}</span>
+        <h3 class="shop-title">{card.title}</h3>
+        <p class="shop-desc">{card.description}</p>
+        <span class="shop-cta">Explore picks →</span>
+      </a>
+    ))}
+  </div>
+</section>
 
-    {/* ── From the Guide ── */}
-    <section class="guide-section container">
-      <h2 class="section-title">From the Guide</h2>
-      <div class="featured-grid">
-        {articleFeed.featuredArticles.map((article) => (
-          <a
-            href={article.href}
-            class="article-card"
-            data-home-article="true"
-            data-track="collector_to_converter_click"
-            data-to-page={article.href}
-            data-link-position="homepage-featured-articles"
-          >
-            <div class="article-img-wrap">
-              <img
-                src={typeof article.image === 'string' ? article.image : article.image.src}
-                alt=""
-                class="article-img"
-                width="400"
-                height="210"
-                loading="lazy"
-              />
-            </div>
-            <div class="article-body">
-              <span class={`article-label article-label--${article.color}`}>{article.label}</span>
-              <h3 class="article-title">{article.title}</h3>
-              <p class="article-desc">{article.description}</p>
-              <span class="article-read">Read →</span>
-            </div>
-          </a>
-        ))}
-      </div>
+{/* ── From the Guide ── */}
+<section class="guide-section container">
+  <h2 class="section-title">From the Guide</h2>
+  <div class="featured-grid">
+    {articleFeed.featuredArticles.map((article) => (
+      <a
+        href={article.href}
+        class="article-card"
+        data-home-article="true"
+        data-track="collector_to_converter_click"
+        data-to-page={article.href}
+        data-link-position="homepage-featured-articles"
+      >
+        <div class="article-img-wrap">
+          <img
+            src={typeof article.image === 'string' ? article.image : article.image.src}
+            alt=""
+            class="article-img"
+            width="400"
+            height="210"
+            loading="lazy"
+          />
+        </div>
+        <div class="article-body">
+          <span class={`article-label article-label--${article.color}`}>{article.label}</span>
+          <h3 class="article-title">{article.title}</h3>
+          <p class="article-desc">{article.description}</p>
+          <span class="article-read">Read →</span>
+        </div>
+      </a>
+    ))}
+  </div>
 
-      <div class="more-grid">
-        {[...articleFeed.moreArticles, ...pinnedGuideRoutes].map((article) => (
-          <a
-            href={article.href}
-            class={`more-card more-card--${article.color}`}
-            data-home-article={articleFeed.moreArticles.includes(article) ? 'true' : undefined}
-            data-track="collector_to_converter_click"
-            data-to-page={article.href}
-            data-link-position="homepage-more-articles"
-          >
-            <h3 class="more-title">{article.title}</h3>
-            <p class="more-desc">{article.description}</p>
-          </a>
-        ))}
-      </div>
-    </section>
+  <div class="more-grid">
+    {[...articleFeed.moreArticles, ...pinnedGuideRoutes].map((article) => (
+      <a
+        href={article.href}
+        class={`more-card more-card--${article.color}`}
+        data-home-article={articleFeed.moreArticles.includes(article) ? 'true' : undefined}
+        data-track="collector_to_converter_click"
+        data-to-page={article.href}
+        data-link-position="homepage-more-articles"
+      >
+        <h3 class="more-title">{article.title}</h3>
+        <p class="more-desc">{article.description}</p>
+      </a>
+    ))}
+  </div>
+</section>
 
-    {/* ── Recent Guides ── */}
-    <section class="converters container">
-      <h2 class="section-title">Browse Picks</h2>
-      <div class="more-grid">
-        {converters.map((c) => (
-          <a
-            href={c.href}
-            class={`more-card more-card--${c.color}`}
-            data-track="collector_to_converter_click"
-            data-to-page={c.href}
-            data-link-position="homepage-converters"
-          >
-            <h3 class="more-title">{c.title}</h3>
-            <p class="more-desc">{c.description}</p>
-          </a>
-        ))}
-      </div>
-    </section>
+{/* ── Browse Picks ── */}
+<section class="converters container">
+  <h2 class="section-title">Browse Picks</h2>
+  <div class="more-grid">
+    {converters.map((c) => (
+      <a
+        href={c.href}
+        class={`more-card more-card--${c.color}`}
+        data-track="collector_to_converter_click"
+        data-to-page={c.href}
+        data-link-position="homepage-converters"
+      >
+        <h3 class="more-title">{c.title}</h3>
+        <p class="more-desc">{c.description}</p>
+      </a>
+    ))}
+  </div>
+</section>
 
-    {/* ── Newsletter (injected from parent) ── */}
-    <slot name="newsletter" />
-  </>
-) : (
-  <>
-    <section class="featured container">
-      <h2 class="section-title">Top Guides</h2>
-      <div class="cards-grid">
-        {topGuides.map((guide) => (
-          <a href={guide.href} class="guide-card" data-track="collector_to_converter_click" data-to-page={guide.href} data-link-position="homepage-top-guides">
-            <h3 class="guide-title">{guide.title}</h3>
-            <p class="guide-description">{guide.description}</p>
-          </a>
-        ))}
-      </div>
-    </section>
-
-    <section class="latest container">
-      <h2 class="section-title">Latest Guides</h2>
-      <div class="cards-grid">
-        {articleFeed.latestGuides.map((guide) => (
-          <a href={guide.href} class="guide-card" data-track="collector_to_converter_click" data-to-page={guide.href} data-link-position="homepage-latest-guides">
-            <h3 class="guide-title">{guide.title}</h3>
-            <p class="guide-description">{guide.description}</p>
-          </a>
-        ))}
-      </div>
-    </section>
-
-    <section class="converters container">
-      <h2 class="section-title">Recent Guides</h2>
-      <div class="cards-grid">
-        {converters.map((c) => (
-          <a href={c.href} class="guide-card" data-track="collector_to_converter_click" data-to-page={c.href} data-link-position="homepage-converters">
-            <h3 class="guide-title">{c.title}</h3>
-            <p class="guide-description">{c.description}</p>
-          </a>
-        ))}
-      </div>
-    </section>
-  </>
-)}
+{/* ── Newsletter (injected from parent) ── */}
+<slot name="newsletter" />
 
 <style>
   /* ── Shared ── */
@@ -416,62 +364,11 @@ const pinnedGuideRoutes = [
   }
 
   /* ══════════════════════════════════════
-     Default (non-v6) layout
-     ══════════════════════════════════════ */
-
-  .featured,
-  .latest {
-    padding-block: var(--space-3xl);
-  }
-
-  .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-xl);
-  }
-
-  .featured .cards-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .guide-card {
-    display: block;
-    background: var(--color-surface);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-sm);
-    padding: var(--space-lg);
-    text-decoration: none;
-    color: inherit;
-    transition: transform var(--transition-base), box-shadow var(--transition-base);
-  }
-
-  .guide-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-    color: inherit;
-  }
-
-  .guide-title {
-    font-size: var(--text-lg);
-    margin-bottom: var(--space-sm);
-    color: var(--color-text);
-  }
-
-  .guide-description {
-    font-size: var(--text-sm);
-    color: var(--color-text-muted);
-    line-height: var(--leading-normal);
-  }
-
-  /* ══════════════════════════════════════
      Responsive
      ══════════════════════════════════════ */
 
   @media (max-width: 1024px) {
     .shop-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .cards-grid {
       grid-template-columns: repeat(2, 1fr);
     }
   }
@@ -488,9 +385,7 @@ const pinnedGuideRoutes = [
   @media (max-width: 640px) {
     .shop-grid,
     .featured-grid,
-    .more-grid,
-    .cards-grid,
-    .featured .cards-grid {
+    .more-grid {
       grid-template-columns: 1fr;
     }
   }
