@@ -63,6 +63,27 @@ const pinnedGuideRoutes = [
 
 {isV6 ? (
   <>
+    {/* ── Shop by Need ── */}
+    <section class="shop container">
+      <h2 class="section-title">Shop by Need</h2>
+      <div class="shop-grid">
+        {shopCards.map((card) => (
+          <a
+            href={card.href}
+            class={`shop-card shop-card--${card.color}`}
+            data-track="collector_to_converter_click"
+            data-to-page={card.href}
+            data-link-position="homepage-shop"
+          >
+            <span class={`shop-label shop-label--${card.color}`}>{card.label}</span>
+            <h3 class="shop-title">{card.title}</h3>
+            <p class="shop-desc">{card.description}</p>
+            <span class="shop-cta">Explore picks →</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
     {/* ── From the Guide ── */}
     <section class="guide-section container">
       <h2 class="section-title">From the Guide</h2>
@@ -113,33 +134,9 @@ const pinnedGuideRoutes = [
       </div>
     </section>
 
-    {/* ── Newsletter (injected from parent) ── */}
-    <slot name="newsletter" />
-
-    {/* ── Shop by Need ── */}
-    <section class="shop container">
-      <h2 class="section-title">Shop by Need</h2>
-      <div class="shop-grid">
-        {shopCards.map((card) => (
-          <a
-            href={card.href}
-            class={`shop-card shop-card--${card.color}`}
-            data-track="collector_to_converter_click"
-            data-to-page={card.href}
-            data-link-position="homepage-shop"
-          >
-            <span class={`shop-label shop-label--${card.color}`}>{card.label}</span>
-            <h3 class="shop-title">{card.title}</h3>
-            <p class="shop-desc">{card.description}</p>
-            <span class="shop-cta">Explore picks →</span>
-          </a>
-        ))}
-      </div>
-    </section>
-
-    {/* ── Recent Converters ── */}
+    {/* ── Recent Guides ── */}
     <section class="converters container">
-      <h2 class="section-title">Recent Guides</h2>
+      <h2 class="section-title">More Guides</h2>
       <div class="more-grid">
         {converters.map((c) => (
           <a
@@ -155,6 +152,9 @@ const pinnedGuideRoutes = [
         ))}
       </div>
     </section>
+
+    {/* ── Newsletter (injected from parent) ── */}
+    <slot name="newsletter" />
   </>
 ) : (
   <>
