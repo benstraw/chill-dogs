@@ -154,6 +154,20 @@ site_system:
       routes:
         - "/calming/crate-training-for-dogs/"
 
+    - name: "CBD for Dogs"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Route CBD/calming-research intent to calming converters and orthopedic bed converter"
+      metric: "collector_to_converter_click to calming and comfort converters"
+      routes:
+        - "/calming/cbd-for-dogs/"
+      notes: >
+        Informational safety article; does not recommend CBD or include Amazon CBD product links.
+        Sources include Cornell Riney Canine Health Center, FDA, Frontiers in Veterinary Science,
+        Colorado State University, AKC CHF, PetMD, and California DCC. Internal links route to
+        calming converters and orthopedic beds. No dosage instructions. Medical escalation language
+        included for severe reactions.
+
     - name: "How to Prepare a Calm Room for Fireworks Night"
       type: "collector"
       collector_subtype: "article"
