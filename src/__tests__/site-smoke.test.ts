@@ -314,7 +314,7 @@ describe('site smoke tests', () => {
   it('publishes homepage featured article images', () => {
     const homeDoc = readBuiltPage('index.html');
     const featuredImages = Array.from(
-      homeDoc.querySelectorAll<HTMLImageElement>('.article-card img, .hp-v7-article-img')
+      homeDoc.querySelectorAll<HTMLImageElement>('.article-card img')
     );
 
     expect(featuredImages.length).toBeGreaterThan(0);

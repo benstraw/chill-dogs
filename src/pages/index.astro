@@ -50,9 +50,9 @@ const orgSchema = {
   >
     <JsonLd slot="head" schema={websiteSchema} />
     <JsonLd slot="head" schema={orgSchema} />
-    <HomepageHero variant="v6" />
+    <HomepageHero />
 
-    <HomepageBody variant="v6" articleFeed={articleFeed}>
+    <HomepageBody articleFeed={articleFeed}>
       <section slot="newsletter" class="container homepage-signup">
         <EmailSignup
           placement="homepage_inline"
