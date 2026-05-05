@@ -175,11 +175,11 @@ export const staticSitemapSections: SitemapSection[] = [
         description: categoryMeta['car-cooling'].description,
         href: ROUTES.coolingCar,
         pageType: 'converter',
-        topics: ['cooling', 'heat-safety', 'car-cooling', 'travel', 'road-trips'],
+        topics: ['cooling', 'heat-safety', 'car-cooling', 'travel', 'road-trips', 'hydration'],
         pinnedRelated: [
           ROUTES.roadTrip,
           ROUTES.coolingMats,
-          ROUTES.coolingVests,
+          ROUTES.coolingHydration,
           ROUTES.coolingTop,
         ],
         relatedLabel: 'Car Cooling Picks',

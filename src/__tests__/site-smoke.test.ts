@@ -119,7 +119,7 @@ describe('site smoke tests', () => {
     const cases = [
       {
         page: path.join('cooling', 'keep-dog-cool-in-car', 'index.html'),
-        expected: ['/cooling/car-cooling-for-dogs/', '/cooling/cooling-mats/', '/cooling/cooling-bandanas/', '/travel/dog-road-trip-gear/'],
+        expected: ['/cooling/car-cooling-for-dogs/', '/cooling/cooling-mats/', '/cooling/dog-travel-hydration/', '/travel/dog-road-trip-gear/'],
       },
       {
         page: path.join('travel', 'how-to-fly-with-a-dog', 'index.html'),
@@ -157,7 +157,7 @@ describe('site smoke tests', () => {
         expected: [
           '/travel/dog-road-trip-gear/',
           '/cooling/cooling-mats/',
-          '/cooling/cooling-vests/',
+          '/cooling/dog-travel-hydration/',
           '/cooling/best-cooling-products-for-dogs/',
         ],
       },
