@@ -15,6 +15,7 @@ export const TOPICS = [
   'cooling-mats',
   'cooling-wearables',
   'frozen-toys',
+  'hydration',
   'calming',
   'anxiety',
   'car-anxiety',
@@ -44,6 +45,7 @@ export interface SitemapPreview {
 
 export interface SitemapPage {
   href: string;
+  baseTitle: string;
   pageType: SitemapPageType;
   collectorSubtype?: SitemapCollectorSubtype;
   topics?: SitemapTopic[];
@@ -92,6 +94,7 @@ function resolveShareImage(href: string, options: { ogImage?: string | ImageMeta
 export function createSitemapPage(input: SitemapPageInput): SitemapPage {
   return {
     href: input.href,
+    baseTitle: input.baseTitle,
     pageType: input.pageType,
     collectorSubtype: input.collectorSubtype,
     topics: input.topics,
@@ -172,11 +175,11 @@ export const staticSitemapSections: SitemapSection[] = [
         description: categoryMeta['car-cooling'].description,
         href: ROUTES.coolingCar,
         pageType: 'converter',
-        topics: ['cooling', 'heat-safety', 'car-cooling', 'travel', 'road-trips'],
+        topics: ['cooling', 'heat-safety', 'car-cooling', 'travel', 'road-trips', 'hydration'],
         pinnedRelated: [
           ROUTES.roadTrip,
           ROUTES.coolingMats,
-          ROUTES.coolingVests,
+          ROUTES.coolingHydration,
           ROUTES.coolingTop,
         ],
         relatedLabel: 'Car Cooling Picks',
@@ -236,6 +239,20 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.coolingTop,
         ],
         relatedLabel: 'Freezable Dog Toys',
+      }),
+      createSitemapPage({
+        baseTitle: categoryMeta['hydration'].title,
+        description: categoryMeta['hydration'].description,
+        href: ROUTES.coolingHydration,
+        pageType: 'converter',
+        topics: ['cooling', 'hydration', 'travel', 'road-trips', 'flying'],
+        pinnedRelated: [
+          ROUTES.travelFlyWithDog,
+          ROUTES.roadTrip,
+          ROUTES.coolingCar,
+          ROUTES.coolingTop,
+        ],
+        relatedLabel: 'Portable Dog Water Bottles',
       }),
     ],
   },

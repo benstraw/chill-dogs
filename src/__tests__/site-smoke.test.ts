@@ -119,13 +119,14 @@ describe('site smoke tests', () => {
     const cases = [
       {
         page: path.join('cooling', 'keep-dog-cool-in-car', 'index.html'),
-        expected: ['/cooling/car-cooling-for-dogs/', '/cooling/cooling-mats/', '/cooling/cooling-bandanas/', '/travel/dog-road-trip-gear/'],
+        expected: ['/cooling/car-cooling-for-dogs/', '/cooling/cooling-mats/', '/cooling/dog-travel-hydration/', '/travel/dog-road-trip-gear/'],
       },
       {
         page: path.join('travel', 'how-to-fly-with-a-dog', 'index.html'),
         expected: [
           '/comforting/best-airline-approved-dog-carriers/',
           '/comforting/best-dog-travel-bags-for-flying/',
+          '/cooling/dog-travel-hydration/',
           '/comforting/best-airline-crates-for-flying-with-your-dog/',
           '/calming/best-calming-products-for-anxious-dogs/',
           '/calming/car-anxiety-for-dogs/',
@@ -156,7 +157,7 @@ describe('site smoke tests', () => {
         expected: [
           '/travel/dog-road-trip-gear/',
           '/cooling/cooling-mats/',
-          '/cooling/cooling-vests/',
+          '/cooling/dog-travel-hydration/',
           '/cooling/best-cooling-products-for-dogs/',
         ],
       },
@@ -313,7 +314,7 @@ describe('site smoke tests', () => {
   it('publishes homepage featured article images', () => {
     const homeDoc = readBuiltPage('index.html');
     const featuredImages = Array.from(
-      homeDoc.querySelectorAll<HTMLImageElement>('.article-card img, .hp-v7-article-img')
+      homeDoc.querySelectorAll<HTMLImageElement>('.article-card img')
     );
 
     expect(featuredImages.length).toBeGreaterThan(0);

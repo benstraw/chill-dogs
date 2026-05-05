@@ -1,6 +1,7 @@
 import type { CollectionEntry } from 'astro:content';
 import type { ImageMetadata } from 'astro';
 import { resolveAutoOgImagePath, resolveProvidedOgImagePath } from './og';
+import { staticSitemapSections } from '@data/content-sitemap';
 
 export type HomepageArticleColor = 'cool' | 'calm' | 'comfort' | 'gear';
 
@@ -57,6 +58,28 @@ export function mapHomepageArticle(entry: CollectionEntry<'articles'>): Homepage
     color: theme.color,
     pubDate: entry.data.pubDate,
   };
+}
+
+export interface HomepageConverterCard {
+  href: string;
+  title: string;
+  description: string;
+  label: string;
+  color: HomepageArticleColor;
+}
+
+export function getHomepageConverters(limit = 12): HomepageConverterCard[] {
+  return staticSitemapSections
+    .flatMap((s) => s.pages)
+    .filter((p) => p.pageType === 'converter')
+    .reverse()
+    .slice(0, limit)
+    .map((p) => ({
+      href: p.href,
+      title: p.baseTitle,
+      description: p.preview.description,
+      ...resolveHomepageArticleTheme(p.href),
+    }));
 }
 
 export function buildHomepageArticleFeed(

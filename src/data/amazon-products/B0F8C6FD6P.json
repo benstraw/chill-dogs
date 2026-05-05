@@ -1,0 +1,587 @@
+{
+  "search_metadata": {
+    "id": "69f048a2532a17b8c51370a4",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/uHfQsAx_TZ5ODDPIGav10g/69f048a2532a17b8c51370a4.json",
+    "created_at": "2026-04-28 05:41:54 UTC",
+    "processed_at": "2026-04-28 05:41:54 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0F8C6FD6P/?",
+    "raw_html_file": "https://serpapi.com/searches/uHfQsAx_TZ5ODDPIGav10g/69f048a2532a17b8c51370a4.html",
+    "total_time_taken": 2.33
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0F8C6FD6P",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0F8C6FD6P",
+    "title": "Soft-Sided Pet Carrier for Cats and Small Dogs – Stylish, Airline-Approved Travel Bag with Mesh Ventilation, Collapsible, Removable Pad and Safety Leash, Fits up to 16 lb",
+    "link": "https://www.amazon.com/hp/wlp/pipeline/membersignup?ref=primedp_ventures_desktopBelowThreshold&primeCampaignId=primedp_ventures_desktopBelowThreshold",
+    "link_clean": "https://www.amazon.com/dp/B0F8C6FD6P/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F8C6FD6P&device=desktop&engine=amazon_product",
+    "badges": [
+      "Amazon's Choice"
+    ],
+    "variants": [
+      {
+        "title": "Color",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0F8C6FD6P",
+            "name": "Matcha Green",
+            "image": "https://m.media-amazon.com/images/I/41-gVZNBeeL._SS64_.jpg",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F8C6FD6P&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0DKC7Y2YS",
+            "name": "Steel Grey",
+            "image": "https://m.media-amazon.com/images/I/41oJtx+QnyL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DKC7Y2YS&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Brand: Petropolitan",
+    "thumbnail": "https://m.media-amazon.com/images/I/71OgCptFbaL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/71OgCptFbaL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81TyQEX5JmL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81WiUZRMsOL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71zZ0yRMjHL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81re9yTZtfL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/91Mq2bXET1L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/91jkDeL9HdL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/91dZSP76OJL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81RD1bGN3NL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.9,
+    "reviews": 18,
+    "discount": "-32%",
+    "price": "$26.99",
+    "extracted_price": 26.99,
+    "price_unit": "$26.99 / count",
+    "extracted_price_unit": 26.99,
+    "old_price": "$39.90",
+    "extracted_old_price": 39.9,
+    "prime": true,
+    "delivery": [
+      "FREE delivery Sunday, May 3 on orders shipped by Amazon over $35",
+      "Or Prime members get FREE delivery Thursday, April 30. Join Prime"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$26.99",
+      "extracted_price": 26.99,
+      "price_unit": "$26.99 / count",
+      "extracted_price_unit": 26.99,
+      "delivery": [
+        "FREE delivery Sunday, May 3 on orders shipped by Amazon over $35",
+        "Or Prime members get FREE delivery Thursday, April 30. Join Prime"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "The Petropolitan",
+          "details": {
+            "heading": "Sold by",
+            "content": "The Petropolitan"
+          },
+          "link": {
+            "text": "The Petropolitan",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A3DYWEI3A4JT33&asin=B0F8C6FD6P&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "packaging": {
+          "text": "Ships in product packaging",
+          "details": {
+            "heading": "Ships in product packaging",
+            "content": "This item has been tested to certify it can ship safely in its original box or bag to avoid unnecessary packaging. Since 2015, we have reduced the weight of outbound packaging per shipment by 41% on average, that’s over 2 million tons of packaging material.If you still require Amazon packaging for this item, choose \"Ship in Amazon packaging\" at checkout. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/sipp_home"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "color": "Matcha Green",
+    "brand": "Petropolitan",
+    "product_dimensions": "17\"L x 9\"W x 11\"H",
+    "material": "Faux Leather, Fleece, Nylon, Rattan",
+    "special_feature": "Collapsible"
+  },
+  "about_item": [
+    "2-IN-1 CARRIER & CAR SEAT: Not only a stylish bag – seat-belt loops are naturally integrated into the delicate design so you can secure the carrier in the car for safer travel.",
+    "FOR CATS & SMALL DOGS: Sized for pets up to 16 lb, giving kittens, cats, toy breeds, and small puppies a secure, cozy ride.",
+    "STYLISH & MODERN LOOK: Refined detailing – smart enough for airport terminals and everyday errands.",
+    "AIRLINE CABIN SIZE & LUGGAGE SLEEVE: Soft-sided design with ventilated panels fits under many airline seats (17\" × 9\" × 11\"); always confirm your carrier’s rules before flying. A luggage sleeve slides over your suitcase handle to ease your load and keep the carrier steady while you roll through the airport.",
+    "HIGH-QUALITY MATERIALS & HARDWARE: High-quality faux leather dual handles and accents for grip and durability; a handle connector/wrap to join the handles for comfort; an adjustable, removable shoulder strap in tough webbing with reinforced hardware; and YKK self-locking zippers for smooth operation that won’t creep open – plus a fluorescent safety leash to keep pets secure.",
+    "VENTILATION & PRIVACY CONTROL: Breathable mesh on multiple sides promotes airflow and visibility. When you need shade or fewer distractions, roll-up flaps can cover the mesh – great for calming nervous pets in busy terminals, blocking bright light for naps, or limiting drafts.",
+    "COMFORTABLE, YEAR-ROUND MAT: Reversible insert with a cooling summer side made from rattan-style woven bamboo fiber (plant-based and eco-friendly) and a cozy winter side – plus a sturdy base that reduces sagging.",
+    "BUILT-IN POOP-BAG DISPENSER: Dedicated pocket with a feed-through slot keeps waste bags handy for quick, tidy cleanups on walks and trips."
+  ],
+  "bought_together": [
+    {
+      "position": 1,
+      "title": "Petropolitan Soft-Sided Pet Carrier for Cats and Small Dogs – Stylish, Airline-Approved Travel Bag with Mesh Ventilation, Collapsible, Removable Pad and Safety Leash, Fits up to 16 lb",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71OgCptFbaL._AC_UL116_SR116,116_.jpg",
+      "price": "$26.99",
+      "extracted_price": 26.99,
+      "price_unit": "$26.99/count",
+      "extracted_price_unit": 26.99,
+      "delivery": [
+        "Get it as soon as Sunday, May 3"
+      ],
+      "stock": "In Stock"
+    },
+    {
+      "position": 2,
+      "title": "Mr. Peanut's Spinner Wheelbase Luggage Cart, Adding Rolling Functionality to Bags & Pet Carriers",
+      "link": "https://www.amazon.com/Mr-Peanuts-Wheelbase-Functionality-Carriers/dp/B09HBTZ4DV/ref=pd_bxgy_thbs_d_sccl_1/132-8919887-3950727?pd_rd_w=aVAG6&content-id=amzn1.sym.9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_p=9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_r=S6BR3HJY0N11QBGF4M7T&pd_rd_wg=32C2R&pd_rd_r=094d327d-b86f-47d8-bd08-e6994ed3d968&pd_rd_i=B09HBTZ4DV&psc=1",
+      "asin": "B09HBTZ4DV",
+      "link_clean": "https://www.amazon.com/Mr-Peanuts-Wheelbase-Functionality-Carriers/dp/B09HBTZ4DV/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09HBTZ4DV&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/4155Amu9BOL._AC_UL116_SR116,116_.jpg",
+      "price": "$84.00",
+      "extracted_price": 84,
+      "delivery": [
+        "Get it as soon as Sunday, May 3"
+      ],
+      "stock": "In Stock"
+    }
+  ],
+  "related_products": [
+    {
+      "position": 1,
+      "title": "FUKUMARU Cat Carrier, 4 Mesh Windows Small Dog Carrier, 4 Storage Pockets Cat Travel Bag, Under 15 lb Airline Approved Pet Ca",
+      "link": "https://www.amazon.com/FUKUMARU-Carrier-Windows-Approved-Rollable/dp/B0C9MFSZ29/ref=pd_sbs_d_sccl_1_1/132-8919887-3950727?pd_rd_w=5UOcY&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=S6BR3HJY0N11QBGF4M7T&pd_rd_wg=32C2R&pd_rd_r=094d327d-b86f-47d8-bd08-e6994ed3d968&pd_rd_i=B0C9MFSZ29&psc=1",
+      "asin": "B0C9MFSZ29",
+      "link_clean": "https://www.amazon.com/FUKUMARU-Carrier-Windows-Approved-Rollable/dp/B0C9MFSZ29/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0C9MFSZ29&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71VnX46PKQL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.6,
+      "reviews": 1677,
+      "price": "$34.79",
+      "extracted_price": 34.79,
+      "price_unit": "$34.79/count",
+      "extracted_price_unit": 34.79,
+      "delivery": [
+        "Get it as soon as Sunday, May 3"
+      ]
+    },
+    {
+      "position": 2,
+      "title": "BAGSMART Cat Carrier: Soft-Sided Pet Carrier for Small Medium Cats Dogs Puppy Quilted Collapsible Puffy Travel Bag Up to 20 L",
+      "link": "https://www.amazon.com/BAGSMART-Cat-Carrier-Soft-Sided-Collapsible/dp/B0FJXQPTR9/ref=pd_sbs_d_sccl_1_2/132-8919887-3950727?pd_rd_w=5UOcY&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=S6BR3HJY0N11QBGF4M7T&pd_rd_wg=32C2R&pd_rd_r=094d327d-b86f-47d8-bd08-e6994ed3d968&pd_rd_i=B0FJXQPTR9&psc=1",
+      "asin": "B0FJXQPTR9",
+      "link_clean": "https://www.amazon.com/BAGSMART-Cat-Carrier-Soft-Sided-Collapsible/dp/B0FJXQPTR9/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FJXQPTR9&device=desktop&engine=amazon_product",
+      "badges": [
+        "Amazon's Choice"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71iEdkE2N1L._AC_UL165_SR165,165_.jpg",
+      "rating": 4.6,
+      "reviews": 106,
+      "price": "$36.99",
+      "extracted_price": 36.99,
+      "delivery": [
+        "Get it as soon as Sunday, May 3"
+      ]
+    },
+    {
+      "position": 3,
+      "title": "Lilliella Pet Carrier Backpack, Airline Approved TSA, Waterproof PU Foldable, 360° Ventilated, Light‑Blocking, Washable Trave",
+      "link": "https://www.amazon.com/Lilliella-Foldable-Waterproof-cat-Portable/dp/B0BHQLC1TS/ref=pd_sbs_d_sccl_1_3/132-8919887-3950727?pd_rd_w=5UOcY&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=S6BR3HJY0N11QBGF4M7T&pd_rd_wg=32C2R&pd_rd_r=094d327d-b86f-47d8-bd08-e6994ed3d968&pd_rd_i=B0BHQLC1TS&psc=1",
+      "asin": "B0BHQLC1TS",
+      "link_clean": "https://www.amazon.com/Lilliella-Foldable-Waterproof-cat-Portable/dp/B0BHQLC1TS/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0BHQLC1TS&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71SYQzJl0NL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.5,
+      "reviews": 182,
+      "price": "$31.34",
+      "extracted_price": 31.34,
+      "delivery": [
+        "Get it as soon as Sunday, May 3"
+      ]
+    },
+    {
+      "position": 4,
+      "title": "Dog, Cat Carrier for Pets Up to 12 Lbs, Airline Approved Collapsible Soft-Sided Pet Travel Bag with Locking Zippers, Breathab",
+      "link": "https://www.amazon.com/Approved-Collapsible-Soft-Sided-Breathable-Removable/dp/B0G3MBHKB9/ref=pd_sbs_d_sccl_1_4/132-8919887-3950727?pd_rd_w=5UOcY&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=S6BR3HJY0N11QBGF4M7T&pd_rd_wg=32C2R&pd_rd_r=094d327d-b86f-47d8-bd08-e6994ed3d968&pd_rd_i=B0G3MBHKB9&psc=1",
+      "asin": "B0G3MBHKB9",
+      "link_clean": "https://www.amazon.com/Approved-Collapsible-Soft-Sided-Breathable-Removable/dp/B0G3MBHKB9/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G3MBHKB9&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71gXUT-F8YL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.8,
+      "reviews": 21,
+      "price": "$59.98",
+      "extracted_price": 59.98,
+      "delivery": [
+        "Get it as soon as Sunday, May 3"
+      ]
+    },
+    {
+      "position": 5,
+      "title": "JESPET Soft-Sided Kennel Pet Carrier for Small Dogs, Cats, Puppy, Airline Approved Cat Carriers Dog Carrier Collapsible, Trav",
+      "link": "https://www.amazon.com/JESPET-Soft-Sided-Approved-Carriers-Collapsible/dp/B077Y7SZQW/ref=pd_sbs_d_sccl_1_5/132-8919887-3950727?pd_rd_w=5UOcY&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=S6BR3HJY0N11QBGF4M7T&pd_rd_wg=32C2R&pd_rd_r=094d327d-b86f-47d8-bd08-e6994ed3d968&pd_rd_i=B077Y7SZQW&psc=1",
+      "asin": "B077Y7SZQW",
+      "link_clean": "https://www.amazon.com/JESPET-Soft-Sided-Approved-Carriers-Collapsible/dp/B077Y7SZQW/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B077Y7SZQW&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/715fH6bOkSL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.4,
+      "reviews": 2615,
+      "price": "$27.99",
+      "extracted_price": 27.99,
+      "delivery": [
+        "Get it as soon as Sunday, May 3"
+      ]
+    },
+    {
+      "position": 6,
+      "title": "PAPZER Collapsible Small Pet Carrier for Cat 15 lbs with Fashion Pocket, Lightweight Sturdy Travel Carry Bag Little Puppy Dog",
+      "link": "https://www.amazon.com/PAPZER-Pet-Carrier-17-7x11-0x11-8-Khaki/dp/B0FXWTXBRC/ref=pd_sbs_d_sccl_1_6/132-8919887-3950727?pd_rd_w=5UOcY&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=S6BR3HJY0N11QBGF4M7T&pd_rd_wg=32C2R&pd_rd_r=094d327d-b86f-47d8-bd08-e6994ed3d968&pd_rd_i=B0FXWTXBRC&psc=1",
+      "asin": "B0FXWTXBRC",
+      "link_clean": "https://www.amazon.com/PAPZER-Pet-Carrier-17-7x11-0x11-8-Khaki/dp/B0FXWTXBRC/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FXWTXBRC&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81fnMt41TFL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.8,
+      "reviews": 29,
+      "price": "$36.99",
+      "extracted_price": 36.99,
+      "delivery": [
+        "Get it as soon as Sunday, May 3"
+      ]
+    }
+  ],
+  "product_details": {
+    "product_dimensions": "17 x 9 x 11 inches; 3.37 Pounds",
+    "item_model_number": "PETROPOLITAN 101.24",
+    "date_first_available": "May 13, 2025",
+    "manufacturer": "Petropolitan",
+    "asin": "B0F8C6FD6P",
+    "best_sellers_rank": [
+      {
+        "text": "#40,149 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 40149,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#92 in Cat Soft-Sided Carriers",
+        "extracted_rank": 92,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/3024133011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Cat Soft-Sided Carriers"
+      },
+      {
+        "text": "#98 in Dog Soft-Sided Carriers",
+        "extracted_rank": 98,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/3024188011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Soft-Sided Carriers"
+      }
+    ],
+    "customer_reviews": "4.9 out of 5 stars",
+    "rating": 4.9,
+    "reviews": 18,
+    "brand_name": "Petropolitan",
+    "model_name": "Pet Carrier Holdall Bag",
+    "upc": "860012868162",
+    "pet_type": "Cat, Dog",
+    "model_number": "PETROPOLITAN 101.24",
+    "manufacturer_part_number": "HA-NY-25",
+    "included_components": "Pet Carrier",
+    "unit_count": "1 Count",
+    "material_type": "Faux Leather, Fleece, Nylon, Rattan",
+    "item_dimensions_l_x_w_x_h": "17\"L x 9\"W x 11\"H",
+    "size": "Medium",
+    "additional_features": "Collapsible",
+    "closure_type": "Snap buttons, Zipper",
+    "dog_breed_size": "Medium, Small",
+    "compatible_with_vehicle_type": "Airplane, Bus, Car, Train",
+    "color": "Matcha Green",
+    "product_style": "Modern Travel",
+    "recommended_uses_for_product": "Traveling",
+    "maximum_weight_recommendation": "16 Pounds"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0F4DFF24G",
+      "title": "Top and 2 Sides Expandable Pet Carrier 17x11x9.5, TSA Airline Approved Small Dog Carriers for Small Dogs, Soft-Sided Cat Carrier with Self-Locking Zippers for Kitten,Rabbit, Puppy, Guinea Pig Black",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JIoFpGq3GtWH10PdRUoMd0YAAAGd0pu_SAEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDIgICAAaHm2/clv1c_ek-wBfHXFbbWzjK3YkNvQ2gzaQ9WsPwwlwunFF_2GpS_551O8sGUUYM9orvEtZNeypvcWxQih47FYO1SKxLGCqEnVV2rGCiv8CJ13Oign9RVvwU_E3gsiWTl8qnlBxfQBfpUIz71SokMgCj4IPll-swbIN-ZjlbY6tywbbXpjQd5mATe2Y4SxzpJ4GMgpBSPxpxjBipr3KOK0Pg44VyN9_xSye8Hk-vM7FPR_awSOeCDymrpnEofs9YGUT8N3qoqvGEBeOWd2TE52WND5Ee_iQWAQ7pPTIRdf-wDbr6X2P02rbnNCkxuz8pXbs28IBSC9MmxrcK1oFgAxhm8f_wvd3RSV5r7JEfmyXrj4SnmIoR4gxVpZ6FRibhOhRHXW_eOO2D18vdfJiIpDIG6BmEtvsnrDArWmHVI6lqeTPkcvve0Zvk5FH_pw4ANO7Eizv7x1UR8_60gm5PHH5oZXSNEIg-_g5vCiWG2ZiBtj9MV9xPAMOJK1KNKkCqF38ugK_bKi0F8sgOIegWE65rJOJiL5cZHMb1XIvUOeo-sTRcLMUXEUYCF9SK8f8rfc0wEmRKq1I0JnuzeyYnjW38kDdvZsDBGS712XmyCQ1qoEvr_RhF3OnqmKDE5iQ03dRR3JgE_icafLNp-lzSNJw3z20OGt05VMZNujA7aiKYMigI7K1YZWgWkfzDdVf89yWTl6ClIZ8oE3LkLYYNTOMPmlj-omTkqE-UnBDF55W0JgOe7m7EuRDcnTWcdjHtvg5sS0mzeGO4m-29Ay9zt8ammQkoHTK-s0ZEKxuhIF4M59VX0wQpVZJgWtNcr2Tm_RdjZ7ymT7PrWv4ZZSI_s4aOJc2QJvdxj5cABclJ8lhaasDvyKHVeMsg70ItojoohAK46pkeCJD4OsEr3qM_oF_I-dmPHh2Y_HjwWvJWVQ-ElrI30BcOmoSsZ8UPAufbZ6vK0n3GCF0t4t3ILHQasYqGLf6j9Evo7uyvVRtwbkvEfJRnPht8_REN1ZI7-0_aJTBtmAm-FSuNx4Vt4jgbSLgJNAnfUMPRU0h1h_yhQcylIH-prGZkT0TjNB--v3AnLgw-C9xT2nmRpZOEtTil5_GNyMXi0AEBsP5_llbL_IyB-1FxBepnNsx9gJw0cUX1eJQmqSnC2OOXE4NVmACebq5rFd8rswjXt1fxCEqsy2R6MPCRGUBPsPNbtLN2DEBzUSELuQX6sNFVTMaR-6SCp9oqQFKEFzjKN4pDkhY65BihJg0oJQMjn-RLrzPN-vGp52tXTSej2EYOvdehCkqPfbIMoboGsROpuX2L8Iol9JqyCcaMUJGPDkKdZz3dbyZoo0OssqQRDoFrI-2Au_2Aicghxj7jUlPT6fUpna-CJjzX1hIiGTsHydrFnIVnZcteOoLLY9ug2fzbj-L6LbteKuZHw-3-ZZtnBXOOxao-eB1-oAOr7ZzJRAKrBEBxDqNPF7MLMLndsZduP-Un9mRYGAvQDoR-l29F9IjPiPHZJEM4ygAz7CS3BQY0jmBRj/https://www.amazon.com/dp/B0F4DFF24G/?_encoding=UTF8&pd_rd_i=B0F4DFF24G&pd_rd_i=B0F4DFF24G&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=ezndR&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=S6BR3HJY0N11QBGF4M7T&pd_rd_wg=32C2R&pd_rd_r=094d327d-b86f-47d8-bd08-e6994ed3d968",
+      "link_clean": "https://www.amazon.com/dp/B0F4DFF24G/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F4DFF24G&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51ip9q5jAjL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/0ce42974-59bb-42ba-8449-4b77e196c1b8.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/0ce42974-59bb-42ba-8449-4b77e196c1b8.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.4,
+      "reviews": 87,
+      "price": "$48.99",
+      "extracted_price": 48.99
+    },
+    {
+      "position": 2,
+      "asin": "B09MJ131L5",
+      "title": "GAPZER Pet Carrier for Large Cats, Soft-Sided Cat Carrier for Medium Big Cats and Puppy up to 20lbs, Washable Dog Carrier Privacy Protection for Home Outdoor Travel",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JGVUjqtjYBuhn456yos4g14AAAGd0pu_SQEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDIgICDaXz1r/clv1c_ek-wxfHTEsbWDdGAtG_QYoizu11j8mAm-AobRknqPqSP5hVtpiVlAKR-V2PhXP32WhwBA9L6YjBoDYD1R03uYpIH21nxlDsfm2wkL9SF6MQeTSG6fW-1Bk70IjjwoE8LjO3QY6veYkJLwWGXvlpu7xDbod_Etsx6UwXyySL6VLa-tnwNPlSy72lPLo74pVVOF5CbhsvIGgr-wM6thwWZpH-LTA9rGDAEgJUX2x36IrO-w9Km_OeFnIQXMYM3Hm9iFNkjSs0woqJep4KGdwPiIRKOh8cvkeCT8nFyFab2rTi2PkfTCq00GFqcOc_3K0dq6TPbHJ2CV9JR-4e3YNbZug8cw0I9Am59Yq4T7rWj8zD-jxsZdCX_O2P8Lv5phphI0Msi8l8DsKzTphaG5VS-jMCu5Pfk69GTAonbX8tqPJSkRUfQt2AYouWww3wjzWRKib_E3AW6AmaMqgXA9IWVREX4KFjDeWqYdyrgeb3Z_-XQdjfI2vCH9B_mwUzEqqWoZG_oW0M1GZJWtmfkLFQJ-sebhklOfbWQO1ouUN9MpDq_khG2FuprfCsuPD-dSE5hNsFGcdcZHYeL100Z55KjmEe5SXspbZOKGz-r3Cr8PxQjsN7rdDME0bxIb8zq4ebaGmovpBlvOs6X8Tyc2zx_-WPqgcn720QaVuPniqYtiZ2ZSiRbZXFEiH9TUmOn7H-O0Vfd7JFQp4bfabUeRDlv97pcBN4d6STPlwwwKKRXRWWuB1k1c0gpygQOD2rUgMBrkK1s39eaAJiCH65aiBGrKY5C_W7PumdYUr4Q2o63Abj7nVGq3bNSSXdxWzhUGDjO6EGl-ufO7ROkLnkzHqopBSvtYLrGsk2NNUVxGycTAaTixYJz3DigkiEK7j_6NBTozgZu2Jen3k08pycDdxbvpIrzPNC0RuJhe4YIa52s5qI9_S_aKT2rY1T52Ly2t4FT0JCbUJCLxfOWLzKXcf-BJvu6ovLQigHzQqZwCZgxaQ2ccK9JFi-AZKhVUDSCH1BaDPCxfndhkHyWgpqZF47bOsICbCBPqSW1gNJ3aNTymXRKKcIQ4dsAi9rn4rkxjIrrbdsLCPGnpzo9b8ZOQo010B4pdXgAJFlPgDhT1qvlP57AWCy4tmASB5nf6BEAXhMn4cw_74zz3spwDcWCf06KT14TK8Lj_ovNjrTYIXX4cYDvZeK2BITPXdYbXdDErbyjnMEBJL5LP_nCSoc6WQTGoRLml8XOaWlbFjP-WfVzIZyUQIFEEuo59MT4Ep8ZMlPvaBt_Lp834Z1PMBV4bYR0oko01h0VUVT7VeyjHVFUM8vGeDRE-SL7xBKViV9a9CS9nnuoy2j04h-pZMDH06qP_9fgFvF-IVuGquKbalpddNMihIVCKT_LghfxiMn1QSaeJIbSnzPT_7jyjOrctTrmozFpez24c2XsX1pYQX5TskCllyRoAhQkd8DdynfjLcDv8BpdRttHYXr7A3AOFfDa2kJMdikDd8cztYexYrK5UGvHxc9sp8_W9qxoRTV4pbX2tD0prLXQmf3FyTVZyzUCR0o/https://www.amazon.com/dp/B09MJ131L5/?_encoding=UTF8&pd_rd_i=B09MJ131L5&pd_rd_i=B09MJ131L5&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=ezndR&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=S6BR3HJY0N11QBGF4M7T&pd_rd_wg=32C2R&pd_rd_r=094d327d-b86f-47d8-bd08-e6994ed3d968",
+      "link_clean": "https://www.amazon.com/dp/B09MJ131L5/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09MJ131L5&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51vCG0gYKFL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/9003ee72-bd05-4266-9003-e4c114859f88.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/9003ee72-bd05-4266-9003-e4c114859f88.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.5,
+      "reviews": 10087,
+      "price": "$29.98",
+      "extracted_price": 29.98,
+      "old_price": "$39.99",
+      "extracted_old_price": 39.99
+    },
+    {
+      "position": 3,
+      "asin": "B0FS1CSZCS",
+      "title": "VeluXanipyr Expandable Airline Approved Pet Carrier, Soft-Sided Travel Bag for Small Cats Dogs with Hard Shell Base, Removable Fleece Pad, Ventilated Mesh, Gray (Blue Trim)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JNBRNjtcOyJs8hxWIk0CA00AAAGd0pu_SgEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDIgICDnUlIw/clv1c_ek-YBfHTEsbWTm7a8CMJvRQgBJpQrA9-dbgM6nR64cI-kfVwNs2No4g3BhEJofCZRGemTHJJsoH-OTyL-XJydigvT-1nuoMLvqwnNLVqzYp-nhyWHsTQLa788LWclvAMgjdUc9yY92Fcwm6ix88m-tLrAF2bDFzvjugQHzbtjwVO_4-BSgj9LeCg7uGU-CvtKOSt3hObftRp1GebVThq8Eixt9UYXGJz0l5a8WhnyRVY0FZE6f4Sn_EeBIxiN39p8VvCBSLNc8DX890sCqnY_8RPrauE163uRuZ5J058HRw_gJG3zJOCM6Yy28v-Posiuyxlx9tyxGXI3mwwuEId28VebYGU-wIIDaU9mHU3yoLGPfcmqtNGUQECMpUuPxoMF2Mn7K3js1mEGNMu6tsZUJRIv-m-mJ36OCqHHf9_WkMo8--TX2CWB7LPI35Jok4v8nDs1dfGOEcZOlv3VrZMhN_Ivyp1SJ5VJzFvqbI0mffWt13tmCStx22UX4WeCPS7rr6j6oq6NDVPL1fxFZUlLPjVZj4n_qRYt1isdheCtSffnWq4oc0sULCAtyWRmVKCArw-kMKiXk1dRH23JYcolrfOyhsrVjdaPf7F1uRTE3lQwSsQ1frF4X9689usPs5x79Hl0baZbVmBvauaExSaxT3D9unngAmuH0iHRGOBqMYZRm4A2HYVXQAXAFwwLjymNI5C1WxLNor57WCCc87B8E_tg5xS-LuZsMs1VJcSIs1629cBWI9WAxV1Nx8lw9MHfqlXaiv-t_rj3roMYJOHPegjtzj_9g5lIjLcSeChAzHpncMa3njnfHuCV16DEdQPobY_pNKgyXKIX47lzXK38FpHVeo-mD3jSUPCTPPjjgpDnCbt7WAySMQdnceuUOfdGIMXKCZO0I_S4HLgmgm99h3PkfBcyC3hk-6V7kNDylZlnfaSaZ4XM0CSpRBL7TgpXne4Z4Vag1Rb6jySLVNtAwN3Vher1Dzkv0jKsuzkZ7RoXQQ0MFuvcw4wPwFPm1C6GuvY_ypy0Qhr-IBVNhD5a0EmNQJYp1Yl5SSwl0489i82yCkxj_-UtRkAoKQs9lxFXb7Qe66-5EnU66HmRaj3bgl0S0340UjNiRhmhqn-2qZ-uAzFFlKhjV9LWjO-eoR_zmXZWk55j1CpyWSgXJrJzslCNulwbTEFM41MvjRzq4sCOCajC00kFhM9q3c_5vA7ByJL4Oh1LB9Kp2zTQj_edRYGVpJEQKph345t602ft8c99jp6uDA4nrikcYQuJMgRJivAQV8eZtZszDi1RpJTZIdU7giGEjVKQUj8qULhz346SK1b9vppvjfFuv5g2t1hAqBp8TVSCuVewkMtwjjaO2Svkgy-67RPg2GCqsZuw7Ti56LZiPebayeSEMlinC2xQOMJQeiNDvpj3AKuI8UpdNQc11n3PDShHFLn1SYsIe1ue578-IXybvFDUGQt1eiFxVnFtcCK3Sjgc5QHycfl3uRhekfwtcKrQtuuR6Budr6_AVIikShRPAH_6fmyNA/https://www.amazon.com/dp/B0FS1CSZCS/?_encoding=UTF8&pd_rd_i=B0FS1CSZCS&pd_rd_i=B0FS1CSZCS&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=ezndR&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=S6BR3HJY0N11QBGF4M7T&pd_rd_wg=32C2R&pd_rd_r=094d327d-b86f-47d8-bd08-e6994ed3d968",
+      "link_clean": "https://www.amazon.com/dp/B0FS1CSZCS/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FS1CSZCS&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41Fa3c2rb4L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/b2c12b64-1e99-4da3-83f2-3aa2e1aee99d.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/b2c12b64-1e99-4da3-83f2-3aa2e1aee99d.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 5,
+      "reviews": 9,
+      "price": "$35.99",
+      "extracted_price": 35.99
+    },
+    {
+      "position": 4,
+      "asin": "B0G3MBHKB9",
+      "title": "Dog, Cat Carrier for Pets Up to 12 Lbs, Airline Approved Collapsible Soft-Sided Pet Travel Bag with Locking Zippers, Breathable Mesh and 4 Large Pockets, Removable Fleece Pad (Beige)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JIBN6EI22YnuK8XOxk3_hWAAAAGd0pu_SwEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDIgICChwiP5/clv1c_ek-YBfHTEsbWTm7a8CMJvRQgBJpQrA9-dbgM6nRm4cI-kfVwNs2No4g3muW-Xo2WRGemTHJJsoH-OTyL-XJydigvT53E9-G78CLA3MiFWPx0AcE7bWv0Dn60wjjyqFHphOnpa00-fbZDBwGbvlpmz_Dbo9fkNsy6UgfywSra-LIHSaJRfGB2fVEAonk-6we64l5j1oqInQlT2-nlg0tPpQ4LTA4qBp_UXbjEQnENjw7lpVzP52lUyqUelIbPB04SeGS_YFVUeOrAehSXbNkKG56fMKJ8oklsGh8MSqyoUpC7Ov53maW0_9wjw0lDJ6yuRo8HodpSV1hsh9Iu51APoBfz_VkUvJw5lQ8y_tbITkBACppwPBXoPJnlAI6hV_GzkUKH3nqc5GsaLGkS0hHiyW1oSlOHkIkh-MhfJRtrK3KfKj_tE2vgztTnX787TwV2EAD3Z8tOpeIzIcm6jahASGFE9CcruXXcHXk2y00CYpWLHT3aOEB_rtjc1cuE_eUDqdLRRVH78uAt-Lyso1ZFxv7voZAuY17gtpt_IWdZLiCMfYNS8aFZGPrJlHifPNnBK9tMiqq-iVuaTXdfxYA_3tQx_GFDVVmF2k0YGD1k8L0ukdV-sQ2VdG_su3K7BgR6Bj55HHllgLhPU0owToON1oVcjwSDYXxgeNX02p9GWOdyT2_DX47QCcd9MZvmHzuBrDJpMRsr_MVnHNhNn2KRy4bmhTQJL_UodWXbDHNO-V3DDi1oEXhxNXmHcyVtXxzluaduUpX7mjy7d4lT_mIsdvTrDPZI09KXpXqLJ0Yi6dchIdz8pK_npjvDNDmNCVCaAUKT5ygei8SRI1He3VhPNnQeqdbps_l_Wr4sxDy9j0D4LCYJyHQB4IAKWk8IhTP8_2JtSRhv_BMkg5T9S4R9wdDLt-py6teRQ_vh8oj8YXGOK4ydBFZGbG_y-NMXDEoS5ZoL3P0ZDtr-DbNMY9-8_mvw36vocaaEv0iKsuzkYbRpGcMCqx0eCDzwPwFPm1C6GutY_y5y0Qhj-oBVdhD5a08mVAJYpVYl5SSwl048dig2MAkxB_-UtRkAoKRs9lhFXbzQe66-ZEjU7aHmR6j3bwkIS0040Ug9iRhGhiD6aiaJoki7m20cWkMozTUaprdme5fsuXezLS6I6UwnYuIuhchSMDcUFVTV4TkxGEdXGTod8tIbpLnsoUXMYGx78ze5xSJL4OhlL59KoWzTQn_edRaGVpJEQKpg345t6235uGDQb71NxKfdkW4JQ0UZl44w3aQrVoVrtkJOUbNUjMPpk8JLmQ_fHYWcxfdfXZfCnvtOsZuvygDfJXoO-AcWO_TJwfJIaP6B88xcwkMswjgaO2Sukgy-67SPhIEDqc7uw7Ti56LZiPebayeSVHu2U6rBjSKUYmXV1RAF3_2tQFF5cPhjpdnbzHfa49_65oKQTYfU9ozUGMBXr5Aepry_VVy56v7ojA-EJPziYgjDiPtsg7zrQgfi1lCT-TQDtbuxvoQnJSdkDSEvyd37bdHi/https://www.amazon.com/dp/B0G3MBHKB9/?_encoding=UTF8&pd_rd_i=B0G3MBHKB9&pd_rd_i=B0G3MBHKB9&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=ezndR&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=S6BR3HJY0N11QBGF4M7T&pd_rd_wg=32C2R&pd_rd_r=094d327d-b86f-47d8-bd08-e6994ed3d968",
+      "link_clean": "https://www.amazon.com/dp/B0G3MBHKB9/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G3MBHKB9&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41j1NSU8AUL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/ecf10eaa-16b5-4cee-adc4-1e4c43026d92.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/ecf10eaa-16b5-4cee-adc4-1e4c43026d92.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.8,
+      "reviews": 21,
+      "price": "$59.98",
+      "extracted_price": 59.98
+    },
+    {
+      "position": 5,
+      "asin": "B0BY8V6SGQ",
+      "title": "Petskd Top-Expandable Pet Carrier 18x13x9.5 Inches Southwest Airline Approved, Soft-Sided Carrier for Small Cats and Dogs with Locking Safety Zippers and Anti-Scratch Mesh(Black)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JCxIoW_Td531lI18QVB_FT4AAAGd0pu_TAEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDIgICCaJK4Q/clv1c_ek-wBfHTEsbWTm7a8CMJvRQgBJpQrA_-m5SDk1AxsOI55ooQ18ErtltntWx5XRyXMrov80IVuHiiJtk1SZ0JCznDfVktrevTbT7vpOok1K-yn7BL5CZMKxQQonl9syhJQfKOBtsBnGUmkb7_aP9H01DYpvls1kB6UgbwwSLC2JJ3UY98xEzypjr_k4Y21Sqfqez7NoqJnw1b2-GloxtWp2_feTsqS_7uHoPpkasd842TX_J2_OeHnIQXMYF3Hq9jFInLkiTKAzxl0bzA6hAWncQFn0yH1HPcdQOkygEMWH0_6MNRnxigtu8Pdod8a1n_-hnKHsMhPQ7fImNYBuGJ0YMlrT2CFrLOU2T4w5npPuZCPuDxYHd943e5m3U4sRnC_rkXNPBxIavZkYZOTNkGw2LdhBDqX9HZSIZJAO7kYUpdGw306ruStKUsqOVh_Pb_O1NrOhKydJr2Yxe6jOEsLlvjEeVf4YkC24G_YLA6hIGRKxAdWCdqNeC7nodeKPT7vr2D5AK5fmjC7tTvZ-icXQNlE_Uv-OdxtqPO9TcVhyKEPdQWKoL71cPMirOeX6gB878ekOOinl1dmJYZDcJhnMztXThL7ywNrwYAwPnGPFQjsUIbWroE4n56cAtrPs5x_1IrwND4yCVQFtfjzKBQ9h0217zqtYmO8SkPR2OB2NbZXi7ImXYVPSSkDMp0ouJ2cvfMtqNAC3L-vD062MxMWntSkozstBjON1xPWYp8a0AsVApF6Ja1ujj6HKTEpWSpYMdhteILXllq3dJTCFSBTGpKvQC4ax64FknsnZB6HrHjNqlM4kqSs9RKgcJD39BPn1RSrowObNbGB52nuMnp2SIrHscKQqVdBjP3MVJKGXKTE8yeUZVaFheIR3ZzmmPdzeIGOy45jD3_iW3P0hGNSrH_5hMGFP659wYSXE9411SZCQE_trfBQntEfU1b0WjlURHTNy4m15Yrmp1eh2jLwW8InEb7VjlyQui7Vb0RYc6qzCIDRSqib63aQb0DfFvYMgG_6hz4nCF6ct90KDHqk-duodY_615DHr-5_kxpTLxY9c5qd_mQs060JL4xw1N4iiyju9whIKwgEnA2Mc7tHEuzDrDDa3vUtVNifw3kEixPB3tnJC8q-q9NGRNEZhy5c4Nsq6Y0C9sPkMOTFhT4keql5nSXG3wiMIzwV0Wqa-0BztndQfCf7XQJGkUGPwENUbIdGcBFUQav5bwXZsVO7ZaH9rTpQfAFiuQjqQQTjNBYzWlPOJNhHxUWgA1M2eGPGh_Gfe1KiFqBFzUUJbzZjlDZI8EM3kDUEAirZx9t8UA-yYABpw5_6-EuL7ptpfM2CJ1T3h-bgiY8G4kVAW6q1bZGLz3n3KIFKEpL9FLQA_SqWbGTGL3twhFh7vZUyMJHwLTcYvfnfmoSkD-yg9rr0HigsEfRqvOqJsRuYTS8ek7rSXN9eH7JjvILipmSYDYWJXmGhrE96C6WAKMnGT-ZvF-vGPgAadoFx41MDacieccqs30/https://www.amazon.com/dp/B0BY8V6SGQ/?_encoding=UTF8&pd_rd_i=B0BY8V6SGQ&pd_rd_i=B0BY8V6SGQ&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=ezndR&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=S6BR3HJY0N11QBGF4M7T&pd_rd_wg=32C2R&pd_rd_r=094d327d-b86f-47d8-bd08-e6994ed3d968",
+      "link_clean": "https://www.amazon.com/dp/B0BY8V6SGQ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0BY8V6SGQ&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51nrAjrSBRL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/14e92c28-b9c5-4904-ad49-466a7d512632.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/14e92c28-b9c5-4904-ad49-466a7d512632.mp4/r/THUMBNAIL_1080P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 754,
+      "price": "$49.95",
+      "extracted_price": 49.95,
+      "old_price": "$65.95",
+      "extracted_old_price": 65.95
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "images": [
+        "https://m.media-amazon.com/images/I/81HzjIHAwhL.jpg",
+        "https://m.media-amazon.com/images/I/810ge8QSiYL.jpg",
+        "https://m.media-amazon.com/images/I/61ZTpaBIS0L.jpg",
+        "https://m.media-amazon.com/images/I/61F-XMQov0L.jpg",
+        "https://m.media-amazon.com/images/I/81HYxw8kWoL.jpg",
+        "https://m.media-amazon.com/images/I/71u7cebJMbL.jpg",
+        "https://m.media-amazon.com/images/I/71U0IijEjTL.jpg",
+        "https://m.media-amazon.com/images/I/71RWe3s1pDL.jpg",
+        "https://m.media-amazon.com/images/I/71VSUJsiefL.jpg",
+        "https://m.media-amazon.com/images/I/71InvlzKeoL.jpg",
+        "https://m.media-amazon.com/images/I/71fF4y761sL.jpg",
+        "https://m.media-amazon.com/images/I/71BST71T8bL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 92,
+        "4 star": 8,
+        "3 star": 0,
+        "2 star": 0,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Great features and cat approved",
+        "text": "I appreciate the extra details that make it look more fashionable, the matcha color, and all the practical features (top or side entry, it completely folds down, seatbelt fasteners, ability to completely open the top, have just mesh on top or completely close the top). We haven't officially taken it on any vet visits or car rides yet but I've left it out for the cats to get familiar with and I regularly find one has hopped into it for a nap! (Cat in photo is 1 yr old and on the petite side probably around 8-9 pounds.)",
+        "rating": 5,
+        "date": "March 29, 2026",
+        "author": "Caitlyn",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AF3IMRNVDFKP5GCWRISEP4SMXL2Q",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/81HzjIHAwhL._SY88.jpg"
+        ],
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Matcha Green"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Cute and comfortable",
+        "text": "So adorable, stylish and comfy for my beautiful baby. It was so easy to trek around the airport on my luggage. Love that you can take the board cover off and wash. It was great. It held up a nightmare of travel.",
+        "rating": 5,
+        "date": "April 16, 2026",
+        "author": "GreyNY",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFSDYZSF7H7QBEW5IWCIYGLCIT4A",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/810ge8QSiYL._SY88.jpg"
+        ],
+        "verified_purchase": true
+      },
+      {
+        "position": 3,
+        "title": "Size, and fitting",
+        "text": "Good fit for a small dog",
+        "rating": 5,
+        "date": "April 3, 2026",
+        "author": "ESC",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFVDJUSK6E52TT5TWCUMJNLL4TXQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true
+      },
+      {
+        "position": 4,
+        "title": "Muy bueno, tal cual la foto",
+        "text": "Muy buena calidad del material.",
+        "rating": 5,
+        "date": "March 26, 2026",
+        "author": "daiana",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFOEPC53ZUH6ZTGLXCE6Z5E7UETA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/61ZTpaBIS0L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81HYxw8kWoL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61F-XMQov0L._SY88.jpg"
+        ],
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Steel Grey"
+        },
+        "country": {
+          "code": "US",
+          "name": "United States"
+        },
+        "language": {
+          "code": "es",
+          "name": "Spanish (United States)"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Super Happy",
+        "text": "This really looks high end. It’s quite expensive but it’s very functional and beautifully made. It’s very solid and collapses flat. I am very happy with my purchase.",
+        "rating": 5,
+        "date": "March 7, 2026",
+        "author": "Wenhamhome",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AESYEC7K2BRNSKWAYS6WN6NUNGKQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Matcha Green"
+        }
+      },
+      {
+        "position": 6,
+        "title": "Petropolitan mixed high-end luggage w/premium Cat carrier features-Comfy kitty travel palace.",
+        "text": "This carrier looks more like a nice piece of luggage than a carrier for kitties(Or a16lb or less)It has a wide shoulder strap as well as handles so you can comfortably and safely carry it. It's very easy to spot clean. It also includes a comfy, removable & washable pad-The pad is reversible(One side is best for use during the summer/if your cat tends to overheat & the other side is best for winter)Both cats love to be in it even at home. If I leave it out & open they'll climb in to hide, snuggle and/or nap. We did put an extra Sherpa pad in it because I thought the ladies would be more comfortable with a tad more padding. Im not a huge fan of the orange \"seatbelt\" leash thing but it could be helpful for some people, especially if your cat/dog tries to escape when you open the carrier. The ladies fit in this comfortably together & that's great although I dont recommend putting more than 2-3 small-ish cats(Weight of cats must total 16lbs or less)in one carrier, especially if your cats dont get along well. They will essentially be trapped in a small space together. I always test the cat's reaction to a new carrier just in case one of them decides they dont want to share the new space. Best to find that out long before trip day! The size of this carrier is one of the things I like most about it. While it does state it is air travel compliant/approved you may want to check with your specific airline's policies on having multiple cats in one carrier(A certain airline used to not allow more than one cat per carrier as per policy but its a good idea to check the most up to date policies. Many airlines allow 2 cats maximum as long as they don't exceed the 16lb max weight & both cats fit comfortably with plenty of space to stand up, change positions, ect. This carrier is sturdy for a soft side carrier. It feels like it's made of premium, high quality materials & it seems to be well-made. I didnt notice any chemical smells as some reviews have noted but I did remove it from the packaging and let it air out long before the girls investigated & explored it. The size & elegant aesthetics is enough to justify the slightly higher price point in my opinion. While I feel it may be a tad on the higher end of the price scale I still think it's reasonably priced.The flaps can be left up/down over the mesh ventilation screens depending on your cat's preference& how much or how little visibility your cat prefers. I usually leave them open for max ventilation since both cats are comfortable with seeing everything around us. Some cats may feel safer/prefer not seeing outside of the carrier. Many airlines have different guidelines regarding pet carrier ventilation, which is another reason to review your carrier's specific rules about traveling with pets/carrier guidelines in advance. This carrier is likely good for trevel on trains and busses too but I recommend reviewing their policies to avoid any gotcha moments on your trip. The Petropolitan is great for car trips-From quick rides to the vet & pet store to longer road trips, this carrier keeps the ladies comfy & safe, All while lookin stylish in their little travel palace.One helpful Tip-Use a small carabiner or other locking mechanismm to secure the zippers together for a little bit of added security, especially if your cat becomes houdinni when they travel.All and all, we love this carrier & I would recommend it to kitty Moms and Dads.",
+        "rating": 4,
+        "date": "October 13, 2025",
+        "author": "Kimmi Bear",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGFMJJPAK735BYEDFPKVZWFVYSKQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/fac1779b-9d06-4c1b-a28b-93e40283e095._CR0%2C0%2C403%2C403_UX460_.jpg",
+        "product": {
+          "color": "Steel Grey"
+        }
+      },
+      {
+        "position": 7,
+        "title": "Perfect incognito pet carrier!",
+        "text": "Great buy! I wanted a bag where it wasn’t obvious my dog was inside and this did just that! She’s 13 pounds and fit comfortably!",
+        "rating": 5,
+        "date": "February 22, 2026",
+        "author": "Mika",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGLUF2P7Q7OD6BTAOHKXDDJ75JBA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/5400ab1e-9201-4739-b177-a33dfef5a6f5._CR0%2C30%2C272%2C272_UX460_.jpg",
+        "images": [
+          "https://m.media-amazon.com/images/I/71U0IijEjTL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71RWe3s1pDL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71VSUJsiefL._SY88.jpg"
+        ],
+        "helpful_votes": "3 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Matcha Green"
+        }
+      },
+      {
+        "position": 8,
+        "title": "Cats Approve",
+        "text": "Cats are not to scale or normal-sized cats 😂 The white one is over 5 lbs and the tabby is over 6 lbs.I took this to the vet with my tabby and got many compliments! The vet even thought the name \"Petropolitan\" was cute. I even had a friend come over to see my new kittens and she noticed and loved this carrier.I was worried in the picture that the handles and trim would be orange on the beige model. But they're not, they are definitely beige, which is good. It's also not too pink, it is definitely beige.The little flaps that you can clip up are super cute. And I like that you can keep your cat completely concealed with them closed (my vet usually has a blanket or towel to put over carriers while cats are in the waiting room).I love that it's collapsible but is still sturdy at the same time. I've had a fabric carrier before and wasn't going to get another one because it just felt like it would fall in on the cat and was flimsy. This does not feel like that at all.My cat's been scratching the netting (just for fun. She loves to play in it) and there's not even a scratch on it. It's very secure.This is a great carrier for cats! Very well-made and well thought out.",
+        "rating": 5,
+        "date": "October 28, 2025",
+        "author": "Ali",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AET5R6ZXUAZV554OITVWKSTQUJBA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/715VCnm33oL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71q010qWPZL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71InvlzKeoL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71fF4y761sL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71BST71T8bL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71BoDJxUHmL._SY88.jpg"
+        ],
+        "helpful_votes": "One person found this helpful"
+      }
+    ]
+  }
+}

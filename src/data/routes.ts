@@ -3,6 +3,7 @@ export const ROUTES = {
   about: '/about/',
   contact: '/contact/',
   coolingHub: '/cooling/',
+  coolingHydration: '/cooling/dog-travel-hydration/',
   coolingTop: '/cooling/best-cooling-products-for-dogs/',
   coolingMats: '/cooling/cooling-mats/',
   coolingBandanas: '/cooling/cooling-bandanas/',

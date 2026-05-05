@@ -17,7 +17,8 @@
     "test:coverage": "vitest run --coverage",
     "prepare": "simple-git-hooks",
     "indexnow:submit": "node scripts/indexnow-submit.mjs",
-    "check:asins": "bun run scripts/check-asin-validity.ts"
+    "check:asins": "bun run scripts/check-asin-validity.ts",
+    "check:ai-docs": "node scripts/validate-ai-docs.mjs"
   },
   "simple-git-hooks": {
     "pre-commit": "bun run test && bun run test:smoke"
