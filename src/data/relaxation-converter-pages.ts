@@ -1604,7 +1604,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
     hero: {
       title: 'Best Airline-Approved Soft-Sided Dog Carriers',
       subtitle:
-        'For in-cabin travel, the right carrier fits under the seat, meets your airline\'s dimensions, and keeps your dog comfortable during the full flight — not just at the gate.',
+        'For in-cabin travel, the right carrier fits under the seat, meets your airline\'s dimension specifications, and keeps your dog comfortable for the duration of the flight, not just at the gate.',
       disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
       primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
       secondaryCta: { label: 'Flying With a Dog Guide', href: ROUTES.travelFlyWithDog },
@@ -1624,11 +1624,11 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         id: 'quick-picks',
         heading: 'Quick Picks',
         intro:
-          'Most in-cabin travelers will do fine with the Sherpa Original. If your dog needs more room mid-flight, any of the expandable options are worth comparing against your specific airline\'s published dimensions.',
+          'Most in-cabin travelers will do fine with the Sherpa Original. If your dog needs more room mid-flight, any of the expandable options are worth comparing against your specific airline\'s dimension specifications.',
         items: [
           {
             label: 'Best Overall',
-            title: 'Sherpa Original Deluxe, Medium',
+            title: 'Sherpa Original Deluxe',
             description: 'The most established in-cabin carrier, with a Guaranteed On Board program that replaces it if any airline rejects it at the gate.',
             productId: 'sherpa-original-deluxe-carrier-medium',
             position: 'quick-picks-1',
@@ -1636,28 +1636,28 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
           {
             label: 'Best Expandable',
             title: "Mr. Peanut's Expandable Carrier",
-            description: 'A side-expanding soft carrier that keeps a simple under-seat footprint for boarding, then adds stretch room once your dog is settled.',
+            description: 'A side-expanding soft carrier that keeps a small under-seat footprint for boarding, then adds stretch room once your dog is settled.',
             productId: 'mr-peanuts-expandable-carrier',
             position: 'quick-picks-2',
           },
           {
             label: 'Best Budget',
             title: 'Amazon Basics Soft-Sided Airline Carrier',
-            description: 'A simple researched pick with a compact footprint, washable fleece pad, and the standard front-plus-top entry layout.',
+            description: 'A carrier with a compact footprint, washable fleece pad, and standard front-plus-top entry layout.',
             productId: 'amazon-basics-soft-sided-carrier',
             position: 'quick-picks-3',
           },
           {
             label: 'Best for Delta Flights',
-            title: 'Sherpa Delta Airlines Carrier, Medium',
-            description: 'Purpose-built to Delta\'s specific under-seat dimensions, which differ from most other carriers\' published requirements.',
+            title: 'Sherpa Delta Airlines Carrier',
+            description: 'Designed to Delta\'s under-seat dimensions, which differ from most other carriers\' specifications.',
             productId: 'sherpa-delta-airlines-carrier-medium',
             position: 'quick-picks-4',
           },
           {
             label: 'Best for Budget Airlines',
             title: 'pidipiti Frontier & Allegiant Carrier',
-            description: 'A lower-profile top-expandable carrier worth comparing when you fly tighter under-seat routes with a genuinely tiny dog.',
+            description: 'A lower-profile, top-expandable carrier for very small dogs.',
             productId: 'pidipiti-budget-airline-carrier',
             position: 'quick-picks-5',
           },
@@ -1668,10 +1668,10 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         id: 'expandable-vs-standard',
         heading: 'How to Choose Between Standard, Expandable, Compact, and Tote-Style Carriers',
         paragraphs: [
-          'Standard soft-sided carriers are the default for most in-cabin travel. They keep the footprint simple, fit under seats more predictably, and work well for small dogs that already settle quickly once the flight starts.',
-          'Expandable carriers are for dogs that fit the boarding dimensions but benefit from extra room once the plane is cruising. The expansion is for comfort after takeoff, not a workaround for boarding with an oversized bag. Check your airline\'s current under-seat dimensions before flying and only unzip after the seat-belt sign is off.',
-          'Compact carriers matter most for very small dogs, regional jets, and budget-airline-style seat spaces. Tote-style carriers are useful when you want a softer handbag profile, but they are usually best for tiny dogs because the shape is narrower than a standard rectangular carrier.',
-          '<strong>Important:</strong> “Airline approved” is still marketing language, not a universal approval. Soft-sided carriers are often easier to fit under seats than hard crates, but every airline, aircraft, and seat row can differ. Always verify your route\'s current published dimensions before buying.',
+          'Standard soft-sided carriers are the default for most in-cabin travel. They have small footprints, fit under most seats, and work well for small dogs that already settle quickly.',
+          'Expandable carriers are for dogs that fit the boarding dimensions but benefit from extra room once the plane is cruising. The expansion is for comfort after takeoff, not a workaround for boarding with an oversized bag. Check your airline\'s current under-seat dimension specifications before flying, and only unzip the carrier after the fasten seat-belt sign is turned off.',
+          'Compact carriers work best for very small dogs, flying on regional jets and in budget-airline-style seat spaces. Tote-style carriers provide a softer environment, but they are best for tiny dogs because the shape is narrower than a standard rectangular carrier.',
+          '<strong>Important:</strong> "Airline approved" is marketing language, not a universal approval. Soft-sided carriers are usually easier to fit under seats than hard crates, but every airline, aircraft, and seat row can differ. Always verify your route\'s current published dimension specifications before buying.',
         ],
         alt: true,
       },
@@ -1682,12 +1682,11 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         positionOffset: 0,
         columns: 3,
         intro:
-          'These are the best starting points when you want a straightforward in-cabin carrier without relying on expansion panels or a purse-style layout. They are practical picks for small dogs that already travel calmly and just need a well-ventilated soft-sided bag.',
+          'These are a good starting point when you want a straightforward in-cabin carrier without expansion panels or a purse-style layout. They are practical picks for small dogs that already travel calmly and just need a well-ventilated soft-sided bag.',
         productIds: [
           'sherpa-original-deluxe-carrier-medium',
           'sherpa-delta-airlines-carrier-medium',
           'amazon-basics-soft-sided-carrier',
-          'henkelion-airline-carrier',
         ],
       },
       {
@@ -1768,7 +1767,6 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         'sherpa-original-deluxe-carrier-medium',
         'sherpa-delta-airlines-carrier-medium',
         'amazon-basics-soft-sided-carrier',
-        'henkelion-airline-carrier',
         'mr-peanuts-expandable-carrier',
         'petskd-top-side-expandable-carrier',
         'petskd-top-expandable-carrier',
