@@ -2,6 +2,7 @@
 import { ROUTES } from '@data/routes';
 import type { HomepageVariant } from '@components/modules/HomepageHero.astro';
 import type { HomepageArticleFeed } from '@utils/homepage-articles';
+import { getHomepageConverters } from '@utils/homepage-articles';
 
 interface Props {
   variant?: HomepageVariant;
@@ -10,6 +11,7 @@ interface Props {
 
 const { variant, articleFeed } = Astro.props;
 const isV6 = variant === 'v6';
+const converters = getHomepageConverters();
 
 const shopCards = [
   {
@@ -134,6 +136,25 @@ const pinnedGuideRoutes = [
         ))}
       </div>
     </section>
+
+    {/* ── Recent Converters ── */}
+    <section class="converters container">
+      <h2 class="section-title">Recent Guides</h2>
+      <div class="more-grid">
+        {converters.map((c) => (
+          <a
+            href={c.href}
+            class={`more-card more-card--${c.color}`}
+            data-track="collector_to_converter_click"
+            data-to-page={c.href}
+            data-link-position="homepage-converters"
+          >
+            <h3 class="more-title">{c.title}</h3>
+            <p class="more-desc">{c.description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
   </>
 ) : (
   <>
@@ -160,6 +181,18 @@ const pinnedGuideRoutes = [
         ))}
       </div>
     </section>
+
+    <section class="converters container">
+      <h2 class="section-title">Recent Guides</h2>
+      <div class="cards-grid">
+        {converters.map((c) => (
+          <a href={c.href} class="guide-card" data-track="collector_to_converter_click" data-to-page={c.href} data-link-position="homepage-converters">
+            <h3 class="guide-title">{c.title}</h3>
+            <p class="guide-description">{c.description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
   </>
 )}
 
@@ -179,7 +212,8 @@ const pinnedGuideRoutes = [
      v6 — Shop by Need
      ══════════════════════════════════════ */
 
-  .shop {
+  .shop,
+  .converters {
     padding-block: var(--space-3xl);
   }
 
