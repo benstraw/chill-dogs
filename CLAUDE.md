@@ -21,6 +21,7 @@ Do not skip the task-specific docs.
 - Use `AffiliateLink.astro` for all Amazon outbound links.
 - Use the existing related-content system (`src/utils/related-pages.ts`). Do not add manual related arrays.
 - Run relevant tests/build checks before finishing.
+- **Never merge, close, or squash a pull request without explicit confirmation.** Phrases like "push the PR up", "put it up for review", or "send it up" mean push the branch and open/update the PR — NOT merge it. Only run `gh pr merge` when the user says exactly that.
 
 ## Source of truth files
 

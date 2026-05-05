@@ -1,0 +1,982 @@
+{
+  "search_metadata": {
+    "id": "69e8813e874d507c7152b59c",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/ngXQkt1HG4dz6ArY__vYgg/69e8813e874d507c7152b59c.json",
+    "created_at": "2026-04-22 08:05:18 UTC",
+    "processed_at": "2026-04-22 08:05:18 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B00YNK9VPI/?",
+    "raw_html_file": "https://serpapi.com/searches/ngXQkt1HG4dz6ArY__vYgg/69e8813e874d507c7152b59c.html",
+    "total_time_taken": 1.58
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B00YNK9VPI",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B00YNK9VPI",
+    "title": "Highwave AutoDogMug Portable Dog Water Bottle, Squeeze Water Bottle with Built-in Travel Bowl for Dogs, Leak-Resistant BPA-Free Dog Water Dispenser for Walking, Hiking & Travel 20 oz (Blue)",
+    "link": "https://www.amazon.com/Highwave-SYNCHKG071299-AutoDogMug-Blue/dp/B00YNK9VPI/",
+    "link_clean": "https://www.amazon.com/dp/B00YNK9VPI/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B00YNK9VPI&device=desktop&engine=amazon_product",
+    "variants": [
+      {
+        "title": "Color",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B00YNK9VPI",
+            "name": "Blue",
+            "image": "https://m.media-amazon.com/images/I/31ZPq2tghbL._SS64_.jpg",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B00YNK9VPI&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B073VTNHZC",
+            "name": "Purple",
+            "image": "https://m.media-amazon.com/images/I/31JjJJn78QL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B073VTNHZC&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B073VTFBSM",
+            "name": "Red",
+            "image": "https://m.media-amazon.com/images/I/31L-eKJACgL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B073VTFBSM&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 4,
+            "asin": "B019DJZ0KI",
+            "name": "Smoke",
+            "image": "https://m.media-amazon.com/images/I/31VF51s5YTL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B019DJZ0KI&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the Highwave Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/61G7Jn3SxxL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/61G7Jn3SxxL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61IrldRFtyL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61qZNe+th0L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71Db-pbvDQS._AC_SL1000_.jpg",
+      "https://m.media-amazon.com/images/I/61t1TYFCVGS._AC_SL1000_.jpg",
+      "https://m.media-amazon.com/images/I/416IUsob3yS._AC_SL1000_.jpg"
+    ],
+    "rating": 4.4,
+    "reviews": 9089,
+    "bought_last_month": "50+ bought in past month",
+    "price": "$20.00",
+    "extracted_price": 20.0,
+    "prime": true,
+    "delivery": [
+      "FREE delivery Monday, April 27 on orders shipped by Amazon over $35"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$20.00",
+      "extracted_price": 20.0,
+      "delivery": [
+        "FREE delivery Monday, April 27 on orders shipped by Amazon over $35"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "Highwave",
+          "details": {
+            "heading": "Sold by",
+            "content": "Highwave"
+          },
+          "link": {
+            "text": "Highwave",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A21VRD6A6JUV4F&asin=B00YNK9VPI&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "color": "Blue",
+    "material": "Plastic",
+    "brand": "Highwave",
+    "item_weight": "0.02 Pounds",
+    "product_dimensions": "4\"L x 2.75\"W x 8.5\"H"
+  },
+  "about_item": [
+    "ONE HANDED DOG HYDRATION: Squeeze the bottle to instantly fill the built-in drinking bowl for your pup, then release to let unused water drain back into the bottle. Perfect for walks, car rides, or anywhere on the go.",
+    "BUILT IN BOWL: Public water bowls can contain harmful pathogens, travel water bowls are an inconvenience to use. The attached bowl allows your dog to drink without needing a separate travel bowl.",
+    "PORTABLE & EASY TO CARRY: Compact design fits most standard car or bicycle cup holders, making it easy to take along on road trips, long walks, and daily outings with your dog.",
+    "BPA-FREE & FOOD SAFE MATERIALS: Made with durable, BPA-free polypropylene so your pet can drink safely from fresh water you bring from home. The bottle is also top-rack dishwasher safe for easy cleaning.",
+    "DESIGNED FOR ACTIVE DOGS & OWNERS: Holds about 20 oz of water and includes a removable strap that can be used as a handle or attached to a backpack, leash, or belt for hands-free carrying on any adventure."
+  ],
+  "related_products": [
+    {
+      "position": 1,
+      "title": "Springer Dog Water Bottle | Portable Travel Water Bottle Dispenser For Dogs - As Seen on Shark Tank | Patented, Leak-Proof Bo",
+      "link": "https://www.amazon.com/Springer-Patented-Leak-Proof-Portable-Traveling/dp/B09CH926J4/ref=pd_sbs_d_sccl_1_1/139-3078702-2675315?pd_rd_w=0Cq40&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=VGGS0S1FPYMCY9QSKK2S&pd_rd_wg=wVUab&pd_rd_r=8b452355-4b4d-45d5-9530-6fa8bde5b9b9&pd_rd_i=B09CH926J4&psc=1",
+      "asin": "B09CH926J4",
+      "link_clean": "https://www.amazon.com/Springer-Patented-Leak-Proof-Portable-Traveling/dp/B09CH926J4/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09CH926J4&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71EVrmt7rfL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.4,
+      "reviews": 2119,
+      "price": "$24.99",
+      "extracted_price": 24.99,
+      "delivery": [
+        "Get it as soon as Monday, Apr 27"
+      ]
+    },
+    {
+      "position": 2,
+      "title": "lesotc Dog Water Bottle, Portable Pet Water Dispenser, Leak Proof Travel Squeeze Water Bottle for Dogs, Puppy Essentials Dog",
+      "link": "https://www.amazon.com/Upgraded-Foldable-Portable-Dispenser-Lightweight/dp/B0C1BYCNNF/ref=pd_sbs_d_sccl_1_2/139-3078702-2675315?pd_rd_w=0Cq40&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=VGGS0S1FPYMCY9QSKK2S&pd_rd_wg=wVUab&pd_rd_r=8b452355-4b4d-45d5-9530-6fa8bde5b9b9&pd_rd_i=B0C1BYCNNF&psc=1",
+      "asin": "B0C1BYCNNF",
+      "link_clean": "https://www.amazon.com/Upgraded-Foldable-Portable-Dispenser-Lightweight/dp/B0C1BYCNNF/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0C1BYCNNF&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71--5l9G9JL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.5,
+      "reviews": 26786,
+      "discount": "10% off",
+      "price": "$19.65",
+      "extracted_price": 19.65,
+      "price_unit": "$19.65/count",
+      "extracted_price_unit": 19.65,
+      "old_price": "$21.83",
+      "extracted_old_price": 21.83,
+      "delivery": [
+        "Get it as soon as Monday, Apr 27"
+      ]
+    },
+    {
+      "position": 3,
+      "title": "GORILLA GRIP Dog Water Bottle, Portable Water Bowl Dispenser for Dogs, 12 oz Leak Proof Pet Travel Squeeze Bottles Food Grade",
+      "link": "https://www.amazon.com/Gorilla-Grip-Dog-Water-Bottle/dp/B08MBDK747/ref=pd_sbs_d_sccl_1_3/139-3078702-2675315?pd_rd_w=0Cq40&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=VGGS0S1FPYMCY9QSKK2S&pd_rd_wg=wVUab&pd_rd_r=8b452355-4b4d-45d5-9530-6fa8bde5b9b9&pd_rd_i=B08MBDK747&psc=1",
+      "asin": "B08MBDK747",
+      "link_clean": "https://www.amazon.com/Gorilla-Grip-Dog-Water-Bottle/dp/B08MBDK747/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B08MBDK747&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/51lr7jTbz+L._AC_UL165_SR165,165_.jpg",
+      "rating": 4.3,
+      "reviews": 4487,
+      "price": "$11.99",
+      "extracted_price": 11.99,
+      "delivery": [
+        "Get it as soon as Monday, Apr 27"
+      ]
+    },
+    {
+      "position": 4,
+      "title": "SÄKER Portable Dog Water Bottle, Collapsible Water Bottle for Dogs Perfect for Walking, Hiking and Outdoors | Works as a Port",
+      "link": "https://www.amazon.com/S%C3%84KER-Portable-Collapsible-Outdoors-Designed/dp/B0DP3MMNFM/ref=pd_sbs_d_sccl_1_4/139-3078702-2675315?pd_rd_w=0Cq40&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=VGGS0S1FPYMCY9QSKK2S&pd_rd_wg=wVUab&pd_rd_r=8b452355-4b4d-45d5-9530-6fa8bde5b9b9&pd_rd_i=B0DP3MMNFM&psc=1",
+      "asin": "B0DP3MMNFM",
+      "link_clean": "https://www.amazon.com/S%C3%84KER-Portable-Collapsible-Outdoors-Designed/dp/B0DP3MMNFM/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DP3MMNFM&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/61eSlvmx0RL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.4,
+      "reviews": 352,
+      "price": "$21.99",
+      "extracted_price": 21.99,
+      "price_unit": "$21.99/count",
+      "extracted_price_unit": 21.99,
+      "delivery": [
+        "Get it as soon as Monday, Apr 27"
+      ]
+    },
+    {
+      "position": 5,
+      "title": "Pecute Upgraded 22 oz Dog Water Bottle with 5 oz Food Container, Portable Dog Travel Water Bottle Dispenser, Leakproof, BPA F",
+      "link": "https://www.amazon.com/Pecute-Container-Dispenser-Leakproof-Lightweight/dp/B0C3QF2JSL/ref=pd_sbs_d_sccl_1_5/139-3078702-2675315?pd_rd_w=0Cq40&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=VGGS0S1FPYMCY9QSKK2S&pd_rd_wg=wVUab&pd_rd_r=8b452355-4b4d-45d5-9530-6fa8bde5b9b9&pd_rd_i=B0C3QF2JSL&psc=1",
+      "asin": "B0C3QF2JSL",
+      "link_clean": "https://www.amazon.com/Pecute-Container-Dispenser-Leakproof-Lightweight/dp/B0C3QF2JSL/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0C3QF2JSL&device=desktop&engine=amazon_product",
+      "badges": [
+        "Amazon's Choice"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/61FdAvWAsOL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.4,
+      "reviews": 3032,
+      "price": "$17.99",
+      "extracted_price": 17.99,
+      "delivery": [
+        "Get it as soon as Monday, Apr 27"
+      ]
+    },
+    {
+      "position": 6,
+      "title": "PupFlask Large Dog Water Bottle | 27 or 40 OZ Stainless Steel | Convenient Dog Drink Dispenser | Puppy Travel Water Bowl | Po",
+      "link": "https://www.amazon.com/PupFlask-Portable-Stainless-Convenient-Hydrated/dp/B07C79KZLL/ref=pd_sbs_d_sccl_1_6/139-3078702-2675315?pd_rd_w=0Cq40&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=VGGS0S1FPYMCY9QSKK2S&pd_rd_wg=wVUab&pd_rd_r=8b452355-4b4d-45d5-9530-6fa8bde5b9b9&pd_rd_i=B07C79KZLL&psc=1",
+      "asin": "B07C79KZLL",
+      "link_clean": "https://www.amazon.com/PupFlask-Portable-Stainless-Convenient-Hydrated/dp/B07C79KZLL/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07C79KZLL&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/41mbE7QF7vL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.4,
+      "reviews": 7447,
+      "price": "$26.96",
+      "extracted_price": 26.96,
+      "delivery": [
+        "Get it as soon as Monday, Apr 27"
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "position": 1,
+      "title": "My Favorite Dog Water Bottle for Travel",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/0d2db7e4-ae1a-4efb-a3e1-7d0f262167f4/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/712a4cfTSrL.jpg",
+      "duration": "0:29",
+      "vendor": "Solo Travel Girl's Adventures with Jennifer Huber",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/71YLcPHxNOL._CR0,0,1247,1247_._FMjpg_._SL34_.jpg",
+      "date": "Jan 29, 2026"
+    },
+    {
+      "position": 2,
+      "title": "Keep those pets hydrated!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/1f4ad668-c6ce-4f08-a971-e60b9d7c2a32/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61jQISO3XxL.jpg",
+      "duration": "0:17",
+      "vendor": "ShopWithHail",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/7152t+Xb9DL._CR0,0,1038,1038_._FMjpg_._SL34_.jpg",
+      "date": "Nov 19, 2023"
+    },
+    {
+      "position": 3,
+      "title": "The Most Practical Thing I Bought for My Dog",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/0fda16ea-4ed0-4bd1-8949-632156e6d567/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/71YNiocX+sL.jpg",
+      "duration": "0:29",
+      "vendor": "Daniela Arteaga",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/91rJ2HiaK-L._CR0,0,1737,1737_._FMjpg_._SL34_.jpg",
+      "date": "Jun 22, 2025"
+    },
+    {
+      "position": 4,
+      "title": "Watch this BEFORE you buy a water bowl for your dog",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/f27d69dd-9a08-4090-81c1-b95ec5c74c9b/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61xHLLy17gL.jpg",
+      "duration": "0:45",
+      "vendor": "⭐️ Madison Lujan ⭐️",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/B1xZLPIUqnL._CR0,384,2320,2320_._FMjpg_._SL34_.jpg",
+      "date": "Jul 9, 2023"
+    },
+    {
+      "position": 5,
+      "title": "Coolest pet invention ever",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/v2/f27e8624-e8bd-50e2-8d31-b74061880364/ShortForm-Generic-480p-16-9-1409173089793-rpcbe5.mp4",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/A1MRJG9-I6L.png",
+      "duration": "0:08",
+      "vendor": "Meowkim",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SL34_.png",
+      "date": "May 11, 2019"
+    },
+    {
+      "position": 6,
+      "title": "To sensitive",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/v2/21b72ad1-98f4-5553-a6e9-81f8417b9008/ShortForm-Generic-480p-16-9-1409173089793-rpcbe5.mp4",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/A1ONImSDD-L.png",
+      "duration": "0:13",
+      "vendor": "Wendy",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SL34_.png",
+      "date": "Jul 13, 2017"
+    },
+    {
+      "position": 7,
+      "title": "Best invention!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/v2/b5adfb8a-a786-50f7-a7eb-73ee35e926df/ShortForm-Generic-480p-16-9-1409173089793-rpcbe5.mp4",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/A1anwJEKW-L.png",
+      "duration": "0:19",
+      "vendor": "Ann Yamamoto",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/S/amazon-avatars-global/83a0357d-618a-4d1a-a0f9-50004ddb2511._CR0%2C0%2C375%2C375_UX460_._SL34_.jpg",
+      "date": "Nov 4, 2018"
+    },
+    {
+      "position": 8,
+      "title": "Portable AutoDogMug for traveling with water",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/eb3a7f2a-fd6e-4ec2-82d3-6f87f76490eb/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/616oUOX6iyL.jpg",
+      "duration": "0:36",
+      "vendor": "April's Gift Ideas and Deals",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/B1e4-5YrInL._CR96,542,1355,1356_._FMjpg_._SL34_.jpg",
+      "date": "Jan 27, 2024"
+    },
+    {
+      "position": 9,
+      "title": "Great Water Bottle! Highwave AutoDogMug Dog Water Bottle",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/41eb28ac-de68-4505-849b-4638192a9e27/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61Lk-ecsjOL.jpg",
+      "duration": "0:24",
+      "vendor": "Griffin Lichtenson",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/A1SlAEOdlxL._CR20,20,1781,1781_._FMjpg_._SL34_.jpg",
+      "date": "Dec 26, 2024"
+    },
+    {
+      "position": 10,
+      "title": "Watch Before Buying Dog Travel Water Bottle Review",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/511d2e96-c5a4-4eed-a6e0-0f27d97a7d21/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/516GjMQGcVL.jpg",
+      "duration": "0:32",
+      "vendor": "🐚 Chelle",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/815vbRFRCrL._CR185,184,458,458_._FMjpg_._SL34_.jpg",
+      "date": "Jul 27, 2023"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1
+    },
+    {
+      "position": 2
+    },
+    {
+      "position": 3,
+      "title": "lifestyle original",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/442f7f70-0f81-4192-8669-7733b033211c.__CR0,0,970,600_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 4,
+      "title": "more features",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/ae54437b-0bbe-487d-929b-862758096c30.__CR0,0,970,600_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 5,
+      "title": "more functions",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/d1f458ee-aa70-449d-83a3-6ea5e619972a.__CR0,0,970,600_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 6,
+      "title": "38 years of family",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/e67393d8-d294-4ea2-9341-d5062d4b5538.__CR0,0,970,600_PT0_SX970_V1___.jpg"
+    }
+  ],
+  "product_details": {
+    "is_discontinued_by_manufacturer": "No",
+    "product_dimensions": "3 x 4 x 9 inches; 0.32 ounces",
+    "item_model_number": "SYNCHKG071299",
+    "date_first_available": "June 1, 2015",
+    "manufacturer": "Highwave",
+    "asin": "B00YNK9VPI",
+    "best_sellers_rank": [
+      {
+        "text": "#43,512 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 43512,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#82 in Dog Water Bottles",
+        "extracted_rank": 82,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/2975358011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Water Bottles"
+      }
+    ],
+    "customer_reviews": "4.4 out of 5 stars",
+    "rating": 4.4,
+    "reviews": 9089,
+    "brand_name": "Highwave",
+    "target_species": "Dog",
+    "dog_breed_size": "Large, Medium, Small",
+    "upc": "792229160015 736024512693 044587201405 740023806325",
+    "included_components": "Bottle, Bowl Top, Velcro Strap (removable)",
+    "unit_count": "1 Count",
+    "item_weight": "0.02 Pounds",
+    "item_dimensions_l_x_w_x_h": "4\"L x 2.75\"W x 8.5\"H",
+    "capacity": "1.3 Pounds",
+    "power_source": "Manual",
+    "voltage": "12 Volts",
+    "color": "Blue",
+    "material_type": "Plastic"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0D4YSDDLX",
+      "title": "Wireless Cat Water Fountain: Battery Operated Stainless Steel Pet Fountain, Automatic Cordless Water Dispenser Indoor, Metal Faucet Bottle for Drinking, Rechargeable Dog Water Bowl with 1 Filter",
+      "link": "https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/JOEC2nOj8uzW659APS_C_44AAAGdtDjdCAEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDEgICAEheKL/clv1c_ek-wxYHXLbbWDfHOAIfj8e5gSssXMXbWsaKDBCVivzt483wH3tgnHuyGdgFGok6OGZrhwYWuV8uSguF1Tj96_ldDzG9pGbCfIHl1xjb-0c71yFB2N_usRbz45_p-8ly4_tO6MaJten6rfz_Kvty1utbJiB0ck-mqlsPt12PqnNa_60mvLVFMi26f1lIzwauvXfiIxH87z6ZInGPxs8Jl2hKOGWkki226GjSmnH7pFjYywV5jt2soBo97CmXtO-1Q8dD5IQUDnUqICVq-od790A1BnrVw7e5sQExcGGWU3nm-x1w6PKIsN-xnv5zZG3eLajNNhKAE7hWr2JOLqk71UfWo5irXBsvHru-bioYJyuSxFegjbqFPF881e_BRhV-T1JB2X0VNdDkfg2c30v_KTutV6SL5Yig7ia5G0hLXSnFc_iPx_G9v2owIuCQBf50MQjs7-CQFuGxMhyBXfuOXaE-S9pMa0d6fKwBMaQzR-i5MEL8X_VMTLkEuyLDI8j0AVBRYCx_4_o6xOuZI7_FAQ_V-id6I7ifnTkMVwVWPl-Da7thAbyHyrnSQ6ujFHOeFrR7Hc3SOv-eOMj6dKAoJhtnfo1QpRvbUsVlhQYx6pjVO7uFxog4zBMzxCBS8IGB3g3aCsGbMcE_qBx6YzZl2QjyHQlG3aucCGFj2o62ML0SyZMfTQzyFvy8BrLxHDrEi9PIAZFRZfsQeFY7bGGjT0M0srprf3gGi3Mz9Gf_iOVEw5JO9HVJoDylj81X9qaHFusIuJtFigs0CPOi5sZa8JfZIB3g82Q8HqSOUViUvDhoDceX7JoS-4WtiWlyaLFnvMVzL3gJISLz__qUdGv2C0OlyLbHCPt5AIQNc08O7cbzbbLAQSc6rLR8ugz1xP0PUjdNcw-WnRAUi6kQAnZwgVKZIbryxTAeU2XYSYrwdwwb0xZEfOYNqBc-UqZ8eItUpe1Q1xLexzHiUix-ZLlaJSONnIsFd8hJQbvm4PHIkmyw0mGvCgzLvqzQc3O-Pw2_biHSev4gCTxNFCacSqEwb77wLXAN47VLCsc32mLhRlmfXmBKFzgyd7VnXDiiDUJPusFSqF9wZ_xQY3lEJE9fvlQJpfv9bBQuDRdcIxaIsP1kJRUhteaqAiF_l9cFH_BHeax8IEmA-9Lbm7ICt8MAZFjGZErhUX89eCgVue273mDMdMTr85eyWYkneU-QxTqk7wr1Z_6Vy09XWbQSc9vkWdP5_Wz6tJOubIuoLAZGxoypH3UifxZEBfYA6CFqyGubhmy21OaI8M43c5nBCDMiaECOa0gTNyipaFOt899su4DfBDwnIA6OqFbz0MVRcqel9oh5wPt3W4FT6DDW8qAcJXvyJkTihGpL5FSd13PmLcjO52lhhhTkWTpHio15FFh0jro4bxvgq6phB6xPQFMA_cN_gUpNGNuWxAVIDth9wFchbX0LW6bZskk67znnXd4CgxmDtaDEPfID8oqrkA7NFRiZdioHaBSxlfw2rFBNI2VaPW0FMd-N-gwBvbCKuMMolma9izIL0kIQ_pf51bKqPBoF3acj-70YlVnz0_gac1w/https://www.amazon.com/dp/B0D4YSDDLX/?_encoding=UTF8&pd_rd_i=B0D4YSDDLX&pd_rd_i=B0D4YSDDLX&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=0VrPg&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=VGGS0S1FPYMCY9QSKK2S&pd_rd_wg=wVUab&pd_rd_r=8b452355-4b4d-45d5-9530-6fa8bde5b9b9",
+      "link_clean": "https://www.amazon.com/dp/B0D4YSDDLX/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0D4YSDDLX&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41809wpXqWL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/a1bc8db8-e80e-49e5-89e3-e4dd1e2353fa.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/a1bc8db8-e80e-49e5-89e3-e4dd1e2353fa.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.0,
+      "reviews": 1072,
+      "price": "$39.99",
+      "extracted_price": 39.99,
+      "old_price": "$49.99",
+      "extracted_old_price": 49.99
+    },
+    {
+      "position": 2,
+      "asin": "B0CFV8F9JW",
+      "title": "Uppetly Dog Water Bottle, Pet Water Bottle with Food Container and Drinking Feeder, Leak Proof, BPA-Free, Portable Foldable Puppy Water Cup Dispenser for Outdoor Walking, Travel, Small Dark Blue",
+      "link": "https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/JNlZ7v4JOZHowfNXSiqxo3YAAAGdtDjdCQEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDEgICAxwQWy/clv1c_ek-wxQfWFbbaTPHXD5tyrleKjFMCmomwT5uU73qym_W-7tWD4cEcx5IfYp2xqhGFWqS4USeBkNHOQrH000xV0GOcccyF6QBTO2hF8VFHXUz3yFJ0N_OsBbz54-RekhzzQ_3TZxEovg8UzKDNVYuP29HahH1clpOslMPzp0MqHVa_zNWT_QC2ggkZz8CrJjOvy3yI-HFzB1epB0X9OS7reMyZktWV5Uc1N6BCdazq1jOmJRkQJiz7ZMgOVnqf6QczygSawvHvCP8lETvB6hDt7dRSU02PcGD62XW-hqjlOhBetOYQkcZ0xexog_XG_OBjjvE7tgxgjMjdBp-z1ZbZmzbJ47x3vjd9nU5LcBkhY2MvWTmlYhi-6Tqc6ItMvXUNTOV_rvNSr5H3AvWQaantC6aua3MlgG2u47FAMjzfoH4ZD92ylHpb98v2vfag1BhqrQoPkyvgPAi6Tk47gIw1b4LEAtjpUu5Mq2efZIq6USCrWTptBwdYfuVUkuO9uXhSev2s76-bIg-rZtblFJwXBBzadl5WEfx7T6ZXDpYt2Q5g9WpYSh7eJX6kO1W8MNEbp1jPGDs1eaAhYKHjg2b369x7g_FvKX9CefvXglXz-NQns0dpgFC6YqYRO1zKvWdUnKZ2uIvlM-p8puvcllDTGbHZqJqgYLYecowb0uWxl8J0NsSSyALLuI-85IGycy-6mmfSaCZPZcTyo61Mzbig8L_x37H3eZoQ9li96YVyvZlxUL6wHGYxRjJwu19j5vvQqy5M4GDo-lavzHcWvHv2M5S8DVmN4o3XZY7SJlqiIpeOoUMViblsaTWE8yn0REgELgbDUAeYXM9TcT7HkBLyZDU8nOYre95AEQs808O7cTzbbHAZTbWRbFng1rKYIEgwNrREYR464G_tMN7sEZwgVKYAAQ10WxxMRqxc0-b7kkegZgXcAHWpy2-4LHK3G2F7yGxYaGO9adyLwZbLIPxWSdvQmikf3-xc7gHMb3QKzunHhpcTCOGcSBwkYj2I72HPO2hh2TQ7CLi-hYgGkPI9OMFsaWuOP4sO7nRcJ4ehrVuctTnDsDY5Rj83AUaLK7SxdyiMQyn9gCNodE2-BNxh6Rg4S5LmYLjplPPks9OlL09tA7uhIb4-v0z1At2JTfZ7OX_7oje7mtQzaPvuWIUdiZZ73WMjI86bvk9HyhRZkJEvJu_gh5hHfbLOwDLVlX1r1rBxgkJMhf2yYqHtt6H0ueRq8dfoEqI0pfud452swW7zXSPSq_fo6s7b5BXfXehP3Df1mUNZJU638rtsEO9Qkzp0g7wZMYaTdc8OadRliLWW1wMrQU26XC1jBsTt-wW9QZgvo2VcY87cGLX8DpLpspjB4OJpyGAjHeAFR-eQ3bVrGqTBflUnBvtjl2famp2UpEynExefbd4AESdtV4yU1QrGYun0EY0nk9Xx12H63rt_eF_UHRXOpwoeatg30ZyNxaiTvXYfNHlEsrVHkVeTyKrByihflxfHEX3qVnPibCxdLWTYi_bnuokrC2tcH0JF8Unmljnfzhh_X9zMA-hGs2Jh1i0_ya0RoZJyUOxZ/https://www.amazon.com/dp/B0CFV8F9JW/?_encoding=UTF8&pd_rd_i=B0CFV8F9JW&pd_rd_i=B0CFV8F9JW&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=0VrPg&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=VGGS0S1FPYMCY9QSKK2S&pd_rd_wg=wVUab&pd_rd_r=8b452355-4b4d-45d5-9530-6fa8bde5b9b9",
+      "link_clean": "https://www.amazon.com/dp/B0CFV8F9JW/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CFV8F9JW&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/418nVEcxtXL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/0fbef091-f9fd-43bd-ad51-9f6055c63e4e.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/0fbef091-f9fd-43bd-ad51-9f6055c63e4e.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.4,
+      "reviews": 465,
+      "price": "$14.99",
+      "extracted_price": 14.99,
+      "old_price": "$15.99",
+      "extracted_old_price": 15.99
+    },
+    {
+      "position": 3,
+      "asin": "B0FW3QTNL1",
+      "title": "Linvivon Dog Water Bowl Dispenser, 10L/2.64Gal/338 Oz Automatic Dog Water Fountain with APP & 2.4G WiFi, 5-Filtered Stainless Steel Pet Water Fountain Quiet for Large Dogs Inside and Multi-Pet Home",
+      "link": "https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/JNFGcim19o9rpwZcn3yPd2AAAAGdtDjdCgEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDEgICA8hc_b/clv1c_ek-wBYHXKsTWnuvbkwYTr1GUIUKatjyrf8LUENCyKCzwEUZ9qzBKsOWmH1B7TbXqgreoRcslnV_mGyzZGQHWUABJu6f42q_10n0QeuekxO1jn8U-m2VjBW-oUlk1wWB6hhTvuzLkwe3a5Qun6V5k0UCboduwdkCOYvRxjjKuyYNlsgUDZjt7bQyBQsa9ZZxqfrTrZsxCEmvCgcStuwGSlvpzaVpwtFYEmSF8ChWMJoP2w1-E6L6yFWovC3jlANYAI_LiBQpTJykfW1AteS4paU9NI9ygdhH1LNYUHAVAzJaYN8dlwBOl2DDtvT_y5cOod0zUgAsyzn-5VhlDIVjR1lBRUpGY7Hjzg93S6CysUN6K54kRhA2mn9Bt6o9GZd0eeVYhVVlKvrSkpvFOSNkKgxJECNlMcAbVZPVIBLKUoWrZOo219TuyMsQ8TPWlnVKcdpE6oW0WAyxDD3ccALYOBE5C9uv2iEVvL_FvCVp0YpbK2R3eGEh_rwCXlMu0--WL1gj_I9iE5YHC7vXjJugYfPuTRj7LkEIO6ZzgOSVaTnASHL9mlix9WGeavSQ5DjSrpQ68KoPV-7xxJr1J1eCqzFZGeJjF0tMm5Lz4MsKxTTd-PJPmiHuxOSMbGCWnTACxVRg7SHS-exWCplKAWhHVS8Vbv03GFS3pmHs6W3bBEC0txEoEhGH7T37NzRwUvK4ypLXBMuEQ5xRGsanFvJFRGQIDj1afdMwT43vgBXIjyRw4nGPfvcH5hQZvjmN7Cz08wY7lMKI0hWoB7z87BQj06VFqh0_RZC549nTn0Nu_1XLUTIARTDgGF2rMrlS18U4kcL0q5sjgCj9tPQdvL-myMZtjofsiVym0yro6soMPV8WkzNFLU6BACkK6Q2va1qDWMRmkMRj__wXybJR936RlQXY0XNxWmdqHqt9zpj9uk1Cg2ns-zPlNKHycWa8ZXJjupa1KihMko9UK1CfDKxbXnwC-xe0lrBQTjsfBcHBYiovTSgTjtvWpOmz4av1XyJ_UF-0KeHdwrf-CoRUL7NgyF1TagvaIcg4WR3bILarCTlZ0QLf-5U1_GOCFCtfib37cwh-PWVq1nNR8meHDrTyi-_kfPznwZri7X_fZ7oEuZKRxtZegtpwRQ4DB8WTrpg5sVqiX_Q93zjhECHHByCYM437mS8TGpE2XSjRJ6lt_GpcqqjPjjnz7Pi0wapIAVtzS5Rf4lJ5rfJdWmWTDfx_uaKDFmVMRjUzdbdkSJwXQhAg80B3umSMFRI_LcUrweqDTmQWiTnU0MKcFP0wa3lWAA96br73Kf6vwEHwTiqlQr5uqxLQXl7alaHGmGt3TgvOWs-iEXlMJd7Xu-P9BWgl6h14bRBfowCZGDuZkGzIWgxTrYIINVRXdwS81ahwWw9ybpSilg-FSx37PqFvbWSi7m4ypdcNokghIgZ8eslPaWRNk3QanNTJD5Yxnj-_oyr8z7TAGM3dOYuIXIGhHS0pWlLIfG5n8IQorddq8ADT2_-PPWU4cWFNyFyV5uyqTZBAlOEml1b2yZKt0vuP12AQW8zczCCGNYWxqoxP3IA/https://www.amazon.com/dp/B0FW3QTNL1/?_encoding=UTF8&pd_rd_i=B0FW3QTNL1&pd_rd_i=B0FW3QTNL1&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=0VrPg&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=VGGS0S1FPYMCY9QSKK2S&pd_rd_wg=wVUab&pd_rd_r=8b452355-4b4d-45d5-9530-6fa8bde5b9b9",
+      "link_clean": "https://www.amazon.com/dp/B0FW3QTNL1/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FW3QTNL1&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41a-UtGdB1L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/fa399361-0602-4b06-8846-160d5291a2d6.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/fa399361-0602-4b06-8846-160d5291a2d6.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.3,
+      "reviews": 137,
+      "price": "$61.99",
+      "extracted_price": 61.99,
+      "old_price": "$109.99",
+      "extracted_old_price": 109.99
+    },
+    {
+      "position": 4,
+      "asin": "B0C3QF2JSL",
+      "title": "Pecute Upgraded 22 oz Dog Water Bottle with 5 oz Food Container, Portable Dog Travel Water Bottle Dispenser, Leakproof, BPA Free, Lightweight, Pet Water Bottle Bowl for Outdoor Walking Hiking Camping",
+      "link": "https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/JKG1GbkCzobwW5AD7G9wi3kAAAGdtDjdCwEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDEgICDbPYJm/clv1c_ek-YBYHXFcbWznynI-MgDzpZHJmSTkOZW0fZn1Dj2gIJKXpzAFKbpPZeXbA0ynmWzQXs_baiGkVFnBdxwVKyJTGbhY24_rYMW-Hmfeck1P0Vqt5qw47FFex74_RONSK6tbB8P4NHvej6fWuYKdOuu9LepG18jZ0K8sZzwy-43vJ6IHAGP9CBwq_Bs7TKPCl_GoQLZUJG0w3ircD2MNvl4oLvBPAHCCd3PSBu4XXWggHwWouHrKJ3Jk2EnF6JYYME81o1aX1BRUXK5Xlcq89rSwQOoLtQzztYiM3EwZp2KiiE_bFo-X_I9k2UTPs8XoATmD-UCOzmuKSAJjpub99sjFpFKui2qjifSNcbimXzuj7fDE0G5jQ8BIFyG_BHni0JQuc9XGwkttcIAQ-zHDOEydPd3vMDCCZMfoMr4ahpsANvJC5GXUkSRqpNOvs5tqU2-A-YRVVGINecAUvNRrYNBG5KdOsCqIXEgi7fzL2ADqbv8xmz2EXqNWPVsq5eMAiYWD8paqeC_RdLD3Tm0PiKM7j8rZ6x2daY8kTAEJ-EdGam5JusNZknmkUOGp0La25KOyrkS3A7BoGslY8xTs-lFxEvZV2yQoQUdcK_7TPl-_3p2TsGZouQ6tSIicGnC5UWInB0mBOOyuH_mGu8Ok5rYFsaOsmDfnhW1YHPE0-53Zeb0kUu4U7z4SRaR-1WcKlNm86DSozJ96lWxfZWzWIhvr8Xv6qtrxqcOwWCxPayIvndNllWLR_49SjnV5XDU_OxV75PL-Pw--DLjjcXtBm2k67X9NkbZZTkJ6pLhNakpL6Xdlz387UMa8HSe0BF2fW-j5jA6MVYRUSyT57W3ioPEvCfddmMo7Ch8oKQ73tM9uJxExlDTnPIqGj0D06UI2N3Qy02TQOfJm7Udl3tnZFV0PvUrwAihpqCrDLUX1HZEdVpTJS4UWBoI-HrbGOH1YiN1sODSvCgvQCBpFeF7rYOe8V--pxbX34Xi2wlbJ-T84pyqSyWt_dCEriax_L7MoEXkwB11UkEUk1Omoxh94cQzjQ1Y9uGLUyHD36tqso6rU3vy-rDeKL9epeXRyZnZM0JSQs8K2QuZXA4O9nN1OvSkO56L4CUeh9iEZAn2xhhz0eTBAsnXUN9BULpOBJdEqGoLHB7dO9lJ7MwV7N0Z0kw__eZw4mPewoFTh-UxWk8xKWpxnj0mf9N6KmPLNKHwQ5pM3UPJ98J68_V9lfP4NdE5KC_lCxKytPYVFkfmpVM7x2Je4SIPLcKTmyKU2ME7dR_HLciVeCjYekQBXFD5-utOqghCIw7y8X6MfUtYpbHu3g3gNPF9oNGC8l-rGTQEY49l9pilYyFikpIyiT3JUMWTBJWGzOfDQ2wsaHwzHTsOvhwEGLxMUdC4Y2O_1xVcRT4QjggCdZqcT8-EIyG5cs43Q-Non5x5ax6gSA8v_PSXzpfOFykKeAa8La3kys_1ZbBLzY-vQHQqcpbMto7YuMUm8ImaIOjvoCOVxah_H7QW3i5PN9-5bc0XYF-rypcHZQsBtIsTOtMyck-m3CS/https://www.amazon.com/dp/B0C3QF2JSL/?_encoding=UTF8&pd_rd_i=B0C3QF2JSL&pd_rd_i=B0C3QF2JSL&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=0VrPg&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=VGGS0S1FPYMCY9QSKK2S&pd_rd_wg=wVUab&pd_rd_r=8b452355-4b4d-45d5-9530-6fa8bde5b9b9",
+      "link_clean": "https://www.amazon.com/dp/B0C3QF2JSL/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0C3QF2JSL&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/419HSVb4OZL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/75cbf689-b69e-4445-a9ae-b63f2b2fe842.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/75cbf689-b69e-4445-a9ae-b63f2b2fe842.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.4,
+      "reviews": 3032,
+      "price": "$17.99",
+      "extracted_price": 17.99
+    },
+    {
+      "position": 5,
+      "asin": "B07C79C5BT",
+      "title": "MalsiPree Dog Water Bottle Dispenser - 12 oz Blue - Leak-Proof Lock & One-Hand Operation - Dog Water Bowl Dispenser - Pet Travel Bottle with Built-in Bowl",
+      "link": "https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/JBKtw5UyHI5nS3Y1_MbUa9oAAAGdtDjdDAEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDEgICAv_Dcg/clv1c_ek-wBYHXLbbWzlYLEhcvOigzZQs_qvzr9YZbplrymzlxeguAiHV5HANfUX0Ppc1wWqS4Rct8Sl818R53KTKGDav3HKO54Dv7yOxAhlIWDUoHSQrx0EQ5ey5648lsdtKCXq0_CkYubC-8M-RqEYwspVHXmM0cllbCkd3Mg5d7zcVc2iWc1mBbNgSJnUCwrqv7rSG87nuL3IPOs-Hon3yLZD-eGXlswV2qAmxkwqcba_RNZCYOvEzWCEuTbDA5-ManBANDjqeKmctvlCsh4YN5cW_qn1kwoTDZHW3sybyo04C9FPon2e2vrFQTG5FDRchquwveNgwQCfpneTBX_k7fjQGkIF94NwAUlu_rYhMFJXkocXp2n8oNXBh22AvXnXHS-iHFirXpQkxZIQwRakM59sNF7pYda4duEvEI6bgJEAy_zkIa1pZigAnZ_5Y1bwaUnmWcvqYaatJpfpX2g4F1aCnSlixAhiV8i0y0xFK2fu3s8IH9uQPAfuaEF_x82jeIZrN7TcpFJ-1r4xYa1uLgZ2NsKnihrGGxgcpg1QeCWf_FASatYoM8L6qveBXEBYCwLBhvH4tcm75P6kNBAJn1aOKRtHHuOW8WusATuIye8Ke4zyKknmVT6HSKiol3aVbGbWYaGOjaSBXgW7pyH02MOh7Ez80HfETi79Va_QWnNFBs0UQV454I3_cE1vULFxj2KBQlCiNvaapdI8bA4pgvGQVqh3W41bgpqYYEm2A0E6xsOM00xiATtqo6CY5lU6XvWv0P4MDk_eLfnlJF6ZlN61c8OQuzm1uMm01pH-B3EHAS5_48Ogrv8iITPzboAftWQnQSd8yDAiDVb41hjtUenOZG85jhpFZXVCtI6vMVk50Eq_731EP6uS64pBv6qiE2kErL-73lKZrIGP3ZtgGMpA9lS2d9M09vJQ3kciJAm8Ea2cAOYL1ID0R9igS6Nb9LC58BGTZnt8aHgkuxTLcW-kEr1KiRTmQjpJ0ljrjQoDCE9wwEXVn3vKnDSUADnGITZDpI3XzJZCp2QT9rkusFC9KraGYb1mVOre_WIQg8ZCHqaBUHki-jEL0d3T2CK43V7YyQkRCr8L0FbR1gkq5Llp92kxiBz_ga71RGwzRsuhJj51hEqJWtg-2sN9ULTE2p_A60R6xcgLy8wLbYVh15f4_zjHZY8IDt8Nd3nZbNvp7YyNpujy8s2XjCTnp2xHHSW-EPSzFZxsroTiMsMyEphz7zy-Z1AO2VpoEFGmHDTwT7OKnvc9ff2NOC0u0WVhjfFwvMM_I5IsZl4pI12zRMgyN0BZ2ypjvZzsmWjyKls2VJ8RdnSpduo8Yf0NBUUR0eWbLkLhiVGJSYnn82aX1rulncyxqL5YwCQjOoG_4SkxiLJD0ThN6vnrBMGqxlppsBWzpOWEst8YQnrFYV4692UTRURh9dPjWxv7qGdX8XpGh81uOI4q9JtDL9dCUm0A2nl72S4qW9CI7SDq0fAUEWFTu_L67SapY2ErR95_kmqc_oEg/https://www.amazon.com/dp/B07C79C5BT/?_encoding=UTF8&pd_rd_i=B07C79C5BT&pd_rd_i=B07C79C5BT&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=0VrPg&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=VGGS0S1FPYMCY9QSKK2S&pd_rd_wg=wVUab&pd_rd_r=8b452355-4b4d-45d5-9530-6fa8bde5b9b9",
+      "link_clean": "https://www.amazon.com/dp/B07C79C5BT/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07C79C5BT&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41yiAA8+JVL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/12c5a9ff-d121-47dd-9a81-3e4e9fa53f98.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/12c5a9ff-d121-47dd-9a81-3e4e9fa53f98.mp4/r/THUMBNAIL_1080P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.7,
+      "reviews": 39694,
+      "price": "$19.99",
+      "extracted_price": 19.99,
+      "old_price": "$22.99",
+      "extracted_old_price": 22.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "text": "Customers find this water dispenser to be the best dog waterer ever, particularly praising its portability for travel and long walks. They appreciate its ease of use, noting it's much easier than traditional bowls, and find it handy for outings. The design receives positive feedback, and customers love using it with their pets. The leak-proof and water retention aspects receive mixed reviews - while some say it doesn't leak, others report water seeping back into the bottle.",
+      "insights": [
+        {
+          "title": "Design",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 645,
+            "positive": 547,
+            "negative": 98
+          },
+          "summary": "Customers like the design of the water dispenser, describing it as the best dog waterer ever.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "This is a great product wish I thought of it!",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1ZPJ01G0N0SFZ"
+            },
+            {
+              "position": 2,
+              "snippet": "Great idea but not well made. The threaded fittings are poor at best, and you really have to squeeze fully in order to get enough water into the bowl.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1WEI71NM5TYRV"
+            },
+            {
+              "position": 3,
+              "snippet": "This is a good product but has a couple down sides. First, it's advertised as a one-handed bottle, which is somewhat true, but it's hard to do....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R34P06Z9DSBVMJ"
+            },
+            {
+              "position": 4,
+              "snippet": "Great, no spills, fits in cup holder. Works GREAT! My sister thinks it looks like a breast pump but I could care less bc ot WORKS",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2CFNU34TIWX1T"
+            }
+          ]
+        },
+        {
+          "title": "Portability",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 577,
+            "positive": 548,
+            "negative": 29
+          },
+          "summary": "Customers find the water dispenser highly portable, noting it's great for traveling with pets, particularly at the dog park and during hikes.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...No more waste of excess water. Our dog totally loves it. Easy to carry. Doesnt leak unless you press the sides. We had to order a second one....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3DYMDBZPJ1UW9"
+            },
+            {
+              "position": 2,
+              "snippet": "...I gave away the first one and had to get another. Great for traveling, hiking, wagon or car rides. Easy to use for pups. Totally recommend",
+              "link": "https://www.amazon.com/gp/customer-reviews/R27NW0DL0WY2PL"
+            },
+            {
+              "position": 3,
+              "snippet": "...Great for travel and just on the go with ur pet. We love ours so good, we are gonna order more; I’m thinking of atleast 2 more....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R27IRWCBSV57OC"
+            },
+            {
+              "position": 4,
+              "snippet": "This is absolutely perfect for on the go!!! My dog always has to have his water when we hit the road lol... So beats using my small plastic cups lol",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1H106Y7GRUAJZ"
+            }
+          ]
+        },
+        {
+          "title": "Functionality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 465,
+            "positive": 364,
+            "negative": 101
+          },
+          "summary": "Customers find that the water dispenser works well for their dogs, with one customer noting it's particularly effective for long trips and another mentioning it's suitable for smaller breeds like 20lb dachshunds.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Works great and fits in car drink holder",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1ZZG998L09XC9"
+            },
+            {
+              "position": 2,
+              "snippet": "It works well and didn't leak. I would have preferred a larger size (perhaps 32 oz). Lastly, in my opinion, it the price was high for what you get.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2PK7D0OUESJPH"
+            },
+            {
+              "position": 3,
+              "snippet": "...This works perfectly, sucks excess water back into the bottle automatically. It doesn’t leak, easy to use, light weight, durable and inexpensive.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1D1YZWFK06Q2W"
+            },
+            {
+              "position": 4,
+              "snippet": "Does not work. The purpose of this water bottle is to squeeze water into the top for your dog. But he water immediately drains out....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3B5EE1RP90AF9"
+            }
+          ]
+        },
+        {
+          "title": "Ease of use",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 293,
+            "positive": 264,
+            "negative": 29
+          },
+          "summary": "Customers find the water dispenser easy to use, particularly noting that it's much easier than using a bowl and water.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "This bottle is a must when out with your dog, no spill and easy to use with no waste allowing you to go farther and longer between refills.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3QK63EH7AIYL6"
+            },
+            {
+              "position": 2,
+              "snippet": "...I bought one as soon as I got home. It truly is very easy to use and a great way to keep your dog hydrated without any mess in your car. Love it.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1288MDIWBQE7C"
+            },
+            {
+              "position": 3,
+              "snippet": "My dog Chewie loves this! And so do I. Super easy to use. I no longer have to travel with multiple items in order to give him water.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2ZFO9U8XFAP8A"
+            },
+            {
+              "position": 4,
+              "snippet": "I looked at so many of these. This was a great choice. Easy squeeze, and the water left in the bowl retracts after the pup is done....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R29MAOQ9YHTH7U"
+            }
+          ]
+        },
+        {
+          "title": "Pet preference",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 255,
+            "positive": 248,
+            "negative": 7
+          },
+          "summary": "Customers report that their dogs love using this water bottle, making it a must-have for pet owners.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Works great. My dogs love it and it's easy to use without spilling water all over the place. Very handy to keep in your car.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2DIABT9XF6HM7"
+            },
+            {
+              "position": 2,
+              "snippet": "This is such an easy and useful pet water bottle. We love it. The dog loves it. Portable and practical.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2PWD8C4YWGA31"
+            },
+            {
+              "position": 3,
+              "snippet": "I love it and my dog loves it. Works as advertised. Whenever we go on a long hike or drive I bring it.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R16V07SLBZ42GI"
+            },
+            {
+              "position": 4,
+              "snippet": "Love this little gadget and our dog loves drinking out of it. I keep it in my side door cupholder all the time for when we go to the park....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2YXEJALZLR11U"
+            }
+          ]
+        },
+        {
+          "title": "Convenience",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 227,
+            "positive": 215,
+            "negative": 12
+          },
+          "summary": "Customers find the water dispenser convenient, particularly noting its usefulness during outings.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...It convenient, easy to use, nonbreakable and spill proof. We use it while hiking, walking in town, on our boat and while traveling in the car....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RMCV2DLFR89D3"
+            },
+            {
+              "position": 2,
+              "snippet": "...I would definitely buy it again. it is very convenient, you can get the water not used to go back to the bottle so that you don't have to dump water...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1301IJMHY1DM8"
+            },
+            {
+              "position": 3,
+              "snippet": "...Very handy, and particularly nice for the car because you only need one hand to use it and there no cap you need to worry about.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3W3Y2LEGKHV3P"
+            },
+            {
+              "position": 4,
+              "snippet": "...I clip it onto my backpack or belt . So convenient .My pup love using his own water source not sharing if at all possible.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R10AJFM082FD5Y"
+            }
+          ]
+        },
+        {
+          "title": "Leak-proof",
+          "sentiment": "mixed",
+          "mentions": {
+            "total": 350,
+            "positive": 193,
+            "negative": 157
+          },
+          "summary": "Customers have mixed experiences with the water dispenser's leak-proof design, with some reporting no leaks or spills, while others mention that it leaks a bit.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "This is perfect for travel!! No spills and no waste! My daughter had one of these and my own dog kept 'asking' for drinks, so I got one as wel.!",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3POR87NAHD83H"
+            },
+            {
+              "position": 2,
+              "snippet": "It leaks. Don't waste your money. And you need a death grip around it to keep the water out of the bottle or it'll suck it right back in.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2A0ANDL8TD859"
+            },
+            {
+              "position": 3,
+              "snippet": "...This DOES NOT leak. It only dispenses water when you squeeze it. Makes it super easy when going on walks and trips with my two long haired dogs!",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2UWRMQGJWAA1B"
+            },
+            {
+              "position": 4,
+              "snippet": "...When not wanting to use the bowl it also leaks so not ideal for travel. Ended up having to take the top off and give water in a small bowl....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RKF6M6PYBZ1HZ"
+            }
+          ]
+        },
+        {
+          "title": "Water retention",
+          "sentiment": "mixed",
+          "mentions": {
+            "total": 273,
+            "positive": 122,
+            "negative": 151
+          },
+          "summary": "Customers have mixed experiences with the water retention of the dispenser: while some report that water goes back inside the bottle, others mention that it does not stay in the top.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...the water doesn't stay in the bowl very well, onc it you press it the water comes out and starts going back into the bottle 2.)...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2TQIDS9TBP0ON"
+            },
+            {
+              "position": 2,
+              "snippet": "...It is really nice too that the water goes back into the bottle when you let go of it to contain it and not have to dump it out as you would a bowl....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1JYFY5V6I73KO"
+            },
+            {
+              "position": 3,
+              "snippet": "...As soon as you let go, the water drains back into the bottle. This has taken my pups a little to get used to....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RPNP4WH4AVEQ4"
+            },
+            {
+              "position": 4,
+              "snippet": "...This bottle the water goes back in the bottle. The other one doesn't. Ive had this for over a year and got it taken by tsa",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1I8SCSFEE0HS0"
+            }
+          ]
+        }
+      ],
+      "images": [
+        "https://m.media-amazon.com/images/I/C1br30URC+S.jpg",
+        "https://m.media-amazon.com/images/I/71+cxxiRsZL.jpg",
+        "https://m.media-amazon.com/images/I/81g1ZCl46lL.jpg",
+        "https://m.media-amazon.com/images/I/71r3R2dF7ZL.jpg",
+        "https://m.media-amazon.com/images/I/51k+0cyKntL.jpg",
+        "https://m.media-amazon.com/images/I/71L5bo0-cpL.jpg",
+        "https://m.media-amazon.com/images/I/81y54csPAHL.jpg",
+        "https://m.media-amazon.com/images/I/71CjVlGbZHL.jpg",
+        "https://m.media-amazon.com/images/I/71I3sHa1zEL.jpg",
+        "https://m.media-amazon.com/images/I/61GRq7qeJEL.jpg",
+        "https://m.media-amazon.com/images/I/A1QaDIMGuKL.jpg",
+        "https://m.media-amazon.com/images/I/81wOI77J-AL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 70,
+        "4 star": 12,
+        "3 star": 8,
+        "2 star": 4,
+        "1 star": 6
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Super travel dog drinking device",
+        "text": "I think this is great item. I had problem with 1st one the company fixed it and said I didn't have to send back the broken one so we threw it away then AMAZON SAID,if I dont send back the one I threw away I'll be charged 35 some dollars. So I don't know i have to call amazon to see if they followed thru on that. But the new item works great and very handy to give your dog water without having to drag a bowl and water jug. Highway if you see this I love your product and you were great ! Amazon how ever tried to bend me over for not returning the product you told me to throw away. So heads up about the company thats selling your product. Thank you tho your company was great !",
+        "rating": 5.0,
+        "date": "October 22, 2025",
+        "author": "tuffnut",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHKIEHH2UESDQPR6VBML5T5TWYVA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Smoke"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Best Way to Provide Water to Pups on a Walk",
+        "text": "Great way to provide water on walks with your pet without having to open a bowl first. Just squeeze and the built in cup fills with water. When finished, any remaining water returns in to the container - no drips! My 2 Cairn Terriers walk at least a mile at a time and always want a drink when it's hot outside. Easiest way to do that!!! Very good quality/durability. Highly recommend it!",
+        "rating": 5.0,
+        "date": "July 8, 2025",
+        "author": "Barbara B.",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHREAZXYGASYHOA5TDEHPSQZBUMA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Red"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Great On-The-Go Water Bottle For Dogs!!",
+        "text": "I needed a good way to be able to give my fur-baby which my 2 girls are like my children. They go almost every where with me and my husband; and just having a cup orBowl with water or to put water in wasn’t working good. This water bottle is amazing; u fill it up and screw the lid on it. When one of the babies want water; we just squeeze the bottle a little bit and it lets water out in the top and the baby drinks it and u can squeeze more to keep putting more water up in the top till they are satisfied. And it doesn’t leak if it is turned over so no mess in our vehicle. Great for travel and just on the go with ur pet. We love ours so good, we are gonna order more; I’m thinking of atleast 2 more. Get different colors too so we know which is which and can have one for each vehicle and an extra one for anything else we may need it for. It is well worth the money and is made good also. And our little fur-babies love it!!",
+        "rating": 5.0,
+        "date": "August 19, 2021",
+        "author": "Mortieleeinman",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFJKOSESA22NWTTWVWMKP7GTAN3Q",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Purple"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Handy Dog Water Bottle",
+        "text": "This is a great gadget that makes it easy to give my dogs water on the go. It fits very easily in a car cup holder, easy to clean and simple to use. You just squeeze the bottle and it fills the top which acts as a bowl. It took a long time to be delivered to me. I think it was over a month. This wasn't really an issue just more of an observation: the excess water your dog doesn't drink out of the bowl will have to get dumped since it doesn't seem to drain back in to the bottle. This is fine since if they slobber all over it I don't want it to drain back in but when they decide not to drink after I've squeezed the bottle then I have to unscrew the top and dump the water back in the bottle or dump the water on the floor. Ive learned to wait to squeeze the bottle until they have their mouth over the bowl. The bottle is a good size for one or two dogs but I wish it was a little bit longer to fit more water. Also it would be nice if it came with an over the shoulder strap so it would be easier to carry on long walks. One other draw back is when it's almost empty the bottle makes a suction sound which scares one of my dogs so I have to remember when it gets low I can only give it to one of my dogs not both. If my one dog didn't get scared I would probably give it a five. The drawbacks are very minor, otherwise this is a very convenient tool to give your dogs water quickly.",
+        "rating": 4.0,
+        "date": "November 10, 2017",
+        "author": "JJ",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AG5XBAXFM62TXBTVVNQL7HYTODPQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Blue"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Great product",
+        "text": "Great product",
+        "rating": 5.0,
+        "date": "March 15, 2026",
+        "author": "smpwrflgard",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHOQDDTYBYRQZAPTOIOJPOUKX3KA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Purple"
+        }
+      },
+      {
+        "position": 6,
+        "title": "Great idea, Needs work.",
+        "text": "I love the concer of this product and the idea behind it but it needs alot of work.I have a Service Dog and this is perfect for when we leave house.Down side.... It leaks through the lid. If you’re needing to pack this inside of a bag or take it anywhere other than on a walk outside, it can get frustrating having to clean up water all the time.Also, it is not dishwasher safe.If you forget to empty remaining water (if any) from the container after use, it will discolor the container within a day or two.I’m unsure if this is Bpa-free so i’m going back to check for sure. Wouldn't surprise me if it’s not.Currently looking for something similar that is dishwasher safe, bpa-free, doesn’t leak etc.If this water bottle did not suck in all the remaining water after my dog is done drinking, I would have not bought this in the first place.Like I said, great idea, but needs alot of work.",
+        "rating": 3.0,
+        "date": "February 26, 2020",
+        "author": "MD",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGYM2XZSEXXJSESQOGYJS4Q3RLDA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Purple"
+        }
+      },
+      {
+        "position": 7,
+        "title": "Best one on the market",
+        "text": "The advantage that these have over similar looking products, is if your pet doesn’t drink all the water in the reservoir the excess water will drain back into the bottle. With others we have tried they don’t have that feature and you then have to find a drain where you can dump the water if you happen to be using indoors.",
+        "rating": 5.0,
+        "date": "February 15, 2026",
+        "author": "Don Mauseth",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEZ2DARJPUBRO7ARIKWX4DCT2DFQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Blue"
+        }
+      },
+      {
+        "position": 8,
+        "title": "Great Water Bottle for my puppy!",
+        "text": "This is the best water bottle I've ever seen. I have it filled, from my kitchen water despenser, and finally he'll drink some water for me!! If Cooper goes with me in the car, his water bottle goes too . He loves it ! So, that in turn makes Mommy happy 😊",
+        "rating": 5.0,
+        "date": "March 22, 2025",
+        "author": "MagicsMom",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEWGR5Q2AJVGE6XMQHAKDQVRX33Q",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Blue"
+        }
+      }
+    ],
+    "other_countries_reviews": [
+      {
+        "position": 1,
+        "title": "Great product",
+        "text": "Excellent product, easy to use and easy to carry while hiking.",
+        "rating": 5.0,
+        "date": "July 10, 2021",
+        "author": "Amazon Customer",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Blue"
+        }
+      },
+      {
+        "position": 2,
+        "title": "The rim is too big and water spills down my cheeks onto my shirt.",
+        "text": "Great for small to medium dogs. A little bulky to Cary around but in the car it is perfect.",
+        "rating": 4.0,
+        "date": "May 22, 2020",
+        "author": "Dave Angel",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Blue"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Perfection.",
+        "text": "I use this product to conveinantly have water for my dogs when we are out. I Love it and so do my fur babies.",
+        "rating": 5.0,
+        "date": "August 20, 2021",
+        "author": "Holly Chamberlain",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true
+      },
+      {
+        "position": 4,
+        "title": "It's not baaaaad...",
+        "text": "I saw this bottle in a tiktok video and thought I'd try it out. It looked interesting. I have two Labs and traditionally we use the ol' \"Gulpy\" dog water bottles.This bottle is ok. My dogs had no problem drinking out of it. I was a little disappointed when I put it in my backpack and it started slowly leaking when it slipped to an angled position or further. I thought the \"squeeze technology\" meant that there was a mechanism that blocked the spout and didn't allow water to go through until it was squeezed.The squeezing feature works great, however with two large dogs I think the double-squeezing will wear this down quicker than users with one dog. I used this bottle on two outings and I'm already concerned for it's structural integrity. Perhaps more ideal for smaller dogs who don't chug as much as mine!",
+        "rating": 3.0,
+        "date": "May 9, 2022",
+        "author": "Johnny8594",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/c0c70b3f-674d-45af-9474-843414c88aed._CR0%2C26%2C281%2C281_UX460_.jpg",
+        "verified_purchase": true,
+        "product": {
+          "color": "Purple"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Great product",
+        "text": "Works great ,dog loved it.",
+        "rating": 5.0,
+        "date": "October 26, 2020",
+        "author": "Dorothy Ross",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Blue"
+        }
+      }
+    ]
+  }
+}

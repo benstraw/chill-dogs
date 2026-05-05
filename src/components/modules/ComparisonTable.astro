@@ -16,7 +16,7 @@ const { products, pageSlug = '' } = Astro.props;
       <tr>
         <th scope="col">Product</th>
         <th scope="col">Best For</th>
-        <th scope="col">Cooling Method</th>
+        <th scope="col">Product Design</th>
         <th scope="col">Sizing</th>
         <th scope="col" class="ct-cta-col"></th>
       </tr>
@@ -88,7 +88,7 @@ const { products, pageSlug = '' } = Astro.props;
       <dl class="ct-mobile-dl">
         <dt>Best For</dt>
         <dd>{product.bestFor}</dd>
-        <dt>Cooling Method</dt>
+        <dt>Product Design</dt>
         <dd>{product.coolingMethod || '—'}</dd>
         {product.sizingNote && (
           <>
