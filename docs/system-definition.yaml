@@ -96,9 +96,10 @@ site_system:
       type: "collector"
       collector_subtype: "article"
       target_action: "Route car-heat-intent traffic to cooling converters"
-      metric: "collector_to_converter_click to car cooling and related converters"
+      metric: "collector_to_converter_click to car cooling and related converters + pinterest_save_click"
       routes:
         - "/cooling/keep-dog-cool-in-car/"
+      notes: "Opt-in PinterestSave modules expose approved article pins near the back-seat heat summary and road-trip checklist section, supporting social recirculation without changing the collector page type."
 
     - name: "How Hot Is Too Hot for Dogs"
       type: "collector"
@@ -254,6 +255,7 @@ site_system:
       - "FAQ"
       - "Disclosure"
       - "InternalLinkStrip"
+      - "PinterestSave"
       - "Toc"
       - "RelatedGuides"
     showstopper:
@@ -341,4 +343,5 @@ site_system:
       - "hero_cta_click"
       - "hero_impression"
       - "toc_click"
+      - "pinterest_save_click"
     funnel_definition: "collector or attractor entry -> converter click -> amazon_outbound_click"
