@@ -1696,7 +1696,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         positionOffset: 4,
         columns: 3,
         intro:
-          'Expandable carriers are useful when your dog fits the boarding size but appreciates more room once the bag is stowed. Compare the closed dimensions first, then use the expansion panel only after boarding and only if your seat setup allows it.',
+          'Expandable carriers are useful when your dog fits the boarding size but appreciates more room once the bag is stowed and the plane takes off. Compare the closed dimensions first, then use the expansion panel only after boarding and only if your seat setup allows it.',
         productIds: [
           'mr-peanuts-expandable-carrier',
           'petskd-top-side-expandable-carrier',
@@ -1708,11 +1708,11 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       {
         kind: 'product_section',
         id: 'compact-carriers',
-        heading: 'Best Compact Carriers for Tighter Under-Seat Limits',
+        heading: 'Best Compact Carriers for Smaller Under-Seat Spaces',
         positionOffset: 9,
         columns: 3,
         intro:
-          'These are the tighter-footprint picks for very small dogs, shallower under-seat spaces, or flights where a standard 18-by-11-by-11 carrier feels like too much of a gamble. They are best for genuinely small dogs, not just lighter dogs.',
+          'These carriers have smaller footprints for tiny dogs and shallow under-seat spaces. They are best for genuinely small dogs, not just lighter dogs.',
         productIds: [
           'petsfit-soft-sided-airline-carrier',
           'pidipiti-budget-airline-carrier',
@@ -1726,7 +1726,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         positionOffset: 12,
         columns: 2,
         intro:
-          'Tote-style carriers work best for tiny dogs and owners who want a softer handbag-style profile. The tradeoff is that these bags are narrower, so check shoulder height and body length carefully before assuming the look is worth the fit.',
+          'Tote-style carriers work best for tiny dogs and owners who want a softer handbag style. The tradeoff is that these bags are narrower, so check shoulder height and body length carefully before assuming the look is worth the fit.',
         productIds: [
           'petami-dog-purse-carrier',
           'lasaviin-dog-carrier-purse',
@@ -1737,24 +1737,24 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       heading: 'Airline Carrier FAQ',
       items: [
         {
-          question: 'What does "airline approved" actually mean on a soft-sided carrier?',
+          question: 'What does "airline approved" actually mean for a soft-sided carrier?',
           answer:
-            'It means the manufacturer designed the carrier to fit within the range of dimensions most major U.S. airlines publish for under-seat pet travel. It is not a certification issued by the FAA, TSA, or any airline. Individual airlines set their own size requirements, and those requirements vary — sometimes by aircraft type on the same airline. A carrier that works on United may not fit on a regional jet operated under the same ticket. Always verify the current published dimensions for your specific airline and route before buying.',
+            'It means the manufacturer designed the carrier to fit within the range of dimensions most major U.S. airlines publish for under-seat pet travel. It is not a certification issued by the FAA, TSA, or any airline. Individual airlines set their own size requirements, and those requirements vary, sometimes by aircraft type on the same airline. A carrier that works on United may not fit on a regional jet operated under the same ticket. Always verify the current published dimensions for your specific airline and route before buying.',
         },
         {
           question: 'Can I unzip the expansion panel during the flight?',
           answer:
-            'Only after the fasten seat belt sign has turned off and the carrier is fully stowed under the seat in front of you. The expansion is for your dog\'s in-flight comfort — it is not intended as a way to bring a carrier that does not fit the under-seat space at boarding. If the carrier cannot compress to fit during takeoff and landing, it does not meet the requirement regardless of what the unzipped dimensions are.',
+            'Only after the fasten seat belt sign has been turned off and the carrier is fully stowed under the seat in front of you. The expansion is for your dog\'s in-flight comfort. It is not intended as a way to bring a carrier that does not fit the under-seat space at boarding. If the carrier cannot compress to fit during takeoff and landing, it does not meet the size requirement regardless of what the unzipped dimensions are.',
         },
         {
           question: 'How do I know which size to buy?',
           answer:
-            'Your dog needs to be able to stand, turn around, and lie down comfortably inside the carrier when it is in its compressed (non-expanded) configuration. Most carriers list a maximum pet weight, but weight is a rough proxy — a long-bodied dog at 14 lb may need a larger carrier than a compact 14 lb dog. Measure your dog\'s length from nose to base of tail and height from the ground to the top of their shoulders, then compare to the carrier\'s interior dimensions, not the exterior ones.',
+            'Your dog needs to be able to stand, turn around, and lie down comfortably inside the carrier when it is in its compressed (non-expanded) configuration. Most carriers list a maximum pet weight, but weight is just one criterion. A long-bodied 14 pound dog may need a larger carrier than a compact 14 pound dog. Measure your dog\'s length from nose to tip of tail and height from the ground to the top of its head, then compare to the carrier\'s interior dimensions.',
         },
         {
           question: 'Is a soft-sided carrier ever acceptable for cargo travel?',
           answer:
-            'No. Airline cargo and checked baggage programs require rigid, hard-sided kennels that meet IATA container requirements. Soft-sided carriers are designed for in-cabin travel only. If your dog is too large for the cabin, see our airline crates page for hard-sided kennel options.',
+            'No. Airline cargo and checked baggage programs require rigid, hard-sided kennels that meet IATA (International Air Transport Association) container requirements. Soft-sided carriers are designed for in-cabin travel only. If your dog is too large for the cabin, see our airline crates page for hard-sided kennel options.',
         },
       ],
     },
