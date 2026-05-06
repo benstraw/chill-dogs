@@ -1193,7 +1193,7 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Removable sherpa-lined bed and top-opening design help small dogs settle more comfortably once inside',
     ],
     bestFor: 'Very small dogs and owners who want a tote-style carrier with built in storage',
-    whyItWorks: 'It gives you the convenience of a purse-style carrier without sacrifcing the basics that matter for flights: airflow, structure, and under-seat-friendly proportions',
+    whyItWorks: 'It gives you the convenience of a purse-style carrier without sacrificing the basics that matter for flights: airflow, structure, and under-seat-friendly proportions',
     considerIf: 'You want a softer handbag-style look for a small dog and still need pockets, ventilation, and an airline-travel-friendly footprint',
     image: { src: 'https://m.media-amazon.com/images/I/818qa6V-TgL._AC_SX300_SY300_QL70_FMwebp_.jpg', alt: 'PetAmi dog purse carrier' },
   },
