@@ -222,6 +222,18 @@ site_system:
       routes:
         - "/safety/what-to-do-if-your-dog-runs-away/"
 
+    - name: "Product browse"
+      type: "converter"
+      pillar: "all"
+      target_action: "Drive affiliate outbound clicks from cross-pillar product discovery"
+      metric: "amazon_outbound_click rate"
+      routes:
+        - "/shop/"
+      notes: >
+        Public-facing product catalog at /shop/. Shows all products from src/data/product-catalog.ts
+        with client-side filtering by pillar, category, and search. Linked from site footer.
+        Page type is converter (not informer) because it drives Amazon affiliate clicks.
+
     - name: "Informer pages"
       type: "informer"
       target_action: "Trust and compliance clarity"

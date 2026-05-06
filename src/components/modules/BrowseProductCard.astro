@@ -1,0 +1,176 @@
+---
+import AffiliateLink from '@components/AffiliateLink.astro';
+import type { ProductCatalogItem } from '@data/product-catalog';
+
+interface Props {
+  product: ProductCatalogItem;
+}
+
+const { product } = Astro.props;
+
+const pillarLabels: Record<string, string> = {
+  cooling: 'Cooling',
+  calming: 'Calming',
+  comfort: 'Comfort',
+  gear: 'Gear',
+};
+---
+
+<div
+  class="browse-card"
+  data-pillar={product.pillar}
+  data-category={product.category}
+  data-name={product.name.toLowerCase()}
+>
+  <div class="card-image">
+    {product.image ? (
+      <img src={product.image.src} alt={product.image.alt} loading="lazy" />
+    ) : (
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="placeholder-dog">
+        <circle cx="22" cy="20" r="6" fill="currentColor" opacity="0.15"/>
+        <circle cx="42" cy="20" r="6" fill="currentColor" opacity="0.15"/>
+        <ellipse cx="32" cy="38" rx="16" ry="14" fill="currentColor" opacity="0.12"/>
+        <circle cx="26" cy="34" r="3" fill="currentColor" opacity="0.2"/>
+        <circle cx="38" cy="34" r="3" fill="currentColor" opacity="0.2"/>
+        <ellipse cx="32" cy="42" rx="4" ry="2.5" fill="currentColor" opacity="0.2"/>
+      </svg>
+    )}
+  </div>
+
+  <div class="card-body">
+    <span class={`pillar-badge pillar-badge--${product.pillar}`}>
+      {pillarLabels[product.pillar] ?? product.pillar}
+    </span>
+    <h3 class="card-name">{product.name}</h3>
+    <p class="card-best-for">{product.bestFor}</p>
+  </div>
+
+  <div class="card-footer">
+    <AffiliateLink
+      href={product.amazonUrl}
+      class="card-cta"
+      data-track="amazon_outbound_click"
+      data-asin={product.asin ?? ''}
+      data-product-name={product.name}
+      data-page-slug="shop"
+    >
+      See on Amazon →
+    </AffiliateLink>
+  </div>
+</div>
+
+<style>
+  .browse-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-sand);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+  }
+
+  .browse-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+
+  .card-image {
+    aspect-ratio: 4 / 3;
+    background: #f5f5f0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: var(--space-sm);
+  }
+
+  .placeholder-dog {
+    width: 48px;
+    height: 48px;
+    color: var(--color-text-muted);
+  }
+
+  .card-body {
+    padding: var(--space-md) var(--space-md) var(--space-sm);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .pillar-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 2px 8px;
+    border-radius: 999px;
+    width: fit-content;
+  }
+
+  .pillar-badge--cooling {
+    background: var(--color-sky);
+    color: var(--color-charcoal);
+  }
+
+  .pillar-badge--calming {
+    background: var(--color-sage);
+    color: var(--color-charcoal);
+  }
+
+  .pillar-badge--comfort {
+    background: var(--color-terracotta);
+    color: var(--color-sand);
+  }
+
+  .pillar-badge--gear {
+    background: var(--color-charcoal);
+    color: var(--color-sand);
+  }
+
+  .card-name {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    line-height: 1.3;
+    color: var(--color-text);
+    margin: 0;
+  }
+
+  .card-best-for {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+  }
+
+  .card-footer {
+    padding: var(--space-sm) var(--space-md) var(--space-md);
+  }
+
+  .card-cta {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    padding: var(--space-xs) var(--space-sm);
+    background: var(--color-charcoal);
+    color: var(--color-sand);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: background var(--transition-fast);
+  }
+
+  .card-cta:hover {
+    background: #444;
+    text-decoration: none;
+  }
+</style>

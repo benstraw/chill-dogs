@@ -522,6 +522,21 @@ export const staticSitemapSections: SitemapSection[] = [
     ],
   },
   {
+    title: 'Shop',
+    description: 'Cross-pillar product browse page — lets visitors discover the full product catalog with pillar, category, and search filtering.',
+    pages: [
+      createSitemapPage({
+        baseTitle: 'All Dog Products',
+        ogTitle: 'Browse All Dog Products — Cooling, Calming, Comfort & Gear',
+        description:
+          'Browse our full catalog of researched dog products — cooling gear, calming aids, comfortable beds, crates, and GPS trackers. Filter by category.',
+        href: ROUTES.shop,
+        pageType: 'converter',
+        topics: ['cooling', 'calming', 'comfort', 'tracking'],
+      }),
+    ],
+  },
+  {
     title: 'Admin & Legal',
     description: 'Informer pages — compliance, trust, contact, and product inventory review. New products must flow into Product Catalog via data files, not hardcoded admin rows.',
     pages: [

@@ -38,6 +38,7 @@ export const ROUTES = {
   comfortFurnitureCrates: '/comforting/best-furniture-dog-crates/',
   comfortHeavyDutyCrates: '/comforting/best-heavy-duty-dog-crates/',
   comfortSleepArticle: '/comforting/how-much-do-dogs-sleep/',
+  shop: '/shop/',
   affiliateDisclosure: '/affiliate-disclosure/',
   privacyPolicy: '/privacy-policy/',
   terms: '/terms/',
