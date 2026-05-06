@@ -30,7 +30,14 @@ saveUrl.searchParams.set('description', description);
 const saveHref = saveUrl.href;
 ---
 
-<aside class="pinterest-save" aria-label={`Save ${title} on Pinterest`}>
+<aside
+  class="pinterest-save"
+  aria-label={`Save ${title} on Pinterest`}
+  data-pinterest-save-card
+  data-canonical-url={pageUrl}
+  data-image-src={imageSrc}
+  data-description={description}
+>
   <a
     class="pinterest-save__image-link"
     href={saveHref}
@@ -71,6 +78,44 @@ const saveHref = saveUrl.href;
     </a>
   </div>
 </aside>
+
+<script is:inline>
+  function getPinterestMediaOrigin() {
+    var host = window.location.hostname;
+    var isLocal =
+      host === 'localhost' ||
+      host === '127.0.0.1' ||
+      host === '[::1]' ||
+      host.endsWith('.local');
+
+    if (window.location.protocol === 'https:' && !isLocal) {
+      return window.location.origin;
+    }
+
+    return 'https://www.chill-dogs.com';
+  }
+
+  function updatePinterestSaveLinks(card) {
+    var canonicalUrl = card.getAttribute('data-canonical-url');
+    var imageSrc = card.getAttribute('data-image-src');
+    var description = card.getAttribute('data-description');
+    if (!canonicalUrl || !imageSrc || !description) return;
+
+    var mediaUrl = new URL(imageSrc, getPinterestMediaOrigin()).href;
+    var saveUrl = new URL('https://www.pinterest.com/pin/create/button/');
+    saveUrl.searchParams.set('url', canonicalUrl);
+    saveUrl.searchParams.set('media', mediaUrl);
+    saveUrl.searchParams.set('description', description);
+
+    card.querySelectorAll('a[href^="https://www.pinterest.com/pin/create/button/"]').forEach(function (link) {
+      link.setAttribute('href', saveUrl.href);
+    });
+  }
+
+  document.querySelectorAll('[data-pinterest-save-card]').forEach(function (card) {
+    updatePinterestSaveLinks(card);
+  });
+</script>
 
 <style>
   .pinterest-save {
