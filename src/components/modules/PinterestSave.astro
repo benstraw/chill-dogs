@@ -1,0 +1,217 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  imageSrc: string;
+  imageAlt: string;
+  canonicalPath: string;
+  pageSlug: string;
+  placement: string;
+  ctaLabel?: string;
+}
+
+const {
+  title,
+  description,
+  imageSrc,
+  imageAlt,
+  canonicalPath,
+  pageSlug,
+  placement,
+  ctaLabel = 'Save to Pinterest',
+} = Astro.props;
+
+const pageUrl = new URL(canonicalPath, 'https://www.chill-dogs.com').href;
+const mediaUrl = new URL(imageSrc, 'https://www.chill-dogs.com').href;
+const saveUrl = new URL('https://www.pinterest.com/pin/create/button/');
+saveUrl.searchParams.set('url', pageUrl);
+saveUrl.searchParams.set('media', mediaUrl);
+saveUrl.searchParams.set('description', description);
+const saveHref = saveUrl.href;
+---
+
+<aside
+  class="pinterest-save"
+  aria-label={`Save ${title} on Pinterest`}
+  data-pinterest-save-card
+  data-canonical-url={pageUrl}
+  data-image-src={imageSrc}
+  data-description={description}
+>
+  <a
+    class="pinterest-save__image-link"
+    href={saveHref}
+    target="_blank"
+    rel="noopener noreferrer nofollow"
+    data-track="pinterest_save_click"
+    data-page-slug={pageSlug}
+    data-pin-title={title}
+    data-placement={placement}
+    data-media={imageSrc}
+  >
+    <img
+      src={imageSrc}
+      alt={imageAlt}
+      width="1000"
+      height="1500"
+      loading="lazy"
+      decoding="async"
+      data-og-image-skip="true"
+    />
+  </a>
+  <div class="pinterest-save__body">
+    <p class="pinterest-save__eyebrow">Save this guide</p>
+    <p class="pinterest-save__title">{title}</p>
+    <p class="pinterest-save__description">{description}</p>
+    <a
+      class="pinterest-save__button"
+      href={saveHref}
+      target="_blank"
+      rel="noopener noreferrer nofollow"
+      data-track="pinterest_save_click"
+      data-page-slug={pageSlug}
+      data-pin-title={title}
+      data-placement={placement}
+      data-media={imageSrc}
+    >
+      {ctaLabel}
+    </a>
+  </div>
+</aside>
+
+<script is:inline>
+  function getPinterestMediaOrigin() {
+    var host = window.location.hostname;
+    var isLocal =
+      host === 'localhost' ||
+      host === '127.0.0.1' ||
+      host === '[::1]' ||
+      host.endsWith('.local');
+
+    if (window.location.protocol === 'https:' && !isLocal) {
+      return window.location.origin;
+    }
+
+    return 'https://www.chill-dogs.com';
+  }
+
+  function updatePinterestSaveLinks(card) {
+    var canonicalUrl = card.getAttribute('data-canonical-url');
+    var imageSrc = card.getAttribute('data-image-src');
+    var description = card.getAttribute('data-description');
+    if (!canonicalUrl || !imageSrc || !description) return;
+
+    var mediaUrl = new URL(imageSrc, getPinterestMediaOrigin()).href;
+    var saveUrl = new URL('https://www.pinterest.com/pin/create/button/');
+    saveUrl.searchParams.set('url', canonicalUrl);
+    saveUrl.searchParams.set('media', mediaUrl);
+    saveUrl.searchParams.set('description', description);
+
+    card.querySelectorAll('a[href^="https://www.pinterest.com/pin/create/button/"]').forEach(function (link) {
+      link.setAttribute('href', saveUrl.href);
+    });
+  }
+
+  document.querySelectorAll('[data-pinterest-save-card]').forEach(function (card) {
+    updatePinterestSaveLinks(card);
+  });
+</script>
+
+<style>
+  .pinterest-save {
+    display: grid;
+    grid-template-columns: minmax(9rem, 12rem) 1fr;
+    gap: var(--space-lg);
+    align-items: center;
+    margin: var(--space-xl) 0;
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .pinterest-save__image-link {
+    display: block;
+    color: inherit;
+  }
+
+  .pinterest-save__image-link:focus-visible,
+  .pinterest-save__button:focus-visible {
+    outline: 3px solid color-mix(in srgb, #bd081c 35%, transparent);
+    outline-offset: 3px;
+  }
+
+  .pinterest-save img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+  }
+
+  .pinterest-save__body {
+    min-width: 0;
+  }
+
+  .pinterest-save__eyebrow {
+    margin: 0 0 var(--space-xs);
+    color: #9f0718;
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .pinterest-save__title {
+    margin: 0 0 var(--space-sm);
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-weight: var(--weight-extrabold);
+    line-height: var(--leading-tight);
+  }
+
+  .pinterest-save__description {
+    margin: 0 0 var(--space-md);
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+  }
+
+  .pinterest-save__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    padding: 0 var(--space-md);
+    background: #bd081c;
+    border-radius: var(--radius-full);
+    color: #fff;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-bold);
+    text-decoration: none;
+    transition:
+      background var(--transition-fast),
+      transform var(--transition-fast);
+  }
+
+  .pinterest-save__button:hover {
+    background: #9f0718;
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 640px) {
+    .pinterest-save {
+      grid-template-columns: 6.5rem 1fr;
+      gap: var(--space-md);
+      padding: var(--space-md);
+    }
+
+    .pinterest-save__title {
+      font-size: var(--text-lg);
+    }
+  }
+</style>

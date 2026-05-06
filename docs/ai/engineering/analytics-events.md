@@ -86,6 +86,7 @@ track('hero_impression', { variant: 'a', page: 'cooling' });
 | `hero_impression` | Hero is 50% visible (IntersectionObserver) | `variant`, `page` |
 | `collector_to_converter_click` | Click on internal link from collector to converter | `from_slug`, `to_slug` |
 | `toc_click` | Click on table of contents link | `anchor`, `page_slug` |
+| `pinterest_save_click` | Click on an opt-in Pinterest save card or save button | `page_slug`, `pin_title`, `placement`, `media` |
 | `email_signup_view` | Email signup form is viewed | — |
 | `email_signup_start` | Email field is focused | — |
 | `email_signup_submit` | Form submitted | — |

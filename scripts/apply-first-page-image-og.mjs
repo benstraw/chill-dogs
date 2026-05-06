@@ -1,5 +1,6 @@
 import { readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
+import { pathToFileURL } from 'node:url';
 
 const distRoot = path.resolve('dist');
 const siteOrigin = 'https://www.chill-dogs.com';
@@ -50,12 +51,23 @@ function replaceMetaContent(html, matcher, contentValue) {
   });
 }
 
-function extractFirstImageSrc(mainHtml) {
-  const match = mainHtml.match(/<img\b[^>]*\bsrc\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/i);
-  return match?.[1] ?? match?.[2] ?? match?.[3] ?? null;
+export function extractFirstImageSrc(mainHtml) {
+  const imageTags = mainHtml.match(/<img\b[^>]*>/gi) ?? [];
+
+  for (const tag of imageTags) {
+    if (/\bdata-og-image-skip\b/i.test(tag)) {
+      continue;
+    }
+
+    const match = tag.match(/\bsrc\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/i);
+    const src = match?.[1] ?? match?.[2] ?? match?.[3] ?? null;
+    if (src) return src;
+  }
+
+  return null;
 }
 
-function applyFirstImageOg(html) {
+export function applyFirstImageOg(html) {
   const main = html.match(/<main[\s\S]*?<\/main>/i)?.[0];
   if (!main) return html;
 
@@ -92,4 +104,6 @@ function main() {
   console.log(`[og] updated og:image + twitter:image from first page image on ${updatedCount} page(s)`);
 }
 
-main();
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main();
+}
