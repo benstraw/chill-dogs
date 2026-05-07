@@ -1,0 +1,933 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import BrowseProductCard from '@components/modules/BrowseProductCard.astro';
+import { productCatalogItems } from '@data/product-catalog';
+import { ROUTES } from '@data/routes';
+
+const allProducts = productCatalogItems;
+const total = allProducts.length;
+
+const pillars = ['cooling', 'calming', 'comfort', 'gear'] as const;
+const pillarLabels: Record<string, string> = {
+  cooling: 'Cooling',
+  calming: 'Calming',
+  comfort: 'Comfort',
+  gear: 'Gear',
+};
+
+const categoriesByPillar: Record<string, string[]> = {};
+for (const pillar of pillars) {
+  const cats = [...new Set(allProducts.filter((p) => p.pillar === pillar).map((p) => p.category))];
+  categoriesByPillar[pillar] = cats;
+}
+
+const countByPillar: Record<string, number> = {};
+for (const pillar of pillars) {
+  countByPillar[pillar] = allProducts.filter((p) => p.pillar === pillar).length;
+}
+---
+
+<BaseLayout
+  title="All Dog Products | Chill Dogs"
+  ogTitle="Browse All Dog Products — Cooling, Calming, Comfort & Gear"
+  description="Browse our full catalog of researched dog products — cooling gear, calming aids, comfortable beds, crates, and GPS trackers. Filter by category."
+  canonicalUrl={ROUTES.shop}
+>
+  <div class="shop-page">
+
+    <!-- Page header -->
+    <header class="shop-header">
+      <div class="container">
+        <h1>All Products</h1>
+        <p class="shop-lede">Every product we've curated across cooling, calming, comfort, and gear.</p>
+      </div>
+    </header>
+
+    <!-- Sticky filter bar -->
+    <div class="filter-bar" id="filter-bar">
+      <div class="container">
+
+        <!-- Main row: search | desktop pillar chips | mobile filter btn + count -->
+        <div class="bar-main">
+          <div class="bar-search">
+            <svg class="search-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M13.5 13.5 17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <input
+              type="search"
+              id="q"
+              placeholder="Search products…"
+              aria-label="Search products"
+              autocomplete="off"
+            />
+          </div>
+
+          <!-- Desktop: pillar chips inline -->
+          <div class="bar-pillars" role="group" aria-label="Filter by pillar">
+            {pillars.map((p) => (
+              <button class="pillar-chip" data-value={p} aria-pressed="false">
+                {pillarLabels[p]}
+                <span class="chip-count">({countByPillar[p]})</span>
+              </button>
+            ))}
+          </div>
+
+          <!-- Desktop: clear -->
+          <button class="bar-clear" id="bar-clear" hidden>Clear</button>
+
+          <!-- Mobile: count + filter trigger -->
+          <div class="bar-mobile">
+            <span class="bar-count-mobile" id="count-mobile" aria-live="polite">{total} products</span>
+            <button class="filter-trigger" id="filter-trigger" aria-haspopup="dialog" aria-expanded="false">
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M3 5h14M6 10h8M9 15h2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              Filters
+              <span class="filter-badge" id="filter-badge" aria-label="active filters" hidden>0</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Desktop: category chip row (contextual, shown when pillar active) -->
+        <div class="bar-cats" id="bar-cats" hidden role="group" aria-label="Filter by sub-category">
+          {pillars.map((pillar) =>
+            categoriesByPillar[pillar].map((cat) => (
+              <button class="cat-chip" data-value={cat} data-pillar={pillar} aria-pressed="false" hidden>
+                {cat.replace(/-/g, ' ')}
+              </button>
+            ))
+          )}
+        </div>
+
+        <!-- Desktop: result count -->
+        <div class="bar-count-row" id="bar-count-desktop" aria-live="polite">
+          <span id="count-desktop">{total} products</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Product grid -->
+    <div class="container content-container">
+      <div
+        class="product-grid"
+        id="grid"
+        data-cats-by-pillar={JSON.stringify(categoriesByPillar)}
+      >
+        {allProducts.map((product) => (
+          <div
+            class="card-wrapper"
+            data-pillar={product.pillar}
+            data-category={product.category}
+            data-name={product.name.toLowerCase()}
+          >
+            <BrowseProductCard product={product} />
+          </div>
+        ))}
+      </div>
+
+      <p class="empty-state" id="empty" hidden>
+        No products match your filters.
+        <button class="text-btn" id="clear-empty">Clear filters</button>
+      </p>
+
+      <div class="disclosure">
+        <p>Chill Dogs is a participant in the Amazon Services LLC Associates Program. As an Amazon Associate, we earn from qualifying purchases at no extra cost to you. <a href={ROUTES.affiliateDisclosure}>Full disclosure →</a></p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom sheet backdrop (mobile) -->
+  <div class="backdrop" id="backdrop" aria-hidden="true"></div>
+
+  <!-- Bottom sheet (mobile filter panel) -->
+  <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" aria-hidden="true">
+    <div class="sheet-handle"></div>
+    <div class="sheet-header">
+      <h2 id="sheet-title" class="sheet-title">Filters</h2>
+      <button class="sheet-close" id="sheet-close" aria-label="Close filters">
+        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M5 5l10 10M15 5 5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="sheet-body">
+      <section class="sheet-section">
+        <h3 class="sheet-section-title">Category</h3>
+        <div class="sheet-pillar-grid">
+          {pillars.map((p) => (
+            <button class="pillar-chip sheet-pillar-chip" data-value={p} aria-pressed="false">
+              <span class="sheet-pillar-label">{pillarLabels[p]}</span>
+              <span class="sheet-pillar-count">{countByPillar[p]} products</span>
+            </button>
+          ))}
+        </div>
+      </section>
+
+      <section class="sheet-section" id="sheet-cat-section" hidden>
+        <h3 class="sheet-section-title">Sub-category</h3>
+        <div class="sheet-cat-chips" id="sheet-cat-chips">
+          {pillars.map((pillar) =>
+            categoriesByPillar[pillar].map((cat) => (
+              <button class="cat-chip" data-value={cat} data-pillar={pillar} aria-pressed="false" hidden>
+                {cat.replace(/-/g, ' ')}
+              </button>
+            ))
+          )}
+        </div>
+      </section>
+    </div>
+
+    <div class="sheet-footer">
+      <button class="sheet-clear" id="sheet-clear">Clear all</button>
+      <button class="sheet-apply" id="sheet-apply">
+        Show <span id="sheet-count">{total}</span> results
+      </button>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  // ─── Elements ─────────────────────────────────────────────────────────────
+  const grid = document.getElementById('grid')!;
+  const qInput = document.getElementById('q') as HTMLInputElement;
+  const barClear = document.getElementById('bar-clear')!;
+  const barCats = document.getElementById('bar-cats')!;
+  const countDesktop = document.getElementById('count-desktop')!;
+  const countMobile = document.getElementById('count-mobile')!;
+  const emptyEl = document.getElementById('empty')!;
+  const clearEmpty = document.getElementById('clear-empty')!;
+  const filterBadge = document.getElementById('filter-badge')!;
+
+  const filterTrigger = document.getElementById('filter-trigger')!;
+  const backdrop = document.getElementById('backdrop')!;
+  const sheet = document.getElementById('sheet')!;
+  const sheetClose = document.getElementById('sheet-close')!;
+  const sheetClear = document.getElementById('sheet-clear')!;
+  const sheetApply = document.getElementById('sheet-apply')!;
+  const sheetCount = document.getElementById('sheet-count')!;
+  const sheetCatSection = document.getElementById('sheet-cat-section')!;
+
+  const catsByPillar: Record<string, string[]> = JSON.parse(grid.dataset.catsByPillar || '{}');
+  const cards = Array.from(grid.querySelectorAll<HTMLElement>('.card-wrapper'));
+  const total = cards.length;
+
+  // ─── State ────────────────────────────────────────────────────────────────
+  const state = {
+    pillars: new Set<string>(),
+    cats: new Set<string>(),
+    q: '',
+  };
+
+  // ─── URL sync ─────────────────────────────────────────────────────────────
+  function syncUrl() {
+    const params = new URLSearchParams();
+    if (state.pillars.size) params.set('p', [...state.pillars].join(','));
+    if (state.cats.size) params.set('c', [...state.cats].join(','));
+    if (state.q) params.set('q', state.q);
+    const qs = params.toString();
+    history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
+  }
+
+  function initFromUrl() {
+    const params = new URLSearchParams(location.search);
+    const p = params.get('p');
+    const c = params.get('c');
+    const q = params.get('q');
+    if (p) p.split(',').filter(Boolean).forEach((v) => state.pillars.add(v));
+    if (c) c.split(',').filter(Boolean).forEach((v) => state.cats.add(v));
+    if (q) state.q = q;
+  }
+
+  // ─── Render ───────────────────────────────────────────────────────────────
+  function render() {
+    const q = state.q.toLowerCase().trim();
+    let count = 0;
+
+    // Filter cards
+    cards.forEach((card) => {
+      const ok =
+        (state.pillars.size === 0 || state.pillars.has(card.dataset.pillar!)) &&
+        (state.cats.size === 0 || state.cats.has(card.dataset.category!)) &&
+        (!q || card.dataset.name!.includes(q));
+      card.hidden = !ok;
+      if (ok) count++;
+    });
+
+    const countStr = count === total ? `${total} products` : `${count} of ${total} products`;
+    countDesktop.textContent = countStr;
+    countMobile.textContent = countStr;
+    sheetCount.textContent = String(count);
+    emptyEl.hidden = count > 0;
+
+    // Active filter count for badge
+    const activeCount = state.pillars.size + state.cats.size + (state.q ? 1 : 0);
+    const hasFilters = activeCount > 0;
+    barClear.hidden = !hasFilters;
+    filterBadge.hidden = !hasFilters;
+    filterBadge.textContent = String(activeCount);
+    filterTrigger.setAttribute('aria-expanded', String(isSheetOpen));
+
+    // Sync all pillar chips (desktop bar + sheet)
+    document.querySelectorAll<HTMLElement>('.pillar-chip').forEach((chip) => {
+      const active = state.pillars.has(chip.dataset.value!);
+      chip.classList.toggle('active', active);
+      chip.setAttribute('aria-pressed', String(active));
+    });
+
+    // Which cats are in scope of active pillars
+    const scopedCats = new Set<string>();
+    if (state.pillars.size > 0) {
+      state.pillars.forEach((p) => (catsByPillar[p] || []).forEach((c) => scopedCats.add(c)));
+    }
+
+    // Desktop cat bar
+    const hasPillar = state.pillars.size > 0;
+    barCats.hidden = !hasPillar;
+    document.querySelectorAll<HTMLElement>('#bar-cats .cat-chip').forEach((chip) => {
+      const inScope = scopedCats.has(chip.dataset.value!);
+      chip.hidden = !inScope;
+      const active = state.cats.has(chip.dataset.value!);
+      chip.classList.toggle('active', active);
+      chip.setAttribute('aria-pressed', String(active));
+    });
+
+    // Sheet cat section
+    sheetCatSection.hidden = !hasPillar;
+    document.querySelectorAll<HTMLElement>('#sheet-cat-chips .cat-chip').forEach((chip) => {
+      const inScope = scopedCats.has(chip.dataset.value!);
+      chip.hidden = !inScope;
+      const active = state.cats.has(chip.dataset.value!);
+      chip.classList.toggle('active', active);
+      chip.setAttribute('aria-pressed', String(active));
+    });
+
+    // Evict cats that are no longer in scope
+    state.cats.forEach((cat) => {
+      if (hasPillar && !scopedCats.has(cat)) state.cats.delete(cat);
+    });
+
+    // Search input value
+    if (qInput.value !== state.q) qInput.value = state.q;
+  }
+
+  // ─── Sheet open / close ───────────────────────────────────────────────────
+  let isSheetOpen = false;
+
+  function openSheet() {
+    isSheetOpen = true;
+    sheet.classList.add('is-open');
+    sheet.setAttribute('aria-hidden', 'false');
+    backdrop.classList.add('is-visible');
+    filterTrigger.setAttribute('aria-expanded', 'true');
+    sheetClose.focus();
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeSheet() {
+    isSheetOpen = false;
+    sheet.classList.remove('is-open');
+    sheet.setAttribute('aria-hidden', 'true');
+    backdrop.classList.remove('is-visible');
+    filterTrigger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    filterTrigger.focus();
+  }
+
+  // ─── Event handlers ───────────────────────────────────────────────────────
+  function togglePillar(value: string) {
+    if (state.pillars.has(value)) {
+      state.pillars.delete(value);
+    } else {
+      state.pillars.add(value);
+    }
+    render();
+    syncUrl();
+  }
+
+  function toggleCat(value: string) {
+    if (state.cats.has(value)) {
+      state.cats.delete(value);
+    } else {
+      state.cats.add(value);
+    }
+    render();
+    syncUrl();
+  }
+
+  function clearAll() {
+    state.pillars.clear();
+    state.cats.clear();
+    state.q = '';
+    render();
+    syncUrl();
+  }
+
+  // Pillar chips (delegated — covers both bar and sheet)
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    const chip = target.closest<HTMLElement>('.pillar-chip');
+    if (chip?.dataset.value) togglePillar(chip.dataset.value);
+  });
+
+  // Cat chips (delegated)
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    const chip = target.closest<HTMLElement>('.cat-chip');
+    if (chip?.dataset.value) toggleCat(chip.dataset.value);
+  });
+
+  qInput.addEventListener('input', () => {
+    state.q = qInput.value;
+    render();
+    syncUrl();
+  });
+
+  barClear.addEventListener('click', clearAll);
+  clearEmpty.addEventListener('click', clearAll);
+  sheetClear.addEventListener('click', clearAll);
+
+  filterTrigger.addEventListener('click', openSheet);
+  sheetClose.addEventListener('click', closeSheet);
+  backdrop.addEventListener('click', closeSheet);
+  sheetApply.addEventListener('click', closeSheet);
+
+  // Close sheet on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isSheetOpen) closeSheet();
+  });
+
+  // ─── Init ─────────────────────────────────────────────────────────────────
+  initFromUrl();
+  render();
+</script>
+
+<style>
+  /* ─── Page ─────────────────────────────────────────────────────────────── */
+  .shop-page {
+    padding-bottom: var(--space-4xl);
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding-inline: var(--space-lg);
+    box-sizing: border-box;
+  }
+
+  /* ─── Header ────────────────────────────────────────────────────────────── */
+  .shop-header {
+    background: var(--color-charcoal);
+    color: var(--color-text-inverse);
+    padding: var(--space-2xl) 0 var(--space-xl);
+  }
+
+  .shop-header h1 {
+    font-size: var(--text-4xl);
+    font-weight: var(--weight-extrabold);
+    color: var(--color-sand);
+    margin: 0 0 var(--space-xs);
+  }
+
+  .shop-lede {
+    font-size: var(--text-sm);
+    color: rgba(240, 244, 246, 0.65);
+    margin: 0;
+  }
+
+  /* ─── Sticky filter bar ─────────────────────────────────────────────────── */
+  .filter-bar {
+    position: sticky;
+    top: var(--header-height);
+    z-index: 50;
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  }
+
+  .filter-bar .container {
+    padding-block: var(--space-sm);
+  }
+
+  .bar-main {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  /* Search */
+  .bar-search {
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    color: var(--color-text-muted);
+    pointer-events: none;
+  }
+
+  #q {
+    font-size: var(--text-sm);
+    padding: 6px 10px 6px 30px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-bg);
+    color: var(--color-text);
+    width: 200px;
+  }
+
+  #q:focus {
+    outline: 2px solid var(--color-sky);
+    outline-offset: 1px;
+    border-color: var(--color-sky);
+  }
+
+  /* Desktop pillar chips */
+  .bar-pillars {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex: 1;
+  }
+
+  .pillar-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    padding: 5px 12px;
+    border: 1.5px solid var(--color-border);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+  }
+
+  .pillar-chip:hover {
+    border-color: var(--color-charcoal);
+  }
+
+  .pillar-chip.active {
+    background: var(--color-charcoal);
+    border-color: var(--color-charcoal);
+    color: var(--color-sand);
+  }
+
+  .chip-count {
+    font-weight: var(--weight-normal);
+    opacity: 0.6;
+    font-size: 0.7em;
+  }
+
+  /* Desktop clear */
+  .bar-clear {
+    font-size: var(--text-xs);
+    color: var(--color-terracotta);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 0;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* Mobile filter trigger — hidden on desktop */
+  .bar-mobile {
+    display: none;
+    align-items: center;
+    gap: var(--space-sm);
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .bar-count-mobile {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    white-space: nowrap;
+  }
+
+  .filter-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    padding: 6px 14px;
+    background: var(--color-charcoal);
+    color: var(--color-sand);
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .filter-trigger svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .filter-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding-inline: 4px;
+    border-radius: 999px;
+    background: var(--color-terracotta);
+    color: var(--color-sand);
+    font-size: 0.7rem;
+    font-weight: var(--weight-bold);
+    line-height: 1;
+  }
+
+  /* Desktop sub-category row */
+  .bar-cats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding-top: var(--space-sm);
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--space-sm);
+  }
+
+  .cat-chip {
+    font-size: var(--text-xs);
+    padding: 3px 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-transform: capitalize;
+    white-space: nowrap;
+  }
+
+  .cat-chip:hover {
+    border-color: var(--color-charcoal);
+  }
+
+  .cat-chip.active {
+    background: var(--color-sky);
+    border-color: var(--color-sky);
+    color: var(--color-charcoal);
+  }
+
+  /* Desktop count row */
+  .bar-count-row {
+    padding-top: 4px;
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+  }
+
+  /* ─── Product grid ──────────────────────────────────────────────────────── */
+  .content-container {
+    padding-top: var(--space-xl);
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: var(--space-3xl);
+    color: var(--color-text-muted);
+    font-size: var(--text-base);
+    margin: 0;
+  }
+
+  .text-btn {
+    background: none;
+    border: none;
+    color: var(--color-terracotta);
+    cursor: pointer;
+    font-size: inherit;
+    text-decoration: underline;
+    padding: 0;
+  }
+
+  .disclosure {
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .disclosure p {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+  }
+
+  .disclosure a {
+    color: var(--color-terracotta);
+  }
+
+  /* ─── Bottom sheet backdrop (mobile only) ──────────────────────────────── */
+  .backdrop {
+    display: none; /* enabled in mobile media query */
+  }
+
+  /* ─── Bottom sheet (mobile only) ────────────────────────────────────────── */
+  .sheet {
+    display: none; /* enabled in mobile media query */
+  }
+
+  .sheet.is-open {
+    transform: translateY(0);
+  }
+
+  .sheet-handle {
+    width: 36px;
+    height: 4px;
+    background: var(--color-border);
+    border-radius: 999px;
+    margin: 10px auto 0;
+    flex-shrink: 0;
+  }
+
+  .sheet-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: 1px solid var(--color-border);
+    flex-shrink: 0;
+  }
+
+  .sheet-title {
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+    margin: 0;
+  }
+
+  .sheet-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: var(--color-bg);
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    color: var(--color-text);
+  }
+
+  .sheet-close svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .sheet-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .sheet-section {}
+
+  .sheet-section-title {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+    margin: 0 0 var(--space-sm);
+  }
+
+  /* Pillar grid in sheet — 2×2 */
+  .sheet-pillar-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+  }
+
+  .sheet-pillar-chip {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-md) var(--space-md);
+    border-radius: var(--radius-md);
+    border-width: 1.5px;
+    min-height: 64px;
+    font-size: var(--text-sm);
+  }
+
+  .sheet-pillar-label {
+    font-weight: var(--weight-semibold);
+    font-size: var(--text-sm);
+  }
+
+  .sheet-pillar-count {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-normal);
+    opacity: 0.65;
+    margin-top: 2px;
+  }
+
+  /* Cat chips in sheet */
+  .sheet-cat-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .sheet-cat-chips .cat-chip {
+    padding: 6px 14px;
+    font-size: var(--text-sm);
+  }
+
+  /* Sheet footer */
+  .sheet-footer {
+    display: flex;
+    gap: var(--space-sm);
+    padding: var(--space-md) var(--space-lg);
+    border-top: 1px solid var(--color-border);
+    padding-bottom: max(var(--space-md), env(safe-area-inset-bottom));
+    flex-shrink: 0;
+  }
+
+  .sheet-clear {
+    flex: 0;
+    padding: 10px var(--space-md);
+    background: none;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text);
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .sheet-apply {
+    flex: 1;
+    padding: 10px var(--space-md);
+    background: var(--color-charcoal);
+    color: var(--color-sand);
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    cursor: pointer;
+  }
+
+  .sheet-apply:active {
+    background: #444;
+  }
+
+  /* ─── Responsive ────────────────────────────────────────────────────────── */
+  @media (max-width: 1100px) {
+    .product-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    /* Switch to mobile filter mode */
+    .bar-pillars,
+    .bar-clear,
+    .bar-cats,
+    .bar-count-row {
+      display: none;
+    }
+
+    /* Bar layout: search flexes to fill, Filters button stays fixed */
+    .bar-main {
+      gap: var(--space-xs);
+    }
+
+    .bar-search {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+
+    .bar-mobile {
+      display: flex;
+      flex: 0 0 auto;
+    }
+
+    /* Count visible in sheet; remove from bar to save space */
+    .bar-count-mobile {
+      display: none;
+    }
+
+    .backdrop {
+      display: block;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 199;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition-base);
+    }
+
+    .backdrop.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .sheet {
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      background: var(--color-surface);
+      border-radius: 20px 20px 0 0;
+      max-height: 88vh;
+      flex-direction: column;
+      transform: translateY(110%);
+      transition: transform 300ms cubic-bezier(0.32, 0.72, 0, 1);
+    }
+
+    #q {
+      width: 100%;
+    }
+
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-sm);
+    }
+
+    .shop-header h1 {
+      font-size: var(--text-3xl);
+    }
+  }
+
+  @media (max-width: 400px) {
+    .product-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xs);
+    }
+
+    .container {
+      padding-inline: var(--space-sm);
+    }
+  }
+</style>
