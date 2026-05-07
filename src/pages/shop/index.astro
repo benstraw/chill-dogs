@@ -409,12 +409,15 @@ for (const pillar of pillars) {
   /* ─── Page ─────────────────────────────────────────────────────────────── */
   .shop-page {
     padding-bottom: var(--space-4xl);
+    overflow-x: hidden;
   }
 
   .container {
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding-inline: var(--space-lg);
+    box-sizing: border-box;
   }
 
   /* ─── Header ────────────────────────────────────────────────────────────── */
@@ -852,8 +855,24 @@ for (const pillar of pillars) {
       display: none;
     }
 
+    /* Bar layout: search flexes to fill, Filters button stays fixed */
+    .bar-main {
+      gap: var(--space-xs);
+    }
+
+    .bar-search {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+
     .bar-mobile {
       display: flex;
+      flex: 0 0 auto;
+    }
+
+    /* Count visible in sheet; remove from bar to save space */
+    .bar-count-mobile {
+      display: none;
     }
 
     .backdrop {
@@ -888,7 +907,6 @@ for (const pillar of pillars) {
     }
 
     #q {
-      flex: 1;
       width: 100%;
     }
 
