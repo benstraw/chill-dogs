@@ -40,6 +40,7 @@ bun run test:smoke       # Smoke tests only; builds the site internally
 bun run test:coverage    # Coverage report for src/utils/**, src/scripts/**, src/data/**
 bun run check:asins      # Check all product ASINs are still live on Amazon
 bun run check:asins -- --quiet  # Same, issues only
+bun run check:amazon     # Check local Amazon cache coverage, freshness, and drift
 bun run indexnow:submit  # Manually submit all URLs to IndexNow API
 bun run check:ai-docs    # Validate AI knowledge graph frontmatter and links
 ```

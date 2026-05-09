@@ -3,7 +3,7 @@ title: Coding Agent Finish Checklist
 type: checklist
 domain: checklists
 status: active
-updated: 2026-05-03
+updated: 2026-05-06
 tags:
   - chill-dogs
   - checklist
@@ -43,7 +43,7 @@ Finishing any coding task — new page, component change, data file update, util
   - Page-level HTML only: `bun run test:smoke`
   - Utility/script/data changes: `bun run test:coverage`
 - [ ] Confirmed build passes for substantive changes
-- [ ] If products were added or changed: `bun run check:asins` passes
+- [ ] If products were added or changed: `bun run check:amazon` and `bun run check:asins` pass
 - [ ] If `docs/ai/` files were added or changed: `bun run check:ai-docs` passes
 - [ ] If architecture, routes, analytics, or affiliate rules changed: run `/update-knowledge` to sync the knowledge graph
 

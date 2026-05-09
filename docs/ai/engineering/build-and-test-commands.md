@@ -3,7 +3,7 @@ title: Build and Test Commands
 type: canonical
 domain: engineering
 status: active
-updated: 2026-05-03
+updated: 2026-05-06
 tags:
   - chill-dogs
   - engineering
@@ -98,7 +98,24 @@ bun run check:asins            # All products
 bun run check:asins -- --quiet # Issues only
 ```
 
-**Env vars needed:** `SEARCHAPI_KEY` or `SERP_API_KEY`
+**Env vars needed:** None. This checks Amazon product pages directly.
+
+---
+
+### `bun run check:amazon`
+
+Checks local Amazon provider cache coverage and freshness. Runs `scripts/check-amazon-freshness.ts`.
+
+**Run after:** Adding products, fetching Amazon metadata, backfilling the cache manifest, or auditing product cache drift.
+
+```bash
+bun run check:amazon
+bun run check:amazon -- --days 120
+```
+
+Default threshold is 90 days and the command is warning-only. It reports missing raw cache files, missing manifest entries, stale entries, malformed cache payloads, title/image drift, and extra cache files not referenced by the current catalog.
+
+**Env vars needed:** None. This reads local cache files only.
 
 ---
 
@@ -131,7 +148,7 @@ Run after adding or modifying files in `docs/ai/`.
 | Substantive page or module change | `bun run test` (includes build) |
 | Page-level HTML only | `bun run test:smoke` |
 | Added or changed utilities/scripts/data | `bun run test:coverage` |
-| Added or changed products | `bun run check:asins` |
+| Added or changed products | `bun run check:amazon` and `bun run check:asins` |
 | Added or changed `docs/ai/` files | `bun run check:ai-docs` |
 | Verify final production output | `bun run build && bun run preview` |
 

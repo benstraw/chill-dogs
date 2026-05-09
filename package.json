@@ -18,6 +18,7 @@
     "prepare": "simple-git-hooks",
     "indexnow:submit": "node scripts/indexnow-submit.mjs",
     "check:asins": "bun run scripts/check-asin-validity.ts",
+    "check:amazon": "bun run scripts/check-amazon-freshness.ts",
     "check:ai-docs": "node scripts/validate-ai-docs.mjs"
   },
   "simple-git-hooks": {

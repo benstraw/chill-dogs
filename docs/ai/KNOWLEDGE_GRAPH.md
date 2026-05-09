@@ -3,7 +3,7 @@ title: Knowledge Graph — Doc Dependency Chains
 type: reference
 domain: global
 status: active
-updated: 2026-05-03
+updated: 2026-05-06
 tags:
   - chill-dogs
   - knowledge-graph
@@ -73,7 +73,7 @@ strategy/metrics-and-page-types.md        # converter type: one job, one CTA
     ↓
 affiliate/amazon-associates-rules.md      # AffiliateLink.astro, tag, rel attributes
     ↓
-affiliate/product-data-rules.md           # Data files, product catalog, check:asins
+affiliate/product-data-rules.md           # Data files, product catalog, check:amazon, check:asins
     ↓
 affiliate/disclosure-rules.md             # Where disclosure must appear
     ↓

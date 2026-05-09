@@ -2,40 +2,34 @@
 
 ## Purpose
 
-Product cards on the site need thumbnail images from Amazon. We fetch product data (including `main_image` URLs) via Amazon Product APIs offered by third-party search providers. Raw JSON responses are cached locally so we don't waste searches on repeat fetches.
+Product data files keep the editorial product copy used on pages. Raw Amazon provider responses are cached separately in `src/data/amazon-products/` so images, titles, ratings, and other metadata can be inspected without repeatedly spending API searches.
+
+The cache is diagnostic and editorial-support data. It must not auto-overwrite product copy or rendered page content.
+
+## Cache Files
+
+| File | Purpose |
+|---|---|
+| `src/data/amazon-products/<ASIN>.json` | Raw provider response for one ASIN. Do not edit manually. |
+| `src/data/amazon-products/_index.json` | Sidecar freshness manifest keyed by ASIN. Tracks `fetchedAt`, `provider`, `title`, and `imageUrl`. |
+
+The raw provider payloads stay unchanged. Freshness and drift checks live in the sidecar manifest.
 
 ## API Providers
 
-| Provider | Free tier | Env variable | Status |
-|----------|-----------|--------------|--------|
-| **SerpAPI** (preferred) | 250 searches/month | `SERP_API_KEY` | Primary |
-| **SearchAPI** (backup) | 100 searches/month | `SEARCHAPI_KEY` | 76 remaining as of 2026-03-11 |
+| Provider | Env variable | Notes |
+|---|---|---|
+| SerpAPI | `SERP_API_KEY` | Default provider. |
+| SearchAPI | `SEARCHAPI_KEY` | Backup provider. |
 
-**Use SerpAPI by default.** It has a larger free tier (250 vs 100/month) and resets monthly.
+Both providers return Amazon product metadata, but response shapes differ. The freshness helper normalizes both `product.*` and `product_results.*` structures.
 
-### Endpoints
+## Fetch Script
 
-- **SerpAPI**: `GET https://serpapi.com/search?engine=amazon_product&asin={ASIN}&api_key={KEY}`
-- **SearchAPI**: `GET https://www.searchapi.io/api/v1/search?engine=amazon_product&asin={ASIN}&api_key={KEY}`
-
-Both return the same general structure. The key field we use is `product.main_image`.
-
-## The Fetch Script
-
-**Location**: `scripts/fetch-amazon-data.ts`
-
-### What it does
-
-1. Reads all ASINs from product data files, including cooling, calming, relaxation, tracking, and accessory products
-2. Checks each ASIN against the local cache (`src/data/amazon-products/{ASIN}.json`)
-3. Fetches only uncached ASINs from the selected provider
-4. Saves the full JSON response to the cache directory
-5. Reports how many searches were used
-
-### Usage
+Location: `scripts/fetch-amazon-data.ts`
 
 ```bash
-# Fetch all uncached products using SerpAPI (default)
+# Fetch all uncached products using SerpAPI
 bun run scripts/fetch-amazon-data.ts
 
 # Use SearchAPI instead
@@ -44,46 +38,61 @@ bun run scripts/fetch-amazon-data.ts --provider searchapi
 # Fetch a single ASIN
 bun run scripts/fetch-amazon-data.ts --asin B0XXXXXX
 
-# Re-fetch everything, ignoring cache
+# Re-fetch even if cached
 bun run scripts/fetch-amazon-data.ts --force
 
-# Show help
-bun run scripts/fetch-amazon-data.ts --help
+# Fetch only missing or stale manifest entries
+bun run scripts/fetch-amazon-data.ts --stale
+
+# Use a custom stale threshold
+bun run scripts/fetch-amazon-data.ts --stale --days 120
 ```
 
-### Flags
+Default behavior still skips raw cached JSON. `--stale` uses `_index.json` and fetches ASINs whose raw cache or manifest entry is missing, or whose manifest entry is older than the configured threshold.
 
-| Flag | Default | Description |
-|------|---------|-------------|
-| `--provider <name>` | `serpapi` | `serpapi` or `searchapi` |
-| `--asin <ASIN>` | — | Fetch a single ASIN only |
-| `--force` | off | Re-fetch even if cached |
+## Freshness Check
 
-## How to Add a New Product
+Run:
 
-1. **Add the product** to the appropriate product data file with its ASIN
-2. **Run the fetch script** for just that ASIN:
+```bash
+bun run check:amazon
+bun run check:amazon -- --days 120
+```
+
+The default threshold is 90 days and the command is warning-only. It reports:
+
+- catalog ASINs with no raw cache file
+- catalog ASINs with no manifest entry
+- stale manifest entries
+- malformed raw cache payloads
+- title or image drift between raw cache and manifest snapshot
+- extra cache files not referenced by the current product catalog
+
+Use `--fail-on-stale` only when intentionally making staleness blocking.
+
+## Manifest Backfill
+
+Run this after introducing the sidecar manifest or after restoring cache files:
+
+```bash
+bun run scripts/backfill-amazon-cache-index.ts
+```
+
+The backfill scans existing raw cache files, extracts normalized title/image snapshots, infers provider where possible, and uses each file's mtime as `fetchedAt`. It does not fetch network data or modify raw provider JSON.
+
+## Product Ingestion Loop
+
+1. Add the product to the relevant source data file with its ASIN and affiliate URL.
+2. Fetch that ASIN:
    ```bash
    bun run scripts/fetch-amazon-data.ts --asin B0NEWASIN
    ```
-3. **Extract the image URL** from the saved JSON:
+3. Inspect the saved raw JSON manually for useful metadata such as `product.main_image` or `product_results.thumbnail`.
+4. Add or update the product image/copy intentionally in source product data.
+5. Run:
    ```bash
-   cat src/data/amazon-products/B0NEWASIN.json | jq '.product.main_image'
+   bun run check:amazon
+   bun run check:asins
    ```
-4. **Populate the `image` field** on the product in the data file
-5. **Build to verify**: `bun run build`
 
-## Search Budget Tracking
-
-Keep a running log so we don't blow through free tiers.
-
-| Date | Provider | Searches used | Remaining | Notes |
-|------|----------|---------------|-----------|-------|
-| 2026-03-11 | SearchAPI | 24 | 76 | Initial bulk fetch of 23 ASINs (22 succeeded, 1 empty) |
-
-## Rules
-
-- **Don't waste searches.** The script skips cached ASINs by default. Use `--asin` for single fetches.
-- **Cache everything.** Raw JSON is saved to `src/data/amazon-products/`. Don't delete these files unless you need to re-fetch.
-- **Save raw JSON.** We store the full API response, not just the image URL. This lets us extract additional data later (price, title, rating) without burning more searches.
-- **Prefer SerpAPI.** It has 2.5x the free monthly budget.
+`check:amazon` verifies cache coverage and freshness. `check:asins` verifies live Amazon page availability.

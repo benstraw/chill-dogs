@@ -3,7 +3,7 @@ title: Converter Page Checklist
 type: checklist
 domain: checklists
 status: active
-updated: 2026-05-03
+updated: 2026-05-06
 tags:
   - chill-dogs
   - checklist
@@ -44,7 +44,7 @@ Finishing any converter page before marking work as done.
 - [ ] Updated `docs/system-definition.yaml`
 - [ ] Build passes: `bun run build`
 - [ ] Tests pass: `bun run test`
-- [ ] ASIN check passes: `bun run check:asins`
+- [ ] Amazon cache and ASIN checks pass: `bun run check:amazon` and `bun run check:asins`
 
 ---
 

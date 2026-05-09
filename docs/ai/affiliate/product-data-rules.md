@@ -3,7 +3,7 @@ title: Product Data Rules
 type: canonical
 domain: affiliate
 status: active
-updated: 2026-05-03
+updated: 2026-05-06
 tags:
   - chill-dogs
   - affiliate
@@ -31,13 +31,13 @@ Adding new products, updating product data, checking product data file structure
 
 | File | Contents |
 |---|---|
-| `src/data/cooling-products.ts` | 15 cooling products — ASINs, affiliate URLs, image thumbnails, category metadata |
+| `src/data/cooling-products.ts` | 25 cooling products — ASINs, affiliate URLs, image thumbnails, category metadata |
 | `src/data/calming-products.ts` | 13 calming products — ASINs, affiliate URLs, image thumbnails |
-| `src/data/relaxation-products.ts` | 41 comfort/rest products — calming beds, orthopedic beds, crates, travel crates |
+| `src/data/relaxation-products.ts` | 78 comfort/rest products — calming beds, orthopedic beds, crates, carriers, travel bags |
 | `src/data/tracking-products.ts` | 8 tracker products + 1 accessory — cellular/off-grid/bluetooth/accessory types |
 | `src/data/product-catalog.ts` | Master catalog — normalized inventory across all pillar data files |
 | `src/data/product-page-map.ts` | Maps product IDs to the converter pages they appear on |
-| `src/data/amazon-products/` | ASIN-keyed JSON files with SearchAPI Amazon product metadata |
+| `src/data/amazon-products/` | ASIN-keyed raw Amazon provider JSON plus `_index.json` freshness manifest |
 
 ---
 
@@ -56,11 +56,11 @@ When adding products:
 
 ## Amazon product metadata (amazon-products/)
 
-`src/data/amazon-products/` contains ASIN-keyed JSON files with full SearchAPI Amazon product responses.
+`src/data/amazon-products/` contains ASIN-keyed JSON files with full Amazon product responses from SerpAPI or SearchAPI.
 
 **Do not edit these files manually.** They are fetched and written by `scripts/fetch-amazon-data.ts`.
 
-These files provide structured metadata (title, image URLs, rating, price range) used by product card components.
+`src/data/amazon-products/_index.json` is the sidecar freshness manifest. It tracks `fetchedAt`, `provider`, `title`, and `imageUrl` snapshots for diagnostics. The raw provider payloads stay unchanged, and provider metadata must not auto-overwrite product copy.
 
 ---
 
@@ -71,12 +71,14 @@ These files provide structured metadata (title, image URLs, rating, price range)
    - `id` — unique identifier string
    - `name` — product display name
    - `asin` — Amazon ASIN
-   - `affiliateUrl` — `https://www.amazon.com/dp/<ASIN>/?tag=chill-dogs-20`
-   - `imageUrl` — Amazon CDN image URL (external, no optimization)
+   - `amazonUrl` — `https://www.amazon.com/dp/<ASIN>/?tag=chill-dogs-20`
+   - `image` — Amazon CDN image URL and alt text (external, no optimization)
    - `category` — category key matching the page's category system
    - Any other fields required by the pillar's TypeScript interface
 3. Verify `product-catalog.ts` includes the new product (it should, if the pillar file is already imported)
-4. Run `bun run check:asins` to verify the ASIN is live
+4. Fetch Amazon metadata for the ASIN: `bun run scripts/fetch-amazon-data.ts --asin <ASIN>`
+5. Run `bun run check:amazon` to verify cache coverage/freshness
+6. Run `bun run check:asins` to verify the ASIN is live
 
 ---
 
@@ -91,6 +93,21 @@ Update this file when:
 
 ---
 
+## Amazon cache freshness
+
+Run after adding products or refreshing Amazon metadata:
+
+```bash
+bun run check:amazon
+bun run check:amazon -- --days 120
+```
+
+`check:amazon` is warning-only by default. It reports missing raw cache files, missing manifest entries, stale entries older than 90 days, malformed cache payloads, title/image drift, and extra cache files not referenced by the catalog.
+
+Use `bun run scripts/backfill-amazon-cache-index.ts` to seed `_index.json` from existing raw cache files without network calls.
+
+---
+
 ## ASIN validity
 
 Run after any product data change:
@@ -100,7 +117,7 @@ bun run check:asins            # Check all ASINs
 bun run check:asins -- --quiet # Issues only
 ```
 
-Requires `SEARCHAPI_KEY` or `SERP_API_KEY` environment variable.
+This checks live Amazon product pages directly and does not use the provider cache.
 
 ---
 
@@ -121,4 +138,4 @@ When a shared product appears on multiple converter pages, update the canonical 
 - [`amazon-associates-rules.md`](amazon-associates-rules.md) — Affiliate link and tag rules
 - [`disclosure-rules.md`](disclosure-rules.md) — When disclosure is required
 - [`../engineering/architecture.md`](../engineering/architecture.md) — Data-driven page architecture
-- [`../engineering/build-and-test-commands.md`](../engineering/build-and-test-commands.md) — `check:asins` command
+- [`../engineering/build-and-test-commands.md`](../engineering/build-and-test-commands.md) — `check:amazon` and `check:asins` commands
