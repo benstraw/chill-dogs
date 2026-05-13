@@ -71,7 +71,7 @@ site_system:
       collector_subtype: "section"
       target_action: "Route anxiety-intent traffic to calming converters"
       metric: "collector_to_converter_click to calming converters"
-      notes: "Section collector uses SectionCollectorPage with dynamic topic-matched converter and article cards from the complete sitemap inventory, grouped into topic subsections for car anxiety, fireworks/noise, crate comfort, escape-risk tracking, research/safety, and calming comparisons including lick-mat enrichment."
+      notes: "Section collector uses SectionCollectorPage with dynamic topic-matched converter and article cards from the complete sitemap inventory, grouped into topic subsections for car anxiety, fireworks/noise including prep and checklist searches, crate comfort, escape-risk tracking, research/safety, and calming comparisons including lick-mat enrichment."
 
     - name: "Comfort"
       type: "collector"
@@ -197,6 +197,15 @@ site_system:
       routes:
         - "/calming/should-you-take-your-dog-to-fireworks/"
       notes: "Practical outdoor-event decision guide focused on leaving before dark, safe exit planning, newsletter capture after the exit-before-dark rule, and recovery paths through calming, cooling, car-anxiety, and GPS tracker converters."
+
+    - name: "Dog Fireworks Anxiety Checklist"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Route fireworks-anxiety checklist traffic to calming converters"
+      metric: "collector_to_converter_click to calming converters"
+      routes:
+        - "/calming/dog-fireworks-anxiety-checklist/"
+      notes: "Practical July 4 checklist organized around the week before, the day of, and the morning after, with conversion paths into calming products, wrap alternatives, and car-anxiety support."
 
     - name: "Road Trip Chill Kit"
       type: "collector"

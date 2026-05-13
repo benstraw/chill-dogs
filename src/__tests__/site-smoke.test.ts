@@ -246,6 +246,14 @@ describe('site smoke tests', () => {
           '/comforting/best-puppy-crates/',
         ],
       },
+      {
+        page: path.join('calming', 'dog-fireworks-anxiety-checklist', 'index.html'),
+        expected: [
+          '/calming/best-calming-products-for-anxious-dogs/',
+          '/calming/best-thundershirt-alternatives/',
+          '/calming/car-anxiety-for-dogs/',
+        ],
+      },
     ];
 
     for (const testCase of cases) {
@@ -599,6 +607,7 @@ describe('site smoke tests', () => {
     expect(sitemap).toContain('/travel/dog-road-trip-gear/');
     expect(sitemap).toContain('/calming/best-calming-products-for-anxious-dogs/');
     expect(sitemap).toContain('/calming/best-lick-mats-for-dogs/');
+    expect(sitemap).toContain('/calming/dog-fireworks-anxiety-checklist/');
     expect(sitemap).toContain('/calming/how-to-prepare-a-calm-room-for-fireworks-night/');
     expect(sitemap).toContain('/comforting/best-puppy-crates/');
     expect(sitemap).toContain('/comforting/best-anxiety-dog-crates/');
@@ -621,6 +630,8 @@ describe('site smoke tests', () => {
 
     expect(rssXml).toContain('/calming/crate-training-for-dogs/');
     expect(rssXml).toContain('How to Crate Train Your Dog');
+    expect(rssXml).toContain('/calming/dog-fireworks-anxiety-checklist/');
+    expect(rssXml).toContain('Dog Fireworks Anxiety Checklist: What to Do Before, During, and After July 4');
     expect(rssXml).toContain('/calming/how-to-prepare-a-calm-room-for-fireworks-night/');
     expect(rssXml).toContain('How to Prepare a Calm Room for Fireworks Night');
   });

@@ -54,6 +54,7 @@ describe('homepage article feed', () => {
     } as ImageMetadata;
 
     const feed = buildHomepageArticleFeed([
+      createArticle('/calming/dog-fireworks-anxiety-checklist/', '2026-05-12'),
       createArticle('/cooling/how-hot-is-too-hot-for-dogs/', '2026-03-10'),
       createArticle('/travel/how-to-fly-with-a-dog/', '2026-04-10', explicitImage),
       createArticle('/calming/crate-training-for-dogs/', '2026-04-09'),
@@ -61,22 +62,25 @@ describe('homepage article feed', () => {
     ]);
 
     expect(feed.featuredArticles.map((article) => article.href)).toEqual([
+      '/calming/dog-fireworks-anxiety-checklist/',
       '/travel/how-to-fly-with-a-dog/',
       '/calming/crate-training-for-dogs/',
-      '/safety/what-to-do-if-your-dog-runs-away/',
     ]);
     expect(feed.moreArticles.map((article) => article.href)).toEqual([
+      '/safety/what-to-do-if-your-dog-runs-away/',
       '/cooling/how-hot-is-too-hot-for-dogs/',
     ]);
     expect(feed.latestGuides.map((article) => article.href)).toEqual([
+      '/calming/dog-fireworks-anxiety-checklist/',
       '/travel/how-to-fly-with-a-dog/',
       '/calming/crate-training-for-dogs/',
       '/safety/what-to-do-if-your-dog-runs-away/',
       '/cooling/how-hot-is-too-hot-for-dogs/',
     ]);
 
-    expect(feed.featuredArticles[0]?.image).toBe('/_assets/custom-og.jpg');
-    expect(feed.moreArticles[0]?.image).toBe('/og/cooling-how-hot-is-too-hot-for-dogs.jpg');
+    expect(feed.featuredArticles[0]?.image).toBe('/og/calming-dog-fireworks-anxiety-checklist.jpg');
+    expect(feed.featuredArticles[1]?.image).toBe('/_assets/custom-og.jpg');
+    expect(feed.moreArticles[0]?.image).toBe('/og/safety-what-to-do-if-your-dog-runs-away.jpg');
   });
 
   it('maps a single article into homepage card data', () => {
