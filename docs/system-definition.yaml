@@ -8,7 +8,7 @@
 
 site_system:
   status: "active"
-  as_of: "2026-04-14"
+  as_of: "2026-05-12"
   owner: "chill-dogs"
   purpose: "Define the website as a modular conversion system and keep implementation aligned."
 
@@ -68,7 +68,7 @@ site_system:
       collector_subtype: "section"
       target_action: "Route anxiety-intent traffic to calming converters"
       metric: "collector_to_converter_click to calming converters"
-      notes: "Collector routes directly to general calming picks, ThunderShirt alternatives, the travel-focused car-anxiety converter, and is supported by article collectors for crate training and fireworks calm-room setup."
+      notes: "Collector routes directly to general calming picks, ThunderShirt alternatives, the travel-focused car-anxiety converter, and is supported by article collectors for crate training plus fireworks prep and checklist searches."
 
     - name: "Cooling converters"
       type: "converter"
@@ -162,6 +162,15 @@ site_system:
       routes:
         - "/calming/how-to-prepare-a-calm-room-for-fireworks-night/"
       notes: "Practical fireworks-night setup guide focused on one low-stimulation room, then routing readers to calming product and wrap comparisons."
+
+    - name: "Dog Fireworks Anxiety Checklist"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Route fireworks-anxiety checklist traffic to calming converters"
+      metric: "collector_to_converter_click to calming converters"
+      routes:
+        - "/calming/dog-fireworks-anxiety-checklist/"
+      notes: "Practical July 4 checklist organized around the week before, the day of, and the morning after, with conversion paths into calming products, wrap alternatives, and car-anxiety support."
 
     - name: "Road Trip Chill Kit"
       type: "collector"
