@@ -1,12 +1,14 @@
 ---
 import AffiliateLink from '@components/AffiliateLink.astro';
 import type { ProductCatalogItem } from '@data/product-catalog';
+import type { PageRef } from '@data/product-page-map';
 
 interface Props {
   product: ProductCatalogItem;
+  appearsOn?: PageRef[];
 }
 
-const { product } = Astro.props;
+const { product, appearsOn = [] } = Astro.props;
 
 const pillarLabels: Record<string, string> = {
   cooling: 'Cooling',
@@ -56,6 +58,17 @@ const pillarLabels: Record<string, string> = {
     >
       See on Amazon →
     </AffiliateLink>
+
+    {appearsOn.length > 0 && (
+      <div class="appears-on">
+        <span class="appears-on-label">Appears on</span>
+        <ul class="appears-on-list">
+          {appearsOn.map((ref) => (
+            <li><a href={ref.href}>{ref.label}</a></li>
+          ))}
+        </ul>
+      </div>
+    )}
   </div>
 </div>
 
@@ -172,5 +185,41 @@ const pillarLabels: Record<string, string> = {
   .card-cta:hover {
     background: #444;
     text-decoration: none;
+  }
+
+  .appears-on {
+    margin-top: var(--space-sm);
+    padding-top: var(--space-sm);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .appears-on-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    margin-bottom: 4px;
+  }
+
+  .appears-on-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .appears-on-list a {
+    font-size: var(--text-xs);
+    color: var(--color-terracotta);
+    line-height: var(--leading-snug);
+    text-decoration: none;
+  }
+
+  .appears-on-list a:hover {
+    text-decoration: underline;
   }
 </style>

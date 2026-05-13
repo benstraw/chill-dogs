@@ -1,9 +1,9 @@
 /**
  * Builds a map of product ID → pages where the product appears.
- * Used by the admin product catalog to show page references.
+ * Used by the admin product catalog and the shop browse page.
  */
 
-import { coolingProducts, type ProductCategory } from './cooling-products';
+import { coolingProducts, categoryMeta } from './cooling-products';
 import { calmingProducts } from './calming-products';
 import { relaxationProducts } from './relaxation-products';
 import { accessoryProducts, trackerProducts } from './tracking-products';
@@ -11,16 +11,19 @@ import { coolingConverterPageConfigs } from './cooling-converter-pages';
 import { calmingConverterPages } from './calming-converter-pages';
 import { relaxationConverterPages } from './relaxation-converter-pages';
 
-interface PageRef {
+export interface PageRef {
   label: string;
   href: string;
 }
 
 type ProductPageMap = Record<string, PageRef[]>;
 
+function cleanCoolingTitle(raw: string): string {
+  return raw.replace(/\s*\(\d{4}\)\s*$/, '');
+}
+
 function addRef(map: ProductPageMap, productId: string, ref: PageRef) {
   if (!map[productId]) map[productId] = [];
-  // Avoid duplicate hrefs
   if (!map[productId].some((r) => r.href === ref.href)) {
     map[productId].push(ref);
   }
@@ -29,101 +32,97 @@ function addRef(map: ProductPageMap, productId: string, ref: PageRef) {
 export function buildProductPageMap(): ProductPageMap {
   const map: ProductPageMap = {};
 
-  // Initialize all product IDs
   for (const p of coolingProducts) map[p.id] = [];
   for (const p of calmingProducts) map[p.id] = [];
   for (const p of relaxationProducts) map[p.id] = [];
   for (const p of trackerProducts) map[p.id] = [];
   for (const p of accessoryProducts) map[p.id] = [];
 
-  // Cooling converter pages: each config maps a category to a page
   for (const [slug, config] of Object.entries(coolingConverterPageConfigs)) {
     const href = `/cooling/${slug}/`;
+    const label = cleanCoolingTitle(categoryMeta[config.category].title);
     const products = coolingProducts.filter((p) => p.category === config.category);
     for (const p of products) {
-      addRef(map, p.id, { label: slug, href });
+      addRef(map, p.id, { label, href });
     }
   }
 
-  // Cooling pillar page: shows all cooling products
-  const coolingPillarRef: PageRef = { label: 'best-cooling-products-for-dogs', href: '/cooling/best-cooling-products-for-dogs/' };
-  for (const p of coolingProducts) {
-    addRef(map, p.id, coolingPillarRef);
-  }
-
-  // Calming converter pages: blocks contain explicit product IDs
   for (const [slug, config] of Object.entries(calmingConverterPages)) {
     const href = `/calming/${slug}/`;
+    const label = config.title;
     for (const block of config.blocks) {
       if (block.kind === 'product_section') {
         for (const id of block.productIds) {
-          addRef(map, id, { label: slug, href });
+          addRef(map, id, { label, href });
         }
       }
       if (block.kind === 'quick_picks') {
         for (const item of block.items) {
-          addRef(map, item.productId, { label: slug, href });
+          addRef(map, item.productId, { label, href });
         }
       }
     }
   }
 
-  // Relaxation converter pages: blocks contain explicit product IDs
   for (const [slug, config] of Object.entries(relaxationConverterPages)) {
     const href = `/comforting/${slug}/`;
+    const label = config.hero.title;
     for (const block of config.blocks) {
       if (block.kind === 'product_section') {
-        for (const id of block.productIds) {
-          addRef(map, id, { label: slug, href });
+        for (const ref of block.productIds) {
+          const id = typeof ref === 'string' ? ref : ref.id;
+          addRef(map, id, { label, href });
         }
       }
       if (block.kind === 'quick_picks') {
         for (const item of block.items) {
-          addRef(map, item.productId, { label: slug, href });
+          addRef(map, item.productId, { label, href });
         }
       }
     }
   }
 
-  // Road trip page: manually mapped based on the imports in that file
-  const roadTripRef: PageRef = { label: 'dog-road-trip-gear', href: '/travel/dog-road-trip-gear/' };
-  // car-cooling (all 4)
-  for (const p of coolingProducts.filter((p) => p.category === 'car-cooling')) {
-    addRef(map, p.id, roadTripRef);
-  }
-  // cooling-mats (first 2)
-  const coolingMats = coolingProducts.filter((p) => p.category === 'cooling-mats');
-  for (const p of coolingMats.slice(0, 2)) {
-    addRef(map, p.id, roadTripRef);
-  }
-  // cooling-vests (first 2)
-  const coolingVests = coolingProducts.filter((p) => p.category === 'cooling-vests');
-  for (const p of coolingVests.slice(0, 2)) {
-    addRef(map, p.id, roadTripRef);
-  }
-  // calming: anxiety-wraps (all), calming-treats (first 3), lick-mats (all)
-  for (const p of calmingProducts.filter((p) => p.category === 'anxiety-wraps')) {
-    addRef(map, p.id, roadTripRef);
-  }
-  const calmingTreats = calmingProducts.filter((p) => p.category === 'calming-treats');
-  for (const p of calmingTreats.slice(0, 3)) {
-    addRef(map, p.id, roadTripRef);
-  }
-  for (const p of calmingProducts.filter((p) => p.category === 'lick-mats')) {
-    addRef(map, p.id, roadTripRef);
+  // Keep in sync with src/components/modules/RoadTripProducts.astro
+  const roadTripRef: PageRef = { label: 'Dog Road Trip Gear', href: '/travel/dog-road-trip-gear/' };
+  const roadTripProductIds = [
+    'enovoe-car-window-shades',
+    'onlynew-portable-fan',
+    'ohmo-spill-proof-bowl',
+    'thundershirt-classic',
+    'greenies-calming-chews',
+    'lukito-licking-mat',
+    'onetigris-travel-dog-bed',
+  ];
+  for (const id of roadTripProductIds) {
+    addRef(map, id, roadTripRef);
   }
 
-  const trackerComparisonRef: PageRef = { label: 'best-dog-gps-trackers', href: '/gear/best-dog-gps-trackers/' };
+  // Keep in sync with src/components/modules/CarCoolingArticleProducts.astro
+  const keepCoolInCarRef: PageRef = {
+    label: 'How to Keep a Dog Cool in a Car',
+    href: '/cooling/keep-dog-cool-in-car/',
+  };
+  for (const p of coolingProducts.filter((p) => p.category === 'car-cooling')) {
+    addRef(map, p.id, keepCoolInCarRef);
+  }
+
+  // Inline AffiliateLink in src/content/articles/calming-crate-training-for-dogs.mdx
+  addRef(map, 'kindtail-pawd-collapsible-crate', {
+    label: 'How to Crate Train Your Dog',
+    href: '/calming/crate-training-for-dogs/',
+  });
+
+  const trackerComparisonRef: PageRef = { label: 'Best Dog GPS Trackers', href: '/gear/best-dog-gps-trackers/' };
   for (const p of trackerProducts) {
     addRef(map, p.id, trackerComparisonRef);
   }
 
-  const garminTrackingRef: PageRef = { label: 'garmin-dog-tracking-collars', href: '/gear/garmin-dog-tracking-collars/' };
+  const garminTrackingRef: PageRef = { label: 'Garmin Dog Tracking Collars', href: '/gear/garmin-dog-tracking-collars/' };
   for (const p of trackerProducts.filter((product) => product.type === 'off-grid')) {
     addRef(map, p.id, garminTrackingRef);
   }
 
-  const fiReviewRef: PageRef = { label: 'fi-dog-collar-review', href: '/gear/fi-dog-collar-review/' };
+  const fiReviewRef: PageRef = { label: 'Fi Dog Collar Review', href: '/gear/fi-dog-collar-review/' };
   addRef(map, 'fi-series-3-plus', fiReviewRef);
   addRef(map, 'stunt-puppy-fi-collar', fiReviewRef);
 
