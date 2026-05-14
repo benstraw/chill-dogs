@@ -73,6 +73,49 @@ export const faqs = [
   },
 ];
 
+export const primarySources = [
+  {
+    title: 'FDA Warning Letter: CBD Dog Health + MycoDog (2025)',
+    href: 'https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/house-alchemy-llc-dba-cbd-dog-health-hamet-love-llc-dba-mycodog-701064-04072025',
+  },
+  {
+    title: 'California Department of Cannabis Control: Animal Cannabis Products Guidance',
+    href: 'https://www.cannabis.ca.gov/posts/animal-cannabis-products-guidance/',
+  },
+  {
+    title: 'FDA: Regulation of Cannabis and Cannabis-Derived Products (Including CBD)',
+    href: 'https://www.fda.gov/news-events/public-health-focus/fda-regulation-cannabis-and-cannabis-derived-products-including-cannabidiol-cbd',
+  },
+  {
+    title: 'Frontiers in Veterinary Science: CBD for Canine Osteoarthritis (2018)',
+    href: 'https://www.frontiersin.org/journals/veterinary-science/articles/10.3389/fvets.2018.00165/full',
+  },
+  {
+    title: 'Cornell Riney Canine Health Center: ABCs of Cannabidiol (CBD)/Hemp',
+    href: 'https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/canine-health-topics/abcs-cannabidiol-cbd-hemp',
+  },
+  {
+    title: 'Colorado State University: Cannabidiol (CBD) and Idiopathic Epilepsy Trial',
+    href: 'https://labs.vetmedbiosci.colostate.edu/brain-research-center/clinical-trials/the-use-of-cannabidiol-cbd-as-an-alternative-to-standard-anticonvulsant-therapy-in-dogs-with-idiopathic-epilepsy/',
+  },
+  {
+    title: 'AKC Canine Health Foundation: Evidence for the Use of CBD',
+    href: 'https://www.akcchf.org/breakthrough/evidence-for-the-use-of-cbd/',
+  },
+  {
+    title: 'Cornell Riney Canine Health Center: CBD Uses and Efficacy',
+    href: 'https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/canine-health-topics/cbd-what-you-need-know-about-its-uses-and-efficacy',
+  },
+  {
+    title: 'AKC: CBD Dog Treats vs. Oils',
+    href: 'https://www.akc.org/expert-advice/health/cbd-dog-treats-vs-oils/',
+  },
+  {
+    title: 'PetMD: CBD Oil for Dogs',
+    href: 'https://www.petmd.com/dog/general-health/CBD-oil-for-dogs',
+  },
+];
+
 <article class="collector-article container">
   <header class="article-header">
     <span class="eyebrow">Calming &amp; Dog Health</span>
@@ -230,6 +273,19 @@ export const faqs = [
   </div>
 
   <FAQ faqs={faqs} />
+
+  <section class="prose" aria-labelledby="primary-sources-title">
+    <h2 id="primary-sources-title">Primary sources used in this article</h2>
+    <ul>
+      {primarySources.map((source) => (
+        <li>
+          <a href={source.href} target="_blank" rel="noopener noreferrer">
+            {source.title}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
 
   <InternalLinkStrip heading="More Calming Guides" currentHref="/calming/cbd-for-dogs/" limit={5} fromPage={pageSlug} />
 </article>
