@@ -1,11 +1,6 @@
 import { describe, expect, it, vi } from 'vitest';
 
 const articleEntries = [
-  createArticle(
-    '/calming/dog-fireworks-anxiety-checklist/',
-    'Dog Fireworks Anxiety Checklist: What to Do Before, During, and After July 4',
-    '2026-05-12'
-  ),
   createArticle('/travel/dog-road-trip-gear/', 'Dog Road Trip Gear', '2026-03-31', {
     topics: ['travel', 'road-trips'],
     pinnedRelated: ['/cooling/car-cooling-for-dogs/'],
@@ -68,7 +63,6 @@ describe('sitemap inventory', () => {
 
     expect(section.title).toBe('Articles (from collection)');
     expect(section.pages.map((page) => page.href)).toEqual([
-      '/calming/dog-fireworks-anxiety-checklist/',
       '/calming/how-to-prepare-a-calm-room-for-fireworks-night/',
       '/travel/how-to-fly-with-a-dog/',
       '/calming/crate-training-for-dogs/',
