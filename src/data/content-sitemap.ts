@@ -579,6 +579,15 @@ export const staticSitemapSections: SitemapSection[] = [
         noindex: true,
       }),
       createSitemapPage({
+        baseTitle: 'Subscribe to Chill-Dogs',
+        ogTitle: 'Subscribe to Chill-Dogs | Dog Tips and Gear Picks',
+        description:
+          'Get practical tips, seasonal reminders, and researched gear picks for keeping your dog cool, calm, and comfortable. Sent occasionally.',
+        href: ROUTES.subscribe,
+        pageType: 'informer',
+        noindex: true,
+      }),
+      createSitemapPage({
         baseTitle: 'Check Your Email',
         ogTitle: 'Check Your Email to Confirm Your Chill-Dogs Signup',
         description:

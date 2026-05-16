@@ -269,6 +269,7 @@ site_system:
         - "/privacy-policy/"
         - "/terms/"
         - "/affiliate-disclosure/"
+        - "/subscribe/"
         - "/subscribe/thanks/"
         - "/subscribe/confirmed/"
       notes: "/admin/products/ is the canonical product inventory review page. Every product in any product data file must flow into this page through src/data/product-catalog.ts; do not hardcode product rows in the admin route. /content-sitemap/ is a hidden editor page that previews the complete build-time sitemap inventory from src/data/sitemap-inventory.ts, which merges static pages with article collection pages and final built share metadata, including post-build OG image rewrites."
@@ -338,10 +339,12 @@ site_system:
       - "email_signup_view"
       - "email_signup_start"
       - "email_signup_submit"
+      - "pageview:/subscribe/"
       - "pageview:/subscribe/thanks/"
       - "pageview:/subscribe/confirmed/"
     notes: >
       Converters intentionally exclude the footer signup so affiliate pages stay single-purpose.
+      /subscribe/ is a dedicated signup landing page (noindex, not linked from the site) for sharing directly.
       /subscribe/thanks/ and /subscribe/confirmed/ are informer pages, noindex, excluded from sitemap discovery,
       and include a minimal Chill-Dogs logo link back to the homepage without restoring full site chrome.
 
