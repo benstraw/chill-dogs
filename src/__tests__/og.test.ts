@@ -66,14 +66,14 @@ describe('og utility functions', () => {
     expect(ogSlugFromPathname('/calming')).toBe('calming');
   });
 
-  it('marks eligible routes and excludes variants, noindex, and 404', () => {
+  it('marks eligible routes and excludes variants and 404', () => {
     expect(isAutoOgEligible({ pathname: '/cooling/cooling-mats/' })).toBe(true);
     expect(isAutoOgEligible({ pathname: '/cooling/v/a/' })).toBe(false);
-    expect(isAutoOgEligible({ pathname: '/about/', noindex: true })).toBe(false);
+    expect(isAutoOgEligible({ pathname: '/about/', noindex: true })).toBe(true);
     expect(isAutoOgEligible({ pathname: '/404' })).toBe(false);
 
     expect(resolveAutoOgImagePath({ pathname: '/cooling/cooling-mats/' })).toBe('/og/cooling-cooling-mats.jpg');
     expect(resolveAutoOgImagePath({ pathname: '/cooling/v/a/' })).toBeNull();
-    expect(resolveAutoOgImagePath({ pathname: '/about/', noindex: true })).toBeNull();
+    expect(resolveAutoOgImagePath({ pathname: '/about/', noindex: true })).toBe('/og/about.jpg');
   });
 });
