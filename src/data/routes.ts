@@ -16,6 +16,7 @@ export const ROUTES = {
   calmingTop: '/calming/best-calming-products-for-anxious-dogs/',
   calmingAlternatives: '/calming/best-thundershirt-alternatives/',
   calmingCar: '/calming/car-anxiety-for-dogs/',
+  calmingLickMats: '/calming/best-lick-mats-for-dogs/',
   calmingCrateGuide: '/calming/crate-training-for-dogs/',
   calmingCbdGuide: '/calming/cbd-for-dogs/',
   calmingFireworksRoom: '/calming/how-to-prepare-a-calm-room-for-fireworks-night/',

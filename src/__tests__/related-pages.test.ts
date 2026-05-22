@@ -217,6 +217,7 @@ describe('related pages', () => {
       '/calming/best-calming-products-for-anxious-dogs/',
       '/calming/best-thundershirt-alternatives/',
       '/calming/car-anxiety-for-dogs/',
+      '/calming/best-lick-mats-for-dogs/',
       '/comforting/best-calming-dog-beds/',
       '/comforting/best-orthopedic-dog-beds/',
       '/comforting/best-puppy-crates/',

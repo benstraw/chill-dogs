@@ -32,7 +32,7 @@ Adding new products, updating product data, checking product data file structure
 | File | Contents |
 |---|---|
 | `src/data/cooling-products.ts` | 25 cooling products — ASINs, affiliate URLs, image thumbnails, category metadata |
-| `src/data/calming-products.ts` | 13 calming products — ASINs, affiliate URLs, image thumbnails |
+| `src/data/calming-products.ts` | 23 calming products — ASINs, affiliate URLs, image thumbnails |
 | `src/data/relaxation-products.ts` | 78 comfort/rest products — calming beds, orthopedic beds, crates, carriers, travel bags |
 | `src/data/tracking-products.ts` | 8 tracker products + 1 accessory — cellular/off-grid/bluetooth/accessory types |
 | `src/data/product-catalog.ts` | Master catalog — normalized inventory across all pillar data files |

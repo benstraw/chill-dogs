@@ -407,11 +407,11 @@ duplicating product data already on the pillar pages.
 
 | URL | Type | Target action |
 |---|---|---|
-| `/travel/rhys-road-trip-chill-kit/` | collector | Route to `/cooling/car-cooling-for-dogs/` or `/calming/car-anxiety-for-dogs/` |
+| `/travel/dog-road-trip-gear/` | collector | Route to `/cooling/car-cooling-for-dogs/` or `/calming/car-anxiety-for-dogs/` |
 | `/cooling/car-cooling-for-dogs/` | converter | Affiliate click to Amazon (car cooling gear) |
 | `/calming/car-anxiety-for-dogs/` | converter | Affiliate click to Amazon (travel calming aids) |
 
-### Collector page structure (`/travel/rhys-road-trip-chill-kit/`)
+### Collector page structure (`/travel/dog-road-trip-gear/`)
 
 The page follows the Web Systems collector pattern: one job (route to converters),
 two primary CTAs above the fold, and all product content organized to support

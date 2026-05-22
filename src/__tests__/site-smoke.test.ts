@@ -519,6 +519,7 @@ describe('site smoke tests', () => {
     expect(sitemap).toContain('/cooling/car-cooling-for-dogs/');
     expect(sitemap).toContain('/travel/dog-road-trip-gear/');
     expect(sitemap).toContain('/calming/best-calming-products-for-anxious-dogs/');
+    expect(sitemap).toContain('/calming/best-lick-mats-for-dogs/');
     expect(sitemap).toContain('/calming/how-to-prepare-a-calm-room-for-fireworks-night/');
     expect(sitemap).toContain('/comforting/best-puppy-crates/');
     expect(sitemap).toContain('/comforting/best-anxiety-dog-crates/');

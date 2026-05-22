@@ -33,7 +33,7 @@ This matches pageviews to your money pages (the pages with Buy on Amazon buttons
    - **Filter by properties → Add property filter**:
      - Property: `$current_url`
      - Operator: `matches regex`
-     - Value: `/(cooling-mats|cooling-bandanas|cooling-vests|freezable-dog-toys|car-cooling-for-dogs|best-calming-products|best-thundershirt-alternatives|car-anxiety-for-dogs)/`
+     - Value: `/(cooling-mats|cooling-bandanas|cooling-vests|freezable-dog-toys|car-cooling-for-dogs|best-calming-products|best-thundershirt-alternatives|car-anxiety-for-dogs|best-lick-mats-for-dogs)/`
 3. Name it: `Converter Page Visit`
 4. Save
 
@@ -191,6 +191,7 @@ Current converter pages:
 - `/calming/best-calming-products-for-anxious-dogs/`
 - `/calming/best-thundershirt-alternatives/`
 - `/calming/car-anxiety-for-dogs/`
+- `/calming/best-lick-mats-for-dogs/`
 
 ---
 
