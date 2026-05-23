@@ -575,7 +575,7 @@ pages. That created weak social previews and failed common OG quality checks
 - Updated `src/__tests__/site-smoke.test.ts`:
   - verifies generated OG asset references in built HTML,
   - verifies OG files exist in `dist/og/`,
-  - verifies `noindex` pages still fall back to default OG image.
+  - verifies routes without generated OG assets still fall back to default OG image.
 - Confirmed OG metadata now points to `.png` assets (not `.svg`) on indexable
   routes to avoid unsupported-format issues on some platforms.
 

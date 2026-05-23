@@ -297,7 +297,7 @@ describe('site smoke tests', () => {
     expect(travelDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
       .toBe(travelDoc.querySelector('meta[name="twitter:image"]')?.getAttribute('content'));
 
-    // noindex pages keep the static default fallback
+    // Explicitly excluded pages keep the static default fallback.
     expect(termsDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
       .toContain('/og-default.jpg');
     // image-less indexable pages keep route-based generated OG assets
@@ -315,6 +315,7 @@ describe('site smoke tests', () => {
 
     const contactRow = sitemapDoc.querySelector('[data-share-preview-row][data-href="/contact/"]');
     const roadTripRow = sitemapDoc.querySelector('[data-share-preview-row][data-href="/travel/dog-road-trip-gear/"]');
+    const subscribeRow = sitemapDoc.querySelector('[data-share-preview-row][data-href="/subscribe/"]');
     const termsRow = sitemapDoc.querySelector('[data-share-preview-row][data-href="/terms/"]');
 
     expect(contactRow?.querySelector('[data-share-title]')?.textContent)
@@ -336,6 +337,11 @@ describe('site smoke tests', () => {
       .toContain('The Day Rhys Ran Off: What We Learned About Dog Tracking');
     expect(rhysRow?.querySelector('[data-share-image]')?.getAttribute('src'))
       .toContain('/_assets/bishop-peak-expert-trail-marker');
+
+    expect(subscribeRow?.querySelector('[data-share-title]')?.textContent)
+      .toContain('Subscribe to Chill-Dogs | Dog Tips and Gear Picks');
+    expect(subscribeRow?.querySelector('[data-share-image]')?.getAttribute('src'))
+      .toContain('/og/subscribe.jpg');
 
     expect(termsRow?.querySelector('[data-share-title]')?.textContent)
       .toContain('Terms of Use | Chill-Dogs');
@@ -436,13 +442,18 @@ describe('site smoke tests', () => {
   });
 
   it('renders subscribe flow pages without site chrome and keeps them noindex', () => {
+    const subscribeDoc = readBuiltPage(path.join('subscribe', 'index.html'));
     const thanksDoc = readBuiltPage(path.join('subscribe', 'thanks', 'index.html'));
     const confirmedDoc = readBuiltPage(path.join('subscribe', 'confirmed', 'index.html'));
 
+    expect(subscribeDoc.querySelector('meta[name="robots"]')?.getAttribute('content'))
+      .toBe('noindex, nofollow');
     expect(thanksDoc.querySelector('meta[name="robots"]')?.getAttribute('content'))
       .toBe('noindex, nofollow');
     expect(confirmedDoc.querySelector('meta[name="robots"]')?.getAttribute('content'))
       .toBe('noindex, nofollow');
+    expect(subscribeDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
+      .toContain('/og/subscribe.jpg');
     expect(thanksDoc.querySelector('header.site-header')).toBeNull();
     expect(thanksDoc.querySelector('footer.site-footer')).toBeNull();
     expect(confirmedDoc.querySelector('header.site-header')).toBeNull();

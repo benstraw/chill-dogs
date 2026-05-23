@@ -85,9 +85,9 @@ function resolveShareTitle(baseTitle: string, ogTitle?: string): string {
   return ogTitle ?? `${baseTitle} | Chill-Dogs`;
 }
 
-function resolveShareImage(href: string, options: { ogImage?: string | ImageMetadata; noindex?: boolean }) {
+function resolveShareImage(href: string, options: { ogImage?: string | ImageMetadata }) {
   return resolveProvidedOgImagePath(options.ogImage)
-    ?? resolveAutoOgImagePath({ pathname: href, noindex: options.noindex })
+    ?? resolveAutoOgImagePath({ pathname: href })
     ?? '/og-default.jpg';
 }
 
@@ -105,7 +105,7 @@ export function createSitemapPage(input: SitemapPageInput): SitemapPage {
     preview: {
       title: resolveShareTitle(input.baseTitle, input.ogTitle),
       description: input.description,
-      image: resolveShareImage(input.href, { ogImage: input.ogImage, noindex: input.noindex }),
+      image: resolveShareImage(input.href, { ogImage: input.ogImage }),
     },
   };
 }

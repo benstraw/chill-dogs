@@ -66,14 +66,19 @@ describe('og utility functions', () => {
     expect(ogSlugFromPathname('/calming')).toBe('calming');
   });
 
-  it('marks eligible routes and excludes variants, noindex pages, and 404', () => {
+  it('marks eligible routes and excludes non-generated route images', () => {
     expect(isAutoOgEligible({ pathname: '/cooling/cooling-mats/' })).toBe(true);
+    expect(isAutoOgEligible({ pathname: '/subscribe/' })).toBe(true);
+    expect(isAutoOgEligible({ pathname: '/subscribe/thanks/' })).toBe(true);
     expect(isAutoOgEligible({ pathname: '/cooling/v/a/' })).toBe(false);
-    expect(isAutoOgEligible({ pathname: '/about/', noindex: true })).toBe(false);
+    expect(isAutoOgEligible({ pathname: '/privacy-policy/' })).toBe(false);
+    expect(isAutoOgEligible({ pathname: '/terms/' })).toBe(false);
+    expect(isAutoOgEligible({ pathname: '/admin/products/' })).toBe(false);
     expect(isAutoOgEligible({ pathname: '/404' })).toBe(false);
 
     expect(resolveAutoOgImagePath({ pathname: '/cooling/cooling-mats/' })).toBe('/og/cooling-cooling-mats.jpg');
+    expect(resolveAutoOgImagePath({ pathname: '/subscribe/' })).toBe('/og/subscribe.jpg');
     expect(resolveAutoOgImagePath({ pathname: '/cooling/v/a/' })).toBeNull();
-    expect(resolveAutoOgImagePath({ pathname: '/about/', noindex: true })).toBeNull();
+    expect(resolveAutoOgImagePath({ pathname: '/terms/' })).toBeNull();
   });
 });

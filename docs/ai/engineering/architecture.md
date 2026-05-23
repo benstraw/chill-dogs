@@ -136,7 +136,7 @@ Vanilla CSS with custom properties. No runtime overhead.
 Three phases run automatically via `bun run build`:
 
 1. **Pre-build** (`src/scripts/`): `watermark-images.mjs` → `generate-og-images.mjs`
-   - Generates `/public/og/<slug>.jpg` for every indexable route
+   - Generates `/public/og/<slug>.jpg` for every eligible route
    - CTA text per page type comes from `src/config/og-cta.mjs`
 
 2. **Astro build**: outputs static HTML to `dist/`
