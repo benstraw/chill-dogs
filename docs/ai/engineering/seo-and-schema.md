@@ -129,7 +129,7 @@ Emitted by `BaseLayout.astro` on production only (`VERCEL_ENV === 'production'`)
 
 ### CollectionPage
 
-Used on section collector pages (`/cooling/`, `/calming/`, `/comforting/`). `SectionCollectorPage` renders the schema, and `src/data/section-collectors.ts` derives `hasPart` from the complete sitemap inventory so new matching articles and converters are included automatically.
+Used on section collector pages (`/cooling/`, `/calming/`, `/comforting/`). `SectionCollectorPage` renders the schema, and `src/data/section-collectors.ts` derives `hasPart` from the complete sitemap inventory so new matching articles and converters are included automatically. Topic subsection grouping affects rendered cards only; schema should include the complete matched inventory.
 
 ### FAQPage
 

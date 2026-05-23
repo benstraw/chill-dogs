@@ -31,6 +31,15 @@ export interface CollectorBodyConfig {
 }
 
 export type SectionCollectorKey = 'cooling' | 'calming' | 'comfort';
+export type TopicSectionPageType = 'converter' | 'article';
+
+export interface TopicSectionDefinition {
+  heading: string;
+  intro?: string;
+  topics: SitemapTopic[];
+  pageTypes?: TopicSectionPageType[];
+  priority?: string[];
+}
 
 export interface SectionCollectorDefinition {
   key: SectionCollectorKey;
@@ -60,11 +69,8 @@ export interface SectionCollectorDefinition {
   startDescription?: string;
   converterPriority?: string[];
   articlePriority?: string[];
-  converterSection: {
-    heading: string;
-    intro?: string;
-  };
-  articleSection: {
+  topicSections: TopicSectionDefinition[];
+  fallbackSection?: {
     heading: string;
     intro?: string;
   };
@@ -120,14 +126,39 @@ export const sectionCollectorDefinitions: Record<SectionCollectorKey, SectionCol
       ROUTES.coolingSafety,
       ROUTES.roadTrip,
     ],
-    converterSection: {
-      heading: 'Cooling Product Comparisons',
-      intro: 'Product paths for hot weather, warm cars, summer walks, frozen enrichment, and travel hydration.',
-    },
-    articleSection: {
-      heading: 'Cooling Articles & Safety Guides',
-      intro: 'Practical guides that explain heat risks, car setup, hydration, and warm-weather travel.',
-    },
+    topicSections: [
+      {
+        heading: 'Car Cooling & Travel Hydration',
+        intro: 'Gear and guides for keeping the back seat cooler, water accessible, and road-trip heat risk lower.',
+        topics: ['car-cooling', 'hydration', 'travel', 'road-trips'],
+      },
+      {
+        heading: 'Cooling Mats',
+        intro: 'At-home and portable mat options for dogs who need a cooler place to rest.',
+        topics: ['cooling-mats'],
+      },
+      {
+        heading: 'Wearable Cooling',
+        intro: 'Bandanas and vests for walks, hikes, and outdoor time when shade is not enough.',
+        topics: ['cooling-wearables'],
+      },
+      {
+        heading: 'Frozen Enrichment',
+        intro: 'Freezable toys and cold enrichment ideas that turn heat relief into something to work on.',
+        topics: ['frozen-toys'],
+      },
+      {
+        heading: 'Heat Safety Guides',
+        intro: 'Practical explainers for hot days, overheating risk, and when to change the plan.',
+        topics: ['heat-safety'],
+        pageTypes: ['article'],
+      },
+      {
+        heading: 'More Cooling Paths',
+        intro: 'Additional cooling comparisons and guides that touch this section.',
+        topics: ['cooling'],
+      },
+    ],
   },
   calming: {
     key: 'calming',
@@ -176,14 +207,40 @@ export const sectionCollectorDefinitions: Record<SectionCollectorKey, SectionCol
       ROUTES.rhysRanAway,
       ROUTES.dogRanAwaySafety,
     ],
-    converterSection: {
-      heading: 'Calming Product Comparisons',
-      intro: 'Converter paths for anxious dogs, travel stress, pressure wraps, comfort beds, and escape-risk tracking.',
-    },
-    articleSection: {
-      heading: 'Calming Articles & Related Guides',
-      intro: 'Research, setup, training, and safety guides for common anxiety triggers and what can happen when dogs bolt.',
-    },
+    topicSections: [
+      {
+        heading: 'Car Anxiety & Travel Stress',
+        intro: 'Calming paths for dogs who pant, pace, whine, or struggle to settle once the trip starts.',
+        topics: ['car-anxiety', 'travel', 'road-trips'],
+      },
+      {
+        heading: 'Fireworks, Storms & Loud Sounds',
+        intro: 'Setup guides and calming paths for predictable noise events.',
+        topics: ['fireworks'],
+      },
+      {
+        heading: 'Crate Training & Comfort',
+        intro: 'Crate, bed, and settling resources for dogs who need a more secure rest setup.',
+        topics: ['crate-training', 'comfort', 'crates', 'beds'],
+      },
+      {
+        heading: 'Escape Risk & Tracking',
+        intro: 'When anxiety can turn into bolting, these tracking and safety guides cover what happens next.',
+        topics: ['tracking', 'gps-tracking', 'lost-dog-safety'],
+      },
+      {
+        heading: 'Research & Safety Guides',
+        intro: 'Informational guides for anxiety research, safety tradeoffs, and what to ask before trying something new.',
+        topics: ['calming', 'anxiety'],
+        pageTypes: ['article'],
+      },
+      {
+        heading: 'Calming Product Comparisons',
+        intro: 'Core product comparisons for anxious dogs, pressure wraps, and calming routines.',
+        topics: ['calming', 'anxiety'],
+        pageTypes: ['converter'],
+      },
+    ],
     showCalmingDisclaimer: true,
     disclosureShowSafety: false,
   },
@@ -226,14 +283,28 @@ export const sectionCollectorDefinitions: Record<SectionCollectorKey, SectionCol
       ROUTES.travelFlyWithDog,
       ROUTES.roadTrip,
     ],
-    converterSection: {
-      heading: 'Comfort Product Comparisons',
-      intro: 'Beds, crates, carriers, and travel gear grouped by the rest setup your dog actually needs.',
-    },
-    articleSection: {
-      heading: 'Comfort Articles & Travel Guides',
-      intro: 'Sleep, crate training, and travel planning guides that route into the right comfort product path.',
-    },
+    topicSections: [
+      {
+        heading: 'Calming & Orthopedic Beds',
+        intro: 'Bed comparisons and sleep guidance for dogs who need more support, security, or better rest.',
+        topics: ['beds', 'orthopedic', 'sleep'],
+      },
+      {
+        heading: 'Crates for Training and Anxiety',
+        intro: 'Crate paths for puppies, anxious dogs, road trips, reinforced containment, and home placement.',
+        topics: ['crates', 'crate-training'],
+      },
+      {
+        heading: 'Flying, Carriers & Travel Prep',
+        intro: 'Airline crates, soft carriers, travel bags, and flying guides for dogs on the move.',
+        topics: ['flying', 'carriers', 'travel'],
+      },
+      {
+        heading: 'More Comfort Paths',
+        intro: 'Additional comfort-related comparisons and guides from nearby topics.',
+        topics: ['comfort'],
+      },
+    ],
     disclosureShowSafety: false,
   },
 };
@@ -261,6 +332,7 @@ export function buildSectionCollectorPageData(
   const articles = cardPages
     .filter((page) => page.pageType === 'collector' && page.collectorSubtype === 'article')
     .sort(compareByPriority(definition.articlePriority ?? [], articleOrder));
+  const groupedSections = buildTopicSections(definition, cardPages, pageOrder, articleOrder);
 
   return {
     definition,
@@ -268,16 +340,7 @@ export function buildSectionCollectorPageData(
       fromPage: definition.fromPage,
       accent: definition.accent,
       start: startPage ? toStartCard(startPage, definition) : undefined,
-      sections: [
-        {
-          ...definition.converterSection,
-          cards: converters.map((page) => toCollectorCard(page)),
-        },
-        {
-          ...definition.articleSection,
-          cards: articles.map((page) => toCollectorCard(page)),
-        },
-      ].filter((section) => section.cards.length > 0),
+      sections: groupedSections,
       showCalmingDisclaimer: definition.showCalmingDisclaimer,
       disclosureShowSafety: definition.disclosureShowSafety,
     },
@@ -306,6 +369,99 @@ function hasTopicOverlap(collectorTopics: SitemapTopic[], pageTopics: SitemapTop
   }
 
   return pageTopics.some((topic) => collectorTopics.includes(topic));
+}
+
+function buildTopicSections(
+  definition: SectionCollectorDefinition,
+  pages: SitemapPage[],
+  pageOrder: Map<string, number>,
+  articleOrder: Map<string, number>
+): CollectorSection[] {
+  const assignedHrefs = new Set<string>();
+  const sections = definition.topicSections.map((section): CollectorSection => {
+    const sectionPages = pages
+      .filter((page) => !assignedHrefs.has(page.href))
+      .filter((page) => isAllowedTopicSectionPage(page, section))
+      .sort(compareTopicSectionPages(section, definition, pageOrder, articleOrder));
+
+    for (const page of sectionPages) {
+      assignedHrefs.add(page.href);
+    }
+
+    return {
+      heading: section.heading,
+      intro: section.intro,
+      cards: sectionPages.map((page) => toCollectorCard(page)),
+    };
+  }).filter((section) => section.cards.length > 0);
+
+  const remainingPages = pages
+    .filter((page) => !assignedHrefs.has(page.href))
+    .sort(compareTopicSectionPages(undefined, definition, pageOrder, articleOrder));
+
+  if (remainingPages.length > 0) {
+    sections.push({
+      heading: definition.fallbackSection?.heading ?? 'More Guides and Comparisons',
+      intro: definition.fallbackSection?.intro,
+      cards: remainingPages.map((page) => toCollectorCard(page)),
+    });
+  }
+
+  return sections;
+}
+
+function isAllowedTopicSectionPage(page: SitemapPage, section: TopicSectionDefinition): boolean {
+  if (section.pageTypes?.length && !section.pageTypes.includes(getTopicSectionPageType(page))) {
+    return false;
+  }
+
+  return hasTopicOverlap(section.topics, page.topics);
+}
+
+function getTopicSectionPageType(page: SitemapPage): TopicSectionPageType {
+  return page.pageType === 'converter' ? 'converter' : 'article';
+}
+
+function compareTopicSectionPages(
+  section: TopicSectionDefinition | undefined,
+  definition: SectionCollectorDefinition,
+  pageOrder: Map<string, number>,
+  articleOrder: Map<string, number>
+) {
+  const sectionPriority = new Map((section?.priority ?? []).map((href, index) => [href, index]));
+  const converterPriority = new Map((definition.converterPriority ?? []).map((href, index) => [href, index]));
+  const articlePriority = new Map((definition.articlePriority ?? []).map((href, index) => [href, index]));
+
+  return (a: SitemapPage, b: SitemapPage): number =>
+    compareNumber(getTopicSectionPageTypeRank(a), getTopicSectionPageTypeRank(b))
+    || compareNumber(sectionPriority.get(a.href) ?? Number.POSITIVE_INFINITY, sectionPriority.get(b.href) ?? Number.POSITIVE_INFINITY)
+    || compareNumber(getDefinitionPriority(a, converterPriority, articlePriority), getDefinitionPriority(b, converterPriority, articlePriority))
+    || compareNumber(getFallbackOrder(a, pageOrder, articleOrder), getFallbackOrder(b, pageOrder, articleOrder))
+    || a.href.localeCompare(b.href);
+}
+
+function getTopicSectionPageTypeRank(page: SitemapPage): number {
+  return page.pageType === 'converter' ? 0 : 1;
+}
+
+function getDefinitionPriority(
+  page: SitemapPage,
+  converterPriority: Map<string, number>,
+  articlePriority: Map<string, number>
+): number {
+  return page.pageType === 'converter'
+    ? converterPriority.get(page.href) ?? Number.POSITIVE_INFINITY
+    : articlePriority.get(page.href) ?? Number.POSITIVE_INFINITY;
+}
+
+function getFallbackOrder(
+  page: SitemapPage,
+  pageOrder: Map<string, number>,
+  articleOrder: Map<string, number>
+): number {
+  return page.pageType === 'converter'
+    ? pageOrder.get(page.href) ?? Number.POSITIVE_INFINITY
+    : articleOrder.get(page.href) ?? Number.POSITIVE_INFINITY;
 }
 
 function getArticleOrder(sections: SitemapSection[], fallbackOrder: Map<string, number>): Map<string, number> {

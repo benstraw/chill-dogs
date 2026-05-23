@@ -125,6 +125,79 @@ describe('section collectors', () => {
     ]);
   });
 
+  it('groups pages by the first matching topic section without repeating cards', () => {
+    const definition: SectionCollectorDefinition = {
+      ...sectionCollectorDefinitions.cooling,
+      startHref: undefined,
+      topicSections: [
+        {
+          heading: 'Car Cooling',
+          topics: ['car-cooling'],
+        },
+        {
+          heading: 'Heat Safety',
+          topics: ['heat-safety'],
+        },
+      ],
+    };
+    const data = buildSectionCollectorPageData(definition, [
+      createSection('Candidates', [
+        createPage({ href: '/cooling/car-cooling-for-dogs/', topics: ['car-cooling', 'heat-safety'] }),
+        createPage({
+          href: '/cooling/how-hot-is-too-hot-for-dogs/',
+          pageType: 'collector',
+          collectorSubtype: 'article',
+          topics: ['heat-safety'],
+        }),
+      ]),
+    ]);
+
+    expect(data.body.sections.map((section) => ({
+      heading: section.heading,
+      hrefs: section.cards.map((card) => card.href),
+    }))).toEqual([
+      {
+        heading: 'Car Cooling',
+        hrefs: ['/cooling/car-cooling-for-dogs/'],
+      },
+      {
+        heading: 'Heat Safety',
+        hrefs: ['/cooling/how-hot-is-too-hot-for-dogs/'],
+      },
+    ]);
+  });
+
+  it('keeps converter cards before article cards inside a topic section', () => {
+    const definition: SectionCollectorDefinition = {
+      ...sectionCollectorDefinitions.cooling,
+      startHref: undefined,
+      topicSections: [
+        {
+          heading: 'Travel Cooling',
+          topics: ['travel'],
+        },
+      ],
+    };
+    const data = buildSectionCollectorPageData(definition, [
+      createSection('Articles (from collection)', [
+        createPage({
+          href: '/travel/dog-road-trip-gear/',
+          pageType: 'collector',
+          collectorSubtype: 'article',
+          topics: ['cooling', 'travel'],
+        }),
+      ]),
+      createSection('Converters', [
+        createPage({ href: '/cooling/dog-travel-hydration/', topics: ['cooling', 'travel'] }),
+      ]),
+    ]);
+
+    expect(data.body.sections[0]?.cards.map((card) => card.href)).toEqual([
+      '/cooling/dog-travel-hydration/',
+      '/travel/dog-road-trip-gear/',
+    ]);
+  });
+
   it('keeps discovered articles in article sitemap publish order', () => {
     const data = buildSectionCollectorPageData(withoutPriority(sectionCollectorDefinitions.cooling), [
       createSection('Articles (from collection)', [

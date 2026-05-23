@@ -99,7 +99,7 @@ Converter pages are configured from data files:
 - `src/data/cooling-converter-pages.ts` — cooling converter copy, CTA targets, FAQ sets
 - `src/data/calming-converter-pages.ts` — calming converter config
 - `src/data/relaxation-converter-pages.ts` — comfort/relaxation converter config
-- `src/data/section-collectors.ts` — cooling, calming, and comfort section collector metadata, hero config, topic coverage, priority ordering, dynamic card inventory, and `CollectionPage.hasPart` schema
+- `src/data/section-collectors.ts` — cooling, calming, and comfort section collector metadata, hero config, topic subsection grouping, topic coverage, priority ordering, dynamic card inventory, and `CollectionPage.hasPart` schema
 
 When a shared product appears on multiple converter pages, update the canonical product data file — not individual page configs — unless the change is explicitly page-specific.
 

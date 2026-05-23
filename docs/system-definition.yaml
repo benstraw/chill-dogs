@@ -62,21 +62,21 @@ site_system:
       collector_subtype: "section"
       target_action: "Route heat-intent traffic to cooling converters"
       metric: "collector_to_converter_click to cooling converters"
-      notes: "Section collector uses SectionCollectorPage with dynamic topic-matched converter and article cards from the complete sitemap inventory, including cooling, heat-safety, car-cooling, wearables, frozen-toy, and hydration topics."
+      notes: "Section collector uses SectionCollectorPage with dynamic topic-matched converter and article cards from the complete sitemap inventory, grouped into topic subsections for car cooling, mats, wearables, frozen enrichment, heat safety, and related cooling paths."
 
     - name: "Calming"
       type: "collector"
       collector_subtype: "section"
       target_action: "Route anxiety-intent traffic to calming converters"
       metric: "collector_to_converter_click to calming converters"
-      notes: "Section collector uses SectionCollectorPage with dynamic topic-matched converter and article cards from the complete sitemap inventory. Coverage includes calming, anxiety, car-anxiety, crate-training, fireworks, and the existing tracking/lost-dog adjacency for anxious dogs that bolt."
+      notes: "Section collector uses SectionCollectorPage with dynamic topic-matched converter and article cards from the complete sitemap inventory, grouped into topic subsections for car anxiety, fireworks/noise, crate comfort, escape-risk tracking, research/safety, and calming comparisons."
 
     - name: "Comfort"
       type: "collector"
       collector_subtype: "section"
       target_action: "Route rest, crate, carrier, and travel-comfort intent to comfort converters"
       metric: "collector_to_converter_click to comfort converters"
-      notes: "Section collector uses SectionCollectorPage with dynamic topic-matched converter and article cards from the complete sitemap inventory. Coverage includes comfort, sleep, beds, orthopedic, crates, crate-training, flying, carriers, and travel topics."
+      notes: "Section collector uses SectionCollectorPage with dynamic topic-matched converter and article cards from the complete sitemap inventory, grouped into topic subsections for beds, crates, flying/carriers/travel prep, and related comfort paths."
 
     - name: "Cooling converters"
       type: "converter"
@@ -371,7 +371,7 @@ site_system:
     hosting: "Static build deployment"
     seo_strategy: "collector captures intent; converter monetizes intent; variant routes remain canonicalized and noindex"
     sitemap_inventory: "src/data/sitemap-inventory.ts composes staticSitemapSections with article MDX collection entries at build time; future related-content derivation should use the complete inventory instead of static-only sections."
-    section_collectors: "src/data/section-collectors.ts defines cooling, calming, and comfort collector metadata, topic coverage, priority ordering, dynamic CollectorBody card inventories, and CollectionPage hasPart schema from the complete sitemap inventory."
+    section_collectors: "src/data/section-collectors.ts defines cooling, calming, and comfort collector metadata, topic subsection grouping, topic coverage, priority ordering, dynamic CollectorBody card inventories, and CollectionPage hasPart schema from the complete sitemap inventory."
 
   redirects:
     # Production: vercel.json → redirects array (true HTTP 301 at Vercel edge).

@@ -76,7 +76,7 @@ Section collector pages that aggregate and route intent.
 
 **Required behavior:**
 - Use `SectionCollectorPage` with `src/data/section-collectors.ts` definitions
-- Render `CollectorBody` from dynamic topic-matched converter and article inventory
+- Render `CollectorBody` from dynamic topic-matched converter and article inventory grouped into topic subsections
 - Derive cards and `CollectionPage.hasPart` from the complete sitemap inventory
 - Above-the-fold route to a converter (no prose above fold)
 - Pure routing intent — no prose content

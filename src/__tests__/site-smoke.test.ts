@@ -121,6 +121,8 @@ describe('site smoke tests', () => {
     const comfortDoc = readBuiltPage(path.join('comforting', 'index.html'));
     const getLinks = (doc: Document) =>
       Array.from(doc.querySelectorAll<HTMLAnchorElement>('a')).map((link) => link.getAttribute('href'));
+    const getHeadings = (doc: Document) =>
+      Array.from(doc.querySelectorAll<HTMLHeadingElement>('.section-heading')).map((heading) => heading.textContent);
 
     expect(getLinks(coolingDoc)).toEqual(expect.arrayContaining([
       '/cooling/dog-travel-hydration/',
@@ -134,6 +136,9 @@ describe('site smoke tests', () => {
       '/comforting/best-airline-approved-dog-carriers/',
       '/travel/how-to-fly-with-a-dog/',
     ]));
+    expect(getHeadings(coolingDoc)).toEqual(expect.arrayContaining(['Car Cooling & Travel Hydration', 'Wearable Cooling']));
+    expect(getHeadings(calmingDoc)).toEqual(expect.arrayContaining(['Car Anxiety & Travel Stress', 'Escape Risk & Tracking']));
+    expect(getHeadings(comfortDoc)).toEqual(expect.arrayContaining(['Calming & Orthopedic Beds', 'Flying, Carriers & Travel Prep']));
   });
 
   it('renders derived InternalLinkStrip links on migrated pages', () => {
