@@ -17,6 +17,15 @@ import BaseLayout from '@layouts/BaseLayout.astro';
       </p>
 
       <h2>Cuddly</h2>
+      <p class="charity-logo-wrap charity-logo-wrap--dark">
+        <img
+          src="https://cdn.shopify.com/s/files/1/2243/6817/files/Cuddly_Logo_Wht.png"
+          alt="CUDDLY logo"
+          class="charity-logo"
+          loading="lazy"
+          decoding="async"
+        />
+      </p>
       <p>
         <a href="https://cuddly.com/home" target="_blank" rel="noopener noreferrer">CUDDLY</a> is a
         verified fundraising and wish-list platform dedicated entirely to supporting animal rescues
@@ -78,8 +87,26 @@ import BaseLayout from '@layouts/BaseLayout.astro';
         >, celebrated annually on May 20 to recognize the special bond that comes with rescuing a
         dog while bringing awareness to the countless dogs waiting to be adopted.
       </p>
+      <p class="charity-logo-wrap">
+        <img
+          src="https://images.squarespace-cdn.com/content/v1/5adfb930e17ba396c002796b/82b9a58f-d407-4dcc-bc95-60a29297f61d/NRDD_logo_horiz.png?format=1500w"
+          alt="National Rescue Dog Day logo"
+          class="charity-logo"
+          loading="lazy"
+          decoding="async"
+        />
+      </p>
 
       <h2>Wild Tunes</h2>
+      <p class="charity-logo-wrap">
+        <img
+          src="https://wildtunes.org/wp-content/uploads/2025/01/wild_tunes3.png"
+          alt="Wild Tunes logo"
+          class="charity-logo"
+          loading="lazy"
+          decoding="async"
+        />
+      </p>
       <p>
         <a href="https://wildtunes.org/" target="_blank" rel="noopener noreferrer">Wild Tunes</a> is
         a 501(c)(3) nonprofit organization dedicated to soothing shelter animals through live music.
@@ -90,6 +117,15 @@ import BaseLayout from '@layouts/BaseLayout.astro';
       </p>
 
       <h2>15 out of 10 Foundation</h2>
+      <p class="charity-logo-wrap">
+        <img
+          src="https://15outof10.org/wp-content/uploads/2021/11/1510-full-logo-75.png"
+          alt="15 out of 10 Foundation logo"
+          class="charity-logo"
+          loading="lazy"
+          decoding="async"
+        />
+      </p>
       <p>
         Matt Nelson created the WeRateDogs Twitter account in November of 2015, posted his first
         GoFundMe for a dog in need in 2016, and since 2017 the WeRateDogs community has been
@@ -123,5 +159,23 @@ import BaseLayout from '@layouts/BaseLayout.astro';
   .charities h1 {
     font-size: var(--text-4xl);
     margin-bottom: var(--space-xl);
+  }
+
+  .charity-logo-wrap {
+    margin: var(--space-sm) 0 var(--space-md);
+  }
+
+  .charity-logo-wrap--dark {
+    background: var(--color-charcoal);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+  }
+
+  .charity-logo {
+    display: block;
+    max-width: 100%;
+    width: min(100%, 340px);
+    max-height: 96px;
+    object-fit: contain;
   }
 </style>
