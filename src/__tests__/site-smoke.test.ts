@@ -123,6 +123,8 @@ describe('site smoke tests', () => {
       Array.from(doc.querySelectorAll<HTMLAnchorElement>('a')).map((link) => link.getAttribute('href'));
     const getHeadings = (doc: Document) =>
       Array.from(doc.querySelectorAll<HTMLHeadingElement>('.section-heading')).map((heading) => heading.textContent);
+    const coolingGuideCards = Array.from(coolingDoc.querySelectorAll<HTMLAnchorElement>('.cat-card--guide'));
+    const coolingConverterCards = Array.from(coolingDoc.querySelectorAll<HTMLAnchorElement>('.cat-card--converter'));
 
     expect(getLinks(coolingDoc)).toEqual(expect.arrayContaining([
       '/cooling/dog-travel-hydration/',
@@ -139,6 +141,10 @@ describe('site smoke tests', () => {
     expect(getHeadings(coolingDoc)).toEqual(expect.arrayContaining(['Car Cooling & Travel Hydration', 'Wearable Cooling']));
     expect(getHeadings(calmingDoc)).toEqual(expect.arrayContaining(['Car Anxiety & Travel Stress', 'Escape Risk & Tracking']));
     expect(getHeadings(comfortDoc)).toEqual(expect.arrayContaining(['Calming & Orthopedic Beds', 'Flying, Carriers & Travel Prep']));
+    expect(coolingGuideCards.length).toBeGreaterThan(0);
+    expect(coolingGuideCards[0]?.querySelector('.cat-card-badge')?.textContent).toBe('Guide');
+    expect(coolingGuideCards[0]?.querySelector('img')?.getAttribute('src')).toBeTruthy();
+    expect(coolingConverterCards[0]?.querySelector('img')).toBeNull();
   });
 
   it('renders derived InternalLinkStrip links on migrated pages', () => {

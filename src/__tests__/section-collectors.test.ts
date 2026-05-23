@@ -212,6 +212,43 @@ describe('section collectors', () => {
     expect(data.articles.map((page) => page.href)).toEqual(['/newer/', '/older/', '/static/']);
   });
 
+  it('marks article cards as guides with preview images', () => {
+    const data = buildSectionCollectorPageData(withoutPriority(sectionCollectorDefinitions.cooling), [
+      createSection('Candidates', [
+        createPage({
+          href: '/cooling/how-hot-is-too-hot-for-dogs/',
+          pageType: 'collector',
+          collectorSubtype: 'article',
+          topics: ['heat-safety'],
+        }),
+      ]),
+    ]);
+    const guideCard = data.body.sections[0]?.cards[0];
+
+    expect(guideCard).toEqual(expect.objectContaining({
+      cardType: 'article',
+      badgeLabel: 'Guide',
+      image: '/og-default.jpg',
+      linkLabel: 'Read the guide ->',
+    }));
+  });
+
+  it('keeps converter cards compact without guide imagery', () => {
+    const data = buildSectionCollectorPageData(withoutPriority(sectionCollectorDefinitions.cooling), [
+      createSection('Candidates', [
+        createPage({ href: '/cooling/cooling-mats/', topics: ['cooling-mats'] }),
+      ]),
+    ]);
+    const converterCard = data.body.sections[0]?.cards[0];
+
+    expect(converterCard).toEqual(expect.objectContaining({
+      cardType: 'converter',
+      image: undefined,
+      badgeLabel: undefined,
+      linkLabel: 'Compare picks ->',
+    }));
+  });
+
   it('keeps every indexable static converter on at least one section collector', () => {
     const converters = staticSitemapSections
       .flatMap((section) => section.pages)

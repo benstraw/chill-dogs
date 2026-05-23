@@ -8,6 +8,9 @@ export interface CollectorCard {
   linkLabel: string;
   dataToPage: string;
   dataCategory?: string;
+  cardType: TopicSectionPageType;
+  image?: string;
+  badgeLabel?: string;
 }
 
 export interface CollectorSection {
@@ -504,6 +507,8 @@ function toStartCard(page: SitemapPage, definition: SectionCollectorDefinition):
 }
 
 function toCollectorCard(page: SitemapPage): CollectorCard {
+  const cardType = getTopicSectionPageType(page);
+
   return {
     href: page.href,
     title: page.relatedLabel ?? page.baseTitle,
@@ -511,6 +516,9 @@ function toCollectorCard(page: SitemapPage): CollectorCard {
     linkLabel: getLinkLabel(page),
     dataToPage: page.href,
     dataCategory: getDataCategory(page.href),
+    cardType,
+    image: cardType === 'article' ? page.preview.image : undefined,
+    badgeLabel: cardType === 'article' ? 'Guide' : undefined,
   };
 }
 
