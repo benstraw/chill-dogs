@@ -42,6 +42,7 @@ const routingCards = [
   <section class="subscribe-flow container">
     <div class="subscribe-panel">
       <p class="eyebrow">Newsletter</p>
+      <h1>{title}</h1>
       <EmailSignup
         placement="homepage_inline"
         pageSlug={ROUTES.subscribe}
@@ -87,6 +88,11 @@ const routingCards = [
     font-weight: var(--weight-bold);
     letter-spacing: 0.12em;
     text-transform: uppercase;
+  }
+
+  .subscribe-panel h1 {
+    margin: 0;
+    font-size: var(--text-3xl);
   }
 
   .routing-grid {

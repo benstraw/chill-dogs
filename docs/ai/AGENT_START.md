@@ -3,7 +3,7 @@ title: Agent Operating Brief
 type: start
 domain: global
 status: active
-updated: 2026-05-03
+updated: 2026-05-23
 tags:
   - chill-dogs
   - operating-brief
@@ -60,7 +60,7 @@ Every page is exactly one of these. Do not invent new types.
 | `attractor` | Convert paid or social campaign traffic |
 | `informer` | Administrative and compliance pages — no revenue goal |
 
-For collectors: use `collectorSubtype: 'section'` for hub pages and `collectorSubtype: 'article'` for prose guides.
+For collectors: use `collectorSubtype: 'section'` for section collector pages and `collectorSubtype: 'article'` for prose guides.
 
 Do not use the word "hub" in specs, code, or comments. Use `collector`.
 

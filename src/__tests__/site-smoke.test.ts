@@ -115,6 +115,38 @@ describe('site smoke tests', () => {
     expect(links).toContain('/comforting/best-travel-crates-for-road-trips/');
   });
 
+  it('renders dynamic section collector inventories for articles and converters', () => {
+    const coolingDoc = readBuiltPage(path.join('cooling', 'index.html'));
+    const calmingDoc = readBuiltPage(path.join('calming', 'index.html'));
+    const comfortDoc = readBuiltPage(path.join('comforting', 'index.html'));
+    const getLinks = (doc: Document) =>
+      Array.from(doc.querySelectorAll<HTMLAnchorElement>('a')).map((link) => link.getAttribute('href'));
+    const getHeadings = (doc: Document) =>
+      Array.from(doc.querySelectorAll<HTMLHeadingElement>('.section-heading')).map((heading) => heading.textContent);
+    const coolingGuideCards = Array.from(coolingDoc.querySelectorAll<HTMLAnchorElement>('.cat-card--guide'));
+    const coolingConverterCards = Array.from(coolingDoc.querySelectorAll<HTMLAnchorElement>('.cat-card--converter'));
+
+    expect(getLinks(coolingDoc)).toEqual(expect.arrayContaining([
+      '/cooling/dog-travel-hydration/',
+      '/travel/dog-road-trip-gear/',
+    ]));
+    expect(getLinks(calmingDoc)).toEqual(expect.arrayContaining([
+      '/calming/cbd-for-dogs/',
+      '/gear/best-dog-gps-trackers/',
+    ]));
+    expect(getLinks(comfortDoc)).toEqual(expect.arrayContaining([
+      '/comforting/best-airline-approved-dog-carriers/',
+      '/travel/how-to-fly-with-a-dog/',
+    ]));
+    expect(getHeadings(coolingDoc)).toEqual(expect.arrayContaining(['Car Cooling & Travel Hydration', 'Wearable Cooling']));
+    expect(getHeadings(calmingDoc)).toEqual(expect.arrayContaining(['Car Anxiety & Travel Stress', 'Escape Risk & Tracking']));
+    expect(getHeadings(comfortDoc)).toEqual(expect.arrayContaining(['Calming & Orthopedic Beds', 'Flying, Carriers & Travel Prep']));
+    expect(coolingGuideCards.length).toBeGreaterThan(0);
+    expect(coolingGuideCards[0]?.querySelector('.cat-card-badge')?.textContent).toBe('Guide');
+    expect(coolingGuideCards[0]?.querySelector('img')?.getAttribute('src')).toBeTruthy();
+    expect(coolingConverterCards[0]?.querySelector('img')).toBeNull();
+  });
+
   it('renders derived InternalLinkStrip links on migrated pages', () => {
     const cases = [
       {

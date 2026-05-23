@@ -2,8 +2,9 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import HeroExperiment from '@components/modules/HeroExperiment.astro';
 import CalmingHubHeroFireworks from '@components/modules/CalmingHubHeroFireworks.astro';
-import CalmingHubBody from '@components/modules/CalmingHubBody.astro';
+import CollectorBody from '@components/modules/CollectorBody.astro';
 import type { HeroVariant } from '@components/modules/HeroExperiment.astro';
+import { getSectionCollectorPageData } from '@data/section-collectors';
 import { ROUTES } from '@data/routes';
 
 export function getStaticPaths() {
@@ -12,40 +13,41 @@ export function getStaticPaths() {
 }
 
 const { variant } = Astro.params as { variant: HeroVariant };
+const { definition, body } = await getSectionCollectorPageData('calming');
 
 /**
- * Variant pages are experiment copies of /calming/.
+ * Variant pages are experiment copies of the calming collector.
  * - canonical: /calming/ (prevents SEO duplication)
  * - robots: noindex, follow (crawl links but don't index)
  */
-const canonicalUrl = new URL('/calming/', Astro.site).href;
+const canonicalUrl = new URL(ROUTES.calmingHub, Astro.site).href;
 ---
 
 <BaseLayout
-  title="Calm & Comfort"
-  description="Explore Chill-Dogs calming guides for anxious dogs, including ThunderShirt, calming chews, lick mats, and snuffle mats."
+  title={definition.title}
+  description={definition.description}
   canonicalUrl={canonicalUrl}
-  navAccent="var(--color-sage)"
+  navAccent={definition.navAccent}
 >
   <meta slot="head" name="robots" content="noindex, follow" />
 
   {variant === 'h' ? (
     <CalmingHubHeroFireworks
-      headline="Calm Starts Here"
-      subhead="Anxiety vests, calming chews, and enrichment distractions for nervous dogs"
-      primaryCta={{ label: 'See top calming picks', href: ROUTES.calmingTop }}
-      secondaryCta={{ label: 'What to try first', href: ROUTES.calmingAlternatives }}
+      headline={definition.hero.headline}
+      subhead={definition.hero.subhead}
+      primaryCta={definition.hero.primaryCta}
+      secondaryCta={definition.hero.secondaryCta}
     />
   ) : (
     <HeroExperiment
       variant={variant}
-      theme="calming"
-      headline="Calm Starts Here"
-      subhead="Anxiety vests, calming chews, and enrichment distractions for nervous dogs"
-      primaryCta={{ label: 'See top calming picks', href: ROUTES.calmingTop }}
-      secondaryCta={{ label: 'What to try first', href: ROUTES.calmingAlternatives }}
+      theme={definition.hero.theme}
+      headline={definition.hero.headline}
+      subhead={definition.hero.subhead}
+      primaryCta={definition.hero.primaryCta}
+      secondaryCta={definition.hero.secondaryCta}
     />
   )}
 
-  <CalmingHubBody />
+  <CollectorBody config={body} />
 </BaseLayout>

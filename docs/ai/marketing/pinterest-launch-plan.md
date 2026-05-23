@@ -3,7 +3,7 @@ title: Pinterest Launch Plan
 type: canonical
 domain: marketing
 status: active
-updated: 2026-05-03
+updated: 2026-05-23
 tags:
   - chill-dogs
   - pinterest
@@ -72,6 +72,23 @@ Topic ideas by category:
 
 ---
 
+## Pin design and copy rules
+
+These rules apply to every Pinterest pin image, including article pins, converter pins, seasonal repins, and one-off campaign pins.
+
+1. Avoid AI-overused filler words in visible pin copy. In particular, avoid `actually` unless it is genuinely needed for meaning or contrast. Also be cautious with generic AI-ish wording like "unlock," "transform," "elevate," "game-changer," "must-have," "ultimate," "revolutionary," and "effortless."
+2. Every pin must include the white logo circle for the Chill-Dogs logo. Place it in the branded footer area, usually near the lower-right.
+3. The branded footer must clearly say `chill-dogs`.
+4. Do not add a footer subheader, tagline, slogan, or support line unless the task requests it. Avoid lines like "Real info. Real dogs. Real support."
+5. Do not use photorealistic dogs. Use flat-vector, cartoon, icon, silhouette, or infographic-style dog art.
+6. Create one standalone pin at a time. Do not create grouped pins, grids, side-by-side alternatives, or multi-pin preview sheets.
+7. Use a true vertical Pinterest composition, ideally 2:3.
+8. Use the established Chill-Dogs Pinterest visual system: sage green, cream, navy, muted olive, botanical accents, and a clean calming-guide infographic style.
+9. Do not make medical or certainty claims. Avoid language such as "CBD will calm your dog," "safe dosage," "vet-approved," "cure," or any promise of a specific health result.
+10. For CBD, anxiety, medication, side effect, or health-adjacent pins, use careful article-aligned evidence language. Emphasize limited evidence for anxiety, product quality checks, possible side effects, medication interactions, and "talk to your vet" guidance.
+
+---
+
 ## Posting cadence
 
 - **Launch:** 3–5 pins per week until all published pages are covered
@@ -94,7 +111,7 @@ Example:
 
 ```
 The back seat runs 10–15 °F hotter than the front cabin — even with AC on.
-Here's what actually works for keeping your dog safe and cool in the car.
+Here are practical ways to help keep your dog safer and cooler in the car.
 Full guide and product picks on Chill-Dogs.
 
 #DogCooling #DogCarSafety #DogLife
@@ -152,6 +169,10 @@ The Pinterest conversion pixel (`PUBLIC_PINTEREST_TAG_ID`) loads only on `VERCEL
 
 - Staging URLs as pin destinations (links will be wrong or broken)
 - Vet-authority claims in pin descriptions — see [`../writing/medical-and-vet-claim-guardrails.md`](../writing/medical-and-vet-claim-guardrails.md)
+- Missing logo circle or missing `chill-dogs` footer text
+- Photorealistic dog images
+- Footer taglines unless specifically requested
+- Medical certainty or CBD cure/calming claims
 - Fake urgency ("Buy before it's gone")
 - More than 4 hashtags
 - Duplicate pins to the same URL within 30 days

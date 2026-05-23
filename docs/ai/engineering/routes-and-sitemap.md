@@ -3,7 +3,7 @@ title: Routes and Sitemap
 type: canonical
 domain: engineering
 status: active
-updated: 2026-05-03
+updated: 2026-05-23
 tags:
   - chill-dogs
   - engineering
@@ -87,6 +87,7 @@ The `canonicalPath` field is the page URL and drives:
 
 Combines static registry + auto-discovered MDX articles at build time. This is the source of truth for:
 - Related content derivation (`src/utils/related-pages.ts`)
+- Section collector card inventories and `CollectionPage.hasPart` schema (`src/data/section-collectors.ts`)
 - RSS feed
 - `llms.txt`
 
@@ -108,6 +109,8 @@ Use these frontmatter/config fields to control related content:
 | `relatedLabel` | Shorter text for InternalLinkStrip pills when the page title is too long |
 
 `InternalLinkStrip` and `RelatedGuides` use `currentHref` prop for automated derivation. Do not add new manual related arrays.
+
+Section collectors (`/cooling/`, `/calming/`, `/comforting/`) also use sitemap topics. Their definitions in `src/data/section-collectors.ts` match indexable converters and article collectors by topic, group cards into first-match topic subsections, allow cross-topic pages to appear in multiple collectors, and preserve converter-first ordering within each subsection.
 
 ---
 

@@ -62,13 +62,21 @@ site_system:
       collector_subtype: "section"
       target_action: "Route heat-intent traffic to cooling converters"
       metric: "collector_to_converter_click to cooling converters"
+      notes: "Section collector uses SectionCollectorPage with dynamic topic-matched converter and article cards from the complete sitemap inventory, grouped into topic subsections for car cooling, mats, wearables, frozen enrichment, heat safety, and related cooling paths."
 
     - name: "Calming"
       type: "collector"
       collector_subtype: "section"
       target_action: "Route anxiety-intent traffic to calming converters"
       metric: "collector_to_converter_click to calming converters"
-      notes: "Collector routes directly to general calming picks, ThunderShirt alternatives, the travel-focused car-anxiety converter, and is supported by article collectors for crate training and fireworks calm-room setup."
+      notes: "Section collector uses SectionCollectorPage with dynamic topic-matched converter and article cards from the complete sitemap inventory, grouped into topic subsections for car anxiety, fireworks/noise, crate comfort, escape-risk tracking, research/safety, and calming comparisons."
+
+    - name: "Comfort"
+      type: "collector"
+      collector_subtype: "section"
+      target_action: "Route rest, crate, carrier, and travel-comfort intent to comfort converters"
+      metric: "collector_to_converter_click to comfort converters"
+      notes: "Section collector uses SectionCollectorPage with dynamic topic-matched converter and article cards from the complete sitemap inventory, grouped into topic subsections for beds, crates, flying/carriers/travel prep, and related comfort paths."
 
     - name: "Cooling converters"
       type: "converter"
@@ -282,6 +290,7 @@ site_system:
       - "CoolingConverterPage"
       - "CalmingConverterPage"
       - "RelaxationConverterPage"
+      - "SectionCollectorPage"
       - "CollectorBody"
       - "ComparisonTable"
       - "CoolingProductGrid"
@@ -329,7 +338,7 @@ site_system:
     friction_points:
       - "Route or tracking metadata mismatches"
       - "Duplicated page scaffolding that drifts over time"
-      - "Unused modules that create implementation confusion"
+      - "Static collector card lists that drift from the sitemap inventory"
       - "Collector pages without clear converter paths"
 
   email_capture_flow:
@@ -362,6 +371,7 @@ site_system:
     hosting: "Static build deployment"
     seo_strategy: "collector captures intent; converter monetizes intent; variant routes remain canonicalized and noindex"
     sitemap_inventory: "src/data/sitemap-inventory.ts composes staticSitemapSections with article MDX collection entries at build time; future related-content derivation should use the complete inventory instead of static-only sections."
+    section_collectors: "src/data/section-collectors.ts defines cooling, calming, and comfort collector metadata, topic subsection grouping, topic coverage, priority ordering, dynamic CollectorBody card inventories, and CollectionPage hasPart schema from the complete sitemap inventory."
 
   redirects:
     # Production: vercel.json → redirects array (true HTTP 301 at Vercel edge).

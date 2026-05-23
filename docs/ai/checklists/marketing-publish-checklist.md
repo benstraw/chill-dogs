@@ -3,7 +3,7 @@ title: Marketing Publish Checklist
 type: checklist
 domain: checklists
 status: active
-updated: 2026-05-03
+updated: 2026-05-23
 tags:
   - chill-dogs
   - checklist
@@ -36,6 +36,14 @@ Before publishing any marketing content — Pinterest pin, newsletter email, or 
 - [ ] UTM parameters present for all campaign links — format: `?utm_source=pinterest&utm_medium=social&utm_campaign=<name>`
 - [ ] Pinterest title is clear and keyword-aware (searchable terms, not vague)
 - [ ] Pinterest description is useful and informative — not spammy or keyword-stuffed
+- [ ] Pinterest pin image uses a vertical 2:3-style composition
+- [ ] Pinterest pin is one standalone pin, not a grid, grouped set, or side-by-side option sheet
+- [ ] Pinterest pin includes the white logo circle near the branded footer area
+- [ ] Pinterest footer clearly says `chill-dogs`
+- [ ] Pinterest footer does not include a subheader, tagline, or slogan unless requested
+- [ ] Pinterest pin avoids AI-overused filler words unless clearly needed, especially `actually`, "unlock," "transform," "elevate," "game-changer," "must-have," "ultimate," "revolutionary," and "effortless"
+- [ ] Pinterest pin uses the established sage, cream, navy, muted olive, botanical, calming-guide visual system
+- [ ] Pinterest pin uses flat-vector, cartoon, icon, silhouette, or infographic-style dogs only — no photorealistic dogs
 - [ ] Hashtags limited to 4 or fewer and relevant to the content
 - [ ] CTA is soft and informational — not sales pressure
   - Use: "See Full Guide," "See Comparison," "Read the Guide," "Learn More"
@@ -44,6 +52,8 @@ Before publishing any marketing content — Pinterest pin, newsletter email, or 
 - [ ] Newsletter links use Markdown format: `[Link text](https://www.chill-dogs.com/path/)`
 - [ ] Campaign content routes to a relevant collector or converter page — not directly to Amazon
 - [ ] No vet-authority language in marketing copy ("vet-approved," "vet-recommended," "clinically proven")
+- [ ] No medical overclaiming in Pinterest copy or image text ("CBD will calm your dog," "safe dosage," "cure," certainty language)
+- [ ] CBD, anxiety, medication, and side-effect pins use careful article-aligned evidence language: limited evidence, product quality, possible side effects, medication interactions, and "talk to your vet"
 - [ ] No fake urgency language ("Act now," "Limited time," "Before it's gone")
 
 ---

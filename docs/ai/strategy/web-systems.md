@@ -3,7 +3,7 @@ title: Web Systems Framework — Applied to Chill-Dogs
 type: canonical
 domain: strategy
 status: active
-updated: 2026-05-03
+updated: 2026-05-23
 tags:
   - chill-dogs
   - web-systems
@@ -53,7 +53,7 @@ Every page on the site belongs to exactly one type. Mixing types is not allowed.
 
 - **Purpose:** Capture organic search traffic via SEO and route it to converters.
 - **Two subtypes on this site:**
-  - `section` — hub pages (`/cooling/`, `/calming/`). Pure routing intent. No prose. Must route above the fold to a converter.
+  - `section` — section collector pages (`/cooling/`, `/calming/`, `/comforting/`). Pure routing intent. No prose. Must route above the fold to a converter.
   - `article` — long-form informational guides. Full prose, TOC, FAQ, InternalLinkStrip to converters.
 - **Metric:** Organic traffic volume + % routed to converters.
 - **Chill-Dogs examples:** `/cooling/` (section), `/cooling/keep-dog-cool-in-car/` (article)
@@ -91,7 +91,7 @@ All pages are built from modules.
 
 Reusable, content-agnostic. Build for reuse. Avoid hardcoded content.
 
-Examples: `Hero`, `CollectorBody`, `FAQ`, `Disclosure`, `InternalLinkStrip`, `Toc`, `CoolingProductCard`, `RelaxationProductCard`
+Examples: `Hero`, `SectionCollectorPage`, `CollectorBody`, `FAQ`, `Disclosure`, `InternalLinkStrip`, `Toc`, `CoolingProductCard`, `RelaxationProductCard`
 
 ### Showstopper modules
 
@@ -121,7 +121,7 @@ Examples: `HomepageHero` variants, collector variant routes, Road Trip collector
 The ideal path is two clicks:
 
 ```
-Homepage/hub hero CTA → Collector → Converter → Amazon
+Homepage or section collector hero CTA → Converter → Amazon
 ```
 
 Rules:

@@ -1,37 +1,5 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
-import HeroExperiment from '@components/modules/HeroExperiment.astro';
-import CalmingHubBody from '@components/modules/CalmingHubBody.astro';
-import JsonLd from '@components/JsonLd.astro';
-
-const collectionSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'CollectionPage',
-  name: 'Calming Products for Anxious Dogs',
-  url: 'https://www.Chill-Dogs.com/calming/',
-  description: 'Explore Chill-Dogs calming guides for anxious dogs, including ThunderShirt, calming chews, lick mats, and snuffle mats.',
-  hasPart: [
-    { '@type': 'WebPage', name: 'Best Calming Products for Anxious Dogs', url: 'https://www.Chill-Dogs.com/calming/best-calming-products-for-anxious-dogs/' },
-    { '@type': 'WebPage', name: 'Best ThunderShirt Alternatives for Dogs', url: 'https://www.Chill-Dogs.com/calming/best-thundershirt-alternatives/' },
-  ],
-};
+import SectionCollectorPage from '@components/modules/SectionCollectorPage.astro';
 ---
 
-<BaseLayout
-  title="Calm & Comfort"
-  ogTitle="Calming Products for Dogs | ThunderShirts, Treats & More"
-  description="Explore Chill-Dogs calming guides for anxious dogs, including ThunderShirt, calming chews, lick mats, and snuffle mats."
-  navAccent="var(--color-sage)"
->
-  <JsonLd slot="head" schema={collectionSchema} />
-  <HeroExperiment
-    variant="c"
-    theme="calming"
-    headline="Calm Starts Here"
-    subhead="Anxiety vests, calming chews, and enrichment distractions for nervous dogs"
-    primaryCta={{ label: 'See top calming picks', href: '/calming/best-calming-products-for-anxious-dogs/' }}
-    secondaryCta={{ label: 'What to try first', href: '/calming/best-thundershirt-alternatives/' }}
-  />
-
-  <CalmingHubBody />
-</BaseLayout>
+<SectionCollectorPage collectorKey="calming" />

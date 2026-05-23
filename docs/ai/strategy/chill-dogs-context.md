@@ -3,7 +3,7 @@ title: Chill-Dogs Site Context
 type: canonical
 domain: strategy
 status: active
-updated: 2026-05-03
+updated: 2026-05-23
 tags:
   - chill-dogs
   - context
@@ -83,9 +83,9 @@ Road trips, air travel, GPS tracking, safety.
 - `/` — Home: routes to cooling, calming, comfort, travel
 
 ### Collectors (section)
-- `/cooling/` — Cooling hub
-- `/calming/` — Calming hub
-- `/comforting/` — Comfort & Rest hub
+- `/cooling/` — Cooling section collector
+- `/calming/` — Calming section collector
+- `/comforting/` — Comfort & Rest section collector
 
 ### Collectors (article)
 - `/cooling/keep-dog-cool-in-car/`

@@ -3,7 +3,7 @@ title: Engineering Architecture
 type: canonical
 domain: engineering
 status: active
-updated: 2026-05-03
+updated: 2026-05-23
 tags:
   - chill-dogs
   - engineering
@@ -99,6 +99,7 @@ Converter pages are configured from data files:
 - `src/data/cooling-converter-pages.ts` — cooling converter copy, CTA targets, FAQ sets
 - `src/data/calming-converter-pages.ts` — calming converter config
 - `src/data/relaxation-converter-pages.ts` — comfort/relaxation converter config
+- `src/data/section-collectors.ts` — cooling, calming, and comfort section collector metadata, hero config, topic subsection grouping, topic coverage, priority ordering, dynamic card inventory, and `CollectionPage.hasPart` schema
 
 When a shared product appears on multiple converter pages, update the canonical product data file — not individual page configs — unless the change is explicitly page-specific.
 
@@ -155,10 +156,10 @@ Three phases run automatically via `bun run build`:
 
 ## A/B experiment variants
 
-- `/cooling/v/{a–g}/` — 7 cooling hub hero variants
-- `/calming/v/{a–g}/` — 7 calming hub hero variants
+- `/cooling/v/{a–i}/` — cooling section collector hero variants
+- `/calming/v/{a–h}/` — calming section collector hero variants
 - `/v/{v1–v5}/` — 5 homepage hero variants
-- All are `noindex` with canonical pointing to the production hub URL
+- All are `noindex` with canonical pointing to the production collector URL
 - Winners promoted to default; variant URLs retired
 
 ---

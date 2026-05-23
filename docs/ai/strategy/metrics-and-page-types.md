@@ -3,7 +3,7 @@ title: Keystone Metric and Page Type Definitions
 type: canonical
 domain: strategy
 status: active
-updated: 2026-05-03
+updated: 2026-05-23
 tags:
   - chill-dogs
   - page-types
@@ -72,10 +72,12 @@ Every page, component, and content decision must trace back to one of these two 
 
 #### `collectorSubtype: 'section'`
 
-Hub pages that aggregate and route intent.
+Section collector pages that aggregate and route intent.
 
 **Required behavior:**
-- Use `CollectorBody` module with card grid config
+- Use `SectionCollectorPage` with `src/data/section-collectors.ts` definitions
+- Render `CollectorBody` from dynamic topic-matched converter and article inventory grouped into topic subsections
+- Derive cards and `CollectionPage.hasPart` from the complete sitemap inventory
 - Above-the-fold route to a converter (no prose above fold)
 - Pure routing intent — no prose content
 - No converter-style comparison implementations
