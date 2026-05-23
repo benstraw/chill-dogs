@@ -130,7 +130,7 @@ export const staticSitemapSections: SitemapSection[] = [
         href: ROUTES.coolingHub,
         pageType: 'collector',
         collectorSubtype: 'section',
-        topics: ['cooling'],
+        topics: ['cooling', 'heat-safety', 'car-cooling', 'cooling-mats', 'cooling-wearables', 'frozen-toys', 'hydration'],
         relatedLabel: 'Cooling Relief',
       }),
       createSitemapPage({
@@ -141,7 +141,7 @@ export const staticSitemapSections: SitemapSection[] = [
         href: ROUTES.calmingHub,
         pageType: 'collector',
         collectorSubtype: 'section',
-        topics: ['calming', 'anxiety'],
+        topics: ['calming', 'anxiety', 'car-anxiety', 'crate-training', 'fireworks', 'tracking', 'gps-tracking', 'lost-dog-safety'],
         relatedLabel: 'Calm & Comfort',
       }),
       createSitemapPage({
@@ -152,7 +152,7 @@ export const staticSitemapSections: SitemapSection[] = [
         href: ROUTES.comfortHub,
         pageType: 'collector',
         collectorSubtype: 'section',
-        topics: ['comfort', 'sleep', 'beds', 'crates'],
+        topics: ['comfort', 'sleep', 'beds', 'orthopedic', 'crates', 'crate-training', 'flying', 'carriers', 'travel'],
         relatedLabel: 'Comfort & Rest',
       }),
     ],

@@ -115,6 +115,27 @@ describe('site smoke tests', () => {
     expect(links).toContain('/comforting/best-travel-crates-for-road-trips/');
   });
 
+  it('renders dynamic section collector inventories for articles and converters', () => {
+    const coolingDoc = readBuiltPage(path.join('cooling', 'index.html'));
+    const calmingDoc = readBuiltPage(path.join('calming', 'index.html'));
+    const comfortDoc = readBuiltPage(path.join('comforting', 'index.html'));
+    const getLinks = (doc: Document) =>
+      Array.from(doc.querySelectorAll<HTMLAnchorElement>('a')).map((link) => link.getAttribute('href'));
+
+    expect(getLinks(coolingDoc)).toEqual(expect.arrayContaining([
+      '/cooling/dog-travel-hydration/',
+      '/travel/dog-road-trip-gear/',
+    ]));
+    expect(getLinks(calmingDoc)).toEqual(expect.arrayContaining([
+      '/calming/cbd-for-dogs/',
+      '/gear/best-dog-gps-trackers/',
+    ]));
+    expect(getLinks(comfortDoc)).toEqual(expect.arrayContaining([
+      '/comforting/best-airline-approved-dog-carriers/',
+      '/travel/how-to-fly-with-a-dog/',
+    ]));
+  });
+
   it('renders derived InternalLinkStrip links on migrated pages', () => {
     const cases = [
       {

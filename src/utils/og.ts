@@ -72,7 +72,11 @@ export function ogSlugFromPathname(pathname: string): string {
   return cleanPath.replace(/\//g, '-');
 }
 
-export function isAutoOgEligible({ pathname }: AutoOgOptions): boolean {
+export function isAutoOgEligible({ pathname, noindex }: AutoOgOptions): boolean {
+  if (noindex) {
+    return false;
+  }
+
   if (pathname === '/404/' || pathname === '/404') {
     return false;
   }

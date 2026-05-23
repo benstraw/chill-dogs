@@ -3,7 +3,7 @@ title: Analytics Events
 type: canonical
 domain: engineering
 status: active
-updated: 2026-05-03
+updated: 2026-05-23
 tags:
   - chill-dogs
   - engineering
@@ -82,7 +82,7 @@ track('hero_impression', { variant: 'a', page: 'cooling' });
 | Event | Trigger | Key Properties |
 |---|---|---|
 | `amazon_outbound_click` | Click on any `AffiliateLink` component | `asin`, `product_name`, `page_slug`, `position` |
-| `hero_cta_click` | Click on hub page hero CTA | `variant`, `page`, `cta` (primary/secondary) |
+| `hero_cta_click` | Click on section collector or variant hero CTA | `variant`, `page`, `cta` (primary/secondary) |
 | `hero_impression` | Hero is 50% visible (IntersectionObserver) | `variant`, `page` |
 | `collector_to_converter_click` | Click on internal link from collector to converter | `from_slug`, `to_slug` |
 | `toc_click` | Click on table of contents link | `anchor`, `page_slug` |
