@@ -280,6 +280,7 @@ site_system:
         - "/subscribe/"
         - "/subscribe/thanks/"
         - "/subscribe/confirmed/"
+        - "/shelter-dog-charities/"
       notes: "/admin/products/ is the canonical product inventory review page. Every product in any product data file must flow into this page through src/data/product-catalog.ts; do not hardcode product rows in the admin route. /content-sitemap/ is a hidden editor page that previews the complete build-time sitemap inventory from src/data/sitemap-inventory.ts, which merges static pages with article collection pages and final built share metadata, including post-build OG image rewrites."
 
   modules:

@@ -612,6 +612,14 @@ export const staticSitemapSections: SitemapSection[] = [
         pageType: 'informer',
         noindex: true,
       }),
+      createSitemapPage({
+        baseTitle: 'Shelter Dog Charities',
+        ogTitle: 'Shelter Dog Charities | Dogs We Help | Chill-Dogs',
+        description:
+          "Anyone can help make a shelter dog's life more chill. These are our favorite charities working to improve the lives of dogs inside and outside of shelters.",
+        href: ROUTES.shelterCharities,
+        pageType: 'informer',
+      }),
     ],
   },
 ];
