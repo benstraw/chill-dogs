@@ -15,6 +15,7 @@ relatedLabel: 'CBD & Calming Guide'
 import Toc from '@components/modules/Toc.astro';
 import FAQ from '@components/modules/FAQ.astro';
 import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
+import PinterestSave from '@components/modules/PinterestSave.astro';
 import { ROUTES } from '@data/routes';
 
 export const pageSlug = 'cbd-for-dogs';
@@ -138,6 +139,17 @@ export const primarySources = [
     <p>
       <strong>Talk to your veterinarian before giving CBD to your dog, especially if your dog has seizures, chronic pain, liver disease, cancer, or takes medication.</strong>
     </p>
+
+    <PinterestSave
+      title="Is CBD Right for Your Dog?"
+      description="A quick visual guide to the questions that matter before deciding whether CBD belongs in your dog's care plan."
+      imageSrc="/images/pinterest/is-cbd-right-for-your-dog.png"
+      imageAlt="Pinterest pin titled Is CBD Right for Your Dog, with a dog beside CBD oil and factors including the dog, reason, product, dose, plan, and veterinary guidance."
+      canonicalPath="/calming/cbd-for-dogs/"
+      pageSlug={pageSlug}
+      placement="intro-decision-framing"
+      ctaLabel="Save to Pinterest"
+    />
 
     <h2 id="is-cbd-legal-for-dogs">Is CBD Legal for Dogs?</h2>
     <p>
@@ -266,6 +278,18 @@ export const primarySources = [
       <li><strong>What product quality markers should I require?</strong> (COA, third-party testing, clear cannabinoid labeling, lot number.)</li>
       <li><strong>When should I stop and call the vet?</strong> Establish a clear threshold before you start.</li>
     </ul>
+
+    <PinterestSave
+      title="7 Questions to Ask Your Vet Before Trying CBD"
+      description="A saveable checklist of vet questions to bring up before giving CBD to your dog."
+      imageSrc="/images/pinterest/7-questions-to-ask-your-vet.png"
+      imageAlt="Pinterest checklist pin titled 7 Questions to Ask Your Vet Before Trying CBD, listing safety, medication, product, dose, side effect, and reassessment questions."
+      canonicalPath="/calming/cbd-for-dogs/"
+      pageSlug={pageSlug}
+      placement="vet-conversation-checklist"
+      ctaLabel="Save checklist to Pinterest"
+    />
+
     <p>
       For dogs with joint pain and limited mobility, a quality resting surface is important. Our guide to <a href={ROUTES.comfortOrthopedicBeds} data-track="collector_to_converter_click" data-from-page={pageSlug} data-to-page={ROUTES.comfortOrthopedicBeds} data-link-position="section">orthopedic dog beds</a> suggests options that reduce pressure on arthritic joints.
     </p>
