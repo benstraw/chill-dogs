@@ -3,7 +3,7 @@ title: Analytics Events
 type: canonical
 domain: engineering
 status: active
-updated: 2026-05-23
+updated: 2026-05-24
 tags:
   - chill-dogs
   - engineering
@@ -90,6 +90,8 @@ track('hero_impression', { variant: 'a', page: 'cooling' });
 | `email_signup_view` | Email signup form is viewed | — |
 | `email_signup_start` | Email field is focused | — |
 | `email_signup_submit` | Form submitted | — |
+| `search_query` | User search produces results (fired after 150 ms debounce) | `query`, `result_count`, `filter` |
+| `search_result_click` | User clicks a page result card from `/search/` | `result_href`, `result_title`, `result_type`, `query` |
 
 ---
 
