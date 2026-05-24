@@ -556,6 +556,13 @@ export const staticSitemapSections: SitemapSection[] = [
     description: 'Informer pages — compliance, trust, contact, and product inventory review. New products must flow into Product Catalog via data files, not hardcoded admin rows.',
     pages: [
       createSitemapPage({
+        baseTitle: 'Search',
+        description: 'Search all Chill-Dogs guides and products.',
+        href: ROUTES.search,
+        pageType: 'informer',
+        noindex: true,
+      }),
+      createSitemapPage({
         baseTitle: 'Product Catalog (Admin)',
         description: 'Curated gear, gift guides, and party ideas for dogs who live the good life.',
         href: '/admin/products/',
