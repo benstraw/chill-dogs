@@ -461,6 +461,23 @@ describe('site smoke tests', () => {
     expect(affiliateDoc.body.textContent).toContain('no additional cost to you');
   });
 
+  it('renders search as a noindex collector with internal product result routes', () => {
+    const searchDoc = readBuiltPage(path.join('search', 'index.html'));
+    const searchIndex = JSON.parse(readBuiltAsset('search-index.json'));
+    const productItems = searchIndex.filter((item: { type: string }) => item.type === 'product');
+
+    expect(searchDoc.querySelector('meta[name="robots"]')?.getAttribute('content'))
+      .toBe('noindex, nofollow');
+    expect(searchDoc.querySelectorAll('a[href*="amazon."]').length).toBe(0);
+    expect(productItems.length).toBeGreaterThan(0);
+
+    for (const item of productItems) {
+      expect(item.href).toMatch(/^\/shop\/\?q=/);
+      expect(item.href).not.toContain('amazon.');
+      expect(item).not.toHaveProperty('amazonUrl');
+    }
+  });
+
   it('renders subscribe flow pages without site chrome and keeps them noindex', () => {
     const subscribeDoc = readBuiltPage(path.join('subscribe', 'index.html'));
     const thanksDoc = readBuiltPage(path.join('subscribe', 'thanks', 'index.html'));

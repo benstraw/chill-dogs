@@ -60,12 +60,13 @@ type SearchIndexItem =
     }
   | {
       type: 'product';
+      id: string;
       name: string;
       pillar: string;        // 'cooling' | 'calming' | 'comfort' | 'gear'
       category: string;
       bestFor: string;
       bullets: string;       // bullets array joined to a single string for Fuse weight matching
-      amazonUrl: string;
+      href: string;          // Internal /shop/?q=... route
     };
 ```
 
@@ -86,41 +87,41 @@ new Fuse(items, {
     { name: 'category',    weight: 0.10 },
     { name: 'topics',      weight: 0.10 },
   ],
-  threshold: 0.35,    // lower = stricter match
+  threshold: 0.2,     // lower = stricter match
   includeScore: true,
   minMatchCharLength: 2,
 })
 ```
 
-Threshold 0.35 is the working sweet spot: tight enough to avoid noise, loose enough for common misspellings like "bandana" vs "bandanas" or "orthopedic" vs "orthopaedic". Adjust if results feel too noisy or too sparse.
+Threshold 0.2 is the working setting: tight enough to avoid noisy product matches while preserving useful matches on names, topics, categories, and descriptions. Adjust if results feel too noisy or too sparse.
 
 ---
 
 ## Search page (`/search/`)
 
-- Page type: `informer`, `noindex: true`
-- Registered in `src/data/content-sitemap.ts` (Admin & Legal section)
+- Page type: `collector`, `noindex: true`
+- Registered in `src/data/content-sitemap.ts`
 - Registered in `src/data/routes.ts` as `ROUTES.search`
 - A magnifying-glass icon in `src/components/Header.astro` links to it
 
 ### UI features
 
 - **Search input** — debounced 150 ms; updates `?q=` URL param for shareable links
-- **Filter bar** — pill buttons: All / Guides (converter) / Hubs (collector) / Products
+- **Filter bar** — pill buttons: All / Guides (converter) / Collectors / Products
+- **Suggested paths** — static internal links to high-intent cooling, calming, comfort, and GPS tracker pages
 - **Result cards:**
-  - Page card — badge (Guide/Hub/Home/Info), title, description, "Read guide →" text link
-  - Product card — badge (Cooling/Calming/Comfort/Gear), name, bestFor, styled "Buy on Amazon" CTA button
-- **Zero-state** — "No results for …" message
+  - Page card — badge (Guide/Collector/Home/Info), title, description, page-type-specific CTA
+  - Product card — badge (Cooling/Calming/Comfort/Gear), name, bestFor, internal "View in shop →" link
+- **State handling** — loading, short-query, empty-result, filtered-empty, and index-fetch-error messages
 
 ### Analytics
 
 | Event | When |
 |---|---|
 | `search_query` | After debounce, when results render. Props: `query`, `result_count`, `filter` |
-| `search_result_click` | Click on a page result card. Props: `result_href`, `result_title`, `result_type`, `query` |
-| `amazon_outbound_click` | Click on any product Buy button. Props: `product_name` (via `data-track` + `data-product-name`) |
+| `search_result_click` | Click on a page or product result card. Props: `result_href`, `result_title`, `result_type`, `query` |
 
-The Amazon buy buttons in search results carry `data-affiliate="true"` and `data-track="amazon_outbound_click"` so they fire the same keystone event as all other affiliate links.
+Product results route internally to `/shop/?q=...`, where product cards render Amazon links through `AffiliateLink.astro` and fire the shared `amazon_outbound_click` event.
 
 ---
 
@@ -135,7 +136,7 @@ The Amazon buy buttons in search results carry `data-affiliate="true"` and `data
 - **New product pillar**: add to `productCatalogItems` — search index picks it up automatically
 - **New page section**: add to `staticSitemapSections` in `src/data/content-sitemap.ts` — search index picks it up automatically
 - **Relevance tuning**: adjust key weights or `threshold` in `src/pages/search.astro`
-- **Do not** add a sitemap entry or canonical link for `/search/` — it is noindex by design
+- **Do not** make `/search/` indexable or add direct Amazon links there — it is a noindex collector by design
 
 ---
 

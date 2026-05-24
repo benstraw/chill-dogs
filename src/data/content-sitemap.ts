@@ -155,6 +155,13 @@ export const staticSitemapSections: SitemapSection[] = [
         topics: ['comfort', 'sleep', 'beds', 'orthopedic', 'crates', 'crate-training', 'flying', 'carriers', 'travel'],
         relatedLabel: 'Comfort & Rest',
       }),
+      createSitemapPage({
+        baseTitle: 'Search',
+        description: 'Search all Chill-Dogs guides and products, then route to relevant product and guide pages.',
+        href: ROUTES.search,
+        pageType: 'collector',
+        noindex: true,
+      }),
     ],
   },
   {
@@ -555,13 +562,6 @@ export const staticSitemapSections: SitemapSection[] = [
     title: 'Admin & Legal',
     description: 'Informer pages — compliance, trust, contact, and product inventory review. New products must flow into Product Catalog via data files, not hardcoded admin rows.',
     pages: [
-      createSitemapPage({
-        baseTitle: 'Search',
-        description: 'Search all Chill-Dogs guides and products.',
-        href: ROUTES.search,
-        pageType: 'informer',
-        noindex: true,
-      }),
       createSitemapPage({
         baseTitle: 'Product Catalog (Admin)',
         description: 'Curated gear, gift guides, and party ideas for dogs who live the good life.',

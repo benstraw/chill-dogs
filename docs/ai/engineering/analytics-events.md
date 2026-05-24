@@ -91,7 +91,7 @@ track('hero_impression', { variant: 'a', page: 'cooling' });
 | `email_signup_start` | Email field is focused | — |
 | `email_signup_submit` | Form submitted | — |
 | `search_query` | User search produces results (fired after 150 ms debounce) | `query`, `result_count`, `filter` |
-| `search_result_click` | User clicks a page result card from `/search/` | `result_href`, `result_title`, `result_type`, `query` |
+| `search_result_click` | User clicks a page or product result card from `/search/` | `result_href`, `result_title`, `result_type`, `query` |
 
 ---
 

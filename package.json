@@ -12,7 +12,7 @@
     "build": "astro build && node scripts/apply-first-page-image-og.mjs && node scripts/apply-content-sitemap-share-preview.mjs && node scripts/indexnow-submit.mjs",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "vitest run",
+    "test": "bun run build && vitest run",
     "test:smoke": "vitest run src/__tests__/site-smoke.test.ts",
     "test:coverage": "vitest run --coverage",
     "prepare": "simple-git-hooks",
