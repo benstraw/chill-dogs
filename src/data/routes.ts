@@ -20,6 +20,7 @@ export const ROUTES = {
   calmingCrateGuide: '/calming/crate-training-for-dogs/',
   calmingCbdGuide: '/calming/cbd-for-dogs/',
   calmingFireworksRoom: '/calming/how-to-prepare-a-calm-room-for-fireworks-night/',
+  calmingFireworksEvent: '/calming/should-you-take-your-dog-to-fireworks/',
   roadTrip: '/travel/dog-road-trip-gear/',
   rhysRanAway: '/travel/rhys-ran-away-cerro-san-luis-obispo/',
   // Tracking cluster

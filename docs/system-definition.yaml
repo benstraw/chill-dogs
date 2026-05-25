@@ -187,6 +187,15 @@ site_system:
         - "/calming/how-to-prepare-a-calm-room-for-fireworks-night/"
       notes: "Practical fireworks-night setup guide focused on one low-stimulation room, then routing readers to calming product and wrap comparisons."
 
+    - name: "Should You Take Your Dog to Fireworks?"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Route fireworks-event and safety intent to calming, cooling, and GPS converter pages"
+      metric: "collector_to_converter_click to calming, cooling, and GPS converters"
+      routes:
+        - "/calming/should-you-take-your-dog-to-fireworks/"
+      notes: "Practical outdoor-event decision guide focused on leaving before dark, safe exit planning, and recovery paths through calming, cooling, car-anxiety, and GPS tracker converters."
+
     - name: "Road Trip Chill Kit"
       type: "collector"
       collector_subtype: "article"
