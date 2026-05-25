@@ -166,6 +166,26 @@ describe('site smoke tests', () => {
         ],
       },
       {
+        page: path.join('travel', 'dog-road-trip-gear', 'index.html'),
+        expected: [
+          '/comforting/best-travel-crates-for-road-trips/',
+          '/cooling/car-cooling-for-dogs/',
+          '/cooling/dog-travel-hydration/',
+          '/calming/car-anxiety-for-dogs/',
+          '/calming/best-lick-mats-for-dogs/',
+        ],
+      },
+      {
+        page: path.join('calming', 'cbd-for-dogs', 'index.html'),
+        expected: [
+          '/calming/best-calming-products-for-anxious-dogs/',
+          '/calming/best-thundershirt-alternatives/',
+          '/calming/car-anxiety-for-dogs/',
+          '/calming/best-lick-mats-for-dogs/',
+          '/comforting/best-orthopedic-dog-beds/',
+        ],
+      },
+      {
         page: path.join('gear', 'fi-dog-collar-review', 'index.html'),
         expected: [
           '/gear/best-dog-gps-trackers/',
