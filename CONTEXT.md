@@ -1,154 +1,262 @@
 ---
 type: context
 tags: [ai-context, strategy, creative]
-updated: 2026-03-19
+updated: 2026-05-25
 ---
 
-# chill-dogs — AI Context File
+# Chill-Dogs Portable AI Onboarding Brief
 
-This file is the single source of truth for sharing context about `chill-dogs.com` with AI platforms and coding assistants. It covers strategy, content, technical stack, and creative guidelines.
+This is a portable context snapshot for sharing `chill-dogs.com` with AI tools that do not already know the site. It is intentionally detailed enough to upload into a blank chatbot, but it is not the final authority when the repository is available.
 
----
+## Start here when repo access is available
 
-## 1. What Is chill-dogs?
+Use the maintained AI documentation and live repo data before relying on this snapshot:
 
-**Chill-Dogs** (`chill-dogs.com`) is an Amazon affiliate site focused on dog lifestyle — specifically cooling, calming, and relaxing products. The site earns revenue through the Amazon Associates program. Every design, content, and engineering decision is evaluated against one question: does this drive or support affiliate revenue?
+- GitHub AI docs folder: <https://github.com/benstraw/chill-dogs/tree/main/docs/ai>
+- `docs/ai/AGENT_START.md` - minimum operating brief
+- `docs/ai/AI_INDEX.md` - task-based documentation router
+- `docs/ai/KNOWLEDGE_GRAPH.md` - dependency chain between docs
+- `docs/system-definition.yaml` - site structure, page types, modules, and conversion architecture
+- `src/data/routes.ts` - internal route constants
+- `src/data/content-sitemap.ts` and `src/data/sitemap-inventory.ts` - page metadata and related-content inventory
+- `src/data/**` - live product, page, and catalog data
 
----
-
-## 2. Strategy and Web Systems
-
-The site is built on the **Web Systems Adventure Mode** framework (`docs/web-systems-adventure-mode.md`). This is a modular, metric-driven planning system with one governing principle:
-
-> A website is a modular conversion system — driven by one dominant metric, structured by page intent, built with reusable modules, governed by clarity and speed, and improved through continuous measurement.
-
-### Page Classification
-
-Every page belongs to exactly one type. Mixing types is not allowed.
-
-| Type | Job | Metric |
-|---|---|---|
-| **converter** | Drive affiliate clicks to Amazon — one CTA, no distractions | Conversion rate (% of visitors who click an affiliate link) |
-| **collector** | Capture organic search traffic and route it to converters | Traffic volume + % routed to converters |
-| **attractor** | Convert paid or social campaign traffic | Campaign conversion rate |
-| **informer** | Administrative and legal pages — no revenue goal | Accuracy, currency |
-
-### Navigation Rules
-
-- Maximum 5 primary nav links
-- No novelty patterns
-- Informer pages (about, privacy, terms) go in the footer only, never the primary nav
-- Current primary nav: **Cooling**, **Calming**
-
-### Conversion Flow
-
-The ideal path is two clicks:
-
-```
-Homepage or hub hero CTA → Collector (pillar guide) → Converter (product page) → Amazon
-```
-
-Primary friction points to minimize:
-- Hero CTA positioning on mobile
-- Affiliate disclosure above the fold (legal requirement, slight friction)
+If this file conflicts with the maintained docs or live source files, use the maintained docs and source files.
 
 ---
 
-## 3. Keystone Metric
+## 1. What Chill-Dogs is
 
-```yaml
-keystone_metrics:
-  primary: Amazon affiliate commission revenue
-  secondary: Organic search traffic (volume of visitors routed to converter pages)
-```
+**Chill-Dogs** (`chill-dogs.com`) is an Astro 5 static affiliate site for dog lifestyle products. It focuses on cooling, calming, comfort, travel, and dog tracking content. Revenue comes from Amazon Associates commissions.
 
-Every page, component, and content decision traces back to one of these two metrics. If a proposed change does not directly drive affiliate clicks or improve organic visibility that routes to converters, it should be questioned.
+The primary business question for strategy, content, design, and engineering is:
 
-The **keystone event** in analytics is `amazon_outbound_click`.
+> Does this drive or support qualified Amazon affiliate clicks?
 
----
+**Brand name:** Chill-Dogs, hyphenated and title case.
 
-## 4. Content Job-Map
+**Domain:** `chill-dogs.com`
 
-### Category Strategy
+**Tagline:** "Stay cool."
 
-The site is organized around three high-intent problem categories:
-
-1. **Cooling** — summer heat relief for dogs. High seasonal intent (May–September peak).
-2. **Calming** — anxiety management for dogs. Evergreen intent year-round.
-3. **Comfort** — rest, recovery, and relaxation products for dogs (beds, orthopedic, calming sleep). Theme color: Dusty Rose (`--color-rose: #b56f76`).
-
-Cooling and calming cross-link naturally (hot dogs are often anxious dogs), which supports internal link equity.
-
-### SEO Model: Pillar + Cluster
-
-Each category has a pillar collector page that targets broad intent, with cluster converter pages targeting specific product categories.
-
-### Page Job-Map
-
-#### Homepage
-| URL | Type | Job |
-|---|---|---|
-| `/` | attractor | Route visitor to `/cooling/` or `/calming/` hub |
-
-#### Cooling Category
-| URL | Type | Job |
-|---|---|---|
-| `/cooling/` | **collector** · hub | Route to converters and pillar guide |
-| `/cooling/best-cooling-products-for-dogs/` | **converter** | Drive affiliate clicks across top cooling categories |
-| `/cooling/cooling-mats/` | **converter** | Drive affiliate clicks for cooling mats |
-| `/cooling/cooling-bandanas/` | **converter** | Drive affiliate clicks for cooling bandanas |
-| `/cooling/cooling-vests/` | **converter** | Drive affiliate clicks for cooling vests |
-| `/cooling/freezable-dog-toys/` | **converter** | Drive affiliate clicks for freezable toys |
-| `/cooling/car-cooling-for-dogs/` | **converter** | Drive affiliate clicks for car cooling gear |
-| `/cooling/keep-dog-cool-in-car/` | **collector** · article | Capture "keep dog cool in car" informational traffic; route to car cooling converters |
-| `/cooling/how-hot-is-too-hot-for-dogs/` | **collector** · article | Capture heat safety queries; route to cooling converters |
-
-#### Calming Category
-| URL | Type | Job |
-|---|---|---|
-| `/calming/` | **collector** · hub | Route to converters and pillar guide |
-| `/calming/best-calming-products-for-anxious-dogs/` | **converter** | Drive affiliate clicks across top calming categories |
-| `/calming/best-thundershirt-alternatives/` | **converter** | Drive affiliate clicks for anxiety wrap alternatives |
-| `/calming/car-anxiety-for-dogs/` | **converter** | Drive affiliate clicks for travel calming aids |
-
-#### Comfort Category
-| URL | Type | Job |
-|---|---|---|
-| `/comfort/` | **collector** · hub | Route to comfort converters (rest, recovery, relaxation) |
-| `/comfort/best-calming-dog-beds/` | **converter** | Drive affiliate clicks for calming dog beds |
-| `/comfort/best-orthopedic-dog-beds/` | **converter** | Drive affiliate clicks for orthopedic dog beds |
-
-#### Travel / Cross-Category
-| URL | Type | Job |
-|---|---|---|
-| `/travel/rhys-road-trip-chill-kit/` | **collector** · article | Route to car cooling and car anxiety converters |
-
-#### Informer Pages
-| URL | Type | Purpose |
-|---|---|---|
-| `/about/` | informer | Brand credibility |
-| `/affiliate-disclosure/` | informer | FTC compliance |
-| `/privacy-policy/` | informer | Legal compliance |
-| `/terms/` | informer | Legal compliance |
-| `/contact/` | informer | Administrative contact |
+**Author of record:** Ben Strawbridge, a careful and practical dog owner who researches questions real dog owners ask. Ben is not a veterinarian, and the site should not imply veterinary authority or endorsements.
 
 ---
 
-## 5. Amazon Associates Program
+## 2. Business model and metrics
 
-### Affiliate Tag
+Chill-Dogs earns through Amazon Associates. The affiliate tag is:
 
-```
+```text
 chill-dogs-20
 ```
 
-This tag must appear on every Amazon URL. It must never change. If you are writing or editing any Amazon link, verify the tag is present.
+The keystone metric is **Amazon affiliate revenue**, supported by qualified outbound clicks to Amazon.
 
-### Link Rules
+Primary analytics event:
 
-- **All Amazon links must use the `AffiliateLink.astro` component.** Never use a plain `<a>` tag for Amazon URLs.
-- The component enforces `rel="nofollow sponsored noopener"`, `target="_blank"`, and `data-affiliate="true"` for click tracking.
+```text
+amazon_outbound_click
+```
+
+Important supporting events include:
+
+- `collector_to_converter_click` - internal route from informational or section pages to product pages
+- `hero_cta_click` - click on a prominent hero CTA
+- `hero_impression` - hero visibility event
+- `toc_click` - table of contents navigation
+- `pinterest_save_click` - Pinterest save interaction
+- email events such as `email_signup_view`, `email_signup_start`, and `email_signup_submit`
+
+Secondary metric:
+
+```text
+collector_to_converter_click rate
+```
+
+This tracks whether traffic captured by collector pages successfully moves toward converter pages.
+
+---
+
+## 3. Page model
+
+Every page has exactly one official page type:
+
+| Type | Job | Success metric |
+|---|---|---|
+| `converter` | Drive Amazon affiliate outbound clicks | `amazon_outbound_click` rate |
+| `collector` | Capture search or topic intent and route users to converters | Organic traffic plus `collector_to_converter_click` rate |
+| `attractor` | Convert campaign, social, or broad entry traffic into site engagement | Campaign or entry-path conversion rate |
+| `informer` | Legal, admin, and trust content | Accuracy and currency |
+
+Collector pages have subtypes:
+
+- `collectorSubtype: 'section'` - category routing pages such as `/cooling/`, `/calming/`, and `/comforting/`
+- `collectorSubtype: 'article'` - long-form guides that answer search intent and route to relevant converters
+
+Do not invent page types. Use only `converter`, `collector`, `attractor`, and `informer`.
+
+### Conversion flow
+
+The site works as a modular conversion system:
+
+```text
+Attractor or collector entry -> relevant converter -> Amazon outbound click -> Amazon purchase
+```
+
+Collector pages should not duplicate full product comparison implementations. They should qualify the reader's intent and point them to the right converter. Converter pages should stay focused on affiliate clicks.
+
+---
+
+## 4. Content categories
+
+### Cooling
+
+Summer heat relief for dogs. Seasonal intent peaks from May through September.
+
+Common product and content areas:
+
+- cooling mats
+- cooling bandanas
+- cooling vests
+- freezable dog toys
+- car cooling gear
+- travel hydration
+- heat safety articles
+
+### Calming
+
+Anxiety and overstimulation support. Evergreen intent year-round.
+
+Common product and content areas:
+
+- calming product roundups
+- ThunderShirt alternatives and anxiety wraps
+- car anxiety aids
+- lick mats and enrichment tools
+- crate training
+- fireworks calm-room setup
+- CBD safety and expectation-setting content
+
+### Comfort
+
+Rest, recovery, and relaxation. Theme color is dusty rose.
+
+Common product and content areas:
+
+- calming dog beds
+- orthopedic dog beds
+- puppy crates
+- anxiety crates
+- road-trip travel crates
+- airline crates
+- airline-approved soft-sided carriers
+- dog travel bags
+- furniture dog crates
+- heavy-duty dog crates
+- sleep education
+
+### Travel, gear, and safety
+
+Travel and lost-dog prevention content connects cooling, calming, comfort, and tracking.
+
+Common areas:
+
+- dog road trip gear
+- flying with a dog
+- GPS tracker comparisons
+- Fi collar review
+- Garmin dog tracking collar education
+- AirTag expectation-setting
+- lost-dog safety guide
+- Rhys runaway story
+
+---
+
+## 5. Current route families
+
+This list is a practical orientation map. When coding, use `src/data/routes.ts` and the sitemap inventory instead of hardcoding these strings.
+
+### Attractor
+
+- `/` - home page, routes visitors into cooling, calming, comfort, crate, and travel paths
+
+### Section collectors
+
+- `/cooling/`
+- `/calming/`
+- `/comforting/`
+
+### Cooling converters
+
+- `/cooling/best-cooling-products-for-dogs/`
+- `/cooling/cooling-mats/`
+- `/cooling/cooling-bandanas/`
+- `/cooling/cooling-vests/`
+- `/cooling/freezable-dog-toys/`
+- `/cooling/car-cooling-for-dogs/`
+- `/cooling/dog-travel-hydration/`
+
+### Calming converters
+
+- `/calming/best-calming-products-for-anxious-dogs/`
+- `/calming/best-thundershirt-alternatives/`
+- `/calming/car-anxiety-for-dogs/`
+- `/calming/best-lick-mats-for-dogs/`
+
+### Comfort converters
+
+- `/comforting/best-calming-dog-beds/`
+- `/comforting/best-orthopedic-dog-beds/`
+- `/comforting/best-puppy-crates/`
+- `/comforting/best-anxiety-dog-crates/`
+- `/comforting/best-travel-crates-for-road-trips/`
+- `/comforting/best-airline-crates-for-flying-with-your-dog/`
+- `/comforting/best-airline-approved-dog-carriers/`
+- `/comforting/best-dog-travel-bags-for-flying/`
+- `/comforting/best-furniture-dog-crates/`
+- `/comforting/best-heavy-duty-dog-crates/`
+
+### Gear and tracking converters
+
+- `/gear/best-dog-gps-trackers/`
+- `/gear/fi-dog-collar-review/`
+- `/shop/` - cross-pillar product browse page; this is a converter because it drives Amazon affiliate clicks
+
+### Article collectors
+
+- `/cooling/keep-dog-cool-in-car/`
+- `/cooling/how-hot-is-too-hot-for-dogs/`
+- `/calming/crate-training-for-dogs/`
+- `/calming/cbd-for-dogs/`
+- `/calming/how-to-prepare-a-calm-room-for-fireworks-night/`
+- `/comforting/how-much-do-dogs-sleep/`
+- `/travel/dog-road-trip-gear/`
+- `/travel/how-to-fly-with-a-dog/`
+- `/travel/rhys-ran-away-cerro-san-luis-obispo/`
+- `/gear/garmin-dog-tracking-collars/`
+- `/gear/airtag-for-dogs/`
+- `/safety/what-to-do-if-your-dog-runs-away/`
+
+### Informer and admin pages
+
+- `/about/`
+- `/contact/`
+- `/affiliate-disclosure/`
+- `/privacy-policy/`
+- `/terms/`
+- `/admin/products/`
+- `/content-sitemap/`
+- `/subscribe/thanks/`
+- `/subscribe/confirmed/`
+
+---
+
+## 6. Affiliate and compliance rules
+
+All Amazon links must use `src/components/AffiliateLink.astro`.
+
+Never write a plain `<a>` tag for an Amazon URL.
 
 ```astro
 <!-- Correct -->
@@ -156,229 +264,169 @@ This tag must appear on every Amazon URL. It must never change. If you are writi
   Buy on Amazon
 </AffiliateLink>
 
-<!-- Wrong — never do this -->
+<!-- Wrong -->
 <a href="https://www.amazon.com/dp/ASIN/?tag=chill-dogs-20">Buy on Amazon</a>
 ```
 
-### FTC Compliance
+The affiliate tag must stay `chill-dogs-20`.
 
-- Inline `Disclosure` component appears at the top of all converter and collector pages.
-- A full `/affiliate-disclosure/` informer page is linked from the footer.
-- No language may imply veterinary endorsement, hands-on product testing, or medical authority unless directly sourced.
+The affiliate disclosure must be visible where affiliate content appears. Converter pages require disclosure before product CTAs. Article collectors require disclosure when product cards or affiliate links appear.
 
-### Click Tracking
-
-The keystone analytics event `amazon_outbound_click` fires on every `[data-affiliate="true"]` element click. Properties captured: `page_slug`, `product_name`, `product_category`, `position`, `destination`.
+The full affiliate disclosure page is `/affiliate-disclosure/`.
 
 ---
 
-## 6. Technical Stack
+## 7. Content guardrails
 
-### Core Framework
+Do not say or imply:
+
+- products are `vet-recommended`, `vet-approved`, or similar without documented sourcing for that exact claim
+- Chill-Dogs consulted veterinarians when it did not
+- Chill-Dogs has veterinary endorsements
+- products were hands-on tested, ordered, tried, or physically reviewed unless that actually happened
+- CBD is recommended or dosed by Chill-Dogs
+- safety, medical, or legal certainty beyond the available sourcing
+
+Prefer language like:
+
+- `researched`
+- `compared`
+- `curated`
+- `practical`
+- `popular`
+
+Tone should be measured, practical, calm, peer-level, and specific. Avoid breathless marketing copy.
+
+---
+
+## 8. Technical stack
 
 | Layer | Technology |
 |---|---|
-| Framework | Astro 5 (SSG — full static build) |
+| Framework | Astro 5 static site generation |
 | Package manager | Bun |
+| Runtime requirement | `bun@1.3.6` |
 | Language | TypeScript |
-| Styling | Vanilla CSS with custom properties (no Tailwind) |
+| Content | Code-first TypeScript data files and MDX articles |
+| Styling | Vanilla CSS with scoped Astro styles and custom properties |
+| Hosting | Vercel |
+| Analytics | PostHog |
+| Email | Buttondown |
 
-### Hosting
+There is no CMS and no server-rendered backend.
 
-**Vercel** (primary). Astro is auto-detected. Deploys on push to `main`. Domain: `chill-dogs.com`.
-
-### Build Commands
+### Commands
 
 ```bash
-bun run dev       # Dev server at localhost:4321
-bun run build     # Static build to dist/
-bun run preview   # Preview built site
-bun run test      # Vitest unit tests
+bun install --frozen-lockfile
+bun run dev
+bun run build
+bun run preview
+bun run test
+bun run test:smoke
+bun run test:coverage
+bun run check:asins
+bun run check:amazon
+bun run check:ai-docs
 ```
 
-### Path Aliases
+The pre-commit hook runs:
 
-```
-@components/  →  src/components/
-@layouts/     →  src/layouts/
-@styles/      →  src/styles/
-@data/        →  src/data/
-@utils/       →  src/utils/
+```bash
+bun run test && bun run test:smoke
 ```
 
-### Analytics and Experiments
+For substantive page or module changes, run both:
 
-**PostHog** is the primary analytics and experimentation platform.
+```bash
+bun run test
+bun run build
+```
 
-- **Project API Key:** set as `PUBLIC_POSTHOG_KEY` in environment variables.
-- **Host:** defaults to `https://us.i.posthog.com` (configurable via `PUBLIC_POSTHOG_HOST`).
-- **Usage:** A/B experiments via Feature Flags, funnel analysis, session recordings.
-- Loaded globally by `src/components/Analytics.astro` — do not add per-page `init()` calls.
+For documentation-only AI doc changes, run:
 
-**Event tracking pattern:**
-- Add `data-track="event_name"` to any element for click tracking.
-- Additional `data-*` attributes become event properties.
-- Import `track()` from `src/scripts/analytics.ts` for non-click events.
+```bash
+bun run check:ai-docs
+```
 
-**Defined events:**
+### Path aliases
 
-| Event | Trigger |
-|---|---|
-| `amazon_outbound_click` | Click on any `AffiliateLink` |
-| `hero_cta_click` | Click on hub page hero CTA |
-| `hero_impression` | Hero is 50% visible (IntersectionObserver) |
-| `collector_to_converter_click` | Click on internal link from collector to converter |
-| `toc_click` | Click on table of contents link |
-
-### Hero A/B Experiments
-
-- `/cooling/v/{a–g}/` — 7 cooling hub hero variants
-- `/calming/v/{a–g}/` — 7 calming hub hero variants
-- `/v/{v1–v5}/` — 5 homepage hero variants
-
-All experiment variant URLs are `noindex` with a canonical pointing to the production hub URL. Winners are promoted to the default and variant URLs are retired.
-
-### Content Architecture
-
-Product data for cooling and calming pages lives in strongly-typed TypeScript files:
-- `src/data/cooling-products.ts` — 11 products, 5 categories
-- `src/data/calming-products.ts` — 8 products, 4 categories
-
-### SEO
-
-- Canonical URLs enforced on every page via `BaseLayout`
-- `@astrojs/sitemap` with priority tuning (homepage: 1.0, cooling/calming: 0.9)
-- `robots.txt` via `astro-robots-txt`
-- JSON-LD structured data (WebSite, Organization, CollectionPage, ItemList, Product) on hub and converter pages
-- OpenGraph + Twitter card meta on every page
-
-### Testing
-
-- **Framework:** Vitest
-- **Location:** `src/__tests__/`
-- **Coverage target:** ≥ 90% statement coverage for `src/utils/**` and `src/scripts/**`
-- **Pre-commit hook:** runs `npm test` before every commit; commits are blocked on test failure
-- **Stub:** `astro:content` virtual module stubbed in `src/__mocks__/astro-content.ts` so helpers can be tested outside Astro build context
+```text
+@components -> src/components
+@layouts    -> src/layouts
+@styles     -> src/styles
+@data       -> src/data
+@utils      -> src/utils
+```
 
 ---
 
-## 7. Creative Guidelines
+## 9. Data and architecture rules
 
-### Brand Name
+Internal routes should come from `src/data/routes.ts`.
 
-**Chill-Dogs** (hyphenated, title case). Domain: `chill-dogs.com`.
+Static non-MDX pages are registered in `src/data/content-sitemap.ts`. MDX article collectors are discovered through `canonicalPath` frontmatter. `src/data/sitemap-inventory.ts` combines the full inventory at build time.
 
-### Tagline
+Related links should derive from sitemap metadata through the related-content system. Do not add new manual related arrays.
 
-> Stay cool.
+Important metadata fields:
 
-### Color Palette
+- `topics`
+- `pinnedRelated`
+- `excludeRelated`
+- `relatedLabel`
 
-Seven named brand colors form the palette. Sky blue signals cooling; sage green signals calming; dusty rose signals comfort.
+Product data should flow through shared data/catalog modules. If a product appears in multiple places, copy edits usually belong in the canonical product record under `src/data/**`, not a page-specific override.
+
+The `/admin/products/` page should stay complete through shared product imports. Do not hardcode product rows there.
+
+---
+
+## 10. Brand and design context
+
+### Voice
+
+Chill-Dogs sounds calm, practical, specific, and owner-to-owner. It should feel researched and trustworthy without claiming clinical authority.
+
+### Palette
 
 | Token | Hex | Role |
 |---|---|---|
-| `--color-sky` | `#87b7c7` | Cooling theme primary; primary CTA color |
-| `--color-sage` | `#8fa98b` | Calming theme primary; accent color |
-| `--color-rose` | `#b56f76` | Comfort theme primary |
-| `--color-sand` | `#e8dcc8` | Warm neutral; secondary surfaces |
-| `--color-cream` | `#f5f0e8` | Light surface; card backgrounds |
-| `--color-terracotta` | `#c4704b` | Warm accent; secondary CTAs |
+| `--color-sky` | `#87b7c7` | Cooling theme and primary CTA |
+| `--color-sage` | `#8fa98b` | Calming theme and accent |
+| `--color-rose` | `#b56f76` | Comfort theme |
+| `--color-sand` | `#e8dcc8` | Warm neutral and secondary surfaces |
+| `--color-cream` | `#f5f0e8` | Light surface and card backgrounds |
+| `--color-terracotta` | `#c4704b` | Warm accent and secondary CTAs |
 | `--color-charcoal` | `#2d2d2d` | Primary text |
-
-**Semantic color tokens** (use these in components):
-
-| Token | Value | Use |
-|---|---|---|
-| `--color-bg` | `#f0f4f6` | Page background |
-| `--color-bg-alt` | `#e0eaee` | Alternative section background |
-| `--color-text` | `var(--color-charcoal)` | Body text |
-| `--color-text-muted` | `#6b6b6b` | Secondary/muted text |
-| `--color-text-inverse` | `#f0f4f6` | Text on dark backgrounds |
-| `--color-primary` | `var(--color-sky)` | Primary button and link color |
-| `--color-primary-hover` | `#74a5b6` | Primary hover state |
-| `--color-rose-hover` | `#a25f66` | Rose hover state |
-| `--color-accent` | `var(--color-sage)` | Accent elements |
-| `--color-accent-alt` | `var(--color-terracotta)` | Alternate accent |
-| `--color-surface` | `#ffffff` | Card / surface |
-| `--color-border` | `#c5d4dc` | Borders and dividers |
 
 ### Typography
 
-| Role | Font | Source |
-|---|---|---|
-| Headings | **Nunito Variable** | Self-hosted via `@fontsource-variable/nunito` |
-| Body | **Inter** | Self-hosted via `@fontsource/inter` |
-
-No Google Fonts — all fonts are self-hosted to avoid third-party DNS lookups.
-
-**Font tokens:**
-```css
---font-heading: 'Nunito Variable', 'Nunito', sans-serif;
---font-body:    'Inter', system-ui, sans-serif;
-```
-
-**Type scale:** `xs (0.75rem)` → `sm` → `base (1rem)` → `lg` → `xl` → `2xl` → `3xl` → `4xl` → `5xl (3rem)`
-
-**Font weights:** `400 (normal)` · `500 (medium)` · `600 (semibold)` · `700 (bold)` · `800 (extrabold)`
+- Headings: Nunito Variable, self-hosted through `@fontsource-variable/nunito`
+- Body: Inter, self-hosted through `@fontsource/inter`
+- No Google Fonts
 
 ### Logo
 
-The logo is a gradient paw print that blends the three pillar colors (sky → sage → rose, top to bottom).
-
-- **Logo mark:** `public/images/paw-logo.png` (tight crop) / `public/images/chill-dogs-logo-padded.png` (with padding)
-- **Word mark:** The site name **"chill-dogs"** rendered in text alongside the paw:
-  - Font: `var(--font-heading)` (Nunito Variable)
-  - Weight: `800` (extrabold)
-  - Size: `var(--text-xl)`
-  - Color: `var(--color-text)` at rest; `var(--color-primary)` on hover
-
-### Spacing Scale
-
-```css
---space-xs:  0.25rem
---space-sm:  0.5rem
---space-md:  1rem
---space-lg:  1.5rem
---space-xl:  2rem
---space-2xl: 3rem
---space-3xl: 4rem
---space-4xl: 6rem
-```
-
-### Border Radii
-
-```css
---radius-sm:   0.25rem
---radius-md:   0.5rem
---radius-lg:   1rem
---radius-full: 9999px
-```
-
-### Shadows
-
-```css
---shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08)
---shadow-md: 0 4px 12px rgba(0, 0, 0, 0.10)
---shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12)
-```
-
-### Layout
-
-```css
---max-width:       1200px
---max-width-prose: 720px
---header-height:   4rem
-```
+- Logo mark: `public/images/paw-logo.png`
+- Padded logo: `public/images/chill-dogs-logo-padded.png`
+- Logo concept: paw print gradient blending sky, sage, and rose
 
 ---
 
-## 8. Content Guardrails
+## 11. Working rules for AI agents
 
-These rules apply to all copy written for or about chill-dogs.com:
+When coding in the repo:
 
-- **Do not** describe products as "vet-recommended," "vet-approved," or similar unless the site has real, documented veterinarian sourcing for that exact claim.
-- **Do not** imply chill-dogs consulted veterinarians or has veterinary endorsements.
-- **Do not** claim products were hands-on tested or physically reviewed by the site unless that actually happened.
-- **Prefer** language like: `researched`, `compared`, `curated`, `practical`, `popular`.
-- Keep all affiliate disclosure language accurate and visible.
+1. Identify the page type before changing a page.
+2. Use existing modules and data-driven patterns before creating new scaffolding.
+3. Use `ROUTES` constants for internal links.
+4. Use `AffiliateLink.astro` for Amazon links.
+5. Keep affiliate disclosures accurate and visible.
+6. Keep product claims conservative and sourced.
+7. Register new non-MDX pages in `src/data/content-sitemap.ts`.
+8. Update `docs/system-definition.yaml` when pages, routes, page types, module stacks, navigation, or conversion flow change.
+9. Use sitemap metadata for related content.
+10. Run the relevant checks before finishing.
+
+For task-specific instructions, read the relevant files under `docs/ai/` before editing.
