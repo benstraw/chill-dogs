@@ -310,9 +310,9 @@ export const staticSitemapSections: SitemapSection[] = [
         topics: ['calming', 'anxiety', 'fireworks', 'comfort'],
         pinnedRelated: [
           ROUTES.calmingTop,
+          ROUTES.calmingFireworksRoom,
           ROUTES.calmingFireworksEvent,
           ROUTES.calmingCar,
-          ROUTES.roadTrip,
           ROUTES.coolingToys,
         ],
         relatedLabel: 'Best Lick Mats',
