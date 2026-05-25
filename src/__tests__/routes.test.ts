@@ -14,6 +14,12 @@ describe('route constants', () => {
     );
   });
 
+  it('uses canonical fireworks event article route', () => {
+    expect(ROUTES.calmingFireworksEvent).toBe(
+      '/calming/should-you-take-your-dog-to-fireworks/'
+    );
+  });
+
   it('uses canonical puppy crates route', () => {
     expect(ROUTES.comfortPuppyCrates).toBe('/comforting/best-puppy-crates/');
   });
