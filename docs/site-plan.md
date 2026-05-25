@@ -78,7 +78,7 @@ registry.
 
 | URL | Type | Target action | Metric | Layout |
 |---|---|---|---|---|
-| `/travel/rhys-road-trip-chill-kit/` | collector | Route to `/cooling/car-cooling-for-dogs/` or `/calming/car-anxiety-for-dogs/` | Click-through to converters | `BaseLayout` |
+| `/travel/dog-road-trip-gear/` | collector | Route to `/cooling/car-cooling-for-dogs/` or `/calming/car-anxiety-for-dogs/` | Click-through to converters | `BaseLayout` |
 | `/cooling/car-cooling-for-dogs/` | converter | Affiliate click to Amazon (car cooling gear) | Conversion rate | `BaseLayout` |
 | `/calming/car-anxiety-for-dogs/` | converter | Affiliate click to Amazon (travel calming aids) | Conversion rate | `BaseLayout` |
 

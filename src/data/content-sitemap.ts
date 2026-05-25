@@ -302,6 +302,21 @@ export const staticSitemapSections: SitemapSection[] = [
         ],
         relatedLabel: 'Car Anxiety Picks',
       }),
+      createSitemapPage({
+        baseTitle: calmingConverterPages['best-lick-mats-for-dogs'].title,
+        description: calmingConverterPages['best-lick-mats-for-dogs'].description,
+        href: ROUTES.calmingLickMats,
+        pageType: 'converter',
+        topics: ['calming', 'anxiety', 'fireworks', 'comfort'],
+        pinnedRelated: [
+          ROUTES.calmingTop,
+          ROUTES.calmingFireworksRoom,
+          ROUTES.calmingFireworksEvent,
+          ROUTES.calmingCar,
+          ROUTES.coolingToys,
+        ],
+        relatedLabel: 'Best Lick Mats',
+      }),
     ],
   },
   {

@@ -14,6 +14,10 @@ describe('route constants', () => {
     );
   });
 
+  it('uses canonical lick mat converter route', () => {
+    expect(ROUTES.calmingLickMats).toBe('/calming/best-lick-mats-for-dogs/');
+  });
+
   it('uses canonical fireworks event article route', () => {
     expect(ROUTES.calmingFireworksEvent).toBe(
       '/calming/should-you-take-your-dog-to-fireworks/'
@@ -45,7 +49,11 @@ describe('route constants', () => {
     expect(calming.hero.primaryCta.href).toBe(ROUTES.calmingTop);
     expect(calming.hero.secondaryCta.href).toBe(ROUTES.calmingAlternatives);
     expect(calming.converterPriority).toEqual(
-      expect.arrayContaining([ROUTES.calmingAlternatives, ROUTES.calmingCar])
+      expect.arrayContaining([
+        ROUTES.calmingAlternatives,
+        ROUTES.calmingLickMats,
+        ROUTES.calmingCar,
+      ])
     );
   });
 

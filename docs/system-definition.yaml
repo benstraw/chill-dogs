@@ -69,7 +69,7 @@ site_system:
       collector_subtype: "section"
       target_action: "Route anxiety-intent traffic to calming converters"
       metric: "collector_to_converter_click to calming converters"
-      notes: "Section collector uses SectionCollectorPage with dynamic topic-matched converter and article cards from the complete sitemap inventory, grouped into topic subsections for car anxiety, fireworks/noise, crate comfort, escape-risk tracking, research/safety, and calming comparisons."
+      notes: "Section collector uses SectionCollectorPage with dynamic topic-matched converter and article cards from the complete sitemap inventory, grouped into topic subsections for car anxiety, fireworks/noise, crate comfort, escape-risk tracking, research/safety, and calming comparisons including lick-mat enrichment."
 
     - name: "Comfort"
       type: "collector"
@@ -99,6 +99,7 @@ site_system:
         - "/calming/best-calming-products-for-anxious-dogs/"
         - "/calming/best-thundershirt-alternatives/"
         - "/calming/car-anxiety-for-dogs/"
+        - "/calming/best-lick-mats-for-dogs/"
 
     - name: "Keep a Dog Cool in a Car"
       type: "collector"
@@ -220,12 +221,12 @@ site_system:
       routes:
         - "/comforting/how-much-do-dogs-sleep/"
 
-    - name: "Rhys Ran Away (Bishop Peak)"
+    - name: "Rhys Ran Away (Cerro San Luis Obispo)"
       type: "collector"
       target_action: "Route story-driven search traffic to GPS tracker comparison converter"
       metric: "collector_to_converter_click to /gear/best-dog-gps-trackers/"
       routes:
-        - "/travel/rhys-ran-away-bishop-peak/"
+        - "/travel/rhys-ran-away-cerro-san-luis-obispo/"
       notes: "Story-driven narrative collector; introduces tracker type education; primary CTA to trackingTop"
 
     - name: "GPS Tracker comparison"
@@ -259,7 +260,7 @@ site_system:
     - name: "What to Do If Your Dog Runs Away"
       type: "collector"
       target_action: "Route safety-intent traffic to GPS tracker comparison and Rhys story"
-      metric: "collector_to_converter_click to /gear/best-dog-gps-trackers/ and /travel/rhys-ran-away-bishop-peak/"
+      metric: "collector_to_converter_click to /gear/best-dog-gps-trackers/ and /travel/rhys-ran-away-cerro-san-luis-obispo/"
       routes:
         - "/safety/what-to-do-if-your-dog-runs-away/"
 
@@ -370,7 +371,7 @@ site_system:
   product_data:
     product_catalog: "src/data/product-catalog.ts — normalized admin inventory across every product data source; /admin/products/ must consume this data module and remain complete whenever products are added"
     cooling_products: "src/data/cooling-products.ts — 25 products with ASIN, affiliate URL, and image thumbnails"
-    calming_products: "src/data/calming-products.ts — 13 products with ASIN, affiliate URL, and image thumbnails"
+    calming_products: "src/data/calming-products.ts — 23 products with ASIN, affiliate URL, and image thumbnails"
     relaxation_products: "src/data/relaxation-products.ts — 78 products (calming beds, orthopedic beds, crates, carriers, travel beds, travel bags) with ASIN, affiliate URL, and image thumbnails"
     tracking_products: "src/data/tracking-products.ts — 8 tracker products and 1 accessory product across cellular/off-grid/bluetooth/accessory types"
     raw_api_cache: "src/data/amazon-products/*.json — full SerpAPI/SearchAPI Amazon Product responses per ASIN; _index.json sidecar tracks fetchedAt/provider/title/image freshness diagnostics"
