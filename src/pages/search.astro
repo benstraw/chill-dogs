@@ -78,6 +78,7 @@ const suggestedSearchPaths = [
   const resultsEl = document.getElementById('search-results') as HTMLDivElement;
   const statusEl = document.getElementById('search-status') as HTMLDivElement;
   const filterBar = document.getElementById('filter-bar') as HTMLDivElement;
+  const suggestedPathsEl = document.getElementById('suggested-paths') as HTMLDivElement;
 
   let fuse: Fuse<SearchItem> | null = null;
   let lastResults: Fuse.FuseResult<SearchItem>[] = [];
@@ -236,12 +237,15 @@ const suggestedSearchPaths = [
       const filterLabel = FILTER_LABELS[activeFilter];
       statusEl.textContent = '';
       renderEmptyState(`No ${filterLabel === 'all' ? '' : filterLabel + ' '}results for "${currentQuery}"`);
+      suggestedPathsEl.style.display = '';
       return;
     }
     if (filtered.length === 0) {
       resultsEl.innerHTML = '';
+      suggestedPathsEl.style.display = '';
       return;
     }
+    suggestedPathsEl.style.display = 'none';
     const label = activeFilter === 'all' ? '' : ` ${FILTER_LABELS[activeFilter]}`;
     statusEl.textContent = `${filtered.length}${label} result${filtered.length === 1 ? '' : 's'} for "${currentQuery}"`;
     resultsEl.innerHTML = filtered
