@@ -1,10 +1,21 @@
 import type { APIRoute } from 'astro';
 import { productCatalogItems } from '@data/product-catalog';
+import { buildProductPageMap } from '@data/product-page-map';
 import { ROUTES } from '@data/routes';
 import { getCompleteSitemapPages } from '@data/sitemap-inventory';
 
 export const GET: APIRoute = async () => {
   const pages = await getCompleteSitemapPages();
+
+  // Invert productPageMap → pageHref: productName[]
+  const pageProductNames: Record<string, string[]> = {};
+  for (const [productId, refs] of Object.entries(buildProductPageMap())) {
+    const product = productCatalogItems.find((p) => p.id === productId);
+    if (!product) continue;
+    for (const ref of refs) {
+      (pageProductNames[ref.href] ??= []).push(product.name);
+    }
+  }
 
   const pageItems = pages
     .filter((p) => !p.noindex)
@@ -15,6 +26,7 @@ export const GET: APIRoute = async () => {
       pageType: p.pageType,
       href: p.href,
       topics: p.topics ?? [],
+      productNames: pageProductNames[p.href] ?? [],
     }));
 
   const productItems = productCatalogItems.map((p) => ({

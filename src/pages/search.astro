@@ -57,6 +57,7 @@ const suggestedSearchPaths = [
     pageType: string;
     href: string;
     topics: string[];
+    productNames: string[];
   };
 
   type ProductItem = {
@@ -95,13 +96,14 @@ const suggestedSearchPaths = [
     const items: SearchItem[] = await res.json();
     fuse = new Fuse(items, {
       keys: [
-        { name: 'title',       weight: 0.40 },
-        { name: 'name',        weight: 0.40 },
-        { name: 'description', weight: 0.25 },
-        { name: 'bestFor',     weight: 0.25 },
-        { name: 'bullets',     weight: 0.15 },
-        { name: 'category',    weight: 0.10 },
-        { name: 'topics',      weight: 0.10 },
+        { name: 'title',        weight: 0.40 },
+        { name: 'name',         weight: 0.40 },
+        { name: 'description',  weight: 0.25 },
+        { name: 'bestFor',      weight: 0.25 },
+        { name: 'bullets',      weight: 0.15 },
+        { name: 'productNames', weight: 0.15 },
+        { name: 'category',     weight: 0.10 },
+        { name: 'topics',       weight: 0.10 },
       ],
       threshold: 0.2,
       includeScore: true,
