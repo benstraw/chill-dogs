@@ -19,7 +19,7 @@ const suggestedSearchPaths = [
   <section class="search-page container">
     <header class="search-header">
       <h1>Search</h1>
-      <p>Find Chill-Dogs guides, product categories, and researched gear picks.</p>
+      <p>Find Chill-Dogs articles, researched gear picks, and individual products.</p>
     </header>
     <div class="search-input-wrap">
       <input
@@ -32,8 +32,7 @@ const suggestedSearchPaths = [
     </div>
     <div class="filter-bar" id="filter-bar" role="group" aria-label="Filter results">
       <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="converter">Guides</button>
-      <button class="filter-btn" data-filter="collector">Collectors</button>
+      <button class="filter-btn" data-filter="article">Articles</button>
       <button class="filter-btn" data-filter="product">Products</button>
     </div>
     <div id="search-status" class="search-status" aria-live="polite"></div>
@@ -72,7 +71,7 @@ const suggestedSearchPaths = [
   };
 
   type SearchItem = PageItem | ProductItem;
-  type FilterKey = 'all' | 'converter' | 'collector' | 'product';
+  type FilterKey = 'all' | 'article' | 'product';
 
   const input = document.getElementById('search-input') as HTMLInputElement;
   const resultsEl = document.getElementById('search-results') as HTMLDivElement;
@@ -86,8 +85,7 @@ const suggestedSearchPaths = [
 
   const FILTER_LABELS: Record<FilterKey, string> = {
     all: 'all',
-    converter: 'guide',
-    collector: 'collector',
+    article: 'article',
     product: 'product',
   };
 
@@ -112,15 +110,15 @@ const suggestedSearchPaths = [
   }
 
   const PAGE_TYPE_LABELS: Record<string, string> = {
-    converter: 'Guide',
-    collector: 'Collector',
+    converter: 'Article',
+    collector: 'Article',
     attractor: 'Home',
     informer:  'Info',
   };
 
   const PAGE_CTA_LABELS: Record<string, string> = {
     converter: 'Compare picks',
-    collector: 'Explore collector',
+    collector: 'Read article',
     attractor: 'Start here',
     informer: 'Read info',
   };
@@ -192,9 +190,9 @@ const suggestedSearchPaths = [
   function applyFilter(results: Fuse.FuseResult<SearchItem>[]): Fuse.FuseResult<SearchItem>[] {
     if (activeFilter === 'all') return results;
     if (activeFilter === 'product') return results.filter((r) => r.item.type === 'product');
-    // 'converter' or 'collector' filters page items by pageType.
+    // 'article' covers both converter and collector page types.
     return results.filter(
-      (r) => r.item.type === 'page' && r.item.pageType === activeFilter
+      (r) => r.item.type === 'page' && (r.item.pageType === 'converter' || r.item.pageType === 'collector')
     );
   }
 
