@@ -491,6 +491,313 @@ export const calmingConverterPages: Record<string, CalmingConverterPageConfig> =
     },
   },
 
+  'best-lick-mats-for-dogs': {
+    slug: 'best-lick-mats-for-dogs',
+    title: 'Best Lick Mats for Dogs: Calming Enrichment Picks',
+    description:
+      'Compare the best lick mats for dogs for fireworks night, grooming, crate time, frozen treats, travel, chewers, and slow-feeding alternatives.',
+    pageSlug: 'best-lick-mats-for-dogs',
+    hero: {
+      title: 'Best Lick Mats for Dogs',
+      subtitle:
+        'Lick mats are great enrichment tools. Spread a dog-safe snack, freeze it if you choose to do so, and give your dog something delicious to focus on during grooming, crate time, quiet indoor breaks, or fireworks-night prep.',
+      disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
+      primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
+      secondaryCta: { label: 'Fireworks Calm Room Guide', href: ROUTES.calmingFireworksRoom },
+    },
+    toc: [
+      { label: 'Quick Picks', anchor: 'quick-picks' },
+      { label: 'How to Choose', anchor: 'how-to-choose' },
+      { label: 'Silicone Mats', anchor: 'starter-silicone-mats' },
+      { label: 'Chew-Resistant Mats', anchor: 'chew-resistant-picks' },
+      { label: 'Frozen Treat Bowls', anchor: 'frozen-treat-bowls' },
+      { label: 'Travel and Holder Options', anchor: 'travel-holder-options' },
+      { label: 'Adjacent Alternatives', anchor: 'adjacent-alternatives' },
+      { label: 'Best Use Cases', anchor: 'best-use-cases' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    blocks: [
+      {
+        kind: 'quick_picks',
+        id: 'quick-picks',
+        heading: 'Quick Picks',
+        intro:
+          "A flat silicone mat works well with all types of spreads. Stainless steel is a good choice for heavy chewers. Bowl-style designs are better for frozen treats. Snuffle or slow-feeder options are great for indulging a dog's instinct to forage for food.",
+        items: [
+          {
+            label: 'Best Overall',
+            title: 'Awoo Paradise Silicone Dog Lick Mat',
+            description:
+              'The Awoo Paradise is the best all-purpose pick for spreads and frozen treats. It is great if you want one mat for fireworks night, crate time, quiet indoor enrichment and calm everyday breaks.',
+            productId: 'awoo-paradise-lick-mat',
+            position: 'quick-picks-1',
+          },
+          {
+            label: 'Best for Fireworks Night',
+            title: 'Pawnana Slow Feeder Lick Mat',
+            description:
+              'Pawnana gives you more depth than a flat mat, which makes it perfect for frozen yogurt, pumpkin, wet-food, or a soaked-kibble setup before the noise starts.',
+            productId: 'pawnana-slow-feeder-lick-mat',
+            position: 'quick-picks-2',
+          },
+          {
+            label: 'Best for Chewers',
+            title: 'FEELNEEDY Stainless Steel Lick Mat',
+            description:
+              'If your dog treats a silicone mat like a chew toy, try the FEELNEEDY. The stainless steel surface is a sturdier choice for dogs that bite or fold flexible mats.',
+            productId: 'feelneedy-stainless-lick-mat',
+            position: 'quick-picks-3',
+          },
+          {
+            label: 'Best for Frozen Treats',
+            title: 'Pawnana Slow Feeder Lick Mat',
+            description:
+              'The shape is more contained than a flat tray and helps to keep frozen spreads in the bowl. It is great for crate time, calm-room setup, or a longer indoor enrichment session.',
+            productId: 'pawnana-slow-feeder-lick-mat',
+            position: 'quick-picks-4',
+          },
+          {
+            label: 'Best for Grooming Sessions',
+            title: 'LUKITO Premium Silicone Licking Mat',
+            description:
+              "LUKITO is the practical grooming pick because suction cups help keep the mat in place on smooth tile walls, tubs, or other clean surfaces while you bathe, brush, or trim your dog's nails.",
+            productId: 'lukito-licking-mat',
+            position: 'quick-picks-5',
+          },
+          {
+            label: 'Best for Travel',
+            title: 'BYAZLETQAN Collapsible Portable Lick Mat',
+            description:
+              'The clamshell design is easier to pack than a full-size open tray. It is a great choice for hikes, road trips, airline travel, and prepared enrichment away from home.',
+            productId: 'byazletqan-portable-lick-mat',
+            position: 'quick-picks-6',
+          },
+          {
+            label: 'Best Snuffle Mat',
+            title: 'Rundic Snuffle Mat for Dogs',
+            description:
+              'Some dogs would rather search than lick. Rundic is a good choice when you are using dry treats or kibble and want foraging enrichment instead of a sticky spread.',
+            productId: 'rundic-snuffle-mat',
+            position: 'quick-picks-7',
+          },
+          {
+            label: 'Best Slow-Feeder Bowl',
+            title: 'Evenco Slow Feeder Bowl',
+            description:
+              'If your dog eats too quickly, choose a slow-feeder bowl instead of a lick mat. Evenco is a great choice for pace control and extended distraction.',
+            productId: 'evenco-slow-feeder-bowl',
+            position: 'quick-picks-8',
+          },
+        ],
+      },
+      {
+        kind: 'prose',
+        id: 'how-to-choose',
+        heading: 'How to Choose a Lick Mat',
+        paragraphs: [
+          'Start with material. Silicone is flexible, so it is easy to spread peanut butter, yogurt, pumpkin, wet food, or soaked kibble on it. Stainless steel is rigid, but it is the better choice for dogs that chew, fold, or damage soft mats.',
+          'Then choose the shape. Flat mats are versatile and easy to stack in the freezer. Bowl-style lick mats are better when you want more depth and mess control. Suction mats are great for grooming and baths because they can attach to a smooth wall or tub surface.',
+          'Check the care instructions before freezing or dishwashing any mat, and supervise dogs that try to bite the mat instead of licking it. If your dog prefers dry treats and sniffing, a snuffle mat may be more useful.',
+        ],
+      },
+      {
+        kind: 'product_section',
+        id: 'starter-silicone-mats',
+        heading: 'Silicone Lick Mats',
+        pageType: 'converter',
+        positionOffset: 0,
+        columns: 2,
+        alt: true,
+        intro:
+          'Flat silicone mats are a great choice for most dogs. They work with common spreadable foods and can be easily stored in a freezer.',
+        copyHtml:
+          'Awoo Paradise and Lickimat work well as a lick mat and a slow feeder. LUKITO is a great choice for grooming because the suction cups allow you to attach the mat to a wall.',
+        productIds: [
+          'awoo-paradise-lick-mat',
+          'lickimat-classic-soother',
+          'lukito-licking-mat',
+        ],
+      },
+      {
+        kind: 'product_section',
+        id: 'chew-resistant-picks',
+        heading: 'Chew-Resistant and Stainless Steel Mats',
+        pageType: 'converter',
+        positionOffset: 4,
+        columns: 3,
+        intro:
+          'Stainless steel is a better choice if your dog chews or shreds silicone. They provide a sturdier surface than a flexible mat.',
+        copyHtml:
+          'FEELNEEDY is the best flat chew-resistant pick. Feedoo is the heavier bowl-style stainless option for wet food and frozen treats. The stainless suction mat is the fixed-position option for crate-side or dogs that push mats around.',
+        productIds: [
+          'feelneedy-stainless-lick-mat',
+          'feedoo-stainless-lick-mat',
+          'stainless-suction-lick-mat',
+        ],
+      },
+      {
+        kind: 'product_section',
+        id: 'frozen-treat-bowls',
+        heading: 'Frozen Treat Mats and Bowls',
+        pageType: 'converter',
+        positionOffset: 7,
+        columns: 3,
+        alt: true,
+        intro:
+          'Bowl-style lick mats are useful when you want depth and food containment. They are less portable than a flat mat, but better for frozen yogurt, pumpkin, wet food, or soaked kibble.',
+        copyHtml:
+          'Pawnana is a strong frozen-treat choice for fireworks night or crate time. QUWOU is a compact lick bowl for smaller servings. West Paw is reversable for slow feeding and licking enrichment.',
+        productIds: [
+          'pawnana-slow-feeder-lick-mat',
+          'quwou-dog-lick-bowl',
+          'west-paw-seaflex-feast-mat',
+        ],
+      },
+      {
+        kind: 'product_section',
+        id: 'travel-holder-options',
+        heading: 'Travel and Holder Options',
+        pageType: 'converter',
+        positionOffset: 10,
+        columns: 2,
+        intro:
+          'Some dogs push mats around, and some owners need a cleaner way to carry prepared enrichment.',
+        copyHtml:
+          'LickiMat Outdoor Keeper is a holder system for outdoor or more stable use with compatible inserts. BYAZLETQAN is a portable clamshell option for road trips, airline travel, and enrichment away from home.',
+        productIds: [
+          'lickimat-outdoor-keeper',
+          'byazletqan-portable-lick-mat',
+        ],
+      },
+      {
+        kind: 'product_section',
+        id: 'adjacent-alternatives',
+        heading: 'Snuffle Mats and Slow-Feeder Bowls',
+        pageType: 'converter',
+        positionOffset: 12,
+        columns: 2,
+        alt: true,
+        intro:
+          'Lick mats are not your only enrichment option. If your dog prefers sniffing and searching, use a snuffle mat. If your dog eats too quickly, use a slow feeder.',
+        copyHtml:
+          'Rundic is the snuffle alternative for dry treats and kibble. Evenco is the slow-feeder alternative when meal pace matters more than calming licking.',
+        productIds: [
+          'rundic-snuffle-mat',
+          'evenco-slow-feeder-bowl',
+        ],
+      },
+      {
+        kind: 'use_table',
+        id: 'best-use-cases',
+        heading: 'Best Use Cases',
+        intro: '',
+        rows: [
+          {
+            situation: 'Fireworks night',
+            bestChoice: 'Pawnana or Awoo Paradise',
+            why: 'Prepare the mat before the noise starts. A frozen bowl lasts longer, while a flat silicone mat is easier to keep ready in the freezer.',
+          },
+          {
+            situation: 'Grooming or baths',
+            bestChoice: 'LUKITO',
+            why: 'Suction cups keep the mat stuck to a smooth tub, tile, or floor.',
+          },
+          {
+            situation: 'Dogs who chew silicone',
+            bestChoice: 'FEELNEEDY or Feedoo',
+            why: 'Stainless steel is the sturdier alternative for dogs that bite or fold flexible mats.',
+          },
+          {
+            situation: 'Frozen treat enrichment',
+            bestChoice: 'Pawnana',
+            why: 'The bowl shape has more depth and helps to contain yogurt, pumpkin, wet food, or soaked kibble.',
+          },
+          {
+            situation: 'Travel',
+            bestChoice: 'BYAZLETQAN',
+            why: 'A portable clamshell is easier to pack and keep clean between stops.',
+          },
+          {
+            situation: 'Dogs who prefer sniffing',
+            bestChoice: 'Rundic Snuffle Mat',
+            why: 'A snuffle mat uses dry treats or kibble and gives foraging-focused dogs a job that is not based on licking.',
+          },
+          {
+            situation: 'Dogs who eat too quickly',
+            bestChoice: 'Evenco Slow Feeder Bowl',
+            why: 'A slow feeder bowl is a better option when your main goal is meal pacing rather than licking enrichment.',
+          },
+        ],
+      },
+      {
+        kind: 'note',
+        heading: 'Calming Note',
+        text:
+          'Lick mats are enrichment tools, not anxiety treatments. They can help occupy some dogs during stressful moments. Severe fear, escape attempts, or self-injury should be discussed with your veterinarian.',
+      },
+    ],
+    faq: {
+      heading: 'Lick Mat FAQ',
+      items: [
+        {
+          question: 'Do lick mats actually calm dogs?',
+          answer:
+            'They can help some dogs settle because licking gives them a repetitive task to focus on. That does not make a lick mat an anxiety treatment, and many dogs will ignore food if they are already panicking.',
+        },
+        {
+          question: 'Are silicone lick mats safe for dogs?',
+          answer:
+            'Silicone mats can be practical for supervised enrichment, but they are not a good fit for every dog. If your dog bites, folds, or chews the mat, remove it and consider a sturdier stainless steel option.',
+        },
+        {
+          question: 'Are stainless steel lick mats better than silicone?',
+          answer:
+            'They are better for some chewers and for owners who want a harder, dishwasher-friendly surface. Silicone is usually easier to spread, store, and freeze, so the better choice depends on your dog and how you plan to use it.',
+        },
+        {
+          question: 'Can you freeze a lick mat?',
+          answer:
+            'Many lick mats are used with frozen spreads, but check the listing and care instructions for the specific product. Flat silicone mats are easiest to stack in the freezer, while bowl-style mats hold deeper frozen portions.',
+        },
+        {
+          question: 'What should I put on a dog lick mat?',
+          answer:
+            'Common options include plain yogurt, pumpkin, wet dog food, soaked kibble, or dog-safe peanut butter without xylitol. Start with a thin layer so your dog learns to lick instead of trying to bite the mat.',
+        },
+        {
+          question: 'What is the difference between a lick mat and a snuffle mat?',
+          answer:
+            'A lick mat uses spreadable food and encourages licking. A snuffle mat uses dry treats or kibble hidden in fabric folds and encourages sniffing and foraging.',
+        },
+      ],
+    },
+    relatedGuidesHeading: 'Related Calming Guides',
+    relatedGuidesLimit: 3,
+    disclaimerVariant: 'standard',
+    disclosureShowSafety: false,
+    internalLinkStripHeading: 'More Calming & Enrichment Guides',
+    internalLinkStripLimit: 5,
+    itemListSchema: {
+      name: 'Best Lick Mats for Dogs',
+      url: 'https://www.chill-dogs.com/calming/best-lick-mats-for-dogs/',
+      productIds: [
+        'awoo-paradise-lick-mat',
+        'lickimat-classic-soother',
+        'lukito-licking-mat',
+        'feelneedy-stainless-lick-mat',
+        'feedoo-stainless-lick-mat',
+        'stainless-suction-lick-mat',
+        'pawnana-slow-feeder-lick-mat',
+        'quwou-dog-lick-bowl',
+        'west-paw-seaflex-feast-mat',
+        'lickimat-outdoor-keeper',
+        'byazletqan-portable-lick-mat',
+        'rundic-snuffle-mat',
+        'evenco-slow-feeder-bowl',
+      ],
+    },
+  },
+
   'car-anxiety-for-dogs': {
     slug: 'car-anxiety-for-dogs',
     title: 'Best Calming Products for Car Anxiety in Dogs',

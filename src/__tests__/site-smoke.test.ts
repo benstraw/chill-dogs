@@ -166,6 +166,26 @@ describe('site smoke tests', () => {
         ],
       },
       {
+        page: path.join('travel', 'dog-road-trip-gear', 'index.html'),
+        expected: [
+          '/comforting/best-travel-crates-for-road-trips/',
+          '/cooling/car-cooling-for-dogs/',
+          '/cooling/dog-travel-hydration/',
+          '/calming/car-anxiety-for-dogs/',
+          '/calming/best-lick-mats-for-dogs/',
+        ],
+      },
+      {
+        page: path.join('calming', 'cbd-for-dogs', 'index.html'),
+        expected: [
+          '/calming/best-calming-products-for-anxious-dogs/',
+          '/calming/best-thundershirt-alternatives/',
+          '/calming/car-anxiety-for-dogs/',
+          '/calming/best-lick-mats-for-dogs/',
+          '/comforting/best-orthopedic-dog-beds/',
+        ],
+      },
+      {
         page: path.join('gear', 'fi-dog-collar-review', 'index.html'),
         expected: [
           '/gear/best-dog-gps-trackers/',
@@ -441,6 +461,23 @@ describe('site smoke tests', () => {
     expect(affiliateDoc.body.textContent).toContain('no additional cost to you');
   });
 
+  it('renders search as a noindex collector with internal product result routes', () => {
+    const searchDoc = readBuiltPage(path.join('search', 'index.html'));
+    const searchIndex = JSON.parse(readBuiltAsset('search-index.json'));
+    const productItems = searchIndex.filter((item: { type: string }) => item.type === 'product');
+
+    expect(searchDoc.querySelector('meta[name="robots"]')?.getAttribute('content'))
+      .toBe('noindex, nofollow');
+    expect(searchDoc.querySelectorAll('.search-results a[href*="amazon."]').length).toBe(0);
+    expect(productItems.length).toBeGreaterThan(0);
+
+    for (const item of productItems) {
+      expect(item.href).toMatch(/^\/shop\/\?q=/);
+      expect(item.href).not.toContain('amazon.');
+      expect(item).not.toHaveProperty('amazonUrl');
+    }
+  });
+
   it('renders subscribe flow pages without site chrome and keeps them noindex', () => {
     const subscribeDoc = readBuiltPage(path.join('subscribe', 'index.html'));
     const thanksDoc = readBuiltPage(path.join('subscribe', 'thanks', 'index.html'));
@@ -519,6 +556,7 @@ describe('site smoke tests', () => {
     expect(sitemap).toContain('/cooling/car-cooling-for-dogs/');
     expect(sitemap).toContain('/travel/dog-road-trip-gear/');
     expect(sitemap).toContain('/calming/best-calming-products-for-anxious-dogs/');
+    expect(sitemap).toContain('/calming/best-lick-mats-for-dogs/');
     expect(sitemap).toContain('/calming/how-to-prepare-a-calm-room-for-fireworks-night/');
     expect(sitemap).toContain('/comforting/best-puppy-crates/');
     expect(sitemap).toContain('/comforting/best-anxiety-dog-crates/');
@@ -637,7 +675,7 @@ describe('site smoke tests', () => {
   });
 
   it('content pages have at least one JSON-LD script', () => {
-    const noSchemaExpected = ['404.html', 'privacy-policy', 'terms', 'content-sitemap', 'admin/', 'subscribe/'];
+    const noSchemaExpected = ['404.html', 'privacy-policy', 'terms', 'content-sitemap', 'admin/', 'subscribe/', 'search/'];
     const htmlFiles = collectHtmlFiles(distRoot);
     const failures: string[] = [];
 

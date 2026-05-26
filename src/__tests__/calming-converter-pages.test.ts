@@ -22,6 +22,16 @@ describe('calming converter page config', () => {
     expect(schema.numberOfItems).toBe(8);
   });
 
+  it('builds item list schema for lick mat converter', () => {
+    const config = getCalmingConverterPageConfig('best-lick-mats-for-dogs');
+    const schema = buildCalmingItemListSchema(config.itemListSchema!);
+
+    expect(config.pageSlug).toBe('best-lick-mats-for-dogs');
+    expect(config.hero.primaryCta.href).toBe('#quick-picks');
+    expect(config.hero.secondaryCta?.href).toBe('/calming/how-to-prepare-a-calm-room-for-fireworks-night/');
+    expect(schema.numberOfItems).toBe(13);
+  });
+
   it('throws for unknown slugs', () => {
     expect(() => getCalmingConverterPageConfig('missing-slug')).toThrow(
       'Missing calming converter page config for slug: missing-slug'

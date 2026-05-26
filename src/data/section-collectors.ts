@@ -197,6 +197,7 @@ export const sectionCollectorDefinitions: Record<SectionCollectorKey, SectionCol
     converterPriority: [
       ROUTES.calmingTop,
       ROUTES.calmingAlternatives,
+      ROUTES.calmingLickMats,
       ROUTES.calmingCar,
       ROUTES.comfortCalmingBeds,
       ROUTES.trackingTop,

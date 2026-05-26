@@ -199,6 +199,8 @@ describe('related pages', () => {
         createPage({ href: '/safety/what-to-do-if-your-dog-runs-away/', pageType: 'collector', collectorSubtype: 'article' }),
         createPage({ href: '/travel/dog-road-trip-gear/', pageType: 'collector', collectorSubtype: 'article' }),
         createPage({ href: '/calming/crate-training-for-dogs/', pageType: 'collector', collectorSubtype: 'article' }),
+        createPage({ href: '/calming/how-to-prepare-a-calm-room-for-fireworks-night/', pageType: 'collector', collectorSubtype: 'article' }),
+        createPage({ href: '/calming/should-you-take-your-dog-to-fireworks/', pageType: 'collector', collectorSubtype: 'article' }),
         createPage({ href: '/travel/how-to-fly-with-a-dog/', pageType: 'collector', collectorSubtype: 'article' }),
       ]),
     ];
@@ -217,6 +219,7 @@ describe('related pages', () => {
       '/calming/best-calming-products-for-anxious-dogs/',
       '/calming/best-thundershirt-alternatives/',
       '/calming/car-anxiety-for-dogs/',
+      '/calming/best-lick-mats-for-dogs/',
       '/comforting/best-calming-dog-beds/',
       '/comforting/best-orthopedic-dog-beds/',
       '/comforting/best-puppy-crates/',

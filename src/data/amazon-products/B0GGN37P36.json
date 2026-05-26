@@ -1,0 +1,609 @@
+{
+  "search_metadata": {
+    "id": "6a10adcc6c3283b57ffb3585",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/osbIdD-HWvhsIso1rDsNfg/6a10adcc6c3283b57ffb3585.json",
+    "created_at": "2026-05-22 19:26:04 UTC",
+    "processed_at": "2026-05-22 19:26:04 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0GGN37P36/?",
+    "raw_html_file": "https://serpapi.com/searches/osbIdD-HWvhsIso1rDsNfg/6a10adcc6c3283b57ffb3585.html",
+    "total_time_taken": 7.2
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0GGN37P36",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0GGN37P36",
+    "title": "Collapsible Dog Travel Bowl with Lid, Portable Slow Feeder & Lick Mat Combo, Mess-Free Clamshell Silicone Water Dish for Hiking (Green)",
+    "link": "https://www.amazon.com/BYAZLETQAN-Collapsible-Portable-Mess-Free-Clamshell/dp/B0GGN37P36/",
+    "link_clean": "https://www.amazon.com/dp/B0GGN37P36/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GGN37P36&device=desktop&engine=amazon_product",
+    "variants": [
+      {
+        "title": "Color",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0GGN37P36",
+            "name": "green",
+            "image": "https://m.media-amazon.com/images/I/31OHVbbZ3CL._SS64_.jpg",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GGN37P36&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0GGNGW2MH",
+            "name": "bluish",
+            "image": "https://m.media-amazon.com/images/I/31uyCngOaML._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GGNGW2MH&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0GGNB59FD",
+            "name": "khaki",
+            "image": "https://m.media-amazon.com/images/I/31fHXtVs-XL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GGNB59FD&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Brand: BYAZLETQAN",
+    "thumbnail": "https://m.media-amazon.com/images/I/61TOUqACgaL._AC_SX300_SY300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/61TOUqACgaL._AC_SL1302_.jpg",
+      "https://m.media-amazon.com/images/I/71-oP4IYZhL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71Tw0FB-9AL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71G2psof5FL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81kVqunxOiL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81rQ-v3vtgL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81hDDibGYtL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.8,
+    "reviews": 7,
+    "discount": "-17%",
+    "price": "$23.99",
+    "extracted_price": 23.99,
+    "old_price": "$28.88",
+    "extracted_old_price": 28.88,
+    "delivery": [
+      "FREE delivery Wednesday, May 27 on orders shipped by Amazon over $35",
+      "Or Prime members get FREE delivery Tomorrow, May 23. Order within 8 hrs 33 mins. Join Prime"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$23.99",
+      "extracted_price": 23.99,
+      "delivery": [
+        "FREE delivery Wednesday, May 27 on orders shipped by Amazon over $35",
+        "Or Prime members get FREE delivery Tomorrow, May 23. Order within 8 hrs 33 mins. Join Prime"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "zerunqianhe",
+          "details": {
+            "heading": "Sold by",
+            "content": "zerunqianhe"
+          },
+          "link": {
+            "text": "zerunqianhe",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=ALUREALPULAB1&asin=B0GGN37P36&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "material": "Food-Grade Silicone, Non-Toxic, BPA-Free, Durable Flexible Silicone, Heat-Resistant",
+    "target_species": "Dogs (Small, Medium), Puppies, Cats, Kittens",
+    "brand": "BYAZLETQAN",
+    "recommended_uses_for_product": "Travel, Hiking, Camping, Walking, Road Trips, Outdoor Adventure, Daily Feeding",
+    "special_feature": "Anti-Choke, Digestion Support, Space Saving, Leak-Proof Design, Easy to Clean, Eco-Friendly"
+  },
+  "about_item": [
+    "THE ULTIMATE 2-IN-1 TRAVEL COMPANION — Say goodbye to packing bulky slow feeders and messy lick mats! Our innovative clamshell design brilliantly combines a deep slow feeder bowl and a textured lick mat into one compact, travel-friendly unit. Perfect for road trips, camping, hiking, or just a quick trip to the local dog park.",
+    "PROMOTES HEALTHY DIGESTION ON THE GO — Unlike standard collapsible bowls that allow dogs to gulp their food, our deep bowl features raised wavy ridges to effectively slow down eating speed. This crucial feature helps prevent choking, regurgitation, and canine bloat, ensuring your furry friend's tummy stays healthy even when away from home.",
+    "ANXIETY RELIEF & MENTAL ENRICHMENT — The integrated lid doubles as a soothing lick mat with an engaging maze pattern. Simply spread peanut butter, yogurt, or wet treats on it to distract and calm your dog during stressful situations like car rides, vet visits, thunderstorms, or settling down in an unfamiliar campsite.",
+    "MESS-FREE CLAMSHELL & SPACE-SAVING DESIGN — No more dirty backpacks! The clever folding mechanism securely snaps closed, keeping residual food, saliva, and doggy messes locked safely inside. It features a convenient reinforced loop, allowing you to easily attach a carabiner (not included) to your leash, belt, or travel bag for hands-free carrying.",
+    "PREMIUM, PET-SAFE & EFFORTLESS TO CLEAN — Your pet’s safety is our top priority. Crafted from flexible, food-grade silicone that is 100% BPA-free and built to withstand rugged outdoor adventures. Cleanup is an absolute breeze—simply wipe it clean, rinse it under a tap, or toss it in the top rack of your dishwasher after your trip."
+  ],
+  "related_products": [
+    {
+      "position": 1,
+      "asin": "B0GRR8NJX6",
+      "title": "Slow Feeder Dog Bowls & Lick Mat for Liquid and Thick Treat, Anti-Slip Dog Lick Bow...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToxOTU2MTMzNDI1MjQ2NTg4OjE3Nzk0Nzc5Njk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTIzNjM1MDQ5MjMwMjo6Ojo&url=%2Fdp%2FB0GRR8NJX6%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0GRR8NJX6%26pd_rd_w%3DK8RDP%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DKP0SESN56VK6JZE0AJP4%26pd_rd_wg%3DdNCzG%26pd_rd_r%3Da8280e70-7c4a-43c3-a849-f4d4755180ec%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0GRR8NJX6/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GRR8NJX6&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "#1 New Release",
+        "Ends in"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/71DaR1owZSL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.1,
+      "reviews": 112,
+      "discount": "-24%",
+      "price": "$15.19",
+      "extracted_price": 15.19,
+      "price_unit": "$15.19 / count",
+      "extracted_price_unit": 15.19,
+      "old_price": "$19.99",
+      "extracted_old_price": 19.99,
+      "save_with_coupon": "Save 5%",
+      "prime": true,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 2,
+      "asin": "B0FTGH7VT8",
+      "title": "Set of 2 Stainless Steel Dog Bowls - 64oz/8 Cups Double Wall Insulated Food and Water Bowls for Dogs and Cats, Non Slip Metal Pet Dishes for Medium-Large Pets, Puppy Essentials by PETMAKER (Black)",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToxOTU2MTMzNDI1MjQ2NTg4OjE3Nzk0Nzc5Njk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTIwMTg5MTExMTIwMjo6Ojo&url=%2Fdp%2FB0FTGH7VT8%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0FTGH7VT8%26pd_rd_w%3DK8RDP%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DKP0SESN56VK6JZE0AJP4%26pd_rd_wg%3DdNCzG%26pd_rd_r%3Da8280e70-7c4a-43c3-a849-f4d4755180ec%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0FTGH7VT8/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FTGH7VT8&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/81E9Ik-9V6L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.5,
+      "reviews": 2,
+      "discount": "-38%",
+      "price": "$27.75",
+      "extracted_price": 27.75,
+      "old_price": "$44.95",
+      "extracted_old_price": 44.95,
+      "prime": true
+    },
+    {
+      "position": 3,
+      "asin": "B0B42KPFR6",
+      "title": "BAGLHER Dog Travel Bag for Supplies - Double-Layer Airline Approved Weekend Pet Travel Organizer Set for Dog and Cat Tote with 2 Pet Food Containers and 2 Collapsible Silicone Bowls Green",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToxOTU2MTMzNDI1MjQ2NTg4OjE3Nzk0Nzc5Njk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTE4NzkyNzg3NjAwMjo6Ojo&url=%2Fdp%2FB0B42KPFR6%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0B42KPFR6%26pd_rd_w%3DK8RDP%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DKP0SESN56VK6JZE0AJP4%26pd_rd_wg%3DdNCzG%26pd_rd_r%3Da8280e70-7c4a-43c3-a849-f4d4755180ec%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0B42KPFR6/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0B42KPFR6&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/81m4psVSrpL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.7,
+      "reviews": 769,
+      "discount": "-10%",
+      "price": "$29.69",
+      "extracted_price": 29.69,
+      "old_price": "$32.99",
+      "extracted_old_price": 32.99,
+      "prime": true
+    },
+    {
+      "position": 4,
+      "asin": "B0DT6X1642",
+      "title": "MALACASA Dog Bowls, Ceramic Dog Food and Water Bowls for Medium Size Dogs, 3.5 Cups Capacity Pet Bowl for Medium Dogs (M-3.5 Cups)",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToxOTU2MTMzNDI1MjQ2NTg4OjE3Nzk0Nzc5Njk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDc4MDkwMTMxMzMwMjo6Ojo&url=%2Fdp%2FB0DT6X1642%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0DT6X1642%26pd_rd_w%3DK8RDP%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DKP0SESN56VK6JZE0AJP4%26pd_rd_wg%3DdNCzG%26pd_rd_r%3Da8280e70-7c4a-43c3-a849-f4d4755180ec%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0DT6X1642/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DT6X1642&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/61MvIuVsAuL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.7,
+      "reviews": 300,
+      "discount": "-13%",
+      "price": "$16.50",
+      "extracted_price": 16.5,
+      "price_unit": "$16.50 / count",
+      "extracted_price_unit": 16.5,
+      "old_price": "$18.99",
+      "extracted_old_price": 18.99,
+      "prime": true,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 5,
+      "asin": "B0FKS3MRHW",
+      "title": "Collapsible Dog Bowls for Travel, Portable Dog Food & Water Bowls Set, Foldable Sil...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToxOTU2MTMzNDI1MjQ2NTg4OjE3Nzk0Nzc5Njk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDk2NDg5NzIzODUwMjo6Ojo&url=%2Fdp%2FB0FKS3MRHW%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0FKS3MRHW%26pd_rd_w%3DK8RDP%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DKP0SESN56VK6JZE0AJP4%26pd_rd_wg%3DdNCzG%26pd_rd_r%3Da8280e70-7c4a-43c3-a849-f4d4755180ec%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0FKS3MRHW/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FKS3MRHW&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Ends in"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/51IMGSfoNJL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 5,
+      "reviews": 4,
+      "discount": "-30%",
+      "price": "$9.79",
+      "extracted_price": 9.79,
+      "old_price": "$13.99",
+      "extracted_old_price": 13.99,
+      "save_with_coupon": "Save 25%",
+      "prime": true
+    },
+    {
+      "position": 6,
+      "asin": "B0DXKF1193",
+      "title": "Lesipee Slow Feeder Dog Bowl for Large & Small Pets, Anti Choking Puzzle Dog Food Bowl with Non-Slip Base, Interactive Pet Slow Eating, Silicone Cat Feeder for Puppies & Cats(Grey Green)",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToxOTU2MTMzNDI1MjQ2NTg4OjE3Nzk0Nzc5Njk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDc2MTM3OTAwOTYwMjo6Ojo&url=%2Fdp%2FB0DXKF1193%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0DXKF1193%26pd_rd_w%3DK8RDP%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DKP0SESN56VK6JZE0AJP4%26pd_rd_wg%3DdNCzG%26pd_rd_r%3Da8280e70-7c4a-43c3-a849-f4d4755180ec%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0DXKF1193/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DXKF1193&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Amazon's Choice",
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/61o+lc5x+dL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 793,
+      "discount": "-10%",
+      "price": "$8.99",
+      "extracted_price": 8.99,
+      "old_price": "$9.99",
+      "extracted_old_price": 9.99,
+      "prime": true
+    },
+    {
+      "position": 7,
+      "asin": "B0G43DRQR2",
+      "title": "Ceramic Slow Feeder Dog Bowl, 1.8 Cup Fun Pet Food Dish for Small & Medium Breeds to Slow Down Eating, Anti-Gulping, Stop Bloat, Preventing Choking (Grey)",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToxOTU2MTMzNDI1MjQ2NTg4OjE3Nzk0Nzc5Njk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTExMzg1NTA1MDEwMjo6Ojo&url=%2Fdp%2FB0G43DRQR2%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0G43DRQR2%26pd_rd_w%3DK8RDP%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DKP0SESN56VK6JZE0AJP4%26pd_rd_wg%3DdNCzG%26pd_rd_r%3Da8280e70-7c4a-43c3-a849-f4d4755180ec%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0G43DRQR2/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G43DRQR2&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/61te9i6O0PL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.8,
+      "reviews": 9,
+      "discount": "-50%",
+      "price": "$10.79",
+      "extracted_price": 10.79,
+      "old_price": "$21.59",
+      "extracted_old_price": 21.59,
+      "prime": true
+    },
+    {
+      "position": 8,
+      "asin": "B0FQC9JN15",
+      "title": "Yipetor Slow Feeder Dog Bowls for Liquid Treat, 【Enrichment Ball-Roll】 Bone Broth Dog Lick Bowl, 3/4 Cup Yogurt Pup Lick Toy for Large Medium Small Breeds Dietary Supplement/Post-op Nutrition",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo2ODk2MTE5MjU2NTgyNDUwOjE3Nzk0Nzc5Njk6c3BfZGV0YWlsMjozMDEwNTMxODk5MzE3MDI6Ojo6&url=%2Fdp%2FB0FQC9JN15%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0FQC9JN15%26pd_rd_w%3DliCaZ%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DKP0SESN56VK6JZE0AJP4%26pd_rd_wg%3DdNCzG%26pd_rd_r%3Da8280e70-7c4a-43c3-a849-f4d4755180ec%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0FQC9JN15/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FQC9JN15&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/61yuiOQSQUL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 3.8,
+      "reviews": 1061,
+      "price": "$19.99",
+      "extracted_price": 19.99,
+      "save_with_coupon": "Save 10%",
+      "prime": true
+    },
+    {
+      "position": 9,
+      "asin": "B0GTYGLWK6",
+      "title": "Dog Lick Bowl, ESELATIN Anxiety Relief Lick Mat for Dogs, Non-Slip Freeze Licking B...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo2ODk2MTE5MjU2NTgyNDUwOjE3Nzk0Nzc5Njk6c3BfZGV0YWlsMjozMDEyODU3NzY1MDgwMDI6Ojo6&url=%2Fdp%2FB0GTYGLWK6%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0GTYGLWK6%26pd_rd_w%3DliCaZ%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DKP0SESN56VK6JZE0AJP4%26pd_rd_wg%3DdNCzG%26pd_rd_r%3Da8280e70-7c4a-43c3-a849-f4d4755180ec%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0GTYGLWK6/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GTYGLWK6&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/61+9avVgQeL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.7,
+      "reviews": 14,
+      "price": "$19.99",
+      "extracted_price": 19.99,
+      "price_unit": "$19.99 / count",
+      "extracted_price_unit": 19.99,
+      "save_with_coupon": "Save 15%",
+      "prime": true
+    },
+    {
+      "position": 10,
+      "asin": "B0GY5G4XL8",
+      "title": "Slow Feeder Dog Lick Bowl with 3 Rolling Ball,Anti-Slip Silicone Puzzle Feeder for Liquid Treats,Bone Broth,Yogurt,Wet Food,Anxiety Relief Enrichment Lick Toy for All Dogs & Cats (Blue-2Pcs)",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo2ODk2MTE5MjU2NTgyNDUwOjE3Nzk0Nzc5Njk6c3BfZGV0YWlsMjozMDEyNzY0NTEwMjUyMDI6Ojo6&url=%2Fdp%2FB0GY5G4XL8%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0GY5G4XL8%26pd_rd_w%3DliCaZ%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DKP0SESN56VK6JZE0AJP4%26pd_rd_wg%3DdNCzG%26pd_rd_r%3Da8280e70-7c4a-43c3-a849-f4d4755180ec%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0GY5G4XL8/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GY5G4XL8&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/715YiL4uPML._AC_UF480,480_SR480,480_.jpg",
+      "rating": 3.8,
+      "reviews": 5,
+      "price": "$26.89",
+      "extracted_price": 26.89,
+      "price_unit": "$26.89 / count",
+      "extracted_price_unit": 26.89
+    },
+    {
+      "position": 11,
+      "asin": "B0F98W8SDG",
+      "title": "Dog Lick Bowl, Non-Slip Dog Slow Feeder Licking Mat Treat Dispenser, Interactive an...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo2ODk2MTE5MjU2NTgyNDUwOjE3Nzk0Nzc5Njk6c3BfZGV0YWlsMjozMDA4MjI2NjAyODQ1MDI6Ojo6&url=%2Fdp%2FB0F98W8SDG%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0F98W8SDG%26pd_rd_w%3DliCaZ%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DKP0SESN56VK6JZE0AJP4%26pd_rd_wg%3DdNCzG%26pd_rd_r%3Da8280e70-7c4a-43c3-a849-f4d4755180ec%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0F98W8SDG/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F98W8SDG&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/61v5KEsyTlL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.6,
+      "reviews": 63,
+      "discount": "-13%",
+      "price": "$13.99",
+      "extracted_price": 13.99,
+      "old_price": "$15.99",
+      "extracted_old_price": 15.99,
+      "prime": true
+    },
+    {
+      "position": 12,
+      "asin": "B0GT9FVBVC",
+      "title": "Dog Lick Bowl with Ball,Dog Licking Bowl with Rolling Ball,Slow Feeder Dog Bowls for Liquid with Rolling Ball,Slow Feeder Dog Bowls for Liquid Treat, for Large Medium Small Puppy Breeds (Blue)",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo2ODk2MTE5MjU2NTgyNDUwOjE3Nzk0Nzc5Njk6c3BfZGV0YWlsMjozMDEyMjExNDgwNzI5MDI6Ojo6&url=%2Fdp%2FB0GT9FVBVC%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0GT9FVBVC%26pd_rd_w%3DliCaZ%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DKP0SESN56VK6JZE0AJP4%26pd_rd_wg%3DdNCzG%26pd_rd_r%3Da8280e70-7c4a-43c3-a849-f4d4755180ec%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0GT9FVBVC/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GT9FVBVC&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/61lcxnn9aTL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 3.5,
+      "reviews": 2,
+      "price": "$17.99",
+      "extracted_price": 17.99,
+      "prime": true
+    },
+    {
+      "position": 13,
+      "asin": "B0GWQVB157",
+      "title": "Large Dog Lick Bowl for Dog, Freezable Silicone Dog Licking Bowl for Distraction, ‌...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo2ODk2MTE5MjU2NTgyNDUwOjE3Nzk0Nzc5Njk6c3BfZGV0YWlsMjozMDEyODg3MTM2NTc4MDI6Ojo6&url=%2Fdp%2FB0GWQVB157%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0GWQVB157%26pd_rd_w%3DliCaZ%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DKP0SESN56VK6JZE0AJP4%26pd_rd_wg%3DdNCzG%26pd_rd_r%3Da8280e70-7c4a-43c3-a849-f4d4755180ec%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0GWQVB157/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GWQVB157&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71dkBNbWsbL._AC_UF480,480_SR480,480_.jpg",
+      "price": "$17.99",
+      "extracted_price": 17.99,
+      "price_unit": "$17.99 / count",
+      "extracted_price_unit": 17.99,
+      "prime": true
+    },
+    {
+      "position": 14,
+      "asin": "B0DL3P6MT6",
+      "title": "Slow Feeder Dog Bowl-3Cups for Large Breeds, Double Wall Food-Grade Stainless Steel...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo2ODk2MTE5MjU2NTgyNDUwOjE3Nzk0Nzc5Njk6c3BfZGV0YWlsMjozMDA4MTkwMzAyNDAxMDI6Ojo6&url=%2Fdp%2FB0DL3P6MT6%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0DL3P6MT6%26pd_rd_w%3DliCaZ%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DKP0SESN56VK6JZE0AJP4%26pd_rd_wg%3DdNCzG%26pd_rd_r%3Da8280e70-7c4a-43c3-a849-f4d4755180ec%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0DL3P6MT6/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DL3P6MT6&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Amazon's Choice"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/71OCMtFO2VL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.5,
+      "reviews": 1613,
+      "price": "$29.98",
+      "extracted_price": 29.98,
+      "prime": true
+    }
+  ],
+  "videos": [
+    {
+      "position": 1,
+      "title": "My dog loves it and will spend a LONG time on the lick mat with peanut butter",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/8d0ebaf7-8407-461d-8dc9-00498209bfc6/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/71f4fySjZgL.jpg",
+      "duration": "0:05",
+      "vendor": "Gary C.",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SL34_.png",
+      "date": "Apr 9, 2026"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": "collapsible dog travel bowl portable slow feeder and lick mat combo for camping hiking outdoors",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/df68f5e3-42b8-4fbb-a71b-0d6d572887f2.__CR0,0,970,600_PT0_SX970_V1___.png"
+    },
+    {
+      "position": 2,
+      "title": "Mess free clamshell foldable dog food dish with carabiner saves space over bulky slow feeder bowls",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/64ebcb50-b858-4b5e-9390-576bf1d53456.__CR0,0,970,600_PT0_SX970_V1___.png"
+    },
+    {
+      "position": 3,
+      "title": "BPA free silicone travel dog bowl with slow eating ridges and puzzle lick mat dishwasher safe",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/9e0c2310-b903-455f-954d-691a4941626a.__CR0,0,970,600_PT0_SX970_V1___.png"
+    },
+    {
+      "position": 4,
+      "title": "Dog anxiety relief lick mat for calming during car rides vet visits travel accessories",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/f4d80eeb-db58-45c6-88bb-6451212ca0b5.__CR0,0,970,600_PT0_SX970_V1___.png"
+    },
+    {
+      "position": 5,
+      "title": "Best multi functional portable dog travel bowl comparison vs standard foldable pet water dish",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/ef5e1bc5-5c98-4f5a-accd-1b6787ea4c20.__CR0,0,970,600_PT0_SX970_V1___.png"
+    }
+  ],
+  "product_details": {
+    "target_species": "Dogs (Small, Medium), Puppies, Cats, Kittens",
+    "brand_name": "BYAZLETQAN",
+    "recommended_uses_for_product": "Travel, Hiking, Camping, Walking, Road Trips, Outdoor Adventure, Daily Feeding",
+    "included_components": "Portable Slow Feeder & Lick Mat Combo",
+    "batteries_are_included": "No",
+    "are_batteries_required": "No",
+    "dog_breed_size": "All",
+    "model_number": "BZQ202602",
+    "manufacturer": "Dongguan Middle East rubber and plastic products Co., LTD",
+    "unit_count": "1 Count",
+    "best_sellers_rank": [
+      {
+        "text": "#194,683 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 194683,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#476 in Dog Travel Bowls",
+        "extracted_rank": 476,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/3024201011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Travel Bowls"
+      }
+    ],
+    "asin": "B0GGN37P36",
+    "rating": 4.8,
+    "reviews": 7,
+    "additional_features": "Anti-Choke, Digestion Support, Space Saving, Leak-Proof Design, Easy to Clean, Eco-Friendly",
+    "power_source": "Manual",
+    "capacity": "2 Cups",
+    "item_dimensions_l_x_w_x_h": "6.69\"L x 6.1\"W x 1.77\"H",
+    "item_weight": "388.4 Grams",
+    "material_type": "Food-Grade Silicone, Non-Toxic, BPA-Free, Durable Flexible Silicone, Heat-Resistant",
+    "product_care_instructions": "Hand Wash Only",
+    "is_the_item_dishwasher_safe": "Yes",
+    "color": "green",
+    "style": "Maze Pattern",
+    "product_dimensions": "6.69 x 6.1 x 1.77 inches; 13.7 ounces",
+    "item_model_number": "BZQ202602",
+    "date_first_available": "January 14, 2026"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0GWDD2HW1",
+      "title": "Dog Lick Bowl with Rolling Ball, Slow Feeder Dog Bowl for Liquid Treats, Anti-Slip Licking Bowl for Bone Broth and Yogurt, Dog Enrichment Toy, 1 Cup Capacity",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JFE11Oa5ZjH4gvE89qoUW58AAAGeUSb7SwEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICCxyOZm/clv1c_ek-wxYHXLbbWDfHOAIfj8e5gSssXIXapUNGMBCViv3uQEktNYkJ4HwNf13yH_3DneawKXq_R6sUFA3lGmgu90-I9NkuAWOMrvihh5O74GuwGB8A7bWv0Dn7Mkpk0J5hh8lryZZAyIGzsiY1fzKki1du_ABydn0FKi8aIJ3cKzwSZX77oqAuMetDpvwR66fM_pWcirJuLXIDK8-_P1yBm3nmODQ9vjErk09tgNFP0yVrdB46-uoF1MUcNSPY7a5q3MfAM5a5tZoVyKTyPQnO17NyVjEV8jlg5wjD_4AGiuD1nta940X0wkXCo5gi-y9lwreH827KqgV0Jghg3uk1Y_6Tkb1EaW0-5NlckAPXJNiCRrOpy_QIoQUSciEgYXbyIS_V7D3iL7iGD7Gcn1s7KMePWqTz9I22wfQ6VSQFo1OKOF3wOs3VG_4g25WKnzHxP0wtKZ29vDbnI7TXiCkQeaDZEncSvdjyEjUs1IVd4Fs1bcF6hc7s15jG_rU-sCCYRNJkCz8WdHDbNF8J43Y6gixUsUFjhwjOndkMVwRTXNkF81GoPbfCctKX-iPfBHReWepnnowTTpi3cWlcoUAUuXMs-5aJM2RhuhpqLFwJBeVLdUJsRfRJHY_3jvDInEyrxchI7NqGH0WRy2qv_lSSNGoGZD_hNVkE5Fdv3Px9kgc4P9aQNRdZJ3y8SKk9_JpCbmGFcCclEGZkF22cCELmah7bfH21rm8jcGUmS4DmpZ3UoUQXQybCSnK4FLSo1K6bBTIvpWALanxiRo6eNxC1RvNruCHk85UGhd81Fm3CyiRnrTvCRYrGTCybKoxbSECBtLb0YPUmwKg-dpI5XU2hoyH-GV7P_nSLDgkPzGknQesJ0rdXMz_K6sWt-9gsu-yGc0a3J63Vtrvdv44QgXjZsEfQ-V_wJat3LGkE78W7OOngyZR-taoEPDCKcfibmOa-Q54zl_3eukCNhAaPa2vCYZBUrHvKL2SJvYvEX_0ca7W3SMZ0SEYG3dmCDzvvYmGCRPD7Lkq5xsdmw2A3-BNX60sx7KAqFacK1KIg1YwE2i7Grjs5H9s8vn3pU-eg4d4kszCDdcPFjcmXS_982XrefI8ZJBtLCYR3fxVT5sffTmZ01WUll-BrCcoENg9YGWak_iznNO-hQca1P2wLlzTX_B3vw-aTSsuYO4hn1QxdJEEHJHUYK75xeZiICTxlfIvDpG-SPkuio3tGtiavlDQmfLLyNSy4DPhcRGam85CFdDlK6tj6QAFf2E8BexnJUVDpa9Txo4FvF0ZkXWFF9eNW39d6leiA8Jmj_ENHPO89tJckGmftTLCWOpUg0w9_4md--rOO0LHJQZtBXGTYgW_NHWKpvUKCAKpLiF5_Y1JU5R6UCUQJbJQss5VH_JcdU4haqjImawvMrbnpEh-MFCdEUJRgDxpUEClgoRH8qS3_IWep-o5xyINsd1GjO4Q7_mQIQKeUpaGQBbMgHmuE3MAnoMmpntFZwiNzDcjn1M48mqduyI9VdE5fcJ25qRS-FNix1GxV0qls457_0xjfFc7eUnViCvIeV8Q/https://www.amazon.com/dp/B0GWDD2HW1/?_encoding=UTF8&pd_rd_i=B0GWDD2HW1&pd_rd_i=B0GWDD2HW1&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=9yx0C&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=KP0SESN56VK6JZE0AJP4&pd_rd_wg=dNCzG&pd_rd_r=a8280e70-7c4a-43c3-a849-f4d4755180ec",
+      "link_clean": "https://www.amazon.com/dp/B0GWDD2HW1/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GWDD2HW1&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/31UX5BObwWL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/fc94c096-3cce-4167-955f-aeb4c6dc5d04.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/fc94c096-3cce-4167-955f-aeb4c6dc5d04.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 5,
+      "reviews": 2,
+      "price": "$19.99",
+      "extracted_price": 19.99
+    },
+    {
+      "position": 2,
+      "asin": "B0GRR8NJX6",
+      "title": "PetsHome Slow Feeder Dog Bowls & Lick Mat for Liquid and Thick Treat, Anti-Slip Dog Lick Bowl with Interactive Rolling Ball, 5/6 Cup Pup Licking Toy for Large Medium Small Dogs and Cats Blue",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JG9pW-UBtZXXieoXQwv9NiEAAAGeUSb7TAEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICACaZxd/clv1c_ek-wBYf3FbbazjI3kDcWe2v7kgw6AAjLNNSIJxSzRzl1K-ZU36Bid9xVZyfYt5NeypvhQvJIdXm97L2gswj8RCTjCQFAyeqoBykkEDXrGNS1yFB2KXutRVw5Y_NpID2lp3Uz7CRhtivMogQ2EIYDqJHbqsGM1lco0sb_xEf-TNdPOdNiprXnpExL-bKbNhDob2-fwDMTz2abdOV31YFyWGpQefUHuI3kyIqLOy067iCAB9yJRzvvQwySQlf-g_tFe9NWTAKACUUCQbBvk2B2xVo9X0x1rdtu29Z5bx-IRB0yJWnLpOtmlUMQa5XjX0PXPzXSFvqWzLJzmgAMDVwR361kGkQclM35VfHQ7c2ribD7j16AxRsENwEvJV036fPAThRvIucz1exdtvCXOOMm-PmK4-Q-IFI5VuKUy0PyjQ9WD5kprGQz4NG0wPyVBWm0yzFJELxU6FdBHGUgjZdWHbo6Tcs6NTlrqs-_JTMhQLXvU93l2IDBMiMfbcA0LP95dXOctp2cEmGHy6oI3rqdEkKDsjoKpboufO2kTeSSnyx4DdAmKoLj1cdsevYfISPNQUy6UZqetcL2560-ED9lwlbSNzc8qQpLgKIME2we2-XcvE-j27mNk3Oj7Q4d2RrWpy1Vv_glY76LvHuHAgMJOf6dxL8UBi0oQap64r7-Iq_kqf4NPY_t8nvlT0GIZU18rdmRIocbvPgwEXcQmuJbUSX8S9oxysHrf2HsczfGkcJBKi-K2Zrju_503PJTdSF6X-58EEpZ2zTehQENKuVi1c8D8ruhPuERKACFAo7WwrkkSWjT6OdruvHAZZvcE2b-N4VHaClF3zRV4pQhFLy-n51Gk4PT5vF9QbFtTGESLcJTFvKIqnS2KPbkNdP5i866vMwOncT1uSCYwQNAMsG7XXSTClrtyOjlGo0l34rtIJgojkFMx03Ti_GoY8C0mOZlE34mDRTc0OEbIp5LLQSIMAaHFsW7LiTulKLhz0HplZhgmMf6B95L5F7iOoLjP6eJ0-gBgfpkiJwcmaPYLC1QcoocgMY0g2wzwvjgsA2GEf2V3y3KIhru7N7_8f7-BpFXQtOl0K9ONCxX8YDpurW_pOYAbzxzS-EeT5Q8XG6HQmXDJjGNUj0DZHmocHKJRC9h4ykJOHarLLldhvsTs9zgdaZOdcaqovMZCl77GjRvMhYpwL7yq0O2DTsF7dtrmTaCpFvxbbYdI-fZn-9YiiPzE_4ze7REAreHN8x1rgF3K_7QXqvGugYSUFb4KRav76fcGZbl6ssWE7oaWY_-fiBNce1tu1yoSxHSLG10gH_TJgPed-rcb6pj3dHPbAgEpx2djGMcp_TxGWRi1TxHHt06k9usP0Oode2Z13LS5OYYm_qJlQ9rp8apTo7vqt_cL0koBIb7JW-1YHGx9bvVAq-KxFL5yrM9ZT_IPuXMNB1bOMn_zhBXSggsbuKgfwbNaFnz8ITm6ptPIz0jBE9TB7Vt35wDQmQnPF2XskqrYcjJXgfC35BTl-iDJZI9/https://www.amazon.com/dp/B0GRR8NJX6/?_encoding=UTF8&pd_rd_i=B0GRR8NJX6&pd_rd_i=B0GRR8NJX6&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=9yx0C&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=KP0SESN56VK6JZE0AJP4&pd_rd_wg=dNCzG&pd_rd_r=a8280e70-7c4a-43c3-a849-f4d4755180ec",
+      "link_clean": "https://www.amazon.com/dp/B0GRR8NJX6/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GRR8NJX6&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/515VWczX5aL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/ebe53af7-0843-426a-946c-b99f3adc117b.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/ebe53af7-0843-426a-946c-b99f3adc117b.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.1,
+      "reviews": 112,
+      "price": "$15.19",
+      "extracted_price": 15.19,
+      "old_price": "$19.99",
+      "extracted_old_price": 19.99
+    },
+    {
+      "position": 3,
+      "asin": "B0GWZW7MXN",
+      "title": "Vidotim Large Silicone Dog Lick Bowl for Dogs, Non-Slip Slow Feeder Lick Bowl for Dogs with Strong Suction, Food-Grade Anxiety Relief Dog Freeze Licking Bowl for Dogs",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JGV-StW9LXdDFSa5u3mfOL0AAAGeUSb7TQEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAfttvo/clv1c_ek-wxQfWFbbaTPHXD5tyrleKjFOCmHGy-AYT6nqym_UMxXbQAeWB3b8UtxtbVh0WaeUIIgo7Dht95S0lzoSExn8qFN67QBWzSRXlLtfon883kJ1tFLNflYxZYPhhlGa2-QtQJYKgNAbhEcUMB7l2ArzLINufsgVqYNQwjTSo0ZYrbUPmbuG5ZZ5uv7FPFxnkj-WS-QlOFAr6odLZd5iMt0sy3f2flMZSFSRokPQpFg0nD6qxvnETI5D6OsUl7-miwlFH8toU-ExYmWIFkpr1PdRPLISzriiCKK9Y6AYjsHrFqLR6bE31Ud9xDozVC4Vc7xSh5cKUsfVoSJ154DoMem-xjd9fFTNu_RYjZLXfMpD-QsknZOjru4RY5ewS9LPuLT-jYmh_We7afVNwqo1COp8UZEdLRhxzD3YIVZQjGvmBpJq1dGWG_xhrR8VzpS14KrYis_6qSfDpWDTqauztWChEHkSvfkyEjUvVMVd4Fu3jwzw8xb815qncVPsD3APQ2pDu0bj4zW6sbK2glq3l0UmDXelkXC49bRrQv0iPWmWYkLzOod6KxovoLrByAca57JreBCwH6sqaHKaRQN9i_XDNLhe84devbAamFDPOPZGR3z7dosun7RXoVKaXraZlf0qWTNk1dFAfylB3t4BFhCWW4hmGP3wNKRYONxkbCTTvlwN2dKYv2YVDDhUorFytoRwHHnauy4PKGbDu_vzQLs0o7lBBe9Y4Ech8Fswo2YmzJ5TAE826HbcTZeWiFPGGod6sTX6ryM6cETfR9kXqfwIW0CdMclRtDITTA39arCtvVq16fujEYI_LfyRkWIX_epucnGHfgNHrOHEdP0u7hZzH2ARFJAQi5K2hCBJqVWQTKeAE2f80Q92FjZPpP7zxlJ9FfbHkgcaB7zt9c-5w50dBx88fgQEuvULowtAFyCuwHdm3DcrMmFIrCKkWHRTq5jff7o7GDHr_m11Y9bQ0UaYyehMor9elOZf9iYMPl0RMQa9VFAd8XhibduB1l3_NbCUzZo-70CgbHUmGzhnkFye8KB0U-bvLPSXDdg-t-EdmAFHBpYglXmd7o8EuoOmjo_7D66WhMnP55rlZIOh-j17c8JxUDLrt2xjBP_uYJ9ZNQAYl17tsWTlNIjUYJ2bFG3WeluvkB2epX9vZ6eZ12coudxwh3z18Kn8a7KqulyemnbY1ynh0nY3YAvVqwlWwgQ_piBhCdmkVNRs-vEF5wICfUrm9rHQIuUMjnxvTwmX7ZWfc0HKlgszmBG-ktS5k7ntSxg6138dnHVSDo4MzbgEy0uBw_hg52oPd5yV7cZ2CYZrv-ausdKQEe3_HFIo1h9-JqpiiG0jEr_vn-vjmwvzul_j_6D7V70GEMlaD73njg-fcuPj3Rsh26ApHmcjroJh8S7mrEa74Uv5y_Rh5kvKqTtwRAp_Vmv5EZiXtvYleM7-FAcU72lHKB-P0WJGiCWA_aP5NKOl3Fb-IxMaLMGsLnmt3wddlC-dhk0GOc_4pddjYLlQ0qdDzg_6Z8h4s_3voswu_lfBCa6LipWzVkTSy/https://www.amazon.com/dp/B0GWZW7MXN/?_encoding=UTF8&pd_rd_i=B0GWZW7MXN&pd_rd_i=B0GWZW7MXN&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=9yx0C&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=KP0SESN56VK6JZE0AJP4&pd_rd_wg=dNCzG&pd_rd_r=a8280e70-7c4a-43c3-a849-f4d4755180ec",
+      "link_clean": "https://www.amazon.com/dp/B0GWZW7MXN/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GWZW7MXN&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41cebvPUmiL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/fca6f508-d3ee-4975-a77e-9b2be44ab37f.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/fca6f508-d3ee-4975-a77e-9b2be44ab37f.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "price": "$17.99",
+      "extracted_price": 17.99
+    },
+    {
+      "position": 4,
+      "asin": "B08MBFWRQW",
+      "title": "GORILLA GRIP Dog Water Bottle, Portable Water Bowl Dispenser for Dogs, 20 oz Leak Proof Pet Travel Squeeze Bottles Food Grade Silicone, Pet Stocking to Go Puppy Essentials, Turquoise",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JJgGhBekF_8ZB2FjRczM40IAAAGeUSb7TgEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICD3kAOW/clv1c_ek-wBQfWbcba3U4JGFWvP6gyYwtOrgBrUGjS6PDKXROsgVTaZPlQD90RH7sdd8gdCWMcJSOl3fI1Jn4gp6dJVwlWW650UPUnaasiwdlln0C0MTdNcTiBjWv1-I3rjpPLh55w18pZNY9RC8nwbfBG-dXFqP2dN3SoEs3I5feC5FZYuj4SN8m1bITc6f6GOgysrPybhglIoobC_W7YfOLC7vc1_68xRz9XocEUvJ9dgQOw-ieORmwiqxmxs9171SbqnhwTe0ma0LKaotwQiChSxe5mgHSFmqBrBVFg3MV4sRW71ipk5VdwJMKBv_X5fJKcvlVoWT1b5hz7NEYmgMHcCnJ5vB_QZ5jAF2lp4-WgnXUYcmf6HiA8Vo_xTM12U5gxs-CdFOTKSF4P0EvnDLy0XLv1dBMd87hIEjH2CptCAQIj5PIwRC2FKxMCL-xQrwm3I5a8fjHc-Axlvx7H5oXQCeSFPlDYheSFsHSVI2wW4LyAuWLY-6GEhYtaOR_0BWucQO2VDGT7S8C34HnbjA97N2FtpqAylENx1KMJILVIP1GBt67ahjWumiTlZEfGhdY5kiCVVRqBH0PD5k-psN5faQ7hbo9Lo2IjvV_0GsYMVEHrv5JeVOrow6UPBdjfhhfVoZsdbwLvvDZ5SupyjX9LaE-GzucUyyPZCLv_pdc-d4KSpR8LIkG3wAgkvHk2qYVZiuX9pdVKDzzjC0eymI3dIkZ3WxYdbdXQX-FK6cFLqcQUALCIszGk1ISruh5jLNthWQnCk2JmVRd5E4zGNtu2cqcav6pkOjUsmH7D-sZcYkGA8tNs3NoN_p0JqhXKcw69C0NLhLl0qHc-fb727snorvgdxImz2sd9q2ubWBhEWDIt4FxLsNPdmOaE7vcSl7Ao7yKFY-QBfuz7M-jqQPMcveo3S9iH2mgjU7_OVu5P8OGWpOk4HRlHmGS5TkwaSMuOELRa3Max7XWa3hLo_1lbnRsFK1V_i6D7wu51w9htIgsX7DXr16SomOxTNr3Mh8DTpVPvxcXZ9daqkAFyXh2i0Pi_v397Ek8weQZbUcRmMOHarCPPxMYQzCxAF4Bbh-Ru80eLZCM_lAtxVbfOtFvOLxg23fp0hYWudYlUaO86jMajdo1UtgaXS-AkMeh_diC3m9tr1LFUUGmeL7JHJ3zUxzhqFqZKlr_FRT6k8BplLYVYLpvcAzmmkn1A8tymOZ-oK8M0LLcZfsAeJl_LoBbIFb65Moplu5J6-wtbpssx5LkOGa51yoSwqoo4f9cRWUK50EEUOjMg34UYCuMVWKl1l5ysdQfwFLo4XAcXsew_SKaMglB08ynFYGWhk5ylBZS3BjdyzJ7QW2Tg1QRDHil7m6ms_0SIRa2Z1zJS5eYc2tqJhQtbt8ixSu7vqN_cL0koAI7FJW-1YHGx9avVAi-6xHP9ipM_ZT3IHuXMNA1fIAlz8pAC8qW6Bzq2sDbNaGHv8ITm6FtOIzMjBE9TB7VNn5zDwicvBOzqsbGa_iTyngNrpdvgpQY11S2d/https://www.amazon.com/dp/B08MBFWRQW/?_encoding=UTF8&pd_rd_i=B08MBFWRQW&pd_rd_i=B08MBFWRQW&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=9yx0C&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=KP0SESN56VK6JZE0AJP4&pd_rd_wg=dNCzG&pd_rd_r=a8280e70-7c4a-43c3-a849-f4d4755180ec",
+      "link_clean": "https://www.amazon.com/dp/B08MBFWRQW/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B08MBFWRQW&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51REwTc6THL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/0e820521-ca76-49cf-bb8f-697f86fae9db.mov/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/0e820521-ca76-49cf-bb8f-697f86fae9db.mov/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.3,
+      "reviews": 4522,
+      "price": "$14.99",
+      "extracted_price": 14.99
+    },
+    {
+      "position": 5,
+      "asin": "B0GTM4W5WP",
+      "title": "Slow Feeder Dog Bowl for Liquid Treats, Anti-Slip Lick Bowl, Bone Broth and Yogurt Puzzle Feeder, No Spill Pet Bowl Pup Lick Toy for Large Medium Small Dogs and Cats, Anxiety Relief, Blue",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JIEeegPVo3FSQhpDd5X97_wAAAGeUSb7TwEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAepwTV/clv1c_ek-YBQvWbcbaXg1XZzuQgo-tvz6pEnfg7GfS7vDKLTp8gVT4egcpM_fcExRMkmnuN6CpoAU4GkX-RvRa68fq6otZGzHOx-rK8WYnwvpiTO0-uZlhHJNPl3yZYvpnvAY2njzPAYQkxTbBFRXJCxTgOXZYovGkNtTrLkD80SqC-EZPCMreocI0APLyGnngKItSnMEFo8xKARrSmd6plxjNuzj_DQ5vEExn8EdQKlM08VQeDBZiSpVA0wYvoOHLWWixi8anlDLBjM_rGy1q8cA4qP_qf6a4IFEvVbjXYHzJa4PWM_ej7QVikK2yN11zFR8RAddFUvRNgKkcT5xt9vhHsXqjPApT5kRrEUkYl2aFrHCahbDbO2CZ3Zkgz7zMOzh7cGWw_zkfJ92GT0JE7favLG-M6mr-GTv4wJhupWJs2Lr4j1Oa_z9e6BuCn5ngbTDRDd0Gz7IzUwArsOqLB52qQt2Czu2Rb6ibGguysGZqKK6d6hz2jrslpqnc1Po7q1CA2pSOt7q9Drgw28dP-Kx1IplbtcGIY0OGymCcjFiRfy8aGYTAUsHbh3kT9rVCQJejDeO4ucCk2Q9L8_NeqaF4v_1irZkFbgNBRdc1Q1RD3Mtjpokoss-ncCyqLhtekxjCCBYlbovePSh0ctm8FvSY8ttDMhvAXc3ZFdv25KKmMW-n21GGjBmZGY7p8D4Ecoo5fe_qEuiKAcBAushCy1FpA8he9HDDbIbff_A9Gqso1s6oK8a6qT06Tdh7TP9I7FqucEYrdKwRvesrMf2zbq54pukjgeDqFckQ9vnoKueuohBlTSWWZ60uKgQ4tqq72vUnCHMffksUxFdoWRKCmf_QqV_1CNDOpn9PIWfUDA_Iznl4ROV0KXr4gEJv14Q84kUxHnGs5RX5srG47ZsAJqi1OAeXPOOQ0yH3fmgI_9K4cy1ggnnT_EFxcb-rpBzTiDnnqLoCyPHPY9QZO88JG4MYYV7oThHKbOC8ox0S08vOxxR04msxPf_4iGPrHkcft3H4sPzJrOatPV_UxH9PKIcEDTW1d6c6YnyRRkKtqPkZoI3GH1ASboFWyZ_t5fTxaZN7k3rgwUp8SWKIZyNEDhn1pC-Zgn3FYLdAvIGyif4eP8bj560Y1nHl8_7zZEK8CaGuApbq3K3dUSTqlc9dVcEz56SiCYzE65St9oa3UmwjYOCBKBBfimR0aXNXUVWmpokCLRzqdLrT5IOlEA3wpAkLS1uk0I6gxvJ1oihYVjx9_A8euPEv1N8wvTaAtb5GOCxekLMuEdaRJxm66O2x93umXgomf4n5J66Lt8un0N40brJrfH5b_dVIyh0OWzKRVsDiN-6zJm6PKBZ95XlyqGkptjIAoAu4s0KLHusJJmrNlJAGpnEGO2uQgNvdOVp6KA7XN8C0cZJqz6M9ds6IGKooYFDCgodRArOGHWxwpQwr4XhYbEHKPq1XlS4pUVeHwysfR0Rtgn8imEsY7zF32lB3RI8Y4-MBTgMH2Aq-Xlvk4HtJk0ax2zXD-w9TO_2Y_VwC53_Z4qI/https://www.amazon.com/dp/B0GTM4W5WP/?_encoding=UTF8&pd_rd_i=B0GTM4W5WP&pd_rd_i=B0GTM4W5WP&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=9yx0C&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=KP0SESN56VK6JZE0AJP4&pd_rd_wg=dNCzG&pd_rd_r=a8280e70-7c4a-43c3-a849-f4d4755180ec",
+      "link_clean": "https://www.amazon.com/dp/B0GTM4W5WP/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GTM4W5WP&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41fWnh61bHL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/f2305111-ab0f-4327-979f-e72aaad621a7.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/f2305111-ab0f-4327-979f-e72aaad621a7.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 5,
+      "reviews": 9,
+      "price": "$19.99",
+      "extracted_price": 19.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "images": [
+        "https://m.media-amazon.com/images/I/712tgtmakYL.jpg",
+        "https://m.media-amazon.com/images/I/81me4kS7yaL.jpg",
+        "https://m.media-amazon.com/images/I/51gB0dvt91L.jpg",
+        "https://m.media-amazon.com/images/I/716O7qkn-JL.jpg",
+        "https://m.media-amazon.com/images/I/61PQ4+aImBL.jpg",
+        "https://m.media-amazon.com/images/I/713nCPUy75L.jpg",
+        "https://m.media-amazon.com/images/I/71kQWScDuGL.jpg",
+        "https://m.media-amazon.com/images/I/716VxvJuKRL.jpg",
+        "https://m.media-amazon.com/images/I/71-ztqEMRtL.jpg",
+        "https://m.media-amazon.com/images/I/81mfxm7+t0L.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 83,
+        "4 star": 17,
+        "3 star": 0,
+        "2 star": 0,
+        "1 star": 0
+      }
+    }
+  }
+}

@@ -69,7 +69,7 @@ site_system:
       collector_subtype: "section"
       target_action: "Route anxiety-intent traffic to calming converters"
       metric: "collector_to_converter_click to calming converters"
-      notes: "Section collector uses SectionCollectorPage with dynamic topic-matched converter and article cards from the complete sitemap inventory, grouped into topic subsections for car anxiety, fireworks/noise, crate comfort, escape-risk tracking, research/safety, and calming comparisons."
+      notes: "Section collector uses SectionCollectorPage with dynamic topic-matched converter and article cards from the complete sitemap inventory, grouped into topic subsections for car anxiety, fireworks/noise, crate comfort, escape-risk tracking, research/safety, and calming comparisons including lick-mat enrichment."
 
     - name: "Comfort"
       type: "collector"
@@ -99,6 +99,7 @@ site_system:
         - "/calming/best-calming-products-for-anxious-dogs/"
         - "/calming/best-thundershirt-alternatives/"
         - "/calming/car-anxiety-for-dogs/"
+        - "/calming/best-lick-mats-for-dogs/"
 
     - name: "Keep a Dog Cool in a Car"
       type: "collector"
@@ -166,7 +167,7 @@ site_system:
       type: "collector"
       collector_subtype: "article"
       target_action: "Route CBD/calming-research intent to calming converters and orthopedic bed converter"
-      metric: "collector_to_converter_click to calming and comfort converters"
+      metric: "collector_to_converter_click to calming and comfort converters + pinterest_save_click"
       routes:
         - "/calming/cbd-for-dogs/"
       notes: >
@@ -174,7 +175,8 @@ site_system:
         Sources include Cornell Riney Canine Health Center, FDA, Frontiers in Veterinary Science,
         Colorado State University, AKC CHF, PetMD, and California DCC. Internal links route to
         calming converters and orthopedic beds. No dosage instructions. Medical escalation language
-        included for severe reactions.
+        included for severe reactions. Opt-in PinterestSave modules expose approved article pins
+        near the intro decision framing and vet checklist sections.
 
     - name: "How to Prepare a Calm Room for Fireworks Night"
       type: "collector"
@@ -184,6 +186,15 @@ site_system:
       routes:
         - "/calming/how-to-prepare-a-calm-room-for-fireworks-night/"
       notes: "Practical fireworks-night setup guide focused on one low-stimulation room, then routing readers to calming product and wrap comparisons."
+
+    - name: "Should You Take Your Dog to Fireworks?"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Route fireworks-event and safety intent to calming, cooling, and GPS converter pages"
+      metric: "collector_to_converter_click to calming, cooling, and GPS converters"
+      routes:
+        - "/calming/should-you-take-your-dog-to-fireworks/"
+      notes: "Practical outdoor-event decision guide focused on leaving before dark, safe exit planning, and recovery paths through calming, cooling, car-anxiety, and GPS tracker converters."
 
     - name: "Road Trip Chill Kit"
       type: "collector"
@@ -210,12 +221,12 @@ site_system:
       routes:
         - "/comforting/how-much-do-dogs-sleep/"
 
-    - name: "Rhys Ran Away (Bishop Peak)"
+    - name: "Rhys Ran Away (Cerro San Luis Obispo)"
       type: "collector"
       target_action: "Route story-driven search traffic to GPS tracker comparison converter"
       metric: "collector_to_converter_click to /gear/best-dog-gps-trackers/"
       routes:
-        - "/travel/rhys-ran-away-bishop-peak/"
+        - "/travel/rhys-ran-away-cerro-san-luis-obispo/"
       notes: "Story-driven narrative collector; introduces tracker type education; primary CTA to trackingTop"
 
     - name: "GPS Tracker comparison"
@@ -249,7 +260,7 @@ site_system:
     - name: "What to Do If Your Dog Runs Away"
       type: "collector"
       target_action: "Route safety-intent traffic to GPS tracker comparison and Rhys story"
-      metric: "collector_to_converter_click to /gear/best-dog-gps-trackers/ and /travel/rhys-ran-away-bishop-peak/"
+      metric: "collector_to_converter_click to /gear/best-dog-gps-trackers/ and /travel/rhys-ran-away-cerro-san-luis-obispo/"
       routes:
         - "/safety/what-to-do-if-your-dog-runs-away/"
 
@@ -264,6 +275,18 @@ site_system:
         Public-facing product catalog at /shop/. Shows all products from src/data/product-catalog.ts
         with client-side filtering by pillar, category, and search. Linked from site footer.
         Page type is converter (not informer) because it drives Amazon affiliate clicks.
+
+    - name: "Search"
+      type: "collector"
+      target_action: "Surface pages and products by keyword; route users to converters"
+      metric: "search_query, search_result_click, downstream amazon_outbound_click on converter pages"
+      routes:
+        - "/search/"
+      notes: >
+        Client-side Fuse.js search at /search/. Index prerendered at build time via src/pages/search-index.json.ts,
+        which merges all non-noindex sitemap pages with the full product catalog. Filter bar (All/Guides/Collectors/Products).
+        Page result cards route to indexed site pages. Product result cards route internally to /shop/?q=... so
+        search results do not expose direct Amazon links. Page is noindex. See docs/ai/engineering/search.md.
 
     - name: "Informer pages"
       type: "informer"
@@ -361,7 +384,7 @@ site_system:
   product_data:
     product_catalog: "src/data/product-catalog.ts — normalized admin inventory across every product data source; /admin/products/ must consume this data module and remain complete whenever products are added"
     cooling_products: "src/data/cooling-products.ts — 25 products with ASIN, affiliate URL, and image thumbnails"
-    calming_products: "src/data/calming-products.ts — 13 products with ASIN, affiliate URL, and image thumbnails"
+    calming_products: "src/data/calming-products.ts — 23 products with ASIN, affiliate URL, and image thumbnails"
     relaxation_products: "src/data/relaxation-products.ts — 78 products (calming beds, orthopedic beds, crates, carriers, travel beds, travel bags) with ASIN, affiliate URL, and image thumbnails"
     tracking_products: "src/data/tracking-products.ts — 8 tracker products and 1 accessory product across cellular/off-grid/bluetooth/accessory types"
     raw_api_cache: "src/data/amazon-products/*.json — full SerpAPI/SearchAPI Amazon Product responses per ASIN; _index.json sidecar tracks fetchedAt/provider/title/image freshness diagnostics"

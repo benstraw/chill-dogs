@@ -1,0 +1,613 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { ROUTES } from '@data/routes';
+
+const suggestedSearchPaths = [
+  { href: ROUTES.coolingTop, label: 'Cooling picks' },
+  { href: ROUTES.calmingTop, label: 'Calming aids' },
+  { href: ROUTES.comfortCalmingBeds, label: 'Calming beds' },
+  { href: ROUTES.trackingTop, label: 'GPS trackers' },
+];
+---
+
+<BaseLayout
+  title="Search Chill-Dogs"
+  ogTitle="Search Chill-Dogs — Find Dog Gear & Guides"
+  description="Search our full catalog of dog cooling gear, calming aids, beds, crates, and GPS trackers — plus guides and articles to help you choose."
+  noindex={true}
+>
+  <section class="search-page container">
+    <header class="search-header">
+      <h1>Search</h1>
+      <p>Find Chill-Dogs articles, researched gear picks, and individual products.</p>
+    </header>
+    <div class="search-input-wrap">
+      <input
+        id="search-input"
+        type="search"
+        placeholder="Try 'cooling mat', 'anxious dog', 'GPS tracker'…"
+        autocomplete="off"
+        aria-label="Search Chill-Dogs"
+      />
+    </div>
+    <div class="filter-bar" id="filter-bar" role="group" aria-label="Filter results">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="article">Articles</button>
+      <button class="filter-btn" data-filter="product">Products</button>
+    </div>
+    <div id="search-status" class="search-status" aria-live="polite"></div>
+    <div class="suggested-paths" id="suggested-paths" aria-label="Suggested searches">
+      <span>Popular paths</span>
+      {suggestedSearchPaths.map((path) => (
+        <a href={path.href}>{path.label}</a>
+      ))}
+    </div>
+    <div id="search-results" class="search-results" role="list"></div>
+  </section>
+</BaseLayout>
+
+<script>
+  import Fuse from 'fuse.js';
+  import { track } from '@scripts/analytics';
+
+  type PageItem = {
+    type: 'page';
+    title: string;
+    description: string;
+    pageType: string;
+    href: string;
+    topics: string[];
+    productNames: string[];
+  };
+
+  type ProductItem = {
+    type: 'product';
+    id: string;
+    name: string;
+    pillar: string;
+    category: string;
+    bestFor: string;
+    bullets: string;
+    image?: { src: string; alt: string };
+    href: string;
+  };
+
+  type SearchItem = PageItem | ProductItem;
+  type FilterKey = 'all' | 'article' | 'product';
+
+  const input = document.getElementById('search-input') as HTMLInputElement;
+  const resultsEl = document.getElementById('search-results') as HTMLDivElement;
+  const statusEl = document.getElementById('search-status') as HTMLDivElement;
+  const filterBar = document.getElementById('filter-bar') as HTMLDivElement;
+  const suggestedPathsEl = document.getElementById('suggested-paths') as HTMLDivElement;
+
+  let fuse: Fuse<SearchItem> | null = null;
+  let lastResults: Fuse.FuseResult<SearchItem>[] = [];
+  let activeFilter: FilterKey = 'all';
+  let currentQuery = '';
+
+  const FILTER_LABELS: Record<FilterKey, string> = {
+    all: 'all',
+    article: 'article',
+    product: 'product',
+  };
+
+  async function loadIndex() {
+    const res = await fetch('/search-index.json');
+    if (!res.ok) throw new Error('Search index failed to load');
+    const items: SearchItem[] = await res.json();
+    fuse = new Fuse(items, {
+      keys: [
+        { name: 'title',        weight: 0.40 },
+        { name: 'name',         weight: 0.40 },
+        { name: 'description',  weight: 0.25 },
+        { name: 'bestFor',      weight: 0.25 },
+        { name: 'bullets',      weight: 0.15 },
+        { name: 'productNames', weight: 0.15 },
+        { name: 'category',     weight: 0.10 },
+        { name: 'topics',       weight: 0.10 },
+      ],
+      threshold: 0.2,
+      includeScore: true,
+      minMatchCharLength: 2,
+    });
+  }
+
+  const PAGE_TYPE_LABELS: Record<string, string> = {
+    converter: 'Article',
+    collector: 'Article',
+    attractor: 'Home',
+    informer:  'Info',
+  };
+
+  const PAGE_CTA_LABELS: Record<string, string> = {
+    converter: 'Compare picks',
+    collector: 'Read article',
+    attractor: 'Start here',
+    informer: 'Read info',
+  };
+
+  const PILLAR_LABELS: Record<string, string> = {
+    cooling: 'Cooling',
+    calming: 'Calming',
+    comfort: 'Comfort',
+    gear:    'Gear',
+  };
+
+  function esc(str: string): string {
+    return str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function renderPageCard(item: PageItem): string {
+    const label = PAGE_TYPE_LABELS[item.pageType] ?? item.pageType;
+    const cta = PAGE_CTA_LABELS[item.pageType] ?? 'Read guide';
+    return `
+      <a
+        class="result-card result-card--page"
+        href="${esc(item.href)}"
+        role="listitem"
+        data-track="search_result_click"
+        data-result-href="${esc(item.href)}"
+        data-result-title="${esc(item.title)}"
+        data-result-type="page"
+        data-query="${esc(currentQuery)}"
+      >
+        <div class="result-meta">
+          <span class="result-badge result-badge--${esc(item.pageType)}">${label}</span>
+          ${item.pageType === 'converter' ? '<span class="result-intent">Comparison guide</span>' : ''}
+        </div>
+        <strong class="result-title">${esc(item.title)}</strong>
+        <p class="result-desc">${esc(item.description)}</p>
+        <span class="result-cta">${esc(cta)} →</span>
+      </a>
+    `;
+  }
+
+  function renderProductCard(item: ProductItem): string {
+    const label = PILLAR_LABELS[item.pillar] ?? item.pillar;
+    const thumbnail = item.image
+      ? `<span class="result-thumb" aria-hidden="true"><img src="${esc(item.image.src)}" alt="" loading="lazy" decoding="async" /></span>`
+      : '';
+
+    return `
+      <a
+        class="result-card result-card--product${item.image ? ' result-card--has-image' : ''}"
+        href="${esc(item.href)}"
+        role="listitem"
+        data-track="search_result_click"
+        data-result-href="${esc(item.href)}"
+        data-result-title="${esc(item.name)}"
+        data-result-type="product"
+        data-query="${esc(currentQuery)}"
+      >
+        <div class="result-meta">
+          <span class="result-badge result-badge--product">Product</span>
+          <span class="result-badge result-badge--${esc(item.pillar)}">${label}</span>
+        </div>
+        <div class="result-product-main${item.image ? ' result-product-main--has-image' : ''}">
+          ${thumbnail}
+          <div class="result-product-copy">
+            <strong class="result-title">${esc(item.name)}</strong>
+            <p class="result-desc">${esc(item.bestFor)}</p>
+          </div>
+        </div>
+        <span class="result-cta">View in shop →</span>
+      </a>
+    `;
+  }
+
+  function applyFilter(results: Fuse.FuseResult<SearchItem>[]): Fuse.FuseResult<SearchItem>[] {
+    if (activeFilter === 'all') return results;
+    if (activeFilter === 'product') return results.filter((r) => r.item.type === 'product');
+    // 'article' covers both converter and collector page types.
+    return results.filter(
+      (r) => r.item.type === 'page' && (r.item.pageType === 'converter' || r.item.pageType === 'collector')
+    );
+  }
+
+  function getSearchTitle(item: SearchItem): string {
+    return item.type === 'page' ? item.title : item.name;
+  }
+
+  function rankResult(result: Fuse.FuseResult<SearchItem>, query: string): number {
+    const normalizedQuery = query.toLowerCase();
+    const title = getSearchTitle(result.item).toLowerCase();
+    const exactTitleBonus = title.includes(normalizedQuery) ? -0.18 : 0;
+    const typeBonus =
+      result.item.type === 'page' && result.item.pageType === 'converter'
+        ? -0.08
+        : result.item.type === 'page' && result.item.pageType === 'collector'
+          ? -0.03
+          : result.item.type === 'product'
+            ? 0.02
+            : 0;
+    return (result.score ?? 1) + exactTitleBonus + typeBonus;
+  }
+
+  function sortResults(results: Fuse.FuseResult<SearchItem>[], query: string): Fuse.FuseResult<SearchItem>[] {
+    return [...results].sort((a, b) => rankResult(a, query) - rankResult(b, query));
+  }
+
+  function renderEmptyState(message: string) {
+    resultsEl.innerHTML = `
+      <div class="empty-state" role="status">
+        <strong>${esc(message)}</strong>
+        <p>Try one of the popular paths below, or search for a product category like "crate", "cooling mat", or "tracker".</p>
+      </div>
+    `;
+  }
+
+  function renderResults() {
+    const filtered = applyFilter(lastResults);
+    if (filtered.length === 0 && lastResults.length > 0) {
+      const filterLabel = FILTER_LABELS[activeFilter];
+      statusEl.textContent = '';
+      renderEmptyState(`No ${filterLabel === 'all' ? '' : filterLabel + ' '}results for "${currentQuery}"`);
+      suggestedPathsEl.style.display = '';
+      return;
+    }
+    if (filtered.length === 0) {
+      resultsEl.innerHTML = '';
+      suggestedPathsEl.style.display = '';
+      return;
+    }
+    suggestedPathsEl.style.display = 'none';
+    const label = activeFilter === 'all' ? '' : ` ${FILTER_LABELS[activeFilter]}`;
+    statusEl.textContent = `${filtered.length}${label} result${filtered.length === 1 ? '' : 's'} for "${currentQuery}"`;
+    resultsEl.innerHTML = filtered
+      .map(({ item }) => (item.type === 'page' ? renderPageCard(item) : renderProductCard(item)))
+      .join('');
+  }
+
+  function runSearch(query: string) {
+    if (!fuse) return;
+    currentQuery = query;
+    const trimmed = query.trim();
+    if (trimmed.length < 2) {
+      lastResults = [];
+      resultsEl.innerHTML = '';
+      statusEl.textContent = 'Type at least 2 characters to search.';
+      return;
+    }
+    lastResults = sortResults(fuse.search(trimmed, { limit: 48 }), trimmed);
+    if (lastResults.length === 0) {
+      statusEl.textContent = '';
+      renderEmptyState(`No results for "${trimmed}"`);
+      return;
+    }
+    renderResults();
+    track('search_query', {
+      query: trimmed,
+      result_count: lastResults.length,
+      filter: activeFilter,
+    });
+  }
+
+  // Filter buttons
+  filterBar.addEventListener('click', (e) => {
+    const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('.filter-btn');
+    if (!btn) return;
+    filterBar.querySelectorAll('.filter-btn').forEach((b) => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter as FilterKey;
+    if (lastResults.length > 0) renderResults();
+  });
+
+  // Hydrate from ?q= param on load
+  const initialQuery = new URLSearchParams(window.location.search).get('q') ?? '';
+
+  statusEl.textContent = 'Loading search...';
+
+  loadIndex()
+    .then(() => {
+      input.focus({ preventScroll: true });
+      if (initialQuery) {
+        input.value = initialQuery;
+        runSearch(initialQuery);
+      } else {
+        statusEl.textContent = 'Type at least 2 characters to search.';
+      }
+    })
+    .catch(() => {
+      statusEl.textContent = '';
+      input.disabled = true;
+      renderEmptyState('Search is temporarily unavailable.');
+    });
+
+  let debounceTimer: ReturnType<typeof setTimeout>;
+  input.addEventListener('input', () => {
+    clearTimeout(debounceTimer);
+    const q = input.value;
+    const url = new URL(window.location.href);
+    if (q.trim()) {
+      url.searchParams.set('q', q);
+    } else {
+      url.searchParams.delete('q');
+    }
+    window.history.replaceState(null, '', url);
+    debounceTimer = setTimeout(() => runSearch(q), 150);
+  });
+</script>
+
+<style>
+  .search-page {
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-4xl);
+    max-width: 52rem;
+  }
+
+  .search-header {
+    margin-bottom: var(--space-xl);
+  }
+
+  .search-header h1 {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--space-xs);
+  }
+
+  .search-header p {
+    color: var(--color-text-muted);
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+  }
+
+  .search-input-wrap {
+    margin-bottom: var(--space-md);
+  }
+
+  #search-input {
+    width: 100%;
+    padding: var(--space-md) var(--space-lg);
+    font-size: var(--text-lg);
+    font-family: inherit;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    color: var(--color-text);
+    outline: none;
+    transition: border-color 0.15s;
+  }
+
+  #search-input:focus {
+    border-color: var(--color-primary);
+  }
+
+  /* ── Filter bar ── */
+  .filter-bar {
+    display: flex;
+    gap: var(--space-sm);
+    overflow-x: auto;
+    padding-bottom: 2px;
+    margin-bottom: var(--space-lg);
+  }
+
+  .filter-btn {
+    flex: 0 0 auto;
+    padding: 4px 14px;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    font-family: inherit;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-full);
+    background: var(--color-surface);
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: border-color 0.12s, color 0.12s, background 0.12s;
+  }
+
+  .filter-btn:hover {
+    border-color: var(--color-primary);
+    color: var(--color-text);
+  }
+
+  .filter-btn.active {
+    border-color: var(--color-primary);
+    background: var(--color-primary);
+    color: #fff;
+  }
+
+  /* ── Status ── */
+  .search-status {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
+    min-height: 1.25em;
+  }
+
+  .suggested-paths {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-xl);
+    font-size: var(--text-sm);
+  }
+
+  .suggested-paths span {
+    color: var(--color-text-muted);
+    margin-right: var(--space-xs);
+  }
+
+  .suggested-paths a {
+    color: var(--color-text);
+    text-decoration: none;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    padding: 4px 10px;
+    background: var(--color-surface);
+  }
+
+  .suggested-paths a:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+
+  /* ── Result grid ── */
+  .search-results {
+    display: grid;
+    gap: var(--space-md);
+  }
+
+  /* Result cards are injected via innerHTML so Astro's scoped attribute
+     is never added — these rules must be :global to apply. */
+  :global(.result-card) {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    color: var(--color-text);
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  :global(.result-card--product) {
+    background: color-mix(in srgb, var(--color-surface) 92%, var(--color-sand));
+  }
+
+  :global(.result-product-main--has-image) {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    align-items: start;
+    gap: var(--space-md);
+  }
+
+  :global(.result-card--page),
+  :global(.result-card--product) {
+    text-decoration: none;
+  }
+
+  :global(.result-card--page:hover),
+  :global(.result-card--product:hover) {
+    border-color: var(--color-primary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  :global(.result-thumb) {
+    width: 72px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: var(--radius-sm);
+    background: #f5f5f0;
+  }
+
+  :global(.result-thumb img) {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 6px;
+  }
+
+  :global(.result-product-copy) {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  /* ── Badges ── */
+  :global(.result-meta) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+  }
+
+  :global(.result-badge) {
+    display: inline-block;
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    align-self: flex-start;
+  }
+
+  :global(.result-badge--converter),
+  :global(.result-badge--collector),
+  :global(.result-badge--informer) { background: var(--color-bg-alt); color: var(--color-text-muted); }
+  :global(.result-badge--product)  { background: var(--color-charcoal); color: var(--color-sand); }
+  :global(.result-badge--attractor) { background: var(--color-sand); color: var(--color-charcoal); }
+  :global(.result-badge--cooling)   { background: #ddf0f7; color: #2a6a80; }
+  :global(.result-badge--calming)   { background: #e8f0e8; color: #3d6b3a; }
+  :global(.result-badge--comfort)   { background: #f5ede3; color: #7a4530; }
+  :global(.result-badge--gear)      { background: #ede8f5; color: #4a3a70; }
+
+  /* ── Card content ── */
+  :global(.result-intent) {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+  }
+
+  :global(.result-title) {
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+    line-height: 1.3;
+  }
+
+  :global(.result-desc) {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  :global(.result-cta) {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    color: var(--color-link);
+    margin-top: var(--space-xs);
+  }
+
+  :global(.result-card--page:hover .result-cta),
+  :global(.result-card--product:hover .result-cta) {
+    color: var(--color-link-hover);
+  }
+
+  :global(.empty-state) {
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl);
+    background: var(--color-bg-alt);
+  }
+
+  :global(.empty-state strong) {
+    display: block;
+    margin-bottom: var(--space-xs);
+  }
+
+  :global(.empty-state p) {
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  @media (max-width: 560px) {
+    .search-page {
+      padding-top: var(--space-xl);
+    }
+
+    .search-header h1 {
+      font-size: var(--text-3xl);
+    }
+
+    :global(.result-product-main--has-image) {
+      grid-template-columns: 64px minmax(0, 1fr);
+    }
+
+    :global(.result-thumb) {
+      width: 64px;
+    }
+  }
+</style>

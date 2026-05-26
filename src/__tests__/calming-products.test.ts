@@ -17,4 +17,12 @@ describe('calming product data integrity', () => {
       expect(product.considerIf).toBeTruthy();
     }
   });
+
+  it('does not duplicate ASINs across calming product records', () => {
+    const asins = calmingProducts
+      .map((product) => product.asin)
+      .filter((asin): asin is string => Boolean(asin));
+
+    expect(new Set(asins).size).toBe(asins.length);
+  });
 });
