@@ -5,7 +5,12 @@ interface Props {
   [key: string]: any;
 }
 
-const { href, class: className, ...rest } = Astro.props;
+const {
+  href,
+  class: className,
+  'data-track': dataTrack = 'amazon_outbound_click',
+  ...rest
+} = Astro.props;
 ---
 
 <a
@@ -14,6 +19,7 @@ const { href, class: className, ...rest } = Astro.props;
   target="_blank"
   class={className}
   data-affiliate="true"
+  data-track={dataTrack}
   {...rest}
 >
   <slot />

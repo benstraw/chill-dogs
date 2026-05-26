@@ -1,4 +1,5 @@
 ---
+import AffiliateLink from '@components/AffiliateLink.astro';
 import EmailSignup from '@components/EmailSignup.astro';
 import { coolingConverterPageConfigs } from '@data/cooling-converter-pages';
 import { calmingConverterPages } from '@data/calming-converter-pages';
@@ -13,6 +14,7 @@ const exploreLinks = [
   { href: ROUTES.coolingHub, label: 'Cooling' },
   { href: ROUTES.calmingHub, label: 'Calming' },
   { href: ROUTES.comfortHub, label: 'Comforting' },
+  { href: ROUTES.shelterCharities, label: 'Dog Charities We Love' },
   { href: ROUTES.shop, label: 'All Products' },
 ];
 
@@ -115,7 +117,29 @@ const footerCategory = inferCategory(currentPath);
     <div class="footer-disclosure">
       <p>
         Chill-Dogs is a participant in the Amazon Services LLC Associates Program.  As an Amazon Associate, we earn from qualifying purchases.
+        Chill-Dogs also participates in the Chewy Affiliate Program and earns commissions from qualifying purchases.
       </p>
+    </div>
+
+    <div class="footer-affiliate-logos">
+      <a
+        href="https://chewy.sjv.io/c/7067825/2846786/32975"
+        target="_blank"
+        rel="nofollow sponsored noopener"
+        aria-label="Chewy Affiliate Program"
+      >
+        <img
+          src="/images/chewy-logo.png"
+          alt="Chewy Affiliate Program logo"
+          width="848"
+          height="258"
+          loading="lazy"
+          decoding="async"
+        />
+      </a>
+      <AffiliateLink href="https://www.amazon.com/b/?node=2975312011&ref_=PetMainNav_1&pf_rd_r=K8AF5S50SA2Y3BXEX3VR&pf_rd_p=eca06bfa-7025-4421-8855-9e7df7f1f66b&pf_rd_m=A2R2RITDJNW1Q6&pf_rd_s=merchandised-search-4&pf_rd_i=2619533011&tag=chill-dogs-20">
+        <img src="https://images-na.ssl-images-amazon.com/images/G/01//associates/network/revamp/AmazonAssociatesLogo.svg" alt="Amazon Associates logo" loading="lazy" decoding="async" />
+      </AffiliateLink>
     </div>
 
     <div class="footer-bottom">
@@ -190,6 +214,27 @@ const footerCategory = inferCategory(currentPath);
     color: rgba(240, 244, 246, 0.65);
     line-height: var(--leading-relaxed);
     max-width: 600px;
+  }
+
+  .footer-affiliate-logos {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-lg);
+  }
+
+  .footer-affiliate-logos a {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .footer-affiliate-logos img {
+    display: block;
+    height: 36px;
+    width: auto;
+    max-width: 180px;
+    object-fit: contain;
   }
 
   .footer-bottom {

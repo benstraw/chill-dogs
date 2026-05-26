@@ -66,6 +66,7 @@ type SearchIndexItem =
       category: string;
       bestFor: string;
       bullets: string;       // bullets array joined to a single string for Fuse weight matching
+      image?: { src: string; alt: string };
       href: string;          // Internal /shop/?q=... route
     };
 ```
@@ -106,12 +107,12 @@ Threshold 0.2 is the working setting: tight enough to avoid noisy product matche
 
 ### UI features
 
-- **Search input** — debounced 150 ms; updates `?q=` URL param for shareable links
+- **Search input** — focused on page load; debounced 150 ms; updates `?q=` URL param for shareable links
 - **Filter bar** — pill buttons: All / Guides (converter) / Collectors / Products
 - **Suggested paths** — static internal links to high-intent cooling, calming, comfort, and GPS tracker pages
 - **Result cards:**
   - Page card — badge (Guide/Collector/Home/Info), title, description, page-type-specific CTA
-  - Product card — badge (Cooling/Calming/Comfort/Gear), name, bestFor, internal "View in shop →" link
+  - Product card — small catalog thumbnail, badge (Cooling/Calming/Comfort/Gear), name, bestFor, internal "View in shop →" link
 - **State handling** — loading, short-query, empty-result, filtered-empty, and index-fetch-error messages
 
 ### Analytics
@@ -121,7 +122,7 @@ Threshold 0.2 is the working setting: tight enough to avoid noisy product matche
 | `search_query` | After debounce, when results render. Props: `query`, `result_count`, `filter` |
 | `search_result_click` | Click on a page or product result card. Props: `result_href`, `result_title`, `result_type`, `query` |
 
-Product results route internally to `/shop/?q=...`, where product cards render Amazon links through `AffiliateLink.astro` and fire the shared `amazon_outbound_click` event.
+Product results route internally to `/shop/?q=...`, where product cards render Amazon links through `AffiliateLink.astro` and fire the shared `amazon_outbound_click` event. The search result list itself should not render direct Amazon result links.
 
 ---
 
@@ -136,7 +137,7 @@ Product results route internally to `/shop/?q=...`, where product cards render A
 - **New product pillar**: add to `productCatalogItems` — search index picks it up automatically
 - **New page section**: add to `staticSitemapSections` in `src/data/content-sitemap.ts` — search index picks it up automatically
 - **Relevance tuning**: adjust key weights or `threshold` in `src/pages/search.astro`
-- **Do not** make `/search/` indexable or add direct Amazon links there — it is a noindex collector by design
+- **Do not** make `/search/` indexable or add direct Amazon links in search result cards — it is a noindex collector by design
 
 ---
 

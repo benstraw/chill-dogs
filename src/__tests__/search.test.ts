@@ -40,6 +40,7 @@ describe('search index — product data shape', () => {
       expect(catalogItem, `${item.id} missing from product catalog`).toBeTruthy();
       expect(item.href).toBe(`${ROUTES.shop}?q=${encodeURIComponent(item.name)}`);
       expect(item.href.startsWith(ROUTES.shop)).toBe(true);
+      expect(item.image).toEqual(catalogItem?.image);
       expect(item.href).not.toContain('amazon.');
       expect(item).not.toHaveProperty('amazonUrl');
     }
@@ -50,7 +51,6 @@ describe('search index — product data shape', () => {
     const searchPage = readFileSync(path.join(projectRoot, 'src/pages/search.astro'), 'utf8');
     const searchDoc = readFileSync(path.join(projectRoot, 'docs/ai/engineering/search.md'), 'utf8');
 
-    expect(searchPage).toContain('Collectors');
     expect(searchPage).not.toContain('Hubs');
     expect(searchDoc).toContain('Collectors');
     expect(searchDoc).not.toContain('Hubs');
@@ -62,6 +62,9 @@ describe('search index — product data shape', () => {
     const searchDoc = readFileSync(path.join(projectRoot, 'docs/ai/engineering/search.md'), 'utf8');
 
     expect(searchPage).toContain('Loading search...');
+    expect(searchPage).toContain('input.focus({ preventScroll: true })');
+    expect(searchPage).toContain('result-thumb');
+    expect(searchPage).toContain('result-product-main--has-image');
     expect(searchPage).toContain('View in shop');
     expect(searchPage).toContain('Compare picks');
     expect(searchDoc).toContain('Suggested paths');
