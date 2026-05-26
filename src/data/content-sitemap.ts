@@ -155,6 +155,13 @@ export const staticSitemapSections: SitemapSection[] = [
         topics: ['comfort', 'sleep', 'beds', 'orthopedic', 'crates', 'crate-training', 'flying', 'carriers', 'travel'],
         relatedLabel: 'Comfort & Rest',
       }),
+      createSitemapPage({
+        baseTitle: 'Search',
+        description: 'Search all Chill-Dogs guides and products, then route to relevant product and guide pages.',
+        href: ROUTES.search,
+        pageType: 'collector',
+        noindex: true,
+      }),
     ],
   },
   {

@@ -43,6 +43,7 @@ export const ROUTES = {
   comfortHeavyDutyCrates: '/comforting/best-heavy-duty-dog-crates/',
   comfortSleepArticle: '/comforting/how-much-do-dogs-sleep/',
   shop: '/shop/',
+  search: '/search/',
   affiliateDisclosure: '/affiliate-disclosure/',
   privacyPolicy: '/privacy-policy/',
   terms: '/terms/',

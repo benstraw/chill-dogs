@@ -8,7 +8,7 @@
 
 site_system:
   status: "active"
-  as_of: "2026-04-14"
+  as_of: "2026-05-24"
   owner: "chill-dogs"
   purpose: "Define the website as a modular conversion system and keep implementation aligned."
 
@@ -275,6 +275,18 @@ site_system:
         Public-facing product catalog at /shop/. Shows all products from src/data/product-catalog.ts
         with client-side filtering by pillar, category, and search. Linked from site footer.
         Page type is converter (not informer) because it drives Amazon affiliate clicks.
+
+    - name: "Search"
+      type: "collector"
+      target_action: "Surface pages and products by keyword; route users to converters"
+      metric: "search_query, search_result_click, downstream amazon_outbound_click on converter pages"
+      routes:
+        - "/search/"
+      notes: >
+        Client-side Fuse.js search at /search/. Index prerendered at build time via src/pages/search-index.json.ts,
+        which merges all non-noindex sitemap pages with the full product catalog. Filter bar (All/Guides/Collectors/Products).
+        Page result cards route to indexed site pages. Product result cards route internally to /shop/?q=... so
+        Amazon outbound links remain centralized in converter pages/components. Page is noindex. See docs/ai/engineering/search.md.
 
     - name: "Informer pages"
       type: "informer"
