@@ -46,11 +46,12 @@ describe('search index — product data shape', () => {
     }
   });
 
-  it('keeps search-specific UI and docs on collector terminology', () => {
+  it('keeps search-specific UI on article terminology and docs on collector terminology', () => {
     const projectRoot = path.resolve(__dirname, '../..');
     const searchPage = readFileSync(path.join(projectRoot, 'src/pages/search.astro'), 'utf8');
     const searchDoc = readFileSync(path.join(projectRoot, 'docs/ai/engineering/search.md'), 'utf8');
 
+    expect(searchPage).toContain('Articles');
     expect(searchPage).not.toContain('Hubs');
     expect(searchDoc).toContain('Collectors');
     expect(searchDoc).not.toContain('Hubs');

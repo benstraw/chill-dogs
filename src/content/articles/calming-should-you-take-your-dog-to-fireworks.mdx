@@ -21,6 +21,7 @@ import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
 import { ROUTES } from '@data/routes';
 
 export const pageSlug = 'should-you-take-your-dog-to-fireworks';
+export const newsletterCtaHref = `${ROUTES.subscribe}?utm_source=article&utm_medium=cta&utm_campaign=fireworks_safety&utm_content=exit_before_dark`;
 
 export const tocHeadings = [
   { anchor: 'daytime-vs-fireworks', label: 'Daytime event vs nighttime noise' },
@@ -117,6 +118,31 @@ export const faqs = [
     <p>
       If your dog has predictable noise anxiety, consider calming products before the fireworks start. Our guides to <a href={ROUTES.calmingTop} data-track="collector_to_converter_click" data-from-page={pageSlug} data-to-page={ROUTES.calmingTop} data-link-position="exit-before-dark">calming products for anxious dogs</a> and <a href={ROUTES.calmingAlternatives} data-track="collector_to_converter_click" data-from-page={pageSlug} data-to-page={ROUTES.calmingAlternatives} data-link-position="exit-before-dark">ThunderShirt alternatives</a> are a good place to start. A calm dog riding home before dark is better than a scared dog being managed through a crowd at night.
     </p>
+
+    <aside class="newsletter-callout" aria-labelledby="fireworks-newsletter-heading">
+      <p id="fireworks-newsletter-heading" class="newsletter-callout__heading">Get the calm-dog checklist before fireworks night</p>
+      <div class="newsletter-callout__copy">
+        <ul class="newsletter-callout__list">
+          <li>Calming setup tips before you leave</li>
+          <li>The exit-before-dark reminder</li>
+          <li>Safety gear to bring</li>
+        </ul>
+      </div>
+      <div class="newsletter-callout__action">
+        <a
+          href={newsletterCtaHref}
+          class="newsletter-callout__link"
+          data-track="newsletter_cta_click"
+          data-cta-type="newsletter"
+          data-topic="fireworks_safety"
+          data-placement="exit_before_dark"
+          data-source-page={pageSlug}
+        >
+          <span class="newsletter-callout__link-text">Subscribe for updates</span>
+        </a>
+        <p class="newsletter-callout__fine">No spam. Unsubscribe any time.</p>
+      </div>
+    </aside>
 
     <h2 id="what-to-bring">What to bring if your decide to take your dog</h2>
     <p>
