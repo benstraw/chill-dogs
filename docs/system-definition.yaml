@@ -191,10 +191,10 @@ site_system:
       type: "collector"
       collector_subtype: "article"
       target_action: "Route fireworks-event and safety intent to calming, cooling, and GPS converter pages"
-      metric: "collector_to_converter_click to calming, cooling, and GPS converters"
+      metric: "collector_to_converter_click to calming, cooling, and GPS converters + newsletter_cta_click"
       routes:
         - "/calming/should-you-take-your-dog-to-fireworks/"
-      notes: "Practical outdoor-event decision guide focused on leaving before dark, safe exit planning, and recovery paths through calming, cooling, car-anxiety, and GPS tracker converters."
+      notes: "Practical outdoor-event decision guide focused on leaving before dark, safe exit planning, newsletter capture after the exit-before-dark rule, and recovery paths through calming, cooling, car-anxiety, and GPS tracker converters."
 
     - name: "Road Trip Chill Kit"
       type: "collector"
@@ -368,6 +368,7 @@ site_system:
     scope: "Homepage inline signup + footer signup on non-converter pages"
     provider: "Buttondown"
     events:
+      - "newsletter_cta_click"
       - "email_signup_view"
       - "email_signup_start"
       - "email_signup_submit"

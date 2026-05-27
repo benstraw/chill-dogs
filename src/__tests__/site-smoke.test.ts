@@ -503,6 +503,27 @@ describe('site smoke tests', () => {
     expect(confirmedDoc.body.textContent).toContain('Hot Weather Guide');
   });
 
+  it('renders the fireworks article newsletter CTA in the exit-planning section', () => {
+    const doc = readBuiltPage(path.join('calming', 'should-you-take-your-dog-to-fireworks', 'index.html'));
+    const ctas = doc.querySelectorAll<HTMLElement>('.newsletter-callout');
+    const cta = ctas[0];
+    const exitHeading = doc.querySelector<HTMLElement>('#exit-before-dark');
+    const whatToBringHeading = doc.querySelector<HTMLElement>('#what-to-bring');
+    const link = cta?.querySelector<HTMLAnchorElement>('.newsletter-callout__link');
+
+    expect(ctas).toHaveLength(1);
+    expect(exitHeading).toBeTruthy();
+    expect(whatToBringHeading).toBeTruthy();
+    expect(Boolean(exitHeading!.compareDocumentPosition(cta!) & 4)).toBe(true);
+    expect(Boolean(cta!.compareDocumentPosition(whatToBringHeading!) & 4)).toBe(true);
+    expect(link?.getAttribute('href')).toBe('/subscribe/?utm_source=article&utm_medium=cta&utm_campaign=fireworks_safety&utm_content=exit_before_dark');
+    expect(link?.getAttribute('data-track')).toBe('newsletter_cta_click');
+    expect(link?.getAttribute('data-cta-type')).toBe('newsletter');
+    expect(link?.getAttribute('data-topic')).toBe('fireworks_safety');
+    expect(link?.getAttribute('data-placement')).toBe('exit_before_dark');
+    expect(link?.getAttribute('data-source-page')).toBe('should-you-take-your-dog-to-fireworks');
+  });
+
   it('renders the admin product catalog from all product data files', () => {
     const doc = readBuiltPage(path.join('admin', 'products', 'index.html'));
 

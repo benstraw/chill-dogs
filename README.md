@@ -190,6 +190,7 @@ If PostHog is not configured, events log to the browser console in dev mode.
 | `amazon_outbound_click` | ProductCards, ComparisonTable, BonusCallout | Outbound affiliate click |
 | `collector_to_converter_click` | HubBody, SummaryBlock, InternalLinkStrip | Internal routing from collector → converter pages |
 | `toc_click` | Toc | Table of contents navigation |
+| `newsletter_cta_click` | Contextual article newsletter CTAs | Article → newsletter signup landing page |
 
 ### Adding a tracked element
 
