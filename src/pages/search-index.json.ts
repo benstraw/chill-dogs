@@ -37,6 +37,7 @@ export const GET: APIRoute = async () => {
     category: p.category,
     bestFor: p.bestFor,
     bullets: p.bullets.join(' '),
+    image: p.image,
     href: `${ROUTES.shop}?q=${encodeURIComponent(p.name)}`,
   }));
 

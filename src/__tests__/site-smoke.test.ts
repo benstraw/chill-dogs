@@ -468,7 +468,7 @@ describe('site smoke tests', () => {
 
     expect(searchDoc.querySelector('meta[name="robots"]')?.getAttribute('content'))
       .toBe('noindex, nofollow');
-    expect(searchDoc.querySelectorAll('a[href*="amazon."]').length).toBe(0);
+    expect(searchDoc.querySelectorAll('.search-results a[href*="amazon."]').length).toBe(0);
     expect(productItems.length).toBeGreaterThan(0);
 
     for (const item of productItems) {

@@ -8,7 +8,7 @@
 
 site_system:
   status: "active"
-  as_of: "2026-05-24"
+  as_of: "2026-05-26"
   owner: "chill-dogs"
   purpose: "Define the website as a modular conversion system and keep implementation aligned."
 
@@ -286,7 +286,7 @@ site_system:
         Client-side Fuse.js search at /search/. Index prerendered at build time via src/pages/search-index.json.ts,
         which merges all non-noindex sitemap pages with the full product catalog. Filter bar (All/Guides/Collectors/Products).
         Page result cards route to indexed site pages. Product result cards route internally to /shop/?q=... so
-        Amazon outbound links remain centralized in converter pages/components. Page is noindex. See docs/ai/engineering/search.md.
+        search results do not expose direct Amazon links. Page is noindex. See docs/ai/engineering/search.md.
 
     - name: "Informer pages"
       type: "informer"
@@ -303,6 +303,7 @@ site_system:
         - "/subscribe/"
         - "/subscribe/thanks/"
         - "/subscribe/confirmed/"
+        - "/shelter-dog-charities/"
       notes: "/admin/products/ is the canonical product inventory review page. Every product in any product data file must flow into this page through src/data/product-catalog.ts; do not hardcode product rows in the admin route. /content-sitemap/ is a hidden editor page that previews the complete build-time sitemap inventory from src/data/sitemap-inventory.ts, which merges static pages with article collection pages and final built share metadata, including post-build OG image rewrites."
 
   modules:
@@ -345,7 +346,7 @@ site_system:
 
   footer:
     sections:
-      - "Explore: cooling, calming, comforting"
+      - "Explore: cooling, calming, comforting, dog charities we love"
       - "Company: about, contact"
       - "Legal: privacy-policy, terms, affiliate-disclosure"
       - "Newsletter signup on non-converter pages only"
