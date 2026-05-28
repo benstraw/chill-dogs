@@ -31,11 +31,12 @@ Adding new products, updating product data, checking product data file structure
 
 | File | Contents |
 |---|---|
-| `src/data/cooling-products.ts` | 25 cooling products — ASINs, affiliate URLs, image thumbnails, category metadata |
-| `src/data/calming-products.ts` | 23 calming products — ASINs, affiliate URLs, image thumbnails |
+| `src/data/cooling-products.ts` | 25 cooling products — canonical editorial copy, optional Amazon fields, merchant offers, image thumbnails, category metadata |
+| `src/data/calming-products.ts` | 23 calming products — canonical editorial copy, optional Amazon fields, merchant offers, image thumbnails |
 | `src/data/relaxation-products.ts` | 78 comfort/rest products — calming beds, orthopedic beds, crates, carriers, travel bags |
 | `src/data/tracking-products.ts` | 8 tracker products + 1 accessory — cellular/off-grid/bluetooth/accessory types |
-| `src/data/product-catalog.ts` | Master catalog — normalized inventory across all pillar data files |
+| `src/data/product-catalog.ts` | Master catalog — normalized inventory across all pillar data files, including merchant offers |
+| `src/data/products/` | Merchant offer types, merchant registry, and offer helpers for Amazon/Chewy affiliate links |
 | `src/data/product-page-map.ts` | Maps product IDs to the converter pages they appear on |
 | `src/data/amazon-products/` | ASIN-keyed raw Amazon provider JSON plus `_index.json` freshness manifest |
 
@@ -44,8 +45,13 @@ Adding new products, updating product data, checking product data file structure
 ## Product catalog — the master inventory
 
 `src/data/product-catalog.ts` is the master product list. It combines all pillar data files into one normalized inventory.
+Each product also exposes `offers`, derived through `src/data/products/` helpers.
 
 The admin page at `/admin/products/` consumes `product-catalog.ts`. **Do not hardcode product rows directly in the admin route.**
+
+Canonical editorial product content belongs on the product record, not on merchant offers. Do not move or duplicate
+`name`, `bullets`, `bestFor`, `howItHelps`, `whyItWorks`, `considerIf`, sizing notes, signal notes, or manually chosen
+images into Amazon, Chewy, or future merchant metadata.
 
 When adding products:
 1. Add to the relevant pillar data file (`cooling-products.ts`, `calming-products.ts`, etc.)
@@ -61,6 +67,19 @@ When adding products:
 **Do not edit these files manually.** They are fetched and written by `scripts/fetch-amazon-data.ts`.
 
 `src/data/amazon-products/_index.json` is the sidecar freshness manifest. It tracks `fetchedAt`, `provider`, `title`, and `imageUrl` snapshots for diagnostics. The raw provider payloads stay unchanged, and provider metadata must not auto-overwrite product copy.
+
+Future Chewy provider data should follow the same rule: raw/cache metadata is diagnostic only. If a fetched title or image
+looks better than the canonical editorial record, surface it for manual editorial review instead of applying it automatically.
+
+## Manual Chewy URL workflow
+
+Chewy links are stored as merchant offers. Until the Impact deep-link workflow is finalized, add Chewy links manually:
+
+1. Create the Chewy affiliate/deep link in Impact.
+2. Add a Chewy offer to the product with `merchant: 'chewy'` and the affiliate URL.
+3. Add `canonicalUrl` when you know the public Chewy product URL.
+4. Add `merchantProductId` only when it is obvious and stable; it is optional for now.
+5. Do not change canonical product copy or images just because a Chewy product title, image, or description differs.
 
 ---
 
@@ -79,6 +98,9 @@ When adding products:
 4. Fetch Amazon metadata for the ASIN: `bun run scripts/fetch-amazon-data.ts --asin <ASIN>`
 5. Run `bun run check:amazon` to verify cache coverage/freshness
 6. Run `bun run check:asins` to verify the ASIN is live
+
+For Chewy-only products, omit `asin` and `amazonUrl`; add at least one active Chewy offer instead. Product pages and
+schema use the primary merchant offer, while Amazon-only scripts ignore products without Amazon offers.
 
 ---
 

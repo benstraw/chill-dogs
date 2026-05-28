@@ -5,6 +5,7 @@ import { getRelaxationProductsByCategory } from '@data/relaxation-products';
 import CoolingProductCard from '@components/modules/CoolingProductCard.astro';
 import CalmingProductCard from '@components/modules/CalmingProductCard.astro';
 import RelaxationProductCard from '@components/modules/RelaxationProductCard.astro';
+import { getRequiredPrimaryOffer } from '@data/products/offers';
 
 interface Props {
   section: 'window-shade' | 'fan' | 'water-bowl' | 'anxiety-wrap' | 'calming-chews' | 'lick-mat' | 'travel-bed';
@@ -26,7 +27,7 @@ const travelBeds = getRelaxationProductsByCategory('travel-beds').filter(p => p.
   <div class="product-slot">
     <CoolingProductCard
       product={product}
-      cta={{ label: 'Check Price on Amazon', href: product.amazonUrl, kind: 'amazon' }}
+      cta={{ label: 'Check Price on Amazon', href: getRequiredPrimaryOffer(product, `${pageSlug}: ${product.id}`).url, kind: 'amazon' }}
       position={i + 1}
       pageType="collector"
       pageSlug={pageSlug}
@@ -37,7 +38,7 @@ const travelBeds = getRelaxationProductsByCategory('travel-beds').filter(p => p.
   <div class="product-slot">
     <CoolingProductCard
       product={product}
-      cta={{ label: 'Check Price on Amazon', href: product.amazonUrl, kind: 'amazon' }}
+      cta={{ label: 'Check Price on Amazon', href: getRequiredPrimaryOffer(product, `${pageSlug}: ${product.id}`).url, kind: 'amazon' }}
       position={i + 2}
       pageType="collector"
       pageSlug={pageSlug}
@@ -48,7 +49,7 @@ const travelBeds = getRelaxationProductsByCategory('travel-beds').filter(p => p.
   <div class="product-slot">
     <CoolingProductCard
       product={product}
-      cta={{ label: 'Check Price on Amazon', href: product.amazonUrl, kind: 'amazon' }}
+      cta={{ label: 'Check Price on Amazon', href: getRequiredPrimaryOffer(product, `${pageSlug}: ${product.id}`).url, kind: 'amazon' }}
       position={i + 3}
       pageType="collector"
       pageSlug={pageSlug}

@@ -11,10 +11,8 @@
  *   bun run scripts/fetch-amazon-data.ts --help
  */
 
-import { coolingProducts } from '../src/data/cooling-products';
-import { calmingProducts } from '../src/data/calming-products';
-import { relaxationProducts } from '../src/data/relaxation-products';
-import { trackerProducts, accessoryProducts } from '../src/data/tracking-products';
+import { productCatalogItems } from '../src/data/product-catalog';
+import { getAmazonOfferEntries } from '../src/data/products/offers';
 import {
   DEFAULT_AMAZON_CACHE_THRESHOLD_DAYS,
   isCacheEntryStale,
@@ -120,13 +118,7 @@ const OUT_DIR = join(import.meta.dir, '..', 'src', 'data', 'amazon-products');
 await mkdir(OUT_DIR, { recursive: true });
 
 // --- Build product list ---
-const allProducts = [
-  ...coolingProducts.map((p) => ({ asin: p.asin, name: p.name })),
-  ...calmingProducts.map((p) => ({ asin: p.asin, name: p.name })),
-  ...relaxationProducts.map((p) => ({ asin: p.asin, name: p.name })),
-  ...trackerProducts.map((p) => ({ asin: p.asin, name: p.name })),
-  ...accessoryProducts.map((p) => ({ asin: p.asin, name: p.name })),
-];
+const allProducts = getAmazonOfferEntries(productCatalogItems).map((p) => ({ asin: p.asin, name: p.name }));
 
 const selectedProducts = singleAsin
   ? allProducts.filter((p) => p.asin === singleAsin).length > 0

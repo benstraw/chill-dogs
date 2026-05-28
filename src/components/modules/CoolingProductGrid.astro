@@ -1,6 +1,7 @@
 ---
 import CoolingProductCard from './CoolingProductCard.astro';
 import type { CoolingProduct } from '@data/cooling-products';
+import { getRequiredPrimaryOffer } from '@data/products/offers';
 
 interface Props {
   products: CoolingProduct[];
@@ -31,7 +32,7 @@ const {
       product={product}
       cta={{
         label: ctaKind === 'amazon' ? ctaLabel : `See best ${product.category.replace(/-/g, ' ')}`,
-        href: ctaKind === 'amazon' ? product.amazonUrl : internalHref,
+        href: ctaKind === 'amazon' ? getRequiredPrimaryOffer(product, `${pageSlug}: ${product.id}`).url : internalHref,
         kind: ctaKind,
       }}
       position={i + 1}

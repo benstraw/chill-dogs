@@ -1,5 +1,7 @@
 import { calmingProducts } from './calming-products';
 import { coolingProducts } from './cooling-products';
+import { getOffers } from './products/offers';
+import type { AffiliateOffer } from './products/types';
 import { relaxationProducts } from './relaxation-products';
 import { accessoryProducts, trackerProducts } from './tracking-products';
 
@@ -9,7 +11,8 @@ export interface ProductCatalogItem {
   pillar: 'cooling' | 'calming' | 'comfort' | 'gear';
   category: string;
   asin?: string;
-  amazonUrl: string;
+  amazonUrl?: string;
+  offers: AffiliateOffer[];
   secondaryUrl?: string;
   secondaryLabel?: string;
   bullets: string[];
@@ -31,6 +34,7 @@ export const productCatalogItems: ProductCatalogItem[] = [
     ...product,
     pillar: 'cooling' as const,
     category: product.category,
+    offers: getOffers(product),
     bullets: [...product.bullets],
     source: 'src/data/cooling-products.ts',
   })),
@@ -38,6 +42,7 @@ export const productCatalogItems: ProductCatalogItem[] = [
     ...product,
     pillar: 'calming' as const,
     category: product.category,
+    offers: getOffers(product),
     bullets: [...product.bullets],
     source: 'src/data/calming-products.ts',
   })),
@@ -45,6 +50,7 @@ export const productCatalogItems: ProductCatalogItem[] = [
     ...product,
     pillar: 'comfort' as const,
     category: product.category,
+    offers: getOffers(product),
     bullets: [...product.bullets],
     source: 'src/data/relaxation-products.ts',
   })),
@@ -55,6 +61,7 @@ export const productCatalogItems: ProductCatalogItem[] = [
     category: product.type,
     asin: product.asin,
     amazonUrl: product.amazonUrl,
+    offers: getOffers(product),
     secondaryUrl: product.secondaryUrl,
     secondaryLabel: product.secondaryLabel,
     bullets: [...product.bullets],
@@ -72,6 +79,7 @@ export const productCatalogItems: ProductCatalogItem[] = [
     category: 'accessories',
     asin: product.asin,
     amazonUrl: product.amazonUrl,
+    offers: getOffers(product),
     bullets: [product.note],
     bestFor: product.note,
     image: product.image,

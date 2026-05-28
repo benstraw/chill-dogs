@@ -383,12 +383,14 @@ site_system:
       and include a minimal Chill-Dogs logo link back to the homepage without restoring full site chrome.
 
   product_data:
-    product_catalog: "src/data/product-catalog.ts — normalized admin inventory across every product data source; /admin/products/ must consume this data module and remain complete whenever products are added"
-    cooling_products: "src/data/cooling-products.ts — 25 products with ASIN, affiliate URL, and image thumbnails"
-    calming_products: "src/data/calming-products.ts — 23 products with ASIN, affiliate URL, and image thumbnails"
-    relaxation_products: "src/data/relaxation-products.ts — 78 products (calming beds, orthopedic beds, crates, carriers, travel beds, travel bags) with ASIN, affiliate URL, and image thumbnails"
+    product_catalog: "src/data/product-catalog.ts — normalized admin inventory across every product data source with merchant offers[]; /admin/products/ must consume this data module and remain complete whenever products are added"
+    product_offer_helpers: "src/data/products/ — merchant metadata, offer types, and helpers for Amazon/Chewy affiliate offers; canonical editorial product copy stays in product records, not merchant offers"
+    cooling_products: "src/data/cooling-products.ts — 25 products with canonical editorial copy, optional Amazon ASIN/affiliate URL, optional merchant offers, and image thumbnails"
+    calming_products: "src/data/calming-products.ts — 23 products with canonical editorial copy, optional Amazon ASIN/affiliate URL, optional merchant offers, and image thumbnails"
+    relaxation_products: "src/data/relaxation-products.ts — 78 products (calming beds, orthopedic beds, crates, carriers, travel beds, travel bags) with canonical editorial copy, optional Amazon ASIN/affiliate URL, optional merchant offers, and image thumbnails"
     tracking_products: "src/data/tracking-products.ts — 8 tracker products and 1 accessory product across cellular/off-grid/bluetooth/accessory types"
-    raw_api_cache: "src/data/amazon-products/*.json — full SerpAPI/SearchAPI Amazon Product responses per ASIN; _index.json sidecar tracks fetchedAt/provider/title/image freshness diagnostics"
+    raw_api_cache: "src/data/amazon-products/*.json — full SerpAPI/SearchAPI Amazon Product responses per ASIN; _index.json sidecar tracks fetchedAt/provider/title/image freshness diagnostics only and must not overwrite canonical product copy or images"
+    future_chewy_cache: "src/data/chewy-products/*.json — reserved future diagnostic cache for Chewy provider metadata by merchant product id or stable URL-derived key; mirror Amazon cache behavior without auto-overwriting editorial fields"
 
   architecture:
     frontend: "Astro 5 static site with scoped CSS and reusable modules"
@@ -409,6 +411,7 @@ site_system:
 
   analytics:
     primary_events:
+      - "affiliate_outbound_click"
       - "amazon_outbound_click"
       - "collector_to_converter_click"
       - "hero_click_cooling"
@@ -417,4 +420,4 @@ site_system:
       - "hero_impression"
       - "toc_click"
       - "pinterest_save_click"
-    funnel_definition: "collector or attractor entry -> converter click -> amazon_outbound_click"
+    funnel_definition: "collector or attractor entry -> converter click -> affiliate_outbound_click; Amazon links dual-fire amazon_outbound_click during dashboard migration"

@@ -8,6 +8,7 @@
  */
 
 import { productCatalogItems } from '../src/data/product-catalog';
+import { getAmazonOfferEntries } from '../src/data/products/offers';
 
 // --- CLI args ---
 const args = process.argv.slice(2);
@@ -15,9 +16,9 @@ const quiet = args.includes('--quiet');
 
 // --- Deduplicate products by ASIN ---
 const byAsin = new Map<string, { name: string; pillar: string }>();
-for (const item of productCatalogItems) {
-  if (item.asin && !byAsin.has(item.asin)) {
-    byAsin.set(item.asin, { name: item.name, pillar: item.pillar });
+for (const item of getAmazonOfferEntries(productCatalogItems)) {
+  if (!byAsin.has(item.asin)) {
+    byAsin.set(item.asin, { name: item.name, pillar: item.pillar ?? '' });
   }
 }
 

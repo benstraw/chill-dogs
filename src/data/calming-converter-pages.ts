@@ -1,4 +1,5 @@
 import { calmingProducts, type CalmingProduct } from './calming-products';
+import { getRequiredPrimaryOffer } from './products/offers';
 import { ROUTES } from './routes';
 
 export type CalmingPageType = 'collector' | 'converter';
@@ -134,7 +135,7 @@ export function buildCalmingItemListSchema(schemaConfig: NonNullable<CalmingConv
       '@type': 'ListItem',
       position: i + 1,
       name: p.name,
-      url: p.amazonUrl,
+      url: getRequiredPrimaryOffer(p, `${schemaConfig.name}: ${p.id}`).url,
     })),
   };
 }

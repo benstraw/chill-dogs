@@ -33,7 +33,7 @@ Adding any Amazon link, modifying a product component, or verifying affiliate li
 chill-dogs-20
 ```
 
-This tag must appear in the query string of every Amazon URL: `?tag=chill-dogs-20`
+This tag must appear in the query string of every Amazon offer URL: `?tag=chill-dogs-20`
 
 Never change it. Never omit it. Always verify it is present when writing or editing any Amazon link.
 
@@ -46,13 +46,16 @@ Never change it. Never omit it. Always verify it is present when writing or edit
 The component enforces:
 - `rel="sponsored noopener noreferrer"` — required for affiliate compliance and security
 - `target="_blank"` — opens in new tab
-- `data-affiliate="true"` — enables `amazon_outbound_click` analytics event
+- `data-affiliate="true"` — enables affiliate click analytics
 
 ```astro
 <!-- Correct -->
 <AffiliateLink
   href="https://www.amazon.com/dp/B09XYZ/?tag=chill-dogs-20"
-  data-track="amazon_outbound_click"
+  data-track="affiliate_outbound_click"
+  data-track-also="amazon_outbound_click"
+  data-merchant="amazon"
+  data-product-id="ruffwear-swamp-cooler"
   data-asin="B09XYZ"
   data-product-name="Ruffwear Swamp Cooler"
 >
@@ -79,7 +82,9 @@ When using `AffiliateLink.astro` for product links, include:
 
 | Attribute | Value | Purpose |
 |---|---|---|
-| `data-track` | `"amazon_outbound_click"` | Fires the keystone analytics event |
+| `data-track` | `"affiliate_outbound_click"` | Fires the cross-merchant affiliate event |
+| `data-track-also` | `"amazon_outbound_click"` | Preserves legacy Amazon dashboards during migration |
+| `data-merchant` | `"amazon"` | Identifies the merchant |
 | `data-asin` | The Amazon ASIN | Identifies the product in analytics |
 | `data-product-name` | The product name | Readable label in analytics |
 
@@ -128,9 +133,12 @@ Always verify `tag=chill-dogs-20` is present.
 
 ## Click tracking
 
-The `amazon_outbound_click` event fires on every `[data-affiliate="true"]` element click. Properties captured from `data-*` attributes:
+Merchant-aware affiliate links fire `affiliate_outbound_click`. Amazon links also dual-fire the legacy
+`amazon_outbound_click` event while dashboards are migrated. Properties captured from `data-*` attributes:
 - `asin` (from `data-asin`)
 - `product_name` (from `data-product-name`)
+- `product_id` (from `data-product-id`)
+- `merchant` (from `data-merchant`)
 - `page_slug` (derived from current URL)
 - `position` (from `data-position` if set)
 

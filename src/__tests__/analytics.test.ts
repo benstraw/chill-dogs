@@ -101,4 +101,28 @@ describe('init — click tracking', () => {
       section: 'hero',
     });
   });
+
+  it('fires a secondary event from data-track-also without leaking track_also props', () => {
+    const capture = vi.fn();
+    (window as any).posthog = { capture };
+
+    document.body.innerHTML =
+      '<a data-track="affiliate_outbound_click" data-track-also="amazon_outbound_click" data-merchant="amazon" data-asin="B001" data-product-name="Toy" href="#">Go</a>';
+
+    init();
+    document.querySelector('a')!.click();
+
+    expect(capture).toHaveBeenNthCalledWith(
+      1,
+      'affiliate_outbound_click',
+      expect.objectContaining({ merchant: 'amazon', asin: 'B001', product_name: 'Toy' })
+    );
+    expect(capture).toHaveBeenNthCalledWith(
+      2,
+      'amazon_outbound_click',
+      expect.objectContaining({ merchant: 'amazon', asin: 'B001', product_name: 'Toy' })
+    );
+    expect(capture.mock.calls[0][1]).not.toHaveProperty('track_also');
+    expect(capture.mock.calls[1][1]).not.toHaveProperty('track_also');
+  });
 });

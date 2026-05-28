@@ -1,0 +1,74 @@
+---
+import { merchants } from '@data/products/merchants';
+import type { AffiliateOffer } from '@data/products/types';
+
+interface Props {
+  offer: AffiliateOffer;
+  product: {
+    id?: string;
+    name: string;
+    category?: string;
+  };
+  class?: string;
+  label?: string;
+  pageType?: string;
+  pageSlug?: string;
+  position?: string | number;
+  [key: string]: any;
+}
+
+const {
+  offer,
+  product,
+  class: className,
+  label,
+  pageType,
+  pageSlug,
+  position,
+  'data-track': dataTrack = 'affiliate_outbound_click',
+  'data-track-also': dataTrackAlso = offer.merchant === 'amazon' ? 'amazon_outbound_click' : undefined,
+  ...rest
+} = Astro.props;
+
+const merchant = merchants[offer.merchant];
+const merchantProductId =
+  offer.merchantProductId ?? (offer.merchant === 'amazon' ? offer.asin : undefined);
+---
+
+<a
+  href={offer.url}
+  rel="sponsored noopener noreferrer"
+  target="_blank"
+  class={className}
+  data-affiliate="true"
+  data-track={dataTrack}
+  data-track-also={dataTrackAlso}
+  data-merchant={offer.merchant}
+  data-product-id={product.id}
+  data-product-name={product.name}
+  data-product-category={product.category}
+  data-merchant-product-id={merchantProductId}
+  data-asin={offer.merchant === 'amazon' ? offer.asin : undefined}
+  data-page-type={pageType}
+  data-page-slug={pageSlug}
+  data-position={position !== undefined ? String(position) : undefined}
+  data-destination={merchant.domain}
+  {...rest}
+>
+  <slot>{label ?? offer.label ?? merchant.ctaCopy}</slot>
+</a>
+
+<style>
+  a[data-merchant="chewy"] {
+    background: #1c49c2;
+    color: #fff !important;
+    border-color: #1c49c2;
+  }
+
+  a[data-merchant="chewy"]:hover {
+    background: #001a70;
+    border-color: #001a70;
+    color: #fff !important;
+  }
+
+</style>

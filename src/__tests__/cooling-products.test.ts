@@ -9,7 +9,9 @@ import {
 describe('cooling product data integrity', () => {
   it('every product amazonUrl contains the affiliate tag', () => {
     for (const product of coolingProducts) {
-      expect(product.amazonUrl).toContain('tag=chill-dogs-20');
+      if (product.amazonUrl) {
+        expect(product.amazonUrl).toContain('tag=chill-dogs-20');
+      }
     }
   });
 

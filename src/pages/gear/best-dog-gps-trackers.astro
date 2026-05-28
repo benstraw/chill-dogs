@@ -8,7 +8,10 @@ import Disclosure from '@components/modules/Disclosure.astro';
 import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
 import JsonLd from '@components/JsonLd.astro';
 import AffiliateLink from '@components/AffiliateLink.astro';
+import MerchantAffiliateLink from '@components/MerchantAffiliateLink.astro';
 import { trackerProducts, getTrackersByType, trackerCategoryMeta } from '@data/tracking-products';
+import { merchants } from '@data/products/merchants';
+import { getOffers } from '@data/products/offers';
 
 const pageSlug = 'best-dog-gps-trackers';
 
@@ -168,15 +171,17 @@ const itemListSchema = {
                 </div>
               </div>
               <div class="product-cta-wrap">
-                <AffiliateLink
-                  href={product.amazonUrl}
-                  data-track="amazon_outbound_click"
-                  data-asin={product.asin}
-                  data-product-name={product.name}
-                  class="product-cta"
-                >
-                  {product.ctaLabel ?? 'Check Price on Amazon'}
-                </AffiliateLink>
+                {getOffers(product).map((offer, offerIndex) => (
+                  <MerchantAffiliateLink
+                    offer={offer}
+                    product={{ id: product.id, name: product.name, category: product.type }}
+                    class={`product-cta${offerIndex > 0 ? ' product-cta--secondary' : ''}`}
+                    label={offer.merchant === 'amazon' ? (product.ctaLabel ?? 'Check Price on Amazon') : merchants[offer.merchant].ctaCopy}
+                    pageType="converter"
+                    pageSlug={pageSlug}
+                    position={`cellular-${offerIndex + 1}`}
+                  />
+                ))}
               </div>
             </div>
           ))}
@@ -247,15 +252,17 @@ const itemListSchema = {
                 </div>
               </div>
               <div class="product-cta-wrap">
-                <AffiliateLink
-                  href={product.amazonUrl}
-                  data-track="amazon_outbound_click"
-                  data-asin={product.asin}
-                  data-product-name={product.name}
-                  class="product-cta"
-                >
-                  {product.ctaLabel ?? 'Shop Alpha TT 25 Collar on Amazon'}
-                </AffiliateLink>
+                {getOffers(product).map((offer, offerIndex) => (
+                  <MerchantAffiliateLink
+                    offer={offer}
+                    product={{ id: product.id, name: product.name, category: product.type }}
+                    class={`product-cta${offerIndex > 0 ? ' product-cta--secondary' : ''}`}
+                    label={offer.merchant === 'amazon' ? (product.ctaLabel ?? 'Shop Alpha TT 25 Collar on Amazon') : merchants[offer.merchant].ctaCopy}
+                    pageType="converter"
+                    pageSlug={pageSlug}
+                    position={`off-grid-${offerIndex + 1}`}
+                  />
+                ))}
                 {product.secondaryUrl && (
                   <AffiliateLink
                     href={product.secondaryUrl}
@@ -338,15 +345,17 @@ const itemListSchema = {
                 </div>
               </div>
               <div class="product-cta-wrap">
-                <AffiliateLink
-                  href={product.amazonUrl}
-                  data-track="amazon_outbound_click"
-                  data-asin={product.asin}
-                  data-product-name={product.name}
-                  class="product-cta"
-                >
-                  Check Price on Amazon
-                </AffiliateLink>
+                {getOffers(product).map((offer, offerIndex) => (
+                  <MerchantAffiliateLink
+                    offer={offer}
+                    product={{ id: product.id, name: product.name, category: product.type }}
+                    class={`product-cta${offerIndex > 0 ? ' product-cta--secondary' : ''}`}
+                    label={offer.merchant === 'amazon' ? 'Check Price on Amazon' : merchants[offer.merchant].ctaCopy}
+                    pageType="converter"
+                    pageSlug={pageSlug}
+                    position={`bluetooth-${offerIndex + 1}`}
+                  />
+                ))}
               </div>
             </div>
           ))}
