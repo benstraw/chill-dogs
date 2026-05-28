@@ -1,12 +1,15 @@
+import type { AffiliateOffer } from './products/types';
+
 export type TrackerType = 'cellular' | 'off-grid' | 'bluetooth';
 
 export interface TrackerProduct {
   id: string;
   name: string;
   type: TrackerType;
-  asin: string;
+  asin?: string;
   /** Full Amazon affiliate URL */
-  amazonUrl: string;
+  amazonUrl?: string;
+  offers?: AffiliateOffer[];
   /** For system bundles: secondary product Amazon URL (e.g. Garmin handheld) */
   secondaryUrl?: string;
   secondaryLabel?: string;
@@ -29,8 +32,9 @@ export interface TrackerProduct {
 export interface AccessoryProduct {
   id: string;
   name: string;
-  asin: string;
-  amazonUrl: string;
+  asin?: string;
+  amazonUrl?: string;
+  offers?: AffiliateOffer[];
   note: string;
   image?: { src: string; alt: string };
 }

@@ -1,7 +1,9 @@
 ---
-import AffiliateLink from '@components/AffiliateLink.astro';
+import MerchantAffiliateLink from '@components/MerchantAffiliateLink.astro';
 import type { ProductCatalogItem } from '@data/product-catalog';
 import type { PageRef } from '@data/product-page-map';
+import { getOffers } from '@data/products/offers';
+import { merchants } from '@data/products/merchants';
 
 interface Props {
   product: ProductCatalogItem;
@@ -9,6 +11,7 @@ interface Props {
 }
 
 const { product, appearsOn = [] } = Astro.props;
+const offers = getOffers(product);
 
 const pillarLabels: Record<string, string> = {
   cooling: 'Cooling',
@@ -48,16 +51,17 @@ const pillarLabels: Record<string, string> = {
   </div>
 
   <div class="card-footer">
-    <AffiliateLink
-      href={product.amazonUrl}
-      class="card-cta"
-      data-track="amazon_outbound_click"
-      data-asin={product.asin ?? ''}
-      data-product-name={product.name}
-      data-page-slug="shop"
-    >
-      See on Amazon →
-    </AffiliateLink>
+    <div class="card-offers">
+      {offers.map((offer, i) => (
+        <MerchantAffiliateLink
+          offer={offer}
+          product={{ id: product.id, name: product.name, category: product.category }}
+          class={`card-cta${i > 0 ? ' card-cta--secondary' : ''}`}
+          label={offer.merchant === 'amazon' ? 'See on Amazon →' : `${merchants[offer.merchant].ctaCopy} →`}
+          pageSlug="shop"
+        />
+      ))}
+    </div>
 
     {appearsOn.length > 0 && (
       <div class="appears-on">
@@ -168,6 +172,11 @@ const pillarLabels: Record<string, string> = {
     padding: var(--space-sm) var(--space-md) var(--space-md);
   }
 
+  .card-offers {
+    display: grid;
+    gap: var(--space-xs);
+  }
+
   .card-cta {
     display: block;
     width: 100%;
@@ -185,6 +194,16 @@ const pillarLabels: Record<string, string> = {
   .card-cta:hover {
     background: #444;
     text-decoration: none;
+  }
+
+  .card-cta--secondary {
+    background: transparent;
+    color: var(--color-charcoal);
+    border: 1px solid var(--color-charcoal);
+  }
+
+  .card-cta--secondary:hover {
+    background: rgba(0, 0, 0, 0.06);
   }
 
   .appears-on {

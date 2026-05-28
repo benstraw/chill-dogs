@@ -1,11 +1,14 @@
+import type { AffiliateOffer } from './products/types';
+
 export type RelaxationProductCategory = 'calming-beds' | 'orthopedic-beds' | 'crates' | 'travel-beds' | 'carriers' | 'travel-bags';
 
 export interface RelaxationProduct {
   id: string;
-  asin: string;
+  asin?: string;
   name: string;
   category: RelaxationProductCategory;
-  amazonUrl: string;
+  amazonUrl?: string;
+  offers?: AffiliateOffer[];
   bullets: [string, string, string];
   bestFor: string;
   whyItWorks: string;

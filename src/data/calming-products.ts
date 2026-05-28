@@ -1,3 +1,5 @@
+import type { AffiliateOffer } from './products/types';
+
 export type CalmingProductCategory =
   | 'anxiety-wraps'
   | 'calming-treats'
@@ -9,7 +11,8 @@ export interface CalmingProduct {
   asin?: string;
   name: string;
   category: CalmingProductCategory;
-  amazonUrl: string;
+  amazonUrl?: string;
+  offers?: AffiliateOffer[];
   bullets: [string, string, string];
   bestFor: string;
   howItHelps: string;
@@ -34,6 +37,13 @@ export const calmingProducts: CalmingProduct[] = [
     howItHelps: 'Gentle pressure support',
     considerIf: 'Your dog tolerates fitted gear and anxiety tends to spike in specific situations',
     image: { src: 'https://m.media-amazon.com/images/I/61PxVCtYzUL._SL500_.jpg', alt: 'ThunderShirt Classic Dog Anxiety Jacket' },
+    offers: [
+      {
+        merchant: 'chewy' as const,
+        url: 'https://chewy.sjv.io/aNAy2R',
+        status: 'active' as const,
+      },
+    ],
   },
   {
     id: 'dajidali-anxiety-vest',
@@ -131,6 +141,13 @@ export const calmingProducts: CalmingProduct[] = [
     howItHelps: 'Nutritional calming support',
     considerIf: 'You want a chewable option instead of a wearable product',
     image: { src: 'https://m.media-amazon.com/images/I/71wvagsKePL._SL500_.jpg', alt: 'Native Pet Calm Chews for Dogs' },
+    offers: [
+      {
+        merchant: 'chewy' as const,
+        url: 'https://chewy.sjv.io/PzVobQ',
+        status: 'active' as const,
+      },
+    ],
   },
   {
     id: 'greenies-calming-chews',
@@ -148,6 +165,13 @@ export const calmingProducts: CalmingProduct[] = [
     howItHelps: 'Daily or situational nutritional support',
     considerIf: 'Your dog already does well with soft supplement-style treats',
     image: { src: 'https://m.media-amazon.com/images/I/71UE9SW5IOL._SL500_.jpg', alt: 'Greenies Supplements Calming Chews' },
+    offers: [
+      {
+        merchant: 'chewy' as const,
+        url: 'https://chewy.sjv.io/1GP67m',
+        status: 'active' as const,
+      },
+    ],
   },
   {
     id: 'pet-honesty-hemp-calming-chews',
@@ -165,6 +189,13 @@ export const calmingProducts: CalmingProduct[] = [
     howItHelps: 'Multi-ingredient calming support',
     considerIf: 'You want hemp positioned as part of your calming routine',
     image: { src: 'https://m.media-amazon.com/images/I/61nfdlquMVL._SL500_.jpg', alt: 'Pet Honesty Hemp Calming Chews' },
+    offers: [
+      {
+        merchant: 'chewy' as const,
+        url: 'https://chewy.sjv.io/0GjbjJ',
+        status: 'active' as const,
+      },
+    ],
   },
   {
     id: 'lickimat-classic-soother',
@@ -182,6 +213,13 @@ export const calmingProducts: CalmingProduct[] = [
     howItHelps: 'Encouraging licking to entertain and reduce stress',
     considerIf: 'You want the most straightforward lick-mat format',
     image: { src: 'https://m.media-amazon.com/images/I/71srIBjOAhL._SL500_.jpg', alt: 'LickiMat Classic Soother Slow Feeder' },
+    offers: [
+      {
+        merchant: 'chewy' as const,
+        url: 'https://chewy.sjv.io/oNLA0O',
+        status: 'active' as const,
+      },
+    ],
   },
   {
     id: 'awoo-paradise-lick-mat',
@@ -393,6 +431,13 @@ export const calmingProducts: CalmingProduct[] = [
     howItHelps: 'Adjustable foraging puzzle',
     considerIf: 'Your dog gets bored with simpler enrichment setups',
     image: { src: 'https://m.media-amazon.com/images/I/71Wmu0n5rtL._SL500_.jpg', alt: 'AWOOF Pet Snuffle Mat for Dogs' },
+    offers: [
+      {
+        merchant: 'chewy' as const,
+        url: 'https://chewy.sjv.io/WOdbRA',
+        status: 'active' as const,
+      },
+    ],
   },
 ];
 

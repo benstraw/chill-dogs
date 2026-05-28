@@ -1,4 +1,5 @@
 import { relaxationProducts, type RelaxationProduct } from './relaxation-products';
+import { getRequiredPrimaryOffer } from './products/offers';
 import { ROUTES } from './routes';
 
 export type RelaxationPageType = 'converter';
@@ -181,7 +182,7 @@ export function buildRelaxationItemListSchema(
       '@type': 'ListItem',
       position: i + 1,
       name: p.name,
-      url: p.amazonUrl,
+      url: getRequiredPrimaryOffer(p, `${schemaConfig.name}: ${p.id}`).url,
     })),
   };
 }

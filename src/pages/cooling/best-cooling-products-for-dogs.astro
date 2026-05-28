@@ -10,6 +10,7 @@ import Disclosure from '@components/modules/Disclosure.astro';
 import RelatedGuides from '@components/modules/RelatedGuides.astro';
 import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
 import { getProductsByCategory } from '@data/cooling-products';
+import { getRequiredPrimaryOffer } from '@data/products/offers';
 
 const pageSlug = 'best-cooling-products-for-dogs';
 
@@ -64,7 +65,7 @@ const itemListSchema = {
     '@type': 'ListItem',
     position: i + 1,
     name: p.name,
-    url: p.amazonUrl,
+    url: getRequiredPrimaryOffer(p, `${pageSlug}: ${p.id}`).url,
   })),
 };
 

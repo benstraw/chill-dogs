@@ -69,10 +69,22 @@ function firstMainImageAbsolute(doc: Document): string | null {
   return new URL(src, 'https://www.chill-dogs.com').href;
 }
 
-function getAmazonAffiliateLinks(doc: Document): HTMLAnchorElement[] {
+function getAffiliateLinks(doc: Document): HTMLAnchorElement[] {
   return Array.from(
-    doc.querySelectorAll<HTMLAnchorElement>('a[data-affiliate="true"][href*="amazon."]')
+    doc.querySelectorAll<HTMLAnchorElement>('a[data-affiliate="true"][data-track="affiliate_outbound_click"]')
   );
+}
+
+function expectTrackedAffiliateLink(link: HTMLAnchorElement) {
+  expect(relTokens(link)).toEqual(['noopener', 'noreferrer', 'sponsored']);
+  expect(link.getAttribute('target')).toBe('_blank');
+
+  if (link.getAttribute('data-merchant') === 'amazon') {
+    expect(link.getAttribute('data-track-also')).toBe('amazon_outbound_click');
+    expect(link.href).toContain('tag=chill-dogs-20');
+  } else {
+    expect(link.getAttribute('data-track-also')).toBeNull();
+  }
 }
 
 function relTokens(link: HTMLAnchorElement): string[] {
@@ -403,42 +415,35 @@ describe('site smoke tests', () => {
     expect(termsSchemas.some((schema) => schema.includes('"@type":"BreadcrumbList"'))).toBe(false);
   });
 
-  it('renders cooling converter pages with tagged Amazon affiliate links', () => {
+  it('renders cooling converter pages with tracked merchant affiliate links', () => {
     const doc = readBuiltPage(path.join('cooling', 'cooling-mats', 'index.html'));
-    const affiliateLinks = getAmazonAffiliateLinks(doc);
+    const affiliateLinks = getAffiliateLinks(doc);
 
     expect(affiliateLinks.length).toBeGreaterThan(0);
 
     for (const link of affiliateLinks) {
-      expect(relTokens(link)).toEqual(['noopener', 'noreferrer', 'sponsored']);
-      expect(link.getAttribute('target')).toBe('_blank');
-      expect(link.getAttribute('data-track')).toBe('amazon_outbound_click');
-      expect(link.href).toContain('tag=chill-dogs-20');
+      expectTrackedAffiliateLink(link);
     }
   });
 
-  it('renders calming converter pages with tagged Amazon affiliate links', () => {
+  it('renders calming converter pages with tracked merchant affiliate links', () => {
     const doc = readBuiltPage(path.join('calming', 'best-calming-products-for-anxious-dogs', 'index.html'));
-    const affiliateLinks = getAmazonAffiliateLinks(doc);
+    const affiliateLinks = getAffiliateLinks(doc);
 
     expect(affiliateLinks.length).toBeGreaterThan(0);
 
     for (const link of affiliateLinks) {
-      expect(relTokens(link)).toEqual(['noopener', 'noreferrer', 'sponsored']);
-      expect(link.getAttribute('target')).toBe('_blank');
-      expect(link.getAttribute('data-track')).toBe('amazon_outbound_click');
-      expect(link.href).toContain('tag=chill-dogs-20');
+      expectTrackedAffiliateLink(link);
     }
   });
 
   it('renders travel converter with affiliate links', () => {
     const doc = readBuiltPage(path.join('travel', 'dog-road-trip-gear', 'index.html'));
-    const affiliateLinks = getAmazonAffiliateLinks(doc);
+    const affiliateLinks = getAffiliateLinks(doc);
 
     expect(affiliateLinks.length).toBeGreaterThan(0);
     for (const link of affiliateLinks) {
-      expect(relTokens(link)).toEqual(['noopener', 'noreferrer', 'sponsored']);
-      expect(link.href).toContain('tag=chill-dogs-20');
+      expectTrackedAffiliateLink(link);
     }
   });
 
@@ -543,11 +548,10 @@ describe('site smoke tests', () => {
     const heavyDutyDoc = readBuiltPage(path.join('comforting', 'best-heavy-duty-dog-crates', 'index.html'));
 
     for (const doc of [airlineDoc, furnitureDoc, heavyDutyDoc]) {
-      const affiliateLinks = getAmazonAffiliateLinks(doc);
+      const affiliateLinks = getAffiliateLinks(doc);
       expect(affiliateLinks.length).toBeGreaterThan(0);
       for (const link of affiliateLinks) {
-        expect(relTokens(link)).toEqual(['noopener', 'noreferrer', 'sponsored']);
-        expect(link.href).toContain('tag=chill-dogs-20');
+        expectTrackedAffiliateLink(link);
       }
     }
   });

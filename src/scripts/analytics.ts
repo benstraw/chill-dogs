@@ -24,7 +24,7 @@ export function track(eventName: string, props: Record<string, any>): void {
 function getTrackingData(el: HTMLElement): Record<string, any> {
   const data: Record<string, any> = {};
   for (const attr of el.attributes) {
-    if (attr.name.startsWith('data-') && attr.name !== 'data-track') {
+    if (attr.name.startsWith('data-') && attr.name !== 'data-track' && attr.name !== 'data-track-also') {
       const key = attr.name.slice(5).replace(/-/g, '_');
       data[key] = attr.value;
     }
@@ -43,5 +43,10 @@ export function init(): void {
     const eventName = tracked.getAttribute('data-track')!;
     const props = getTrackingData(tracked);
     track(eventName, props);
+
+    const alsoEventName = tracked.getAttribute('data-track-also');
+    if (alsoEventName) {
+      track(alsoEventName, props);
+    }
   });
 }

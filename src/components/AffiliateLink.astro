@@ -1,4 +1,6 @@
 ---
+import MerchantAffiliateLink from '@components/MerchantAffiliateLink.astro';
+
 interface Props {
   href: string;
   class?: string;
@@ -8,19 +10,35 @@ interface Props {
 const {
   href,
   class: className,
-  'data-track': dataTrack = 'amazon_outbound_click',
+  'data-track': dataTrack = 'affiliate_outbound_click',
+  'data-asin': dataAsin,
+  'data-product-name': dataProductName = '',
+  'data-product-id': dataProductId,
+  'data-product-category': dataProductCategory,
   ...rest
 } = Astro.props;
+
+const asin = dataAsin ?? href.match(/\/dp\/([^/?]+)/)?.[1] ?? '';
+const effectiveTrack = dataTrack === 'amazon_outbound_click' ? 'affiliate_outbound_click' : dataTrack;
 ---
 
-<a
-  href={href}
-  rel="sponsored noopener noreferrer"
-  target="_blank"
+<MerchantAffiliateLink
+  offer={{
+    merchant: 'amazon',
+    asin,
+    merchantProductId: asin,
+    url: href,
+    status: 'active',
+  }}
+  product={{
+    id: dataProductId,
+    name: dataProductName,
+    category: dataProductCategory,
+  }}
   class={className}
-  data-affiliate="true"
-  data-track={dataTrack}
+  data-track={effectiveTrack}
+  data-track-also="amazon_outbound_click"
   {...rest}
 >
   <slot />
-</a>
+</MerchantAffiliateLink>

@@ -31,7 +31,10 @@ describe('admin product catalog data', () => {
       expect(product.name).toBeTruthy();
       expect(product.pillar).toMatch(/^(cooling|calming|comfort|gear)$/);
       expect(product.category).toBeTruthy();
-      expect(product.amazonUrl).toContain('tag=chill-dogs-20');
+      if (product.amazonUrl) {
+        expect(product.amazonUrl).toContain('tag=chill-dogs-20');
+      }
+      expect(product.offers.length).toBeGreaterThan(0);
       expect(product.bullets.length).toBeGreaterThan(0);
       expect(product.bestFor).toBeTruthy();
       expect(product.source).toMatch(/^src\/data\/.+\.ts$/);

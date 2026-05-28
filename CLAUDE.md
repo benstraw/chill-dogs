@@ -28,6 +28,7 @@ Do not skip the task-specific docs.
 - `docs/system-definition.yaml` - keep updated when pages, routes, or page types change.
 - `src/data/sitemap-inventory.ts` - every new non-MDX page must be registered here.
 - `src/data/routes.ts` - all internal route strings live here.
+- `src/data/products/` - canonical merchant offer types/helpers. Product editorial copy remains in product records; Amazon/Chewy provider metadata is diagnostic only and must not auto-overwrite copy or images.
 
 ## Commands
 
