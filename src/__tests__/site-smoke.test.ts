@@ -249,6 +249,8 @@ describe('site smoke tests', () => {
       {
         page: path.join('calming', 'dog-fireworks-anxiety-checklist', 'index.html'),
         expected: [
+          '/calming/how-to-prepare-a-calm-room-for-fireworks-night/',
+          '/calming/should-you-take-your-dog-to-fireworks/',
           '/calming/best-calming-products-for-anxious-dogs/',
           '/calming/best-thundershirt-alternatives/',
           '/calming/car-anxiety-for-dogs/',
@@ -265,6 +267,21 @@ describe('site smoke tests', () => {
         expect(link.getAttribute('data-track')).toBe('collector_to_converter_click');
       }
     }
+  });
+
+  it('links fireworks checklist sections to supporting article guides', () => {
+    const doc = readBuiltPage(path.join('calming', 'dog-fireworks-anxiety-checklist', 'index.html'));
+    const calmRoomLink = doc.querySelector<HTMLAnchorElement>(
+      'a[href="/calming/how-to-prepare-a-calm-room-for-fireworks-night/"][data-link-position="morning-of-july-4"]'
+    );
+    const eventDecisionLink = doc.querySelector<HTMLAnchorElement>(
+      'a[href="/calming/should-you-take-your-dog-to-fireworks/"][data-link-position="during-fireworks"]'
+    );
+
+    expect(calmRoomLink?.textContent).toBe('fireworks calm room guide');
+    expect(calmRoomLink?.getAttribute('data-from-page')).toBe('dog-fireworks-anxiety-checklist');
+    expect(eventDecisionLink?.textContent).toBe('fireworks event decision guide');
+    expect(eventDecisionLink?.getAttribute('data-from-page')).toBe('dog-fireworks-anxiety-checklist');
   });
 
   it('renders derived RelatedGuides cards on migrated converter pages', () => {

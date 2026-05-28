@@ -189,6 +189,15 @@ site_system:
         - "/calming/how-to-prepare-a-calm-room-for-fireworks-night/"
       notes: "Practical fireworks-night setup guide focused on one low-stimulation room, then routing readers to calming product and wrap comparisons."
 
+    - name: "Dog Fireworks Anxiety Checklist"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Route fireworks-anxiety checklist traffic to companion fireworks articles and calming converters"
+      metric: "collector_to_converter_click to fireworks companion articles and calming converters"
+      routes:
+        - "/calming/dog-fireworks-anxiety-checklist/"
+      notes: "Practical July 4 checklist organized around the week before, the day of, and the morning after, with section links and related-strip paths to the fireworks calm-room and event-decision articles plus conversion paths into calming products, wrap alternatives, and car-anxiety support."
+
     - name: "Should You Take Your Dog to Fireworks?"
       type: "collector"
       collector_subtype: "article"
@@ -197,15 +206,6 @@ site_system:
       routes:
         - "/calming/should-you-take-your-dog-to-fireworks/"
       notes: "Practical outdoor-event decision guide focused on leaving before dark, safe exit planning, newsletter capture after the exit-before-dark rule, and recovery paths through calming, cooling, car-anxiety, and GPS tracker converters."
-
-    - name: "Dog Fireworks Anxiety Checklist"
-      type: "collector"
-      collector_subtype: "article"
-      target_action: "Route fireworks-anxiety checklist traffic to calming converters"
-      metric: "collector_to_converter_click to calming converters"
-      routes:
-        - "/calming/dog-fireworks-anxiety-checklist/"
-      notes: "Practical July 4 checklist organized around the week before, the day of, and the morning after, with conversion paths into calming products, wrap alternatives, and car-anxiety support."
 
     - name: "Road Trip Chill Kit"
       type: "collector"
