@@ -8,7 +8,7 @@
 
 site_system:
   status: "active"
-  as_of: "2026-05-26"
+  as_of: "2026-05-29"
   owner: "chill-dogs"
   purpose: "Define the website as a modular conversion system and keep implementation aligned."
 
@@ -272,6 +272,20 @@ site_system:
       metric: "collector_to_converter_click to /gear/best-dog-gps-trackers/ and /travel/rhys-ran-away-cerro-san-luis-obispo/"
       routes:
         - "/safety/what-to-do-if-your-dog-runs-away/"
+
+    - name: "Most Chill Dog Breeds"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Capture calm/chill breed search intent and bridge readers toward the future dog DNA test converter path"
+      metric: "collector_to_converter_click to calming, cooling, and adoption-support pages; future dog DNA converter click once live"
+      routes:
+        - "/breeds/most-chill-dog-breeds/"
+      notes: >
+        Informational breed-intent article; frames chill dogs as an owner-fit and individual-dog question,
+        cites AKC breed pages for high-level breed traits, cites breed-behavior research caveat that breed
+        explains limited individual behavioral variation, and introduces Embark as the personal Chill-Dogs
+        DNA-test favorite with Wisdom Panel as the future value comparison. /breeds/[slug].astro routes
+        MDX article collectors whose canonicalPath starts with /breeds/.
 
     - name: "Product browse"
       type: "converter"

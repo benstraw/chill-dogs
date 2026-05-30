@@ -151,7 +151,7 @@ When a live/indexed URL changes slug:
 
 Valid `topics` values are defined in `src/data/content-sitemap.ts` as the `TOPICS` const:
 
-`cooling`, `heat-safety`, `car-cooling`, `cooling-mats`, `cooling-wearables`, `frozen-toys`, `calming`, `anxiety`, `car-anxiety`, `crate-training`, `fireworks`, `comfort`, `sleep`, `beds`, `orthopedic`, `crates`, `travel`, `road-trips`, `flying`, `carriers`, `tracking`, `gps-tracking`, `lost-dog-safety`
+`cooling`, `heat-safety`, `car-cooling`, `cooling-mats`, `cooling-wearables`, `frozen-toys`, `calming`, `anxiety`, `car-anxiety`, `crate-training`, `fireworks`, `comfort`, `sleep`, `beds`, `orthopedic`, `crates`, `travel`, `road-trips`, `flying`, `carriers`, `tracking`, `gps-tracking`, `lost-dog-safety`, `breeds`, `mixed-breed-dogs`, `dog-dna-tests`
 
 Use these exact values. Do not invent new topic strings.
 

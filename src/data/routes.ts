@@ -29,6 +29,7 @@ export const ROUTES = {
   garminTracking: '/gear/garmin-dog-tracking-collars/',
   airtagForDogs: '/gear/airtag-for-dogs/',
   dogRanAwaySafety: '/safety/what-to-do-if-your-dog-runs-away/',
+  breedsChillDogs: '/breeds/most-chill-dog-breeds/',
   comfortHub: '/comforting/',
   comfortCalmingBeds: '/comforting/best-calming-dog-beds/',
   comfortOrthopedicBeds: '/comforting/best-orthopedic-dog-beds/',
