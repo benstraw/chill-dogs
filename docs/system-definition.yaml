@@ -213,6 +213,15 @@ site_system:
         - "/travel/how-to-fly-with-a-dog/"
       notes: "Informational air-travel guide; attributes facts to TSA, USDA APHIS, AVMA, DOT, CDC, and AAHA. No product roundup. Internal links to calming and comfort converters."
 
+    - name: "Best Dog-Friendly Airlines"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Route dog-friendly flight service intent to travel, calming, and comfort converters/collectors"
+      metric: "collector_to_converter_click to travel, calming, and comfort pages"
+      routes:
+        - "/travel/dog-friendly-airlines/"
+      notes: "Article collector focused on dog-forward onboard flight options beyond standard under-seat commercial airline pet policies; routes to flying-with-dogs, carrier, travel bag, car anxiety, and road trip pages."
+
     - name: "How Much Do Dogs Sleep"
       type: "collector"
       collector_subtype: "article"
