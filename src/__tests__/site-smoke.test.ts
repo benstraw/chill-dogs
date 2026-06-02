@@ -125,6 +125,7 @@ describe('site smoke tests', () => {
 
     expect(links).toContain('/calming/crate-training-for-dogs/');
     expect(links).toContain('/comforting/best-travel-crates-for-road-trips/');
+    expect(links).toContain('/calming/best-lick-mats-for-dogs/');
   });
 
   it('renders dynamic section collector inventories for articles and converters', () => {
@@ -506,6 +507,22 @@ describe('site smoke tests', () => {
       .toContain('Chill-Dogs');
     expect(confirmedDoc.body.textContent).toContain('Cooling Picks');
     expect(confirmedDoc.body.textContent).toContain('Hot Weather Guide');
+  });
+
+  it('publishes the postcard QR alias as a tracked subscribe redirect', () => {
+    const expectedDestination = 'https://www.chill-dogs.com/subscribe/?utm_source=postcard&utm_medium=print&utm_campaign=offline_flyer';
+    const joinDoc = readBuiltPage(path.join('join', 'index.html'));
+    const refresh = joinDoc.querySelector('meta[http-equiv="refresh"]');
+    const vercelConfig = JSON.parse(readFileSync(path.join(projectRoot, 'vercel.json'), 'utf8'));
+    const joinRedirects = vercelConfig.redirects.filter(({ source }: { source: string }) =>
+      source === '/join' || source === '/join/'
+    );
+
+    expect(refresh?.getAttribute('content')).toContain(expectedDestination);
+    expect(joinRedirects).toEqual([
+      { source: '/join', destination: expectedDestination, statusCode: 302 },
+      { source: '/join/', destination: expectedDestination, statusCode: 302 },
+    ]);
   });
 
   it('renders the fireworks article newsletter CTA in the exit-planning section', () => {

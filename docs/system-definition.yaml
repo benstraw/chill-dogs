@@ -8,7 +8,7 @@
 
 site_system:
   status: "active"
-  as_of: "2026-05-26"
+  as_of: "2026-06-02"
   owner: "chill-dogs"
   purpose: "Define the website as a modular conversion system and keep implementation aligned."
 
@@ -410,11 +410,17 @@ site_system:
     section_collectors: "src/data/section-collectors.ts defines cooling, calming, and comfort collector metadata, topic subsection grouping, topic coverage, priority ordering, dynamic CollectorBody card inventories, and CollectionPage hasPart schema from the complete sitemap inventory."
 
   redirects:
-    # Production: vercel.json → redirects array (true HTTP 301 at Vercel edge).
+    # Production: vercel.json → redirects array (true HTTP redirect at Vercel edge).
     # Local dev/preview: astro.config.mjs → redirects block (meta-refresh fallback).
-    # Add an entry here any time a live/indexed URL is changed.
+    # Add an entry here any time a live/indexed URL changes or a marketing alias is added.
+    - from: "/join"
+      to: "https://www.chill-dogs.com/subscribe/?utm_source=postcard&utm_medium=print&utm_campaign=offline_flyer"
+      status: 302
+      reason: "Short marketing alias for postcard QR codes; temporary redirect keeps the campaign destination editable."
+      date: "2026-06-02"
     - from: "/travel/rhys-road-trip-chill-kit/"
       to: "/travel/dog-road-trip-gear/"
+      status: 301
       reason: "Slug updated to target primary keyword 'dog road trip gear'; old URL was indexed."
       date: "2026-03-20"
 

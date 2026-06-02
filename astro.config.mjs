@@ -17,6 +17,10 @@ export default defineConfig({
   site: 'https://www.chill-dogs.com',
   trailingSlash: 'ignore',
   redirects: {
+    '/join': {
+      status: 302,
+      destination: 'https://www.chill-dogs.com/subscribe/?utm_source=postcard&utm_medium=print&utm_campaign=offline_flyer',
+    },
     '/travel/rhys-road-trip-chill-kit/': '/travel/dog-road-trip-gear/',
   },
   integrations: [
