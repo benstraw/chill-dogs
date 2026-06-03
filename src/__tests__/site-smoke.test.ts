@@ -122,10 +122,22 @@ describe('site smoke tests', () => {
     const links = Array.from(doc.querySelectorAll<HTMLAnchorElement>('a')).map((link) =>
       link.getAttribute('href')
     );
+    const lickMatLinks = Array.from(
+      doc.querySelectorAll<HTMLAnchorElement>('a[href="/calming/best-lick-mats-for-dogs/"]')
+    );
+    const travelCrateLinks = Array.from(
+      doc.querySelectorAll<HTMLAnchorElement>('a[href="/comforting/best-travel-crates-for-road-trips/"]')
+    );
 
     expect(links).toContain('/calming/crate-training-for-dogs/');
     expect(links).toContain('/comforting/best-travel-crates-for-road-trips/');
     expect(links).toContain('/calming/best-lick-mats-for-dogs/');
+    expect(lickMatLinks.map((link) => link.getAttribute('data-link-position'))).toEqual([
+      'homepage-converters',
+    ]);
+    expect(travelCrateLinks.map((link) => link.getAttribute('data-link-position'))).toEqual([
+      'homepage-converters',
+    ]);
   });
 
   it('renders dynamic section collector inventories for articles and converters', () => {
@@ -246,6 +258,16 @@ describe('site smoke tests', () => {
           '/comforting/best-puppy-crates/',
         ],
       },
+      {
+        page: path.join('calming', 'dog-fireworks-anxiety-checklist', 'index.html'),
+        expected: [
+          '/calming/how-to-prepare-a-calm-room-for-fireworks-night/',
+          '/calming/should-you-take-your-dog-to-fireworks/',
+          '/calming/best-calming-products-for-anxious-dogs/',
+          '/calming/best-thundershirt-alternatives/',
+          '/calming/car-anxiety-for-dogs/',
+        ],
+      },
     ];
 
     for (const testCase of cases) {
@@ -257,6 +279,21 @@ describe('site smoke tests', () => {
         expect(link.getAttribute('data-track')).toBe('collector_to_converter_click');
       }
     }
+  });
+
+  it('links fireworks checklist sections to supporting article guides', () => {
+    const doc = readBuiltPage(path.join('calming', 'dog-fireworks-anxiety-checklist', 'index.html'));
+    const calmRoomLink = doc.querySelector<HTMLAnchorElement>(
+      'a[href="/calming/how-to-prepare-a-calm-room-for-fireworks-night/"][data-link-position="morning-of-july-4"]'
+    );
+    const eventDecisionLink = doc.querySelector<HTMLAnchorElement>(
+      'a[href="/calming/should-you-take-your-dog-to-fireworks/"][data-link-position="during-fireworks"]'
+    );
+
+    expect(calmRoomLink?.textContent).toBe('fireworks calm room guide');
+    expect(calmRoomLink?.getAttribute('data-from-page')).toBe('dog-fireworks-anxiety-checklist');
+    expect(eventDecisionLink?.textContent).toBe('fireworks event decision guide');
+    expect(eventDecisionLink?.getAttribute('data-from-page')).toBe('dog-fireworks-anxiety-checklist');
   });
 
   it('renders derived RelatedGuides cards on migrated converter pages', () => {
@@ -599,6 +636,7 @@ describe('site smoke tests', () => {
     expect(sitemap).toContain('/travel/dog-road-trip-gear/');
     expect(sitemap).toContain('/calming/best-calming-products-for-anxious-dogs/');
     expect(sitemap).toContain('/calming/best-lick-mats-for-dogs/');
+    expect(sitemap).toContain('/calming/dog-fireworks-anxiety-checklist/');
     expect(sitemap).toContain('/calming/how-to-prepare-a-calm-room-for-fireworks-night/');
     expect(sitemap).toContain('/comforting/best-puppy-crates/');
     expect(sitemap).toContain('/comforting/best-anxiety-dog-crates/');
@@ -621,6 +659,8 @@ describe('site smoke tests', () => {
 
     expect(rssXml).toContain('/calming/crate-training-for-dogs/');
     expect(rssXml).toContain('How to Crate Train Your Dog');
+    expect(rssXml).toContain('/calming/dog-fireworks-anxiety-checklist/');
+    expect(rssXml).toContain('Dog Fireworks Anxiety Checklist: What to Do Before, During, and After the Fourth of July');
     expect(rssXml).toContain('/calming/how-to-prepare-a-calm-room-for-fireworks-night/');
     expect(rssXml).toContain('How to Prepare a Calm Room for Fireworks Night');
   });
