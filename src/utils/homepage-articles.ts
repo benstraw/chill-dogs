@@ -84,7 +84,7 @@ export function getHomepageConverters(limit = 15): HomepageConverterCard[] {
 
 export function buildHomepageArticleFeed(
   entries: CollectionEntry<'articles'>[],
-  featuredCount = 6
+  featuredCount = Number.POSITIVE_INFINITY
 ): HomepageArticleFeed {
   const sortedArticles = entries
     .slice()

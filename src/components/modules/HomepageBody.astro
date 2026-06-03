@@ -97,21 +97,23 @@ const shopCards = [
     ))}
   </div>
 
-  <div class="more-grid">
-    {articleFeed.moreArticles.map((article) => (
-      <a
-        href={article.href}
-        class={`more-card more-card--${article.color}`}
-        data-home-article="true"
-        data-track="collector_to_converter_click"
-        data-to-page={article.href}
-        data-link-position="homepage-more-articles"
-      >
-        <h3 class="more-title">{article.title}</h3>
-        <p class="more-desc">{article.description}</p>
-      </a>
-    ))}
-  </div>
+  {articleFeed.moreArticles.length > 0 && (
+    <div class="more-grid">
+      {articleFeed.moreArticles.map((article) => (
+        <a
+          href={article.href}
+          class={`more-card more-card--${article.color}`}
+          data-home-article="true"
+          data-track="collector_to_converter_click"
+          data-to-page={article.href}
+          data-link-position="homepage-more-articles"
+        >
+          <h3 class="more-title">{article.title}</h3>
+          <p class="more-desc">{article.description}</p>
+        </a>
+      ))}
+    </div>
+  )}
 </section>
 
 {/* ── Browse Picks ── */}
