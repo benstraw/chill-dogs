@@ -258,6 +258,60 @@ describe('site smoke tests', () => {
     }
   });
 
+  it('renders the breeds article cluster with canonical URLs and cross-links', () => {
+    const cases = [
+      {
+        page: path.join('breeds', 'most-chill-dog-breeds', 'index.html'),
+        canonical: 'https://www.chill-dogs.com/breeds/most-chill-dog-breeds/',
+        h1: 'What Are the Most Chill Dog Breeds?',
+        expectedLinks: [
+          '/breeds/dog-temperament-by-age/',
+          '/breeds/dog-dna-tests-compared/',
+          '/calming/best-calming-products-for-anxious-dogs/',
+        ],
+      },
+      {
+        page: path.join('breeds', 'dog-temperament-by-age', 'index.html'),
+        canonical: 'https://www.chill-dogs.com/breeds/dog-temperament-by-age/',
+        h1: 'Do Dogs Get Calmer With Age?',
+        expectedLinks: [
+          '/breeds/most-chill-dog-breeds/',
+          '/breeds/dog-dna-tests-compared/',
+          '/shelter-dog-charities/',
+        ],
+      },
+      {
+        page: path.join('breeds', 'dog-dna-tests-compared', 'index.html'),
+        canonical: 'https://www.chill-dogs.com/breeds/dog-dna-tests-compared/',
+        h1: 'Dog DNA Tests Compared',
+        expectedLinks: [
+          '/breeds/most-chill-dog-breeds/',
+          '/breeds/dog-temperament-by-age/',
+          '/calming/best-calming-products-for-anxious-dogs/',
+        ],
+      },
+    ];
+
+    for (const testCase of cases) {
+      const doc = readBuiltPage(testCase.page);
+      const links = Array.from(doc.querySelectorAll<HTMLAnchorElement>('a')).map((link) =>
+        link.getAttribute('href')
+      );
+      const schemas = Array.from(
+        doc.querySelectorAll<HTMLScriptElement>('script[type="application/ld+json"]')
+      ).map((script) => script.textContent || '');
+
+      expect(doc.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.getAttribute('href'))
+        .toBe(testCase.canonical);
+      expect(doc.querySelector('h1')?.textContent).toContain(testCase.h1);
+      expect(doc.querySelector('.toc')).not.toBeNull();
+      expect(doc.querySelector('.faq')).not.toBeNull();
+      expect(schemas.some((schema) => schema.includes('"@type":"Article"'))).toBe(true);
+      expect(schemas.some((schema) => schema.includes('"@type":"FAQPage"'))).toBe(true);
+      expect(links).toEqual(expect.arrayContaining(testCase.expectedLinks));
+    }
+  });
+
   it('renders derived RelatedGuides cards on migrated converter pages', () => {
     const cases = [
       {

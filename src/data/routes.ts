@@ -30,6 +30,8 @@ export const ROUTES = {
   airtagForDogs: '/gear/airtag-for-dogs/',
   dogRanAwaySafety: '/safety/what-to-do-if-your-dog-runs-away/',
   breedsChillDogs: '/breeds/most-chill-dog-breeds/',
+  breedsTemperamentByAge: '/breeds/dog-temperament-by-age/',
+  breedsDnaTestsCompared: '/breeds/dog-dna-tests-compared/',
   comfortHub: '/comforting/',
   comfortCalmingBeds: '/comforting/best-calming-dog-beds/',
   comfortOrthopedicBeds: '/comforting/best-orthopedic-dog-beds/',

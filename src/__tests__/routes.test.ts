@@ -24,6 +24,12 @@ describe('route constants', () => {
     );
   });
 
+  it('uses canonical breeds cluster routes', () => {
+    expect(ROUTES.breedsChillDogs).toBe('/breeds/most-chill-dog-breeds/');
+    expect(ROUTES.breedsTemperamentByAge).toBe('/breeds/dog-temperament-by-age/');
+    expect(ROUTES.breedsDnaTestsCompared).toBe('/breeds/dog-dna-tests-compared/');
+  });
+
   it('uses canonical puppy crates route', () => {
     expect(ROUTES.comfortPuppyCrates).toBe('/comforting/best-puppy-crates/');
   });

@@ -34,6 +34,7 @@ export const TOPICS = [
   'gps-tracking',
   'lost-dog-safety',
   'breeds',
+  'adoption',
   'mixed-breed-dogs',
   'dog-dna-tests',
 ] as const;

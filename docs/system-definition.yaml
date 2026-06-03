@@ -8,7 +8,7 @@
 
 site_system:
   status: "active"
-  as_of: "2026-05-29"
+  as_of: "2026-06-03"
   owner: "chill-dogs"
   purpose: "Define the website as a modular conversion system and keep implementation aligned."
 
@@ -273,19 +273,22 @@ site_system:
       routes:
         - "/safety/what-to-do-if-your-dog-runs-away/"
 
-    - name: "Most Chill Dog Breeds"
+    - name: "Calm Dog Breeds cluster"
       type: "collector"
       collector_subtype: "article"
-      target_action: "Capture calm/chill breed search intent and bridge readers toward the future dog DNA test converter path"
-      metric: "collector_to_converter_click to calming, cooling, and adoption-support pages; future dog DNA converter click once live"
+      target_action: "Capture calm/chill breed, temperament-by-age, and dog-DNA comparison search intent, then route readers toward relevant converters and the future dog DNA converter path"
+      metric: "collector_to_converter_click to breed-cluster articles, calming/cooling/comfort converters, and future dog DNA converter once live"
       routes:
         - "/breeds/most-chill-dog-breeds/"
+        - "/breeds/dog-temperament-by-age/"
+        - "/breeds/dog-dna-tests-compared/"
       notes: >
-        Informational breed-intent article; frames chill dogs as an owner-fit and individual-dog question,
-        cites AKC breed pages for high-level breed traits, cites breed-behavior research caveat that breed
-        explains limited individual behavioral variation, and introduces Embark as the personal Chill-Dogs
-        DNA-test favorite with Wisdom Panel as the future value comparison. /breeds/[slug].astro routes
-        MDX article collectors whose canonicalPath starts with /breeds/.
+        Three informational article collectors split the former oversized calm-dog draft into separate intents:
+        calm breeds and breed jobs; temperament by age and adoption timing; and Embark vs Wisdom Panel dog DNA
+        tests as an editorial feeder to a future DNA-test converter. The cluster uses /breeds/[slug].astro for
+        MDX articles whose canonicalPath starts with /breeds/, route constants in src/data/routes.ts, and
+        sitemap topics/pinnedRelated metadata for related-link derivation. Article 3 stays a collector, not a
+        product roundup converter; affiliate pressure remains light until the future converter exists.
 
     - name: "Product browse"
       type: "converter"
