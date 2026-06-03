@@ -1,0 +1,786 @@
+{
+  "search_metadata": {
+    "id": "69f04e22d649a9f2dc0af53e",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/l_eBYYNCIfI4fhN6_BMcVQ/69f04e22d649a9f2dc0af53e.json",
+    "created_at": "2026-04-28 06:05:22 UTC",
+    "processed_at": "2026-04-28 06:05:22 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0F2GFMG74/?",
+    "raw_html_file": "https://serpapi.com/searches/l_eBYYNCIfI4fhN6_BMcVQ/69f04e22d649a9f2dc0af53e.html",
+    "total_time_taken": 2.29
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0F2GFMG74",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0F2GFMG74",
+    "title": "KindTail Nomad Nap Mat - Travel Dog Bed - Machine Washable, Water-Resistant Dog Mat for Pets up to 50 lbs - Lightweight, Portable Pet Bed with Carry Handle - Folds to 14 x 9 x 5 (1.5 lbs, Light Grey)",
+    "link": "https://www.amazon.com/KindTail-Nomad-Nap-Mat-Water-Resistant/dp/B0F2GFMG74/",
+    "link_clean": "https://www.amazon.com/dp/B0F2GFMG74/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F2GFMG74&device=desktop&engine=amazon_product",
+    "badges": [
+      "Amazon's Choice"
+    ],
+    "variants": [
+      {
+        "title": "Color",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0F2GFMG74",
+            "name": "Light Grey",
+            "image": "https://m.media-amazon.com/images/I/41xPAwovlzL._SS64_.jpg",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F2GFMG74&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0F2GC349S",
+            "name": "Blue",
+            "image": "https://m.media-amazon.com/images/I/41tJlcVHkpL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F2GC349S&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the KindTail Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/81PVoGDckNL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/81PVoGDckNL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81nIkuLfVJL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81ySiMyw+eL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81zdzEAhkZL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/912G4189u+L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81rlluYCB8L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/9123cy3D8SL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.5,
+    "reviews": 35,
+    "price": "$49.99",
+    "extracted_price": 49.99,
+    "prime": true,
+    "delivery": [
+      "FREE delivery Saturday, May 2",
+      "Or Prime members get FREE delivery Wednesday, April 29. Order within 54 mins. Join Prime"
+    ],
+    "stock": "Only 15 left in stock - order soon."
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$49.99",
+      "extracted_price": 49.99,
+      "delivery": [
+        "FREE delivery Saturday, May 2",
+        "Or Prime members get FREE delivery Wednesday, April 29. Order within 54 mins. Join Prime"
+      ],
+      "stock": "Only 15 left in stock - order soon.",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "KindTail",
+          "details": {
+            "heading": "Sold by",
+            "content": "KindTail"
+          },
+          "link": {
+            "text": "KindTail",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A2AN7ES8S4L4AG&asin=B0F2GFMG74&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "brand": "KindTail",
+    "breed_recommendation": "Small & Medium",
+    "special_feature": "Foldable, Lightweight, Machine Wash and Dry",
+    "material": "Polyester",
+    "product_dimensions": "37\"L x 28\"W x 0.5\"Th"
+  },
+  "about_item": [
+    "Compact and Foldable - This portable dog mat for pets up to 50 lbs compactly rolls up to 14 x 9 x 5-inches, making it simple to pack away for adventures with your furry friend. It's designed with a sturdy, easy-to-carry handle.",
+    "Lightweight Material - Made from water-resistant polyester wrapped in super soft faux rabbit fur, our 1.5 lb. Nap Mat is the perfect travel companion for your pup. The cozy materials will keep your pet comfortable on the go.",
+    "Convenient Care - This washable dog travel mat can be put directly into the washing machine and tumble-dried at a low temperature to easily keep your furry friend's space fresh. Say goodbye to messy cleanups and hello to a hassle-free travel experience.",
+    "The Perfect Size - Our travel bed spreads out to 37 x 28 x 0.5 inches so your small or medium size pets can enjoy their own space for relaxation anytime and anywhere. Take this paw-friendly mat with you so your pup will feel comfy wherever you go!",
+    "Durable Construction - The KindTail sleeping mat's durable materials are ideal for all travel and activities - from quick car trips to the great outdoors. Our versatile base layer and soft cover will withstand even the most energetic play."
+  ],
+  "bought_together": [
+    {
+      "position": 1,
+      "title": "KindTail Nomad Nap Mat - Travel Dog Bed - Machine Washable, Water-Resistant Dog Mat for Pets up to 50 lbs - Lightweight, Portable Pet Bed with Carry Handle - Folds to 14 x 9 x 5 (1.5 lbs, Light Grey)",
+      "link": "https://www.amazon.com/product-reviews/B0F2GFMG74/ref=sspa_dk_detail_sbt_d_sccl_3_cr/138-2963340-8476436?pd_rd_w=z0ZMx&content-id=amzn1.sym.ea1d9533-fbb7-4608-bb6f-bfdceb6f6336&pf_rd_p=ea1d9533-fbb7-4608-bb6f-bfdceb6f6336&pf_rd_r=EFMXYD3AMRH1868YQ51A&pd_rd_wg=eMsl7&pd_rd_r=d02db3f5-b960-4939-b587-a136e4eee5f1&pd_rd_i=B0F2GFMG74",
+      "asin": "B0F2GFMG74",
+      "link_clean": "https://www.amazon.com/product-reviews/B0F2GFMG74/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F2GFMG74&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81PVoGDckNL._AC_UL116_SR116,116_.jpg",
+      "rating": 4.5,
+      "reviews": 4.5,
+      "price": "$49.99",
+      "extracted_price": 49.99,
+      "stock": "Only 15 left in stock - order soon."
+    },
+    {
+      "position": 2,
+      "title": "KindTail Dog Travel Bowls - Set of 2 Portable Pet Food & Water Dishes with Lid & Handle - Each Nesting Container Includes a Non-Slip Silicone Base - Microwave & Dishwasher Safe - BPA & Toxin-Free",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo2Mjc1MjAzMDc3MzkzNTUxOjE3NzczNTYzMjM6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTE2MDE1OTA2MTAwMjo6MDo6&url=%2FKindTail-Dog-Travel-Bowls-Containers%2Fdp%2FB09N3V66ZD%3Fpsc%3D1%26pd_rd_w%3Dz0ZMx%26content-id%3Damzn1.sym.ea1d9533-fbb7-4608-bb6f-bfdceb6f6336%26pf_rd_p%3Dea1d9533-fbb7-4608-bb6f-bfdceb6f6336%26pf_rd_r%3DEFMXYD3AMRH1868YQ51A%26pd_rd_wg%3DeMsl7%26pd_rd_r%3Dd02db3f5-b960-4939-b587-a136e4eee5f1%26ref_%3Dsspa_dk_detail_sbt_img_0%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM%3D",
+      "asin": "B09N3V66ZD",
+      "link_clean": "https://www.amazon.com/dp/B09N3V66ZD/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09N3V66ZD&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/61jQ8Uw4KYL._AC_UL116_SR116,116_.jpg",
+      "rating": 4.4,
+      "reviews": 4.4,
+      "price": "$29.99",
+      "extracted_price": 29.99,
+      "prime": true,
+      "stock": "In Stock"
+    },
+    {
+      "position": 3,
+      "title": "KindTail Dog Travel Bowls - Set of 2 Portable Pet Food & Water Dishes with Lid & Handle - Each Nesting Container Includes a Non-Slip Silicone Base - Microwave & Dishwasher Safe - BPA & Toxin-Free",
+      "link": "https://www.amazon.com/KindTail-Dog-Travel-Bowls-Containers/dp/B0CGKDHX5Y?psc=1&pd_rd_w=z0ZMx&content-id=amzn1.sym.ea1d9533-fbb7-4608-bb6f-bfdceb6f6336&pf_rd_p=ea1d9533-fbb7-4608-bb6f-bfdceb6f6336&pf_rd_r=EFMXYD3AMRH1868YQ51A&pd_rd_wg=eMsl7&pd_rd_r=d02db3f5-b960-4939-b587-a136e4eee5f1&ref_=sspa_dk_detail_sbt_img_1&ie=UTF8&psc=1&spc=MTo2Mjc1MjAzMDc3MzkzNTUxOjE3NzczNTYzMjM6c3BfZGV0YWlsX3RoZW1hdGljOjo6OkIwQ0dLREhYNVk6L2h6L2RwL2RhdGE=&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM=",
+      "asin": "B0CGKDHX5Y",
+      "link_clean": "https://www.amazon.com/KindTail-Dog-Travel-Bowls-Containers/dp/B0CGKDHX5Y/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CGKDHX5Y&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/61vB1uwkeeL._AC_UL116_SR116,116_.jpg",
+      "rating": 4.4,
+      "reviews": 4.4,
+      "price": "$34.99",
+      "extracted_price": 34.99,
+      "price_unit": "$34.99/count",
+      "extracted_price_unit": 34.99,
+      "stock": "In Stock"
+    }
+  ],
+  "related_products": [
+    {
+      "position": 1,
+      "asin": "B0B4WMWDB3",
+      "title": "Dog Travel Mat - Portable Waterproof Foldable Dog Bed for Home, Car, Crate & Outdoo...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToyMzkwMTc0MTc1NDQyNjExOjE3NzczNTYzMjM6c3BfZGV0YWlsOjIwMDE2MzE1NjcyNDI5ODo6Ojo&url=%2Fdp%2FB0B4WMWDB3%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0B4WMWDB3%26pd_rd_w%3D26TRN%26content-id%3Damzn1.sym.613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_p%3D613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_r%3DEFMXYD3AMRH1868YQ51A%26pd_rd_wg%3DeMsl7%26pd_rd_r%3Dd02db3f5-b960-4939-b587-a136e4eee5f1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw",
+      "link_clean": "https://www.amazon.com/dp/B0B4WMWDB3/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0B4WMWDB3&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/61R4NTqfBcL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.5,
+      "reviews": 119,
+      "discount": "-13%",
+      "price": "$34.95",
+      "extracted_price": 34.95,
+      "old_price": "$39.95",
+      "extracted_old_price": 39.95,
+      "prime": true
+    },
+    {
+      "position": 2,
+      "asin": "B0GJ2SLTY1",
+      "title": "Sytopia 42 Inch Indestructible Canvas Outdoor Dog Bed for Extra Large Dogs, Chew Proof Waterproof Pet Bed with Machine Washable Removable Cover, Durable Indoor Patio Pet Pad for Crate, Green",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToyMzkwMTc0MTc1NDQyNjExOjE3NzczNTYzMjM6c3BfZGV0YWlsOjMwMTI0NDkxOTM5MzAwMjo6Ojo&url=%2Fdp%2FB0GJ2SLTY1%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0GJ2SLTY1%26pd_rd_w%3D26TRN%26content-id%3Damzn1.sym.613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_p%3D613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_r%3DEFMXYD3AMRH1868YQ51A%26pd_rd_wg%3DeMsl7%26pd_rd_r%3Dd02db3f5-b960-4939-b587-a136e4eee5f1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw",
+      "link_clean": "https://www.amazon.com/dp/B0GJ2SLTY1/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GJ2SLTY1&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71T-QiEPh4L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.1,
+      "reviews": 25,
+      "discount": "-6%",
+      "price": "$64.99",
+      "extracted_price": 64.99,
+      "price_unit": "$64.99 / count",
+      "extracted_price_unit": 64.99,
+      "old_price": "$68.99",
+      "extracted_old_price": 68.99,
+      "prime": true
+    },
+    {
+      "position": 3,
+      "asin": "B0B5JXR6YH",
+      "title": "TIMBER RIDGE Outdoor Dog Bed, Cooling Elevated Pet Bed Portable Raised Dog Bed with Breathable Mesh, Dog Bed Foldable Dog Cot for Indoor & Outside, Grey",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToyMzkwMTc0MTc1NDQyNjExOjE3NzczNTYzMjM6c3BfZGV0YWlsOjMwMDUzNTQyNzU0NjgwMjo6Ojo&url=%2Fdp%2FB0B5JXR6YH%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0B5JXR6YH%26pd_rd_w%3D26TRN%26content-id%3Damzn1.sym.613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_p%3D613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_r%3DEFMXYD3AMRH1868YQ51A%26pd_rd_wg%3DeMsl7%26pd_rd_r%3Dd02db3f5-b960-4939-b587-a136e4eee5f1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw",
+      "link_clean": "https://www.amazon.com/dp/B0B5JXR6YH/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0B5JXR6YH&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Amazon's Choice"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/71Swzmx2WRL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.8,
+      "reviews": 284,
+      "price": "$44.99",
+      "extracted_price": 44.99,
+      "prime": true,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 4,
+      "asin": "B0GJK6744D",
+      "title": "Sytopia 36 Inch Canvas Outdoor Dog Bed for Large Dogs, Durable Dog Bed with Waterproof Machine Washable Removable Cover, Indoor Patio Pet Pad for Crate, Green",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToyMzkwMTc0MTc1NDQyNjExOjE3NzczNTYzMjM6c3BfZGV0YWlsOjMwMTI0NTE4NDY4NjAwMjo6Ojo&url=%2Fdp%2FB0GJK6744D%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0GJK6744D%26pd_rd_w%3D26TRN%26content-id%3Damzn1.sym.613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_p%3D613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_r%3DEFMXYD3AMRH1868YQ51A%26pd_rd_wg%3DeMsl7%26pd_rd_r%3Dd02db3f5-b960-4939-b587-a136e4eee5f1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw",
+      "link_clean": "https://www.amazon.com/dp/B0GJK6744D/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GJK6744D&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81ZHzP+s04L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 19,
+      "price": "$56.99",
+      "extracted_price": 56.99,
+      "prime": true
+    },
+    {
+      "position": 5,
+      "asin": "B0GWR3PWJQ",
+      "title": "Sytopia Waterproof Canvas Outdoor Dog Bed, 42 Inch Pet Bed for Extra Large Dogs, Washable Removable Cover, Indoor Outdoor Patio Pad, Dark Grey",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToyMzkwMTc0MTc1NDQyNjExOjE3NzczNTYzMjM6c3BfZGV0YWlsOjMwMTE3NTMzNjY5OTcwMjo6Ojo&url=%2Fdp%2FB0GWR3PWJQ%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0GWR3PWJQ%26pd_rd_w%3D26TRN%26content-id%3Damzn1.sym.613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_p%3D613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_r%3DEFMXYD3AMRH1868YQ51A%26pd_rd_wg%3DeMsl7%26pd_rd_r%3Dd02db3f5-b960-4939-b587-a136e4eee5f1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw",
+      "link_clean": "https://www.amazon.com/dp/B0GWR3PWJQ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GWR3PWJQ&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71m6pm8IhnL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.2,
+      "reviews": 6,
+      "price": "$64.99",
+      "extracted_price": 64.99,
+      "price_unit": "$64.99 / count",
+      "extracted_price_unit": 64.99,
+      "prime": true
+    },
+    {
+      "position": 6,
+      "asin": "B0DB6FWDWT",
+      "title": "KindTail Dog Crate Pad - Soft Velvet, Reversible Bed - Machine Washable Kennel Mat for Pets up to 15 lbs, Mattress for Cozy Sleeping - 20” x 15” x 1” (Pink, Small)",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToyMzkwMTc0MTc1NDQyNjExOjE3NzczNTYzMjM6c3BfZGV0YWlsOjMwMTE3NjMwMjcwODQwMjo6Ojo&url=%2Fdp%2FB0DB6FWDWT%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0DB6FWDWT%26pd_rd_w%3D26TRN%26content-id%3Damzn1.sym.613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_p%3D613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_r%3DEFMXYD3AMRH1868YQ51A%26pd_rd_wg%3DeMsl7%26pd_rd_r%3Dd02db3f5-b960-4939-b587-a136e4eee5f1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw",
+      "link_clean": "https://www.amazon.com/dp/B0DB6FWDWT/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DB6FWDWT&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/61scHP-I5kL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.6,
+      "reviews": 284,
+      "price": "$24.99",
+      "extracted_price": 24.99,
+      "price_unit": "$24.99 / count",
+      "extracted_price_unit": 24.99,
+      "prime": true
+    },
+    {
+      "position": 7,
+      "asin": "B0GJK73NN2",
+      "title": "Sytopia 42 Inch Canvas Outdoor Dog Bed for Extra Large Dogs, Durable Indoor Patio Pet Pad for Crate, Waterproof Machine Washable Removable Cover, Dark Grey",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToyMzkwMTc0MTc1NDQyNjExOjE3NzczNTYzMjM6c3BfZGV0YWlsOjMwMTI0NDc3MzI2MDIwMjo6Ojo&url=%2Fdp%2FB0GJK73NN2%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0GJK73NN2%26pd_rd_w%3D26TRN%26content-id%3Damzn1.sym.613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_p%3D613a5a0c-ad86-44dc-b9ed-5da62fb83b9e%26pf_rd_r%3DEFMXYD3AMRH1868YQ51A%26pd_rd_wg%3DeMsl7%26pd_rd_r%3Dd02db3f5-b960-4939-b587-a136e4eee5f1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw",
+      "link_clean": "https://www.amazon.com/dp/B0GJK73NN2/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GJK73NN2&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81R+hEsWD1L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.2,
+      "reviews": 21,
+      "price": "$66.99",
+      "extracted_price": 66.99,
+      "prime": true
+    },
+    {
+      "position": 8,
+      "asin": "B0B4WN72X8",
+      "title": "Dog Travel Mat - Portable Waterproof Foldable Dog Bed for Home, Car, Crate & Outdoo...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToxNTU1MjMwNjgzMTYyNjM4OjE3NzczNTYzMjM6c3BfZGV0YWlsMjoyMDAxNjMxMDE0ODA5OTg6Ojo6&url=%2Fdp%2FB0B4WN72X8%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0B4WN72X8%26pd_rd_w%3D0pvww%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DEFMXYD3AMRH1868YQ51A%26pd_rd_wg%3DeMsl7%26pd_rd_r%3Dd02db3f5-b960-4939-b587-a136e4eee5f1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0B4WN72X8/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0B4WN72X8&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/61vDlFgiHIL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.5,
+      "reviews": 119,
+      "discount": "-13%",
+      "price": "$34.95",
+      "extracted_price": 34.95,
+      "old_price": "$39.95",
+      "extracted_old_price": 39.95,
+      "prime": true
+    },
+    {
+      "position": 9,
+      "asin": "B0DB6FWDWT",
+      "title": "KindTail Dog Crate Pad - Soft Velvet, Reversible Bed - Machine Washable Kennel Mat for Pets up to 15 lbs, Mattress for Cozy Sleeping - 20” x 15” x 1” (Pink, Small)",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToxNTU1MjMwNjgzMTYyNjM4OjE3NzczNTYzMjM6c3BfZGV0YWlsMjozMDExNzYzMDI3MDg0MDI6Ojo6&url=%2Fdp%2FB0DB6FWDWT%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0DB6FWDWT%26pd_rd_w%3D0pvww%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DEFMXYD3AMRH1868YQ51A%26pd_rd_wg%3DeMsl7%26pd_rd_r%3Dd02db3f5-b960-4939-b587-a136e4eee5f1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0DB6FWDWT/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DB6FWDWT&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/61scHP-I5kL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.6,
+      "reviews": 284,
+      "price": "$24.99",
+      "extracted_price": 24.99,
+      "price_unit": "$24.99 / count",
+      "extracted_price_unit": 24.99,
+      "prime": true
+    },
+    {
+      "position": 10,
+      "asin": "B0GWR3PWJQ",
+      "title": "Sytopia Waterproof Canvas Outdoor Dog Bed, 42 Inch Pet Bed for Extra Large Dogs, Washable Removable Cover, Indoor Outdoor Patio Pad, Dark Grey",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToxNTU1MjMwNjgzMTYyNjM4OjE3NzczNTYzMjM6c3BfZGV0YWlsMjozMDExNzUzMzY2OTk3MDI6Ojo6&url=%2Fdp%2FB0GWR3PWJQ%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0GWR3PWJQ%26pd_rd_w%3D0pvww%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DEFMXYD3AMRH1868YQ51A%26pd_rd_wg%3DeMsl7%26pd_rd_r%3Dd02db3f5-b960-4939-b587-a136e4eee5f1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0GWR3PWJQ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GWR3PWJQ&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71m6pm8IhnL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.2,
+      "reviews": 6,
+      "price": "$64.99",
+      "extracted_price": 64.99,
+      "price_unit": "$64.99 / count",
+      "extracted_price_unit": 64.99,
+      "prime": true
+    },
+    {
+      "position": 11,
+      "asin": "B0GF7PLBKX",
+      "title": "Dog Cooling Mat, Universal Pet Cooling Pad, Double-Sided Durable Water-Resistant, P...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToxNTU1MjMwNjgzMTYyNjM4OjE3NzczNTYzMjM6c3BfZGV0YWlsMjozMDEyMjc4MDk4ODE4MDI6Ojo6&url=%2Fdp%2FB0GF7PLBKX%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0GF7PLBKX%26pd_rd_w%3D0pvww%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DEFMXYD3AMRH1868YQ51A%26pd_rd_wg%3DeMsl7%26pd_rd_r%3Dd02db3f5-b960-4939-b587-a136e4eee5f1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0GF7PLBKX/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GF7PLBKX&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81o5rLj903L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.7,
+      "reviews": 107,
+      "price": "$28.99",
+      "extracted_price": 28.99,
+      "prime": true
+    },
+    {
+      "position": 12,
+      "asin": "B0B5JXR6YH",
+      "title": "TIMBER RIDGE Outdoor Dog Bed, Cooling Elevated Pet Bed Portable Raised Dog Bed with Breathable Mesh, Dog Bed Foldable Dog Cot for Indoor & Outside, Grey",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToxNTU1MjMwNjgzMTYyNjM4OjE3NzczNTYzMjM6c3BfZGV0YWlsMjozMDA1MzU0Mjc1NDY4MDI6Ojo6&url=%2Fdp%2FB0B5JXR6YH%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0B5JXR6YH%26pd_rd_w%3D0pvww%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DEFMXYD3AMRH1868YQ51A%26pd_rd_wg%3DeMsl7%26pd_rd_r%3Dd02db3f5-b960-4939-b587-a136e4eee5f1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0B5JXR6YH/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0B5JXR6YH&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Amazon's Choice"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/71Swzmx2WRL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.8,
+      "reviews": 284,
+      "price": "$44.99",
+      "extracted_price": 44.99,
+      "prime": true,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 13,
+      "asin": "B0GJ2SLTY1",
+      "title": "Sytopia 42 Inch Indestructible Canvas Outdoor Dog Bed for Extra Large Dogs, Chew Proof Waterproof Pet Bed with Machine Washable Removable Cover, Durable Indoor Patio Pet Pad for Crate, Green",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToxNTU1MjMwNjgzMTYyNjM4OjE3NzczNTYzMjM6c3BfZGV0YWlsMjozMDEyNDQ5MTkzOTMwMDI6Ojo6&url=%2Fdp%2FB0GJ2SLTY1%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0GJ2SLTY1%26pd_rd_w%3D0pvww%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DEFMXYD3AMRH1868YQ51A%26pd_rd_wg%3DeMsl7%26pd_rd_r%3Dd02db3f5-b960-4939-b587-a136e4eee5f1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0GJ2SLTY1/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GJ2SLTY1&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71T-QiEPh4L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.1,
+      "reviews": 25,
+      "discount": "-6%",
+      "price": "$64.99",
+      "extracted_price": 64.99,
+      "price_unit": "$64.99 / count",
+      "extracted_price_unit": 64.99,
+      "old_price": "$68.99",
+      "extracted_old_price": 68.99,
+      "prime": true
+    },
+    {
+      "position": 14,
+      "asin": "B0GJK6744D",
+      "title": "Sytopia 36 Inch Canvas Outdoor Dog Bed for Large Dogs, Durable Dog Bed with Waterproof Machine Washable Removable Cover, Indoor Patio Pet Pad for Crate, Green",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MToxNTU1MjMwNjgzMTYyNjM4OjE3NzczNTYzMjM6c3BfZGV0YWlsMjozMDEyNDUxODQ2ODYwMDI6Ojo6&url=%2Fdp%2FB0GJK6744D%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0GJK6744D%26pd_rd_w%3D0pvww%26content-id%3Damzn1.sym.953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_p%3D953c7d66-4120-4d22-a777-f19dbfa69309%26pf_rd_r%3DEFMXYD3AMRH1868YQ51A%26pd_rd_wg%3DeMsl7%26pd_rd_r%3Dd02db3f5-b960-4939-b587-a136e4eee5f1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0GJK6744D/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GJK6744D&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81ZHzP+s04L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 19,
+      "price": "$56.99",
+      "extracted_price": 56.99,
+      "prime": true
+    }
+  ],
+  "videos": [
+    {
+      "position": 1,
+      "title": "Nomad Travel Dog Bed",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/0a87bd5b-7e48-4328-bd82-c558439e09e5/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/51J+TQ1NoOL.jpg",
+      "duration": "0:25",
+      "vendor": "KindTail",
+      "date": "Mar 27, 2025"
+    },
+    {
+      "position": 2,
+      "title": "Perfect for when our pup needs to place, holds up great to her pawing it",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/1eb2726c-b98a-4617-8d8b-d72793816818/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/618IkEQ3TGL.jpg",
+      "duration": "0:36",
+      "vendor": "FlyingUnicorns",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SL34_.png",
+      "date": "Jan 25, 2026"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": "Nomad nap mat portable pet bed",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/8c16ad5c-1863-4787-963f-aff9127a9586.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 2,
+      "title": "Nomad nap mat portable pet bed",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/939f08f8-7da1-43f4-a3df-43e3c3038842.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 3,
+      "title": "Nomad nap mat portable pet bed",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/783e9d94-6ebe-40aa-9635-15b8ccfed208.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 4,
+      "title": "Nomad nap mat portable pet bed",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/3cbdf4f0-132a-4a19-9a7b-04e4630a181e.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 5,
+      "title": "Nomad nap mat portable pet bed",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/6682e5ac-a50a-4a44-a750-b6691ab225c2.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 6,
+      "title": "Nomad nap mat portable pet bed",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/b54eddb9-70f8-4766-a40d-951091b2a836.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    }
+  ],
+  "product_details": {
+    "product_dimensions": "37 x 28 x 0.5 inches; 1.57 Pounds",
+    "item_model_number": "98001",
+    "date_first_available": "March 25, 2025",
+    "manufacturer": "KindTail",
+    "asin": "B0F2GFMG74",
+    "best_sellers_rank": [
+      {
+        "text": "#97,360 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 97360,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#204 in Cat Bed Mats",
+        "extracted_rank": 204,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/3024127011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Cat Bed Mats"
+      },
+      {
+        "text": "#565 in Dog Bed Mats",
+        "extracted_rank": 565,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/3024178011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Bed Mats"
+      }
+    ],
+    "customer_reviews": "4.5 out of 5 stars",
+    "rating": 4.5,
+    "reviews": 35,
+    "breed_recommendation": "Small & Medium",
+    "other_special_features_of_the_product": "Foldable, Lightweight, Machine Wash and Dry",
+    "recommended_uses_for_product": "Camping, Hiking, Travel",
+    "material_type": "Polyester",
+    "fill_material": "Polyester Fiber",
+    "product_care_instructions": "Machine Wash",
+    "color": "Light Grey",
+    "item_shape": "Rectangular",
+    "pattern": "Geometric",
+    "brand_name": "KindTail",
+    "upc": "850032391566",
+    "model_number": "98001",
+    "unit_count": "1.0 Count",
+    "included_components": "Nap Mat",
+    "item_dimensions_l_x_w_x_thickness": "37\"L x 28\"W x 0.5\"Th",
+    "item_weight": "0.71 Kilograms",
+    "size": "37 x 28 inches"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B09FTFLLP7",
+      "title": "Tinaco Calming Dogs/Cats Bed Mats, Dog Pad Washable Removable Couch Cover, Plush Long Fur Mat for Pets, Waterproof Lining, Perfect for Small, Medium and Large Dogs and Cats (Gradient Gray, 36\"x31\")",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JCevGN2aO5yodp0Zxs0iMXMAAAGd0rE5xAEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICDQjT8R/clv1c_ek-wxfHXLcTWDVVOWi4bJhJ0SsCze_6OMbS9QBWgt5yKe3lo8LBBAKUugRyVL3dLcoy_cGvCExL4Edmu6USGv5wIVF9JP-yB_08UKoLlyOfwq7HziQosi8feppH0J3s0vT0BKYMQQem0IftG0qN8ZcpaovV81lTh1kXwwSqy-MZPCMo7VsjDf4OgvHgoD77ksuAi0i4j_9dplYO_sVoVoH45F30NNt_2jqasKuqjGs0xy5DMA9EG2IH0Ab-rWWhavv6pu0OBjeuya5WkCB9ydp8LZ4wSX8_CYzVDZtI8nXKaz1dT1j16-L5dF1nzEpWsOtv9xDIjoC2cTJ0s5nhsFvk3IUf3rH0YVOVc16Hi5dayTCqhq13dCz3Y9iGflobpUiHe42E08DYqybIwqvGi3CwEafU3j79tDgBB12TSFaRa_iPx_G9v2owIuCQhxn7aYnymztC7dzSSRgsssW4iqUySWkIW2Nq_W8Gb7TG6eNzy1dSrz1odRg9eKIkhoR4as-YKsAFJroECO9ioFp3pUkmD5vYMM0TtMV5pTusdNgZbdTE_woA7GHHj-YtSz-aJkYrU-tKvHHbAyOrvnHaG5umcd17DZ300dvaJD0KNtl7058saowdz4ise3yR7rIKX-Rtm8yd2hNNeSQmdD0ST-eHA7afSQWJaTpC6N7jydjskKLO6zPvmtQ8UTDanL2yy0ZwIfhZZZIYx1iz4GFKE-sBNAFQlh9TCI_kvZQ4NOmKDKXNwOZH02PJUZQyEljvrNRoGJTWBtDAy2P-tk5b-tDDpuFO4HeF5H9hZ5Je5PlWimHcyU8GfEp_tKip8piMw77uV0_z3BREwYLmwv03RsH7pTRqdcTwQVMk-aiRhruFZWrv_ibJnFKPKRyeUzHJG5peN3Jtyalz65qWhOInhkxad2SujZfIoGHZdL5jW1EIxxFbsRzk9a4TcPvm1G5lVbUcROlukf7q1xM4aoDU6j_HePggbX-xcbgDMb3QEtiVqciwKCMGyTJwk1kszbWwp_97oz7Y7CIiu0n__m4ezHgHPQ0U8B7P-VwYrqt7EDwOLF6WCoVXLUe96AbSsqqET6JDAUhC5mKJi6uWLVEfLkfzS0jLwmKKnaRft3QZCmI9sEnuhIb7evELxwtyJjGN1fzVnIN_hIkXXTnO6602NiXkghiKzva-buH9DY5lmErRw8t8Qu9nOGCB0jLSJTVDCBCQLMKUT3_livqIbVvKXVIyb0sR4bCHmcGybIKEyo1KHIf-KqM6JEu-7xorVZL7jcyKf51vlEOIrUFF_QDmO7VomAhPxhyPc283DwFwQvBH7aYKhoTiZbcXMn0uqWzCsSzMzVLO8HNTeffzPkxlBH8Bakb2qzZp7IUBPHzm7m0NFKArt7fXiEGHsRIGsv5EWpngv5I6fd_YHmP7AhTIv-4NfsleO5MjXlxj3HuhahxKdUdUuvD-hyVnIHn4w_edOlH1QAY22eDt_D7l3p0xjA-apAXkhTV9B16Gf1PBy4PbV1fXIrMZ-pKXde-47rccbBAnUjFqLOjtAELPT-MMLb4-uB9YRPw/https://www.amazon.com/dp/B09FTFLLP7/?_encoding=UTF8&pd_rd_i=B09FTFLLP7&pd_rd_i=B09FTFLLP7&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=5Rihj&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=EFMXYD3AMRH1868YQ51A&pd_rd_wg=eMsl7&pd_rd_r=d02db3f5-b960-4939-b587-a136e4eee5f1",
+      "link_clean": "https://www.amazon.com/dp/B09FTFLLP7/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09FTFLLP7&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51AIoF+NQTL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/82a2302d-3ccb-478d-8d16-73ea0093b920.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/82a2302d-3ccb-478d-8d16-73ea0093b920.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.1,
+      "reviews": 3524,
+      "price": "$28.36",
+      "extracted_price": 28.36,
+      "old_price": "$29.86",
+      "extracted_old_price": 29.86
+    },
+    {
+      "position": 2,
+      "asin": "B0DNN9MVTB",
+      "title": "Bedsure Premium Cooling Blanket for Medium Dog - Q-MAX>0.5, Breathable Summer Washable Cold Pet Throw Blanket, Soft Durable Self Cooling Cat Mat for Hot Weather, Pearl Grey, 30x40",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JKGAJ_mmbKoB6iYWnz95H_MAAAGd0rE5xgEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICChqTkf/clv1c_ek-YBYfXLbbSTT1Tdz-Qio-tvz6rGncq-YbSKlrymzk4ynqejtWC0ETQsmvJ0XyOGZrhQQ8ripY0iK3Q-2H_7VuMS0BpVDImcidkXCVZsyyvSpDLGQtA4uJT1P3cJvE4zlI-RTpm1X02Pv7zOMolNSEvoMncF1XwquTJR9cKzQ0RQXEHClL-ppbTDrgOrotPIC17-tbHN0TN0unPQ0rSogLITNcVjGae0IwvCZOpGivtdPdVHF4knbavqIc-OAvZNWNWdgp2f2KK2ckn9VlIY1dz1StzyPTxxSdwJvX5_cTcjw44WWefJzr4XEpYoSy8QHdiPLhsUuG6vkvMjT8UuUZCaELD-LxA2QW4g5FE5VKpQKE4il0H1TkUx1VeTVP5cS0fruhbJfMgRzL0B4xUNko7T0BcI3s7RGaF982qX4YoiUnd2SITnhsv2XfApmTKUuxKZmI5MMW-p5Pii0xVCsaI6-Y9AD_Pg9QFIOn6kMMeC7e-pZB-a7lDiHaf6owzQFh8ofhHFAS9kzmGycY4Li-9JfK4gpya3QNv0WhcXP0zUqs7Q4WXcev7uYdCp4hYQvhhwHHYyl_9vmknq1W3ghC2MziKXnxnyMEOJox3QeXTvw6SA8-FfKcDbUJtudQZycgDHcwB5YLUXLHjQX7FpdiW2FLGB1iTrxBKJt8GqmrJigj3Jw-FcyQ-DJN_J74J2SNUzOTyCshqAhUK_giO-MBNwML26BkrnR5qHGyJ-z3B-0wsQG_EIYdm8n5qhe34A-WR0akF71szgVgXcTVDrXbDf2i5J42u5-aaUIeh054KpIeWKul9b_x4JAOVmDkz8XoVGpk1nO2Bfe7miox4xBYxcBF4YLXHQQj4QK3EWUnytJLqEfpNQgZKzLTv9A5h0zwDD-jC5WlLFj8Kuu1sUrNtt6XcNS1ysjKDTx1dZCzWZVffpUpgm0CouMqCn6RByn2TbWFeXvgPhsKmOp8J9qTjw58KmzYnqOnq5jrHn8Yt6wwtWtU_7U-UcFk8z36aw2JMnqifYtVB1xDIKdjREbY5-gDfMaCqz_shWKgTQzkAuLR2yDYZoo1vCmxhkzehCC4jQfT2m-owuQ9kf1jAyGFsWcomGkr8qfkj5n4eodTEA3m2g495b-eLqdhDPoIsACB_HQD7Ip5HZ_sO1Q6ad1fn994GV4CXVd7aQM-zdfID_yPEAtAtNLNbrp-YdrQgKUMHd1HZCeZO7lM1WCA6KSH-umrhv9WM07pviuQ-TvkOY0JXl_Bp_OgJWLd4yp404_0-tALaCiAflpLa71UPm4OBnUIVoVTQ9nJQyHlfyHhFWRs6PzZxU1k0HH9m1b31uxP-ZXMktq_53pwFlT0yTFzk-pR-eTqyzyClxzxxpVOIwFEPQYU9by9166GNtWSyqjMF95G214as6eX9RhCflF-oWk-kpNercU8oiRAFR4jHPl1FOejZlRS8sAfIGIvB7auDZZLMUbe8IIjtKGfEmDjyLrNZ1iqk2gW5KzL42Liw2X9xamXrGZxQdB3qxQ_qhqene9D5/https://www.amazon.com/dp/B0DNN9MVTB/?_encoding=UTF8&pd_rd_i=B0DNN9MVTB&pd_rd_i=B0DNN9MVTB&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=5Rihj&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=EFMXYD3AMRH1868YQ51A&pd_rd_wg=eMsl7&pd_rd_r=d02db3f5-b960-4939-b587-a136e4eee5f1",
+      "link_clean": "https://www.amazon.com/dp/B0DNN9MVTB/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DNN9MVTB&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41th7EpUSSL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/eeb06a34-2573-48c5-83a8-7f2a990bbdf4.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/eeb06a34-2573-48c5-83a8-7f2a990bbdf4.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 352,
+      "price": "$24.98",
+      "extracted_price": 24.98,
+      "old_price": "$29.99",
+      "extracted_old_price": 29.99
+    },
+    {
+      "position": 3,
+      "asin": "B0CHVVMYFY",
+      "title": "blunique Calming Large Dog Bed for Couch, 41 x 37 inch Removable Couch Cover for Dogs Washable, Non-Slip Fluffy Plush Dog Sofa Mat for Furniture Protector - Grey",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JJybMOCQZdqJTpGj6fI2hIAAAAGd0rE5xwEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICAj2eov/clv1c_ek-wxfHXFbbWDfHXL5scrhfcuXaZLo8nmm2oDiVjPRsw8XwT3tiiuJzB92uF7QSUtnE3Xw4rjpaObKf6_UQce1mMcfORSSenFXgBfymY2ULnqyHXwkBS7sbx8-MUxjCwjRGhQUC2qnZOQMW8z1YUx-XfpY1cF1f8mtLi9y9qbIUdRFFJM5aJWlL27WrZTjU8HoCz_xdKEhvE_dT2fwiCRQ7CSB97QRu_UA_ghEFy0owNjD6HmUcbQh0JdHVp-b9JUqpJP-rfRtRPyz0ZlInEztd8n4qe3xAJu_H6FcItnfb6z1dTVgVi-L5agHxEzJigONv9xN4RDL17E-jGpTesEfiHBjTFgQjeoYErOJrH7dKSqOts8fBunJQ4ahOlo46OUGpvJE2tDza-SviLuG7Pcx4THaV3kFZgYJBq3vyxJsyebzJNZ1uRfv2zndXZ_u4JRc1PvdBVcUxN_lrHAhPSKZKU7Mi3oktTum43B9Mze9scHoZG6u-rksNhzBSF0IejMHSirSkdOqCcMFrxhnfBIAOPT5xKcXA_OVwqOttursUe_FtsqmZXl6GG6-clw7cH-oMyb7NX0oXxzG5R9XnTxlo4ZKv3fWVlXXEf2mgHi0T7hzEYGopJG0h3Il88PETuRJo0YBY-oxz0mWaiD2oY-gOqo5OmV8jxdpIP1UL8A1e9ooopckNE4TxIwfo-hB703xZoJgiSH22EMUnQVg38_8pmQzvpJBReg48K6yA0KoCzwpmXAFMDFCXuL1J-xyUJ1I2400l0WTMeGKWoHgXonPjPuZUt1CYUf6VxfBrjaIvbspt9u9p7cugSqRvSqm3oUKaNi1TM1AQdDYrOJKn-Mcamgv-zPYE4tO0E2a5ST57EbuMY1bePj5O6KCN6ThMWWp4ND_7rEniBBBptZwnUYGO_Xs2rSwWU2V8WYvRa1Qb0xZEbOYNKBb-UaZ_WIlEoCtancDIyrTl80EeD2Fn-zxdVY6uSYTJabnVYvsFO-o-G595EiqRGgu_XOxcjtdqb6OLXjcMjShzVh58aqEwb97-CNlU8B7MuVQYrKt7EDweLG6SCA5F3bJ5WBjjmibgX6H5MsznRiLJh6uWLVKf53Lggw-kQN0JsTg_q3RZK-O_PhdQf7e66KOeXM-1d52uPfzVnAN_xJkXXQnG6alKFi7SXUoCTWOdOchrllSBJkLfqTtwv9pD_-iQKTFeQmkIy9mszrlKLxOfpffztvyrQIMclJHasIAyrVz92mR8IgGO15DzB1tSGmQK67Tsi6Qu73CG0kUIZZ68aSljVf8qpcnSnLKwW64zC3tcgdaQeuJ-cvqgJudGwEPnQs7HSt1AefAzBcb3bepR_H3KFt7at2kET1yc9QdGqn3hpTtghaU2zRjJv9kY-90BB_rRKXar3mwoA9ac8OOawmECl4K28aczOGUKjhWNLmwjeI1FMpeySr_Tsqx0_CWAohE60Swf6J_b5FhPbNGt3XTASqzWEuHPzzR8f_opqRU75XipJScBzvYofyPcmoB0BK67fi0UvVWmYj5g6rIXXGxBoajCjxemdDVPx12k/https://www.amazon.com/dp/B0CHVVMYFY/?_encoding=UTF8&pd_rd_i=B0CHVVMYFY&pd_rd_i=B0CHVVMYFY&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=5Rihj&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=EFMXYD3AMRH1868YQ51A&pd_rd_wg=eMsl7&pd_rd_r=d02db3f5-b960-4939-b587-a136e4eee5f1",
+      "link_clean": "https://www.amazon.com/dp/B0CHVVMYFY/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CHVVMYFY&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51KQJA75l0L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/ef8cfe08-df90-436a-8015-6a6088c116d7.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/ef8cfe08-df90-436a-8015-6a6088c116d7.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.3,
+      "reviews": 1201,
+      "price": "$29.99",
+      "extracted_price": 29.99,
+      "old_price": "$39.99",
+      "extracted_old_price": 39.99
+    },
+    {
+      "position": 4,
+      "asin": "B0DSZNWRZK",
+      "title": "Luciphia Premium Cooling Dog Blanket for Small Medium Dogs Q-max>0.4 Washable Self-Cooling Cat Pet Mat Puppy Breathble Calming Throw for Beds Couches (Blue,29x40 inches)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JKZNIkv1aFSb-le2JvtDqc8AAAGd0rE5yAEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICAeBqHJ/clv1c_ek-wBfHXLcTWnuOrk9HI84ba8LhSFkGFktiy3BbKkBzG9gPfp9ZlLPg-pNyXCfGu3XFAiwK27HeZlPVIpi1UnC8nB4n_R3-7T6JOV8y6UNz0kzBvqJL7q3ToQ_hyoGaZUnwDgVzi-q2oxhyEQUPsXlT7o9ekxpXoU4X0yCqymMZPCcv_kxJft11YxQSVhEIry3Z6RElGA3PgtdbdtMGiWUDFHt70wa2-CSkL0OTqdxUnbGr07Ws_FmrquZADY3UXdrMURcrGna0Kn4dppREFAimI0yP0MJw4fOwtfPztwN9TaOxhESzq4eZZdVuSrDjOf9isiCGStx5GKy5DV32AfMtxVj9rLLOTXtPDOHRAKqHS9rFf33Qalx6X3TYcRa3S7XFhZXiEMoPNpLBONvvtgphdAEnmqTI5l9C_NkV0LDyJCxIK2Lf6NhO1EdshhH_WuATw4yuSHNhNu8OfZuIyT5LCRJlpEV5wSwQCbg05IODYSboxdQWUQqRMVMpvutmSfby0LJ_6XfEJ3a3L60nycLzx7sjxWYBrPmQRpkVFE6bqF_sAvqvXRH6r2RUvuNYvCp7jFb02zO0ENS_7ruzcv5Hb0rSCZGAvV4mtVopOKPy-3Oub3HU0DIztxd5Mgsw3tQKSz4yfKIQePRm-zF1-Qfijp6Y6UQWFb4BVNwfJ9OoQWdZmjNma-WI5VHeE5QQpSyoZIV5mMtLXpyrsThJOtXYtHymPmSLqjBnRrm3Gk-2XBVHCFda_UR6Q6GYHeqxi6G6jFbXBOgtr25r6N0bu8DxgyQwCMSgQHvjoKie1Ij-RSUl2v0zzPvJ3BDxYtE_nfX5_9ttd5JG8pQk0CXmf4mxyRJuezxBvx--YUDVqM1wHG74SbWz3XCABIQ59a4nA7FwABqgZz-qTrC5QcDBrxUNYg1X17mOkWr7pHA-4qFdPpHFod8UEj6b6Lou0GlP5fnMGTl_XQeTGAzXuD6Nl3WMPxNIj7C-_ia4aKX9HOR8-SNa2WXluEJ3il9tdimRTBBsi50VSfrR3idBE6x2wRMRKyMWjijXVLuUx8jicbayr9w05ic4YpV8iPVwWhIU6YTINLqU8-VnJFZff4bcPwt06_7tC3QF_vJFI8Oq1Xohah4oLzD5kOivo6ud6jt08PFPEWHzDquZxRJ_OtYK7442auyxRWDYL3oKeNU45MAs78eHpjqVityvpTTSJ7OecquRrSsBuM2IDaPHlxCC3TzxB58dKBicMT0alreawt3VLabtA_GkGfyDdsHO3P7xmJjC-52BSqSwjfu0aUm0Rk8a1xkL1wZ8G4tO5Nr5aQveTswmCBmjJ4MbLsDAl5vY1zWe0srcxWZV8-tNyvYRfse3GD4JvpB_1SWyxCBt-q0d2O6unlmJjM5hNEbQ1CGMGLJ7vYr5Hk-Obvqm14z6ypOSegnwR_YyS6OU_0I_ihxc1y5ZgKuuGfJsN70UWoajG16NK2-T4dm4Xm2GLv0WspkS4ES5fMimPbnvrhCyAe-kqNs8fZZeVJcP3XhTwbEbpk1yDFdMwytfpKHIwUojnR30wYk4/https://www.amazon.com/dp/B0DSZNWRZK/?_encoding=UTF8&pd_rd_i=B0DSZNWRZK&pd_rd_i=B0DSZNWRZK&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=5Rihj&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=EFMXYD3AMRH1868YQ51A&pd_rd_wg=eMsl7&pd_rd_r=d02db3f5-b960-4939-b587-a136e4eee5f1",
+      "link_clean": "https://www.amazon.com/dp/B0DSZNWRZK/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DSZNWRZK&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41oDnc4I-VL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/97297f0b-66ff-434b-9b9b-d40431f9ae9b.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/97297f0b-66ff-434b-9b9b-d40431f9ae9b.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.4,
+      "reviews": 168,
+      "price": "$20.99",
+      "extracted_price": 20.99
+    },
+    {
+      "position": 5,
+      "asin": "B0D3H1P49N",
+      "title": "Elevated Dog Bed Raised Outdoor Dog Cot for Large Dogs, Installation Requires No Tools, Frame with Washable Cooling Breathable Mesh Anti-Slip Feet, Indoor Pet Bed, Black, 43.3 Inches",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JKTyKRDv3bOWm8pKDw-v2ekAAAGd0rE5yQEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICByKok8/clv1c_ek-wBfHXbcbWXixXZFvu-lwLsHSxs2Dp0XqG9BNo2b0buosmmsplQagZ9pR84EHFg96sJeP9gYFZWbeKX7zqLDZayxx9o2vTInXMWlxt7Y4uqlTDgsOBtmnmyJnU5fTjJqL1bV7fMwm3c-wXRARHP_DaouXMVlc7sEV1yTuAbK43CX_lQmklwpFG-o-pr8ua8CLNaOrJmgHR7-HvJ2Bm1kOp7SuFhmlumFfH-2Tu1QE6InUfJ-D04pA2_0UV_wWAi2wRkVsW-JzhrTyVI_Mxu0q2RY_sNh8pRddvMH4GykKlkFz8Vd-E9yJpgaFDB6RuJrqa_9tya8pTOQEYAh5KCZ50DQ8wOcAmTe2v9ATnPBexQfEpsxfq040b6BLiI_smM8CjpFsryNfnDG6Gww_oPTbKvKcNG6bzwop22qqGasGv9_hBWNkTdFmi8WCQFKYFf77RpnSgOc5cAiBPMarmgA4E9T_CBV5k3xvjDNCBGVHJmxg29wMAV_ETU-BMFIW94wn14VlA_3HCsL2tSP_Bde_LaN4ApIqU_m06062Zjb0YSwzA6pN3nCet24kq904R8oFC0gy_jk4s9ZzdiH0nN2l02lleSR1AY3SlazyVPPPMle6cbjC3wll_GE-sD42KcTXBDYV9JYQCiuZLBMk5f8UTOmKYW7QS_cvadsiYBlY4K7lYaHjJkBkTWx6cCJ_zNmo-Rb51lo3z08-GyUqx5JMsHxibGSwAvpYM2uyDof8KiqT76jqZWJ13LDZJB8WmgEZXg5nhJQ7aLUFqdVlUdzoPxEgmadig0RWSzH_PspADV1C61-qrLCLPx1B5n1zmPBS33fY3bjYZNuxayyaZJFlYCt6l1FBF0NX7vXawErdxcMafvz9CsML-5zeh37SwWKCn7_bTa1PjAtbC40nPbMMEcFPLeVhbtywD6_845XmYuBVkObwTg35-nDvX919D5DvPMdK90YB148ec9tWjaHURjGwzackB7yofA6o7nDZwabfGI4sA8Y4nO1RRYgO10g8kVuWlgzTv27IqWJYdO0e5jZWYyObSv8K2uYtz4KG35oe1H7c6BquXvphrDG0zFES4tw2-ubVXD5vjJBPKfxRF0ApbxVQAD8Ronqc5kKU_I3cpNThGSFIP1-tvXa5Esuf3UH9FjMXe4rjbODplpoOM3nw19OCicquDEml_vB-rdl_uqwLdtGPUkPbOFGMravrFZvoxTdx3k3xAbwSf66b4t4tAmHHADaWFHn3FtsWB4TVdriDs_-vTqTFW1VSXTxCm7S59e18QjlA38kPkN4TqLulQPQJOnirPaDZW5HmGMVE_Nw-p3ZAR1j5Y2xcus19lrANumbRJRtuEdyRc1wPgmY75dDZ2jUW9g2jx4rhXBrTH1UndjPsKITZkr6XNubATwfKv4DewOEGEUJWpPXg4lToDY6nHWZElU1nQm9od7YaFhKKLFbrlb7uXxycj7DAGM0dGYuIfGKhHS7ZWhLIZ24b822jyz-Mudv9WeOSyWfxkE7c1Ksfzc3rwrAYS4YyyOGipGKbdBJf_2q4K5mHHNm8J/https://www.amazon.com/dp/B0D3H1P49N/?_encoding=UTF8&pd_rd_i=B0D3H1P49N&pd_rd_i=B0D3H1P49N&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=5Rihj&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=EFMXYD3AMRH1868YQ51A&pd_rd_wg=eMsl7&pd_rd_r=d02db3f5-b960-4939-b587-a136e4eee5f1",
+      "link_clean": "https://www.amazon.com/dp/B0D3H1P49N/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0D3H1P49N&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51Jfabv6fkL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/56b56fac-4fa1-41d2-8372-e040646c853e.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/56b56fac-4fa1-41d2-8372-e040646c853e.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.4,
+      "reviews": 1580,
+      "price": "$33.99",
+      "extracted_price": 33.99,
+      "old_price": "$39.99",
+      "extracted_old_price": 39.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "images": [
+        "https://m.media-amazon.com/images/I/81UuBlGbSfL.jpg",
+        "https://m.media-amazon.com/images/I/71-U9+pDIwL.jpg",
+        "https://m.media-amazon.com/images/I/81FfNQ0xMjL.jpg",
+        "https://m.media-amazon.com/images/I/81zTVQMz6kL.jpg",
+        "https://m.media-amazon.com/images/I/81F+oIRInEL.jpg",
+        "https://m.media-amazon.com/images/I/716E9hvxHiL.jpg",
+        "https://m.media-amazon.com/images/I/71-KvtXSfNL.jpg",
+        "https://m.media-amazon.com/images/I/71mhcBFq6ZL.jpg",
+        "https://m.media-amazon.com/images/I/811gqMvqZzL.jpg",
+        "https://m.media-amazon.com/images/I/7156AWvc1fL.jpg",
+        "https://m.media-amazon.com/images/I/81iqet-uL9L.jpg",
+        "https://m.media-amazon.com/images/I/71NTqcIwuKL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 72,
+        "4 star": 12,
+        "3 star": 9,
+        "2 star": 7,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "I call this my EVERYTHING mat. A must have for pets, adult people and human children!",
+        "text": "I can't say enough great things about this Kind Tail Nap Mat. It's more than a Travel Dog Bed, it's a washable, water-resistant \"sitting\" mat for people and kids too. I'll explain.Dogs: My dog trainer gave me a small mat to train my dog to go to whenever I needed her to lay down and stay put. It was a flimsy mat that she gave out to all her trainees for free. I wanted something higher in quality and durable. Not only is this mat beautiful with an attractive design, but it is also soft, the size is as advertised, it is lightweight, folds up easily into a small bag with handle, and looks like new again after being washed in my washing machine.Disabled or Elderly People: Now for me... I recently underwent two major surgeries back-to-back. I live alone with 6 dogs. My family comes over to help me, but sometimes I need to get on the floor and sweep up with a small hand broom (I'm too weak to do it from standing up). This mat has sufficient cushion to keep me comfortable sitting on it (at 185lbs now). It also slides on my wood grain floor easily so scooting along to sweep up has never been easier. The faux rabbit fur feels really nice on my bare legs, feet, and swollen ankles too.For parents of actual human children (haha), this mat is ALSO perfect. Put it in the bottom of your shopping cart for your kids to sit on without getting dirty. It is thick and firm enough to keep them comfortable. It has a handle and is light enough for your kids to carry as their own (with a small pocket for them to stuff their favorite toy into as well). Think of the airport and how your child wants to sit on the floor - not up on those uncomfortable chairs. This is the soft, sanitary barrier you've been looking for.I could go on about this little mat for days, but long reviews are often skipped over, and I don't want anyone to skip this one. I'll be adding a video later, as it's still in the dryer getting fluffed up for the 10+ time. Until I can walk and stand and clean normally on my own again, this mat is my best friend.",
+        "rating": 5,
+        "date": "March 25, 2026",
+        "author": "KiwiMe",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEPZ3IFVADCMRTIDA772JYWNBN4Q",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/a1e30022-feec-403c-8af4-f7c79487d127._CR2%2C0%2C495%2C495_SX460_.jpg",
+        "product": {
+          "color": "Blue"
+        }
+      },
+      {
+        "position": 2,
+        "title": "About to get another one so we have more mat surface area",
+        "text": "Excellent packable bed that's easy to pack. That's really the key isn't it? PACKABILITY. If I can't pack it back into the form it originally came in, the convenience is completely lost. This is a great example of that being taken into account. It's durable and washes quite easily. It got super dirty from rain and mud and washed right off. I wouldn't say it's the softest, but for the durability and reusability, my dog doesn't mind either.",
+        "rating": 5,
+        "date": "February 18, 2026",
+        "author": "San Geo",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEI6FZOSQNXITOYYMGOWX7CI4MSQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "product": {
+          "color": "Blue"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Perfect Travel Bed for On-the-Go Dogs",
+        "text": "I bought this Nomad nap mat for trips and outings with my dog, and it’s been a great purchase. It’s lightweight and easy to fold, and the carry handle makes it simple to bring along anywhere. The material feels durable and slightly water-resistant, which is helpful for outdoor use. My dog seems comfortable lying on it, and it gives him a familiar spot to relax when we’re away from home. I also appreciate that it’s machine washable, which makes cleanup easy. For the price, the quality and convenience make it a really practical travel bed for dogs.",
+        "rating": 5,
+        "date": "February 9, 2026",
+        "author": "Marlinda Davis",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFJ5QSOU53RTSAZ7L7IAV4GCOIAA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/7ee5b87a-e294-4e7e-b507-31c961ff2594._CR0%2C0%2C499%2C499_SX460_.jpg",
+        "product": {
+          "color": "Blue"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Small but convenient",
+        "text": "This dog travel bed is pretty small. It’s also on the thin side, but it is a travel dog bed. I’d personally call it a dog or pet mat rather than dog bed because it’s so thin. The mat is soft. It’s good for a small or small to medium dog. It does fold up nicely to take with you. The quality is good. The stitching is clear and straight. The padding is even. We go camping a lot and my dogs don’t like to lay on the ground, so this was nice to have with when we were by the campfire. Yes my dogs are pampered. It works great for what it is. I would personally like it to be a thicker mat but it is nice.",
+        "rating": 4,
+        "date": "December 27, 2025",
+        "author": "M. R.",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFQCN6CRQR5QYVR6RKARUITIZKSQ",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "product": {
+          "color": "Light Grey"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Perfect for when our pup needs to place, holds up great to her pawing it",
+        "text": "One of our younger pups has a tendency to find her way in to trouble. She is trained to place. This dog bed is easy to take along to have her place at a brewery, home or on a trip. It folds up and carries nicely.I really like that one side is soft so when she is laying on it in the chillier months it is more warm than other similar items.There is a small pocket to tuck items into. Once it is folded up there is a handle at the top.Quality has been great. All of the seams and edges look nice. The blanket is symmetrical. Even more surprising this week she has been digging on them pawing the blanket and they look just the same as before she started. Which is better than some crate mats that she has had.For a size reference the dog in my review photos is a 20 lbs. Cavapoo rescue.Would absolutely choose this again and would recommend!",
+        "rating": 5,
+        "date": "January 25, 2026",
+        "author": "FlyingUnicorns",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEDCYLOTZ4GXSLSQUMM5NLJHRROA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/81NRyYJ8z2L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71eirYulMYL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81LLPsCFlML._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71mhcBFq6ZL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/7156AWvc1fL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81UvSxDG23L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81UuBlGbSfL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/811gqMvqZzL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71hbLEDmSTL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71-U9+pDIwL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81F+oIRInEL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81sDp-sihuL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/718TCoCg3jL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/716E9hvxHiL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71Z+4lfDq1L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71Ks0dMKxjL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81ORyslIkLL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71ldg6KMlEL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71NTqcIwuKL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71QoCvmo2PL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71-KvtXSfNL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71xSMuE-RfL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81vRPzGf45L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81FfNQ0xMjL._SY88.jpg"
+        ],
+        "video": {
+          "link": "https://m.media-amazon.com/images/I/E1FWiDkAPjL.mp4",
+          "thumbnail": "https://m.media-amazon.com/images/I/618IkEQ3TGL._SY256.jpg"
+        },
+        "product": {
+          "color": "Light Grey"
+        }
+      },
+      {
+        "position": 6,
+        "title": "Thin for the price",
+        "text": "This pet mat is nice in design for folding up and carrying but the $50 price tag doesn't seem worth it to me. The design and stitching look like it will last a long time but being so thin and light, I don't see it being more practical than a cheap folded fleece blanket. It seems more material was put into this for looks than for softness. I bought it for our cats and they do use it when I put it down but that is cat curiosity, I have not had a single cat go to sleep on it yet. If you are buying for looks, this is a good buy I guess. If you are buying for value or pet comfort I would not recommend this.",
+        "rating": 3,
+        "date": "December 6, 2025",
+        "author": "James",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AF6SEAH5CFBLRC2SIEF4UXCXPF2Q",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "product": {
+          "color": "Light Grey"
+        }
+      },
+      {
+        "position": 7,
+        "title": "Actually Folds Small and Is Feather-Light",
+        "text": "I got this for weekend trips and taking my dogs to cafes, and it is absolutely perfect. The 1.5 lb weight is incredible—I barely notice it in my tote bag. The ability to fold it down small is genius, and the built-in carry handle is so convenient. My Frenchies love the cushioning, and I love that I can quickly toss it in the wash after a dirty day at the park. This is exactly the highly portable, no-fuss travel solution every pet owner needs. Worth every penny for the convenience alone!",
+        "rating": 5,
+        "date": "November 30, 2025",
+        "author": "Reh",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHTFKHQBHQRBPKTTBPECHNETSBGA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "product": {
+          "color": "Light Grey"
+        }
+      },
+      {
+        "position": 8,
+        "title": "Not non-slip",
+        "text": "This mat is supposed to be non-slip but unfortunately slides all over the place.",
+        "rating": 2,
+        "date": "March 8, 2026",
+        "author": "KJ",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEZM4YJOJQ2WUTK4MOZYZ3HCE4MA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Blue"
+        }
+      }
+    ]
+  }
+}

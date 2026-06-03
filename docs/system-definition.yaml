@@ -139,6 +139,8 @@ site_system:
       routes:
         - "/comforting/best-calming-dog-beds/"
         - "/comforting/best-orthopedic-dog-beds/"
+        - "/comforting/best-chew-resistant-dog-beds/"
+        - "/comforting/best-dog-travel-beds/"
         - "/comforting/best-puppy-crates/"
         - "/comforting/best-anxiety-dog-crates/"
         - "/comforting/best-travel-crates-for-road-trips/"
@@ -148,8 +150,10 @@ site_system:
         - "/comforting/best-furniture-dog-crates/"
         - "/comforting/best-heavy-duty-dog-crates/"
       notes: >
-        Comfort collector routes to calming beds, orthopedic beds, puppy crates, anxiety crates, travel crates,
-        airline crates, airline carriers, furniture crates, and heavy-duty crates.
+        Comfort collector routes to calming beds, orthopedic beds, chew-resistant/indestructible beds, travel beds, puppy crates,
+        anxiety crates, travel crates, airline crates, airline carriers, travel bags, furniture crates, and heavy-duty crates.
+        The chew-resistant bed converter owns the indestructible/chew-proof intent and stays on
+        /comforting/best-chew-resistant-dog-beds/ rather than creating a duplicate /comfort/ route.
         The soft-sided airline carrier converter now groups picks into classic, expandable, compact,
         and tote-style sections so the page can expand without turning into a single undifferentiated product wall.
         The furniture crates page includes double-compartment and multi-door picks alongside standard furniture options.
@@ -211,19 +215,20 @@ site_system:
     - name: "Road Trip Chill Kit"
       type: "collector"
       collector_subtype: "article"
-      target_action: "Route mixed intent to cooling and calming converters"
+      target_action: "Route mixed intent to cooling, calming, and comfort travel-bed converters"
       metric: "collector_to_converter_click split by destination"
       routes:
         - "/travel/dog-road-trip-gear/"
+      notes: "Routes road-trip comfort intent to the dog travel bed converter as well as cooling and calming pages."
 
     - name: "How to Fly With a Dog"
       type: "collector"
       collector_subtype: "article"
-      target_action: "Route air-travel intent to calming converters and comfort bed converters"
+      target_action: "Route air-travel intent to calming converters and comfort bed/travel-bed converters"
       metric: "collector_to_converter_click to calming and comfort converters"
       routes:
         - "/travel/how-to-fly-with-a-dog/"
-      notes: "Informational air-travel guide; attributes facts to TSA, USDA APHIS, AVMA, DOT, CDC, and AAHA. No product roundup. Internal links to calming and comfort converters."
+      notes: "Informational air-travel guide; attributes facts to TSA, USDA APHIS, AVMA, DOT, CDC, and AAHA. No product roundup. Internal links to calming, carrier, and comfort travel-bed converters."
 
     - name: "Best Dog-Friendly Airlines"
       type: "collector"
@@ -408,7 +413,7 @@ site_system:
     product_offer_helpers: "src/data/products/ — merchant metadata, offer types, and helpers for Amazon/Chewy affiliate offers; canonical editorial product copy stays in product records, not merchant offers"
     cooling_products: "src/data/cooling-products.ts — 25 products with canonical editorial copy, optional Amazon ASIN/affiliate URL, optional merchant offers, and image thumbnails"
     calming_products: "src/data/calming-products.ts — 23 products with canonical editorial copy, optional Amazon ASIN/affiliate URL, optional merchant offers, and image thumbnails"
-    relaxation_products: "src/data/relaxation-products.ts — 78 products (calming beds, orthopedic beds, crates, carriers, travel beds, travel bags) with canonical editorial copy, optional Amazon ASIN/affiliate URL, optional merchant offers, and image thumbnails"
+    relaxation_products: "src/data/relaxation-products.ts — 121+ products (calming beds, orthopedic beds, chew-resistant beds, crates, travel beds, carriers, travel bags) with canonical editorial copy, optional Amazon ASIN/affiliate URL, optional merchant offers, and image thumbnails"
     tracking_products: "src/data/tracking-products.ts — 8 tracker products and 1 accessory product across cellular/off-grid/bluetooth/accessory types"
     raw_api_cache: "src/data/amazon-products/*.json — full SerpAPI/SearchAPI Amazon Product responses per ASIN; _index.json sidecar tracks fetchedAt/provider/title/image freshness diagnostics only and must not overwrite canonical product copy or images"
     future_chewy_cache: "src/data/chewy-products/*.json — reserved future diagnostic cache for Chewy provider metadata by merchant product id or stable URL-derived key; mirror Amazon cache behavior without auto-overwriting editorial fields"

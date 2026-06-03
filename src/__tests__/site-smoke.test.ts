@@ -475,6 +475,28 @@ describe('site smoke tests', () => {
     }
   });
 
+  it('renders comfort travel-bed converter pages with tagged Amazon affiliate links', () => {
+    const doc = readBuiltPage(path.join('comforting', 'best-dog-travel-beds', 'index.html'));
+    const affiliateLinks = getAffiliateLinks(doc).filter((link) => link.getAttribute('data-merchant') === 'amazon');
+
+    expect(affiliateLinks.length).toBeGreaterThan(0);
+
+    for (const link of affiliateLinks) {
+      expectTrackedAffiliateLink(link);
+    }
+  });
+
+  it('renders comfort chew-resistant converter pages with tagged Amazon affiliate links', () => {
+    const doc = readBuiltPage(path.join('comforting', 'best-chew-resistant-dog-beds', 'index.html'));
+    const affiliateLinks = getAffiliateLinks(doc).filter((link) => link.getAttribute('data-merchant') === 'amazon');
+
+    expect(affiliateLinks.length).toBeGreaterThan(0);
+
+    for (const link of affiliateLinks) {
+      expectTrackedAffiliateLink(link);
+    }
+  });
+
   it('renders travel converter with affiliate links', () => {
     const doc = readBuiltPage(path.join('travel', 'dog-road-trip-gear', 'index.html'));
     const affiliateLinks = getAffiliateLinks(doc);

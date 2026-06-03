@@ -272,6 +272,8 @@ export const sectionCollectorDefinitions: Record<SectionCollectorKey, SectionCol
     converterPriority: [
       ROUTES.comfortCalmingBeds,
       ROUTES.comfortOrthopedicBeds,
+      ROUTES.comfortChewResistantBeds,
+      ROUTES.comfortTravelBeds,
       ROUTES.comfortPuppyCrates,
       ROUTES.comfortAnxietyCrates,
       ROUTES.comfortTravelCrates,
@@ -290,7 +292,7 @@ export const sectionCollectorDefinitions: Record<SectionCollectorKey, SectionCol
     topicSections: [
       {
         heading: 'Calming & Orthopedic Beds',
-        intro: 'Bed comparisons and sleep guidance for dogs who need more support, security, or better rest.',
+        intro: 'Bed comparisons and sleep guidance for dogs who need more support, security, durability, or a portable place to settle.',
         topics: ['beds', 'orthopedic', 'sleep'],
       },
       {

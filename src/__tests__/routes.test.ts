@@ -38,6 +38,14 @@ describe('route constants', () => {
     expect(ROUTES.comfortAnxietyCrates).toBe('/comforting/best-anxiety-dog-crates/');
   });
 
+  it('uses canonical chew-resistant beds route', () => {
+    expect(ROUTES.comfortChewResistantBeds).toBe('/comforting/best-chew-resistant-dog-beds/');
+  });
+
+  it('uses canonical travel beds route', () => {
+    expect(ROUTES.comfortTravelBeds).toBe('/comforting/best-dog-travel-beds/');
+  });
+
   it('uses canonical travel crates route', () => {
     expect(ROUTES.comfortTravelCrates).toBe('/comforting/best-travel-crates-for-road-trips/');
   });
@@ -71,6 +79,8 @@ describe('route constants', () => {
     expect(comfort.hero.secondaryCta.href).toBe(ROUTES.comfortOrthopedicBeds);
     expect(comfort.converterPriority).toEqual(
       expect.arrayContaining([
+        ROUTES.comfortChewResistantBeds,
+        ROUTES.comfortTravelBeds,
         ROUTES.comfortPuppyCrates,
         ROUTES.comfortAnxietyCrates,
         ROUTES.comfortTravelCrates,
