@@ -41,20 +41,6 @@ const shopCards = [
   },
 ];
 
-const pinnedGuideRoutes = [
-  {
-    title: 'Best Lick Mats for Dogs',
-    description: 'Food-based enrichment for crate time, fireworks prep, and anxious routines.',
-    href: ROUTES.calmingLickMats,
-    color: 'calm',
-  },
-  {
-    title: 'Travel Crates for Road Trips',
-    description: 'Hard-sided and soft folding crates for dogs who travel by car.',
-    href: ROUTES.comfortTravelCrates,
-    color: 'comfort',
-  },
-];
 ---
 
 {/* ── Shop by Need ── */}
@@ -112,11 +98,11 @@ const pinnedGuideRoutes = [
   </div>
 
   <div class="more-grid">
-    {[...articleFeed.moreArticles, ...pinnedGuideRoutes].map((article) => (
+    {articleFeed.moreArticles.map((article) => (
       <a
         href={article.href}
         class={`more-card more-card--${article.color}`}
-        data-home-article={articleFeed.moreArticles.includes(article) ? 'true' : undefined}
+        data-home-article="true"
         data-track="collector_to_converter_click"
         data-to-page={article.href}
         data-link-position="homepage-more-articles"

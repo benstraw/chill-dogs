@@ -53,10 +53,11 @@ site_system:
       notes: >
         Home page includes a dusty rose color block introducing the Comfort & Rest collector
         with tagline "Settle in." — positioned between HomepageHero and the start-prompt section.
-        The latest/guide lists include How to Crate Train Your Dog and Best Travel Crates for Road Trips
-        to connect informational crate intent with the new crate converter path.
-        The Browse Picks list is temporarily broad enough to include Best Lick Mats for Dogs until
-        converter routing below the article section gets a fuller refactor.
+        The latest/guide lists include How to Crate Train Your Dog to connect informational
+        crate intent with the new crate converter path.
+        The Browse Picks list is temporarily broad enough to include Best Lick Mats for Dogs
+        and Best Travel Crates for Road Trips until converter routing below the article section
+        gets a fuller refactor.
         A homepage-inline email signup block sits below HomepageBody as a secondary capture path.
 
     - name: "Cooling"

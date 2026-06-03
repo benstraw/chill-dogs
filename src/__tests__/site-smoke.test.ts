@@ -122,10 +122,22 @@ describe('site smoke tests', () => {
     const links = Array.from(doc.querySelectorAll<HTMLAnchorElement>('a')).map((link) =>
       link.getAttribute('href')
     );
+    const lickMatLinks = Array.from(
+      doc.querySelectorAll<HTMLAnchorElement>('a[href="/calming/best-lick-mats-for-dogs/"]')
+    );
+    const travelCrateLinks = Array.from(
+      doc.querySelectorAll<HTMLAnchorElement>('a[href="/comforting/best-travel-crates-for-road-trips/"]')
+    );
 
     expect(links).toContain('/calming/crate-training-for-dogs/');
     expect(links).toContain('/comforting/best-travel-crates-for-road-trips/');
     expect(links).toContain('/calming/best-lick-mats-for-dogs/');
+    expect(lickMatLinks.map((link) => link.getAttribute('data-link-position'))).toEqual([
+      'homepage-converters',
+    ]);
+    expect(travelCrateLinks.map((link) => link.getAttribute('data-link-position'))).toEqual([
+      'homepage-converters',
+    ]);
   });
 
   it('renders dynamic section collector inventories for articles and converters', () => {
