@@ -594,6 +594,14 @@ export const staticSitemapSections: SitemapSection[] = [
         pageType: 'informer',
       }),
       createSitemapPage({
+        baseTitle: 'How We Use AI',
+        ogTitle: 'How Chill-Dogs Uses AI | Our Research Process',
+        description:
+          'Chill-Dogs uses AI to accelerate research and content structure. Humans verify all claims, edit the voice, and curate every product recommendation.',
+        href: ROUTES.howWeUseAi,
+        pageType: 'informer',
+      }),
+      createSitemapPage({
         baseTitle: 'Privacy Policy',
         description: 'Privacy policy for Chill-Dogs. Learn how we handle your data.',
         href: ROUTES.privacyPolicy,

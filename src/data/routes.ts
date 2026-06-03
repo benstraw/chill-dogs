@@ -46,6 +46,7 @@ export const ROUTES = {
   shop: '/shop/',
   search: '/search/',
   affiliateDisclosure: '/affiliate-disclosure/',
+  howWeUseAi: '/how-we-use-ai/',
   privacyPolicy: '/privacy-policy/',
   terms: '/terms/',
   shelterCharities: '/shelter-dog-charities/',

@@ -1,0 +1,66 @@
+---
+import { ROUTES } from '@data/routes';
+import BaseLayout from '@layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="How We Use AI"
+  ogTitle="How Chill-Dogs Uses AI | Our Research Process"
+  description="Chill-Dogs uses AI to accelerate research and content structure. Humans verify all claims, edit the voice, and curate every product recommendation."
+>
+  <section class="legal container">
+    <div class="prose">
+      <h1>How We Use AI</h1>
+
+      <p>
+        We use AI tools as part of how we research and build chill-dogs.com. This page explains what that means in practice.
+      </p>
+
+      <h2>Research and structure</h2>
+
+      <p>
+        When we're developing an article — say, how hot is too hot for a dog, or how to manage car anxiety — we use AI to accelerate the research phase. That means pulling together what's known on a topic, identifying the questions real dog owners are actually asking, and sketching a structure that covers the subject thoroughly.
+      </p>
+      <p>
+        AI helps us move faster and catch gaps we might otherwise miss. It doesn't replace knowing what matters to dog owners, or which sources are worth citing.
+      </p>
+
+      <h2>Where humans stay in the loop</h2>
+
+      <p>Every article goes through human editorial review before it's published. Specifically:</p>
+      <ul>
+        <li><strong>Source verification.</strong> Any statistic or claim that references a named organization — AKC, AAHA, ASPCA — gets checked against the actual source. We don't publish figures we haven't confirmed.</li>
+        <li><strong>Tone and voice.</strong> AI drafts tend toward generic. We edit for the measured, practical voice this site is built around.</li>
+        <li><strong>Product curation.</strong> Decisions about which products appear on converter pages are made by us, not generated. We research categories, compare options, and make judgment calls about what's worth recommending.</li>
+        <li><strong>Final edit.</strong> Every article is edited in depth before it goes live — structure, accuracy, tone, and flow. AI output is a starting point, not a finished product. Nothing publishes without that pass.</li>
+      </ul>
+
+      <h2>What AI doesn't do here</h2>
+
+      <p>
+        AI doesn't write our affiliate disclosures, set our editorial standards, or decide what this site is for. It doesn't select products, verify veterinary claims, or make calls about what's safe to recommend to dog owners. Those decisions stay with us.
+      </p>
+
+      <h2>Why we're telling you this</h2>
+
+      <p>
+        Because you're trusting us with a practical question about your dog, and you deserve to know how the information was put together. We think AI-assisted research, done carefully with human oversight, produces better content than either approach alone. But the oversight part isn't optional — it's the point.
+      </p>
+      <p>
+        If you have questions about how a specific piece of content was researched, <a href={ROUTES.contact}>contact us</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal {
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-4xl);
+  }
+
+  .legal h1 {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--space-xl);
+  }
+</style>
