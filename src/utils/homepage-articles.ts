@@ -84,7 +84,7 @@ export function getHomepageConverters(limit = 15): HomepageConverterCard[] {
 
 export function buildHomepageArticleFeed(
   entries: CollectionEntry<'articles'>[],
-  featuredCount = 3
+  featuredCount = 6
 ): HomepageArticleFeed {
   const sortedArticles = entries
     .slice()

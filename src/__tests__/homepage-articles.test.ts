@@ -59,15 +59,19 @@ describe('homepage article feed', () => {
       createArticle('/travel/how-to-fly-with-a-dog/', '2026-04-10', explicitImage),
       createArticle('/calming/crate-training-for-dogs/', '2026-04-09'),
       createArticle('/safety/what-to-do-if-your-dog-runs-away/', '2026-04-03'),
+      createArticle('/comforting/how-much-do-dogs-sleep/', '2026-03-24'),
+      createArticle('/cooling/keep-dog-cool-in-car/', '2026-03-20'),
     ]);
 
     expect(feed.featuredArticles.map((article) => article.href)).toEqual([
       '/calming/dog-fireworks-anxiety-checklist/',
       '/travel/how-to-fly-with-a-dog/',
       '/calming/crate-training-for-dogs/',
+      '/safety/what-to-do-if-your-dog-runs-away/',
+      '/comforting/how-much-do-dogs-sleep/',
+      '/cooling/keep-dog-cool-in-car/',
     ]);
     expect(feed.moreArticles.map((article) => article.href)).toEqual([
-      '/safety/what-to-do-if-your-dog-runs-away/',
       '/cooling/how-hot-is-too-hot-for-dogs/',
     ]);
     expect(feed.latestGuides.map((article) => article.href)).toEqual([
@@ -75,12 +79,15 @@ describe('homepage article feed', () => {
       '/travel/how-to-fly-with-a-dog/',
       '/calming/crate-training-for-dogs/',
       '/safety/what-to-do-if-your-dog-runs-away/',
+      '/comforting/how-much-do-dogs-sleep/',
+      '/cooling/keep-dog-cool-in-car/',
       '/cooling/how-hot-is-too-hot-for-dogs/',
     ]);
 
     expect(feed.featuredArticles[0]?.image).toBe('/og/calming-dog-fireworks-anxiety-checklist.jpg');
     expect(feed.featuredArticles[1]?.image).toBe('/_assets/custom-og.jpg');
-    expect(feed.moreArticles[0]?.image).toBe('/og/safety-what-to-do-if-your-dog-runs-away.jpg');
+    expect(feed.featuredArticles[3]?.image).toBe('/og/safety-what-to-do-if-your-dog-runs-away.jpg');
+    expect(feed.moreArticles[0]?.image).toBe('/og/cooling-how-hot-is-too-hot-for-dogs.jpg');
   });
 
   it('maps a single article into homepage card data', () => {
