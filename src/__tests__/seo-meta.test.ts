@@ -11,7 +11,7 @@
 
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
-import { describe, expect, it } from 'vitest';
+import { beforeAll, describe, expect, it } from 'vitest';
 
 const distRoot = path.join(process.cwd(), 'dist');
 
@@ -56,7 +56,11 @@ function collectMeta(): PageMeta[] {
 }
 
 describe('SEO meta tag lengths', () => {
-  const pages = collectMeta();
+  let pages: PageMeta[] = [];
+
+  beforeAll(() => {
+    pages = collectMeta();
+  });
 
   it('dist/ contains indexable pages to check', () => {
     expect(pages.length).toBeGreaterThan(0);

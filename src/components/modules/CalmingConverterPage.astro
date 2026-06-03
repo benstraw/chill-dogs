@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 import JsonLd from '@components/JsonLd.astro';
-import AffiliateLink from '@components/AffiliateLink.astro';
+import MerchantAffiliateLink from '@components/MerchantAffiliateLink.astro';
 import Hero from '@components/modules/Hero.astro';
 import Toc from '@components/modules/Toc.astro';
 import FAQ from '@components/modules/FAQ.astro';
@@ -18,6 +18,8 @@ import {
   type CalmingConverterPageConfig,
   type QuickPickItem,
 } from '@data/calming-converter-pages';
+import { getOffers } from '@data/products/offers';
+import { merchants } from '@data/products/merchants';
 
 interface Props {
   config: CalmingConverterPageConfig;
@@ -81,19 +83,19 @@ function quickPickProduct(item: QuickPickItem) {
                     <p class="quick-pick-label">{item.label}</p>
                     <h3>{item.title}</h3>
                     <p>{item.description}</p>
-                    <AffiliateLink
-                      href={product.amazonUrl}
-                      class="quick-pick-link"
-                      data-track="amazon_outbound_click"
-                      data-page-type="collector"
-                      data-page-slug={config.pageSlug}
-                      data-product-name={product.name}
-                      data-product-category={product.category}
-                      data-position={item.position}
-                      data-destination="amazon.com"
-                    >
-                      Check price on Amazon
-                    </AffiliateLink>
+                    <div class="quick-pick-offers">
+                      {getOffers(product).map((offer, i) => (
+                        <MerchantAffiliateLink
+                          offer={offer}
+                          product={{ id: product.id, name: product.name, category: product.category }}
+                          class={`quick-pick-link${i > 0 ? ' quick-pick-link--secondary' : ''}`}
+                          label={merchants[offer.merchant].ctaCopy}
+                          pageType="converter"
+                          pageSlug={config.pageSlug}
+                          position={item.position}
+                        />
+                      ))}
+                    </div>
                   </article>
                 );
               })}
@@ -314,8 +316,24 @@ function quickPickProduct(item: QuickPickItem) {
     transition: background 0.15s ease;
   }
 
+  .quick-pick-offers {
+    display: grid;
+    gap: var(--space-xs);
+  }
+
   .quick-pick-link:hover {
     background: var(--color-sage-hover);
+    color: var(--color-charcoal) !important;
+  }
+
+  .quick-pick-link--secondary {
+    background: transparent;
+    color: var(--color-charcoal) !important;
+    border: 1px solid var(--color-sage);
+  }
+
+  .quick-pick-link--secondary:hover {
+    background: color-mix(in srgb, var(--color-sage) 18%, transparent);
     color: var(--color-charcoal) !important;
   }
 

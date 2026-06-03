@@ -1,3 +1,5 @@
+import type { AffiliateOffer } from './products/types';
+
 export type ProductCategory =
   | 'cooling-mats'
   | 'cooling-bandanas'
@@ -11,7 +13,8 @@ export interface CoolingProduct {
   asin?: string;
   name: string;
   category: ProductCategory;
-  amazonUrl: string;
+  amazonUrl?: string;
+  offers?: AffiliateOffer[];
   bullets: [string, string, string];
   bestFor: string;
   coolingMethod?: string;

@@ -3,7 +3,7 @@ title: Affiliate Disclosure Rules
 type: canonical
 domain: affiliate
 status: active
-updated: 2026-05-03
+updated: 2026-05-23
 tags:
   - chill-dogs
   - affiliate
@@ -40,7 +40,7 @@ The `Disclosure` component must appear on every converter page. Place it before 
 
 ### Section collector pages
 
-The `Disclosure` component must appear on section collector pages (`/cooling/`, `/calming/`) — include it near any product links or CTAs.
+The `Disclosure` component must appear on section collector pages (`/cooling/`, `/calming/`, `/comforting/`) — include it near any product links or CTAs.
 
 ### Article collectors with inline product cards
 

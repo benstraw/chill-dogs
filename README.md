@@ -139,10 +139,10 @@ This runs automatically via the `prebuild` script before `astro build`.
 
 ### Default behavior
 
-- Every indexable route gets a generated OG JPEG at `/og/<route-slug>.jpg`.
+- Every eligible route gets a generated OG JPEG at `/og/<route-slug>.jpg`, including `noindex` pages such as `/subscribe/`.
 - After build, pages that render images in `<main>` automatically set `og:image` and `twitter:image` to the first on-page image.
 - If no image is rendered in `<main>`, metadata falls back to the generated route OG image.
-- Routes with `noindex`, `/v/` experiment variants, and `404` are excluded from auto OG and fall back to `/og-default.jpg`.
+- Routes without generated OG assets, such as `/v/` experiment variants, `404`, admin/internal pages, and legal policy pages, fall back to `/og-default.jpg`.
 
 ### Frontmatter overrides (posts collection)
 
@@ -190,6 +190,7 @@ If PostHog is not configured, events log to the browser console in dev mode.
 | `amazon_outbound_click` | ProductCards, ComparisonTable, BonusCallout | Outbound affiliate click |
 | `collector_to_converter_click` | HubBody, SummaryBlock, InternalLinkStrip | Internal routing from collector → converter pages |
 | `toc_click` | Toc | Table of contents navigation |
+| `newsletter_cta_click` | Contextual article newsletter CTAs | Article → newsletter signup landing page |
 
 ### Adding a tracked element
 

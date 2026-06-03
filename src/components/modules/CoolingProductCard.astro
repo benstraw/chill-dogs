@@ -1,6 +1,8 @@
 ---
-import AffiliateLink from '@components/AffiliateLink.astro';
+import MerchantAffiliateLink from '@components/MerchantAffiliateLink.astro';
 import type { CoolingProduct } from '@data/cooling-products';
+import { getOffers } from '@data/products/offers';
+import { merchants } from '@data/products/merchants';
 
 interface Props {
   product: CoolingProduct;
@@ -13,7 +15,7 @@ interface Props {
 const { product, cta, position = 0, pageType = 'converter', pageSlug = '' } = Astro.props;
 
 const isAmazon = cta.kind === 'amazon';
-const trackEvent = isAmazon ? 'amazon_outbound_click' : 'collector_to_converter_click';
+const offers = isAmazon ? getOffers(product) : [];
 ---
 
 <div class="cp-card">
@@ -58,24 +60,24 @@ const trackEvent = isAmazon ? 'amazon_outbound_click' : 'collector_to_converter_
       </p>
     )}
     {isAmazon ? (
-      <AffiliateLink
-        href={cta.href}
-        class="cp-cta"
-        data-track={trackEvent}
-        data-page-type={pageType}
-        data-page-slug={pageSlug}
-        data-product-name={product.name}
-        data-product-category={product.category}
-        data-position={String(position)}
-        data-destination="amazon.com"
-      >
-        {cta.label}
-      </AffiliateLink>
+      <div class="cp-offers">
+        {offers.map((offer, offerIndex) => (
+          <MerchantAffiliateLink
+            offer={offer}
+            product={{ id: product.id, name: product.name, category: product.category }}
+            class={`cp-cta${offerIndex > 0 ? ' cp-cta--secondary' : ''}`}
+            label={offer.merchant === 'amazon' ? cta.label : merchants[offer.merchant].ctaCopy}
+            pageType={pageType}
+            pageSlug={pageSlug}
+            position={String(position)}
+          />
+        ))}
+      </div>
     ) : (
       <a
         href={cta.href}
         class="cp-cta"
-        data-track={trackEvent}
+        data-track="collector_to_converter_click"
         data-from-page={pageSlug}
         data-to-page={cta.href}
         data-category={product.category}
@@ -112,6 +114,11 @@ const trackEvent = isAmazon ? 'amazon_outbound_click' : 'collector_to_converter_
 
   .cp-card:hover {
     box-shadow: var(--shadow-lg);
+  }
+
+  .cp-offers {
+    display: grid;
+    gap: var(--space-xs);
   }
 
   .cp-image {
@@ -207,6 +214,17 @@ const trackEvent = isAmazon ? 'amazon_outbound_click' : 'collector_to_converter_
   :global(.cp-cta:hover) {
     background: var(--color-primary-hover);
     color: var(--color-text-inverse) !important;
+  }
+
+  :global(.cp-cta--secondary) {
+    background: transparent;
+    color: var(--color-primary) !important;
+    border: 1px solid var(--color-primary);
+  }
+
+  :global(.cp-cta--secondary:hover) {
+    background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+    color: var(--color-primary) !important;
   }
 
   :global(.cp-cta:focus-visible) {

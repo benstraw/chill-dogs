@@ -1,5 +1,6 @@
 import { relaxationProducts, type RelaxationProduct } from './relaxation-products';
 import { coolingProducts } from './cooling-products';
+import { getRequiredPrimaryOffer } from './products/offers';
 import { ROUTES } from './routes';
 
 export type RelaxationPageType = 'converter';
@@ -108,7 +109,8 @@ export interface RelaxationDisplayProduct {
   asin?: string;
   name: string;
   category: string;
-  amazonUrl: string;
+  amazonUrl?: string;
+  offers?: RelaxationProduct['offers'];
   bullets: string[];
   bestFor: string;
   whyItWorks: string;
@@ -234,7 +236,7 @@ export function buildRelaxationItemListSchema(
       '@type': 'ListItem',
       position: i + 1,
       name: p.name,
-      url: p.amazonUrl,
+      url: getRequiredPrimaryOffer(p, `${schemaConfig.name}: ${p.id}`).url,
     })),
   };
 }
@@ -2185,47 +2187,11 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         },
       ],
     },
-    relatedGuides: {
-      heading: 'More Comfort & Behavior Help',
-      guides: [
-        {
-          href: ROUTES.comfortHub,
-          title: 'Comfort & Rest',
-          description:
-            'Browse the full comfort pillar for calming beds, orthopedic beds, travel beds, and crate paths built around different rest problems.',
-        },
-        {
-          href: ROUTES.comfortCalmingBeds,
-          title: 'Best Calming Dog Beds',
-          description:
-            'For dogs that want to curl and lean into a raised edge, compare calming bed shapes separately from tougher chew-resistant formats.',
-        },
-        {
-          href: ROUTES.comfortOrthopedicBeds,
-          title: 'Best Orthopedic Dog Beds',
-          description:
-            'If support is the main issue rather than destruction, compare the orthopedic options that prioritize foam and daily joint comfort.',
-        },
-        {
-          href: ROUTES.calmingCrateGuide,
-          title: 'How to Crate Train Your Dog',
-          description:
-            'Useful when bedding destruction is tied to confinement, routine, or stress rather than simple rough play.',
-        },
-      ],
-    },
+    relatedGuidesHeading: 'More Comfort & Behavior Help',
+    relatedGuidesLimit: 4,
     disclosureShowSafety: false,
-    internalLinkStrip: {
-      heading: 'More Rest, Crate, and Calming Guides',
-      links: [
-        { label: 'Comfort & Rest', href: ROUTES.comfortHub },
-        { label: 'Orthopedic Dog Beds', href: ROUTES.comfortOrthopedicBeds },
-        { label: 'Calming Dog Beds', href: ROUTES.comfortCalmingBeds },
-        { label: 'Best Calming Products', href: ROUTES.calmingTop },
-        { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
-        { label: 'Dog Travel Beds', href: ROUTES.comfortTravelBeds },
-      ],
-    },
+    internalLinkStripHeading: 'More Rest, Crate, and Calming Guides',
+    internalLinkStripLimit: 6,
     itemListSchema: {
       name: 'Best Indestructible Chew-Proof Dog Beds',
       url: 'https://www.chill-dogs.com/comforting/best-chew-resistant-dog-beds/',
@@ -2456,46 +2422,11 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         },
       ],
     },
-    relatedGuides: {
-      heading: 'More Travel & Rest Help',
-      guides: [
-        {
-          href: ROUTES.roadTrip,
-          title: 'Dog Road Trip Gear',
-          description:
-            'Cooling, calming, hydration, and rest gear for long drives when your dog needs more than a bowl and a blanket.',
-        },
-        {
-          href: ROUTES.travelFlyWithDog,
-          title: 'How to Fly With a Dog',
-          description:
-            'Carrier rules, airport prep, anxiety planning, and what to ask before air travel enters the picture.',
-        },
-        {
-          href: ROUTES.comfortCalmingBeds,
-          title: 'Best Calming Dog Beds',
-          description:
-            'If your dog settles best with raised edges and more enclosed sleep shapes, compare calming beds separately from travel mats.',
-        },
-        {
-          href: ROUTES.calmingCar,
-          title: 'Car Anxiety for Dogs',
-          description:
-            'Travel beds help with settling at the destination, but anxious car rides often need a separate calming strategy too.',
-        },
-      ],
-    },
+    relatedGuidesHeading: 'More Travel & Rest Help',
+    relatedGuidesLimit: 4,
     disclosureShowSafety: false,
-    internalLinkStrip: {
-      heading: 'More Dog Travel & Rest Guides',
-      links: [
-        { label: 'Dog Road Trip Gear', href: ROUTES.roadTrip },
-        { label: 'How to Fly With a Dog', href: ROUTES.travelFlyWithDog },
-        { label: 'Car Anxiety for Dogs', href: ROUTES.calmingCar },
-        { label: 'Best Calming Dog Beds', href: ROUTES.comfortCalmingBeds },
-        { label: 'Best Orthopedic Dog Beds', href: ROUTES.comfortOrthopedicBeds },
-      ],
-    },
+    internalLinkStripHeading: 'More Dog Travel & Rest Guides',
+    internalLinkStripLimit: 5,
     itemListSchema: {
       name: 'Best Dog Travel Beds',
       url: 'https://www.chill-dogs.com/comforting/best-dog-travel-beds/',

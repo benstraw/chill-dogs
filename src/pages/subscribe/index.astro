@@ -12,21 +12,25 @@ const routingCards = [
     title: 'Cooling Picks',
     description: 'Start with the main cooling path for mats, vests, bandanas, and heat-ready gear.',
     href: ROUTES.coolingHub,
+    tone: 'cooling',
   },
   {
     title: 'Calming Picks',
     description: 'See the main calming path for wraps, chews, lick mats, and travel-stress help.',
     href: ROUTES.calmingHub,
+    tone: 'calming',
   },
   {
     title: 'Comfort & Rest',
     description: 'Browse beds, crates, and comfort-focused guides for dogs who need better downtime.',
     href: ROUTES.comfortHub,
+    tone: 'comfort',
   },
   {
     title: 'Hot Weather Guide',
     description: 'Read the heat-safety guide that explains when temperatures are too hot for dogs.',
     href: ROUTES.coolingSafety,
+    tone: 'safety',
   },
 ];
 ---
@@ -42,6 +46,7 @@ const routingCards = [
   <section class="subscribe-flow container">
     <div class="subscribe-panel">
       <p class="eyebrow">Newsletter</p>
+      <h1>{title}</h1>
       <EmailSignup
         placement="homepage_inline"
         pageSlug={ROUTES.subscribe}
@@ -51,7 +56,7 @@ const routingCards = [
 
       <div class="routing-grid">
         {routingCards.map((card) => (
-          <a href={card.href} class="routing-card">
+          <a href={card.href} class:list={['routing-card', `routing-card--${card.tone}`]}>
             <h2>{card.title}</h2>
             <p>{card.description}</p>
             <span>Explore -&gt;</span>
@@ -89,6 +94,11 @@ const routingCards = [
     text-transform: uppercase;
   }
 
+  .subscribe-panel h1 {
+    margin: 0;
+    font-size: var(--text-3xl);
+  }
+
   .routing-grid {
     display: grid;
     gap: var(--space-md);
@@ -100,10 +110,26 @@ const routingCards = [
     padding: var(--space-lg);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
-    background: linear-gradient(180deg, rgba(135, 183, 199, 0.14), rgba(245, 240, 232, 0.9));
+    background: var(--routing-card-bg, var(--color-surface));
     text-decoration: none;
     color: var(--color-text);
     transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  .routing-card--cooling {
+    --routing-card-bg: linear-gradient(150deg, hsl(195, 70%, 97%), hsl(202, 48%, 89%));
+  }
+
+  .routing-card--calming {
+    --routing-card-bg: linear-gradient(150deg, hsl(150, 35%, 97%), hsl(158, 32%, 88%));
+  }
+
+  .routing-card--comfort {
+    --routing-card-bg: linear-gradient(150deg, hsl(345, 45%, 98%), hsl(340, 38%, 90%));
+  }
+
+  .routing-card--safety {
+    --routing-card-bg: linear-gradient(150deg, hsl(28, 64%, 97%), hsl(22, 48%, 88%));
   }
 
   .routing-card:hover {

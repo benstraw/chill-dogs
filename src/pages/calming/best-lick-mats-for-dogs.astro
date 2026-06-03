@@ -1,0 +1,8 @@
+---
+import CalmingConverterPage from '@components/modules/CalmingConverterPage.astro';
+import { getCalmingConverterPageConfig } from '@data/calming-converter-pages';
+
+const config = getCalmingConverterPageConfig('best-lick-mats-for-dogs');
+---
+
+<CalmingConverterPage config={config} />

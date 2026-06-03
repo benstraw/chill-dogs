@@ -1,0 +1,360 @@
+{
+  "search_metadata": {
+    "id": "6a10ad90410cdab01e6cdeed",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/nqgUWMCvz7I9yM7tRuujKg/6a10ad90410cdab01e6cdeed.json",
+    "created_at": "2026-05-22 19:25:04 UTC",
+    "processed_at": "2026-05-22 19:25:04 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0GQGYDKT2/?",
+    "raw_html_file": "https://serpapi.com/searches/nqgUWMCvz7I9yM7tRuujKg/6a10ad90410cdab01e6cdeed.html",
+    "total_time_taken": 20.24
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0GQGYDKT2",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0GQGYDKT2",
+    "title": "Dog Lick Bowl, BPA Free Silicone Slow Feeder Licking Mat with Strong Suction for Dog, Non-Slip Freeze Licking Bowl for Anxiety Relief & Boredom, Dishwasher(Blue, Large)",
+    "link": "https://www.amazon.com/QUWOU-Silicone-Licking-Non-Slip-Dishwasher/dp/B0GQGYDKT2/",
+    "link_clean": "https://www.amazon.com/dp/B0GQGYDKT2/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GQGYDKT2&device=desktop&engine=amazon_product",
+    "variants": [
+      {
+        "title": "Color",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0GQGYDKT2",
+            "name": "Blue",
+            "image": "https://m.media-amazon.com/images/I/41XL8TQX5bL._SS64_.jpg",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GQGYDKT2&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0GQH297TS",
+            "name": "Purple",
+            "image": "https://m.media-amazon.com/images/I/41FAJ4T7JzL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GQH297TS&device=desktop&engine=amazon_product"
+          }
+        ]
+      },
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0GQGZT5KX",
+            "name": "Small",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GQGZT5KX&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0GQGYDKT2",
+            "name": "Large",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GQGYDKT2&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the QUWOU Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/61ge1Bwk88L._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/61ge1Bwk88L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71wL5QenFvL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/719YmT1UOUL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71A1ZCqCM1L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61YFQXh9q+L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/710Kl6Q8YiL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71XkYW+G7OL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71iyZddwbTL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.7,
+    "reviews": 7,
+    "discount": "-10%",
+    "price": "$17.99",
+    "extracted_price": 17.99,
+    "old_price": "$19.99",
+    "extracted_old_price": 19.99,
+    "prime": true,
+    "delivery": [
+      "FREE delivery Wednesday, May 27 on orders shipped by Amazon over $35",
+      "Or Prime members get FREE delivery Sunday, May 24. Order within 9 hrs 34 mins. Join Prime"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$17.99",
+      "extracted_price": 17.99,
+      "delivery": [
+        "FREE delivery Wednesday, May 27 on orders shipped by Amazon over $35",
+        "Or Prime members get FREE delivery Sunday, May 24. Order within 9 hrs 34 mins. Join Prime"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "Dannila",
+          "details": {
+            "heading": "Sold by",
+            "content": "Dannila"
+          },
+          "link": {
+            "text": "Dannila",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A1Y8682G1Z0G0J&asin=B0GQGYDKT2&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "material": "Silicone",
+    "target_species": "Dog",
+    "brand": "QUWOU",
+    "recommended_uses_for_product": "Dry Food, Indoor, Multiple Pets, Slow Feeding, Wet Food",
+    "special_feature": "Durable, Nonslip"
+  },
+  "about_item": [
+    "【Slow Down Fast Eaters】 Stop Eating Too Fast with our slow feeder dog bowls. The unique bridge-shaped interior effectively separates food, extending mealtime by 10x to prevent bloating and support digestion.",
+    "【Calm Anxiety & Boredom】 Vets recommend this Dog Lick Bowl for mental stimulation. The rhythmic licking action helps soothe Separation Anxiety and stress, making it an ideal slow dog feeder bowl for baths.",
+    "【100% Safe & Durable】 Crafted from BPA Free food-grade silicone, this dog food bowl is non-toxic and tough. This puppy slow feeder bowl is gentle on tongues but built to last for dogs of all sizes.",
+    "【Strong Suction & No Mess】 Featuring a Strong Suction base, this dog slow feeder bowl sticks firmly to walls or floors. Raised edges prevent spills, making it the perfect slow feed liquid dog bowl for yogurt.",
+    "【Easy Clean & Oral Care】 The bridge textures scrape the tongue for fresher breath. After use, it’s 100% Dishwasher Safe. Freeze it for a long-lasting, cooling treat that combines aesthetic style with utility."
+  ],
+  "related_products": [
+    {
+      "position": 1,
+      "title": "Dog Lick Bowl for Dogs, Lick Mat, Slow Feeder Lick Bowl with Strong Suction, BPA-Free Silicone, Freeze Licking Bowl for Anxie",
+      "link": "https://www.amazon.com/Dog-Lick-Enrichment-Distraction-Dishwasher/dp/B0GFSSHX91/ref=pd_sbs_d_sccl_1_1/000-0000000-0000000?pd_rd_w=OjZPr&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=XNRYVTJC20R053HRFFD6&pd_rd_wg=WaLRd&pd_rd_r=bc9a9989-3079-41a4-a0ea-79c9a92feac4&pd_rd_i=B0GFSSHX91&psc=1",
+      "asin": "B0GFSSHX91",
+      "link_clean": "https://www.amazon.com/Dog-Lick-Enrichment-Distraction-Dishwasher/dp/B0GFSSHX91/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GFSSHX91&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/610KTxn2InL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.8,
+      "reviews": 43
+    },
+    {
+      "position": 2,
+      "title": "YAMI Dog Lick Bowl, Lick Mat for Dogs, Wet Food Cat Slow Feeder, Freeze Bowl, Enrichment & Puzzle Toy for Anxiety Relief, Foo",
+      "link": "https://www.amazon.com/YAMI-Enrichment-Food-Grade-Silicone-Dishwasher/dp/B0FD5JKL3Q/ref=pd_sbs_d_sccl_1_2/000-0000000-0000000?pd_rd_w=OjZPr&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=XNRYVTJC20R053HRFFD6&pd_rd_wg=WaLRd&pd_rd_r=bc9a9989-3079-41a4-a0ea-79c9a92feac4&pd_rd_i=B0FD5JKL3Q&psc=1",
+      "asin": "B0FD5JKL3Q",
+      "link_clean": "https://www.amazon.com/YAMI-Enrichment-Food-Grade-Silicone-Dishwasher/dp/B0FD5JKL3Q/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FD5JKL3Q&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81eLmV9YRTL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.5,
+      "reviews": 60
+    },
+    {
+      "position": 3,
+      "title": "Stainless Steel Lick Mat for Dogs and Cats - FEELNEEDY Large Licking Pad with Suction Cups, Chew-Proof, Non-Slip Pet Licky Ma",
+      "link": "https://www.amazon.com/Stainless-Steel-Lick-Dogs-Cats/dp/B0GF179QJ5/ref=pd_sbs_d_sccl_1_3/000-0000000-0000000?pd_rd_w=OjZPr&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=XNRYVTJC20R053HRFFD6&pd_rd_wg=WaLRd&pd_rd_r=bc9a9989-3079-41a4-a0ea-79c9a92feac4&pd_rd_i=B0GF179QJ5&psc=1",
+      "asin": "B0GF179QJ5",
+      "link_clean": "https://www.amazon.com/Stainless-Steel-Lick-Dogs-Cats/dp/B0GF179QJ5/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GF179QJ5&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81m9FkTp5JL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.7,
+      "reviews": 44
+    },
+    {
+      "position": 4,
+      "title": "Dog Lick Bowl, Bestalk Anxiety Relief Lick Mat for Dogs, Non-Slip Freeze Licking Bowl Enrichment Puzzle Feeder for Distractio",
+      "link": "https://www.amazon.com/Bestalk-Non-Slip-Enrichment-Distraction-Dishwasher/dp/B0F6N9DCWM/ref=pd_sbs_d_sccl_1_4/000-0000000-0000000?pd_rd_w=OjZPr&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=XNRYVTJC20R053HRFFD6&pd_rd_wg=WaLRd&pd_rd_r=bc9a9989-3079-41a4-a0ea-79c9a92feac4&pd_rd_i=B0F6N9DCWM&psc=1",
+      "asin": "B0F6N9DCWM",
+      "link_clean": "https://www.amazon.com/Bestalk-Non-Slip-Enrichment-Distraction-Dishwasher/dp/B0F6N9DCWM/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F6N9DCWM&device=desktop&engine=amazon_product",
+      "badges": [
+        "Amazon's Choice"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/615HrUJL-bL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.5,
+      "reviews": 256
+    },
+    {
+      "position": 5,
+      "title": "Dog Lick Bowl with Brush and Scraper, Anxiety Relief Lick Mat for Dogs, Non-Slip Freeze Licking Bowl Enrichment Puzzle Feeder",
+      "link": "https://www.amazon.com/Dog-Lick-Bowl-Enrichment-Distraction/dp/B0GKLYS12B/ref=pd_sbs_d_sccl_1_5/000-0000000-0000000?pd_rd_w=OjZPr&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=XNRYVTJC20R053HRFFD6&pd_rd_wg=WaLRd&pd_rd_r=bc9a9989-3079-41a4-a0ea-79c9a92feac4&pd_rd_i=B0GKLYS12B&psc=1",
+      "asin": "B0GKLYS12B",
+      "link_clean": "https://www.amazon.com/Dog-Lick-Bowl-Enrichment-Distraction/dp/B0GKLYS12B/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GKLYS12B&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/61r+5HR3NoL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.9,
+      "reviews": 20
+    },
+    {
+      "position": 6,
+      "title": "Dog Lick Bowl, Bestalk Wobbly Freeze Bowl Enrichment Feeder for Dogs, Anxiety Relief Lick Mat Puzzle Toy for Distraction, BPA",
+      "link": "https://www.amazon.com/Bestalk-Enrichment-Distraction-Silicone-Dishwasher/dp/B0G4HCVJTL/ref=pd_sbs_d_sccl_1_6/000-0000000-0000000?pd_rd_w=OjZPr&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=XNRYVTJC20R053HRFFD6&pd_rd_wg=WaLRd&pd_rd_r=bc9a9989-3079-41a4-a0ea-79c9a92feac4&pd_rd_i=B0G4HCVJTL&psc=1",
+      "asin": "B0G4HCVJTL",
+      "link_clean": "https://www.amazon.com/Bestalk-Enrichment-Distraction-Silicone-Dishwasher/dp/B0G4HCVJTL/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G4HCVJTL&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/616mlaBdPmL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.5,
+      "reviews": 61
+    }
+  ],
+  "videos": [
+    {
+      "position": 1,
+      "title": "Dog Lick Bowl",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/352a7c82-ec00-4fad-98ec-7b6bb42851e6/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61bX6J-prgL.jpg",
+      "duration": "1:56",
+      "vendor": "Dannila",
+      "date": "May 6, 2026"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": "Slow Feeder Bowl",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/cd6e35e6-f969-494c-a042-158080ec55d2.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 2,
+      "carousel_images": [
+        {
+          "position": 1,
+          "title": "Strong Suction Power",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/2613a8bc-d6a7-404e-829e-c5556be1cd67.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 2,
+          "title": "Aesthetic&amp;amp;Practical",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/f8e2a09e-18eb-4859-8fbe-2178c775dbd5.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 3,
+          "title": "Non Toxic &amp;amp;Ultra Durable",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/b7d16b5f-0d95-43fa-86d5-d4be80b2ed39.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 4,
+          "title": "Easy to Clean",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/cd2c7f1e-4b84-44f5-b524-af08bec91ee5.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        }
+      ]
+    },
+    {
+      "position": 3,
+      "title": "Size Guide",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/dac67b3c-7095-4bdd-877c-1e9431c02518.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 4,
+      "title": "1",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/1aa395f4-b880-4c2a-83ff-0ead4f9979e5.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 5,
+      "title": "1",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/7413422f-9655-488d-95ba-d8018a4339bf.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 6,
+      "title": "1",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/600161be-73a9-4848-bbad-93dba08a8394.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 7,
+      "title": "1",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/2e62b9dd-9b4a-41cb-b8ca-b4d2a87f9e6f.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    }
+  ],
+  "product_details": {
+    "target_species": "Dog",
+    "brand_name": "QUWOU",
+    "recommended_uses_for_product": "Dry Food, Indoor, Multiple Pets, Slow Feeding, Wet Food",
+    "included_components": "Non",
+    "batteries_are_included": "No",
+    "are_batteries_required": "No",
+    "dog_breed_size": "All",
+    "model_number": "Large-Blue",
+    "manufacturer": "QUWOU",
+    "unit_count": "1 Count",
+    "best_sellers_rank": [
+      {
+        "text": "#64,084 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 64084,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#380 in Dog Slow Feeders",
+        "extracted_rank": 380,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/17602455011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Slow Feeders"
+      }
+    ],
+    "asin": "B0GQGYDKT2",
+    "rating": 4.7,
+    "reviews": 7,
+    "additional_features": "Durable, Nonslip",
+    "smart_home_compatibility": "Not Smart Home Compatible",
+    "capacity": "1800 Cubic Centimeters",
+    "item_dimensions_l_x_w_x_h": "7.2\"L x 7.2\"W x 2.8\"H",
+    "material_type": "Silicone",
+    "is_the_item_dishwasher_safe": "Yes",
+    "color": "Blue",
+    "style": "Classic",
+    "product_dimensions": "7.2 x 7.2 x 2.8 inches; 10.55 ounces",
+    "item_model_number": "Large-Blue",
+    "date_first_available": "February 27, 2026"
+  },
+  "reviews_information": {
+    "summary": {
+      "images": [
+        "https://m.media-amazon.com/images/I/71aMkwuGACL.jpg",
+        "https://m.media-amazon.com/images/I/71IQKX9t+pL.jpg",
+        "https://m.media-amazon.com/images/I/71y2hEorp6L.jpg",
+        "https://m.media-amazon.com/images/I/71o3h47DlmL.jpg",
+        "https://m.media-amazon.com/images/I/71cLrAPPNzL.jpg",
+        "https://m.media-amazon.com/images/I/71JN7uR7MTL.jpg",
+        "https://m.media-amazon.com/images/I/71fK5S1ttAL.jpg",
+        "https://m.media-amazon.com/images/I/71JzNNerXML.jpg",
+        "https://m.media-amazon.com/images/I/71E+TofrTIL.jpg",
+        "https://m.media-amazon.com/images/I/71TgGWDfw2L.jpg",
+        "https://m.media-amazon.com/images/I/7123zwxhfBL.jpg",
+        "https://m.media-amazon.com/images/I/71blwxMvtAL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 68,
+        "4 star": 32,
+        "3 star": 0,
+        "2 star": 0,
+        "1 star": 0
+      }
+    }
+  }
+}

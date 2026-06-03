@@ -1,10 +1,18 @@
 ---
 import AffiliateLink from '@components/AffiliateLink.astro';
+import MerchantAffiliateLink from '@components/MerchantAffiliateLink.astro';
+import type { AffiliateOffer } from '@data/products/types';
 
 interface HeroCta {
   label: string;
   href: string;
   isAffiliate?: boolean;
+  offer?: AffiliateOffer;
+  product?: {
+    id?: string;
+    name: string;
+    category?: string;
+  };
 }
 
 interface Props {
@@ -22,8 +30,10 @@ function isAmazonUrl(href: string) {
   return href.includes('amazon.com') || href.includes('amzn.');
 }
 
-const primaryIsAffiliate = primaryCta.isAffiliate ?? isAmazonUrl(primaryCta.href);
-const secondaryIsAffiliate = secondaryCta ? (secondaryCta.isAffiliate ?? isAmazonUrl(secondaryCta.href)) : false;
+const primaryIsAffiliate = primaryCta.isAffiliate ?? (Boolean(primaryCta.offer) || isAmazonUrl(primaryCta.href));
+const secondaryIsAffiliate = secondaryCta
+  ? (secondaryCta.isAffiliate ?? (Boolean(secondaryCta.offer) || isAmazonUrl(secondaryCta.href)))
+  : false;
 ---
 
 <section class="hero">
@@ -32,11 +42,21 @@ const secondaryIsAffiliate = secondaryCta ? (secondaryCta.isAffiliate ?? isAmazo
     {subtitle && <p class="hero-subtitle">{subtitle}</p>}
     {disclaimer && <p class="hero-disclaimer">{disclaimer}</p>}
     <div class="hero-ctas">
-      {primaryIsAffiliate ? (
+      {primaryCta.offer ? (
+        <MerchantAffiliateLink
+          offer={primaryCta.offer}
+          product={primaryCta.product ?? { name: primaryCta.label }}
+          class="hero-cta hero-cta--primary"
+          pageSlug={pageSlug}
+          position="hero-primary"
+        >
+          {primaryCta.label}
+        </MerchantAffiliateLink>
+      ) : primaryIsAffiliate ? (
         <AffiliateLink
           href={primaryCta.href}
           class="hero-cta hero-cta--primary"
-          data-track="amazon_outbound_click"
+          data-track="affiliate_outbound_click"
           data-page-slug={pageSlug}
           data-position="hero-primary"
           data-destination="amazon.com"
@@ -56,11 +76,21 @@ const secondaryIsAffiliate = secondaryCta ? (secondaryCta.isAffiliate ?? isAmazo
         </a>
       )}
       {secondaryCta && (
-        secondaryIsAffiliate ? (
+        secondaryCta.offer ? (
+          <MerchantAffiliateLink
+            offer={secondaryCta.offer}
+            product={secondaryCta.product ?? { name: secondaryCta.label }}
+            class="hero-cta hero-cta--secondary"
+            pageSlug={pageSlug}
+            position="hero-secondary"
+          >
+            {secondaryCta.label}
+          </MerchantAffiliateLink>
+        ) : secondaryIsAffiliate ? (
           <AffiliateLink
             href={secondaryCta.href}
             class="hero-cta hero-cta--secondary"
-            data-track="amazon_outbound_click"
+            data-track="affiliate_outbound_click"
             data-page-slug={pageSlug}
             data-position="hero-secondary"
             data-destination="amazon.com"

@@ -1,7 +1,9 @@
 ---
 import { Image } from 'astro:assets';
-import AffiliateLink from '@components/AffiliateLink.astro';
+import MerchantAffiliateLink from '@components/MerchantAffiliateLink.astro';
 import type { RelaxationDisplayProduct } from '@data/relaxation-converter-pages';
+import { getOffers } from '@data/products/offers';
+import { merchants } from '@data/products/merchants';
 
 interface Props {
   product: RelaxationDisplayProduct;
@@ -10,6 +12,7 @@ interface Props {
 }
 
 const { product, position = 0, pageSlug = '' } = Astro.props;
+const offers = getOffers(product);
 ---
 
 <div class="rx-card">
@@ -45,19 +48,19 @@ const { product, position = 0, pageSlug = '' } = Astro.props;
     <p class="rx-card-meta">
       <span class="rx-card-meta-label">Consider it if:</span> {product.considerIf}
     </p>
-    <AffiliateLink
-      href={product.amazonUrl}
-      class="rx-card-cta"
-      data-track="amazon_outbound_click"
-      data-page-type="converter"
-      data-page-slug={pageSlug}
-      data-product-name={product.name}
-      data-product-category={product.category}
-      data-position={String(position)}
-      data-destination="amazon.com"
-    >
-      Check Price on Amazon
-    </AffiliateLink>
+    <div class="rx-card-offers">
+      {offers.map((offer, i) => (
+        <MerchantAffiliateLink
+          offer={offer}
+          product={{ id: product.id, name: product.name, category: product.category }}
+          class={`rx-card-cta${i > 0 ? ' rx-card-cta--secondary' : ''}`}
+          label={merchants[offer.merchant].ctaCopy}
+          pageType="converter"
+          pageSlug={pageSlug}
+          position={String(position)}
+        />
+      ))}
+    </div>
   </div>
 </div>
 
@@ -101,6 +104,11 @@ const { product, position = 0, pageSlug = '' } = Astro.props;
 
   .rx-card-body {
     padding: var(--space-lg);
+  }
+
+  .rx-card-offers {
+    display: grid;
+    gap: var(--space-xs);
   }
 
   .rx-card-name {
@@ -168,6 +176,17 @@ const { product, position = 0, pageSlug = '' } = Astro.props;
 
   :global(.rx-card-cta:hover) {
     background: var(--color-sky-hover);
+    color: var(--color-charcoal) !important;
+  }
+
+  :global(.rx-card-cta--secondary) {
+    background: transparent;
+    color: var(--color-charcoal) !important;
+    border: 1px solid var(--color-sky);
+  }
+
+  :global(.rx-card-cta--secondary:hover) {
+    background: color-mix(in srgb, var(--color-sky) 16%, transparent);
     color: var(--color-charcoal) !important;
   }
 

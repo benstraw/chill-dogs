@@ -15,7 +15,6 @@ interface OgCtaOptions {
 
 interface AutoOgOptions {
   pathname: string;
-  noindex?: boolean;
 }
 
 export type OgImageInput = string | ImageMetadata | null | undefined;
@@ -74,6 +73,14 @@ export function ogSlugFromPathname(pathname: string): string {
 
 export function isAutoOgEligible({ pathname }: AutoOgOptions): boolean {
   if (pathname === '/404/' || pathname === '/404') {
+    return false;
+  }
+
+  if (pathname === '/content-sitemap/' || pathname === '/privacy-policy/' || pathname === '/terms/') {
+    return false;
+  }
+
+  if (pathname.startsWith('/admin/')) {
     return false;
   }
 

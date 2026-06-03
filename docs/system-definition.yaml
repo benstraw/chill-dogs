@@ -8,7 +8,7 @@
 
 site_system:
   status: "active"
-  as_of: "2026-04-27"
+  as_of: "2026-06-02"
   owner: "chill-dogs"
   purpose: "Define the website as a modular conversion system and keep implementation aligned."
 
@@ -53,8 +53,11 @@ site_system:
       notes: >
         Home page includes a dusty rose color block introducing the Comfort & Rest collector
         with tagline "Settle in." — positioned between HomepageHero and the start-prompt section.
-        The latest/guide lists include How to Crate Train Your Dog and Best Travel Crates for Road Trips
-        to connect informational crate intent with the new crate converter path.
+        The latest/guide lists include How to Crate Train Your Dog to connect informational
+        crate intent with the new crate converter path.
+        The Browse Picks list is temporarily broad enough to include Best Lick Mats for Dogs
+        and Best Travel Crates for Road Trips until converter routing below the article section
+        gets a fuller refactor.
         A homepage-inline email signup block sits below HomepageBody as a secondary capture path.
 
     - name: "Cooling"
@@ -62,13 +65,21 @@ site_system:
       collector_subtype: "section"
       target_action: "Route heat-intent traffic to cooling converters"
       metric: "collector_to_converter_click to cooling converters"
+      notes: "Section collector uses SectionCollectorPage with dynamic topic-matched converter and article cards from the complete sitemap inventory, grouped into topic subsections for car cooling, mats, wearables, frozen enrichment, heat safety, and related cooling paths."
 
     - name: "Calming"
       type: "collector"
       collector_subtype: "section"
       target_action: "Route anxiety-intent traffic to calming converters"
       metric: "collector_to_converter_click to calming converters"
-      notes: "Collector routes directly to general calming picks, ThunderShirt alternatives, the travel-focused car-anxiety converter, and is supported by article collectors for crate training and fireworks calm-room setup."
+      notes: "Section collector uses SectionCollectorPage with dynamic topic-matched converter and article cards from the complete sitemap inventory, grouped into topic subsections for car anxiety, fireworks/noise including prep and checklist searches, crate comfort, escape-risk tracking, research/safety, and calming comparisons including lick-mat enrichment."
+
+    - name: "Comfort"
+      type: "collector"
+      collector_subtype: "section"
+      target_action: "Route rest, crate, carrier, and travel-comfort intent to comfort converters"
+      metric: "collector_to_converter_click to comfort converters"
+      notes: "Section collector uses SectionCollectorPage with dynamic topic-matched converter and article cards from the complete sitemap inventory, grouped into topic subsections for beds, crates, flying/carriers/travel prep, and related comfort paths."
 
     - name: "Cooling converters"
       type: "converter"
@@ -91,6 +102,7 @@ site_system:
         - "/calming/best-calming-products-for-anxious-dogs/"
         - "/calming/best-thundershirt-alternatives/"
         - "/calming/car-anxiety-for-dogs/"
+        - "/calming/best-lick-mats-for-dogs/"
 
     - name: "Keep a Dog Cool in a Car"
       type: "collector"
@@ -162,7 +174,7 @@ site_system:
       type: "collector"
       collector_subtype: "article"
       target_action: "Route CBD/calming-research intent to calming converters and orthopedic bed converter"
-      metric: "collector_to_converter_click to calming and comfort converters"
+      metric: "collector_to_converter_click to calming and comfort converters + pinterest_save_click"
       routes:
         - "/calming/cbd-for-dogs/"
       notes: >
@@ -170,7 +182,8 @@ site_system:
         Sources include Cornell Riney Canine Health Center, FDA, Frontiers in Veterinary Science,
         Colorado State University, AKC CHF, PetMD, and California DCC. Internal links route to
         calming converters and orthopedic beds. No dosage instructions. Medical escalation language
-        included for severe reactions.
+        included for severe reactions. Opt-in PinterestSave modules expose approved article pins
+        near the intro decision framing and vet checklist sections.
 
     - name: "How to Prepare a Calm Room for Fireworks Night"
       type: "collector"
@@ -180,6 +193,24 @@ site_system:
       routes:
         - "/calming/how-to-prepare-a-calm-room-for-fireworks-night/"
       notes: "Practical fireworks-night setup guide focused on one low-stimulation room, then routing readers to calming product and wrap comparisons."
+
+    - name: "Dog Fireworks Anxiety Checklist"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Route fireworks-anxiety checklist traffic to companion fireworks articles and calming converters"
+      metric: "collector_to_converter_click to fireworks companion articles and calming converters"
+      routes:
+        - "/calming/dog-fireworks-anxiety-checklist/"
+      notes: "Practical July 4 checklist organized around the week before, the day of, and the morning after, with section links and related-strip paths to the fireworks calm-room and event-decision articles plus conversion paths into calming products, wrap alternatives, and car-anxiety support."
+
+    - name: "Should You Take Your Dog to Fireworks?"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Route fireworks-event and safety intent to calming, cooling, and GPS converter pages"
+      metric: "collector_to_converter_click to calming, cooling, and GPS converters + newsletter_cta_click"
+      routes:
+        - "/calming/should-you-take-your-dog-to-fireworks/"
+      notes: "Practical outdoor-event decision guide focused on leaving before dark, safe exit planning, newsletter capture after the exit-before-dark rule, and recovery paths through calming, cooling, car-anxiety, and GPS tracker converters."
 
     - name: "Road Trip Chill Kit"
       type: "collector"
@@ -199,6 +230,15 @@ site_system:
         - "/travel/how-to-fly-with-a-dog/"
       notes: "Informational air-travel guide; attributes facts to TSA, USDA APHIS, AVMA, DOT, CDC, and AAHA. No product roundup. Internal links to calming, carrier, and comfort travel-bed converters."
 
+    - name: "Best Dog-Friendly Airlines"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Route dog-friendly flight service intent to travel, calming, and comfort converters/collectors"
+      metric: "collector_to_converter_click to travel, calming, and comfort pages"
+      routes:
+        - "/travel/dog-friendly-airlines/"
+      notes: "Article collector focused on dog-forward onboard flight options beyond standard under-seat commercial airline pet policies; routes to flying-with-dogs, carrier, travel bag, car anxiety, and road trip pages."
+
     - name: "How Much Do Dogs Sleep"
       type: "collector"
       collector_subtype: "article"
@@ -207,12 +247,12 @@ site_system:
       routes:
         - "/comforting/how-much-do-dogs-sleep/"
 
-    - name: "Rhys Ran Away (Bishop Peak)"
+    - name: "Rhys Ran Away (Cerro San Luis Obispo)"
       type: "collector"
       target_action: "Route story-driven search traffic to GPS tracker comparison converter"
       metric: "collector_to_converter_click to /gear/best-dog-gps-trackers/"
       routes:
-        - "/travel/rhys-ran-away-bishop-peak/"
+        - "/travel/rhys-ran-away-cerro-san-luis-obispo/"
       notes: "Story-driven narrative collector; introduces tracker type education; primary CTA to trackingTop"
 
     - name: "GPS Tracker comparison"
@@ -246,7 +286,7 @@ site_system:
     - name: "What to Do If Your Dog Runs Away"
       type: "collector"
       target_action: "Route safety-intent traffic to GPS tracker comparison and Rhys story"
-      metric: "collector_to_converter_click to /gear/best-dog-gps-trackers/ and /travel/rhys-ran-away-bishop-peak/"
+      metric: "collector_to_converter_click to /gear/best-dog-gps-trackers/ and /travel/rhys-ran-away-cerro-san-luis-obispo/"
       routes:
         - "/safety/what-to-do-if-your-dog-runs-away/"
 
@@ -261,6 +301,18 @@ site_system:
         Public-facing product catalog at /shop/. Shows all products from src/data/product-catalog.ts
         with client-side filtering by pillar, category, and search. Linked from site footer.
         Page type is converter (not informer) because it drives Amazon affiliate clicks.
+
+    - name: "Search"
+      type: "collector"
+      target_action: "Surface pages and products by keyword; route users to converters"
+      metric: "search_query, search_result_click, downstream amazon_outbound_click on converter pages"
+      routes:
+        - "/search/"
+      notes: >
+        Client-side Fuse.js search at /search/. Index prerendered at build time via src/pages/search-index.json.ts,
+        which merges all non-noindex sitemap pages with the full product catalog. Filter bar (All/Guides/Collectors/Products).
+        Page result cards route to indexed site pages. Product result cards route internally to /shop/?q=... so
+        search results do not expose direct Amazon links. Page is noindex. See docs/ai/engineering/search.md.
 
     - name: "Informer pages"
       type: "informer"
@@ -277,6 +329,7 @@ site_system:
         - "/subscribe/"
         - "/subscribe/thanks/"
         - "/subscribe/confirmed/"
+        - "/shelter-dog-charities/"
       notes: "/admin/products/ is the canonical product inventory review page. Every product in any product data file must flow into this page through src/data/product-catalog.ts; do not hardcode product rows in the admin route. /content-sitemap/ is a hidden editor page that previews the complete build-time sitemap inventory from src/data/sitemap-inventory.ts, which merges static pages with article collection pages and final built share metadata, including post-build OG image rewrites."
 
   modules:
@@ -287,6 +340,7 @@ site_system:
       - "CoolingConverterPage"
       - "CalmingConverterPage"
       - "RelaxationConverterPage"
+      - "SectionCollectorPage"
       - "CollectorBody"
       - "ComparisonTable"
       - "CoolingProductGrid"
@@ -318,7 +372,7 @@ site_system:
 
   footer:
     sections:
-      - "Explore: cooling, calming, comforting"
+      - "Explore: cooling, calming, comforting, dog charities we love"
       - "Company: about, contact"
       - "Legal: privacy-policy, terms, affiliate-disclosure"
       - "Newsletter signup on non-converter pages only"
@@ -334,13 +388,14 @@ site_system:
     friction_points:
       - "Route or tracking metadata mismatches"
       - "Duplicated page scaffolding that drifts over time"
-      - "Unused modules that create implementation confusion"
+      - "Static collector card lists that drift from the sitemap inventory"
       - "Collector pages without clear converter paths"
 
   email_capture_flow:
     scope: "Homepage inline signup + footer signup on non-converter pages"
     provider: "Buttondown"
     events:
+      - "newsletter_cta_click"
       - "email_signup_view"
       - "email_signup_start"
       - "email_signup_submit"
@@ -354,16 +409,14 @@ site_system:
       and include a minimal Chill-Dogs logo link back to the homepage without restoring full site chrome.
 
   product_data:
-    product_catalog: "src/data/product-catalog.ts — normalized admin inventory across every product data source; /admin/products/ must consume this data module and remain complete whenever products are added"
-    cooling_products: "src/data/cooling-products.ts — 25 products with ASIN, affiliate URL, and image thumbnails"
-    calming_products: "src/data/calming-products.ts — 13 products with ASIN, affiliate URL, and image thumbnails"
-<<<<<<< HEAD
-    relaxation_products: "src/data/relaxation-products.ts — 100+ products (calming beds, orthopedic beds, chew-resistant beds, crates, travel beds, carriers, travel bags) with ASIN, affiliate URL, and image thumbnails"
-=======
-    relaxation_products: "src/data/relaxation-products.ts — 121 products (calming beds, orthopedic beds, chew-resistant beds, crates, travel beds, carriers, travel bags) with ASIN, affiliate URL, and image thumbnails"
->>>>>>> cefabb0 (Rewrite chew-proof dog bed converter)
+    product_catalog: "src/data/product-catalog.ts — normalized admin inventory across every product data source with merchant offers[]; /admin/products/ must consume this data module and remain complete whenever products are added"
+    product_offer_helpers: "src/data/products/ — merchant metadata, offer types, and helpers for Amazon/Chewy affiliate offers; canonical editorial product copy stays in product records, not merchant offers"
+    cooling_products: "src/data/cooling-products.ts — 25 products with canonical editorial copy, optional Amazon ASIN/affiliate URL, optional merchant offers, and image thumbnails"
+    calming_products: "src/data/calming-products.ts — 23 products with canonical editorial copy, optional Amazon ASIN/affiliate URL, optional merchant offers, and image thumbnails"
+    relaxation_products: "src/data/relaxation-products.ts — 121+ products (calming beds, orthopedic beds, chew-resistant beds, crates, travel beds, carriers, travel bags) with canonical editorial copy, optional Amazon ASIN/affiliate URL, optional merchant offers, and image thumbnails"
     tracking_products: "src/data/tracking-products.ts — 8 tracker products and 1 accessory product across cellular/off-grid/bluetooth/accessory types"
-    raw_api_cache: "src/data/amazon-products/*.json — full SerpAPI/SearchAPI Amazon Product responses per ASIN; _index.json sidecar tracks fetchedAt/provider/title/image freshness diagnostics"
+    raw_api_cache: "src/data/amazon-products/*.json — full SerpAPI/SearchAPI Amazon Product responses per ASIN; _index.json sidecar tracks fetchedAt/provider/title/image freshness diagnostics only and must not overwrite canonical product copy or images"
+    future_chewy_cache: "src/data/chewy-products/*.json — reserved future diagnostic cache for Chewy provider metadata by merchant product id or stable URL-derived key; mirror Amazon cache behavior without auto-overwriting editorial fields"
 
   architecture:
     frontend: "Astro 5 static site with scoped CSS and reusable modules"
@@ -371,18 +424,26 @@ site_system:
     hosting: "Static build deployment"
     seo_strategy: "collector captures intent; converter monetizes intent; variant routes remain canonicalized and noindex"
     sitemap_inventory: "src/data/sitemap-inventory.ts composes staticSitemapSections with article MDX collection entries at build time; future related-content derivation should use the complete inventory instead of static-only sections."
+    section_collectors: "src/data/section-collectors.ts defines cooling, calming, and comfort collector metadata, topic subsection grouping, topic coverage, priority ordering, dynamic CollectorBody card inventories, and CollectionPage hasPart schema from the complete sitemap inventory."
 
   redirects:
-    # Production: vercel.json → redirects array (true HTTP 301 at Vercel edge).
+    # Production: vercel.json → redirects array (true HTTP redirect at Vercel edge).
     # Local dev/preview: astro.config.mjs → redirects block (meta-refresh fallback).
-    # Add an entry here any time a live/indexed URL is changed.
+    # Add an entry here any time a live/indexed URL changes or a marketing alias is added.
+    - from: "/join"
+      to: "https://www.chill-dogs.com/subscribe/?utm_source=postcard&utm_medium=print&utm_campaign=offline_flyer"
+      status: 302
+      reason: "Short marketing alias for postcard QR codes; temporary redirect keeps the campaign destination editable."
+      date: "2026-06-02"
     - from: "/travel/rhys-road-trip-chill-kit/"
       to: "/travel/dog-road-trip-gear/"
+      status: 301
       reason: "Slug updated to target primary keyword 'dog road trip gear'; old URL was indexed."
       date: "2026-03-20"
 
   analytics:
     primary_events:
+      - "affiliate_outbound_click"
       - "amazon_outbound_click"
       - "collector_to_converter_click"
       - "hero_click_cooling"
@@ -391,4 +452,4 @@ site_system:
       - "hero_impression"
       - "toc_click"
       - "pinterest_save_click"
-    funnel_definition: "collector or attractor entry -> converter click -> amazon_outbound_click"
+    funnel_definition: "collector or attractor entry -> converter click -> affiliate_outbound_click; Amazon links dual-fire amazon_outbound_click during dashboard migration"

@@ -1,0 +1,33 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import HeroExperiment from '@components/modules/HeroExperiment.astro';
+import CollectorBody from '@components/modules/CollectorBody.astro';
+import JsonLd from '@components/JsonLd.astro';
+import { getSectionCollectorPageData, type SectionCollectorKey } from '@data/section-collectors';
+
+interface Props {
+  collectorKey: SectionCollectorKey;
+}
+
+const { collectorKey } = Astro.props;
+const { definition, body, schema } = await getSectionCollectorPageData(collectorKey);
+---
+
+<BaseLayout
+  title={definition.title}
+  ogTitle={definition.ogTitle}
+  description={definition.description}
+  navAccent={definition.navAccent}
+>
+  <JsonLd slot="head" schema={schema} />
+  <HeroExperiment
+    variant="c"
+    theme={definition.hero.theme}
+    headline={definition.hero.headline}
+    subhead={definition.hero.subhead}
+    primaryCta={definition.hero.primaryCta}
+    secondaryCta={definition.hero.secondaryCta}
+  />
+
+  <CollectorBody config={body} />
+</BaseLayout>

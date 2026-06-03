@@ -1,0 +1,973 @@
+{
+  "search_metadata": {
+    "id": "6a10ad47f5d5ac053868afe3",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/oDsq61s0lLczJX0a0blzcQ/6a10ad47f5d5ac053868afe3.json",
+    "created_at": "2026-05-22 19:23:51 UTC",
+    "processed_at": "2026-05-22 19:23:51 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0F5YF2N85/?",
+    "raw_html_file": "https://serpapi.com/searches/oDsq61s0lLczJX0a0blzcQ/6a10ad47f5d5ac053868afe3.html",
+    "total_time_taken": 46.01
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0F5YF2N85",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0F5YF2N85",
+    "title": "Double Wall Stainless Steel Lick Mat for Dogs & Cats - Chew Proof & Whisker Friendly, Non-Slip Base, for Calm Feeding & Anxiety Relief - Dishwasher Safe Slow Feeder Pad [1Pack]",
+    "link": "https://www.amazon.com/Feedoo-Double-Wall-Stainless-Steel/dp/B0F5YF2N85/",
+    "link_clean": "https://www.amazon.com/dp/B0F5YF2N85/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F5YF2N85&device=desktop&engine=amazon_product",
+    "badges": [
+      "Amazon's Choice"
+    ],
+    "variants": [
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0FVT5QTTK",
+            "name": "S",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FVT5QTTK&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0F5YF2N85",
+            "name": "L",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F5YF2N85&device=desktop&engine=amazon_product"
+          }
+        ]
+      },
+      {
+        "title": "Number of Items",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0F5YF2N85",
+            "name": "1",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F5YF2N85&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0F5YVDP2M",
+            "name": "2",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F5YVDP2M&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the Feedoo Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/71bbtFt5a2L._AC_SX300_SY300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/71bbtFt5a2L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71wrY-FKM3L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81wqVfDg7dL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71bjUAGcbxL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71Wc7bokYdL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81Q+bbJmWEL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81iJ7GrLUPL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71Ko0JurH5L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71d6aSK2t2L._AC_SL1500_.jpg"
+    ],
+    "rating": 4.6,
+    "reviews": 213,
+    "bought_last_month": "100+ bought in past month",
+    "discount": "-6%",
+    "price": "$20.69",
+    "extracted_price": 20.69,
+    "price_unit": "$20.69 / count",
+    "extracted_price_unit": 20.69,
+    "old_price": "$21.99",
+    "extracted_old_price": 21.99,
+    "delivery": [
+      "FREE delivery Wednesday, May 27 on orders shipped by Amazon over $35"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "buy_new": {
+      "caption": "Buy New",
+      "price": "$20.69",
+      "extracted_price": 20.69,
+      "price_unit": "$20.69 / count",
+      "extracted_price_unit": 20.69,
+      "delivery": [
+        "FREE delivery Wednesday, May 27 on orders shipped by Amazon over $35"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "Feedoopet",
+          "details": {
+            "heading": "Sold by",
+            "content": "Feedoopet"
+          },
+          "link": {
+            "text": "Feedoopet",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=AWF0DNF4ZPRON&asin=B0F5YF2N85&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    },
+    "buy_used": {
+      "caption": "Used - Like New",
+      "price": "$18.62",
+      "extracted_price": 18.62,
+      "price_unit": "$18.62 / count",
+      "extracted_price_unit": 18.62,
+      "delivery": [
+        "FREE delivery Wednesday, May 27 on orders shipped by Amazon over $35"
+      ],
+      "stock": "Only 2 left in stock - order soon.",
+      "features": {
+        "ships_from": "Amazon",
+        "sold_by": "Feedoopet"
+      }
+    }
+  },
+  "item_specifications": {
+    "material": "304(18/8) Stainless Steel",
+    "color": "1Pack",
+    "brand": "Feedoo",
+    "product_care_instructions": "Dishwasher-Safe",
+    "upc": "789091989721"
+  },
+  "about_item": [
+    "【Made of Durable Stainless Steel】 Feedoo lick mat for dogs is crafted from double wall 304 stainless steel, not silicone or plastic. This premium-grade material is chew-resistant, durable, and naturally hygienic-ideal for dogs who need more than just a toy. US Patented Designed for daily enrichment and built to last.",
+    "【Calm Every Meal】 Use this slow feeder for dogs to help reduce bloating, promote better digestion, and ease anxiety. The textured surface encourages soothing licking behavior that keeps your pup calm and focused during mealtime, training, or stressful moments like grooming and thunderstorms.",
+    "【Anxiety Relief in Any Situation】 This versatile crate lick mat doubles as a calming aid during grooming, bathing, travel, or crate time. Spread peanut butter, yogurt, or wet food to keep your dog mentally engaged and emotionally settled-perfect for separation anxiety or daily enrichment.",
+    "【Non-Slip Base, Effortless Clean-Up】 The non-slip base keep the mat steady on any floor, more heavy duty than other silicone mat. Unlike silicone mats that trap food and odors, this dishwasher safe lick mat is easy to rinse, won’t retain smells, and stays spotless meal after meal. Whether hand-washed or tossed in the dishwasher, Feedoo is built to stay clean and hygienic with minimal effort.",
+    "【One Mat, For Medium & Large Dogs】 Measuring 9.65\" x 9.65\" x 0.38\", this licking mat is perfectly sized to suit medium, large dogs breeds, and even heavy chewers. Designed for peanut butter and treats, it provides a safe and rewarding experience for every stage of life-whether for calming enrichment or fun treat time, it’s a daily essential."
+  ],
+  "bought_together": [
+    {
+      "position": 1,
+      "title": "Feedoo Double Wall Stainless Steel Lick Mat for Dogs & Cats - Chew Proof & Whisker Friendly, Non-Slip Base, for Calm Feeding & Anxiety Relief - Dishwasher Safe Slow Feeder Pad [1Pack]",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71bbtFt5a2L._AC_UL116_SR116,116_.jpg",
+      "price": "$20.69",
+      "extracted_price": 20.69,
+      "price_unit": "$20.69/count",
+      "extracted_price_unit": 20.69,
+      "delivery": [
+        "Get it as soon as Wednesday, May 27"
+      ],
+      "stock": "In Stock"
+    },
+    {
+      "position": 2,
+      "title": "Feedoo Slow Feeder Dog Bowl-2Cups for Medium Breeds, Double Wall Food-Grade Stainless Steel, Heavy Duty with Non-Slip Rubber Base, Puzzle Maze Bowl to Slow Down Eating",
+      "link": "https://www.amazon.com/Feedoo-Double-Layer-Food-Grade-Stainless-Non-Slip/dp/B0D1FMP3S5/ref=pd_bxgy_thbs_d_sccl_1/130-0080124-3857373?pd_rd_w=RPXbq&content-id=amzn1.sym.9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_p=9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_r=AGDA28GVK8CB6XRZ7EXJ&pd_rd_wg=joqT6&pd_rd_r=817e37ba-c9fc-4747-acf4-2a522d13a346&pd_rd_i=B0D1FMP3S5&psc=1",
+      "asin": "B0D1FMP3S5",
+      "link_clean": "https://www.amazon.com/Feedoo-Double-Layer-Food-Grade-Stainless-Non-Slip/dp/B0D1FMP3S5/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0D1FMP3S5&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71xJogtBfRL._AC_UL116_SR116,116_.jpg",
+      "price": "$25.64",
+      "extracted_price": 25.64,
+      "delivery": [
+        "Get it as soon as Wednesday, May 27"
+      ],
+      "stock": "In Stock"
+    }
+  ],
+  "related_products": [
+    {
+      "position": 1,
+      "title": "2 Pack - Stainless Steel Lick Mat for Dogs & Cats, Large Non-Slip Slow Feeder Pad with Suction Cups, Chew-Proof Dog Licking M",
+      "link": "https://www.amazon.com/Pack-Stainless-Non-Slip-Chew-Proof-Grooming/dp/B0FKHK7418/ref=pd_sbs_d_sccl_1_1/130-0080124-3857373?pd_rd_w=U56Ld&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=AGDA28GVK8CB6XRZ7EXJ&pd_rd_wg=joqT6&pd_rd_r=817e37ba-c9fc-4747-acf4-2a522d13a346&pd_rd_i=B0FKHK7418&psc=1",
+      "asin": "B0FKHK7418",
+      "link_clean": "https://www.amazon.com/Pack-Stainless-Non-Slip-Chew-Proof-Grooming/dp/B0FKHK7418/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FKHK7418&device=desktop&engine=amazon_product",
+      "badges": [
+        "Amazon's Choice"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81jG-gRQJ4L._AC_UL165_SR165,165_.jpg",
+      "rating": 4.6,
+      "reviews": 64,
+      "price": "$32.90",
+      "extracted_price": 32.9,
+      "price_unit": "$16.45/count",
+      "extracted_price_unit": 16.45,
+      "delivery": [
+        "Get it as soon as Wednesday, May 27"
+      ]
+    },
+    {
+      "position": 2,
+      "title": "Lick Mat for Dogs & Cats, Stainless Steel Pet Slow Feeder for Crate Boredom & Anxiety Reduce, Cat Licking Pads with Spatula &",
+      "link": "https://www.amazon.com/Stainless-Steel-Large-Lick-Mat/dp/B0D9VPVM91/ref=pd_sbs_d_sccl_1_2/130-0080124-3857373?pd_rd_w=U56Ld&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=AGDA28GVK8CB6XRZ7EXJ&pd_rd_wg=joqT6&pd_rd_r=817e37ba-c9fc-4747-acf4-2a522d13a346&pd_rd_i=B0D9VPVM91&psc=1",
+      "asin": "B0D9VPVM91",
+      "link_clean": "https://www.amazon.com/Stainless-Steel-Large-Lick-Mat/dp/B0D9VPVM91/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0D9VPVM91&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/815GozN5vzL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.6,
+      "reviews": 244,
+      "price": "$19.99",
+      "extracted_price": 19.99,
+      "price_unit": "$19.99/pound",
+      "extracted_price_unit": 19.99,
+      "delivery": [
+        "Get it as soon as Wednesday, May 27"
+      ]
+    },
+    {
+      "position": 3,
+      "title": "Stainless Steel Lick Mat for Dogs Cats, Slow Feeder Lick Pad for Aggressive Chewers, Non-Slip Heavy Duty Base, Mental Stimula",
+      "link": "https://www.amazon.com/Stainless-Aggressive-Non-Slip-Stimulation-Whisker-Friendly/dp/B0G3GBZ1P7/ref=pd_sbs_d_sccl_1_3/130-0080124-3857373?pd_rd_w=U56Ld&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=AGDA28GVK8CB6XRZ7EXJ&pd_rd_wg=joqT6&pd_rd_r=817e37ba-c9fc-4747-acf4-2a522d13a346&pd_rd_i=B0G3GBZ1P7&psc=1",
+      "asin": "B0G3GBZ1P7",
+      "link_clean": "https://www.amazon.com/Stainless-Aggressive-Non-Slip-Stimulation-Whisker-Friendly/dp/B0G3GBZ1P7/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G3GBZ1P7&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81ZwElmH2gL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.7,
+      "reviews": 120,
+      "price": "$20.89",
+      "extracted_price": 20.89,
+      "delivery": [
+        "Get it as soon as Wednesday, May 27"
+      ]
+    },
+    {
+      "position": 4,
+      "title": "PEGGY11 Durable Stainless Steel Lick Pad for Cats & Dogs | Strong Suction Cups | Anxiety Relief & Slow Feeder | Dishwasher Sa",
+      "link": "https://www.amazon.com/PEGGY11-Durable-Stainless-Food-Grade-Reduction/dp/B08HZFW6SJ/ref=pd_sbs_d_sccl_1_4/130-0080124-3857373?pd_rd_w=U56Ld&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=AGDA28GVK8CB6XRZ7EXJ&pd_rd_wg=joqT6&pd_rd_r=817e37ba-c9fc-4747-acf4-2a522d13a346&pd_rd_i=B08HZFW6SJ&psc=1",
+      "asin": "B08HZFW6SJ",
+      "link_clean": "https://www.amazon.com/PEGGY11-Durable-Stainless-Food-Grade-Reduction/dp/B08HZFW6SJ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B08HZFW6SJ&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71P-AWvmEzL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.6,
+      "reviews": 454,
+      "price": "$17.99",
+      "extracted_price": 17.99,
+      "price_unit": "$17.99/count",
+      "extracted_price_unit": 17.99,
+      "delivery": [
+        "Get it as soon as Wednesday, May 27"
+      ]
+    },
+    {
+      "position": 5,
+      "title": "Stainless Steel Lick Mat for Dogs & Cats, Dog Lick Mat with Suction Cups & Crate Mount, Chew-Proof Slow Feeder with 3 Texture",
+      "link": "https://www.amazon.com/Stainless-Suction-Chew-Proof-Textured-Feeding/dp/B0G2RMWLWR/ref=pd_sbs_d_sccl_1_5/130-0080124-3857373?pd_rd_w=U56Ld&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=AGDA28GVK8CB6XRZ7EXJ&pd_rd_wg=joqT6&pd_rd_r=817e37ba-c9fc-4747-acf4-2a522d13a346&pd_rd_i=B0G2RMWLWR&psc=1",
+      "asin": "B0G2RMWLWR",
+      "link_clean": "https://www.amazon.com/Stainless-Suction-Chew-Proof-Textured-Feeding/dp/B0G2RMWLWR/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G2RMWLWR&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/713geJVx6LL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.7,
+      "reviews": 36,
+      "price": "$19.88",
+      "extracted_price": 19.88,
+      "delivery": [
+        "Get it as soon as Wednesday, May 27"
+      ]
+    },
+    {
+      "position": 6,
+      "title": "Luugoo Stainless Steel Lick Mat for Dogs & Cats — 15\"×10\" Extra Large Metal Dog Licking Mat, Chew Proof Slow Feeder with Suct",
+      "link": "https://www.amazon.com/Luugoo-Heavy-Duty-Stainless-Steel/dp/B0G1C8PGJJ/ref=pd_sbs_d_sccl_1_6/130-0080124-3857373?pd_rd_w=U56Ld&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=AGDA28GVK8CB6XRZ7EXJ&pd_rd_wg=joqT6&pd_rd_r=817e37ba-c9fc-4747-acf4-2a522d13a346&pd_rd_i=B0G1C8PGJJ&psc=1",
+      "asin": "B0G1C8PGJJ",
+      "link_clean": "https://www.amazon.com/Luugoo-Heavy-Duty-Stainless-Steel/dp/B0G1C8PGJJ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G1C8PGJJ&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71uj-vbOPHL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.2,
+      "reviews": 32,
+      "price": "$17.99",
+      "extracted_price": 17.99,
+      "delivery": [
+        "Get it as soon as Wednesday, May 27"
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "position": 1,
+      "title": "What do my cats think? #pets #cats",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/4b3a2bea-2c2a-44d7-9451-7f0c171cf7ac/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/A1wU7aFT-fL.png",
+      "duration": "0:16",
+      "vendor": "Hannah & Her Cats (@AgnesTheTuxedo)",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/71g-yiv2q8L._CR0,0,1009,1009_._FMjpg_._SL34_.jpg",
+      "date": "Oct 13, 2025"
+    },
+    {
+      "position": 2,
+      "title": "Awesome Cat Licker Tray!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/e6f56774-3387-49cc-96c0-5551b1119189/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61EDtcQ3D0L.jpg",
+      "duration": "0:38",
+      "vendor": "Sinoreh Daryadell",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/S/amazon-avatars-global/79230682-406d-4312-b72f-9da3ca3db8d7._CR0%2C0%2C500%2C500_SX460_._SL34_.jpeg",
+      "date": "Mar 12, 2026"
+    },
+    {
+      "position": 3,
+      "title": "A feeder toy for pets to give them challenge & prevents quick eating. Sadly, Mine did not separate.",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/e7a152cc-bb39-42d4-9985-a77428434f3b/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/51wVEagI8yL.jpg",
+      "duration": "3:10",
+      "vendor": "Frazil",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/S/amazon-avatars-global/effdc3ec-6853-4383-8e43-db96481ec6b6._CR3%2C0%2C493%2C493_SX460_._SL34_.jpg",
+      "date": "Aug 14, 2025"
+    },
+    {
+      "position": 4,
+      "title": "Fantastic solution for anxious chewers!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/6e7e99fb-36fb-4355-b4fb-b827d03503f1/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61O33qcdOuL.jpg",
+      "duration": "0:39",
+      "vendor": "MDG",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SL34_.png",
+      "date": "Jul 12, 2025"
+    },
+    {
+      "position": 5,
+      "title": "I LOVE this Lick Mat (and so do my dogs)",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/d5cc9fa8-ab30-4e97-b5bc-a4b5312f60c6/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/6195Azd74AL.jpg",
+      "duration": "0:20",
+      "vendor": "MJA",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/S/amazon-avatars-global/89088e48-5075-4698-8c9d-56d7f04a83d7._CR0%2C0%2C500%2C500_SX460_._SL34_.jpg",
+      "date": "Jun 29, 2025"
+    },
+    {
+      "position": 6,
+      "title": "Metal Lick Mat",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/566c9d4c-0288-475f-bdd4-396ecd89b07e/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/A13Vhy0vDOL.png",
+      "duration": "0:40",
+      "vendor": "janet l reed",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/81yIi5CpijL._CR0,0,1759,1759_._FMjpg_._SL34_.jpg",
+      "date": "Dec 13, 2025"
+    },
+    {
+      "position": 7,
+      "title": "Double Layer Stainless Steel Lick Mat for Dogs",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/f9b57803-f941-4b5d-8d00-90170db56451/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61aqyk0S2xL.jpg",
+      "duration": "0:43",
+      "vendor": "RJ Martinez",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/71NEuM313PL._CR0,0,1110,1110_._FMjpg_._SL34_.jpg",
+      "date": "Jun 30, 2025"
+    },
+    {
+      "position": 8,
+      "title": "Stainless steel lick mat!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/c2fadeec-89d4-46be-81f1-a16d5a265c95/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/71OaQAmIXzL.jpg",
+      "duration": "0:31",
+      "vendor": "Megan S",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/51cjlT-jToL._CR0,0,519,519_._FMjpg_._SL34_.jpg",
+      "date": "Dec 8, 2025"
+    },
+    {
+      "position": 9,
+      "title": "Why this is the only lick mat you need #sponsored",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/b0081184-d979-48f0-988f-1e055712e0b6/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61oO08HIXRL.jpg",
+      "duration": "1:00",
+      "vendor": "The Penningtons",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/81EFLemAHGL._CR0,0,560,560_._FMpng_._SL34_.png",
+      "date": "Jul 26, 2025"
+    },
+    {
+      "position": 10,
+      "title": "Excellent dog lick pad",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/4759128f-39d0-43b7-aa53-e033974da4e1/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61sxx-vOs8L.jpg",
+      "duration": "0:10",
+      "vendor": "PiroVirus",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/S/amazon-avatars-global/4e8bb665-4a3a-4f72-9efb-496cd29aa030._CR8%2C0%2C1874%2C1874_SX460_._SL34_.jpg",
+      "date": "Jul 9, 2025"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1
+    },
+    {
+      "position": 2
+    },
+    {
+      "position": 3
+    },
+    {
+      "position": 4
+    },
+    {
+      "position": 5
+    },
+    {
+      "position": 6
+    },
+    {
+      "position": 7,
+      "compare_with_similar": [
+        {
+          "position": 1,
+          "asin": "B0F5YF2N85",
+          "title": "Large Lick Mat-1Pack",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/1837ad3d-71a8-4739-b883-c65ab65d4b0c.__CR0,0,400,450_PT0_SX200_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B0F5YF2N85?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F5YF2N85&device=desktop&engine=amazon_product",
+          "rating": 4.6,
+          "reviews": 213,
+          "price": "$20.69",
+          "extracted_price": 20.69,
+          "function": "Anxiety Relief Slow Feeding",
+          "material": "Double-layer Stainless Steel",
+          "suitable_for": "Medium Large Dogs Cats",
+          "anti_slip": "✔",
+          "wet_dry_food": "✔"
+        },
+        {
+          "position": 2,
+          "asin": "B0F5YVDP2M",
+          "title": "Large Lick Mat-2Pack",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/47fc847f-0c35-4c0c-9c9d-5d0515d5a1c9.__CR0,0,400,450_PT0_SX200_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B0F5YVDP2M?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F5YVDP2M&device=desktop&engine=amazon_product",
+          "rating": 4.6,
+          "reviews": 213,
+          "price": "$39.99",
+          "extracted_price": 39.99,
+          "function": "Anxiety Relief Slow Feeding",
+          "material": "Double-layer Stainless Steel",
+          "suitable_for": "Medium Large Dogs Cats",
+          "anti_slip": "✔",
+          "wet_dry_food": "✔"
+        },
+        {
+          "position": 3,
+          "asin": "B0FVT5QTTK",
+          "title": "Small Lick Mat-2Pack",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/1d861f33-0de7-4d82-9bcc-44500a7a9681.__CR0,0,400,450_PT0_SX200_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B0FVT5QTTK?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FVT5QTTK&device=desktop&engine=amazon_product",
+          "rating": 4.6,
+          "reviews": 213,
+          "price": "$19.99",
+          "extracted_price": 19.99,
+          "function": "Anxiety Relief Slow Feeding",
+          "material": "Double-layer Stainless Steel",
+          "suitable_for": "Small Dogs Cats",
+          "anti_slip": "✔",
+          "wet_dry_food": "✔"
+        },
+        {
+          "position": 4,
+          "asin": "B0FVT58HVF",
+          "title": "Small Lick Mat-2Pack",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/a7433b75-180b-4000-a409-a8f1d494d8d6.__CR0,0,400,450_PT0_SX200_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B0FVT58HVF?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FVT58HVF&device=desktop&engine=amazon_product",
+          "rating": 4.6,
+          "reviews": 213,
+          "price": "$37.99",
+          "extracted_price": 37.99,
+          "function": "Anxiety Relief Slow Feeding",
+          "material": "Double-layer Stainless Steel",
+          "suitable_for": "Small Dogs Cats",
+          "anti_slip": "✔",
+          "wet_dry_food": "✔"
+        },
+        {
+          "position": 5,
+          "asin": "B0FRS49WH1",
+          "title": "1-Cup Slow Feeder Bowl",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/28bbd2fe-371b-4153-bfc8-b05bbff12c50.__CR0,0,400,450_PT0_SX200_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B0FRS49WH1?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FRS49WH1&device=desktop&engine=amazon_product",
+          "rating": 4.5,
+          "reviews": 1613,
+          "price": "$23.99",
+          "extracted_price": 23.99,
+          "function": "Slow Down Eating",
+          "material": "Double-layer Stainless Steel",
+          "suitable_for": "Small Breeds",
+          "anti_slip": "✔",
+          "wet_dry_food": "✔"
+        },
+        {
+          "position": 6,
+          "asin": "B0D1FMP3S5",
+          "title": "2-Cup Slow Feeder Bowl",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/01671582-2465-4562-ae3e-977cc8f96ecf.__CR0,0,400,450_PT0_SX200_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B0D1FMP3S5?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0D1FMP3S5&device=desktop&engine=amazon_product",
+          "rating": 4.5,
+          "reviews": 1613,
+          "price": "$25.64",
+          "extracted_price": 25.64,
+          "function": "Slow Down Eating",
+          "material": "Double-layer Stainless Steel",
+          "suitable_for": "Medium Breeds",
+          "anti_slip": "✔",
+          "wet_dry_food": "✔"
+        },
+        {
+          "position": 7,
+          "asin": "B0DL3P6MT6",
+          "title": "3-Cup Slow Feeder Bowl",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/3967517c-f3cb-4c60-904e-8f9eef88e376.__CR0,0,400,450_PT0_SX200_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B0DL3P6MT6?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DL3P6MT6&device=desktop&engine=amazon_product",
+          "rating": 4.5,
+          "reviews": 1613,
+          "price": "$29.98",
+          "extracted_price": 29.98,
+          "function": "Slow Down Eating",
+          "material": "Double-layer Stainless Steel",
+          "suitable_for": "Large Breeds",
+          "anti_slip": "✔",
+          "wet_dry_food": "✔"
+        }
+      ]
+    }
+  ],
+  "product_details": {
+    "brand_name": "Feedoo",
+    "upc": "789091989721",
+    "pet_type": "Cat, Dog",
+    "item_dimensions_l_x_w": "9.65\"L x 9.65\"W",
+    "model_number": "FP17-01",
+    "manufacturer_part_number": "FP17-01",
+    "included_components": "Stainless Steel Lick Mat 1pcs",
+    "item_weight": "500 Grams",
+    "unit_count": "1 Count",
+    "warranty_description": "2 years",
+    "target_species": "Dogs",
+    "manufacturer": "Feedoo",
+    "best_sellers_rank": [
+      {
+        "text": "#20,756 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 20756,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#105 in Dog Feeding Mats",
+        "extracted_rank": 105,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/14828689011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Feeding Mats"
+      }
+    ],
+    "asin": "B0F5YF2N85",
+    "rating": 4.6,
+    "reviews": 213,
+    "material_type": "304(18/8) Stainless Steel",
+    "product_care_instructions": "Dishwasher-Safe",
+    "color": "1Pack",
+    "product_dimensions": "9.65 x 9.65 x 0.39 inches; 1.1 Pounds",
+    "item_model_number": "FP17-01",
+    "date_first_available": "June 14, 2025"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0CK2VF2B7",
+      "title": "Messy Mutts Square 16\" x 16\" Forage and Lick Mat with Non-Slip Suction Cups | Stimulating Sniffing Interactive Puzzle for Dogs | Silicone Triangle Licking",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JENqXSl5aUW3chcbfnqIodUAAAGeUSWNQwEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICAf7VpE/clv1c_ek-wBYHXFcbWznynI-MgDzrZjBAPnkYZUjvaiHTquwE-reza5VARMv_V0j4VEMnOq0r8izQ69187DS53LNC9E2JZ-kFRo6-HbD5FaCfXxgo-qFeqt_WPKyjgYnl1q0jsFVoqJj1PELmP3kOZ200qbZDduPU8F1Rmk93Mgxf7zcNe2PVggsPBHruBTQAx8uOI6rzG4Eh3U2-oh0X_OSrp-CSenJb7Zb-43_tXnXbtFi5iAxxT5ykYCo87BqYMOM1ep9b9JxUDnUYLfRQX0M550B1BnrVwrU77RXBcWG2QotG_dsE5oci8HnQhsoxRanebodMHMAwQqRqrPJJC2_ISkN0gev_VNfNulu-bYoML0nso5QD-XFuHM1ZQ45BXPQURDSbtclamveZfGxuJSruMIZzcAV2l4mkUF1GdZnWLUJ_kgqK33IFxlkBuUFoU5Ejr7Ms-Z4aKjJK-Yl1vrLfIQE8qxQIVxM3Pu-c3r9bDXXOAnwlPdYSIl_3O4w_L-3wBubKch7SOwb3P5vddFbroEino73j2e0hmBGZ5cyqh0rrlq8IKAzFzgUkApzg6ya-EVriRXY7Ndw92UncKdtHpaDKm3gUa618mM6HRVVQA9dwajAEJH5h-jZSQH48t0cbTsKz1gSY4fVcmmnB4CAGJ7RmrM6mPcdppxsoaHZP6otsPXd0wQnfn_1i-ipaNZ639bQWx4oSeuj6WmaWqWE5VJnM0c-qV_xz4mX76WHThZjb-38YxVBB8laE6SY5l04HQiq4SU2wpG-PfDjcX-BhN61aONsS3m1uMm03pD106b3T8oba6X10FmldH5YJBoy6L6GQDNP57OFHRUjjrBZHFvuj_HbspFxXznSf8i7t8U3PoKRIBUgvU_LaqhyZ4NslQlYxe0xocssoRAyTI6AUrr4Zhfclw7ziKSzu4OO3K3uPwdYUeLxIyufbZYlGQnw6S50t4tzPMnPcw2uRB2wfMIKeo5-XWO9Z_APGbwF0h7XGYdCEnNY6-k_YJ2RpjA8NwSxmgrlt4DpVi7ECYQ-0X5hvEO7_LMPMxvS7fMTDPCPR1IjdlEVlRLsOnQZ1KwyG9NC8T-tR7AQLDtIzUj3_6i2U0Ft3XDXuI5AptaYPum3cpdiAzpsmu7bxVlv4Q-E_7LzLFUodoXwxJmUBuxNXMszBHHpAsqalpg5VgHthZES_M2ioXFGTRzfIqvVZGZP88p7p7kugMqnYl3kP_b1vPgm9lvR6xlfA_-9u4fF27CJX8_79tQ_jrWC0AkgspqLYdNeB4s2Xr80MLzOGhfRnpCIabwBPtNFAbTJBwKGwDMggK0f3vesDi2HyVL5d8G7WznaWbTPX8u9XvEJzVOxFSGiSSE2u0YuTPbl_ogXACQUxwhzD-nbNzCPLMYbNGukxaYv0v4p-hRWgxFEs5MAazxPncyEDbQNHUFFtEzsHoLln1qTGv58W9jw-edYtDncBWwA93J99cpAddQvjvgrtNM9gLAyUn8gNaHOCJnn6BBZ3OmXC3vUuYjk540A/https://www.amazon.com/dp/B0CK2VF2B7/?_encoding=UTF8&pd_rd_i=B0CK2VF2B7&pd_rd_i=B0CK2VF2B7&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=G8qln&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=AGDA28GVK8CB6XRZ7EXJ&pd_rd_wg=joqT6&pd_rd_r=817e37ba-c9fc-4747-acf4-2a522d13a346",
+      "link_clean": "https://www.amazon.com/dp/B0CK2VF2B7/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CK2VF2B7&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41MySy5R9zL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/41dc358f-90a5-4e04-871c-f49aebcc631f.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/41dc358f-90a5-4e04-871c-f49aebcc631f.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.2,
+      "reviews": 14,
+      "price": "$30.99",
+      "extracted_price": 30.99
+    },
+    {
+      "position": 2,
+      "asin": "B0D9VPVM91",
+      "title": "Lick Mat for Dogs & Cats, Stainless Steel Pet Slow Feeder for Crate Boredom & Anxiety Reduce, Cat Licking Pads with Spatula & Scrubbing Brush, Blue",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JH9zR4QyPBmgOFNu9Q2JUqUAAAGeUSWNRAEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICCR3QBc/clv1c_ek-wBYHXFcbWznynIzd3-fKIehwdaJgW0joythTy1x9VMQdIsHgMj00BmYQNk3GeS4TZy2wq-4eWeoA1RSdBlqUrGsN5rISdKXUFPlpp7Y4uqlfbus8mW3_aljm0Jni8vvgK2_LMspR5BRlivQPEqZVLodyGjjXrveVzTD6-_iYvOSueNd90buy49ZOw0gT80TlWsQmj_2eK0HfzskDYdE6yL1d3TEQo9Dwio3cKBsHu6gQjyjSZULqkAnKpD66GnmlPzvjcVZS9wr7yNmbp9Uq0hWf9jSgXCOmQC-JR7LitxMRLfxI1oh7Bu8SOy0okQlEknWNrDzzQI03CJTexIuKcfvITMEx9j_nUJ9QSJPmOlqJNihjhZlpoZ4588zLGiuA8UBvcB2EODnOWjB10VBYTvZGbSc5NdwXbI6-B4NzT2PxBEz5W6BoSoDP_Zz4jycoLlKT9TQArvOqLBx3qLOIhz0PZqq6mGguysGZqLK7dtJ0fjnN6Zrjc1Pob-IfA2pSut7qdDrww28dP-F7bumcE3Bdl6U1uhtjW5rQaQh29XLis0ztxvifG6ntzs8IdpcSESMU6JTJKV6RVGcy4HWuQIFMSNVyH0HfUbqkDnS_jqWALHea5bHkSzkhu52g3Y4qDKyvCmqd8vAAtMCAu5cFRIyvW1ImF3u4gA-cjVWgjj3XMmcgNrRed3JKMCt8TN1qmRGZ2M2kK8tbAFoIXaX01BwakeTo-MecDU7Qq2wp4VrsdPPmS17S5ccPDkIpvjChNICHo-kLTyDcXMvp5b24OCfAxAStk7mP7Hz3qvhG_oofxUIoPPlkHXtBv6ZD3wS5wsODzCskjNTmU0LFh5hQP4lEXtzp5EzytQ36wFZeAq7o1-2i0AJyeAyV5axgTvtVXWJBuS9Gc_WRavdn47hJt3yzuCYsXbClm5SUiFH8HBovbMaHYFDPsudnUOz2K9q1K1QsgI9UKlCuhKxrWmXC-B3w_qfQLjubdIN-wIjR7A0VtQh5Vhn0NrgPVsLZMHNdTY2tt1MEoLGSxmJU04WETYS_FWwgmR7TIDSbBflbzQLfUwjIf7wAKpPdswVTW8g-PtoD2lFRMme3DsV7ItjrG_CFwSVHmDfR9eVOiA_B4VmwGNeTHjJPSSapt0EPOHWjn_c92TjtECHfB-Byr0rary2149q33K0c4vplPBK8q8jtixj7--C1MJ7CCdR0OUKJ_lI5rXEx38Nu4FqCW0KPGhVERgUxtaRBane3bGgsgci2UuB2x7PSrYFgltPnE6FuocGAc78oExM7M60tQPbTyQEay8u5aXwMcnvswfgYo_Ovq2SAEsK4fUQ6gZdN34Q_5RN2Awx3KNqMR6vx986JGmidPgBJHNGV6CeqjoSS2OPQ55dgV-VxHYdsGB_QWFf0Xg_81Vhiw0gx2imp42aaK4Dy7iugT-OM-0g-Dt70RmBGWU3qqMF0ITlnZmZfyoHD5CPwmxSQbgtSpcG44f4_kXDXKhy_8GwE3wXuqvDsUHIeanpsWNozuxCKLOHQU53jdPKZeuB5WhVGZLpkvao-oCikY/https://www.amazon.com/dp/B0D9VPVM91/?_encoding=UTF8&pd_rd_i=B0D9VPVM91&pd_rd_i=B0D9VPVM91&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=G8qln&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=AGDA28GVK8CB6XRZ7EXJ&pd_rd_wg=joqT6&pd_rd_r=817e37ba-c9fc-4747-acf4-2a522d13a346",
+      "link_clean": "https://www.amazon.com/dp/B0D9VPVM91/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0D9VPVM91&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51EaaRbQ06L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/f85e2795-2766-4577-b06b-da78c17e488d.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/f85e2795-2766-4577-b06b-da78c17e488d.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 244,
+      "price": "$19.99",
+      "extracted_price": 19.99,
+      "old_price": "$22.99",
+      "extracted_old_price": 22.99
+    },
+    {
+      "position": 3,
+      "asin": "B0DKF35BFS",
+      "title": "Dog Lick Bowl, Bestalk Anxiety Relief Slow Feeder Dog Lick Mat Treat Dispenser, Non-Slip Licking Bowl Enrichment Toys, BPA Free Silicone, Dishwasher Safe",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JK5r92Dzodg1LQb-52Uehu4AAAGeUSWNRQEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICCO0cek/clv1c_ek-wxYH3LcTaTKXhvF_s_V7jhDDDGBh5KsemRHTDCwDaEUqJ8rDBGWlEKnoSH5JQ_AUdqAc4ixaEhYHkcHGMwlgORWFpDaDZIFX3O9fymM83qyLpyER5Zy585OFs9tJD-wSn7mluh8P_Iemzz5gyUdzpgJ2flXkKt-CAH7boyJIeWEGzf4qiQK5VjFnfxdsLgVX5nkOb30ZP18L-hVjIZMh7SE-HWHI4pPbsq5IG8TJ6dBUpzv66WD7kmoBs-f9JVg7jTIv4sRh0pWLSTB6iGwWpQjb4Us9dzKWWbj6mTyR_tRfoD36LkSRKtgeaT95Tis8z6LBQDL17M1pcVfw3Wrf1Y-LWXeNKiAgAm1aJZPbhxWb2na2Fk7Ry5Yecq1y1h01hTOsJFanmpempS4gg8Mx9hDN9OEvDYm5DVMpiXDJ8Aeh1wg7qMClSE45cVywZOrmzZBBAyTlJkXk3WOQwRU0M6Q9Mxw51-2StvIBZJtFTCj09rfkKJmUBV4QloJ62WIWgUdEb1L0-xSdgzgxyKpaR5Aa23FJJdetw96K0F4MYemzA6Ivbpt65hinnGF1rcNkrQpb7cIRknJ67GXHp-sJmCbql58JEvKGg7gUvMyH6-Qze6hq3yV4jHetSz6oRZymDtOqExdzS0ohvHG5Flssmgdavkb6EvoCdhlB33IcfKK-EmBLy8Jd5Qc7xTv2R-fIgbFRZfsQelY7bGGjT0XHaqxjfTvLbc8j6FkzpK8uyseLInQqaNbMSZSXyFHIG-oBcSAm0yXFUgz4fB1Gij1vkpzX7ERqIG7kXNwUncxpDOOk4aVhGLtI8MKhb95LZzocgNNZT2M1A3lX2OW1QTwa_-l4Lw_rJGfjxFR_ScxcDyr5rmfHB6xwAtVVlkSxjydWrpwxAbmsPTXLOAqTJTS4QLu8mvl8fOtQj61706DWVc5iVJi6oTVOrA8G8DwAVorPsrbLfB7POUWHptUNAkFTWoXLJEIiQkhDQp-t1V4SdcUpAb178BUALfuORILYGnbQa3WxqomXK1gbNmrIDRDbcL9h5FWjPQ3AlQUYtGqrrBXVRZP9iyEyg4aUxCDErXLkvDvH3znqbPlgwidRjwYIgKSH5sG9zCLsiF6KS_NrViNZGNj3D51T5g_qS-vgesglNUjNtw5ixuQacE1ZTN5_0WevwLyfEibQwIhaIn3bkFSo2V3RU4POVnC_2ap-a-mwsAa94G7VlGWZTcJFp4AA4FG_tu550yxpCC4sjXsLWNThid65GJUp8tZLxCmAv7xnR13Cz3kuHAjlnrarFksFUZ1uiFhMyENLvcuO3AYKUBYmMTSQQYbBmWh9H13oFBM2wyqgkvwhKeo4Jt53FjEO1poBApae4emYYA-LHEa2e9BpMeD9e5PWqkfGGrhS2gU2DMU2lElOQcmncrQriZ4tleQWwcyXsVxpIFcBuO5I2A5xjpaT5b49eshN5vz7FC-7AUsQJOTedFwLpXXRf-l9DdAmLpGD-KMaxYkx4JMOrXMbRhe1O4yVJyido5TfyuY2GgcII3mmS3NAsAohrvtg/https://www.amazon.com/dp/B0DKF35BFS/?_encoding=UTF8&pd_rd_i=B0DKF35BFS&pd_rd_i=B0DKF35BFS&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=G8qln&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=AGDA28GVK8CB6XRZ7EXJ&pd_rd_wg=joqT6&pd_rd_r=817e37ba-c9fc-4747-acf4-2a522d13a346",
+      "link_clean": "https://www.amazon.com/dp/B0DKF35BFS/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DKF35BFS&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41ExyFOre1L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/3325aa3b-db25-44e9-9af5-22a2263ffae0.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/3325aa3b-db25-44e9-9af5-22a2263ffae0.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 180,
+      "price": "$19.66",
+      "extracted_price": 19.66,
+      "old_price": "$20.69",
+      "extracted_old_price": 20.69
+    },
+    {
+      "position": 4,
+      "asin": "B0D8Q7V969",
+      "title": "Dog Slow Feeder Lick Bowl, Anxiety Relief Dog Licking Mat Treat Dispenser, Non-Slip Anti-Choking Slow Eating Lick Bowl for Small Medium and Large Breed Dogs, BPA Free Silicone",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JDppW44Xlc8zSUdnKlm4y9EAAAGeUSWNRgEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICDnDDuP/clv1c_ek-wxfH3LbTaTKXjvF8cJhJ0StwRN7CE6mjZ-t5mz6RsOo9-79TTUVVMn65gaIG1hhL1fefF8V_MhoVbzgwlRH6KUmWpBKjZyNHxxtfymM83wgH7fW-1Bn70Ijn2oO9SNfgW5U9C53XdH7LQ1EEsbpHepLX8FlBWEsbu6WciTKQ_GUyooM1-PI7Zg2nHJoBltDOa6rt7voYFVe75NeHoin-_M0iwJwIoLm9y82_q_SJpJ9wlCeADxHQ5QrUb2gbIZA7bOM3czVdci4AJbl70ozKZTEQpgtGwlX5UO8h8oZzW4d5SyAvKg-FW7pDJ5aJGfn7wMZmUfuqXXwmHFuQE3H6-YnkGe5_-07Njr7g3PJPR-xl4DDQHRXJf7WF6hjainujXdN9PnZL5owgKZF5tbrH-rziZUoziIIAGhkDnJ-IhZlV833hYKLtagJKpoJrPkaBXVHFFSeXRxb9ITHdgVilaoQTj4EY3UBJmzJexQrar2u_o_bvE0tD9tJQaea__lDaXzL_64XlsO8SJQN2rLWYFuS4v4EDRQxxfe4dxsv0TR7JOCb7rS7415z2wbI64tz7ohe4FcAVchgUELPdagevZdHTGvsOYOEpusbnLTmxzoxW5cy9cfxEs5VWxi8r395C2tIvf_CqtDdY4cRWtS2610V6eE6S6GrZ_b9O-PpZolx9EpcLoxkj9ON-DRU9SetnqXWSEpTUQo43iAbbmPEBntI0nXzo-Acg5PzdN3gAPXLsGzYP9PeIaw1wBBhimw8ET2Dwm4W007OfohN_mAxE-1chvdR6yq7L9vuEpfxoLlUaPlN8hFMEHoNmGQQOXK-ko-TzjqLobyNC5cHojQi0iCM94DovbtduyAOo_KQx_2sKfwQp965KLo6D48Ci0MuDl64-QHH_uJkG1oniiLj1JxTTTPAAx3M7a8mg4zAy4PEAvpl7A8rZxUPyYosPo1pfnTraFMNEiutsAaJYgzQtkXrji0dHIAhspnlW5H96Jz6lLAH1KTW6tgknN7Et7mp1BFfwPxcsnsEdb0kXTokVHIdpHw3LAr7EhtY_L2E7qRCp445jBM2WVIsDOUYOyggg6Xl2poFeg5b0BJzi7lFkjUCbhvN7mshnbM48PS0bJCyjDCdp4EtfBKwMWPzenslBMRVhVi3s_bF3Raoi5zqhqhI3C0Ajfxa9TgleYITPKwrhhEhvFq3TTSdn4p81bXpTgs8zFNC-pvMLzfQMIys08Ns_zNO3uaSUAYmzDrYJktB-vRzCQmWMjAAC9jv7LSgv9TY7Mweg4_kxQtuZKcbxIbBCmV8Xku7UB9DtkU5tzA66YPPEKs_l8nzI5sjAugBipmFb6LWmFpPzG_HXUzvAI8QVvytkXaMfA11ha2-ao6Yte3nCqIlZh2N5F7k0Wfd2K7QfGiHPGFaEVdFbzKQAJtFYgutFU32iyTK2axPjPeidCu9Adr7r3xQ-gF_lih-7F67dd9S7E756VjAej-38O57x7Xn6f_dsYIGdzcOj_efZ5rRUypKFptFl96mF-Fyv0AZWlBkDDsW0QKYQT/https://www.amazon.com/dp/B0D8Q7V969/?_encoding=UTF8&pd_rd_i=B0D8Q7V969&pd_rd_i=B0D8Q7V969&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=G8qln&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=AGDA28GVK8CB6XRZ7EXJ&pd_rd_wg=joqT6&pd_rd_r=817e37ba-c9fc-4747-acf4-2a522d13a346",
+      "link_clean": "https://www.amazon.com/dp/B0D8Q7V969/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0D8Q7V969&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41sGdKdmNsL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/3ccb5333-fcab-404b-b178-2dee7d9420d7.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/3ccb5333-fcab-404b-b178-2dee7d9420d7.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.2,
+      "reviews": 262,
+      "price": "$14.99",
+      "extracted_price": 14.99,
+      "old_price": "$19.99",
+      "extracted_old_price": 19.99
+    },
+    {
+      "position": 5,
+      "asin": "B0F6BGB2SW",
+      "title": "Evenco Slow Feeder Bowl for Large dog, Silicone Lick Mat & Snuffle Mat with Suction Cups - Interactive Puzzle Feeder to Slow Eating & Keep Busy, Reduce Vomiting & Relieve Boredom (21\"x 11\" Light Blue)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JJC2-MwlHojLFPrbu6_71t4AAAGeUSWNRwEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICDAzGWX/clv1c_ek-wxYHXFcbWDXHEa4vrJ16WpAySuUaPLk21KFbmHq9D5B3a5YhBEx0Fb1CCzb3QykjHzIW2T1cga2KU7xzE1-og-wBz_vi-c3V5jsnlG6Qm69fbuv8mWWfaljm0Jng8BtjaRBT1c9XV1FAVb15BNPVLodyGjjXrveRzTD6-_iYvOSvO1ts8adjltyI6ELc7U1W7SctLAhuEfYQvFkjBMfr-oV09Flyo0xZqzfoW1TygTXc8B7uN1lPS2JYi6g17kGlPDqIbHIOqJ4KoZwlkfmfqf4JTV8uzWz3BelIAkfa6w9VcVyVy--iwNl6StQMKBrdFFVQBbpiYiB0M7nsHqXreTdcZV5pJ__3i-IgoQvpYCtU5kB2ZvGIOktjq5AiWB6ukpCtRhmrmwuXrCpy4VwdOjNMsKDbC2rY8JDTpOaRi1JFX7exk6WOzyRI7W4iZi_sa17TSnzQ75Isndbh1nP_A6489yGlag-XU9TeuPOLtHIcfFu3EZqsVas_hnmx2IKe6qiBUlAXO7J6i0fiGmGUc2helaYtrIThiw1OMEL7U_LfbkcctbJNPpJxvESVGMgZuGqtaR4Drq9hRZ1wD2GEr919IhtJe6GTWcgyx4-SLFVbkPKMLmTMv3z3j6R9M90gGaJ6wkUJBEhZFNB33u7h-UlO3deGCJPe-SoJgwrbjRLpTdkHX_pZRfxN7zAkGyKw5d4egSvSUmREKanEPrXYxlQmD3DKokJ3Bqi9CsmUWdAMvXV2F2pwHZc1L-zGyQT2hWSYIWT4HttJFAuukaK3mJG0wEMxQ9snuqOsGXfAV0FT3ig5yBxJSqRGNp5ZVeRGRWQCYrF7FAtEZlVQpJfKp3lM3zlMWK5fM_xpjQDABWdbvYbJbW3Bs8bskgFIp6NA82YS-VF2tqEl2m81tryE4Yt5wkXL8c-RfZG2NxYB0hmsiVM6Akj5fWVKgDV8WGm7aYNH3iGB15tp6_MBceL16JXMoDrj10mMTv_KOG9n87xXGfBT0BUV2cyQ1vdB9gLYHSvlmDlOPUJ95qNsdNYMBRhZ0kmLOs3-4hKej5VvD2neyZTMAX9mTLkW9BZs_C6zOXK4GeifsjtQLxIxrYblfMX5mUMv7-5XSio2V3nTVJv4Dg_e5ThGMXNTzwq3GSmjYHqHxFmrolq2S64eLKwbnM94ubJPACxSyZR3Q87PFhf8CJ7d40OjvS-n2z3WWBsloynN1PemRvz-vrqKGA2uWlrxZL3OI69Ai1Sgn_MQJKlja7ie-M5G2WU6lIgxh7R8-lFgGa6w1Fn7rbR3lv2hYYDb5wYgbfrAs1pHy0JLx-4PoaX6ScVLkY6-tOzVblIy26ryyfRoCw6IVLdiZspZ1rXY0Mh2xU4qqCjXMt4xfpAtvmBpRUe12lFIF1ZL4rqBEDUhVm7um44b9BFhNYL9mHtoL0VM387z7Cck618HzddW-bNfqdiQu1S1QESQ9vQ2BM4wsKL9ftb7pCkuOFIt5GD6EHAsbcFAcELLNYumTIadaBNsM36lx66-R_Pbu_4SFeuPGxDXHbji0WjBPv32k/https://www.amazon.com/dp/B0F6BGB2SW/?_encoding=UTF8&pd_rd_i=B0F6BGB2SW&pd_rd_i=B0F6BGB2SW&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=G8qln&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=AGDA28GVK8CB6XRZ7EXJ&pd_rd_wg=joqT6&pd_rd_r=817e37ba-c9fc-4747-acf4-2a522d13a346",
+      "link_clean": "https://www.amazon.com/dp/B0F6BGB2SW/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F6BGB2SW&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41WPBsDoioL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/f87e9d4f-4821-4596-8937-83c8c10e3656.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/f87e9d4f-4821-4596-8937-83c8c10e3656.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.1,
+      "reviews": 20,
+      "price": "$18.48",
+      "extracted_price": 18.48
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "text": "Customers find the stainless steel lick mat easy to clean in the dishwasher and appreciate its durability, with one noting it's better than plastic versions. The product effectively slows down eating, particularly for young dogs, and stays in place on various surfaces including wood floors. Customers consider it great for pets, with one mentioning it's perfect for RV use. While customers find it well worth the money, opinions on value are mixed.",
+      "insights": [
+        {
+          "title": "Ease of cleaning",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 30,
+            "positive": 29,
+            "negative": 1
+          },
+          "summary": "Customers find the pet placemat easy to clean, noting that it washes nicely in the dishwasher.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...As well they are so easy to clean!!",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2G4XCS7N33COP"
+            },
+            {
+              "position": 2,
+              "snippet": "So much better than those silicone lick mats. Sturdy, sanitary, easier to clean, stays in place without those stupid suction cups....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1QAMS44A41IGA"
+            },
+            {
+              "position": 3,
+              "snippet": "I like the sturdiness and the ease of cleaning. Perfect for our cats.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3SO7LKKS6U0SS"
+            },
+            {
+              "position": 4,
+              "snippet": "...It’s also really easy to clean, especially since all the raised pieces are round so no corners that the food can get caught in.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1RGOHV1UJRGRI"
+            }
+          ]
+        },
+        {
+          "title": "Quality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 27,
+            "positive": 27,
+            "negative": 0
+          },
+          "summary": "Customers praise the stainless steel construction of the lick mat, with one customer noting it performs better than plastic and silicone alternatives.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Great lick mat that the puppy can’t eat along with her food 😂 (unlike the normal rubber ones)....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1RGOHV1UJRGRI"
+            },
+            {
+              "position": 2,
+              "snippet": "...Only thing is the grooves should be deeper. Otherwise, it's a good product....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RRC49G8PRLSL3"
+            },
+            {
+              "position": 3,
+              "snippet": "Excellent quality. Well worth the money. It also stays in place even on wood floors. It could be a little deeper but still does the job. Very solid....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R19DQCENP4BRNI"
+            },
+            {
+              "position": 4,
+              "snippet": "This is a well made and sturdy item which is important if you have a tough dog who likes to chew. I just wish that the grooves were a bit deeper....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R37LG3I21RHS2Q"
+            }
+          ]
+        },
+        {
+          "title": "Durability",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 26,
+            "positive": 25,
+            "negative": 1
+          },
+          "summary": "Customers find the pet placemat durable, with one mentioning their cat won't rip it apart and another noting it will last forever.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "So much better than those silicone lick mats. Sturdy, sanitary, easier to clean, stays in place without those stupid suction cups....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1QAMS44A41IGA"
+            },
+            {
+              "position": 2,
+              "snippet": "It worked well, very high quality, heavy duty. However, this is way too big for a cat. Wish this was about 1/2 the size and it would work better.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R217BDYD07Z5F4"
+            },
+            {
+              "position": 3,
+              "snippet": "Durable- holds up to our pup I do feel like the plastic ones have deeper crevices, but our pup would chew them up",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1V77FRW77T978"
+            },
+            {
+              "position": 4,
+              "snippet": "This is the only slow feeder that my cat won't rip apart and prevents her from vomiting....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RO9WGN7Y8KQGL"
+            }
+          ]
+        },
+        {
+          "title": "Slows down eating",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 15,
+            "positive": 14,
+            "negative": 1
+          },
+          "summary": "Customers find that the lick mat effectively slows down their pets' eating pace, particularly noting its success with young chowhounds and cats that inhale their food.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Works great, slows our young cat from inhaling his food.",
+              "link": "https://www.amazon.com/gp/customer-reviews/RI77J1K2AUHUF"
+            },
+            {
+              "position": 2,
+              "snippet": "...She took to it right away and really slowed down her eating....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1RGOHV1UJRGRI"
+            },
+            {
+              "position": 3,
+              "snippet": "Dog loves it. Slows her down so she eats slower, stimulates her big brain. Gives the other dog time to finish his food. You won’t be sorry....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R27FDVO2ZU26NQ"
+            },
+            {
+              "position": 4,
+              "snippet": "This lick mat definitely slowed out St Bernard Retriever mix down on her eating. She was the runt of the litter and would literally inhale her food....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3RIDMZ7LSMZQP"
+            }
+          ]
+        },
+        {
+          "title": "Pet-friendly",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 13,
+            "positive": 13,
+            "negative": 0
+          },
+          "summary": "Customers find the pet placemat great for their dogs and cats, with one mentioning it's perfect for RV and home use.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...It’s good for puppies, too....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1Q7R0UMNM6W7W"
+            },
+            {
+              "position": 2,
+              "snippet": "I like the sturdiness and the ease of cleaning. Perfect for our cats.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3SO7LKKS6U0SS"
+            },
+            {
+              "position": 3,
+              "snippet": "Great for treats! Keeps my dog occupied.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2ESOZYP7IGNKA"
+            },
+            {
+              "position": 4,
+              "snippet": "Love it, because it cannot be destroyed. Dogs love it more....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3EDZ9JAFVVDCM"
+            }
+          ]
+        },
+        {
+          "title": "Stability",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 12,
+            "positive": 11,
+            "negative": 1
+          },
+          "summary": "Customers appreciate the lick mat's stability, noting that it stays in place even on wood floors and doesn't slide around, with one customer mentioning that food doesn't stick to it.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...You won’t be sorry. Dishwasher friendly. No slip.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R27FDVO2ZU26NQ"
+            },
+            {
+              "position": 2,
+              "snippet": "...Has rubber on bottom so it doesn't slide. Cleans well in dishwasher and much better than silicone which dog can chew and destroy.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3FMN6VFZDCNXL"
+            },
+            {
+              "position": 3,
+              "snippet": "This really slows down my young chowhound of a cat. Easy to clean and stays put.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1NBZJRT8INT41"
+            },
+            {
+              "position": 4,
+              "snippet": "These stainless steel lick mats don't slide on tile and are great for distractions, mental engagement and just to spread out yogurt or peanut butter.",
+              "link": "https://www.amazon.com/gp/customer-reviews/RRKY60T3B28C8"
+            }
+          ]
+        },
+        {
+          "title": "Eating slowness",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 10,
+            "positive": 10,
+            "negative": 0
+          },
+          "summary": "Customers appreciate that the lick mat helps their pets eat more slowly, with one customer noting it takes several minutes to finish a meal, and another mentioning it allows other dogs time to finish their food.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "A great slow feeder",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1T5KGWUFYKN9Q"
+            },
+            {
+              "position": 2,
+              "snippet": "Dog loves it. Slows her down so she eats slower, stimulates her big brain. Gives the other dog time to finish his food. You won’t be sorry....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R27FDVO2ZU26NQ"
+            },
+            {
+              "position": 3,
+              "snippet": "...food in like 30 seconds flat but this thing had her eating slowly for FIVE MINUTES STRAIGHT. im glad she's mad about it. Serves her right.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3EAQLFWLUOQ3H"
+            },
+            {
+              "position": 4,
+              "snippet": "I am very pleased with this item. My fur baby doesn't eat as fast, so he doesn't get a tummy ache.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1ZTRQEFI1HAI3"
+            }
+          ]
+        },
+        {
+          "title": "Value for money",
+          "sentiment": "mixed",
+          "mentions": {
+            "total": 13,
+            "positive": 8,
+            "negative": 5
+          },
+          "summary": "Customers have mixed opinions about the lick mat's value for money, with some finding it well worth the cost while others consider it pricey.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "My cat cleans her plate! It’s worth the money to have my cat eat all of her food and it doesn’t get dried out like it did on the silicone plates....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2G4XCS7N33COP"
+            },
+            {
+              "position": 2,
+              "snippet": "...It’s good for puppies, too. This one is the very best I’ve tried-expensive , but well worth the cost for its durability...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1Q7R0UMNM6W7W"
+            },
+            {
+              "position": 3,
+              "snippet": "Great buy!!",
+              "link": "https://www.amazon.com/gp/customer-reviews/R12XJUNGUUMES4"
+            },
+            {
+              "position": 4,
+              "snippet": "...Are they pricey? Yeah but worth it... especially since no one can eat it.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1JOC5FR5A6161"
+            }
+          ]
+        }
+      ],
+      "images": [
+        "https://m.media-amazon.com/images/I/81FBRaR+2CL.jpg",
+        "https://m.media-amazon.com/images/I/61bDpwG7qBL.jpg",
+        "https://m.media-amazon.com/images/I/71-QkW-U4JL.jpg",
+        "https://m.media-amazon.com/images/I/71PUyTIaHEL.jpg",
+        "https://m.media-amazon.com/images/I/71oyo1Ud+4L.jpg",
+        "https://m.media-amazon.com/images/I/71fhSollj9L.jpg",
+        "https://m.media-amazon.com/images/I/71AZYFlvtxL.jpg",
+        "https://m.media-amazon.com/images/I/71-wcI3JRML.jpg",
+        "https://m.media-amazon.com/images/I/71AVmLhbIuL.jpg",
+        "https://m.media-amazon.com/images/I/71kQ0laQ+TL.jpg",
+        "https://m.media-amazon.com/images/I/71YeeZTX-jL.jpg",
+        "https://m.media-amazon.com/images/I/71GEJl8xU8L.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 80,
+        "4 star": 10,
+        "3 star": 6,
+        "2 star": 1,
+        "1 star": 3
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
 ---
+import AffiliateLink from '@components/AffiliateLink.astro';
 import EmailSignup from '@components/EmailSignup.astro';
 import { coolingConverterPageConfigs } from '@data/cooling-converter-pages';
 import { calmingConverterPages } from '@data/calming-converter-pages';
@@ -13,6 +14,7 @@ const exploreLinks = [
   { href: ROUTES.coolingHub, label: 'Cooling' },
   { href: ROUTES.calmingHub, label: 'Calming' },
   { href: ROUTES.comfortHub, label: 'Comforting' },
+  { href: ROUTES.shelterCharities, label: 'Dog Charities We Love' },
   { href: ROUTES.shop, label: 'All Products' },
 ];
 
@@ -98,6 +100,18 @@ const footerCategory = inferCategory(currentPath);
           ))}
         </ul>
       </div>
+      <div class="footer-col">
+        <ul>
+          <li>
+            <a href="https://www.pinterest.com/chilldogs42/" target="_blank" rel="noopener noreferrer" class="pinterest-follow" aria-label="Follow Chill-Dogs on Pinterest">
+              <svg class="pinterest-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="#E60023" d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
+              </svg>
+              Follow us on Pinterest
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
 
     {shouldShowSignup && (
@@ -112,10 +126,31 @@ const footerCategory = inferCategory(currentPath);
       </div>
     )}
 
-    <div class="footer-disclosure">
-      <p>
-        Chill-Dogs is a participant in the Amazon Services LLC Associates Program.  As an Amazon Associate, we earn from qualifying purchases.
-      </p>
+    <div class="footer-affiliates">
+      <div class="footer-affiliate-block">
+        <p>Chill-Dogs is a participant in the Amazon Services LLC Associates Program. As an Amazon Associate, we earn from qualifying purchases.</p>
+        <AffiliateLink href="https://www.amazon.com/b/?node=2975312011&ref_=PetMainNav_1&pf_rd_r=K8AF5S50SA2Y3BXEX3VR&pf_rd_p=eca06bfa-7025-4421-8855-9e7df7f1f66b&pf_rd_m=A2R2RITDJNW1Q6&pf_rd_s=merchandised-search-4&pf_rd_i=2619533011&tag=chill-dogs-20">
+          <img src="https://images-na.ssl-images-amazon.com/images/G/01//associates/network/revamp/AmazonAssociatesLogo.svg" alt="Amazon Associates logo" loading="lazy" decoding="async" />
+        </AffiliateLink>
+      </div>
+      <div class="footer-affiliate-block">
+        <p>Chill-Dogs participates in the Chewy Affiliate Program and earns commissions from qualifying purchases.</p>
+        <a
+          href="https://chewy.sjv.io/c/7067825/2846786/32975"
+          target="_blank"
+          rel="nofollow sponsored noopener"
+          aria-label="Chewy Affiliate Program"
+        >
+          <img
+            src="/images/chewy-logo.png"
+            alt="Chewy logo"
+            width="848"
+            height="258"
+            loading="lazy"
+            decoding="async"
+          />
+        </a>
+      </div>
     </div>
 
     <div class="footer-bottom">
@@ -143,7 +178,7 @@ const footerCategory = inferCategory(currentPath);
 
   .footer-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--space-2xl);
     margin-bottom: var(--space-2xl);
   }
@@ -173,23 +208,57 @@ const footerCategory = inferCategory(currentPath);
     color: var(--color-text-inverse);
   }
 
-  .footer-disclosure {
-    border-top: 1px solid rgba(240, 244, 246, 0.15);
-    padding-top: var(--space-xl);
-    margin-bottom: var(--space-lg);
-  }
-
   .footer-signup {
     border-top: 1px solid rgba(240, 244, 246, 0.15);
     padding-block: var(--space-2xl);
     margin-bottom: var(--space-2xl);
   }
 
-  .footer-disclosure p {
+  .pinterest-follow {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .pinterest-logo {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  .footer-affiliates {
+    border-top: 1px solid rgba(240, 244, 246, 0.15);
+    padding-top: var(--space-xl);
+    margin-bottom: var(--space-lg);
+    display: flex;
+    gap: var(--space-3xl);
+    flex-wrap: wrap;
+  }
+
+  .footer-affiliate-block {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .footer-affiliate-block p {
     font-size: var(--text-xs);
     color: rgba(240, 244, 246, 0.65);
     line-height: var(--leading-relaxed);
-    max-width: 600px;
+    max-width: 280px;
+  }
+
+  .footer-affiliate-block a {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .footer-affiliate-block img {
+    display: block;
+    height: 32px;
+    width: auto;
+    max-width: 160px;
+    object-fit: contain;
   }
 
   .footer-bottom {

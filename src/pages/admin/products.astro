@@ -2,12 +2,19 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import { productCatalogItems } from '../../data/product-catalog';
 import { buildProductPageMap } from '../../data/product-page-map';
+import { merchants } from '../../data/products/merchants';
+import { getOffers } from '../../data/products/offers';
 
 const pageMap = buildProductPageMap();
 const allProducts = productCatalogItems;
 
 const pillars = [...new Set(allProducts.map((p) => p.pillar))];
 const categories = [...new Set(allProducts.map((p) => p.category))];
+const merchantFilters = [
+  { label: 'Has Amazon', value: 'has-amazon' },
+  { label: 'Has Chewy', value: 'has-chewy' },
+  { label: 'Missing Chewy', value: 'missing-chewy' },
+];
 ---
 
 <BaseLayout title="Product Catalog (Admin)" noindex={true} hideChrome={true}>
@@ -32,6 +39,14 @@ const categories = [...new Set(allProducts.map((p) => p.category))];
           ))}
         </div>
       </div>
+      <div class="filter-group">
+        <span class="filter-label">Merchant</span>
+        <div class="chips" id="merchant-chips">
+          {merchantFilters.map((m) => (
+            <button class="chip" data-filter="merchant" data-value={m.value}>{m.label}</button>
+          ))}
+        </div>
+      </div>
       <div class="toolbar-footer">
         <p class="count"><span id="visible-count">{allProducts.length}</span> of {allProducts.length} products</p>
         <button class="clear-btn" id="clear-filters">Clear filters</button>
@@ -47,19 +62,42 @@ const categories = [...new Set(allProducts.map((p) => p.category))];
           <th data-sort="category">Category</th>
           <th data-sort="name">Name</th>
           <th>Best For</th>
-          <th>Link</th>
+          <th>Offers</th>
         </tr>
       </thead>
       <tbody id="product-rows">
         {allProducts.map((p) => (
           <>
-            <tr class="product-row" data-pillar={p.pillar} data-category={p.category} data-name={p.name}>
+            <tr
+              class="product-row"
+              data-pillar={p.pillar}
+              data-category={p.category}
+              data-name={p.name}
+              data-has-amazon={String(Boolean(getOffers(p).some((offer) => offer.merchant === 'amazon')))}
+              data-has-chewy={String(Boolean(getOffers(p).some((offer) => offer.merchant === 'chewy')))}
+            >
               <td class="toggle-cell"><button class="toggle-btn" aria-label="Expand details">+</button></td>
               <td><span class={`badge badge--${p.pillar}`}>{p.pillar}</span></td>
               <td>{p.category}</td>
               <td class="name-cell">{p.name}</td>
               <td>{p.bestFor}</td>
-              <td><a href={p.amazonUrl} target="_blank" rel="nofollow noopener">Amazon</a></td>
+              <td>
+                <div class="offer-badges">
+                  {getOffers(p).map((offer) => (
+                    <a
+                      class={`offer-badge offer-badge--${offer.merchant}`}
+                      href={offer.url}
+                      target="_blank"
+                      rel="nofollow noopener"
+                    >
+                      {merchants[offer.merchant].label}
+                    </a>
+                  ))}
+                  {!getOffers(p).some((offer) => offer.merchant === 'chewy') && (
+                    <span class="offer-badge offer-badge--missing">Missing Chewy</span>
+                  )}
+                </div>
+              </td>
             </tr>
             <tr class="detail-row" style="display:none">
               <td colspan="6">
@@ -131,6 +169,29 @@ const categories = [...new Set(allProducts.map((p) => p.category))];
                       </div>
                     </div>
                     <div class="detail-ids">
+                      <div class="detail-section detail-section--offers">
+                        <h4>Offers</h4>
+                        <ul class="offer-detail-list">
+                          {getOffers(p).map((offer) => (
+                            <li>
+                              <span class={`offer-badge offer-badge--${offer.merchant}`}>
+                                {merchants[offer.merchant].label}
+                              </span>
+                              <a href={offer.url} target="_blank" rel="nofollow noopener">
+                                {offer.url}
+                              </a>
+                              {offer.merchant === 'amazon' && (
+                                <span class="meta-value meta-value--mono">ASIN: {offer.asin}</span>
+                              )}
+                              {offer.merchantProductId && offer.merchant !== 'amazon' && (
+                                <span class="meta-value meta-value--mono">
+                                  Merchant ID: {offer.merchantProductId}
+                                </span>
+                              )}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                       <div class="meta-item">
                         <span class="meta-label">ID</span>
                         <span class="meta-value meta-value--mono">{p.id}</span>
@@ -143,7 +204,7 @@ const categories = [...new Set(allProducts.map((p) => p.category))];
                       )}
                       {p.secondaryUrl && (
                         <div class="meta-item">
-                          <span class="meta-label">Secondary Link</span>
+                          <span class="meta-label">Garmin Compatibility Link</span>
                           <span class="meta-value">
                             <a href={p.secondaryUrl} target="_blank" rel="nofollow noopener">
                               {p.secondaryLabel ?? 'Secondary product'}
@@ -185,7 +246,7 @@ const categories = [...new Set(allProducts.map((p) => p.category))];
   let sortKey = '';
   let sortAsc = true;
   let allExpanded = false;
-  const activeFilters: Record<string, Set<string>> = { pillar: new Set(), category: new Set() };
+  const activeFilters: Record<string, Set<string>> = { pillar: new Set(), category: new Set(), merchant: new Set() };
 
   function applyFilters() {
     const q = search.value.toLowerCase();
@@ -195,9 +256,14 @@ const categories = [...new Set(allProducts.map((p) => p.category))];
       const detailRow = row.nextElementSibling as HTMLTableRowElement;
       const matchPillar = activeFilters.pillar.size === 0 || activeFilters.pillar.has(row.dataset.pillar!);
       const matchCategory = activeFilters.category.size === 0 || activeFilters.category.has(row.dataset.category!);
+      const matchMerchant =
+        activeFilters.merchant.size === 0 ||
+        (activeFilters.merchant.has('has-amazon') && row.dataset.hasAmazon === 'true') ||
+        (activeFilters.merchant.has('has-chewy') && row.dataset.hasChewy === 'true') ||
+        (activeFilters.merchant.has('missing-chewy') && row.dataset.hasChewy !== 'true');
       const text = row.textContent! + (detailRow?.textContent || '');
       const matchSearch = !q || text.toLowerCase().includes(q);
-      const visible = matchPillar && matchCategory && matchSearch;
+      const visible = matchPillar && matchCategory && matchMerchant && matchSearch;
       row.style.display = visible ? '' : 'none';
       if (!visible && detailRow) detailRow.style.display = 'none';
       if (visible) count++;
@@ -205,7 +271,11 @@ const categories = [...new Set(allProducts.map((p) => p.category))];
 
     visibleCount.textContent = String(count);
 
-    const hasFilters = search.value || activeFilters.pillar.size > 0 || activeFilters.category.size > 0;
+    const hasFilters =
+      search.value ||
+      activeFilters.pillar.size > 0 ||
+      activeFilters.category.size > 0 ||
+      activeFilters.merchant.size > 0;
     clearBtn.style.display = hasFilters ? '' : 'none';
   }
 
@@ -265,8 +335,7 @@ const categories = [...new Set(allProducts.map((p) => p.category))];
 
   function clearAll() {
     search.value = '';
-    activeFilters.pillar.clear();
-    activeFilters.category.clear();
+    Object.values(activeFilters).forEach((filter) => filter.clear());
     chips.forEach((c) => c.classList.remove('active'));
     applyFilters();
   }
@@ -551,6 +620,57 @@ const categories = [...new Set(allProducts.map((p) => p.category))];
     background: var(--color-sand);
     border-radius: var(--radius-sm);
     border: 1px solid var(--color-border);
+  }
+
+  .detail-section--offers {
+    flex-basis: 100%;
+  }
+
+  .offer-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .offer-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: var(--weight-semibold);
+    padding: 2px 7px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+  }
+
+  .offer-badge--amazon {
+    background: var(--color-charcoal);
+    color: var(--color-sand);
+  }
+
+  .offer-badge--chewy {
+    background: var(--color-sky);
+    color: var(--color-charcoal);
+  }
+
+  .offer-badge--missing {
+    border: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    background: var(--color-cream);
+  }
+
+  .offer-detail-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: var(--space-xs);
+  }
+
+  .offer-detail-list li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: var(--text-sm);
   }
 
   .page-list {

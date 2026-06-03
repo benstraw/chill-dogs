@@ -8,6 +8,9 @@ import Disclosure from '@components/modules/Disclosure.astro';
 import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
 import JsonLd from '@components/JsonLd.astro';
 import AffiliateLink from '@components/AffiliateLink.astro';
+import MerchantAffiliateLink from '@components/MerchantAffiliateLink.astro';
+import { merchants } from '@data/products/merchants';
+import { getOffers } from '@data/products/offers';
 import { getTrackersByType, accessoryProducts } from '@data/tracking-products';
 
 const pageSlug = 'fi-dog-collar-review';
@@ -194,15 +197,29 @@ const articleSchema = {
         </p>
 
         <div class="fi-buy-cta">
-          <AffiliateLink
-            href={fiProduct?.amazonUrl ?? 'https://www.amazon.com/dp/B0FH8GDBLX?tag=chill-dogs-20'}
-            data-track="amazon_outbound_click"
-            data-asin={fiProduct?.asin ?? 'B0FH8GDBLX'}
-            data-product-name="Fi Series 3+ GPS Collar (12-mo membership)"
-            class="fi-buy-btn"
-          >
-            Shop Fi Series 3+ on Amazon (12-mo membership)
-          </AffiliateLink>
+          {fiProduct ? (
+            getOffers(fiProduct).map((offer, offerIndex) => (
+              <MerchantAffiliateLink
+                offer={offer}
+                product={{ id: fiProduct.id, name: fiProduct.name, category: fiProduct.type }}
+                class={`fi-buy-btn${offerIndex > 0 ? ' product-cta--secondary' : ''}`}
+                label={offer.merchant === 'amazon' ? 'Shop Fi Series 3+ on Amazon (12-mo membership)' : merchants[offer.merchant].ctaCopy}
+                pageType="converter"
+                pageSlug={pageSlug}
+                position={`fi-review-${offerIndex + 1}`}
+              />
+            ))
+          ) : (
+            <AffiliateLink
+              href="https://www.amazon.com/dp/B0FH8GDBLX?tag=chill-dogs-20"
+              data-track="amazon_outbound_click"
+              data-asin="B0FH8GDBLX"
+              data-product-name="Fi Series 3+ GPS Collar (12-mo membership)"
+              class="fi-buy-btn"
+            >
+              Shop Fi Series 3+ on Amazon (12-mo membership)
+            </AffiliateLink>
+          )}
           <p class="fi-buy-note">Includes 12-month membership — best per-month value for Fi</p>
         </div>
         <div class="best-for-list">
@@ -251,15 +268,17 @@ const articleSchema = {
               <p class="accessory-card-name">{stuntPuppyCollar.name}</p>
               <p class="accessory-card-note">{stuntPuppyCollar.note}</p>
             </div>
-            <AffiliateLink
-              href={stuntPuppyCollar.amazonUrl}
-              data-track="amazon_outbound_click"
-              data-asin={stuntPuppyCollar.asin}
-              data-product-name={stuntPuppyCollar.name}
-              class="accessory-cta"
-            >
-              Shop on Amazon
-            </AffiliateLink>
+            {getOffers(stuntPuppyCollar).map((offer, offerIndex) => (
+              <MerchantAffiliateLink
+                offer={offer}
+                product={{ id: stuntPuppyCollar.id, name: stuntPuppyCollar.name, category: 'accessories' }}
+                class={`accessory-cta${offerIndex > 0 ? ' product-cta--secondary' : ''}`}
+                label={offer.merchant === 'amazon' ? 'Shop on Amazon' : merchants[offer.merchant].ctaCopy}
+                pageType="converter"
+                pageSlug={pageSlug}
+                position={`fi-accessory-${offerIndex + 1}`}
+              />
+            ))}
           </div>
         )}
       </div>

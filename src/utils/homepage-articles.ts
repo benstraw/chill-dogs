@@ -68,11 +68,21 @@ export interface HomepageConverterCard {
   color: HomepageArticleColor;
 }
 
-export function getHomepageConverters(limit = 12): HomepageConverterCard[] {
-  return staticSitemapSections
+const HOMEPAGE_PINNED_CONVERTERS = ['/calming/best-lick-mats-for-dogs/'];
+
+export function getHomepageConverters(limit = 15): HomepageConverterCard[] {
+  const converters = staticSitemapSections
     .flatMap((s) => s.pages)
     .filter((p) => p.pageType === 'converter')
-    .reverse()
+    .reverse();
+  const pinnedConverters = HOMEPAGE_PINNED_CONVERTERS
+    .map((href) => converters.find((converter) => converter.href === href))
+    .filter((converter): converter is (typeof converters)[number] => Boolean(converter));
+
+  return [
+    ...pinnedConverters,
+    ...converters.filter((converter) => !HOMEPAGE_PINNED_CONVERTERS.includes(converter.href)),
+  ]
     .slice(0, limit)
     .map((p) => ({
       href: p.href,

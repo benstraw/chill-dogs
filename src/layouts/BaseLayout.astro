@@ -40,7 +40,7 @@ const {
 const siteTitle = title === 'Home'
   ? 'Chill-Dogs — Cooling & Calming Products for Dogs'
   : `${title} | Chill-Dogs`;
-const autoOgImage = resolveAutoOgImagePath({ pathname: Astro.url.pathname, noindex });
+const autoOgImage = resolveAutoOgImagePath({ pathname: Astro.url.pathname });
 const resolvedOgImage = new URL(
   resolveProvidedOgImagePath(ogImage) || autoOgImage || '/og-default.jpg',
   Astro.site

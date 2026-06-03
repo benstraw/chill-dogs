@@ -1,6 +1,7 @@
 ---
 import { getProductsByCategory } from '@data/cooling-products';
 import CoolingProductCard from '@components/modules/CoolingProductCard.astro';
+import { getRequiredPrimaryOffer } from '@data/products/offers';
 
 interface Props {
   slice: 'first' | 'rest';
@@ -16,7 +17,7 @@ const startPosition = slice === 'first' ? 1 : 4;
   <div class="product-slot">
     <CoolingProductCard
       product={product}
-      cta={{ label: 'See on Amazon', href: product.amazonUrl, kind: 'amazon' }}
+      cta={{ label: 'See on Amazon', href: getRequiredPrimaryOffer(product, `${pageSlug}: ${product.id}`).url, kind: 'amazon' }}
       position={startPosition + i}
       pageType="collector"
       pageSlug={pageSlug}

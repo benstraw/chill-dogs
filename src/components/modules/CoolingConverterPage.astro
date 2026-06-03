@@ -9,6 +9,8 @@ import Disclosure from '@components/modules/Disclosure.astro';
 import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
 import { getProductsByCategory, categoryMeta } from '@data/cooling-products';
 import type { CoolingConverterPageConfig } from '@data/cooling-converter-pages';
+import { merchants } from '@data/products/merchants';
+import { getRequiredPrimaryOffer } from '@data/products/offers';
 
 interface Props {
   config: CoolingConverterPageConfig;
@@ -22,6 +24,8 @@ if (products.length === 0) {
   throw new Error(`No products found for category: ${config.category}`);
 }
 
+const topOffer = getRequiredPrimaryOffer(products[0], `${config.pageSlug} hero product`);
+
 const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
@@ -32,7 +36,7 @@ const itemListSchema = {
     '@type': 'ListItem',
     position: i + 1,
     name: p.name,
-    url: p.amazonUrl,
+    url: getRequiredPrimaryOffer(p, `${config.pageSlug} item list: ${p.id}`).url,
   })),
 };
 ---
@@ -43,7 +47,12 @@ const itemListSchema = {
     title={meta.heroHeadline}
     subtitle={meta.introCopy}
     disclaimer="As an Amazon Associate, we earn from qualifying purchases."
-    primaryCta={{ label: 'See #1 Pick on Amazon', href: products[0].amazonUrl }}
+    primaryCta={{
+      label: `See #1 Pick on ${merchants[topOffer.merchant].label}`,
+      href: topOffer.url,
+      offer: topOffer,
+      product: { id: products[0].id, name: products[0].name, category: products[0].category },
+    }}
     secondaryCta={config.secondaryCta}
     pageSlug={config.pageSlug}
   />

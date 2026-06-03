@@ -1,4 +1,5 @@
 import { buildAmazonAffiliateUrl, getAmazonProductMetadata } from './amazon-product-metadata';
+import type { AffiliateOffer } from './products/types';
 
 export type RelaxationProductCategory =
   | 'calming-beds'
@@ -11,10 +12,11 @@ export type RelaxationProductCategory =
 
 export interface RelaxationProduct {
   id: string;
-  asin: string;
+  asin?: string;
   name: string;
   category: RelaxationProductCategory;
-  amazonUrl: string;
+  amazonUrl?: string;
+  offers?: AffiliateOffer[];
   bullets: [string, string, string];
   bestFor: string;
   whyItWorks: string;
@@ -23,7 +25,10 @@ export interface RelaxationProduct {
 }
 
 function createFetchedRelaxationProduct(
-  config: Omit<RelaxationProduct, 'name' | 'amazonUrl' | 'image'> & { category: RelaxationProductCategory }
+  config: Omit<RelaxationProduct, 'asin' | 'name' | 'amazonUrl' | 'image'> & {
+    asin: string;
+    category: RelaxationProductCategory;
+  }
 ): RelaxationProduct {
   const fetched = getAmazonProductMetadata(config.asin);
 

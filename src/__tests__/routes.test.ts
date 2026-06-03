@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
 import { ROUTES } from '../data/routes';
-import { calmingCollectorBody, comfortCollectorBody } from '../data/collector-bodies';
+import { sectionCollectorDefinitions } from '../data/section-collectors';
 
 describe('route constants', () => {
   it('uses canonical calming alternatives route', () => {
@@ -11,6 +11,22 @@ describe('route constants', () => {
   it('uses canonical fireworks calm room route', () => {
     expect(ROUTES.calmingFireworksRoom).toBe(
       '/calming/how-to-prepare-a-calm-room-for-fireworks-night/'
+    );
+  });
+
+  it('uses canonical lick mat converter route', () => {
+    expect(ROUTES.calmingLickMats).toBe('/calming/best-lick-mats-for-dogs/');
+  });
+
+  it('uses canonical fireworks checklist route', () => {
+    expect(ROUTES.calmingFireworksChecklist).toBe(
+      '/calming/dog-fireworks-anxiety-checklist/'
+    );
+  });
+
+  it('uses canonical fireworks event article route', () => {
+    expect(ROUTES.calmingFireworksEvent).toBe(
+      '/calming/should-you-take-your-dog-to-fireworks/'
     );
   });
 
@@ -40,65 +56,38 @@ describe('route constants', () => {
     expect(ROUTES.comfortHeavyDutyCrates).toBe('/comforting/best-heavy-duty-dog-crates/');
   });
 
-  it('keeps calming collector links aligned to canonical route', () => {
-    const alternativesCard = calmingCollectorBody.sections[0].cards.find(
-      (card) => card.title === 'Best ThunderShirt Alternatives for Dogs'
-    );
-    const carAnxietyCard = calmingCollectorBody.sections[0].cards.find(
-      (card) => card.title === 'Car Anxiety for Dogs'
-    );
+  it('keeps calming collector definition aligned to canonical routes', () => {
+    const calming = sectionCollectorDefinitions.calming;
 
-    expect(alternativesCard?.href).toBe(ROUTES.calmingAlternatives);
-    expect(alternativesCard?.dataToPage).toBe(ROUTES.calmingAlternatives);
-    expect(carAnxietyCard?.href).toBe(ROUTES.calmingCar);
-    expect(carAnxietyCard?.dataToPage).toBe(ROUTES.calmingCar);
+    expect(calming.href).toBe(ROUTES.calmingHub);
+    expect(calming.hero.primaryCta.href).toBe(ROUTES.calmingTop);
+    expect(calming.hero.secondaryCta.href).toBe(ROUTES.calmingAlternatives);
+    expect(calming.converterPriority).toEqual(
+      expect.arrayContaining([
+        ROUTES.calmingAlternatives,
+        ROUTES.calmingLickMats,
+        ROUTES.calmingCar,
+      ])
+    );
   });
 
-  it('keeps comfort collector puppy crate link aligned to canonical route', () => {
-    const puppyCratesCard = comfortCollectorBody.sections[0].cards.find(
-      (card) => card.title === 'Best Puppy Crates'
-    );
-    const anxietyCratesCard = comfortCollectorBody.sections[0].cards.find(
-      (card) => card.title === 'Best Dog Crates for Anxiety'
-    );
-    const chewResistantBedsCard = comfortCollectorBody.sections[0].cards.find(
-      (card) => card.title === 'Best Indestructible Chew-Proof Dog Beds'
-    );
-    const travelBedsCard = comfortCollectorBody.sections[0].cards.find(
-      (card) => card.title === 'Best Dog Travel Beds'
-    );
-    const travelCratesCard = comfortCollectorBody.sections[0].cards.find(
-      (card) => card.title === 'Best Travel Crates for Road Trips'
-    );
+  it('keeps comfort collector definition aligned to canonical routes', () => {
+    const comfort = sectionCollectorDefinitions.comfort;
 
-    expect(puppyCratesCard?.href).toBe(ROUTES.comfortPuppyCrates);
-    expect(puppyCratesCard?.dataToPage).toBe(ROUTES.comfortPuppyCrates);
-    expect(anxietyCratesCard?.href).toBe(ROUTES.comfortAnxietyCrates);
-    expect(anxietyCratesCard?.dataToPage).toBe(ROUTES.comfortAnxietyCrates);
-    expect(chewResistantBedsCard?.href).toBe(ROUTES.comfortChewResistantBeds);
-    expect(chewResistantBedsCard?.dataToPage).toBe(ROUTES.comfortChewResistantBeds);
-    expect(travelBedsCard?.href).toBe(ROUTES.comfortTravelBeds);
-    expect(travelBedsCard?.dataToPage).toBe(ROUTES.comfortTravelBeds);
-    expect(travelCratesCard?.href).toBe(ROUTES.comfortTravelCrates);
-    expect(travelCratesCard?.dataToPage).toBe(ROUTES.comfortTravelCrates);
-  });
-
-  it('keeps additional comfort crate cards aligned to canonical routes', () => {
-    const airlineCard = comfortCollectorBody.sections[1].cards.find(
-      (card) => card.title === 'Best Airline Crates for Flying With Your Dog'
+    expect(comfort.href).toBe(ROUTES.comfortHub);
+    expect(comfort.hero.primaryCta.href).toBe(ROUTES.comfortCalmingBeds);
+    expect(comfort.hero.secondaryCta.href).toBe(ROUTES.comfortOrthopedicBeds);
+    expect(comfort.converterPriority).toEqual(
+      expect.arrayContaining([
+        ROUTES.comfortChewResistantBeds,
+        ROUTES.comfortTravelBeds,
+        ROUTES.comfortPuppyCrates,
+        ROUTES.comfortAnxietyCrates,
+        ROUTES.comfortTravelCrates,
+        ROUTES.comfortAirlineCrates,
+        ROUTES.comfortFurnitureCrates,
+        ROUTES.comfortHeavyDutyCrates,
+      ])
     );
-    const furnitureCard = comfortCollectorBody.sections[1].cards.find(
-      (card) => card.title === 'Best Furniture Dog Crates'
-    );
-    const heavyDutyCard = comfortCollectorBody.sections[1].cards.find(
-      (card) => card.title === 'Best Heavy-Duty Dog Crates'
-    );
-
-    expect(airlineCard?.href).toBe(ROUTES.comfortAirlineCrates);
-    expect(airlineCard?.dataToPage).toBe(ROUTES.comfortAirlineCrates);
-    expect(furnitureCard?.href).toBe(ROUTES.comfortFurnitureCrates);
-    expect(furnitureCard?.dataToPage).toBe(ROUTES.comfortFurnitureCrates);
-    expect(heavyDutyCard?.href).toBe(ROUTES.comfortHeavyDutyCrates);
-    expect(heavyDutyCard?.dataToPage).toBe(ROUTES.comfortHeavyDutyCrates);
   });
 });

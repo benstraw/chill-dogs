@@ -85,9 +85,9 @@ function resolveShareTitle(baseTitle: string, ogTitle?: string): string {
   return ogTitle ?? `${baseTitle} | Chill-Dogs`;
 }
 
-function resolveShareImage(href: string, options: { ogImage?: string | ImageMetadata; noindex?: boolean }) {
+function resolveShareImage(href: string, options: { ogImage?: string | ImageMetadata }) {
   return resolveProvidedOgImagePath(options.ogImage)
-    ?? resolveAutoOgImagePath({ pathname: href, noindex: options.noindex })
+    ?? resolveAutoOgImagePath({ pathname: href })
     ?? '/og-default.jpg';
 }
 
@@ -105,7 +105,7 @@ export function createSitemapPage(input: SitemapPageInput): SitemapPage {
     preview: {
       title: resolveShareTitle(input.baseTitle, input.ogTitle),
       description: input.description,
-      image: resolveShareImage(input.href, { ogImage: input.ogImage, noindex: input.noindex }),
+      image: resolveShareImage(input.href, { ogImage: input.ogImage }),
     },
   };
 }
@@ -130,7 +130,7 @@ export const staticSitemapSections: SitemapSection[] = [
         href: ROUTES.coolingHub,
         pageType: 'collector',
         collectorSubtype: 'section',
-        topics: ['cooling'],
+        topics: ['cooling', 'heat-safety', 'car-cooling', 'cooling-mats', 'cooling-wearables', 'frozen-toys', 'hydration'],
         relatedLabel: 'Cooling Relief',
       }),
       createSitemapPage({
@@ -141,7 +141,7 @@ export const staticSitemapSections: SitemapSection[] = [
         href: ROUTES.calmingHub,
         pageType: 'collector',
         collectorSubtype: 'section',
-        topics: ['calming', 'anxiety'],
+        topics: ['calming', 'anxiety', 'car-anxiety', 'crate-training', 'fireworks', 'tracking', 'gps-tracking', 'lost-dog-safety'],
         relatedLabel: 'Calm & Comfort',
       }),
       createSitemapPage({
@@ -152,8 +152,15 @@ export const staticSitemapSections: SitemapSection[] = [
         href: ROUTES.comfortHub,
         pageType: 'collector',
         collectorSubtype: 'section',
-        topics: ['comfort', 'sleep', 'beds', 'crates'],
+        topics: ['comfort', 'sleep', 'beds', 'orthopedic', 'crates', 'crate-training', 'flying', 'carriers', 'travel'],
         relatedLabel: 'Comfort & Rest',
+      }),
+      createSitemapPage({
+        baseTitle: 'Search',
+        description: 'Search all Chill-Dogs guides and products, then route to relevant product and guide pages.',
+        href: ROUTES.search,
+        pageType: 'collector',
+        noindex: true,
       }),
     ],
   },
@@ -302,6 +309,21 @@ export const staticSitemapSections: SitemapSection[] = [
         ],
         relatedLabel: 'Car Anxiety Picks',
       }),
+      createSitemapPage({
+        baseTitle: calmingConverterPages['best-lick-mats-for-dogs'].title,
+        description: calmingConverterPages['best-lick-mats-for-dogs'].description,
+        href: ROUTES.calmingLickMats,
+        pageType: 'converter',
+        topics: ['calming', 'anxiety', 'fireworks', 'comfort'],
+        pinnedRelated: [
+          ROUTES.calmingTop,
+          ROUTES.calmingFireworksRoom,
+          ROUTES.calmingFireworksEvent,
+          ROUTES.calmingCar,
+          ROUTES.coolingToys,
+        ],
+        relatedLabel: 'Best Lick Mats',
+      }),
     ],
   },
   {
@@ -415,14 +437,30 @@ export const staticSitemapSections: SitemapSection[] = [
         description: relaxationConverterPages['best-chew-resistant-dog-beds'].description,
         href: ROUTES.comfortChewResistantBeds,
         pageType: 'converter',
+        topics: ['comfort', 'beds', 'crates'],
+        pinnedRelated: [
+          ROUTES.comfortOrthopedicBeds,
+          ROUTES.comfortCalmingBeds,
+          ROUTES.calmingCrateGuide,
+          ROUTES.comfortTravelBeds,
+        ],
         ogTitle: relaxationConverterPages['best-chew-resistant-dog-beds'].ogTitle,
+        relatedLabel: 'Chew-Resistant Dog Beds',
       }),
       createSitemapPage({
         baseTitle: relaxationConverterPages['best-dog-travel-beds'].title,
         description: relaxationConverterPages['best-dog-travel-beds'].description,
         href: ROUTES.comfortTravelBeds,
         pageType: 'converter',
+        topics: ['comfort', 'beds', 'travel', 'road-trips'],
+        pinnedRelated: [
+          ROUTES.roadTrip,
+          ROUTES.travelFlyWithDog,
+          ROUTES.comfortCalmingBeds,
+          ROUTES.comfortOrthopedicBeds,
+        ],
         ogTitle: relaxationConverterPages['best-dog-travel-beds'].ogTitle,
+        relatedLabel: 'Dog Travel Beds',
       }),
       createSitemapPage({
         baseTitle: relaxationConverterPages['best-puppy-crates'].title,
@@ -625,6 +663,14 @@ export const staticSitemapSections: SitemapSection[] = [
         href: ROUTES.terms,
         pageType: 'informer',
         noindex: true,
+      }),
+      createSitemapPage({
+        baseTitle: 'Dog Charities We Love',
+        ogTitle: 'Dog Charities We Love | Shelter Support | Chill-Dogs',
+        description:
+          "Anyone can help make a dog's life more chill. These are our favorite charities working to improve the lives of dogs inside and outside of shelters.",
+        href: ROUTES.shelterCharities,
+        pageType: 'informer',
       }),
     ],
   },

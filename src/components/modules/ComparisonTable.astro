@@ -1,6 +1,8 @@
 ---
-import AffiliateLink from '@components/AffiliateLink.astro';
+import MerchantAffiliateLink from '@components/MerchantAffiliateLink.astro';
 import type { CoolingProduct } from '@data/cooling-products';
+import { getOffers } from '@data/products/offers';
+import { merchants } from '@data/products/merchants';
 
 interface Props {
   products: CoolingProduct[];
@@ -45,20 +47,20 @@ const { products, pageSlug = '' } = Astro.props;
           <td>{product.coolingMethod || '—'}</td>
           <td>{product.sizingNote || '—'}</td>
           <td class="ct-cta-cell">
-            <AffiliateLink
-              href={product.amazonUrl}
-              class="ct-cta"
-              data-track="amazon_outbound_click"
-              data-page-type="converter"
-              data-page-slug={pageSlug}
-              data-product-name={product.name}
-              data-product-category={product.category}
-              data-position={String(i + 1)}
-              data-destination="amazon.com"
-              data-table="true"
-            >
-              Check Price
-            </AffiliateLink>
+            <div class="ct-offers">
+              {getOffers(product).map((offer, offerIndex) => (
+                <MerchantAffiliateLink
+                  offer={offer}
+                  product={{ id: product.id, name: product.name, category: product.category }}
+                  class={`ct-cta${offerIndex > 0 ? ' ct-cta--secondary' : ''}`}
+                  label={offer.merchant === 'amazon' ? 'Check Price' : merchants[offer.merchant].ctaCopy}
+                  pageType="converter"
+                  pageSlug={pageSlug}
+                  position={String(i + 1)}
+                  data-table="true"
+                />
+              ))}
+            </div>
           </td>
         </tr>
       ))}
@@ -97,20 +99,20 @@ const { products, pageSlug = '' } = Astro.props;
           </>
         )}
       </dl>
-      <AffiliateLink
-        href={product.amazonUrl}
-        class="ct-cta"
-        data-track="amazon_outbound_click"
-        data-page-type="converter"
-        data-page-slug={pageSlug}
-        data-product-name={product.name}
-        data-product-category={product.category}
-        data-position={String(i + 1)}
-        data-destination="amazon.com"
-        data-table="true"
-      >
-        Check Price on Amazon
-      </AffiliateLink>
+      <div class="ct-offers">
+        {getOffers(product).map((offer, offerIndex) => (
+          <MerchantAffiliateLink
+            offer={offer}
+            product={{ id: product.id, name: product.name, category: product.category }}
+            class={`ct-cta${offerIndex > 0 ? ' ct-cta--secondary' : ''}`}
+            label={offer.merchant === 'amazon' ? 'Check Price on Amazon' : merchants[offer.merchant].ctaCopy}
+            pageType="converter"
+            pageSlug={pageSlug}
+            position={String(i + 1)}
+            data-table="true"
+          />
+        ))}
+      </div>
     </div>
   ))}
 </div>
@@ -190,6 +192,12 @@ const { products, pageSlug = '' } = Astro.props;
     text-align: center;
   }
 
+  .ct-offers {
+    display: grid;
+    gap: var(--space-xs);
+    justify-items: center;
+  }
+
   :global(.ct-cta) {
     display: inline-block;
     background: var(--color-primary);
@@ -206,6 +214,17 @@ const { products, pageSlug = '' } = Astro.props;
   :global(.ct-cta:hover) {
     background: var(--color-primary-hover);
     color: var(--color-text-inverse) !important;
+  }
+
+  :global(.ct-cta--secondary) {
+    background: transparent;
+    color: var(--color-primary) !important;
+    border: 1px solid var(--color-primary);
+  }
+
+  :global(.ct-cta--secondary:hover) {
+    background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+    color: var(--color-primary) !important;
   }
 
   :global(.ct-cta:focus-visible) {

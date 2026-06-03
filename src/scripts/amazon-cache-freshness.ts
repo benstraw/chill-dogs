@@ -3,6 +3,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { productCatalogItems } from '../data/product-catalog';
+import { getAmazonOfferEntries, getOffer } from '../data/products/offers';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -34,6 +35,8 @@ export interface CatalogAsinEntry {
   name: string;
   pillar: string;
 }
+
+type CatalogAsinSourceItem = CatalogAsinEntry | (typeof productCatalogItems)[number];
 
 export interface AmazonCacheReportItem {
   asin: string;
@@ -172,13 +175,23 @@ export function getCacheEntryAgeDays(entry: AmazonCacheManifestEntry, now = new 
   return Math.max(0, Math.floor(ageMs / 86_400_000));
 }
 
-export function getCatalogAsinEntries(items = productCatalogItems): CatalogAsinEntry[] {
+export function getCatalogAsinEntries(items: CatalogAsinSourceItem[] = productCatalogItems): CatalogAsinEntry[] {
+  if (items === productCatalogItems) {
+    return getAmazonOfferEntries(productCatalogItems).map((item) => ({
+      asin: item.asin,
+      name: item.name,
+      pillar: item.pillar ?? '',
+    }));
+  }
+
   const byAsin = new Map<string, CatalogAsinEntry>();
 
   for (const item of items) {
-    if (item.asin && !byAsin.has(item.asin)) {
-      byAsin.set(item.asin, {
-        asin: item.asin,
+    const offer = 'id' in item ? getOffer(item as (typeof productCatalogItems)[number], 'amazon') : undefined;
+    const asin = offer?.merchant === 'amazon' ? offer.asin : item.asin;
+    if (asin && !byAsin.has(asin)) {
+      byAsin.set(asin, {
+        asin,
         name: item.name,
         pillar: item.pillar,
       });

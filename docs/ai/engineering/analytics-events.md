@@ -3,7 +3,7 @@ title: Analytics Events
 type: canonical
 domain: engineering
 status: active
-updated: 2026-05-03
+updated: 2026-05-24
 tags:
   - chill-dogs
   - engineering
@@ -82,14 +82,17 @@ track('hero_impression', { variant: 'a', page: 'cooling' });
 | Event | Trigger | Key Properties |
 |---|---|---|
 | `amazon_outbound_click` | Click on any `AffiliateLink` component | `asin`, `product_name`, `page_slug`, `position` |
-| `hero_cta_click` | Click on hub page hero CTA | `variant`, `page`, `cta` (primary/secondary) |
+| `hero_cta_click` | Click on section collector or variant hero CTA | `variant`, `page`, `cta` (primary/secondary) |
 | `hero_impression` | Hero is 50% visible (IntersectionObserver) | `variant`, `page` |
 | `collector_to_converter_click` | Click on internal link from collector to converter | `from_slug`, `to_slug` |
 | `toc_click` | Click on table of contents link | `anchor`, `page_slug` |
 | `pinterest_save_click` | Click on an opt-in Pinterest save card or save button | `page_slug`, `pin_title`, `placement`, `media` |
+| `newsletter_cta_click` | Click on a contextual article newsletter CTA | `cta_type`, `topic`, `placement`, `source_page` |
 | `email_signup_view` | Email signup form is viewed | — |
 | `email_signup_start` | Email field is focused | — |
 | `email_signup_submit` | Form submitted | — |
+| `search_query` | User search produces results (fired after 150 ms debounce) | `query`, `result_count`, `filter` |
+| `search_result_click` | User clicks a page or product result card from `/search/` | `result_href`, `result_title`, `result_type`, `query` |
 
 ---
 
@@ -97,12 +100,17 @@ track('hero_impression', { variant: 'a', page: 'cooling' });
 
 `AffiliateLink.astro` automatically adds `data-affiliate="true"` to every Amazon outbound link.
 
-The `amazon_outbound_click` event fires on any click of `[data-affiliate="true"]`. Additional properties come from `data-asin` and `data-product-name` attributes.
+Merchant links fire `affiliate_outbound_click`. Amazon links also fire `amazon_outbound_click` through
+`data-track-also` during the dashboard migration. Additional properties come from `data-asin`,
+`data-product-id`, `data-merchant`, and `data-product-name` attributes.
 
 ```astro
 <AffiliateLink
   href="https://www.amazon.com/dp/B09XYZ/?tag=chill-dogs-20"
-  data-track="amazon_outbound_click"
+  data-track="affiliate_outbound_click"
+  data-track-also="amazon_outbound_click"
+  data-merchant="amazon"
+  data-product-id="ruffwear-swamp-cooler"
   data-asin="B09XYZ"
   data-product-name="Ruffwear Swamp Cooler"
 >

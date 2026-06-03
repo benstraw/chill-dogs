@@ -407,11 +407,11 @@ duplicating product data already on the pillar pages.
 
 | URL | Type | Target action |
 |---|---|---|
-| `/travel/rhys-road-trip-chill-kit/` | collector | Route to `/cooling/car-cooling-for-dogs/` or `/calming/car-anxiety-for-dogs/` |
+| `/travel/dog-road-trip-gear/` | collector | Route to `/cooling/car-cooling-for-dogs/` or `/calming/car-anxiety-for-dogs/` |
 | `/cooling/car-cooling-for-dogs/` | converter | Affiliate click to Amazon (car cooling gear) |
 | `/calming/car-anxiety-for-dogs/` | converter | Affiliate click to Amazon (travel calming aids) |
 
-### Collector page structure (`/travel/rhys-road-trip-chill-kit/`)
+### Collector page structure (`/travel/dog-road-trip-gear/`)
 
 The page follows the Web Systems collector pattern: one job (route to converters),
 two primary CTAs above the fold, and all product content organized to support
@@ -575,7 +575,7 @@ pages. That created weak social previews and failed common OG quality checks
 - Updated `src/__tests__/site-smoke.test.ts`:
   - verifies generated OG asset references in built HTML,
   - verifies OG files exist in `dist/og/`,
-  - verifies `noindex` pages still fall back to default OG image.
+  - verifies routes without generated OG assets still fall back to default OG image.
 - Confirmed OG metadata now points to `.png` assets (not `.svg`) on indexable
   routes to avoid unsupported-format issues on some platforms.
 

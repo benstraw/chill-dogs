@@ -69,10 +69,22 @@ function firstMainImageAbsolute(doc: Document): string | null {
   return new URL(src, 'https://www.chill-dogs.com').href;
 }
 
-function getAmazonAffiliateLinks(doc: Document): HTMLAnchorElement[] {
+function getAffiliateLinks(doc: Document): HTMLAnchorElement[] {
   return Array.from(
-    doc.querySelectorAll<HTMLAnchorElement>('a[data-affiliate="true"][href*="amazon."]')
+    doc.querySelectorAll<HTMLAnchorElement>('a[data-affiliate="true"][data-track="affiliate_outbound_click"]')
   );
+}
+
+function expectTrackedAffiliateLink(link: HTMLAnchorElement) {
+  expect(relTokens(link)).toEqual(['noopener', 'noreferrer', 'sponsored']);
+  expect(link.getAttribute('target')).toBe('_blank');
+
+  if (link.getAttribute('data-merchant') === 'amazon') {
+    expect(link.getAttribute('data-track-also')).toBe('amazon_outbound_click');
+    expect(link.href).toContain('tag=chill-dogs-20');
+  } else {
+    expect(link.getAttribute('data-track-also')).toBeNull();
+  }
 }
 
 function relTokens(link: HTMLAnchorElement): string[] {
@@ -104,15 +116,60 @@ describe('site smoke tests', () => {
     expect(canonical?.getAttribute('href')).toBe('https://www.chill-dogs.com/');
   });
 
-  it('links the homepage into crate training and road trip crate paths', () => {
+  it('links the homepage into featured converter and guide paths', () => {
     const doc = readBuiltPage('index.html');
 
     const links = Array.from(doc.querySelectorAll<HTMLAnchorElement>('a')).map((link) =>
       link.getAttribute('href')
     );
+    const lickMatLinks = Array.from(
+      doc.querySelectorAll<HTMLAnchorElement>('a[href="/calming/best-lick-mats-for-dogs/"]')
+    );
+    const travelCrateLinks = Array.from(
+      doc.querySelectorAll<HTMLAnchorElement>('a[href="/comforting/best-travel-crates-for-road-trips/"]')
+    );
 
     expect(links).toContain('/calming/crate-training-for-dogs/');
     expect(links).toContain('/comforting/best-travel-crates-for-road-trips/');
+    expect(links).toContain('/calming/best-lick-mats-for-dogs/');
+    expect(lickMatLinks.map((link) => link.getAttribute('data-link-position'))).toEqual([
+      'homepage-converters',
+    ]);
+    expect(travelCrateLinks.map((link) => link.getAttribute('data-link-position'))).toEqual([
+      'homepage-converters',
+    ]);
+  });
+
+  it('renders dynamic section collector inventories for articles and converters', () => {
+    const coolingDoc = readBuiltPage(path.join('cooling', 'index.html'));
+    const calmingDoc = readBuiltPage(path.join('calming', 'index.html'));
+    const comfortDoc = readBuiltPage(path.join('comforting', 'index.html'));
+    const getLinks = (doc: Document) =>
+      Array.from(doc.querySelectorAll<HTMLAnchorElement>('a')).map((link) => link.getAttribute('href'));
+    const getHeadings = (doc: Document) =>
+      Array.from(doc.querySelectorAll<HTMLHeadingElement>('.section-heading')).map((heading) => heading.textContent);
+    const coolingGuideCards = Array.from(coolingDoc.querySelectorAll<HTMLAnchorElement>('.cat-card--guide'));
+    const coolingConverterCards = Array.from(coolingDoc.querySelectorAll<HTMLAnchorElement>('.cat-card--converter'));
+
+    expect(getLinks(coolingDoc)).toEqual(expect.arrayContaining([
+      '/cooling/dog-travel-hydration/',
+      '/travel/dog-road-trip-gear/',
+    ]));
+    expect(getLinks(calmingDoc)).toEqual(expect.arrayContaining([
+      '/calming/cbd-for-dogs/',
+      '/gear/best-dog-gps-trackers/',
+    ]));
+    expect(getLinks(comfortDoc)).toEqual(expect.arrayContaining([
+      '/comforting/best-airline-approved-dog-carriers/',
+      '/travel/how-to-fly-with-a-dog/',
+    ]));
+    expect(getHeadings(coolingDoc)).toEqual(expect.arrayContaining(['Car Cooling & Travel Hydration', 'Wearable Cooling']));
+    expect(getHeadings(calmingDoc)).toEqual(expect.arrayContaining(['Car Anxiety & Travel Stress', 'Escape Risk & Tracking']));
+    expect(getHeadings(comfortDoc)).toEqual(expect.arrayContaining(['Calming & Orthopedic Beds', 'Flying, Carriers & Travel Prep']));
+    expect(coolingGuideCards.length).toBeGreaterThan(0);
+    expect(coolingGuideCards[0]?.querySelector('.cat-card-badge')?.textContent).toBe('Guide');
+    expect(coolingGuideCards[0]?.querySelector('img')?.getAttribute('src')).toBeTruthy();
+    expect(coolingConverterCards[0]?.querySelector('img')).toBeNull();
   });
 
   it('renders derived InternalLinkStrip links on migrated pages', () => {
@@ -131,6 +188,26 @@ describe('site smoke tests', () => {
           '/calming/best-calming-products-for-anxious-dogs/',
           '/calming/car-anxiety-for-dogs/',
           '/travel/dog-road-trip-gear/',
+        ],
+      },
+      {
+        page: path.join('travel', 'dog-road-trip-gear', 'index.html'),
+        expected: [
+          '/comforting/best-travel-crates-for-road-trips/',
+          '/cooling/car-cooling-for-dogs/',
+          '/cooling/dog-travel-hydration/',
+          '/calming/car-anxiety-for-dogs/',
+          '/calming/best-lick-mats-for-dogs/',
+        ],
+      },
+      {
+        page: path.join('calming', 'cbd-for-dogs', 'index.html'),
+        expected: [
+          '/calming/best-calming-products-for-anxious-dogs/',
+          '/calming/best-thundershirt-alternatives/',
+          '/calming/car-anxiety-for-dogs/',
+          '/calming/best-lick-mats-for-dogs/',
+          '/comforting/best-orthopedic-dog-beds/',
         ],
       },
       {
@@ -181,6 +258,16 @@ describe('site smoke tests', () => {
           '/comforting/best-puppy-crates/',
         ],
       },
+      {
+        page: path.join('calming', 'dog-fireworks-anxiety-checklist', 'index.html'),
+        expected: [
+          '/calming/how-to-prepare-a-calm-room-for-fireworks-night/',
+          '/calming/should-you-take-your-dog-to-fireworks/',
+          '/calming/best-calming-products-for-anxious-dogs/',
+          '/calming/best-thundershirt-alternatives/',
+          '/calming/car-anxiety-for-dogs/',
+        ],
+      },
     ];
 
     for (const testCase of cases) {
@@ -192,6 +279,21 @@ describe('site smoke tests', () => {
         expect(link.getAttribute('data-track')).toBe('collector_to_converter_click');
       }
     }
+  });
+
+  it('links fireworks checklist sections to supporting article guides', () => {
+    const doc = readBuiltPage(path.join('calming', 'dog-fireworks-anxiety-checklist', 'index.html'));
+    const calmRoomLink = doc.querySelector<HTMLAnchorElement>(
+      'a[href="/calming/how-to-prepare-a-calm-room-for-fireworks-night/"][data-link-position="morning-of-july-4"]'
+    );
+    const eventDecisionLink = doc.querySelector<HTMLAnchorElement>(
+      'a[href="/calming/should-you-take-your-dog-to-fireworks/"][data-link-position="during-fireworks"]'
+    );
+
+    expect(calmRoomLink?.textContent).toBe('fireworks calm room guide');
+    expect(calmRoomLink?.getAttribute('data-from-page')).toBe('dog-fireworks-anxiety-checklist');
+    expect(eventDecisionLink?.textContent).toBe('fireworks event decision guide');
+    expect(eventDecisionLink?.getAttribute('data-from-page')).toBe('dog-fireworks-anxiety-checklist');
   });
 
   it('renders derived RelatedGuides cards on migrated converter pages', () => {
@@ -265,7 +367,7 @@ describe('site smoke tests', () => {
     expect(travelDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
       .toBe(travelDoc.querySelector('meta[name="twitter:image"]')?.getAttribute('content'));
 
-    // noindex pages keep the static default fallback
+    // Explicitly excluded pages keep the static default fallback.
     expect(termsDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
       .toContain('/og-default.jpg');
     // image-less indexable pages keep route-based generated OG assets
@@ -283,6 +385,7 @@ describe('site smoke tests', () => {
 
     const contactRow = sitemapDoc.querySelector('[data-share-preview-row][data-href="/contact/"]');
     const roadTripRow = sitemapDoc.querySelector('[data-share-preview-row][data-href="/travel/dog-road-trip-gear/"]');
+    const subscribeRow = sitemapDoc.querySelector('[data-share-preview-row][data-href="/subscribe/"]');
     const termsRow = sitemapDoc.querySelector('[data-share-preview-row][data-href="/terms/"]');
 
     expect(contactRow?.querySelector('[data-share-title]')?.textContent)
@@ -304,6 +407,11 @@ describe('site smoke tests', () => {
       .toContain('The Day Rhys Ran Off: What We Learned About Dog Tracking');
     expect(rhysRow?.querySelector('[data-share-image]')?.getAttribute('src'))
       .toContain('/_assets/bishop-peak-expert-trail-marker');
+
+    expect(subscribeRow?.querySelector('[data-share-title]')?.textContent)
+      .toContain('Subscribe to Chill-Dogs | Dog Tips and Gear Picks');
+    expect(subscribeRow?.querySelector('[data-share-image]')?.getAttribute('src'))
+      .toContain('/og/subscribe.jpg');
 
     expect(termsRow?.querySelector('[data-share-title]')?.textContent)
       .toContain('Terms of Use | Chill-Dogs');
@@ -345,70 +453,57 @@ describe('site smoke tests', () => {
     expect(termsSchemas.some((schema) => schema.includes('"@type":"BreadcrumbList"'))).toBe(false);
   });
 
-  it('renders cooling converter pages with tagged Amazon affiliate links', () => {
+  it('renders cooling converter pages with tracked merchant affiliate links', () => {
     const doc = readBuiltPage(path.join('cooling', 'cooling-mats', 'index.html'));
-    const affiliateLinks = getAmazonAffiliateLinks(doc);
+    const affiliateLinks = getAffiliateLinks(doc);
 
     expect(affiliateLinks.length).toBeGreaterThan(0);
 
     for (const link of affiliateLinks) {
-      expect(relTokens(link)).toEqual(['noopener', 'noreferrer', 'sponsored']);
-      expect(link.getAttribute('target')).toBe('_blank');
-      expect(link.getAttribute('data-track')).toBe('amazon_outbound_click');
-      expect(link.href).toContain('tag=chill-dogs-20');
+      expectTrackedAffiliateLink(link);
     }
   });
 
-  it('renders calming converter pages with tagged Amazon affiliate links', () => {
+  it('renders calming converter pages with tracked merchant affiliate links', () => {
     const doc = readBuiltPage(path.join('calming', 'best-calming-products-for-anxious-dogs', 'index.html'));
-    const affiliateLinks = getAmazonAffiliateLinks(doc);
+    const affiliateLinks = getAffiliateLinks(doc);
 
     expect(affiliateLinks.length).toBeGreaterThan(0);
 
     for (const link of affiliateLinks) {
-      expect(relTokens(link)).toEqual(['noopener', 'noreferrer', 'sponsored']);
-      expect(link.getAttribute('target')).toBe('_blank');
-      expect(link.getAttribute('data-track')).toBe('amazon_outbound_click');
-      expect(link.href).toContain('tag=chill-dogs-20');
+      expectTrackedAffiliateLink(link);
     }
   });
 
   it('renders comfort travel-bed converter pages with tagged Amazon affiliate links', () => {
     const doc = readBuiltPage(path.join('comforting', 'best-dog-travel-beds', 'index.html'));
-    const affiliateLinks = getAmazonAffiliateLinks(doc);
+    const affiliateLinks = getAffiliateLinks(doc).filter((link) => link.getAttribute('data-merchant') === 'amazon');
 
     expect(affiliateLinks.length).toBeGreaterThan(0);
 
     for (const link of affiliateLinks) {
-      expect(relTokens(link)).toEqual(['noopener', 'noreferrer', 'sponsored']);
-      expect(link.getAttribute('target')).toBe('_blank');
-      expect(link.getAttribute('data-track')).toBe('amazon_outbound_click');
-      expect(link.href).toContain('tag=chill-dogs-20');
+      expectTrackedAffiliateLink(link);
     }
   });
 
   it('renders comfort chew-resistant converter pages with tagged Amazon affiliate links', () => {
     const doc = readBuiltPage(path.join('comforting', 'best-chew-resistant-dog-beds', 'index.html'));
-    const affiliateLinks = getAmazonAffiliateLinks(doc);
+    const affiliateLinks = getAffiliateLinks(doc).filter((link) => link.getAttribute('data-merchant') === 'amazon');
 
     expect(affiliateLinks.length).toBeGreaterThan(0);
 
     for (const link of affiliateLinks) {
-      expect(relTokens(link)).toEqual(['noopener', 'noreferrer', 'sponsored']);
-      expect(link.getAttribute('target')).toBe('_blank');
-      expect(link.getAttribute('data-track')).toBe('amazon_outbound_click');
-      expect(link.href).toContain('tag=chill-dogs-20');
+      expectTrackedAffiliateLink(link);
     }
   });
 
   it('renders travel converter with affiliate links', () => {
     const doc = readBuiltPage(path.join('travel', 'dog-road-trip-gear', 'index.html'));
-    const affiliateLinks = getAmazonAffiliateLinks(doc);
+    const affiliateLinks = getAffiliateLinks(doc);
 
     expect(affiliateLinks.length).toBeGreaterThan(0);
     for (const link of affiliateLinks) {
-      expect(relTokens(link)).toEqual(['noopener', 'noreferrer', 'sponsored']);
-      expect(link.href).toContain('tag=chill-dogs-20');
+      expectTrackedAffiliateLink(link);
     }
   });
 
@@ -431,14 +526,36 @@ describe('site smoke tests', () => {
     expect(affiliateDoc.body.textContent).toContain('no additional cost to you');
   });
 
+  it('renders search as a noindex collector with internal product result routes', () => {
+    const searchDoc = readBuiltPage(path.join('search', 'index.html'));
+    const searchIndex = JSON.parse(readBuiltAsset('search-index.json'));
+    const productItems = searchIndex.filter((item: { type: string }) => item.type === 'product');
+
+    expect(searchDoc.querySelector('meta[name="robots"]')?.getAttribute('content'))
+      .toBe('noindex, nofollow');
+    expect(searchDoc.querySelectorAll('.search-results a[href*="amazon."]').length).toBe(0);
+    expect(productItems.length).toBeGreaterThan(0);
+
+    for (const item of productItems) {
+      expect(item.href).toMatch(/^\/shop\/\?q=/);
+      expect(item.href).not.toContain('amazon.');
+      expect(item).not.toHaveProperty('amazonUrl');
+    }
+  });
+
   it('renders subscribe flow pages without site chrome and keeps them noindex', () => {
+    const subscribeDoc = readBuiltPage(path.join('subscribe', 'index.html'));
     const thanksDoc = readBuiltPage(path.join('subscribe', 'thanks', 'index.html'));
     const confirmedDoc = readBuiltPage(path.join('subscribe', 'confirmed', 'index.html'));
 
+    expect(subscribeDoc.querySelector('meta[name="robots"]')?.getAttribute('content'))
+      .toBe('noindex, nofollow');
     expect(thanksDoc.querySelector('meta[name="robots"]')?.getAttribute('content'))
       .toBe('noindex, nofollow');
     expect(confirmedDoc.querySelector('meta[name="robots"]')?.getAttribute('content'))
       .toBe('noindex, nofollow');
+    expect(subscribeDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
+      .toContain('/og/subscribe.jpg');
     expect(thanksDoc.querySelector('header.site-header')).toBeNull();
     expect(thanksDoc.querySelector('footer.site-footer')).toBeNull();
     expect(confirmedDoc.querySelector('header.site-header')).toBeNull();
@@ -449,6 +566,43 @@ describe('site smoke tests', () => {
       .toContain('Chill-Dogs');
     expect(confirmedDoc.body.textContent).toContain('Cooling Picks');
     expect(confirmedDoc.body.textContent).toContain('Hot Weather Guide');
+  });
+
+  it('publishes the postcard QR alias as a tracked subscribe redirect', () => {
+    const expectedDestination = 'https://www.chill-dogs.com/subscribe/?utm_source=postcard&utm_medium=print&utm_campaign=offline_flyer';
+    const joinDoc = readBuiltPage(path.join('join', 'index.html'));
+    const refresh = joinDoc.querySelector('meta[http-equiv="refresh"]');
+    const vercelConfig = JSON.parse(readFileSync(path.join(projectRoot, 'vercel.json'), 'utf8'));
+    const joinRedirects = vercelConfig.redirects.filter(({ source }: { source: string }) =>
+      source === '/join' || source === '/join/'
+    );
+
+    expect(refresh?.getAttribute('content')).toContain(expectedDestination);
+    expect(joinRedirects).toEqual([
+      { source: '/join', destination: expectedDestination, statusCode: 302 },
+      { source: '/join/', destination: expectedDestination, statusCode: 302 },
+    ]);
+  });
+
+  it('renders the fireworks article newsletter CTA in the exit-planning section', () => {
+    const doc = readBuiltPage(path.join('calming', 'should-you-take-your-dog-to-fireworks', 'index.html'));
+    const ctas = doc.querySelectorAll<HTMLElement>('.newsletter-callout');
+    const cta = ctas[0];
+    const exitHeading = doc.querySelector<HTMLElement>('#exit-before-dark');
+    const whatToBringHeading = doc.querySelector<HTMLElement>('#what-to-bring');
+    const link = cta?.querySelector<HTMLAnchorElement>('.newsletter-callout__link');
+
+    expect(ctas).toHaveLength(1);
+    expect(exitHeading).toBeTruthy();
+    expect(whatToBringHeading).toBeTruthy();
+    expect(Boolean(exitHeading!.compareDocumentPosition(cta!) & 4)).toBe(true);
+    expect(Boolean(cta!.compareDocumentPosition(whatToBringHeading!) & 4)).toBe(true);
+    expect(link?.getAttribute('href')).toBe('/subscribe/?utm_source=article&utm_medium=cta&utm_campaign=fireworks_safety&utm_content=exit_before_dark');
+    expect(link?.getAttribute('data-track')).toBe('newsletter_cta_click');
+    expect(link?.getAttribute('data-cta-type')).toBe('newsletter');
+    expect(link?.getAttribute('data-topic')).toBe('fireworks_safety');
+    expect(link?.getAttribute('data-placement')).toBe('exit_before_dark');
+    expect(link?.getAttribute('data-source-page')).toBe('should-you-take-your-dog-to-fireworks');
   });
 
   it('renders the admin product catalog from all product data files', () => {
@@ -470,11 +624,10 @@ describe('site smoke tests', () => {
     const heavyDutyDoc = readBuiltPage(path.join('comforting', 'best-heavy-duty-dog-crates', 'index.html'));
 
     for (const doc of [airlineDoc, furnitureDoc, heavyDutyDoc]) {
-      const affiliateLinks = getAmazonAffiliateLinks(doc);
+      const affiliateLinks = getAffiliateLinks(doc);
       expect(affiliateLinks.length).toBeGreaterThan(0);
       for (const link of affiliateLinks) {
-        expect(relTokens(link)).toEqual(['noopener', 'noreferrer', 'sponsored']);
-        expect(link.href).toContain('tag=chill-dogs-20');
+        expectTrackedAffiliateLink(link);
       }
     }
   });
@@ -504,6 +657,8 @@ describe('site smoke tests', () => {
     expect(sitemap).toContain('/cooling/car-cooling-for-dogs/');
     expect(sitemap).toContain('/travel/dog-road-trip-gear/');
     expect(sitemap).toContain('/calming/best-calming-products-for-anxious-dogs/');
+    expect(sitemap).toContain('/calming/best-lick-mats-for-dogs/');
+    expect(sitemap).toContain('/calming/dog-fireworks-anxiety-checklist/');
     expect(sitemap).toContain('/calming/how-to-prepare-a-calm-room-for-fireworks-night/');
     expect(sitemap).toContain('/comforting/best-puppy-crates/');
     expect(sitemap).toContain('/comforting/best-anxiety-dog-crates/');
@@ -518,6 +673,7 @@ describe('site smoke tests', () => {
     expect(sitemap).not.toContain('/terms/');
     expect(sitemap).not.toContain('/subscribe/thanks/');
     expect(sitemap).not.toContain('/subscribe/confirmed/');
+    expect(sitemap).not.toContain('/join');
   });
 
   it('publishes article collection entries in rss feed', () => {
@@ -525,6 +681,8 @@ describe('site smoke tests', () => {
 
     expect(rssXml).toContain('/calming/crate-training-for-dogs/');
     expect(rssXml).toContain('How to Crate Train Your Dog');
+    expect(rssXml).toContain('/calming/dog-fireworks-anxiety-checklist/');
+    expect(rssXml).toContain('Dog Fireworks Anxiety Checklist: What to Do Before, During, and After the Fourth of July');
     expect(rssXml).toContain('/calming/how-to-prepare-a-calm-room-for-fireworks-night/');
     expect(rssXml).toContain('How to Prepare a Calm Room for Fireworks Night');
   });
@@ -622,7 +780,7 @@ describe('site smoke tests', () => {
   });
 
   it('content pages have at least one JSON-LD script', () => {
-    const noSchemaExpected = ['404.html', 'privacy-policy', 'terms', 'content-sitemap', 'admin/', 'subscribe/'];
+    const noSchemaExpected = ['404.html', 'privacy-policy', 'terms', 'content-sitemap', 'admin/', 'subscribe/', 'search/'];
     const htmlFiles = collectHtmlFiles(distRoot);
     const failures: string[] = [];
 
