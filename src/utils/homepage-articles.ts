@@ -68,7 +68,7 @@ export interface HomepageConverterCard {
   color: HomepageArticleColor;
 }
 
-export function getHomepageConverters(limit = 12): HomepageConverterCard[] {
+export function getHomepageConverters(limit = 15): HomepageConverterCard[] {
   return staticSitemapSections
     .flatMap((s) => s.pages)
     .filter((p) => p.pageType === 'converter')

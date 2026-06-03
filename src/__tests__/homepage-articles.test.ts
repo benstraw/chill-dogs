@@ -4,6 +4,7 @@ import type { ImageMetadata } from 'astro';
 
 import {
   buildHomepageArticleFeed,
+  getHomepageConverters,
   mapHomepageArticle,
   resolveHomepageArticleTheme,
 } from '../utils/homepage-articles';
@@ -90,5 +91,12 @@ describe('homepage article feed', () => {
       color: 'comfort',
       image: '/og/comforting-how-much-do-dogs-sleep.jpg',
     });
+  });
+
+  it('includes the lick-mat converter in the default homepage browse picks', () => {
+    const converters = getHomepageConverters();
+
+    expect(converters.map((converter) => converter.href)).toContain('/calming/best-lick-mats-for-dogs/');
+    expect(converters.filter((converter) => converter.href === '/calming/best-lick-mats-for-dogs/')).toHaveLength(1);
   });
 });
