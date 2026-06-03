@@ -116,7 +116,7 @@ describe('site smoke tests', () => {
     expect(canonical?.getAttribute('href')).toBe('https://www.chill-dogs.com/');
   });
 
-  it('links the homepage into crate training and road trip crate paths', () => {
+  it('links the homepage into featured converter and guide paths', () => {
     const doc = readBuiltPage('index.html');
 
     const links = Array.from(doc.querySelectorAll<HTMLAnchorElement>('a')).map((link) =>
@@ -613,6 +613,7 @@ describe('site smoke tests', () => {
     expect(sitemap).not.toContain('/terms/');
     expect(sitemap).not.toContain('/subscribe/thanks/');
     expect(sitemap).not.toContain('/subscribe/confirmed/');
+    expect(sitemap).not.toContain('/join');
   });
 
   it('publishes article collection entries in rss feed', () => {
