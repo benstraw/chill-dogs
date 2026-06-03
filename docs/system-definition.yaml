@@ -53,8 +53,11 @@ site_system:
       notes: >
         Home page includes a dusty rose color block introducing the Comfort & Rest collector
         with tagline "Settle in." — positioned between HomepageHero and the start-prompt section.
-        The latest/guide lists include How to Crate Train Your Dog and Best Travel Crates for Road Trips
-        to connect informational crate intent with the new crate converter path.
+        The latest/guide lists include How to Crate Train Your Dog to connect informational
+        crate intent with the new crate converter path.
+        The Browse Picks list is temporarily broad enough to include Best Lick Mats for Dogs
+        and Best Travel Crates for Road Trips until converter routing below the article section
+        gets a fuller refactor.
         A homepage-inline email signup block sits below HomepageBody as a secondary capture path.
 
     - name: "Cooling"
@@ -69,7 +72,7 @@ site_system:
       collector_subtype: "section"
       target_action: "Route anxiety-intent traffic to calming converters"
       metric: "collector_to_converter_click to calming converters"
-      notes: "Section collector uses SectionCollectorPage with dynamic topic-matched converter and article cards from the complete sitemap inventory, grouped into topic subsections for car anxiety, fireworks/noise, crate comfort, escape-risk tracking, research/safety, and calming comparisons including lick-mat enrichment."
+      notes: "Section collector uses SectionCollectorPage with dynamic topic-matched converter and article cards from the complete sitemap inventory, grouped into topic subsections for car anxiety, fireworks/noise including prep and checklist searches, crate comfort, escape-risk tracking, research/safety, and calming comparisons including lick-mat enrichment."
 
     - name: "Comfort"
       type: "collector"
@@ -186,6 +189,15 @@ site_system:
       routes:
         - "/calming/how-to-prepare-a-calm-room-for-fireworks-night/"
       notes: "Practical fireworks-night setup guide focused on one low-stimulation room, then routing readers to calming product and wrap comparisons."
+
+    - name: "Dog Fireworks Anxiety Checklist"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Route fireworks-anxiety checklist traffic to companion fireworks articles and calming converters"
+      metric: "collector_to_converter_click to fireworks companion articles and calming converters"
+      routes:
+        - "/calming/dog-fireworks-anxiety-checklist/"
+      notes: "Practical July 4 checklist organized around the week before, the day of, and the morning after, with section links and related-strip paths to the fireworks calm-room and event-decision articles plus conversion paths into calming products, wrap alternatives, and car-anxiety support."
 
     - name: "Should You Take Your Dog to Fireworks?"
       type: "collector"
@@ -427,11 +439,17 @@ site_system:
     section_collectors: "src/data/section-collectors.ts defines cooling, calming, and comfort collector metadata, topic subsection grouping, topic coverage, priority ordering, dynamic CollectorBody card inventories, and CollectionPage hasPart schema from the complete sitemap inventory."
 
   redirects:
-    # Production: vercel.json → redirects array (true HTTP 301 at Vercel edge).
+    # Production: vercel.json → redirects array (true HTTP redirect at Vercel edge).
     # Local dev/preview: astro.config.mjs → redirects block (meta-refresh fallback).
-    # Add an entry here any time a live/indexed URL is changed.
+    # Add an entry here any time a live/indexed URL changes or a marketing alias is added.
+    - from: "/join"
+      to: "https://www.chill-dogs.com/subscribe/?utm_source=postcard&utm_medium=print&utm_campaign=offline_flyer"
+      status: 302
+      reason: "Short marketing alias for postcard QR codes; temporary redirect keeps the campaign destination editable."
+      date: "2026-06-02"
     - from: "/travel/rhys-road-trip-chill-kit/"
       to: "/travel/dog-road-trip-gear/"
+      status: 301
       reason: "Slug updated to target primary keyword 'dog road trip gear'; old URL was indexed."
       date: "2026-03-20"
 

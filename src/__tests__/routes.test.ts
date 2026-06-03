@@ -18,6 +18,12 @@ describe('route constants', () => {
     expect(ROUTES.calmingLickMats).toBe('/calming/best-lick-mats-for-dogs/');
   });
 
+  it('uses canonical fireworks checklist route', () => {
+    expect(ROUTES.calmingFireworksChecklist).toBe(
+      '/calming/dog-fireworks-anxiety-checklist/'
+    );
+  });
+
   it('uses canonical fireworks event article route', () => {
     expect(ROUTES.calmingFireworksEvent).toBe(
       '/calming/should-you-take-your-dog-to-fireworks/'

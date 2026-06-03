@@ -3,6 +3,16 @@
   "buildCommand": "bun run build",
   "redirects": [
     {
+      "source": "/join",
+      "destination": "https://www.chill-dogs.com/subscribe/?utm_source=postcard&utm_medium=print&utm_campaign=offline_flyer",
+      "statusCode": 302
+    },
+    {
+      "source": "/join/",
+      "destination": "https://www.chill-dogs.com/subscribe/?utm_source=postcard&utm_medium=print&utm_campaign=offline_flyer",
+      "statusCode": 302
+    },
+    {
       "source": "/travel/rhys-road-trip-chill-kit",
       "destination": "/travel/dog-road-trip-gear/",
       "statusCode": 301

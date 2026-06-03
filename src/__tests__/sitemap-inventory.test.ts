@@ -16,6 +16,11 @@ const articleEntries = [
     pinnedRelated: ['/breeds/most-chill-dog-breeds/', '/breeds/dog-temperament-by-age/'],
     relatedLabel: 'Dog DNA Tests',
   }),
+  createArticle(
+    '/calming/dog-fireworks-anxiety-checklist/',
+    'Dog Fireworks Anxiety Checklist: What to Do Before, During, and After July 4',
+    '2026-05-12'
+  ),
   createArticle('/travel/dog-road-trip-gear/', 'Dog Road Trip Gear', '2026-03-31', {
     topics: ['travel', 'road-trips'],
     pinnedRelated: ['/cooling/car-cooling-for-dogs/'],
@@ -81,6 +86,7 @@ describe('sitemap inventory', () => {
       '/breeds/most-chill-dog-breeds/',
       '/breeds/dog-temperament-by-age/',
       '/breeds/dog-dna-tests-compared/',
+      '/calming/dog-fireworks-anxiety-checklist/',
       '/calming/how-to-prepare-a-calm-room-for-fireworks-night/',
       '/travel/how-to-fly-with-a-dog/',
       '/calming/crate-training-for-dogs/',
