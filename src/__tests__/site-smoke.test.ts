@@ -648,7 +648,7 @@ describe('site smoke tests', () => {
     expect(rssXml).toContain('/calming/crate-training-for-dogs/');
     expect(rssXml).toContain('How to Crate Train Your Dog');
     expect(rssXml).toContain('/calming/dog-fireworks-anxiety-checklist/');
-    expect(rssXml).toContain('Dog Fireworks Anxiety Checklist: What to Do Before, During, and After July 4');
+    expect(rssXml).toContain('Dog Fireworks Anxiety Checklist: What to Do Before, During, and After the Fourth of July');
     expect(rssXml).toContain('/calming/how-to-prepare-a-calm-room-for-fireworks-night/');
     expect(rssXml).toContain('How to Prepare a Calm Room for Fireworks Night');
   });
