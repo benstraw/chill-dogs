@@ -305,6 +305,30 @@ site_system:
       routes:
         - "/safety/what-to-do-if-your-dog-runs-away/"
 
+    - name: "Rattlesnake Safety for Dogs"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Capture rattlesnake emergency and prevention search intent, then route readers to the dog snake-bite emergency kit converter and GPS tracker comparison"
+      metric: "collector_to_converter_click to /gear/dog-snake-bite-emergency-kit/ and /gear/best-dog-gps-trackers/"
+      routes:
+        - "/safety/rattlesnake-safety-for-dogs/"
+      notes: >
+        Emergency-adjacent safety article leads with veterinary escalation, dog-carry guidance,
+        symptoms, treatment overview, prevention, aversion training, vaccine context, and what to pack.
+        It must not imply chill-dogs provides veterinary advice or that any product treats venom.
+
+    - name: "Dog Snake-Bite Emergency Kit"
+      type: "converter"
+      target_action: "Drive affiliate outbound clicks for transport, restraint, warmth, first-aid, phone, and visibility gear"
+      metric: "amazon_outbound_click rate + collector_to_converter_click from /safety/rattlesnake-safety-for-dogs/"
+      routes:
+        - "/gear/dog-snake-bite-emergency-kit/"
+      notes: >
+        Converter page is positioned as a transport and vet-readiness kit for suspected snakebite
+        emergencies, not a venom-removal or at-home treatment kit. Products flow through
+        src/data/emergency-products.ts, product-catalog.ts, product-page-map.ts, and SerpAPI-backed
+        amazon-products cache entries before appearing in /admin/products/.
+
     - name: "Product browse"
       type: "converter"
       pillar: "all"

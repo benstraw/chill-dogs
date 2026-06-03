@@ -1,0 +1,664 @@
+{
+  "search_metadata": {
+    "id": "6a203ed9529e4bef2c0736f0",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/h45a-PVDqbTrfZnFhday9A/6a203ed9529e4bef2c0736f0.json",
+    "created_at": "2026-06-03 14:48:57 UTC",
+    "processed_at": "2026-06-03 14:48:57 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B00MIZ7UVC/?",
+    "raw_html_file": "https://serpapi.com/searches/h45a-PVDqbTrfZnFhday9A/6a203ed9529e4bef2c0736f0.html",
+    "total_time_taken": 8.05
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B00MIZ7UVC",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B00MIZ7YQI",
+    "title": "Rock-N-Rescue SAR Dog Harness - Heavy Duty Wear-Resistant Nylon, Sizes to Support Small and Large Dogs, Orange, Small",
+    "link": "https://www.amazon.com/Rock-N-Rescue-Dog-Harness-Small-Orange/dp/B00MIZ7UVC/",
+    "link_clean": "https://www.amazon.com/dp/B00MIZ7UVC/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B00MIZ7YQI&device=desktop&engine=amazon_product",
+    "badges": [
+      "Amazon's Choice"
+    ],
+    "variants": [
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B00MIZ7YQI",
+            "name": "Small",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B00MIZ7YQI&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B00MIZ7VO8",
+            "name": "Medium",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B00MIZ7VO8&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B00MIZ80VQ",
+            "name": "Large",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B00MIZ80VQ&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the Rock-N-Rescue Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/71+E+Rzq7VL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/71+E+Rzq7VL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71lFdzWSGtL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71dJ3CXDJPL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81PMtoZxJXL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71oKVuUpEwL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71C1pRhoeTL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71BYX2k5SlL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61A7BaOUfML._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81mw0Q19BpL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.6,
+    "reviews": 20,
+    "price": "$182.99",
+    "extracted_price": 182.99,
+    "prime": true,
+    "delivery": [
+      "FREE delivery Wednesday, June 10. Order within 1 hr 55 mins"
+    ],
+    "stock": "Only 1 left in stock - order soon."
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$182.99",
+      "extracted_price": 182.99,
+      "delivery": [
+        "FREE delivery Wednesday, June 10. Order within 1 hr 55 mins"
+      ],
+      "stock": "Only 1 left in stock - order soon.",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "Rock-N-Rescue",
+          "details": {
+            "heading": "Sold by",
+            "content": "Rock-N-Rescue"
+          },
+          "link": {
+            "text": "Rock-N-Rescue",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=ASKGYQRRPSINJ&asin=B00MIZ7YQI&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "size": "Small",
+    "color": "Orange",
+    "pattern": "Dog",
+    "brand": "Rock-N-Rescue",
+    "material": "1000 Denier Cordura Nylon"
+  },
+  "about_item": [
+    "THE ULTIMATE CANINE SAR HARNESS: A full body harness designed specifically for SAR dogs, this design helps you to safely and securely lower or raise your dog down cliffs, into collapsed structures or from helicopters",
+    "ULTRA STRONG AND WEAR-RESISTANT NYLON: Our extra high strength harness is the highest quality to make sure it delivers superior resistance to abrasion, tearing, and heavy loads",
+    "SIZES TO FIT MOST BREEDS: We offer harnesses in a wide range of sizes that are suitable for most small, medium, and large dogs - use our guide below to find the best fit for your canine companion",
+    "INCLUDES A STORAGE BAG: Each harness comes with a storage bag so you can keep your doggie’s harness clean and in good condition until the next time you need it",
+    "AMERICAN MADE: Proudly made by Rock-N-Rescue in the U.S.A., our harnesses, climbing gear, and accessories are suitable for any urban rescue mission, survival training, or wilderness adventure"
+  ],
+  "related_products": [
+    {
+      "position": 1,
+      "asin": "B0F3D64GYD",
+      "title": "2026 New Edition, Fei & Eve Classic Dog Harness - Quick-Release Buckles | 3-Point N...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo3MTU3ODM3MjAzNTQyMzc3OjE3ODA0OTgxNDQ6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDc5NDU3NTEzMDkwMjo6Ojo&url=%2Fdp%2FB0F3D64GYD%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0F3D64GYD%26pd_rd_w%3DcbqE5%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DXQCYN5JENX95E3XE5KX4%26pd_rd_wg%3DOSJCn%26pd_rd_r%3Db1e7177d-c284-4640-89a5-cc815bd8a05d%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0F3D64GYD/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F3D64GYD&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/81GSNZepCmL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 116,
+      "discount": "-20%",
+      "price": "$39.99",
+      "extracted_price": 39.99,
+      "old_price": "$49.99",
+      "extracted_old_price": 49.99,
+      "prime": true
+    },
+    {
+      "position": 2,
+      "asin": "B09KWWT9V3",
+      "title": "Best Pet Supplies Voyager Adjustable Step-in Flex Breathable Mesh Dog Harness for Small Medium Large Dogs Leash Set (Black), XL",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo3MTU3ODM3MjAzNTQyMzc3OjE3ODA0OTgxNDQ6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTEyNzA4MDAzMzcwMjo6Ojo&url=%2Fdp%2FB09KWWT9V3%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB09KWWT9V3%26pd_rd_w%3DcbqE5%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DXQCYN5JENX95E3XE5KX4%26pd_rd_wg%3DOSJCn%26pd_rd_r%3Db1e7177d-c284-4640-89a5-cc815bd8a05d%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B09KWWT9V3/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09KWWT9V3&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/61HFD7L75KL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 15139,
+      "discount": "-20%",
+      "price": "$18.45",
+      "extracted_price": 18.45,
+      "old_price": "$22.99",
+      "extracted_old_price": 22.99,
+      "prime": true
+    },
+    {
+      "position": 3,
+      "asin": "B0CW3T7BWC",
+      "title": "Voyager Aerolite Over the Head Dog Harness, No Pull Breathable Air Mesh Vest, Quick Dry with Reflective Stitching, Adjustable Escape Resistant Harness for Small Medium Large Dogs - Blue, Small",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo3MTU3ODM3MjAzNTQyMzc3OjE3ODA0OTgxNDQ6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTAzNTYzOTcwODAwMjo6Ojo&url=%2Fdp%2FB0CW3T7BWC%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0CW3T7BWC%26pd_rd_w%3DcbqE5%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DXQCYN5JENX95E3XE5KX4%26pd_rd_wg%3DOSJCn%26pd_rd_r%3Db1e7177d-c284-4640-89a5-cc815bd8a05d%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0CW3T7BWC/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CW3T7BWC&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Amazon's Choice",
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/81o78C+hFdL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 645,
+      "discount": "-18%",
+      "price": "$12.28",
+      "extracted_price": 12.28,
+      "old_price": "$14.99",
+      "extracted_old_price": 14.99,
+      "prime": true
+    },
+    {
+      "position": 4,
+      "asin": "B0FNR6C2H9",
+      "title": "Dog Harness No Pull, 2 Leash Clips, Reflective Mesh Vest with Padded Chest, Adjusta...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo3MTU3ODM3MjAzNTQyMzc3OjE3ODA0OTgxNDQ6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTIwMTA4NTQ0NzYwMjo6Ojo&url=%2Fdp%2FB0FNR6C2H9%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0FNR6C2H9%26pd_rd_w%3DcbqE5%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DXQCYN5JENX95E3XE5KX4%26pd_rd_wg%3DOSJCn%26pd_rd_r%3Db1e7177d-c284-4640-89a5-cc815bd8a05d%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0FNR6C2H9/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FNR6C2H9&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/71ELekTHXPL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.3,
+      "reviews": 26,
+      "discount": "-50%",
+      "price": "$10.99",
+      "extracted_price": 10.99,
+      "old_price": "$21.99",
+      "extracted_old_price": 21.99,
+      "prime": true
+    },
+    {
+      "position": 5,
+      "asin": "B0F1SYVXPR",
+      "title": "Dog Harness No-Pull with Front & Back D-Rings, Water-Repellent 600D Oxford for Hiki...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo3MTU3ODM3MjAzNTQyMzc3OjE3ODA0OTgxNDQ6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDc0NzIzMjk4MDYwMjo6Ojo&url=%2Fdp%2FB0F1SYVXPR%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0F1SYVXPR%26pd_rd_w%3DcbqE5%26content-id%3Damzn1.sym.85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_p%3D85ceacba-39b1-4243-8f28-2e014f9512c7%26pf_rd_r%3DXQCYN5JENX95E3XE5KX4%26pd_rd_wg%3DOSJCn%26pd_rd_r%3Db1e7177d-c284-4640-89a5-cc815bd8a05d%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0F1SYVXPR/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F1SYVXPR&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Limited time deal"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/714HqUBYPxL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.5,
+      "reviews": 59,
+      "discount": "-50%",
+      "price": "$9.99",
+      "extracted_price": 9.99,
+      "old_price": "$19.98",
+      "extracted_old_price": 19.98,
+      "prime": true
+    },
+    {
+      "position": 6,
+      "asin": "B0BKH7CRS8",
+      "title": "RNA Resc Tech Lineman Belt – 9′ Hunting Rope for Saddle Hunting with CNC-Sewn Eye. 8mm Heat-Resistant Technora® Sheath, UHMWPE/Polypropylene Core. MBS 23kN for Tree Stand and Safety Applications",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo3NjQ1MTUzNTUzOTMyODk0OjE3ODA0OTgxNDQ6c3BfZGV0YWlsMjozMDAwMjQzNzcwMTY5MDI6Ojo6&url=%2Fdp%2FB0BKH7CRS8%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0BKH7CRS8%26pd_rd_w%3DNRxV2%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DXQCYN5JENX95E3XE5KX4%26pd_rd_wg%3DOSJCn%26pd_rd_r%3Db1e7177d-c284-4640-89a5-cc815bd8a05d%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0BKH7CRS8/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0BKH7CRS8&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/616VvxSDgJL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 3.3,
+      "reviews": 32,
+      "price": "$36.99",
+      "extracted_price": 36.99,
+      "prime": true
+    },
+    {
+      "position": 7,
+      "asin": "B00LPSCTBY",
+      "title": "Rock-N-Rescue Professional Nylon Web Anchor Strap - Safety-Rated D-Ring Configuration, Heavy-Duty Fall Protection Equipment, Multiple Lengths 36-180 Inch, Industrial Safety Gear",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo3NjQ1MTUzNTUzOTMyODk0OjE3ODA0OTgxNDQ6c3BfZGV0YWlsMjozMDAwMjQzMTQ1MjY0MDI6Ojo6&url=%2Fdp%2FB00LPSCTBY%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB00LPSCTBY%26pd_rd_w%3DNRxV2%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DXQCYN5JENX95E3XE5KX4%26pd_rd_wg%3DOSJCn%26pd_rd_r%3Db1e7177d-c284-4640-89a5-cc815bd8a05d%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B00LPSCTBY/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B00LPSCTBY&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Amazon's Choice"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/61y3lWrS7OL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.5,
+      "reviews": 42,
+      "price": "$38.99",
+      "extracted_price": 38.99,
+      "prime": true
+    },
+    {
+      "position": 8,
+      "asin": "B07FD5WMS2",
+      "title": "EXCELLENT ELITE SPANKER No Pull Dog Harness Padded Military Patrol Vest Adjustable Nylon Small Service Walking Dog Harness with Handle for Training Running(BLK-M)",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo3NjQ1MTUzNTUzOTMyODk0OjE3ODA0OTgxNDQ6c3BfZGV0YWlsMjoyMDAwODkwNjI0MjM3MzE6Ojo6&url=%2Fdp%2FB07FD5WMS2%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB07FD5WMS2%26pd_rd_w%3DNRxV2%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DXQCYN5JENX95E3XE5KX4%26pd_rd_wg%3DOSJCn%26pd_rd_r%3Db1e7177d-c284-4640-89a5-cc815bd8a05d%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B07FD5WMS2/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07FD5WMS2&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/712c0K8HDVL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 969,
+      "price": "$26.89",
+      "extracted_price": 26.89,
+      "price_unit": "$26.89 / count",
+      "extracted_price_unit": 26.89,
+      "prime": true
+    },
+    {
+      "position": 9,
+      "asin": "B0C9W1V6XR",
+      "title": "NeoAlly Sturdy Dog Lift Harness Full Body Support & Mobility Aids System - 5-in-1 Lifting Support, Carry Sling, Vest Harness, Back Brace, and Anxiety Vest - Endorsed by Shark Tank (X-Large (Pro))",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo3NjQ1MTUzNTUzOTMyODk0OjE3ODA0OTgxNDQ6c3BfZGV0YWlsMjozMDAwMTc2MjcwMTMxMDI6Ojo6&url=%2Fdp%2FB0C9W1V6XR%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0C9W1V6XR%26pd_rd_w%3DNRxV2%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DXQCYN5JENX95E3XE5KX4%26pd_rd_wg%3DOSJCn%26pd_rd_r%3Db1e7177d-c284-4640-89a5-cc815bd8a05d%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0C9W1V6XR/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0C9W1V6XR&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/61gPk36VeNL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 3.7,
+      "reviews": 74,
+      "price": "$194.95",
+      "extracted_price": 194.95,
+      "price_unit": "$194.95 / count",
+      "extracted_price_unit": 194.95,
+      "prime": true
+    },
+    {
+      "position": 10,
+      "asin": "B002SQGS4Q",
+      "title": "RNR Poseidon Standard Rescue Sling – Yellow Nylon Harness with Padded Webbing & Mil-Spec Hardware – One Size Fits All – Suitable for Water Patrol & Ski Rescue – Made In USA",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo3NjQ1MTUzNTUzOTMyODk0OjE3ODA0OTgxNDQ6c3BfZGV0YWlsMjozMDAwMjQzNzUwMDM1MDI6Ojo6&url=%2Fdp%2FB002SQGS4Q%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB002SQGS4Q%26pd_rd_w%3DNRxV2%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DXQCYN5JENX95E3XE5KX4%26pd_rd_wg%3DOSJCn%26pd_rd_r%3Db1e7177d-c284-4640-89a5-cc815bd8a05d%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B002SQGS4Q/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B002SQGS4Q&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/61HNq9LVyWL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4,
+      "reviews": 4,
+      "price": "$116.99",
+      "extracted_price": 116.99,
+      "prime": true
+    },
+    {
+      "position": 11,
+      "asin": "B08GKBWFGZ",
+      "title": "100% Certified Home Compostable Dog Poop Bags - 10% to Charity - ASTM D6400 & EN 13432 Compliant - 240 x Plant Based Compostable Poop Bags (16 Rolls)",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo3NjQ1MTUzNTUzOTMyODk0OjE3ODA0OTgxNDQ6c3BfZGV0YWlsMjozMDA2NjUwNjkxNDA4MDI6Ojo6&url=%2Fdp%2FB08GKBWFGZ%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB08GKBWFGZ%26pd_rd_w%3DNRxV2%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DXQCYN5JENX95E3XE5KX4%26pd_rd_wg%3DOSJCn%26pd_rd_r%3Db1e7177d-c284-4640-89a5-cc815bd8a05d%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B08GKBWFGZ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B08GKBWFGZ&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81tojHkX5TL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.7,
+      "reviews": 7696,
+      "price": "$24.99",
+      "extracted_price": 24.99,
+      "price_unit": "$24.99 / count",
+      "extracted_price_unit": 24.99,
+      "prime": true
+    },
+    {
+      "position": 12,
+      "asin": "B0DT45LDZ4",
+      "title": "Huntboo Escape Proof Dog Harness – No Pull, No Slip, Fully Reflective, Adjustable 7-Point Design for Small, Medium, and Large Dogs – Lightweight for Outdoor Training & Hiking (Teal, M)",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo3NjQ1MTUzNTUzOTMyODk0OjE3ODA0OTgxNDQ6c3BfZGV0YWlsMjozMDA4Nzc5NzE1MTIzMDI6Ojo6&url=%2Fdp%2FB0DT45LDZ4%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0DT45LDZ4%26pd_rd_w%3DNRxV2%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DXQCYN5JENX95E3XE5KX4%26pd_rd_wg%3DOSJCn%26pd_rd_r%3Db1e7177d-c284-4640-89a5-cc815bd8a05d%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0DT45LDZ4/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DT45LDZ4&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81GAP0h-oVL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 330,
+      "discount": "-6%",
+      "price": "$24.64",
+      "extracted_price": 24.64,
+      "old_price": "$26.09",
+      "extracted_old_price": 26.09,
+      "prime": true
+    }
+  ],
+  "product_details": {
+    "is_discontinued_by_manufacturer": "No",
+    "package_dimensions": "12.76 x 10.31 x 4.37 inches; 3.16 Pounds",
+    "item_model_number": "WDOG-S-O",
+    "date_first_available": "August 8, 2014",
+    "manufacturer": "Rock-N-Rescue",
+    "asin": "B00MIZ7YQI",
+    "best_sellers_rank": [
+      {
+        "text": "#230,740 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 230740,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#2,585 in Dog Vest Harnesses",
+        "extracted_rank": 2585,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/3024192011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Vest Harnesses"
+      }
+    ],
+    "customer_reviews": "4.6 out of 5 stars",
+    "rating": 4.6,
+    "reviews": 20,
+    "brand_name": "Rock-N-Rescue",
+    "model_number": "WDOG-S-O",
+    "manufacturer_part_number": "WDOG-S-O",
+    "unit_count": "4.00 Count",
+    "target_species": "Dog",
+    "size": "Small",
+    "closure_type": "Buckle",
+    "dog_breed_size": "Small",
+    "breed_recommendation": "Small Breeds",
+    "color": "Orange",
+    "pattern": "Dog",
+    "material_type": "1000 Denier Cordura Nylon",
+    "product_care_instructions": "Spray with Cleanser or Dry Clean"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B09J867KR3",
+      "title": "rabbitgoo Tactical Dog Harness for Large Dogs, No Pull Military Service Vest with Handle & Molle, Easy Control for Training Walking, Adjustable Reflective Straps, Black, L",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JEwRP0BoYVXdTVQeGRk7sBIAAAGejfWd5AEAAAH2AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDEgICDc_iE2/clv1c_ek-IBYHXFcbWDn2nI7fIOog9uTpjqoAHrkszMlb6Hs9sFHtQX2wF1oB-Y3rwBGif5uJ2ioIW7AeAeoB98OKiAfMOF9jDXhGVTSBVGTGJJLT1kzJvSgoug8XepuH0J3887YaXRLyKpDnFzIP8T-p3rMSJ4diS_vVqklZ-wym8fG7f2moOZIBk1_vhksfWSJoeurYLczlbf4dP0OnLomIgwifC23Qfpe9X5QqH-FW7lgmcpLsnAiH6Y9Cjw0CqSXYROuj3w1Pa6rC0CL-1NzSsusAojKmTvj9z-9x7FC88Zj3KKuQTBnZZ9n6hm8TOw9p3mbDY0i07dZC0ND7avfaLl2vOy5JddyvBgIJKlSlpmgIUKCZa1fkrXtw4CHvb5B_3U3ZzXBr-p_rkS0FOvnevO0S8Cgc-TuZ1H-wYCS5_NNCJb-TVaKAhdPIa63p4rxBDlnJHcNLyvE-VX6H4rX3fO4P64_4IPzxcpbEkeU9wlW-64G4X7fFfa5mtnfePorUnK1ECO6CKRHSqXBVM9D8uRtR0CZNlgBzaC4cuYdh2hc6RLBJRb6UlGipF0mbp68jRSlEdYtY_inlRoAvkPvFN5lOC21gRc4uAzfyNtW72e5uRrWjCrJITAC40Y6HkERJl9BUkJ2EhHSkgm8nWdizu6YndtxSyQfJ_GR_aV-y7I2gJgoqanc2dvDZjmTOjhQx8reZbeV28vM2ct9LQTpqRIhUEgs3khhgCn-Q5hQ8rV3vSSRbFqASdq5TRGedv2SgKqellnBPx_WOm7NOievh75lXVJ6Y7cpSEIPI7wkPQ4KSv8LDc7oQjBgLkB6376gqZxJnNB7UwgwEI-Lo3lCGvqnTAVG7S6vTC0I57kgeHd8Vdxk-5480H5E711Z6d2hSw4lhfel1w2wEQ4z0NEXrkUhRXcR5vvS3JmFUy9XXYIBhloPg3zYRMLrkSetbCnxlmY_KZIl0PXfTLaGQCqs3DTg7iT10H-rNBG1_PqvdxerWlNAVvRCsGaBFLIfwST-PnkalUNGWGxGI-7eBA12CyKKMrQJaJCCfAP-5RsnYGtQ6Snl-23-_cQKTRYMvx05AfGDSNWhDruzXCTWgVMCI91YXTfkItFQOiNrgL_Qu2P_3wG2SgINdOsdcIOJ-D6sAVjgjx_O5mRSpxj5V1oBKkIUoy5t4iSkesOgLcCxp_26oOLuI-IKsiV3Pz9NAlTAphdlokfWD93W9287dEeQPh_SNyLB-Vt7YlF7w4fSbomZ4Nww2yBiCzNJsCgJOoA0_Kp_TSjHa9QhSVM4ReD1LZxqUypxO5euouFoyKVVl0pGRhnX3FfIooiHoCgvxeeZlO-PfcAyX8XRldJbQ0P7fmSx-t5a6Wspc7HPFdm0qUG-4cllsVnOSmq--jlnCEjnbDd8umsmNj3B6Q1AuhmiT4EMRCYpNsEYn6Wfm7-G--gYt6xAtNJ3cjQs6l_MU88NSRNAQFV3MwwyDA9pAklaZKaaycireCVMGjUEynk-YTffqqK17ojCqNrC5ElxY2OgM6uiL2MArkzWRWtg/https://www.amazon.com/dp/B09J867KR3/?_encoding=UTF8&pd_rd_i=B09J867KR3&pd_rd_i=B09J867KR3&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=S9fjt&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=XQCYN5JENX95E3XE5KX4&pd_rd_wg=OSJCn&pd_rd_r=b1e7177d-c284-4640-89a5-cc815bd8a05d",
+      "link_clean": "https://www.amazon.com/dp/B09J867KR3/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09J867KR3&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/5139t-EyCmL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/8c1ab979-c1ab-4232-8c3d-dd7415004d0b.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/8c1ab979-c1ab-4232-8c3d-dd7415004d0b.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.5,
+      "reviews": 8967,
+      "price": "$24.99",
+      "extracted_price": 24.99
+    },
+    {
+      "position": 2,
+      "asin": "B08RWBSGNX",
+      "title": "BUMBIN Tactical Dog Harness for Medium Dogs No Pull, Famous TIK Tok No Pull Dog Harness, Fit Smart Reflective Pet Walking Harness for Training, Adjustable Dog Vest Harness with Handle Green M",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JEXjv9PSawYt6WlHjQGQffIAAAGejfWd5QEAAAH2AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDEgICAP2uCm/clv1c_ek-IBXfWbcbSXg5XYzv8Bzhg6zKUEoPTKv9ZLreqzu9-F1jyyAg2D2gy2CG0VfjHzENeUqPR5FNqrsRw7xLy1ffXzRo3b9ppWoQhR4HiyuZiIzvhN92XYVnZoPpgylphghKlpAR8u0qFw-Q3VObK4AGbpcu0tlTtEE300TGaZEaeWHb3q0gBVFTKD4vXHLpL_G_BocnIGRnOwXzJ50hDnKApt9-3huxUnbgN2dmKFMqcl_A_BZvR3eFkhOUaAUoGop6s0gZP3LrU0j4bqjjy4skHUlzwKd_6fgDyFcItzc23Btqx2H0a3X2tPolgvEn8yZKkpGEqDzzQI08AW6drtiOh5uYKXuVmyzIi7jYnWmeUm1aIn783lNNlWmzWTnOSw7QyIHaT8ID4cMVP04J5IBtd0g7NkAr41mkQPuDoIpaOkZFjT9oOeMk7WU_XomFXJAhfj8bqaqyycjA0DSLt9Mqg1W2WhnSmT9HxMY-_oGoYPdYk6u-7WpwhZTyCK2s8NAarIOgAkGgeleLn05kYVUNANiTVVOtB_dgNLltodlGOxQwOsa8RIYsMpPLgxNdqrtqlfBd5zh2Yj-sy-3A0JknJHtzUeLiwCDKrAfEKFPMzorgKznyrpgtv1swuyTW1tbvAfFqi_5WOLXQYdBUa4pHqjpuDO2qdJ_ps9VpG9DEykBf5gO1PpT60mN9y_i4-hzwFoBlsVu7mD83kajGeWGuJU0ky3EoMNOVLTY_Mxy2XSTaX3DgAvqc59lHUqcPuzp4oMLbolh8a5TuJBC_9_nphU8JzSbKoT-nLGMLufzUrUMzwjCvVKjy0-nLkKD6ZF6V5xnMzT35daVOa1RCVIJu8IHFJKL9y8uGg5Uk4ld7laBHP4yFvawApKrTujJPrTHrJgNEbXM8fOip0wwcnfp8QUeequXtFGu5KZgU2rDI17Ext7NndKxLqB1A7sSEGaJtTYyoFC-BlJEIi6vmG48E6YRq2wCV3jPo4E2G8dqfOiN062CQRvV8mWI2hdI22r6pikcNuAoOvZkDQ3OMvgPQtjdbA2VwACKRqwpVWY9iSFPwidJdLM7qZyZsCq51TwkvBYZP2RythTcSiYH7q02Y96XkOhX8qN1diVarcG1tD4XUVv6PsbCgRX48IluCVOJqGXWT5Ns0Hh2Aj3lDt9PxyB5ZEOXolknZ-BpLga5826Pwy7gVwlNLkk94HolNTmcWgr8QJCDqhjnghheWs1vZzzwYiKCgpm4awz5chbn_U9sNdvLgZqg-pjY-UHjctcVG9NlxhvveP5Ce7GSO5mzjyYSRiMtNNUGTiXjj_GdGVnA1hISfKr-jGOQGIh3UN3cOo6lh-gkTZ9iIOfWBZQIaPtyEFALEMB2wY7GTaBnNTh4PrblLwDu4c_7_O1nvhS3cLfOrDQ1p5nYBbgAcHQr7bNusjDGnIxAvUhrs8Pl5s5pImyxCllmTSWHpuLVWpMFbgYzeEOTW2uo0EEGZy8-iKCpzDamsqv0yXEgLmbeJSZ3RjtxMt9ZzJqieu3Ox1WKni0JiSpKp1rNneIsB2BoiCoqWIP6i5iWs8uw/https://www.amazon.com/dp/B08RWBSGNX/?_encoding=UTF8&pd_rd_i=B08RWBSGNX&pd_rd_i=B08RWBSGNX&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=S9fjt&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=XQCYN5JENX95E3XE5KX4&pd_rd_wg=OSJCn&pd_rd_r=b1e7177d-c284-4640-89a5-cc815bd8a05d",
+      "link_clean": "https://www.amazon.com/dp/B08RWBSGNX/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B08RWBSGNX&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51VBEicfo4L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/0a4f3df1-cb12-4bb7-ba28-c8307a1a0cbc.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/0a4f3df1-cb12-4bb7-ba28-c8307a1a0cbc.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.5,
+      "reviews": 6852,
+      "price": "$21.99",
+      "extracted_price": 21.99
+    },
+    {
+      "position": 3,
+      "asin": "B078N3JYW1",
+      "title": "ICEFANG Tactical Dog Harness, Large Size,2X Metal Buckle,Working Dog MOLLE Vest with Handle,No Pulling Front Leash Clip,Hook and Loop Panel (Brown,L (Pack of 1))",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JIIEVOPWVCPvrKEUWXgsDHIAAAGejfWd5gEAAAH2AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDEgICDEG94O/clv1c_ek-YBXfWVcba3TK2ZyrSA82kiga5bu8nyzkJLvr2yr0r_o9Ev58DVpI_ayi7dUCw9qxjS16KU0Uv5r0T9rx9wZ2--NfSks-I0oOhJYj4wkpXg43KskBS7Ofx8__UxjCymboINMBlX_wgqf72G7WiDqz9aB2ek3EK0rRgDvSoypsniQtfmUfS4FGdeoy18_NRudcYREJEHDvkvVRk50lDm6KpVF4-EdvysIFybXvvLtHZmZh62q6SBFTjUxK6m8qNV1uqGFaJm8E6Vwphh_OtisbWjLUTnzNz45Di-iREE9iLGuoTxoyLUv4etuq3nIAwdTVcqU_ds5OZZkMeuwGRvShwEZ5V-2IB1qWSIuqzMTpiUqI8i0PvrozZn4ZvXs0IIg-bDmBr4FIUgXJ0sXWPV5oyxDsqjuZ5HXAuTlpqb2BcejqWvCi422oAGzlDSSJCqoAut8kKh7EFNb-s8wvneoGeR1RHOgvfwRFYGOr7oGOsfhqFA_uGZsgbrpQ8_BKA2pSOOLuNDrYw-8d_DO36UYnd-hb9JoSYp8ba1FTeHGKi3Jiy02akIj_G6md7M5i7DugfzxvnjFKZ9KhT-PzxnRMC-kflaNi9Z0F7ug7tiUR_pgfd5ILv0_gUEITbHRUCtN6NzmeGni8zms-UT5r55mztqJDR4X0MGTeQcyXW1iBP9dREmHLOuJn9QQiSfzmU-YBh1vVYGSJ7N7Vtf0-Mh-IhU4TaPrwhATncGRxSJvf6pIMBt7CSnCnK12MioEnMv53pWgJanxjr8xmIlwOqW67Wfd_sPaIfmGCUAFTDS-Fw6dxvLTZGAegSgH4rav6RZXVssNDAcVRwMj-3s7zrP1p8EIBSC-Fa9gx3_ibq4WzBajd5mLlt_zJjssVoGRHpVuSBPmEJgcEFf4zWjO1JtbKa9uK3zLoWeB5mhb2uGk9Q3Qq06ct-3nNsWp8Wy1r0q-WUX375AV1BwIw1Hfu3rMu8svDn_WmmnHg6UwlLzklGeJksEEhVWvlscNEiIGOmb-nMzsN5JrjUUepKpg-Ii1R4dGXju1lAUrw3qL3YL2kI3YJkNaKgYi-CMvkdVpk3ye5gpJXrM9VSk9ursoE9PvyyQwatF69XLyZkD4VCGUNifVF2UFvxS5zLPkO-gUilWACP70Rqrfj3bGQ7FkawIdbklLZGDSLJ-b8rRfi1d6mg1zRqecBAbo3WNBS4ZYZY3iv5tfu-S3u1AwXlSQ7jAuDlSNNijc46rx6wUzj7xJgzaSLGzdOEz9X3wNJfu8rMKqs2xOLfjS8PRglv8hkxQPi9CoZ3jbOrDdYngNdDSX4Qhiu3H9SNzdOZTFQvlsth8JZwkt4tbgESKrHnKgy0mgYB7txPpd2QhsVe1pzv-a_dE52a4z0QI_pA2arSqCVTFzACCxtvlQop411HOM2X049GxuHt4EuPAw8WKPiQEFqxFay1TgQYJznlO2FfzdDRcOnUzuPaptOzjGywIgVZFp4_tsDroiy1xsz_1gK0d1tm_EbYg9xCf00VIcZ5wiTfN2enVqMdXIdnFmK9fGE/https://www.amazon.com/dp/B078N3JYW1/?_encoding=UTF8&pd_rd_i=B078N3JYW1&pd_rd_i=B078N3JYW1&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=S9fjt&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=XQCYN5JENX95E3XE5KX4&pd_rd_wg=OSJCn&pd_rd_r=b1e7177d-c284-4640-89a5-cc815bd8a05d",
+      "link_clean": "https://www.amazon.com/dp/B078N3JYW1/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B078N3JYW1&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41lhGyAVYyL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c7d5f53b-6ced-4b25-9655-1b3a47d11244.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c7d5f53b-6ced-4b25-9655-1b3a47d11244.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.7,
+      "reviews": 22439,
+      "price": "$35.89",
+      "extracted_price": 35.89,
+      "old_price": "$39.99",
+      "extracted_old_price": 39.99
+    },
+    {
+      "position": 4,
+      "asin": "B0BVGPHRKV",
+      "title": "Kruz Dog Harness (Chest 14.5\"-15.5\", Weight 6–10 lbs) Athletica Adjustable Heavy Duty No Choke Puppy Vest for Small Dogs Lightweight Air Mesh, Reflective, Puppy Essentials – Raspberry Pink, Small",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JCUPwnLvRAQVY9L5OyBDIe8AAAGejfWd5wEAAAH2AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDEgICCQXE5S/clv1c_ek-IxYHXLbbWDdHYVp8pMQ8yBQ46uNZ0MW6LbJja35vFGgZEOTBesQt70ti24XyOmeyIDsByCReJaAdS_iWtApofXhv-jK4ZPiuNDivgwKMujyH1Xnw0PLl65vRkFtNx8vzjYZPUhQi5CHm_nYe4RZfYtcW8F1Xm4uLyty_qb4QUXx-1TwCH2Fy296ExDQqU9ngO3OlPEjvE_dSUF0jKr616FW23LGayqP_0zCrh8rzRR9nZ9ucvNx0MZUh_cJvL10rJJF4AwyiXy_cmTAprINMfdWsWvruQm6wF2ihEGwyEeU0TRXZXMuQedPI17ZC0SE_mDiluah2ga8gGONWzXW6A0oRNNyuR1PJO1Qk53oobCC46wf091vT_yviGI69uCL2LOrT3dSrIxOAH0QWLLmZmEwxpSElUw_1H0YdWa-z81N7qrtHXb7v433wfoYdjn3C2fVhf2tqbnamy9yFqUmwQe5w6AcJL6QFFx92FGw01j4sE6q-rGpwhaTNEeuu0JUET2125KjS7zIF72m78dNO0jBaSj52llRuDnOYDdvyEEWKVzwUD-bWpMpnAa5DgiTQyzYZ6E_tSdO3UfMNK7mWtyYib8yPx8jiDeU_Ec4YO9yCJxqg-NHw2FwXwwvXAGMJD2DlBsNgB-I1ls_7Ind4F4QVw0W-1RVcZIfczGv-R5nXJN4mltCdhwS194AkUG-dbPR3dJTYBmpFi33gIELQGAtXnhpQDj2YoBU43F3t3WZZHTWOdGUMQZCXKHPWWdYKvgP4Iu4MFhuug-vheJ1XeuwpX6Erk9PIGFihMERVvYPxaQ4MALVQRZaJ_Kx7sQpr6TSrixeHB_-QKWASd_HX9GKcVUA54UNeFnieuEeKuYGPo_y8K47X-xO_F9vgZ6JGrs7BwaOuMR0FbHhml3T51AV8DFX8hSNNdmGP5ygI1IX0gVM5gky6f_CbQmat7JUzC5CrBGOJ25CQJvT-uZmbOn340LgAPsrtVApbxHJtfISKc1IIYD2v6G2tQdQJTaVhMwo1kwP0SE5QhpKeGuXtHt-LR9KEVGJi-qspzVjsUIJddc4PbBZ984CJsmXQrAtse82ihEptY5jlZODrzS269HhskNJJmqeXwsN-7sT2aJS7zX_XToSEDxsBDGEcLRQFDSd9G7CJDJ5sln5bYdN0KU-IzjlIl45mVDLFXMqiEpLZpAvIH7p-It872vbuqiCnQ_s2VmfaLtwljpbMP-mx6vxWGbyL5KLPJMRHcTPqRUf2HGtT-yqGE9sVwWqBSYSao9W5H163ZLkycSjgiEq5tN2jTOgpyx8odcEE3Q8MrPzazu7F_z4H-kK_PpzuYk_Krmrjg_rjPlv3cHmUqPA2wnzpwNTM691R6eBtB6PzR_FFTkyIJjwL1bpHPAtvv6mJ_pTcelqN0M1mbkSn9uA8GZdqO673s_i61xtoS46Gl_cZfXy8frTEttJ-sYCa-bCgoJg-Gu-NQSMz_TYlLwg_1Iqaokni744BNOpHTCUd7r7dwM1aF4UoN8HqMxDz3HeNy_bZ21JR7qPYrYKmCCZiJiHy3jyO_CVNCCLt55g/https://www.amazon.com/dp/B0BVGPHRKV/?_encoding=UTF8&pd_rd_i=B0BVGPHRKV&pd_rd_i=B0BVGPHRKV&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=S9fjt&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=XQCYN5JENX95E3XE5KX4&pd_rd_wg=OSJCn&pd_rd_r=b1e7177d-c284-4640-89a5-cc815bd8a05d",
+      "link_clean": "https://www.amazon.com/dp/B0BVGPHRKV/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0BVGPHRKV&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41Dt9AJi3NL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/1cb1f0c5-fe18-46db-a530-be8e472abc9f.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/1cb1f0c5-fe18-46db-a530-be8e472abc9f.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.1,
+      "reviews": 1992,
+      "price": "$11.99",
+      "extracted_price": 11.99
+    },
+    {
+      "position": 5,
+      "asin": "B0DDXB7WFW",
+      "title": "Dog Lift Harness, Full Body Support with Adjustable Control Handle for Small Senior Dogs, Post-Surgery Recovery & Joint Problems (Oxford Cloth, S)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JGMGZTM8Yu6lxHV_7s9v-KQAAAGejfWd6AEAAAH2AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDEgICASXjm3/clv1c_ek-IBXvWVcbW3TK2ZyrSA82kiga5bu-H1ycDS8FIVU0DtusmTF_8pVkV9X8gODm2XwGvPwK3uSpGByA2TsKvmfaVJedJye8-MRVsw1Xj_cR3gwgpbjX8WiGw0vlxvWhFUlrzk7FhrtUCrs7zJNaw8Lh7otaIBtXpU4DywDyymGbf2WLAC5cit6top3btC_Z8Z8EAR5srn4DN2NLwnSjw_yPJec9vVFq0ReyPnoVVyypEt38HSxfZkL2kAmJp-b_5BCRgLK6bF4OqI-KoZ8kkfpFrZ4pTVwwyG-tbbSa9G2gcy1ZbPyfxQv5mWhod-hh--ppFVvRNgKk8pMT_pncSu36oVgT8LEzVd7g9mG3H3ORAo027vlCAVFQBPcz1TOfM7XQBCyDCLJWKx4Xl3g66IJsNxAYmjocpvJHHWUhKN_muo2UkCpw29VquqnqMaSIohnZ7fFxxzOaPVwtJQcYbY5t0n5zWBQ39W0UToTOgpahjmLQR7VHOfIktghe_IhEvM1VDNaLKFwY_o7_GyTqUBnSyIpNmgB4a7ePoU2qt9hqBf_f3q18lArrsNBLnerPQSgHArHooTwXryH3jyf29-g_mPUFPPONhX8959zN1UkXhQF0N6WGoFB0ZELTLmxcSML6NOiaWGm8_8S5ZujyTyT-o1a-yQGL8GTeQs83dli9N5VTFLfvAd1tg2eA-A2VzjB_oFNNZftF0AkbsSrHetwkjhr0A1iAiJx_9FkDrN9OB2dSATWYw_E9VZ1JVwQS0zqM4WBGvbOCPdLsDKro0sqmLivcOpccpa73vanRsaaP-PUPHAVm2TvU6iP7xFku4KVJ1jPqrZltNNnMjpD2eccdtn03_I66Uoro9drBRRekBQG_b8NafTvQ4DQOS2mXGxAkSecE44CBgErpcs6T624G3I6cVjgIIvE1Uhf8Yis9h2GxNbAxYQib9uj5_2Uf6mjuMgoAlRxbtlaJPME4fmoyxAN7EnU5omfn7AqxmqSnw2WawJW9qLPs-n17JJ3NaAT1qVDEnrhU6ehZE7oWNHE3vy-EtdTeyaOHjlbcnbqMDYW62ooA6-ODpvuJcU8Ul8zpy83GifX4fZuwXrH1QXUGWua8T26EE17TYo1Jx2lYp63b9HUNZpZMK8A3m5lai9tC5bXdUbaZTFKgaM8PuQojM1UEz9whAUfXAI4BWsBlSjn6HlSraXqZqO_bbbOgl6ol_5doxTcR3kf5Aa4SfI2Xo64g0WGkwjaVFs54Q_LNZ9_0PvOv0PmEtiPQBNjq2QCD0mTY2wvJ1jysady7H7uGH6oukcgMrU_4PiqDNgRiZviOE8y-7rLn8x3vrZ7MdQ1oJt0MwWRTDz1SyJ5siwKidTerBo4N4a82cLcAQqDi4Ejiqvib11G6eE4R8BoogPdNULBlzQ76VY2WbkWn9uA8IqCXkhe3s_q61xlIT46HwaDjUeCGnDllxn6INsk1z83ELzD4Y4Mj5Grt8MvIgTRBONjdIYF7F5yOuvkK4JrvBWc-9FEUFnWkOGH-4H8wDyUEHkP5b4XKT4fgjHKmVUuyDIg9qRy274knLgdHMLg/https://www.amazon.com/dp/B0DDXB7WFW/?_encoding=UTF8&pd_rd_i=B0DDXB7WFW&pd_rd_i=B0DDXB7WFW&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=S9fjt&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=XQCYN5JENX95E3XE5KX4&pd_rd_wg=OSJCn&pd_rd_r=b1e7177d-c284-4640-89a5-cc815bd8a05d",
+      "link_clean": "https://www.amazon.com/dp/B0DDXB7WFW/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DDXB7WFW&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/31ZsQ3MvOVL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/58f2efd7-37ae-4765-acd6-6713295e512a.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/58f2efd7-37ae-4765-acd6-6713295e512a.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.1,
+      "reviews": 135,
+      "price": "$89.99",
+      "extracted_price": 89.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "customer_reviews": {
+        "5 star": 78,
+        "4 star": 12,
+        "3 star": 0,
+        "2 star": 10,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Highest quality rescue harness on the market",
+        "text": "Quality of materials and stitching is top notch. As you can see from the video, the harness does not put pressure on the dog’s neck/airway. My daughter can safely carry her 84# dog out, if necessary. This harness is also used for helicopter rescues, so you can trust that it will do the job. Don’t cheap out and buy a cheaper one.(We purchased an XL for this dog)",
+        "rating": 5,
+        "date": "January 10, 2025",
+        "author": "Amazon Customer",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGEHQ5EFDBJJ3SNFMMD74VIDP4HQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "video": {
+          "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/0102e4a0-e925-4c90-a05f-242c4d155694/default.vertical.jobtemplate.hls.m3u8",
+          "thumbnail": "https://m.media-amazon.com/images/I/51vvfGeb9QL._SY500_.jpg"
+        },
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Orange",
+          "size": "Large"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Does it exactly what it should with good quality",
+        "text": "I bought this to hoist my dog up in the air to clip her nails, clean her ears, etc. She's a 70 pound dog that hates being groomed so it was a chore before. Now I use this to get her about 3 feet off the ground and I sit in a chair and do what used to take 20 minutes of wrestling in about 5 minutes.",
+        "rating": 5,
+        "date": "January 20, 2022",
+        "author": "Jolafo01",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHG3UP6HCOTUDY2YV4ZUQ4JAMQPQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/8a2bdd51-9a70-4092-9ee3-9d1ec9fd3937._CR88%2C0%2C323%2C323_SX460_SX48_.jpg",
+        "helpful_votes": "3 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Orange",
+          "size": "Medium"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Excellent quality",
+        "text": "Sturdy professional safety.",
+        "rating": 5,
+        "date": "February 5, 2022",
+        "author": "Denise",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AG6AIUORGGMOM6M2YL2QUMDEUKHQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Orange",
+          "size": "Medium"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Nothing special for extra price",
+        "text": "Followed the sizing but it was waaaaay to big for our 80*lbs boxer. instead of supporting him evenly under his chest, belly, and hips, it was cutting into him around his legs creating pressure points. Plus it’s huge and heavy to carry around when hiking. It might be ok as some tactical gear for crazy stunts (the metal connectors, straps, stitching are heavy duty for sure. Seems like great quality to support heavy weights). But if you just hike a lot with your dog and need a compact plan B rescue harness for that one day when something might go wrong, this one is unnecessary. I’ll keep looking for more of a low profile and softer harness that can be more comfortable for an injured dog",
+        "rating": 2,
+        "date": "December 7, 2022",
+        "author": "Tatiana",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEZ3NJPGR4NP23WSELMYSJL4PNMQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/ff084e24-f129-4560-bbf1-42b10771c4f8._CR0%2C0%2C400%2C400_UX460_SX48_.jpg",
+        "helpful_votes": "3 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Orange",
+          "size": "Large"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Great product, but customer service is lacking.",
+        "text": "This is a must for my Search & Rescue Border Collie who takes way to many risky routes while doing air scent tasks. That being said, the original purchase came with a broken clasp on one of the connecting shoulder straps (the spring is not in the right place). I initially reached out to them and they provided a replacement, but it was a 4 pt.harness strap rather than a shoulder strap. I reached out again asking to replace the shoulder strap (and mail back the 4 pt. Harness straps), but it was crickets for a response. I cannot find a shoulder strap to purchase that matches what came with them elsewhere either. Again, GREAT product, but really would like a new strap and I get no responses.",
+        "rating": 4,
+        "date": "March 14, 2024",
+        "author": "rayme smith",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHDIOFD2JHPCQTLSP6E3YA6R3OOQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "product": {
+          "color": "Orange",
+          "size": "Small"
+        }
+      },
+      {
+        "position": 6,
+        "title": "great quality and made in USA",
+        "text": "A bit heavy than I expected",
+        "rating": 5,
+        "date": "May 31, 2021",
+        "author": "Karine Vullien",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEXKW5OSNGQBCAIS45BIZS5LNZ4Q?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "2 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Orange",
+          "size": "Medium"
+        }
+      },
+      {
+        "position": 7,
+        "title": "Just what I wanted",
+        "text": "This is going to work perfectly. Safe way to lift a large dog into the boat from the dinghy.",
+        "rating": 5,
+        "date": "July 1, 2019",
+        "author": "Amazon Customer",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AH5TRA3SXV55MB4NHAFIJZN3UXNQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Orange",
+          "size": "Large"
+        }
+      },
+      {
+        "position": 8,
+        "title": "Works great",
+        "text": "It's probably a bit heavy for long backpackers and hikers but it's great for what I need. Wanted a sturdy emergency harness for my smaller hikes that will hold the dog securely. This definitely does! Great support for the bum, can't see the dog slipping out. I imagine the straps will rub your shoulders raw after a while, but if it's to help save my fur ball I can deal.Seems very sturdy and well made. Won't know until I need to put it to the test. Hopefully I never will!",
+        "rating": 5,
+        "date": "December 16, 2022",
+        "author": "A Customer",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEYCDKGYWWTD2IKLRHNJQBQ2UH6Q?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/af5ea3c1-2721-4b84-8bae-3f3dba4bca0f._CR0%2C0%2C746%2C746_SX460_SX48_.jpg",
+        "images": [
+          "https://m.media-amazon.com/images/I/71gnIZHqYkL.jpg",
+          "https://m.media-amazon.com/images/I/61Zu92k05PL.jpg"
+        ],
+        "helpful_votes": "11 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Orange",
+          "size": "Small"
+        }
+      }
+    ],
+    "other_countries_reviews": [
+      {
+        "position": 1,
+        "title": "Fantastic",
+        "text": "This does exactly as it says, good fit and my dog was happy to be lifted up in it. He seemed secure and reasonably comfortable",
+        "rating": 5,
+        "date": "August 24, 2022",
+        "author": "Yricka",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Orange",
+          "size": "Medium"
+        },
+        "country": {
+          "code": "GB",
+          "name": "United Kingdom"
+        },
+        "language": {
+          "code": "en",
+          "name": "English (United Kingdom)"
+        }
+      }
+    ]
+  }
+}

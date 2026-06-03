@@ -5,11 +5,13 @@
 
 import { coolingProducts, categoryMeta } from './cooling-products';
 import { calmingProducts } from './calming-products';
+import { emergencyProducts } from './emergency-products';
 import { relaxationProducts } from './relaxation-products';
 import { accessoryProducts, trackerProducts } from './tracking-products';
 import { coolingConverterPageConfigs } from './cooling-converter-pages';
 import { calmingConverterPages } from './calming-converter-pages';
 import { relaxationConverterPages } from './relaxation-converter-pages';
+import { ROUTES } from './routes';
 
 export interface PageRef {
   label: string;
@@ -37,6 +39,7 @@ export function buildProductPageMap(): ProductPageMap {
   for (const p of relaxationProducts) map[p.id] = [];
   for (const p of trackerProducts) map[p.id] = [];
   for (const p of accessoryProducts) map[p.id] = [];
+  for (const p of emergencyProducts) map[p.id] = [];
 
   for (const [slug, config] of Object.entries(coolingConverterPageConfigs)) {
     const href = `/cooling/${slug}/`;
@@ -125,6 +128,14 @@ export function buildProductPageMap(): ProductPageMap {
   const fiReviewRef: PageRef = { label: 'Fi Dog Collar Review', href: '/gear/fi-dog-collar-review/' };
   addRef(map, 'fi-series-3-plus', fiReviewRef);
   addRef(map, 'stunt-puppy-fi-collar', fiReviewRef);
+
+  const snakeBiteKitRef: PageRef = {
+    label: 'Dog Snake-Bite Emergency Kit',
+    href: ROUTES.dogSnakeBiteEmergencyKit,
+  };
+  for (const p of emergencyProducts) {
+    addRef(map, p.id, snakeBiteKitRef);
+  }
 
   return map;
 }

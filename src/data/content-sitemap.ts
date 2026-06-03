@@ -36,6 +36,9 @@ export const TOPICS = [
   'tracking',
   'gps-tracking',
   'lost-dog-safety',
+  'snake-safety',
+  'trail-safety',
+  'emergency-prep',
 ] as const;
 
 export type SitemapTopic = typeof TOPICS[number];
@@ -451,6 +454,23 @@ export const staticSitemapSections: SitemapSection[] = [
         relatedLabel: 'All GPS Trackers',
         heroProduct: trackerHero('fi-series-3-plus', 'Best Everyday GPS', 'Fi Series 3+ GPS Collar'),
         pubDate: new Date('2026-03-18'),
+      }),
+      createSitemapPage({
+        baseTitle: 'Dog Snake-Bite Emergency Kit: What to Pack Before a Walk or Hike',
+        ogTitle: 'Dog Snake-Bite Emergency Kit for Walks and Hikes',
+        description:
+          'Build a practical dog snake-bite emergency kit for walks, hikes, and backyards: carry slings, first aid kits, muzzles, and vet-ready supplies.',
+        href: ROUTES.dogSnakeBiteEmergencyKit,
+        pageType: 'converter',
+        topics: ['snake-safety', 'trail-safety', 'emergency-prep', 'travel', 'tracking'],
+        pinnedRelated: [
+          ROUTES.rattlesnakeSafetyForDogs,
+          ROUTES.trackingTop,
+          ROUTES.dogRanAwaySafety,
+          ROUTES.roadTrip,
+          ROUTES.coolingHydration,
+        ],
+        relatedLabel: 'Snake-Bite Emergency Kit',
       }),
       createSitemapPage({
         baseTitle: 'Fi Dog Collar Review: GPS Tracking for Everyday Dogs (2026)',

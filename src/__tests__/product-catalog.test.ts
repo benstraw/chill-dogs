@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 
 import { calmingProducts } from '../data/calming-products';
 import { coolingProducts } from '../data/cooling-products';
+import { emergencyProducts } from '../data/emergency-products';
 import { productCatalogItems } from '../data/product-catalog';
 import { buildProductPageMap } from '../data/product-page-map';
 import { relaxationProducts } from '../data/relaxation-products';
@@ -15,6 +16,7 @@ describe('admin product catalog data', () => {
       ...relaxationProducts,
       ...trackerProducts,
       ...accessoryProducts,
+      ...emergencyProducts,
     ];
     const catalogIds = productCatalogItems.map((product) => product.id);
 
@@ -64,6 +66,11 @@ describe('admin product catalog data', () => {
     expect(pageMap['stunt-puppy-fi-collar']).toEqual(
       expect.arrayContaining([
         expect.objectContaining({ href: '/gear/fi-dog-collar-review/' }),
+      ])
+    );
+    expect(pageMap['fido-pro-airlift-rescue-sling']).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ href: '/gear/dog-snake-bite-emergency-kit/' }),
       ])
     );
   });
