@@ -70,10 +70,9 @@ describe('homepage article feed', () => {
       '/safety/what-to-do-if-your-dog-runs-away/',
       '/comforting/how-much-do-dogs-sleep/',
       '/cooling/keep-dog-cool-in-car/',
-    ]);
-    expect(feed.moreArticles.map((article) => article.href)).toEqual([
       '/cooling/how-hot-is-too-hot-for-dogs/',
     ]);
+    expect(feed.moreArticles).toEqual([]);
     expect(feed.latestGuides.map((article) => article.href)).toEqual([
       '/calming/dog-fireworks-anxiety-checklist/',
       '/travel/how-to-fly-with-a-dog/',
@@ -87,7 +86,7 @@ describe('homepage article feed', () => {
     expect(feed.featuredArticles[0]?.image).toBe('/og/calming-dog-fireworks-anxiety-checklist.jpg');
     expect(feed.featuredArticles[1]?.image).toBe('/_assets/custom-og.jpg');
     expect(feed.featuredArticles[3]?.image).toBe('/og/safety-what-to-do-if-your-dog-runs-away.jpg');
-    expect(feed.moreArticles[0]?.image).toBe('/og/cooling-how-hot-is-too-hot-for-dogs.jpg');
+    expect(feed.featuredArticles[6]?.image).toBe('/og/cooling-how-hot-is-too-hot-for-dogs.jpg');
   });
 
   it('maps a single article into homepage card data', () => {
