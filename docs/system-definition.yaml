@@ -286,6 +286,23 @@ site_system:
       routes:
         - "/safety/what-to-do-if-your-dog-runs-away/"
 
+    - name: "Calm Dog Breeds cluster"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Capture calm/chill breed, temperament-by-age, and dog-DNA comparison search intent, then route readers toward relevant converters and the future dog DNA converter path"
+      metric: "collector_to_converter_click to breed-cluster articles, calming/cooling/comfort converters, and future dog DNA converter once live"
+      routes:
+        - "/breeds/most-chill-dog-breeds/"
+        - "/breeds/dog-temperament-by-age/"
+        - "/breeds/dog-dna-tests-compared/"
+      notes: >
+        Three informational article collectors split the former oversized calm-dog draft into separate intents:
+        calm breeds and breed jobs; temperament by age and adoption timing; and Embark vs Wisdom Panel dog DNA
+        tests as an editorial feeder to a future DNA-test converter. The cluster uses /breeds/[slug].astro for
+        MDX articles whose canonicalPath starts with /breeds/, route constants in src/data/routes.ts, and
+        sitemap topics/pinnedRelated metadata for related-link derivation. Article 3 stays a collector, not a
+        product roundup converter; affiliate pressure remains light until the future converter exists.
+
     - name: "Product browse"
       type: "converter"
       pillar: "all"

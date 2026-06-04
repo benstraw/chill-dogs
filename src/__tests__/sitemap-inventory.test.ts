@@ -1,6 +1,21 @@
 import { describe, expect, it, vi } from 'vitest';
 
 const articleEntries = [
+  createArticle('/breeds/most-chill-dog-breeds/', 'What Are the Most Chill Dog Breeds?', '2026-05-29', {
+    topics: ['breeds', 'mixed-breed-dogs', 'dog-dna-tests'],
+    pinnedRelated: ['/breeds/dog-temperament-by-age/', '/breeds/dog-dna-tests-compared/'],
+    relatedLabel: 'Chill Dog Breeds',
+  }),
+  createArticle('/breeds/dog-temperament-by-age/', 'Do Dogs Get Calmer With Age?', '2026-05-28', {
+    topics: ['breeds', 'adoption'],
+    pinnedRelated: ['/breeds/most-chill-dog-breeds/', '/breeds/dog-dna-tests-compared/'],
+    relatedLabel: 'Dog Temperament by Age',
+  }),
+  createArticle('/breeds/dog-dna-tests-compared/', 'Dog DNA Tests Compared', '2026-05-27', {
+    topics: ['breeds', 'mixed-breed-dogs', 'dog-dna-tests'],
+    pinnedRelated: ['/breeds/most-chill-dog-breeds/', '/breeds/dog-temperament-by-age/'],
+    relatedLabel: 'Dog DNA Tests',
+  }),
   createArticle(
     '/calming/dog-fireworks-anxiety-checklist/',
     'Dog Fireworks Anxiety Checklist: What to Do Before, During, and After July 4',
@@ -68,6 +83,9 @@ describe('sitemap inventory', () => {
 
     expect(section.title).toBe('Articles (from collection)');
     expect(section.pages.map((page) => page.href)).toEqual([
+      '/breeds/most-chill-dog-breeds/',
+      '/breeds/dog-temperament-by-age/',
+      '/breeds/dog-dna-tests-compared/',
       '/calming/dog-fireworks-anxiety-checklist/',
       '/calming/how-to-prepare-a-calm-room-for-fireworks-night/',
       '/travel/how-to-fly-with-a-dog/',
@@ -100,11 +118,18 @@ describe('sitemap inventory', () => {
   it('passes article related metadata from frontmatter into sitemap pages', async () => {
     const pages = await getCompleteSitemapPages();
     const roadTrip = pages.find((page) => page.href === '/travel/dog-road-trip-gear/');
+    const chillBreeds = pages.find((page) => page.href === '/breeds/most-chill-dog-breeds/');
 
     expect(roadTrip?.topics).toEqual(['travel', 'road-trips']);
     expect(roadTrip?.pinnedRelated).toEqual(['/cooling/car-cooling-for-dogs/']);
     expect(roadTrip?.excludeRelated).toEqual(['/privacy-policy/']);
     expect(roadTrip?.relatedLabel).toBe('Dog Road Trip Gear');
+    expect(chillBreeds?.topics).toEqual(['breeds', 'mixed-breed-dogs', 'dog-dna-tests']);
+    expect(chillBreeds?.pinnedRelated).toEqual([
+      '/breeds/dog-temperament-by-age/',
+      '/breeds/dog-dna-tests-compared/',
+    ]);
+    expect(chillBreeds?.relatedLabel).toBe('Chill Dog Breeds');
   });
 
   it('places article collectors after entry points and before remaining static sections', async () => {

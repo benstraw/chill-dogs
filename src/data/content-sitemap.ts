@@ -33,6 +33,10 @@ export const TOPICS = [
   'tracking',
   'gps-tracking',
   'lost-dog-safety',
+  'breeds',
+  'adoption',
+  'mixed-breed-dogs',
+  'dog-dna-tests',
 ] as const;
 
 export type SitemapTopic = typeof TOPICS[number];
