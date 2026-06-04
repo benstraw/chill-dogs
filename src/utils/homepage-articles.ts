@@ -66,18 +66,29 @@ export interface HomepageConverterCard {
   description: string;
   label: string;
   color: HomepageArticleColor;
+  pubDate?: Date;
+  lastUpdated?: Date;
 }
 
 export function getHomepageConverters(limit = 15): HomepageConverterCard[] {
   return staticSitemapSections
     .flatMap((s) => s.pages)
     .filter((p) => p.pageType === 'converter')
-    .reverse()
+    .sort((a, b) => {
+      const aDate = a.lastUpdated ?? a.pubDate;
+      const bDate = b.lastUpdated ?? b.pubDate;
+      if (!aDate && !bDate) return 0;
+      if (!aDate) return 1;
+      if (!bDate) return -1;
+      return bDate.valueOf() - aDate.valueOf();
+    })
     .slice(0, limit)
     .map((p) => ({
       href: p.href,
       title: p.baseTitle,
       description: p.preview.description,
+      pubDate: p.pubDate,
+      lastUpdated: p.lastUpdated,
       ...resolveHomepageArticleTheme(p.href),
     }));
 }
