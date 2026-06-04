@@ -109,10 +109,19 @@ describe('site smoke tests', () => {
 
     const coolingCta = doc.querySelector<HTMLAnchorElement>('a[data-track="hero_click_cooling"]');
     const calmingCta = doc.querySelector<HTMLAnchorElement>('a[data-track="hero_click_calming"]');
+    const loveNote = doc.querySelector<HTMLElement>('.hp-v6-love-note');
+    const loveHeart = doc.querySelector<SVGElement>('.hp-v6-love-heart');
+    const heroSlogan = doc.querySelector<HTMLElement>('.hp-v6-slogan');
     const canonical = doc.querySelector<HTMLLinkElement>('link[rel="canonical"]');
 
     expect(coolingCta?.getAttribute('href')).toBe('/cooling/');
     expect(calmingCta?.getAttribute('href')).toBe('/calming/');
+    expect(loveNote?.getAttribute('aria-label')).toBe('For the love of dogs');
+    expect(loveNote?.textContent?.trim()).toBe('For the love of dogs');
+    expect(loveHeart?.getAttribute('aria-hidden')).toBe('true');
+    expect(heroSlogan?.textContent?.replace(/\s+/g, ' ').trim()).toBe(
+      'Temperature or Temperament — We Have You Covered'
+    );
     expect(canonical?.getAttribute('href')).toBe('https://www.chill-dogs.com/');
   });
 

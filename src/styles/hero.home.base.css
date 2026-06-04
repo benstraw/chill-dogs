@@ -2,6 +2,15 @@
  * hero.home.base.css — Homepage hero layout and styles
  */
 
+@font-face {
+  font-family: 'Oooh Baby Love Note';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/oooh-baby-love-note.woff2') format('woff2');
+  unicode-range: U+20, U+46, U+64-68, U+6c, U+6f, U+72-74, U+76;
+}
+
 .hp-hero {
   position: relative;
   overflow: visible;
@@ -45,8 +54,10 @@
 
 .hp-v6-logo {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: var(--space-md);
   padding: var(--space-3xl);
 }
 
@@ -55,6 +66,26 @@
   max-width: 420px;
   height: auto;
   display: block;
+}
+
+.hp-v6-love-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin: 0;
+  font-family: 'Oooh Baby Love Note', 'Oooh Baby', 'Caveat', 'Patrick Hand', 'Comic Sans MS', cursive;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: var(--weight-bold);
+  line-height: 1;
+  color: #0b376d;
+}
+
+.hp-v6-love-heart {
+  width: 0.8em;
+  height: 0.8em;
+  flex: 0 0 auto;
+  color: var(--color-terracotta);
+  transform: translateY(0.04em);
 }
 
 /* ── Right: slogan + panes cell ── */
@@ -136,6 +167,10 @@
 
   .hp-v6-logo-img {
     max-width: 200px;
+  }
+
+  .hp-v6-love-note {
+    font-size: clamp(1.65rem, 9.5vw, 2.35rem);
   }
 
   .hp-v6-right {
