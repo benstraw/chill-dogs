@@ -36,7 +36,7 @@ function quickPickProduct(item: QuickPickItem) {
 }
 ---
 
-<BaseLayout title={config.title} ogTitle={config.ogTitle} description={config.description} navAccent="var(--color-sky)">
+<BaseLayout title={config.title} ogTitle={config.ogTitle} description={config.description} pillarTheme="comfort">
   {schema && <JsonLd slot="head" schema={schema} />}
 
   <div class="relaxation-theme">
@@ -273,7 +273,7 @@ function quickPickProduct(item: QuickPickItem) {
   }
 
   .quick-pick-image-placeholder {
-    color: var(--color-sky);
+    color: var(--pillar-accent);
     opacity: 0.5;
   }
 
@@ -295,8 +295,8 @@ function quickPickProduct(item: QuickPickItem) {
     text-align: center;
     margin-top: var(--space-md);
     padding: var(--space-sm) var(--space-md);
-    background: var(--color-sky);
-    color: var(--color-charcoal) !important;
+    background: var(--pillar-accent);
+    color: var(--pillar-accent-text) !important;
     font-weight: var(--weight-semibold);
     font-size: var(--text-sm);
     text-decoration: none;
@@ -310,23 +310,23 @@ function quickPickProduct(item: QuickPickItem) {
   }
 
   .quick-pick-link:hover {
-    background: var(--color-sky-hover);
-    color: var(--color-charcoal) !important;
+    background: var(--pillar-accent-hover);
+    color: var(--pillar-accent-text) !important;
   }
 
   .quick-pick-link--secondary {
     background: transparent;
-    color: var(--color-charcoal) !important;
-    border: 1px solid var(--color-sky);
+    color: var(--pillar-link) !important;
+    border: 1px solid var(--pillar-accent);
   }
 
   .quick-pick-link--secondary:hover {
-    background: color-mix(in srgb, var(--color-sky) 16%, transparent);
-    color: var(--color-charcoal) !important;
+    background: color-mix(in srgb, var(--pillar-accent) 16%, transparent);
+    color: var(--pillar-link) !important;
   }
 
   .quick-pick-link:focus-visible {
-    outline: 2px solid var(--color-sky);
+    outline: 2px solid var(--pillar-accent);
     outline-offset: 2px;
   }
 
@@ -340,32 +340,32 @@ function quickPickProduct(item: QuickPickItem) {
   }
 
   :global(.relaxation-theme .hero-cta--primary) {
-    background: var(--color-sky);
-    color: var(--color-charcoal);
+    background: var(--pillar-accent);
+    color: var(--pillar-accent-text);
   }
 
   :global(.relaxation-theme .hero-cta--primary:hover) {
-    background: var(--color-sky-hover);
-    color: var(--color-charcoal);
+    background: var(--pillar-accent-hover);
+    color: var(--pillar-accent-text);
   }
 
   :global(.relaxation-theme .hero-cta--secondary) {
-    color: var(--color-sky);
-    border-color: var(--color-sky);
+    color: var(--pillar-link);
+    border-color: var(--pillar-link);
   }
 
   :global(.relaxation-theme .hero-cta--secondary:hover) {
-    background: var(--color-sky);
-    color: var(--color-charcoal);
+    background: var(--pillar-accent);
+    color: var(--pillar-accent-text);
   }
 
   :global(.relaxation-theme .ils-link:hover) {
-    background: var(--color-sky);
-    color: var(--color-charcoal);
+    background: var(--pillar-accent);
+    color: var(--pillar-accent-text);
   }
 
   :global(.relaxation-theme .disc-inner a) {
-    color: var(--color-sky);
+    color: var(--pillar-link);
   }
 
   @media (max-width: 1024px) {

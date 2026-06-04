@@ -5,6 +5,7 @@ import '@styles/collector-article.css';
 import '@styles/article-components.css';
 import type { ImageMetadata } from 'astro';
 import { resolveAutoOgImagePath, resolveProvidedOgImagePath } from '@utils/og';
+import type { PillarThemeKey } from '@data/pillar-themes';
 
 interface Props {
   title: string;
@@ -13,9 +14,10 @@ interface Props {
   canonicalPath: string;
   ogImage?: string | ImageMetadata;
   navAccent?: string;
+  pillarTheme?: PillarThemeKey;
 }
 
-const { title, description, ogTitle, canonicalPath, ogImage, navAccent } = Astro.props;
+const { title, description, ogTitle, canonicalPath, ogImage, navAccent, pillarTheme } = Astro.props;
 const canonicalUrl = `https://www.chill-dogs.com${canonicalPath}`;
 const resolvedArticleImage = resolveProvidedOgImagePath(ogImage)
   ?? `https://www.chill-dogs.com${resolveAutoOgImagePath({ pathname: canonicalPath }) ?? '/og-default.jpg'}`;
@@ -35,7 +37,7 @@ const articleSchema = {
   },
 };
 ---
-<BaseLayout {title} {description} {ogTitle} canonicalUrl={canonicalUrl} {navAccent}>
+<BaseLayout {title} {description} {ogTitle} canonicalUrl={canonicalUrl} {navAccent} {pillarTheme}>
   <JsonLd slot="head" schema={articleSchema} />
   <slot />
 </BaseLayout>

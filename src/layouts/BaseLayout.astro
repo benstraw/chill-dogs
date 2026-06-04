@@ -14,6 +14,7 @@ import SpeedInsights from '@vercel/speed-insights/astro';
 import type { ImageMetadata } from 'astro';
 import { resolveAutoOgImagePath, resolveProvidedOgImagePath } from '@utils/og';
 import { buildBreadcrumbSchema } from '@utils/breadcrumbs';
+import { pillarThemes, pillarThemeStyle, resolvePillarThemeFromPath, type PillarThemeKey } from '@data/pillar-themes';
 
 interface Props {
   title: string;
@@ -23,6 +24,7 @@ interface Props {
   canonicalUrl?: string;
   noindex?: boolean;
   navAccent?: string;
+  pillarTheme?: PillarThemeKey;
   hideChrome?: boolean;
 }
 
@@ -34,9 +36,17 @@ const {
   canonicalUrl,
   noindex = false,
   navAccent,
+  pillarTheme,
   hideChrome = false,
 } = Astro.props;
 
+const inferredPillarTheme = resolvePillarThemeFromPath(Astro.url.pathname);
+const resolvedPillarTheme = inferredPillarTheme ?? (pillarTheme ? pillarThemes[pillarTheme] : undefined);
+const htmlStyle = resolvedPillarTheme
+  ? pillarThemeStyle(resolvedPillarTheme)
+  : navAccent
+    ? `--color-nav-accent: ${navAccent}`
+    : undefined;
 const siteTitle = title === 'Home'
   ? 'Chill-Dogs — Cooling & Calming Products for Dogs'
   : `${title} | Chill-Dogs`;
@@ -53,7 +63,7 @@ const breadcrumbSchema = !noindex && !isStaging && Astro.site
 ---
 
 <!doctype html>
-<html lang="en" style={navAccent ? `--color-nav-accent: ${navAccent}` : undefined}>
+<html lang="en" data-pillar-theme={resolvedPillarTheme?.key} style={htmlStyle}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />

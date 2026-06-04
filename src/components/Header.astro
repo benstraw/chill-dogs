@@ -13,6 +13,10 @@ const navItems = [
 const currentPath = Astro.url.pathname;
 const isHome = currentPath === '/' || currentPath.startsWith('/v/');
 const isSearch = currentPath === ROUTES.search;
+
+function isActivePath(href: string) {
+  return currentPath === href || (href !== '/' && currentPath.startsWith(href));
+}
 ---
 
 <header class="site-header">
@@ -28,16 +32,20 @@ const isSearch = currentPath === ROUTES.search;
     </button>
     <nav class="main-nav" aria-label="Main navigation">
       <ul>
-        {navItems.map(({ href, label }) => (
-          <li>
-            <a
-              href={href}
-              class:list={[{ active: currentPath === href || (href !== '/' && currentPath.startsWith(href)) }]}
-            >
-              {label}
-            </a>
-          </li>
-        ))}
+        {navItems.map(({ href, label }) => {
+          const isActive = isActivePath(href);
+          return (
+            <li>
+              <a
+                href={href}
+                class:list={[{ active: isActive }]}
+                aria-current={isActive ? 'page' : undefined}
+              >
+                {label}
+              </a>
+            </li>
+          );
+        })}
         <li>
           <a
             href={ROUTES.search}

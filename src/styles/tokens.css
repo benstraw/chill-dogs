@@ -21,6 +21,12 @@
   --color-accent: var(--color-sage);
   --color-accent-text: #5e7a5a;
   --color-accent-alt: var(--color-terracotta);
+  --pillar-accent: var(--color-primary);
+  --pillar-accent-hover: var(--color-primary-hover);
+  --pillar-accent-text: var(--color-text-inverse);
+  --pillar-link: var(--color-link);
+  --pillar-link-hover: var(--color-link-hover);
+  --pillar-soft-bg: var(--color-bg-cool);
   --color-surface: #ffffff;
   --color-border: #c5d4dc;
 

@@ -172,6 +172,35 @@ describe('site smoke tests', () => {
     expect(coolingConverterCards[0]?.querySelector('img')).toBeNull();
   });
 
+  it('applies pillar themes to all pages under pillar URL paths', () => {
+    const cases = [
+      { page: path.join('cooling', 'index.html'), theme: 'cooling' },
+      { page: path.join('cooling', 'cooling-mats', 'index.html'), theme: 'cooling' },
+      { page: path.join('cooling', 'keep-dog-cool-in-car', 'index.html'), theme: 'cooling' },
+      { page: path.join('calming', 'index.html'), theme: 'calming' },
+      { page: path.join('calming', 'best-calming-products-for-anxious-dogs', 'index.html'), theme: 'calming' },
+      { page: path.join('calming', 'cbd-for-dogs', 'index.html'), theme: 'calming' },
+      { page: path.join('comforting', 'index.html'), theme: 'comfort' },
+      { page: path.join('comforting', 'best-anxiety-dog-crates', 'index.html'), theme: 'comfort' },
+      { page: path.join('comforting', 'how-much-do-dogs-sleep', 'index.html'), theme: 'comfort' },
+    ];
+
+    for (const { page, theme } of cases) {
+      const doc = readBuiltPage(page);
+      expect(doc.documentElement.getAttribute('data-pillar-theme')).toBe(theme);
+      expect(doc.documentElement.getAttribute('style')).toContain('--pillar-accent:');
+    }
+  });
+
+  it('marks the active pillar top-nav item with the pillar theme', () => {
+    const comfortDoc = readBuiltPage(path.join('comforting', 'best-anxiety-dog-crates', 'index.html'));
+    const activeNav = comfortDoc.querySelector<HTMLAnchorElement>('.main-nav a[aria-current="page"]');
+
+    expect(comfortDoc.documentElement.getAttribute('data-pillar-theme')).toBe('comfort');
+    expect(comfortDoc.documentElement.getAttribute('style')).toContain('--color-nav-accent: hsl(345, 38%, 38%)');
+    expect(activeNav?.getAttribute('href')).toBe('/comforting/');
+  });
+
   it('renders derived InternalLinkStrip links on migrated pages', () => {
     const cases = [
       {

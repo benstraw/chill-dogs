@@ -1,4 +1,5 @@
 import type { SitemapPage, SitemapSection, SitemapTopic } from './content-sitemap';
+import type { PillarThemeKey } from './pillar-themes';
 import { ROUTES } from './routes';
 
 export interface CollectorCard {
@@ -21,7 +22,7 @@ export interface CollectorSection {
 
 export interface CollectorBodyConfig {
   fromPage: string;
-  accent: 'primary' | 'sage' | 'terracotta';
+  accent: PillarThemeKey;
   start?: {
     href: string;
     title: string;
@@ -98,7 +99,7 @@ export const sectionCollectorDefinitions: Record<SectionCollectorKey, SectionCol
     key: 'cooling',
     href: ROUTES.coolingHub,
     fromPage: 'cooling-collector',
-    accent: 'primary',
+    accent: 'cooling',
     title: 'Cooling Relief',
     ogTitle: 'Cooling Products for Dogs | Mats, Vests & Bandanas',
     schemaName: 'Cooling Relief for Dogs',
@@ -167,8 +168,7 @@ export const sectionCollectorDefinitions: Record<SectionCollectorKey, SectionCol
     key: 'calming',
     href: ROUTES.calmingHub,
     fromPage: 'calming-collector',
-    accent: 'sage',
-    navAccent: 'var(--color-sage)',
+    accent: 'calming',
     title: 'Calm & Comfort',
     ogTitle: 'Calming Products for Dogs | ThunderShirts, Treats & More',
     schemaName: 'Calming Products for Anxious Dogs',
@@ -252,7 +252,7 @@ export const sectionCollectorDefinitions: Record<SectionCollectorKey, SectionCol
     key: 'comfort',
     href: ROUTES.comfortHub,
     fromPage: 'comfort-collector',
-    accent: 'terracotta',
+    accent: 'comfort',
     title: 'Comfort & Rest',
     ogTitle: 'Dog Beds for Comfort & Rest | Calming & Orthopedic Picks',
     schemaName: 'Comfort & Rest for Dogs',
