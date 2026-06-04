@@ -99,7 +99,7 @@ const offers = getOffers(product);
   }
 
   .calm-card-image-placeholder {
-    color: var(--color-sage);
+    color: var(--pillar-link);
     opacity: 0.5;
   }
 
@@ -120,7 +120,7 @@ const offers = getOffers(product);
 
   .calm-card-best-for {
     font-size: var(--text-sm);
-    color: var(--color-accent-text);
+    color: var(--pillar-link);
     margin-bottom: var(--space-md);
     line-height: var(--leading-normal);
   }
@@ -146,7 +146,7 @@ const offers = getOffers(product);
     content: '+';
     position: absolute;
     left: 0;
-    color: var(--color-accent-text);
+    color: var(--pillar-link);
     font-weight: var(--weight-bold);
   }
 
@@ -165,8 +165,8 @@ const offers = getOffers(product);
   :global(.calm-card-cta) {
     display: block;
     text-align: center;
-    background: var(--color-primary);
-    color: var(--color-text-inverse) !important;
+    background: var(--pillar-accent);
+    color: var(--pillar-accent-text) !important;
     font-weight: var(--weight-semibold);
     padding: var(--space-sm) var(--space-lg);
     border-radius: var(--radius-md);
@@ -176,23 +176,23 @@ const offers = getOffers(product);
   }
 
   :global(.calm-card-cta:hover) {
-    background: var(--color-primary-hover);
-    color: var(--color-text-inverse) !important;
+    background: var(--pillar-accent-hover);
+    color: var(--pillar-accent-text) !important;
   }
 
   :global(.calm-card-cta--secondary) {
     background: transparent;
-    color: var(--color-primary) !important;
-    border: 1px solid var(--color-primary);
+    color: var(--pillar-link) !important;
+    border: 1px solid var(--pillar-accent);
   }
 
   :global(.calm-card-cta--secondary:hover) {
-    background: color-mix(in srgb, var(--color-primary) 10%, transparent);
-    color: var(--color-primary) !important;
+    background: color-mix(in srgb, var(--pillar-accent) 10%, transparent);
+    color: var(--pillar-link) !important;
   }
 
   :global(.calm-card-cta:focus-visible) {
-    outline: 2px solid var(--color-primary);
+    outline: 2px solid var(--pillar-accent);
     outline-offset: 2px;
   }
 </style>

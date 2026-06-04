@@ -365,6 +365,14 @@ site_system:
       - "/calming/"
       - "/comforting/"
       - "/about/"
+    pillar_theme_contract:
+      source: "src/data/pillar-themes.ts"
+      rule: "Every page whose URL path starts with /cooling/, /calming/, or /comforting/ inherits its pillar theme in BaseLayout."
+      active_state: "Top-nav active and hover colors use the resolved pillar accent via --color-nav-accent."
+      themes:
+        cooling: "cooling blue for links, buttons, hover states, and soft accents on /cooling/*"
+        calming: "calming green for links, buttons, hover states, and soft accents on /calming/*"
+        comfort: "dusty rose for links, buttons, hover states, and soft accents on /comforting/*; do not use sky blue or terracotta as the Comforting authority"
 
   footer:
     sections:

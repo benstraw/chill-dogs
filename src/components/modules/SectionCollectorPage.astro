@@ -17,7 +17,7 @@ const { definition, body, schema } = await getSectionCollectorPageData(collector
   title={definition.title}
   ogTitle={definition.ogTitle}
   description={definition.description}
-  navAccent={definition.navAccent}
+  pillarTheme={definition.accent}
 >
   <JsonLd slot="head" schema={schema} />
   <HeroExperiment
