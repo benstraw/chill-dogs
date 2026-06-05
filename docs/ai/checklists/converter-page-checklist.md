@@ -3,7 +3,7 @@ title: Converter Page Checklist
 type: checklist
 domain: checklists
 status: active
-updated: 2026-05-06
+updated: 2026-06-05
 tags:
   - chill-dogs
   - checklist
@@ -40,6 +40,7 @@ Finishing any converter page before marking work as done.
 - [ ] Schema present (FAQPage if FAQ exists, appropriate structured data for product listings)
 - [ ] Related content uses the approved related-content system only (`topics`, `pinnedRelated`, `excludeRelated`, `relatedLabel` in sitemap config) — no new manual related arrays
 - [ ] Added to sitemap inventory (`src/data/content-sitemap.ts`)
+- [ ] Sitemap entry includes `pubDate`; set `lastUpdated` only for a material content/product refresh
 - [ ] Route constant added to `src/data/routes.ts`
 - [ ] Updated `docs/system-definition.yaml`
 - [ ] Build passes: `bun run build`
