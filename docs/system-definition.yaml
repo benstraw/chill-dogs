@@ -8,7 +8,7 @@
 
 site_system:
   status: "active"
-  as_of: "2026-06-03"
+  as_of: "2026-06-05"
   owner: "chill-dogs"
   purpose: "Define the website as a modular conversion system and keep implementation aligned."
 
@@ -58,9 +58,9 @@ site_system:
         The From the Guide section features all current article collectors with OG-image cards,
         including How to Crate Train Your Dog to connect informational crate intent with the
         new crate converter path.
-        The Browse Picks list is temporarily broad enough to include Best Lick Mats for Dogs
-        and Best Travel Crates for Road Trips until converter routing below the article section
-        gets a fuller refactor.
+        The Browse Picks list renders up to 15 converter cards from static sitemap metadata,
+        sorted by lastUpdated ?? pubDate descending so newly published or materially refreshed
+        converter pages can surface without manual homepage card ordering.
         A homepage-inline email signup block sits below HomepageBody as a secondary capture path.
 
     - name: "Cooling"
@@ -429,7 +429,7 @@ site_system:
     cms: "None (code-first content/config in repository)"
     hosting: "Static build deployment"
     seo_strategy: "collector captures intent; converter monetizes intent; variant routes remain canonicalized and noindex"
-    sitemap_inventory: "src/data/sitemap-inventory.ts composes staticSitemapSections with article MDX collection entries at build time; future related-content derivation should use the complete inventory instead of static-only sections."
+    sitemap_inventory: "src/data/sitemap-inventory.ts composes staticSitemapSections with article MDX collection entries at build time; future related-content derivation should use the complete inventory instead of static-only sections. Converter sitemap entries carry pubDate and optional lastUpdated metadata for homepage Browse Picks recency ordering."
     section_collectors: "src/data/section-collectors.ts defines cooling, calming, and comfort collector metadata, topic subsection grouping, topic coverage, priority ordering, dynamic CollectorBody card inventories, and CollectionPage hasPart schema from the complete sitemap inventory."
 
   redirects:

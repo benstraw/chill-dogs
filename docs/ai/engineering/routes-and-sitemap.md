@@ -3,7 +3,7 @@ title: Routes and Sitemap
 type: canonical
 domain: engineering
 status: active
-updated: 2026-05-23
+updated: 2026-06-05
 tags:
   - chill-dogs
   - engineering
@@ -73,6 +73,8 @@ Optional fields:
 - `relatedLabel` — shorter text for InternalLinkStrip pills
 - `ogTitle` — social-specific title when `<title>` falls outside 40–65 char limit
 - `noindex` — set true for admin/staging pages
+- `pubDate` — original publication date; required for converter pages
+- `lastUpdated` — material content/product refresh date; optional for converter pages
 
 ### 2. MDX article auto-discovery
 
@@ -111,6 +113,14 @@ Use these frontmatter/config fields to control related content:
 `InternalLinkStrip` and `RelatedGuides` use `currentHref` prop for automated derivation. Do not add new manual related arrays.
 
 Section collectors (`/cooling/`, `/calming/`, `/comforting/`) also use sitemap topics. Their definitions in `src/data/section-collectors.ts` match indexable converters and article collectors by topic, group cards into first-match topic subsections, allow cross-topic pages to appear in multiple collectors, and preserve converter-first ordering within each subsection.
+
+---
+
+## Converter recency metadata
+
+Converter entries in `src/data/content-sitemap.ts` must include `pubDate`. Use the first real publication date from git history when available. Set `lastUpdated` only for a material content or product refresh that should promote the converter in recency-based surfaces.
+
+The homepage Browse Picks list uses this metadata via `getHomepageConverters()`: it renders up to 15 converters sorted by `lastUpdated ?? pubDate` descending, with undated converters last. This ordering is homepage-specific; section collectors still use topic and priority routing rules.
 
 ---
 

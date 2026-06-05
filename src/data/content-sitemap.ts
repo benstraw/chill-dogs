@@ -53,6 +53,8 @@ export interface SitemapPage {
   excludeRelated?: string[];
   relatedLabel?: string;
   noindex?: boolean;
+  pubDate?: Date;
+  lastUpdated?: Date;
   preview: SitemapPreview;
 }
 
@@ -75,6 +77,8 @@ export interface SitemapPageInput {
   ogTitle?: string;
   ogImage?: string | ImageMetadata;
   noindex?: boolean;
+  pubDate?: Date;
+  lastUpdated?: Date;
 }
 
 function resolveShareTitle(baseTitle: string, ogTitle?: string): string {
@@ -102,6 +106,8 @@ export function createSitemapPage(input: SitemapPageInput): SitemapPage {
     excludeRelated: input.excludeRelated,
     relatedLabel: input.relatedLabel,
     noindex: input.noindex,
+    pubDate: input.pubDate,
+    lastUpdated: input.lastUpdated,
     preview: {
       title: resolveShareTitle(input.baseTitle, input.ogTitle),
       description: input.description,
@@ -176,6 +182,7 @@ export const staticSitemapSections: SitemapSection[] = [
         pageType: 'converter',
         topics: ['cooling', 'heat-safety'],
         relatedLabel: 'Best Cooling Products',
+        pubDate: new Date('2026-02-27'),
       }),
       createSitemapPage({
         baseTitle: categoryMeta['car-cooling'].title,
@@ -190,6 +197,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.coolingTop,
         ],
         relatedLabel: 'Car Cooling Picks',
+        pubDate: new Date('2026-03-02'),
       }),
       createSitemapPage({
         baseTitle: categoryMeta['cooling-mats'].title,
@@ -204,6 +212,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.coolingTop,
         ],
         relatedLabel: 'Best Cooling Mats',
+        pubDate: new Date('2026-02-27'),
       }),
       createSitemapPage({
         baseTitle: categoryMeta['cooling-bandanas'].title,
@@ -218,6 +227,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.coolingTop,
         ],
         relatedLabel: 'Best Cooling Bandanas',
+        pubDate: new Date('2026-02-27'),
       }),
       createSitemapPage({
         baseTitle: categoryMeta['cooling-vests'].title,
@@ -232,6 +242,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.coolingTop,
         ],
         relatedLabel: 'Best Cooling Vests',
+        pubDate: new Date('2026-02-27'),
       }),
       createSitemapPage({
         baseTitle: categoryMeta['freezable-dog-toys'].title,
@@ -246,6 +257,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.coolingTop,
         ],
         relatedLabel: 'Freezable Dog Toys',
+        pubDate: new Date('2026-02-27'),
       }),
       createSitemapPage({
         baseTitle: categoryMeta['hydration'].title,
@@ -260,6 +272,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.coolingTop,
         ],
         relatedLabel: 'Portable Dog Water Bottles',
+        pubDate: new Date('2026-04-29'),
       }),
     ],
   },
@@ -282,6 +295,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.dogRanAwaySafety,
         ],
         relatedLabel: 'Best Calming Products',
+        pubDate: new Date('2026-02-27'),
       }),
       createSitemapPage({
         baseTitle: calmingConverterPages['best-thundershirt-alternatives'].title,
@@ -294,6 +308,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.calmingTop,
         ],
         relatedLabel: 'ThunderShirt Alternatives',
+        pubDate: new Date('2026-02-28'),
       }),
       createSitemapPage({
         baseTitle: calmingConverterPages['car-anxiety-for-dogs'].title,
@@ -308,6 +323,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.roadTrip,
         ],
         relatedLabel: 'Car Anxiety Picks',
+        pubDate: new Date('2026-03-02'),
       }),
       createSitemapPage({
         baseTitle: calmingConverterPages['best-lick-mats-for-dogs'].title,
@@ -323,6 +339,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.coolingToys,
         ],
         relatedLabel: 'Best Lick Mats',
+        pubDate: new Date('2026-05-25'),
       }),
     ],
   },
@@ -347,6 +364,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.roadTrip,
         ],
         relatedLabel: 'All GPS Trackers',
+        pubDate: new Date('2026-03-18'),
       }),
       createSitemapPage({
         baseTitle: 'Fi Dog Collar Review: GPS Tracking for Everyday Dogs (2026)',
@@ -364,6 +382,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.dogRanAwaySafety,
         ],
         relatedLabel: 'Fi Collar Review',
+        pubDate: new Date('2026-03-18'),
       }),
       createSitemapPage({
         baseTitle: 'Garmin Dog Tracking Collars: Off-Grid GPS for Wilderness & Hiking (2026)',
@@ -418,6 +437,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.calmingHub,
         ],
         relatedLabel: 'Best Calming Dog Beds',
+        pubDate: new Date('2026-03-18'),
       }),
       createSitemapPage({
         baseTitle: relaxationConverterPages['best-orthopedic-dog-beds'].title,
@@ -431,6 +451,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.calmingHub,
         ],
         relatedLabel: 'Best Orthopedic Dog Beds',
+        pubDate: new Date('2026-03-18'),
       }),
       createSitemapPage({
         baseTitle: relaxationConverterPages['best-puppy-crates'].title,
@@ -444,6 +465,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.comfortHub,
         ],
         relatedLabel: 'Best Puppy Crates',
+        pubDate: new Date('2026-04-09'),
       }),
       createSitemapPage({
         baseTitle: relaxationConverterPages['best-anxiety-dog-crates'].title,
@@ -458,6 +480,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.comfortPuppyCrates,
         ],
         relatedLabel: 'Best Anxiety Dog Crates',
+        pubDate: new Date('2026-04-09'),
       }),
       createSitemapPage({
         baseTitle: relaxationConverterPages['best-travel-crates-for-road-trips'].title,
@@ -472,6 +495,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.comfortAnxietyCrates,
         ],
         relatedLabel: 'Travel Crates for Road Trips',
+        pubDate: new Date('2026-04-09'),
       }),
       createSitemapPage({
         baseTitle: relaxationConverterPages['best-airline-crates-for-flying-with-your-dog'].title,
@@ -485,6 +509,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.comfortAnxietyCrates,
         ],
         relatedLabel: 'Best Airline Crates',
+        pubDate: new Date('2026-04-12'),
       }),
       createSitemapPage({
         baseTitle: relaxationConverterPages['best-airline-approved-dog-carriers'].title,
@@ -500,6 +525,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.roadTrip,
         ],
         relatedLabel: 'Best Airline-Approved Carriers',
+        pubDate: new Date('2026-04-29'),
       }),
       createSitemapPage({
         baseTitle: relaxationConverterPages['best-dog-travel-bags-for-flying'].title,
@@ -514,6 +540,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.roadTrip,
         ],
         relatedLabel: 'Best Dog Travel Bags',
+        pubDate: new Date('2026-04-29'),
       }),
       createSitemapPage({
         baseTitle: relaxationConverterPages['best-furniture-dog-crates'].title,
@@ -527,6 +554,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.comfortPuppyCrates,
         ],
         relatedLabel: 'Best Furniture Dog Crates',
+        pubDate: new Date('2026-04-12'),
       }),
       createSitemapPage({
         baseTitle: relaxationConverterPages['best-heavy-duty-dog-crates'].title,
@@ -540,6 +568,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.comfortFurnitureCrates,
         ],
         relatedLabel: 'Best Heavy-Duty Dog Crates',
+        pubDate: new Date('2026-04-12'),
       }),
     ],
   },
@@ -555,6 +584,7 @@ export const staticSitemapSections: SitemapSection[] = [
         href: ROUTES.shop,
         pageType: 'converter',
         topics: ['cooling', 'calming', 'comfort', 'tracking'],
+        pubDate: new Date('2026-05-07'),
       }),
     ],
   },
