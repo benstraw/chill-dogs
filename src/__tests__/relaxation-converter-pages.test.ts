@@ -82,21 +82,14 @@ describe('relaxation converter page config', () => {
     const config = getRelaxationConverterPageConfig('best-chew-resistant-dog-beds');
 
     expect(config.pageSlug).toBe('best-chew-resistant-dog-beds');
-    expect(config.title).toBe('Best Indestructible Chew-Proof Dog Beds');
+    expect(config.title).toBe('Best Chew-Proof Dog Beds');
     expect(config.hero.secondaryCta?.href).toBe('/comforting/');
     expect(config.itemListSchema?.productIds).toEqual([
       'k9-ballistics-armored-crate-bed',
       'k9-ballistics-elevated-cooling-bed',
       'fxw-titannest-elevated-bed',
       'veehoo-chewproof-elevated-bed',
-      'sytopia-elevated-chew-resistant-bed',
-      'couzssyhi-chew-proof-crate-pad',
-      'brands1231-chew-resistant-crate-mat',
-      'vivifying-chew-resistant-crate-pad',
-      'sytopia-orthopedic-chew-resistant-bed',
       'k9-ballistics-ripstop-oval-bolster-bed',
-      'k9-ballistics-rectangle-pillow-bed',
-      'k9-ballistics-bolster-nesting-bed',
     ]);
     expect(config.blocks.some((block) => (
       block.kind === 'comparison_table' &&
@@ -400,13 +393,6 @@ describe('relaxation converter page config', () => {
       'fxw-titannest-elevated-bed',
       'veehoo-chewproof-elevated-bed',
       'k9-ballistics-ripstop-oval-bolster-bed',
-      'k9-ballistics-rectangle-pillow-bed',
-      'k9-ballistics-bolster-nesting-bed',
-      'vivifying-chew-resistant-crate-pad',
-      'couzssyhi-chew-proof-crate-pad',
-      'sytopia-orthopedic-chew-resistant-bed',
-      'sytopia-elevated-chew-resistant-bed',
-      'brands1231-chew-resistant-crate-mat',
     ]));
   });
 

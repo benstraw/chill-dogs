@@ -163,7 +163,7 @@ function quickPickProduct(item: QuickPickItem) {
                             offer={getRequiredPrimaryOffer(product, `${config.pageSlug} comparison table: ${product.id}`)}
                             product={{ id: product.id, name: product.name, category: product.category }}
                             class="comparison-table__cta"
-                            label="Check Price"
+                            label="Check Price on Amazon or Chewy"
                             pageType="converter"
                             pageSlug={config.pageSlug}
                             position={`table-${index + 1}`}
@@ -207,7 +207,7 @@ function quickPickProduct(item: QuickPickItem) {
                       offer={getRequiredPrimaryOffer(product, `${config.pageSlug} comparison table mobile: ${product.id}`)}
                       product={{ id: product.id, name: product.name, category: product.category }}
                       class="comparison-table__cta"
-                      label="Check Price on Amazon"
+                      label="Check Price on Amazon or Chewy"
                       pageType="converter"
                       pageSlug={config.pageSlug}
                       position={`table-${index + 1}`}

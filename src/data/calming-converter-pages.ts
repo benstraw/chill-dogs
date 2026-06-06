@@ -151,7 +151,7 @@ export const calmingConverterPages: Record<string, CalmingConverterPageConfig> =
       title: 'Best Calming Products for Anxious Dogs',
       subtitle:
         'If your dog gets shaky during thunderstorms, paces due to fireworks, struggles with separation, or melts down during grooming, the right calming tools can help. Some products work by providing gentle pressure, others through nutritional support.  Some dogs benefit from postive distractions, like licking or sniffing.  ',
-      disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
+      disclaimer: 'As an Amazon Associate and a Chewy Affiliate, we earn from qualifying purchases.',
       primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
       secondaryCta: { label: 'ThunderShirt Alternatives', href: ROUTES.calmingAlternatives },
     },
@@ -378,7 +378,7 @@ export const calmingConverterPages: Record<string, CalmingConverterPageConfig> =
       title: 'Best ThunderShirt Alternatives: 5 Anxiety Wraps Compared',
       subtitle:
         'ThunderShirt is the most popular anxiety wrap, but it is not the only option. Some dogs flinch at velcro noise, others need ear or head coverage for noise phobias, some need firmer compression, and some owners just want to spend less. We compared 5 wraps against ThunderShirt so you can find the right fit.',
-      disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
+      disclaimer: 'As an Amazon Associate and a Chewy Affiliate, we earn from qualifying purchases.',
       primaryCta: { label: 'Compare All 6 Wraps', href: '#compare' },
       secondaryCta: { label: 'See All Calming Picks', href: ROUTES.calmingTop },
     },
@@ -502,7 +502,7 @@ export const calmingConverterPages: Record<string, CalmingConverterPageConfig> =
       title: 'Best Lick Mats for Dogs',
       subtitle:
         'Lick mats are great enrichment tools. Spread a dog-safe snack, freeze it if you choose to do so, and give your dog something delicious to focus on during grooming, crate time, quiet indoor breaks, or fireworks-night prep.',
-      disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
+      disclaimer: 'As an Amazon Associate and a Chewy Affiliate, we earn from qualifying purchases.',
       primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
       secondaryCta: { label: 'Fireworks Calm Room Guide', href: ROUTES.calmingFireworksRoom },
     },
@@ -809,7 +809,7 @@ export const calmingConverterPages: Record<string, CalmingConverterPageConfig> =
       title: 'Calming Tools for Car-Anxious Dogs',
       subtitle:
         'Whether your dog whines from the driveway or shakes through the whole trip, these are the practical tools — anxiety wraps, calming chews, and lick mats — that make a real difference for travel stress.',
-      disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
+      disclaimer: 'As an Amazon Associate and a Chewy Affiliate, we earn from qualifying purchases.',
       primaryCta: { label: 'See All Calming Picks', href: ROUTES.calmingTop },
       secondaryCta: { label: 'Full Road Trip Guide', href: ROUTES.roadTrip },
     },

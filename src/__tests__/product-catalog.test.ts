@@ -93,12 +93,12 @@ describe('admin product catalog data', () => {
   it('tracks added chew-proof bed products on the chew-resistant converter', () => {
     const pageMap = buildProductPageMap();
 
-    expect(pageMap['couzssyhi-chew-proof-crate-pad']).toEqual(
+    expect(pageMap['k9-ballistics-armored-crate-bed']).toEqual(
       expect.arrayContaining([
         expect.objectContaining({ href: '/comforting/best-chew-resistant-dog-beds/' }),
       ])
     );
-    expect(pageMap['k9-ballistics-bolster-nesting-bed']).toEqual(
+    expect(pageMap['k9-ballistics-ripstop-oval-bolster-bed']).toEqual(
       expect.arrayContaining([
         expect.objectContaining({ href: '/comforting/best-chew-resistant-dog-beds/' }),
       ])
