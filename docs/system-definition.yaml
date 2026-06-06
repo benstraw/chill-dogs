@@ -21,6 +21,7 @@ site_system:
       - "navigation changed"
       - "module stack changed"
       - "analytics funnel changed"
+      - "share preview metadata changed"
     enforced_by:
       - "AGENTS.md"
       - "CLAUDE.md"
@@ -41,6 +42,17 @@ site_system:
       now that related-content migration has started; preserve editorial intent with
       pinnedRelated and excludeRelated instead.
 
+  share_previews:
+    status: "active"
+    source_of_truth: "src/data/content-sitemap.ts"
+    generated_outputs: "public/og/<route-slug>.jpg"
+    cache: ".cache/og-gen/"
+    rules:
+      - "Product-style OG images are opt-in through heroProduct metadata, not page type."
+      - "Use heroProduct only when one product should represent the page in a social preview."
+      - "Pages without heroProduct use the general OG template."
+      - "/shop/ and broad or multi-product collectors stay on the general OG path."
+
   keystone_metrics:
     primary: "Amazon affiliate revenue (qualified outbound clicks to purchases)"
     secondary: "collector_to_converter_click rate"
@@ -60,7 +72,9 @@ site_system:
         new crate converter path.
         The Browse Picks list renders up to 15 converter cards from static sitemap metadata,
         sorted by lastUpdated ?? pubDate descending so newly published or materially refreshed
-        converter pages can surface without manual homepage card ordering.
+        converter pages can surface without manual homepage card ordering. The first three eligible
+        converter cards with heroProduct metadata render as visual product-style OG cards on the
+        homepage; the remaining converter cards stay compact.
         A homepage-inline email signup block sits below HomepageBody as a secondary capture path.
 
     - name: "Cooling"

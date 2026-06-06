@@ -3,17 +3,30 @@ import type { CollectionEntry } from 'astro:content';
 import type { ImageMetadata } from 'astro';
 
 const mockStaticSitemapSections = vi.hoisted(() => {
-  const converter = (href: string, title: string, pubDate?: string, lastUpdated?: string) => ({
+  const converter = (
+    href: string,
+    title: string,
+    pubDate?: string,
+    lastUpdated?: string,
+    heroProduct = true
+  ) => ({
     href,
     baseTitle: title,
     description: `${title} description`,
     pageType: 'converter',
     pubDate: pubDate ? new Date(pubDate) : undefined,
     lastUpdated: lastUpdated ? new Date(lastUpdated) : undefined,
+    heroProduct: heroProduct
+      ? {
+          image: 'https://example.com/product.jpg',
+          badge: 'Top Pick',
+          name: title,
+        }
+      : undefined,
     preview: {
       title,
       description: `${title} preview`,
-      image: '/og-default.jpg',
+      image: `/og/${href.replace(/^\/|\/$/g, '').replace(/\//g, '-')}.jpg`,
     },
   });
 
@@ -38,7 +51,7 @@ const mockStaticSitemapSections = vi.hoisted(() => {
         converter('/comforting/dated-pick-12/', 'Dated Pick 12', '2026-05-09'),
         converter('/comforting/dated-pick-13/', 'Dated Pick 13', '2026-05-08'),
         converter('/gear/older-overflow-pick/', 'Older Overflow Pick', '2026-01-01'),
-        converter('/gear/undated-pick/', 'Undated Pick'),
+        converter('/gear/undated-pick/', 'Undated Pick', undefined, undefined, false),
         {
           href: '/cooling/not-a-converter/',
           baseTitle: 'Not a Converter',
@@ -182,6 +195,7 @@ describe('homepage article feed', () => {
     ]);
     expect(converters[0]?.lastUpdated).toEqual(new Date('2026-06-10'));
     expect(converters[0]?.pubDate).toEqual(new Date('2026-01-01'));
+    expect(converters[0]?.image).toBe('/og/cooling-updated-pick.jpg');
     expect(converters.map((converter) => converter.href)).not.toContain('/gear/older-overflow-pick/');
   });
 
@@ -192,5 +206,6 @@ describe('homepage article feed', () => {
     expect(converters.map((converter) => converter.href)).not.toContain('/cooling/not-a-converter/');
     expect(converters.at(-2)?.href).toBe('/gear/older-overflow-pick/');
     expect(converters.at(-1)?.href).toBe('/gear/undated-pick/');
+    expect(converters.at(-1)?.image).toBeUndefined();
   });
 });

@@ -40,6 +40,7 @@ Finishing any converter page before marking work as done.
 - [ ] Schema present (FAQPage if FAQ exists, appropriate structured data for product listings)
 - [ ] Related content uses the approved related-content system only (`topics`, `pinnedRelated`, `excludeRelated`, `relatedLabel` in sitemap config) — no new manual related arrays
 - [ ] Added to sitemap inventory (`src/data/content-sitemap.ts`)
+- [ ] Sitemap entry includes `heroProduct` when one product should represent the page in social previews; omit it for browse/search or multi-product pages
 - [ ] Sitemap entry includes `pubDate`; set `lastUpdated` only for a material content/product refresh
 - [ ] Route constant added to `src/data/routes.ts`
 - [ ] Updated `docs/system-definition.yaml`

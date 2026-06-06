@@ -1,8 +1,10 @@
 import { mkdirSync, readdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { PAGE_TYPE_CTA } from '../config/og-cta.mjs';
+import { staticSitemapSections } from '../data/content-sitemap.ts';
 import { Resvg } from '@resvg/resvg-js';
 import sharp from 'sharp';
+import { pathToFileURL } from 'node:url';
 
 const projectRoot = process.cwd();
 const pagesDir = path.join(projectRoot, 'src', 'pages');
@@ -13,6 +15,12 @@ const logoPath = path.join(projectRoot, 'public', 'images', 'chill-dogs-logo-pad
 const logoDataUri = existsSync(logoPath)
   ? `data:image/png;base64,${readFileSync(logoPath).toString('base64')}`
   : null;
+const PRODUCT_OG_ROUTES = new Set(
+  staticSitemapSections
+    .flatMap((section) => section.pages)
+    .filter((page) => page.heroProduct)
+    .map((page) => page.href)
+);
 
 const EXCLUDED_STATIC_ROUTES = new Set([
   '/404/',
@@ -427,13 +435,17 @@ function dedupeByPathname(records) {
   return out;
 }
 
+export function buildGeneralOgRecords() {
+  return dedupeByPathname([
+    ...buildStaticRouteRecords(),
+    ...buildArticleRouteRecords(),
+  ]).filter((record) => !PRODUCT_OG_ROUTES.has(record.pathname));
+}
+
 async function generateOgImages() {
   mkdirSync(outDir, { recursive: true });
 
-  const records = dedupeByPathname([
-    ...buildStaticRouteRecords(),
-    ...buildArticleRouteRecords(),
-  ]);
+  const records = buildGeneralOgRecords();
 
   for (const record of records) {
     const headline = deriveHeadline(record);
@@ -456,7 +468,9 @@ async function generateOgImages() {
     writeFileSync(targetPath, jpegBuffer);
   }
 
-  console.log(`[og] generated ${records.length} per-page OG images in public/og`);
+  console.log(`[og] generated ${records.length} general per-page OG images in public/og`);
 }
 
-generateOgImages();
+if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+  generateOgImages();
+}

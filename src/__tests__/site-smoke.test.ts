@@ -474,6 +474,23 @@ describe('site smoke tests', () => {
     }
   });
 
+  it('publishes homepage Browse Picks with product-style OG images', () => {
+    const homeDoc = readBuiltPage('index.html');
+    const pickImages = Array.from(
+      homeDoc.querySelectorAll<HTMLImageElement>('[data-home-pick="true"] img')
+    );
+
+    expect(pickImages).toHaveLength(3);
+
+    for (const image of pickImages) {
+      const src = image.getAttribute('src');
+      expect(src).toBeTruthy();
+      expect(src?.startsWith('/og/')).toBe(true);
+      const asset = readFileSync(path.join(distRoot, src!.replace(/^\//, '')));
+      expect(asset.length).toBeGreaterThan(1024);
+    }
+  });
+
   it('injects BreadcrumbList schema on indexable pages only', () => {
     const coolingDoc = readBuiltPage(path.join('cooling', 'cooling-mats', 'index.html'));
     const termsDoc = readBuiltPage(path.join('terms', 'index.html'));

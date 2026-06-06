@@ -2,9 +2,12 @@ import type { ImageMetadata } from 'astro';
 import { resolveAutoOgImagePath } from '@utils/og';
 import { resolveProvidedOgImagePath } from '@utils/og';
 import { calmingConverterPages } from './calming-converter-pages';
-import { categoryMeta } from './cooling-products';
+import { calmingProducts } from './calming-products';
+import { categoryMeta, getProductsByCategory, type ProductCategory } from './cooling-products';
+import { relaxationProducts } from './relaxation-products';
 import { relaxationConverterPages } from './relaxation-converter-pages';
 import { ROUTES } from './routes';
+import { trackerProducts } from './tracking-products';
 
 export type SitemapPageType = 'converter' | 'collector' | 'attractor' | 'informer';
 export type SitemapCollectorSubtype = 'section' | 'article';
@@ -43,6 +46,13 @@ export interface SitemapPreview {
   image: string;
 }
 
+export interface SitemapHeroProduct {
+  image: string;
+  badge: string;
+  name: string;
+  asin?: string;
+}
+
 export interface SitemapPage {
   href: string;
   baseTitle: string;
@@ -55,6 +65,8 @@ export interface SitemapPage {
   noindex?: boolean;
   pubDate?: Date;
   lastUpdated?: Date;
+  heroProduct?: SitemapHeroProduct;
+  ogSummary?: string;
   preview: SitemapPreview;
 }
 
@@ -76,9 +88,69 @@ export interface SitemapPageInput {
   relatedLabel?: string;
   ogTitle?: string;
   ogImage?: string | ImageMetadata;
+  heroProduct?: SitemapHeroProduct;
+  ogSummary?: string;
   noindex?: boolean;
   pubDate?: Date;
   lastUpdated?: Date;
+}
+
+interface ProductHeroSource {
+  id: string;
+  asin?: string;
+  name: string;
+  image?: {
+    src: string;
+  };
+}
+
+function productHero(product: ProductHeroSource | undefined, badge: string, name?: string): SitemapHeroProduct {
+  if (!product) {
+    throw new Error(`Missing hero product for badge: ${badge}`);
+  }
+
+  if (!product.image?.src) {
+    throw new Error(`Hero product ${product.id} is missing an image`);
+  }
+
+  return {
+    image: product.image.src,
+    badge,
+    name: name ?? product.name,
+    asin: product.asin,
+  };
+}
+
+function coolingHero(category: ProductCategory, productId: string, badge: string, name?: string): SitemapHeroProduct {
+  return productHero(
+    getProductsByCategory(category).find((product) => product.id === productId),
+    badge,
+    name
+  );
+}
+
+function calmingHero(productId: string, badge: string, name?: string): SitemapHeroProduct {
+  return productHero(
+    calmingProducts.find((product) => product.id === productId),
+    badge,
+    name
+  );
+}
+
+function comfortHero(productId: string, badge: string, name?: string): SitemapHeroProduct {
+  return productHero(
+    relaxationProducts.find((product) => product.id === productId),
+    badge,
+    name
+  );
+}
+
+function trackerHero(productId: string, badge: string, name?: string): SitemapHeroProduct {
+  return productHero(
+    trackerProducts.find((product) => product.id === productId),
+    badge,
+    name
+  );
 }
 
 function resolveShareTitle(baseTitle: string, ogTitle?: string): string {
@@ -108,6 +180,8 @@ export function createSitemapPage(input: SitemapPageInput): SitemapPage {
     noindex: input.noindex,
     pubDate: input.pubDate,
     lastUpdated: input.lastUpdated,
+    heroProduct: input.heroProduct,
+    ogSummary: input.ogSummary,
     preview: {
       title: resolveShareTitle(input.baseTitle, input.ogTitle),
       description: input.description,
@@ -181,6 +255,7 @@ export const staticSitemapSections: SitemapSection[] = [
         href: ROUTES.coolingTop,
         pageType: 'converter',
         topics: ['cooling', 'heat-safety'],
+        heroProduct: coolingHero('cooling-mats', 'green-pet-shop-cooling-pad', 'Best Cooling Mat', 'Green Pet Shop Pad'),
         relatedLabel: 'Best Cooling Products',
         pubDate: new Date('2026-02-27'),
       }),
@@ -197,6 +272,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.coolingTop,
         ],
         relatedLabel: 'Car Cooling Picks',
+        heroProduct: coolingHero('car-cooling', 'enovoe-car-window-shades', 'Best Window Shade', 'Enovoe Window Shades'),
         pubDate: new Date('2026-03-02'),
       }),
       createSitemapPage({
@@ -212,6 +288,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.coolingTop,
         ],
         relatedLabel: 'Best Cooling Mats',
+        heroProduct: coolingHero('cooling-mats', 'green-pet-shop-cooling-pad', 'Best Cooling Mat', 'Green Pet Shop Pad'),
         pubDate: new Date('2026-02-27'),
       }),
       createSitemapPage({
@@ -227,6 +304,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.coolingTop,
         ],
         relatedLabel: 'Best Cooling Bandanas',
+        heroProduct: coolingHero('cooling-bandanas', 'afp-chill-out-ice-bandana', 'Best Ice-Pack Bandana', 'AFP Chill Out Bandana'),
         pubDate: new Date('2026-02-27'),
       }),
       createSitemapPage({
@@ -242,6 +320,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.coolingTop,
         ],
         relatedLabel: 'Best Cooling Vests',
+        heroProduct: coolingHero('cooling-vests', 'ruffwear-swamp-cooler', 'Best Hiking Vest', 'Ruffwear Swamp Cooler'),
         pubDate: new Date('2026-02-27'),
       }),
       createSitemapPage({
@@ -257,6 +336,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.coolingTop,
         ],
         relatedLabel: 'Freezable Dog Toys',
+        heroProduct: coolingHero('freezable-dog-toys', 'kong-classic', 'Best Freezable Toy', 'KONG Classic'),
         pubDate: new Date('2026-02-27'),
       }),
       createSitemapPage({
@@ -272,6 +352,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.coolingTop,
         ],
         relatedLabel: 'Portable Dog Water Bottles',
+        heroProduct: coolingHero('hydration', 'ohmo-spill-proof-dog-bowl', 'Best Travel Bowl', 'OHMO Spill Proof Bowl'),
         pubDate: new Date('2026-04-29'),
       }),
     ],
@@ -295,6 +376,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.dogRanAwaySafety,
         ],
         relatedLabel: 'Best Calming Products',
+        heroProduct: calmingHero('thundershirt-classic', 'Best Overall', 'ThunderShirt Classic'),
         pubDate: new Date('2026-02-27'),
       }),
       createSitemapPage({
@@ -308,6 +390,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.calmingTop,
         ],
         relatedLabel: 'ThunderShirt Alternatives',
+        heroProduct: calmingHero('thundershirt-classic', 'Reference Pick', 'ThunderShirt Classic'),
         pubDate: new Date('2026-02-28'),
       }),
       createSitemapPage({
@@ -323,6 +406,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.roadTrip,
         ],
         relatedLabel: 'Car Anxiety Picks',
+        heroProduct: calmingHero('thundershirt-classic', 'Best Travel Wrap', 'ThunderShirt Classic'),
         pubDate: new Date('2026-03-02'),
       }),
       createSitemapPage({
@@ -339,6 +423,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.coolingToys,
         ],
         relatedLabel: 'Best Lick Mats',
+        heroProduct: calmingHero('awoo-paradise-lick-mat', 'Best Overall', 'Awoo Paradise Lick Mat'),
         pubDate: new Date('2026-05-25'),
       }),
     ],
@@ -364,6 +449,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.roadTrip,
         ],
         relatedLabel: 'All GPS Trackers',
+        heroProduct: trackerHero('fi-series-3-plus', 'Best Everyday GPS', 'Fi Series 3+ GPS Collar'),
         pubDate: new Date('2026-03-18'),
       }),
       createSitemapPage({
@@ -382,6 +468,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.dogRanAwaySafety,
         ],
         relatedLabel: 'Fi Collar Review',
+        heroProduct: trackerHero('fi-series-3-plus', 'Reviewed Pick', 'Fi Series 3+ GPS Collar'),
         pubDate: new Date('2026-03-18'),
       }),
       createSitemapPage({
@@ -401,6 +488,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.dogRanAwaySafety,
         ],
         relatedLabel: 'Garmin Off-Grid Systems',
+        heroProduct: trackerHero('garmin-alpha-tt25-system', 'Best Off-Grid System', 'Garmin Alpha TT 25 + 300i'),
       }),
       createSitemapPage({
         baseTitle: "AirTag for Dogs: What It Can (and Can't) Actually Do",
@@ -418,6 +506,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.dogRanAwaySafety,
         ],
         relatedLabel: 'AirTag for Dogs',
+        heroProduct: trackerHero('apple-airtag-2nd-gen', 'Bluetooth Backup', 'Apple AirTag 2nd Gen'),
       }),
     ],
   },
@@ -437,6 +526,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.calmingHub,
         ],
         relatedLabel: 'Best Calming Dog Beds',
+        heroProduct: comfortHero('bedstill-donut-calming-bed', 'Best Donut Bed', 'BedStill Donut Bed'),
         pubDate: new Date('2026-03-18'),
       }),
       createSitemapPage({
@@ -451,6 +541,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.calmingHub,
         ],
         relatedLabel: 'Best Orthopedic Dog Beds',
+        heroProduct: comfortHero('cwawz-orthopedic-bolster', 'Best Full-Surround', 'CWAWZ Orthopedic Bolster Bed'),
         pubDate: new Date('2026-03-18'),
       }),
       createSitemapPage({
@@ -465,6 +556,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.comfortHub,
         ],
         relatedLabel: 'Best Puppy Crates',
+        heroProduct: comfortHero('kindtail-pawd-collapsible-crate', 'Top Puppy Crate Pick', 'KindTail PAWD Crate'),
         pubDate: new Date('2026-04-09'),
       }),
       createSitemapPage({
@@ -480,6 +572,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.comfortPuppyCrates,
         ],
         relatedLabel: 'Best Anxiety Dog Crates',
+        heroProduct: comfortHero('midwest-life-stages-crate', 'Best Mild-Anxiety Wire Crate', 'MidWest Life Stages Crate'),
         pubDate: new Date('2026-04-09'),
       }),
       createSitemapPage({
@@ -495,6 +588,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.comfortAnxietyCrates,
         ],
         relatedLabel: 'Travel Crates for Road Trips',
+        heroProduct: comfortHero('petsafe-happy-ride-travel-crate', 'Best Road-Trip Crate', 'PetSafe Happy Ride Crate'),
         pubDate: new Date('2026-04-09'),
       }),
       createSitemapPage({
@@ -509,6 +603,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.comfortAnxietyCrates,
         ],
         relatedLabel: 'Best Airline Crates',
+        heroProduct: comfortHero('petmate-sky-kennel', 'Best Airline-Style Kennel', 'Petmate Sky Kennel'),
         pubDate: new Date('2026-04-12'),
       }),
       createSitemapPage({
@@ -525,6 +620,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.roadTrip,
         ],
         relatedLabel: 'Best Airline-Approved Carriers',
+        heroProduct: comfortHero('sherpa-original-deluxe-carrier-medium', 'Best Overall', 'Sherpa Original Deluxe'),
         pubDate: new Date('2026-04-29'),
       }),
       createSitemapPage({
@@ -540,6 +636,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.roadTrip,
         ],
         relatedLabel: 'Best Dog Travel Bags',
+        heroProduct: comfortHero('delomo-dog-travel-backpack', 'Best Overall', 'DELOMO Dog Travel Backpack'),
         pubDate: new Date('2026-04-29'),
       }),
       createSitemapPage({
@@ -554,6 +651,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.comfortPuppyCrates,
         ],
         relatedLabel: 'Best Furniture Dog Crates',
+        heroProduct: comfortHero('amazon-basics-furniture-style-crate', 'Best Simple Furniture Crate', 'Amazon Basics Furniture Crate'),
         pubDate: new Date('2026-04-12'),
       }),
       createSitemapPage({
@@ -568,6 +666,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.comfortFurnitureCrates,
         ],
         relatedLabel: 'Best Heavy-Duty Dog Crates',
+        heroProduct: comfortHero('impact-high-anxiety-crate', 'Best Heavy-Duty Pick', 'Impact High Anxiety Crate'),
         pubDate: new Date('2026-04-12'),
       }),
     ],

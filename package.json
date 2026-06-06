@@ -8,8 +8,10 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "prebuild": "node src/scripts/watermark-images.mjs && node src/scripts/generate-og-images.mjs",
+    "prebuild": "node src/scripts/watermark-images.mjs && bun run src/scripts/og-gen/generate.tsx && bun run src/scripts/generate-og-images.mjs",
     "build": "astro build && node scripts/apply-first-page-image-og.mjs && node scripts/apply-content-sitemap-share-preview.mjs && node scripts/indexnow-submit.mjs",
+    "og:gen": "bun run src/scripts/og-gen/generate.tsx",
+    "og:force": "bun run src/scripts/og-gen/generate.tsx --force",
     "preview": "astro preview",
     "astro": "astro",
     "test": "bun run build && vitest run",
@@ -35,6 +37,7 @@
     "astro": "^5.18.0",
     "astro-robots-txt": "^1.0.0",
     "fuse.js": "^7.3.0",
+    "satori": "^0.26.0",
     "typescript": "^6.0.3"
   },
   "devDependencies": {

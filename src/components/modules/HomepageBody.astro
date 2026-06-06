@@ -9,6 +9,9 @@ interface Props {
 
 const { articleFeed } = Astro.props;
 const converters = getHomepageConverters();
+const featuredConverters = converters.filter((converter) => converter.image).slice(0, 3);
+const featuredConverterHrefs = new Set(featuredConverters.map((converter) => converter.href));
+const moreConverters = converters.filter((converter) => !featuredConverterHrefs.has(converter.href));
 
 const shopCards = [
   {
@@ -119,20 +122,54 @@ const shopCards = [
 {/* ── Browse Picks ── */}
 <section class="converters container">
   <h2 class="section-title">Browse Picks</h2>
-  <div class="more-grid">
-    {converters.map((c) => (
-      <a
-        href={c.href}
-        class={`more-card more-card--${c.color}`}
-        data-track="collector_to_converter_click"
-        data-to-page={c.href}
-        data-link-position="homepage-converters"
-      >
-        <h3 class="more-title">{c.title}</h3>
-        <p class="more-desc">{c.description}</p>
-      </a>
-    ))}
-  </div>
+  {featuredConverters.length > 0 && (
+    <div class="featured-grid browse-featured-grid">
+      {featuredConverters.map((c) => (
+        <a
+          href={c.href}
+          class="article-card"
+          data-home-pick="true"
+          data-track="collector_to_converter_click"
+          data-to-page={c.href}
+          data-link-position="homepage-converters"
+        >
+          <div class="article-img-wrap">
+            <img
+              src={c.image}
+              alt=""
+              class="article-img article-img--product-og"
+              width="400"
+              height="210"
+              loading="lazy"
+            />
+          </div>
+          <div class="article-body">
+            <span class={`article-label article-label--${c.color}`}>{c.label}</span>
+            <h3 class="article-title">{c.title}</h3>
+            <p class="article-desc">{c.description}</p>
+            <span class="article-read">Explore →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  )}
+
+  {moreConverters.length > 0 && (
+    <div class="more-grid">
+      {moreConverters.map((c) => (
+        <a
+          href={c.href}
+          class={`more-card more-card--${c.color}`}
+          data-track="collector_to_converter_click"
+          data-to-page={c.href}
+          data-link-position="homepage-converters"
+        >
+          <h3 class="more-title">{c.title}</h3>
+          <p class="more-desc">{c.description}</p>
+        </a>
+      ))}
+    </div>
+  )}
 </section>
 
 {/* ── Newsletter (injected from parent) ── */}
@@ -273,6 +310,15 @@ const shopCards = [
     transform: scale(1.04);
   }
 
+  .article-img--product-og {
+    transform-origin: 100% 50%;
+    transform: scale(2.25);
+  }
+
+  .article-card:hover .article-img--product-og {
+    transform: scale(2.32);
+  }
+
   .article-body {
     display: flex;
     flex-direction: column;
@@ -321,6 +367,10 @@ const shopCards = [
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-md);
+  }
+
+  .browse-featured-grid {
+    margin-bottom: var(--space-lg);
   }
 
   .more-card {
