@@ -144,11 +144,12 @@ This runs automatically via the `prebuild` script before `astro build`.
 - Every eligible route gets a generated OG JPEG at `/og/<route-slug>.jpg`, including `noindex` pages such as `/subscribe/`.
 - Product-style OG JPGs are generated locally and committed under `public/og/`; Vercel does not render or fetch remote product images during deploy builds.
 - Product-style outputs and downloaded product images are cached under `.cache/og-gen/` for local regeneration.
+- The committed `src/scripts/og-gen/product-og-manifest.json` records the current render input keys so tests fail when a title, summary, theme, or `heroProduct` change needs fresh JPGs.
 - After build, pages that render images in `<main>` automatically set `og:image` and `twitter:image` to the first on-page image.
 - If no image is rendered in `<main>`, metadata falls back to the generated route OG image.
 - Routes without generated OG assets, such as `/v/` experiment variants, `404`, admin/internal pages, and legal policy pages, fall back to `/og-default.jpg`.
 
-When adding or changing `heroProduct`, run `bun run og:force`, visually inspect the changed product-style images, and commit the matching `public/og/<route-slug>.jpg` files. Product image downloads may still come from `.cache/og-gen/images/`.
+When adding or changing `heroProduct`, run `bun run og:force`, visually inspect the changed product-style images, and commit the matching `public/og/<route-slug>.jpg` files plus `src/scripts/og-gen/product-og-manifest.json`. Product image downloads may still come from `.cache/og-gen/images/`.
 
 ### Frontmatter overrides (posts collection)
 

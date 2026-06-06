@@ -5,7 +5,7 @@ import { afterEach, describe, expect, it } from 'vitest';
 
 import { staticSitemapSections, type SitemapPage } from '../data/content-sitemap';
 import { cacheKey, copyCachedOutputToPublic, writeOutputWithCache } from '../scripts/og-gen/cache';
-import { getProductOgHrefs, productOgCacheKey } from '../scripts/og-gen/generate';
+import { buildProductOgManifest, getProductOgHrefs, productOgCacheKey } from '../scripts/og-gen/generate';
 import { outputFilenameFromHref, resolveOgSummary, splitOgTitle } from '../scripts/og-gen/text';
 import { validateHeroProductPage } from '../scripts/og-gen/validation';
 import { buildGeneralOgRecords } from '../scripts/generate-og-images.mjs';
@@ -15,6 +15,12 @@ const touchedDirs: string[] = [];
 
 function pagesByHref(): Map<string, SitemapPage> {
   return new Map(staticSitemapSections.flatMap((section) => section.pages).map((page) => [page.href, page]));
+}
+
+function readCommittedProductOgManifest(): ReturnType<typeof buildProductOgManifest> {
+  return JSON.parse(
+    readFileSync(path.join(process.cwd(), 'src', 'scripts', 'og-gen', 'product-og-manifest.json'), 'utf8')
+  );
 }
 
 function page(overrides: Partial<SitemapPage>): SitemapPage {
@@ -102,6 +108,16 @@ describe('product-style OG images', () => {
         `${href} is missing its committed product-style OG image`
       ).toBe(true);
     }
+  });
+
+  it('keeps the committed product-style OG manifest in sync with current inputs', () => {
+    const committedManifest = readCommittedProductOgManifest();
+    const expectedManifest = buildProductOgManifest();
+
+    expect(
+      committedManifest,
+      'Product-style OG inputs changed. Run bun run og:force, inspect the changed public/og JPGs, and commit the JPGs plus src/scripts/og-gen/product-og-manifest.json.'
+    ).toEqual(expectedManifest);
   });
 
   it('falls back to a compact first-sentence summary', () => {

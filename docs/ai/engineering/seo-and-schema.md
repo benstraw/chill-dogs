@@ -86,7 +86,7 @@ Write the description for both humans and search. It should be specific, useful,
 
 ### og:image
 
-General OG images are auto-generated during pre-build by `src/scripts/generate-og-images.mjs`. Product-style OG images for sitemap pages that define `heroProduct` are generated locally with `bun run og:force` and committed under `/public/og/<slug>.jpg`, so deploy builds do not fetch remote product images or render Satori templates.
+General OG images are auto-generated during pre-build by `src/scripts/generate-og-images.mjs`. Product-style OG images for sitemap pages that define `heroProduct` are generated locally with `bun run og:force` and committed under `/public/og/<slug>.jpg`, so deploy builds do not fetch remote product images or render Satori templates. The generator also writes `src/scripts/og-gen/product-og-manifest.json`; tests compare that manifest to current sitemap inputs so stale committed JPGs are caught when the title, summary, theme, or hero product changes.
 
 `BaseLayout.astro` auto-resolves the OG image path. No manual `og:image` configuration is needed for standard pages.
 
