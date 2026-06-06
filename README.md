@@ -149,7 +149,7 @@ This runs automatically via the `prebuild` script before `astro build`.
 - If no image is rendered in `<main>`, metadata falls back to the generated route OG image.
 - Routes without generated OG assets, such as `/v/` experiment variants, `404`, admin/internal pages, and legal policy pages, fall back to `/og-default.jpg`.
 
-When adding or changing `heroProduct`, run `bun run og:force`, visually inspect the changed product-style images, and commit the matching `public/og/<route-slug>.jpg` files plus `src/scripts/og-gen/product-og-manifest.json`. Product image downloads may still come from `.cache/og-gen/images/`.
+When adding or changing `heroProduct`, run `bun run og:force`, visually inspect the changed product-style images, and commit the matching `public/og/<route-slug>.jpg` files plus `src/scripts/og-gen/product-og-manifest.json`. New product-style OG JPGs need `git add -f public/og/<route-slug>.jpg` because generated OG outputs are ignored by default. Product image downloads may still come from `.cache/og-gen/images/`.
 
 ### Frontmatter overrides (posts collection)
 

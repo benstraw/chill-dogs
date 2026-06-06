@@ -41,7 +41,7 @@ Finishing any converter page before marking work as done.
 - [ ] Related content uses the approved related-content system only (`topics`, `pinnedRelated`, `excludeRelated`, `relatedLabel` in sitemap config) — no new manual related arrays
 - [ ] Added to sitemap inventory (`src/data/content-sitemap.ts`)
 - [ ] Sitemap entry includes `heroProduct` when one product should represent the page in social previews; omit it for browse/search or multi-product pages
-- [ ] If `heroProduct` was added or changed, ran `bun run og:force`, visually inspected the result, and committed the matching `public/og/<route-slug>.jpg` plus `src/scripts/og-gen/product-og-manifest.json`
+- [ ] If `heroProduct` was added or changed, ran `bun run og:force`, visually inspected the result, and committed the matching `public/og/<route-slug>.jpg` plus `src/scripts/og-gen/product-og-manifest.json`; use `git add -f` for new product OG JPGs
 - [ ] Sitemap entry includes `pubDate`; set `lastUpdated` only for a material content/product refresh
 - [ ] Route constant added to `src/data/routes.ts`
 - [ ] Updated `docs/system-definition.yaml`

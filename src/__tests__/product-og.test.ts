@@ -1,3 +1,4 @@
+import { execFileSync } from 'node:child_process';
 import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
@@ -21,6 +22,18 @@ function readCommittedProductOgManifest(): ReturnType<typeof buildProductOgManif
   return JSON.parse(
     readFileSync(path.join(process.cwd(), 'src', 'scripts', 'og-gen', 'product-og-manifest.json'), 'utf8')
   );
+}
+
+function isTrackedByGit(relativePath: string): boolean {
+  try {
+    execFileSync('git', ['ls-files', '--error-unmatch', relativePath], {
+      cwd: process.cwd(),
+      stdio: 'ignore',
+    });
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 function page(overrides: Partial<SitemapPage>): SitemapPage {
@@ -103,10 +116,14 @@ describe('product-style OG images', () => {
 
   it('has checked-in product-style OG assets for every hero product page', () => {
     for (const href of getProductOgHrefs()) {
+      const relativePath = path.join('public', 'og', outputFilenameFromHref(href));
       expect(
-        existsSync(path.join(process.cwd(), 'public', 'og', outputFilenameFromHref(href))),
+        existsSync(path.join(process.cwd(), relativePath)),
         `${href} is missing its committed product-style OG image`
       ).toBe(true);
+      expect(isTrackedByGit(relativePath), `${relativePath} must be tracked; use git add -f for new product OGs`).toBe(
+        true
+      );
     }
   });
 
