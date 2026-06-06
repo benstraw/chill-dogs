@@ -86,11 +86,11 @@ Write the description for both humans and search. It should be specific, useful,
 
 ### og:image
 
-OG images are auto-generated during pre-build. `src/scripts/og-gen/generate.tsx` renders product-style OG images first for sitemap pages that define `heroProduct`; `src/scripts/generate-og-images.mjs` then renders the general OG template for the remaining eligible routes. Images are placed at `/public/og/<slug>.jpg`, including noindex pages such as `/subscribe/`.
+General OG images are auto-generated during pre-build by `src/scripts/generate-og-images.mjs`. Product-style OG images for sitemap pages that define `heroProduct` are generated locally with `bun run og:force` and committed under `/public/og/<slug>.jpg`, so deploy builds do not fetch remote product images or render Satori templates.
 
 `BaseLayout.astro` auto-resolves the OG image path. No manual `og:image` configuration is needed for standard pages.
 
-Use `heroProduct` only when one product should represent the page in a social preview. Product-led converters usually qualify; browse/search pages such as `/shop/`, broad informational collectors, and multi-product article collectors should stay on the general OG path. Product-style OG generation caches rendered JPGs and downloaded product image bytes in `.cache/og-gen/` for warm Vercel builds.
+Use `heroProduct` only when one product should represent the page in a social preview. Product-led converters usually qualify; browse/search pages such as `/shop/`, broad informational collectors, and multi-product article collectors should stay on the general OG path. Product-style OG generation caches rendered JPGs and downloaded product image bytes in `.cache/og-gen/` for local regeneration.
 
 `noindex` controls robots metadata only; it does not block generated social images. Routes without generated OG assets, including `/v/` variants, `404`, admin/internal pages, and legal policy pages, fall back to `/og-default.jpg`.
 

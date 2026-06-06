@@ -1,4 +1,4 @@
-import { mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
@@ -93,6 +93,15 @@ describe('product-style OG images', () => {
     expect(outputFilenameFromHref('/gear/garmin-dog-tracking-collars/')).toBe(
       'gear-garmin-dog-tracking-collars.jpg'
     );
+  });
+
+  it('has checked-in product-style OG assets for every hero product page', () => {
+    for (const href of getProductOgHrefs()) {
+      expect(
+        existsSync(path.join(process.cwd(), 'public', 'og', outputFilenameFromHref(href))),
+        `${href} is missing its committed product-style OG image`
+      ).toBe(true);
+    }
   });
 
   it('falls back to a compact first-sentence summary', () => {

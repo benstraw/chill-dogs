@@ -6,6 +6,8 @@ import sharp from 'sharp';
 const CACHE_DIR = path.join(process.cwd(), '.cache', 'og-gen');
 const OUTPUT_CACHE_DIR = path.join(CACHE_DIR, 'outputs');
 const IMAGE_CACHE_DIR = path.join(CACHE_DIR, 'images');
+const DEFAULT_IMAGE_FETCH_TIMEOUT_MS = 5_000;
+const imageDataUriRequests = new Map<string, Promise<string | null>>();
 
 export function cacheKey(inputs: object): string {
   return createHash('sha256')
@@ -53,6 +55,22 @@ function inferMimeType(url: string, responseType?: string | null): string {
   return 'image/jpeg';
 }
 
+function imageFetchTimeoutMs(): number {
+  const value = Number.parseInt(process.env.OG_IMAGE_FETCH_TIMEOUT_MS ?? '', 10);
+  return Number.isFinite(value) && value > 0 ? value : DEFAULT_IMAGE_FETCH_TIMEOUT_MS;
+}
+
+async function fetchImageWithTimeout(url: string): Promise<Response> {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), imageFetchTimeoutMs());
+
+  try {
+    return await fetch(url, { signal: controller.signal });
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
 async function dataUriForSatori(bytes: Buffer, mimeType: string): Promise<string | null> {
   try {
     const pngBytes = await sharp(bytes).png().toBuffer();
@@ -67,7 +85,7 @@ async function dataUriForSatori(bytes: Buffer, mimeType: string): Promise<string
   }
 }
 
-export async function getCachedImageDataUri(url: string): Promise<string | null> {
+async function loadCachedImageDataUri(url: string): Promise<string | null> {
   ensureCacheDirs();
   const base = imageCacheBase(url);
   const imagePath = `${base}.bin`;
@@ -78,7 +96,7 @@ export async function getCachedImageDataUri(url: string): Promise<string | null>
       return dataUriForSatori(readFileSync(imagePath), readFileSync(mimePath, 'utf8'));
     }
 
-    const response = await fetch(url);
+    const response = await fetchImageWithTimeout(url);
     if (!response.ok) {
       console.warn(`[og] failed to fetch hero image ${url}: ${response.status}`);
       return null;
@@ -94,4 +112,18 @@ export async function getCachedImageDataUri(url: string): Promise<string | null>
     console.warn(`[og] failed to load hero image ${url}: ${error instanceof Error ? error.message : String(error)}`);
     return null;
   }
+}
+
+export function getCachedImageDataUri(url: string): Promise<string | null> {
+  const inFlight = imageDataUriRequests.get(url);
+  if (inFlight) {
+    return inFlight;
+  }
+
+  const request = loadCachedImageDataUri(url).finally(() => {
+    imageDataUriRequests.delete(url);
+  });
+  imageDataUriRequests.set(url, request);
+
+  return request;
 }

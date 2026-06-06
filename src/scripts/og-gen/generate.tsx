@@ -17,6 +17,7 @@ import { resolveOgTheme } from './themes';
 import { validateHeroProductPages } from './validation';
 
 const TEMPLATE_VERSION = 'hero-product-og-v1';
+const DEFAULT_PRODUCT_OG_CONCURRENCY = 4;
 const outDir = path.join(process.cwd(), 'public', 'og');
 const logoPath = path.join(process.cwd(), 'public', 'images', 'paw-logo.png');
 
@@ -77,6 +78,30 @@ function imageDataUriFromFile(filePath: string, mimeType: string): string | null
   return `data:${mimeType};base64,${readFileSync(filePath).toString('base64')}`;
 }
 
+function productOgConcurrency(): number {
+  const value = Number.parseInt(process.env.OG_PRODUCT_CONCURRENCY ?? '', 10);
+  return Number.isFinite(value) && value > 0 ? value : DEFAULT_PRODUCT_OG_CONCURRENCY;
+}
+
+async function mapWithConcurrency<T, R>(
+  items: T[],
+  limit: number,
+  worker: (item: T) => Promise<R>
+): Promise<R[]> {
+  const results = new Array<R>(items.length);
+  let nextIndex = 0;
+  const workers = Array.from({ length: Math.min(limit, items.length) }, async () => {
+    while (nextIndex < items.length) {
+      const currentIndex = nextIndex;
+      nextIndex += 1;
+      results[currentIndex] = await worker(items[currentIndex]);
+    }
+  });
+
+  await Promise.all(workers);
+  return results;
+}
+
 export function productOgCacheKey(page: SitemapPage): string {
   const theme = resolveOgTheme(page);
   const summary = resolveOgSummary({
@@ -101,6 +126,65 @@ export function getProductOgHrefs(): string[] {
     .map((page) => page.href);
 }
 
+async function renderProductOgPage(
+  page: SitemapPage,
+  options: CliOptions,
+  shared: {
+    fonts: ReturnType<typeof loadOgFonts>;
+    logoDataUri: string | null;
+  }
+): Promise<GenerateStats> {
+  const stats: GenerateStats = { generated: 0, cached: 0, failed: 0, skipped: 0 };
+
+  if (!page.heroProduct) {
+    stats.skipped += 1;
+    return stats;
+  }
+
+  const key = productOgCacheKey(page);
+  const targetPath = path.join(outDir, outputFilenameFromHref(page.href));
+
+  if (!options.force && copyCachedOutputToPublic(key, targetPath)) {
+    console.log(`[og:product] cached ${page.href}`);
+    stats.cached += 1;
+    return stats;
+  }
+
+  try {
+    const theme = resolveOgTheme(page);
+    const summary = resolveOgSummary({
+      ogSummary: page.ogSummary,
+      description: page.preview.description,
+    });
+    const heroImageDataUri = await getCachedImageDataUri(page.heroProduct.image);
+    const svg = await satori(
+      ProductOgTemplate({
+        title: stripSiteSuffix(page.preview.title),
+        summary,
+        heroProduct: page.heroProduct,
+        heroImageDataUri,
+        logoDataUri: shared.logoDataUri,
+        theme,
+        year: new Date().getFullYear(),
+      }),
+      {
+        width: 1200,
+        height: 630,
+        fonts: shared.fonts,
+      }
+    );
+    const jpegBuffer = await sharp(Buffer.from(svg)).jpeg({ quality: 90, mozjpeg: true }).toBuffer();
+    writeOutputWithCache(key, targetPath, jpegBuffer);
+    console.log(`[og:product] generated ${page.href}`);
+    stats.generated += 1;
+  } catch (error) {
+    console.error(`[og:product] failed ${page.href}: ${error instanceof Error ? error.message : String(error)}`);
+    stats.failed += 1;
+  }
+
+  return stats;
+}
+
 async function generateProductOgImages(options: CliOptions): Promise<GenerateStats> {
   ensureCacheDirs();
   mkdirSync(outDir, { recursive: true });
@@ -109,56 +193,20 @@ async function generateProductOgImages(options: CliOptions): Promise<GenerateSta
   const logoDataUri = imageDataUriFromFile(logoPath, 'image/png');
   const pages = getProductOgPages(options);
   validateHeroProductPages(pages);
-
-  const stats: GenerateStats = { generated: 0, cached: 0, failed: 0, skipped: 0 };
-
-  for (const page of pages) {
-    if (!page.heroProduct) {
-      stats.skipped += 1;
-      continue;
-    }
-
-    const key = productOgCacheKey(page);
-    const targetPath = path.join(outDir, outputFilenameFromHref(page.href));
-
-    if (!options.force && copyCachedOutputToPublic(key, targetPath)) {
-      console.log(`[og:product] cached ${page.href}`);
-      stats.cached += 1;
-      continue;
-    }
-
-    try {
-      const theme = resolveOgTheme(page);
-      const summary = resolveOgSummary({
-        ogSummary: page.ogSummary,
-        description: page.preview.description,
-      });
-      const heroImageDataUri = await getCachedImageDataUri(page.heroProduct.image);
-      const svg = await satori(
-        ProductOgTemplate({
-          title: stripSiteSuffix(page.preview.title),
-          summary,
-          heroProduct: page.heroProduct,
-          heroImageDataUri,
-          logoDataUri,
-          theme,
-          year: new Date().getFullYear(),
-        }),
-        {
-          width: 1200,
-          height: 630,
-          fonts,
-        }
-      );
-      const jpegBuffer = await sharp(Buffer.from(svg)).jpeg({ quality: 90, mozjpeg: true }).toBuffer();
-      writeOutputWithCache(key, targetPath, jpegBuffer);
-      console.log(`[og:product] generated ${page.href}`);
-      stats.generated += 1;
-    } catch (error) {
-      console.error(`[og:product] failed ${page.href}: ${error instanceof Error ? error.message : String(error)}`);
-      stats.failed += 1;
-    }
-  }
+  const pageStats = await mapWithConcurrency(
+    pages,
+    productOgConcurrency(),
+    (page) => renderProductOgPage(page, options, { fonts, logoDataUri })
+  );
+  const stats = pageStats.reduce<GenerateStats>(
+    (total, item) => ({
+      generated: total.generated + item.generated,
+      cached: total.cached + item.cached,
+      failed: total.failed + item.failed,
+      skipped: total.skipped + item.skipped,
+    }),
+    { generated: 0, cached: 0, failed: 0, skipped: 0 }
+  );
 
   console.log(
     `[og:product] ${stats.generated} generated, ${stats.cached} cached, ${stats.skipped} skipped, ${stats.failed} failed`
@@ -174,4 +222,3 @@ async function generateProductOgImages(options: CliOptions): Promise<GenerateSta
 if (import.meta.main) {
   await generateProductOgImages(parseCliOptions(process.argv.slice(2)));
 }
-
