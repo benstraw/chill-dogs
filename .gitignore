@@ -4,7 +4,10 @@ node_modules/
 # astro
 dist/
 .astro/
-public/og/
+
+# Generated share images. Product-style OG JPGs are committed with git add -f and stay tracked.
+public/og/*
+!public/og/
 .vercel/
 
 # watermarked images (generated at build time)

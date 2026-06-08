@@ -29,6 +29,7 @@ Test non-trivial logic in isolation. Skip trivial getters, filters, and pass-thr
 - `analytics.ts` — PostHog dispatch, graceful degradation without PostHog, event delegation via `closest()`, `data-*` attribute mapping to snake_case props
 - `llms.ts` — path normalization edge cases, `dedupeAndRankLinks` dedup/exclusion behavior, `buildLlmsMarkdown` output structure (maxLinks, section grouping, empty inputs)
 - `og.ts` — headline derivation priority and site-suffix stripping, `clampOgText` boundary behavior (exact limit, no word boundary, normal truncation), CTA defaults and overrides, route eligibility logic
+- `src/scripts/og-gen/**` — product-style OG eligibility by `heroProduct`, committed asset coverage and stale-input manifest checks, route filename derivation, summary fallback, title splitting, cache key/copy behavior, and `heroProduct` validation
 - `breadcrumbs.ts` — already fully covered, no changes needed
 - `collection-helpers.ts` — already fully covered, no changes needed
 
@@ -60,7 +61,7 @@ Smoke tests build the site once and verify critical output. They catch integrati
 - Homepage renders with both pillar CTAs and correct canonical
 - Affiliate links on cooling, calming, and travel converter pages have correct `rel`, `target`, `data-track`, and affiliate tag
 - Collector hub pages are indexable with correct canonical URLs
-- OG images are generated and referenced in meta tags
+- OG images are generated and referenced in meta tags, with product-style routes served from committed `public/og/` assets and general routes generated during pre-build
 - BreadcrumbList schema appears on indexable pages, not on noindex pages
 - 404 and policy pages are noindex
 - Sitemap includes all content routes and excludes variant pages
@@ -78,19 +79,20 @@ Smoke tests build the site once and verify critical output. They catch integrati
 
 Coverage scope in `vitest.config.ts`: `src/utils/**`, `src/scripts/**`, `src/data/**`.
 
-`generate-og-images.mjs` is excluded from unit coverage — it's a build script validated indirectly by smoke tests checking OG image output.
+`generate-og-images.mjs` rendering remains validated by smoke tests checking OG image output. Its route-record selection is unit-tested so product-style routes are skipped by the general generator while routes such as `/shop/` stay on the general OG path. Product-style OG routes are tested for committed asset coverage and manifest freshness because deploy builds do not render those images.
 
 ---
 
 ## Current State
 
-10 test files, 50 tests, all passing. Suite runs in ~3 seconds.
+Vitest covers the fast utility/data boundary and the build smoke layer. Keep this table aligned when adding new test files.
 
 | File | Tests | What it covers |
 |---|---|---|
 | `analytics.test.ts` | 6 | PostHog dispatch, degradation, delegation, attr mapping |
 | `llms.test.ts` | 11 | Path normalization, dedup, exclusion, markdown output |
 | `og.test.ts` | 8 | Headline derivation, clamping, CTA, eligibility |
+| `product-og.test.ts` | 12 | Hero-product OG eligibility, committed assets and manifest freshness, text helpers, cache behavior, validation |
 | `breadcrumbs.test.ts` | 3 | Schema generation, special labels |
 | `cooling-products.test.ts` | 2 | Affiliate tags, category meta completeness |
 | `calming-products.test.ts` | 2 | Affiliate tags, display field integrity |

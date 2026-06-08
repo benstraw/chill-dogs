@@ -64,6 +64,7 @@ export interface HomepageConverterCard {
   href: string;
   title: string;
   description: string;
+  image?: string;
   label: string;
   color: HomepageArticleColor;
   pubDate?: Date;
@@ -87,6 +88,7 @@ export function getHomepageConverters(limit = 15): HomepageConverterCard[] {
       href: p.href,
       title: p.baseTitle,
       description: p.preview.description,
+      image: p.heroProduct ? p.preview.image : undefined,
       pubDate: p.pubDate,
       lastUpdated: p.lastUpdated,
       ...resolveHomepageArticleTheme(p.href),

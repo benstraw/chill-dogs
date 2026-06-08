@@ -129,20 +129,27 @@ Design tokens live entirely in `src/styles/tokens.css`. No Tailwind.
 
 ## Per-page OG images
 
-Per-page OG images are generated automatically at build time into `public/og/` by:
+General per-page OG images are generated automatically at build time into `public/og/` by:
 
 ```bash
-node src/scripts/generate-og-images.mjs
+bun run src/scripts/generate-og-images.mjs
 ```
 
 This runs automatically via the `prebuild` script before `astro build`.
 
 ### Default behavior
 
+- Pages with a `heroProduct` entry in `src/data/content-sitemap.ts` use the product-style OG template with one featured product image.
+- Pages without `heroProduct` stay on the general OG template, even if they are converters. Browse/search pages such as `/shop/` should not use `heroProduct`.
 - Every eligible route gets a generated OG JPEG at `/og/<route-slug>.jpg`, including `noindex` pages such as `/subscribe/`.
+- Product-style OG JPGs are generated locally and committed under `public/og/`; Vercel does not render or fetch remote product images during deploy builds.
+- Product-style outputs and downloaded product images are cached under `.cache/og-gen/` for local regeneration.
+- The committed `src/scripts/og-gen/product-og-manifest.json` records the current render input keys so tests fail when a title, summary, theme, or `heroProduct` change needs fresh JPGs.
 - After build, pages that render images in `<main>` automatically set `og:image` and `twitter:image` to the first on-page image.
 - If no image is rendered in `<main>`, metadata falls back to the generated route OG image.
 - Routes without generated OG assets, such as `/v/` experiment variants, `404`, admin/internal pages, and legal policy pages, fall back to `/og-default.jpg`.
+
+When adding or changing `heroProduct`, run `bun run og:force`, visually inspect the changed product-style images, and commit the matching `public/og/<route-slug>.jpg` files plus `src/scripts/og-gen/product-og-manifest.json`. New product-style OG JPGs need `git add -f public/og/<route-slug>.jpg` because generated OG outputs are ignored by default. Product image downloads may still come from `.cache/og-gen/images/`.
 
 ### Frontmatter overrides (posts collection)
 
