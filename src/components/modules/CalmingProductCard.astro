@@ -54,7 +54,8 @@ const offers = getOffers(product);
         <MerchantAffiliateLink
           offer={offer}
           product={{ id: product.id, name: product.name, category: product.category }}
-          class={`calm-card-cta${i > 0 ? ' calm-card-cta--secondary' : ''}`}
+          tone="pillar"
+          variant={i > 0 ? 'secondary' : 'primary'}
           label={merchants[offer.merchant].ctaCopy}
           pageType={pageType}
           pageSlug={pageSlug}
@@ -112,6 +113,11 @@ const offers = getOffers(product);
     gap: var(--space-xs);
   }
 
+  /* Preserve the per-offer top gap the old .calm-card-cta carried. */
+  .calm-card-offers :global(.ui-cta) {
+    margin-top: var(--space-md);
+  }
+
   .calm-card-name {
     font-size: var(--text-lg);
     font-weight: var(--weight-bold);
@@ -160,39 +166,5 @@ const offers = getOffers(product);
   .calm-card-meta-label {
     font-weight: var(--weight-semibold);
     color: var(--color-text);
-  }
-
-  :global(.calm-card-cta) {
-    display: block;
-    text-align: center;
-    background: var(--pillar-accent);
-    color: var(--pillar-accent-text) !important;
-    font-weight: var(--weight-semibold);
-    padding: var(--space-sm) var(--space-lg);
-    border-radius: var(--radius-md);
-    transition: background var(--transition-fast);
-    text-decoration: none;
-    margin-top: var(--space-md);
-  }
-
-  :global(.calm-card-cta:hover) {
-    background: var(--pillar-accent-hover);
-    color: var(--pillar-accent-text) !important;
-  }
-
-  :global(.calm-card-cta--secondary) {
-    background: transparent;
-    color: var(--pillar-link) !important;
-    border: 1px solid var(--pillar-accent);
-  }
-
-  :global(.calm-card-cta--secondary:hover) {
-    background: color-mix(in srgb, var(--pillar-accent) 10%, transparent);
-    color: var(--pillar-link) !important;
-  }
-
-  :global(.calm-card-cta:focus-visible) {
-    outline: 2px solid var(--pillar-accent);
-    outline-offset: 2px;
   }
 </style>

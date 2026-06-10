@@ -1,0 +1,94 @@
+/*
+ * Unified conversion CTA button.
+ *
+ * Single home for affiliate / product CTA styling. Consumed two ways:
+ *   1. MerchantAffiliateLink.astro adds `.ui-cta` + data-variant/size/tone when a
+ *      caller passes the variant/size/tone props.
+ *   2. Raw internal CTA anchors (e.g. CoolingProductCard collector -> converter link)
+ *      use `class="ui-cta"` directly.
+ *
+ * Colour comes from the active pillar theme (--pillar-* set on <html> by the layout),
+ * so a single definition themes correctly per pillar and falls back to --color-primary
+ * on un-themed pages (see tokens.css defaults).
+ *
+ * Defaults: variant=primary, size=standard, tone=pillar.
+ * Merchant tone is intentionally NOT handled here — MerchantAffiliateLink's scoped
+ * `a[data-merchant="chewy"]` rule stays authoritative and wins on specificity.
+ */
+
+.ui-cta {
+  display: block;
+  text-align: center;
+  font-weight: var(--weight-semibold);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--pillar-accent);
+  color: var(--pillar-accent-text);
+  transition: background var(--transition-fast);
+}
+
+.ui-cta:hover {
+  background: var(--pillar-accent-hover);
+  color: var(--pillar-accent-text);
+  text-decoration: none;
+}
+
+.ui-cta:focus-visible {
+  outline: 2px solid var(--pillar-accent);
+  outline-offset: 2px;
+}
+
+/* ---- variant: secondary / ghost = outlined ---- */
+.ui-cta[data-variant='secondary'],
+.ui-cta[data-variant='ghost'] {
+  background: transparent;
+  color: var(--pillar-link);
+  border: 1px solid var(--pillar-accent);
+}
+
+.ui-cta[data-variant='secondary']:hover,
+.ui-cta[data-variant='ghost']:hover {
+  background: color-mix(in srgb, var(--pillar-accent) 10%, transparent);
+  color: var(--pillar-link);
+}
+
+/* ---- size ---- */
+.ui-cta[data-size='compact'] {
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--text-sm);
+  width: 100%;
+}
+
+.ui-cta[data-size='wide'] {
+  width: 100%;
+}
+
+/* ---- tone: neutral (charcoal / sand) ---- */
+.ui-cta[data-tone='neutral'] {
+  background: var(--color-charcoal);
+  color: var(--color-sand);
+  border-radius: var(--radius-sm);
+}
+
+.ui-cta[data-tone='neutral']:hover {
+  background: #444;
+  color: var(--color-sand);
+}
+
+.ui-cta[data-tone='neutral']:focus-visible {
+  outline-color: var(--color-charcoal);
+}
+
+.ui-cta[data-tone='neutral'][data-variant='secondary'],
+.ui-cta[data-tone='neutral'][data-variant='ghost'] {
+  background: transparent;
+  color: var(--color-charcoal);
+  border: 1px solid var(--color-charcoal);
+}
+
+.ui-cta[data-tone='neutral'][data-variant='secondary']:hover,
+.ui-cta[data-tone='neutral'][data-variant='ghost']:hover {
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--color-charcoal);
+}

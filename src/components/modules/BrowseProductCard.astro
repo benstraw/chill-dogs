@@ -56,7 +56,9 @@ const pillarLabels: Record<string, string> = {
         <MerchantAffiliateLink
           offer={offer}
           product={{ id: product.id, name: product.name, category: product.category }}
-          class={`card-cta${i > 0 ? ' card-cta--secondary' : ''}`}
+          tone="neutral"
+          size="compact"
+          variant={i > 0 ? 'secondary' : 'primary'}
           label={offer.merchant === 'amazon' ? 'See on Amazon →' : `${merchants[offer.merchant].ctaCopy} →`}
           pageSlug="shop"
         />
@@ -175,35 +177,6 @@ const pillarLabels: Record<string, string> = {
   .card-offers {
     display: grid;
     gap: var(--space-xs);
-  }
-
-  .card-cta {
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-size: var(--text-sm);
-    font-weight: var(--weight-semibold);
-    padding: var(--space-xs) var(--space-sm);
-    background: var(--color-charcoal);
-    color: var(--color-sand);
-    border-radius: var(--radius-sm);
-    text-decoration: none;
-    transition: background var(--transition-fast);
-  }
-
-  .card-cta:hover {
-    background: #444;
-    text-decoration: none;
-  }
-
-  .card-cta--secondary {
-    background: transparent;
-    color: var(--color-charcoal);
-    border: 1px solid var(--color-charcoal);
-  }
-
-  .card-cta--secondary:hover {
-    background: rgba(0, 0, 0, 0.06);
   }
 
   .appears-on {

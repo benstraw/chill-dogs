@@ -65,7 +65,8 @@ const offers = isAmazon ? getOffers(product) : [];
           <MerchantAffiliateLink
             offer={offer}
             product={{ id: product.id, name: product.name, category: product.category }}
-            class={`cp-cta${offerIndex > 0 ? ' cp-cta--secondary' : ''}`}
+            tone="pillar"
+            variant={offerIndex > 0 ? 'secondary' : 'primary'}
             label={offer.merchant === 'amazon' ? cta.label : merchants[offer.merchant].ctaCopy}
             pageType={pageType}
             pageSlug={pageSlug}
@@ -76,7 +77,7 @@ const offers = isAmazon ? getOffers(product) : [];
     ) : (
       <a
         href={cta.href}
-        class="cp-cta"
+        class="ui-cta"
         data-track="collector_to_converter_click"
         data-from-page={pageSlug}
         data-to-page={cta.href}
@@ -197,38 +198,5 @@ const offers = isAmazon ? getOffers(product) : [];
   .cp-meta-label {
     font-weight: var(--weight-semibold);
     color: var(--color-text);
-  }
-
-  :global(.cp-cta) {
-    display: block;
-    text-align: center;
-    background: var(--color-primary);
-    color: var(--color-text-inverse) !important;
-    font-weight: var(--weight-semibold);
-    padding: var(--space-sm) var(--space-lg);
-    border-radius: var(--radius-md);
-    transition: background var(--transition-fast);
-    text-decoration: none;
-  }
-
-  :global(.cp-cta:hover) {
-    background: var(--color-primary-hover);
-    color: var(--color-text-inverse) !important;
-  }
-
-  :global(.cp-cta--secondary) {
-    background: transparent;
-    color: var(--color-primary) !important;
-    border: 1px solid var(--color-primary);
-  }
-
-  :global(.cp-cta--secondary:hover) {
-    background: color-mix(in srgb, var(--color-primary) 10%, transparent);
-    color: var(--color-primary) !important;
-  }
-
-  :global(.cp-cta:focus-visible) {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 2px;
   }
 </style>

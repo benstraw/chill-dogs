@@ -53,7 +53,8 @@ const offers = getOffers(product);
         <MerchantAffiliateLink
           offer={offer}
           product={{ id: product.id, name: product.name, category: product.category }}
-          class={`rx-card-cta${i > 0 ? ' rx-card-cta--secondary' : ''}`}
+          tone="pillar"
+          variant={i > 0 ? 'secondary' : 'primary'}
           label={merchants[offer.merchant].ctaCopy}
           pageType="converter"
           pageSlug={pageSlug}
@@ -111,6 +112,11 @@ const offers = getOffers(product);
     gap: var(--space-xs);
   }
 
+  /* Preserve the per-offer top gap the old .rx-card-cta carried. */
+  .rx-card-offers :global(.ui-cta) {
+    margin-top: var(--space-md);
+  }
+
   .rx-card-name {
     font-size: var(--text-lg);
     font-weight: var(--weight-bold);
@@ -159,39 +165,5 @@ const offers = getOffers(product);
   .rx-card-meta-label {
     font-weight: var(--weight-semibold);
     color: var(--color-text);
-  }
-
-  :global(.rx-card-cta) {
-    display: block;
-    text-align: center;
-    background: var(--pillar-accent);
-    color: var(--pillar-accent-text) !important;
-    font-weight: var(--weight-semibold);
-    padding: var(--space-sm) var(--space-lg);
-    border-radius: var(--radius-md);
-    transition: background var(--transition-fast);
-    text-decoration: none;
-    margin-top: var(--space-md);
-  }
-
-  :global(.rx-card-cta:hover) {
-    background: var(--pillar-accent-hover);
-    color: var(--pillar-accent-text) !important;
-  }
-
-  :global(.rx-card-cta--secondary) {
-    background: transparent;
-    color: var(--pillar-link) !important;
-    border: 1px solid var(--pillar-accent);
-  }
-
-  :global(.rx-card-cta--secondary:hover) {
-    background: color-mix(in srgb, var(--pillar-accent) 16%, transparent);
-    color: var(--pillar-link) !important;
-  }
-
-  :global(.rx-card-cta:focus-visible) {
-    outline: 2px solid var(--pillar-accent);
-    outline-offset: 2px;
   }
 </style>
