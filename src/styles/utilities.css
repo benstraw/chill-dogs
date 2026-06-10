@@ -166,6 +166,43 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
+/*
+ * Shared responsive product-grid vocabulary for the conversion UI layer.
+ * Uses the converter breakpoint set (1024 / 900 / 640) so converter and product
+ * grids collapse identically. Existing `.cards-grid--*` is left in place; callers
+ * migrate opportunistically.
+ */
+.ui-grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.ui-grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.ui-grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .ui-grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .ui-grid--2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .ui-grid--3 {
+    grid-template-columns: 1fr;
+  }
+}
+
 .guide-card {
   display: block;
   background: var(--color-surface);

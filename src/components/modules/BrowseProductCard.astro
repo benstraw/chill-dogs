@@ -1,5 +1,5 @@
 ---
-import MerchantAffiliateLink from '@components/MerchantAffiliateLink.astro';
+import AffiliateOfferStack from './primitives/AffiliateOfferStack.astro';
 import type { ProductCatalogItem } from '@data/product-catalog';
 import type { PageRef } from '@data/product-page-map';
 import { getOffers } from '@data/products/offers';
@@ -51,19 +51,15 @@ const pillarLabels: Record<string, string> = {
   </div>
 
   <div class="card-footer">
-    <div class="card-offers">
-      {offers.map((offer, i) => (
-        <MerchantAffiliateLink
-          offer={offer}
-          product={{ id: product.id, name: product.name, category: product.category }}
-          tone="neutral"
-          size="compact"
-          variant={i > 0 ? 'secondary' : 'primary'}
-          label={offer.merchant === 'amazon' ? 'See on Amazon →' : `${merchants[offer.merchant].ctaCopy} →`}
-          pageSlug="shop"
-        />
-      ))}
-    </div>
+    <AffiliateOfferStack
+      offers={offers}
+      product={{ id: product.id, name: product.name, category: product.category }}
+      tone="neutral"
+      size="compact"
+      topGap={false}
+      pageSlug="shop"
+      resolveLabel={(offer) => (offer.merchant === 'amazon' ? 'See on Amazon →' : `${merchants[offer.merchant].ctaCopy} →`)}
+    />
 
     {appearsOn.length > 0 && (
       <div class="appears-on">
@@ -172,11 +168,6 @@ const pillarLabels: Record<string, string> = {
 
   .card-footer {
     padding: var(--space-sm) var(--space-md) var(--space-md);
-  }
-
-  .card-offers {
-    display: grid;
-    gap: var(--space-xs);
   }
 
   .appears-on {
