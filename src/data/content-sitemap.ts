@@ -459,7 +459,7 @@ export const staticSitemapSections: SitemapSection[] = [
         baseTitle: 'Snake-Bite Emergency Kit for Dogs: What to Pack Before a Walk or Hike',
         ogTitle: 'Snake-Bite Emergency Kit for Dogs on Walks and Hikes',
         description:
-          'Build a practical dog snake-bite emergency kit for walks, hikes, and backyards: carry slings, first aid kits, muzzles, and vet-ready supplies.',
+          'Build a practical dog snake-bite emergency kit for walks, hikes, and backyards: carry slings, first aid kits, and vet-ready supplies.',
         href: ROUTES.dogSnakeBiteEmergencyKit,
         pageType: 'converter',
         topics: ['snake-safety', 'trail-safety', 'emergency-prep', 'travel', 'tracking'],

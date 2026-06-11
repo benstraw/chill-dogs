@@ -26,7 +26,7 @@ const tocHeadings = [
   { label: 'Six Jobs', anchor: 'six-jobs' },
   { label: 'Carry Slings', anchor: 'carry' },
   { label: 'First Aid Kits', anchor: 'first-aid' },
-  { label: 'Muzzles', anchor: 'muzzle' },
+  { label: 'Muzzle Safety', anchor: 'muzzle' },
   { label: 'Small Add-ons', anchor: 'warmth-control' },
   { label: 'Phone and Light', anchor: 'prevention' },
   { label: 'Skip These', anchor: 'skip-these' },
@@ -37,7 +37,7 @@ const faqs = [
   {
     question: 'What should be in a dog snake-bite emergency kit?',
     answer:
-      'Pack a carry sling or rescue harness, dog first aid kit, emergency muzzle for limited safe use, slip lead, Mylar blanket, power bank, headlamp, gloves, gauze, marker, and an emergency vet info card. The kit is for transport and readiness, not venom treatment.',
+      'Pack a carry sling or rescue harness, dog first aid kit, slip lead, Mylar blanket, power bank, headlamp, gloves, gauze, marker, and an emergency vet info card. The kit is for transport and readiness, not venom treatment.',
   },
   {
     question: 'Can I treat a dog snakebite at home?',
@@ -57,7 +57,7 @@ const faqs = [
   {
     question: 'Should I muzzle my dog after a snakebite?',
     answer:
-      'Only if it is safe and necessary to prevent a pain bite while you handle or carry your dog. Do not muzzle a dog that is struggling to breathe, vomiting, overheating, brachycephalic, or swelling around the face.',
+      'Only if it is safe and necessary to prevent a pain bite while you handle or carry your dog. Do not muzzle a dog that is struggling to breathe, vomiting, overheating, brachycephalic, or swelling around the face. Remove collars, harnesses, and muzzles if swelling or breathing problems appear.',
   },
 ];
 
@@ -80,7 +80,7 @@ const itemListSchema = {
 <BaseLayout
   title="Snake-Bite Emergency Kit for Dogs: What to Pack Before a Walk or Hike"
   ogTitle="Snake-Bite Emergency Kit for Dogs on Walks and Hikes"
-  description="Build a practical dog snake-bite emergency kit for walks, hikes, and backyards: carry slings, first aid kits, muzzles, and vet-ready supplies."
+  description="Build a practical dog snake-bite emergency kit for walks, hikes, and backyards: carry slings, first aid kits, and vet-ready supplies."
 >
   <JsonLd slot="head" schema={itemListSchema} />
 
@@ -161,51 +161,59 @@ const itemListSchema = {
               <h2>{meta.title}</h2>
               <p>{meta.intro}</p>
             </div>
-            <div class="product-grid">
-              {products.map((product, productIndex) => (
-                <article class="product-card" id={product.id}>
-                  {product.image && (
-                    <div class="product-image">
-                      <img src={product.image.src} alt={product.image.alt} loading="lazy" width="300" height="300" />
-                    </div>
-                  )}
-                  <div class="product-body">
-                    <p class="badge">{product.badge}</p>
-                    <h3>{product.name}</h3>
-                    <p class="use-case">{product.useCase}</p>
-                    <ul class="product-bullets">
-                      {product.bullets.map((bullet) => <li>{bullet}</li>)}
-                    </ul>
-                    <p class="how-it-helps"><strong>How it helps:</strong> {product.howItHelps}</p>
-                    {product.sizingNote && <p class="note"><strong>Fit note:</strong> {product.sizingNote}</p>}
-                    {product.caution && <p class="note note--caution"><strong>Caution:</strong> {product.caution}</p>}
-                    <div class="pros-cons">
-                      <div>
-                        <p class="mini-heading">Pros</p>
-                        <ul>{product.pros.map((item) => <li>{item}</li>)}</ul>
+            {products.length > 0 && (
+              <div class="product-grid">
+                {products.map((product, productIndex) => (
+                  <article class="product-card" id={product.id}>
+                    {product.image && (
+                      <div class="product-image">
+                        <img src={product.image.src} alt={product.image.alt} loading="lazy" width="300" height="300" />
                       </div>
-                      <div>
-                        <p class="mini-heading">Cons</p>
-                        <ul>{product.cons.map((item) => <li>{item}</li>)}</ul>
+                    )}
+                    <div class="product-body">
+                      <p class="badge">{product.badge}</p>
+                      <h3>{product.name}</h3>
+                      <p class="use-case">{product.useCase}</p>
+                      <ul class="product-bullets">
+                        {product.bullets.map((bullet) => <li>{bullet}</li>)}
+                      </ul>
+                      {product.howItHelps && <p class="how-it-helps"><strong>How it helps:</strong> {product.howItHelps}</p>}
+                      {product.sizingNote && <p class="note"><strong>Fit note:</strong> {product.sizingNote}</p>}
+                      {product.caution && <p class="note note--caution"><strong>Caution:</strong> {product.caution}</p>}
+                      {(product.pros?.length || product.cons?.length) && (
+                        <div class="pros-cons">
+                          {product.pros?.length ? (
+                            <div>
+                              <p class="mini-heading">Pros</p>
+                              <ul>{product.pros.map((item) => <li>{item}</li>)}</ul>
+                            </div>
+                          ) : null}
+                          {product.cons?.length ? (
+                            <div>
+                              <p class="mini-heading">Cons</p>
+                              <ul>{product.cons.map((item) => <li>{item}</li>)}</ul>
+                            </div>
+                          ) : null}
+                        </div>
+                      )}
+                      <div class="product-cta-wrap">
+                        {getOffers(product).map((offer, offerIndex) => (
+                          <MerchantAffiliateLink
+                            offer={offer}
+                            product={{ id: product.id, name: product.name, category: product.category }}
+                            class={`product-cta${offerIndex > 0 ? ' product-cta--secondary' : ''}`}
+                            label={offer.merchant === 'amazon' ? (product.ctaLabel ?? 'Check Price on Amazon') : merchants[offer.merchant].ctaCopy}
+                            pageType="converter"
+                            pageSlug={pageSlug}
+                            position={`${category}-${productIndex + 1}-${offerIndex + 1}`}
+                          />
+                        ))}
                       </div>
                     </div>
-                    <div class="product-cta-wrap">
-                      {getOffers(product).map((offer, offerIndex) => (
-                        <MerchantAffiliateLink
-                          offer={offer}
-                          product={{ id: product.id, name: product.name, category: product.category }}
-                          class={`product-cta${offerIndex > 0 ? ' product-cta--secondary' : ''}`}
-                          label={offer.merchant === 'amazon' ? (product.ctaLabel ?? 'Check Price on Amazon') : merchants[offer.merchant].ctaCopy}
-                          pageType="converter"
-                          pageSlug={pageSlug}
-                          position={`${category}-${productIndex + 1}-${offerIndex + 1}`}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
+                  </article>
+                ))}
+              </div>
+            )}
           </div>
         </section>
       );
@@ -221,15 +229,15 @@ const itemListSchema = {
           </div>
           <div class="kit-card">
             <h3>Car kit</h3>
-            <p>Loaded first aid kit, carry harness, muzzle, slip lead, Mylar blanket, power bank, headlamp, and a printed vet info card.</p>
+            <p>Loaded first aid kit, carry harness, slip lead, Mylar blanket, power bank, headlamp, and a printed vet info card.</p>
           </div>
           <div class="kit-card">
             <h3>Trail kit</h3>
-            <p>Packable carry sling, lightweight first aid kit, soft muzzle, slip lead, one Mylar blanket, power bank, and headlamp.</p>
+            <p>Packable carry sling, lightweight first aid kit, slip lead, one Mylar blanket, power bank, and headlamp.</p>
           </div>
           <div class="kit-card">
             <h3>Large-dog kit</h3>
-            <p>Prioritize a harness rated well above your dog's weight, a wide slip lead, a fitted basket muzzle, and practice before you need it.</p>
+            <p>Prioritize a harness rated well above your dog's weight, a wide slip lead, and practice the carry before you need it.</p>
           </div>
         </div>
       </div>
