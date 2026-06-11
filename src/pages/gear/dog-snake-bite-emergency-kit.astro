@@ -64,7 +64,7 @@ const faqs = [
 const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Dog Snake-Bite Emergency Kit Items',
+  name: 'Snake-Bite Emergency Kit for Dogs Items',
   description: 'Transport and vet-readiness gear for suspected dog snakebite emergencies.',
   url: 'https://www.chill-dogs.com/gear/dog-snake-bite-emergency-kit/',
   numberOfItems: emergencyProducts.length,
@@ -78,16 +78,16 @@ const itemListSchema = {
 ---
 
 <BaseLayout
-  title="Dog Snake-Bite Emergency Kit: What to Pack Before a Walk or Hike"
-  ogTitle="Dog Snake-Bite Emergency Kit for Hikes and Walks"
+  title="Snake-Bite Emergency Kit for Dogs: What to Pack Before a Walk or Hike"
+  ogTitle="Snake-Bite Emergency Kit for Dogs on Walks and Hikes"
   description="Build a practical dog snake-bite emergency kit for walks, hikes, and backyards: carry slings, first aid kits, muzzles, and vet-ready supplies."
 >
   <JsonLd slot="head" schema={itemListSchema} />
 
   <Hero
-    title="Dog Snake-Bite Emergency Kit"
-    subtitle="What helps most after a suspected bite is not a venom-removal gadget. It is the gear that helps you carry, control, warm, and get your dog to a veterinarian faster."
-    disclaimer="As an Amazon Associate, we earn from qualifying purchases."
+    title="Snake-Bite Emergency Kit for Dogs"
+    subtitle="The best snakebite emergency kit has nothing to do with venom removal. It is gear that helps you carry, control, and warm your dog as you get to a veterinarian as soon as possible."
+    disclaimer="As an Amazon Associate and a Chewy Affiliate, we earn from qualifying purchases."
     primaryCta={{ label: 'Start With Carry Gear', href: '#carry' }}
     secondaryCta={{ label: 'Read the Safety Guide', href: ROUTES.rattlesnakeSafetyForDogs }}
     pageSlug={pageSlug}
@@ -99,32 +99,35 @@ const itemListSchema = {
         <span class="section-label">Read first</span>
         <h2>A snakebite kit does not treat venom</h2>
         <p>
-          A suspected rattlesnake bite is a veterinary emergency. Call your vet or the nearest emergency animal hospital, keep your dog quiet, and carry them if you safely can. The products below are for transport, restraint, warmth, communication, and clean handling on the way to care.
+          A suspected rattlesnake bite is a veterinary emergency. Call 911 and your vet or the nearest emergency animal hospital immediately. Keep your dog quiet, calm, warm and still. If you must transport them, carry them if you are able to do so. If you cannot carry them, walk slowly to your car or to emergency responders. This will help slow the spread of venom through the bloodstream.
+        </p>
+        <p>
+          The products below are for restraint, transport, and warmth on the way to care.
         </p>
         <div class="do-dont-grid">
           <div class="do-dont-card">
             <h3>Do</h3>
             <ul>
-              <li>Call ahead so the vet is ready.</li>
-              <li>Keep your dog calm and still.</li>
-              <li>Carry your dog if it is safe.</li>
-              <li>Keep them warm and quiet.</li>
+              <li>Call ahead so the vet is ready</li>
+              <li>Keep your dog calm and still</li>
+              <li>Carry your dog if you can</li>
+              <li>Keep your dog warm and quiet</li>
               <li>Use a muzzle only when it is safe and necessary.</li>
             </ul>
           </div>
           <div class="do-dont-card">
-            <h3>Do not</h3>
+            <h3>Do Not</h3>
             <ul>
-              <li>Do not cut the wound or suck out venom.</li>
-              <li>Do not apply a tourniquet.</li>
-              <li>Do not use ice as snakebite treatment.</li>
-              <li>Do not give human pain medicine unless a vet says to.</li>
-              <li>Do not delay the vet trip to use a product.</li>
+              <li>Cut the wound or suck out venom</li>
+              <li>Apply a tourniquet</li>
+              <li>Use ice as snakebite treatment</li>
+              <li>Give human pain medicine without veterinary approval</li>
+              <li>Delay in getting to the vet</li>
             </ul>
           </div>
         </div>
         <p class="source-line">
-          Medical framing is based on public guidance from VCA, CDC/NIOSH, ASPCA, and WSU Veterinary Teaching Hospital. For the full emergency and prevention guide, read <a href={ROUTES.rattlesnakeSafetyForDogs}>rattlesnake safety for dogs</a>.
+          Medical recommendations are based on public guidance from VCA, CDC/NIOSH, ASPCA, and WSU Veterinary Teaching Hospital. For the full emergency and prevention guide, read <a href={ROUTES.rattlesnakeSafetyForDogs}>rattlesnake safety for dogs</a>.
         </p>
       </div>
     </section>
@@ -133,14 +136,14 @@ const itemListSchema = {
 
     <section class="jobs-section" id="six-jobs">
       <div class="section-inner">
-        <h2>The 6 jobs this kit should do</h2>
+        <h2>Items in your kit should allow you to:</h2>
         <div class="job-grid">
           <div class="job-card"><strong>Carry</strong><span>Move your dog without making them walk.</span></div>
           <div class="job-card"><strong>Control</strong><span>Keep a scared dog secure around cars, trails, and doors.</span></div>
-          <div class="job-card"><strong>Restrain</strong><span>Reduce pain-biting risk only when a muzzle is safe.</span></div>
+          <div class="job-card"><strong>Restrain</strong><span>Reduce pain-biting risk by using a muzzle when it is safe to do so.</span></div>
           <div class="job-card"><strong>Warm</strong><span>Keep your dog quiet and warm on the way to care.</span></div>
           <div class="job-card"><strong>Call</strong><span>Keep phone power available to reach the emergency vet.</span></div>
-          <div class="job-card"><strong>Prepare</strong><span>Keep clean supplies and vet info ready before the bite.</span></div>
+          <div class="job-card"><strong>Prepare</strong><span>Keep clean supplies and vet info ready.</span></div>
         </div>
       </div>
     </section>
@@ -154,7 +157,7 @@ const itemListSchema = {
         <section class={`product-section product-section--${category}`} id={category}>
           <div class="section-inner">
             <div class="section-header">
-              <span class="section-label">{category.replace('-', ' ')}</span>
+              <span class="section-label">{meta.label}</span>
               <h2>{meta.title}</h2>
               <p>{meta.intro}</p>
             </div>

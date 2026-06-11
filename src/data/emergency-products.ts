@@ -27,28 +27,33 @@ export interface EmergencyProduct {
   image?: { src: string; alt: string };
 }
 
-export const emergencyCategoryMeta: Record<EmergencyProductCategory, { title: string; intro: string }> = {
+export const emergencyCategoryMeta: Record<EmergencyProductCategory, { label: string; title: string; intro: string }> = {
   carry: {
+    label: 'Carry Slings',
     title: 'Emergency Carry Slings and Rescue Harnesses',
     intro:
-      'A carry sling is the centerpiece of a dog snake-bite emergency kit because movement can make a bad situation worse. The goal is to move your dog toward veterinary care without making them walk.',
+      'A carry sling is crucial because movement can expedite the spread of venom through the bloodstream. If you can, carry your dog rather than having them walk.',
   },
   'first-aid': {
+    label: 'First Aid',
     title: 'Dog First Aid Kits to Build Around',
     intro:
       'A first aid kit is useful for gloves, gauze, a clean dressing, an emergency blanket, and basic trail readiness. It does not treat venom, but it keeps the practical supplies in one place.',
   },
   muzzle: {
+    label: 'Muzzle',
     title: 'Emergency Muzzles for Pain-Biting Risk',
     intro:
       'A muzzle is a sometimes tool. Pain can make even a gentle dog bite, but breathing, vomiting, heat stress, and facial swelling always matter more than restraint.',
   },
   'warmth-control': {
+    label: 'Small Add-ons',
     title: 'Small Add-ons for Warmth, Control, and Vet Information',
     intro:
       'Small items can make the trip to the emergency vet calmer: a slip lead for backup control, a Mylar blanket for warmth, and simple supplies for clean handling and clear information.',
   },
   prevention: {
+    label: 'Phone and Light',
     title: 'Phone and Visibility Add-ons',
     intro:
       'The best emergency kit is the one that helps you call ahead, see the trail, and leave quickly. A charged phone, backup battery, and headlamp are simple but useful pieces.',

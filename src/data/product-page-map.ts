@@ -130,7 +130,7 @@ export function buildProductPageMap(): ProductPageMap {
   addRef(map, 'stunt-puppy-fi-collar', fiReviewRef);
 
   const snakeBiteKitRef: PageRef = {
-    label: 'Dog Snake-Bite Emergency Kit',
+    label: 'Snake-Bite Emergency Kit for Dogs',
     href: ROUTES.dogSnakeBiteEmergencyKit,
   };
   for (const p of emergencyProducts) {
