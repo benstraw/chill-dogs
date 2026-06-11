@@ -163,7 +163,7 @@ const collectionSchema = {
           The Alpha TT 25 collar pairs with the Alpha 300i handheld to form a complete off-grid tracking system. Both are sold separately — the collar goes on the dog; the handheld displays real-time location in the field. No cell signal required. If you already have compatible collars, the Alpha 300i can also be bought as the standalone handheld.
         </p>
 
-        <div class="product-grid">
+        <div class="product-grid ui-grid ui-grid--2">
           {garminProducts.map((product) => (
             <div class="product-card" id={product.id}>
               {product.image && (
@@ -462,11 +462,8 @@ const collectionSchema = {
     margin: 0;
   }
 
-  /* Product grid */
+  /* Product grid — columns / gap / responsive from `.ui-grid`; spacing only here. */
   .product-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-lg);
     margin-bottom: var(--space-xl);
   }
 
@@ -722,7 +719,7 @@ const collectionSchema = {
   }
 
   @media (max-width: 768px) {
-    .product-grid, .verdict-grid { grid-template-columns: 1fr; }
+    .verdict-grid { grid-template-columns: 1fr; }
     .product-pros-cons { grid-template-columns: 1fr; }
   }
 

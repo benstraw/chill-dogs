@@ -168,13 +168,18 @@
 
 /*
  * Shared responsive product-grid vocabulary for the conversion UI layer.
- * Uses the converter breakpoint set (1024 / 900 / 640) so converter and product
- * grids collapse identically. Existing `.cards-grid--*` is left in place; callers
- * migrate opportunistically.
+ * Owns columns / gap / responsive only; callers keep their own page-specific
+ * max-width, centering, and margins. Canonical collapse: 3->2 at 1024px, any
+ * 2->1 at 768px. Used by the converter, cooling, and gear product grids.
+ * `.cards-grid--*` (collector hub grids) is intentionally left separate.
  */
 .ui-grid {
   display: grid;
   gap: var(--space-lg);
+}
+
+.ui-grid--1 {
+  grid-template-columns: 1fr;
 }
 
 .ui-grid--2 {
@@ -191,13 +196,8 @@
   }
 }
 
-@media (max-width: 900px) {
-  .ui-grid--2 {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .ui-grid--2,
   .ui-grid--3 {
     grid-template-columns: 1fr;
   }

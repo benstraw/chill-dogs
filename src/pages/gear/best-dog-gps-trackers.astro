@@ -133,7 +133,7 @@ const itemListSchema = {
         </div>
         <p class="section-intro">{trackerCategoryMeta.cellular.intro}</p>
 
-        <div class="product-grid">
+        <div class="product-grid ui-grid ui-grid--2">
           {cellular.map((product, i) => (
             <div class="product-card" id={product.id}>
               {product.image && (
@@ -217,7 +217,7 @@ const itemListSchema = {
         </div>
         <p class="section-intro">{trackerCategoryMeta['off-grid'].intro}</p>
 
-        <div class="product-grid">
+        <div class="product-grid ui-grid ui-grid--2">
           {offGrid.map((product, i) => (
             <div class="product-card" id={product.id}>
               {product.image && (
@@ -310,7 +310,7 @@ const itemListSchema = {
           </p>
         </div>
 
-        <div class="product-grid">
+        <div class="product-grid ui-grid ui-grid--2">
           {bluetooth.map((product, i) => (
             <div class="product-card" id={product.id}>
               {product.image && (
@@ -604,11 +604,8 @@ const itemListSchema = {
     margin-bottom: var(--space-xl);
   }
 
-  /* Product grid */
+  /* Product grid — columns / gap / responsive from `.ui-grid`; spacing only here. */
   .product-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-lg);
     margin-bottom: var(--space-xl);
   }
 
@@ -966,10 +963,6 @@ const itemListSchema = {
   }
 
   @media (max-width: 768px) {
-    .product-grid {
-      grid-template-columns: 1fr;
-    }
-
     .product-pros-cons {
       grid-template-columns: 1fr;
     }

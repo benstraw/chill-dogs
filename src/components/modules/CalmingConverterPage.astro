@@ -58,7 +58,7 @@ function quickPickProduct(item: QuickPickItem) {
           <div class="converter-inner">
             <h2>{block.heading}</h2>
             <p class="section-intro">{block.intro}</p>
-            <div class="quick-picks-grid">
+            <div class="quick-picks-grid ui-grid ui-grid--3">
               {block.items.map((item) => {
                 const product = quickPickProduct(item);
                 return (
@@ -108,7 +108,7 @@ function quickPickProduct(item: QuickPickItem) {
             <h2>{block.heading}</h2>
             {block.intro && <p class="section-intro">{block.intro}</p>}
             {block.copyHtml && <p class="section-copy" set:html={block.copyHtml} />}
-            <div class={`product-grid product-grid--${block.columns}`}>
+            <div class={`product-grid product-grid--${block.columns} ui-grid ui-grid--${block.columns}`}>
               {getRequiredProducts(block.productIds).map((product, i) => (
                 <CalmingProductCard
                   product={product}
@@ -122,7 +122,7 @@ function quickPickProduct(item: QuickPickItem) {
         </section>
       ) : block.kind === 'decision_columns' ? (
         <section class={sectionClass(block)} id={block.id}>
-          <div class="converter-inner decisions">
+          <div class="converter-inner decisions ui-grid ui-grid--2">
             <div class="decision-card">
               <h2>{block.left.heading}</h2>
               <ul>
@@ -222,26 +222,10 @@ function quickPickProduct(item: QuickPickItem) {
     text-decoration: underline;
   }
 
-  .quick-picks-grid,
-  .decisions,
-  .product-grid {
-    display: grid;
-    gap: var(--space-lg);
-  }
-
-  .quick-picks-grid,
-  .product-grid--3 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .product-grid--2,
-  .decisions {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
+  /* Grid columns / gap / responsive come from `.ui-grid` (utilities.css);
+     only the single-column max-width constraint stays page-local. */
   .product-grid--1 {
     max-width: 720px;
-    grid-template-columns: 1fr;
   }
 
   .quick-pick-card,
@@ -380,28 +364,9 @@ function quickPickProduct(item: QuickPickItem) {
     color: var(--pillar-link);
   }
 
-  @media (max-width: 1024px) {
-    .quick-picks-grid,
-    .product-grid--3 {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (max-width: 900px) {
-    .product-grid--2,
-    .decisions {
-      grid-template-columns: 1fr;
-    }
-  }
-
   @media (max-width: 640px) {
     .converter-section {
       padding: var(--space-xl) var(--space-md);
-    }
-
-    .quick-picks-grid,
-    .product-grid--3 {
-      grid-template-columns: 1fr;
     }
   }
 </style>
