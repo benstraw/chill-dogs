@@ -3,7 +3,7 @@ title: Engineering Architecture
 type: canonical
 domain: engineering
 status: active
-updated: 2026-05-23
+updated: 2026-06-10
 tags:
   - chill-dogs
   - engineering
@@ -117,16 +117,25 @@ When a shared product appears on multiple converter pages, update the canonical 
 Vanilla CSS with custom properties. No runtime overhead.
 
 - Design tokens: `src/styles/tokens.css`
-- Components use Astro scoped `<style>` blocks
+- Per-pillar theming: `src/data/pillar-themes.ts` injects `--pillar-*` CSS vars inline at the layout level (cooling / calming / comfort). Themed pages also set `--color-primary` to the pillar accent, so `--pillar-accent` and `--color-primary` resolve to the same value on themed pages.
+- Components use Astro scoped `<style>` blocks for component-specific styling.
 - Six-color palette: sand, sage, sky, cream, terracotta, charcoal
 - Self-hosted fonts: Nunito Variable (headings), Inter (body)
+
+### Shared conversion UI system
+
+The conversion surface (product cards + affiliate CTAs) is built from shared primitives. **Prefer these over bespoke per-component CSS** when building or editing product cards, CTAs, or product grids.
+
+- **CTA buttons** — `src/styles/cta.css` defines the `.ui-cta` button and is imported globally in `BaseLayout`. Drive it through `MerchantAffiliateLink.astro`'s presentation props: `variant` (`primary` / `secondary` / `ghost`), `size` (`compact` / `standard` / `wide`), `tone` (`pillar` / `neutral` / `merchant`), rendered as `data-variant` / `data-size` / `data-tone`. Defaults: primary / standard / pillar. Passing any of the three opts the link into `.ui-cta`. Merchant-specific styling (e.g. Chewy blue) stays authoritative via the scoped `data-merchant` selector in `MerchantAffiliateLink`. Raw internal CTAs can use `class="ui-cta"` directly.
+- **Product-card primitives** — `src/components/modules/primitives/`: `ProductCardShell` (surface / radius / shadow / hover + padded body), `ProductImageFrame` (4:3 image shell + shared placeholder), `ProductBulletList` (`+`-marker list), `AffiliateOfferStack` (maps `getOffers(product)` to `MerchantAffiliateLink` with primary/secondary variants; `topGap` + `resolveLabel` props). The cooling / calming / comfort cards compose these; `BrowseProductCard` keeps a bespoke sand/footer shell and only reuses `AffiliateOfferStack`.
+- **Product grids** — `.ui-grid` / `.ui-grid--1` / `--2` / `--3` in `src/styles/utilities.css` is the shared product-grid vocabulary. It owns columns / gap / responsive only; callers keep their own page-specific max-width, centering, and margins. Canonical collapse: 3→2 cols at 1024px, any 2→1 col at 768px. Used by the converter, cooling, and gear product grids. The separate `.cards-grid--*` family is for collector hub grids; `shop/` uses a bespoke compact catalog grid (left intentionally separate).
 
 ---
 
 ## Images
 
 - **Local images:** Use `<Image>` from `astro:assets` — never raw `<img>`. Astro optimizes at build time.
-- **External images (Amazon CDN):** Use raw `<img>` — cannot be optimized at build time.
+- **External images (Amazon CDN):** Cannot be optimized at build time (no `image.domains` configured). The `ProductImageFrame` primitive renders product images via `<Image>`, which passes remote Amazon URLs through unchanged; outside the primitive, raw `<img>` is also acceptable for external images.
 - **Original site photography:** Must be watermarked before use. See watermarking pipeline in build-and-test-commands.md.
 
 ---
