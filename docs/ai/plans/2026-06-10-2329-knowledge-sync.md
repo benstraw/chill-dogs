@@ -38,6 +38,7 @@ What changed in code:
 
 **Executed:** 2026-06-10
 **Commits reviewed:** 3090e18, b162601, 1368896
+**Follow-up:** Reconciled with the simplified converter product model after PR #232, keeping the shared UI primitives while rendering converter cards from bullet-only product copy.
 
 ## Changes made
 
