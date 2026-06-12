@@ -294,6 +294,175 @@ export const emergencyProducts: EmergencyProduct[] = [
       alt: 'LHKNL rechargeable LED headlamp two-pack on a white background',
     },
   },
+  {
+    id: 'hipypaw-basket-silicone-muzzle',
+    name: 'HipyPaw Basket Silicone Dog Muzzle',
+    category: 'muzzle',
+    badge: 'Best Silicone Basket',
+    asin: 'B0G6ZKGM85',
+    amazonUrl: 'https://www.amazon.com/dp/B0G6ZKGM85?tag=chill-dogs-20',
+    useCase: 'Silicone basket muzzle for medium and large dogs during transport',
+    bestFor: 'Owners who want a soft, flexible basket that allows drinking',
+    bullets: [
+      'Silicone basket design allows panting and drinking',
+      'Soft material is gentler on the face than rigid plastic',
+      'Lightweight enough to keep in a trail pack or car kit',
+    ],
+    howItHelps:
+      'Reduces pain-biting risk during handling only when breathing is normal and the dog is calm enough to apply it safely.',
+    caution:
+      'Do not muzzle a dog that is struggling to breathe, vomiting, overheating, brachycephalic, or swelling around the face.',
+    sizingNote: 'Size carefully before the trail — a muzzle that needs adjusting during an emergency adds stress.',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/71WlU8K7jwL._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: 'HipyPaw black silicone basket dog muzzle on a white background',
+    },
+  },
+  {
+    id: 'vinchini-3d-mesh-muzzle',
+    name: 'VINCHINI 3D Air Mesh Dog Muzzle',
+    category: 'muzzle',
+    badge: 'Best Budget Mesh',
+    asin: 'B0GKYDN917',
+    amazonUrl: 'https://www.amazon.com/dp/B0GKYDN917?tag=chill-dogs-20',
+    useCase: 'Affordable 3D mesh muzzle for medium dogs',
+    bestFor: 'Beagle-sized and medium-breed owners looking for a lightweight budget option',
+    bullets: [
+      '3D air mesh keeps airflow around the snout',
+      'Escape-proof strap design for a secure fit',
+      'Compact and lightweight for trail kits',
+    ],
+    howItHelps:
+      'A practical budget backup for medium dogs during careful handling, when breathing is fully clear.',
+    caution:
+      'Do not muzzle a dog that is struggling to breathe, vomiting, overheating, brachycephalic, or swelling around the face.',
+    sizingNote:
+      'Sized for Beagle, Cocker Spaniel, Border Collie, and similar medium breeds — verify fit before heading out.',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/71hcXCUrsaL._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: 'VINCHINI black 3D mesh dog muzzle on a white background',
+    },
+  },
+  {
+    id: 'pawfun-reflective-mesh-muzzle',
+    name: 'Pawfun Reflective Mesh Dog Muzzle',
+    category: 'muzzle',
+    badge: 'Best Reflective Straps',
+    asin: 'B0GXW3M9KQ',
+    amazonUrl: 'https://www.amazon.com/dp/B0GXW3M9KQ?tag=chill-dogs-20',
+    useCase: 'Breathable mesh muzzle with reflective straps for low-light trail use',
+    bestFor: 'Hikers and dusk walkers who want added visibility during an emergency carry',
+    bullets: [
+      'Reflective straps improve visibility on low-light carries',
+      'Soft mesh construction allows airflow around the snout',
+      'Available in small, medium, and large',
+    ],
+    howItHelps:
+      'Adds a visibility layer for nighttime or dusk trail emergencies, while providing restraint when the dog can safely wear a muzzle.',
+    caution:
+      'Do not muzzle a dog that is struggling to breathe, vomiting, overheating, brachycephalic, or swelling around the face.',
+    sizingNote: 'Measure snout circumference and follow the size chart before heading out.',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/710Yy6xaijL._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: 'Pawfun black mesh dog muzzle with reflective straps on a white background',
+    },
+  },
+  {
+    id: 'shinylin-basket-mesh-muzzle',
+    name: 'Shinylin Basket Air Mesh Dog Muzzle',
+    category: 'muzzle',
+    badge: 'Best Multi-Size Set',
+    asin: 'B0FK4D9L15',
+    amazonUrl: 'https://www.amazon.com/dp/B0FK4D9L15?tag=chill-dogs-20',
+    useCase: 'Basket air mesh muzzle available across six sizes',
+    bestFor: 'Multi-dog households or owners who want the widest range of fit options',
+    bullets: [
+      'Six size options (S through XXXL) cover small to giant breeds',
+      'Basket-style mesh design keeps the snout covered while allowing air',
+      'Snap fastener applies and removes faster than buckle straps',
+    ],
+    howItHelps:
+      'The wide size range means you can fit a muzzle properly before an emergency rather than guessing at the trailhead.',
+    caution:
+      'Do not muzzle a dog that is struggling to breathe, vomiting, overheating, brachycephalic, or swelling around the face.',
+    sizingNote: 'Six sizes available — measure and test the fit at home so you know the right size for your dog.',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/81AOe4JyoSL._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: 'Shinylin basket air mesh dog muzzle on a white background',
+    },
+  },
+  {
+    id: 'tviaoh-small-dog-muzzle',
+    name: 'TVIAOH Small Dog Muzzle',
+    category: 'muzzle',
+    badge: 'Best for Small Dogs',
+    asin: 'B0F898P647',
+    amazonUrl: 'https://www.amazon.com/dp/B0F898P647?tag=chill-dogs-20',
+    useCase: 'Soft nylon muzzle sized for small breeds',
+    bestFor: 'Small-dog owners who want an appropriately sized muzzle in the kit',
+    bullets: [
+      'Sized specifically for small breeds',
+      'Reflective strap for low-light visibility',
+      'Soft nylon allows panting and drinking when correctly fitted',
+    ],
+    howItHelps:
+      'Fills a gap for small-dog owners — most budget muzzle sets are sized for medium and large breeds.',
+    caution:
+      'Do not muzzle a dog that is struggling to breathe, vomiting, overheating, brachycephalic, or swelling around the face.',
+    sizingNote:
+      'Measure snout circumference to confirm fit — small muzzles vary significantly between brands.',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/41DRMjQAlBL._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: 'TVIAOH small dog muzzle on a white background',
+    },
+  },
+  {
+    id: 'letsqk-2pack-mesh-muzzle',
+    name: 'LETSQK 2-Pack Mesh Dog Muzzle',
+    category: 'muzzle',
+    badge: 'Best Value 2-Pack',
+    asin: 'B0GK8XCCZC',
+    amazonUrl: 'https://www.amazon.com/dp/B0GK8XCCZC?tag=chill-dogs-20',
+    useCase: 'Two-pack soft mesh muzzle for households with more than one dog',
+    bestFor: 'Multi-dog owners who want a spare or need two different sizes',
+    bullets: [
+      'Two muzzles per pack — practical for multi-dog households',
+      'Soft mesh allows panting and drinking when properly fitted',
+      'Available across small, medium, and large sizes',
+    ],
+    howItHelps: 'A second muzzle in the kit costs little extra and means one is always available.',
+    caution:
+      'Do not muzzle a dog that is struggling to breathe, vomiting, overheating, brachycephalic, or swelling around the face.',
+    sizingNote: 'Both muzzles in the pack are the same size — confirm the size before ordering.',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/81I08AKRvAL._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: 'LETSQK two-pack mesh dog muzzle on a white background',
+    },
+  },
+  {
+    id: 'lh-ntgr-reflective-muzzle',
+    name: 'LH NTGR Adjustable Reflective Dog Muzzle',
+    category: 'muzzle',
+    badge: 'Best Adjustable Fit',
+    asin: 'B0GW7K9DGZ',
+    amazonUrl: 'https://www.amazon.com/dp/B0GW7K9DGZ?tag=chill-dogs-20',
+    useCase: 'Adjustable reflective muzzle for large, medium, and small dogs',
+    bestFor: 'Owners who want reflective safety details and a fully adjustable fit',
+    bullets: [
+      'Reflective panel improves visibility during low-light carries',
+      'Adjustable straps fit a range of head shapes',
+      'Breathable design allows panting when safely applied',
+    ],
+    howItHelps:
+      'The reflective panel and adjustable fit make it practical for trail and dusk emergency scenarios.',
+    caution:
+      'Do not muzzle a dog that is struggling to breathe, vomiting, overheating, brachycephalic, or swelling around the face.',
+    sizingNote: 'Adjust and test the fit at home before relying on it in an emergency.',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/81dcJbJISXL._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: 'LH NTGR adjustable reflective dog muzzle on a white background',
+    },
+  },
 ];
 
 export function getEmergencyProductsByCategory(category: EmergencyProductCategory): EmergencyProduct[] {
