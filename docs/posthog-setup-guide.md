@@ -170,7 +170,7 @@ All custom events currently tracked on the site:
 |---|---|---|
 | `hero_click_cooling` | HomepageHero CTA | `variant` |
 | `hero_click_calming` | HomepageHero CTA | `variant` |
-| `amazon_outbound_click` | Hero, ProductCard, ComparisonTable, BonusCallout, TopPicks | `page_slug`, `product_name`, `product_category`, `position`, `destination` |
+| `amazon_outbound_click` | Hero, ProductCard, BonusCallout | `page_slug`, `product_name`, `product_category`, `position`, `destination` |
 | `collector_to_converter_click` | Hero, HubBody, SummaryBlock, RelatedGuides, PostCard, InternalLinkStrip, index.astro | `from_page`, `to_page`, `link_position` |
 | `toc_click` | Toc | `page_slug`, `target_anchor` |
 

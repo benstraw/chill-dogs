@@ -37,10 +37,12 @@ A converter page has one job: get a qualified visitor to click an affiliate link
 
 ```
 1. Hero / intro blurb   (2–3 sentences)
-2. Product entries       (one per product)
+2. Product sections      (grouped by category/use case)
 3. FAQ                  (optional; 3–5 questions)
 4. InternalLinkStrip    (links to related converters/collectors)
 ```
+
+Converter pages should not include separate quick-pick or quick-comparison sections. If the page needs a shortcut CTA, point it to the first real product section.
 
 ---
 
@@ -58,13 +60,13 @@ Example: if every cooling mat on the page works best on hard floors, say that in
 
 ## 4. Per-product copy
 
-### Length: 2–4 sentences per product
+For cooling, calming, and relaxation converters, canonical product copy is the product's bullet list. Do not add separate per-product fields like `bestFor`, `coolingMethod`, `sizingNote`, `howItHelps`, `whyItWorks`, or `considerIf`.
 
-This is a firm target, not a floor. One well-chosen sentence that nails the differentiator is better than four sentences that pad.
+There is no fixed bullet count. Use the number of bullets needed to make the buying distinction clear, then stop.
 
 ### What to write
 
-The four topics from [`product-copy-rules.md`](product-copy-rules.md) — category fit, use case, tradeoffs, buyer context — are a **mental checklist**, not a four-paragraph structure. For each product, pick the **1–2 points that are most differentiating** and write only those.
+The four topics from [`product-copy-rules.md`](product-copy-rules.md) — category fit, use case, tradeoffs, buyer context — are a **mental checklist**, not a required set of fields. For each product, pick the points that are most differentiating and express them as concise bullets.
 
 Ask: what makes this product different from the others on this page? Write that. Skip anything that is true of every product on the page.
 
@@ -72,14 +74,14 @@ Ask: what makes this product different from the others on this page? Write that.
 
 - **Re-introductions.** Do not re-explain what the product category does in each entry. The intro covered it.
 - **Shared context repeated per product.** If a trait applies to all products, it belongs in the intro, not each entry.
-- **Covering all four topics every time.** Most products only need 1–2 points. A third or fourth point is only worth adding if it is genuinely differentiating.
+- **Covering all four topics every time.** Most products only need a few useful bullets. Additional bullets are only worth adding if they are genuinely differentiating.
 - **Padding.** "This is a great option for dog owners who want..." adds no information. State the specific fit directly.
 
 ---
 
 ## 5. Preserve existing product copy
 
-Product copy written into canonical data files (`src/data/products/`) is the **source of truth**. Render it as-is — do not rewrite or summarize it when building a converter page.
+Product copy written into canonical data files (`src/data/**-products.ts`) is the **source of truth**. Render product bullets as-is — do not rewrite or summarize them when building a converter page.
 
 Where a product has page-specific copy overrides (set in the data or page config), preserve those overrides exactly as written. Do not normalize them to match other products on the same page.
 
@@ -103,7 +105,8 @@ Before finishing a converter page, scan for:
 - [ ] Does the intro cover shared context (so product entries don't have to)?
 - [ ] Does any product entry re-explain what the product category does?
 - [ ] Does any phrase appear in more than one product entry with minor variation?
-- [ ] Are any product entries longer than 4 sentences?
+- [ ] Are bullets doing distinct work, or repeating the same idea in different words?
+- [ ] Are quick-pick or quick-comparison sections absent?
 - [ ] Do FAQ answers repeat what product entries already said?
 
 ---

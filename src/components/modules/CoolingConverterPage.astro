@@ -2,7 +2,6 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import JsonLd from '@components/JsonLd.astro';
 import Hero from '@components/modules/Hero.astro';
-import ComparisonTable from '@components/modules/ComparisonTable.astro';
 import CoolingProductGrid from '@components/modules/CoolingProductGrid.astro';
 import FAQ from '@components/modules/FAQ.astro';
 import Disclosure from '@components/modules/Disclosure.astro';
@@ -58,14 +57,7 @@ const itemListSchema = {
   />
 
   <div class="converter-content">
-    <section class="converter-section">
-      <div class="converter-inner">
-        <h2>Quick Comparison</h2>
-        <ComparisonTable products={products} pageSlug={config.pageSlug} />
-      </div>
-    </section>
-
-    <section class="converter-section converter-section--alt">
+    <section class="converter-section converter-section--alt" id="products">
       <div class="converter-inner">
         <h2>Detailed Reviews</h2>
         <CoolingProductGrid

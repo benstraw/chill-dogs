@@ -17,13 +17,6 @@ export interface TocHeading {
   anchor: string;
 }
 
-export interface QuickPickItem {
-  label: string;
-  title: string;
-  description: string;
-  productId: string;
-  position: string;
-}
 
 export interface ProseBlock {
   kind: 'prose';
@@ -61,23 +54,12 @@ export interface NoteBlock {
   alt?: boolean;
 }
 
-export interface QuickPicksBlock {
-  kind: 'quick_picks';
-  heading: string;
-  intro: string;
-  items: QuickPickItem[];
-  id?: string;
-  alt?: boolean;
-}
 
 export interface ProductSectionProductOverride {
   id: string;
   bullets?: string[];
   hideBullets?: number[];
   appendBullets?: string[];
-  bestFor?: string;
-  whyItWorks?: string;
-  considerIf?: string;
 }
 
 export type ProductSectionProductRef = string | ProductSectionProductOverride;
@@ -90,8 +72,7 @@ export type RelaxationBlock =
   | ProseBlock
   | ProductSectionBlock
   | DecisionColumnsBlock
-  | NoteBlock
-  | QuickPicksBlock;
+  | NoteBlock;
 
 export interface RelaxationConverterPageConfig {
   slug: string;
@@ -140,15 +121,7 @@ export function resolveRelaxationDisplayProducts(
       };
     }
 
-    const {
-      id: _id,
-      bullets,
-      hideBullets,
-      appendBullets,
-      bestFor,
-      whyItWorks,
-      considerIf,
-    } = ref;
+    const { id: _id, bullets, hideBullets, appendBullets } = ref;
 
     const resolvedBullets = bullets
       ? [...bullets]
@@ -160,9 +133,6 @@ export function resolveRelaxationDisplayProducts(
     return {
       ...base,
       bullets: resolvedBullets,
-      bestFor: bestFor ?? base.bestFor,
-      whyItWorks: whyItWorks ?? base.whyItWorks,
-      considerIf: considerIf ?? base.considerIf,
     };
   });
 }
@@ -199,50 +169,16 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       subtitle:
         'Some dogs sleep anywhere. Others circle the same spot twelve times before lying down — and still look anxious once they do. The right bed shapes how your dog settles. Raised rims, soft fill, and enclosed shapes give dogs the containment and comfort they look for on their own.',
       disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
-      primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
+      primaryCta: { label: 'See Products', href: '#donut-beds' },
       secondaryCta: { label: 'Orthopedic Beds', href: ROUTES.comfortOrthopedicBeds },
     },
     toc: [
-      { label: 'Quick Picks', anchor: 'quick-picks' },
       { label: 'Donut & Cuddler Beds', anchor: 'donut-beds' },
       { label: 'Bolster & Premium Beds', anchor: 'bolster-beds' },
       { label: 'Which Bed Style Fits Your Dog', anchor: 'which-style' },
       { label: 'FAQ', anchor: 'faq' },
     ],
     blocks: [
-      {
-        kind: 'quick_picks',
-        id: 'quick-picks',
-        heading: 'Quick Picks',
-        intro:
-          'Not sure where to start? These are the clearest first picks depending on what your dog needs most — a fully enclosed donut shape, a cuddler with plush warmth, or a bolster with premium construction.',
-        items: [
-          {
-            label: 'Best Donut Bed',
-            title: 'BedStill Donut Calming Dog Bed',
-            description:
-              'The raised rim and round shape give dogs the enclosed, chin-rest position they naturally seek. A practical starting point for dogs who curl tightly or press against walls and furniture when resting.',
-            productId: 'bedstill-donut-calming-bed',
-            position: 'quick-picks-1',
-          },
-          {
-            label: 'Best Premium Pick',
-            title: 'Pendleton Fleece Kuddler Dog Bed',
-            description:
-              "Pendleton's heritage fleece brings a warmth and texture that keeps dogs settled through full naps. The lower-profile kuddler shape works well for dogs who sprawl out rather than curl.",
-            productId: 'pendleton-fleece-kuddler',
-            position: 'quick-picks-2',
-          },
-          {
-            label: 'Best for Medium Dogs',
-            title: 'ChiXnuggle Dog Bed',
-            description:
-              'The recessed center and snuggle-focused fill support the natural positions medium dogs choose for deep rest — without the full raised rim of a donut if your dog prefers less height.',
-            productId: 'chixnuggle-dog-bed',
-            position: 'quick-picks-3',
-          },
-        ],
-      },
       {
         kind: 'product_section',
         id: 'donut-beds',
@@ -348,66 +284,16 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       subtitle:
         'A puppy\'s first crate should make housebreaking and quiet-time practice easier without forcing you to buy another crate in a month. For most puppies, that means a wire crate with a divider panel and a door layout that fits the room where training actually happens.',
       disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
-      primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
+      primaryCta: { label: 'See Products', href: '#puppy-crates' },
       secondaryCta: { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
     },
     toc: [
-      { label: 'Quick Picks', anchor: 'quick-picks' },
       { label: 'Puppy Crate Picks', anchor: 'puppy-crates' },
       { label: 'iCrate vs Life Stages', anchor: 'icrate-vs-life-stages' },
       { label: 'Which Crate Fits Your Puppy', anchor: 'which-crate' },
       { label: 'FAQ', anchor: 'faq' },
     ],
     blocks: [
-      {
-        kind: 'quick_picks',
-        id: 'quick-picks',
-        heading: 'Quick Picks',
-        intro:
-          'Start with the crate that best fits your budget and best matches your room layout. All three picks are practical for puppy crate training, but they solve different problems.',
-        items: [
-          {
-            label: 'Top Pick for Puppy Crate Training',
-            title: 'KindTail PAWD Collapsible Dog Crate',
-            description:
-              'The featured pick if you want a cleaner-looking puppy crate that collapses for storage and includes a washable bed.',
-            productId: 'kindtail-pawd-collapsible-crate',
-            position: 'quick-picks-1',
-          },
-          {
-            label: 'Best Budget First Crate',
-            title: 'MidWest iCrate Dog Crate (18-Inch)',
-            description:
-              'The simple pick for tiny-breed puppies: lighter, usually cheaper, and built around the divider-panel setup that makes puppy housebreaking easier.',
-            productId: 'midwest-icrate-puppy',
-            position: 'quick-picks-2',
-          },
-          {
-            label: 'Best Sturdier Wire Crate',
-            title: 'MidWest Life Stages Dog Crate (22-Inch)',
-            description:
-              'Life Stages uses heavier-gauge steel than iCrate and feels more solid for active puppies.',
-            productId: 'midwest-life-stages-puppy-crate',
-            position: 'quick-picks-3',
-          },
-          {
-            label: 'Best Flexible Door Layout',
-            title: 'Petmate Training Retreat Kennel',
-            description:
-              'A useful alternative when side-door access is needed. The two-door layout can make daily crate routines easier in tight bedrooms or living rooms.',
-            productId: 'petmate-training-retreat-kennel',
-            position: 'quick-picks-4',
-          },
-          {
-            label: 'Best Color Option',
-            title: "Internet's Best Double Door Wire Dog Kennel (Blue)",
-            description:
-              'A small wire puppy crate that does the basic training job but comes in color, which makes it stand out from the usual black-crate lineup.',
-            productId: 'internets-best-small-wire-crate',
-            position: 'quick-picks-5',
-          },
-        ],
-      },
       {
         kind: 'product_section',
         id: 'puppy-crates',
@@ -525,50 +411,16 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       subtitle:
         'Some dogs settle in a familiar wire crate. Others do better with an enclosed kennel that blocks visual stimulation. And some escape artists need a heavy-duty crate to help keep them safe.',
       disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
-      primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
+      primaryCta: { label: 'See Products', href: '#anxiety-crates' },
       secondaryCta: { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
     },
     toc: [
-      { label: 'Quick Picks', anchor: 'quick-picks' },
       { label: 'Safety First', anchor: 'safety-first' },
       { label: 'Anxiety Crate Picks', anchor: 'anxiety-crates' },
       { label: 'Which Crate Fits the Pattern', anchor: 'which-crate' },
       { label: 'FAQ', anchor: 'faq' },
     ],
     blocks: [
-      {
-        kind: 'quick_picks',
-        id: 'quick-picks',
-        heading: 'Quick Picks',
-        intro:
-          'Use these as management categories, not anxiety cures. The right choice depends on whether your dog is mildly unsettled, overstimulated by visibility, or actively trying to escape.',
-        items: [
-          {
-            label: 'Best Wire Crate for Mild Anxiety',
-            title: 'MidWest Life Stages Dog Crate',
-            description:
-              'A sturdy wire option for dogs who are already crate-trained and need a familiar, ventilated place to settle during mild stress.',
-            productId: 'midwest-life-stages-crate',
-            position: 'quick-picks-1',
-          },
-          {
-            label: 'Best Enclosed Crate',
-            title: 'Petmate Sky Kennel',
-            description:
-              'The enclosed plastic shell can reduce visual stimulation for dogs who settle better when the world is partly blocked out.',
-            productId: 'petmate-sky-kennel',
-            position: 'quick-picks-2',
-          },
-          {
-            label: 'Best Heavy-Duty Crate',
-            title: 'Impact High Anxiety Dog Crate',
-            description:
-              'The heavy-duty option for dogs with a real escape history, who have bent wire crates, or who risk injury from standard crate escape attempts.',
-            productId: 'impact-high-anxiety-crate',
-            position: 'quick-picks-3',
-          },
-        ],
-      },
       {
         kind: 'prose',
         id: 'safety-first',
@@ -668,58 +520,16 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       subtitle:
         'For road trips, the best dog travel crate depends less on price and more on how your dog actually travels. Some dogs do well in a lightweight folding crate that is easy to pack and set up. Others need a sturdier, hard-sided kennel with more structure that makes it harder for them to claw their way out.',
       disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
-      primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
+      primaryCta: { label: 'See Products', href: '#travel-crates' },
       secondaryCta: { label: 'Road Trip Gear', href: ROUTES.roadTrip },
     },
     toc: [
-      { label: 'Quick Picks', anchor: 'quick-picks' },
       { label: 'Hard-Sided vs Soft Folding', anchor: 'hard-sided-vs-soft' },
       { label: 'Travel Crate Comparison', anchor: 'travel-crates' },
       { label: 'Which One Should You Buy', anchor: 'which-one' },
       { label: 'Bottom Line', anchor: 'bottom-line' },
     ],
     blocks: [
-      {
-        kind: 'quick_picks',
-        id: 'quick-picks',
-        heading: 'Quick Answer: Top Picks',
-        intro:
-          'If you already know how your dog behaves in a crate, the choice is simple. Prioritize portability for calm, crate-trained dogs. Prioritize structure for dogs who push boundaries.',
-        items: [
-          {
-            label: 'Best Overall for Road Trips',
-            title: 'PetSafe Happy Ride Collapsible Travel Crate',
-            description:
-              'The best all-around road trip pick because it is specifically built around travel use, car setup, and collapsible storage.',
-            productId: 'petsafe-happy-ride-travel-crate',
-            position: 'quick-picks-1',
-          },
-          {
-            label: 'Best Hard-Sided Travel Crate',
-            title: 'Petmate Sky Kennel',
-            description:
-              'The better hard-sided choice when your dog needs more structure, more enclosure, or a sturdier alternative to soft folding travel crates.',
-            productId: 'petmate-sky-kennel',
-            position: 'quick-picks-2',
-          },
-          {
-            label: 'Best Soft Folding Crate',
-            title: 'EliteField 3-Door Folding Soft Dog Crate',
-            description:
-              'A strong, soft-sided option for trained dogs, hotel stays, and temporary setup when the three-door layout is useful.',
-            productId: 'elitefield-three-door-soft-crate',
-            position: 'quick-picks-3',
-          },
-          {
-            label: 'Best Lightweight Soft Crate',
-            title: 'Lesure Soft Collapsible Dog Crate',
-            description:
-              'The lightweight convenience pick for calm, trained dogs when easy carry, quick setup, and compact storage matter most.',
-            productId: 'lesure-soft-collapsible-crate',
-            position: 'quick-picks-4',
-          },
-        ],
-      },
       {
         kind: 'prose',
         id: 'hard-sided-vs-soft',
@@ -885,58 +695,16 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       subtitle:
         'Flying with a dog is a different crate decision than road trips or house-training. For flights, prioritize rigid construction, ventilation, hardware, and a kennel size that follows airline rules for your dog and route.',
       disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
-      primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
+      primaryCta: { label: 'See Products', href: '#airline-crates' },
       secondaryCta: { label: 'Crate Training Guide', href: ROUTES.calmingCrateGuide },
     },
     toc: [
-      { label: 'Quick Picks', anchor: 'quick-picks' },
       { label: 'Airline Crates vs Road-Trip Crates', anchor: 'airline-vs-road-trip' },
       { label: 'Airline Crate Picks', anchor: 'airline-crates' },
       { label: 'Which One Should You Buy', anchor: 'which-one' },
       { label: 'FAQ', anchor: 'faq' },
     ],
     blocks: [
-      {
-        kind: 'quick_picks',
-        id: 'quick-picks',
-        heading: 'Quick Picks',
-        intro:
-          'For flying, rigid hard-sided kennels are the default. The right choice depends on your dog’s size, how flight-specific the crate needs to be, and whether you need a smaller rigid carrier or a larger cargo-style kennel.',
-        items: [
-          {
-            label: 'Best Overall Airline-Style Kennel',
-            title: 'Petmate Sky Kennel',
-            description:
-              'The clearest starting point for a rigid, enclosed kennel suitable for airline travel.',
-            productId: 'petmate-sky-kennel',
-            position: 'quick-picks-1',
-          },
-          {
-            label: 'Best Flight-Focused Pick',
-            title: 'SportPet Airline Compliant Travel Kennel',
-            description:
-              'A more flight-specific kennel with removable wheels, bowls, and airline-oriented hardware details.',
-            productId: 'sportpet-airline-compliant-kennel',
-            position: 'quick-picks-2',
-          },
-          {
-            label: 'Best Budget Hard-Sided Carrier',
-            title: 'Amazon Basics Hard-Sided Pet Travel Carrier',
-            description:
-              'A rigid carrier for small pets when you need a simple, hard-sided transport option without paying for a larger cargo-style kennel.',
-            productId: 'amazon-basics-hard-sided-carrier',
-            position: 'quick-picks-3',
-          },
-          {
-            label: 'Best Small-Pet Loading Option',
-            title: 'Petmate Two-Door Kennel',
-            description:
-              'Top and front access can make small-pet loading easier than a standard front-door-only kennel.',
-            productId: 'petmate-two-door-kennel',
-            position: 'quick-picks-4',
-          },
-        ],
-      },
       {
         kind: 'prose',
         id: 'airline-vs-road-trip',
@@ -1083,66 +851,16 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       subtitle:
         'Furniture dog crates are for people who want a crate that matches their home\'s decor and helps to make a room more functional. The right pick depends on dog size, room placement, and whether you want a decorative table-style crate or a sturdier furniture build.',
       disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
-      primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
+      primaryCta: { label: 'See Products', href: '#furniture-crates' },
       secondaryCta: { label: 'Comfort & Rest', href: ROUTES.comfortHub },
     },
     toc: [
-      { label: 'Quick Picks', anchor: 'quick-picks' },
       { label: 'Furniture Crates vs Standard Crates', anchor: 'furniture-vs-standard' },
       { label: 'Furniture Crate Picks', anchor: 'furniture-crates' },
       { label: 'Which One Should You Buy', anchor: 'which-one' },
       { label: 'FAQ', anchor: 'faq' },
     ],
     blocks: [
-      {
-        kind: 'quick_picks',
-        id: 'quick-picks',
-        heading: 'Quick Picks',
-        intro:
-          'Decorative crates solve different problems than puppy crates, anxiety crates, or road-trip crates. Use them when you want a crate that looks like it belongs in your home and fits your design style.',
-        items: [
-          {
-            label: 'Best Simple Furniture Crate',
-            title: 'Amazon Basics Furniture Style Dog Crate',
-            description:
-              'Classic furniture styling that complements most home decor.',
-            productId: 'amazon-basics-furniture-style-crate',
-            position: 'quick-picks-1',
-          },
-          {
-            label: 'Best for Visible Living Spaces',
-            title: 'DWANTON Dog Crate Furniture',
-            description:
-              'A rustic decorative crate-table option when the kennel needs to look intentional in a bedroom or living room.',
-            productId: 'dwanton-dog-crate-furniture',
-            position: 'quick-picks-2',
-          },
-          {
-            label: 'Best for Large Dogs',
-            title: 'IRONCK Extra Large Dog Crate Furniture',
-            description:
-              'A stronger, oversized furniture-crate option for owners who need more space for a bigger dog.',
-            productId: 'ironck-extra-large-dog-crate-furniture',
-            position: 'quick-picks-3',
-          },
-          {
-            label: 'Best Sturdier Furniture Build',
-            title: 'Oranland Heavy Duty Dog Crate Furniture',
-            description:
-              'A better fit when you like the furniture look but want more structure than lightweight decorative crates usually provide.',
-            productId: 'oranland-heavy-duty-furniture-crate',
-            position: 'quick-picks-4',
-          },
-          {
-            label: 'Best Charging Station Feature',
-            title: 'Modern Dog Crate Furniture with Charging Station',
-            description:
-              'The standout pick if you want the crate to function like a real side table or nightstand, not just decorative furniture.',
-            productId: 'charging-station-furniture-crate',
-            position: 'quick-picks-5',
-          },
-        ],
-      },
       {
         kind: 'prose',
         id: 'furniture-vs-standard',
@@ -1287,58 +1005,16 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       subtitle:
         'Not every dog needs a heavy-duty crate. They make sense when a standard crate is not sufficient because the dog bends bars, breaks latches, or risks injury trying to get out.',
       disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
-      primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
+      primaryCta: { label: 'See Products', href: '#heavy-duty-crates' },
       secondaryCta: { label: 'Anxiety Crate Guide', href: ROUTES.comfortAnxietyCrates },
     },
     toc: [
-      { label: 'Quick Picks', anchor: 'quick-picks' },
       { label: 'When to Use a Heavy-Duty Crate', anchor: 'when-heavy-duty-makes-sense' },
       { label: 'Heavy-Duty Crate Picks', anchor: 'heavy-duty-crates' },
       { label: 'Which One Should You Buy', anchor: 'which-one' },
       { label: 'FAQ', anchor: 'faq' },
     ],
     blocks: [
-      {
-        kind: 'quick_picks',
-        id: 'quick-picks',
-        heading: 'Quick Picks',
-        intro:
-          'These picks are for dogs that have already shown you a normal crate is not enough. Choose based on dog size, how enclosed you want the crate to feel, and how serious the escape problem has become.',
-        items: [
-          {
-            label: 'Best Overall Heavy-Duty Pick',
-            title: 'Impact High Anxiety Dog Crate',
-            description:
-              'The clearest premium option for dogs that have already damaged standard crates or put themselves at risk trying to escape.',
-            productId: 'impact-high-anxiety-crate',
-            position: 'quick-picks-1',
-          },
-          {
-            label: 'Best Large-Dog Value',
-            title: 'Oranland Heavy Duty Indestructible Dog Crate',
-            description:
-              'A strong large-dog alternative when you need reinforced containment.',
-            productId: 'oranland-heavy-duty-dog-crate',
-            position: 'quick-picks-2',
-          },
-          {
-            label: 'Best for Smaller Escape Artists',
-            title: 'Gardner Pet Heavy Duty Dog Crate',
-            description:
-              'A useful option when the dog is small but still capable of defeating ordinary small wire crates.',
-            productId: 'gardner-pet-heavy-duty-crate',
-            position: 'quick-picks-3',
-          },
-          {
-            label: 'Best XXL Size Option',
-            title: 'Heavy Duty Dog Crate XXL',
-            description:
-              'A better fit when you need both reinforced structure and true oversized interior room for a very large dog.',
-            productId: 'xxl-heavy-duty-dog-crate',
-            position: 'quick-picks-4',
-          },
-        ],
-      },
       {
         kind: 'prose',
         id: 'when-heavy-duty-makes-sense',
@@ -1458,50 +1134,16 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       subtitle:
         'Older dogs, larger breeds, and heavy daily resters need more than a padded surface. Orthopedic beds use denser foam to distribute body weight more evenly — reducing pressure on joints over the hours dogs spend resting each day. The right bed does that without sliding across the floor or collapsing after a few weeks.',
       disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
-      primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
+      primaryCta: { label: 'See Products', href: '#support-beds' },
       secondaryCta: { label: 'Calming Beds', href: ROUTES.comfortCalmingBeds },
     },
     toc: [
-      { label: 'Quick Picks', anchor: 'quick-picks' },
       { label: 'Orthopedic Support Beds', anchor: 'support-beds' },
       { label: 'Orthopedic Bolster Beds', anchor: 'bolster-beds' },
       { label: 'Which Bed Fits Your Dog', anchor: 'which-bed' },
       { label: 'FAQ', anchor: 'faq' },
     ],
     blocks: [
-      {
-        kind: 'quick_picks',
-        id: 'quick-picks',
-        heading: 'Quick Picks',
-        intro:
-          'Three clear starting points depending on what your dog needs most — full-body bolster support, straightforward flat orthopedic foam, or extra surface area for larger breeds.',
-        items: [
-          {
-            label: 'Best Full-Surround',
-            title: 'CWAWZ Orthopedic Dog Bed with Full-Surround Bolsters',
-            description:
-              'Raised edges on all four sides mean your dog always has something to lean against regardless of how it positions itself. The dual-sided design adds practical longevity.',
-            productId: 'cwawz-orthopedic-bolster',
-            position: 'quick-picks-1',
-          },
-          {
-            label: 'Best Value Flat Bed',
-            title: 'INVENHO Washable Orthopedic Dog Bed',
-            description:
-              'Orthopedic foam base, fully washable, anti-slip bottom. Straightforward construction that covers the basics at a practical price point for dogs who need daily support.',
-            productId: 'invenho-orthopedic-bed',
-            position: 'quick-picks-2',
-          },
-          {
-            label: 'Best for Large Dogs',
-            title: 'ZOMISIA Orthopedic Dog Bed for Large Dogs',
-            description:
-              'Large-format foam that gives bigger dogs room to stretch fully without losing support at the edges — sized for breeds where most standard beds just are not long enough.',
-            productId: 'zomisia-orthopedic-bed',
-            position: 'quick-picks-3',
-          },
-        ],
-      },
       {
         kind: 'product_section',
         id: 'support-beds',
@@ -1607,11 +1249,10 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       subtitle:
         'For in-cabin travel, the right carrier fits under the seat, meets your airline\'s dimension specifications, and keeps your dog comfortable for the duration of the flight, not just at the gate.',
       disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
-      primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
+      primaryCta: { label: 'See Products', href: '#classic-soft-sided' },
       secondaryCta: { label: 'Flying With a Dog Guide', href: ROUTES.travelFlyWithDog },
     },
     toc: [
-      { label: 'Quick Picks', anchor: 'quick-picks' },
       { label: 'How to Choose a Carrier', anchor: 'expandable-vs-standard' },
       { label: 'Classic Soft-Sided Carriers', anchor: 'classic-soft-sided' },
       { label: 'Expandable In-Cabin Carriers', anchor: 'expandable-carriers' },
@@ -1620,50 +1261,6 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       { label: 'FAQ', anchor: 'faq' },
     ],
     blocks: [
-      {
-        kind: 'quick_picks',
-        id: 'quick-picks',
-        heading: 'Quick Picks',
-        intro:
-          'Most in-cabin travelers will do fine with the Sherpa Original. If your dog needs more room mid-flight, any of the expandable options are worth comparing against your specific airline\'s dimension specifications.',
-        items: [
-          {
-            label: 'Best Overall',
-            title: 'Sherpa Original Deluxe',
-            description: 'The most established in-cabin carrier, with a Guaranteed On Board program that replaces it if any airline rejects it at the gate.',
-            productId: 'sherpa-original-deluxe-carrier-medium',
-            position: 'quick-picks-1',
-          },
-          {
-            label: 'Best Expandable',
-            title: "Mr. Peanut's Expandable Carrier",
-            description: 'A side-expanding soft carrier that keeps a small under-seat footprint for boarding, then adds stretch room once your dog is settled.',
-            productId: 'mr-peanuts-expandable-carrier',
-            position: 'quick-picks-2',
-          },
-          {
-            label: 'Best Budget',
-            title: 'Amazon Basics Soft-Sided Airline Carrier',
-            description: 'A carrier with a compact footprint, washable fleece pad, and standard front-plus-top entry layout.',
-            productId: 'amazon-basics-soft-sided-carrier',
-            position: 'quick-picks-3',
-          },
-          {
-            label: 'Best for Delta Flights',
-            title: 'Sherpa Delta Airlines Carrier',
-            description: 'Designed to Delta\'s under-seat dimensions, which differ from most other carriers\' specifications.',
-            productId: 'sherpa-delta-airlines-carrier-medium',
-            position: 'quick-picks-4',
-          },
-          {
-            label: 'Best for Budget Airlines',
-            title: 'pidipiti Frontier & Allegiant Carrier',
-            description: 'A lower-profile, top-expandable carrier for very small dogs.',
-            productId: 'pidipiti-budget-airline-carrier',
-            position: 'quick-picks-5',
-          },
-        ],
-      },
       {
         kind: 'prose',
         id: 'expandable-vs-standard',
@@ -1793,56 +1390,15 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       subtitle:
         'A dedicated bag keeps documents, food and water, leash, collapsible bowl, and waste supplies organized and accessible from check-in to landing, so you\'re not digging through a general bag at the gate.',
       disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
-      primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
+      primaryCta: { label: 'See Products', href: '#all-picks' },
       secondaryCta: { label: 'Flying With a Dog Guide', href: ROUTES.travelFlyWithDog },
     },
     toc: [
-      { label: 'Quick Picks', anchor: 'quick-picks' },
       { label: 'Backpack vs Tote', anchor: 'backpack-vs-tote' },
       { label: 'All Picks', anchor: 'all-picks' },
       { label: 'FAQ', anchor: 'faq' },
     ],
     blocks: [
-      {
-        kind: 'quick_picks',
-        id: 'quick-picks',
-        heading: 'Quick Picks',
-        intro: 'The best option depends on how long you\'re traveling, and whether you prefer a backpack or a tote.',
-        items: [
-          {
-            label: 'Best Overall',
-            title: 'DELOMO Dog Travel Backpack',
-            description:
-              'Six dedicated compartments with labeled sections for food, treats, bowls, leash, and paperwork. Insulated food pocket and luggage strap handle are convenient for airline travel.',
-            productId: 'delomo-dog-travel-backpack',
-            position: '1',
-          },
-          {
-            label: 'Best for a Week Away',
-            title: 'Mobile Dog Gear Week Away Bag',
-            description:
-              'Full-week capacity with included collapsible bowls, treat bag, and waste dispenser in a single organized duffel bag.',
-            productId: 'mobile-dog-gear-week-away',
-            position: '2',
-          },
-          {
-            label: 'Best Budget',
-            title: 'Mancro Dog Travel Bag',
-            description:
-              'One tote that covers the essentials: bowl, leash, treats, waste bags.',
-            productId: 'mancro-dog-travel-bag',
-            position: '3',
-          },
-          {
-            label: 'Best Tote',
-            title: 'Mobile Dog Gear Day Tote',
-            description:
-              'Tote bag with included accessories: collapsible silicone bowl, water bottle, treat bag, and waste bag dispenser. Pre-organized and ready to grab.',
-            productId: 'mobile-dog-gear-day-tote',
-            position: '4',
-          },
-        ],
-      },
       {
         kind: 'prose',
         id: 'backpack-vs-tote',

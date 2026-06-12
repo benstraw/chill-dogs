@@ -35,8 +35,8 @@ export const GET: APIRoute = async () => {
     name: p.name,
     pillar: p.pillar,
     category: p.category,
-    bestFor: p.bestFor,
-    bullets: p.bullets.join(' '),
+    bullets: p.bullets,
+    bulletText: p.bullets.join(' '),
     image: p.image,
     href: `${ROUTES.shop}?q=${encodeURIComponent(p.name)}`,
   }));

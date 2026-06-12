@@ -64,8 +64,8 @@ type SearchIndexItem =
       name: string;
       pillar: string;        // 'cooling' | 'calming' | 'comfort' | 'gear'
       category: string;
-      bestFor: string;
-      bullets: string;       // bullets array joined to a single string for Fuse weight matching
+      bullets: string[];
+      bulletText: string;    // bullets array joined to a single string for Fuse weight matching
       image?: { src: string; alt: string };
       href: string;          // Internal /shop/?q=... route
     };
@@ -83,8 +83,7 @@ new Fuse(items, {
     { name: 'title',       weight: 0.40 },
     { name: 'name',        weight: 0.40 },
     { name: 'description', weight: 0.25 },
-    { name: 'bestFor',     weight: 0.25 },
-    { name: 'bullets',     weight: 0.15 },
+    { name: 'bulletText',  weight: 0.25 },
     { name: 'category',    weight: 0.10 },
     { name: 'topics',      weight: 0.10 },
   ],
@@ -112,7 +111,7 @@ Threshold 0.2 is the working setting: tight enough to avoid noisy product matche
 - **Suggested paths** — static internal links to high-intent cooling, calming, comfort, and GPS tracker pages
 - **Result cards:**
   - Page card — badge (Guide/Collector/Home/Info), title, description, page-type-specific CTA
-  - Product card — small catalog thumbnail, badge (Cooling/Calming/Comfort/Gear), name, bestFor, internal "View in shop →" link
+  - Product card — small catalog thumbnail, badge (Cooling/Calming/Comfort/Gear), name, bullets, internal "View in shop →" link
 - **State handling** — loading, short-query, empty-result, filtered-empty, and index-fetch-error messages
 
 ### Analytics

@@ -17,13 +17,6 @@ export interface TocHeading {
   anchor: string;
 }
 
-export interface QuickPickItem {
-  label: string;
-  title: string;
-  description: string;
-  productId: string;
-  position: string;
-}
 
 export interface ProseBlock {
   kind: 'prose';
@@ -71,22 +64,13 @@ export interface NoteBlock {
   alt?: boolean;
 }
 
-export interface QuickPicksBlock {
-  kind: 'quick_picks';
-  heading: string;
-  intro: string;
-  items: QuickPickItem[];
-  id?: string;
-  alt?: boolean;
-}
 
 export type CalmingBlock =
   | ProseBlock
   | ProductSectionBlock
   | DecisionColumnsBlock
   | UseTableBlock
-  | NoteBlock
-  | QuickPicksBlock;
+  | NoteBlock;
 
 export interface CalmingConverterPageConfig {
   slug: string;
@@ -152,11 +136,10 @@ export const calmingConverterPages: Record<string, CalmingConverterPageConfig> =
       subtitle:
         'If your dog gets shaky during thunderstorms, paces due to fireworks, struggles with separation, or melts down during grooming, the right calming tools can help. Some products work by providing gentle pressure, others through nutritional support.  Some dogs benefit from postive distractions, like licking or sniffing.  ',
       disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
-      primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
+      primaryCta: { label: 'See Products', href: '#anxiety-wraps' },
       secondaryCta: { label: 'ThunderShirt Alternatives', href: ROUTES.calmingAlternatives },
     },
     toc: [
-      { label: 'Quick Picks', anchor: 'quick-picks' },
       { label: 'Anxiety Wraps', anchor: 'anxiety-wraps' },
       { label: 'Calming Treats', anchor: 'calming-treats' },
       { label: 'Lick Mats', anchor: 'lick-mats' },
@@ -166,39 +149,6 @@ export const calmingConverterPages: Record<string, CalmingConverterPageConfig> =
       { label: 'FAQ', anchor: 'faq' },
     ],
     blocks: [
-      {
-        kind: 'quick_picks',
-        id: 'quick-picks',
-        heading: 'Quick Picks Summary',
-        intro:
-          'If you want the short version, start here. These are the strongest first-click options depending on whether you want the most proven wearable, the easiest low-cost distraction tool, or help for loud-event anxiety.',
-        items: [
-          {
-            label: 'Best Overall',
-            title: 'ThunderShirt Classic Dog Anxiety Jacket',
-            description:
-              'ThunderShirt is the clearest starting point for dogs who spiral during storms, fireworks, or travel. It is easy to understand, easy to use before a trigger starts, and often the first calming product dog owners try for event-based anxiety.',
-            productId: 'thundershirt-classic',
-            position: 'quick-picks-1',
-          },
-          {
-            label: 'Best Budget',
-            title: 'LUKITO Premium Silicone Licking Mat',
-            description:
-              'For a lower-cost calming tool, the LUKITO mat gives you immediate use during baths, brushing, and quick stress spikes. The suction cups also make it more practical than a flat mat if you need it to stay put.',
-            productId: 'lukito-licking-mat',
-            position: 'quick-picks-2',
-          },
-          {
-            label: 'Best for Storms & Fireworks',
-            title: 'ThunderShirt Classic Dog Anxiety Jacket',
-            description:
-              'Loud, predictable events are where a wrap makes the most sense because you can put it on before the stress peaks. It is also easier to use in a dark room or safe space than puzzle-style enrichment tools.',
-            productId: 'thundershirt-classic',
-            position: 'quick-picks-3',
-          },
-        ],
-      },
       {
         kind: 'product_section',
         id: 'anxiety-wraps',
@@ -503,11 +453,10 @@ export const calmingConverterPages: Record<string, CalmingConverterPageConfig> =
       subtitle:
         'Lick mats are great enrichment tools. Spread a dog-safe snack, freeze it if you choose to do so, and give your dog something delicious to focus on during grooming, crate time, quiet indoor breaks, or fireworks-night prep.',
       disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
-      primaryCta: { label: 'See Quick Picks', href: '#quick-picks' },
+      primaryCta: { label: 'See Products', href: '#starter-silicone-mats' },
       secondaryCta: { label: 'Fireworks Calm Room Guide', href: ROUTES.calmingFireworksRoom },
     },
     toc: [
-      { label: 'Quick Picks', anchor: 'quick-picks' },
       { label: 'How to Choose', anchor: 'how-to-choose' },
       { label: 'Silicone Mats', anchor: 'starter-silicone-mats' },
       { label: 'Chew-Resistant Mats', anchor: 'chew-resistant-picks' },
@@ -518,79 +467,6 @@ export const calmingConverterPages: Record<string, CalmingConverterPageConfig> =
       { label: 'FAQ', anchor: 'faq' },
     ],
     blocks: [
-      {
-        kind: 'quick_picks',
-        id: 'quick-picks',
-        heading: 'Quick Picks',
-        intro:
-          "A flat silicone mat works well with all types of spreads. Stainless steel is a good choice for heavy chewers. Bowl-style designs are better for frozen treats. Snuffle or slow-feeder options are great for indulging a dog's instinct to forage for food.",
-        items: [
-          {
-            label: 'Best Overall',
-            title: 'Awoo Paradise Silicone Dog Lick Mat',
-            description:
-              'The Awoo Paradise is the best all-purpose pick for spreads and frozen treats. It is great if you want one mat for fireworks night, crate time, quiet indoor enrichment and calm everyday breaks.',
-            productId: 'awoo-paradise-lick-mat',
-            position: 'quick-picks-1',
-          },
-          {
-            label: 'Best for Fireworks Night',
-            title: 'Pawnana Slow Feeder Lick Mat',
-            description:
-              'Pawnana gives you more depth than a flat mat, which makes it perfect for frozen yogurt, pumpkin, wet-food, or a soaked-kibble setup before the noise starts.',
-            productId: 'pawnana-slow-feeder-lick-mat',
-            position: 'quick-picks-2',
-          },
-          {
-            label: 'Best for Chewers',
-            title: 'FEELNEEDY Stainless Steel Lick Mat',
-            description:
-              'If your dog treats a silicone mat like a chew toy, try the FEELNEEDY. The stainless steel surface is a sturdier choice for dogs that bite or fold flexible mats.',
-            productId: 'feelneedy-stainless-lick-mat',
-            position: 'quick-picks-3',
-          },
-          {
-            label: 'Best for Frozen Treats',
-            title: 'Pawnana Slow Feeder Lick Mat',
-            description:
-              'The shape is more contained than a flat tray and helps to keep frozen spreads in the bowl. It is great for crate time, calm-room setup, or a longer indoor enrichment session.',
-            productId: 'pawnana-slow-feeder-lick-mat',
-            position: 'quick-picks-4',
-          },
-          {
-            label: 'Best for Grooming Sessions',
-            title: 'LUKITO Premium Silicone Licking Mat',
-            description:
-              "LUKITO is the practical grooming pick because suction cups help keep the mat in place on smooth tile walls, tubs, or other clean surfaces while you bathe, brush, or trim your dog's nails.",
-            productId: 'lukito-licking-mat',
-            position: 'quick-picks-5',
-          },
-          {
-            label: 'Best for Travel',
-            title: 'BYAZLETQAN Collapsible Portable Lick Mat',
-            description:
-              'The clamshell design is easier to pack than a full-size open tray. It is a great choice for hikes, road trips, airline travel, and prepared enrichment away from home.',
-            productId: 'byazletqan-portable-lick-mat',
-            position: 'quick-picks-6',
-          },
-          {
-            label: 'Best Snuffle Mat',
-            title: 'Rundic Snuffle Mat for Dogs',
-            description:
-              'Some dogs would rather search than lick. Rundic is a good choice when you are using dry treats or kibble and want foraging enrichment instead of a sticky spread.',
-            productId: 'rundic-snuffle-mat',
-            position: 'quick-picks-7',
-          },
-          {
-            label: 'Best Slow-Feeder Bowl',
-            title: 'Evenco Slow Feeder Bowl',
-            description:
-              'If your dog eats too quickly, choose a slow-feeder bowl instead of a lick mat. Evenco is a great choice for pace control and extended distraction.',
-            productId: 'evenco-slow-feeder-bowl',
-            position: 'quick-picks-8',
-          },
-        ],
-      },
       {
         kind: 'prose',
         id: 'how-to-choose',

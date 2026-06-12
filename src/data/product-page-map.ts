@@ -56,11 +56,6 @@ export function buildProductPageMap(): ProductPageMap {
           addRef(map, id, { label, href });
         }
       }
-      if (block.kind === 'quick_picks') {
-        for (const item of block.items) {
-          addRef(map, item.productId, { label, href });
-        }
-      }
     }
   }
 
@@ -72,11 +67,6 @@ export function buildProductPageMap(): ProductPageMap {
         for (const ref of block.productIds) {
           const id = typeof ref === 'string' ? ref : ref.id;
           addRef(map, id, { label, href });
-        }
-      }
-      if (block.kind === 'quick_picks') {
-        for (const item of block.items) {
-          addRef(map, item.productId, { label, href });
         }
       }
     }

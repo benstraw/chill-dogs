@@ -160,7 +160,6 @@ Require careful testing and iteration; cannot be blindly copied from other proje
 | Module | Why high-touch |
 |---|---|
 | `CoolingProductGrid` | Conversion-critical; product selection and ordering directly affects revenue |
-| `ComparisonTable` | Decision-making tool; bad UX kills conversions |
 | `CalmingUseTable` | Category guidance table; must match user intent accurately |
 
 ---

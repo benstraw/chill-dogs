@@ -70,7 +70,7 @@ For each product on a converter page, copy should address:
 3. **Tradeoffs** — What does this product trade off? Portability vs. cooling power? Price vs. durability?
 4. **Buyer context** — Who will get the most value from this? Who should look elsewhere?
 
-**Length: 2–4 sentences per product.** The four topics are a mental checklist — write only what differentiates this product. Do not repeat context that applies to all products on the page; state shared context once in the page intro instead.
+For cooling, calming, and relaxation converters, product copy lives in bullets on the canonical product record. There is no fixed bullet count; write only the bullets that differentiate the product. Do not repeat context that applies to all products on the page; state shared context once in the page intro instead.
 
 Keep descriptions factual and specific. Vague praise ("great quality," "dogs love it") adds no value.
 
