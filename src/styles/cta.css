@@ -92,3 +92,20 @@
   background: rgba(0, 0, 0, 0.06);
   color: var(--color-charcoal);
 }
+
+/* ---- merchant override: chewy stays blue regardless of tone/variant ---- */
+.ui-cta[data-merchant='chewy'] {
+  background: #1c49c2;
+  color: #fff;
+  border-color: #1c49c2;
+}
+
+.ui-cta[data-merchant='chewy']:hover {
+  background: #001a70;
+  color: #fff;
+  border-color: #001a70;
+}
+
+.ui-cta[data-merchant='chewy']:focus-visible {
+  outline-color: #1c49c2;
+}
