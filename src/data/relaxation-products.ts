@@ -9,10 +9,7 @@ export interface RelaxationProduct {
   category: RelaxationProductCategory;
   amazonUrl?: string;
   offers?: AffiliateOffer[];
-  bullets: [string, string, string];
-  bestFor: string;
-  whyItWorks: string;
-  considerIf: string;
+  bullets: string[];
   image?: { src: string; alt: string };
 }
 
@@ -30,9 +27,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Donut shape encourages curling, the position many dogs naturally seek during deep rest',
       'Machine washable cover makes upkeep practical for dogs who use their bed heavily',
     ],
-    bestFor: 'Dogs who like to curl, burrow, or press against something when resting',
-    whyItWorks: 'Raised border and round shape create an enclosed feel that many dogs seek out on their own',
-    considerIf: 'Your dog tends to curl tightly or consistently gravitates toward corners and edges during naps',
     image: { src: 'https://m.media-amazon.com/images/I/71hPsNDImjL._SL500_.jpg', alt: 'BedStill Donut Calming Dog Bed' },
   },
   {
@@ -46,9 +40,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Soft fill provides cushion without pressure-point buildup during long rest sessions',
       'Sized for medium dogs who want enclosed comfort without a full raised donut rim',
     ],
-    bestFor: 'Medium dogs who prefer a cozy, nestled sleeping position',
-    whyItWorks: 'Recessed center and snuggle-focused fill support the natural positions dogs choose for deep rest',
-    considerIf: 'Your dog regularly seeks out confined spaces, tight spots, or curls tightly when napping',
     image: { src: 'https://m.media-amazon.com/images/I/61Wrn3q+2yL._SL500_.jpg', alt: 'ChiXnuggle Dog Bed' },
   },
   {
@@ -62,10 +53,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Kuddler shape has lower sides and a plush center for dogs who sprawl or lay flat',
       'Washable construction keeps upkeep practical despite the premium materials',
     ],
-    bestFor: 'Dogs who sprawl out to sleep and owners who want a visually distinctive bed',
-    whyItWorks: 'Pendleton fleece provides deep softness that encourages dogs to settle and stay put through full naps',
-    considerIf:
-      'You want a bed that looks as good as it functions and your dog favors flat or low-profile resting',
     image: { src: 'https://m.media-amazon.com/images/I/71sayTkHvuL._SL500_.jpg', alt: 'Pendleton Fleece Kuddler Dog Bed' },
   },
   {
@@ -79,9 +66,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Raised bolster edges give dogs a perimeter to lean against during rest',
       'Carolina Pet Company is a US-based manufacturer with a track record of quality construction',
     ],
-    bestFor: 'Dogs who like to rest their head on a raised edge or lean against a bolster',
-    whyItWorks: 'Raised bolster perimeter supports resting heads and creates a defined, comforting sleeping area',
-    considerIf: 'Your dog regularly leans against furniture, walls, or cushions when settling in for a nap',
     image: { src: 'https://m.media-amazon.com/images/I/51zWC7FVLdL._SL500_.jpg', alt: 'Carolina Pet Company Microfiber Tipped Bolster Bed' },
   },
   {
@@ -95,9 +79,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Waterproof lining and washable removable cover make cleanup practical for daily use',
       'Couch-style profile with raised back gives dogs a surface to rest against during sleep',
     ],
-    bestFor: 'Dogs who like a raised back to lean against and need orthopedic joint support',
-    whyItWorks: 'Egg-crate foam provides better pressure distribution than standard foam, reducing buildup at hips and shoulders during long rest',
-    considerIf: 'Your dog actively seeks out furniture or walls to lean against when napping',
     image: { src: 'https://m.media-amazon.com/images/I/610mMpDp39L._SL500_.jpg', alt: 'INVENHO Orthopedic Dog Couch Bed' },
   },
   {
@@ -111,9 +92,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'ComfyFleece corduroy cover adds texture and warmth without trapping excess heat',
       'Non-slip bottom keeps the bed stable on hardwood and tile floors',
     ],
-    bestFor: 'Dogs who want both memory foam support and the enclosed feel of raised sides',
-    whyItWorks: 'Memory foam conforms to the dog\'s shape while raised sides provide the perimeter security many dogs naturally seek',
-    considerIf: 'You want a bed that looks like furniture and your dog benefits from both joint support and a contained sleeping area',
     image: { src: 'https://m.media-amazon.com/images/I/81-9n7k4bTL._SL500_.jpg', alt: 'Bedsure ComfyFleece Orthopedic Dog Bed with Sides' },
   },
 
@@ -130,10 +108,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Anti-slip bottom keeps the bed from shifting on hardwood, tile, or vinyl floors',
       'Fully washable construction — cover and foam — for dogs who spend a lot of time in their bed',
     ],
-    bestFor: 'Active dogs, larger breeds, or dogs who rest heavily and need consistent joint support',
-    whyItWorks:
-      'Dense orthopedic foam distributes body weight more evenly than poly fill, reducing pressure buildup during long sleep sessions',
-    considerIf: 'Your dog rests heavily, is over 40 lbs, or you want a bed that stays in one place on smooth floors',
     image: { src: 'https://m.media-amazon.com/images/I/71UWPGl3COL._SL500_.jpg', alt: 'INVENHO Washable Orthopedic Dog Bed' },
   },
   {
@@ -147,9 +121,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Attached design means the bolster and base stay together — no separating components',
       'Anti-slip backing keeps the bed stable on smooth floors during rest',
     ],
-    bestFor: 'Dogs who need both joint support and the enclosed feel of a bolster-surround design',
-    whyItWorks: 'Combines dense foam support with a contained perimeter that many dogs actively seek out during rest',
-    considerIf: 'Your dog wants both body support and the security of a surrounded sleeping area',
     image: { src: 'https://m.media-amazon.com/images/I/81n7foznoHL._SL500_.jpg', alt: 'Anti-Anxiety Orthopedic Dog Bed with Bolster' },
   },
   {
@@ -163,11 +134,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Foam base provides the joint support larger breeds typically need for comfortable, sustained rest',
       'Simple, clean design works well in open spaces or alongside furniture',
     ],
-    bestFor: 'Large or extra-large dogs who need full-length orthopedic support during rest and sleep',
-    whyItWorks:
-      'Oversized foam gives bigger dogs enough room to fully stretch without losing support at the edges',
-    considerIf:
-      'You have a large breed dog that currently sleeps on the floor or regularly falls off smaller beds',
     image: { src: 'https://m.media-amazon.com/images/I/71bAiTc5GCL._SL500_.jpg', alt: 'ZOMISIA Orthopedic Dog Bed for Large Dogs' },
   },
   {
@@ -181,11 +147,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Dual-sided construction gives you two surface options as materials wear differently over time',
       'Orthopedic foam base supports the body while the bolster perimeter supports resting heads and necks',
     ],
-    bestFor: 'Dogs who like to rest their head on the bed edge or want to feel fully enclosed during sleep',
-    whyItWorks:
-      'Full perimeter bolsters combined with orthopedic base support both body and head from every angle',
-    considerIf:
-      'Your dog constantly repositions to lean against a bed edge — full-surround means there is always one in reach',
     image: { src: 'https://m.media-amazon.com/images/I/71wdK2f8JkL._SL500_.jpg', alt: 'CWAWZ Orthopedic Dog Bed with Full-Surround Bolsters' },
   },
   {
@@ -199,11 +160,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Bolster profile is lower than a full donut, making it accessible for dogs who prefer a gentle edge',
       'Quality construction from a US-based pet bed manufacturer with consistent sizing',
     ],
-    bestFor: 'Mid-to-large dogs who want bolster support without a full raised donut rim',
-    whyItWorks:
-      'Microfiber construction holds loft longer than standard poly, so the bed stays comfortable through regular use',
-    considerIf:
-      'Your dog prefers a medium-depth sleeping bowl over a flat mat or a fully raised donut bed',
     image: { src: 'https://m.media-amazon.com/images/I/51pzu55J+1L._SL500_.jpg', alt: 'Carolina Pet Company Microfiber Tipped Bolster Bed Large' },
   },
 
@@ -220,11 +176,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Waterproof, anti-slip base stays put on hotel floors, tent floors, and hard surfaces',
       'Cushioned plush interior gives dogs a consistent, familiar sleep surface at every stop',
     ],
-    bestFor: 'Dogs who travel frequently and need a packable but genuinely comfortable off-road sleep surface',
-    whyItWorks:
-      'A consistent sleep surface at every stop reduces novelty stress — dogs settle faster when their bed smells and feels the same whether it\'s night 1 or night 10',
-    considerIf:
-      'You want a travel bed that takes up almost no space but still gives your dog a proper sleep surface instead of a folded blanket',
     image: { src: 'https://m.media-amazon.com/images/I/71riy3hJGtL._SL500_.jpg', alt: 'OneTigris Travel Dog Bed' },
   },
 
@@ -241,11 +192,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Includes a washable padded bed for a more finished puppy rest setup',
       'Medium size is listed for small-to-medium pets between 15 and 25 pounds',
     ],
-    bestFor: 'Puppy owners who want a cleaner-looking, portable indoor crate instead of a standard wire crate',
-    whyItWorks:
-      'The collapsible hard-panel format gives puppies a defined resting space while feeling more like home furniture than a basic wire crate',
-    considerIf:
-      'You want the featured puppy-crate pick and your puppy fits the listed medium size range',
     image: { src: 'https://m.media-amazon.com/images/I/71+6X5mSFIL.jpg', alt: 'KindTail PAWD Collapsible Dog Crate' },
   },
   {
@@ -259,11 +205,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Includes a divider panel so the usable crate space can grow with a small puppy',
       'Folding wire design is easy to move, store, or reposition around the house',
     ],
-    bestFor: 'Tiny-breed puppies who need a small, straightforward first wire crate with a divider',
-    whyItWorks:
-      'The smaller puppy-specific size keeps the crate from starting too large while preserving the divider-based housebreaking setup',
-    considerIf:
-      'You want the simpler, lighter Midwest option for a tiny puppy and do not need the heavier-gauge Life Stages build',
     image: { src: 'https://m.media-amazon.com/images/I/81Cpkz5lEPL.jpg', alt: 'MidWest iCrate 18-Inch Dog Crate' },
   },
   {
@@ -277,11 +218,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Includes a divider panel for puppy-to-adult crate setup in a smaller footprint',
       'Heavier-gauge steel than the iCrate line for a sturdier wire-crate feel',
     ],
-    bestFor: 'Extra-small puppies when you want the sturdier Midwest wire crate in a puppy-sized model',
-    whyItWorks:
-      'It keeps the same divider-based training logic as iCrate but uses a heavier build for extra durability',
-    considerIf:
-      'You do not mind extra weight and want the sturdier Midwest option for a small puppy',
     image: { src: 'https://m.media-amazon.com/images/I/91Xxqc6WtBL.jpg', alt: 'MidWest Life Stages 22-Inch Dog Crate' },
   },
   {
@@ -295,11 +231,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Blue finish gives it a different look from the all-black wire crates that dominate this category',
       'Front and side doors keep placement flexible in bedrooms, offices, or living spaces',
     ],
-    bestFor: 'Owners who want a small puppy wire crate with a bit more personality than the standard black look',
-    whyItWorks:
-      'It covers the same basic wire-crate training job while giving color-conscious buyers a real alternative to the usual black crate format',
-    considerIf:
-      'You want a functional puppy wire crate but care about color and room fit instead of settling for another plain black crate',
     image: { src: 'https://m.media-amazon.com/images/I/81MsY7MTquL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: "Internet's Best Double Door Wire Dog Kennel Blue" },
   },
   {
@@ -313,11 +244,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Folding wire design is easy to move, store, or reposition around the house',
       'A practical, budget-friendly starting point for standard puppy crate training',
     ],
-    bestFor: 'Most puppies who need a straightforward first wire crate with a divider',
-    whyItWorks:
-      'The divider lets you size the sleeping area smaller during housebreaking, then open up more room as the puppy grows',
-    considerIf:
-      'You want the simpler, lighter Midwest option and do not need the heavier-gauge Life Stages build',
     image: { src: 'https://m.media-amazon.com/images/I/916OE0sVPqL.jpg', alt: 'MidWest iCrate Dog Crate' },
   },
   {
@@ -331,11 +257,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Heavier-gauge steel than the iCrate line for a sturdier wire-crate feel',
       'A stronger choice for an especially active puppy',
     ],
-    bestFor: 'Owners who want a sturdier wire crate for a strong or active puppy',
-    whyItWorks:
-      'It keeps the same divider-based training logic as iCrate but uses a heavier build for extra durability',
-    considerIf:
-      'You do not mind a heavier crate that feels more solid',
     image: { src: 'https://m.media-amazon.com/images/I/91NBxSDchXL.jpg', alt: 'MidWest Life Stages Dog Crate' },
   },
   {
@@ -349,11 +270,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Wire construction keeps airflow and visibility high during early crate introduction',
       'Useful alternative if the room layout makes a single front door awkward',
     ],
-    bestFor: 'Puppy owners who want flexible door access for different room setups',
-    whyItWorks:
-      'A second access point can make daily crate routines easier when the crate sits beside furniture or against a wall',
-    considerIf:
-      'You want a wire training crate but need side-door access more than the sturdier Life Stages build',
     image: { src: 'https://m.media-amazon.com/images/I/81abUgMp5uL.jpg', alt: 'Petmate Training Retreat Kennel' },
   },
   {
@@ -367,11 +283,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Zinc steel paddle latch plus four butterfly latches add multiple security points',
       'Small circular ventilation holes are designed to limit tooth access while preserving airflow',
     ],
-    bestFor: 'Escape artists who have already bent wire crates or injured themselves trying to get out',
-    whyItWorks:
-      'The heavier enclosure, reinforced latching, and smaller ventilation openings are aimed at containment when standard crates are not enough',
-    considerIf:
-      'Your dog has a proven escape history and you are using the crate as part of a broader safety and behavior plan',
     image: { src: 'https://m.media-amazon.com/images/I/71PqD1QxTFL.jpg', alt: 'Impact High Anxiety Dog Crate' },
   },
   {
@@ -385,11 +296,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       '360-degree ventilation and tie-down holes support travel use',
       'Includes travel-prep accessories such as live-animal stickers, cup, ID stickers, and absorbent pad',
     ],
-    bestFor: 'Anxious dogs who settle better with a more enclosed den-like crate',
-    whyItWorks:
-      'The plastic shell creates a quieter, more contained environment while still allowing ventilation from all sides',
-    considerIf:
-      'Your dog is crate-trained but gets overstimulated by open wire visibility or needs a travel-ready kennel',
     image: { src: 'https://m.media-amazon.com/images/I/71HTfabbQ3L.jpg', alt: 'Petmate Sky Kennel' },
   },
   {
@@ -403,11 +309,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Collapsible soft-sided format folds flat for storage between road trips',
       'Mesh windows, dual side doors, storage pockets, and waterproof fleece pad for long-drive convenience',
     ],
-    bestFor: 'Road trips where you want a travel-specific crate that is easier to pack than a standard indoor crate',
-    whyItWorks:
-      'It is built around for car use rather than house-training, making it great for road trips',
-    considerIf:
-      'Your dog is calm enough for a soft travel crate and you want a crate that packs down between drives',
     image: { src: 'https://m.media-amazon.com/images/I/81LvTZeUnwL.jpg', alt: 'PetSafe Happy Ride Collapsible Travel Crate' },
   },
   {
@@ -421,11 +322,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Folds down to a low profile and includes a carrying bag and fleece bed',
       'Steel-tube frame with fabric and mesh cover is convenient for trained dogs who settle calmly',
     ],
-    bestFor: 'Crate-trained dogs who travel well',
-    whyItWorks:
-      'The three-door layout makes placement more flexible when a crate is moving between the car, hotel room, and campsite',
-    considerIf:
-      'Your dog is already calm in a crate and you want a soft folding crate with more door options than most',
     image: { src: 'https://m.media-amazon.com/images/I/81eoHEQHU3L.jpg', alt: 'EliteField 3-Door Folding Soft Dog Crate' },
   },
   {
@@ -439,11 +335,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Quick setup and disassembly make it practical for travel stops and temporary rooms',
       'Four-sided breathable mesh and removable mat keep the setup light and easy to maintain',
     ],
-    bestFor: 'Calm, trained dogs whose owners prioritize the lightest, most portable soft crate setup',
-    whyItWorks:
-      'The compact folding design favors convenience and fast setup over hard-sided structure',
-    considerIf:
-      'You want easy carry-and-store travel convenience and your dog will not chew, claw, or push at soft crate walls',
     image: { src: 'https://m.media-amazon.com/images/I/8111DM2a0KL.jpg', alt: 'Lesure Soft Collapsible Dog Crate' },
   },
   {
@@ -457,11 +348,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'No-tool folding format and wheels are built around easier carry and storage',
       'Works as a middle-ground option when you want more structure than fabric without a full fixed kennel',
     ],
-    bestFor: 'Road-trip buyers who want a more structured collapsible crate without jumping to a full fixed hard-sided kennel',
-    whyItWorks:
-      'It sits between soft folding crates and fully rigid kennels, which makes it useful for buyers who want both structure and portability',
-    considerIf:
-      'You like the convenience of a collapsible crate but want a more substantial look and shell than a mesh-heavy soft crate',
     image: { src: 'https://m.media-amazon.com/images/I/712Iv0QSn0L._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Collapsible Hard-Sided Travel Crate' },
   },
   {
@@ -475,11 +361,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Wheels and no-tool setup make it easier to move and store between trips',
       'Beige finish and enclosed frame feel different from both basic wire crates and soft travel crates',
     ],
-    bestFor: 'Owners who want a collapsible road-trip crate with a more enclosed, furniture-like look than a standard soft crate',
-    whyItWorks:
-      'It gives you portability and fold-flat storage while still feeling more substantial than the typical soft-sided travel crate',
-    considerIf:
-      'You want a travel crate with a different visual style and more structure than soft mesh options usually provide',
     image: { src: 'https://m.media-amazon.com/images/I/81YdRCpJqKL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'ZOMISIA Collapsible Steel Dog Crate' },
   },
   {
@@ -493,11 +374,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Removable wheels and food bowls help with airport handling and flight prep',
       'Reinforced hardware, tie-down points, and full ventilation support cargo-style requirements',
     ],
-    bestFor: 'Flight prep when you want a kennel designed around airline-style travel requirements',
-    whyItWorks:
-      'It combines a rigid shell, flight-oriented hardware, and airport-friendly transport details in one kennel',
-    considerIf:
-      'You need a crate for flying with your dog and want a more travel-specific setup than a standard home kennel',
     image: { src: 'https://m.media-amazon.com/images/I/71SqUKBgQWL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'SportPet Airline Compliant Travel Kennel' },
   },
   {
@@ -511,11 +387,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Secure ventilation and carry handle make it practical for short travel and transport',
       'Straightforward budget-friendly option when you need a rigid small-pet carrier',
     ],
-    bestFor: 'Smaller pets who need a basic rigid carrier',
-    whyItWorks:
-      'The rigid shell gives you more structure than a soft carrier while keeping the format simple and portable',
-    considerIf:
-      'You need a smaller hard-sided carrier for transport and your pet fits the listed size range comfortably',
     image: { src: 'https://m.media-amazon.com/images/I/71KLUcxRWML._AC_SX300_SY300_QL70_FMwebp_.jpg', alt: 'Amazon Basics Hard-Sided Pet Travel Carrier' },
   },
   {
@@ -529,11 +400,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Den-like shell works for small dogs or cats that do better in a more enclosed carrier',
       'Simple rigid travel option that is easier to carry than a larger cargo kennel',
     ],
-    bestFor: 'Small pets that need a rigid kennel with easier top-and-front loading',
-    whyItWorks:
-      'The extra access point can reduce loading friction when a pet resists a standard front-entry carrier',
-    considerIf:
-      'You want a smaller enclosed kennel and top access matters more than a full airline-focused feature set',
     image: { src: 'https://m.media-amazon.com/images/I/71AC0Sv6arL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Petmate Two-Door Kennel' },
   },
   {
@@ -547,11 +413,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Includes two bowls for an all-in-one home setup',
       'A practical decorative option when you want the crate to fit a visible room',
     ],
-    bestFor: 'Owners who want a simple furniture-style crate in a classic design',
-    whyItWorks:
-      'It gives you the visual upgrade of crate furniture without jumping straight to the most expensive decorative options',
-    considerIf:
-      'You want a cleaner indoor look and the crate will live in a visible shared space',
     image: { src: 'https://m.media-amazon.com/images/I/71WXadC2-EL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Amazon Basics Furniture Style Dog Crate' },
   },
   {
@@ -565,11 +426,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Double-door layout gives more flexibility for room placement',
       'Comes with a cushion for a more finished indoor setup',
     ],
-    bestFor: 'Homes where the crate needs to blend in with the other furniture in the room',
-    whyItWorks:
-      'The end-table form helps the crate blend into bedrooms and living rooms more naturally than all-wire setups',
-    considerIf:
-      'You care as much about how the crate looks in the room as how it functions for daily use',
     image: { src: 'https://m.media-amazon.com/images/I/81Q3DMv-W7L._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'DWANTON Dog Crate Furniture' },
   },
   {
@@ -583,11 +439,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Rustic wood finish works for visible placement in common rooms',
       'Designed as a pet house plus end table instead of a standard kennel look',
     ],
-    bestFor: 'Medium or large dogs whose crate needs to fit into home decor more gracefully',
-    whyItWorks:
-      'It gives larger dogs a furniture-style option instead of forcing owners into a purely utilitarian wire crate',
-    considerIf:
-      'You want a larger decorative crate and do not need heavy-duty escape-proof containment',
     image: { src: 'https://m.media-amazon.com/images/I/71JHGz9ucFL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'rehomerance Dog Crate Furniture' },
   },
   {
@@ -601,11 +452,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Includes a pet bed for a more complete indoor furniture setup',
       'Double-door layout gives easier access than many decorative crates',
     ],
-    bestFor: 'Small dogs when you want decorative crate furniture with a finished bedside-table look',
-    whyItWorks:
-      'It is built around small-space indoor use where the crate has to function visually as furniture',
-    considerIf:
-      'Your dog is small and the crate will sit in a bedroom, office, or living room rather than a utility area',
     image: { src: 'https://m.media-amazon.com/images/I/71U1gwRTARL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: "Internet's Best Decorative Dog Kennel" },
   },
   {
@@ -619,11 +465,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Built for small dogs and can be combined with additional units',
       'End-table styling helps it read as furniture in tight indoor spaces',
     ],
-    bestFor: 'Small-dog owners who want more access points in a decorative indoor crate',
-    whyItWorks:
-      'The extra door flexibility helps when a furniture crate has to fit around real room constraints',
-    considerIf:
-      'You want a furniture crate for a small dog and value side access or modular layout options',
     image: { src: 'https://m.media-amazon.com/images/I/71d-pddTVAL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Lyromix Dog Crate Furniture' },
   },
   {
@@ -637,11 +478,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Decorative wood looks more like furniture than a basic wire crate',
       'Adjustable bowls are convenient for dog feeding',
     ],
-    bestFor: 'Owners who want furniture-crate styling without a long assembly process',
-    whyItWorks:
-      'The foldable format is easier to assemble than standard crate furniture',
-    considerIf:
-      'You want the furniture look but still care about being able to move, store, or set up the crate quickly',
     image: { src: 'https://m.media-amazon.com/images/I/81s6bZdJqIL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Easycom Foldable Dog Crate Furniture' },
   },
   {
@@ -655,11 +491,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Folding format makes it more flexible than fixed decorative crate furniture',
       'Wood-and-metal build gives it a more substantial feel than lightweight decorative options',
     ],
-    bestFor: 'Owners who like furniture-crate styling but want integrated feeding convenience and foldable setup',
-    whyItWorks:
-      'The rotating bowls and foldable format are more functional than standard decorative crates',
-    considerIf:
-      'You want furniture styling plus practical home-use features',
     image: { src: 'https://m.media-amazon.com/images/I/71-oYVgYdTL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Folding Furniture Crate with Rotating Bowls' },
   },
   {
@@ -673,11 +504,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Reinforced metal construction is sturdier than lightweight decorative crates',
       'Suitable for large dogs',
     ],
-    bestFor: 'Large dogs when you want furniture styling',
-    whyItWorks:
-      'It keeps the visual upgrade of crate furniture while offering more space and stronger structure for larger breeds',
-    considerIf:
-      'You need a larger indoor crate with room-friendly furniture styling',
     image: { src: 'https://m.media-amazon.com/images/I/91-pfSgJ5dL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'IRONCK Extra Large Dog Crate Furniture' },
   },
   {
@@ -691,11 +517,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Lockable enclosure supports indoor or sheltered outdoor placement',
       'Plastic-heavy decorative build gives it a different feel than wood furniture crates',
     ],
-    bestFor: 'Small-dog owners who want a compact decorative kennel that can be used as a side table',
-    whyItWorks:
-      'It blends containment with a lighter decorative form for compact spaces',
-    considerIf:
-      'You want a smaller furniture-style crate and do not need a heavier wood-and-steel build',
     image: { src: 'https://m.media-amazon.com/images/I/71eX3avmroL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Bifanuo Dog Crate Furniture' },
   },
   {
@@ -709,11 +530,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Modern furniture styling is designed to function as both kennel and side table',
       'Flip-up hidden acrylic door gives it a more polished furniture look than many decorative crates',
     ],
-    bestFor: 'Owners who want a furniture crate that doubles as a real usable side table with charging access',
-    whyItWorks:
-      'The charging station turns it into genuinely useful room furniture instead of just a crate',
-    considerIf:
-      'You want the crate in a bedroom or living room and want charging capabilities',
     image: { src: 'https://m.media-amazon.com/images/I/71iS8C25R0L._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Modern Dog Crate Furniture with Charging Station' },
   },
   {
@@ -727,11 +543,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Designed for medium and large dogs that need a more substantial indoor setup',
       'Blends crate furniture aesthetics with a heavier-duty frame',
     ],
-    bestFor: 'Owners who want furniture styling but need a sturdier crate than most decorative options',
-    whyItWorks:
-      'It sits between standard crate furniture and true heavy-duty crates, providing more structure while still looking decorative',
-    considerIf:
-      'Your dog needs a stronger kennel than a lightweight furniture crate, but you still want the crate to complement home decor',
     image: { src: 'https://m.media-amazon.com/images/I/81VFBYh3TmL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Oranland Heavy Duty Dog Crate Furniture' },
   },
   {
@@ -745,11 +556,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Built-in charging station makes it a practical nightstand or side table for small-dog owners',
       'Steel-tube and wood construction in a rustic brown finish complements home decor',
     ],
-    bestFor: 'Small-dog owners who want a furniture crate that functions as a side table',
-    whyItWorks:
-      'The flip-top drawer and charging station make it genuinely useful as furniture, not just as a kennel, especially in a bedroom or living room',
-    considerIf:
-      'Your dog is small, the crate will sit in a visible room, and you want the surface to actually be usable as a nightstand or side table',
     image: { src: 'https://m.media-amazon.com/images/I/81RbcLjaKsL._SL500_.jpg', alt: 'IRONCK Furniture Dog Crate with Flip-Top Drawer' },
   },
   {
@@ -763,11 +569,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Built-in charging station makes the top surface usable as a side table with power access',
       'Sized for small and medium dogs up to 45 lb with a side-table footprint that fits most rooms',
     ],
-    bestFor: 'Owners who want a modern, polished furniture crate rather than a rustic wood look — and will actually use the charging station',
-    whyItWorks:
-      'The walnut finish and hidden acrylic door make it look more like intentional furniture than a crate in disguise, which matters for visible bedroom or living-room placement',
-    considerIf:
-      'Your dog is under 45 lb, your home leans toward modern or Scandinavian styling, and the charging station would genuinely get daily use',
     image: { src: 'https://m.media-amazon.com/images/I/816kOPz+6rL._SL500_.jpg', alt: 'Feandrea Modern Furniture Dog Crate with Charging Station' },
   },
   {
@@ -781,11 +582,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Available in 32", 39", and 44" to give medium dogs more sizing options within the furniture-crate format',
       '360-degree rotating feed rack and two-door layout allow practical access in different room setups',
     ],
-    bestFor: 'Owners who want furniture styling with more closure security than lightweight decorative crates typically provide',
-    whyItWorks:
-      'The multi-lock barn door makes it a more credible option for dogs who have pushed past simpler latch mechanisms, without requiring a full switch to a utility-style heavy-duty crate',
-    considerIf:
-      'You like the furniture look but your dog has tested the latches on lighter crates, and you still want something that fits a visible room',
     image: { src: 'https://m.media-amazon.com/images/I/81NGP7WR7dL._SL500_.jpg', alt: 'SAKSUN Furniture Dog Crate with Sliding Barn Door' },
   },
   {
@@ -799,11 +595,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Sliding barn door with a multi-lock closure addresses the single-latch failure mode common in lighter decorative furniture crates',
       'Chipboard panels with wear-resistant surface and steel-tube framing support up to 220 lbs on top, giving it real table-surface utility',
     ],
-    bestFor: 'Small to medium dogs up to 44 lbs that have pushed past basic single-latch mechanisms.  The anti-chew edge treatment and double-welded steel address persistent but not extreme escape behavior',
-    whyItWorks:
-      'The recessed board edges remove the easiest chewing targets, and the multi-lock barn door addresses the sliding or pawing-open failure modes in standard decorative crate latches',
-    considerIf:
-      'Your small or medium dog works at latch edges or chews at crate openings, and you want a furniture-style option instead of a heavier utility crate',
     image: { src: 'https://m.media-amazon.com/images/I/810zxDD9MdL._SL500_.jpg', alt: 'Hzuaneri Anti-Chew Furniture Dog Crate with Barn Door' },
   },
   {
@@ -817,11 +608,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'High-quality steel and reinforced particleboard build with an upgraded double-door lock system designed to contain dogs that push standard latches',
       'Removable metal floor panel cleans more easily than wire floors and provides stable paw support for dogs that pace or shift weight while inside',
     ],
-    bestFor: 'Medium to large dogs that target the bars themselves. The enclosed panel approach removes the primary gripping and chewing surface that persistent escape artists find on open-bar furniture crates',
-    whyItWorks:
-      'Switching from bar-grid to enclosed panel removes the most accessible chewing and gripping surfaces, which is what many persistent dogs find first on standard furniture crates',
-    considerIf:
-      'Your dog targets the bars or mesh rather than the door latch.  An enclosed panel means there is nothing for the dog to physically grab onto, rather than just adding more locks to the same vulnerable structure',
     image: { src: 'https://m.media-amazon.com/images/I/71Hbp8TTNUL._SL500_.jpg', alt: 'REXWELTEN Heavy-Duty Enclosed Furniture Dog Crate' },
   },
   {
@@ -835,11 +621,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Sized at 46.5 inches for large-breed dogs.  Can function as a TV stand or end table with a stable wood base',
       'Sliding front door eliminates the outward swing of a hinged door.  Useful for placement in the corner of a room',
     ],
-    bestFor: 'Large dog owners who want strong steel bars, three access options, and a sliding front door',
-    whyItWorks:
-      'The sliding door mechanism has less swing-out gap and less torque leverage than a hinged door, which reduces the chance of a dog escaping by repeatedly nosing or pawing a swinging door open',
-    considerIf:
-      'You need a crate in a corner or against a wall.  You want a large-dog furniture crate with stronger steel bars rather than lightweight decorative framing.  You want a crate that looks and functions as furniture',
     image: { src: 'https://m.media-amazon.com/images/I/71RxdhVH0zL._SL500_.jpg', alt: 'Petrova Heavy-Duty Furniture Dog Crate with Sliding Door' },
   },
   {
@@ -853,11 +634,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Engineered-wood build with iron reinforcement supports over 400 lbs on top, suitable for use as a TV stand or console table',
       'Can be arranged in an L-shape corner configuration, side-by-side, or split into two separate crates depending on room layout',
     ],
-    bestFor: 'Two-dog households that want a single furniture-style piece that keeps both dogs in their own crated space',
-    whyItWorks:
-      'The removable divider gives each dog their own separate section, while the single footprint keeps the room organized',
-    considerIf:
-      'You have two dogs that do fine in separate spaces and want to avoid two individual crates sitting side by side in the same room',
     image: { src: 'https://m.media-amazon.com/images/I/81y29uEOExL._SL500_.jpg', alt: 'Rovibek Double Dog Crate Furniture' },
   },
   {
@@ -871,11 +647,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Four lockable caster wheels let you roll the crate between rooms for cleaning, repositioning, or following sunlight',
       'Includes a removable blackout curtain that attaches or removes easily for privacy during naps or busy household moments',
     ],
-    bestFor: 'Large-dog owners who want a furniture crate they can reposition across the house and close off for naptime privacy',
-    whyItWorks:
-      'Wheel mobility and the blackout curtain are two practical features that most decorative wood-panel crates skip entirely',
-    considerIf:
-      'Your large dog settles better without visual stimulation and you want a crate-table that can easily move from room to room without heavy lifting',
     image: { src: 'https://m.media-amazon.com/images/I/81eV2cWZNWL._SL500_.jpg', alt: 'HugCoz Double-Door Dog Crate Furniture' },
   },
   {
@@ -889,11 +660,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Front and side double-door layout provides convenient access',
       'Compact end-table footprint keeps the scale realistic for smaller living rooms or bedrooms where a large crate-table would feel oversized',
     ],
-    bestFor: 'Small or medium dog owners who want an end-table furniture crate with open wire visibility rather than a fully enclosed wood panel design',
-    whyItWorks:
-      'The wire end-table is less expensive than a solid-panel wood furniture crate while still looking more intentional than a standard wire crate in a visible room',
-    considerIf:
-      'Your dog is small enough for an end-table crate and does better with the open-air feel of wire over the more enclosed environment of a solid-panel wood kennel',
     image: { src: 'https://m.media-amazon.com/images/I/61O8jnv+AOL._SL500_.jpg', alt: 'PawHut Double-Door Wire Furniture Dog Crate' },
   },
   {
@@ -907,11 +673,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Double-door layout and wheels make for easier management',
       'A stronger containment option than ordinary wire or decorative crates',
     ],
-    bestFor: 'Large dogs that need reinforced containment beyond a standard wire crate',
-    whyItWorks:
-      'The heavier frame and reinforced base are built for dogs that push, paw, or damage lighter crates',
-    considerIf:
-      'You already know a normal crate is not sufficient and your dog needs more serious containment',
     image: { src: 'https://m.media-amazon.com/images/I/81aSK08xZWL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Oranland Heavy Duty Indestructible Dog Crate' },
   },
   {
@@ -925,11 +686,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Double-door access, sturdy locks, and sliding tray',
       'Large sizing suits bigger or stronger dogs',
     ],
-    bestFor: 'Larger dogs that need more security points and more structure than a basic crate offers',
-    whyItWorks:
-      'It combines a heavier frame with stronger latching for dogs that test ordinary crate walls and doors',
-    considerIf:
-      'Your dog has started pushing beyond what a wire crate can realistically contain',
     image: { src: 'https://m.media-amazon.com/images/I/71BPouKuP9L._AC_SX300_SY300_QL70_FMwebp_.jpg', alt: 'KOKOTANGS Heavy Duty Dog Crate' },
   },
   {
@@ -943,11 +699,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Triple-door access and removable tray',
       'Built for small dogs with escape or chewing issues rather than general puppy training',
     ],
-    bestFor: 'Small dogs that still need reinforced containment instead of a basic wire crate',
-    whyItWorks:
-      'It fills the gap between tiny starter crates and the much larger heavy-duty models built for big dogs',
-    considerIf:
-      'Your dog is small but determined enough that ordinary small wire crates are not a good long-term fit',
     image: { src: 'https://m.media-amazon.com/images/I/71mgtvn3eqL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Gardner Pet Heavy Duty Dog Crate' },
   },
   {
@@ -961,11 +712,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Escape-resistant framing, tray, and wheels target large-breed management',
       'Useful when standard XXL wire crates still feel too flimsy',
     ],
-    bestFor: 'Very large dogs that need both oversized space and reinforced containment',
-    whyItWorks:
-      'It addresses the needs of extra-large dogs who outgrow the size and strength of standard crates',
-    considerIf:
-      'You need true XXL sizing and a stronger build',
     image: { src: 'https://m.media-amazon.com/images/I/81JfbDGBGSL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Heavy Duty Dog Crate XXL' },
   },
   {
@@ -979,11 +725,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Removable tray and mobile base make cleanup and repositioning easier',
       'Bridges the gap between a standard wire crate and a fully enclosed heavy-duty kennel',
     ],
-    bestFor: 'Owners who want stronger large-crate hardware without moving to a fully enclosed aluminum-style crate',
-    whyItWorks:
-      'It adds more security and sturdier handling details than a basic large wire crate while staying more familiar in form',
-    considerIf:
-      'Your dog needs a step up from a standard large wire crate but not necessarily the most enclosed heavy-duty option',
     image: { src: 'https://m.media-amazon.com/images/I/81trYMp3QqL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'HIWOKK Large Dog Crate' },
   },
 
@@ -998,11 +739,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Machine washable cover and waterproof base make cleanup after muddy adventures easy',
       'Stylish patterns look better in a living room than standard wire or plastic crates',
     ],
-    bestFor: 'Dogs who need a portable rest space for travel, crate training, or a dedicated nap spot at home',
-    whyItWorks:
-      'A dedicated enclosed space gives dogs the den-like environment that helps many dogs wind down between activities',
-    considerIf:
-      'You want a crate that works at home and on the road without the bulk of traditional wire or plastic options',
     image: { src: 'https://m.media-amazon.com/images/I/61jTpS6FsTL._SL500_.jpg', alt: 'KindTail Collapsible Dog Crate' },
   },
 
@@ -1019,9 +755,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Spring wire frame lets the rear end of the bag compress to fit under the seat, then spring back to full shape after boarding. Folds flat when not in use.',
       'Mesh panels on three sides give ventilation and clear line-of-sight. Fleece base liner is included.',
     ],
-    bestFor: 'Dogs flying in cabin who need a proven, airline-accepted soft-sided carrier',
-    whyItWorks: 'The Guaranteed On Board program means Sherpa will replace it if an airline rejects it.',
-    considerIf: 'Your dog weighs under 16 lb and you want the most established in-cabin carrier on the market',
     image: { src: 'https://m.media-amazon.com/images/I/81gqQnt7waL._SL500_.jpg', alt: 'Sherpa Original Deluxe Travel Pet Carrier Medium' },
   },
   {
@@ -1035,9 +768,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Spring wire frame compresses to slide under the seat and returns to shape once stowed',
       'Mesh on three sides keeps airflow moving; removable fleece liner is washable',
     ],
-    bestFor: 'Delta flyers who want a carrier confirmed to match Delta\'s specific under-seat dimensions',
-    whyItWorks: 'Built to Delta\'s published dimensions, which differ from many other carriers',
-    considerIf: 'You fly Delta regularly and want a carrier purpose-built for their specific size requirements',
     image: { src: 'https://m.media-amazon.com/images/I/81IWGNpchBL._AC_SL1500_.jpg', alt: 'Sherpa Delta Airlines Travel Pet Carrier Medium' },
   },
   {
@@ -1051,9 +781,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Padded shoulder strap and top handle make airport transit easier',
       'Mesh windows on all four sides maximize airflow in a closed cabin environment',
     ],
-    bestFor: 'Dogs who do better with more space during the flight itself, not just at the gate',
-    whyItWorks: 'The expansion panel means the carrier meets under-seat requirements at boarding, while giving your dog extra room once you are in the air',
-    considerIf: 'Your dog fits the base dimensions for boarding but tends to get restless and would benefit from more stretch room once airborne',
     image: { src: 'https://m.media-amazon.com/images/I/716JjBt7o+L._SL500_.jpg', alt: "Mr. Peanut's Expandable Airline Approved Soft-Sided Pet Carrier" },
   },
   {
@@ -1067,9 +794,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Meets major airline under-seat dimension specifications',
       'Removable and washable fleece mat is included; exterior pocket fits documents and treats',
     ],
-    bestFor: 'Owners who want maximum flexibility in how the carrier expands during the flight',
-    whyItWorks: 'Two-direction expansion gives another option for extra room',
-    considerIf: 'You want both top and side expansion options',
     image: { src: 'https://m.media-amazon.com/images/I/71w8VK00EGL._SL500_.jpg', alt: 'Petskd Top and Side Expandable Pet Carrier' },
   },
   {
@@ -1083,9 +807,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Base dimensions meet most major airline under-seat requirements',
       'Mesh on three sides plus a top mesh window provide ventilation from multiple angles',
     ],
-    bestFor: 'Dogs that prefer to sit upright rather than lie down during flights',
-    whyItWorks: 'Top-only expansion adds height without requiring side clearance, which can be limited by the seat structure in front of you',
-    considerIf: 'Your dog habitually sits up or stands during car rides and would benefit from added vertical room',
     image: { src: 'https://m.media-amazon.com/images/I/810Neazl1UL._SL500_.jpg', alt: 'Petskd Top-Expandable Pet Carrier' },
   },
   {
@@ -1099,9 +820,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Designed to meet Delta, American, and United Airline under-seat dimension specifications',
       'Two-way zipper and breathable mesh panels on three sides keep the interior comfortable and well-ventilated',
     ],
-    bestFor: 'Flyers on the big three U.S. airlines who want a top-expanding carrier confirmed against published dimension requirements',
-    whyItWorks: 'Designed to meet Delta, American, and United\'s published dimensions specifications',
-    considerIf: 'You want an affordable, top-expanding carrier and frequently fly Delta, American, and/or United',
     image: { src: 'https://m.media-amazon.com/images/I/81MjgtZtakL._SL500_.jpg', alt: 'Lekereise Top-Expandable Pet Carrier' },
   },
   {
@@ -1115,9 +833,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Removable fleece pad is machine washable',
       'Front and top openings with handles and a removable shoulder strap',
     ],
-    bestFor: 'Small dogs whose owners want a simple, lower-cost in-cabin carrier from a familiar brand',
-    whyItWorks: 'It provides a compact shell, mesh airflow, easy loading, and a washable floor pad',
-    considerIf: 'You want a proven, budget carrier from an established brand',
     image: { src: 'https://m.media-amazon.com/images/I/719971mj1eL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Amazon Basics soft-sided airline carrier' },
   },
   {
@@ -1131,9 +846,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Top opening, two side doors, shoulder strap, and luggage-pass-through make airport handling easier',
       'Includes a removable fleece mat and locking zippers for a more travel-ready setup',
     ],
-    bestFor: 'Small dogs who need a compact carrier with easier airport handling than a basic two-door bag',
-    whyItWorks: 'The shorter shell, luggage sleeve, and multi-door access make it practical for terminal use',
-    considerIf: 'You want a compact carrier for a small dog and care about luggage-handle compatibility as much as in-cabin fit',
     image: { src: 'https://m.media-amazon.com/images/I/71HK16AZbXL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'PETSFIT soft-sided airline carrier' },
   },
   {
@@ -1147,9 +859,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Top expansion panel adds extra room after boarding without requiring side clearance',
       'Locking zippers and anti-scratch mesh make it a good choice for dogs that paw at soft carriers',
     ],
-    bestFor: 'Small dogs flying on airlines with flatter under-seat profiles such as Frontier or Southwest',
-    whyItWorks: 'The lower, wider shape gives you a more airline-specific fit',
-    considerIf: 'You need a soft-sided carrier for a small dog that prefers to sit or stand during travel',
     image: { src: 'https://m.media-amazon.com/images/I/81MjgtZtakL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Lekereise Frontier and Southwest airline carrier' },
   },
   {
@@ -1163,9 +872,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Top expansion adds some breathing room once the carrier is stowed and the plane is in flight',
       'Built specifically for very small dogs',
     ],
-    bestFor: 'Tiny dogs whose carriers need to fit in small spaces',
-    whyItWorks: 'Its unusually low profile allows it to fit in small spaces',
-    considerIf: 'Your dog is genuinely tiny and you want a compact carrier for shallow under-seat spaces',
     image: { src: 'https://m.media-amazon.com/images/I/719dVzV+OOL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'pidipiti Frontier and Allegiant airline carrier' },
   },
   {
@@ -1179,9 +885,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Top zipper access and multiple side openings make it easier to check on a dog in transit',
       'Seat-belt loop and side pocket add practical travel features without increasing the size of the bag',
     ],
-    bestFor: 'Teacup and very small dogs that fit in narrower soft-sided carriers',
-    whyItWorks: 'The slim bag profile has sufficient room for tiny dogs while still providing ventilation, quick-access openings, and a practical airport-friendly design',
-    considerIf: 'Your dog is under about 8 pounds or simply fits better in a more narrow carrier',
     image: { src: 'https://m.media-amazon.com/images/I/715fH6bOkSL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'JESPET compact airline carrier' },
   },
   {
@@ -1195,9 +898,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Front and rear pockets make it easier to carry treats, documents, and small travel essentials in one bag',
       'Removable sherpa-lined bed and top-opening design help small dogs settle more comfortably once inside',
     ],
-    bestFor: 'Very small dogs and owners who want a tote-style carrier with built in storage',
-    whyItWorks: 'It gives you the convenience of a purse-style carrier without sacrificing the basics that matter for flights: airflow, structure, and under-seat-friendly proportions',
-    considerIf: 'You want a softer handbag-style look for a small dog and still need pockets, ventilation, and an airline-travel-friendly footprint',
     image: { src: 'https://m.media-amazon.com/images/I/818qa6V-TgL._AC_SX300_SY300_QL70_FMwebp_.jpg', alt: 'PetAmi dog purse carrier' },
   },
   {
@@ -1211,9 +911,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Three-side mesh ventilation and a wide top opening make it more practical than many fashion-first pet purses',
       'Multiple small pockets and lightweight vegan leather construction work well for short travel days with tiny dogs',
     ],
-    bestFor: 'Tiny dogs whose owners want a lighter tote-style carrier with a cleaner everyday look',
-    whyItWorks: 'It keeps the tote-style profile narrow while allowing enough ventilation and access to make it useful for short in-cabin travel',
-    considerIf: 'Your dog is about 10 pounds or lighter and you want a soft-sided carrier that feels closer to a purse than a standard travel bag',
     image: { src: 'https://m.media-amazon.com/images/I/71XupbJZnVL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Lasaviin dog carrier purse' },
   },
 
@@ -1230,9 +927,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Main carry pocket is large enough for a day\'s worth of supplies without overpacking',
       'Padded back panel and adjustable straps make it comfortable to carry through long airport terminals',
     ],
-    bestFor: 'Travelers who want a dedicated day-of-flight backpack with clear compartment separation',
-    whyItWorks: 'Dedicated sections for dog gear prevent digging through a general bag at security or boarding, keeping paperwork and essentials accessible when you need them',
-    considerIf: 'You prefer a backpack carry style and want everything organized and reachable without opening multiple bags',
     image: { src: 'https://m.media-amazon.com/images/I/61RB5siFcXL._SL500_.jpg', alt: 'FCT Dog Travel Backpack' },
   },
   {
@@ -1246,9 +940,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Interior organizer keeps bowls, treats, medications, and documents separated without extra pouches',
       'Doubles as an under-seat personal item on many airlines when lightly packed',
     ],
-    bestFor: 'Short-trip travelers who want one bag that handles both the flight and the stay at the destination',
-    whyItWorks: 'Roll-flat construction stores easily between trips without sacrificing carry capacity when you need it',
-    considerIf: 'You pack light and want a single tote that functions as your carry-on bag and fits under the seat',
     image: { src: 'https://m.media-amazon.com/images/I/81rNHYHsJaL._SL500_.jpg', alt: 'Igolumon Dog Travel Bag' },
   },
   {
@@ -1262,9 +953,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Insulated food pocket keeps kibble dry and separated from other gear throughout a long travel day',
       'Fits comfortably over rolling luggage handle so you don\'t have to carry it through the airport',
     ],
-    bestFor: 'Organized packers who want every item in its own dedicated spot for fast access during travel',
-    whyItWorks: 'Pre-assigned compartments are convenient for check-in, security, and boarding',
-    considerIf: 'You tend to overpack and want a bag that enforces organization through its structure',
     image: { src: 'https://m.media-amazon.com/images/I/81OVQqFgiUL._SL500_.jpg', alt: 'DELOMO Dog Travel Backpack' },
   },
   {
@@ -1278,9 +966,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Zipper top keeps contents secure in overhead bins or under seats',
       'Price point makes it a practical choice for many fliers',
     ],
-    bestFor: 'Budget-conscious travelers who need a reliable dog kit bag without paying for extra features',
-    whyItWorks: 'It includes everything you need for the flight and the duration of your trip',
-    considerIf: 'You fly occasionally and want a simple, affordable dedicated dog bag rather than a feature-heavy backpack',
     image: { src: 'https://m.media-amazon.com/images/I/81ILyFK9lxL._SL500_.jpg', alt: 'Mancro Dog Travel Bag' },
   },
   {
@@ -1294,9 +979,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Side pockets accommodate a water bottle and collapsible bowl without opening the main compartment',
       'Padded shoulder straps and chest clip distribute weight comfortably during long transit days',
     ],
-    bestFor: 'Multi-day travelers who need a backpack that carries supplies for several days, not just a one-way flight',
-    whyItWorks: 'Larger capacity and internal dividers make it practical for weekend trips where you\'re packing food, medications, and gear for multiple days away',
-    considerIf: 'Your trips last more than one night and you want one bag that handles everything from the flight through the stay',
     image: { src: 'https://m.media-amazon.com/images/I/714XDoYmSiL._SL500_.jpg', alt: 'Baglher Dog Travel Backpack' },
   },
   {
@@ -1310,9 +992,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Water-resistant exterior keeps contents dry during outdoor transit between gate and ground transportation',
       'Luggage strap on back slides over rolling bag handles for hands-free airport navigation',
     ],
-    bestFor: 'Frequent flyers who want a proven backpack with practical airport features',
-    whyItWorks: 'Water-resistant construction and luggage pass-through strap are convenient for airport travel',
-    considerIf: 'You want a backpack with a solid track record and practical features for moving through airports efficiently',
     image: { src: 'https://m.media-amazon.com/images/I/A1t1j1QO7NL._SL500_.jpg', alt: 'PetAmi Dog Travel Backpack' },
   },
   {
@@ -1326,9 +1005,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Stocked with a collapsible silicone bowl, water bottle, treat bag, and waste bag dispenser',
       'Sewn-in organization keeps included accessories in place during transit',
     ],
-    bestFor: 'Travelers who prefer a tote over a backpack and want a bag that comes with useful accessories',
-    whyItWorks: 'It comes pre-organized with practical accessories',
-    considerIf: 'You find backpack straps uncomfortable during long travel days and prefer a tote you can drop and pick up easily',
     image: { src: 'https://m.media-amazon.com/images/I/71aib5MhqvL._SL500_.jpg', alt: 'Mobile Dog Gear Day Tote' },
   },
   {
@@ -1342,9 +1018,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Includes collapsible bowls, treat bag, waste bag dispenser, and food carrier in a single organized system',
       'Duffel-style carry with both shoulder strap and handles for flexibility in different transit environments',
     ],
-    bestFor: 'Extended trip travelers who want a single, fully organized system for a week or more of dog supplies',
-    whyItWorks: 'Full-week capacity with included accessories, so you don\'t have to assemble a kit piece by piece.',
-    considerIf: 'You travel for a week or more at a time and want a bag that carries sufficient supplies so you don\'t have to restock mid-trip.',
     image: { src: 'https://m.media-amazon.com/images/I/81em6fyVBFL._SL500_.jpg', alt: 'Mobile Dog Gear Week Away Bag' },
   },
   {
@@ -1358,9 +1031,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Quick-access front pocket keeps leash, treats, and boarding documents reachable without opening the main compartment',
       'Includes a lightweight collapsible bowl that tucks into a dedicated side pocket',
     ],
-    bestFor: 'Minimalist travelers who want a slim, under-seat bag that doesn\'t take up carry-on overhead space',
-    whyItWorks: 'Slim design that qualifies as a personal item fits comfortably under the seat and keeps dog supplies within reach',
-    considerIf: 'You bring a carry-on bag on every flight and need the dog gear to fit under the seat without competing for overhead space',
     image: { src: 'https://m.media-amazon.com/images/I/71VR8shgxpL._SL500_.jpg', alt: 'Clawist Dog Travel Bag' },
   },
   {
@@ -1374,9 +1044,6 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Multiple exterior pockets keep frequently used items like leash and waste bags accessible',
       'Durable construction holds up to repeated trips without zippers or seams failing under normal airport use',
     ],
-    bestFor: 'Regular flyers who want a durable backpack that holds up across many trips without showing wear',
-    whyItWorks: 'Emphasis on durability and practical pocket placement makes it a reliable option for multiple uses',
-    considerIf: 'You fly with your dog several times a year, and you want a functional and organized bag that holds up trip after trip',
     image: { src: 'https://m.media-amazon.com/images/I/81gA-nAEDcL._SL500_.jpg', alt: 'Anild Dog Travel Backpack' },
   },
 ];

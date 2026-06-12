@@ -70,6 +70,8 @@ For each product on a converter page, copy should address:
 3. **Tradeoffs** — What does this product trade off? Portability vs. cooling power? Price vs. durability?
 4. **Buyer context** — Who will get the most value from this? Who should look elsewhere?
 
+For cooling, calming, and relaxation converters, product copy lives in bullets on the canonical product record. There is no fixed bullet count; write only the bullets that differentiate the product. Do not repeat context that applies to all products on the page; state shared context once in the page intro instead.
+
 Keep descriptions factual and specific. Vague praise ("great quality," "dogs love it") adds no value.
 
 ---
@@ -96,6 +98,7 @@ CTA buttons on `AffiliateLink.astro` links should be:
 
 ## Related knowledge
 
+- [`converter-writing-guide.md`](converter-writing-guide.md) — Full copy structure and anti-repetition rules for converter pages
 - [`medical-and-vet-claim-guardrails.md`](medical-and-vet-claim-guardrails.md) — Full guardrails for health and vet claims
 - [`article-writing-guide.md`](article-writing-guide.md) — Voice and style for all site copy
 - [`../affiliate/amazon-associates-rules.md`](../affiliate/amazon-associates-rules.md) — Affiliate link requirements

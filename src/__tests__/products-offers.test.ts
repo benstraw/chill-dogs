@@ -48,7 +48,6 @@ describe('multi-merchant product offers', () => {
     const product = {
       id: 'dual-offer-product',
       name: 'Dual Offer Product',
-      bestFor: 'Testing offer order',
       bullets: ['One'],
       offers,
     };
@@ -60,7 +59,6 @@ describe('multi-merchant product offers', () => {
     const product = {
       id: 'chewy-only-product',
       name: 'Chewy Only Product',
-      bestFor: 'Testing Chewy-only offers',
       bullets: ['One', 'Two', 'Three'],
       offers: [
         {
@@ -122,27 +120,26 @@ describe('multi-merchant product offers', () => {
         },
       ],
       bullets: ['Canonical bullet'],
-      bestFor: 'Canonical best-for copy',
       image: { src: 'https://example.com/canonical.jpg', alt: 'Canonical alt' },
       source: 'src/data/products-offers.test.ts',
     };
 
     const searchLikeItem = {
       name: product.name,
-      bestFor: product.bestFor,
-      bullets: product.bullets.join(' '),
+      bullets: product.bullets,
       image: product.image,
     };
     const adminLikeItem = {
       name: product.name,
-      bestFor: product.bestFor,
+      bullets: product.bullets,
       image: product.image,
     };
 
     expect(searchLikeItem.name).toBe('Canonical Editorial Name');
-    expect(searchLikeItem.bullets).toBe('Canonical bullet');
+    expect(searchLikeItem.bullets).toEqual(['Canonical bullet']);
     expect(searchLikeItem.image?.src).toBe('https://example.com/canonical.jpg');
     expect(adminLikeItem.name).not.toBe(providerMetadata.title);
+    expect(adminLikeItem.bullets).toEqual(['Canonical bullet']);
     expect(adminLikeItem.image?.src).not.toBe(providerMetadata.imageUrl);
   });
 });

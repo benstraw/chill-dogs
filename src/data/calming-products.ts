@@ -13,10 +13,7 @@ export interface CalmingProduct {
   category: CalmingProductCategory;
   amazonUrl?: string;
   offers?: AffiliateOffer[];
-  bullets: [string, string, string];
-  bestFor: string;
-  howItHelps: string;
-  considerIf: string;
+  bullets: string[];
   image?: { src: string; alt: string };
 }
 
@@ -33,9 +30,6 @@ export const calmingProducts: CalmingProduct[] = [
       'Useful for storms, fireworks, travel, and guests at the door',
       'Simple hook-and-loop design makes it easy to put on before a stressful event',
     ],
-    bestFor: 'Dogs who respond well to wearable support during predictable stress',
-    howItHelps: 'Gentle pressure support',
-    considerIf: 'Your dog tolerates fitted gear and anxiety tends to spike in specific situations',
     image: { src: 'https://m.media-amazon.com/images/I/61PxVCtYzUL._SL500_.jpg', alt: 'ThunderShirt Classic Dog Anxiety Jacket' },
     offers: [
       {
@@ -56,9 +50,6 @@ export const calmingProducts: CalmingProduct[] = [
       'Two-piece adjustable design lets you fine-tune chest and belly compression separately',
       'Breathable mesh lining helps reduce overheating during longer wear sessions',
     ],
-    bestFor: 'Dogs who panic at velcro ripping sounds or need quieter fastening during storms',
-    howItHelps: 'Gentle compression with noise-free closure',
-    considerIf: 'Your dog flinches at velcro noise or you need to adjust the wrap without adding stress',
     image: { src: 'https://m.media-amazon.com/images/I/712jcgYde6L._SL500_.jpg', alt: 'DAJIDALI Dog Anxiety Vest' },
   },
   {
@@ -72,9 +63,6 @@ export const calmingProducts: CalmingProduct[] = [
       'Quiet hook-and-loop fastening designed to reduce startling noise',
       'Available in XS through 2XL for a wider range of body types',
     ],
-    bestFor: 'Budget-conscious dog owners who want a basic anxiety wrap without overspending',
-    howItHelps: 'Affordable gentle pressure support',
-    considerIf: 'You want to try an anxiety wrap without the ThunderShirt price tag',
     image: { src: 'https://m.media-amazon.com/images/I/71plUgjjhoL._SL500_.jpg', alt: 'Harbyel Dog Anxiety Jacket' },
   },
   {
@@ -88,9 +76,6 @@ export const calmingProducts: CalmingProduct[] = [
       'Turtleneck extends over ears, which can help muffle sound for noise-phobic dogs',
       'Fleece blend with wide straps for a snug but comfortable fit across the torso',
     ],
-    bestFor: 'Dogs with noise phobias who benefit from ear coverage during storms or fireworks',
-    howItHelps: 'Pressure wrap plus ear coverage for sound-sensitive dogs',
-    considerIf: 'Your dog reacts to loud sounds and you want a wrap that also covers the ears and neck',
     image: { src: 'https://m.media-amazon.com/images/I/61Pplb6TlfL._SL500_.jpg', alt: 'BEAUTYZOO Reversible Dog Anxiety Shirt' },
   },
   {
@@ -104,9 +89,6 @@ export const calmingProducts: CalmingProduct[] = [
       'Sleeveless cut reduces overheating risk compared to full-coverage wraps',
       'Soft, stretchy fabric makes it easy to put on dogs who resist rigid garments',
     ],
-    bestFor: 'Dogs who need head and neck coverage during noise events without overheating',
-    howItHelps: 'Torso compression plus adjustable hood for head coverage',
-    considerIf: 'Your dog seeks to hide during loud events and might benefit from a hood for security',
     image: { src: 'https://m.media-amazon.com/images/I/61zRnyKGANL._SL500_.jpg', alt: 'MORVIGIVE Sleeveless Dog Anxiety Vest with Hood' },
   },
   {
@@ -120,9 +102,6 @@ export const calmingProducts: CalmingProduct[] = [
       'Lightweight fabric keeps dogs comfortable during extended wear',
       'Simple pull-on style with belt adjustment makes fitting straightforward',
     ],
-    bestFor: 'Dogs who need firmer compression than standard wraps provide',
-    howItHelps: 'Stronger double compression with adjustable tightness',
-    considerIf: 'Your dog does not respond to lighter pressure wraps and may benefit from firmer hold',
     image: { src: 'https://m.media-amazon.com/images/I/61RSUfDB-yL._SL500_.jpg', alt: 'Caslfuca Dog Anxiety Vest' },
   },
   {
@@ -137,9 +116,6 @@ export const calmingProducts: CalmingProduct[] = [
       'Designed for occasional stress like travel, visitors, or noisy evenings',
       'Soft chew format is easy to add before a known trigger',
     ],
-    bestFor: 'Natural-leaning households that want a simple chew before stressful moments',
-    howItHelps: 'Nutritional calming support',
-    considerIf: 'You want a chewable option instead of a wearable product',
     image: { src: 'https://m.media-amazon.com/images/I/71wvagsKePL._SL500_.jpg', alt: 'Native Pet Calm Chews for Dogs' },
     offers: [
       {
@@ -161,9 +137,6 @@ export const calmingProducts: CalmingProduct[] = [
       'Easy daily-use format for dogs already used to soft supplements',
       'Good fit for mild nervous energy and routine support',
     ],
-    bestFor: 'Dog owners who want a recognizable brand and straightforward calming chew',
-    howItHelps: 'Daily or situational nutritional support',
-    considerIf: 'Your dog already does well with soft supplement-style treats',
     image: { src: 'https://m.media-amazon.com/images/I/71UE9SW5IOL._SL500_.jpg', alt: 'Greenies Supplements Calming Chews' },
     offers: [
       {
@@ -185,9 +158,6 @@ export const calmingProducts: CalmingProduct[] = [
       'Commonly considered for travel, alone time, and loud-environment support',
       'Blends multiple calming ingredients into one chew',
     ],
-    bestFor: 'Pet parents specifically looking for a hemp-based calming chew',
-    howItHelps: 'Multi-ingredient calming support',
-    considerIf: 'You want hemp positioned as part of your calming routine',
     image: { src: 'https://m.media-amazon.com/images/I/61nfdlquMVL._SL500_.jpg', alt: 'Pet Honesty Hemp Calming Chews' },
     offers: [
       {
@@ -209,9 +179,6 @@ export const calmingProducts: CalmingProduct[] = [
       'Useful as a short-term distraction during baths, nail trims, or brushing',
       'Simple design makes it easy to clean and store',
     ],
-    bestFor: 'Everyday grooming distraction and short calming sessions',
-    howItHelps: 'Encouraging licking to entertain and reduce stress',
-    considerIf: 'You want the most straightforward lick-mat format',
     image: { src: 'https://m.media-amazon.com/images/I/71srIBjOAhL._SL500_.jpg', alt: 'LickiMat Classic Soother Slow Feeder' },
     offers: [
       {
@@ -232,9 +199,6 @@ export const calmingProducts: CalmingProduct[] = [
       'Useful for quiet indoor enrichment before fireworks, crate time, or evening wind-down',
       'Design works as a lick mat and a slow feeder',
     ],
-    bestFor: 'Everyday calming enrichment and frozen spread prep',
-    howItHelps: 'Licking enrichment with a broad silicone surface',
-    considerIf: 'You want one simple mat for fireworks prep, crate time, and quiet indoor breaks',
     image: { src: 'https://m.media-amazon.com/images/I/81prplvbKjL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Awoo Paradise Silicone Dog Lick Mat' },
   },
   {
@@ -249,9 +213,6 @@ export const calmingProducts: CalmingProduct[] = [
       'Attaches to wall or tub',
       'Silicone construction is practical for repeated use and cleanup',
     ],
-    bestFor: 'Dog owners who want to distract their dog during bath time and grooming',
-    howItHelps: 'Promoting licking with added suction stability',
-    considerIf: 'You need a mat that stays put on tile, tub walls, or smooth floors',
     image: { src: 'https://m.media-amazon.com/images/I/71fXsViJtML._SL500_.jpg', alt: 'LUKITO Premium Silicone Licking Mat' },
   },
   {
@@ -265,9 +226,6 @@ export const calmingProducts: CalmingProduct[] = [
       'Flat textured surface supports spreadable treats and provides enrichment',
       'Dishwasher-safe material makes it practical for frequent use',
     ],
-    bestFor: 'Dogs that damage silicone mats',
-    howItHelps: 'Providing durable licking enrichment',
-    considerIf: 'Your dog tends to bite, fold, or chew flexible silicone mats',
     image: { src: 'https://m.media-amazon.com/images/I/81m9FkTp5JL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'FEELNEEDY Stainless Steel Lick Mat' },
   },
   {
@@ -281,9 +239,6 @@ export const calmingProducts: CalmingProduct[] = [
       'Heavier format can feel more stable than a thin silicone sheet',
       'Useful when durability matters more than portability',
     ],
-    bestFor: 'Durable frozen treats and wet-food',
-    howItHelps: 'Providing a stainless bowl-style licking surface',
-    considerIf: 'You want a sturdier setup for yogurt, pumpkin, wet food, or soaked kibble',
     image: { src: 'https://m.media-amazon.com/images/I/71bbtFt5a2L._AC_SX300_SY300_QL70_FMwebp_.jpg', alt: 'Feedoo Double Wall Stainless Steel Lick Mat' },
   },
   {
@@ -297,9 +252,6 @@ export const calmingProducts: CalmingProduct[] = [
       'Suction-style setup can help with crate-side or fixed-position enrichment',
       'Useful for dogs who push around lightweight mats',
     ],
-    bestFor: 'Crate enrichment and dogs who push around silicone mats',
-    howItHelps: 'Providing fixed-position stainless steel licking enrichment',
-    considerIf: 'You need a more stable, chew-resistant mat',
     image: { src: 'https://m.media-amazon.com/images/I/713geJVx6LL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Stainless Suction Textured Feeding Lick Mat' },
   },
   {
@@ -313,9 +265,6 @@ export const calmingProducts: CalmingProduct[] = [
       'More contained than a flat mat for crate time or calm-room setup',
       'Good for when you want enrichment to last longer than a thin smear',
     ],
-    bestFor: 'Frozen treats during fireworks night or crate time',
-    howItHelps: 'Bowl-style licking and slow-feeding enrichment',
-    considerIf: 'You want a deeper frozen treat option instead of a flat mat',
     image: { src: 'https://m.media-amazon.com/images/I/71JDi4WGGnL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Pawnana Slow Feeder Lick Mat' },
   },
   {
@@ -329,9 +278,6 @@ export const calmingProducts: CalmingProduct[] = [
       'Smaller footprint can work better for small spaces than a full mat',
       'Useful for dogs who do better with contained licking than a tray',
     ],
-    bestFor: 'Small to medium dogs that need contained licking enrichment',
-    howItHelps: 'Compact lick-bowl enrichment',
-    considerIf: 'You want less mess and do not need a wall-mounted grooming mat',
     image: { src: 'https://m.media-amazon.com/images/I/61ge1Bwk88L._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'QUWOU Dog Lick Bowl' },
   },
   {
@@ -345,9 +291,6 @@ export const calmingProducts: CalmingProduct[] = [
       'Bubble-style surface gives spreadable treats more texture than a plain tray',
       'Dishwasher safe',
     ],
-    bestFor: 'Dogs who would benefit from slow feeding as well as a licking mat',
-    howItHelps: 'Textured premium licking enrichment',
-    considerIf: 'You want a reversable design that allows for slow feeding and licking enrichment',
     image: { src: 'https://m.media-amazon.com/images/I/71jVXyAwNTL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'West Paw Seaflex Bubbles Feast Mat' },
   },
   {
@@ -361,9 +304,6 @@ export const calmingProducts: CalmingProduct[] = [
       'Outdoor-ready setup makes enrichment easier on patios, decks, or yards',
       'Useful for dogs who move lightweight mats before they finish',
     ],
-    bestFor: 'Outdoor enrichment and dogs who push mats around',
-    howItHelps: 'Holder station for lick-mat stability',
-    considerIf: 'You already like LickiMat-style inserts and want a sturdier station',
     image: { src: 'https://m.media-amazon.com/images/I/71xcalwKR1L._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'LickiMat Outdoor Keeper Feeding Station' },
   },
   {
@@ -377,9 +317,6 @@ export const calmingProducts: CalmingProduct[] = [
       'Useful for hiking, road trips, and airline travel',
       'Helps keep travel enrichment more contained between stops',
     ],
-    bestFor: 'Travel and portable prepared enrichment',
-    howItHelps: 'Packable licking enrichment',
-    considerIf: 'You want a lick-mat option that can travel cleaner than an open tray',
     image: { src: 'https://m.media-amazon.com/images/I/61TOUqACgaL._AC_SX300_SY300_QL70_FMwebp_.jpg', alt: 'BYAZLETQAN Collapsible Portable Lick Mat' },
   },
   {
@@ -394,9 +331,6 @@ export const calmingProducts: CalmingProduct[] = [
       'Helpful for indoor enrichment and redirecting restless energy',
       'Suction cups and non-slip bottom help to keep it in place',
     ],
-    bestFor: 'Dogs who have a strong foraging instinct and need indoor enrichment',
-    howItHelps: 'Fostering foraging and mental engagement',
-    considerIf: 'You want a mat that will slow feeding and provide enrichment',
     image: { src: 'https://m.media-amazon.com/images/I/812agfn++dL._SL500_.jpg', alt: 'Rundic Snuffle Mat for Dogs' },
   },
   {
@@ -410,9 +344,6 @@ export const calmingProducts: CalmingProduct[] = [
       'Works better for kibble or full meals than sticky spread enrichment',
       'Made from food-safe silicone. Dishwasher safe.',
     ],
-    bestFor: 'Dogs who need slower meals as well as licking enrichment',
-    howItHelps: 'Slow-feeding meal control',
-    considerIf: 'Your dog tends to eat too quickly',
     image: { src: 'https://m.media-amazon.com/images/I/617uJkbtmHL._AC_SY300_SX300_QL70_FMwebp_.jpg', alt: 'Evenco Slow Feeder Bowl' },
   },
   {
@@ -427,9 +358,6 @@ export const calmingProducts: CalmingProduct[] = [
       'Useful for dogs that blow through basic enrichment too quickly',
       'Can help stretch feeding time and keep busy noses occupied',
     ],
-    bestFor: 'Dogs who need a more adjustable nose-work challenge',
-    howItHelps: 'Adjustable foraging puzzle',
-    considerIf: 'Your dog gets bored with simpler enrichment setups',
     image: { src: 'https://m.media-amazon.com/images/I/71Wmu0n5rtL._SL500_.jpg', alt: 'AWOOF Pet Snuffle Mat for Dogs' },
     offers: [
       {

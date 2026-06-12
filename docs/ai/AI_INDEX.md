@@ -49,6 +49,7 @@ You are starting any task and need to know which docs apply.
 
 **Read:**
 - [`strategy/metrics-and-page-types.md`](strategy/metrics-and-page-types.md) — Converter job and required behavior
+- [`writing/converter-writing-guide.md`](writing/converter-writing-guide.md) — Copy structure, length limits, anti-repetition rules
 - [`affiliate/amazon-associates-rules.md`](affiliate/amazon-associates-rules.md) — AffiliateLink.astro, rel attributes, tag requirement
 - [`affiliate/product-data-rules.md`](affiliate/product-data-rules.md) — Where product data lives, how to add products
 - [`affiliate/disclosure-rules.md`](affiliate/disclosure-rules.md) — Disclosure placement rules

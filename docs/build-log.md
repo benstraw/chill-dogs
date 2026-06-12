@@ -125,19 +125,17 @@ Modules are built once and reused everywhere.
 - `Analytics.astro` — GA4 script injection with environment guard
 
 **Product display**
-- `CoolingProductCard.astro` — Individual cooling product card with 3 bullet
-  points, bestFor, and affiliate CTA. Supports `kind: 'internal'` for routing
-  to converter pages vs. `kind: 'affiliate'` for direct Amazon links.
+- `CoolingProductCard.astro` — Individual cooling product card with bullet
+  copy and affiliate CTA. Supports `kind: 'internal'` for routing to converter
+  pages vs. `kind: 'affiliate'` for direct Amazon links.
 - `CoolingProductGrid.astro` — Grid wrapper
-- `CalmingProductCard.astro` — Calming product card; includes `howItHelps` and
-  `considerIf` fields to guide purchase decisions without overstepping medical
-  authority
+- `CalmingProductCard.astro` — Calming product card with bullet copy and
+  affiliate CTA
 - `CalmingUseTable.astro` — Category comparison table for calming product types
-- `ComparisonTable.astro` — Generic comparison table
 
 **Page-structure**
 - `Hero.astro` — Static hero for converter/collector pages (not A/B-tested)
-- `SummaryBlock.astro` — Above-fold "Quick Picks" summary on pillar pages;
+- `SummaryBlock.astro` — Above-fold category summary on collector pages;
   routes users to converter pages immediately without requiring scroll
 - `Toc.astro` — Sticky table of contents for long-form pillar pages
 - `FAQ.astro` — Structured FAQ with schema-ready markup

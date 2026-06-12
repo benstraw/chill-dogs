@@ -53,6 +53,7 @@ Finishing any converter page before marking work as done.
 
 ## Related knowledge
 
+- [`../writing/converter-writing-guide.md`](../writing/converter-writing-guide.md) — Copy structure, length limits, anti-repetition rules
 - [`../affiliate/amazon-associates-rules.md`](../affiliate/amazon-associates-rules.md) — AffiliateLink component and tag
 - [`../affiliate/product-data-rules.md`](../affiliate/product-data-rules.md) — Product data file locations
 - [`../affiliate/disclosure-rules.md`](../affiliate/disclosure-rules.md) — Disclosure placement rules

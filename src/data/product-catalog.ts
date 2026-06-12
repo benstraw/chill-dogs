@@ -16,13 +16,7 @@ export interface ProductCatalogItem {
   secondaryUrl?: string;
   secondaryLabel?: string;
   bullets: string[];
-  bestFor: string;
   image?: { src: string; alt: string };
-  coolingMethod?: string;
-  sizingNote?: string;
-  howItHelps?: string;
-  whyItWorks?: string;
-  considerIf?: string;
   signalNote?: string;
   subscriptionNote?: string;
   note?: string;
@@ -65,9 +59,7 @@ export const productCatalogItems: ProductCatalogItem[] = [
     secondaryUrl: product.secondaryUrl,
     secondaryLabel: product.secondaryLabel,
     bullets: [...product.bullets],
-    bestFor: product.best_for,
     image: product.image,
-    whyItWorks: product.use_case,
     signalNote: product.signalNote,
     subscriptionNote: product.subscriptionNote,
     source: 'src/data/tracking-products.ts',
@@ -81,7 +73,6 @@ export const productCatalogItems: ProductCatalogItem[] = [
     amazonUrl: product.amazonUrl,
     offers: getOffers(product),
     bullets: [product.note],
-    bestFor: product.note,
     image: product.image,
     note: product.note,
     source: 'src/data/tracking-products.ts',

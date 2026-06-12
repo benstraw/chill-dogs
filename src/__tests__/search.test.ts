@@ -10,8 +10,6 @@ describe('search index — product data shape', () => {
     for (const p of productCatalogItems) {
       expect(typeof p.name, `${p.id} missing name`).toBe('string');
       expect(p.name.length, `${p.id} empty name`).toBeGreaterThan(0);
-      expect(typeof p.bestFor, `${p.id} missing bestFor`).toBe('string');
-      expect(p.bestFor.length, `${p.id} empty bestFor`).toBeGreaterThan(0);
       expect(Array.isArray(p.bullets), `${p.id} bullets not array`).toBe(true);
       expect(p.bullets.length, `${p.id} empty bullets`).toBeGreaterThan(0);
     }
