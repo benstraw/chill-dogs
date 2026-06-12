@@ -15,10 +15,7 @@ export interface CoolingProduct {
   category: ProductCategory;
   amazonUrl?: string;
   offers?: AffiliateOffer[];
-  bullets: [string, string, string];
-  bestFor: string;
-  coolingMethod?: string;
-  sizingNote?: string;
+  bullets: string[];
   image?: { src: string; alt: string };
   rhysApproved?: boolean;
 }
@@ -47,9 +44,6 @@ export const coolingProducts: CoolingProduct[] = [
       'Recharges automatically after 15–20 minutes of non-use',
       'Lightweight and portable for travel, crates, or outdoor use',
     ],
-    bestFor: 'Hassle-free cooling anywhere — just set it down and go',
-    coolingMethod: 'Pressure-activated gel',
-    sizingNote: 'Available in S, M, L, XL — measure your dog lying down',
     image: { src: 'https://m.media-amazon.com/images/I/71n1Mod8sRL._SL500_.jpg', alt: 'The Green Pet Shop Cooling Pet Pad' },
   },
   {
@@ -64,9 +58,6 @@ export const coolingProducts: CoolingProduct[] = [
       'Durable nylon exterior resists punctures from nails',
       'No electricity required — fill once and it stays cool for hours',
     ],
-    bestFor: 'Large breeds that need sustained, even cooling',
-    coolingMethod: 'Water-based absorption',
-    sizingNote: 'Comes in S through XL — XL fits dogs up to 100 lbs',
     image: { src: 'https://m.media-amazon.com/images/I/61xAcMN3KJL._SL500_.jpg', alt: 'K&H Cool Bed III' },
   },
   {
@@ -81,9 +72,6 @@ export const coolingProducts: CoolingProduct[] = [
       'Elevated design lifts dogs off hot floors for passive airflow cooling beneath their body',
       'Pre-assembled and crate-ready — slides through a wire crate door at an angle, no tools needed',
     ],
-    bestFor: 'Aggressive chewers who need an indestructible elevated bed with passive cooling',
-    coolingMethod: 'Elevated airflow — no padding, heat escapes underneath',
-    sizingNote: 'S through XXL — check your crate\'s inner dimensions before ordering',
     image: { src: 'https://m.media-amazon.com/images/I/51U85OKm+1L._SL500_.jpg', alt: 'K9 Ballistics Chew Proof Elevated Cooling Dog Bed' },
     rhysApproved: true,
   },
@@ -99,9 +87,6 @@ export const coolingProducts: CoolingProduct[] = [
       'Foldable design fits kennels, crates, beds, and car seats',
       'Wipes clean easily with a damp cloth',
     ],
-    bestFor: 'Crate training and car travel in hot weather',
-    coolingMethod: 'Pressure-activated gel',
-    sizingNote: 'Multiple sizes — pick one that matches your crate dimensions',
     image: { src: 'https://m.media-amazon.com/images/I/71JPOml6KrL._SL500_.jpg', alt: 'Arf Pets Self Cooling Mat' },
   },
 
@@ -118,9 +103,6 @@ export const coolingProducts: CoolingProduct[] = [
       'Inner ice-pack pocket for extra-hot days',
       "Lightweight fabric that dries quickly and won't weigh your dog down",
     ],
-    bestFor: 'Quick walks and outdoor play on warm days',
-    coolingMethod: 'Evaporative + optional ice pack',
-    sizingNote: 'S/M and L/XL — measure around the base of the neck',
     image: { src: 'https://m.media-amazon.com/images/I/611AOa13OFL._SL500_.jpg', alt: 'All For Paws Chill Out Ice Bandana' },
   },
   {
@@ -135,9 +117,6 @@ export const coolingProducts: CoolingProduct[] = [
       '2-pack so you always have a fresh one ready to swap',
       'Adjustable snap closure fits necks up to 20 inches',
     ],
-    bestFor: 'Small to medium dogs on daily summer walks',
-    coolingMethod: 'Evaporative cooling',
-    sizingNote: 'Fits necks up to 20 inches — best for small/medium breeds',
     image: { src: 'https://m.media-amazon.com/images/I/71yNibhBnRS._SL500_.jpg', alt: 'KYEESE Dog Instant Cooling Bandanas (2-Pack)' },
   },
 
@@ -154,9 +133,6 @@ export const coolingProducts: CoolingProduct[] = [
       'UPF 50+ sun protection on the back and sides',
       'Compatible with Ruffwear harnesses — clip a leash right on top',
     ],
-    bestFor: 'Hiking, trail running, and all-day outdoor adventures',
-    coolingMethod: 'Evaporative (soak, wring, wear)',
-    sizingNote: 'Sized XXS through XL — use Ruffwear\'s girth measurement chart',
     image: { src: 'https://m.media-amazon.com/images/I/71CjrUbyTWL._SL500_.jpg', alt: 'Ruffwear Swamp Cooler Dog Cooling Vest' },
   },
   {
@@ -171,9 +147,6 @@ export const coolingProducts: CoolingProduct[] = [
       'Reflective trim for visibility on early-morning or evening walks',
       'Hook-and-loop closure adjusts to most body shapes',
     ],
-    bestFor: 'Budget-friendly everyday cooling on walks and errands',
-    coolingMethod: 'Evaporative mesh',
-    sizingNote: 'S, M, L — measure chest girth for the best fit',
     image: { src: 'https://m.media-amazon.com/images/I/81Dk2mMHkhL._SL500_.jpg', alt: 'Kurgo Core Cooling Vest' },
   },
   {
@@ -188,9 +161,6 @@ export const coolingProducts: CoolingProduct[] = [
       'Moisture-activated cooling lasts through a full walk',
       'Lightweight enough that most dogs forget they\'re wearing it',
     ],
-    bestFor: 'Pet owners who want function and fashion',
-    coolingMethod: 'Evaporative cooling',
-    sizingNote: 'Runs slightly small — size up if your dog is between sizes',
     image: { src: 'https://m.media-amazon.com/images/I/81ZAyuCF-sL._SL500_.jpg', alt: 'Canada Pooch Chill Seeker Cooling Vest' },
   },
 
@@ -207,8 +177,6 @@ export const coolingProducts: CoolingProduct[] = [
       'Nearly indestructible natural rubber stands up to heavy chewers',
       'Unpredictable bounce keeps dogs mentally engaged',
     ],
-    bestFor: 'Heavy chewers who need long-lasting enrichment',
-    coolingMethod: 'Freeze stuffing inside',
     image: { src: 'https://m.media-amazon.com/images/I/61eVAqrR7uL._SL500_.jpg', alt: 'KONG Classic Dog Toy' },
   },
   {
@@ -223,8 +191,6 @@ export const coolingProducts: CoolingProduct[] = [
       'Dishwasher-safe for easy cleanup',
       'Fun shape encourages interactive play and licking',
     ],
-    bestFor: 'Dogs who love to lick and need gentle hydration encouragement',
-    coolingMethod: 'Frozen water release',
     image: { src: 'https://m.media-amazon.com/images/I/7196xcBelQL._SL500_.jpg', alt: 'PetSafe Chilly Penguin' },
   },
 
@@ -241,9 +207,6 @@ export const coolingProducts: CoolingProduct[] = [
       'Blocks UV rays and cuts cabin temperature significantly on sunny drives',
       'Folds flat for storage; quick to attach and remove at rest stops',
     ],
-    bestFor: 'Blocking direct sun from back-seat windows on hot road trips',
-    coolingMethod: 'Passive sun and UV blocking',
-    sizingNote: 'Universal fit — covers most standard rear side windows',
     image: { src: 'https://m.media-amazon.com/images/I/61GEGcE92WL._SL500_.jpg', alt: 'Enovoe Magnetic Car Window Shades (4-Pack)' },
   },
   {
@@ -258,9 +221,6 @@ export const coolingProducts: CoolingProduct[] = [
       '4 speed settings with a quiet brushless motor (≤30dB); USB-C charges in 3–5 hours',
       'Foldable hook hangs from a headrest, cargo bar, or tent; 270° rotating air outlet',
     ],
-    bestFor: 'Road trips and camping where a reliable power source isn\'t guaranteed',
-    coolingMethod: 'Active airflow — portable rechargeable fan',
-    sizingNote: 'One size; compact enough to fit in a backpack or door panel',
     image: { src: 'https://m.media-amazon.com/images/I/71aPhAz-VlL._SL500_.jpg', alt: 'ONLYNEW Portable Rechargeable Fan' },
   },
   {
@@ -275,9 +235,6 @@ export const coolingProducts: CoolingProduct[] = [
       'Collapses flat for easy storage in a door panel, console, or travel bag',
       'Dishwasher-safe and holds 24 oz — practical for medium and large dogs',
     ],
-    bestFor: 'In-car hydration that stays in the bowl instead of on the seat',
-    coolingMethod: 'Hydration support',
-    sizingNote: '24 oz capacity; works well for medium to large dogs',
     image: { src: 'https://m.media-amazon.com/images/I/61rhiId91LL._SL500_.jpg', alt: 'OHMO Spill Proof Collapsible Dog Water Bowl' },
   },
   {
@@ -292,9 +249,6 @@ export const coolingProducts: CoolingProduct[] = [
       'Waterproof quilted surface stays cooler than bare upholstery or vinyl seats',
       'Anchors to headrests front and back — no tools needed',
     ],
-    bestFor: 'Keeping dogs stable, cool, and off hot leather seats',
-    coolingMethod: 'Surface insulation from hot upholstery',
-    sizingNote: 'Standard and XL fit most sedans, SUVs, and trucks',
     image: { src: 'https://m.media-amazon.com/images/I/81ypdd26KKL._SL500_.jpg', alt: '4Knines Dog Seat Cover Hammock' },
   },
 
@@ -311,9 +265,6 @@ export const coolingProducts: CoolingProduct[] = [
       'Collapses flat for packing but holds its shape fully for drinking',
       '24 oz capacity for medium to large dogs',
     ],
-    bestFor: 'Car travel and situations where a standard bowl tips or sloshes',
-    coolingMethod: 'Spill-resistant collapsible bowl',
-    sizingNote: '24 oz',
     rhysApproved: true,
     image: { src: 'https://m.media-amazon.com/images/I/61rhiId91LL._SL500_.jpg', alt: 'OHMO Spill Proof Collapsible Dog Water Bowl' },
   },
@@ -328,9 +279,6 @@ export const coolingProducts: CoolingProduct[] = [
       'Squeeze-to-dispense design fills the built-in bowl without pouring or wasting water',
       '20 oz capacity covers most dogs for a 30–60 minute walk in warm weather',
     ],
-    bestFor: 'Active dogs on walks, hikes, and travel',
-    coolingMethod: 'Squeeze bottle with integrated foldable silicone bowl',
-    sizingNote: '20 oz, 25 oz',
     image: { src: 'https://m.media-amazon.com/images/I/71JwQQqdF2L._SL500_.jpg', alt: 'Springer Flip Portable Dog Water Bottle' },
   },
   {
@@ -344,9 +292,6 @@ export const coolingProducts: CoolingProduct[] = [
       'Leak-proof seal tested to 24 hours on its side, so no wet bag on transit days',
       'BPA-free Tritan plastic; dishwasher-safe components for easy cleaning after use',
     ],
-    bestFor: 'Travel days where water conservation and leak-proof carry matter most',
-    coolingMethod: 'One-touch dispenser with return-water trough',
-    sizingNote: '12 oz, 24 oz',
     image: { src: 'https://m.media-amazon.com/images/I/71GjkitcmOL._SL500_.jpg', alt: 'MalsiPree Dog Water Bottle Dispenser' },
   },
   {
@@ -360,9 +305,6 @@ export const coolingProducts: CoolingProduct[] = [
       'Top opening is deep enough for most dog muzzles',
       'BPA-free and leak-resistant',
     ],
-    bestFor: 'Dogs who prefer to drink from a wider bowl',
-    coolingMethod: 'Squeeze bottle with fixed top bowl',
-    sizingNote: '20 oz',
     image: { src: 'https://m.media-amazon.com/images/I/61G7Jn3SxxL._SL500_.jpg', alt: 'Highwave AutoDogMug Portable Dog Water Bottle' },
   },
   {
@@ -376,9 +318,6 @@ export const coolingProducts: CoolingProduct[] = [
       'Leak-proof lid with a carabiner clip attaches to a pack or leash handle without a separate clip',
       'Double-wall stainless steel keeps water cooler longer on warm days than plastic alternatives',
     ],
-    bestFor: 'Hikers and travelers who want a premium bottle with a detachable, packable bowl',
-    coolingMethod: 'Bottle with detachable silicone bowl; stainless steel insulation',
-    sizingNote: '20.3 oz, 33.8 oz',
     image: { src: 'https://m.media-amazon.com/images/I/71gEYgCwZVL._SL500_.jpg', alt: 'OllyDog OllyBottle with Detachable Bowl' },
   },
   {
@@ -392,9 +331,6 @@ export const coolingProducts: CoolingProduct[] = [
       'Removable bowl is attached to the bottle bottom. No loose components to pack separately',
       'Dual-use design means you and your dog can drink from the same bottle',
     ],
-    bestFor: 'Keeping water cold on warm-weather outings',
-    coolingMethod: 'Insulated stainless steel with attached bowl',
-    sizingNote: '50 oz',
     image: { src: 'https://m.media-amazon.com/images/I/61cL-UIATpL._SL500_.jpg', alt: 'Asobu Buddy Bottle Insulated with Bowl' },
   },
   {
@@ -408,9 +344,6 @@ export const coolingProducts: CoolingProduct[] = [
       'Wide-mouth opening makes filling from a water fountain or stream fast without a funnel',
       'Carabiner clip attaches to a pack strap or leash handle for hands-free carry',
     ],
-    bestFor: 'Travelers and hikers who want a packable bottle that folds flat when empty',
-    coolingMethod: 'Collapsible flexible plastic; rolls flat when empty',
-    sizingNote: '16 oz, 23 oz, 34 oz, 50 oz',
     image: { src: 'https://m.media-amazon.com/images/I/51ufvu1A7+L._SL500_.jpg', alt: 'Vapur Collapsible Water Bottle' },
   },
   {
@@ -424,9 +357,6 @@ export const coolingProducts: CoolingProduct[] = [
       'Macaron color silicone collapses flat and stacks for compact storage in any bag',
       'Soft silicone walls flex under a dog\'s nose without tipping the bowl',
     ],
-    bestFor: 'Owners who want a water bowl and food bowl in one packable 2-pack',
-    coolingMethod: 'Collapsible travel bowls with carabiner clips',
-    sizingNote: '12 oz, 22 oz, 34 oz',
     image: { src: 'https://m.media-amazon.com/images/I/61Bvzu5fHnL._SL500_.jpg', alt: 'SLSON Collapsible Dog Bowl 2-Pack' },
   },
   {
@@ -440,9 +370,6 @@ export const coolingProducts: CoolingProduct[] = [
       'Carabiner on each bowl clips directly to a leash, bag strap, or belt loop',
       'BPA-free food-grade silicone',
     ],
-    bestFor: 'Keeping a dedicated water and food bowl clipped directly to your gear at all times',
-    coolingMethod: 'Collapsible travel bowls with carabiner clips',
-    sizingNote: '20 oz, 34 oz',
     image: { src: 'https://m.media-amazon.com/images/I/61ZllHjCBFL._SL500_.jpg', alt: 'PetBonus 2-Pack Silicone Collapsible Dog Bowls' },
   },
   {
@@ -456,9 +383,6 @@ export const coolingProducts: CoolingProduct[] = [
       'Thick silicone walls keep the bowl open under a dog\'s muzzle without collapsing mid-drink',
       'Two-pack provides separate water and food bowls without buying two different products',
     ],
-    bestFor: 'Medium to large dogs who need a wider, more stable collapsible bowl',
-    coolingMethod: 'Large-diameter collapsible silicone bowls; 2-pack',
-    sizingNote: 'Large; check listing for exact diameter',
     image: { src: 'https://m.media-amazon.com/images/I/61zFNvTfdbL._SL500_.jpg', alt: 'Kytely Large Collapsible Dog Bowls 2-Pack' },
   },
 

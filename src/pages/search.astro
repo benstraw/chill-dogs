@@ -66,8 +66,8 @@ const suggestedSearchPaths = [
     name: string;
     pillar: string;
     category: string;
-    bestFor: string;
-    bullets: string;
+    bullets: string[];
+    bulletText: string;
     image?: { src: string; alt: string };
     href: string;
   };
@@ -101,8 +101,7 @@ const suggestedSearchPaths = [
         { name: 'title',        weight: 0.40 },
         { name: 'name',         weight: 0.40 },
         { name: 'description',  weight: 0.25 },
-        { name: 'bestFor',      weight: 0.25 },
-        { name: 'bullets',      weight: 0.15 },
+        { name: 'bulletText',   weight: 0.25 },
         { name: 'productNames', weight: 0.15 },
         { name: 'category',     weight: 0.10 },
         { name: 'topics',       weight: 0.10 },
@@ -172,6 +171,9 @@ const suggestedSearchPaths = [
     const thumbnail = item.image
       ? `<span class="result-thumb" aria-hidden="true"><img src="${esc(item.image.src)}" alt="" loading="lazy" decoding="async" /></span>`
       : '';
+    const bullets = item.bullets
+      .map((bullet) => `<li>${esc(bullet)}</li>`)
+      .join('');
 
     return `
       <a
@@ -192,7 +194,7 @@ const suggestedSearchPaths = [
           ${thumbnail}
           <div class="result-product-copy">
             <strong class="result-title">${esc(item.name)}</strong>
-            <p class="result-desc">${esc(item.bestFor)}</p>
+            <ul class="result-bullets">${bullets}</ul>
           </div>
         </div>
         <span class="result-cta">View in shop →</span>
@@ -560,6 +562,14 @@ const suggestedSearchPaths = [
     color: var(--color-text-muted);
     line-height: 1.5;
     margin: 0;
+  }
+
+  :global(.result-bullets) {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    margin: 0;
+    padding-left: 1.125rem;
   }
 
   :global(.result-cta) {

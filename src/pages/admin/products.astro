@@ -61,7 +61,7 @@ const merchantFilters = [
           <th data-sort="pillar">Pillar</th>
           <th data-sort="category">Category</th>
           <th data-sort="name">Name</th>
-          <th>Best For</th>
+          <th>Bullets</th>
           <th>Offers</th>
         </tr>
       </thead>
@@ -80,7 +80,11 @@ const merchantFilters = [
               <td><span class={`badge badge--${p.pillar}`}>{p.pillar}</span></td>
               <td>{p.category}</td>
               <td class="name-cell">{p.name}</td>
-              <td>{p.bestFor}</td>
+              <td>
+                <ul class="table-bullets">
+                  {p.bullets.map((b) => <li>{b}</li>)}
+                </ul>
+              </td>
               <td>
                 <div class="offer-badges">
                   {getOffers(p).map((offer) => (
@@ -115,36 +119,6 @@ const merchantFilters = [
                       </ul>
                     </div>
                     <div class="detail-meta">
-                      {p.coolingMethod && (
-                        <div class="meta-item">
-                          <span class="meta-label">Cooling Method</span>
-                          <span class="meta-value">{p.coolingMethod}</span>
-                        </div>
-                      )}
-                      {p.sizingNote && (
-                        <div class="meta-item">
-                          <span class="meta-label">Sizing Note</span>
-                          <span class="meta-value">{p.sizingNote}</span>
-                        </div>
-                      )}
-                      {p.howItHelps && (
-                        <div class="meta-item">
-                          <span class="meta-label">How It Helps</span>
-                          <span class="meta-value">{p.howItHelps}</span>
-                        </div>
-                      )}
-                      {p.whyItWorks && (
-                        <div class="meta-item">
-                          <span class="meta-label">Why It Works</span>
-                          <span class="meta-value">{p.whyItWorks}</span>
-                        </div>
-                      )}
-                      {p.considerIf && (
-                        <div class="meta-item">
-                          <span class="meta-label">Consider If</span>
-                          <span class="meta-value">{p.considerIf}</span>
-                        </div>
-                      )}
                       {p.signalNote && (
                         <div class="meta-item">
                           <span class="meta-label">Signal</span>
@@ -539,6 +513,17 @@ const merchantFilters = [
 
   .name-cell {
     font-weight: var(--weight-semibold);
+  }
+
+  .table-bullets {
+    margin: 0;
+    padding-left: var(--space-md);
+    color: var(--color-text-muted);
+    line-height: var(--leading-normal);
+  }
+
+  .table-bullets li + li {
+    margin-top: 2px;
   }
 
   .detail-row td {

@@ -97,28 +97,17 @@ describe('relaxation converter page config', () => {
     ]);
   });
 
-  it('supports full bullet replacement and copy overrides per page', () => {
+  it('supports full bullet replacement per page', () => {
     const [product] = resolveRelaxationDisplayProducts([
       {
         id: 'petmate-sky-kennel',
         bullets: ['Rigid kennel shape fits airline-style flight prep better than soft or collapsible travel crates.'],
-        bestFor: 'Flight prep when you want a hard-sided kennel with strong airline-travel familiarity',
-        considerIf: 'You want a rigid kennel for flight prep rather than a soft or collapsible travel crate',
       },
     ]);
 
     expect(product.bullets).toEqual([
       'Rigid kennel shape fits airline-style flight prep better than soft or collapsible travel crates.',
     ]);
-    expect(product.bestFor).toBe(
-      'Flight prep when you want a hard-sided kennel with strong airline-travel familiarity'
-    );
-    expect(product.considerIf).toBe(
-      'You want a rigid kennel for flight prep rather than a soft or collapsible travel crate'
-    );
-    expect(product.whyItWorks).toBe(
-      'The plastic shell creates a quieter, more contained environment while still allowing ventilation from all sides'
-    );
   });
 
   it('hides the wire-comparison bullet on the airline crates page only', () => {

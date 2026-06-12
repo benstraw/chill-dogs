@@ -77,7 +77,9 @@ affiliate/product-data-rules.md           # Data files, product catalog, check:a
     ↓
 affiliate/disclosure-rules.md             # Where disclosure must appear
     ↓
-writing/product-copy-rules.md             # Product description language
+writing/converter-writing-guide.md        # Copy structure, length limits, anti-repetition rules
+    ↓
+writing/product-copy-rules.md             # Product description language guardrails
     ↓
 engineering/routes-and-sitemap.md         # Register in sitemap, use route constants
     ↓

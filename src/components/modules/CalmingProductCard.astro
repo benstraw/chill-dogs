@@ -20,16 +20,7 @@ const offers = getOffers(product);
 <ProductCardShell>
   <ProductImageFrame slot="image" image={product.image} />
   <h3 class="calm-card-name">{product.name}</h3>
-  <p class="calm-card-best-for">
-    <strong>Best for:</strong> {product.bestFor}
-  </p>
   <ProductBulletList bullets={product.bullets} />
-  <p class="calm-card-meta">
-    <span class="calm-card-meta-label">Works by:</span> {product.howItHelps}
-  </p>
-  <p class="calm-card-meta">
-    <span class="calm-card-meta-label">Consider it if:</span> {product.considerIf}
-  </p>
   <AffiliateOfferStack
     offers={offers}
     product={{ id: product.id, name: product.name, category: product.category }}
@@ -45,28 +36,5 @@ const offers = getOffers(product);
     font-size: var(--text-lg);
     font-weight: var(--weight-bold);
     margin-bottom: var(--space-sm);
-  }
-
-  .calm-card-best-for {
-    font-size: var(--text-sm);
-    color: var(--pillar-link);
-    margin-bottom: var(--space-md);
-    line-height: var(--leading-normal);
-  }
-
-  .calm-card-best-for strong {
-    color: var(--color-text);
-  }
-
-  .calm-card-meta {
-    font-size: var(--text-xs);
-    color: var(--color-text-muted);
-    margin-bottom: var(--space-sm);
-    line-height: var(--leading-normal);
-  }
-
-  .calm-card-meta-label {
-    font-weight: var(--weight-semibold);
-    color: var(--color-text);
   }
 </style>

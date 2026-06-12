@@ -47,7 +47,9 @@ const pillarLabels: Record<string, string> = {
       {pillarLabels[product.pillar] ?? product.pillar}
     </span>
     <h3 class="card-name">{product.name}</h3>
-    <p class="card-best-for">{product.bestFor}</p>
+    <ul class="card-bullets">
+      {product.bullets.map((bullet) => <li>{bullet}</li>)}
+    </ul>
   </div>
 
   <div class="card-footer">
@@ -159,11 +161,12 @@ const pillarLabels: Record<string, string> = {
     margin: 0;
   }
 
-  .card-best-for {
+  .card-bullets {
     font-size: var(--text-xs);
     color: var(--color-text-muted);
     line-height: var(--leading-relaxed);
     margin: 0;
+    padding-left: 1rem;
   }
 
   .card-footer {

@@ -47,7 +47,7 @@ Product data is a system boundary — it's manually authored and directly drives
 **What we test:**
 
 - Every `amazonUrl` in both product files contains `tag=chill-dogs-20`
-- Every calming product has 3 bullets and populated `bestFor`, `howItHelps`, `considerIf`
+- Every calming product has at least one populated bullet
 - Every cooling category has complete meta: title, headline, intro copy, FAQs, and valid internal links
 
 These tests are resilient to product additions/removals because they iterate over the data rather than asserting exact counts.

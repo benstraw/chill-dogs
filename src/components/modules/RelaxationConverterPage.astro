@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 import JsonLd from '@components/JsonLd.astro';
-import MerchantAffiliateLink from '@components/MerchantAffiliateLink.astro';
 import Hero from '@components/modules/Hero.astro';
 import Toc from '@components/modules/Toc.astro';
 import FAQ from '@components/modules/FAQ.astro';
@@ -11,14 +10,10 @@ import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
 import RelaxationProductCard from '@components/modules/RelaxationProductCard.astro';
 import {
   buildRelaxationItemListSchema,
-  getRequiredProducts,
   resolveRelaxationDisplayProducts,
   type RelaxationBlock,
   type RelaxationConverterPageConfig,
-  type QuickPickItem,
 } from '@data/relaxation-converter-pages';
-import { getOffers } from '@data/products/offers';
-import { merchants } from '@data/products/merchants';
 
 interface Props {
   config: RelaxationConverterPageConfig;
@@ -31,9 +26,6 @@ function sectionClass(block: RelaxationBlock): string {
   return block.alt ? 'converter-section converter-section--alt' : 'converter-section';
 }
 
-function quickPickProduct(item: QuickPickItem) {
-  return getRequiredProducts([item.productId])[0];
-}
 ---
 
 <BaseLayout title={config.title} ogTitle={config.ogTitle} description={config.description} pillarTheme="comfort">
@@ -52,56 +44,7 @@ function quickPickProduct(item: QuickPickItem) {
     {config.toc && <Toc headings={config.toc} pageSlug={config.pageSlug} />}
 
     {config.blocks.map((block) => (
-      block.kind === 'quick_picks' ? (
-        <section class={sectionClass(block)} id={block.id}>
-          <div class="converter-inner">
-            <h2>{block.heading}</h2>
-            <p class="section-intro">{block.intro}</p>
-            <div class="quick-picks-grid ui-grid ui-grid--3">
-              {block.items.map((item) => {
-                const product = quickPickProduct(item);
-                return (
-                  <article class="quick-pick-card">
-                    <div class="quick-pick-image">
-                      {product.image ? (
-                        <img
-                          src={product.image.src}
-                          alt={product.image.alt}
-                          loading="lazy"
-                          decoding="async"
-                          onerror="this.style.display='none';this.parentElement.classList.add('quick-pick-image--fallback')"
-                        />
-                      ) : (
-                        <div class="quick-pick-image-placeholder" aria-hidden="true">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="48" height="48" fill="currentColor" aria-hidden="true">
-                            <path d="M50 15c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zm-20 25c-3.3 0-6 2.7-6 6v4c0 8.8 11.2 16 26 16s26-7.2 26-16v-4c0-3.3-2.7-6-6-6H30zm-8 30c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm56 0c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zM36 78c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm28 0c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z"/>
-                          </svg>
-                        </div>
-                      )}
-                    </div>
-                    <p class="quick-pick-label">{item.label}</p>
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                    <div class="quick-pick-offers">
-                      {getOffers(product).map((offer, i) => (
-                        <MerchantAffiliateLink
-                          offer={offer}
-                          product={{ id: product.id, name: product.name, category: product.category }}
-                          class={`quick-pick-link${i > 0 ? ' quick-pick-link--secondary' : ''}`}
-                          label={merchants[offer.merchant].ctaCopy}
-                          pageType="converter"
-                          pageSlug={config.pageSlug}
-                          position={item.position}
-                        />
-                      ))}
-                    </div>
-                  </article>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-      ) : block.kind === 'product_section' ? (
+      block.kind === 'product_section' ? (
         <section class={sectionClass(block)} id={block.id}>
           <div class="converter-inner">
             <h2>{block.heading}</h2>
@@ -216,7 +159,6 @@ function quickPickProduct(item: QuickPickItem) {
     max-width: 720px;
   }
 
-  .quick-pick-card,
   .decision-card,
   .relaxation-note {
     background: var(--color-surface);
@@ -225,93 +167,11 @@ function quickPickProduct(item: QuickPickItem) {
     padding: var(--space-lg);
   }
 
-  .quick-pick-label {
-    font-size: var(--text-xs);
-    font-weight: var(--weight-semibold);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-text-muted);
-    margin-bottom: var(--space-xs);
-  }
-
-  .quick-pick-image {
-    aspect-ratio: 4 / 3;
-    overflow: hidden;
-    background: var(--color-bg-alt);
-    border-radius: var(--radius-md);
-    margin-bottom: var(--space-sm);
-  }
-
-  .quick-pick-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    background: #fff;
-  }
-
-  .quick-pick-image--fallback,
-  .quick-pick-image:has(.quick-pick-image-placeholder) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .quick-pick-image-placeholder {
-    color: var(--pillar-accent);
-    opacity: 0.5;
-  }
-
-  .quick-pick-card h3 {
-    font-size: var(--text-lg);
-    margin-bottom: var(--space-sm);
-  }
-
-  .quick-pick-card p,
   .decision-card li,
   .relaxation-note p {
     font-size: var(--text-sm);
     color: var(--color-text-muted);
     line-height: var(--leading-relaxed);
-  }
-
-  .quick-pick-link {
-    display: block;
-    text-align: center;
-    margin-top: var(--space-md);
-    padding: var(--space-sm) var(--space-md);
-    background: var(--pillar-accent);
-    color: var(--pillar-accent-text) !important;
-    font-weight: var(--weight-semibold);
-    font-size: var(--text-sm);
-    text-decoration: none;
-    border-radius: var(--radius-md);
-    transition: background 0.15s ease;
-  }
-
-  .quick-pick-offers {
-    display: grid;
-    gap: var(--space-xs);
-  }
-
-  .quick-pick-link:hover {
-    background: var(--pillar-accent-hover);
-    color: var(--pillar-accent-text) !important;
-  }
-
-  .quick-pick-link--secondary {
-    background: transparent;
-    color: var(--pillar-link) !important;
-    border: 1px solid var(--pillar-accent);
-  }
-
-  .quick-pick-link--secondary:hover {
-    background: color-mix(in srgb, var(--pillar-accent) 16%, transparent);
-    color: var(--pillar-link) !important;
-  }
-
-  .quick-pick-link:focus-visible {
-    outline: 2px solid var(--pillar-accent);
-    outline-offset: 2px;
   }
 
   .decision-card ul {

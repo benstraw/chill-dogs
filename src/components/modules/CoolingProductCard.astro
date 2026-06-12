@@ -27,20 +27,7 @@ const offers = isAmazon ? getOffers(product) : [];
   {product.rhysApproved && (
     <div class="cp-rhys-badge">Rhys Approved Product</div>
   )}
-  <p class="cp-best-for">
-    <strong>Best for:</strong> {product.bestFor}
-  </p>
   <ProductBulletList bullets={product.bullets} />
-  {product.coolingMethod && (
-    <p class="cp-meta">
-      <span class="cp-meta-label">Product:</span> {product.coolingMethod}
-    </p>
-  )}
-  {product.sizingNote && (
-    <p class="cp-meta">
-      <span class="cp-meta-label">Sizing:</span> {product.sizingNote}
-    </p>
-  )}
   {isAmazon ? (
     <AffiliateOfferStack
       offers={offers}
@@ -87,26 +74,4 @@ const offers = isAmazon ? getOffers(product) : [];
     margin-bottom: var(--space-sm);
   }
 
-  .cp-best-for {
-    font-size: var(--text-sm);
-    color: var(--pillar-link);
-    margin-bottom: var(--space-md);
-    line-height: var(--leading-normal);
-  }
-
-  .cp-best-for strong {
-    color: var(--color-text);
-  }
-
-  .cp-meta {
-    font-size: var(--text-xs);
-    color: var(--color-text-muted);
-    margin-bottom: var(--space-sm);
-    line-height: var(--leading-normal);
-  }
-
-  .cp-meta-label {
-    font-weight: var(--weight-semibold);
-    color: var(--color-text);
-  }
 </style>

@@ -50,8 +50,8 @@ Each product also exposes `offers`, derived through `src/data/products/` helpers
 The admin page at `/admin/products/` consumes `product-catalog.ts`. **Do not hardcode product rows directly in the admin route.**
 
 Canonical editorial product content belongs on the product record, not on merchant offers. Do not move or duplicate
-`name`, `bullets`, `bestFor`, `howItHelps`, `whyItWorks`, `considerIf`, sizing notes, signal notes, or manually chosen
-images into Amazon, Chewy, or future merchant metadata.
+`name`, `bullets`, gear-specific signal/subscription notes, or manually chosen images into Amazon, Chewy, or future
+merchant metadata. Cooling, calming, and relaxation converter product copy should stay in bullets only.
 
 When adding products:
 1. Add to the relevant pillar data file (`cooling-products.ts`, `calming-products.ts`, etc.)
