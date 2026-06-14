@@ -478,7 +478,8 @@ export const staticSitemapSections: SitemapSection[] = [
         description:
           'An honest look at Fi Series 3+ — cellular GPS tracking, escape alerts, and geofencing. What it does well, what it costs, and where it fails without cell signal.',
         href: ROUTES.fiCollarReview,
-        pageType: 'converter',
+        pageType: 'collector',
+        collectorSubtype: 'article',
         topics: ['tracking', 'gps-tracking', 'lost-dog-safety'],
         pinnedRelated: [
           ROUTES.trackingTop,
@@ -509,6 +510,7 @@ export const staticSitemapSections: SitemapSection[] = [
         ],
         relatedLabel: 'Garmin Off-Grid Systems',
         heroProduct: trackerHero('garmin-alpha-tt25-system', 'Best Off-Grid System', 'Garmin Alpha TT 25 + 300i'),
+        pubDate: new Date('2026-03-18'),
       }),
       createSitemapPage({
         baseTitle: "AirTag for Dogs: What It Can (and Can't) Actually Do",
@@ -527,6 +529,7 @@ export const staticSitemapSections: SitemapSection[] = [
         ],
         relatedLabel: 'AirTag for Dogs',
         heroProduct: trackerHero('apple-airtag-2nd-gen', 'Bluetooth Backup', 'Apple AirTag 2nd Gen'),
+        pubDate: new Date('2026-03-18'),
       }),
     ],
   },

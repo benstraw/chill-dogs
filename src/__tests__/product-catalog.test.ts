@@ -38,7 +38,6 @@ describe('admin product catalog data', () => {
       }
       expect(product.offers.length).toBeGreaterThan(0);
       expect(product.bullets.length).toBeGreaterThan(0);
-      expect(product.bestFor).toBeTruthy();
       expect(product.source).toMatch(/^src\/data\/.+\.ts$/);
     }
   });

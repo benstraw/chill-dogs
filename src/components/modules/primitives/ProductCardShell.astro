@@ -1,0 +1,37 @@
+---
+/**
+ * Shared product-card surface for the converter cards (cooling / calming / comfort).
+ *
+ * Provides the common surface, radius, shadow, and hover treatment plus a padded
+ * body. Pass the image element into the `image` slot (e.g. <ProductImageFrame />)
+ * and the card body into the default slot.
+ *
+ * BrowseProductCard intentionally does NOT use this shell — its sand/border/footer
+ * layout is a different thing, not drift.
+ */
+---
+
+<div class="product-card">
+  <slot name="image" />
+  <div class="product-card-body">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .product-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: box-shadow var(--transition-base);
+  }
+
+  .product-card:hover {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .product-card-body {
+    padding: var(--space-lg);
+  }
+</style>

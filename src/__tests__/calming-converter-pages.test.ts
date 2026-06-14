@@ -27,7 +27,7 @@ describe('calming converter page config', () => {
     const schema = buildCalmingItemListSchema(config.itemListSchema!);
 
     expect(config.pageSlug).toBe('best-lick-mats-for-dogs');
-    expect(config.hero.primaryCta.href).toBe('#quick-picks');
+    expect(config.hero.primaryCta.href).toBe('#starter-silicone-mats');
     expect(config.hero.secondaryCta?.href).toBe('/calming/how-to-prepare-a-calm-room-for-fireworks-night/');
     expect(schema.numberOfItems).toBe(13);
   });

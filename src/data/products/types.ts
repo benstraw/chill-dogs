@@ -39,13 +39,7 @@ export interface ProductEditorialFields {
   readonly id: string;
   readonly name: string;
   readonly bullets: readonly string[];
-  readonly bestFor: string;
   readonly image?: ProductImage;
-  readonly coolingMethod?: string;
-  readonly sizingNote?: string;
-  readonly howItHelps?: string;
-  readonly whyItWorks?: string;
-  readonly considerIf?: string;
   readonly signalNote?: string;
   readonly subscriptionNote?: string;
   readonly note?: string;

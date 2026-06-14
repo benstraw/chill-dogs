@@ -1,0 +1,69 @@
+---
+import MerchantAffiliateLink from '@components/MerchantAffiliateLink.astro';
+import { merchants } from '@data/products/merchants';
+import type { AffiliateOffer } from '@data/products/types';
+
+/**
+ * Renders a product's offers as a stack of shared `.ui-cta` buttons through
+ * MerchantAffiliateLink. The first offer is the primary CTA, the rest secondary.
+ *
+ * `resolveLabel` lets callers override the button copy per offer (cooling uses the
+ * page CTA label for Amazon; browse appends an arrow). Defaults to the merchant's
+ * configured `ctaCopy`.
+ *
+ * `topGap` adds the per-offer top margin the pillar converter cards carry; browse's
+ * compact footer CTAs pass `topGap={false}` to stay flush.
+ */
+interface Props {
+  offers: AffiliateOffer[];
+  product: { id?: string; name: string; category?: string };
+  tone?: 'pillar' | 'neutral' | 'merchant';
+  size?: 'compact' | 'standard' | 'wide';
+  pageType?: string;
+  pageSlug?: string;
+  position?: string | number;
+  topGap?: boolean;
+  resolveLabel?: (offer: AffiliateOffer, index: number) => string;
+}
+
+const {
+  offers,
+  product,
+  tone = 'pillar',
+  size,
+  pageType,
+  pageSlug,
+  position,
+  topGap = true,
+  resolveLabel,
+} = Astro.props;
+
+const labelFor = resolveLabel ?? ((offer: AffiliateOffer) => merchants[offer.merchant].ctaCopy);
+---
+
+<div class:list={['offer-stack', { 'offer-stack--top-gap': topGap }]}>
+  {offers.map((offer, i) => (
+    <MerchantAffiliateLink
+      offer={offer}
+      product={product}
+      tone={tone}
+      size={size}
+      variant={i > 0 ? 'secondary' : 'primary'}
+      label={labelFor(offer, i)}
+      pageType={pageType}
+      pageSlug={pageSlug}
+      position={position !== undefined ? String(position) : undefined}
+    />
+  ))}
+</div>
+
+<style>
+  .offer-stack {
+    display: grid;
+    gap: var(--space-xs);
+  }
+
+  .offer-stack--top-gap :global(.ui-cta) {
+    margin-top: var(--space-md);
+  }
+</style>

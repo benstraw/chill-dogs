@@ -1,0 +1,38 @@
+---
+/**
+ * Shared `+`-marker bullet list for the converter cards. Marker colour follows the
+ * active pillar theme via --pillar-link.
+ */
+interface Props {
+  bullets: string[];
+}
+
+const { bullets } = Astro.props;
+---
+
+<ul class="product-bullets">
+  {bullets.map((bullet) => <li>{bullet}</li>)}
+</ul>
+
+<style>
+  .product-bullets {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+    line-height: var(--leading-normal);
+  }
+
+  .product-bullets li {
+    padding-left: var(--space-md);
+    position: relative;
+    margin-bottom: var(--space-xs);
+  }
+
+  .product-bullets li::before {
+    content: '+';
+    position: absolute;
+    left: 0;
+    color: var(--pillar-link);
+    font-weight: var(--weight-bold);
+  }
+</style>

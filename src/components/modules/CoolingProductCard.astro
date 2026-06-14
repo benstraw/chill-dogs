@@ -1,5 +1,8 @@
 ---
-import MerchantAffiliateLink from '@components/MerchantAffiliateLink.astro';
+import ProductCardShell from './primitives/ProductCardShell.astro';
+import ProductImageFrame from './primitives/ProductImageFrame.astro';
+import ProductBulletList from './primitives/ProductBulletList.astro';
+import AffiliateOfferStack from './primitives/AffiliateOfferStack.astro';
 import type { CoolingProduct } from '@data/cooling-products';
 import { getOffers } from '@data/products/offers';
 import { merchants } from '@data/products/merchants';
@@ -18,86 +21,39 @@ const isAmazon = cta.kind === 'amazon';
 const offers = isAmazon ? getOffers(product) : [];
 ---
 
-<div class="cp-card">
-  <div class="cp-image">
-    {product.image ? (
-      <img
-        src={product.image.src}
-        alt={product.image.alt}
-        width="400"
-        height="300"
-        loading="lazy"
-        decoding="async"
-        onerror="this.style.display='none';this.parentElement.classList.add('cp-image--fallback')"
-      />
-    ) : (
-      <div class="cp-image-placeholder" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="48" height="48" fill="currentColor" aria-hidden="true">
-          <path d="M50 15c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zm-20 25c-3.3 0-6 2.7-6 6v4c0 8.8 11.2 16 26 16s26-7.2 26-16v-4c0-3.3-2.7-6-6-6H30zm-8 30c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm56 0c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zM36 78c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm28 0c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z"/>
-        </svg>
-      </div>
-    )}
-  </div>
-  <div class="cp-body">
-    <h3 class="cp-name">{product.name}</h3>
-    {product.rhysApproved && (
-      <div class="cp-rhys-badge">Rhys Approved Product</div>
-    )}
-    <p class="cp-best-for">
-      <strong>Best for:</strong> {product.bestFor}
-    </p>
-    <ul class="cp-bullets">
-      {product.bullets.map((b) => <li>{b}</li>)}
-    </ul>
-    {product.coolingMethod && (
-      <p class="cp-meta">
-        <span class="cp-meta-label">Product:</span> {product.coolingMethod}
-      </p>
-    )}
-    {product.sizingNote && (
-      <p class="cp-meta">
-        <span class="cp-meta-label">Sizing:</span> {product.sizingNote}
-      </p>
-    )}
-    {isAmazon ? (
-      <div class="cp-offers">
-        {offers.map((offer, offerIndex) => (
-          <MerchantAffiliateLink
-            offer={offer}
-            product={{ id: product.id, name: product.name, category: product.category }}
-            class={`cp-cta${offerIndex > 0 ? ' cp-cta--secondary' : ''}`}
-            label={offer.merchant === 'amazon' ? cta.label : merchants[offer.merchant].ctaCopy}
-            pageType={pageType}
-            pageSlug={pageSlug}
-            position={String(position)}
-          />
-        ))}
-      </div>
-    ) : (
-      <a
-        href={cta.href}
-        class="cp-cta"
-        data-track="collector_to_converter_click"
-        data-from-page={pageSlug}
-        data-to-page={cta.href}
-        data-category={product.category}
-        data-link-position="section"
-      >
-        {cta.label}
-      </a>
-    )}
-  </div>
-</div>
+<ProductCardShell>
+  <ProductImageFrame slot="image" image={product.image} />
+  <h3 class="cp-name">{product.name}</h3>
+  {product.rhysApproved && (
+    <div class="cp-rhys-badge">Rhys Approved Product</div>
+  )}
+  <ProductBulletList bullets={product.bullets} />
+  {isAmazon ? (
+    <AffiliateOfferStack
+      offers={offers}
+      product={{ id: product.id, name: product.name, category: product.category }}
+      tone="pillar"
+      pageType={pageType}
+      pageSlug={pageSlug}
+      position={position}
+      resolveLabel={(offer) => (offer.merchant === 'amazon' ? cta.label : merchants[offer.merchant].ctaCopy)}
+    />
+  ) : (
+    <a
+      href={cta.href}
+      class="ui-cta"
+      data-track="collector_to_converter_click"
+      data-from-page={pageSlug}
+      data-to-page={cta.href}
+      data-category={product.category}
+      data-link-position="section"
+    >
+      {cta.label}
+    </a>
+  )}
+</ProductCardShell>
 
 <style>
-  .cp-card {
-    background: var(--color-surface);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    overflow: hidden;
-    transition: box-shadow var(--transition-base);
-  }
-
   .cp-rhys-badge {
     display: inline-block;
     font-size: var(--text-xs);
@@ -112,123 +68,10 @@ const offers = isAmazon ? getOffers(product) : [];
     margin-bottom: var(--space-sm);
   }
 
-  .cp-card:hover {
-    box-shadow: var(--shadow-lg);
-  }
-
-  .cp-offers {
-    display: grid;
-    gap: var(--space-xs);
-  }
-
-  .cp-image {
-    aspect-ratio: 4 / 3;
-    overflow: hidden;
-    background: var(--color-bg-alt);
-  }
-
-  .cp-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    background: #fff;
-  }
-
-  .cp-image--fallback,
-  .cp-image:has(.cp-image-placeholder) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .cp-image-placeholder {
-    color: var(--color-sage);
-    opacity: 0.5;
-  }
-
-  .cp-body {
-    padding: var(--space-lg);
-  }
-
   .cp-name {
     font-size: var(--text-lg);
     font-weight: var(--weight-bold);
     margin-bottom: var(--space-sm);
   }
 
-  .cp-best-for {
-    font-size: var(--text-sm);
-    color: var(--color-accent-text);
-    margin-bottom: var(--space-md);
-    line-height: var(--leading-normal);
-  }
-
-  .cp-best-for strong {
-    color: var(--color-text);
-  }
-
-  .cp-bullets {
-    font-size: var(--text-sm);
-    color: var(--color-text-muted);
-    margin-bottom: var(--space-md);
-    line-height: var(--leading-normal);
-  }
-
-  .cp-bullets li {
-    padding-left: var(--space-md);
-    position: relative;
-    margin-bottom: var(--space-xs);
-  }
-
-  .cp-bullets li::before {
-    content: '+';
-    position: absolute;
-    left: 0;
-    color: var(--color-accent-text);
-    font-weight: var(--weight-bold);
-  }
-
-  .cp-meta {
-    font-size: var(--text-xs);
-    color: var(--color-text-muted);
-    margin-bottom: var(--space-md);
-  }
-
-  .cp-meta-label {
-    font-weight: var(--weight-semibold);
-    color: var(--color-text);
-  }
-
-  :global(.cp-cta) {
-    display: block;
-    text-align: center;
-    background: var(--color-primary);
-    color: var(--color-text-inverse) !important;
-    font-weight: var(--weight-semibold);
-    padding: var(--space-sm) var(--space-lg);
-    border-radius: var(--radius-md);
-    transition: background var(--transition-fast);
-    text-decoration: none;
-  }
-
-  :global(.cp-cta:hover) {
-    background: var(--color-primary-hover);
-    color: var(--color-text-inverse) !important;
-  }
-
-  :global(.cp-cta--secondary) {
-    background: transparent;
-    color: var(--color-primary) !important;
-    border: 1px solid var(--color-primary);
-  }
-
-  :global(.cp-cta--secondary:hover) {
-    background: color-mix(in srgb, var(--color-primary) 10%, transparent);
-    color: var(--color-primary) !important;
-  }
-
-  :global(.cp-cta:focus-visible) {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 2px;
-  }
 </style>

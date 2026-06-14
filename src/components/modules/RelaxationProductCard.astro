@@ -1,9 +1,10 @@
 ---
-import { Image } from 'astro:assets';
-import MerchantAffiliateLink from '@components/MerchantAffiliateLink.astro';
+import ProductCardShell from './primitives/ProductCardShell.astro';
+import ProductImageFrame from './primitives/ProductImageFrame.astro';
+import ProductBulletList from './primitives/ProductBulletList.astro';
+import AffiliateOfferStack from './primitives/AffiliateOfferStack.astro';
 import type { RelaxationDisplayProduct } from '@data/relaxation-converter-pages';
 import { getOffers } from '@data/products/offers';
-import { merchants } from '@data/products/merchants';
 
 interface Props {
   product: RelaxationDisplayProduct;
@@ -15,183 +16,25 @@ const { product, position = 0, pageSlug = '' } = Astro.props;
 const offers = getOffers(product);
 ---
 
-<div class="rx-card">
-  <div class="rx-card-image">
-    {product.image ? (
-      <Image
-        src={product.image.src}
-        alt={product.image.alt}
-        width={400}
-        height={300}
-        loading="lazy"
-        onerror="this.style.display='none';this.parentElement.classList.add('rx-card-image--fallback')"
-      />
-    ) : (
-      <div class="rx-card-image-placeholder" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="48" height="48" fill="currentColor" aria-hidden="true">
-          <path d="M50 15c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zm-20 25c-3.3 0-6 2.7-6 6v4c0 8.8 11.2 16 26 16s26-7.2 26-16v-4c0-3.3-2.7-6-6-6H30zm-8 30c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm56 0c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zM36 78c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm28 0c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z"/>
-        </svg>
-      </div>
-    )}
-  </div>
-  <div class="rx-card-body">
-    <h3 class="rx-card-name">{product.name}</h3>
-    <p class="rx-card-best-for">
-      <strong>Best for:</strong> {product.bestFor}
-    </p>
-    <ul class="rx-card-bullets">
-      {product.bullets.map((bullet) => <li>{bullet}</li>)}
-    </ul>
-    <p class="rx-card-meta">
-      <span class="rx-card-meta-label">Why it works:</span> {product.whyItWorks}
-    </p>
-    <p class="rx-card-meta">
-      <span class="rx-card-meta-label">Consider it if:</span> {product.considerIf}
-    </p>
-    <div class="rx-card-offers">
-      {offers.map((offer, i) => (
-        <MerchantAffiliateLink
-          offer={offer}
-          product={{ id: product.id, name: product.name, category: product.category }}
-          class={`rx-card-cta${i > 0 ? ' rx-card-cta--secondary' : ''}`}
-          label={merchants[offer.merchant].ctaCopy}
-          pageType="converter"
-          pageSlug={pageSlug}
-          position={String(position)}
-        />
-      ))}
-    </div>
-  </div>
-</div>
+<ProductCardShell>
+  <ProductImageFrame slot="image" image={product.image} />
+  <h3 class="rx-card-name">{product.name}</h3>
+  <ProductBulletList bullets={product.bullets} />
+  <AffiliateOfferStack
+    offers={offers}
+    product={{ id: product.id, name: product.name, category: product.category }}
+    tone="pillar"
+    pageType="converter"
+    pageSlug={pageSlug}
+    position={position}
+  />
+</ProductCardShell>
 
 <style>
-  .rx-card {
-    background: var(--color-surface);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    overflow: hidden;
-    transition: box-shadow var(--transition-base);
-  }
-
-  .rx-card:hover {
-    box-shadow: var(--shadow-lg);
-  }
-
-  .rx-card-image {
-    aspect-ratio: 4 / 3;
-    overflow: hidden;
-    background: var(--color-bg-alt);
-  }
-
-  .rx-card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    background: #fff;
-  }
-
-  .rx-card-image--fallback,
-  .rx-card-image:has(.rx-card-image-placeholder) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .rx-card-image-placeholder {
-    color: var(--pillar-link);
-    opacity: 0.5;
-  }
-
-  .rx-card-body {
-    padding: var(--space-lg);
-  }
-
-  .rx-card-offers {
-    display: grid;
-    gap: var(--space-xs);
-  }
-
   .rx-card-name {
     font-size: var(--text-lg);
     font-weight: var(--weight-bold);
     margin-bottom: var(--space-sm);
   }
 
-  .rx-card-best-for {
-    font-size: var(--text-sm);
-    color: var(--pillar-link);
-    margin-bottom: var(--space-md);
-    line-height: var(--leading-normal);
-  }
-
-  .rx-card-best-for strong {
-    color: var(--color-text);
-  }
-
-  .rx-card-bullets {
-    font-size: var(--text-sm);
-    color: var(--color-text-muted);
-    margin-bottom: var(--space-md);
-    line-height: var(--leading-normal);
-  }
-
-  .rx-card-bullets li {
-    padding-left: var(--space-md);
-    position: relative;
-    margin-bottom: var(--space-xs);
-  }
-
-  .rx-card-bullets li::before {
-    content: '+';
-    position: absolute;
-    left: 0;
-    color: var(--pillar-link);
-    font-weight: var(--weight-bold);
-  }
-
-  .rx-card-meta {
-    font-size: var(--text-xs);
-    color: var(--color-text-muted);
-    margin-bottom: var(--space-sm);
-    line-height: var(--leading-normal);
-  }
-
-  .rx-card-meta-label {
-    font-weight: var(--weight-semibold);
-    color: var(--color-text);
-  }
-
-  :global(.rx-card-cta) {
-    display: block;
-    text-align: center;
-    background: var(--pillar-accent);
-    color: var(--pillar-accent-text) !important;
-    font-weight: var(--weight-semibold);
-    padding: var(--space-sm) var(--space-lg);
-    border-radius: var(--radius-md);
-    transition: background var(--transition-fast);
-    text-decoration: none;
-    margin-top: var(--space-md);
-  }
-
-  :global(.rx-card-cta:hover) {
-    background: var(--pillar-accent-hover);
-    color: var(--pillar-accent-text) !important;
-  }
-
-  :global(.rx-card-cta--secondary) {
-    background: transparent;
-    color: var(--pillar-link) !important;
-    border: 1px solid var(--pillar-accent);
-  }
-
-  :global(.rx-card-cta--secondary:hover) {
-    background: color-mix(in srgb, var(--pillar-accent) 16%, transparent);
-    color: var(--pillar-link) !important;
-  }
-
-  :global(.rx-card-cta:focus-visible) {
-    outline: 2px solid var(--pillar-accent);
-    outline-offset: 2px;
-  }
 </style>

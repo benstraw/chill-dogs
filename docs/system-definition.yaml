@@ -71,8 +71,9 @@ site_system:
         Home page includes a dusty rose color block introducing the Comfort & Rest collector
         with tagline "Settle in." — positioned between HomepageHero and the start-prompt section.
         The From the Guide section features all current article collectors with OG-image cards,
-        including How to Crate Train Your Dog to connect informational crate intent with the
-        new crate converter path.
+        including static Astro article collectors like the tracking gear guides alongside MDX
+        guide entries such as How to Crate Train Your Dog, so the homepage article feed follows
+        sitemap page-type metadata rather than only the content collection.
         The Browse Picks list renders up to 15 converter cards from static sitemap metadata,
         sorted by lastUpdated ?? pubDate descending so newly published or materially refreshed
         converter pages can surface without manual homepage card ordering. The first three eligible
@@ -278,9 +279,10 @@ site_system:
         - "/gear/best-dog-gps-trackers/"
 
     - name: "Fi Dog Collar Review"
-      type: "converter"
-      target_action: "Drive affiliate outbound clicks for Fi collar; route off-grid seekers to Garmin page"
-      metric: "amazon_outbound_click rate (placeholder CTAs pending affiliate setup)"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Route everyday GPS-tracker intent to Fi purchase paths and off-grid seekers to Garmin/tracker comparison pages"
+      metric: "amazon_outbound_click rate + collector_to_converter_click to /gear/best-dog-gps-trackers/ and /gear/garmin-dog-tracking-collars/"
       routes:
         - "/gear/fi-dog-collar-review/"
 
@@ -381,7 +383,6 @@ site_system:
       - "RelaxationConverterPage"
       - "SectionCollectorPage"
       - "CollectorBody"
-      - "ComparisonTable"
       - "CoolingProductGrid"
       - "CoolingProductCard"
       - "CalmingProductCard"
