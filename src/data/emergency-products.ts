@@ -1,7 +1,38 @@
 import type { AffiliateOffer } from './products/types';
+import b0b1w5r11y from './amazon-products/B0B1W5R11Y.json';
+import b0b1w6vlkw from './amazon-products/B0B1W6VLKW.json';
+import b0bwsqwxpc from './amazon-products/B0BWSQWXPC.json';
+import b0c3cdqgjq from './amazon-products/B0C3CDQGJQ.json';
+import b0clv3yjdx from './amazon-products/B0CLV3YJDX.json';
+import b0crwll6c1 from './amazon-products/B0CRWLL6C1.json';
+import b0dcqdxss5 from './amazon-products/B0DCQDXSS5.json';
+import b0f1zfmvxg from './amazon-products/B0F1ZFMVXG.json';
+import b0f2cbr1t1 from './amazon-products/B0F2CBR1T1.json';
+import b0f6yl3lt1 from './amazon-products/B0F6YL3LT1.json';
+import b0fd8kws9l from './amazon-products/B0FD8KWS9L.json';
+import b0fy6tvdhq from './amazon-products/B0FY6TVDHQ.json';
+import b0g4w14r1y from './amazon-products/B0G4W14R1Y.json';
+import b0g595ggpq from './amazon-products/B0G595GGPQ.json';
+import b0gfmqt8yj from './amazon-products/B0GFMQT8YJ.json';
+import b0gh76xgkz from './amazon-products/B0GH76XGKZ.json';
+import b0ghhdv7y9 from './amazon-products/B0GHHDV7Y9.json';
+import b0gjd28nrt from './amazon-products/B0GJD28NRT.json';
+import b0gxf114lp from './amazon-products/B0GXF114LP.json';
+import b0grgdvz21 from './amazon-products/B0GRGDVZ21.json';
+import b0grv66y6x from './amazon-products/B0GRV66Y6X.json';
+import b0gtr1575s from './amazon-products/B0GTR1575S.json';
+import b07gvsg62x from './amazon-products/B07GVSG62X.json';
+import b07wrpclyr from './amazon-products/B07WRPCLYR.json';
+import b077z3lnx9 from './amazon-products/B077Z3LNX9.json';
+import b08bhjfsj4 from './amazon-products/B08BHJFSJ4.json';
+import b08zfvzphm from './amazon-products/B08ZFVZPHM.json';
+import b09fkvqqvh from './amazon-products/B09FKVQQVH.json';
+import b097pldd92 from './amazon-products/B097PLDD92.json';
+import b00ti8gse2 from './amazon-products/B00TI8GSE2.json';
 
 export type EmergencyProductCategory =
   | 'carry'
+  | 'stretcher'
   | 'first-aid'
   | 'muzzle'
   | 'warmth-control'
@@ -27,12 +58,125 @@ export interface EmergencyProduct {
   image?: { src: string; alt: string };
 }
 
+interface AmazonProductCache {
+  product_results?: {
+    title?: string;
+    thumbnail?: string;
+  };
+  about_item?: string[];
+}
+
+const amazonProductCache = {
+  B0GFMQT8YJ: b0gfmqt8yj,
+  B0GH76XGKZ: b0gh76xgkz,
+  B0GRV66Y6X: b0grv66y6x,
+  B0GRGDVZ21: b0grgdvz21,
+  B0GJD28NRT: b0gjd28nrt,
+  B07GVSG62X: b07gvsg62x,
+  B0F6YL3LT1: b0f6yl3lt1,
+  B0FD8KWS9L: b0fd8kws9l,
+  B07WRPCLYR: b07wrpclyr,
+  B097PLDD92: b097pldd92,
+  B09FKVQQVH: b09fkvqqvh,
+  B08ZFVZPHM: b08zfvzphm,
+  B0B1W6VLKW: b0b1w6vlkw,
+  B0B1W5R11Y: b0b1w5r11y,
+  B0F2CBR1T1: b0f2cbr1t1,
+  B0CLV3YJDX: b0clv3yjdx,
+  B0C3CDQGJQ: b0c3cdqgjq,
+  B0CRWLL6C1: b0crwll6c1,
+  B0FY6TVDHQ: b0fy6tvdhq,
+  B0GHHDV7Y9: b0ghhdv7y9,
+  B0GXF114LP: b0gxf114lp,
+  B0G595GGPQ: b0g595ggpq,
+  B0GTR1575S: b0gtr1575s,
+  B08BHJFSJ4: b08bhjfsj4,
+  B0F1ZFMVXG: b0f1zfmvxg,
+  B0DCQDXSS5: b0dcqdxss5,
+  B077Z3LNX9: b077z3lnx9,
+  B00TI8GSE2: b00ti8gse2,
+  B0BWSQWXPC: b0bwsqwxpc,
+  B0G4W14R1Y: b0g4w14r1y,
+} satisfies Record<string, AmazonProductCache>;
+
+type AmazonCandidateInput = {
+  asin: keyof typeof amazonProductCache;
+  id: string;
+  category: EmergencyProductCategory;
+  badge: string;
+  useCase: string;
+  bestFor: string;
+  fallbackBullets: string[];
+};
+
+const unsafeAmazonBulletPatterns = [
+  /\bvet[-\s]?(approved|endorsed|reviewed|recommended)\b/i,
+  /\bsnake\s*bites?\b/i,
+  /\bclose serious wounds?\b/i,
+  /\bstop bleeding fast\b/i,
+];
+
+function cleanAmazonBullet(bullet: string): string {
+  return bullet.replace(/^【([^】]+)】\s*/, '$1: ').replace(/^\d+\.\s*/, '').trim();
+}
+
+function productTitle(cache: AmazonProductCache, fallback: string): string {
+  return (cache.product_results?.title?.trim() || fallback)
+    .replace(/\bVet Approved\s*/gi, '')
+    .replace(/,\s*Best Head Lamp for Adults and Kids/gi, '')
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+}
+
+function amazonBullets(cache: AmazonProductCache, fallbackBullets: string[]): string[] {
+  const safeBullets = (cache.about_item ?? [])
+    .filter((bullet) => !unsafeAmazonBulletPatterns.some((pattern) => pattern.test(bullet)))
+    .map(cleanAmazonBullet)
+    .filter(Boolean)
+    .slice(0, 3);
+
+  return [...safeBullets, ...fallbackBullets].slice(0, 3);
+}
+
+function createAmazonReviewCandidate(input: AmazonCandidateInput): EmergencyProduct {
+  const cache = amazonProductCache[input.asin];
+  const name = productTitle(cache, input.id);
+  const thumbnail = cache.product_results?.thumbnail;
+
+  return {
+    id: input.id,
+    name,
+    category: input.category,
+    badge: input.badge,
+    asin: input.asin,
+    amazonUrl: `https://www.amazon.com/dp/${input.asin}?tag=chill-dogs-20`,
+    useCase: input.useCase,
+    bestFor: input.bestFor,
+    bullets: amazonBullets(cache, input.fallbackBullets),
+    ctaLabel: 'Check Price on Amazon',
+    ...(thumbnail
+      ? {
+          image: {
+            src: thumbnail,
+            alt: `${name} on a white background`,
+          },
+        }
+      : {}),
+  };
+}
+
 export const emergencyCategoryMeta: Record<EmergencyProductCategory, { label: string; title: string; intro: string }> = {
   carry: {
     label: 'Carry Slings',
     title: 'Emergency Carry Slings and Rescue Harnesses',
     intro:
       'A carry sling is crucial because movement can expedite the spread of venom through the bloodstream. If you can, carry your dog rather than having them walk.',
+  },
+  stretcher: {
+    label: 'Dog Stretchers',
+    title: 'Dog Stretchers for Vehicle and Trail Transport',
+    intro:
+      'A dog stretcher is a larger transport option for car kits, group hikes, and situations where a dog needs more body support than a sling.',
   },
   'first-aid': {
     label: 'First Aid',
@@ -59,6 +203,414 @@ export const emergencyCategoryMeta: Record<EmergencyProductCategory, { label: st
       'The best emergency kit is the one that helps you call ahead, see the trail, and leave quickly. A charged phone, backup battery, and headlamp are simple but useful pieces.',
   },
 };
+
+const carryReviewCandidates: EmergencyProduct[] = [
+  createAmazonReviewCandidate({
+    asin: 'B0GFMQT8YJ',
+    id: 'wakytu-emergency-rescue-sling',
+    category: 'carry',
+    badge: 'Rescue Sling Candidate',
+    useCase: 'Review candidate for packable emergency dog carry support',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes a lightweight, packable rescue sling.',
+      'Intended for short emergency carries and outdoor use.',
+      'Confirm the current size and weight guidance before buying.',
+    ],
+  }),
+  createAmazonReviewCandidate({
+    asin: 'B0GH76XGKZ',
+    id: 'dual-handle-dog-lifting-harness',
+    category: 'carry',
+    badge: 'Lift Harness Candidate',
+    useCase: 'Review candidate for short lifts, stairs, and assisted movement',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes a dual-handle lifting harness.',
+      'Designed for assisted walking and short support lifts.',
+      'Confirm fit, lift points, and size range before buying.',
+    ],
+  }),
+  createAmazonReviewCandidate({
+    asin: 'B0GRV66Y6X',
+    id: 'onetigris-full-body-dog-carry-sling',
+    category: 'carry',
+    badge: 'Full-Body Carry Candidate',
+    useCase: 'Review candidate for larger dogs that need fuller body support',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes full-body support and reinforced handles.',
+      'Designed for larger dogs and assisted carrying.',
+      'Confirm measurements and carry load before buying.',
+    ],
+  }),
+  createAmazonReviewCandidate({
+    asin: 'B0GRGDVZ21',
+    id: 'vivifying-dog-lift-harness',
+    category: 'carry',
+    badge: 'Rear Support Candidate',
+    useCase: 'Review candidate for rear-leg support and short mobility assistance',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes rear-leg support for large dogs.',
+      'Designed for standing, stairs, and car assistance.',
+      'Confirm sizing and whether rear-only support fits your kit needs.',
+    ],
+  }),
+];
+
+const stretcherReviewCandidates: EmergencyProduct[] = [
+  createAmazonReviewCandidate({
+    asin: 'B0GJD28NRT',
+    id: 'veehoo-dog-stretcher',
+    category: 'stretcher',
+    badge: 'Dog Stretcher Candidate',
+    useCase: 'Review candidate for a vehicle or group emergency transport kit',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes an aluminum-frame dog stretcher.',
+      'Includes safety straps and non-slip handles.',
+      'Confirm folded size and storage needs before buying.',
+    ],
+  }),
+  createAmazonReviewCandidate({
+    asin: 'B07GVSG62X',
+    id: 'patient-aid-portable-stretcher',
+    category: 'stretcher',
+    badge: 'Soft Stretcher Candidate',
+    useCase: 'Review candidate for a soft stretcher that can store flat',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes a soft transfer stretcher with multiple handles.',
+      'Designed to fold down for storage.',
+      'Confirm dimensions and animal handling fit before buying.',
+    ],
+  }),
+  createAmazonReviewCandidate({
+    asin: 'B0F6YL3LT1',
+    id: 'gray-large-dog-stretcher',
+    category: 'stretcher',
+    badge: 'Large Dog Stretcher Candidate',
+    useCase: 'Review candidate for larger-dog transport with multiple handles',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes a foldable stretcher for large dogs.',
+      'Designed with multiple handles for balanced carrying.',
+      'Confirm listed capacity and dimensions before buying.',
+    ],
+  }),
+  createAmazonReviewCandidate({
+    asin: 'B0FD8KWS9L',
+    id: 'black-pet-emergency-stretcher',
+    category: 'stretcher',
+    badge: 'Emergency Stretcher Candidate',
+    useCase: 'Review candidate for pet transport from vehicle, trailhead, or home',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes a pet stretcher with multiple handles.',
+      'Designed for emergency, illness, injury, or recovery transport.',
+      'Confirm listed size, handle layout, and storage before buying.',
+    ],
+  }),
+];
+
+const firstAidReviewCandidates: EmergencyProduct[] = [
+  createAmazonReviewCandidate({
+    asin: 'B07WRPCLYR',
+    id: 'arca-pet-car-first-aid-kit',
+    category: 'first-aid',
+    badge: 'First Aid Kit Candidate',
+    useCase: 'Review candidate for a car, home, or travel pet first aid kit',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes a pet emergency kit with travel supplies.',
+      'Includes a thermometer, muzzle, tick kit, and mini first aid pouch.',
+      'Use as transport support, not snakebite treatment.',
+    ],
+  }),
+  createAmazonReviewCandidate({
+    asin: 'B097PLDD92',
+    id: 'arca-pet-reflective-first-aid-pouch',
+    category: 'first-aid',
+    badge: 'First Aid Pouch Candidate',
+    useCase: 'Review candidate for a compact outdoor pet first aid pouch',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes a water-resistant reflective pouch.',
+      'Includes basic supplies such as gloves, antiseptic, tweezers, and scissors.',
+      'Use as transport support, not snakebite treatment.',
+    ],
+  }),
+  createAmazonReviewCandidate({
+    asin: 'B09FKVQQVH',
+    id: 'arca-pet-100-piece-first-aid-kit',
+    category: 'first-aid',
+    badge: '100-Piece Kit Candidate',
+    useCase: 'Review candidate for a larger pet first aid supply kit',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes a 100-piece pet first aid kit.',
+      'Includes visibility details and a pet care guide.',
+      'Use as transport support, not snakebite treatment.',
+    ],
+  }),
+  createAmazonReviewCandidate({
+    asin: 'B08ZFVZPHM',
+    id: 'adventure-dog-medical-kit-vet-in-a-box',
+    category: 'first-aid',
+    badge: 'Medical Kit Candidate',
+    useCase: 'Review candidate for a more loaded dog medical kit',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes a dog-focused medical kit.',
+      'Includes wound-care and lighting supplies for field readiness.',
+      'Use as transport support, not snakebite treatment.',
+    ],
+  }),
+  createAmazonReviewCandidate({
+    asin: 'B0B1W6VLKW',
+    id: 'compact-dog-first-aid-travel-pack',
+    category: 'first-aid',
+    badge: 'Travel Pack Candidate',
+    useCase: 'Review candidate for a compact hiking, camping, or travel first aid kit',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes a lightweight pet first aid travel pack.',
+      'Includes supplies such as tick remover, cleansing wipes, saline wash, and thermal blanket.',
+      'Use as transport support, not snakebite treatment.',
+    ],
+  }),
+  createAmazonReviewCandidate({
+    asin: 'B0B1W5R11Y',
+    id: 'dog-first-aid-essential-pack',
+    category: 'first-aid',
+    badge: 'Essential Pack Candidate',
+    useCase: 'Review candidate for a home, car, RV, or camping first aid kit',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes a hard-sided pet first aid case.',
+      'Includes supplies such as tick remover, slip leash, saline wash, and thermal blanket.',
+      'Use as transport support, not snakebite treatment.',
+    ],
+  }),
+];
+
+const warmthReviewCandidates: EmergencyProduct[] = [
+  createAmazonReviewCandidate({
+    asin: 'B0F2CBR1T1',
+    id: 'sierra-madre-emergency-sleeping-bag',
+    category: 'warmth-control',
+    badge: 'Emergency Blanket Candidate',
+    useCase: 'Review candidate for a compact thermal layer in a car or trail kit',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes a waterproof Mylar thermal bivy.',
+      'Designed to pack small for emergency storage.',
+      'Confirm size and packability before buying.',
+    ],
+  }),
+  createAmazonReviewCandidate({
+    asin: 'B0CLV3YJDX',
+    id: 'frelaxy-emergency-blanket-pack',
+    category: 'warmth-control',
+    badge: 'Emergency Blanket Candidate',
+    useCase: 'Review candidate for a multipack emergency blanket add-on',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes extra-thick, extra-large emergency blankets.',
+      'Includes whistles and storage pouches.',
+      'Confirm pack size and storage case before buying.',
+    ],
+  }),
+];
+
+const slipLeadReviewCandidates: EmergencyProduct[] = [
+  createAmazonReviewCandidate({
+    asin: 'B0C3CDQGJQ',
+    id: 'petarea-reflective-slip-lead',
+    category: 'warmth-control',
+    badge: 'Slip Lead Candidate',
+    useCase: 'Review candidate for backup control in a car, trail, or home kit',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes a slip lead that combines leash and collar function.',
+      'Reflective thread is braided into the rope.',
+      'Confirm width, length, and safe handling fit before buying.',
+    ],
+  }),
+  createAmazonReviewCandidate({
+    asin: 'B0CRWLL6C1',
+    id: 'mad-dog-products-orange-slip-lead',
+    category: 'warmth-control',
+    badge: 'Slip Lead Candidate',
+    useCase: 'Review candidate for a simple backup leash in an emergency kit',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes an orange English slip lead.',
+      'Designed to work without a separate collar.',
+      'Confirm width, length, and safe handling fit before buying.',
+    ],
+  }),
+];
+
+const preventionReviewCandidates: EmergencyProduct[] = [
+  createAmazonReviewCandidate({
+    asin: 'B0FY6TVDHQ',
+    id: 'ultra-thin-20000mah-power-bank',
+    category: 'prevention',
+    badge: 'Power Bank Candidate',
+    useCase: 'Review candidate for keeping a phone charged during emergency transport',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes a 20,000mAh portable charger.',
+      'Includes a built-in USB-C cable.',
+      'Keep charged before storing it in a kit.',
+    ],
+  }),
+  createAmazonReviewCandidate({
+    asin: 'B0GHHDV7Y9',
+    id: 'cuktech-25000mah-power-bank',
+    category: 'prevention',
+    badge: 'Power Bank Candidate',
+    useCase: 'Review candidate for higher-capacity phone and device charging',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes a 25,000mAh portable charger.',
+      'Includes a built-in USB-C cable and multiple charging ports.',
+      'Keep charged before storing it in a kit.',
+    ],
+  }),
+  createAmazonReviewCandidate({
+    asin: 'B0GXF114LP',
+    id: '50000mah-built-in-cable-power-bank',
+    category: 'prevention',
+    badge: 'Power Bank Candidate',
+    useCase: 'Review candidate for a larger-capacity car or camping kit battery',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes a 50,000mAh power bank.',
+      'Includes built-in cables and an LED display.',
+      'Confirm size, weight, and charging needs before buying.',
+    ],
+  }),
+  createAmazonReviewCandidate({
+    asin: 'B0G595GGPQ',
+    id: 'iniu-magnetic-10000mah-power-bank',
+    category: 'prevention',
+    badge: 'Power Bank Candidate',
+    useCase: 'Review candidate for a compact phone battery in a light trail kit',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes a 10,000mAh magnetic power bank.',
+      'Designed for wireless and wired phone charging.',
+      'Confirm phone compatibility before buying.',
+    ],
+  }),
+  createAmazonReviewCandidate({
+    asin: 'B0GTR1575S',
+    id: '10000mah-built-in-cable-power-bank',
+    category: 'prevention',
+    badge: 'Power Bank Candidate',
+    useCase: 'Review candidate for a compact all-in-one phone charger',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes a 10,000mAh portable charger.',
+      'Includes built-in cables and an LCD display.',
+      'Keep charged before storing it in a kit.',
+    ],
+  }),
+  createAmazonReviewCandidate({
+    asin: 'B08BHJFSJ4',
+    id: 'black-diamond-cosmo-300-headlamp',
+    category: 'prevention',
+    badge: 'Headlamp Candidate',
+    useCase: 'Review candidate for hands-free light in a trail or car kit',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing identifies this as the Black Diamond Cosmo 300 headlamp.',
+      'Headlamps keep both hands free during low-light transport.',
+      'Confirm current battery type, brightness, and water rating before buying.',
+    ],
+  }),
+  createAmazonReviewCandidate({
+    asin: 'B0F1ZFMVXG',
+    id: 'nebo-mycro-450-headlamp',
+    category: 'prevention',
+    badge: 'Headlamp Candidate',
+    useCase: 'Review candidate for rechargeable hands-free light',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes a rechargeable headlamp.',
+      'Includes multiple light modes.',
+      'Confirm brightness, runtime, and charging setup before buying.',
+    ],
+  }),
+  createAmazonReviewCandidate({
+    asin: 'B0DCQDXSS5',
+    id: 'nitecore-nu20-classic-headlamp',
+    category: 'prevention',
+    badge: 'Headlamp Candidate',
+    useCase: 'Review candidate for a lightweight rechargeable headlamp',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes a lightweight USB-C rechargeable headlamp.',
+      'Includes white and red light modes.',
+      'Confirm runtime and brightness before buying.',
+    ],
+  }),
+  createAmazonReviewCandidate({
+    asin: 'B077Z3LNX9',
+    id: 'nitecore-nu25-headlamp',
+    category: 'prevention',
+    badge: 'Headlamp Candidate',
+    useCase: 'Review candidate for a compact rechargeable headlamp',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes a 360-lumen rechargeable headlamp.',
+      'Includes white, high-CRI, and red light outputs.',
+      'Confirm current model details before buying.',
+    ],
+  }),
+  createAmazonReviewCandidate({
+    asin: 'B00TI8GSE2',
+    id: 'energizer-led-headlamp',
+    category: 'prevention',
+    badge: 'Headlamp Candidate',
+    useCase: 'Review candidate for a battery-powered emergency headlamp',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing identifies this as an Energizer LED headlamp.',
+      'Headlamps keep both hands free during low-light transport.',
+      'Confirm batteries, brightness, and runtime before buying.',
+    ],
+  }),
+  createAmazonReviewCandidate({
+    asin: 'B0BWSQWXPC',
+    id: 'coast-wph34r-rechargeable-headlamp',
+    category: 'prevention',
+    badge: 'Headlamp Candidate',
+    useCase: 'Review candidate for a waterproof rechargeable headlamp',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes a rechargeable waterproof headlamp.',
+      'Includes multiple beam colors and modes.',
+      'Confirm runtime, brightness, and charging setup before buying.',
+    ],
+  }),
+  createAmazonReviewCandidate({
+    asin: 'B0G4W14R1Y',
+    id: 'sunrei-rechargeable-headlamp',
+    category: 'prevention',
+    badge: 'Headlamp Candidate',
+    useCase: 'Review candidate for a rechargeable outdoor headlamp',
+    bestFor: 'Review before choosing for a snake-bite emergency kit.',
+    fallbackBullets: [
+      'Amazon listing describes a USB-C rechargeable headlamp.',
+      'Includes red light, motion sensor, and multiple light modes.',
+      'Confirm runtime, brightness, and fit before buying.',
+    ],
+  }),
+];
 
 export const emergencyProducts: EmergencyProduct[] = [
   {
@@ -110,6 +662,8 @@ export const emergencyProducts: EmergencyProduct[] = [
       alt: 'Rock-N-Rescue orange SAR dog harness on a white background',
     },
   },
+  ...carryReviewCandidates,
+  ...stretcherReviewCandidates,
   {
     id: 'adventure-medical-me-and-my-dog-kit',
     name: 'Adventure Medical Kits Me & My Dog First Aid Kit',
@@ -201,6 +755,7 @@ export const emergencyProducts: EmergencyProduct[] = [
       alt: 'Kurgo dog first aid kit on a white background',
     },
   },
+  ...firstAidReviewCandidates,
   {
     id: 'swiss-safe-mylar-emergency-blankets',
     name: 'Swiss Safe Mylar Emergency Blankets',
@@ -224,76 +779,9 @@ export const emergencyProducts: EmergencyProduct[] = [
       alt: 'Swiss Safe Mylar emergency blanket multipack on a white background',
     },
   },
-  {
-    id: 'mendota-pet-slip-lead',
-    name: 'Mendota Pet Slip Lead',
-    category: 'warmth-control',
-    badge: 'Best Backup Control Tool',
-    asin: 'B00074W3RW',
-    amazonUrl: 'https://www.amazon.com/dp/B00074W3RW?tag=chill-dogs-20',
-    useCase: 'Backup control if a dog slips a collar or harness',
-    bestFor: 'Car kits, trail kits, and backyard emergency hooks',
-    bullets: [
-      'Leash and collar function in one simple tool',
-      'Useful when a panicked dog slips other gear',
-      'Packs flat in a first aid pouch or car bin',
-    ],
-    pros: ['Simple and durable', 'Fast backup control', 'Works without a separate collar'],
-    cons: ['Not for unattended use', 'Requires calm handling', 'Choose width by dog size'],
-    howItHelps:
-      'Gives you quick backup control while moving a scared or painful dog toward the car.',
-    sizingNote: 'Choose the lead width and length that fit your dog size and handling needs.',
-    image: {
-      src: 'https://m.media-amazon.com/images/I/518869tpQWL._AC_SY300_SX300_QL70_FMwebp_.jpg',
-      alt: 'Mendota green rope slip lead on a white background',
-    },
-  },
-  {
-    id: 'anker-313-power-bank',
-    name: 'Anker 313 Power Bank',
-    category: 'prevention',
-    badge: 'Best Call-the-Vet Add-On',
-    asin: 'B08TW84CR1',
-    amazonUrl: 'https://www.amazon.com/dp/B08TW84CR1?tag=chill-dogs-20',
-    useCase: 'Backup phone power for calling the emergency vet from the trail or car',
-    bestFor: 'Hikers, road trippers, and anyone walking outside cell-phone comfort zones',
-    bullets: [
-      'Small backup battery for phone calls and maps',
-      'Helps you call ahead before arriving at the vet',
-      'Useful for everyday travel emergencies too',
-    ],
-    pros: ['Compact size', 'Useful beyond dog gear', 'Good capacity for phones'],
-    cons: ['Must be kept charged', 'Not waterproof', 'Cable may be separate'],
-    howItHelps:
-      'Keeps your phone alive so you can call the emergency vet, navigate, and coordinate help.',
-    image: {
-      src: 'https://m.media-amazon.com/images/I/61524M+c4pL._AC_SY300_SX300_QL70_FMwebp_.jpg',
-      alt: 'Anker 313 compact power bank on a white background',
-    },
-  },
-  {
-    id: 'lhknl-rechargeable-headlamp',
-    name: 'LHKNL Rechargeable LED Headlamp',
-    category: 'prevention',
-    badge: 'Best Dusk and Dawn Add-On',
-    asin: 'B08D66HCXW',
-    amazonUrl: 'https://www.amazon.com/dp/B08D66HCXW?tag=chill-dogs-20',
-    useCase: 'Hands-free visibility for summer dusk and dawn walks',
-    bestFor: 'Trail walkers and backyard owners who walk during lower-light snake hours',
-    bullets: [
-      'Hands-free light for spotting trail hazards',
-      'Useful during dusk, dawn, and emergency carries',
-      'Cheap prevention gear with broad utility',
-    ],
-    pros: ['Hands-free visibility', 'Rechargeable', 'Useful for carrying or searching'],
-    cons: ['Battery must be maintained', 'Brightness varies by mode', 'Not a snake deterrent'],
-    howItHelps:
-      'Helps you see the path, spot hazards earlier, and keep both hands free if you need to carry your dog.',
-    image: {
-      src: 'https://m.media-amazon.com/images/I/71DxWxvCwlL._AC_SX342_SY445_QL70_FMwebp_.jpg',
-      alt: 'LHKNL rechargeable LED headlamp two-pack on a white background',
-    },
-  },
+  ...warmthReviewCandidates,
+  ...slipLeadReviewCandidates,
+  ...preventionReviewCandidates,
   {
     id: 'hipypaw-basket-silicone-muzzle',
     name: 'HipyPaw Basket Silicone Dog Muzzle',

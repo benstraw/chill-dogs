@@ -9,6 +9,47 @@ import { relaxationProducts } from '../data/relaxation-products';
 import { accessoryProducts, trackerProducts } from '../data/tracking-products';
 
 describe('admin product catalog data', () => {
+  it('keeps snake-bite kit product ASINs unique and current', () => {
+    const emergencyAsins = emergencyProducts.map((product) => product.asin).filter(Boolean);
+    const addedAsins = [
+      'B0GFMQT8YJ',
+      'B0GH76XGKZ',
+      'B0GRV66Y6X',
+      'B0GRGDVZ21',
+      'B0GJD28NRT',
+      'B07GVSG62X',
+      'B0F6YL3LT1',
+      'B0FD8KWS9L',
+      'B07WRPCLYR',
+      'B097PLDD92',
+      'B09FKVQQVH',
+      'B08ZFVZPHM',
+      'B0B1W6VLKW',
+      'B0B1W5R11Y',
+      'B0F2CBR1T1',
+      'B0CLV3YJDX',
+      'B0C3CDQGJQ',
+      'B0CRWLL6C1',
+      'B0FY6TVDHQ',
+      'B0GHHDV7Y9',
+      'B0GXF114LP',
+      'B0G595GGPQ',
+      'B0GTR1575S',
+      'B08BHJFSJ4',
+      'B0F1ZFMVXG',
+      'B0DCQDXSS5',
+      'B077Z3LNX9',
+      'B00TI8GSE2',
+      'B0BWSQWXPC',
+      'B0G4W14R1Y',
+    ];
+
+    expect(new Set(emergencyAsins).size).toBe(emergencyAsins.length);
+    expect(emergencyAsins).toEqual(expect.arrayContaining(addedAsins));
+    expect(emergencyAsins).not.toEqual(expect.arrayContaining(['B00074W3RW', 'B08TW84CR1', 'B08D66HCXW']));
+    expect(emergencyProducts.filter((product) => product.category === 'stretcher')).toHaveLength(4);
+  });
+
   it('includes every product from every product data file', () => {
     const sourceProducts = [
       ...coolingProducts,
