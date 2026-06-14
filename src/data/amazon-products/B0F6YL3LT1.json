@@ -1,0 +1,493 @@
+{
+  "search_metadata": {
+    "id": "6a2e4c51a7d784558418d118",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/m_vmL2XSaf1cIL6bcomGrg/6a2e4c51a7d784558418d118.json",
+    "created_at": "2026-06-14 06:38:09 UTC",
+    "processed_at": "2026-06-14 06:38:09 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0F6YL3LT1/?",
+    "raw_html_file": "https://serpapi.com/searches/m_vmL2XSaf1cIL6bcomGrg/6a2e4c51a7d784558418d118.html",
+    "total_time_taken": 6.05
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0F6YL3LT1",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0F6YL3LT1",
+    "title": "Dog Stretcher for Large Dogs, Dog Stretcher, Portable Stretcher, Emergency Animal Carrier Capable of Holding up to 300 pounds with 8 Handles(Gray)",
+    "link": "https://www.amazon.com/Dog-Stretcher-Large-Dogs-Emergency/dp/B0F6YL3LT1/",
+    "link_clean": "https://www.amazon.com/dp/B0F6YL3LT1/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F6YL3LT1&device=desktop&engine=amazon_product",
+    "badges": [
+      "Frequently returned item Check the product details and customer reviews to learn more about this item."
+    ],
+    "variants": [
+      {
+        "title": "Color",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0F6YL3LT1",
+            "name": "Gray",
+            "image": "https://m.media-amazon.com/images/I/416jxO9tH1L._SS64_.jpg",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F6YL3LT1&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0FZ879D8X",
+            "name": "Purple",
+            "image": "https://m.media-amazon.com/images/I/41y9H1xh3bL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FZ879D8X&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Brand: ChengFu",
+    "thumbnail": "https://m.media-amazon.com/images/I/71Awahd2M8L._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/71Awahd2M8L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71BOBJJpBYL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71+KxGTjSvL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71irluukQ5L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71O8F+NlZKL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81T+7E8qBdL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81XW4HU4GZL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.7,
+    "reviews": 32,
+    "price": "$27.99",
+    "extracted_price": 27.99,
+    "price_unit": "$27.99 / count",
+    "extracted_price_unit": 27.99,
+    "delivery": [
+      "FREE delivery Thursday, June 18 on orders shipped by Amazon over $35",
+      "Or Prime members get FREE delivery Monday, June 15. Order within 21 mins. Join Prime"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$27.99",
+      "extracted_price": 27.99,
+      "price_unit": "$27.99 / count",
+      "extracted_price_unit": 27.99,
+      "delivery": [
+        "FREE delivery Thursday, June 18 on orders shipped by Amazon over $35",
+        "Or Prime members get FREE delivery Monday, June 15. Order within 21 mins. Join Prime"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "ChengFu",
+          "details": {
+            "heading": "Sold by",
+            "content": "ChengFu"
+          },
+          "link": {
+            "text": "ChengFu",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A3UVPLMQFB4Y6F&asin=B0F6YL3LT1&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "packaging": {
+          "text": "Ships in product packaging",
+          "details": {
+            "heading": "Ships in product packaging",
+            "content": "This item has been tested to certify it can ship safely in its original box or bag to avoid unnecessary packaging. Since 2015, we have reduced the weight of outbound packaging per shipment by 41% on average, that’s over 2 million tons of packaging material.If you still require Amazon packaging for this item, choose \"Ship in Amazon packaging\" at checkout. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/sipp_home"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "color": "Gray",
+    "brand": "ChengFu",
+    "product_dimensions": "48\"L x 40\"W x 0.2\"H",
+    "material": "Oxford cloth",
+    "special_feature": "Foldable"
+  },
+  "about_item": [
+    "Dog Stretcher is crafted from select Oxford fabric, which is tough enough to easily withstand up to 300 pounds, while being smooth and delicate to the touch, providing a thoughtful experience for the user.",
+    "The Dog Stretcher for Large Dogs measures 48 x 40 inches, and its spacious design makes it easy to transport large dogs, whether it's a larger Labrador or a German Shepherd, it's a perfect fit and meets the needs of a wide range of dog breeds.",
+    "The Portable Stretcher's lightweight design and unique foldable structure make it extremely easy to store and take up very little space. With a light weight of only 450g, the stretcher can be easily carried outside on a daily basis or used indoors, providing comfortable support for your pet anytime, anywhere.",
+    "Emergency Animal Carrier Unlike traditional stretcher bars with fixed supports, this stretcher bar features a flexible oxford fabric design. It not only retains excellent toughness and support, but is also able to adjust its shape at will according to actual needs, making it easy to use in narrow environments, greatly expanding the use scenarios, whether it is a narrow passageway indoors or a complex terrain outdoors, it can easily cope with the situation.",
+    "In terms of appearance design, the stretcher adopts a modernized style, and the exquisite pattern on the fabric surface breaks the monotony of the traditional stretcher, making the whole stretcher look more fashionable and comfortable, which is not only a practical pet accessory, but also a piece of home decorations with a sense of aesthetics."
+  ],
+  "bought_together": [
+    {
+      "position": 1,
+      "title": "Dog Stretcher for Large Dogs, Dog Stretcher, Portable Stretcher, Emergency Animal Carrier Capable of Holding up to 300 pounds with 8 Handles(Gray)",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71Awahd2M8L._AC_UL116_SR116,116_.jpg",
+      "price": "$27.99",
+      "extracted_price": 27.99,
+      "price_unit": "$27.99/count",
+      "extracted_price_unit": 27.99,
+      "delivery": [
+        "Get it as soon as Thursday, Jun 18"
+      ],
+      "stock": "In Stock"
+    },
+    {
+      "position": 2,
+      "title": "Adjustable Dog Lift Harness Dog Sling for Large Dogs Hind Leg Support Soft Lift Support and Rehab Harness for Weak Rear Legs, Helps Senior, Injured, Disabled and After ACL Surgery Dogs Large",
+      "link": "https://www.amazon.com/Support-Harness-Injured-Disabled-Surgery/dp/B07KXGWRYP/ref=pd_bxgy_thbs_d_sccl_1/134-4008090-1607915?pd_rd_w=mfyWn&content-id=amzn1.sym.9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_p=9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_r=M5REEDKW70P6X1AVFB6M&pd_rd_wg=459q8&pd_rd_r=da867fd9-0d74-4940-9e74-5e40a16da976&pd_rd_i=B07KXGWRYP&psc=1",
+      "asin": "B07KXGWRYP",
+      "link_clean": "https://www.amazon.com/Support-Harness-Injured-Disabled-Surgery/dp/B07KXGWRYP/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07KXGWRYP&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/61eXBek0kOL._AC_UL116_SR116,116_.jpg",
+      "price": "$19.99",
+      "extracted_price": 19.99,
+      "price_unit": "$19.99/count",
+      "extracted_price_unit": 19.99,
+      "delivery": [
+        "Get it as soon as Thursday, Jun 18"
+      ],
+      "stock": "In Stock"
+    },
+    {
+      "position": 3,
+      "title": "LOOBANI Portable Dog Sling for Back Legs, Hip Support Harness to Help Lift Rear for Canine Aid Old K9 Cruciate Ligament Rehabilitation",
+      "link": "https://www.amazon.com/LOOBANI-Portable-Cruciate-Ligament-Rehabilitation/dp/B07L3VLH5S/ref=pd_bxgy_thbs_d_sccl_2/134-4008090-1607915?pd_rd_w=mfyWn&content-id=amzn1.sym.9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_p=9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_r=M5REEDKW70P6X1AVFB6M&pd_rd_wg=459q8&pd_rd_r=da867fd9-0d74-4940-9e74-5e40a16da976&pd_rd_i=B07L3VLH5S&psc=1",
+      "asin": "B07L3VLH5S",
+      "link_clean": "https://www.amazon.com/LOOBANI-Portable-Cruciate-Ligament-Rehabilitation/dp/B07L3VLH5S/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07L3VLH5S&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/611zvRxVbbL._AC_UL116_SR116,116_.jpg",
+      "price": "$26.99",
+      "extracted_price": 26.99,
+      "delivery": [
+        "Get it as soon as Thursday, Jun 18"
+      ],
+      "stock": "In Stock"
+    }
+  ],
+  "product_details": {
+    "product_dimensions": "48 x 40 x 0.2 inches; 1.13 Pounds",
+    "item_model_number": "Dog Stretcher for Large Dogs",
+    "date_first_available": "April 30, 2025",
+    "manufacturer": "ChengFu",
+    "asin": "B0F6YL3LT1",
+    "best_sellers_rank": [
+      {
+        "text": "#41,097 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 41097,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#3,532 in Dog Health Supplies",
+        "extracted_rank": 3532,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/2975377011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Health Supplies"
+      }
+    ],
+    "customer_reviews": "4.7 out of 5 stars",
+    "rating": 4.7,
+    "reviews": 32,
+    "brand_name": "ChengFu",
+    "model_name": "Dog Stretcher for Large Dogs",
+    "model_number": "Dog Stretcher for Large Dogs",
+    "manufacturer_part_number": "Dog Stretcher for Large Dogs",
+    "included_components": "no",
+    "unit_count": "1.0 Count",
+    "recommended_uses_for_product": "Camping, Hiking, Walking",
+    "maximum_weight_recommendation": "300 Pounds",
+    "item_dimensions_l_x_w_x_h": "48\"L x 40\"W x 0.2\"H",
+    "item_weight": "1.1 Pounds",
+    "size": "47\"Lx29\"W",
+    "additional_features": "Foldable",
+    "closure_type": "Zipper",
+    "dog_breed_size": "Large",
+    "compatible_with_vehicle_type": "Car",
+    "color": "Gray",
+    "product_style": "Modern",
+    "material_type": "Oxford cloth"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0F9WT9L5W",
+      "title": "Dog Food Storage Container, 15-23 Lbs Collapsible Dog Food Container with Transparent Airtight Lid, Wheels and Scoop, Travel Pet Food Storage Container for Cat, Dog and Bird, Keep Dry Food Fresh",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JDVCHut-gVX3JbCQ05C08w0AAAGexNotFAEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICAchH-J/clv1c_ek-wxYHXFcbWDQHEa4sesmPkMDERPfvol614xlVg35kk_E0ktCP-5dSeb-i6Y0BW_umiRsQcoa9snK_Um6t75fRijU0tVON7mSmh_u6AUI22ulepdKsyIWQo4_xnjEZt1c8q6NFULGctXPHyJH5Jb5DaqpVcF1Rml83sw1c7zcdd252fwmYeJt63Fo7s85rwnh2hZ0VFGVNQgcy9lxFyXkC7P3-XPLLywJLETnM1gc6Uo5tMFzTzZ7kelQBPZ05V-lBps7btR58o7qJJLbzoaW_pH14wgdBmS9cvz5i6GqWtrIz7rZ_t91Izy6gCR6TCS4sFgZic9nXop-0sPw8BjBHKYWPFGhWptJqDlH4UX-gbDPuAHx38D3vWJct9BJlyddABnk3u-p2CdxvxaIta-sFFiyvKYGjP8DTHI5Cxg8eH0LmzxYURU5mqVVq0BqQlLfzRvnIhAxxMHggd3z9ALxrJK1BpWe_mClvjD-x8GNKMmhhmpRJQqtlIhCpPiiOXoK8p6AYC_2nGcJSpQDvzpzgBLGihBRmywerw93SFWM_GgxcrA2S4AYPaW3VJiV7pkOAO1SGlAinvLD-d6Uo_p1pMLykmmdMYwg-tqGcsbLxhuk82e9D01p7kgOgs0TTMBtheE_HjL0LR4GK0XpevyTK8txsLxvbxOdOAJU0gj0PwVAN2NyYt2YdNDD2oXUy6kZIMPgbZXpbxsRTguoTTKnUHcv0nhoB7h-MIA27ztGt1Gb7DzzMBUMPfFudt2bhLwN2kx16PqwMEhuvA-vhXhFWlI5ZLchB9CN00Av_4bChvysKPCk-Ow6Sf8Qfpz2rv__rJDhNLxYqLpmrU5teV-cl_u2Dzf6sp4coor0Ggze09f_ty7uoItN3ljRnpv87QNOpIPsVi4dKi6LvX7qz2gHEJARYkhUY6L0Swt8bCxGc2-JlYFWeNR7oebpHW3BSKyrffbl_0it-e9ADBbYELLfmY5X0r7-vz0U2Nb1Zy9GsPA3sYnp1Z0pmQO1mSLPyHWF4kTFULzwWIodOEZaau4X8Zc9ccH9G9B5hV1Smxka_VphWv2IGgul8k2ykMF8gNR4p7FCFSfhH3E-R5vet0QPxT9MGUKr6RFDUGdIRGKxZlqRsKn0b2qopuXmkHzDSX--Du5Ti3wyaLxseMJjIhZorcKz6WE5qoNEebM062SANG439P32BnIxdE83NkGEk_0fq2WzV5rEEzVdIt36G5DZwiFtdEtjQUSce1oRYEXfUL9w-Y5aiNaRBtjDCuD5QuqxQ2yN7Bb4BaQwD7HCgaZ2dW9FcN1l3O4o3KTYDEDQXSeepwcY6XPcJBaj07CCyiclppkLog0xRO-lSHB6AN7h6n3ENctn8K3sOR2tBoObNmtzlJGCpChwM-ITzV4SmO4ItzkquqMAaF178wr8UYUlK2RAJVyktvgeKeRQ-PIOTOfCmfCYcJ51XCNRUM00G-6-xNHHqlxSgbQvS5CG86X4_mc-UxQe2Hes8Jv9yTOuflLea6fcRew_0paO2YEWLVG_yDnQaiRgunqQZEkMWSNLjTIO8/https://www.amazon.com/dp/B0F9WT9L5W/?_encoding=UTF8&pd_rd_i=B0F9WT9L5W&pd_rd_i=B0F9WT9L5W&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=VQH0V&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=M5REEDKW70P6X1AVFB6M&pd_rd_wg=459q8&pd_rd_r=da867fd9-0d74-4940-9e74-5e40a16da976",
+      "link_clean": "https://www.amazon.com/dp/B0F9WT9L5W/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F9WT9L5W&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41uV8SKaotL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/d4812966-c215-463d-8379-9dd330806b4c.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/d4812966-c215-463d-8379-9dd330806b4c.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.5,
+      "reviews": 325,
+      "price": "$23.99",
+      "extracted_price": 23.99,
+      "old_price": "$29.99",
+      "extracted_old_price": 29.99
+    },
+    {
+      "position": 2,
+      "asin": "B0BJDKC5VP",
+      "title": "Cervical Neck Traction Device: Neck Stretcher for Cervical Pain Relief, Electric Air Pump with 3 Power Traction, Built-in 8 Airbag, Improved Stretcher for Neck Decompression and Neck Tension Relief",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JDspyy3-BJ9F4he9fnBv-IQAAAGexNotFgEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICBxur7O/clv1c_ek-wBQf2LcTWXk4hOzIv7vt9oho-mJ7D4U6w88Ty7ReRw3SwqgADC6h4fLqyM8etoyyXOoM79tI2I0M3C8_M-aIRDmvecbKPLDOoErRi7Iq-mgMZMHCHTOz22iEkB5MSb5YmHXKbAvffnzTNgNud2bgboNi45hXas0VzzguYrM5XiSMFi4wrYWNC3e79eovpWk4G9HFzB1epQ7R98Xrku_vaWxtr9EolsdW2AhR1ccM-wTVhYmoICk2PPXAp-K3LPoPhjp-KC4TVuCgh7btoeedoLa-x4ShnaqZsNE60-saY4JN_F2zsy9fbNdMBr3reO_ikQ81wayDJkPTl15JrvquF1xYlIHKvU5DN_8zMsXij5rZ3p63TBTn3Ca4YoUiKXHDp0-aymgILI6f6A9G6yMdW6Tx-Etg31M494LiqvUtbBTy2cWWsZRlLXxfmDHhXnx2G0lCR1Hz8c-4HsRpN3igBk3iiaxHFA5kTylugPjql-4oz4ynQ7lfzTjMAvzgRgD-0bQXw6I4su7VtKLR2qCPbFASytCTTwvjxH3dFT8yoIrEH8CFG-qGlG0UlH7_ZCmH21cGyFYRx1bhlQdNHikyiIx5S1fP3Sy8Gjuh5f3QiuskLNu9Gv3olZGNkmtvuS0ZFEME_Yjw3BclNVVS43ovdt_h6xvLDrvKV-aSxnBrXFx_tCBHOdBtvq_D-YlyiuRBs7fe0E8MG15Zdxn_YTGUo0lBRc9Y2_4bv6bClIIgTsE90ntBdCbVx-3W9vhBWpM5oLZrr0O48k9hZ0YX4DTz8zm7PKApK_4RzKy1bwx0hOXWqzSNuZ7IJqlTdTgihlwOtcZ-Efo4HT2ZxRVOLjLXnLYG49is2VLW-iql8B_zHWPSTs7uL9C-qRxX9uUk8TalKbvdL0Xsr6fp26OczCWbhiuCCZ8sVewaWUEyK_Q_MviBi6Tizr4YbWdquTqVFOq_sT57tJ_ITzigf30_wKNEzbGfQYnlkWF1E91SDR_BsNEz_i9Sz-Y0GrauPe7oLL4NeDsGqrZV8VixyugLkOoBx-60dfPVV-pAMVwXNdhuSYNGNyWNgqV3bg0YBFsxrw5iofMGfv8Ln59nC0QQc2_Pa_4C7lD8sJAe3gRY7TmZk9gYa_0K-3OTOTAqTnE0XCvmMn_Chna-MVqnbAzmJd_aZbBzoPrTrHZ244vJNtKJd6f0IRvintWhj4gVefWLH-cYhnlDt3Fy4SBh86YYd8QSGI7_JoJoqupUjqN-5aA5yeBO-wiL5hxSPbQ3Difkq1a8ib9BxitSWzwx2117TRDoarEw4KrZ8U3YCADH0CrsOjx-tSjnzy1_ONq_16qkn8tFpiK5XB2Uxzu1FW5leM5zzlJcK5ddOz-z0oudHzieukRWqNYbnxGFFWHUT1ZL4gmAUo9ESFvEPMht2WINopYs3Rga19xTjR2pERg96K7oRSJHE5IYH484mdLJClttRddTMyOY9aQfaGQDsCc4e2Ix0wn2TUFu3fHCxW-ffP38_Gl6Yr1QzudTv0x6Z8Vpb8RJY3rwF0T1aBQ5kL06eh2LE/https://www.amazon.com/dp/B0BJDKC5VP/?_encoding=UTF8&pd_rd_i=B0BJDKC5VP&pd_rd_i=B0BJDKC5VP&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=VQH0V&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=M5REEDKW70P6X1AVFB6M&pd_rd_wg=459q8&pd_rd_r=da867fd9-0d74-4940-9e74-5e40a16da976",
+      "link_clean": "https://www.amazon.com/dp/B0BJDKC5VP/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0BJDKC5VP&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41yJbmfEMFL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/730c538e-1e40-4a8c-84b3-819a973afee6.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/730c538e-1e40-4a8c-84b3-819a973afee6.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.2,
+      "reviews": 350,
+      "price": "$119.99",
+      "extracted_price": 119.99
+    },
+    {
+      "position": 3,
+      "asin": "B0B7DP9CGN",
+      "title": "Neck Stretcher, Cervical Traction Device, Neck Traction Device, Cervical Neck Traction Device for Neck Pain Relief, Adjustable Inflatable Neck Brace, Neck Decompression Home Use (Blue)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JHXTiKvxJI3ZVB3yu3HmTHkAAAGexNotFwEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICATaeU5/clv1c_ek-wxQfWFbbaTPHXD5tyrleKLAWZLs-wT5uUs3qyi_UM1Q3rhmt6H4U9Yjtofc3BpHYNirKy_Q5b_rHU00h96O5W5V0LIym5uCps6jbW6NyGhhSeX-RULS3_9rXcdgIAE54ihX6IAjclrMaz3b_n99qL4N-SmjWGWiSQz7ygxIwV7VJUB8Tjb9GbXQA6RispIfegYEVFGVNQocy9F9BKcD3aWRn550YlN1QCZajq1jNS5ZNM5qbXS1fnU3ofyQczno0IciaKuba3aqubCXJnciB7NLxwPmcLFHgQvjNDG4ee8LV5BdFcgzc1dB4RQ6lr6TNNhKAEwF8dEiAYi6oxt_LTUSf_J8vHVJSlg4IJ2nn2TPCMfs9PAZlLHhGb0UGX6FUfTG9q_11gUgQFcs_8QPcFheVLKUbj1hyxj0aluFMEDfe6lHpZ10uPvXShxB5qvQYLE_E8J00hcdHeuzeIVCnTnB0nR9z-o8hmyz28TYeNb1k8MgQ55QwHML6bHckoLdcYBBBF5e5SU5ypw9DpzK3hrWCVnVtuxSKzrzdFkbbi79uEnrtXZG6ku1XBlqq_rmoTt0yZZrTi66RgS1EtssMI3ZJplV5G_y5FWCdZLxByItxQdxDvVSvZ55BFtjulMuDS_eSNGuohhnEA1a9FVgomCdXvkT6kvvKFeSVQ9y8s_aItgudXeVc1EJHVCbEi9PIAZMCvx5jHMsbtSlRYkAMjif0A1ACiJs8C-5EkUYi3R7TAkwza6CAzcXo4NZOMou-sbXKqwI78GRdB-YUw4Uu1WnCdUBpKC7k30wUnDhqDRfN0BOrHxeyE-wn0RJwVeZnw2aFCbLtNlrxHmH2YUp4dLi-HBq349x5bulaUqeBZWrN_ZNgcTHoBfHVIptrCC4BIMD864GPtOKqaX4Ve0YZZavYBcGgL0j5ei6ud5Euc4OCcrPWJi7YxEWLktZexgT7KBxOPRZPNxWuOI37672tFY6eSYTFabn1Yvt0Nuu3o8kSOYgWNNx_7Vv3h9eMaXEoN2R5AR41Qv319TLRf-BgWR07DdNCxNvKBVyBEj_IrDe7vLmcepGVUu-i41s0mnW76UYkWA6MXeJ8YAm30f5UQBDNuiHeBW7PE59t-wMeRHtcOugxit1Xt0hXlTdNpIj37NJPFgYvx77LSURFBeLjiAt9MKTXbbYAwSWzoNbGgBoCNDTpdtGGBDxRFco-dgKPFv0EovfGMrFvU1dsWdP53WyYvJOufIioDAJHhYR5tmQS_eOUTkODs536cd-zesRdW1krlkKM7XFF9YDWPQ274EckSv7lN4Xle01RZhNWWN8kXEdu2BGza7tHGDaKhNiOOnwvRZ9JXXZGdJ2Fospyh4OFpzGADHfAJR2d-y1EdNV6ATu8GBvurIZigjnozpE6nk-vvra8Ro9j4ilhDoGdJZUaM9jD7yFx-ZMwbMCik300sBBeTF9qoAWiAHbuOWlVRb3sx4n8EZKVWpYWaXyB1kAT-xJqqUkzqw2XbCb0wKcNs6a8qxs9kQSjgWFy12u2fQlI6ZL3AevybhI_F1zB6i9c2BR4/https://www.amazon.com/dp/B0B7DP9CGN/?_encoding=UTF8&pd_rd_i=B0B7DP9CGN&pd_rd_i=B0B7DP9CGN&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=VQH0V&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=M5REEDKW70P6X1AVFB6M&pd_rd_wg=459q8&pd_rd_r=da867fd9-0d74-4940-9e74-5e40a16da976",
+      "link_clean": "https://www.amazon.com/dp/B0B7DP9CGN/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0B7DP9CGN&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41LpLO6AxQL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/9d598eaa-ab13-4675-baf7-1be36d14d946.MP4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/9d598eaa-ab13-4675-baf7-1be36d14d946.MP4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4,
+      "reviews": 3267,
+      "price": "$21.59",
+      "extracted_price": 21.59,
+      "old_price": "$23.99",
+      "extracted_old_price": 23.99
+    },
+    {
+      "position": 4,
+      "asin": "B0F65NVN9F",
+      "title": "Supet Dog Sling Carrier for Small Pets, Hands Free Cat Sling, Reducing Back Neck Pain Anti-Anxiety Puppy Front, Adjustable Soft Dog Carrying (Grey, Regular 0-9 Lbs)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JKP7cGzAV-a4ih1jfHJoNDIAAAGexNotGAEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICCdIsN4/clv1c_ek-wxQfWLbbSDRHUVp4p3gLJ7TlWSpMXp9q2Qw_ll4liKAXvaurKJYasysGIghxFe90YAtDIbwOJcYdGwRJe9UtY-wdqWDJMbC0yAglJDLX6uyWNPnw4fal86uRkltNz9Bxruvc_wHiAITAqACksLaO-8F2YlGVKkyHSTbCrwKzfcUPNVvzokNvLFgFjnr9FhIMOzWhz9-eplWE0M0r4eMuzWUp7YCqUFbo-Qrtob8Hd2Ph95SNHpN9gQHA94g-6gGGtD6qaH4PqiGj_OWSp7VpwxStJojBpNvHyqOJr97cvBNaxdPG39358OBId-z_QFJ8KFsc7hx3UPU3ERaeqQlL7-DqX7Wd4hlVSn9mcmm8QJtvIo3cc8M6pVnrSaf1Ntd4UlOFYlUXe9XkxPQLoXk3XOVHg5Yq8S-sUSvHW4LhcvzeaxXmzQDxgBqayKA0jyfwRUojl1bKbbykwSdItMd-D40kAnQXVb-VBWKXsHen0-QZF5He3YrmyYLeEhNNkimku1H1DnoDcWu1HhCur1ZL2HHBpaENiplEbzVOMl27XzL_f8cfObJyspNJ4M0OicnZuMdGPA5LLyv0_tg3-G3p1G5IYoyvQFZITiRfTfdXTj-YhgRVZWTpexabzcUlfejXbQK5dPpuo-jFDFRwLb-1bKr2mPjCiLF9f1GSCgdDNi6-TIXa5ERNVTml3ehypSO9QTnDg6djggsiNQEuICC_e3HKXHOoZlZR6QvE5miERCHy0w-Wk2LOZlIykd2PMr7dDZPPc4hClTf6XFILTr2_I7xHSA75zm2wnpfcluK9qD2UgS-jf7eX53YpFEWSqvw3q6pYS9p5kv2SA-f4mRDc6eVbB6uu5pyiop7ZvjIALBWoZ7U99t5N-tgMp2yac6akJ-3dtqMhn4oSAgDl90MMhcwVkcGgLEj5Wu0d4kUeAZlvcMHmty-q5JyFgGZHUV0m-FbnQ52dd5tJYuCQIxSuwgRGu7i--ia6eKZ8GOR_4CNbS1ZIIS1jNi_x3VnnG3UhNO0dj2JacuXlW7q5317Vk-niwecHlhrWv43QZryb7Hb-Z4a3mrV2MlpYqTKqySQpc78eYxdp99MD2DpctMJEQhJ-_WYnOyilSxMcSQjisIsHbY3neVQcAar9jV-z1IgSXSmdQ8ewVadA2ZzF-4bSlzRL9vjSN6oVD5h86MAMj8WEODiZhtyvxTyTx7NuQquTrSuBys2EIitEt26Kp5cefzHHaGyds6jflpegzvxx7VyHbezkc-QgXgzS-wPbtCy665zIjzq9jf-3sTtVDIJm_st6OrnaFfYXO5cQYYb-dyEjDtgl45hzl82AzTHNV4e-f_W4zK_RH_6kotVNiy4bGZs3W8oQVGBCZEEMfB8eMfsEbnTpu3Q21DoIA4h52BCLExIwYHzn7Us5tJjkSHvI-YGmBDtDEE42FBPt1PlpP_wSnhai7kgUjFDZT_zV5GgVfnfw4yDlBSsJhDjiO-fe9lzcIiiUMU7nQeRD_aIYgvMrRzc12Bk_oSjue5HQU47DnNIrCWf4nZUP1wZ580azBOv3U/https://www.amazon.com/dp/B0F65NVN9F/?_encoding=UTF8&pd_rd_i=B0F65NVN9F&pd_rd_i=B0F65NVN9F&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=VQH0V&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=M5REEDKW70P6X1AVFB6M&pd_rd_wg=459q8&pd_rd_r=da867fd9-0d74-4940-9e74-5e40a16da976",
+      "link_clean": "https://www.amazon.com/dp/B0F65NVN9F/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F65NVN9F&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41tYPV2RV2L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/bcdc36fe-6a1d-4e65-a8b8-c946c6d3e161.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/bcdc36fe-6a1d-4e65-a8b8-c946c6d3e161.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.2,
+      "reviews": 121,
+      "price": "$29.99",
+      "extracted_price": 29.99
+    },
+    {
+      "position": 5,
+      "asin": "B0GX9KTW9H",
+      "title": "Dog Sling Carrier for Small Dogs with Bottom Support, Adjustable Pet Front Dog Carrier-Padded Strap Reducing Back Neck Pain, Anti-Anxiety Backpack for Travel Hiking Camping, Hands Free (Black,M)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JBlkNIwRtpU08fPK9pY8MCAAAAGexNotGQEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICBh0Df_/clv1c_ek-wxQfWFbbaTLHXD5vcKUShqhZWsFzjT5uU73qyizkwSnueCGtSBCwPe-3C0MBI-ovl6sJ7dBm5JGozFLczBKfFAvPtrBve6shkCtiWxNY-U3HzghuCp2Xp2FkU5ve3XPgBSSix5R5QwYg2-4OBAuIT4NyVrmVqI9QxDjO82ZYHact4KWqglJxeeZ9ut0rbo4Cyy-vInA7dGeb3p3jst7vPDc-uMVLINCZN9k7bFv0jKsw70-zwYPD6vMUE3-EBw6YdAhsU4Bip34nNMatm5Kuti5l-URG5_00tWO9p4cCnaAxR36v2IdffdUuGr7rO_7ikAs0K5ItbKfppqpgAF7b3zi51hFmXCHJhxzBKOf6FN_VTgIgQ9aCqcA4aACu7kSijeQ0wAnSuoYorSpBgj4DvXmWrc642EUntiFlpfiqdVcHusHmzWN9ADmZ4DlXgA4YrpFy-yFIPG3CYEh1An2_E3UWEHh0tT2FAWJv8He31YsrzOZNOa4khgne_aoUnI9VDrf6awLXKVBJ89EGYImiwcvq5PpyaEzcvANiKRtJnBWaBbbWPPIW5q8tKRBXbBx0PDFyvC7cM0_8kLKZChZZCTpRRR5vZp4T885gn5ZBR8-EK9i3cgMtwkCrY3_nkL_htovvOcBlBnXNwG_p4Mcgld1hBBw62xHrX97uobgXm25OGLqpSnjxW6U-ngn7rsSEMrxcQmXkEp53b-9p-anb2fU6e0gBQ8YW8Oyo1JbE5okBcBFUOB71cJeyz6PXtyZVWeHH3TZoQS0LMKlNdceqXzoM1bD1N3t_WBq6jvgH8x4lyTjv3hF8PaoxaOy-5NdF1Hoc51eVoilT3RFodfI5u1kDSfyDutBYlPt2aUHqxhr2ftIKk-WNM1K3T14s16CZNvkYCWK6aX9r6OdDw8qs2xUl_bz85fdJaVZrqSsP2dF6kaUpR0wo38TWD_GjRa__11MAFhJRdks6BZbHjLX9GYn8r7-1z0cO0b1V65AsPg_rggDkE2Ur1gZL0RvmwwocqfS0nC9R1uhDDE-GCwrv4a7Iw3_6A1wewIVdnjtSbRtj4DygWXi9hh6NmmnQnQtsn8gq7UDvZv3H0U402F-HJBgQ6C4M3dCvp8w45sxUkXd87p0NHfHAbCx4u4iGX1-kb8w4yy6s3V_zFSHIDurhSr9nx6i_03AOFctRqh9Gs83k6T9LO1_gGJ5GUwnKSrmrncTTMexRs3GapTJaDnVNTyuwgoByUOuDIMA2URV4GIcFR6MfokH9I9A0tYREe_-fVCSivl2XY73uVW8CksfYhef51iOhuxboa0-C8XSUakKNDtL32dZcoL776ktAO7ioErbix0-gu87-GniJuMepiNj982bWbY_pQth4QRxc5nf1a6eJDTQtvbWAL9qGxschCBzLnuH9H7D5AW0GfswB5haebDiHaj9fPERlEfESk44Mpo9D3ds7CFuhc7wjvPiz4kXuvh46RUrR0YQWvdHBaUJbpyRbkV2Z6Yn1UqFyWfgS5igeeB06uzieClETqfyKCVaiKAfJShQtxIYOG52cJA04/https://www.amazon.com/dp/B0GX9KTW9H/?_encoding=UTF8&pd_rd_i=B0GX9KTW9H&pd_rd_i=B0GX9KTW9H&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=VQH0V&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=M5REEDKW70P6X1AVFB6M&pd_rd_wg=459q8&pd_rd_r=da867fd9-0d74-4940-9e74-5e40a16da976",
+      "link_clean": "https://www.amazon.com/dp/B0GX9KTW9H/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GX9KTW9H&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41IDMINlO-L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c0a5ed1a-c6a2-47f3-b2ea-f700397d95a0.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c0a5ed1a-c6a2-47f3-b2ea-f700397d95a0.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 14,
+      "price": "$41.99",
+      "extracted_price": 41.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "images": [
+        "https://m.media-amazon.com/images/I/81sO6qVE3fL.jpg",
+        "https://m.media-amazon.com/images/I/81PLR-n08kL.jpg",
+        "https://m.media-amazon.com/images/I/81ZiWqKa8XL.jpg",
+        "https://m.media-amazon.com/images/I/71sBLkfZCmL.jpg",
+        "https://m.media-amazon.com/images/I/71QwBsRIh2L.jpg",
+        "https://m.media-amazon.com/images/I/81Pf2SZImDL.jpg",
+        "https://m.media-amazon.com/images/I/81okVGT9V5L.jpg",
+        "https://m.media-amazon.com/images/I/71luDvLqzWL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 87,
+        "4 star": 0,
+        "3 star": 13,
+        "2 star": 0,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Kudos for this carrier!",
+        "text": "Very helpful post surgery for larger dogs! Light but sturdy! Slippery so easy to wipe clean! Very helpful for getting pets in & out of your vehicle!",
+        "rating": 5,
+        "date": "June 5, 2026",
+        "author": "Richard B",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AF3CR7CTI2XUAXWNCWXT2J5J4K3A?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Gray",
+          "size": "47\"Lx29\"W"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Great item",
+        "text": "Nice quality and easy to use. Helped get my injured large dog into and out of the vehicle safely and quickly.",
+        "rating": 5,
+        "date": "May 29, 2026",
+        "author": "Ann",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AH3DGYLEHM7TZCHSDGI7J267I6FA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Gray",
+          "size": "47\"Lx29\"W"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Works well",
+        "text": "Very useful. Was able to transport our large malamute/husky to the vet.",
+        "rating": 5,
+        "date": "May 25, 2026",
+        "author": "Amazon Customer",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFFGR6PXOLTIJKZBQBNZYBK4TW7A?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Gray",
+          "size": "47\"Lx29\"W"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Suggestions for improvement....for truly large dogs",
+        "text": "Manufacturers have no idea of what a large dog actually is. Our shepherd weighs 112 lbs, has very long legs, and can't walk. Bought these hoping they would help, but they are not stiff enough, nor straps sturdy enough. Ended up moving him with his washable wee pad. I would be scared to use these to transport him any further than a couple feet. Of course I can't return them because they have now been used.My suggestion would be to make these larger, thicker, and make handle more like rope. Photo below was where we had to transfer dog from one bed to another.",
+        "rating": 3,
+        "date": "January 9, 2026",
+        "author": "Brian Morton",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AF5UGPKGEWBSNTDYSVAK4VQEF5YQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/71luDvLqzWL.jpg",
+          "https://m.media-amazon.com/images/I/71QwBsRIh2L.jpg"
+        ],
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Gray",
+          "size": "47\"Lx29\"W"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Well made and works for my Bullmastiff",
+        "text": "Thankfully, we haven't had to use this, but we did test it for our senior, 100 pound Bullmastiff. He has arthritis and we want to be prepared in the event that we need to rush him to the vet.",
+        "rating": 5,
+        "date": "February 8, 2026",
+        "author": "Kaley",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGDZF2SJPLT73WXBWQUGQASZCKVQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/4ba260bb-fa72-496a-82e1-359e63cbc8d1._CR63%2C0%2C373%2C373_SX460_SX48_.jpg",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Gray",
+          "size": "47\"Lx29\"W"
+        }
+      },
+      {
+        "position": 6,
+        "title": "Very helpful for an elderly dog",
+        "text": "This has been such a help for our elderly dog who has arthritis. He has a lot of trouble walking, but he still eats, drinks, goes to the bathroom, and wags his tail, so we're not putting him down until we have to. We use this to pick him up and put him in his wagon and take him outside, which he enjoys a lot.",
+        "rating": 5,
+        "date": "January 7, 2026",
+        "author": "Laura Allen Clayton",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEFC2PNY4DXFYNZ66GSFZ6I6BILA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/6226e24a-2ad6-44fe-8d85-658c94858829._CR0%2C0%2C418%2C418_UX460_SX48_.jpg",
+        "helpful_votes": "3 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Gray",
+          "size": "47\"Lx29\"W"
+        }
+      },
+      {
+        "position": 7,
+        "title": "Absolutely reccomend",
+        "text": "Helped greatly with my 86lb boxer after a grand mal seizure. Getting him moved alone was hard. This helped greatly",
+        "rating": 5,
+        "date": "February 1, 2026",
+        "author": "KConner",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AENQ2NVHKCUW3EW3CZTOM4TAP76A?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/ca1e9641-c59f-4db2-8152-daa0068c7983._CR0%2C0%2C475%2C475_SX460_SX48_.jpg",
+        "verified_purchase": true
+      },
+      {
+        "position": 8,
+        "title": "Very Strong Sheet Stretcher",
+        "text": "My wife and I could move my dog (73lb) by using this strong sheet stretcher. We suggest passing your arms through the front handles and grabbing the side handles. You could move a dog stably and safely.",
+        "rating": 5,
+        "date": "March 22, 2026",
+        "author": "Kiyopon",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGVLSBNCE6SE5HADESAQBQ5MFFGA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Gray",
+          "size": "47\"Lx29\"W"
+        }
+      }
+    ],
+    "other_countries_reviews": [
+      {
+        "position": 1,
+        "title": "Camilla para perro",
+        "text": "Perfecto para cargar perros enfermos que no puedan caminar grandes",
+        "rating": 5,
+        "date": "April 9, 2026",
+        "author": "No sirve en México la aplicación no se puede descargar, utilizar es un fraude",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Gray",
+          "size": "47\"Lx29\"W"
+        },
+        "country": {
+          "code": "MX",
+          "name": "Mexico"
+        },
+        "language": {
+          "code": "es",
+          "name": "Spanish (Mexico)"
+        }
+      }
+    ]
+  }
+}

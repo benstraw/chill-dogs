@@ -1,0 +1,691 @@
+{
+  "search_metadata": {
+    "id": "6a2e4cc1f680d1ff35ddccdf",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/1LZfNuk3TS27s_7w7rzupA/6a2e4cc1f680d1ff35ddccdf.json",
+    "created_at": "2026-06-14 06:40:01 UTC",
+    "processed_at": "2026-06-14 06:40:01 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0GXF114LP/?",
+    "raw_html_file": "https://serpapi.com/searches/1LZfNuk3TS27s_7w7rzupA/6a2e4cc1f680d1ff35ddccdf.html",
+    "total_time_taken": 12.27
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0GXF114LP",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0GXF114LP",
+    "title": "Portable Charger Power Bank 50000mAh, Massive Capacity Travel Essential, Built-in USB-C & iOS Cables, AC Wall Plug, 22.5W Fast Charging Battery Pack with LED Display for Camping, iPhone, Samsung",
+    "link": "https://www.amazon.com/Portable-50000mAh-Capacity-Essential-Charging/dp/B0GXF114LP/",
+    "link_clean": "https://www.amazon.com/dp/B0GXF114LP/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GXF114LP&device=desktop&engine=amazon_product",
+    "variants": [
+      {
+        "title": "Color",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0GXF114LP",
+            "name": "Ebony",
+            "image": "https://m.media-amazon.com/images/I/41a0UG8eM2L._SS64_.jpg",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GXF114LP&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0FL7CFNXL",
+            "name": "Light Grey",
+            "image": "https://m.media-amazon.com/images/I/41sjtDIRuBL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FL7CFNXL&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0GCM1RVRP",
+            "name": "Pearl White",
+            "image": "https://m.media-amazon.com/images/I/41ZBBZP-ksL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GCM1RVRP&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the JKELAR Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/71UH61Eu7xL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/71UH61Eu7xL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71S8nx1k9WL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71EKFNl4fKL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71o6NeXkRLL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71eANjqd-EL._AC_SL1470_.jpg",
+      "https://m.media-amazon.com/images/I/71YK8eAVMdL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81K+-aEubEL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81yGPKr-f5L._AC_SL1500_.jpg"
+    ],
+    "rating": 4.3,
+    "reviews": 37,
+    "bought_last_month": "1K+ bought in past month",
+    "price": "$43.99",
+    "extracted_price": 43.99,
+    "delivery": [
+      "FREE delivery Friday, June 19",
+      "Or Prime members get FREE delivery Tomorrow, June 15. Order within 10 hrs 54 mins. Join Prime",
+      "Arrives 6 days before Father's Day"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$43.99",
+      "extracted_price": 43.99,
+      "delivery": [
+        "FREE delivery Friday, June 19",
+        "Or Prime members get FREE delivery Tomorrow, June 15. Order within 10 hrs 54 mins. Join Prime",
+        "Arrives 6 days before Father's Day"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "keksyna",
+          "details": {
+            "heading": "Sold by",
+            "content": "keksyna"
+          },
+          "link": {
+            "text": "keksyna",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A1MVARK69L28IV&asin=B0GXF114LP&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "protection_plan": [
+    {
+      "position": 1,
+      "asin": "B08429R6QR",
+      "link": "https://www.amazon.com/dp/B08429R6QR/",
+      "title": "1-Year Protection Plan",
+      "price": "$12.99",
+      "extracted_price": 12.99
+    },
+    {
+      "position": 2,
+      "asin": "B07RZ3LSHM",
+      "link": "https://www.amazon.com/dp/B07RZ3LSHM/",
+      "title": "Complete Protect: One plan covers all eligible past and future purchases (Best Value)",
+      "price": "$16.99/month",
+      "extracted_price": 16.99
+    }
+  ],
+  "item_specifications": {
+    "connector_type": "USB Type C",
+    "brand": "JKELAR",
+    "battery_capacity": "50000 Milliamp Hours",
+    "color": "Ebony",
+    "special_feature": "Built In Cable"
+  },
+  "about_item": [
+    "Massive 50000mAh Capacity - Days of Power: This heavy-duty battery bank delivers a week's worth of reliable energy, making it a travel camping essential for road trips, outdoor adventures, and remote work. With universal compatibility, it safely charges your iPhones, Android phones, and power-hungry tablets multiple times",
+    "3-Year Free Replacement & Safe Charging Guarantee: Built with reliable safety protection and premium materials for worry-free charging. If any covered quality issue occurs within 3 years, we’ll send you a brand-new replacement, hassle-free",
+    "Built-In Cables for All iPhones & Type-C Phones: Say goodbye to tangled messy cords and forgotten cables. This innovative power bank features a built-in Type-C cable and a Lightning cable, combined with an extra USB-C port to juice up multiple devices simultaneously. Ready to charge right out of the box, it simplifies your travel gear and keeps your essentials powered up anywhere",
+    "Super Fast 22.5W Charging - 85% in 30 Mins: Stop waiting and start doing. Engineered with advanced 22.5W fast-charging tech, this power bank fuels the latest iPhone 17 Pro Max up to an incredible 85% in just 30 minutes—leaving conventional 15W chargers far behind. High-speed performance ensures your devices spend less time connected to the brick and more time in your hands",
+    "2 Ways to Fast Recharge & Multi-Safe Protection: Never get stranded with a dead power bank. Featuring both USB-C and Micro USB inputs, it offers flexible dual recharge options. With PD 18W rapid input, it achieves a 75% charge in just 2 hours. Backed by a certified system for overcharge and short-circuit protection, it features an LED display and emergency flashlight for total peace of mind",
+    "What You Get: 1 × Massive 50000mAh Portable Charger, 1 × Built-In USB-C Cable, 1 × Built-In Lightning Cable, 1 × Extra USB-C Charging Cord, and 1 × User Manual"
+  ],
+  "bought_together": [
+    {
+      "position": 1,
+      "title": "Portable Charger Power Bank 50000mAh, Massive Capacity Travel Essential, Built-in USB-C & iOS Cables, AC Wall Plug, 22.5W Fast Charging Battery Pack with LED Display for Camping, iPhone, Samsung",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71UH61Eu7xL._AC_UL116_SR116,116_.jpg",
+      "price": "$43.99",
+      "extracted_price": 43.99,
+      "delivery": [
+        "Get it as soon as Friday, Jun 19"
+      ],
+      "stock": "In Stock"
+    },
+    {
+      "position": 2,
+      "title": "ooioo Creatine Monohydrate Gummies for Men & Women – Boost Focus, Stamina & Muscle Growth – Sugar Free, Vegan, with L-Taurine, BCAA 2:1:1, B12 & B6 – Mixed Berry Flavor – 120 Gummies",
+      "link": "https://www.amazon.com/ooioo-Creatine-Monohydrate-Gummies-Women/dp/B0GTV5V725/ref=pd_bxgy_thbs_d_sccl_1/140-2586650-7843850?pd_rd_w=qo4gM&content-id=amzn1.sym.9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_p=9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_r=HF53HRGR2MX62GGF4Z84&pd_rd_wg=DWdTa&pd_rd_r=9f43c3ed-dea7-48f5-b9a1-a914e1ebb0ce&pd_rd_i=B0GTV5V725&psc=1",
+      "asin": "B0GTV5V725",
+      "link_clean": "https://www.amazon.com/ooioo-Creatine-Monohydrate-Gummies-Women/dp/B0GTV5V725/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GTV5V725&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81T5pzZya+L._AC_UL116_SR116,116_.jpg",
+      "price": "$26.99",
+      "extracted_price": 26.99,
+      "price_unit": "$0.22/count",
+      "extracted_price_unit": 0.22,
+      "delivery": [
+        "Get it as soon as Friday, Jun 19"
+      ],
+      "stock": "In Stock"
+    }
+  ],
+  "videos": [
+    {
+      "position": 1,
+      "title": "Is It REALLY fast-charging? Watch This!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/abf9fc0f-dc08-4c92-b535-10bf895ede27/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/A1E+JCW37AL.jpg",
+      "duration": "3:01",
+      "vendor": "Littlehomeshop.LJ",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/61iR7LZ3OFL._CR0,0,481,481_._FMjpg_._SL34_.jpg",
+      "date": "Jan 20, 2026"
+    },
+    {
+      "position": 2,
+      "title": "JKELAR Power Bank - What to Know",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/03f1ed33-b1ff-45fc-b862-465ce5afd145/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/51UuTzVFYpL.jpg",
+      "duration": "1:18",
+      "vendor": "👉 Janessa Reviews 🛍️ 📸",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/71JkLvszqpL._CR0,0,953,953_._FMjpg_._SL34_.jpg",
+      "date": "Jan 21, 2026"
+    },
+    {
+      "position": 3,
+      "title": "Travel-Friendly Portable Charger for On-the-Go Power",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/896dbcc2-fe34-4560-bc81-2ef7c202febe/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/914IgU0PbfL.png",
+      "duration": "3:35",
+      "vendor": "Kristin Retay",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/918cMIkFnFL._CR0,0,1981,1981_._FMjpg_._SL34_.jpg",
+      "date": "Apr 22, 2026"
+    },
+    {
+      "position": 4,
+      "title": "A Closer Look - High-Capacity, Convenient!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/d376eb74-b5bf-46d3-b540-07cada20fa92/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/81ZpC0r31XL.jpg",
+      "duration": "2:48",
+      "vendor": "Mesa & Jaron Reviews",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/7142to6gJwL._CR0,0,966,966_._FMjpg_._SL34_.jpg",
+      "date": "Apr 13, 2026"
+    },
+    {
+      "position": 5,
+      "title": "Portable Charger Power Bank 50000mAh, PD 22.5W Fast Charging",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/b7af4e2d-aefb-4d8b-b019-b32f354061a0/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/91c57qw0tQL.jpg",
+      "duration": "0:44",
+      "vendor": "keksyna",
+      "date": "Nov 13, 2025"
+    },
+    {
+      "position": 6,
+      "title": "Portable Charger Power Bank 50000mAh",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/d18a33b6-f7d6-44ee-a2ce-6728122a7342/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/915tfJrCsLL.jpg",
+      "duration": "0:29",
+      "vendor": "keksyna",
+      "date": "Jun 9, 2026"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": "Large Capacity With Built-in Cables",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/266990b9-651a-4473-bb7c-01e46571f52b.__CR4,0,1954,801_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 2,
+      "title": "JKELAR Portable Charger Power Bank",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/d9942412-384f-4dd4-989d-033da7522b5b.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 3,
+      "title": "Portable Charger with USB-C &amp;amp; iOS Cables",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/b12a16f7-5aeb-4ded-ba00-658b0dc946eb.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 4,
+      "carousel_images": [
+        {
+          "position": 1,
+          "title": "Camping Essentials",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/d44e5eb2-c42a-4730-87a4-881cd38e21ff.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 2,
+          "title": "Convenient Charging",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/e4f6c5d2-8f07-494d-8df1-8eb5ea58cb21.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 3,
+          "title": "Travel Essentials",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/0a28bbaf-cb9b-4fc5-88ec-b9de823c0eb4.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        }
+      ]
+    },
+    {
+      "position": 5,
+      "carousel_images": [
+        {
+          "position": 1,
+          "title": "All-in-One Power",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/7f0e22d0-8707-41fa-96c6-dc60366508d2.__CR0,0,1959,803_PT0_SX1464_V1___.png"
+        },
+        {
+          "position": 2,
+          "title": "Faster and Safer",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/e247091e-cf76-4381-96da-dec150a6e35e.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 3,
+          "title": "Quick Recharging",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/0c53649c-d0e1-4b6c-b11d-017ce42e03d8.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 4,
+          "title": "Outlast Your Devices",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/b1753a77-fc49-410f-a4f1-cfc1d97630a2.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        }
+      ]
+    },
+    {
+      "position": 6,
+      "carousel_images": [
+        {
+          "position": 1,
+          "title": "Everything in the Box",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/3a420c3f-7f7a-4c6c-be65-668ddf7615f4.__CR4,0,1954,801_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 2,
+          "title": "Compatible with Mainstream Devices",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/5daaa5bd-470b-4cf4-b723-83a48c9e777d.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        }
+      ]
+    },
+    {
+      "position": 7
+    }
+  ],
+  "product_details": {
+    "connector_type": "USB Type C",
+    "battery_capacity": "50000 Milliamp Hours",
+    "other_special_features_of_the_product": "Built In Cable",
+    "voltage": "5 Volts",
+    "power_source": "Battery",
+    "amperage": "3.0",
+    "number_of_ports": "3",
+    "rapid_charging_performance": "18w Fast Charging",
+    "is_product_cordless": "Yes",
+    "portable": "Yes",
+    "compatible_devices": "iPhone",
+    "compatible_phone_models": "Smartphone",
+    "color": "Ebony",
+    "battery_cell_type": "Lithium Ion",
+    "brand": "JKELAR",
+    "model_name": "P8",
+    "model_number": "P8",
+    "number_of_items": "1",
+    "number_of_batteries": "4 Lithium Polymer batteries required. (included)",
+    "warranty_description": "1 Year",
+    "manufacturer": "DONGGUAN Hi-Tech Electronic Industrial Co.,Ltd",
+    "best_sellers_rank": [
+      {
+        "text": "#2,877 in Cell Phones & Accessories (See Top 100 in Cell Phones & Accessories)",
+        "extracted_rank": 2877,
+        "link": "https://www.amazon.com/gp/bestsellers/wireless/ref=pd_zg_ts_wireless",
+        "link_text": "See Top 100 in Cell Phones & Accessories"
+      },
+      {
+        "text": "#213 in Cell Phone Portable Power Banks",
+        "extracted_rank": 213,
+        "link": "https://www.amazon.com/gp/bestsellers/wireless/7073960011/ref=pd_zg_hrsr_wireless",
+        "link_text": "Cell Phone Portable Power Banks"
+      }
+    ],
+    "asin": "B0GXF114LP",
+    "customer_reviews": "5.0 out of 5 stars",
+    "rating": 5,
+    "reviews": 37,
+    "antenna_location": "Indoor/Outdoor",
+    "warranty_type": "Limited",
+    "item_weight": "488.8 Grams",
+    "item_dimensions_l_x_w_x_thickness": "6.3\"L x 3.3\"W x 1\"Th",
+    "unit_count": "1.0 Count",
+    "item_dimensions": "6.3 x 3.3 x 1 inches"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0GD7CJNM6",
+      "title": "RORRY Flow Portable Charger, 10000mAh 40W Fast Charging Power Bank with Built-in USB C Cable and Foldable Wall Plug, Battery Pack Travel Essentials for iPhone 17/16/15, Apple Watch, iPad, MacBook",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JBrBoAkYrB_VJyU-htdGcOUAAAGexNv8NAEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICAumi6g/clv1c_ek-YBYXWbcba3k4JGFWvP6gye5L7mEaD2ZOZExyz--ie4VT4egdvWMcbHHscd8ht4iac_W3XOeub9qXWgf84BnJPvwTX9DZ56EmR-veC1E46KbElpAXHSXS4Yvx5nP-g0BwRCZO-LPaz528ukWz0u9XR0P0dlc_vi_i8L2arj8eex6MUQjYqggM1k3pvNZHgxgVI5kRYBd_EfSRdrzB80OkfmfsvjGgE-E_tHh10L0EKPhZtPy9Y0lIWMYN3RlzwnTE-RPVfYspPCNr0ukhyfzTSTaC3YZy4yysvIZNJR3YliEUDTEWFB-WxaBIjileY9rExycSlNTWLiK11AM_IFTbXVDWu01WzYHJjNbjW-lxwaRMraIcyHEamDZuzzGmsKzCkZVA-V4LNvbWo7m8oIgpPYYY96cSTUxXZ7guO4JjB9Cjw7kooIpHfbruWOgnc9ZF2YGKgimisoiXAEtoVLYCENCDwoMebSKbPJryJohZkYUnJnnC3eh6myfRHeMCGW_zZV8Agv0rFcUIG05cVvxxES6GnYVLVTNPHxqyZTxmMHK3bZjSd0PVYTNCJXOl2Z2F0-Av6aRlSoDYo-XQrNi-5dcRpUdXIUB8qLqtzv_txufX1Gdnh6Jtc9cDDcmmKdUxTPOdoP1bsv7awWmNNTIf2hO8h8EVo7k5ZV_TZEw0tyPvIRhXbERG4wkUfEgMnDxJr5v4m-zhGsRceqdyPao7Ck1WfcO0f4GPg6ooDoNB4TnP4KuJgDSBi0ubm8Nr4wwEE2PysLu0bbLPStrGQU7uahQZtDdJvKxN-2jk6fbJo5O6TArHTIJ5SSAMjgCM_jSxLmLvc4pEEBsaJRp2Kny5SANQbdf65u3wA0VCodUCirqJ_GnGoyraI12xkgWF6LxzSxs61dcY4Q6uQTZ_QtADD_yB73lAmTEKci6o8dcCCN6uALF2LnJo6YtqlUJjHpubjqVI8NsJ3LWby_WOcw85rDfvbJHNsva5LLvQM44WSPlg4zUTh-HiT6ggJcbxvfv4GF64khzAFLrnwzmPXUHoOms3p8JhlFBk45dQ9i0jSO21zarjMp97_mePUHpBuQ76vprx0UGiLVSIYClCe0Ez609GqBeDReaotpTsM1wJi_dk14PeMFzsnF_AFhy7AuFpNdBP1d_kjyE_bZ4ma1Nn5tmBQRAa05YEQltT4lD_d6YkdZav0vEu_3uso_7ZzeZLM7v9TLyvHvkKFYsEeQKN6OR6g97u-M4qdC3kwPG0xOIRR6I-MqsFl-w2Eh5KUw11UfnfuzKtnlR-Gs0G6gujDwK98n-DH-A48SQVdnanPQ8fcTXka_xriXz01T2pQ7IF03ZDMaTPSe--l-i-Pc_IL5QGMGys_Zko8fWOVWsbHG_i7OxwFP3ezUURP_xKfEkAEB3U3R2_ITO9QY1APmV0GJd4YEt5LpYT7o6_RuGIM38Mo1hAnoEmhfkDU6JTUHPEb7WQIFfw2602CoMHwVczSIpOgkUa2WyHzY4aWjLrE2-hJic3Dk8fs-4VdFvyjMsSt/https://www.amazon.com/dp/B0GD7CJNM6/?_encoding=UTF8&pd_rd_i=B0GD7CJNM6&pd_rd_i=B0GD7CJNM6&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=T8Ucx&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=HF53HRGR2MX62GGF4Z84&pd_rd_wg=DWdTa&pd_rd_r=9f43c3ed-dea7-48f5-b9a1-a914e1ebb0ce",
+      "link_clean": "https://www.amazon.com/dp/B0GD7CJNM6/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GD7CJNM6&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/31GxGMa+UpL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7c52767e-3d43-4590-ae33-485dd567d2e6.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7c52767e-3d43-4590-ae33-485dd567d2e6.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 1068,
+      "price": "$36.99",
+      "extracted_price": 36.99,
+      "old_price": "$41.99",
+      "extracted_old_price": 41.99
+    },
+    {
+      "position": 2,
+      "asin": "B0GTTH62FZ",
+      "title": "SOLUPUP Solar Charger Power Bank 10000mAh, 15W Foldable with 4 Panels, PD22.5W Fast Portable Phone Charger, External Battery Pack with USB-C in/Output for Phone Camping Hiking (2026 Upgrade)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JPv29rHBVo_FqijQ5P5kEasAAAGexNv8NQEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICAIUg9n/clv1c_ek-IBXfWLcTSXk6htmnxSfo_PR-nsrFvauyg88Ty1Repw2xwq3K_-zl4lv4fl-5n8o-_cOMKdBQn4rmuMYMJL1AI0YEwfrCHMUMQMZRO1plz2kE86p7qDxjYIn9-KzCS8GCJn4ixomeYhKAmq69CK1DZvJV8FjOokMPzt2NqnNa_6DJrs2zS6W4joUo8d2KD7pSZkjt7v8VslOX7ctylp2uCBAb6F2Ig9q0uJp2XL13OEeK70eeHnITXMeF3Hm9gni0Yw_V_eurAdhTXLN38Mg1v9apgpUsVlgI8NWVg3tm8If9X2WHsom8fdtBD_bPJltkt0Y3nEY7e0mx_S04xfXL3kSbTFfXEVVRGgxI5oQL24PzsqHK_LdjBcRLPFvsatKFJOIWm5ZI5FkYpQZsDEzhEqivKQGjVwGjspGm2AK_kqFQElc2941mg8WhQXlRTg2jgvBdbTFNYsmJW80UdhYPlCef5m3NbjTnHuEKish4w-TWWUzRy1j3dhtFdDYTFr97sgt5oqoskBlU-Ix31ybu_rWl3gebs8kUHIzuSZ4SAIE9mkm19GXcSzH_yLLkypNjkpH8_5z6_GYpccYcYk1WL0G0dpA_H2-LnA-NR96MKXPIP0Kpnk1uFTV1gEmwXNyRHT_2ARi_CPIJGGnUWoBWEEym94V0vR8BtBEsu0GWIZ-NsJ-sG3mvDsEiovU-8nQI7O4c7ugEWlmPhWu3JbaHkS5o9ytnrfnmcNgcMZgJ9xa5XHy74LQYAeKjkd5K6B8FayROeYm8O2e1ulO2qZ1WMgVdlV6Q56G89absEviOPH19oxzn0FmoM8qnbMFuhjwOtHcabZakfMKSH0eAWdOr5JMDZ3VFVFM9zOkQrPV1ujld4-Nb3BXpUhhl5weLWsRgslODf76P8dj6i5hmEw-43ixxdVmdUBcTJ_8ramAP4nAteSsfdlEjRHMvepMdl-NQ2LuChzEw7CYctLwXCD_AZSpw9FqJtQsDqg411zrMBTk-zIorFrAsh2ESSwrzMt96-_t2LzsRxSFXtLvIf6Oz4qn_ICrgIWvfezhSe7eQge5ciiACWI17xVuo4R5IXIRrrC9eFn2N8L_v7BHfUHmEYuQ4mj7aQXlZKuFQZmJleGV0_HwZlP3Ue94kd-er_Olup7KM8dvhwgOLj_gI29AQeV12-L7vP4xAavnp7mQBTjbIQKxYc8lqg5b-zWtaFNWE2-o4BpUzD_ggDvAe-k70ykofPaD5gkmvaSKxF1UNLDX5exhmeCqMVusex6DPeIyEnE1uUVfa_KxF6aTPyeHMmny_kQ3Nb7O-jLr7f9Cxh2wzKl_tCgOLxx6ir17DAIWFXWiD1zn-pcG8XOEntDeaW2D3dPaz4WV1YyOatLMm3SWPv-DSByTa4SftL4j6DBon9Y1Ske-8qq76TLbpLS5ypdZan7D2JnL6V-ojQP-Ba3no3YbZP3r6IYzmnsb0BKNiGt5QLHn5Rq3EdCUZF_HxAQFwADRLBvUwrTiXQAPqiJOTG7da9rduRHzb4zkDhWZuAg8uuyNN-Bzx1uOnvGR2pd5c/https://www.amazon.com/dp/B0GTTH62FZ/?_encoding=UTF8&pd_rd_i=B0GTTH62FZ&pd_rd_i=B0GTTH62FZ&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=T8Ucx&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=HF53HRGR2MX62GGF4Z84&pd_rd_wg=DWdTa&pd_rd_r=9f43c3ed-dea7-48f5-b9a1-a914e1ebb0ce",
+      "link_clean": "https://www.amazon.com/dp/B0GTTH62FZ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GTTH62FZ&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51oe-duczCL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/5d1caee6-05ef-403f-9b09-6053b1745dbf.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/5d1caee6-05ef-403f-9b09-6053b1745dbf.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.4,
+      "reviews": 18,
+      "price": "$45.49",
+      "extracted_price": 45.49
+    },
+    {
+      "position": 3,
+      "asin": "B0GR8ZML6V",
+      "title": "Luvknit Portable Charger with Wall Plug, 38800mAh Power Bank 22.5W Fast Charging, Built-in Lightning & USB-C Cables, Plug in Portable Charger for Android Samsung iPhone, 4-in-1 Travel Charger",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JLyn57ebidO9dV1bEE77Ri0AAAGexNv8NgEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICANaZAu/clv1c_ek-wBXfWFbbSzjK3Y2NsQ2s_iJ8xf12DSZsEjkPKldKrxPbtRWUSvJAfYr2C0MtujwnFGGPmsBiZKYQ9kVJG25e9mAsPyKfpY6lFEfeCWgBVn8U-W31jDXHI0lg2BZe9V1ja2SKxAykmwwICV5NE05DbquWs1ufKE0fx4x2K5K7PKavctZIsQaDg833BSgCGvaV7R8jIHhKu2-HVowtS5nPfOXu6RNJ-ZggR5WgpmmoO9htbpzTsV1kSMYEXRgSTRCfzLhJDD48gb6Jp7T-oVudpTaC34abk9mnsSwTOydO3qt4oTGOKKDoZsTN_H34B_cioQ9EKZLJXMXhYqhpfH74kAJ5rc1uv5G81KR1bmGfUzr47fk7pL25NsECiCn_pk4WUZH6I3u5BXY6ksjnzPoV-24vOEiCy1NTN9I5-nLpLJ9govPAAeyHWZQxBFxJ302usgtV0QCwhtIfa48y6jJvFc6Wj-GdwztBy8n5KCoAByhujWBWNQ26Mzvrzq8FztulMd_WE1lVz9cQrIJBefB0rrPkD9JTc3Wsp-EivbuHYLe-BChSwnWgaCCvCBPp_s7oIxL09ZsMQnR6A8oRZXqqZnKUg8mALB6njcM4V2bdsfVBBsHn3g8wgShxE43yFT8IBJ4cId4RPV6Qfwf66PR2cL9_dyR6DA3vTBKpvUKWA3wf9wIrc1HW6pF64bJ40tdQqn4qA5QACuoDbDOseL4wkeo6dd1L3IJsGb_e34oBnyauepqxG0LTQFvEXMdnPa9848bExhnqC7u-ywgv06SDq5mdRZOa-WHaMVU55sKo_F9LUl2-UCv6fHKtRENcwvxB2_Bxl0ISpb0ytu0myixmP0l7Vp35KrR3Jzhq1y6cbcRFNRZihTFBEd19Y98pccyYXWKz-VP3iECNrC67bI2nwdWcCDP7-CXzwhaOm_AfsdHOQNxHHrHm6AzkkZDVYcHhBhdmdWXOnTIonVkYIUhh4-z3I4OnsrimQriCHR68xFU489skok-nNxPGBBUqKg-deyEG-b5VslSwOjk1nhBAG_dIrIevAvNBDi4V0kHzP7HUIEIrem97uBMmuqw2bSZYKcj26H3lCKvhTlNXPQif8_VJDOJbCAim-4hs9JxKqDJ3q9AhFpZtO5JCLmmVeS1tMQDv6BrhuBzIoWsvROwyrm8Nkmtk5lZuYhRIsB_Hv5iIIjurNYDBc7EVhTIcL4-tgE9zaFz6kzkRWy3g_upZcRVXNlZ9IqKzxWaNtYBSC7ak-4hFlG7ut8VGH8CYa_eJhzuiJqBnaxnQDYR1dWS-tnKCx5jidM84_4rPxTz-Bi_2ugIDqqDe9rxzGUsKQ0mRkCHKlpn41O9wCUyAfo3yXfs7tXVFtXWWBspuYrPRdX9dfqySYOkLeTgpU3PC2UZ0xl1V0Jd5PXtAe7Xj_04V3Rq0s9EqhV-erVfIc9WDdlzqkARTdbw9wX6t-u7qELx-5G_pFCcvof5EMJZ8Y9Vq2MOp4lrHty6LIW9jTP3n_HYj43BY2KMfqP7aY8yeO_sdALB1RJZAVxp68YHf-J4j0/https://www.amazon.com/dp/B0GR8ZML6V/?_encoding=UTF8&pd_rd_i=B0GR8ZML6V&pd_rd_i=B0GR8ZML6V&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=T8Ucx&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=HF53HRGR2MX62GGF4Z84&pd_rd_wg=DWdTa&pd_rd_r=9f43c3ed-dea7-48f5-b9a1-a914e1ebb0ce",
+      "link_clean": "https://www.amazon.com/dp/B0GR8ZML6V/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GR8ZML6V&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41fNziUO0BL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/fae02325-7da5-4076-ab64-807dd5127e76.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/fae02325-7da5-4076-ab64-807dd5127e76.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.7,
+      "reviews": 25,
+      "price": "$27.99",
+      "extracted_price": 27.99,
+      "old_price": "$35.99",
+      "extracted_old_price": 35.99
+    },
+    {
+      "position": 4,
+      "asin": "B0G58G8M6X",
+      "title": "LILIO Portable Charger Power Bank，60,000mAh Battery Pack, 22.5W Power Bank Fast Charging with USB Cable, Phone Charger for iPhone 17/16/15/14/13 All Series/Samsung/Android, Camping Essentials, Black",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JK53xpuz5kRPr6yXVGWZwHEAAAGexNv8NwEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICA7s-O9/clv1c_ek-YBQfWbdbWXg5XY7uQgY-ugwzCfPuw3ZMJSsVACgYQplK-BF9LGhmxE6g1jEbE9hszyrK_50xGMO8RNn0zMvKv14lqErayvrx1NBP-_0AmzzlDgctKCG3C8pk2IzRS51sZqlPieBhopk6O_5UzyfibodO45hVZs0VzzguArK43iWMHYhqN7X5nQ2p3F9JQOdXd5lZXE6_4zLR99nkwij-aDEZmIV77GuyHw48Ta8RNo8X2LmwTodCDtlJ7MvrfAUmhhOwmMapwIEyvz0L7SgyUGEprVo5dTJJRIHYVljlkjt8XEXhPC5dfgPzFJl965Mj9xdIRDL2dE6iGwsLrlXZS1T5w5kVrFYkYm7II1vZtiWmjO2BpqO1-2dknGGl0TeFT-OzBvLGtbp0yDbIQMvb2tEcd5We01ygk5qQ-eP8FDF4s_V_9_w8X4UpsuH3GViaQpvo8JxV43Hs7aumajY8YCH5jaCR-cmGAaAwNhiWp-Q46jQQTkj_zSRrksKzF3caY_pL4XdSzYNZp9tDCF3yBrajFwCoaJYTgOF5r7NpRk0rNhyECHMvJFKn6_Dw-1ioOqfQyxK-Arx04t_IxA6OEf_F7aIiDA-Stg0F6rRobCCMSib4WOCld5fkMKSVoqh55t8Qd3_1Lh-Y_R46u3vo7O1SOdOAEoC0Aqlc74JvpkA-JCmkb7jYHkOk0cy-6mu8FDSFP7oUGO5BqyX4nvu8WM-qET_VAiFg-wW3F1Ap4Vr0dLJ0d9CnJbizhjvpfszBWAUQJYCty1f742t_0W_W6Uy2FgDqPg-668QNcI_qQLV6U6aeHod4iKI8s2iW43YjdGQryVgFNVQHQA9jP0ZrxC9DOpn9HIX88DQ_8LHiVUNx4KXt19jA4yYQ8-kUvHm-k5Qv5srG47_vIJ6g1OAeXJKOe0iG0fogYbzEsqZDft3TTzIFxsc_Vs17TiCuJII1_lLZXUYNTHAGGNyequPtd3z90vx0ZXQrCInes2ya8d9_l0G5LrX9kscyfMiUeTAKDpdgphH73XQA8OsduTodq481UtKnBL9YwQODhyJs1zqj17YzE3vFr7R80ZekCQlpsdGwHCp1cmvyn_c5Noa9seoSCkP0ha2ln9cem58fL_IBMloF7wek5mrX5lazW9DyNnsc3jd7POzzOMJybjocqMYrN0a2_OyHsaFa339Be5Efbg9PoKRCBtNfuxbMhf_rHxii5d61xCgNfIOqsj3_ZkyG-TI4yrxyRU9jKAaczaSPuTdIjNKxe_rnk8tbw9fS1MX_QDnRMRher7p_4g9ijNck3ur3KJ6JE4boj_Ba1qsNy0kApWqQdTATxKCBzymMYsJetQMIe1GEwplaJT9dDfW7C8K_zsJQ0ylU5htclTiJARJBOfjJrULYTYntj6IYuV_piLiFhV1AqQ3D2a1Ygc8Y5jqjBICk2p9G8PzlccMtWQWBO81GRmZJyZ3KIrph2UBnDZpsENlJ0YNLamDBFf76glHckHA68b2ycqJq1x7UlaQTjZa-W1ttv1uHAnNWQ-RA6/https://www.amazon.com/dp/B0G58G8M6X/?_encoding=UTF8&pd_rd_i=B0G58G8M6X&pd_rd_i=B0G58G8M6X&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=T8Ucx&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=HF53HRGR2MX62GGF4Z84&pd_rd_wg=DWdTa&pd_rd_r=9f43c3ed-dea7-48f5-b9a1-a914e1ebb0ce",
+      "link_clean": "https://www.amazon.com/dp/B0G58G8M6X/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G58G8M6X&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41ST0TqbSwL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/4c26fbb9-d785-41f7-a014-f4ee0b9b7775.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/4c26fbb9-d785-41f7-a014-f4ee0b9b7775.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.4,
+      "reviews": 1216,
+      "price": "$32.38",
+      "extracted_price": 32.38,
+      "old_price": "$52.99",
+      "extracted_old_price": 52.99
+    },
+    {
+      "position": 5,
+      "asin": "B0FCXRLQLW",
+      "title": "Kepswin Solar Charger Power Bank 49800mAh with 4 Built-in Cables & 3 Foldable Panels, PD22.5W Fast Portable Phone Charger, External Battery Pack with USB-C in/Output & Flashlight for Outdoor Camping",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JDFPnK99eOXzvXoi2ywZk9wAAAGexNv8OAEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICCVq8ex/clv1c_ek-wxfHXLcTWDaXjaCcSiFwLMKlTuYp7scQe0lPrPlfXzXRwpwiIu1WMWIM1q_NAx7axfx-FkybrwcwEtW2UcgzTf-76PBGj6XybewfGfJSnG3YsfrvDOaw4YvvhbBL37yCqvDRl-QaOV3VtplQn_dKLYFydBFjlnP5AB7eK7cdSEbeUfZcBTNIZy5vCbs9YJf1bJgrMHSHL57S1Ieogp3qLDK4Hxq4eHyZ_GpPNlt28UOTNe3t_wLZHGnemH0E6nuTAy7JL7Kf8jf-57AyR7Dj4QyRFWMCMLrUXAgVA2Wbl5N6Aod15dRIdldfPebbHdJjh1jnMmQ7zyUbyyeSf0hicm0pOCYIIE_dLug4X_WvbMzfKsFmucBowPF8UxSDAEVvewaNXKwOoBsk8aHt1i7bu6h_Mj-rVhZZm65IuzV9ZUIV5wwajtIU0TqVxhZk4cQSfU8RvurxwWNzHgo-VZaJgE3xl-_j_O67scHRmhqCE8InIabm5AGQE8GUCa0L1lPzgAgzjP_KdPvyQ7qY8MXESsML0mlhzfH8n2TSlbdtMei2xMyEpxv9gqdJAdpOfCOa-04xuJ3oQR2_O9Ngs8XPgUkKU1P2h4Luh5jmAdFLObQczafcyhMygM5ypsDWX762Cs2-tX_V6OSV0_V32gD7Wkp2zXDe4CW8Ptq4m8Ray37PZzFvTpH7NRhXyJ6ohjPdjJrzL58EAm6oJL9VPGYJCj1YnSx5A_4b4ps0IGrcYTW32utVGkbpOSr8VoHppSDukC73wkCEGIu0hr2bWysPFZJ0liQqO65u62N6nAQE3zNGXXzv-gLWt0tAOPfjer_K8gIOjCJDcaGBQfB_zEubUCecTFLL35CZU6l4mf2dmWgtMsc1tLsixY1qwcyM0MmTU64-Xb0frMbG0onuiLju5hOrTDYMxVM8aw2AYTA2ovHArx27A8qZxXv4AwdNu9pffSLaBcEG--KnP-70qzZeE3BfO8JCX7EvfsVUq0Ev-4lGuZtLZV6qV6yFkV6uq6eq6zDd1XsO4kUhlp_X8rt2Wc2CPD29VFSt1jl6o1p_yy6tlzUrF5bWoh2b2xHPcHjJVf1pu-UO-B1bGKCCU4ssyKSAEJ_d7Y2n2wGpGm07r03jI8hpLcO530tS9TwF2ECvx5JyMqUTrHRAvNeqq5wm_MTokxb3eD9nAQ8CptRY8PsBTjEeVembFYMCd4MOakYFNqL3pJlsjStUYreOQb6P-GPFgzoNzrO7DKTLZIgmJNdTfcLz0PVgaeFS5UoJpwmQGwpY_ZI8XvH_9PEMdqmMs9kzP8rwbqdrFr-MUQifQUzrgehlCkrPs6ZkgolAuwHi2mFb64boiQ9_SV-GKAmz7puIZi66W8RwCxiDDEm41mEvSomhCOQLQUOytSbiO6t00ia5j-zkyWOEF_FejUD00XfwHtGn-FWzyTK2eRPjPeqMDu9AdS7n35Q-gFYhih-8F67Vdh6H_KGbfZpz1p0L4SC-geXvD3hPHJwLIZJq3sMpi9bPeB0zgux4k6NpZe0BlPwziGjusYgkhMBZi/https://www.amazon.com/dp/B0FCXRLQLW/?_encoding=UTF8&pd_rd_i=B0FCXRLQLW&pd_rd_i=B0FCXRLQLW&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=T8Ucx&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=HF53HRGR2MX62GGF4Z84&pd_rd_wg=DWdTa&pd_rd_r=9f43c3ed-dea7-48f5-b9a1-a914e1ebb0ce",
+      "link_clean": "https://www.amazon.com/dp/B0FCXRLQLW/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FCXRLQLW&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41U04p3v3aL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/03550d0f-be46-434e-90cd-6b3f93ca01cd.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/03550d0f-be46-434e-90cd-6b3f93ca01cd.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.4,
+      "reviews": 264,
+      "price": "$53.99",
+      "extracted_price": 53.99,
+      "old_price": "$59.99",
+      "extracted_old_price": 59.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "images": [
+        "https://m.media-amazon.com/images/I/61v7PTlvA3L.jpg",
+        "https://m.media-amazon.com/images/I/71nI1g+JJ0L.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 95,
+        "4 star": 5,
+        "3 star": 0,
+        "2 star": 0,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Perfect Travel Companion",
+        "text": "This power bank is exactly what I needed for travel. The 50000mAh capacity lasts a long time and can charge multiple devices without worry. The built-in USB-C and iOS cables are incredibly convenient, and the LED display makes it easy to monitor the remaining battery.My only suggestion would be to include a carrying pouch for added protection. Overall, a dependable and well-designed charger that I highly recommend.",
+        "rating": 5,
+        "date": "June 11, 2026",
+        "author": "Lucimar dias",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFPNZ6YF32S6J4ZP5CBJAOB5DNNA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Ebony"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Huge Capacity and Very Convenient",
+        "text": "This power bank has an impressive battery capacity and easily keeps my devices charged for several days. I also love the built-in cables and wall plug, which means I don't need to carry extra accessories when traveling.One suggestion would be to make it a little lighter for easier portability. Overall, it's a reliable and practical power bank for trips and everyday use.",
+        "rating": 5,
+        "date": "June 11, 2026",
+        "author": "Amazon Customer",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGPWIT3RQUVXYV3EV2UZOMS7QUXA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Ebony"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Do not hesitate to buy it, it is super excellent charger",
+        "text": "Excellent charger lasts a long battery apart from that it comes with two auxiliary cables to connect and you can have several devices charging and they charge you all super well without a doubt it has been a good buy I will be buying another one of this really loves this charger",
+        "rating": 5,
+        "date": "June 7, 2026",
+        "author": "Yeniffer",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AG2IAT5GUDZVHK23NE6QDQ76UG7A?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/3eb5edc4-1b8d-4612-8ea4-71f3cceaa5e4._CR0%2C0%2C500%2C500_SX460_SX48_.jpeg",
+        "verified_purchase": true,
+        "product": {
+          "color": "Ebony"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Charges phone many times",
+        "text": "Great product. Extremely happy with it.",
+        "rating": 5,
+        "date": "May 10, 2026",
+        "author": "Dawn4033",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEPEKC64CXA6YLKQKR2T44ZCV5QA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true
+      },
+      {
+        "position": 5,
+        "title": "Very good product",
+        "text": "This portable charger is a great product for me; it has really saved the day when my phone, speaker, or smartwatch ran out of battery. It works for everything, the battery lasts a long time, and it is excellent to take along on trips.",
+        "rating": 5,
+        "date": "June 9, 2026",
+        "author": "Mary Dávila",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AF7P6D5LHV6PL3CPVVLH5WRV3RBQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/82b3d894-ba0d-4890-8868-a9b2c38a36b4._CR0%2C0%2C375%2C375_UX460_SX48_.jpg",
+        "verified_purchase": true,
+        "product": {
+          "color": "Ebony"
+        }
+      },
+      {
+        "position": 6,
+        "title": "Great, I loved this charger",
+        "text": "This charger is great for traveling and being able to charge your mobile and that it does not discharge I would buy it again I loved it",
+        "rating": 5,
+        "date": "June 7, 2026",
+        "author": "Mileidy",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHK6YGX4PLVPTFCEWWCRNZQWER7A?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/5e6f5596-193b-4699-85c2-997ac12ecc90._CR0%2C0%2C500%2C500_SX460_SX48_.jpeg",
+        "verified_purchase": true,
+        "product": {
+          "color": "Ebony"
+        }
+      },
+      {
+        "position": 7,
+        "title": "Good option to have extra battery always at hand",
+        "text": "It has worked very well for me so far. I like that it has the cables integrated because it is much more comfortable to go out and I don't have to carry several accessories. The screen shows the remaining battery and that helps to know when to recharge it. It has a good size to carry in the wallet or backpack and has been useful to me when I spend many hours away from home. The flashlight is also a practical detail for certain situations.",
+        "rating": 5,
+        "date": "June 12, 2026",
+        "author": "Melissa Magallanes",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGRNKCKS57U6MZOAJ3OZKNYWRJKQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/2622cc66-a0cd-4278-a5dc-936e78594940._CR0%2C0%2C500%2C500_SX460_SX48_.jpeg",
+        "verified_purchase": true,
+        "product": {
+          "color": "Ebony"
+        }
+      },
+      {
+        "position": 8,
+        "title": "Lots of charging power.",
+        "text": "Works great but too big and heavy for your pocket.",
+        "rating": 5,
+        "date": "May 15, 2026",
+        "author": "Tony Campisi",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEHXU4HBO2LYR5IOOQYHJB4YU37A?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true
+      }
+    ],
+    "other_countries_reviews": [
+      {
+        "position": 1,
+        "title": "Design bonito e visor nítido",
+        "text": "O acabamento é muito bonito e não fica com marca de dedo. O visor LED é bem nítido, dá pra ver a porcentagem de longe.",
+        "rating": 5,
+        "date": "April 17, 2026",
+        "author": "biro el_swefy",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "country": {
+          "code": "BR",
+          "name": "Brazil"
+        },
+        "language": {
+          "code": "pt",
+          "name": "Portuguese (Brazil)"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Carrega até 4 dispositivos simultaneamente, ideal para grupos!",
+        "text": "Com cabos integrados e duas portas extras, carreguei meu celular, tablet, fones de ouvido e console de jogos ao mesmo tempo na última viagem. O power bank ajusta a corrente automaticamente para cada dispositivo, garantindo carregamento seguro e otimizado para todos.",
+        "rating": 5,
+        "date": "March 13, 2026",
+        "author": "Praxedes Marinho",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "country": {
+          "code": "BR",
+          "name": "Brazil"
+        },
+        "language": {
+          "code": "pt",
+          "name": "Portuguese (Brazil)"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Ideal para viagens longas",
+        "text": "Comprei para usar em viagens longas e ele segurou a onda perfeitamente. É um pouco pesado, mas pelo tanto que carrega, vale muito a pena.",
+        "rating": 5,
+        "date": "April 17, 2026",
+        "author": "sunstreak",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "country": {
+          "code": "BR",
+          "name": "Brazil"
+        },
+        "language": {
+          "code": "pt",
+          "name": "Portuguese (Brazil)"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Compatibilidade total, funciona com iPhone e Android!",
+        "text": "Funciona perfeitamente com meu iPhone, o Samsung do amigo, iPad e até drones e consoles portáteis. Não há incompatibilidades, e os cabos integrados evitam a necessidade de adaptadores — um só power bank resolve todos os aparelhos!",
+        "rating": 5,
+        "date": "March 13, 2026",
+        "author": "Valquíria Wilkens",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "country": {
+          "code": "BR",
+          "name": "Brazil"
+        },
+        "language": {
+          "code": "pt",
+          "name": "Portuguese (Brazil)"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Salva no dia a dia",
+        "text": "Cura o meu desespero! Consigo carregar meu celular e o tablet ao mesmo tempo. Os cabos embutidos são bem resistentes.",
+        "rating": 5,
+        "date": "April 17, 2026",
+        "author": "Eduardo Lopes",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "country": {
+          "code": "BR",
+          "name": "Brazil"
+        },
+        "language": {
+          "code": "pt",
+          "name": "Portuguese (Brazil)"
+        }
+      }
+    ]
+  }
+}
