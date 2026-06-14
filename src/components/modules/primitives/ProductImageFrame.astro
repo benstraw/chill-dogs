@@ -1,0 +1,64 @@
+---
+import { Image } from 'astro:assets';
+
+/**
+ * 4:3 product image shell shared by the converter cards.
+ *
+ * Renders an Astro <Image> (optimized, lazy) when an image is provided, otherwise
+ * the shared placeholder silhouette. The placeholder/accent colour comes from the
+ * active pillar theme via --pillar-link, so it themes per pillar automatically.
+ */
+interface Props {
+  image?: { src: string; alt: string };
+  width?: number;
+  height?: number;
+}
+
+const { image, width = 400, height = 300 } = Astro.props;
+---
+
+<div class="product-image-frame">
+  {image ? (
+    <Image
+      src={image.src}
+      alt={image.alt}
+      width={width}
+      height={height}
+      loading="lazy"
+      onerror="this.style.display='none';this.parentElement.classList.add('product-image-frame--fallback')"
+    />
+  ) : (
+    <div class="product-image-frame__placeholder" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="48" height="48" fill="currentColor" aria-hidden="true">
+        <path d="M50 15c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zm-20 25c-3.3 0-6 2.7-6 6v4c0 8.8 11.2 16 26 16s26-7.2 26-16v-4c0-3.3-2.7-6-6-6H30zm-8 30c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm56 0c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zM36 78c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm28 0c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z"/>
+      </svg>
+    </div>
+  )}
+</div>
+
+<style>
+  .product-image-frame {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--color-bg-alt);
+  }
+
+  .product-image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #fff;
+  }
+
+  .product-image-frame--fallback,
+  .product-image-frame:has(.product-image-frame__placeholder) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product-image-frame__placeholder {
+    color: var(--pillar-link);
+    opacity: 0.5;
+  }
+</style>

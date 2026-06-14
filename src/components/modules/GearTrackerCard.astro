@@ -1,0 +1,225 @@
+---
+import AffiliateLink from '@components/AffiliateLink.astro';
+import ProductCardShell from './primitives/ProductCardShell.astro';
+import ProductImageFrame from './primitives/ProductImageFrame.astro';
+import ProductBulletList from './primitives/ProductBulletList.astro';
+import AffiliateOfferStack from './primitives/AffiliateOfferStack.astro';
+import type { TrackerProduct } from '@data/tracking-products';
+import { merchants } from '@data/products/merchants';
+import { getOffers } from '@data/products/offers';
+
+interface Props {
+  product: TrackerProduct;
+  pageSlug: string;
+  positionPrefix: string;
+  amazonLabel?: string;
+  showType?: boolean;
+}
+
+const {
+  product,
+  pageSlug,
+  positionPrefix,
+  amazonLabel = product.ctaLabel ?? 'Check Price on Amazon',
+  showType = true,
+} = Astro.props;
+
+const offers = getOffers(product);
+---
+
+<div class="gear-tracker-card" id={product.id}>
+  <ProductCardShell>
+    <ProductImageFrame slot="image" image={product.image} />
+    <div class="gear-tracker-card__header">
+      <h3 class="gear-tracker-card__name">{product.name}</h3>
+      {showType && <span class="gear-tracker-card__type">{product.type}</span>}
+    </div>
+    <p class="gear-tracker-card__use">{product.use_case}</p>
+    <ProductBulletList bullets={product.bullets} />
+
+    <div class="gear-tracker-card__meta">
+      <p class="gear-tracker-card__meta-line"><strong>Signal:</strong> {product.signalNote}</p>
+      {product.subscriptionNote && (
+        <p class="gear-tracker-card__meta-line"><strong>Subscription:</strong> {product.subscriptionNote}</p>
+      )}
+      <p class="gear-tracker-card__meta-line"><strong>Best for:</strong> {product.best_for}</p>
+    </div>
+
+    <div class="gear-tracker-card__pros-cons">
+      <div>
+        <p class="gear-tracker-card__pros-heading">Pros</p>
+        <ul class="gear-tracker-card__list gear-tracker-card__list--pros">
+          {product.pros.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+      <div>
+        <p class="gear-tracker-card__cons-heading">Cons</p>
+        <ul class="gear-tracker-card__list gear-tracker-card__list--cons">
+          {product.cons.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+    </div>
+
+    <div class="gear-tracker-card__offers">
+      <AffiliateOfferStack
+        offers={offers}
+        product={{ id: product.id, name: product.name, category: product.type }}
+        pageType="converter"
+        pageSlug={pageSlug}
+        position={positionPrefix}
+        resolveLabel={(offer, index) =>
+          offer.merchant === 'amazon' ? amazonLabel : merchants[offer.merchant].ctaCopy
+        }
+      />
+
+      {product.secondaryUrl && (
+        <AffiliateLink
+          href={product.secondaryUrl}
+          data-product-id={product.id}
+          data-product-name={product.name}
+          data-product-category={product.type}
+          data-page-type="converter"
+          data-page-slug={pageSlug}
+          data-position={`${positionPrefix}-secondary`}
+          class="ui-cta"
+          data-variant="secondary"
+        >
+          {product.secondaryLabel ?? 'Shop on Amazon'}
+        </AffiliateLink>
+      )}
+    </div>
+  </ProductCardShell>
+</div>
+
+<style>
+  .gear-tracker-card {
+    height: 100%;
+  }
+
+  .gear-tracker-card :global(.product-card) {
+    height: 100%;
+  }
+
+  .gear-tracker-card__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-sm);
+  }
+
+  .gear-tracker-card__name {
+    font-size: var(--text-lg);
+    font-weight: var(--weight-bold);
+    margin: 0;
+    flex: 1;
+  }
+
+  .gear-tracker-card__type {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+    background: var(--color-bg-alt);
+    padding: 2px var(--space-sm);
+    border-radius: var(--radius-sm);
+    white-space: nowrap;
+  }
+
+  .gear-tracker-card__use {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 0 0 var(--space-md);
+  }
+
+  .gear-tracker-card__meta {
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .gear-tracker-card__meta-line {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin: 0;
+    line-height: var(--leading-normal);
+  }
+
+  .gear-tracker-card__meta-line strong {
+    color: var(--color-text);
+  }
+
+  .gear-tracker-card__pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-md);
+  }
+
+  .gear-tracker-card__pros-heading,
+  .gear-tracker-card__cons-heading {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0 0 var(--space-sm);
+  }
+
+  .gear-tracker-card__pros-heading {
+    color: var(--color-sage);
+  }
+
+  .gear-tracker-card__cons-heading {
+    color: var(--color-terracotta);
+  }
+
+  .gear-tracker-card__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .gear-tracker-card__list li {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    line-height: var(--leading-normal);
+    margin-bottom: var(--space-xs);
+    padding-left: var(--space-md);
+    position: relative;
+  }
+
+  .gear-tracker-card__list--pros li::before,
+  .gear-tracker-card__list--cons li::before {
+    position: absolute;
+    left: 0;
+    font-weight: var(--weight-bold);
+  }
+
+  .gear-tracker-card__list--pros li::before {
+    content: '+';
+    color: var(--color-sage);
+  }
+
+  .gear-tracker-card__list--cons li::before {
+    content: '-';
+    color: var(--color-terracotta);
+  }
+
+  .gear-tracker-card__offers {
+    margin-top: auto;
+  }
+
+  .gear-tracker-card__offers :global(.ui-cta[data-variant='secondary']) {
+    margin-top: var(--space-sm);
+  }
+
+  @media (max-width: 768px) {
+    .gear-tracker-card__pros-cons {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

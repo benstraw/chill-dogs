@@ -166,6 +166,43 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
+/*
+ * Shared responsive product-grid vocabulary for the conversion UI layer.
+ * Owns columns / gap / responsive only; callers keep their own page-specific
+ * max-width, centering, and margins. Canonical collapse: 3->2 at 1024px, any
+ * 2->1 at 768px. Used by the converter, cooling, and gear product grids.
+ * `.cards-grid--*` (collector hub grids) is intentionally left separate.
+ */
+.ui-grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.ui-grid--1 {
+  grid-template-columns: 1fr;
+}
+
+.ui-grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.ui-grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .ui-grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ui-grid--2,
+  .ui-grid--3 {
+    grid-template-columns: 1fr;
+  }
+}
+
 .guide-card {
   display: block;
   background: var(--color-surface);

@@ -1,0 +1,64 @@
+---
+import ProductCardShell from './primitives/ProductCardShell.astro';
+import ProductImageFrame from './primitives/ProductImageFrame.astro';
+import AffiliateOfferStack from './primitives/AffiliateOfferStack.astro';
+import type { AccessoryProduct } from '@data/tracking-products';
+import { merchants } from '@data/products/merchants';
+import { getOffers } from '@data/products/offers';
+
+interface Props {
+  product: AccessoryProduct;
+  pageSlug: string;
+  label?: string;
+}
+
+const { product, pageSlug, label = 'Fi-Ready Collar' } = Astro.props;
+const offers = getOffers(product);
+---
+
+<div class="gear-accessory-card">
+  <ProductCardShell>
+    <ProductImageFrame slot="image" image={product.image} />
+    <p class="gear-accessory-card__label">{label}</p>
+    <h3 class="gear-accessory-card__name">{product.name}</h3>
+    <p class="gear-accessory-card__note">{product.note}</p>
+    <AffiliateOfferStack
+      offers={offers}
+      product={{ id: product.id, name: product.name, category: 'accessories' }}
+      pageType="converter"
+      pageSlug={pageSlug}
+      position="fi-accessory"
+      resolveLabel={(offer) => (offer.merchant === 'amazon' ? 'Shop on Amazon' : merchants[offer.merchant].ctaCopy)}
+    />
+  </ProductCardShell>
+</div>
+
+<style>
+  .gear-accessory-card {
+    max-width: var(--max-width-prose);
+    margin-top: var(--space-xl);
+  }
+
+  .gear-accessory-card__label {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+    margin: 0 0 var(--space-sm);
+  }
+
+  .gear-accessory-card__name {
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text);
+    margin: 0 0 var(--space-xs);
+  }
+
+  .gear-accessory-card__note {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+  }
+</style>

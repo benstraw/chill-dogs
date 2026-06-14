@@ -14,6 +14,10 @@ interface Props {
   pageType?: string;
   pageSlug?: string;
   position?: string | number;
+  /** Opt into the shared `.ui-cta` button system (src/styles/cta.css). */
+  variant?: 'primary' | 'secondary' | 'ghost';
+  size?: 'compact' | 'standard' | 'wide';
+  tone?: 'pillar' | 'neutral' | 'merchant';
   [key: string]: any;
 }
 
@@ -25,6 +29,9 @@ const {
   pageType,
   pageSlug,
   position,
+  variant,
+  size,
+  tone,
   'data-track': dataTrack = 'affiliate_outbound_click',
   'data-track-also': dataTrackAlso = offer.merchant === 'amazon' ? 'amazon_outbound_click' : undefined,
   ...rest
@@ -33,13 +40,20 @@ const {
 const merchant = merchants[offer.merchant];
 const merchantProductId =
   offer.merchantProductId ?? (offer.merchant === 'amazon' ? offer.asin : undefined);
+
+// Opt-in: passing any of variant/size/tone adopts the shared `.ui-cta` styling.
+const isCta = variant !== undefined || size !== undefined || tone !== undefined;
+const ctaClass = isCta ? ['ui-cta', className].filter(Boolean).join(' ') : className;
 ---
 
 <a
   href={offer.url}
   rel="sponsored noopener noreferrer"
   target="_blank"
-  class={className}
+  class={ctaClass}
+  data-variant={variant}
+  data-size={size}
+  data-tone={tone}
   data-affiliate="true"
   data-track={dataTrack}
   data-track-also={dataTrackAlso}

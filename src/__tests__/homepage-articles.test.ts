@@ -1,67 +1,124 @@
 import { describe, expect, it, vi } from 'vitest';
-import type { CollectionEntry } from 'astro:content';
-import type { ImageMetadata } from 'astro';
 
 const mockStaticSitemapSections = vi.hoisted(() => {
-  const converter = (
+  const page = (
     href: string,
     title: string,
-    pubDate?: string,
-    lastUpdated?: string,
-    heroProduct = true
+    pageType: 'converter' | 'collector',
+    options: {
+      collectorSubtype?: 'article' | 'section';
+      pubDate?: string;
+      lastUpdated?: string;
+      heroProduct?: boolean;
+      image?: string;
+    } = {}
   ) => ({
     href,
     baseTitle: title,
-    description: `${title} description`,
-    pageType: 'converter',
-    pubDate: pubDate ? new Date(pubDate) : undefined,
-    lastUpdated: lastUpdated ? new Date(lastUpdated) : undefined,
-    heroProduct: heroProduct
-      ? {
+    pageType,
+    collectorSubtype: options.collectorSubtype,
+    pubDate: options.pubDate ? new Date(options.pubDate) : undefined,
+    lastUpdated: options.lastUpdated ? new Date(options.lastUpdated) : undefined,
+    heroProduct: options.heroProduct === false
+      ? undefined
+      : {
           image: 'https://example.com/product.jpg',
           badge: 'Top Pick',
           name: title,
-        }
-      : undefined,
+        },
     preview: {
       title,
       description: `${title} preview`,
-      image: `/og/${href.replace(/^\/|\/$/g, '').replace(/\//g, '-')}.jpg`,
+      image: options.image ?? `/og/${href.replace(/^\/|\/$/g, '').replace(/\//g, '-')}.jpg`,
     },
   });
 
   return [
     {
       title: 'Mock sitemap',
-      description: 'Mock sitemap pages for homepage converter tests.',
+      description: 'Mock sitemap pages for homepage tests.',
       pages: [
-        converter('/cooling/updated-pick/', 'Updated Pick', '2026-01-01', '2026-06-10'),
-        converter('/calming/latest-published-pick/', 'Latest Published Pick', '2026-06-01'),
-        converter('/comforting/dated-pick-01/', 'Dated Pick 01', '2026-05-20'),
-        converter('/comforting/dated-pick-02/', 'Dated Pick 02', '2026-05-19'),
-        converter('/comforting/dated-pick-03/', 'Dated Pick 03', '2026-05-18'),
-        converter('/comforting/dated-pick-04/', 'Dated Pick 04', '2026-05-17'),
-        converter('/comforting/dated-pick-05/', 'Dated Pick 05', '2026-05-16'),
-        converter('/comforting/dated-pick-06/', 'Dated Pick 06', '2026-05-15'),
-        converter('/comforting/dated-pick-07/', 'Dated Pick 07', '2026-05-14'),
-        converter('/comforting/dated-pick-08/', 'Dated Pick 08', '2026-05-13'),
-        converter('/comforting/dated-pick-09/', 'Dated Pick 09', '2026-05-12'),
-        converter('/comforting/dated-pick-10/', 'Dated Pick 10', '2026-05-11'),
-        converter('/comforting/dated-pick-11/', 'Dated Pick 11', '2026-05-10'),
-        converter('/comforting/dated-pick-12/', 'Dated Pick 12', '2026-05-09'),
-        converter('/comforting/dated-pick-13/', 'Dated Pick 13', '2026-05-08'),
-        converter('/gear/older-overflow-pick/', 'Older Overflow Pick', '2026-01-01'),
-        converter('/gear/undated-pick/', 'Undated Pick', undefined, undefined, false),
-        {
-          href: '/cooling/not-a-converter/',
-          baseTitle: 'Not a Converter',
-          pageType: 'collector',
-          preview: {
-            title: 'Not a Converter',
-            description: 'This page should not appear in Browse Picks.',
-            image: '/og-default.jpg',
-          },
-        },
+        page('/gear/airtag-for-dogs/', 'AirTag for Dogs', 'collector', {
+          collectorSubtype: 'article',
+          pubDate: '2026-06-12',
+        }),
+        page('/travel/how-to-fly-with-a-dog/', 'How to Fly With a Dog', 'collector', {
+          collectorSubtype: 'article',
+          pubDate: '2026-06-11',
+          image: '/_assets/custom-og.jpg',
+        }),
+        page('/gear/fi-dog-collar-review/', 'Fi Dog Collar Review', 'collector', {
+          collectorSubtype: 'article',
+          pubDate: '2026-06-10',
+        }),
+        page('/safety/what-to-do-if-your-dog-runs-away/', 'What to Do If Your Dog Runs Away', 'collector', {
+          collectorSubtype: 'article',
+          pubDate: '2026-06-09',
+        }),
+        page('/cooling/how-hot-is-too-hot-for-dogs/', 'How Hot Is Too Hot for Dogs', 'collector', {
+          collectorSubtype: 'article',
+          pubDate: '2026-06-08',
+        }),
+        page('/gear/garmin-dog-tracking-collars/', 'Garmin Dog Tracking Collars', 'collector', {
+          collectorSubtype: 'article',
+          pubDate: '2026-06-07',
+        }),
+        page('/cooling/not-an-article/', 'Not an Article', 'collector', {
+          collectorSubtype: 'section',
+          pubDate: '2026-06-06',
+        }),
+        page('/cooling/updated-pick/', 'Updated Pick', 'converter', {
+          pubDate: '2026-01-01',
+          lastUpdated: '2026-06-10',
+        }),
+        page('/calming/latest-published-pick/', 'Latest Published Pick', 'converter', {
+          pubDate: '2026-06-01',
+        }),
+        page('/comforting/dated-pick-01/', 'Dated Pick 01', 'converter', {
+          pubDate: '2026-05-20',
+        }),
+        page('/comforting/dated-pick-02/', 'Dated Pick 02', 'converter', {
+          pubDate: '2026-05-19',
+        }),
+        page('/comforting/dated-pick-03/', 'Dated Pick 03', 'converter', {
+          pubDate: '2026-05-18',
+        }),
+        page('/comforting/dated-pick-04/', 'Dated Pick 04', 'converter', {
+          pubDate: '2026-05-17',
+        }),
+        page('/comforting/dated-pick-05/', 'Dated Pick 05', 'converter', {
+          pubDate: '2026-05-16',
+        }),
+        page('/comforting/dated-pick-06/', 'Dated Pick 06', 'converter', {
+          pubDate: '2026-05-15',
+        }),
+        page('/comforting/dated-pick-07/', 'Dated Pick 07', 'converter', {
+          pubDate: '2026-05-14',
+        }),
+        page('/comforting/dated-pick-08/', 'Dated Pick 08', 'converter', {
+          pubDate: '2026-05-13',
+        }),
+        page('/comforting/dated-pick-09/', 'Dated Pick 09', 'converter', {
+          pubDate: '2026-05-12',
+        }),
+        page('/comforting/dated-pick-10/', 'Dated Pick 10', 'converter', {
+          pubDate: '2026-05-11',
+        }),
+        page('/comforting/dated-pick-11/', 'Dated Pick 11', 'converter', {
+          pubDate: '2026-05-10',
+        }),
+        page('/comforting/dated-pick-12/', 'Dated Pick 12', 'converter', {
+          pubDate: '2026-05-09',
+        }),
+        page('/comforting/dated-pick-13/', 'Dated Pick 13', 'converter', {
+          pubDate: '2026-05-08',
+        }),
+        page('/gear/older-overflow-pick/', 'Older Overflow Pick', 'converter', {
+          pubDate: '2026-01-01',
+        }),
+        page('/gear/undated-pick/', 'Undated Pick', 'converter', {
+          heroProduct: false,
+        }),
       ],
     },
   ];
@@ -71,32 +128,17 @@ vi.mock('@data/content-sitemap', () => ({
   staticSitemapSections: mockStaticSitemapSections,
 }));
 
+vi.mock('@data/sitemap-inventory', () => ({
+  getCompleteSitemapPages: async () => mockStaticSitemapSections.flatMap((section) => section.pages),
+}));
+
 import {
-  buildHomepageArticleFeed,
+  getHomepageArticleFeed,
   getHomepageConverters,
+  isHomepageArticle,
   mapHomepageArticle,
   resolveHomepageArticleTheme,
 } from '../utils/homepage-articles';
-
-function createArticle(
-  canonicalPath: string,
-  pubDate: string,
-  ogImage?: ImageMetadata
-): CollectionEntry<'articles'> {
-  return {
-    id: canonicalPath,
-    slug: canonicalPath,
-    body: '',
-    collection: 'articles',
-    data: {
-      title: canonicalPath,
-      description: `${canonicalPath} description`,
-      pubDate: new Date(pubDate),
-      canonicalPath,
-      ogImage,
-    },
-  } as CollectionEntry<'articles'>;
-}
 
 describe('homepage article feed', () => {
   it('derives homepage themes from article route prefixes', () => {
@@ -114,62 +156,57 @@ describe('homepage article feed', () => {
     });
   });
 
-  it('maps images and sorts newest articles to the top', () => {
-    const explicitImage = {
-      src: '/_assets/custom-og.jpg',
-      width: 1200,
-      height: 630,
-      format: 'jpg',
-    } as ImageMetadata;
-
-    const feed = buildHomepageArticleFeed([
-      createArticle('/calming/dog-fireworks-anxiety-checklist/', '2026-05-12'),
-      createArticle('/cooling/how-hot-is-too-hot-for-dogs/', '2026-03-10'),
-      createArticle('/travel/how-to-fly-with-a-dog/', '2026-04-10', explicitImage),
-      createArticle('/calming/crate-training-for-dogs/', '2026-04-09'),
-      createArticle('/safety/what-to-do-if-your-dog-runs-away/', '2026-04-03'),
-      createArticle('/comforting/how-much-do-dogs-sleep/', '2026-03-24'),
-      createArticle('/cooling/keep-dog-cool-in-car/', '2026-03-20'),
-    ]);
+  it('includes static and content-style article collectors in homepage guide order', async () => {
+    const feed = await getHomepageArticleFeed();
 
     expect(feed.featuredArticles.map((article) => article.href)).toEqual([
-      '/calming/dog-fireworks-anxiety-checklist/',
+      '/gear/airtag-for-dogs/',
       '/travel/how-to-fly-with-a-dog/',
-      '/calming/crate-training-for-dogs/',
+      '/gear/fi-dog-collar-review/',
       '/safety/what-to-do-if-your-dog-runs-away/',
-      '/comforting/how-much-do-dogs-sleep/',
-      '/cooling/keep-dog-cool-in-car/',
       '/cooling/how-hot-is-too-hot-for-dogs/',
+      '/gear/garmin-dog-tracking-collars/',
     ]);
     expect(feed.moreArticles).toEqual([]);
     expect(feed.latestGuides.map((article) => article.href)).toEqual([
-      '/calming/dog-fireworks-anxiety-checklist/',
+      '/gear/airtag-for-dogs/',
       '/travel/how-to-fly-with-a-dog/',
-      '/calming/crate-training-for-dogs/',
+      '/gear/fi-dog-collar-review/',
       '/safety/what-to-do-if-your-dog-runs-away/',
-      '/comforting/how-much-do-dogs-sleep/',
-      '/cooling/keep-dog-cool-in-car/',
       '/cooling/how-hot-is-too-hot-for-dogs/',
+      '/gear/garmin-dog-tracking-collars/',
     ]);
-
-    expect(feed.featuredArticles[0]?.image).toBe('/og/calming-dog-fireworks-anxiety-checklist.jpg');
+    expect(feed.featuredArticles[0]?.image).toBe('/og/gear-airtag-for-dogs.jpg');
     expect(feed.featuredArticles[1]?.image).toBe('/_assets/custom-og.jpg');
-    expect(feed.featuredArticles[3]?.image).toBe('/og/safety-what-to-do-if-your-dog-runs-away.jpg');
-    expect(feed.featuredArticles[6]?.image).toBe('/og/cooling-how-hot-is-too-hot-for-dogs.jpg');
   });
 
-  it('maps a single article into homepage card data', () => {
-    const article = mapHomepageArticle(
-      createArticle('/comforting/how-much-do-dogs-sleep/', '2026-03-24')
-    );
+  it('maps a sitemap article into homepage card data', () => {
+    const article = mapHomepageArticle({
+      href: '/comforting/how-much-do-dogs-sleep/',
+      baseTitle: 'How Much Do Dogs Sleep',
+      pageType: 'collector',
+      collectorSubtype: 'article',
+      pubDate: new Date('2026-03-24'),
+      preview: {
+        title: 'How Much Do Dogs Sleep',
+        description: 'Sleep article preview',
+        image: '/og/comforting-how-much-do-dogs-sleep.jpg',
+      },
+    });
 
     expect(article).toMatchObject({
-      title: '/comforting/how-much-do-dogs-sleep/',
+      title: 'How Much Do Dogs Sleep',
       href: '/comforting/how-much-do-dogs-sleep/',
       label: 'Comfort',
       color: 'comfort',
       image: '/og/comforting-how-much-do-dogs-sleep.jpg',
     });
+  });
+
+  it('recognizes only article collectors with publish dates as homepage guide candidates', () => {
+    expect(isHomepageArticle(mockStaticSitemapSections[0].pages[0]!)).toBe(true);
+    expect(isHomepageArticle(mockStaticSitemapSections[0].pages[6]!)).toBe(false);
+    expect(isHomepageArticle(mockStaticSitemapSections[0].pages[7]!)).toBe(false);
   });
 
   it('sorts homepage converters by latest date and caps the default list at 15 cards', () => {
@@ -199,11 +236,10 @@ describe('homepage article feed', () => {
     expect(converters.map((converter) => converter.href)).not.toContain('/gear/older-overflow-pick/');
   });
 
-  it('filters non-converters and places undated converters last when the limit allows them', () => {
+  it('places undated converters last when the limit allows them', () => {
     const converters = getHomepageConverters(20);
 
     expect(converters).toHaveLength(17);
-    expect(converters.map((converter) => converter.href)).not.toContain('/cooling/not-a-converter/');
     expect(converters.at(-2)?.href).toBe('/gear/older-overflow-pick/');
     expect(converters.at(-1)?.href).toBe('/gear/undated-pick/');
     expect(converters.at(-1)?.image).toBeUndefined();

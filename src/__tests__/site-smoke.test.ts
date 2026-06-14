@@ -40,7 +40,7 @@ function readBuiltAsset(relativePath: string): string {
 function readArticlePublishOrder(): string[] {
   const articlesRoot = path.join(projectRoot, 'src', 'content', 'articles');
 
-  return readdirSync(articlesRoot)
+  const articlePages = readdirSync(articlesRoot)
     .filter((entry) => entry.endsWith('.mdx'))
     .map((entry) => {
       const contents = readFileSync(path.join(articlesRoot, entry), 'utf8');
@@ -55,7 +55,15 @@ function readArticlePublishOrder(): string[] {
         canonicalPath,
         pubDate: new Date(pubDate),
       };
-    })
+    });
+
+  const staticArticlePages = [
+    { canonicalPath: '/gear/fi-dog-collar-review/', pubDate: new Date('2026-03-18') },
+    { canonicalPath: '/gear/garmin-dog-tracking-collars/', pubDate: new Date('2026-03-18') },
+    { canonicalPath: '/gear/airtag-for-dogs/', pubDate: new Date('2026-03-18') },
+  ];
+
+  return [...articlePages, ...staticArticlePages]
     .sort((a, b) => b.pubDate.valueOf() - a.pubDate.valueOf())
     .map((article) => article.canonicalPath);
 }
@@ -139,6 +147,8 @@ describe('site smoke tests', () => {
     );
 
     expect(links).toContain('/calming/crate-training-for-dogs/');
+    expect(links).toContain('/gear/airtag-for-dogs/');
+    expect(links).toContain('/gear/fi-dog-collar-review/');
     expect(links).toContain('/comforting/best-travel-crates-for-road-trips/');
     expect(links).toContain('/calming/best-lick-mats-for-dogs/');
     expect(lickMatLinks.map((link) => link.getAttribute('data-link-position'))).toEqual([

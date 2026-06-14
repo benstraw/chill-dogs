@@ -52,7 +52,7 @@ function sectionClass(block: CalmingBlock): string {
             <h2>{block.heading}</h2>
             {block.intro && <p class="section-intro">{block.intro}</p>}
             {block.copyHtml && <p class="section-copy" set:html={block.copyHtml} />}
-            <div class={`product-grid product-grid--${block.columns}`}>
+            <div class={`product-grid product-grid--${block.columns} ui-grid ui-grid--${block.columns}`}>
               {getRequiredProducts(block.productIds).map((product, i) => (
                 <CalmingProductCard
                   product={product}
@@ -66,7 +66,7 @@ function sectionClass(block: CalmingBlock): string {
         </section>
       ) : block.kind === 'decision_columns' ? (
         <section class={sectionClass(block)} id={block.id}>
-          <div class="converter-inner decisions">
+          <div class="converter-inner decisions ui-grid ui-grid--2">
             <div class="decision-card">
               <h2>{block.left.heading}</h2>
               <ul>
@@ -166,24 +166,10 @@ function sectionClass(block: CalmingBlock): string {
     text-decoration: underline;
   }
 
-  .decisions,
-  .product-grid {
-    display: grid;
-    gap: var(--space-lg);
-  }
-
-  .product-grid--3 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .product-grid--2,
-  .decisions {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
+  /* Grid columns / gap / responsive come from `.ui-grid` (utilities.css);
+     only the single-column max-width constraint stays page-local. */
   .product-grid--1 {
     max-width: 720px;
-    grid-template-columns: 1fr;
   }
 
   .decision-card,
@@ -239,40 +225,9 @@ function sectionClass(block: CalmingBlock): string {
     color: var(--pillar-link);
   }
 
-  :global(.calming-theme .calm-card-cta) {
-    background: var(--pillar-accent);
-    color: var(--pillar-accent-text) !important;
-  }
-
-  :global(.calming-theme .calm-card-cta:hover) {
-    background: var(--pillar-accent-hover);
-    color: var(--pillar-accent-text) !important;
-  }
-
-  :global(.calming-theme .calm-card-cta:focus-visible) {
-    outline-color: var(--pillar-accent);
-  }
-
-  @media (max-width: 1024px) {
-    .product-grid--3 {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (max-width: 900px) {
-    .product-grid--2,
-    .decisions {
-      grid-template-columns: 1fr;
-    }
-  }
-
   @media (max-width: 640px) {
     .converter-section {
       padding: var(--space-xl) var(--space-md);
-    }
-
-    .product-grid--3 {
-      grid-template-columns: 1fr;
     }
   }
 </style>
