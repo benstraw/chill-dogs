@@ -307,6 +307,18 @@ site_system:
       routes:
         - "/safety/what-to-do-if-your-dog-runs-away/"
 
+    - name: "Natural Flea and Tick Prevention for Dogs"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Route flea/tick safety intent to outdoor safety, road-trip, hydration, and emergency-kit collectors/converters"
+      metric: "collector_to_converter_click to related outdoor safety and travel paths"
+      routes:
+        - "/safety/natural-flea-and-tick-prevention-for-dogs/"
+      notes: >
+        Article-only collector focused on year-round California flea/tick pressure, natural-prevention limits,
+        Wondercide label reading, cat-safety caveats, bath support, and veterinary escalation triggers.
+        No product roundup, comparison table, direct Amazon links, or flea/tick converter route exists in this branch.
+
     - name: "Product browse"
       type: "converter"
       pillar: "all"
