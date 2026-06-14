@@ -15,6 +15,7 @@ export async function getArticleSitemapSection(): Promise<SitemapSection> {
         href: entry.data.canonicalPath,
         pageType: 'collector',
         collectorSubtype: 'article',
+        pubDate: entry.data.pubDate,
         topics: entry.data.topics,
         pinnedRelated: entry.data.pinnedRelated,
         excludeRelated: entry.data.excludeRelated,

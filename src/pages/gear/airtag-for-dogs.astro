@@ -7,10 +7,12 @@ import FAQ from '@components/modules/FAQ.astro';
 import Disclosure from '@components/modules/Disclosure.astro';
 import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
 import JsonLd from '@components/JsonLd.astro';
+import AffiliateLink from '@components/AffiliateLink.astro';
 import { getTrackersByType } from '@data/tracking-products';
 
 const pageSlug = 'airtag-for-dogs';
 const bluetoothProducts = getTrackersByType('bluetooth');
+const airtagProduct = bluetoothProducts.find((product) => product.id === 'apple-airtag-2nd-gen') ?? bluetoothProducts[0];
 
 const tocHeadings = [
   { label: 'What AirTag Actually Is', anchor: 'what-it-is' },
@@ -86,9 +88,9 @@ const collectionSchema = {
     <section class="content-section" id="what-it-is">
       <div class="section-inner">
         <h2>What AirTag Actually Is</h2>
-        {bluetoothProducts[0]?.image && (
+        {airtagProduct?.image && (
           <div class="product-hero-image">
-            <img src={bluetoothProducts[0].image.src} alt={bluetoothProducts[0].image.alt} loading="eager" width="300" height="300" />
+            <img src={airtagProduct.image.src} alt={airtagProduct.image.alt} loading="eager" width="300" height="300" />
           </div>
         )}
         <p class="section-body">
@@ -199,6 +201,23 @@ const collectionSchema = {
             </p>
           </div>
         </div>
+
+        {airtagProduct?.amazonUrl && airtagProduct.asin && (
+          <div class="section-shop-cta">
+            <AffiliateLink
+              href={airtagProduct.amazonUrl}
+              data-track="amazon_outbound_click"
+              data-asin={airtagProduct.asin}
+              data-product-name={airtagProduct.name}
+              class="ui-cta"
+            >
+              Shop AirTag on Amazon
+            </AffiliateLink>
+            <p class="section-shop-note">
+              Best fit for Apple users who want a low-cost backup tag, not a standalone GPS tracker.
+            </p>
+          </div>
+        )}
 
         <div class="section-converter-cta">
           <a
@@ -489,6 +508,17 @@ const collectionSchema = {
   }
 
   /* Section CTA */
+  .section-shop-cta {
+    margin: 0 0 var(--space-xl);
+    max-width: var(--max-width-prose);
+  }
+
+  .section-shop-note {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin: var(--space-xs) 0 0;
+  }
+
   .section-converter-cta { margin-top: var(--space-xl); }
 
   .converter-cta-btn {

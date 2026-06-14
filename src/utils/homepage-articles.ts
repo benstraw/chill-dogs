@@ -1,6 +1,5 @@
-import type { CollectionEntry } from 'astro:content';
-import type { ImageMetadata } from 'astro';
-import { resolveAutoOgImagePath, resolveProvidedOgImagePath } from './og';
+import { getCompleteSitemapPages } from '@data/sitemap-inventory';
+import type { SitemapPage } from '@data/content-sitemap';
 import { staticSitemapSections } from '@data/content-sitemap';
 
 export type HomepageArticleColor = 'cool' | 'calm' | 'comfort' | 'gear';
@@ -9,7 +8,7 @@ export interface HomepageArticleCard {
   title: string;
   description: string;
   href: string;
-  image: string | ImageMetadata;
+  image: string;
   label: string;
   color: HomepageArticleColor;
   pubDate: Date;
@@ -44,19 +43,21 @@ export function resolveHomepageArticleTheme(canonicalPath: string): Pick<Homepag
   return { label: match.label, color: match.color };
 }
 
-export function mapHomepageArticle(entry: CollectionEntry<'articles'>): HomepageArticleCard {
-  const theme = resolveHomepageArticleTheme(entry.data.canonicalPath);
+export function isHomepageArticle(page: SitemapPage): boolean {
+  return page.pageType === 'collector' && page.collectorSubtype === 'article' && !!page.pubDate;
+}
+
+export function mapHomepageArticle(page: SitemapPage): HomepageArticleCard {
+  const theme = resolveHomepageArticleTheme(page.href);
 
   return {
-    title: entry.data.title,
-    description: entry.data.description,
-    href: entry.data.canonicalPath,
-    image: resolveProvidedOgImagePath(entry.data.ogImage)
-      ?? resolveAutoOgImagePath({ pathname: entry.data.canonicalPath })
-      ?? '/og-default.jpg',
+    title: page.baseTitle,
+    description: page.preview.description,
+    href: page.href,
+    image: page.preview.image,
     label: theme.label,
     color: theme.color,
-    pubDate: entry.data.pubDate,
+    pubDate: page.pubDate!,
   };
 }
 
@@ -95,13 +96,12 @@ export function getHomepageConverters(limit = 15): HomepageConverterCard[] {
     }));
 }
 
-export function buildHomepageArticleFeed(
-  entries: CollectionEntry<'articles'>[],
+export async function getHomepageArticleFeed(
   featuredCount = Number.POSITIVE_INFINITY
-): HomepageArticleFeed {
-  const sortedArticles = entries
-    .slice()
-    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+): Promise<HomepageArticleFeed> {
+  const sortedArticles = (await getCompleteSitemapPages())
+    .filter(isHomepageArticle)
+    .sort((a, b) => b.pubDate!.valueOf() - a.pubDate!.valueOf())
     .map(mapHomepageArticle);
 
   return {
