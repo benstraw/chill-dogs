@@ -329,9 +329,9 @@ site_system:
         Converter page is positioned as a transport and vet-readiness kit for suspected snakebite
         emergencies, not a venom-removal or at-home treatment kit. Product categories include
         carry slings, dog stretchers, first-aid kits, muzzle safety, warmth/control add-ons,
-        phone power, and visibility gear. Products flow through src/data/emergency-products.ts,
-        product-catalog.ts, product-page-map.ts, and SerpAPI-backed amazon-products cache entries
-        before appearing in /admin/products/.
+        phone power, and visibility gear. Canonical products live in src/data/emergency-products.ts
+        and flow through product-catalog.ts and product-page-map.ts before appearing in
+        /admin/products/. SerpAPI-backed amazon-products cache entries are reference data only.
 
     - name: "Product browse"
       type: "converter"

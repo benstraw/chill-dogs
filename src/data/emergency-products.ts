@@ -1,34 +1,4 @@
 import type { AffiliateOffer } from './products/types';
-import b0b1w5r11y from './amazon-products/B0B1W5R11Y.json';
-import b0b1w6vlkw from './amazon-products/B0B1W6VLKW.json';
-import b0bwsqwxpc from './amazon-products/B0BWSQWXPC.json';
-import b0c3cdqgjq from './amazon-products/B0C3CDQGJQ.json';
-import b0clv3yjdx from './amazon-products/B0CLV3YJDX.json';
-import b0crwll6c1 from './amazon-products/B0CRWLL6C1.json';
-import b0dcqdxss5 from './amazon-products/B0DCQDXSS5.json';
-import b0f1zfmvxg from './amazon-products/B0F1ZFMVXG.json';
-import b0f2cbr1t1 from './amazon-products/B0F2CBR1T1.json';
-import b0f6yl3lt1 from './amazon-products/B0F6YL3LT1.json';
-import b0fd8kws9l from './amazon-products/B0FD8KWS9L.json';
-import b0fy6tvdhq from './amazon-products/B0FY6TVDHQ.json';
-import b0g4w14r1y from './amazon-products/B0G4W14R1Y.json';
-import b0g595ggpq from './amazon-products/B0G595GGPQ.json';
-import b0gfmqt8yj from './amazon-products/B0GFMQT8YJ.json';
-import b0gh76xgkz from './amazon-products/B0GH76XGKZ.json';
-import b0ghhdv7y9 from './amazon-products/B0GHHDV7Y9.json';
-import b0gjd28nrt from './amazon-products/B0GJD28NRT.json';
-import b0gxf114lp from './amazon-products/B0GXF114LP.json';
-import b0grgdvz21 from './amazon-products/B0GRGDVZ21.json';
-import b0grv66y6x from './amazon-products/B0GRV66Y6X.json';
-import b0gtr1575s from './amazon-products/B0GTR1575S.json';
-import b07gvsg62x from './amazon-products/B07GVSG62X.json';
-import b07wrpclyr from './amazon-products/B07WRPCLYR.json';
-import b077z3lnx9 from './amazon-products/B077Z3LNX9.json';
-import b08bhjfsj4 from './amazon-products/B08BHJFSJ4.json';
-import b08zfvzphm from './amazon-products/B08ZFVZPHM.json';
-import b09fkvqqvh from './amazon-products/B09FKVQQVH.json';
-import b097pldd92 from './amazon-products/B097PLDD92.json';
-import b00ti8gse2 from './amazon-products/B00TI8GSE2.json';
 
 export type EmergencyProductCategory =
   | 'carry'
@@ -56,113 +26,6 @@ export interface EmergencyProduct {
   sizingNote?: string;
   ctaLabel?: string;
   image?: { src: string; alt: string };
-}
-
-interface AmazonProductCache {
-  product_results?: {
-    title?: string;
-    thumbnail?: string;
-  };
-  about_item?: string[];
-}
-
-const amazonProductCache = {
-  B0GFMQT8YJ: b0gfmqt8yj,
-  B0GH76XGKZ: b0gh76xgkz,
-  B0GRV66Y6X: b0grv66y6x,
-  B0GRGDVZ21: b0grgdvz21,
-  B0GJD28NRT: b0gjd28nrt,
-  B07GVSG62X: b07gvsg62x,
-  B0F6YL3LT1: b0f6yl3lt1,
-  B0FD8KWS9L: b0fd8kws9l,
-  B07WRPCLYR: b07wrpclyr,
-  B097PLDD92: b097pldd92,
-  B09FKVQQVH: b09fkvqqvh,
-  B08ZFVZPHM: b08zfvzphm,
-  B0B1W6VLKW: b0b1w6vlkw,
-  B0B1W5R11Y: b0b1w5r11y,
-  B0F2CBR1T1: b0f2cbr1t1,
-  B0CLV3YJDX: b0clv3yjdx,
-  B0C3CDQGJQ: b0c3cdqgjq,
-  B0CRWLL6C1: b0crwll6c1,
-  B0FY6TVDHQ: b0fy6tvdhq,
-  B0GHHDV7Y9: b0ghhdv7y9,
-  B0GXF114LP: b0gxf114lp,
-  B0G595GGPQ: b0g595ggpq,
-  B0GTR1575S: b0gtr1575s,
-  B08BHJFSJ4: b08bhjfsj4,
-  B0F1ZFMVXG: b0f1zfmvxg,
-  B0DCQDXSS5: b0dcqdxss5,
-  B077Z3LNX9: b077z3lnx9,
-  B00TI8GSE2: b00ti8gse2,
-  B0BWSQWXPC: b0bwsqwxpc,
-  B0G4W14R1Y: b0g4w14r1y,
-} satisfies Record<string, AmazonProductCache>;
-
-type AmazonCandidateInput = {
-  asin: keyof typeof amazonProductCache;
-  id: string;
-  category: EmergencyProductCategory;
-  badge: string;
-  useCase: string;
-  bestFor: string;
-  fallbackBullets: string[];
-};
-
-const unsafeAmazonBulletPatterns = [
-  /\bvet[-\s]?(approved|endorsed|reviewed|recommended)\b/i,
-  /\bsnake\s*bites?\b/i,
-  /\bclose serious wounds?\b/i,
-  /\bstop bleeding fast\b/i,
-];
-
-function cleanAmazonBullet(bullet: string): string {
-  return bullet.replace(/^【([^】]+)】\s*/, '$1: ').replace(/^\d+\.\s*/, '').trim();
-}
-
-function productTitle(cache: AmazonProductCache, fallback: string): string {
-  return (cache.product_results?.title?.trim() || fallback)
-    .replace(/\bVet Approved\s*/gi, '')
-    .replace(/,\s*Best Head Lamp for Adults and Kids/gi, '')
-    .replace(/\s{2,}/g, ' ')
-    .trim();
-}
-
-function amazonBullets(cache: AmazonProductCache, fallbackBullets: string[]): string[] {
-  const safeBullets = (cache.about_item ?? [])
-    .filter((bullet) => !unsafeAmazonBulletPatterns.some((pattern) => pattern.test(bullet)))
-    .map(cleanAmazonBullet)
-    .filter(Boolean)
-    .slice(0, 3);
-
-  return [...safeBullets, ...fallbackBullets].slice(0, 3);
-}
-
-function createAmazonReviewCandidate(input: AmazonCandidateInput): EmergencyProduct {
-  const cache = amazonProductCache[input.asin];
-  const name = productTitle(cache, input.id);
-  const thumbnail = cache.product_results?.thumbnail;
-
-  return {
-    id: input.id,
-    name,
-    category: input.category,
-    badge: input.badge,
-    asin: input.asin,
-    amazonUrl: `https://www.amazon.com/dp/${input.asin}?tag=chill-dogs-20`,
-    useCase: input.useCase,
-    bestFor: input.bestFor,
-    bullets: amazonBullets(cache, input.fallbackBullets),
-    ctaLabel: 'Check Price on Amazon',
-    ...(thumbnail
-      ? {
-          image: {
-            src: thumbnail,
-            alt: `${name} on a white background`,
-          },
-        }
-      : {}),
-  };
 }
 
 export const emergencyCategoryMeta: Record<EmergencyProductCategory, { label: string; title: string; intro: string }> = {
@@ -205,411 +68,621 @@ export const emergencyCategoryMeta: Record<EmergencyProductCategory, { label: st
 };
 
 const carryReviewCandidates: EmergencyProduct[] = [
-  createAmazonReviewCandidate({
-    asin: 'B0GFMQT8YJ',
+  {
     id: 'wakytu-emergency-rescue-sling',
+    name: 'Wakytu Dog Emergency Rescue Sling - Lightweight Packable Lift Harness with Handle - Safe Transport for Small Medium Dogs - Ideal for Hiking Skiing（18.5-29.5lbs）',
     category: 'carry',
     badge: 'Rescue Sling Candidate',
+    asin: 'B0GFMQT8YJ',
+    amazonUrl: 'https://www.amazon.com/dp/B0GFMQT8YJ?tag=chill-dogs-20',
     useCase: 'Review candidate for packable emergency dog carry support',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
-      'Amazon listing describes a lightweight, packable rescue sling.',
-      'Intended for short emergency carries and outdoor use.',
-      'Confirm the current size and weight guidance before buying.',
+    bullets: [
+      'Emergency Dog Carrying Sling: Designed for hiking, skiing, and other outdoor activities, allowing you to safely carry your injured or sick dog using the dog lift from the trail to safety, even in rugged terrain.',
+      'Lightweight and Packable: Just 18 oz, this incredibly lightweight rescue sling for dogs fits into a small stuff sack, making it an essential addition to store in your backpack to ensure you\'re always prepared for emergencies.',
+      'Full Body Support : Whether the front or rear legs need support, our dog backpack carrier and dog lift harness provide full body support. well-made buckles can withstand large pulling forces without bursting. it also stabilizes your dog and prevents them from struggling, allowing you to trim their nails with ease.​',
     ],
-  }),
-  createAmazonReviewCandidate({
-    asin: 'B0GH76XGKZ',
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/71bgbXfa7lL._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: 'Wakytu Dog Emergency Rescue Sling - Lightweight Packable Lift Harness with Handle - Safe Transport for Small Medium Dogs - Ideal for Hiking Skiing（18.5-29.5lbs） on a white background',
+    },
+  },
+  {
     id: 'dual-handle-dog-lifting-harness',
+    name: 'Dog Lifting Harness for Medium Dogs, Dual Handle Dog Support Harness for Daily Walking Assistance, Male Dog-Friendly, Breathable & Easy On Mobility Aid, Red, M',
     category: 'carry',
     badge: 'Lift Harness Candidate',
+    asin: 'B0GH76XGKZ',
+    amazonUrl: 'https://www.amazon.com/dp/B0GH76XGKZ?tag=chill-dogs-20',
     useCase: 'Review candidate for short lifts, stairs, and assisted movement',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
-      'Amazon listing describes a dual-handle lifting harness.',
-      'Designed for assisted walking and short support lifts.',
-      'Confirm fit, lift points, and size range before buying.',
+    bullets: [
+      'Lift & Walk with Confidence: Designed to support dogs with limited hind leg mobility, arthritis, or post-surgery recovery. Helps your dog stand, walk, and move safely with less strain.',
+      'Dual Handles for Flexible Control: Two integrated lift handles provide maximum control for different situations—perfect for stairs, walking assistance, or short lifts when your dog needs extra help.',
+      'Male Dog-Friendly, No Potty Interference: The thoughtful wrap design avoids belly pressure and does not interfere with potty needs, ensuring comfort and dignity for male dogs during daily use.',
     ],
-  }),
-  createAmazonReviewCandidate({
-    asin: 'B0GRV66Y6X',
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/71JmtA9r9qL._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: 'Dog Lifting Harness for Medium Dogs, Dual Handle Dog Support Harness for Daily Walking Assistance, Male Dog-Friendly, Breathable & Easy On Mobility Aid, Red, M on a white background',
+    },
+  },
+  {
     id: 'onetigris-full-body-dog-carry-sling',
+    name: 'OneTigris Full Body Dog Carry Sling for Large Dogs, Dog Lift Harness Backpack Carrier with Handles, for Senior Dogs, Joint Injuries, Up and Down Stairs (Black, XL)',
     category: 'carry',
     badge: 'Full-Body Carry Candidate',
+    asin: 'B0GRV66Y6X',
+    amazonUrl: 'https://www.amazon.com/dp/B0GRV66Y6X?tag=chill-dogs-20',
     useCase: 'Review candidate for larger dogs that need fuller body support',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
-      'Amazon listing describes full-body support and reinforced handles.',
-      'Designed for larger dogs and assisted carrying.',
-      'Confirm measurements and carry load before buying.',
+    bullets: [
+      'FULL-BODY SUPPORT HARNESS - Evenly distributes weight to keep your dog stable and supported, ideal lift assistance with spine protection for senior dogs, dogs with joint injury or arthritis',
+      'INTERIOR MOBILITY AID - Ideal for helping dogs stand up, turn around, or move safely between rooms to prevent slips, with wide, adjustable padded shoulder straps for single-shoulder or crossbody use, offering controlled movement, physio aid, and confidence building',
+      'REINFORCED DUAL HANDLES - 2 side handles allow for controlled lifting and help reduce the load on the carrier\'s back and maximize comfort for the pup being lifted for daily life support',
     ],
-  }),
-  createAmazonReviewCandidate({
-    asin: 'B0GRGDVZ21',
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/71JCo5FMVWL._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: 'OneTigris Full Body Dog Carry Sling for Large Dogs, Dog Lift Harness Backpack Carrier with Handles, for Senior Dogs, Joint Injuries, Up and Down Stairs (Black, XL) on a white background',
+    },
+  },
+  {
     id: 'vivifying-dog-lift-harness',
+    name: 'Vivifying Dog Lift Harness for Large Dogs, Soft Flannel Rear Leg Support Sling, Adjustable Dog Lifting Harness for Weak Back Legs, Senior Injured Disabled Dogs, ACL Surgery Mobility Assist, L, Gray',
     category: 'carry',
     badge: 'Rear Support Candidate',
+    asin: 'B0GRGDVZ21',
+    amazonUrl: 'https://www.amazon.com/dp/B0GRGDVZ21?tag=chill-dogs-20',
     useCase: 'Review candidate for rear-leg support and short mobility assistance',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
-      'Amazon listing describes rear-leg support for large dogs.',
-      'Designed for standing, stairs, and car assistance.',
-      'Confirm sizing and whether rear-only support fits your kit needs.',
+    bullets: [
+      'Rear Leg Support for Large Dogs – Our dog lift harness helps large dogs with weak back legs, senior mobility needs, injury, disability, or post-surgery movement challenges. Use it for walking, standing, stairs, and car assistance',
+      'Soft Flannel for Gentle Support – This gray flannel rear leg support sling provides soft underbelly contact and helps reduce rubbing while lifting. It is a comfortable daily support option for dogs needing hip and joint mobility assistance',
+      'Upgraded Non-Slip Style Handle – The upgraded padded handle is designed to stay in place better and provide a more comfortable grip. This dog lifting harness helps owners support large dogs with improved control and less hand strain',
     ],
-  }),
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/71g9k5dSi8L._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: 'Vivifying Dog Lift Harness for Large Dogs, Soft Flannel Rear Leg Support Sling, Adjustable Dog Lifting Harness for Weak Back Legs, Senior Injured Disabled Dogs, ACL Surgery Mobility Assist, L, Gray on a white background',
+    },
+  },
 ];
 
 const stretcherReviewCandidates: EmergencyProduct[] = [
-  createAmazonReviewCandidate({
-    asin: 'B0GJD28NRT',
+  {
     id: 'veehoo-dog-stretcher',
+    name: 'Veehoo Dog Stretcher for Large Dogs, Aluminum Alloy Portable Dog Transport Stretcher with Safety Straps, Non-Slip Handles, Waterproof Fabric, for Outdoor Rescue, Senior Dogs, or Hip & Joint Care',
     category: 'stretcher',
     badge: 'Dog Stretcher Candidate',
+    asin: 'B0GJD28NRT',
+    amazonUrl: 'https://www.amazon.com/dp/B0GJD28NRT?tag=chill-dogs-20',
     useCase: 'Review candidate for a vehicle or group emergency transport kit',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
-      'Amazon listing describes an aluminum-frame dog stretcher.',
-      'Includes safety straps and non-slip handles.',
-      'Confirm folded size and storage needs before buying.',
+    bullets: [
+      'Load Capacity & Durability: High-strength aluminum alloy frame reinforced with dual steel bars supports up to 260 lbs, delivering high load capacity that outperforms standard stretchers—engineered to withstand real emergencies without bending or warping',
+      'Designed for Safe Transport: Three adjustable quick-release safety straps (one on chest, two on legs) securely immobilize patients. Wide non-slip rubber grip handles on both ends ensure a secure hold and protect hands, even in wet conditions',
+      'Wipes Clean in Seconds: Premium 600D Oxford fabric with waterproof, fireproof, and anti-stain coating ensures hygiene across any environment. Wipes clean in seconds—ideal for hospitals, clinics, and ambulances where rapid sanitization between uses is essential',
     ],
-  }),
-  createAmazonReviewCandidate({
-    asin: 'B07GVSG62X',
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/31tfS6BLmmL._SX342_SY445_QL70_FMwebp_.jpg',
+      alt: 'Veehoo Dog Stretcher for Large Dogs, Aluminum Alloy Portable Dog Transport Stretcher with Safety Straps, Non-Slip Handles, Waterproof Fabric, for Outdoor Rescue, Senior Dogs, or Hip & Joint Care on a white background',
+    },
+  },
+  {
     id: 'patient-aid-portable-stretcher',
+    name: 'Patient Aid Portable Stretcher & Gurney with 8 Handles - 44" x 50" - EMS, Sports Medicine, Emergency Rescue, Emergency Evacuation - Moving, Lifting or Transfer - Human, Animal, Pet - 600 lb Capacity',
     category: 'stretcher',
     badge: 'Soft Stretcher Candidate',
+    asin: 'B07GVSG62X',
+    amazonUrl: 'https://www.amazon.com/dp/B07GVSG62X?tag=chill-dogs-20',
     useCase: 'Review candidate for a soft stretcher that can store flat',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
-      'Amazon listing describes a soft transfer stretcher with multiple handles.',
-      'Designed to fold down for storage.',
-      'Confirm dimensions and animal handling fit before buying.',
+    bullets: [
+      'Can be used as a soft stretcher, mobility sheet or for EMS transfers to hospital beds and operating tables. Can be used with a wide variety of patients with a 600lb weight Capacity.',
+      'Friction-reducing bottoms that ease positioning and reduces back strains during transfers. Can be used to transport, transfer or rescue patients from areas inaccessible to stretchers.',
+      'Designed to be used hundreds of times and folds into small package for easy storage. Can be used to get patients off the floor.',
     ],
-  }),
-  createAmazonReviewCandidate({
-    asin: 'B0F6YL3LT1',
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/41dGfUbQPuL._SX342_SY445_QL70_FMwebp_.jpg',
+      alt: 'Patient Aid Portable Stretcher & Gurney with 8 Handles - 44" x 50" - EMS, Sports Medicine, Emergency Rescue, Emergency Evacuation - Moving, Lifting or Transfer - Human, Animal, Pet - 600 lb Capacity on a white background',
+    },
+  },
+  {
     id: 'gray-large-dog-stretcher',
+    name: 'Dog Stretcher for Large Dogs, Dog Stretcher, Portable Stretcher, Emergency Animal Carrier Capable of Holding up to 300 pounds with 8 Handles(Gray)',
     category: 'stretcher',
     badge: 'Large Dog Stretcher Candidate',
+    asin: 'B0F6YL3LT1',
+    amazonUrl: 'https://www.amazon.com/dp/B0F6YL3LT1?tag=chill-dogs-20',
     useCase: 'Review candidate for larger-dog transport with multiple handles',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
-      'Amazon listing describes a foldable stretcher for large dogs.',
-      'Designed with multiple handles for balanced carrying.',
-      'Confirm listed capacity and dimensions before buying.',
+    bullets: [
+      'Dog Stretcher is crafted from select Oxford fabric, which is tough enough to easily withstand up to 300 pounds, while being smooth and delicate to the touch, providing a thoughtful experience for the user.',
+      'The Dog Stretcher for Large Dogs measures 48 x 40 inches, and its spacious design makes it easy to transport large dogs, whether it\'s a larger Labrador or a German Shepherd, it\'s a perfect fit and meets the needs of a wide range of dog breeds.',
+      'The Portable Stretcher\'s lightweight design and unique foldable structure make it extremely easy to store and take up very little space. With a light weight of only 450g, the stretcher can be easily carried outside on a daily basis or used indoors, providing comfortable support for your pet anytime, anywhere.',
     ],
-  }),
-  createAmazonReviewCandidate({
-    asin: 'B0FD8KWS9L',
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/71Awahd2M8L._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: 'Dog Stretcher for Large Dogs, Dog Stretcher, Portable Stretcher, Emergency Animal Carrier Capable of Holding up to 300 pounds with 8 Handles(Gray) on a white background',
+    },
+  },
+  {
     id: 'black-pet-emergency-stretcher',
+    name: 'Pet Stretcher for Dogs – Emergency Animal Carrier, 300lb Weight Limit, 44”x28” Size, with 8 Safety Straps for Easy Transport（Black）',
     category: 'stretcher',
     badge: 'Emergency Stretcher Candidate',
+    asin: 'B0FD8KWS9L',
+    amazonUrl: 'https://www.amazon.com/dp/B0FD8KWS9L?tag=chill-dogs-20',
     useCase: 'Review candidate for pet transport from vehicle, trailhead, or home',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
-      'Amazon listing describes a pet stretcher with multiple handles.',
-      'Designed for emergency, illness, injury, or recovery transport.',
-      'Confirm listed size, handle layout, and storage before buying.',
+    bullets: [
+      'For Every Pet Parent – Emergency, Illness, Injury or Disability: As a caring pet parent, ensuring your dog\'s safety during emergencies, illness, injury, or recovery is a top priority. Our Pet Stretcher is the ideal solution, providing a secure and easy way to transport your pet to safety—whether from your vehicle to home or to a medical facility.',
+      'Supports Up to 300 Pounds: Our Pet Stretcher is designed to comfortably carry pets weighing up to 300 pounds (136 kg). Made from durable nylon material, it features 8 sturdy handles for balanced support, making it easy for one or more people to transport your pet.',
+      'Designed for Comfort & Easy Handling: Transporting your pet is now simpler than ever! This lightweight stretcher is designed with ease of use in mind, allowing for smooth navigation through tight spaces like stairs, vehicles, or narrow hallways. The neoprene-covered handles ensure a comfortable grip, no matter the weight.',
     ],
-  }),
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/61Piwka25aL._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: 'Pet Stretcher for Dogs – Emergency Animal Carrier, 300lb Weight Limit, 44”x28” Size, with 8 Safety Straps for Easy Transport（Black） on a white background',
+    },
+  },
 ];
 
 const firstAidReviewCandidates: EmergencyProduct[] = [
-  createAmazonReviewCandidate({
-    asin: 'B07WRPCLYR',
+  {
     id: 'arca-pet-car-first-aid-kit',
+    name: 'ARCA PET Cat & Dog First Aid Kit for Car - Pet Emergency Kit for Home Office Travel – Dog Camping Essentials with Digital Thermometer, Muzzle & Mini First Aid Pouch',
     category: 'first-aid',
     badge: 'First Aid Kit Candidate',
+    asin: 'B07WRPCLYR',
+    amazonUrl: 'https://www.amazon.com/dp/B07WRPCLYR?tag=chill-dogs-20',
     useCase: 'Review candidate for a car, home, or travel pet first aid kit',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
-      'Amazon listing describes a pet emergency kit with travel supplies.',
-      'Includes a thermometer, muzzle, tick kit, and mini first aid pouch.',
-      'Use as transport support, not snakebite treatment.',
+    bullets: [
+      'ENSURE PET SAFETY ON THE GO with our dog travel accessories, dog must haves in pet travel. Our comprehensive pet first aid kit for dogs is your companion for worry-free journeys.',
+      'PET EMERGENCY ESSENTIALS: In addition to comprehensive pet first aid supplies, we include a dog thermometer, dog muzzle, tick kit, emergency flashlight, and a handy mini first aid kit pouch.',
+      'GEAR UP FOR OUTDOOR FUN! This first aid kit is your first line of defense during activities like hiking, jogging, or camping, designed for dog camping gear and hunting dog adventures.',
     ],
-  }),
-  createAmazonReviewCandidate({
-    asin: 'B097PLDD92',
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/919bY8axD4L._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: 'ARCA PET Cat & Dog First Aid Kit for Car - Pet Emergency Kit for Home Office Travel – Dog Camping Essentials with Digital Thermometer, Muzzle & Mini First Aid Pouch on a white background',
+    },
+  },
+  {
     id: 'arca-pet-reflective-first-aid-pouch',
+    name: 'ARCA PET Dog First Aid Kit - Pet Emergency Kit - Water Resistant High Visibility Reflective First Aid Pouch Dog Camping Essentials for Hiking, Backpacking, Sports, Hunting',
     category: 'first-aid',
     badge: 'First Aid Pouch Candidate',
+    asin: 'B097PLDD92',
+    amazonUrl: 'https://www.amazon.com/dp/B097PLDD92?tag=chill-dogs-20',
     useCase: 'Review candidate for a compact outdoor pet first aid pouch',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
-      'Amazon listing describes a water-resistant reflective pouch.',
-      'Includes basic supplies such as gloves, antiseptic, tweezers, and scissors.',
-      'Use as transport support, not snakebite treatment.',
+    bullets: [
+      'READY FOR ADVENTURE: ARCA PET First Aid Kit for dogs, with dog travel accessories, ensures preparedness for minor and major situations, providing your pet the care it needs on your outdoor excursions.',
+      '35 PCS EMERGENCY ESSENTIALS: Travel dog must haves! Care for your pet with gloves, antiseptic, tweezers, scissors, first aid book and more. No fumbling when every second counts!',
+      'IDEAL FOR ALL OUTDOOR: Our dog emergency kit, essential for daily use, camping, hiking, and more, is a necessity for outdoor enthusiasts! Ideal for dog hunting gear and dog camping gear.',
     ],
-  }),
-  createAmazonReviewCandidate({
-    asin: 'B09FKVQQVH',
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/81YQs25G6VL._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: 'ARCA PET Dog First Aid Kit - Pet Emergency Kit - Water Resistant High Visibility Reflective First Aid Pouch Dog Camping Essentials for Hiking, Backpacking, Sports, Hunting on a white background',
+    },
+  },
+  {
     id: 'arca-pet-100-piece-first-aid-kit',
+    name: 'ARCA PET Cat & Dog First Aid Kit - High Visibility Reflective Zipper with Fluorescent Letter Print - 100 pcs with Dog Thermometer, Tick Remover Kit & Pet First Aid Kit Manual Book',
     category: 'first-aid',
     badge: '100-Piece Kit Candidate',
+    asin: 'B09FKVQQVH',
+    amazonUrl: 'https://www.amazon.com/dp/B09FKVQQVH?tag=chill-dogs-20',
     useCase: 'Review candidate for a larger pet first aid supply kit',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
-      'Amazon listing describes a 100-piece pet first aid kit.',
-      'Includes visibility details and a pet care guide.',
-      'Use as transport support, not snakebite treatment.',
+    bullets: [
+      'Comprehensive Emergency Kit: Over 100 vital items including a pet thermometer and medicine feeder, perfect for dog travel essentials and dog camping essentials. Ready for any outdoor emergency.',
+      'High-Visibility: Features a reflective zipper and fluorescent lettering, easily visible in any lighting. Ideal as pet first aid kit for car and essential for nighttime emergency & outdoor adventures',
+      'Adventure Ready: Perfect for pet owners on the go, this kit pairs seamlessly with dog hiking gear and dog travel accessories for road trips and outdoor excursions, ensuring for any unexpected events',
     ],
-  }),
-  createAmazonReviewCandidate({
-    asin: 'B08ZFVZPHM',
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/91ZV6pYT5QL._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: 'ARCA PET Cat & Dog First Aid Kit - High Visibility Reflective Zipper with Fluorescent Letter Print - 100 pcs with Dog Thermometer, Tick Remover Kit & Pet First Aid Kit Manual Book on a white background',
+    },
+  },
+  {
     id: 'adventure-dog-medical-kit-vet-in-a-box',
+    name: 'Adventure Dog Medical Kit - Vet in a Box',
     category: 'first-aid',
     badge: 'Medical Kit Candidate',
+    asin: 'B08ZFVZPHM',
+    amazonUrl: 'https://www.amazon.com/dp/B08ZFVZPHM?tag=chill-dogs-20',
     useCase: 'Review candidate for a more loaded dog medical kit',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
+    bullets: [
       'Amazon listing describes a dog-focused medical kit.',
       'Includes wound-care and lighting supplies for field readiness.',
       'Use as transport support, not snakebite treatment.',
     ],
-  }),
-  createAmazonReviewCandidate({
-    asin: 'B0B1W6VLKW',
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/81t9FSgXDoL._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: 'Adventure Dog Medical Kit - Vet in a Box on a white background',
+    },
+  },
+  {
     id: 'compact-dog-first-aid-travel-pack',
+    name: 'Dog First Aid Kit - Emergency Supplies - Pet First Aid Kit Guide, Tick Remover, Thermal Blanket & More - Compact Dog Gear for Hiking, Camping & Backpacking (Travel Pack)',
     category: 'first-aid',
     badge: 'Travel Pack Candidate',
+    asin: 'B0B1W6VLKW',
+    amazonUrl: 'https://www.amazon.com/dp/B0B1W6VLKW?tag=chill-dogs-20',
     useCase: 'Review candidate for a compact hiking, camping, or travel first aid kit',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
-      'Amazon listing describes a lightweight pet first aid travel pack.',
-      'Includes supplies such as tick remover, cleansing wipes, saline wash, and thermal blanket.',
-      'Use as transport support, not snakebite treatment.',
+    bullets: [
+      'BE READY ANYWHERE, ANYTIME – Lightweight, compact cat & dog first aid kit for hiking, camping, or travel. Designed for fast, effective emergency care when space and weight matter most.',
+      'PACKED WITH REAL PET ESSENTIALS – Includes vet-wrap, tick remover, cleansing wipes, saline wash, thermal blanket & more—no fluff, just field-tested dog emergency tools.',
+      'BUILT FOR BACKPACKING & ADVENTURE – Soft case fits in backpacks, glove compartments, or car consoles. Ideal for travel, hunting, road trips, camping, and everyday dog hiking gear.',
     ],
-  }),
-  createAmazonReviewCandidate({
-    asin: 'B0B1W5R11Y',
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/71aAipRmSFL._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: 'Dog First Aid Kit - Emergency Supplies - Pet First Aid Kit Guide, Tick Remover, Thermal Blanket & More - Compact Dog Gear for Hiking, Camping & Backpacking (Travel Pack) on a white background',
+    },
+  },
+  {
     id: 'dog-first-aid-essential-pack',
+    name: 'Dog First Aid Kit - Emergency Supplies - Pet First Aid Kit Guide, Tick Remover, Slip Leash & Medical Essentials for Home, Camping, Car, RV, Travel (Essential Pack)',
     category: 'first-aid',
     badge: 'Essential Pack Candidate',
+    asin: 'B0B1W5R11Y',
+    amazonUrl: 'https://www.amazon.com/dp/B0B1W5R11Y?tag=chill-dogs-20',
     useCase: 'Review candidate for a home, car, RV, or camping first aid kit',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
-      'Amazon listing describes a hard-sided pet first aid case.',
-      'Includes supplies such as tick remover, slip leash, saline wash, and thermal blanket.',
-      'Use as transport support, not snakebite treatment.',
+    bullets: [
+      'MORE THAN JUST BANDAGES – Includes vet-wrap, tick remover, first aid pads, saline wash, styptic pencil, slip leash & thermal blanket—real pet essentials, not just human first aid items.',
+      'BUILT FOR TRAVEL & ADVENTURE – Water resistant, hard-sided case protects supplies in your car, backpack, or RV. Ideal for hiking, road trips, camping, and disaster preparedness.',
+      'COMPACT, DURABLE & ORGANIZED CASE: Our hard-sided waterproof case features a strong zipper, mesh pockets, and reflective printing. Compact and customizable, with space for additional items.',
     ],
-  }),
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/81EMxVmHhZL._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: 'Dog First Aid Kit - Emergency Supplies - Pet First Aid Kit Guide, Tick Remover, Slip Leash & Medical Essentials for Home, Camping, Car, RV, Travel (Essential Pack) on a white background',
+    },
+  },
 ];
 
 const warmthReviewCandidates: EmergencyProduct[] = [
-  createAmazonReviewCandidate({
-    asin: 'B0F2CBR1T1',
+  {
     id: 'sierra-madre-emergency-sleeping-bag',
+    name: 'Sierra Madre Emergency Sleeping Bag – Ultralight, Waterproof Mylar Thermal Bivy Sack Tent for Hiking, Bug-Out Bags, Survival Kits',
     category: 'warmth-control',
     badge: 'Emergency Blanket Candidate',
+    asin: 'B0F2CBR1T1',
+    amazonUrl: 'https://www.amazon.com/dp/B0F2CBR1T1?tag=chill-dogs-20',
     useCase: 'Review candidate for a compact thermal layer in a car or trail kit',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
-      'Amazon listing describes a waterproof Mylar thermal bivy.',
-      'Designed to pack small for emergency storage.',
-      'Confirm size and packability before buying.',
+    bullets: [
+      'STAY WARM IN ANY EMERGENCY: Designed for survival in extreme conditions, Sierra Madre’s thermal bivy sack reflects 90% of body heat, keeping you warmer for longer in cold weather. Ideal for survival kits, bug-out bags, camping, and hiking.',
+      'WATERPROOF & WINDPROOF PROTECTION: Mylar was originally designed as a tear-resistant, insulating material by NASA for space exploration. Our durable PET emergency sleeping bag shields you from rain, wind, and snow, ensuring you stay dry and warm no matter the conditions.',
+      'ULTRALIGHT WITH FULL COVERAGE: Weighing just 6 ounces, this survival bivy sack packs down small, fitting effortlessly into any backpack, glove compartment, or emergency kit for easy portability. Despite its light weight, our bag is larger for full coverage, fitting more body types comfortably.',
     ],
-  }),
-  createAmazonReviewCandidate({
-    asin: 'B0CLV3YJDX',
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/51UjfhM1q0L._AC_SX300_SY300_QL70_FMwebp_.jpg',
+      alt: 'Sierra Madre Emergency Sleeping Bag – Ultralight, Waterproof Mylar Thermal Bivy Sack Tent for Hiking, Bug-Out Bags, Survival Kits on a white background',
+    },
+  },
+  {
     id: 'frelaxy-emergency-blanket-pack',
+    name: 'Frelaxy Emergency Blanket 2-Pack/4-Pack, Extra-Thick Extra-Large Space Blankets with Whistles, Storage Pouchs, and EVA case',
     category: 'warmth-control',
     badge: 'Emergency Blanket Candidate',
+    asin: 'B0CLV3YJDX',
+    amazonUrl: 'https://www.amazon.com/dp/B0CLV3YJDX?tag=chill-dogs-20',
     useCase: 'Review candidate for a multipack emergency blanket add-on',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
-      'Amazon listing describes extra-thick, extra-large emergency blankets.',
-      'Includes whistles and storage pouches.',
-      'Confirm pack size and storage case before buying.',
+    bullets: [
+      'Whistles+Blankets for Double Protection: Each emergency blanket comes with a survival whistle to keep you warm and safe when needed.',
+      '2X THICKER THAN AVERAGE: Made of Durable 26umPE material, it is twice thicker than Average emergency blankets.',
+      '20% LARGE THAN STANDARD: The size of each blanket is 83" x 60", which is larger than regular blankets and provides full body protection.',
     ],
-  }),
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/71Ynql7JTpL._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: 'Frelaxy Emergency Blanket 2-Pack/4-Pack, Extra-Thick Extra-Large Space Blankets with Whistles, Storage Pouchs, and EVA case on a white background',
+    },
+  },
 ];
 
 const slipLeadReviewCandidates: EmergencyProduct[] = [
-  createAmazonReviewCandidate({
-    asin: 'B0C3CDQGJQ',
+  {
     id: 'petarea-reflective-slip-lead',
+    name: '5 FT Slip Lead Dog Leash, Heavy Duty Rope Leash for Small Medium Large Dogs, No Pull Training Lead with Reflective Thread, Strong Comfortable Loop Leash (Blue Stripe, Medium(3/8"))',
     category: 'warmth-control',
     badge: 'Slip Lead Candidate',
+    asin: 'B0C3CDQGJQ',
+    amazonUrl: 'https://www.amazon.com/dp/B0C3CDQGJQ?tag=chill-dogs-20',
     useCase: 'Review candidate for backup control in a car, trail, or home kit',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
-      'Amazon listing describes a slip lead that combines leash and collar function.',
-      'Reflective thread is braided into the rope.',
-      'Confirm width, length, and safe handling fit before buying.',
+    bullets: [
+      'GREAT FOR TRAINING - The leash tightens when your dog pulls and loosens when the behavior is corrected. Slip lead easily stops your dog from pulling with no harm. Also great for walking, jogging, training, crate transfer and potty breaks for your pet.',
+      'COLLAR AND LEASH IN ONE – This slip leash is convenient as it can be used without a collar or harness. It can be adjusted to fit any dog’s neck size by adjusting the leather stopper. Simply place the loop over your dog’s head and you’ll be ready to go.',
+      'HIGHLY REFLECTIVE – Reflective thread braided throughout the leash ensures that you and your dog are safe and visible during late-night walks',
     ],
-  }),
-  createAmazonReviewCandidate({
-    asin: 'B0CRWLL6C1',
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/71eHzXMqXhL._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: '5 FT Slip Lead Dog Leash, Heavy Duty Rope Leash for Small Medium Large Dogs, No Pull Training Lead with Reflective Thread, Strong Comfortable Loop Leash (Blue Stripe, Medium(3/8")) on a white background',
+    },
+  },
+  {
     id: 'mad-dog-products-orange-slip-lead',
+    name: 'Mad Dog Products 1/4 Inch x 4 feet Orange Signature English Slip Lead Dog Leash - Made in USA',
     category: 'warmth-control',
     badge: 'Slip Lead Candidate',
+    asin: 'B0CRWLL6C1',
+    amazonUrl: 'https://www.amazon.com/dp/B0CRWLL6C1?tag=chill-dogs-20',
     useCase: 'Review candidate for a simple backup leash in an emergency kit',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
-      'Amazon listing describes an orange English slip lead.',
-      'Designed to work without a separate collar.',
-      'Confirm width, length, and safe handling fit before buying.',
+    bullets: [
+      'NO COLLAR NEEDED: Designed for ease of use for you and your pup. Just slip the loop over the dog\'s neck and secure it with the custom locking stopper made by Mad Dog\'s product specialists.',
+      'TRAINER APPROVED: The slip leash is great for training and is favored by dog trainers and breeders around the world. 23 different color options to match your dog\'s unique personality and style.',
+      'BETTER MATERIALS AND PREMIUM FEEL: Mad Dog Products leashes are soft on the hands, machine washable and UV fade-proof. Always handmade using quality polypropylene rope and brass rust-proof hardware.',
     ],
-  }),
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/61wxuiDLPWL._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: 'Mad Dog Products 1/4 Inch x 4 feet Orange Signature English Slip Lead Dog Leash - Made in USA on a white background',
+    },
+  },
 ];
 
 const preventionReviewCandidates: EmergencyProduct[] = [
-  createAmazonReviewCandidate({
-    asin: 'B0FY6TVDHQ',
+  {
     id: 'ultra-thin-20000mah-power-bank',
+    name: 'Ultra-Thin 20,000mAh Power Bank, 45W Max Fast Charging Battery Pack, Built-in USB-C Cable for iPhone 17/16 Series, Galaxy, MacBook, and More',
     category: 'prevention',
     badge: 'Power Bank Candidate',
+    asin: 'B0FY6TVDHQ',
+    amazonUrl: 'https://www.amazon.com/dp/B0FY6TVDHQ?tag=chill-dogs-20',
     useCase: 'Review candidate for keeping a phone charged during emergency transport',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
-      'Amazon listing describes a 20,000mAh portable charger.',
-      'Includes a built-in USB-C cable.',
-      'Keep charged before storing it in a kit.',
+    bullets: [
+      'The Slim Powerhouse: This 0.7\'\' power bank is your unstoppable, on-the-go energy source. Built from tough, lightweight aerospace aluminum, it provides formidable power in a sleek, burden-free form factor that travels effortlessly with you.',
+      '45W High-Speed Charging: Output 45W to your devices while inputting 40W to the power bank itself. Get a 50% charge for your iPhone 16 Pro in 27 minutes.',
+      'Massive 20,000mah Capacity: This power beast can fully charge an iPhone 16 four times over. Experience the freedom of immense power that\'s designed to be carried without the weight.',
     ],
-  }),
-  createAmazonReviewCandidate({
-    asin: 'B0GHHDV7Y9',
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/51ikc21h3qL._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: 'Ultra-Thin 20,000mAh Power Bank, 45W Max Fast Charging Battery Pack, Built-in USB-C Cable for iPhone 17/16 Series, Galaxy, MacBook, and More on a white background',
+    },
+  },
+  {
     id: 'cuktech-25000mah-power-bank',
+    name: 'CUKTECH 25,000mAh Power Bank, 100W Max Portable Charger with Built-in USB-C Cable, Fast Charging External Battery Pack for MacBook Pro/Air, iPhone 17/16/15 Series, Samsung, Pixel, Airline Approved',
     category: 'prevention',
     badge: 'Power Bank Candidate',
+    asin: 'B0GHHDV7Y9',
+    amazonUrl: 'https://www.amazon.com/dp/B0GHHDV7Y9?tag=chill-dogs-20',
     useCase: 'Review candidate for higher-capacity phone and device charging',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
-      'Amazon listing describes a 25,000mAh portable charger.',
-      'Includes a built-in USB-C cable and multiple charging ports.',
-      'Keep charged before storing it in a kit.',
+    bullets: [
+      '100W Ultra-Fast Output: Power your laptop anywhere. With a 100W peak output, this power bank can charge a MacBook Air 13" (M3) to 56% in just 30 mins. Stay productive on the go with high-speed delivery that rivals your original wall charger',
+      '25,000mAh High Capacity: Airline approved. Rated at 90Wh, it safely fits FAA carry-on limits (under 100Wh). Provides up to 3.2 full charges for iPhone 17 Pro Max or 1.2 charges for MacBook Air—perfect for long flights and travel',
+      'Charge 3 Devices at Once: Built-in convenience. Charge 3 Devices at Once: Built-in convenience. Equipped with an integrated USB-C cable, one USB-C port, and one USB-A port — charge your laptop, phone, and accessories at the same time without carrying extra cables',
     ],
-  }),
-  createAmazonReviewCandidate({
-    asin: 'B0GXF114LP',
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/51zFD9uYSYL._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: 'CUKTECH 25,000mAh Power Bank, 100W Max Portable Charger with Built-in USB-C Cable, Fast Charging External Battery Pack for MacBook Pro/Air, iPhone 17/16/15 Series, Samsung, Pixel, Airline Approved on a white background',
+    },
+  },
+  {
     id: '50000mah-built-in-cable-power-bank',
+    name: 'Portable Charger Power Bank 50000mAh, Massive Capacity Travel Essential, Built-in USB-C & iOS Cables, AC Wall Plug, 22.5W Fast Charging Battery Pack with LED Display for Camping, iPhone, Samsung',
     category: 'prevention',
     badge: 'Power Bank Candidate',
+    asin: 'B0GXF114LP',
+    amazonUrl: 'https://www.amazon.com/dp/B0GXF114LP?tag=chill-dogs-20',
     useCase: 'Review candidate for a larger-capacity car or camping kit battery',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
-      'Amazon listing describes a 50,000mAh power bank.',
-      'Includes built-in cables and an LED display.',
-      'Confirm size, weight, and charging needs before buying.',
+    bullets: [
+      'Massive 50000mAh Capacity - Days of Power: This heavy-duty battery bank delivers a week\'s worth of reliable energy, making it a travel camping essential for road trips, outdoor adventures, and remote work. With universal compatibility, it safely charges your iPhones, Android phones, and power-hungry tablets multiple times',
+      '3-Year Free Replacement & Safe Charging Guarantee: Built with reliable safety protection and premium materials for worry-free charging. If any covered quality issue occurs within 3 years, we’ll send you a brand-new replacement, hassle-free',
+      'Built-In Cables for All iPhones & Type-C Phones: Say goodbye to tangled messy cords and forgotten cables. This innovative power bank features a built-in Type-C cable and a Lightning cable, combined with an extra USB-C port to juice up multiple devices simultaneously. Ready to charge right out of the box, it simplifies your travel gear and keeps your essentials powered up anywhere',
     ],
-  }),
-  createAmazonReviewCandidate({
-    asin: 'B0G595GGPQ',
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/71UH61Eu7xL._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: 'Portable Charger Power Bank 50000mAh, Massive Capacity Travel Essential, Built-in USB-C & iOS Cables, AC Wall Plug, 22.5W Fast Charging Battery Pack with LED Display for Camping, iPhone, Samsung on a white background',
+    },
+  },
+  {
     id: 'iniu-magnetic-10000mah-power-bank',
+    name: 'INIU Slimmest Power Bank for MagSafe, 10000mAh Qi2.2 Certified 25W Wireless & 45W Wired USB C Fast Charging Portable Charger, Flight-Safe Travel Phone Magnetic Battery Pack for iPhone etc, Orange',
     category: 'prevention',
     badge: 'Power Bank Candidate',
+    asin: 'B0G595GGPQ',
+    amazonUrl: 'https://www.amazon.com/dp/B0G595GGPQ?tag=chill-dogs-20',
     useCase: 'Review candidate for a compact phone battery in a light trail kit',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
-      'Amazon listing describes a 10,000mAh magnetic power bank.',
-      'Designed for wireless and wired phone charging.',
-      'Confirm phone compatibility before buying.',
+    bullets: [
+      'Trusted INIU Quality with 3-Year Care: As the SAFE Fast Charge Pro trusted by over 38 million users, we ensure the safest charging with the highest-grade materials. With our industry-leading 3-year INIU care, if you have any issues in three years, a new one is on us.',
+      'Market\'s Slimmest 10000mAh Qi2 25W Magnetic Power Bank: At just 0.5 inches thin, INIU Qi2 25W-certified magnetic power bank slips easily into any bag while packing a 10,000mAh capacity - power without the bulk.',
+      'Save 30min with Ultra-Fast Qi2 25W Wireless Charging: INIU Qi2 25W-certified magnetic portable power bank wirelessly charges your iPhone 17 Pro from 0% to 50% in just 33min - 30min faster than other regular 7.5W magnetic power banks. Note: fast Qi2 25W magnetic wireless charging is supported only for iPhone 16 Plus/ Pro Max/17 series.',
     ],
-  }),
-  createAmazonReviewCandidate({
-    asin: 'B0GTR1575S',
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/71U58faqOAL._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: 'INIU Slimmest Power Bank for MagSafe, 10000mAh Qi2.2 Certified 25W Wireless & 45W Wired USB C Fast Charging Portable Charger, Flight-Safe Travel Phone Magnetic Battery Pack for iPhone etc, Orange on a white background',
+    },
+  },
+  {
     id: '10000mah-built-in-cable-power-bank',
+    name: 'Portable Charger 10000mAh Power Bank, Built-in 4 Cables & 6-Device Charging,Fast Charging with LCD Display,USB-C In/Out, Compatible with iPhone 17/16/15/14 for Travel Camping Essentials-Black',
     category: 'prevention',
     badge: 'Power Bank Candidate',
+    asin: 'B0GTR1575S',
+    amazonUrl: 'https://www.amazon.com/dp/B0GTR1575S?tag=chill-dogs-20',
     useCase: 'Review candidate for a compact all-in-one phone charger',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
+    bullets: [
+      'This 10000mAh portable charger power bank combines convenience, portability and fast charging performance in one compact design. Featuring 4 built-in charging cables, USB-C input and output, and support for charging up to 6 devices simultaneously, it provides an easy all-in-one charging solution for everyday use. Compatible with iPhone 17/16/15/14 and many other USB-powered devices, this slim battery pack is ideal for travel, camping, commuting, office use and emergency backup charging. The LCD display shows accurate battery percentage information so you can monitor remaining power at a glance.',
       'Amazon listing describes a 10,000mAh portable charger.',
       'Includes built-in cables and an LCD display.',
-      'Keep charged before storing it in a kit.',
     ],
-  }),
-  createAmazonReviewCandidate({
-    asin: 'B08BHJFSJ4',
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/81ZQvpeFRaL._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: 'Portable Charger 10000mAh Power Bank, Built-in 4 Cables & 6-Device Charging,Fast Charging with LCD Display,USB-C In/Out, Compatible with iPhone 17/16/15/14 for Travel Camping Essentials-Black on a white background',
+    },
+  },
+  {
     id: 'black-diamond-cosmo-300-headlamp',
+    name: 'Black Diamond Cosmo 300 Headlamp, Graphite',
     category: 'prevention',
     badge: 'Headlamp Candidate',
+    asin: 'B08BHJFSJ4',
+    amazonUrl: 'https://www.amazon.com/dp/B08BHJFSJ4?tag=chill-dogs-20',
     useCase: 'Review candidate for hands-free light in a trail or car kit',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
+    bullets: [
       'Amazon listing identifies this as the Black Diamond Cosmo 300 headlamp.',
       'Headlamps keep both hands free during low-light transport.',
       'Confirm current battery type, brightness, and water rating before buying.',
     ],
-  }),
-  createAmazonReviewCandidate({
-    asin: 'B0F1ZFMVXG',
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/71r9v00seoL._AC_SX342_SY445_QL70_FMwebp_.jpg',
+      alt: 'Black Diamond Cosmo 300 Headlamp, Graphite on a white background',
+    },
+  },
+  {
     id: 'nebo-mycro-450-headlamp',
+    name: 'NEBO MYCRO 450 Headlamp | 450 Lumens, 6 Light Modes, White Red & Green Light, USB-C Rechargeable, Water Resistant, Adjustable Strap, Cap Light Convertible, Bright Light for Camping & Hiking – Blue',
     category: 'prevention',
     badge: 'Headlamp Candidate',
+    asin: 'B0F1ZFMVXG',
+    amazonUrl: 'https://www.amazon.com/dp/B0F1ZFMVXG?tag=chill-dogs-20',
     useCase: 'Review candidate for rechargeable hands-free light',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
-      'Amazon listing describes a rechargeable headlamp.',
-      'Includes multiple light modes.',
-      'Confirm brightness, runtime, and charging setup before buying.',
+    bullets: [
+      '450 LUMEN RECHARGEABLE HEADLAMP FOR MAX BRIGHTNESS – Powerful LED headlamp delivers up to 450 lumens in Turbo mode with a focused spot beam for clear visibility during work, outdoor activities, and emergencies.',
+      '6 LIGHT MODES FOR ANY SITUATION – Includes Turbo, High, Medium, Low, plus red and green light modes to preserve night vision. Smart Power Control optimizes brightness and runtime for efficient performance.',
+      '2-IN-1 HEADLAMP + CAP LIGHT DESIGN – Quickly converts from a headlamp to a clip-on cap light for versatile, hands-free lighting. Ideal for running, camping, fishing, and everyday tasks.',
     ],
-  }),
-  createAmazonReviewCandidate({
-    asin: 'B0DCQDXSS5',
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/81qMbGgYilL._AC_SX342_SY445_QL70_FMwebp_.jpg',
+      alt: 'NEBO MYCRO 450 Headlamp | 450 Lumens, 6 Light Modes, White Red & Green Light, USB-C Rechargeable, Water Resistant, Adjustable Strap, Cap Light Convertible, Bright Light for Camping & Hiking – Blue on a white background',
+    },
+  },
+  {
     id: 'nitecore-nu20-classic-headlamp',
+    name: 'Nitecore NU20 Classic Ultralight Headlamp, 360 Lumen USB-C Rechargeable Lightweight for Backpacking, Camping, Running with Auxilary White and Red Light',
     category: 'prevention',
     badge: 'Headlamp Candidate',
+    asin: 'B0DCQDXSS5',
+    amazonUrl: 'https://www.amazon.com/dp/B0DCQDXSS5?tag=chill-dogs-20',
     useCase: 'Review candidate for a lightweight rechargeable headlamp',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
-      'Amazon listing describes a lightweight USB-C rechargeable headlamp.',
-      'Includes white and red light modes.',
-      'Confirm runtime and brightness before buying.',
+    bullets: [
+      'ULTRA-LIGHT & POWERFUL - Weighs just 1.34 oz yet delivers up to 360 lumens with a beam distance of 119 yards, perfect for all-day wear without strain.',
+      '3 LIGHT MODES + SAFETY FEATURES - Main white LED with 3 brightness levels, plus SOS & Beacon, a soft reading light, and an auxiliary red light for night vision — ideal for camping, hiking, running, or emergencies.',
+      'LONG RUNTIME & FAST CHARGING - Up to 97 hours of use on low mode; recharges in just over an hour via USB-C. Battery indicator ensures you’re never caught off guard.',
     ],
-  }),
-  createAmazonReviewCandidate({
-    asin: 'B077Z3LNX9',
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/71Dx1Xloz2L._AC_SX342_SY445_QL70_FMwebp_.jpg',
+      alt: 'Nitecore NU20 Classic Ultralight Headlamp, 360 Lumen USB-C Rechargeable Lightweight for Backpacking, Camping, Running with Auxilary White and Red Light on a white background',
+    },
+  },
+  {
     id: 'nitecore-nu25-headlamp',
+    name: 'Nitecore NU25 360 Lumen Triple Output - White, Red, High CRI - Lightweight USB Rechargeable Headlamp (Black)',
     category: 'prevention',
     badge: 'Headlamp Candidate',
+    asin: 'B077Z3LNX9',
+    amazonUrl: 'https://www.amazon.com/dp/B077Z3LNX9?tag=chill-dogs-20',
     useCase: 'Review candidate for a compact rechargeable headlamp',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
-      'Amazon listing describes a 360-lumen rechargeable headlamp.',
-      'Includes white, high-CRI, and red light outputs.',
-      'Confirm current model details before buying.',
+    bullets: [
+      '360 LUMEN WIDE BEAM - Featuring a CREE XP-G2 S3 LED for a primary output, the NU25 is capable of 360 lumen max output and 88 yards of throw, perfect for biking, jogging and trekking.',
+      'AUXILIARY HIGH CRI AND RED LED LIGHTS - The high CRI auxiliary light produces richer more natural looking colors over standard LEDs making it a great tool for up close tasks requiring fine detail while the auxiliary red LED is great for preserving night vision.',
+      'COMPACT AND LIGHTWEIGHT - Weighing less than an ounce (0.99oz w/o headband, 1.9oz w/ headband) and small enough to fit in a pocket, the NU25 is comfortable for daily use and long excursions.',
     ],
-  }),
-  createAmazonReviewCandidate({
-    asin: 'B00TI8GSE2',
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/71Y2uzYi8WL._AC_SX342_SY445_QL70_FMwebp_.jpg',
+      alt: 'Nitecore NU25 360 Lumen Triple Output - White, Red, High CRI - Lightweight USB Rechargeable Headlamp (Black) on a white background',
+    },
+  },
+  {
     id: 'energizer-led-headlamp',
+    name: 'Energizer LED Headlamp, Bright and Durable, Lightweight, Built For Camping, Hiking, Outdoors, Emergency Light, Batteries Included',
     category: 'prevention',
     badge: 'Headlamp Candidate',
+    asin: 'B00TI8GSE2',
+    amazonUrl: 'https://www.amazon.com/dp/B00TI8GSE2?tag=chill-dogs-20',
     useCase: 'Review candidate for a battery-powered emergency headlamp',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
+    bullets: [
       'Amazon listing identifies this as an Energizer LED headlamp.',
       'Headlamps keep both hands free during low-light transport.',
       'Confirm batteries, brightness, and runtime before buying.',
     ],
-  }),
-  createAmazonReviewCandidate({
-    asin: 'B0BWSQWXPC',
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/71x2yk0T1yL._AC_SY300_SX300_QL70_FMwebp_.jpg',
+      alt: 'Energizer LED Headlamp, Bright and Durable, Lightweight, Built For Camping, Hiking, Outdoors, Emergency Light, Batteries Included on a white background',
+    },
+  },
+  {
     id: 'coast-wph34r-rechargeable-headlamp',
+    name: 'Coast WPH34R 2000 Lumen Waterproof Ultra Bright IP68 USB Rechargeable-Dual Power Headlamp, 6 Modes with Spot and Flood Beams, Black/Grey',
     category: 'prevention',
     badge: 'Headlamp Candidate',
+    asin: 'B0BWSQWXPC',
+    amazonUrl: 'https://www.amazon.com/dp/B0BWSQWXPC?tag=chill-dogs-20',
     useCase: 'Review candidate for a waterproof rechargeable headlamp',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
-      'Amazon listing describes a rechargeable waterproof headlamp.',
-      'Includes multiple beam colors and modes.',
-      'Confirm runtime, brightness, and charging setup before buying.',
+    bullets: [
+      'WATERPROOF: Sealed tight to withstand full submersion, this IP68-built headlamp shines in six output modes spanning three beam colors: Green, white and red.',
+      'RECHARGEABLE PLUS: Boost your power and performance—with the optional upgrade to a secondary CR123 battery (purchased separately) that snaps into position on top of the integrated battery.',
+      'TRI-COLOR: Select from two light colors—using the white utility beam for general use and the green and red anti-glare LED to prevent night blinding, detectability and emergency signaling.',
     ],
-  }),
-  createAmazonReviewCandidate({
-    asin: 'B0G4W14R1Y',
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/71eXvU0NusL._AC_SX342_SY445_QL70_FMwebp_.jpg',
+      alt: 'Coast WPH34R 2000 Lumen Waterproof Ultra Bright IP68 USB Rechargeable-Dual Power Headlamp, 6 Modes with Spot and Flood Beams, Black/Grey on a white background',
+    },
+  },
+  {
     id: 'sunrei-rechargeable-headlamp',
+    name: 'SUNREI Rechargeable Headlamp, Red Led Headlamp, 2200mAh Battery, Motion Sensor, Stepless Dimming, IPX6 Waterproof, 6 Light Modes, Type-C, Lightweight Outdoor Headlamp for Camping, Hiking, Running',
     category: 'prevention',
     badge: 'Headlamp Candidate',
+    asin: 'B0G4W14R1Y',
+    amazonUrl: 'https://www.amazon.com/dp/B0G4W14R1Y?tag=chill-dogs-20',
     useCase: 'Review candidate for a rechargeable outdoor headlamp',
     bestFor: 'Review before choosing for a snake-bite emergency kit.',
-    fallbackBullets: [
-      'Amazon listing describes a USB-C rechargeable headlamp.',
-      'Includes red light, motion sensor, and multiple light modes.',
-      'Confirm runtime, brightness, and fit before buying.',
+    bullets: [
+      'Ultra-Bright 500 Lumens CREE LED Headlamp: This bright rechargeable LED headlamp delivers up to 500 lumens using a genuine CREE LED. Includes spotlight, floodlight, mixed beam, red light, and red flashing modes—ideal for camping, hiking, running, fishing, and other outdoor activities',
+      'USB-C Rechargeable Headlamp with 2200mAh Battery: Features a built-in 2200mAh rechargeable battery for long runtime up to 200 hours. This USB C headlamp supports fast charging with power banks, wall chargers, or car adapters—perfect for camping gear or emergency kits',
+      'Hands-Free Motion Sensor Headlamp: Activate the motion sensor mode to turn the headlamp on/off with just a wave. A great choice for work, repairs, night running, or using the lamp with gloves—true hands-free headlamp convenience',
     ],
-  }),
+    ctaLabel: 'Check Price on Amazon',
+    image: {
+      src: 'https://m.media-amazon.com/images/I/61FEUjQgqQL._AC_SX342_SY445_QL70_FMwebp_.jpg',
+      alt: 'SUNREI Rechargeable Headlamp, Red Led Headlamp, 2200mAh Battery, Motion Sensor, Stepless Dimming, IPX6 Waterproof, 6 Light Modes, Type-C, Lightweight Outdoor Headlamp for Camping, Hiking, Running on a white background',
+    },
+  },
 ];
 
 export const emergencyProducts: EmergencyProduct[] = [
