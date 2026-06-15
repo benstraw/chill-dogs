@@ -54,10 +54,10 @@ export const emergencyCategoryMeta: Record<EmergencyProductCategory, { label: st
       'Pain can make even a gentle dog bite, but only muzzle your dog if it is safe to do so. Snake bites can cause breathing problems, vomiting, heat stress, and facial swelling. Remove collars, harnesses and muzzles if symptoms appear.',
   },
   'warmth-control': {
-    label: 'Small Add-ons',
-    title: 'Small Add-ons for Warmth, Control, and Vet Information',
+    label: 'Control and Warmth',
+    title: 'Control and Warmth',
     intro:
-      'Small items can make the trip to the emergency vet calmer: a slip lead for backup control, a Mylar blanket for warmth, and simple supplies for clean handling and clear information.',
+      'These items can help keep your dog safe and warm on the way to the vet.',
   },
   prevention: {
     label: 'Phone and Light',
@@ -147,6 +147,72 @@ const carryReviewCandidates: EmergencyProduct[] = [
       src: 'https://m.media-amazon.com/images/I/71g9k5dSi8L._AC_SY300_SX300_QL70_FMwebp_.jpg',
       alt: 'Vivifying Dog Lift Harness for Large Dogs, Soft Flannel Rear Leg Support Sling, Adjustable Dog Lifting Harness for Weak Back Legs, Senior Injured Disabled Dogs, ACL Surgery Mobility Assist, L, Gray on a white background',
     },
+  },
+  {
+    id: 'canine-canyon-rover-rescue-carry-harness',
+    name: 'Canine Canyon Rover Rescue Dog Carry Harness',
+    category: 'carry',
+    badge: 'Chewy Carry Harness',
+    useCase: 'Chewy-only rescue carry harness alternative for emergency transport',
+    bestFor: 'Owners who want another retailer option for a structured carry harness.',
+    bullets: [
+      'Structured carry-harness option for moving a dog without asking them to walk farther.',
+      'Fits the same evacuation role as the larger carry picks on this page, with a pet-retail checkout option.',
+      'Check the current sizing and weight guidance before relying on it in an emergency.',
+    ],
+    offers: [
+      {
+        merchant: 'chewy' as const,
+        url: 'https://www.chewy.com/canine-canyon-rover-rescue-dog-carry/dp/2103910',
+        canonicalUrl: 'https://www.chewy.com/canine-canyon-rover-rescue-dog-carry/dp/2103910',
+        merchantProductId: '2103910',
+        status: 'active' as const,
+      },
+    ],
+  },
+  {
+    id: 'ruffwear-backtrak-evacuation-kit',
+    name: 'Ruffwear BackTrak Evacuation Kit',
+    category: 'carry',
+    badge: 'Chewy Carry Harness',
+    useCase: 'Chewy-only evacuation harness option for trail or car kits',
+    bestFor: 'Owners who want a carry option from a known outdoor-dog gear brand.',
+    bullets: [
+      'Evacuation-focused carry option for getting a dog off the trail or into the car with less extra walking.',
+      'Useful if you want a more outdoor-gear-oriented alternative in this category.',
+      'Check the current fit guidance and practice the carry at home before an emergency.',
+    ],
+    offers: [
+      {
+        merchant: 'chewy' as const,
+        url: 'https://www.chewy.com/ruffwear-backtrak-evacuation-kit-dog/dp/3588422',
+        canonicalUrl: 'https://www.chewy.com/ruffwear-backtrak-evacuation-kit-dog/dp/3588422',
+        merchantProductId: '3588422',
+        status: 'active' as const,
+      },
+    ],
+  },
+  {
+    id: 'non-stop-dogwear-dog-rescue-sling',
+    name: 'Non-stop Dogwear Dog Rescue Sling',
+    category: 'carry',
+    badge: 'Chewy Rescue Sling',
+    useCase: 'Chewy-only rescue sling option for packable dog carries',
+    bestFor: 'Owners who want another sling-style carry option from Chewy.',
+    bullets: [
+      'Sling-style alternative for carrying a dog instead of having them keep moving after a bite.',
+      'Fits better in a trail-focused kit than bulkier car-only transport gear.',
+      'Confirm the current size range and carry instructions before counting on it in the field.',
+    ],
+    offers: [
+      {
+        merchant: 'chewy' as const,
+        url: 'https://www.chewy.com/non-stop-dogwear-dog-rescue-sling/dp/3598582',
+        canonicalUrl: 'https://www.chewy.com/non-stop-dogwear-dog-rescue-sling/dp/3598582',
+        merchantProductId: '3598582',
+        status: 'active' as const,
+      },
+    ],
   },
 ];
 
@@ -309,6 +375,15 @@ const firstAidReviewCandidates: EmergencyProduct[] = [
       'Use as transport support, not snakebite treatment.',
     ],
     ctaLabel: 'Check Price on Amazon',
+    offers: [
+      {
+        merchant: 'chewy' as const,
+        url: 'https://www.chewy.com/adventure-medical-kits-adventure-dog/dp/250995',
+        canonicalUrl: 'https://www.chewy.com/adventure-medical-kits-adventure-dog/dp/250995',
+        merchantProductId: '250995',
+        status: 'active' as const,
+      },
+    ],
     image: {
       src: 'https://m.media-amazon.com/images/I/81t9FSgXDoL._AC_SY300_SX300_QL70_FMwebp_.jpg',
       alt: 'Adventure Dog Medical Kit - Vet in a Box on a white background',
@@ -439,6 +514,50 @@ const slipLeadReviewCandidates: EmergencyProduct[] = [
       src: 'https://m.media-amazon.com/images/I/61wxuiDLPWL._AC_SY300_SX300_QL70_FMwebp_.jpg',
       alt: 'Mad Dog Products 1/4 Inch x 4 feet Orange Signature English Slip Lead Dog Leash - Made in USA on a white background',
     },
+  },
+  {
+    id: 'mendota-products-large-slip-lead',
+    name: 'Mendota Products Large Slip Lead',
+    category: 'warmth-control',
+    badge: 'Chewy Slip Lead',
+    useCase: 'Chewy-only slip lead option for backup control in car or trail kits',
+    bestFor: 'Owners who want a simple backup leash option from Chewy.',
+    bullets: [
+      'Slip-lead option for fast backup control when you need to move a scared dog around cars, doors, or trailheads.',
+      'Useful as a simple add-on when you do not want to depend on a separate collar and leash.',
+      'Choose the right length and width ahead of time so it is ready when you need it.',
+    ],
+    offers: [
+      {
+        merchant: 'chewy' as const,
+        url: 'https://www.chewy.com/mendota-products-large-slip-confetti/dp/144722',
+        canonicalUrl: 'https://www.chewy.com/mendota-products-large-slip-confetti/dp/144722',
+        merchantProductId: '144722',
+        status: 'active' as const,
+      },
+    ],
+  },
+  {
+    id: 'water-woods-braided-rope-slip-dog-lead',
+    name: 'Water & Woods Braided Rope Slip Dog Lead',
+    category: 'warmth-control',
+    badge: 'Chewy Slip Lead',
+    useCase: 'Chewy-only rope slip lead option for emergency backup handling',
+    bestFor: 'Owners who want another rope-lead option from Chewy.',
+    bullets: [
+      'Braided rope slip lead for quick control when a dog needs to be guided carefully during transport.',
+      'Useful as a backup lead in kits that already focus on carry gear and warmth.',
+      'Check the rope thickness and size before buying so it matches your dog and handling needs.',
+    ],
+    offers: [
+      {
+        merchant: 'chewy' as const,
+        url: 'https://www.chewy.com/water-woods-braided-rope-slip-dog/dp/650214',
+        canonicalUrl: 'https://www.chewy.com/water-woods-braided-rope-slip-dog/dp/650214',
+        merchantProductId: '650214',
+        status: 'active' as const,
+      },
+    ],
   },
 ];
 
@@ -755,6 +874,15 @@ export const emergencyProducts: EmergencyProduct[] = [
     cons: ['Not snakebite treatment', 'Still needs added dog-specific supplies', 'Supply mix can change'],
     howItHelps:
       'Keeps gloves, dressings, and basic emergency supplies ready while you focus on getting to a veterinarian.',
+    offers: [
+      {
+        merchant: 'chewy' as const,
+        url: 'https://www.chewy.com/adventure-medical-kits-dog-series-me/dp/250997',
+        canonicalUrl: 'https://www.chewy.com/adventure-medical-kits-dog-series-me/dp/250997',
+        merchantProductId: '250997',
+        status: 'active' as const,
+      },
+    ],
     image: {
       src: 'https://m.media-amazon.com/images/I/91eY4r3AyEL._AC_SY300_SX300_QL70_FMwebp_.jpg',
       alt: 'Adventure Medical Kits Me and My Dog first aid kit on a white background',
@@ -778,6 +906,15 @@ export const emergencyProducts: EmergencyProduct[] = [
     cons: ['Less complete than larger kits', 'No carry solution', 'Needs add-ons for snakebite readiness'],
     howItHelps:
       'Adds basic clean-handling and dressing supplies without making the emergency kit too bulky to carry.',
+    offers: [
+      {
+        merchant: 'chewy' as const,
+        url: 'https://www.chewy.com/adventure-medical-kits-dog-series/dp/250999',
+        canonicalUrl: 'https://www.chewy.com/adventure-medical-kits-dog-series/dp/250999',
+        merchantProductId: '250999',
+        status: 'active' as const,
+      },
+    ],
     image: {
       src: 'https://m.media-amazon.com/images/I/91n+0ewODtL._AC_SY300_SX300_QL70_FMwebp_.jpg',
       alt: 'Adventure Medical Kits Trail Dog first aid kit on a white background',
@@ -823,30 +960,59 @@ export const emergencyProducts: EmergencyProduct[] = [
       'Backed by a lifetime warranty.',
     ],
     howItHelps: 'Gives you a ready supply pouch for clean handling, dressing materials, and general dog first aid.',
+    offers: [
+      {
+        merchant: 'chewy' as const,
+        url: 'https://www.chewy.com/kurgo-first-aid-kit-dogs-cats/dp/56782',
+        canonicalUrl: 'https://www.chewy.com/kurgo-first-aid-kit-dogs-cats/dp/56782',
+        merchantProductId: '56782',
+        status: 'active' as const,
+      },
+    ],
     image: {
       src: 'https://m.media-amazon.com/images/I/81QdYcNIVeL._AC_SY300_SX300_QL70_FMwebp_.jpg',
       alt: 'Kurgo dog first aid kit on a white background',
     },
+  },
+  {
+    id: 'kurgo-rsg-first-aid-kit',
+    name: 'Kurgo RSG First Aid Kit for Dogs',
+    category: 'first-aid',
+    badge: 'Chewy First Aid Add-On',
+    useCase: 'Chewy-only dog first aid pouch for car and trail kits',
+    bestFor: 'Owners who want another compact dog-first-aid option from Chewy.',
+    bullets: [
+      'Compact first-aid add-on for general dog emergency supplies and clean handling.',
+      'Useful if you want a smaller pouch to pair with a carry harness, slip lead, and vet info card.',
+      'Review the current supply list and add your own route-to-vet notes before relying on it.',
+    ],
+    offers: [
+      {
+        merchant: 'chewy' as const,
+        url: 'https://www.chewy.com/kurgo-rsg-first-aid-kit-dogs/dp/207876',
+        canonicalUrl: 'https://www.chewy.com/kurgo-rsg-first-aid-kit-dogs/dp/207876',
+        merchantProductId: '207876',
+        status: 'active' as const,
+      },
+    ],
   },
   ...firstAidReviewCandidates,
   {
     id: 'swiss-safe-mylar-emergency-blankets',
     name: 'Swiss Safe Mylar Emergency Blankets',
     category: 'warmth-control',
-    badge: 'Best Budget Warmth Add-On',
+    badge: 'MYLAR BLANKET',
     asin: 'B01LZN0KGB',
     amazonUrl: 'https://www.amazon.com/dp/B01LZN0KGB?tag=chill-dogs-20',
-    useCase: 'Tiny warmth layer for car, backyard, and hiking kits',
+    useCase: 'Mylar blanket add-on for emergency warmth during transport',
     bestFor: 'Every kit, because they are cheap and easy to stash',
     bullets: [
-      'Small enough for every emergency bag',
-      'Helps keep a quiet dog warm during transport',
-      'Useful beyond snakebite scenarios',
+      'EFFECTIVELY REFLECTS & RETAINS HEAT: Engineered with advanced dual-sided aluminized Mylar technology, to retain 90% of body heat.',
+      'PORTABLE DESIGN FOR ANY ADVENTURE: Built with military-grade 12-micron aluminized polyethylene mylar. Ultra-compact.',
+      'HEAVY DUTY YET LIGHTWEIGHT: Designed to be hard to rip, offering reliable protection against wind and rain.',
+      'WATERPROOF AND VERSATILE: Use them as a blanket, ground cover, shelter, or to protect your gear from the elements.',
+      'BONUS SPACE BLANKET INCLUDED: With every purchase, receive a bonus space blanket - a smaller, more compact version. Perfect for keeping in your glove compartment, hiking backpack, or emergency go-bag.',
     ],
-    pros: ['Very compact', 'Low-cost multipack', 'Easy to keep in several places'],
-    cons: ['Crinkly and noisy', 'Not durable for repeated use', 'Not dog-specific'],
-    howItHelps:
-      'Adds a lightweight warmth layer for the ride to veterinary care, especially after shock or long trail carries.',
     image: {
       src: 'https://m.media-amazon.com/images/I/71t6WSsGGwL._AC_SX300_SY300_QL70_FMwebp_.jpg',
       alt: 'Swiss Safe Mylar emergency blanket multipack on a white background',

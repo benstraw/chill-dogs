@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
+import { emergencyProducts } from '../data/emergency-products';
 import { productCatalogItems, type ProductCatalogItem } from '../data/product-catalog';
 import { getAmazonOfferEntries, getOffers, getPrimaryOffer, getRequiredPrimaryOffer } from '../data/products/offers';
 import type { AffiliateOffer, ProviderMetadata } from '../data/products/types';
@@ -94,6 +95,28 @@ describe('multi-merchant product offers', () => {
     for (const product of withChewy) {
       const chewyOffer = getOffers(product).find((o) => o.merchant === 'chewy');
       expect(() => new URL(chewyOffer!.url)).not.toThrow();
+    }
+  });
+
+  it('wires the requested snake-bite kit Chewy offers into the emergency catalog', () => {
+    const expectedChewyUrlsById = {
+      'canine-canyon-rover-rescue-carry-harness': 'https://www.chewy.com/canine-canyon-rover-rescue-dog-carry/dp/2103910',
+      'ruffwear-backtrak-evacuation-kit': 'https://www.chewy.com/ruffwear-backtrak-evacuation-kit-dog/dp/3588422',
+      'non-stop-dogwear-dog-rescue-sling': 'https://www.chewy.com/non-stop-dogwear-dog-rescue-sling/dp/3598582',
+      'adventure-dog-medical-kit-vet-in-a-box': 'https://www.chewy.com/adventure-medical-kits-adventure-dog/dp/250995',
+      'adventure-medical-me-and-my-dog-kit': 'https://www.chewy.com/adventure-medical-kits-dog-series-me/dp/250997',
+      'adventure-medical-trail-dog-kit': 'https://www.chewy.com/adventure-medical-kits-dog-series/dp/250999',
+      'kurgo-50-piece-dog-first-aid-kit': 'https://www.chewy.com/kurgo-first-aid-kit-dogs-cats/dp/56782',
+      'kurgo-rsg-first-aid-kit': 'https://www.chewy.com/kurgo-rsg-first-aid-kit-dogs/dp/207876',
+      'mendota-products-large-slip-lead': 'https://www.chewy.com/mendota-products-large-slip-confetti/dp/144722',
+      'water-woods-braided-rope-slip-dog-lead': 'https://www.chewy.com/water-woods-braided-rope-slip-dog/dp/650214',
+    } satisfies Record<string, string>;
+
+    for (const [productId, chewyUrl] of Object.entries(expectedChewyUrlsById)) {
+      const product = emergencyProducts.find((entry) => entry.id === productId);
+      expect(product, `${productId} missing from emergency products`).toBeTruthy();
+      const chewyOffer = product && getOffers(product).find((offer) => offer.merchant === 'chewy');
+      expect(chewyOffer?.url).toBe(chewyUrl);
     }
   });
 
