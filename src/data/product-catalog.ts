@@ -17,6 +17,7 @@ export interface ProductCatalogItem {
   secondaryLabel?: string;
   bullets: string[];
   image?: { src: string; alt: string };
+  images?: readonly { src: string; alt: string }[];
   signalNote?: string;
   subscriptionNote?: string;
   note?: string;

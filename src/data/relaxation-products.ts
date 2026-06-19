@@ -11,6 +11,7 @@ export interface RelaxationProduct {
   offers?: AffiliateOffer[];
   bullets: string[];
   image?: { src: string; alt: string };
+  images?: readonly { src: string; alt: string }[];
 }
 
 export const relaxationProducts: RelaxationProduct[] = [

@@ -17,7 +17,7 @@ const offers = getOffers(product);
 ---
 
 <ProductCardShell>
-  <ProductImageFrame slot="image" image={product.image} />
+  <ProductImageFrame slot="image" image={product.image} images={product.images} />
   <h3 class="rx-card-name">{product.name}</h3>
   <ProductBulletList bullets={product.bullets} />
   <AffiliateOfferStack

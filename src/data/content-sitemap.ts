@@ -697,7 +697,14 @@ export const staticSitemapSections: SitemapSection[] = [
       createSitemapPage({
         baseTitle: 'Product Catalog (Admin)',
         description: 'Curated gear, gift guides, and party ideas for dogs who live the good life.',
-        href: '/admin/products/',
+        href: ROUTES.adminProducts,
+        pageType: 'informer',
+        noindex: true,
+      }),
+      createSitemapPage({
+        baseTitle: 'Image Browser (Admin)',
+        description: 'Browse available Amazon cache images per product to curate the editorial images array.',
+        href: ROUTES.adminImages,
         pageType: 'informer',
         noindex: true,
       }),
