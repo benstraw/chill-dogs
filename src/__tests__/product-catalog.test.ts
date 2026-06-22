@@ -15,7 +15,6 @@ describe('admin product catalog data', () => {
       'B0GFMQT8YJ',
       'B0GH76XGKZ',
       'B0GRV66Y6X',
-      'B0GRGDVZ21',
       'B0GJD28NRT',
       'B07GVSG62X',
       'B0F6YL3LT1',
