@@ -28,7 +28,7 @@ const tocHeadings = [
   { label: 'Dog Stretchers', anchor: 'stretcher' },
   { label: 'First Aid Kits', anchor: 'first-aid' },
   { label: 'Muzzle Safety', anchor: 'muzzle' },
-  { label: 'Control and Warmth', anchor: 'warmth-control' },
+  { label: 'Blankets and Leads', anchor: 'warmth-control' },
   { label: 'Phone and Light', anchor: 'prevention' },
   { label: 'Skip These', anchor: 'skip-these' },
   { label: 'FAQ', anchor: 'faq' },
@@ -38,7 +38,7 @@ const faqs = [
   {
     question: 'What should be in a dog snake-bite emergency kit?',
     answer:
-      'Pack a carry sling or rescue harness, dog first aid kit, slip lead, Mylar blanket, power bank, headlamp, gloves, gauze, marker, and an emergency vet info card. The kit is for transport and readiness, not venom treatment.',
+      'Pack a carry sling or rescue harness, dog first aid kit, slip lead, Mylar blanket, power bank, headlamp, and an emergency vet info card. The kit is for transport and readiness, not venom treatment.',
   },
   {
     question: 'Can I treat a dog snakebite at home?',
@@ -53,7 +53,7 @@ const faqs = [
   {
     question: 'Should I let my dog walk after a snakebite?',
     answer:
-      'Avoid it if you safely can. Movement can spread venom faster, which is why a carry sling or rescue harness is the centerpiece of this kit.',
+      'Avoid it if you safely can. Movement can spread venom faster. If you cannot carry your dog, walk slowly.',
   },
   {
     question: 'Should I muzzle my dog after a snakebite?',
@@ -220,40 +220,16 @@ const itemListSchema = {
       );
     })}
 
-    <section class="kit-section">
-      <div class="section-inner">
-        <h2>Build the kit by use case</h2>
-        <div class="kit-grid">
-          <div class="kit-card">
-            <h3>Backyard kit</h3>
-            <p>First aid kit, slip lead, Mylar blanket, emergency vet card, and the nearest emergency vet number saved on your phone.</p>
-          </div>
-          <div class="kit-card">
-            <h3>Car kit</h3>
-            <p>Loaded first aid kit, carry harness, slip lead, Mylar blanket, power bank, headlamp, and a printed vet info card.</p>
-          </div>
-          <div class="kit-card">
-            <h3>Trail kit</h3>
-            <p>Packable carry sling, lightweight first aid kit, slip lead, one Mylar blanket, power bank, and headlamp.</p>
-          </div>
-          <div class="kit-card">
-            <h3>Large-dog kit</h3>
-            <p>Prioritize a harness rated well above your dog's weight, a wide slip lead, and practice the carry before you need it.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="skip-section" id="skip-these">
       <div class="section-inner">
         <span class="section-label">Skip these for snakebite</span>
-        <h2>What not to buy for dog snakebite emergencies</h2>
+        <h2>What Not to Buy for Dog Snakebite Emergencies:</h2>
         <div class="skip-list">
-          <div class="skip-item"><h3>Venom extractors and suction pumps</h3><p>They are not recommended for snakebite first aid and can waste time that should be spent getting veterinary care.</p></div>
-          <div class="skip-item"><h3>Tourniquet kits</h3><p>Tourniquets are not recommended for snakebite first aid and can worsen tissue damage.</p></div>
-          <div class="skip-item"><h3>Blades or scalpels</h3><p>Cutting a bite wound is outdated and dangerous. Do not buy a kit that encourages it.</p></div>
-          <div class="skip-item"><h3>Ice packs as treatment</h3><p>A cold pack can belong in a general first aid kit, but do not ice a suspected snakebite as treatment.</p></div>
-          <div class="skip-item"><h3>Human pain medicine</h3><p>Never give aspirin, ibuprofen, naproxen, or acetaminophen unless a veterinarian specifically instructs you.</p></div>
+          <div class="skip-item"><h3>Venom extractors and suction pumps</h3><p>They can waste time that should be spent getting to veterinary care.</p></div>
+          <div class="skip-item"><h3>Tourniquet kits</h3><p>They can worsen tissue damage.</p></div>
+          <div class="skip-item"><h3>Blades or scalpels</h3><p>Cutting a bite wound is dangerous.</p></div>
+          <div class="skip-item"><h3>Ice packs</h3><p>Icing can cause severe muscle and tissue damage, and may lead to shock.</p></div>
+          <div class="skip-item"><h3>Human pain medicine</h3><p>Never give aspirin, ibuprofen, naproxen, or acetaminophen unless a veterinarian specifically instructs you to do so.</p></div>
         </div>
       </div>
     </section>
@@ -284,7 +260,6 @@ const itemListSchema = {
 
   .safety-section,
   .jobs-section,
-  .kit-section,
   .skip-section,
   .product-section {
     padding: var(--space-2xl) 0;
@@ -319,7 +294,6 @@ const itemListSchema = {
 
   .section-header p,
   .safety-section p,
-  .kit-card p,
   .skip-item p {
     color: var(--color-text-muted);
     line-height: var(--leading-relaxed);
@@ -327,20 +301,12 @@ const itemListSchema = {
 
   .do-dont-grid,
   .job-grid,
-  .kit-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--space-lg);
-    margin-top: var(--space-xl);
-  }
-
   .job-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .do-dont-card,
   .job-card,
-  .kit-card,
   .skip-item {
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
@@ -349,7 +315,6 @@ const itemListSchema = {
   }
 
   .do-dont-card h3,
-  .kit-card h3,
   .skip-item h3 {
     margin: 0 0 var(--space-sm);
   }
@@ -511,7 +476,6 @@ const itemListSchema = {
 
   @media (max-width: 700px) {
     .do-dont-grid,
-    .kit-grid,
     .pros-cons {
       grid-template-columns: 1fr;
     }
