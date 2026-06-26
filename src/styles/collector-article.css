@@ -54,7 +54,7 @@
   margin-bottom: var(--space-sm);
 }
 
-.prose a {
+.prose a:not(.ui-cta) {
   color: var(--color-link);
   text-decoration: underline;
 }
