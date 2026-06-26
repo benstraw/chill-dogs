@@ -98,8 +98,8 @@ describe('multi-merchant product offers', () => {
     }
   });
 
-  it('wires the requested snake-bite kit Chewy offers into the emergency catalog', () => {
-    const expectedChewyUrlsById = {
+  it('wires the requested snake-bite kit Chewy offers into the emergency catalog with affiliate URLs', () => {
+    const expectedChewyCanonicalUrlsById = {
       'canine-canyon-rover-rescue-carry-harness': 'https://www.chewy.com/canine-canyon-rover-rescue-dog-carry/dp/2103910',
       'ruffwear-backtrak-evacuation-kit': 'https://www.chewy.com/ruffwear-backtrak-evacuation-kit-dog/dp/3588422',
       'non-stop-dogwear-dog-rescue-sling': 'https://www.chewy.com/non-stop-dogwear-dog-rescue-sling/dp/3598582',
@@ -112,11 +112,14 @@ describe('multi-merchant product offers', () => {
       'water-woods-braided-rope-slip-dog-lead': 'https://www.chewy.com/water-woods-braided-rope-slip-dog/dp/650214',
     } satisfies Record<string, string>;
 
-    for (const [productId, chewyUrl] of Object.entries(expectedChewyUrlsById)) {
+    for (const [productId, canonicalUrl] of Object.entries(expectedChewyCanonicalUrlsById)) {
       const product = emergencyProducts.find((entry) => entry.id === productId);
       expect(product, `${productId} missing from emergency products`).toBeTruthy();
       const chewyOffer = product && getOffers(product).find((offer) => offer.merchant === 'chewy');
-      expect(chewyOffer?.url).toBe(chewyUrl);
+      expect(chewyOffer, `${productId} missing Chewy offer`).toBeTruthy();
+      expect(() => new URL(chewyOffer!.url), `${productId} Chewy url is not a valid URL`).not.toThrow();
+      expect(chewyOffer!.url, `${productId} Chewy url must be an affiliate link, not a raw chewy.com URL`).toMatch(/^https:\/\/chewy\.sjv\.io\//);
+      expect(chewyOffer!.canonicalUrl, `${productId} canonicalUrl must be the raw Chewy product URL`).toBe(canonicalUrl);
     }
   });
 

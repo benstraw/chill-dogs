@@ -8,6 +8,7 @@ import Disclosure from '@components/modules/Disclosure.astro';
 import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
 import JsonLd from '@components/JsonLd.astro';
 import MerchantAffiliateLink from '@components/MerchantAffiliateLink.astro';
+import ProductBulletList from '@components/modules/primitives/ProductBulletList.astro';
 import {
   emergencyCategoryMeta,
   emergencyProducts,
@@ -175,9 +176,7 @@ const itemListSchema = {
                       <p class="badge">{product.badge}</p>
                       <h3>{product.name}</h3>
                       <p class="use-case">{product.useCase}</p>
-                      <ul class="product-bullets">
-                        {product.bullets.map((bullet) => <li>{bullet}</li>)}
-                      </ul>
+                      <ProductBulletList bullets={product.bullets} />
                       {product.howItHelps && <p class="how-it-helps"><strong>How it helps:</strong> {product.howItHelps}</p>}
                       {product.sizingNote && <p class="note"><strong>Fit note:</strong> {product.sizingNote}</p>}
                       {product.caution && <p class="note note--caution"><strong>Caution:</strong> {product.caution}</p>}
@@ -320,13 +319,11 @@ const itemListSchema = {
   }
 
   .do-dont-card ul,
-  .product-bullets,
   .pros-cons ul {
     padding-left: 1.1rem;
   }
 
   .do-dont-card li,
-  .product-bullets li,
   .pros-cons li {
     color: var(--color-text-muted);
     line-height: var(--leading-relaxed);

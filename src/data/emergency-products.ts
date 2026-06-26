@@ -150,14 +150,14 @@ const carryReviewCandidates: EmergencyProduct[] = [
     offers: [
       {
         merchant: 'chewy' as const,
-        url: 'https://www.chewy.com/canine-canyon-rover-rescue-dog-carry/dp/2103910',
+        url: 'https://chewy.sjv.io/c/7067825/3054490/32975?u=https%3A%2F%2Fwww.chewy.com%2Fcanine-canyon-rover-rescue-dog-carry%2Fdp%2F2103910&subId1=dog-snake-bite-emergency-kit&subId2=product-card',
         canonicalUrl: 'https://www.chewy.com/canine-canyon-rover-rescue-dog-carry/dp/2103910',
         merchantProductId: '2103910',
         status: 'active' as const,
       },
     ],
     image: {
-      src: 'https://img.chewy.com/is/image/catalog/2103910_MAIN._AC_SL1500_V1608320100_.jpg',
+      src: 'https://image.chewy.com/catalog/general/images/moe/0696a596-5006-7f7d-8000-3095cbc414f4._AC_SS1800_V1_.jpg',
       alt: 'Canine Canyon Rover Rescue Dog Carry Harness on a white background',
     },
   },
@@ -177,14 +177,14 @@ const carryReviewCandidates: EmergencyProduct[] = [
     offers: [
       {
         merchant: 'chewy' as const,
-        url: 'https://www.chewy.com/ruffwear-backtrak-evacuation-kit-dog/dp/3588422',
+        url: 'https://chewy.sjv.io/c/7067825/3054490/32975?u=https%3A%2F%2Fwww.chewy.com%2Fruffwear-backtrak-evacuation-kit-dog%2Fdp%2F3588422&subId1=dog-snake-bite-emergency-kit&subId2=product-card',
         canonicalUrl: 'https://www.chewy.com/ruffwear-backtrak-evacuation-kit-dog/dp/3588422',
         merchantProductId: '3588422',
         status: 'active' as const,
       },
     ],
     image: {
-      src: 'https://img.chewy.com/is/image/catalog/3588422_MAIN._AC_SL1500_V1678733972_.jpg',
+      src: 'https://image.chewy.com/catalog/general/images/moe/0690274e-190f-7145-8000-6efe9d4396f3._AC_SS1800_V1_.jpg',
       alt: 'Ruffwear BackTrak Evacuation Kit on a white background',
     },
   },
@@ -204,14 +204,14 @@ const carryReviewCandidates: EmergencyProduct[] = [
     offers: [
       {
         merchant: 'chewy' as const,
-        url: 'https://www.chewy.com/non-stop-dogwear-dog-rescue-sling/dp/3598582',
+        url: 'https://chewy.sjv.io/c/7067825/3054490/32975?u=https%3A%2F%2Fwww.chewy.com%2Fnon-stop-dogwear-dog-rescue-sling%2Fdp%2F3598582&subId1=dog-snake-bite-emergency-kit&subId2=product-card',
         canonicalUrl: 'https://www.chewy.com/non-stop-dogwear-dog-rescue-sling/dp/3598582',
         merchantProductId: '3598582',
         status: 'active' as const,
       },
     ],
     image: {
-      src: 'https://img.chewy.com/is/image/catalog/3598582_MAIN._AC_SL600_V1689197837_.jpg',
+      src: 'https://image.chewy.com/catalog/general/images/moe/0699f533-e038-7213-8000-f831fec2093a._AC_SS1800_V1_.jpg',
       alt: 'Non-stop Dogwear Dog Rescue Sling on a white background',
     },
   },
@@ -376,7 +376,7 @@ const firstAidReviewCandidates: EmergencyProduct[] = [
     offers: [
       {
         merchant: 'chewy' as const,
-        url: 'https://www.chewy.com/adventure-medical-kits-adventure-dog/dp/250995',
+        url: 'https://chewy.sjv.io/c/7067825/3054490/32975?u=https%3A%2F%2Fwww.chewy.com%2Fadventure-medical-kits-adventure-dog%2Fdp%2F250995&subId1=dog-snake-bite-emergency-kit&subId2=product-card',
         canonicalUrl: 'https://www.chewy.com/adventure-medical-kits-adventure-dog/dp/250995',
         merchantProductId: '250995',
         status: 'active' as const,
@@ -530,12 +530,16 @@ const slipLeadReviewCandidates: EmergencyProduct[] = [
     offers: [
       {
         merchant: 'chewy' as const,
-        url: 'https://www.chewy.com/mendota-products-large-slip-confetti/dp/144722',
+        url: 'https://chewy.sjv.io/c/7067825/3054490/32975?u=https%3A%2F%2Fwww.chewy.com%2Fmendota-products-large-slip-confetti%2Fdp%2F144722&subId1=dog-snake-bite-emergency-kit&subId2=product-card',
         canonicalUrl: 'https://www.chewy.com/mendota-products-large-slip-confetti/dp/144722',
         merchantProductId: '144722',
         status: 'active' as const,
       },
     ],
+    image: {
+      src: 'https://image.chewy.com/catalog/general/images/mendota-products-large-slip-confetti-rope-dog-leash-hi-viz-yellow-4ft-long-12in-wide/img-416316._AC_SS1800_V1_.jpg',
+      alt: 'Mendota Products Large Slip Confetti Rope Dog Leash in hi-viz yellow on a white background',
+    },
   },
   {
     id: 'water-woods-braided-rope-slip-dog-lead',
@@ -551,12 +555,16 @@ const slipLeadReviewCandidates: EmergencyProduct[] = [
     offers: [
       {
         merchant: 'chewy' as const,
-        url: 'https://www.chewy.com/water-woods-braided-rope-slip-dog/dp/650214',
+        url: 'https://chewy.sjv.io/c/7067825/3054490/32975?u=https%3A%2F%2Fwww.chewy.com%2Fwater-woods-braided-rope-slip-dog%2Fdp%2F650214&subId1=dog-snake-bite-emergency-kit&subId2=product-card',
         canonicalUrl: 'https://www.chewy.com/water-woods-braided-rope-slip-dog/dp/650214',
         merchantProductId: '650214',
         status: 'active' as const,
       },
     ],
+    image: {
+      src: 'https://image.chewy.com/catalog/general/images/water-woods-braided-rope-slip-dog-leash-green/img-450905._AC_SS1800_V1_.jpg',
+      alt: 'Water & Woods Braided Rope Slip Dog Leash in green on a white background',
+    },
   },
 ];
 
@@ -826,7 +834,7 @@ export const emergencyProducts: EmergencyProduct[] = [
     offers: [
       {
         merchant: 'chewy' as const,
-        url: 'https://www.chewy.com/adventure-medical-kits-dog-series-me/dp/250997',
+        url: 'https://chewy.sjv.io/c/7067825/3054490/32975?u=https%3A%2F%2Fwww.chewy.com%2Fadventure-medical-kits-dog-series-me%2Fdp%2F250997&subId1=dog-snake-bite-emergency-kit&subId2=product-card',
         canonicalUrl: 'https://www.chewy.com/adventure-medical-kits-dog-series-me/dp/250997',
         merchantProductId: '250997',
         status: 'active' as const,
@@ -853,7 +861,7 @@ export const emergencyProducts: EmergencyProduct[] = [
     offers: [
       {
         merchant: 'chewy' as const,
-        url: 'https://www.chewy.com/adventure-medical-kits-dog-series/dp/250999',
+        url: 'https://chewy.sjv.io/c/7067825/3054490/32975?u=https%3A%2F%2Fwww.chewy.com%2Fadventure-medical-kits-dog-series%2Fdp%2F250999&subId1=dog-snake-bite-emergency-kit&subId2=product-card',
         canonicalUrl: 'https://www.chewy.com/adventure-medical-kits-dog-series/dp/250999',
         merchantProductId: '250999',
         status: 'active' as const,
@@ -902,7 +910,7 @@ export const emergencyProducts: EmergencyProduct[] = [
     offers: [
       {
         merchant: 'chewy' as const,
-        url: 'https://www.chewy.com/kurgo-first-aid-kit-dogs-cats/dp/56782',
+        url: 'https://chewy.sjv.io/c/7067825/3054490/32975?u=https%3A%2F%2Fwww.chewy.com%2Fkurgo-first-aid-kit-dogs-cats%2Fdp%2F56782&subId1=dog-snake-bite-emergency-kit&subId2=product-card',
         canonicalUrl: 'https://www.chewy.com/kurgo-first-aid-kit-dogs-cats/dp/56782',
         merchantProductId: '56782',
         status: 'active' as const,
@@ -927,14 +935,14 @@ export const emergencyProducts: EmergencyProduct[] = [
     offers: [
       {
         merchant: 'chewy' as const,
-        url: 'https://www.chewy.com/kurgo-rsg-first-aid-kit-dogs/dp/207876',
+        url: 'https://chewy.sjv.io/c/7067825/3054490/32975?u=https%3A%2F%2Fwww.chewy.com%2Fkurgo-rsg-first-aid-kit-dogs%2Fdp%2F207876&subId1=dog-snake-bite-emergency-kit&subId2=product-card',
         canonicalUrl: 'https://www.chewy.com/kurgo-rsg-first-aid-kit-dogs/dp/207876',
         merchantProductId: '207876',
         status: 'active' as const,
       },
     ],
     image: {
-      src: 'https://img.chewy.com/is/image/catalog/207876_MAIN._AC_SL1500_V1639578277_.jpg',
+      src: 'https://image.chewy.com/catalog/general/images/kurgo-rsg-first-aid-kit-for-dogs/img-568019._AC_SS1800_V1_.jpg',
       alt: 'Kurgo RSG First Aid Kit for Dogs on a white background',
     },
   },
