@@ -68,18 +68,21 @@ When adding products:
 
 `src/data/amazon-products/_index.json` is the sidecar freshness manifest. It tracks `fetchedAt`, `provider`, `title`, and `imageUrl` snapshots for diagnostics. The raw provider payloads stay unchanged, and provider metadata must not auto-overwrite product copy.
 
-Future Chewy provider data should follow the same rule: raw/cache metadata is diagnostic only. If a fetched title or image
-looks better than the canonical editorial record, surface it for manual editorial review instead of applying it automatically.
+Chewy provider data follows the same rule: raw/cache metadata is diagnostic only. If a fetched title or image looks better
+than the canonical editorial record, surface it for manual editorial review instead of applying it automatically.
 
-## Manual Chewy URL workflow
+## Chewy Impact workflow
 
-Chewy links are stored as merchant offers. Until the Impact deep-link workflow is finalized, add Chewy links manually:
+Chewy links are stored as merchant offers. Generate and verify Chewy affiliate links with the Impact-backed tooling in
+[`../../affiliate-links.md`](../../affiliate-links.md).
 
-1. Create the Chewy affiliate/deep link in Impact.
-2. Add a Chewy offer to the product with `merchant: 'chewy'` and the affiliate URL.
-3. Add `canonicalUrl` when you know the public Chewy product URL.
-4. Add `merchantProductId` only when it is obvious and stable; it is optional for now.
-5. Do not change canonical product copy or images just because a Chewy product title, image, or description differs.
+1. Find or fetch the Chewy catalog item with `bun run fetch:chewy -- --search "product name"` or `bun run fetch:chewy -- --catalog-id <catalog-id> --item-id <item-id>`.
+2. Generate the Impact affiliate link from the canonical Chewy product URL with `bun run chewy-link -- "https://www.chewy.com/example-product/dp/123456" --article <page-slug> --placement <placement>`.
+3. Add a Chewy offer to the relevant canonical product record in `src/data/**`.
+4. Use `canonicalUrl` for the public Chewy URL, `url` for the affiliate/deep link, and `merchantProductId` for the stable Chewy or Impact catalog item ID when known.
+5. For Chewy-only products, omit `asin` and `amazonUrl`; include at least one active Chewy offer.
+6. Treat cached Chewy name, bullets, description, price, stock, and image URLs as review inputs. Manually choose any copy or image changes.
+7. Confirm `/admin/products/` reflects the new offer through shared product data. Do not hardcode admin rows.
 
 ---
 
