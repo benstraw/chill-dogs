@@ -440,7 +440,8 @@ site_system:
     relaxation_products: "src/data/relaxation-products.ts — 78 products (calming beds, orthopedic beds, crates, carriers, travel beds, travel bags) with canonical editorial copy, optional Amazon ASIN/affiliate URL, optional merchant offers, and image thumbnails"
     tracking_products: "src/data/tracking-products.ts — 8 tracker products and 1 accessory product across cellular/off-grid/bluetooth/accessory types"
     raw_api_cache: "src/data/amazon-products/*.json — full SerpAPI/SearchAPI Amazon Product responses per ASIN; _index.json sidecar tracks fetchedAt/provider/title/image freshness diagnostics only and must not overwrite canonical product copy or images"
-    future_chewy_cache: "src/data/chewy-products/*.json — reserved future diagnostic cache for Chewy provider metadata by merchant product id or stable URL-derived key; mirror Amazon cache behavior without auto-overwriting editorial fields"
+    chewy_affiliate_tooling: "src/lib/affiliate/ and scripts/chewy-link.ts — internal Impact-backed Chewy affiliate link generation, using the live Impact tracking link when credentials are available and CHEWY_IMPACT_BASE_URL only as a verifiable fallback/cache"
+    chewy_cache: "src/data/chewy-products/*.json — diagnostic Impact catalog cache for Chewy product metadata and image URLs by catalog item id; _index.json sidecar tracks normalized review fields without auto-overwriting canonical product copy, images, or offers"
 
   architecture:
     frontend: "Astro 5 static site with scoped CSS and reusable modules"

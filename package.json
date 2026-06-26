@@ -21,7 +21,11 @@
     "indexnow:submit": "node scripts/indexnow-submit.mjs",
     "check:asins": "bun run scripts/check-asin-validity.ts",
     "check:amazon": "bun run scripts/check-amazon-freshness.ts",
-    "check:ai-docs": "node scripts/validate-ai-docs.mjs"
+    "check:ai-docs": "node scripts/validate-ai-docs.mjs",
+    "chewy-link": "bun run scripts/chewy-link.ts",
+    "chewy-link:verify": "bun run scripts/chewy-link.ts verify",
+    "chewy-link:csv": "bun run scripts/chewy-link.ts csv",
+    "fetch:chewy": "bun run scripts/fetch-chewy-data.ts"
   },
   "simple-git-hooks": {
     "pre-commit": "bun run test && bun run test:smoke"
