@@ -1,0 +1,511 @@
+{
+  "search_metadata": {
+    "id": "6a2bb546f73e4dab433374c4",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/CvkWSyoMqAMIO0oPaV0tuQ/6a2bb546f73e4dab433374c4.json",
+    "created_at": "2026-06-12 07:29:10 UTC",
+    "processed_at": "2026-06-12 07:29:10 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0F898P647/?",
+    "raw_html_file": "https://serpapi.com/searches/CvkWSyoMqAMIO0oPaV0tuQ/6a2bb546f73e4dab433374c4.html",
+    "total_time_taken": 5.99
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0F898P647",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0F898P647",
+    "title": "New Dog Muzzle for Small Dogs, to Prevent Biting, Soft Material with Reflective & Adjustable Strap, Breathable Mouth Guard for Biting Chewing Grooming, Allow Panting Drinking (Black, S Size)",
+    "link": "https://www.amazon.com/Dog-Material-Reflective-Adjustable-Breathable/dp/B0F898P647/",
+    "link_clean": "https://www.amazon.com/dp/B0F898P647/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F898P647&device=desktop&engine=amazon_product",
+    "badges": [
+      "Amazon's Choice"
+    ],
+    "variants": [
+      {
+        "title": "Pattern Name",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0F898P647",
+            "name": "BlackGray",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F898P647&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0DJYG462J",
+            "name": "New Black",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DJYG462J&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0D4QG741Z",
+            "name": "New Blue",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0D4QG741Z&device=desktop&engine=amazon_product"
+          }
+        ]
+      },
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0F898P647",
+            "name": "S",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F898P647&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0DJYH6X9R",
+            "name": "M",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DJYH6X9R&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0DJYHBCYR",
+            "name": "XL",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DJYHBCYR&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 4,
+            "asin": "B0D4QDY6KB",
+            "name": "XL Size",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0D4QDY6KB&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the TVIAOH Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/41DRMjQAlBL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/711DtPoMpwL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71lYozPsaCL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61go6iQ44KL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/813w0SLH+fL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81UGYaZqIBL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71Fdl5FofcL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.7,
+    "reviews": 34,
+    "discount": "-17%",
+    "price": "$9.99",
+    "extracted_price": 9.99,
+    "old_price": "$11.99",
+    "extracted_old_price": 11.99,
+    "offers": [
+      "Save 5%"
+    ],
+    "prime": true,
+    "delivery": [
+      "FREE delivery Wednesday, June 17 on orders shipped by Amazon over $35",
+      "Or Prime members get FREE delivery Sunday, June 14. Order within 7 hrs 25 mins. Join Prime"
+    ],
+    "stock": "Only 1 left in stock - order soon."
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$9.99",
+      "extracted_price": 9.99,
+      "delivery": [
+        "FREE delivery Wednesday, June 17 on orders shipped by Amazon over $35",
+        "Or Prime members get FREE delivery Sunday, June 14. Order within 7 hrs 25 mins. Join Prime"
+      ],
+      "stock": "Only 1 left in stock - order soon.",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "YSHS US",
+          "details": {
+            "heading": "Sold by",
+            "content": "YSHS US"
+          },
+          "link": {
+            "text": "YSHS US",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A1I70MLOIT357M&asin=B0F898P647&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "30-day refund / replacement",
+          "details": {
+            "heading": "30-day refund / replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "size": "S",
+    "brand": "TVIAOH",
+    "color": "Black",
+    "material": "Nylon",
+    "breed_recommendation": "Small Breeds"
+  },
+  "about_item": [
+    "【Do you have a Dog?】.-----. When you try to cut his nails. He makes a lot of noise and sometimes tries to bite you so it’s a gamble as to whether or not you’ll keep your fingers if you’re trimming his nails. This TVIAOH dog muzzle fits well, and it does keep dog from fighting us. dog muzzles to prevent biting.",
+    "【Humane Dog Muzzle - Medium】.-----. The material felt decent and did not seem to irritate our dog, and it was pretty easy to put the muzzle on him. This muzzle also, when put on the dog correctly, still allows for the dog to pant, drink, and eat treats. It is extremely important for the dog to be able to open their mouth enough to pant. That is how they cool themselves, instead of swearing like hoomans do.",
+    "【Remember to Reward Your Dog】.-----. Use it when needed, and give plenty of breaks where you remove it for some time. Dog tried to scratch it off at first and couldn’t, but she soon got used to its comfort.These are not intended to be used as punishment or discipline. Don't forget to reward your dog every time you put it on especially if they haven't worn a muzzle. muzzle for dogs. Muzzle for dog. no barking muzzle",
+    "【Safe Guard for Dogs】.-----. They are for training and for necessary and legit reasons, to protect yourself, and others, from injury. The dog muzzles is very thoughtfully designed and effectively prevents it from biting, barking, making our walks safer and more enjoyable. We only use it to prevent her reaction to triggers. If your dog gets very aggressive when it comes to grooming, vets, nail clipping, etc. This works great to stop her from hurting anyone. Very useful in difficult situations.",
+    "【Secure and Adjustable Fit】.-----. Functional, durable, effective.This thoughtfully designed muzzle combines security, breathability, and ease of use to create a stress-free experience for both pets and their owners. It is adjustable, the velcro is great quality. The adjustable muzzle piece is a great design and perfect. It allows you to get a comfortable fit for your dog while providing a little size adjustment. A humane way to silence a yapping dog and that it didn't harm our canine."
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": "dog muzzle",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/dbdc2968-04f1-48b9-80b1-cdfff211353b.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 2,
+      "title": "dog muzzles",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/2ac34dfe-9d94-4615-9fff-d30c1f6568e7.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 3,
+      "carousel_images": [
+        {
+          "position": 1,
+          "title": "Dog Muzzle",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/d64042f5-a1ea-4067-b72e-87ced4a8a2e8.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 2,
+          "title": "dog muzzle for grooming",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/09c8e767-9683-4f19-ab7a-22e6dc397f7d.__CR0,874,1600,656_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 3,
+          "title": "dog muzzle for grooming",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/09c8e767-9683-4f19-ab7a-22e6dc397f7d.__CR0,62,1600,656_PT0_SX1464_V1___.jpg"
+        }
+      ]
+    },
+    {
+      "position": 4
+    },
+    {
+      "position": 5,
+      "carousel_images": [
+        {
+          "position": 1,
+          "title": "muzzles",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/afebb6bd-3ebf-4746-815d-14210c684612.__CR0,853,1600,656_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 2,
+          "title": "dog mouth harness",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/4a8e9b54-1ae7-4379-950a-ca5ee1e80fed.__CR0,423,1500,615_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 3,
+          "title": "muzzles for dogs",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/81c38562-f256-4d52-a219-d5bcfd2d3da0.__CR0,640,1600,656_PT0_SX1464_V1___.jpg"
+        }
+      ]
+    },
+    {
+      "position": 6,
+      "carousel_images": [
+        {
+          "position": 1,
+          "title": "soft muzzle",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/608a6928-b685-4b81-81b1-ab2db5b7b8ec.__CR0,34,1600,656_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 2,
+          "title": "Dog Muzzle",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/95fa21a3-ad9e-459c-b014-d9f23dd5aeb7.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 3,
+          "title": "Dog Muzzle",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/7434e013-9fd9-433b-84fe-6bce70a27e22.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        }
+      ]
+    },
+    {
+      "position": 7,
+      "carousel_images": [
+        {
+          "position": 1,
+          "title": "soft muzzle",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/608a6928-b685-4b81-81b1-ab2db5b7b8ec.__CR0,739,1600,656_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 2,
+          "title": "[New] Small Dog Muzzle",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/62c627c7-734c-4143-835e-62771af541e8.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 3,
+          "title": "Dog Muzzle",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/8469d0d5-a0cf-449e-8cf6-a2161ef30d9d.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        }
+      ]
+    }
+  ],
+  "product_details": {
+    "product_dimensions": "1.6 x 5.5 x 0.67 inches; 0.08 ounces",
+    "item_model_number": "TVAOH Dog Muzzle-S",
+    "date_first_available": "May 11, 2025",
+    "manufacturer": "TVIAOH",
+    "asin": "B0F898P647",
+    "best_sellers_rank": [
+      {
+        "text": "#138,237 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 138237,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#513 in Dog Muzzles",
+        "extracted_rank": 513,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/2975344011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Muzzles"
+      }
+    ],
+    "customer_reviews": "4.7 out of 5 stars",
+    "rating": 4.7,
+    "reviews": 34,
+    "brand_name": "TVIAOH",
+    "number_of_items": "1",
+    "manufacturer_part_number": "TVAOH Dog Muzzle-S",
+    "model_number": "TVAOH Dog Muzzle-S",
+    "included_components": "1pcs Dog Muzzle",
+    "unit_count": "1.0 Count",
+    "item_type_name": "Dog Muzzle",
+    "warranty_description": "If you have any questions, please contact the seller via the order number",
+    "breed_recommendation": "Small Breeds",
+    "target_species": "Dog",
+    "size": "S",
+    "color": "Black",
+    "material_type": "Nylon"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0FS1MMHL2",
+      "title": "Diketone Dog Muzzle for Large Dogs Basket Soft Adjustable Muzzle, Dogs can Pant and Drink to Prevent Biting, Chewing and Barking (Black, L-6)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JNKODNvfuRD9Lnsdxy15NAsAAAGeurwskAEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICCeRpkt/clv1c_ek-wxQfWLbbSDRHUVp4p3gLJ7b0aFJo0c9u0Jr_iXkqL5PLC98FNzWrF7w1-T_uQJv4YAsJLvd2LLAybDGXEsy9DzGO05OJFNjk5P6lZnisHSMFz-3iGzjrr4K005_U9UinagNHeG8OijWprqk2-GzIzgNyRsjWqkwq2zTynlPJfibu9yoT7mviQagTfYGKsj3Xxrj5qXALD2NaJjWzgIibePPf_p-ykZEqH-S4DJVMi60foduBvej4Gtvb5G9qFgfPmzGRXjeejURyjrZ3EEiudi8Vzt87O4UlpQ2NcAnydctQLFria3X31P6hgvhX82ZKkjDx7d_F5e45c4P025xuts9QL3NzSFio1-eUmAN29qbBm2DJi88dcNMY3kDgMPz6RBOnVxdNcJcqajzcoHM8FcmDIGdPtijN6Ipx12tezn-zbXiticrNGAOtzoWXtC94s5NS-uYUG8lRJXEG-6EWxjVVE0lFZdlgXtcGWtlkq9v2te-nCy6ilCXtMcTNPIqJnGQ8rnjcMTdhzvfTOFvcpvAqAEau8eHO4UL9aWdcaYMkplEfuZdyCrfCLsGUB7521BoIkK4hzxzGerbdtfpZOLBRzbH0ibuJe_gMd2_-A3SoV2a9GwHcKz_fEHVQJ8j1nem3c8kf87_FCK9bRyfGrgxsByidkGVLa_ULMSWw1KK3c3W_3jOuV7NmE8sOtIb_Z1MJKDeb-9qcQSzF26rhjN6Z7yFfC2K-MBJ_lWUKmoXOj7ARlJSQLWJi_cW6YNO6MnjKh7YgLxH4ifrjrguF9TxcYt1gKP22BunD05EWMjQLxm7sNLwnc8-OnTbozAeX_TyPfgSm2rNmM2ftGLjMUhErPLT2-zj_XcbiNZtb98n43Fhqj8d9oKN447hGhZfOr5xV42UE2Hkkzth1Niwng8vDLakPh-AHDrJuQBlrU9yZTdFVF-SIvkF2Jz8pgmOd1RVYnvgUbxJLLNBv-ov-AF9ct55PcPZ4jDIjo5a5R_7IVWYL8LOg_7xGNyqeSYtijcgYSaa59OTfUwuOR01iiLuueiFrBcrOc_E3Xugd8vW1iy9uulEwZTjaTbeXUAwCWp91pwnkpLifrzQHuvazYq6c-uHB8ZXkypDjk3Ig3uqJpORqdvDheJfz5peleeLa8e3F9Weh4dMxZGSzXPcnVl8NP7ULYviHolBm-AVrTkowlFbeQY4oe7PBiaVwi1wj0L_J7JN-6_J1WIq-y1D124LS9fyGKX-r1WCYXyVk6dBRO8wH5ZIByl0WazQ9LUMhR4Uxs6u2QPSw0rIGif096kxFvxjwSiN_szruVzdJSjodYhsyqMD1gprSNy52xE9FSOfoCw6rH2BN_usegfbFETC6v2J-jaDhVj6mitBg95Vnk1l4Vp8P_UuwoUaMDKlpVb4T_alK59qWrth6aU60nIRi0bJxBIpLGItH-bYkYlQiv0VbGNYrhsmxPytHZ0uM-4f8it5Ypn8uKK33K-0kbxbg-BwbYreAcwbtcLu5j_ZS0U_cyucD8SmGEzOSWH-d6yxYO5arCDOBSj1x9mJ5dO-BVZQ7dzgAHDw/https://www.amazon.com/dp/B0FS1MMHL2/?_encoding=UTF8&pd_rd_i=B0FS1MMHL2&pd_rd_i=B0FS1MMHL2&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=hsZpp&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=CHTQCK6HP3ZMG96WXCN0&pd_rd_wg=4bReK&pd_rd_r=afba0e52-bb42-4475-bd6f-b76c50cba0e1",
+      "link_clean": "https://www.amazon.com/dp/B0FS1MMHL2/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FS1MMHL2&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41eZph2AhDL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/b0cd37c7-0e78-4982-ac22-75b7e03d312c.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/b0cd37c7-0e78-4982-ac22-75b7e03d312c.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 3.6,
+      "reviews": 466,
+      "price": "$18.89",
+      "extracted_price": 18.89
+    },
+    {
+      "position": 2,
+      "asin": "B09JSH54ZT",
+      "title": "Mayerzon Dog Muzzle, Patented Mesh Muzzles for Small Medium Large Dogs, Soft Covered Mouth Guard with Adjustable Straps, Prevent Biting Chewing and Licking",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JNzx2RJrcjks5dAykRyPjnIAAAGeurwskQEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICBPTET4/clv1c_ek-IBfHXbcbWXixXZFvu-lwLsHSxs2DpR3iGhHanjk0b40Ua_Dbn88oYLl04bGgE0_50fyVxOZiERAMQxGpy_HXdTj_e7zBe7mMwSd6HUN1kD5NRLB66Hc375M8gzqezN-ipZOB_dlf7Zkd3CskxedbXMF2fkxHpm9j8L2Yriseej0uNKYU-tljnK5Z05HvwDUCO4VZXE6_4nsw9FtBSVqK7PnwUfMx7BJM-fSza2rGz0QGQMzT75fgBlwBOBnGx3j0cwvX_Dr4l1bihKtUMsy1H5KWzz2hN7HF9Eds5qnMuhOkS8QJccuxnvtzXE7dNJ_ovBxtz7xXrmLSmqF_O15ZYyXyQV_nGJUzGoxY4IQH2SvDcd7baqixD-QMRPf5ZlIPrJgxYGkpR695JOH6zNt9Q6SJ5Yig4YNK1uYEwDq2PrO4lX8wDMhsSIyZyTD53n32mLleRRHuGmhHMI96XaI-CrU1u-N4ipXVbB7-gRWpxP_8yNnsfVosQNHQgcCsdM5mWDZhOroEyvdl4b_z0xzfDUxe-NufVv5V3xK-m1AKtn6H-03miW4gv2OinNi3yVegijhbwgHEyxvfNDssXM04eczbNRPCuZuaYVSFA0AXZbTWn-E1wxwx6YDWsdY0Mo326ucKOiwLmOLUVjBOzvWg4IQpEAPgXFhcoCdBYOavS6XCvmlivGgPJ1HiNu1vT8Uo2mJBh9H5jyYbJzIT93_tIchaESauGzNi_4W1L6K4eQ1hGlfuipRPtPVRs95F4o9aTN7g1e9c75zsre3q1bxl6gyDrZdp-Q_VEGc3-1wpG4WfSXhHGRCObF68PjYNRxOsh3Lf5fau7GuJTuBxXxYQYvfFEpYayVAwDL3G0mV4sXpO9kwp0v_Py507U-hUqUfhg_iXYu9cwiry7MyKCbWXArqvNLzkym2JpIo6DAqB-62nunJzidfJCl1ItpCQPOxNjGJluw8BDkPnHxmyqbI780qlP6Gj6HZihO9S0fQQ_SYYdH0PHR422b2HwD-q8H2z6puyn3eg_b3_e6U8O-HepN9bJeNTo8HrsnKGygysUdDsiRtRIQHJZI2m4O7ryUHY-DxLYZRDk6E2wuZEXs_G_9IOZRZ3E9HnEWtn1ckL_wP6gUNr9UaSi-Yyld97mo3nLRK2g0U53xrefMBwo_rhtiyjhTTVUKb5Qe4_FhYeit1L71i5sy2qPGZCCxbK0iWbV8jHXDAbhSKvtQT6ton4KHGrYo16Fid2tHHJFRrjiVcc0a8Av2TPd4qMBx4EBwUdK3nZdzudNqNULha4FYPCeLItylWMSwVgSV2XBEtbWVQvGB1naZZtEm5VXTyXGOmEI7b7nf1OBSlhWB6CP3NcTdFXH7eg3kM6fZh_kHH1OzPSJ8Gi2GhTpWkHraSpcb4L1RyFllZQo6L0c9Fryy01I1Uv07DJ3d1iYVf_qic8zcIR7qnx5_PCS8mvrhSxEJrUdnrVpFe8XHLV_cRdXG0xSipD3IsT5u9qNLY0lm1pyt75KnGpl/https://www.amazon.com/dp/B09JSH54ZT/?_encoding=UTF8&pd_rd_i=B09JSH54ZT&pd_rd_i=B09JSH54ZT&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=hsZpp&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=CHTQCK6HP3ZMG96WXCN0&pd_rd_wg=4bReK&pd_rd_r=afba0e52-bb42-4475-bd6f-b76c50cba0e1",
+      "link_clean": "https://www.amazon.com/dp/B09JSH54ZT/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09JSH54ZT&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51JWEptLqkL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/799039f6-8b1f-49a3-bd3b-a036c2c8c2d2.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/799039f6-8b1f-49a3-bd3b-a036c2c8c2d2.mp4/r/THUMBNAIL_1080P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 3.9,
+      "reviews": 5916,
+      "price": "$11.99",
+      "extracted_price": 11.99
+    },
+    {
+      "position": 3,
+      "asin": "B0FDBK9JXX",
+      "title": "KnJuLee Dog Muzzle, Silicone Dog Muzzle, Durable, Breathable, Anti Bite, Anti Barking, Allow for Drinking Water, Adjustable Strap, Suitable for Small to Large Dogs (Coffee, L)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JMeuLuHD4H7Cj7N7l2Dixy4AAAGeurwskgEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICCqHaWc/clv1c_ek-wBXf2VcbW3jI2m_XuA8GU-lWGkJmG38khwf1or-1xCFjYZIeo2MoejUUgLGgEkzzPmk_Z7P4KjT0wCLBiOomwVa5EVG95MYr8rVr2HsQVzVO1KXXORVz54-xOqoizP5KxaGG_dtf7ZpP0K8G1e9Df2J2dkdnvl9jcb6erisSdeFqFBibviuqA5ivUinde88C570ptJ18YtNMtd2uZeOjInDqMdRYKV98bKt926VLdfNA70Mnwo_D67IRV5-kBqzkJmsP-TsXl7Mi1o_xTcQmEMS1z0TxSRRdspluaGmWwmGFrvWPkZNbbBU2SzjCBh5_IqRuCVnMExoFZaqjGUbA7pcPdNH0HZVSmE8PlPBeNFhpI1CuMarRBLnVnH0Nf0fOExZGYIRz1gvYoYj3ZXj4AcfPiKnN-4uLYnq7VBGKD5Mogoszad7NsWL_hYJ4pPWSWEapSmi2fQcMjXT6tSKGLDteMBzhrLXpsm3ORDpYP8vW2WBXzwz8bNakeHFgYr4pLQzUFGHFySoM8viMzIsyydu-h244dq5yZuDhpd4AAapNpCTGz8zTCCTvP-Qq8eSlEgqw-8OLNlf82ut4Jwc3BuNGJFjV4Tz99H4-qkYFXgxHaZpAUak3XtAKBZXOXiqhmkGFT9KQH97WT_q2dcaqh7MzqDLeeoyyNBCrT4FvriAO88caz-wgN9VDj28F3x0gWf3zcn_oqE5LUnR12ZJLGl9f43emTUEvoBLgn9khCYk5sOmNrKaylNeg1Az51u8ov2rsZQqLQE1S7uebjnn9m7Wz8ZqJTtzP57mmEwB8pQCoydM2wZj3Zlp69gZtKUMzPEA1YW7PsvfMdImswFT9fOookzGkWOuPP1TrYRlgIQd3Ms2zAkyIHKF7ZdkGmmLNiMbJgRlmzqoa9LhWuldFastxhW5_JvRt5LjsPT5QI6iWHdtBeArWAaT7-VCRePxdv9suk8XvMfiOI5qzbSQt8AIEqZfEVaN7jFidSH9q81CLUKb3rTjCRCv2BhvMKWVWJwwfo6WRPRl4kvIwT3-z5drHeXtix-cN4bCU-5_pud19XjpyVsl7LB1cVcc0hsA99KffeNquE5LskPiyQriiGam8BuCzsiMvoBCHCT5uj2RCPtx8PZdgxEB5W2NqJ2NyIIUHnJ-AUg1iSxsO0Iyq6RQ170D30O-VNwybLKZhOBrZn2tVb-nlCUPTdBr5OrAtdLZHfPbF_XzRwrfH53hp5gd_9BFI0YmbTxTFWgkDoVxwhGoeZ2QHQTBIxYHiF2-1Tw3KxD9E_cAidzCRX7F4T6C4VcDH3cucK0UBDumLZNZfMYieip8ukHTmULzCMlwTvlR4tvrxhhUOFxWRQeq61BCQBf5NiT3DjQZrVvzHOILwcJjr8JWuXHSBg2BgAbrAUkYqTC7-BDfYVZcZ1TZnn8boB1yCBrrBUUzsEuTtgxs0Pk-sP6-A5MVnYU3Mnv6gkWIXotPabPaf3pRnWynkjZe9FhGOFmgmmZQbsZhLqW-I4X2vjjvNZKMxoQ8EUtA/https://www.amazon.com/dp/B0FDBK9JXX/?_encoding=UTF8&pd_rd_i=B0FDBK9JXX&pd_rd_i=B0FDBK9JXX&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=hsZpp&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=CHTQCK6HP3ZMG96WXCN0&pd_rd_wg=4bReK&pd_rd_r=afba0e52-bb42-4475-bd6f-b76c50cba0e1",
+      "link_clean": "https://www.amazon.com/dp/B0FDBK9JXX/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FDBK9JXX&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41I3mkX1neL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/171a5014-c8e1-4121-8008-dfd0245fd86d.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/171a5014-c8e1-4121-8008-dfd0245fd86d.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 3,
+      "reviews": 79,
+      "price": "$16.99",
+      "extracted_price": 16.99
+    },
+    {
+      "position": 4,
+      "asin": "B0GRQVDPT7",
+      "title": "Breathable Basket Dog Muzzle for Extra Large Dogs, Adjustable Reflective Anti-Biting Barking Chewing Muzzle, Soft Durable Pet Muzzle Allows Drinking Panting for 55-88 lbs Extra Large Breed Dogs",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JLBhqsw00Ufn_E7iNrsh6rUAAAGeurwslAEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICCyNYZE/clv1c_ek-YBXfWbcbS3lYJGhWWgc2FRDbCfOuH3yejM3enDgYQplK-FT-Pu-V1a-iNNdUdCSO0UETyD4Y8_Q4DaBJWQRnuywp9Q2vd6ltNp_zk120c3wSuazX81iBw0vlzrWhFLZxoqkUIkxWKVj87KqaZPgGbpcv0ttXrAM3p83tKnYdcGOqz-vmxgcPWwSs-qEvnGffDljlPHDuEvYQuF0pFkKMpt9-7iOJUnYAN2SiLDMqcl_DdBpvZ3-FkglE5IUwGltAR2mVS2DqV0j5YlDjyjGdzH4qe3xAZDOueewLQRM63NtSRcJCXN5atRrA66bdkYsnnnWMqf7FxR4ranf2ymgurTuTH5wsUV7z7-G2FwOBAo3UjvVLqQzdePva4OMbatkzYpuXFVOIJuXRsrAHOxtNwHCH1iNb1emIUqJ_3ir0sKuTLQip6mUoHwTP9Rp4BxbobpFI8TagIAZnWUtz5TT-j3m1SbzzY6lZ7VtrkHWKaZTYVAPF7Z-9tW08_Fvy0UE9983jblXY-wLjGJDz9nJHN9DspV5rAYLUbgUl9BTKQPBHTbkOPMEe5ragBoNjS-LfVZblGwy_J_L9zvDb8DlJ39aQSDnLkdYC0wgNe3U2EsJB_9P3SOnQRFUKwnV9hfNIhl_usVHhcqRiQ0SQ1uDv9o6YU2PjzHSfO6P7Hzmm3dUDcymMNq0HQ61MAhv0wNjpZ-zpZEbN_9IHcAjmeJsKBhIvzzUyYkQeAOEE2KUuR9G3wyZPOhElkYnIaDkrqL55Qme77T_vebVjN8wJvJCwg9yRkpz35wkVpUZ92U1rnLPp37Gsn1eRmcHMjFbki-3MsikzcgCUQv1LPsRvWyICtz7bCmkAGp3A15EEQZNdA-K1irEuskLz48GZYElqva549dXLmQnVykXR2-PDQnZi4ELAb_xf2Qi5ywX3YxEBFsBYnDzZoRnoBwZ681gGIWrsZtNMJ2LfcSDGdjinQxyr-wLkVu-TnYN-tKQS7WTjBGoUkNeWY5Fh1mnyfQ62R2v4nlRDyLT7tVPVBrUSSmhhP3Mwako70nJ-6M97yAIL9v8WcheMgWBiHPEsOR57IOw1M2JMu-NMVx7AVF3p51Fmv1F-uMM2ZjMu9OWwJtNNs-Disa9U7JP7WUTe8ExTgIEVuxfKJcJ6wBLbE5mN6o65069Ri1_yw3cR7UdcuxmOXajX41j3dS7adMqWuq5IO1CeUDuuNHgPsDBjgQQ4WqNDDfxnq_kZiPtCc6HfEI4yJMcqJh9F79ImxDYgfFLwSceOn9A1rWv_CQLKVAoDOazDtwxVXFgDuDiJ1-z3oyxKB8XeOqPJ2O3a9YWPfrkZZtrE7_Xv9BOCqQ5qnl579krUaQ25or5bhlrL9ZNX50xzVOjBpsGUu-wA7slFsMBXi8o3CD6JdNAEPwMA9MIb6WJXgai1fQ0jUzHNPWIcxwi8DlxbU1EqFW4ytIH4qpQxxXZhzIc2-R6b9jcQcEC7Y9rP4IVsgwVq3x-u_1Ey2fK8vXUZVZe2IQOxDghmiVrJ5PMBW8WJMK-HD/https://www.amazon.com/dp/B0GRQVDPT7/?_encoding=UTF8&pd_rd_i=B0GRQVDPT7&pd_rd_i=B0GRQVDPT7&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=hsZpp&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=CHTQCK6HP3ZMG96WXCN0&pd_rd_wg=4bReK&pd_rd_r=afba0e52-bb42-4475-bd6f-b76c50cba0e1",
+      "link_clean": "https://www.amazon.com/dp/B0GRQVDPT7/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GRQVDPT7&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41BH69eKxJL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/3a3f5f21-6108-4eb9-8a66-7c5403aaffd8.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/3a3f5f21-6108-4eb9-8a66-7c5403aaffd8.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.7,
+      "reviews": 3,
+      "price": "$14.99",
+      "extracted_price": 14.99
+    },
+    {
+      "position": 5,
+      "asin": "B0G34JTP4M",
+      "title": "PAWsay 2 Pack Dog Muzzle, Soft Dog Muzzle for Large Sized Dogs Anti Biting Barking Chewing Grooming, Air Mesh Breathable Dogs Mouth Guard Drinkable Adjustable Pet Muzzles, Red L",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JGWBX196wCsHTBQWPtrLsAgAAAGeurwslQEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICDQUroR/clv1c_ek-YBQfWFcbSDn0nItMgDzpZHJmQrgDMSIfZn1Bj2wIhkhgMIA3LQNb53aaUEMtOqoqvTMUcrvEve0HZKehpL7pf9hv9qv95W2nvDz-iLNwEyHeJHlw4vbl85uoEFtPyd1eTGSBTDgnOC21qrs--hKHvcF2ZjF2KEqCyzjihtPLfibt9sl2M0Oy2oIpKBLcETUEJdTlRU_d4dSdb9kvKP_7-n10NLmS325JqbX_rXtHZ-Zhy0taiDCzTQ8JFe9qFhwLWTGdPzeejYRCk0YXEkiudBSZzt47e6U1Vs2Nc4lydktQXFrya3U1mtsSOSz10HbAjsSHb9uv62R_aUfWvVhmK0GG0qIBQRTIi4HUnvol9t7WglbyM1DaMS_TAJUZtIUlU3NrdgQ7qNYeTjAHM_y1zjCZ2kFaIYmKVFd5Gcd6xuTWawWQAjVGBgUyvmFSR71aA5LkksduiylxDcAjfRU2g7Tkv-U_7yJNtfYdIcPLrwzs8DboKBu0O11QggR4dNJmaDiBBLAAyNZi47uxyp2LsjmFFjOUVsY3z21a8kwCMvo7-E8fOUIysmIzvymhnpfQmDyb8QsHR5vN1qKFdA4dz7UYoHgPLPcUMWDTTeOXeCAt-RLnn6KZgdAqgdL1kJJOblPLpDCNpnTtazSdBEPPBd8EV4S0VmAV9twyPOijcLVCvmXK9jw1Mgesl85ZLHfR07uiIAsxXuCWKEDGjE_z7y-X0N9saGV9qHHyFu81PnBRD-GZoyPUQcCbKHPaGdV9inMwSN7bhfTncH6rmhHR5GFBu45SMID8WOuV-MjZv_go2edw3VjTntlJlznkL411H6vwN7NRIKeFJcZXSjcVy7MC_AmNw7rOS_XCr2rveRElxC_G-dXevv5vMoD5bs7ELAlOfyI90SEoLfkN1pA3WHbll9noGywddYe0hvO8T-eyF82Dhj2b0AimDxLbfPveyiQALm_qi6YZgjEZfzrKyvdjBM65XJMs4cuekacsrzdwvcXjI0J34KDHHFHZZOc1VLtwKq_-WFV2Dy1gTbb7RYB0E5PtQIDQvinpAhcjiaWbJ_-_ccJIQY9ia115zE7uiItuUkY75615SFrpRslqngnH-y879oQF1dY0ebe6zrRe9ZVidNE7dnUBoFWpHyYqUJdQBTbwFu9yDQdlhe4emiNBxZVOeQvEKpeaOBip246XvKIdNbG_a0ZTBuTaf0w2WIouyqpayDnGEQufhsU0-iwW89XyomCHNFQ8dyJ5ewW9Op6_FQRuKitEYXcNLYb_JdQ4oazqFLV6SuYb8oLJ6sxC8XCjRcG_JXvZwrU9mdsT_s5b2zYDWH_h11Hz7DQhDnEKy8mEtwsW0ivWnQVSYi01MDMvKKgXvY7DqELClnugC68Ij3w9Az9--berYJDre6spUex7HB5vVtAZZqQlFR6MBdjtR2xQObcaO32MYqr_YK1rUDlgKksvKcP3wocXE6QuYeHOO5ohhawgDfP8TvQSDloW2XntXMwfQ__6RUYankWXQp8sBF_fKyZ93ymE83xpHdcA/https://www.amazon.com/dp/B0G34JTP4M/?_encoding=UTF8&pd_rd_i=B0G34JTP4M&pd_rd_i=B0G34JTP4M&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=hsZpp&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=CHTQCK6HP3ZMG96WXCN0&pd_rd_wg=4bReK&pd_rd_r=afba0e52-bb42-4475-bd6f-b76c50cba0e1",
+      "link_clean": "https://www.amazon.com/dp/B0G34JTP4M/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G34JTP4M&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41mzVoV+liL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/f2ebff3a-52e5-4ed7-887f-e1c0cf25bbaf.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/f2ebff3a-52e5-4ed7-887f-e1c0cf25bbaf.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 3.8,
+      "reviews": 16,
+      "price": "$10.99",
+      "extracted_price": 10.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "images": [
+        "https://m.media-amazon.com/images/I/81ggNtKCG2L.jpg",
+        "https://m.media-amazon.com/images/I/81zWOii9fkL.jpg",
+        "https://m.media-amazon.com/images/I/8159Q5lYgXL.jpg",
+        "https://m.media-amazon.com/images/I/71LGNzt17aL.jpg",
+        "https://m.media-amazon.com/images/I/71+NFIHOLrL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 75,
+        "4 star": 25,
+        "3 star": 0,
+        "2 star": 0,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Works great!",
+        "text": "Works great! My new lab puppy actually settles right down with it on. Soft and comfortable for her.",
+        "rating": 5,
+        "date": "August 29, 2025",
+        "author": "Samantha",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEOXWY4GGPZPFSXDUP2YWZPADSWA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/6b2ba53c-888f-4dbc-b356-04697ab614a6._CR0%2C0%2C500%2C500_SX460_SX48_.jpeg",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true
+      },
+      {
+        "position": 2,
+        "title": "Good alternative",
+        "text": "I got this for my 100lb German Shepard for when he goes to the vet. The quality is very good however this closure around the muzzle is velcro which unfortunately my dog was able to open. It is a nice concept for smaller dogs and definitely a lot easier to put on and you can adjust the tightness to your comfort level. Just be wary for a bigger dog with a stronger jaw as they may be able to open it as well.",
+        "rating": 4,
+        "date": "January 13, 2025",
+        "author": "Books with Jen B",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGZCJBWORT753JWBBP33J2VSVASQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/4a0ae8f9-8cf3-4cc6-afe9-162b307c8e4f._CR0%2C0%2C490%2C490_SX460_SX48_.jpg",
+        "helpful_votes": "5 people found this helpful"
+      },
+      {
+        "position": 3,
+        "title": "Muzzle that works!",
+        "text": "Fits well adjustable",
+        "rating": 5,
+        "date": "January 28, 2026",
+        "author": "Janice Oliver",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHISSB3WW7D7MFKF2AXZW4G7HZBQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "product": {
+          "pattern_name": "New Blue",
+          "size": "XL Size"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Works for us",
+        "text": "I only need this every once in a while and my dog is medium size but it fits rather loose than snug on him. Easy to snap on and off. Breathable. Thank you",
+        "rating": 5,
+        "date": "September 2, 2025",
+        "author": "Rotkehlchen M",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AG5RHHJIKIZB55EUN7ABEHQ6RGOQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png"
+      },
+      {
+        "position": 5,
+        "title": "Works as Promised, but Takes Practice to Put On",
+        "text": "This muzzle does what it claims! It prevents biting and stays secure, even on our dog, who is very squirmy. It takes some effort to figure out how to put it on properly, which can be frustrating the first few times you try it. Once it's on, our dog could still pant and drink. It seems to be made from a durable material and I hope it will last a long while. Our dog tries to eat anything and everything while he's on walks, so I am glad we finally have a way to keep him from getting to stuff on the ground. You can only do so much monitoring visually!(Side note: My biggest issue is actually with the product page—it's filled with unsettling images of aggressive dogs and bite wounds, which feels a little excessive and off-putting. Overall, it’s a functional product, but the marketing could use a serious tone-down).",
+        "rating": 5,
+        "date": "May 28, 2025",
+        "author": "Ian",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AG5DHID6TFHMPBHSR2BXH2M7COSQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/6a0ed04a-d29f-4cd6-8c38-b3542e23544b._CR0%2C0%2C500%2C500_SX460_SX48_.jpg",
+        "helpful_votes": "One person found this helpful"
+      },
+      {
+        "position": 6,
+        "title": "Ok for quick uses - Large Size",
+        "text": "I ordered this in a medium and large size because my dog is in between sizes and I was concerned the large size would be too wide for his nose. Since both items are the same except for sizing, my review of the common features are the same but I'll note the differences between the two sizes.Both are stitched well, are easy to use, have a double velcro-like closure for an extra assurance to keep your dog secure, and have adjustable straps with a durable clip closure. However, I question if it would \"loosen up\" if worn for a longer period (more than an hour or so). If you're using this for short-term use like nail trimming or in my case, administering ear medication, then I think this type of muzzle is fine.The large size is about 10.5 inches long and 2.75 inches at the widest part. Although both fit, I think the large size is a better fit and more comfortable for my dog and feels a little more secure. He was hard to measure since it was his face and he woudn't sit still, but I agree with the instruction to size down for length but the circumference seems to accomodate a little larger.",
+        "rating": 4,
+        "date": "September 18, 2024",
+        "author": "Lissa",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFB2S5QAER3XSUQ6GMQPEUZB2HZA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/81ggNtKCG2L.jpg",
+          "https://m.media-amazon.com/images/I/8159Q5lYgXL.jpg",
+          "https://m.media-amazon.com/images/I/81zWOii9fkL.jpg"
+        ],
+        "helpful_votes": "3 people found this helpful"
+      },
+      {
+        "position": 7,
+        "title": "Better reaction than leather muzzle used by vet",
+        "text": "Works nicely for my “Chigi” (Chihuahua/Corgi). 8 years old but new to us - terrific friendly little dog but tends to growl and act a little aggressive with vets and groomers. He didn’t mind the feel of this muzzle like he did with the leather muzzle the vet used at first. Recommended.",
+        "rating": 5,
+        "date": "June 23, 2025",
+        "author": "Kenneth Clifford",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AH73YLU6K247MHMXIHVLFBFVR3VQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png"
+      },
+      {
+        "position": 8,
+        "title": "Good muzzle",
+        "text": "I recently purchased the Dog Muzzle (Dark Gray, M) for my pup, and I can confidently say it has been a fantastic investment! This muzzle is not only effective in stopping unwanted biting, barking, and chewing, but it also prioritizes my dog's comfort, which is so important to me.The first thing I noticed was the soft material and breathable design. My dog seems comfortable wearing it, and I appreciate that it allows her to pant and drink without any restrictions. The adjustable strap is a game-changer—it ensures a snug fit without being too tight, so I can trust that it will stay in place while still being gentle on her snout.I also love the reflective feature, which adds an extra layer of safety during our evening walks. It gives me peace of mind knowing that my dog is visible to others, especially in low-light conditions.Grooming sessions have become so much easier since using this muzzle. It keeps her calm and prevents any nipping or biting when she's feeling a bit anxious. Plus, it’s easy to clean, which is a big plus for me!Overall, this dog muzzle has exceeded my expectations in both quality and functionality. I highly recommend it for anyone looking for a reliable, comfortable muzzle for their furry friend. Five stars all the way!",
+        "rating": 5,
+        "date": "February 6, 2025",
+        "author": "Tory Miller",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFXD6Q2O2AXKBHGWS575NV5BWXGA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "2 people found this helpful"
+      }
+    ]
+  }
+}

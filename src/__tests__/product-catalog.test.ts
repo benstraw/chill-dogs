@@ -2,12 +2,51 @@ import { describe, expect, it } from 'vitest';
 
 import { calmingProducts } from '../data/calming-products';
 import { coolingProducts } from '../data/cooling-products';
+import { emergencyProducts } from '../data/emergency-products';
 import { productCatalogItems } from '../data/product-catalog';
 import { buildProductPageMap } from '../data/product-page-map';
 import { relaxationProducts } from '../data/relaxation-products';
 import { accessoryProducts, trackerProducts } from '../data/tracking-products';
 
 describe('admin product catalog data', () => {
+  it('keeps snake-bite kit product ASINs unique and current', () => {
+    const emergencyAsins = emergencyProducts.map((product) => product.asin).filter(Boolean);
+    const addedAsins = [
+      'B0GFMQT8YJ',
+      'B0GH76XGKZ',
+      'B0GRV66Y6X',
+      'B0GJD28NRT',
+      'B07GVSG62X',
+      'B0F6YL3LT1',
+      'B0FD8KWS9L',
+      'B07WRPCLYR',
+      'B097PLDD92',
+      'B09FKVQQVH',
+      'B08ZFVZPHM',
+      'B0B1W6VLKW',
+      'B0B1W5R11Y',
+      'B0F2CBR1T1',
+      'B0CLV3YJDX',
+      'B0C3CDQGJQ',
+      'B0CRWLL6C1',
+      'B0FY6TVDHQ',
+      'B0GHHDV7Y9',
+      'B0GXF114LP',
+      'B0GTR1575S',
+      'B0F1ZFMVXG',
+      'B0DCQDXSS5',
+      'B077Z3LNX9',
+      'B00TI8GSE2',
+      'B0BWSQWXPC',
+      'B0G4W14R1Y',
+    ];
+
+    expect(new Set(emergencyAsins).size).toBe(emergencyAsins.length);
+    expect(emergencyAsins).toEqual(expect.arrayContaining(addedAsins));
+    expect(emergencyAsins).not.toEqual(expect.arrayContaining(['B00074W3RW', 'B08TW84CR1', 'B08D66HCXW']));
+    expect(emergencyProducts.filter((product) => product.category === 'stretcher')).toHaveLength(4);
+  });
+
   it('includes every product from every product data file', () => {
     const sourceProducts = [
       ...coolingProducts,
@@ -15,6 +54,7 @@ describe('admin product catalog data', () => {
       ...relaxationProducts,
       ...trackerProducts,
       ...accessoryProducts,
+      ...emergencyProducts,
     ];
     const catalogIds = productCatalogItems.map((product) => product.id);
 
@@ -63,6 +103,11 @@ describe('admin product catalog data', () => {
     expect(pageMap['stunt-puppy-fi-collar']).toEqual(
       expect.arrayContaining([
         expect.objectContaining({ href: '/gear/fi-dog-collar-review/' }),
+      ])
+    );
+    expect(pageMap['fido-pro-airlift-rescue-sling']).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ href: '/gear/dog-snake-bite-emergency-kit/' }),
       ])
     );
   });

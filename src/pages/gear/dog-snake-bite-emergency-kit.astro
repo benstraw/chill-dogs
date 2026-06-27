@@ -1,0 +1,484 @@
+---
+import { ROUTES } from '@data/routes';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/modules/Hero.astro';
+import Toc from '@components/modules/Toc.astro';
+import FAQ from '@components/modules/FAQ.astro';
+import Disclosure from '@components/modules/Disclosure.astro';
+import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
+import JsonLd from '@components/JsonLd.astro';
+import MerchantAffiliateLink from '@components/MerchantAffiliateLink.astro';
+import ProductBulletList from '@components/modules/primitives/ProductBulletList.astro';
+import {
+  emergencyCategoryMeta,
+  emergencyProducts,
+  getEmergencyProductsByCategory,
+  type EmergencyProductCategory,
+} from '@data/emergency-products';
+import { merchants } from '@data/products/merchants';
+import { getOffers } from '@data/products/offers';
+
+const pageSlug = 'dog-snake-bite-emergency-kit';
+
+const categories: EmergencyProductCategory[] = ['carry', 'stretcher', 'first-aid', 'muzzle', 'warmth-control', 'prevention'];
+
+const tocHeadings = [
+  { label: 'Safety Note', anchor: 'safety-note' },
+  { label: 'Six Jobs', anchor: 'six-jobs' },
+  { label: 'Carry Slings', anchor: 'carry' },
+  { label: 'Dog Stretchers', anchor: 'stretcher' },
+  { label: 'First Aid Kits', anchor: 'first-aid' },
+  { label: 'Muzzle Safety', anchor: 'muzzle' },
+  { label: 'Blankets and Leads', anchor: 'warmth-control' },
+  { label: 'Phone and Light', anchor: 'prevention' },
+  { label: 'Skip These', anchor: 'skip-these' },
+  { label: 'FAQ', anchor: 'faq' },
+];
+
+const faqs = [
+  {
+    question: 'What should be in a dog snake-bite emergency kit?',
+    answer:
+      'Pack a carry sling or rescue harness, dog first aid kit, slip lead, Mylar blanket, power bank, headlamp, and an emergency vet info card. The kit is for transport and readiness, not venom treatment.',
+  },
+  {
+    question: 'Can I treat a dog snakebite at home?',
+    answer:
+      'No. Treat any suspected snakebite as a veterinary emergency and contact a veterinarian or emergency animal hospital immediately. The kit helps you move, steady, warm, and protect your dog on the way to care.',
+  },
+  {
+    question: 'Should I use a venom extractor on my dog?',
+    answer:
+      'No. Suction and extractor devices are not recommended for snakebite first aid and can waste important time. Skip them and get to the vet.',
+  },
+  {
+    question: 'Should I let my dog walk after a snakebite?',
+    answer:
+      'Avoid it if you safely can. Movement can spread venom faster. If you cannot carry your dog, walk slowly.',
+  },
+  {
+    question: 'Should I muzzle my dog after a snakebite?',
+    answer:
+      'Only if it is safe and necessary to prevent a pain bite while you handle or carry your dog. Do not muzzle a dog that is struggling to breathe, vomiting, overheating, brachycephalic, or swelling around the face. Remove collars, harnesses, and muzzles if swelling or breathing problems appear.',
+  },
+];
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Snake-Bite Emergency Kit for Dogs Items',
+  description: 'Transport and vet-readiness gear for suspected dog snakebite emergencies.',
+  url: 'https://www.chill-dogs.com/gear/dog-snake-bite-emergency-kit/',
+  numberOfItems: emergencyProducts.length,
+  itemListElement: emergencyProducts.map((product, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: product.name,
+    url: `https://www.chill-dogs.com/gear/dog-snake-bite-emergency-kit/#${product.id}`,
+  })),
+};
+---
+
+<BaseLayout
+  title="Snake-Bite Emergency Kit for Dogs: What to Pack Before a Walk or Hike"
+  ogTitle="Snake-Bite Emergency Kit for Dogs on Walks and Hikes"
+  description="Build a practical dog snake-bite emergency kit for walks, hikes, and backyards: carry slings, first aid kits, and vet-ready supplies."
+>
+  <JsonLd slot="head" schema={itemListSchema} />
+
+  <Hero
+    title="Snake-Bite Emergency Kit for Dogs"
+    subtitle="The best snakebite emergency kit has nothing to do with venom removal. It is gear that helps you carry, control, and warm your dog as you get to a veterinarian as soon as possible."
+    disclaimer="As an Amazon Associate and a Chewy Affiliate, we earn from qualifying purchases."
+    primaryCta={{ label: 'Start With Carry Gear', href: '#carry' }}
+    secondaryCta={{ label: 'Read the Safety Guide', href: ROUTES.rattlesnakeSafetyForDogs }}
+    pageSlug={pageSlug}
+  />
+
+  <div class="converter-content">
+    <section class="safety-section" id="safety-note">
+      <div class="section-inner">
+        <span class="section-label">Read first</span>
+        <h2>A snakebite kit does not treat venom</h2>
+        <p>
+          A suspected rattlesnake bite is a veterinary emergency. Call 911 and your vet or the nearest emergency animal hospital immediately. Keep your dog quiet, calm, warm and still. If you must transport them, carry them if you are able to do so. If you cannot carry them, walk slowly to your car or to emergency responders. This will help slow the spread of venom through the bloodstream.
+        </p>
+        <p>
+          The products below are for restraint, transport, and warmth on the way to care.
+        </p>
+        <div class="do-dont-grid">
+          <div class="do-dont-card">
+            <h3>Do</h3>
+            <ul>
+              <li>Call ahead so the vet is ready</li>
+              <li>Keep your dog calm and still</li>
+              <li>Carry your dog if you can</li>
+              <li>Keep your dog warm and quiet</li>
+              <li>Use a muzzle only when it is safe and necessary.</li>
+            </ul>
+          </div>
+          <div class="do-dont-card">
+            <h3>Do Not</h3>
+            <ul>
+              <li>Cut the wound or suck out venom</li>
+              <li>Apply a tourniquet</li>
+              <li>Use ice as snakebite treatment</li>
+              <li>Give human pain medicine without veterinary approval</li>
+              <li>Delay in getting to the vet</li>
+            </ul>
+          </div>
+        </div>
+        <p class="source-line">
+          Medical recommendations are based on public guidance from VCA, CDC/NIOSH, ASPCA, and WSU Veterinary Teaching Hospital. For the full emergency and prevention guide, read <a href={ROUTES.rattlesnakeSafetyForDogs}>rattlesnake safety for dogs</a>.
+        </p>
+      </div>
+    </section>
+
+    <Toc headings={tocHeadings} pageSlug={pageSlug} />
+
+    <section class="jobs-section" id="six-jobs">
+      <div class="section-inner">
+        <h2>Items in your kit should allow you to:</h2>
+        <div class="job-grid">
+          <div class="job-card"><strong>Carry</strong><span>Move your dog without making them walk.</span></div>
+          <div class="job-card"><strong>Control</strong><span>Keep a scared dog secure around cars, trails, and doors.</span></div>
+          <div class="job-card"><strong>Restrain</strong><span>Reduce pain-biting risk by using a muzzle when it is safe to do so.</span></div>
+          <div class="job-card"><strong>Warm</strong><span>Keep your dog quiet and warm on the way to care.</span></div>
+          <div class="job-card"><strong>Call</strong><span>Keep phone power available to reach the emergency vet.</span></div>
+          <div class="job-card"><strong>Prepare</strong><span>Keep clean supplies and vet info ready.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <Disclosure />
+
+    {categories.map((category) => {
+      const meta = emergencyCategoryMeta[category];
+      const products = getEmergencyProductsByCategory(category);
+      return (
+        <section class={`product-section product-section--${category}`} id={category}>
+          <div class="section-inner">
+            <div class="section-header">
+              <span class="section-label">{meta.label}</span>
+              <h2>{meta.title}</h2>
+              <p>{meta.intro}</p>
+            </div>
+            {products.length > 0 && (
+              <div class="product-grid">
+                {products.map((product, productIndex) => (
+                  <article class="product-card" id={product.id}>
+                    {product.image && (
+                      <div class="product-image">
+                        <img src={product.image.src} alt={product.image.alt} loading="lazy" width="300" height="300" />
+                      </div>
+                    )}
+                    <div class="product-body">
+                      <p class="badge">{product.badge}</p>
+                      <h3>{product.name}</h3>
+                      <p class="use-case">{product.useCase}</p>
+                      <ProductBulletList bullets={product.bullets} />
+                      {product.howItHelps && <p class="how-it-helps"><strong>How it helps:</strong> {product.howItHelps}</p>}
+                      {product.sizingNote && <p class="note"><strong>Fit note:</strong> {product.sizingNote}</p>}
+                      {product.caution && <p class="note note--caution"><strong>Caution:</strong> {product.caution}</p>}
+                      {(product.pros?.length || product.cons?.length) && (
+                        <div class="pros-cons">
+                          {product.pros?.length ? (
+                            <div>
+                              <p class="mini-heading">Pros</p>
+                              <ul>{product.pros.map((item) => <li>{item}</li>)}</ul>
+                            </div>
+                          ) : null}
+                          {product.cons?.length ? (
+                            <div>
+                              <p class="mini-heading">Cons</p>
+                              <ul>{product.cons.map((item) => <li>{item}</li>)}</ul>
+                            </div>
+                          ) : null}
+                        </div>
+                      )}
+                      <div class="product-cta-wrap">
+                        {getOffers(product).map((offer, offerIndex) => (
+                          <MerchantAffiliateLink
+                            offer={offer}
+                            product={{ id: product.id, name: product.name, category: product.category }}
+                            class={`product-cta${offerIndex > 0 ? ' product-cta--secondary' : ''}`}
+                            label={offer.merchant === 'amazon' ? (product.ctaLabel ?? 'Check Price on Amazon') : merchants[offer.merchant].ctaCopy}
+                            pageType="converter"
+                            pageSlug={pageSlug}
+                            position={`${category}-${productIndex + 1}-${offerIndex + 1}`}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+      );
+    })}
+
+    <section class="skip-section" id="skip-these">
+      <div class="section-inner">
+        <span class="section-label">Skip these for snakebite</span>
+        <h2>What Not to Buy for Dog Snakebite Emergencies:</h2>
+        <div class="skip-list">
+          <div class="skip-item"><h3>Venom extractors and suction pumps</h3><p>They can waste time that should be spent getting to veterinary care.</p></div>
+          <div class="skip-item"><h3>Tourniquet kits</h3><p>They can worsen tissue damage.</p></div>
+          <div class="skip-item"><h3>Blades or scalpels</h3><p>Cutting a bite wound is dangerous.</p></div>
+          <div class="skip-item"><h3>Ice packs</h3><p>Icing can cause severe muscle and tissue damage, and may lead to shock.</p></div>
+          <div class="skip-item"><h3>Human pain medicine</h3><p>Never give aspirin, ibuprofen, naproxen, or acetaminophen unless a veterinarian specifically instructs you to do so.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <FAQ faqs={faqs} heading="Dog Snake-Bite Kit FAQ" />
+    </section>
+
+    <InternalLinkStrip
+      heading="More Trail and Emergency Safety Guides"
+      currentHref={ROUTES.dogSnakeBiteEmergencyKit}
+      limit={6}
+      fromPage={pageSlug}
+    />
+  </div>
+</BaseLayout>
+
+<style>
+  .converter-content {
+    padding-bottom: var(--space-2xl);
+  }
+
+  .section-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-lg);
+  }
+
+  .safety-section,
+  .jobs-section,
+  .skip-section,
+  .product-section {
+    padding: var(--space-2xl) 0;
+  }
+
+  .product-section:nth-of-type(even),
+  .jobs-section,
+  .skip-section {
+    background: var(--color-surface);
+  }
+
+  .section-label {
+    display: inline-block;
+    margin-bottom: var(--space-sm);
+    color: var(--color-accent);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+
+  h2 {
+    font-size: var(--text-2xl);
+    line-height: var(--leading-tight);
+    margin: 0 0 var(--space-md);
+  }
+
+  .section-header {
+    max-width: var(--max-width-prose);
+    margin-bottom: var(--space-xl);
+  }
+
+  .section-header p,
+  .safety-section p,
+  .skip-item p {
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+  }
+
+  .do-dont-grid,
+  .job-grid,
+  .job-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .do-dont-card,
+  .job-card,
+  .skip-item {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    padding: var(--space-lg);
+  }
+
+  .do-dont-card h3,
+  .skip-item h3 {
+    margin: 0 0 var(--space-sm);
+  }
+
+  .do-dont-card ul,
+  .pros-cons ul {
+    padding-left: 1.1rem;
+  }
+
+  .do-dont-card li,
+  .pros-cons li {
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+  }
+
+  .source-line {
+    max-width: var(--max-width-prose);
+    margin-top: var(--space-lg);
+  }
+
+  .source-line a {
+    color: var(--color-accent);
+    font-weight: var(--weight-semibold);
+  }
+
+  .job-card {
+    display: grid;
+    gap: var(--space-xs);
+  }
+
+  .job-card strong {
+    color: var(--color-text);
+    font-size: var(--text-lg);
+  }
+
+  .job-card span {
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-xl);
+  }
+
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    padding: var(--space-lg);
+  }
+
+  .product-image {
+    min-height: 180px;
+    border-radius: var(--radius-sm);
+    background: #fff;
+    border: 1px solid var(--color-border);
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    padding: var(--space-md);
+  }
+
+  .product-image img {
+    max-width: 180px;
+    max-height: 180px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  .badge {
+    color: var(--color-accent);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-bold);
+    margin: 0 0 var(--space-xs);
+    text-transform: uppercase;
+  }
+
+  .product-card h3 {
+    font-size: var(--text-xl);
+    margin: 0 0 var(--space-sm);
+  }
+
+  .use-case,
+  .how-it-helps,
+  .note {
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+  }
+
+  .note {
+    border-left: 3px solid var(--color-border);
+    padding-left: var(--space-md);
+  }
+
+  .note--caution {
+    border-left-color: var(--color-accent);
+  }
+
+  .pros-cons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+
+  .mini-heading {
+    color: var(--color-text);
+    font-weight: var(--weight-semibold);
+    margin: 0 0 var(--space-xs);
+  }
+
+  .product-cta-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-top: var(--space-lg);
+  }
+
+  .product-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    border-radius: var(--radius-sm);
+    background: var(--color-accent);
+    color: #fff;
+    font-weight: var(--weight-semibold);
+    padding: var(--space-sm) var(--space-lg);
+    text-decoration: none;
+  }
+
+  .product-cta:hover {
+    color: #fff;
+    filter: brightness(0.95);
+  }
+
+  .skip-list {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: var(--space-md);
+  }
+
+  @media (max-width: 980px) {
+    .product-grid,
+    .job-grid,
+    .skip-list {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .do-dont-grid,
+    .pros-cons {
+      grid-template-columns: 1fr;
+    }
+
+    .product-image {
+      min-height: 160px;
+    }
+  }
+</style>

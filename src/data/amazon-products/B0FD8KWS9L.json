@@ -1,0 +1,356 @@
+{
+  "search_metadata": {
+    "id": "6a2e4c582ddc437cccff6d78",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/gFPbA0AabQfM4CEyiLgwxw/6a2e4c582ddc437cccff6d78.json",
+    "created_at": "2026-06-14 06:38:16 UTC",
+    "processed_at": "2026-06-14 06:38:16 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0FD8KWS9L/?",
+    "raw_html_file": "https://serpapi.com/searches/gFPbA0AabQfM4CEyiLgwxw/6a2e4c582ddc437cccff6d78.html",
+    "total_time_taken": 4.56
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0FD8KWS9L",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0FD8KWS9L",
+    "title": "Pet Stretcher for Dogs – Emergency Animal Carrier, 300lb Weight Limit, 44”x28” Size, with 8 Safety Straps for Easy Transport（Black）",
+    "link": "https://www.amazon.com/Pet-Stretcher-Dogs-Emergency-Transport/dp/B0FD8KWS9L/",
+    "link_clean": "https://www.amazon.com/dp/B0FD8KWS9L/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FD8KWS9L&device=desktop&engine=amazon_product",
+    "variants": [
+      {
+        "title": "Color",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0FD8KWS9L",
+            "name": "Black",
+            "image": "https://m.media-amazon.com/images/I/310t4CR4-XL._SS64_.jpg",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FD8KWS9L&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0FD8K8NTX",
+            "name": "Blue",
+            "image": "https://m.media-amazon.com/images/I/31DsqcfoS4L._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FD8K8NTX&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0FD8J3S47",
+            "name": "Orange",
+            "image": "https://m.media-amazon.com/images/I/31LdSN+YDgL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FD8J3S47&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the BOTUWASE Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/61Piwka25aL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/61Piwka25aL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/717KH3gDE+L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71YY8kRJLyL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81yf3kJGkhL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71maAjyF-9L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/713yAukzi4L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71lUjWHuXkL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71a+UkIEVyL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.6,
+    "reviews": 12,
+    "price": "$23.99",
+    "extracted_price": 23.99,
+    "snap_ebt_eligible": true,
+    "delivery": [
+      "FREE delivery Friday, June 19 on orders shipped by Amazon over $35",
+      "Or Prime members get FREE delivery Tuesday, June 16. Join Prime"
+    ],
+    "stock": "Only 12 left in stock - order soon."
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$23.99",
+      "extracted_price": 23.99,
+      "delivery": [
+        "FREE delivery Friday, June 19 on orders shipped by Amazon over $35",
+        "Or Prime members get FREE delivery Tuesday, June 16. Join Prime"
+      ],
+      "stock": "Only 12 left in stock - order soon.",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "BOTUWASE",
+          "details": {
+            "heading": "Sold by",
+            "content": "BOTUWASE"
+          },
+          "link": {
+            "text": "BOTUWASE",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A31Y8F4KO7MGF8&asin=B0FD8KWS9L&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "about_item": [
+    "For Every Pet Parent – Emergency, Illness, Injury or Disability: As a caring pet parent, ensuring your dog's safety during emergencies, illness, injury, or recovery is a top priority. Our Pet Stretcher is the ideal solution, providing a secure and easy way to transport your pet to safety—whether from your vehicle to home or to a medical facility.",
+    "Supports Up to 300 Pounds: Our Pet Stretcher is designed to comfortably carry pets weighing up to 300 pounds (136 kg). Made from durable nylon material, it features 8 sturdy handles for balanced support, making it easy for one or more people to transport your pet.",
+    "Designed for Comfort & Easy Handling: Transporting your pet is now simpler than ever! This lightweight stretcher is designed with ease of use in mind, allowing for smooth navigation through tight spaces like stairs, vehicles, or narrow hallways. The neoprene-covered handles ensure a comfortable grip, no matter the weight.",
+    "Foldable & Easy to Store: Need to store it? No worries! Our Pet Stretcher folds up easily for transport and storage, taking up minimal space in your vehicle. Ideal for pet parents on the move.",
+    "One Size Fits Most Dogs – Including Large Breeds: Whether your dog is small, medium, or large, our Pet Stretcher is the perfect fit! It’s been used to transport large breeds like Newfoundlands. Available in Black, Blue, or Safety Orange, choose the color that best suits you."
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": "1",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/61752a42-dafb-44d5-9642-a1aa3628378c.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 2,
+      "title": "2",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/fa95c1d1-40b4-4c4f-b81a-203d6e091f77.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 3,
+      "title": "3",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/4c3af66e-234d-4602-9e1e-502f7d60099c.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 4,
+      "title": "4",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/642bd6d5-0bf9-4cab-9211-b5d0d8a89371.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 5,
+      "title": "5",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/81490907-eccc-4ff0-a96b-d1a7333badad.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 6,
+      "title": "6",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/f8ae4a8a-aca8-4734-8c8f-5dc724983cc4.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 7,
+      "title": "7",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/e04c2e41-90a1-42a1-a846-df0ef238a3ec.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    }
+  ],
+  "product_details": {
+    "item_model_number": "Transport Stretcher-2PackOrange",
+    "date_first_available": "June 15, 2025",
+    "manufacturer": "BOTUWASE",
+    "asin": "B0FD8KWS9L",
+    "best_sellers_rank": [
+      {
+        "text": "#151,605 in Industrial & Scientific (See Top 100 in Industrial & Scientific)",
+        "extracted_rank": 151605,
+        "link": "https://www.amazon.com/gp/bestsellers/industrial/ref=pd_zg_ts_industrial",
+        "link_text": "See Top 100 in Industrial & Scientific"
+      },
+      {
+        "text": "#31 in Stretchers & Gurneys",
+        "extracted_rank": 31,
+        "link": "https://www.amazon.com/gp/bestsellers/industrial/8297448011/ref=pd_zg_hrsr_industrial",
+        "link_text": "Stretchers & Gurneys"
+      }
+    ],
+    "rating": 4.6,
+    "reviews": 12
+  },
+  "reviews_information": {
+    "summary": {
+      "images": [
+        "https://m.media-amazon.com/images/I/81NgHskyP6L.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 59,
+        "4 star": 41,
+        "3 star": 0,
+        "2 star": 0,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Helpful",
+        "text": "My dog was unable to walk any longer and this helped a lot to get him into the car to take him to the vet . He seemed comfortable while he was being carried which was important . The material is a good quality",
+        "rating": 5,
+        "date": "May 24, 2026",
+        "author": "YasDeeSan",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFVQ4UEHGIAVTXVQ2DB5BVUXSIWQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/049d8ab5-c4c6-41fd-a299-677a9076e8d0._CR0%2C0%2C375%2C375_UX460_SX48_.jpg",
+        "verified_purchase": true,
+        "product": {
+          "size": "44“*28“",
+          "color": "Black"
+        }
+      },
+      {
+        "position": 2,
+        "title": "A must have if you need to move an injured dog!",
+        "text": "This was a godsend. When our 41lb senior dog couldn't get around at the end, we put her in her bed on this stretcher to carry her up and down the stairs. It's not as stiff as it's depicted, but that doesn't affect the use. She was not a fan of being on it alone, as she didn't feel stable, but it worked beautifully in conjunction with her bed. I think if your dog is incapacitated and you have to use it without a bed, it should work fine. I know our dog was still very alert when we attempted to use it by itself. One tip that could make this better would be removable braces that could slip into pockets beneath it to make it stiffer if needed and add stability.",
+        "rating": 4,
+        "date": "June 10, 2026",
+        "author": "Lisa H.",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AECDXB365ZMU3H4Q26DM25DIVOSQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "44“*28“",
+          "color": "Black"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Sturdy enough for 65 lb Husky",
+        "text": "We got this when our 10 year old Husky got an aggressive cancer. He got to the point he could not longer walk assisted, over a weekend. His decline was overnight and with this, we were able to move him from room to room to be near us til we could get him back to doctor, as well as in and out of the truck. He is no longer with us, but hopefully it helped make his last couple days more comfortable with his family by his side. You never know when it might be useful to have. But praying I'll never need it again. Nevertheless.. it's there.",
+        "rating": 5,
+        "date": "November 24, 2025",
+        "author": "Trinda V Flowers",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFFHFE2DV4KZKKUEOQ5HBJFVFCGA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "3 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "size": "44“*28“",
+          "color": "Blue"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Seems to hold up well",
+        "text": "We use this for humane cases and it has held up very well. So far we have carried a large goat and several dogs.",
+        "rating": 4,
+        "date": "March 28, 2026",
+        "author": "C. ODonnell",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AH6U7RH7NQ3JW3FVVWV22QX5PO3A?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "size": "44“*28“",
+          "color": "Orange"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Pet stretcher",
+        "text": "Constructed with durability in mind, this stretcher supports a weight limit of up to 300 pounds, which is impressive. The fabric is sturdy yet lightweight, making it manageable to carry. The bright color makes it easily visible in emergencies, and the compact design allows for easy storage when not in use. The stretcher handles well, even with larger dogs. It comes equipped with safety straps that secure pets during transport, providing peace of mind. I found that the stretcher is easy to maneuver, making it suitable for navigating tight spaces without causing distress to the animal. Setting up the stretcher is straightforward, which is essential in emergency situations. The handles are well-placed, giving me a good grip while carrying. It’s also easy to clean, which is a bonus after any outdoor use.",
+        "rating": 5,
+        "date": "September 24, 2025",
+        "author": "Jen",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AG5M4ZIQDO3QUWN46HKJXKMZ7RRQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "2 people found this helpful",
+        "product": {
+          "size": "44“*28“",
+          "color": "Orange"
+        }
+      },
+      {
+        "position": 6,
+        "title": "pet stretcher",
+        "text": "This is exactly as described. It’s a durable pet stretcher and feels solid in every way. I didn’t push it to the full 300-pound limit, but it definitely made moving a large dog much easier. The fabric is thick and waterproof, and nothing about it feels flimsy. The handles are strong and well-placed, so weight stays pretty balanced even with an awkward carry.It folds up fairly flat, which makes it easy to stash in the car. I got the blue version, but the color’s less important than how well it works, and it does the job well. Good thing to have around if you’ve got a big dog with mobility issues or just want to be prepared.",
+        "rating": 5,
+        "date": "October 4, 2025",
+        "author": "SG",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEQSKVCSTORBT3OXFOVTSONATGTQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/81NgHskyP6L.jpg"
+        ],
+        "helpful_votes": "One person found this helpful",
+        "product": {
+          "size": "44“*28“",
+          "color": "Blue"
+        }
+      },
+      {
+        "position": 7,
+        "title": "Good product",
+        "text": "Came as expected. I didn't get to test it out. Fortunately it wasn't needed. Looks well made. I'll keep it around in case of emergencies.",
+        "rating": 4,
+        "date": "December 8, 2025",
+        "author": "Randall J McEachern",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEOCJUUGNMSII2GFYXFVHQ3J5DOQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "size": "44“*28“",
+          "color": "Blue"
+        }
+      },
+      {
+        "position": 8,
+        "title": "Lifting sheet",
+        "text": "Very thick & heavy. Seems very strong. Handles are good size. Surface area is large. Material is flexible & smooth. Easy to use. Overall good.Would buy again.",
+        "rating": 5,
+        "date": "May 20, 2024",
+        "author": "Amazon Customer",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEUGSOKZS5IOFW5OQF4YM2IIFZKQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "2 people found this helpful"
+      }
+    ],
+    "other_countries_reviews": [
+      {
+        "position": 1,
+        "title": "Sturdy and light weight",
+        "text": "Good product",
+        "rating": 5,
+        "date": "December 29, 2025",
+        "author": "annamma varghese",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "44“*28“",
+          "color": "Blue"
+        },
+        "country": {
+          "code": "CA",
+          "name": "Canada"
+        },
+        "language": {
+          "code": "en",
+          "name": "English (Canada)"
+        }
+      }
+    ]
+  }
+}

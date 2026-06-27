@@ -1,0 +1,915 @@
+{
+  "search_metadata": {
+    "id": "6a2e4c5d3882c5b38fddcc64",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/3ZaGXQyuO19XZercGYwQmA/6a2e4c5d3882c5b38fddcc64.json",
+    "created_at": "2026-06-14 06:38:21 UTC",
+    "processed_at": "2026-06-14 06:38:21 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B07WRPCLYR/?",
+    "raw_html_file": "https://serpapi.com/searches/3ZaGXQyuO19XZercGYwQmA/6a2e4c5d3882c5b38fddcc64.html",
+    "total_time_taken": 6.48
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B07WRPCLYR",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B07WRPCLYR",
+    "title": "ARCA PET Cat & Dog First Aid Kit for Car - Pet Emergency Kit for Home Office Travel – Dog Camping Essentials with Digital Thermometer, Muzzle & Mini First Aid Pouch",
+    "link": "https://www.amazon.com/ARCA-PET-Office-Travel-Emergency/dp/B07WRPCLYR/",
+    "link_clean": "https://www.amazon.com/dp/B07WRPCLYR/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07WRPCLYR&device=desktop&engine=amazon_product",
+    "badges": [
+      "Amazon's Choice"
+    ],
+    "variants": [
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B09FKVQQVH",
+            "name": "CarePlus Kit",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09FKVQQVH&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B097PLDD92",
+            "name": "Ready-Go Pouch",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B097PLDD92&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B07WRPCLYR",
+            "name": "CoreCare Kit",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07WRPCLYR&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the ARCA PET Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/919bY8axD4L._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/919bY8axD4L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/91gU2EP1J2L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81YOjpUMd5L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81s-hfMStKL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81dKAnPTFpL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/91qdu6bYMdL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81m27rDiNqL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.8,
+    "reviews": 2400,
+    "bought_last_month": "1K+ bought in past month",
+    "price": "$35.90",
+    "extracted_price": 35.9,
+    "price_unit": "$35.90 / count",
+    "extracted_price_unit": 35.9,
+    "old_price": "$49.85",
+    "extracted_old_price": 49.85,
+    "snap_ebt_eligible": true,
+    "delivery": [
+      "FREE delivery Thursday, June 18",
+      "Or Prime members get FREE delivery Tomorrow, June 14. Order within 21 mins. Join Prime"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$35.90",
+      "extracted_price": 35.9,
+      "price_unit": "$35.90 / count",
+      "extracted_price_unit": 35.9,
+      "delivery": [
+        "FREE delivery Thursday, June 18",
+        "Or Prime members get FREE delivery Tomorrow, June 14. Order within 21 mins. Join Prime"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "ARCA PET",
+          "details": {
+            "heading": "Sold by",
+            "content": "ARCA PET"
+          },
+          "link": {
+            "text": "ARCA PET",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A7HPMPFR4QMIT&asin=B07WRPCLYR&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "packaging": {
+          "text": "Ships in product packaging",
+          "details": {
+            "heading": "Ships in product packaging",
+            "content": "This item has been tested to certify it can ship safely in its original box or bag to avoid unnecessary packaging. Since 2015, we have reduced the weight of outbound packaging per shipment by 41% on average, that’s over 2 million tons of packaging material.If you still require Amazon packaging for this item, choose \"Ship in Amazon packaging\" at checkout. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/sipp_home"
+          }
+        }
+      }
+    }
+  },
+  "about_item": [
+    "ENSURE PET SAFETY ON THE GO with our dog travel accessories, dog must haves in pet travel. Our comprehensive pet first aid kit for dogs is your companion for worry-free journeys.",
+    "VET ENDORSED: Our Dog & Cat first aid kit, vet-reviewed for precision, is expertly crafted in a medical facility, providing superior quality emergency dog essentials for peace of mind.",
+    "PET EMERGENCY ESSENTIALS: In addition to comprehensive pet first aid supplies, we include a dog thermometer, dog muzzle, tick kit, emergency flashlight, and a handy mini first aid kit pouch.",
+    "Pet Care Guide: A comprehensive first aid manual with essential instructions for treating everything from snake bites to minor injuries, making it dog must haves for your pet’s hiking and camping gear",
+    "GEAR UP FOR OUTDOOR FUN! This first aid kit is your first line of defense during activities like hiking, jogging, or camping, designed for dog camping gear and hunting dog adventures."
+  ],
+  "bought_together": [
+    {
+      "position": 1,
+      "title": "ARCA PET Cat & Dog First Aid Kit for Car - Pet Emergency Kit for Home Office Travel – Dog Camping Essentials with Digital Thermometer, Muzzle & Mini First Aid Pouch",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/919bY8axD4L._AC_UL116_SR116,116_.jpg",
+      "price": "$35.90",
+      "extracted_price": 35.9,
+      "price_unit": "$35.90/count",
+      "extracted_price_unit": 35.9,
+      "delivery": [
+        "Get it as soon as Thursday, Jun 18"
+      ],
+      "stock": "In Stock"
+    },
+    {
+      "position": 2,
+      "title": "Miracle Care Kwik Stop Styptic Powder for Dogs, Cats and Birds, 0.5 Ounce, Fast Acting Blood Stop Powder with Pain Relieving Benzocaine",
+      "link": "https://www.amazon.com/Miracle-Care-Kwik-Styptic-Powder/dp/B0002H3RBU/ref=pd_bxgy_thbs_d_sccl_1/139-2532653-5306841?pd_rd_w=Rpo9q&content-id=amzn1.sym.dcf559c6-d374-405e-a13e-133e852d81e1&pf_rd_p=dcf559c6-d374-405e-a13e-133e852d81e1&pf_rd_r=5JRE3FCAQDXC1GKSQXQ6&pd_rd_wg=5fuUR&pd_rd_r=87105c0f-fd9d-4188-a8f8-dc1c161276ee&pd_rd_i=B0002H3RBU&psc=1",
+      "asin": "B0002H3RBU",
+      "link_clean": "https://www.amazon.com/Miracle-Care-Kwik-Styptic-Powder/dp/B0002H3RBU/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0002H3RBU&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71TOZZBFJlL._AC_UL116_SR116,116_.jpg",
+      "price": "$8.99",
+      "extracted_price": 8.99,
+      "price_unit": "$17.98/ounce",
+      "extracted_price_unit": 17.98,
+      "delivery": [
+        "Get it as soon as Thursday, Jun 18"
+      ],
+      "stock": "In Stock"
+    },
+    {
+      "position": 3,
+      "title": "Liquid Bandage for Dogs 4oz Waterproof Spray - Dog Wound Care with Aloe for Cuts, Scrapes, Hot Spots & Paw Injuries - Alcohol-Free, Safe if Licked, Made in USA | Chew + Heal",
+      "link": "https://www.amazon.com/Chew-Heal-Labs-Waterproof-Stitches/dp/B0CQPMRXMF/ref=pd_bxgy_thbs_d_sccl_2/139-2532653-5306841?pd_rd_w=Rpo9q&content-id=amzn1.sym.dcf559c6-d374-405e-a13e-133e852d81e1&pf_rd_p=dcf559c6-d374-405e-a13e-133e852d81e1&pf_rd_r=5JRE3FCAQDXC1GKSQXQ6&pd_rd_wg=5fuUR&pd_rd_r=87105c0f-fd9d-4188-a8f8-dc1c161276ee&pd_rd_i=B0CQPMRXMF&psc=1",
+      "asin": "B0CQPMRXMF",
+      "link_clean": "https://www.amazon.com/Chew-Heal-Labs-Waterproof-Stitches/dp/B0CQPMRXMF/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CQPMRXMF&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71NrZ4QmpPL._AC_UL116_SR116,116_.jpg",
+      "price": "$12.98",
+      "extracted_price": 12.98,
+      "price_unit": "$3.25/fluid ounce",
+      "extracted_price_unit": 3.25,
+      "delivery": [
+        "Get it as soon as Thursday, Jun 18"
+      ],
+      "stock": "In Stock"
+    }
+  ],
+  "videos": [
+    {
+      "position": 1,
+      "title": "First aid for your pet",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/b9f6dd1d-30fa-49cf-acfa-f21a4444884e/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/A1ds8aSrzUL.jpg",
+      "duration": "2:01",
+      "vendor": "Dallas' Picks & Perks",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/A1d2IFzsMkL._CR13,281,1188,1189_._FMjpg_._SL34_.jpg",
+      "date": "Sep 2, 2025"
+    },
+    {
+      "position": 2,
+      "title": "Be Prepared for Pet Emergencies!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/d712d3e6-50d8-41fb-a3c8-208b5a8205c2/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/714TtlSA1nL.jpg",
+      "duration": "0:57",
+      "vendor": "Blue & Titan",
+      "vendor_thumbnail": "https://images-na.ssl-images-amazon.com/images/S/influencer-profile-image-prod/logo/bluethehusky_1657211132888_original._CR146,92,797,797_._FMjpg_._SL34_.jpeg",
+      "date": "Dec 26, 2022"
+    },
+    {
+      "position": 3,
+      "title": "Must have for dog owners!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/1e945cef-47f2-48aa-99a6-c61c1df0dabc/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/71vsYBnR7LL.jpg",
+      "duration": "0:50",
+      "vendor": "Kirstie Southard",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/A1Uk9BKTd0L._CR188,90,892,891_._FMjpg_._SL34_.jpg",
+      "date": "Jun 8, 2024"
+    },
+    {
+      "position": 4,
+      "title": "The must have for pet parents everything you need in an emergency",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/126d736a-5cd4-4a2a-97d7-770ad95a26d0/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61+n8MQkdsL.jpg",
+      "duration": "1:34",
+      "vendor": "✅ Erica",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/619aOkyYk8L._CR0,0,670,670_._FMjpg_._SL34_.jpg",
+      "date": "Sep 9, 2025"
+    },
+    {
+      "position": 5,
+      "title": "An absolute MUST have if you have pets! First aid kit",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/bfcd80de-7d9d-46ae-80eb-80516431a0a1/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/7169GtFpoQL.jpg",
+      "duration": "2:00",
+      "vendor": "✅ Natalie M",
+      "vendor_thumbnail": "https://images-na.ssl-images-amazon.com/images/S/influencer-profile-image-prod/logo/natalie_moss_1686799147940_original._FMjpg_._SL34_.jpeg",
+      "date": "Oct 21, 2023"
+    },
+    {
+      "position": 6,
+      "title": "Take Care of Your Dogs!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/9b77f9c6-0f83-47b1-8232-669e1cd7d382/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/71J73KwihgL.jpg",
+      "duration": "0:21",
+      "vendor": "Everyday Family Finds",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/71Vjkcwsv4L._CR0,0,5000,5000_._FMjpg_._SL34_.jpg",
+      "date": "Dec 16, 2025"
+    },
+    {
+      "position": 7,
+      "title": "ARCA PET CoreCare: Everyday Essentials for Pet Safety",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/a3d633da-f24a-493b-9cd5-2e6594781d3f/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/714r1DGUhRL.jpg",
+      "duration": "0:33",
+      "vendor": "ARCA PET",
+      "date": "Dec 8, 2025"
+    },
+    {
+      "position": 8,
+      "title": "ARCA Pet Dog First Aid Kit",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/3a352ba6-6b78-4775-9417-f6ada2d1f94b/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/51XGlpRboUL.jpg",
+      "duration": "0:43",
+      "vendor": "Cecilia",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/612viQaz+dL._CR0,0,695,695_._FMjpg_._SL34_.jpg",
+      "date": "May 15, 2026"
+    },
+    {
+      "position": 9,
+      "title": "ARCA PET Cat & Dog First Aid Kit Home Office Travel Car Emergency Kit Pet Travel Kit",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/e83b66e2-2b6d-4cfd-baea-79e113c4c91d/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61ege-GyAFL.png",
+      "duration": "1:33",
+      "vendor": "TrackSec Technology Co., Ltd",
+      "date": "Nov 20, 2019"
+    },
+    {
+      "position": 10,
+      "title": "Don&#39;t leave home without this pet first aid kit!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/761fd9a6-20ed-4f57-b674-d53b90c52cd9/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/A1jdF7g22pL.jpg",
+      "duration": "2:41",
+      "vendor": "TyJenLA",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/A1SESwgJ6bL._CR0,0,3024,3024_._FMjpg_._SL34_.jpg",
+      "date": "Jun 1, 2026"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": " Keep your mind at ease that no matter where you are with our pet first aid kit. ",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/bcf43835-614e-48d0-ac20-02ba8e060e83.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 2,
+      "title": "ARCA PET Cat &amp; Dog First Aid Kit Home Office Travel Car First Aid Kit Emergency Kit Dog Travel Kit ",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/0b376457-9ce0-49b3-92cf-5368414980f3.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 3,
+      "title": "Vet recommended",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/41b7ca85-069a-4317-9426-630d9e137b5e.__CR0,0,1952,800_PT0_SX1464_V1___.jpeg"
+    },
+    {
+      "position": 4,
+      "title": "ENSURE PET SAFETY ON THE GO with our dog travel accessories, dog owner must haves in pet travel. ",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/6d40c64a-1c37-4205-afb2-b715d75d112a.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 5,
+      "title": "Safeguard your loved ones from the dangers of traveling outdoors!",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/bab323dc-f4cf-4a4f-89d3-8f1b07f3cb12.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 6,
+      "title": "Based in Los Angeles, CA, we deliver trustworthy innovation and quality.",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/bd076abf-8503-4dbc-8ded-715b1b3980fb.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 7,
+      "compare_with_similar": [
+        {
+          "position": 1,
+          "asin": "B07WRPCLYR",
+          "title": "Pet First Aid - Essential",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/6ed2c9c5-d92d-42d1-a646-9ca2d4cad8f3.__CR0,0,200,225_PT0_SX200_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B07WRPCLYR?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07WRPCLYR&device=desktop&engine=amazon_product",
+          "rating": 4.8,
+          "reviews": 2400,
+          "price": "$35.90",
+          "extracted_price": 35.9,
+          "suggested_use": "Home, Car, Camping, Road Trip",
+          "exclusive_highlight": "Premium Basic Necessities",
+          "additional_feature": "Protective Hard Case",
+          "material": "Reflective Printing",
+          "pet_suitability": "Dogs, Cats & Small Animals"
+        },
+        {
+          "position": 2,
+          "asin": "B09FKVQQVH",
+          "title": "Pet First Aid - Care Plus",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/c6aca84f-956e-46cd-9c4d-9371e925a66a.__CR0,0,200,225_PT0_SX200_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B09FKVQQVH?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09FKVQQVH&device=desktop&engine=amazon_product",
+          "rating": 4.8,
+          "reviews": 2400,
+          "price": "$54.99",
+          "extracted_price": 54.99,
+          "suggested_use": "Home, Car, Camping, Road Trip",
+          "exclusive_highlight": "Extensive First Aid Solution",
+          "additional_feature": "High Visibility for Safety",
+          "material": "Glow in the Dark Printing",
+          "pet_suitability": "Dogs, Cats & Small Animals"
+        },
+        {
+          "position": 3,
+          "asin": "B097PLDD92",
+          "title": "Pet First Aid - On the Go",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/daf58254-fef6-4548-a2c4-29eda96511fd.__CR0,0,200,225_PT0_SX200_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B097PLDD92?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B097PLDD92&device=desktop&engine=amazon_product",
+          "rating": 4.8,
+          "reviews": 2400,
+          "price": "$19.95",
+          "extracted_price": 19.95,
+          "suggested_use": "Hiking, Camping, Beach",
+          "exclusive_highlight": "Optimal Compact Essentials",
+          "additional_feature": "Lightweight for On-the-Go",
+          "material": "Reflective Printing",
+          "pet_suitability": "Dogs & Cats"
+        },
+        {
+          "position": 4,
+          "asin": "B09NRKV6SN",
+          "title": "Pet Cotton Swabs",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/f5ee89e7-ba7d-4abc-8a30-66909cd06936.__CR0,0,200,225_PT0_SX200_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B09NRKV6SN?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09NRKV6SN&device=desktop&engine=amazon_product",
+          "rating": 4.6,
+          "reviews": 432,
+          "price": "$9.95",
+          "extracted_price": 9.95,
+          "suggested_use": "Multipurpose Pet Cotton Swabs",
+          "exclusive_highlight": "Splinter-Free and Safe",
+          "additional_feature": "Soft & Extra Absorbent",
+          "material": "100% Premium Cotton",
+          "pet_suitability": "Dogs, Cats & Small Animals"
+        },
+        {
+          "position": 5,
+          "asin": "B0BMXBH3PD",
+          "title": "Dog Ear Cleaning Wipes",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/1cefe39c-5ed8-46aa-a3ba-c06de5fccf90.__CR0,0,200,225_PT0_SX200_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B0BMXBH3PD?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0BMXBH3PD&device=desktop&engine=amazon_product",
+          "rating": 4.4,
+          "reviews": 754,
+          "suggested_use": "Cleaning Dog Ears",
+          "exclusive_highlight": "Hassle-Free Finger Wipe Design",
+          "additional_feature": "Pet Safe Formula",
+          "material": "Pre-Soaked Soft Texture Fabric",
+          "pet_suitability": "Dogs & Cats"
+        },
+        {
+          "position": 6,
+          "asin": "B0BMXCJSGN",
+          "title": "Dog Teeth Cleaning Wipes",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/62ee4934-91eb-439c-87ba-353973987826.__CR142,0,2276,2560_PT0_SX200_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B0BMXCJSGN?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0BMXCJSGN&device=desktop&engine=amazon_product",
+          "rating": 4.4,
+          "reviews": 754,
+          "suggested_use": "Cleaning Dog Teeth and Gums",
+          "exclusive_highlight": "Hassle-Free Finger Wipe Design",
+          "additional_feature": "Pet Safe Formula",
+          "material": "Pre-Soaked Pearl Design Fabric",
+          "pet_suitability": "Dogs"
+        },
+        {
+          "position": 7,
+          "asin": "B08T1MKJ9M",
+          "title": "Pet Travel Bag",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/5f910b52-1719-482d-a9ab-ba99d8e0b2b9.__CR86,0,1327,1493_PT0_SX200_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B08T1MKJ9M?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B08T1MKJ9M&device=desktop&engine=amazon_product",
+          "customer_reviews": ".aplus-v2 .aplus-review-right-padding { padding-right: 0.1rem; } —",
+          "suggested_use": "Weekend Trip, Hiking, Dog Park",
+          "exclusive_highlight": "11-Pocket Perfect Travel Set",
+          "additional_feature": "Pet Food Bag & BPA-Free Bowls",
+          "material": "Water-Resistant Fabric",
+          "pet_suitability": "Dogs & Cats"
+        }
+      ]
+    }
+  ],
+  "product_details": {
+    "brand_name": "ARCA PET",
+    "included_components": "Pet First Aid Handbook, Thermometer, Emergency Muzzle, Tick Removal, Leash, Flashlight, Antibiotic Ointment, Styptic Pencil, Antiseptic Wipes, Sting Relief Pads, Gloves, Thermal Blanket, Elastic Bandages, Mini Pouch and more",
+    "manufacturer": "ARCA USA, LLC.",
+    "upc": "640816262249",
+    "model_number": "0612464",
+    "manufacturer_part_number": "0612464",
+    "age_range_description": "All Ages",
+    "best_sellers_rank": [
+      {
+        "text": "#4,676 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 4676,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#470 in Dog Health Supplies",
+        "extracted_rank": 470,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/2975377011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Health Supplies"
+      }
+    ],
+    "asin": "B07WRPCLYR",
+    "rating": 4.8,
+    "reviews": 2400,
+    "number_of_pieces": "75",
+    "item_dimensions": "8.5 x 6.5 x 3.25 inches",
+    "unit_count": "1 Count",
+    "material_type": "nylon",
+    "material_features": "Reflective Printing, Water Resistant, Durable",
+    "recommended_uses_for_product": "Camping, Emergency Preparedness, Home, Traveling",
+    "color": "Neon Orange",
+    "other_special_features_of_the_product": "Portable",
+    "container_type": "Hardcase",
+    "product_dimensions": "8.5 x 6.5 x 3.25 inches; 1.49 Pounds",
+    "item_model_number": "0612464",
+    "date_first_available": "August 20, 2019"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "image": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/797b1037-c42d-4679-8ef6-bcaa70123bc7._CR169,1603,2544,1332_SX460_CB1169409_QL70_.jpeg",
+      "name": "SurviveX",
+      "brand_logo": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/3f39a819-9d8c-4b5b-8b32-86138420bac8._CR0,0,2000,2000_AC_SX96_SY48_CB1169409_QL70_.png",
+      "headline": "Life-Saving First Aid Kits. Gear Up. Stay Safe!",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JDlp4tmo1qQ4sxn_h2RLgtcAAAGexNpijAEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICDRoW36/clv1c_ek-wBfHXFbbWzjO3YkNvQ2gzXEu30gBuzpIif1anfhwhshmyiL0Z-8yXZ2LmUDVQiyuijaFBYnIf_pQYpWZisk0AJi8r3imQa82Es84HPe0Cf0Ba8yjpDnwoQrgz1GbbBL-pHhnT0jmmqZbKNGYn_9_FkP2dcxXsldfYu7d7HCaM1r3jys8zGM4iL4PKDgPEsieL4VhR90tgVUfkPcqXcyna3HwvPuTcBTpvAxPo9tCF4KblCPBkFcHNlgFrRaVIj_-JlidQXvD4NsuHIvSsPS-FQ9y8n8TSb5aLOCvL2XU0ubbPeYbZrEc-89X6qoRJdJil3vjp-cGhYIsguf9-NK56nppyq4MIEkptpuGo5aHY5WOaRaoQGkUJkZAZBqlwKZiHyUxE4JU39YdC5QN1qc1YjpZGhfZgzKB3yorbr9ajSzkD0v3zoWScixvHkU-iy10ZqYIARBRyENHlWY0m3ijhoWOkM4Ky4515nqEda8LUW_7k-SOn0yQd6YW3kNDo5lI2FUCvdYJfwSAx9TuB4UPZcSGE4iFzETtW5Dl5EOtORuXVfLU6EUZOe-dORqycJybySWhD9BNjp7aHjpFnc0qBLt8cjo79BuH1tlKZM0rIRULNQPWRFu-c7LfMmhH1Bwp9Vt6d1GBwcrhdD-WLP_TWSwWn7-xLn0QJBIgucliHjqEgcC7vIjXl_FLmFJcYjkw8fj3mpVUqnMgF9LlQe-DNESe1BrVJI9dSai7X0E1T8D677lMbrzzK4L22NreNfmN1Sy3XL3Gui0xf1WH0oGJmX_uQiVcYH8UYvlkWDwGkKxqUgfzUVDAqvjHlyBLjm9sIusr7faVAmt_Rnh4ysQmHN9mw9998NiO1uQ8zRFM5QL1VetRKMhwzMk97lUp0yQqr8z0tdUpGYlOWQUNu_dFi-UQnyJQCgHxB2yYmQzo-Qz9G-3SgVsJZseiC2groHm4XcfedsUPlNjbcj9G6pYxMbbHqHu3bGq9mBc0isKuyOsgwIzn_J19ui0X-9HFkbWvXdoP6IBbBAIYG5orsvNgcTMRYKofXp_zipy4mQjWc4aNZvNDjrqD-aNwH_NMxYVFv0EIxTSwbBZ9QaMhV8EFYJWpPBd434ymibgPmGBFOeRkWrwGMGhY03ZddJlAr7daap5ywU6Xh16D1YYpNpnOBM0wIrsc3ugMbpoB2mzO9XUs9S7bjN_vrOnB8RQEXnSfIrlIDd-Ci3lXT5x4saOH9Mmox9c1Bqaaj33Pv3vgwj8syKOXmphHeAVypkZMAiQQBj1g14DTxdD0lJACSD2x4BT1W6pE0ktkLtCmMPUhn5o-yN91OvECbPGyjz3FDG-ePuG9V06dw3pPoWjpJlSxFp4t2y59LuxD4gTlImprDCtKgplVhQTlODpk6_Q5iEHN0lpVDORRA6w-96ig9H4BWAI5WgonrSL-knDGr-hSM6I9JF_Ymqqa1k1MmRmMHOS1Sls_nyn-2oACrJ408XiDgbrNp3MerXTEXQ5bx-vmNfc9ob1zRRvo6TpefPBzFChBWw4qV/https://www.amazon.com/stores/page/7AA82347-D768-4D67-A5BD-17336279494E/?_encoding=UTF8&store_ref=SB_A0062961Q9R8MGDDP1X8-A06431722QRLLD96E3W83&pd_rd_plhdr=t&aaxitk=fee423d2ae6bfbe24d7d113aed35789e&hsa_cr_id=0&lp_asins=B0FND43WYX%2CB0DF3LXT66%2CB0DF41NH2S&lp_slot=desktop-arbies&lp_page_asin=B07WRPCLYR&pd_rd_i=ad1&ref_=sbx_be_dp_arbies_mblsd_mb0_bkgd&pd_rd_w=h64FV&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=5JRE3FCAQDXC1GKSQXQ6&pd_rd_wg=5fuUR&pd_rd_r=87105c0f-fd9d-4188-a8f8-dc1c161276ee"
+    },
+    {
+      "position": 2,
+      "image": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/094ef494-e7c4-4431-ba56-f45fb36590d2._CR0,764,2500,1309_SX460_CB1169409_QL70_.jpg",
+      "name": "Rescue Essentials",
+      "brand_logo": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/900ee071-e71c-4e96-994c-1dfc9f37f919._CR0,0,1800,403_AC_SX96_SY48_CB1169409_QL70_.jpg",
+      "headline": "Emergency Prepared for Any Situation",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JF41C5oMWDFQCouE1ZR2ALkAAAGexNpijQEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICBUjbxx/clv1c_ek-wBYHXLbbWzlYLEhcvOigzZQt_qgBDlUkJSlVgX4TMg5pkK7Ci932N2zBofc1RfqxuittweTpT0rDcYNsY_xpGxQkPssQKmSthd1FgzdJwgxSeXMTULK745s0cdmNM8medBOwHB3E83xz4nNho-pQrQNyfhAXc9rTATnWv1IMao11hbIM9ci4aJhbSRk36G2UAh8vIFgq807A95gSFM8FbPHzc5UeA0_vOMhIUac_9qREheCEIBol7Cqaqhov19VJMpZhtBgca1dnqukmSUDupPMNwYaptAp3sgH_JyUKl8Jx_VIfvx1IS26ym3y_ZB7oem90K5AHJlAjdDGqS2liSu3uYsQllAmPZkc4RrOKxGegpOD5cOToTgfPkH5ldW0JEVhua9dyk_3bP4hkhPNDVRJ1ruLrz9yztVqKZZKLUbwAJPE8_X2Xf7V6TOIZ1Ib1S6PPingh0T3Zww27MSTmt2gAD43NZkTvnuFp7sxZJ-Xd_Xk8IrMoMTkPbz0Tmsk643m0o55vi2rmxyn01EPWVdGePGjNbwty343qXTGCJEPyYFSTsJxwiw56i_fiLNsBVRE1cX-7I6KwcKZGDzwdCOSejSYpiACCt9umyTiNEgMSG3BQV2b7S-0eKGLCkfqL0ZyOfEhSwKwoK8u1ohPk_-W8aOz3UpVYEUtKKusbdpKNFkaLTbGuWPDMnfG024zMpvt_ukUvQNP-SFn3I8Go3jk_FsvI3OX2GyV-poYOTmcOTDJPcRdSv1gMlL0fuUdBOtX8-nyIhjHzOzgGOa7ISyH_6-4ByviHfNFfAhEdSI-JT4ALiujwd7hO_61Pi_WvDZDUX4XaohfAz5Gi_JC1-auDn8cOXXGVyQ27hVQRCULsc3cDFcbvVUwCYs0YBpYWtG14vatBRyB8f6euf1SRTe4eiZqocQjapa9Qr2IxgXGX_v0gjI6COI6iby6CueARJfssmKA3v7_2QWnIXYmXUsbUnpx8_VT-hnCn3t85sXrdnHMiyKkXutPIERgaD56r2wjhB_0of0XNdrMD44rXMdw6UP9t25oPdmDasq28ET6lCExYLeI64uFskRFYdHeRzv0CPowjH_z85Gt0-gIxPdMZefc4gBhDaVFJ8Mz2GYyHxfhE-0-zq4lmzGLYz2m_QMHq99kb2M3qkkRA6J0fGAeiKavRSgWf96LwbIwqlVtY_c5C2-OmZRTpmlXlpJN5lcSvTmNUaRhebXpXJ4LZ_FxJo1_kFEpKb0iANzttQKcD8eZvS_dMbLGhwqpT-CZZIrnF62tfhM3HJXOp-JqFLrMsVs4OZjHZBe9AjcX0IV6biHQQJzXjA_HaMkl0ELne_NwV81An2U7y7H2NRc0lXzKJj9ixp7GsRg1X0qZa8QPRpcXx15myB6EsRNZIU3DujzquODYfejo5KtDn4e9NY49O_5hms-ckltJm0vHqGQg5FT-eFqoq1f61b_3HwXpgntTfDgw5WnELdj45tMwDLgq4XxOsFG0s6Wkx4eAbDKSU0rdQukEh_HeYNRh93fo8wAA/https://www.amazon.com/stores/page/BD94FD9A-FE7F-48D6-8A9B-7DA190FF29A4/?_encoding=UTF8&store_ref=SB_A0363413PD61JVO8Y2YK-A09776032E2IOL4JOLORB&pd_rd_plhdr=t&aaxitk=29ec947aed5e0375d2cdb589050df4f0&hsa_cr_id=0&lp_asins=B00AAOV8YI%2CB00KGKHURU%2CB003IWNOVO&lp_slot=desktop-arbies&lp_page_asin=B07WRPCLYR&pd_rd_i=ad2&ref_=sbx_be_dp_arbies_mblsd_mb1_bkgd&pd_rd_w=h64FV&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=5JRE3FCAQDXC1GKSQXQ6&pd_rd_wg=5fuUR&pd_rd_r=87105c0f-fd9d-4188-a8f8-dc1c161276ee"
+    },
+    {
+      "position": 3,
+      "image": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/30cff6df-2955-4535-be15-faf4480b8041._CR0,0,1254,657_SX460_CB1169409_QL70_.jpg",
+      "name": "Sulfodene",
+      "brand_logo": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/db894a6d-093a-4886-bd85-1db12708635c._CR0,0,1172,610_AC_SX96_SY48_CB1169409_QL70_.jpg",
+      "headline": "The go-to skincare treatment for dogs",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JN7DQAa1LZKnHB30wQwXVEEAAAGexNpijgEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICAGf1ga/clv1c_ek-wBYH3FcbSDn0nEDfQOog9-xwdaJi_n2vCndVDSGGPGANf08JCjk1Boa--T03_vSKwx66Rg47PL2xtfnA2AnIMy6fMcrWYa-K8PRr-v-oSbyTb5yrpHixoQzo0qmfD5CU-b7SJ9LPG7JfKVM6metPcqD2cwQUqUMby1heO6J6Ko4MpQmi1jmSt7oAWsqGtMs3HVvvr3KGL1vA05VyN9_BWyy9Hg-0MkFPV_awU-RwBks926X2-CZ_WIG7ns4Mcc0pXjzC7Uzs5GiNDJkavSQSOQ5pfRIddy7s_Z_wLWqx7tGjZwo9uDYtXbsW-MOy79Imxrez66c1ZK4ccEHaye2UFq-nzKkTmyTvjIbHOjR70zBL-Su4kFgPHvH31pgxKsq4v5r4GzHLBx82nuLlZ_mN_RV0KFd1kosgF5hkfRFEeoC8zwUnjG5IEgc3dXqPYABNV2yFqXBeT8CTFV4smXHhBxE4P43zITN6YvmHSwXtJ-bn4wLUsEcnUVh7nEoJSISvuHnff0j_IAm37QJ5686ycHGksaJOvcQnbs9cbu6Zf0b5pYhpcKnnrcimsboPzi5AQhBwxQMD3_MhZ298_vtSIkxzYWt_PIHp42F6bjgNzXHdEWXnXqS-DjLfsmh_VE6hFiwnAo3eKuVUbfpnQN-xW-RWhPGUClJ9YOuB1HbXAuGVOPs-1R6BphHbSkMR9AUXrpf7re-RdZBDxFh0-5KgmvTx0m8qb10CnvN9L0EoFNf2DBr92B2wkuz320vBKl4R43x0KVoSgQWH_9N_gGoZM3IaIHOMVzBnWFgt1WUKfyyh9Q9ZjGRSXosK867Hl2-r3bwAnLTn-7XhiiddL8YDBf-xziWxJj0vXWPqvnp2DmHfRzQyQwoAjZnf55o0Qcq8mzU6oXwCY80MNGT4xUba28unkNvViKsRffdzrbybgPMUWSIhN76IyDW8-bU7BSQLOdRN2DjCLCYFH2ncXqKhYvpk3Btbdm-YIIESeOraYSb4i8Fi6HjXtgCgDEa0DviWiLdyFnYfqIJslVP-MJKmW16S8VwsOrCHwXKQ8Lglhs1RXyk2PWnGLnq7NMqvP9Uv_DSifir_EuJFQuQ2eyGAUzrD2OtOUplQ0TXHISivolqdo8lIFg3-CXoYnTvcMYSgQkDaIl1T16YBjrZiuaYeRydmrQW6bnZqgQTqfOSVGnRhIqrcYYr4gouM9XJhm8KAWM_fMoRPyPXz8WLFBZVXaSj_Q7X7McLedprSCaX8tvcmV4kmFdXnYw0rwRx_C78rMHdbxA6YdnerDxDONKtmm8gMHLC0_GCRJGxkqvLOKNH_trZukjPV0vk64CzAIqD1zIfLqpGNvedqy5-7YbdftXENyIGQWcIrYg2Sv5rudjk9qXxE1MOZbm9C1dwdfsoYkIV5H8H00O5XmDPkM0DpU9lWjCon5Ov5PuSrUg5TqARE3BHd51P8kYSldp1ETxAi0SyFjSeYxi-fVhJ0L2zZXqk9vcXtRt-7kwhcZkuu0R_dT2w/https://www.amazon.com/stores/page/4DD9C111-97FA-4608-9C9A-979111EF8279/?_encoding=UTF8&store_ref=SB_A07424632ZWV9LN9VN8YV-A06979843BOUPYAV0UY30&pd_rd_plhdr=t&aaxitk=2b8bb17bcde261f5ad8b44b0e06d8e0c&hsa_cr_id=0&lp_asins=B001FK4BLI%2CB00X12NLSM&lp_slot=desktop-arbies&lp_page_asin=B07WRPCLYR&pd_rd_i=ad3&ref_=sbx_be_dp_arbies_mblsd_mb2_bkgd&pd_rd_w=h64FV&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=5JRE3FCAQDXC1GKSQXQ6&pd_rd_wg=5fuUR&pd_rd_r=87105c0f-fd9d-4188-a8f8-dc1c161276ee"
+    },
+    {
+      "position": 4,
+      "image": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/90c9f9f8-46ee-4a08-85d7-450089c5e008._CR43,0,1433,750_SX460_CB1169409_QL70_.jpg",
+      "name": "KEEPGOING",
+      "brand_logo": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/426f7457-7caa-41ec-930b-545235e5f78e._CR0,0,400,400_AC_SX96_SY48_CB1169409_QL70_.jpg",
+      "headline": "FSA/HSA Eligible First Aid Kit for Home & Travel",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JM0WOYwJ1VwqAneCnOWQBGoAAAGexNpijwEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICDbkrI9/clv1c_ek-wBfHXFbbWzjO3YutQ39v9kjFBTjtElUlJ7NVAb8jv6OoulFrns241yutgPp-UWd7MZ7kiquG7LVYEsy3BspabYtr_I_4bWyaKM97p0w10lhywJuDRDG312PUw4TuO6Y2YgkTuFVSZgyd3TcJ3x6gbINkIlVD2_mSgzrGvxwD_tid6dC99x76jq_y2sAgjhIUJZUZWayH8FYXkPcqXcynd23wvKFpjsucV_mwRKQuyo3uIDomVWfgrEn-mf1vtv_62cVt8vxfya1jdOW6F0uUQvHvsOG4dq3ATpWTgzK4YsMZ1w3BlM1lcKtzbOrnsB6YgsawX6xSnDnqmn3z607c_p8iOTxsQnvUNImiTQ1XsC0uqcoEPuv1MbT0YXL4VvYGUHR8nnO8wQu_rQSknlP8pXTaDpzBZNAjHpTVL40ZzFEg0fJxn7RoBMYv0yEYgbWgsl-1CHZLBowofTrN-KMdj-Gs43CFGUC7QnTOH8N6Als5pf_Nl6ts1xbzfRDHAPKu2sG80LePQoq3_1976i4kr5QzeKwFJxbK9i0aGj9bzdH6Rt9x3gGVB07srmTXh-xIQpvCDK350sat4-stXSUje4m56LK6rzRQabrYGloPCdOMnmGmiri7EJkh20NVPeZxug18YQNhChzikVpzVg06oG5VH2Z0dijvrrekSgyRRMo7IQ8w4kFPx8HO5TZn-PNkCUXhLPp6MoCJyDVgcfObNlSe1xLXJE9FSii7X0FFT8PqdblOdK4Pf9rW3NrWRYC48aOCbvwCAlV6-Oh2CNUlicA6l_Am-My8qS7VZqL8oBLlDt8V2wTnIhTO14lqPVBuO1i_Az8Y5gdukB1DndvUIeSQvtIgzqhoM3_Dnfj2OuK8adxNKWmIt6S3RQ3fqfqDY4fVaje5wgXY6zOFWlW3EE6Xvp8cTR_ZR5e3ZQuXOtsdtiL-9_mJLtDID4_uFoESHGP0lh5pxos7pUE3XBmqCmizQf-F3AsmMOvyWISmwYv6Q0WESmNmOMCyz1RBzLHIgZejQvhB7pTZC3JTvrGxbhA1Qi_D-lEuNXSxmIAZOIu7PoRdXFp7Few_wao96MaaxSqrhzXwNpgAzTqWMmaWKPHFkTHJCYWB1t4vrzq4gbeIjN_Dw_oooV-N4T5nOmVbQMHxd6kXW9UY4cqCGH_Zosgj-YphGB6qoYE_1vZMeajQy2JWrNcOTQvxmnXh5IFxkaa3TGFRhZhdjTFSEtLcuySkGYYYdlCR4e12b8aTkmF5Z0GBc4m5mKLcRcdyL8YK3NuOoh6tFDVdkQZ20cHxPHis0uDCF7zDCONUArvj6asnEtlmte1lx5bvA2GFxyGEny3aD1xk2KU5bQ6AkhTRvSP6qkfQUZHzvf3nTBpYG2rMGOCaZbojtOZikj_xKxLkATDQKKPa5qw6FA4C_kzZiXosT4dqS1efFyRgh4zUQUsSdzzE4AHyFKtpWbILOVRYSRqmEfTt11fQ17i8bTElXeyZB1cKvcw_ri-YQdiuYKCTIk-9q1C4YO8zlT5N33H6lzA/https://www.amazon.com/stores/page/98E51999-BAFA-448E-850D-1EA91F1707B8/?_encoding=UTF8&store_ref=SB_A06980482RUZSFMDWY84O-A10162901Z3EJ5JI0RMVA&pd_rd_plhdr=t&aaxitk=e515c9eacaa28ba0d7bb50a9cc918a7e&hsa_cr_id=0&lp_asins=B0C43BJW7V%2CB0BLNRCQ3T%2CB0BRWFXV7M&lp_slot=desktop-arbies&lp_page_asin=B07WRPCLYR&pd_rd_i=ad4&ref_=sbx_be_dp_arbies_mblsd_mb3_bkgd&pd_rd_w=h64FV&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=5JRE3FCAQDXC1GKSQXQ6&pd_rd_wg=5fuUR&pd_rd_r=87105c0f-fd9d-4188-a8f8-dc1c161276ee"
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "text": "Customers find this first aid kit comprehensive and well-stocked with first aid essentials, making it suitable for pet emergencies and easy to carry in the car. They appreciate its size for on-the-go use and consider it worth the price, with one customer noting it saved their pet's life.",
+      "insights": [
+        {
+          "title": "Quality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 90,
+            "positive": 88,
+            "negative": 2
+          },
+          "summary": "Customers find the first aid kit to be of good quality, describing it as a great starter pack with everything needed for pet emergencies.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "great product wish there was more med equipment like the staples",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1FXPB0L4PYOGA"
+            },
+            {
+              "position": 2,
+              "snippet": "...had the need to use the first aid products yet but they look like good quality and everything came as expected.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R80SGGG5TXWVV"
+            },
+            {
+              "position": 3,
+              "snippet": "I am blown away what a good kit this is. It is better then most my human first aid kits!! Highly recommend, pet or not , this kit is good!...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1VH9R0L2O0B3G"
+            },
+            {
+              "position": 4,
+              "snippet": "Great kit just a shame 1 of the 2 I ordered is missing some items....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R27C7DVNQRYJGL"
+            }
+          ]
+        },
+        {
+          "title": "Included items",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 61,
+            "positive": 57,
+            "negative": 4
+          },
+          "summary": "Customers appreciate that the first aid kit is well-stocked with first aid essentials.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...This has all the essentials you would need to provide proper pet first aid and CPR in order to help get them to a vet for treatment....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2SEU8T7FIPFFZ"
+            },
+            {
+              "position": 2,
+              "snippet": "It’s alright. It comes with a lot of stuff a regular human first aid kit comes with, which are helpful to an extent, but as someone who has a...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1JGAAT9YVCT4F"
+            },
+            {
+              "position": 3,
+              "snippet": "...It pretty much has everything you need .i bought a few more separate items to add to it but overall it has basic essentials in case of an emergency!",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2SZ99QQNELVY"
+            },
+            {
+              "position": 4,
+              "snippet": "...It’s a well stocked kit in a sturdy soft side case. The bright color makes it easy to spot....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R5VXRS3B7NC28"
+            }
+          ]
+        },
+        {
+          "title": "Emergency use",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 52,
+            "positive": 50,
+            "negative": 2
+          },
+          "summary": "Customers find the first aid kit essential for pet owners, with one mentioning it's particularly useful during hikes.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "There are many good items in this kit. Good to have on hand if you have pets.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R246MLT5GXJU3X"
+            },
+            {
+              "position": 2,
+              "snippet": "Very useful, loved it. I compared it to other kits on my list and was the most complete. Loved the manual and how it was packed.",
+              "link": "https://www.amazon.com/gp/customer-reviews/RZFPEW98UEX1Y"
+            },
+            {
+              "position": 3,
+              "snippet": "...I like the emergency blanket because shock is a big problem if you were out on a trail and he gets hurt....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R15CAI2UX86A30"
+            },
+            {
+              "position": 4,
+              "snippet": "...- bandages, a thermometer, scissors - and just about everything you might need in an emergency....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R69Q11PYB4H3B"
+            }
+          ]
+        },
+        {
+          "title": "Size",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 40,
+            "positive": 34,
+            "negative": 6
+          },
+          "summary": "Customers appreciate the first aid kit's size, describing it as compact and great for pets on the go.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...to just stuff in your hiking bag will not take up much room small and compact and has quite the assortment of different things you may need of your...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2ZS0EEEHYW3WH"
+            },
+            {
+              "position": 2,
+              "snippet": "...It's a great size, has everything you could possibly need and is a great value for all the products that are included....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2BU6PYAHA48FH"
+            },
+            {
+              "position": 3,
+              "snippet": "...need for my dogs in the event of emergencies & It's the perfect size for travel or hiking. Highly recommend it.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R33Z01QXGU03KW"
+            },
+            {
+              "position": 4,
+              "snippet": "...It’s a great compatible and small bag filled with very useful things! Takes up very little space....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R25DE51MI2B8XK"
+            }
+          ]
+        },
+        {
+          "title": "Value for money",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 37,
+            "positive": 32,
+            "negative": 5
+          },
+          "summary": "Customers find the first aid kit worth its price, with one customer specifically mentioning it's worth the investment for their pet's safety.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...we didn’t need to use it but so glad we had it just in case worth the money and nice quality easy to just stuff in your hiking bag will not take up...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2ZS0EEEHYW3WH"
+            },
+            {
+              "position": 2,
+              "snippet": "...It's a great size, has everything you could possibly need and is a great value for all the products that are included....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2BU6PYAHA48FH"
+            },
+            {
+              "position": 3,
+              "snippet": "...This is an excellent first-aid kit for pets and it's worth the price. I'd recommend it to all pet owners.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R69Q11PYB4H3B"
+            },
+            {
+              "position": 4,
+              "snippet": "...Great value for the price. It’s small and compact, but it first A LOT in it....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3LE5E7YKEGEN4"
+            }
+          ]
+        },
+        {
+          "title": "Portability",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 32,
+            "positive": 32,
+            "negative": 0
+          },
+          "summary": "Customers appreciate the first aid kit's portability, finding it great for on-the-go use and easy to carry or store.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Great to have in the car. My dog has been bitten twice at the dog park and this kit had everything I needed",
+              "link": "https://www.amazon.com/gp/customer-reviews/RZIV62WH22V31"
+            },
+            {
+              "position": 2,
+              "snippet": "...It will be handy to keep in the car for when we travel....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1H3481NJPWQGC"
+            },
+            {
+              "position": 3,
+              "snippet": "...The case is nice and it is a convenient kit to keep in your car, but unfortunately when it finally came time to use the kit I realized it is missing...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2WIOOCEHJ1V46"
+            },
+            {
+              "position": 4,
+              "snippet": "...supplied, it has everything needed just in case, and it also brings a little purse so you can take things in the car or in the case of traveling....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1922S0WCM3E40"
+            }
+          ]
+        },
+        {
+          "title": "Comprehensive",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 20,
+            "positive": 19,
+            "negative": 1
+          },
+          "summary": "Customers find the first aid kit comprehensive, containing all the basics needed for emergency situations.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...The Arco first aid kit is complete and compact, making it easy to store in a car RV boat snd of course, at home.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3L2V4SP49PQVN"
+            },
+            {
+              "position": 2,
+              "snippet": "This small kit had the basics needed for first aid. I wish there was clotting cloths included. I added that to my kit.",
+              "link": "https://www.amazon.com/gp/customer-reviews/RNAS6Q30J04IX"
+            },
+            {
+              "position": 3,
+              "snippet": "The ARCA Cirst Aid Kit for dogs is a very thorough kit and can help you take of small injuries and also with larger injuries until you can get to a...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3HIZ8WPWX95SZ"
+            },
+            {
+              "position": 4,
+              "snippet": "Very comprehensive!",
+              "link": "https://www.amazon.com/gp/customer-reviews/R18BO5PNARURIZ"
+            }
+          ]
+        },
+        {
+          "title": "Versatility",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 20,
+            "positive": 18,
+            "negative": 2
+          },
+          "summary": "Customers find the first aid kit versatile, providing peace of mind for both pets and humans, with one customer mentioning it helped save their pet's life.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...It worked flawlessly, tick entirely intact and all! I was glad to have bought it, so I highly recommend it, even if you think nothing may happen....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2NJ3TI82HF6JY"
+            },
+            {
+              "position": 2,
+              "snippet": "I like this product, it gives everything you need for a little accident. Its small enough to put inside my dogs backpack for her to carry around....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R13N6XNMPRS7KI"
+            },
+            {
+              "position": 3,
+              "snippet": "...ARCA Cirst Aid Kit for dogs is a very thorough kit and can help you take of small injuries and also with larger injuries until you can get to a...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3HIZ8WPWX95SZ"
+            },
+            {
+              "position": 4,
+              "snippet": "Perfect to have incase of small bites or scratches that fits in your globe box or side pocket on the door, a must have for any dog parent!",
+              "link": "https://www.amazon.com/gp/customer-reviews/R382G0IV5H1MIH"
+            }
+          ]
+        }
+      ],
+      "images": [
+        "https://m.media-amazon.com/images/I/71sFd4890wL.jpg",
+        "https://m.media-amazon.com/images/I/81oGz+UVvPL.jpg",
+        "https://m.media-amazon.com/images/I/81QyLmeGFoL.jpg",
+        "https://m.media-amazon.com/images/I/81nrPOVz7tL.jpg",
+        "https://m.media-amazon.com/images/I/814nkXwXYqL.jpg",
+        "https://m.media-amazon.com/images/I/81mfzBBmjML.jpg",
+        "https://m.media-amazon.com/images/I/712+EEJ79ML.jpg",
+        "https://m.media-amazon.com/images/I/71Hg4W7NDhL.jpg",
+        "https://m.media-amazon.com/images/I/71p29ps3MgL.jpg",
+        "https://m.media-amazon.com/images/I/71YSVK-cBhL.jpg",
+        "https://m.media-amazon.com/images/I/718j9mIoKAL.jpg",
+        "https://m.media-amazon.com/images/I/71mTH1ui4nL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 85,
+        "4 star": 11,
+        "3 star": 3,
+        "2 star": 1,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Great for emergencies",
+        "text": "Needed this for a pet emergency recently. So glad I had this and it has what I needed. Nice and compact and good size, good for storing away or traveling. A nice amount of emergency supplies and quality content.",
+        "rating": 5,
+        "date": "March 5, 2026",
+        "author": "MELY",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AESMC4L3UC47EN5JEEDF4Q2LKN6A?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/b48761e1-aa9f-40c4-b48e-d5e65145bb58._CR0%2C0%2C1080%2C1080_SX460_SX48_.jpg",
+        "helpful_votes": "2 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "size": "CoreCare Kit"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Total Bargain For the Quality. Love Having This For Backup Safety.",
+        "text": "Absolutely love how much fits in this pouch. I bought it as a backup for my truck in case I need it for my dog while not at home. It’s easy to transport by fitting in my glovebox, center console or the back pouch of a seat. It has quality products inside that I don’t question if they’re safe for my dog. The quantity of first aid supplies plus the free swabs was definitely more than I expected for the cost. It was worth the money. I have no worries my dog will be safe in an emergency whether it’s something small or until I can get him to an emergency vet for further assistance if something were to happen when we’re out and about. It gives me so much peace of mind.",
+        "rating": 5,
+        "date": "January 28, 2026",
+        "author": "A. D. York",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFMILLX2GZJ23ITVQAWTDDLZCXDA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "5 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "size": "Ready-Go Pouch"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Pet first aid kit is a wise investment for your peace of mind and your pets health",
+        "text": "Every responsible pet owner would be wise to include a pet first aid kit for use at home and while traveling. The Arco first aid kit is complete and compact, making it easy to store in a car RV boat snd of course, at home.",
+        "rating": 5,
+        "date": "May 30, 2026",
+        "author": "Flash Jellybean",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEU7HHCBQYMRFVDANYVCEZKWABSQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "CoreCare Kit"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Pricey but Worth It",
+        "text": "This is a really good starter pack. I would recommend it for anyone who has a pet or if you just got a pet , this is good to have in your essentials kit. It travels really well and it is pretty sturdy. Everything fits in the pack just fine and it is easy to find. It's also pretty compact so it is easy to organize.",
+        "rating": 5,
+        "date": "November 13, 2025",
+        "author": "BeeP",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFSYFTTDGR76NPFD7T45QPVQ6SKA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/fa5450b6-de67-43b1-a4a0-bbea5d19aed6._CR0%2C0%2C500%2C500_SX460_SX48_.jpeg",
+        "helpful_votes": "3 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "size": "Ready-Go Pouch"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Very Useful and Complete",
+        "text": "I was impressed with how many items come inside. It gives me peace of mind knowing I’m prepared when traveling with my dog.",
+        "rating": 4,
+        "date": "August 28, 2025",
+        "author": "karla chourio",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGSKHKAZUDYNKNHOAMKA2QJP3LFQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "5 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "size": "CoreCare Kit"
+        }
+      },
+      {
+        "position": 6,
+        "title": "Good quality, great brand",
+        "text": "Just took the first aid course and they were selling a lame kit for triple the price with items like the scissors, bandages and packaging of lower quality. This was a great price had everything I would need for my needs in a nice travel bag.",
+        "rating": 5,
+        "date": "February 10, 2026",
+        "author": "Azetan",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEHQQAHN3TDRL5GE2NHUQEPIBPHQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/670ca669-1381-4245-80b6-5fd5a1a749a8._CR0%2C0%2C500%2C500_SX460_SX48_.jpeg",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "size": "Ready-Go Pouch"
+        }
+      },
+      {
+        "position": 7,
+        "title": "Great product",
+        "text": "I have boufgt this 4 times everyone loves it! Used formraffle prize,Used for gifts and at work",
+        "rating": 5,
+        "date": "April 20, 2026",
+        "author": "Nanakaren",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AF3NCHLAHIXJMP5KL4HONUYE6ERA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "CoreCare Kit"
+        }
+      },
+      {
+        "position": 8,
+        "title": "Just buy it already",
+        "text": "Peace of mind is priceless, and honestly most adventure pups will find their fair share of scrapes and bruises. This kit is well stocked with USEFUL items and a handy guide for the less familiar. Well worth the cost!",
+        "rating": 5,
+        "date": "May 27, 2026",
+        "author": "Charming Char",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHGSDZGOHVGYKQSV6BHD7YPA3XDQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "size": "CoreCare Kit"
+        }
+      }
+    ]
+  }
+}

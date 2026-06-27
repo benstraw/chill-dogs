@@ -83,6 +83,8 @@ Use `--delete-cache <item-id>` to remove one cached raw payload and its `_index.
 
 The cache is review-only. It must not automatically replace canonical product copy, manually selected images, or merchant offers.
 
+> **TODO — improve Chewy cache ID matching:** The Impact catalog assigns its own internal IDs that often differ from the Chewy `/dp/` product IDs stored in our product records (e.g. Kurgo RSG is `207876` on Chewy but `181207` in Impact; Adventure Medical products diverge similarly). As a result, `--item-id` fetches fail and `--search` must be used, which caches 100 unrelated items at a time. Two improvements to consider: (1) add a `--search-one "keyword"` mode that runs a search but writes only the first-ranked result to cache; (2) store `merchantProductId` alongside Impact's own `CatalogItemId` in the manifest so the two ID spaces can be reconciled without a full re-search. Until then, fetch with `--search`, then manually trim the manifest to just the products you need.
+
 ## How to Add Chewy Products to the Catalog
 
 1. Find or fetch the Chewy catalog item:
