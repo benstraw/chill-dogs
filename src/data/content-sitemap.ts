@@ -443,7 +443,7 @@ export const staticSitemapSections: SitemapSection[] = [
   },
   {
     title: 'Tracking & Safety',
-    description: 'GPS tracker converters and safety collectors — route lost-dog and tracking intent to affiliate product pages.',
+    description: 'GPS tracker converters and safety clusters — route lost-dog, flea/tick, and emergency intent to affiliate product pages.',
     pages: [
       createSitemapPage({
         baseTitle: 'Best Dog GPS Trackers: Cellular vs Off-Grid vs Bluetooth (2026)',
@@ -483,6 +483,57 @@ export const staticSitemapSections: SitemapSection[] = [
         relatedLabel: 'Snake-Bite Emergency Kit',
         heroProduct: emergencyHero('fido-pro-airlift-rescue-sling', 'Top Rescue Sling', 'Fido Pro Airlift Rescue Sling'),
         pubDate: new Date('2026-06-26'),
+      }),
+      createSitemapPage({
+        baseTitle: 'Best Flea and Tick Medications for Dogs',
+        description:
+          'Compare the most common flea and tick medications for dogs — monthly and quarterly oral prescriptions, combo chews, OTC topicals, and Seresto collar trade-offs.',
+        href: ROUTES.fleaTickMedications,
+        pageType: 'converter',
+        topics: ['flea-tick', 'travel', 'road-trips'],
+        pinnedRelated: [
+          ROUTES.fleaTickPillar,
+          ROUTES.naturalFleaTickPrevention,
+          ROUTES.naturalFleaTickProducts,
+          ROUTES.fleaSeasonBathTools,
+          ROUTES.roadTrip,
+        ],
+        relatedLabel: 'Flea & Tick Medications',
+        pubDate: new Date('2026-06-30'),
+      }),
+      createSitemapPage({
+        baseTitle: 'Best Natural Flea and Tick Products for Dogs',
+        description:
+          'Compare Wondercide-led natural flea and tick options for dogs — sprays, spot-ons, shampoos, and collars — with practical notes on reapplication and efficacy limits.',
+        href: ROUTES.naturalFleaTickProducts,
+        pageType: 'converter',
+        topics: ['flea-tick', 'travel', 'road-trips'],
+        pinnedRelated: [
+          ROUTES.naturalFleaTickPrevention,
+          ROUTES.fleaTickPillar,
+          ROUTES.fleaSeasonBathTools,
+          ROUTES.fleaTickMedications,
+          ROUTES.roadTrip,
+        ],
+        relatedLabel: 'Natural Flea & Tick Products',
+        pubDate: new Date('2026-06-30'),
+      }),
+      createSitemapPage({
+        baseTitle: 'Dog Bath Tools for Flea Season',
+        description:
+          'Bath tools for flea season focus on cleanup and coat care, not miracle claims — especially slip-on tub sprayers and practical rinse routines.',
+        href: ROUTES.fleaSeasonBathTools,
+        pageType: 'converter',
+        topics: ['flea-tick', 'travel', 'road-trips'],
+        pinnedRelated: [
+          ROUTES.naturalFleaTickProducts,
+          ROUTES.naturalFleaTickPrevention,
+          ROUTES.fleaTickPillar,
+          ROUTES.fleaTickMedications,
+          ROUTES.roadTrip,
+        ],
+        relatedLabel: 'Flea-Season Bath Tools',
+        pubDate: new Date('2026-06-30'),
       }),
       createSitemapPage({
         baseTitle: 'Fi Dog Collar Review: GPS Tracking for Everyday Dogs (2026)',
@@ -712,12 +763,12 @@ export const staticSitemapSections: SitemapSection[] = [
     pages: [
       createSitemapPage({
         baseTitle: 'All Dog Products',
-        ogTitle: 'Browse All Dog Products — Cooling, Calming, Comfort & Gear',
+        ogTitle: 'Browse All Dog Products — Cooling, Comfort, and Safety',
         description:
-          'Browse our full catalog of researched dog products — cooling gear, calming aids, comfortable beds, crates, and GPS trackers. Filter by category.',
+          'Browse our full catalog of researched dog products — cooling gear, calming aids, comfort picks, GPS trackers, and flea-and-tick safety products.',
         href: ROUTES.shop,
         pageType: 'converter',
-        topics: ['cooling', 'calming', 'comfort', 'tracking'],
+        topics: ['cooling', 'calming', 'comfort', 'tracking', 'flea-tick'],
         pubDate: new Date('2026-05-07'),
       }),
     ],

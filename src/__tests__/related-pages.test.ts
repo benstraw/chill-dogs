@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
 import type { SitemapPage, SitemapSection, SitemapTopic } from '../data/content-sitemap';
+import { ROUTES } from '../data/routes';
 import { getCompleteSitemapSections } from '../data/sitemap-inventory';
 import { getRelatedPages, toLinkStripItems, toRelatedGuideCards } from '../utils/related-pages';
 
@@ -259,5 +260,40 @@ describe('related pages', () => {
         expect(relatedPage.href).not.toBe(page.href);
       }
     }
+  });
+
+  it('keeps the flea and tick cluster tightly related in the complete sitemap', async () => {
+    const sections = [
+      createSection('Safety', [
+        createPage({
+          href: ROUTES.fleaTickPillar,
+          pageType: 'collector',
+          collectorSubtype: 'article',
+          topics: ['flea-tick', 'travel'],
+          pinnedRelated: [
+            ROUTES.fleaTickMedications,
+            ROUTES.naturalFleaTickPrevention,
+            ROUTES.naturalFleaTickProducts,
+          ],
+        }),
+        createPage({ href: ROUTES.fleaTickMedications, topics: ['flea-tick', 'travel'] }),
+        createPage({
+          href: ROUTES.naturalFleaTickPrevention,
+          pageType: 'collector',
+          collectorSubtype: 'article',
+          topics: ['flea-tick', 'travel'],
+        }),
+        createPage({ href: ROUTES.naturalFleaTickProducts, topics: ['flea-tick', 'travel'] }),
+        createPage({ href: ROUTES.fleaSeasonBathTools, topics: ['flea-tick'] }),
+      ]),
+    ];
+
+    const related = await getRelatedPages({ currentHref: ROUTES.fleaTickPillar, sections, limit: 4 });
+
+    expect(related.map((page) => page.href)).toEqual(expect.arrayContaining([
+      ROUTES.fleaTickMedications,
+      ROUTES.naturalFleaTickPrevention,
+      ROUTES.naturalFleaTickProducts,
+    ]));
   });
 });

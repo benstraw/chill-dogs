@@ -1,14 +1,15 @@
 ---
 title: 'Natural Flea and Tick Prevention for Dogs'
-description: 'A practical guide to natural flea and tick prevention for dogs, with label-reading tips, cat-safety caveats, bath support, and when to call your vet.'
+description: 'A specialist guide for owners who already prefer natural flea and tick prevention for dogs, with label-reading tips, cat-safety notes, and bath support.'
+ogTitle: 'Natural Flea and Tick Prevention for Dogs Guide'
 pubDate: 2026-06-14
 canonicalPath: '/safety/natural-flea-and-tick-prevention-for-dogs/'
 topics: [flea-tick, travel, road-trips, lost-dog-safety]
 pinnedRelated:
-  - '/travel/dog-road-trip-gear/'
-  - '/safety/what-to-do-if-your-dog-runs-away/'
-  - '/gear/dog-snake-bite-emergency-kit/'
-  - '/cooling/dog-travel-hydration/'
+  - '/safety/flea-and-tick-prevention-for-dogs/'
+  - '/safety/best-natural-flea-and-tick-products-for-dogs/'
+  - '/safety/dog-bath-tools-for-flea-season/'
+  - '/safety/best-flea-and-tick-medications-for-dogs/'
 relatedLabel: 'Natural Flea & Tick Guide'
 ---
 
@@ -21,8 +22,9 @@ import { ROUTES } from '@data/routes';
 export const pageSlug = 'natural-flea-and-tick-prevention-for-dogs';
 
 export const tocHeadings = [
+  { label: 'Start Here First', anchor: 'start-here-first' },
   { label: 'Year-Round Pressure', anchor: 'year-round-pressure' },
-  { label: 'Why Owners Look Natural', anchor: 'why-natural' },
+  { label: 'Why Owners Stay Natural', anchor: 'why-natural' },
   { label: 'Natural Options', anchor: 'natural-options' },
   { label: 'Reading Wondercide Labels', anchor: 'wondercide-labels' },
   { label: 'Bath Support', anchor: 'bath-support' },
@@ -87,9 +89,9 @@ export const primarySources = [
 
 <Hero
   title="Natural Flea and Tick Prevention for Dogs"
-  subtitle="A practical guide to plant-based sprays, baths, label reading, cat-safety caveats, and when a real flea problem needs veterinary help."
-  primaryCta={{ label: 'Read Road Trip Gear', href: ROUTES.roadTrip }}
-  secondaryCta={{ label: 'Read Lost-Dog Safety', href: ROUTES.dogRanAwaySafety }}
+  subtitle="This is the specialist guide for owners who already know they want a lower-toxicity, natural-first routine. If you still want the full conventional-vs-natural decision framework, start with the broad pillar first."
+  primaryCta={{ label: 'See Natural Product Picks', href: ROUTES.naturalFleaTickProducts }}
+  secondaryCta={{ label: 'Read the Full Flea & Tick Guide', href: ROUTES.fleaTickPillar }}
   pageSlug={pageSlug}
 />
 
@@ -98,6 +100,14 @@ export const primarySources = [
   <Toc headings={tocHeadings} pageSlug={pageSlug} />
 
   <div class="prose">
+    <h2 id="start-here-first">Start here only if you already know you want a natural-first routine</h2>
+    <p>
+      This page is not trying to be the broadest flea and tick decision guide on the site anymore. It assumes you have already decided you want to avoid or minimize conventional pesticides where possible and want the best natural routine you can build without pretending natural products solve every problem.
+    </p>
+    <p>
+      If you are still deciding between prescription medications, OTC products, and natural options, go back to <a href={ROUTES.fleaTickPillar}>our full flea and tick prevention guide</a> first. If you already know you want product picks in the natural lane, use <a href={ROUTES.naturalFleaTickProducts}>our natural flea and tick product comparison</a>.
+    </p>
+
     <p>
       If you live on the Central Coast, flea and tick prevention never really feels like a seasonal chore. Warm winters, coastal brush, dog parks, trail edges, boarding, and road trips all blur the calendar. A dog can pick up fleas after a casual neighborhood walk, and ticks do not need a dramatic wilderness day to become a problem.
     </p>
@@ -157,6 +167,9 @@ export const primarySources = [
     <p>
       A reader-recommended rinse tool like a Rinseroo-style hose attachment can make this less of a wrestling match, especially for apartment showers or dogs who dislike loud sprayers. That is a convenience note, not a treatment claim. The important part is the routine: wet the coat thoroughly, use only dog-appropriate products, avoid eyes and ears, rinse completely, dry well, and wash bedding afterward if fleas are suspected.
     </p>
+    <p>
+      If you want the actual product comparison for that cleanup workflow, use <a href={ROUTES.fleaSeasonBathTools}>our flea-season bath tools page</a>. It keeps the bath-setup conversation separate from the prevention decision itself.
+    </p>
 
     <h2 id="when-to-escalate">When Natural Is Not Enough</h2>
     <p>
@@ -171,6 +184,9 @@ export const primarySources = [
     </ul>
     <p>
       A good veterinarian conversation does not have to be all-or-nothing. Bring the product labels you are considering, explain your exposure level, say clearly if cats live in the home, and ask what a safe prevention ladder looks like for your dog.
+    </p>
+    <p>
+      If your natural routine keeps falling short, the next step is not more hope. It is a clearer decision. Move to <a href={ROUTES.fleaTickMedications}>the medications comparison page</a> or go back up to <a href={ROUTES.fleaTickPillar}>the full flea and tick pillar guide</a>.
     </p>
   </div>
 
@@ -192,8 +208,8 @@ export const primarySources = [
   </section>
 
   <InternalLinkStrip
-    heading="More Outdoor Dog Safety Guides"
-    currentHref={ROUTES.fleaTickPrevention}
+    heading="More Flea, Tick, and Outdoor Safety Guides"
+    currentHref={ROUTES.naturalFleaTickPrevention}
     limit={5}
     fromPage={pageSlug}
   />

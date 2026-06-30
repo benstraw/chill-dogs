@@ -6,6 +6,7 @@
 import { coolingProducts, categoryMeta } from './cooling-products';
 import { calmingProducts } from './calming-products';
 import { emergencyProducts } from './emergency-products';
+import { fleaTickProducts } from './flea-tick-products';
 import { relaxationProducts } from './relaxation-products';
 import { accessoryProducts, trackerProducts } from './tracking-products';
 import { coolingConverterPageConfigs } from './cooling-converter-pages';
@@ -40,6 +41,7 @@ export function buildProductPageMap(): ProductPageMap {
   for (const p of trackerProducts) map[p.id] = [];
   for (const p of accessoryProducts) map[p.id] = [];
   for (const p of emergencyProducts) map[p.id] = [];
+  for (const p of fleaTickProducts) map[p.id] = [];
 
   for (const [slug, config] of Object.entries(coolingConverterPageConfigs)) {
     const href = `/cooling/${slug}/`;
@@ -125,6 +127,36 @@ export function buildProductPageMap(): ProductPageMap {
   };
   for (const p of emergencyProducts) {
     addRef(map, p.id, snakeBiteKitRef);
+  }
+
+  const fleaTickMedicationRef: PageRef = {
+    label: 'Best Flea and Tick Medications for Dogs',
+    href: ROUTES.fleaTickMedications,
+  };
+  for (const p of fleaTickProducts.filter((product) =>
+    ['rx-oral-monthly', 'rx-oral-quarterly', 'rx-oral-combo', 'otc-topical', 'otc-collar'].includes(product.category)
+  )) {
+    addRef(map, p.id, fleaTickMedicationRef);
+  }
+
+  const fleaTickNaturalRef: PageRef = {
+    label: 'Best Natural Flea and Tick Products for Dogs',
+    href: ROUTES.naturalFleaTickProducts,
+  };
+  for (const p of fleaTickProducts.filter((product) =>
+    ['natural-spray', 'natural-spot-on', 'natural-shampoo', 'natural-collar'].includes(product.category)
+  )) {
+    addRef(map, p.id, fleaTickNaturalRef);
+  }
+
+  const fleaBathRef: PageRef = {
+    label: 'Dog Bath Tools for Flea Season',
+    href: ROUTES.fleaSeasonBathTools,
+  };
+  for (const p of fleaTickProducts.filter((product) =>
+    ['bath-tool', 'natural-shampoo'].includes(product.category)
+  )) {
+    addRef(map, p.id, fleaBathRef);
   }
 
   return map;

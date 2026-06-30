@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
 import { emergencyProducts } from '../data/emergency-products';
+import { fleaTickProducts } from '../data/flea-tick-products';
 import { productCatalogItems, type ProductCatalogItem } from '../data/product-catalog';
 import { getAmazonOfferEntries, getOffers, getPrimaryOffer, getRequiredPrimaryOffer } from '../data/products/offers';
 import type { AffiliateOffer, ProviderMetadata } from '../data/products/types';
@@ -120,6 +121,36 @@ describe('multi-merchant product offers', () => {
       expect(() => new URL(chewyOffer!.url), `${productId} Chewy url is not a valid URL`).not.toThrow();
       expect(chewyOffer!.url, `${productId} Chewy url must be an affiliate link, not a raw chewy.com URL`).toMatch(/^https:\/\/chewy\.sjv\.io\//);
       expect(chewyOffer!.canonicalUrl, `${productId} canonicalUrl must be the raw Chewy product URL`).toBe(canonicalUrl);
+    }
+  });
+
+  it('wires flea-and-tick offers into the safety catalog with valid affiliate URLs', () => {
+    const expectedOfferIds = [
+      'nexgard-10-24',
+      'bravecto-44-88',
+      'frontline-plus-45-88',
+      'seresto-large',
+      'wondercide-spray-lemongrass',
+      'wondercide-spot-on-medium',
+      'wondercide-shampoo-peppermint',
+      'rinseroo-original',
+    ];
+
+    for (const productId of expectedOfferIds) {
+      const product = fleaTickProducts.find((entry) => entry.id === productId);
+      expect(product, `${productId} missing from flea/tick products`).toBeTruthy();
+      expect(getOffers(product!), `${productId} has no offers`).not.toHaveLength(0);
+
+      for (const offer of getOffers(product!)) {
+        expect(() => new URL(offer.url), `${productId} has invalid offer url`).not.toThrow();
+        if (offer.merchant === 'amazon') {
+          expect(offer.url).toContain('tag=chill-dogs-20');
+        }
+        if (offer.merchant === 'chewy') {
+          expect(offer.url).toMatch(/^https:\/\/chewy\.sjv\.io\//);
+          expect(offer.canonicalUrl).toContain('https://www.chewy.com/');
+        }
+      }
     }
   });
 
