@@ -1,5 +1,6 @@
 import { calmingProducts } from './calming-products';
 import { coolingProducts } from './cooling-products';
+import { emergencyProducts } from './emergency-products';
 import { getOffers } from './products/offers';
 import type { AffiliateOffer } from './products/types';
 import { relaxationProducts } from './relaxation-products';
@@ -76,5 +77,22 @@ export const productCatalogItems: ProductCatalogItem[] = [
     image: product.image,
     note: product.note,
     source: 'src/data/tracking-products.ts',
+  })),
+  ...emergencyProducts.map((product) => ({
+    id: product.id,
+    name: product.name,
+    pillar: 'gear' as const,
+    category: product.category,
+    asin: product.asin,
+    amazonUrl: product.amazonUrl,
+    offers: getOffers(product),
+    bullets: [...product.bullets],
+    bestFor: product.bestFor,
+    image: product.image,
+    sizingNote: product.sizingNote,
+    howItHelps: product.howItHelps,
+    considerIf: product.caution,
+    whyItWorks: product.useCase,
+    source: 'src/data/emergency-products.ts',
   })),
 ];

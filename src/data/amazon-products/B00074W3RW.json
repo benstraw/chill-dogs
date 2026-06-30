@@ -1,0 +1,1373 @@
+{
+  "search_metadata": {
+    "id": "6a203f2c1cff1913fe7c3b64",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/QqTsFdklPi1zzluL-m6WlA/6a203f2c1cff1913fe7c3b64.json",
+    "created_at": "2026-06-03 14:50:20 UTC",
+    "processed_at": "2026-06-03 14:50:20 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B00074W3RW/?",
+    "raw_html_file": "https://serpapi.com/searches/QqTsFdklPi1zzluL-m6WlA/6a203f2c1cff1913fe7c3b64.html",
+    "total_time_taken": 14.33
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B00074W3RW",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B00074W3RW",
+    "title": "Mendota Pet Slip Leash - Dog Lead and Collar Combo - Made in The USA - Hunter Green, 1/2 in x 6 ft - for Large Breeds",
+    "link": "https://www.amazon.com/Mendota-Slip-Lead-Hunter-Green/dp/B00074W3RW/",
+    "link_clean": "https://www.amazon.com/dp/B00074W3RW/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B00074W3RW&device=desktop&engine=amazon_product",
+    "badges": [
+      "Frequently returned item Check the product details and customer reviews to learn more about this item."
+    ],
+    "variants": [
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B003HVTP5U",
+            "name": "1/2 in x 4 ft",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B003HVTP5U&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B00074W3RW",
+            "name": "1/2 in x 6 ft",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B00074W3RW&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0869QGDV1",
+            "name": "3/8 in x 4 ft",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0869QGDV1&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 4,
+            "asin": "B01DL9LWWG",
+            "name": "3/8 in x 4 ft, 6 ft",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B01DL9LWWG&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 5,
+            "asin": "B086B4WK33",
+            "name": "3/8 in x 6 ft",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B086B4WK33&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 6,
+            "asin": "B003J9HQJM",
+            "name": "4 Feet",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B003J9HQJM&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 7,
+            "asin": "B01DL9LX0M",
+            "name": "4 ft",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B01DL9LX0M&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 8,
+            "asin": "B003J9J4A6",
+            "name": "6 ft",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B003J9J4A6&device=desktop&engine=amazon_product"
+          }
+        ]
+      },
+      {
+        "title": "Color",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B00074W3RW",
+            "name": "Hunter Green",
+            "image": "https://m.media-amazon.com/images/I/413TJtv5F1L._SS64_.jpg",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B00074W3RW&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0869Q4YSF",
+            "name": "Arctic Blue",
+            "image": "https://m.media-amazon.com/images/I/41SU2HX2VqL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0869Q4YSF&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0036BNP5C",
+            "name": "Black Confetti",
+            "image": "https://m.media-amazon.com/images/I/41RowwUdBKL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0036BNP5C&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 4,
+            "asin": "B001B15YT4",
+            "name": "Black Ice Purple",
+            "image": "https://m.media-amazon.com/images/I/41fl1kWdMQL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B001B15YT4&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 5,
+            "asin": "B001B18400",
+            "name": "Black Ice Red",
+            "image": "https://m.media-amazon.com/images/I/41AIR+UODTL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B001B18400&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 6,
+            "asin": "B0869Q2CMB",
+            "name": "Black Ice Silver",
+            "image": "https://m.media-amazon.com/images/I/410ccJol6oL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0869Q2CMB&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 7,
+            "asin": "B00HK41TSQ",
+            "name": "Black Ice Turquoise",
+            "image": "https://m.media-amazon.com/images/I/41JMUT3pUsL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B00HK41TSQ&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 8,
+            "asin": "B001B12R0S",
+            "name": "Black Ice Yellow",
+            "image": "https://m.media-amazon.com/images/I/41mgrPKO34L._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B001B12R0S&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 9,
+            "asin": "B004XJL4I6",
+            "name": "Diamond Ruby Rasp/Burgundy",
+            "image": "https://m.media-amazon.com/images/I/41blcfSkd7L._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B004XJL4I6&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 10,
+            "asin": "B001B15YBW",
+            "name": "Kelly Confetti",
+            "image": "https://m.media-amazon.com/images/I/41HpXueSNlL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B001B15YBW&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 11,
+            "asin": "B001B10UZW",
+            "name": "Kelly Green",
+            "image": "https://m.media-amazon.com/images/I/41h794OGEoL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B001B10UZW&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 12,
+            "asin": "B002HGALRC",
+            "name": "Mocha",
+            "image": "https://m.media-amazon.com/images/I/41iLdNL0kML._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B002HGALRC&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 13,
+            "asin": "B003J9C4GC",
+            "name": "Night-Viz Black",
+            "image": "https://m.media-amazon.com/images/I/41g-DFlXHVL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B003J9C4GC&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 14,
+            "asin": "B003AVGMMG",
+            "name": "Purple",
+            "image": "https://m.media-amazon.com/images/I/41FAS0Cf8aL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B003AVGMMG&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 15,
+            "asin": "B001B13XCE",
+            "name": "Raspberry Confetti",
+            "image": "https://m.media-amazon.com/images/I/41+aVrcpLWL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B001B13XCE&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 16,
+            "asin": "B003AVIOJU",
+            "name": "Salt and Pepper",
+            "image": "https://m.media-amazon.com/images/I/41oiduN0vyL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B003AVIOJU&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 17,
+            "asin": "B003AVKHEA",
+            "name": "Taffy",
+            "image": "https://m.media-amazon.com/images/I/417Szwwx-9L._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B003AVKHEA&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 18,
+            "asin": "B0035Z9B2K",
+            "name": "Woodlands",
+            "image": "https://m.media-amazon.com/images/I/415V0RHiYwL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0035Z9B2K&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 19,
+            "asin": "B01DL9LWXK",
+            "name": "Black Ice Raspberry",
+            "image": "https://m.media-amazon.com/images/I/41XD7FtZk3L._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B01DL9LWXK&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 20,
+            "asin": "B000LQ6318",
+            "name": "Brown",
+            "image": "https://m.media-amazon.com/images/I/31b+SpvDIHL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B000LQ6318&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 21,
+            "asin": "B001B183H4",
+            "name": "Camo",
+            "image": "https://m.media-amazon.com/images/I/41kGSnydisL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B001B183H4&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 22,
+            "asin": "B0135Z2ZYA",
+            "name": "Harvest",
+            "image": "https://m.media-amazon.com/images/I/41UEIfR06FL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0135Z2ZYA&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 23,
+            "asin": "B003AVEMZ0",
+            "name": "Pink",
+            "image": "https://m.media-amazon.com/images/I/41Ee2y8OpmL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B003AVEMZ0&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 24,
+            "asin": "B001DIMQTG",
+            "name": "Pink Chocolate",
+            "image": "https://m.media-amazon.com/images/I/418CofasN9L._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B001DIMQTG&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 25,
+            "asin": "B003AVKEYS",
+            "name": "Purple Confetti",
+            "image": "https://m.media-amazon.com/images/I/41BRW-B1JOL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B003AVKEYS&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 26,
+            "asin": "B000LQ7BQE",
+            "name": "Tan",
+            "image": "https://m.media-amazon.com/images/I/416GWBwBvyL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B000LQ7BQE&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 27,
+            "asin": "B000LQ632W",
+            "name": "White",
+            "image": "https://m.media-amazon.com/images/I/31Th1+pcc4L._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B000LQ632W&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 28,
+            "asin": "B007SNF8B8",
+            "name": "Amber",
+            "image": "https://m.media-amazon.com/images/I/310TCnEEWDL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B007SNF8B8&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 29,
+            "asin": "B08X211D3X",
+            "name": "Amethyst",
+            "image": "https://m.media-amazon.com/images/I/41VZ3nj8L5L._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B08X211D3X&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 30,
+            "asin": "B001B183B0",
+            "name": "Diamond Sandstone",
+            "image": "https://m.media-amazon.com/images/I/41jOZnX+3aL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B001B183B0&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 31,
+            "asin": "B0135Z30AI",
+            "name": "Ivy",
+            "image": "https://m.media-amazon.com/images/I/41n9MushBmL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0135Z30AI&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 32,
+            "asin": "B007SNF8LS",
+            "name": "Jade",
+            "image": "https://m.media-amazon.com/images/I/415uwSGzdOL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B007SNF8LS&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 33,
+            "asin": "B003J9J4A6",
+            "name": "Night-Viz Blue",
+            "image": "https://m.media-amazon.com/images/I/41nQGKdtVlL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B003J9J4A6&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 34,
+            "asin": "B000LQ7BDC",
+            "name": "Orange",
+            "image": "https://m.media-amazon.com/images/I/318vdj94zZL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B000LQ7BDC&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 35,
+            "asin": "B007SNF8SG",
+            "name": "Ruby",
+            "image": "https://m.media-amazon.com/images/I/41blcfSkd7L._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B007SNF8SG&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 36,
+            "asin": "B0869Q43NT",
+            "name": "Sandstone",
+            "image": "https://m.media-amazon.com/images/I/41jOZnX+3aL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0869Q43NT&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 37,
+            "asin": "B007SNF8WC",
+            "name": "Sapphire",
+            "image": "https://m.media-amazon.com/images/I/41htiEm52yL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B007SNF8WC&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 38,
+            "asin": "B003AVCR6G",
+            "name": "Seafoam",
+            "image": "https://m.media-amazon.com/images/I/418aYZv6sXL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B003AVCR6G&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 39,
+            "asin": "B003AVEKLQ",
+            "name": "Starbright",
+            "image": "https://m.media-amazon.com/images/I/41cD7Z7SZUL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B003AVEKLQ&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 40,
+            "asin": "B0034DP8DE",
+            "name": "Sunset",
+            "image": "https://m.media-amazon.com/images/I/41nhA4IbX2L._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0034DP8DE&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the Mendota Pet Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/518869tpQWL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/518869tpQWL._AC_SL1000_.jpg",
+      "https://m.media-amazon.com/images/I/71tPujyQt0S._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71gyJwcvnqS._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61qtAX9KYLS._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81YtwzAjsGS._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81h5QVZ2RTS._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/917dlNM1zoS._AC_SL1500_.jpg"
+    ],
+    "rating": 4.7,
+    "reviews": 3886,
+    "bought_last_month": "50+ bought in past month",
+    "price": "$24.49",
+    "extracted_price": 24.49,
+    "prime": true,
+    "delivery": [
+      "FREE delivery Monday, June 8 on orders shipped by Amazon over $35",
+      "Or Prime members get FREE delivery Tomorrow, June 4. Order within 11 hrs 44 mins. Join Prime"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$24.49",
+      "extracted_price": 24.49,
+      "delivery": [
+        "FREE delivery Monday, June 8 on orders shipped by Amazon over $35",
+        "Or Prime members get FREE delivery Tomorrow, June 4. Order within 11 hrs 44 mins. Join Prime"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "Mendota Pet",
+          "details": {
+            "heading": "Sold by",
+            "content": "Mendota Pet"
+          },
+          "link": {
+            "text": "Mendota Pet",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A2KW4OBDCC9SH9&asin=B00074W3RW&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "size": "1/2 in x 6 ft",
+    "color": "Hunter Green",
+    "brand": "Mendota Pet",
+    "material": "Polypropylene",
+    "product_dimensions": "72\"L x 0.5\"W"
+  },
+  "about_item": [
+    "This slip leash acts as a leash and a collar in one. Simply slip the loop over your dogs neck and use the handle end as a leash. Leash and collar in one combination that is great for training and known for its ease of use.",
+    "This slip leash & collar combination is a favoriate amongst dog trainers, handlers and show dogs. Soft on the hands with its Broken in Feel easy to use and pliable enough to fit in your coat pocket.",
+    "Mendota Slip Leashes are hand made in the USA using premium quality material.",
+    "1/2″ x 4′ and 1/2″ x 6′ for dogs over 50 pounds",
+    "Brass, satin nickel or black metallic hardware and oil tanned leather splices."
+  ],
+  "bought_together": [
+    {
+      "position": 1,
+      "title": "Mendota Pet Slip Leash - Dog Lead and Collar Combo - Made in The USA - Hunter Green, 1/2 in x 6 ft - for Large Breeds",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/518869tpQWL._AC_UL116_SR116,116_.jpg",
+      "price": "$24.49",
+      "extracted_price": 24.49,
+      "delivery": [
+        "Get it as soon as Monday, Jun 8"
+      ],
+      "stock": "In Stock"
+    },
+    {
+      "position": 2,
+      "title": "Mendota Products Slip Leash - Dog Lead and Collar Combo - Made in The USA - Blue, 1/2 in x 6 ft - for Large Breeds",
+      "link": "https://www.amazon.com/Mendota-Products-2802-Slip-Lead/dp/B001B12R94/ref=pd_bxgy_thbs_d_sccl_1/140-1097210-2644833?pd_rd_w=HJdFN&content-id=amzn1.sym.9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_p=9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_r=DPRP486V8089BA9QDGQ4&pd_rd_wg=svPSI&pd_rd_r=7d3f81e8-87fd-417a-9a59-cb749e47e702&pd_rd_i=B001B12R94&psc=1",
+      "asin": "B001B12R94",
+      "link_clean": "https://www.amazon.com/Mendota-Products-2802-Slip-Lead/dp/B001B12R94/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B001B12R94&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/6120xgFjEwL._AC_UL116_SR116,116_.jpg",
+      "price": "$24.49",
+      "extracted_price": 24.49,
+      "delivery": [
+        "Get it as soon as Monday, Jun 8"
+      ],
+      "stock": "In Stock"
+    }
+  ],
+  "related_products": [
+    {
+      "position": 1,
+      "title": "Mendota Pet Slip Leash - Dog Lead and Collar Combo - Made in The USA - Black, 1/2 in x 6 ft - for Large Breeds",
+      "link": "https://www.amazon.com/Mendota-Slip-Lead-Black-Dogs/dp/B00074W3RM/ref=pd_sbs_d_sccl_1_1/140-1097210-2644833?pd_rd_w=FBCnB&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=DPRP486V8089BA9QDGQ4&pd_rd_wg=svPSI&pd_rd_r=7d3f81e8-87fd-417a-9a59-cb749e47e702&pd_rd_i=B00074W3RM&psc=1",
+      "asin": "B00074W3RM",
+      "link_clean": "https://www.amazon.com/Mendota-Slip-Lead-Black-Dogs/dp/B00074W3RM/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B00074W3RM&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/51w6inO4AxL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.7,
+      "reviews": 1031,
+      "price": "$22.19",
+      "extracted_price": 22.19,
+      "delivery": [
+        "Get it as soon as Monday, Jun 8"
+      ]
+    },
+    {
+      "position": 2,
+      "title": "Mendota Pet Slip Leash - Dog Lead and Collar Combo - Made in The USA - Tan, 1/2 in x 6 ft - for Large Breeds",
+      "link": "https://www.amazon.com/Mendota-Products-Slip-Lead-Dogs/dp/B003AVCR66/ref=pd_sbs_d_sccl_1_2/140-1097210-2644833?pd_rd_w=FBCnB&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=DPRP486V8089BA9QDGQ4&pd_rd_wg=svPSI&pd_rd_r=7d3f81e8-87fd-417a-9a59-cb749e47e702&pd_rd_i=B003AVCR66&psc=1",
+      "asin": "B003AVCR66",
+      "link_clean": "https://www.amazon.com/Mendota-Products-Slip-Lead-Dogs/dp/B003AVCR66/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B003AVCR66&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/51ajWiyAV-L._AC_UL165_SR165,165_.jpg",
+      "rating": 4.4,
+      "reviews": 62,
+      "price": "$24.49",
+      "extracted_price": 24.49,
+      "delivery": [
+        "Get it as soon as Monday, Jun 8"
+      ]
+    },
+    {
+      "position": 3,
+      "title": "Mendota Pet Slip Leash - Dog Lead and Collar Combo - Made in The USA - Hunter Green, 3/8 in x 6 ft - for Small/Medium Breeds",
+      "link": "https://www.amazon.com/Mendota-Slip-Lead-Hunter-Green/dp/B0002YFSDI/ref=pd_sbs_d_sccl_1_3/140-1097210-2644833?pd_rd_w=FBCnB&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=DPRP486V8089BA9QDGQ4&pd_rd_wg=svPSI&pd_rd_r=7d3f81e8-87fd-417a-9a59-cb749e47e702&pd_rd_i=B0002YFSDI&psc=1",
+      "asin": "B0002YFSDI",
+      "link_clean": "https://www.amazon.com/Mendota-Slip-Lead-Hunter-Green/dp/B0002YFSDI/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0002YFSDI&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/51zNW-YsG4L._AC_UL165_SR165,165_.jpg",
+      "rating": 4.7,
+      "reviews": 4279,
+      "price": "$21.24",
+      "extracted_price": 21.24,
+      "delivery": [
+        "Get it as soon as Monday, Jun 8"
+      ]
+    },
+    {
+      "position": 4,
+      "title": "Mendota Products Slip Leash - Dog Lead and Collar Combo - Made in The USA - Blue, 1/2 in x 6 ft - for Large Breeds",
+      "link": "https://www.amazon.com/Mendota-Products-2802-Slip-Lead/dp/B001B12R94/ref=pd_sbs_d_sccl_1_4/140-1097210-2644833?pd_rd_w=FBCnB&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=DPRP486V8089BA9QDGQ4&pd_rd_wg=svPSI&pd_rd_r=7d3f81e8-87fd-417a-9a59-cb749e47e702&pd_rd_i=B001B12R94&psc=1",
+      "asin": "B001B12R94",
+      "link_clean": "https://www.amazon.com/Mendota-Products-2802-Slip-Lead/dp/B001B12R94/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B001B12R94&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/6120xgFjEwL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.7,
+      "reviews": 291,
+      "price": "$24.49",
+      "extracted_price": 24.49,
+      "delivery": [
+        "Get it as soon as Monday, Jun 8"
+      ]
+    },
+    {
+      "position": 5,
+      "title": "Fida Durable Slip Lead, 6 FT x 1/2\" Heavy Duty Loop Leash, Comfortable Strong Rope for Large, Medium Dogs, No Pull Pet Traini",
+      "link": "https://www.amazon.com/Fida-Durable-Comfortable-Training-Reflective/dp/B08Y1SDD54/ref=pd_sbs_d_sccl_1_5/140-1097210-2644833?pd_rd_w=FBCnB&content-id=amzn1.sym.aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_p=aa738fbd-ad05-4d11-aae2-04b598db6305&pf_rd_r=DPRP486V8089BA9QDGQ4&pd_rd_wg=svPSI&pd_rd_r=7d3f81e8-87fd-417a-9a59-cb749e47e702&pd_rd_i=B08Y1SDD54&psc=1",
+      "asin": "B08Y1SDD54",
+      "link_clean": "https://www.amazon.com/Fida-Durable-Comfortable-Training-Reflective/dp/B08Y1SDD54/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B08Y1SDD54&device=desktop&engine=amazon_product",
+      "badges": [
+        "Amazon's Choice"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81BWZkKUkzL._AC_UL165_SR165,165_.jpg",
+      "rating": 4.5,
+      "reviews": 14482,
+      "price": "$13.99",
+      "extracted_price": 13.99,
+      "price_unit": "$13.99/count",
+      "extracted_price_unit": 13.99,
+      "delivery": [
+        "Get it as soon as Monday, Jun 8"
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "position": 1,
+      "title": "Reliable Slip Leash!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/24c2ed37-4be4-4491-83d8-dae757d1fff5/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/A1XE1WoXYgL.jpg",
+      "duration": "0:24",
+      "vendor": "Jamie Moeller",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/71znVgSC+VL._CR0,0,1080,1080_._FMjpg_._SL34_.jpg",
+      "date": "Jun 28, 2024"
+    },
+    {
+      "position": 2,
+      "title": "Leading the way in slip leads! #thisorthat #dogleash #dog",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/dba67010-c7a0-4b9d-a16b-bfda5dcb5b80/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/B1AwsfiYP3L.jpg",
+      "duration": "0:46",
+      "vendor": "Zella and Company",
+      "vendor_thumbnail": "https://images-na.ssl-images-amazon.com/images/S/influencer-profile-image-prod/logo/influencer-69428003_1624318178122_original._CR0,0,1080,1080_._FMjpg_._SL34_.jpeg",
+      "date": "Oct 3, 2024"
+    },
+    {
+      "position": 3,
+      "title": "Best dog leashes | Tested and approved!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/07794224-255c-4ef5-8c6b-a81ad05c37a8/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/C1m35pKCweL.png",
+      "duration": "0:43",
+      "vendor": "Kami Christensen",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/81P0lO+MJbL._CR0,0,1206,1206_._FMjpg_._SL34_.jpg",
+      "date": "Feb 8, 2026"
+    },
+    {
+      "position": 4,
+      "title": "Why I Rely on This Slip Leash",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/b4bfea34-df20-455e-8699-e3c4e92398a7/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/51pyZH5te1L.jpg",
+      "duration": "0:48",
+      "vendor": "Pam Perry",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/919GxFTZ+5L._CR0,0,2316,2316_._FMjpg_._SL34_.jpg",
+      "date": "Aug 7, 2025"
+    },
+    {
+      "position": 5,
+      "title": "1 year review - this got us through puppyhood.",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/a662a952-ba96-4b22-8ead-09e0eb816ba9/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61NDNVVlfqL.jpg",
+      "duration": "0:13",
+      "vendor": "Ally",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/91OXM3GgI6L._CR0,0,1466,1466_._FMjpg_._SL34_.jpg",
+      "date": "Mar 28, 2025"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "image": "https://m.media-amazon.com/images/S/aplus-media/vc/79027e2a-6755-4e9f-8060-ad0c6960ef2b._SR970,300_.png"
+    },
+    {
+      "position": 2
+    },
+    {
+      "position": 3
+    },
+    {
+      "position": 4,
+      "features": [
+        {
+          "position": 1,
+          "title": "Step 1",
+          "image": "https://m.media-amazon.com/images/S/aplus-media/vc/3f99500e-1f8b-4a9f-a4b9-0d4a5f554c9d._SL220__.png"
+        },
+        {
+          "position": 2,
+          "title": "Step 2",
+          "image": "https://m.media-amazon.com/images/S/aplus-media/vc/f820912d-9af4-495f-9715-d89cd77f40f9._SL220__.png"
+        },
+        {
+          "position": 3,
+          "title": "Step 3",
+          "image": "https://m.media-amazon.com/images/S/aplus-media/vc/15e8fbe0-ff32-4253-bb20-e8b86cb93760._SL220__.png"
+        },
+        {
+          "position": 4,
+          "title": "Step 4",
+          "image": "https://m.media-amazon.com/images/S/aplus-media/vc/21fddb7b-95fa-4468-a0d5-fe094aa9cbc9._SL220__.png"
+        }
+      ]
+    },
+    {
+      "position": 5,
+      "compare_with_similar": [
+        {
+          "position": 1,
+          "asin": "B004VEU4RA",
+          "title": "Mendota Slip Leash",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media/vc/95a74140-79fd-42ac-98b5-63e022e4e9a8._SR150,300_.png",
+          "link": "https://www.amazon.com/dp/B004VEU4RA?ref=emc_s_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B004VEU4RA&device=desktop&engine=amazon_product",
+          "rating": 3.8,
+          "reviews": 25,
+          "price": "— no data",
+          "main_benefit": "All-in-one leash and collar is great for training.",
+          "sizes": "½\" x 4’, ½\" x 6’, ⅜” x 4’ and ⅜” x 6’"
+        },
+        {
+          "position": 2,
+          "asin": "B003AVK38A",
+          "title": "Mendota Snap Leash",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media/vc/67cc079a-149d-42dd-be50-f5d0f3938012._SR150,300_.png",
+          "link": "https://www.amazon.com/dp/B003AVK38A?ref=emc_s_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B003AVK38A&device=desktop&engine=amazon_product",
+          "rating": 4.6,
+          "reviews": 1175,
+          "price": "$23.49",
+          "extracted_price": 23.49,
+          "main_benefit": "Attaches to collar for walking, exercise or field use.",
+          "sizes": "½\" x 4’, ½\" x 6’, ⅜” x 4’ and ⅜” x 6"
+        },
+        {
+          "position": 3,
+          "asin": "B01EMBIA7M",
+          "title": "Mendota Swivel Slip Leash",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media/vc/90eb10e9-a4d2-45d8-9775-88df2d0ea1b4._SR150,300_.png",
+          "link": "https://www.amazon.com/dp/B01EMBIA7M?ref=emc_s_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B01EMBIA7M&device=desktop&engine=amazon_product",
+          "rating": 4.2,
+          "reviews": 23,
+          "price": "$28.49",
+          "extracted_price": 28.49,
+          "main_benefit": "For dogs that need a little practice staying on course.",
+          "sizes": "⅜” x 6′ and ½” x 6′"
+        },
+        {
+          "position": 4,
+          "asin": "B001B15XOA",
+          "title": "Mendota Traffic Leash",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media/vc/07a8a8e5-126b-4648-9ffe-8b9ee7070411._SR150,300_.png",
+          "link": "https://www.amazon.com/dp/B001B15XOA?ref=emc_s_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B001B15XOA&device=desktop&engine=amazon_product",
+          "rating": 4.6,
+          "reviews": 140,
+          "price": "$19.49",
+          "extracted_price": 19.49,
+          "main_benefit": "When you need to keep your dog close at all times.",
+          "sizes": "½\" x 1½’"
+        }
+      ]
+    }
+  ],
+  "product_details": {
+    "brand_name": "Mendota Pet",
+    "dog_breed_size": "Large",
+    "global_trade_identification_number": "00793721028049",
+    "manufacturer": "Mendota Products",
+    "upc": "793721006207 793721028049",
+    "manufacturer_part_number": "2804",
+    "model_number": "2804",
+    "unit_count": "1 Count",
+    "included_components": "Slip Lead",
+    "target_species": "Dog",
+    "item_type_name": "Pet Supplies",
+    "warranty_description": "No Warranty",
+    "best_sellers_rank": [
+      {
+        "text": "#9,612 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 9612,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#48 in Standard Dog Leashes",
+        "extracted_rank": 48,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/3024193011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Standard Dog Leashes"
+      }
+    ],
+    "asin": "B00074W3RW",
+    "rating": 4.7,
+    "reviews": 3886,
+    "size": "1/2 in x 6 ft",
+    "item_dimensions_l_x_w": "72\"L x 0.5\"W",
+    "color": "Hunter Green",
+    "pattern": "Solid",
+    "material_type": "Polypropylene",
+    "closure_type": "Snap",
+    "is_discontinued_by_manufacturer": "No",
+    "product_dimensions": "4.5 x 1.9 x 4.5 inches; 3.53 ounces",
+    "item_model_number": "2804",
+    "date_first_available": "July 12, 2004"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B08Y5RYPTS",
+      "title": "Fida Durable Slip Lead Dog Leash, 6 FT x 1/2\" Heavy Duty Dog Loop Leashes, Comfortable Strong Rope Slip Leash for Large Medium Dogs, No Pull Pet Training Lead with Highly Reflective(1/2\", Black)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JMhntFGbHeiOXXDkzNDiAuMAAAGejfbrewEAAAH2AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDIgICD3mKnS/clv1c_ek-wBQfWFcbWD30nItMgDzpZHJmQrmgGcruytBTy159KF5PrCWNs59Wer7vgewSW1pJxHWOmIXJqI9vpSWehhvIOF15pwOmXbCZFtqpg2FUvmRcNwhCbTer26mEkB3P2_3bXXQEu7tlAwtKSEsN54sLz4NyVrvVqI5TQDzes3-YTVQMfxzpMmqbuD-Q_LM2ZCXaip8xLHC2Ez_DdhwSZ1EK7v_4u5MeALmxmAJcba_RNYCIfJ-C0tkYN4IVFz-UDQ-et5IzHjatb-NQGltvt1RV-MASzpkoz0a8ZgCvWCpcQpVUWufDiAG-wZKRsjuic55IZI-5SLSdTxoJI6j3xFBbZmiurTxmPpJr4lLb3-huWRMI-KZyIloifiaG8ZNTmI37LkXmce08kHr6GK4_Y5sWEN5dZBNBFQqBQupi3eu9p8DhBmDwtNxbyxmiQxAvZyDc5YMyHauJ3gx4yhiSgqynSVr9DKTp1T0xy5ZuvhLaFsr04WQAIa0zVfbT1fnuYqILJ4eeF9bhOuIos3xlYaeIlWr2hM1e8c9QCgpehE6rtbeMCIvbwEUoDBZM3xrvYs1JVPDNprrnbRMFdW7v_2kkgHHyahYIgw91W2o6RXwiWwFU4nJRq22PP24dxPp8hSFEmpNaU0AvU_QGrt7gQnawWl9E2wlHfImnH6E0uNNqN1iIMxTaYeYYgjOHJVN0vIbGu5-Hk81rS2KVa0_Kd1AjQ3cfnDFUvHD1iX5RUpil4GzioU7HAtynJID8pkD_fQOYtO9CKAKMx_7GaPuAc6fZKqVxeX9q01KIGkZ44HVLeNkL3JBGyMHzyl85UP7S0Z4kGaKnOWDB_fZJ6uMIah59Ek-3vFTVW33GBIjsY6-7FUNJlFTTA-Ne6fBV8WFPRS63uWQZl3kIPgJbOMEqx_CTjIiOMaZhDewUtnPvMhFCyUjmmahwYigQRKkukFwtvfWU43nO8gUs1VhWoLKLy4_u0WMvIQYuv4j1xVUmq21I_JvFrSFtYkMiPhrJtKEauN3QJNMG6p7MRruH9Qy93XePeEUbZR7YWI-oZxrm_M0lB28MoHGbNJFjw4fSqzgVmpzLRrrde9SoLSatBXb_5NCro51cOw0QHJcwjVTIxdJvN2z9oeC2cNrF-r2yCdbJDAlvLhCyHCcsDi6nXjQsU5rc-K-Blehx4m00T5jhTFhsiY6v4qKkEVe33zo8Fltov1V5k0M3SJFp4RD0JAyHRIAtAMyq5YI1KBFnWj5tXVGbrJmR7QpFgdbhh07FxFnS8C8vpceh7ghbNcJyrXO2SLVlnGhe2Mk2l5ngUnY5C7wCECN2ZBRkB_MiKfWEyEqgUlVqQVNA7YtHQ3WqMU7BfsUG1AOozjz65TM7EwdPfK2B72f2VHD_4g3SarfS_SOrgOGIxasaEQxoxPbWAX1F5cPhj5nEiO35CikYaPdLS-V90e9xNnAp4xbHRkuVhQ1diAg1ROIzOamAzILpxvW5hwdtX6j8RlMSsiQw5v3DxzZZye8u15ghEUP77VqPB/https://www.amazon.com/dp/B08Y5RYPTS/?_encoding=UTF8&pd_rd_i=B08Y5RYPTS&pd_rd_i=B08Y5RYPTS&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=c2HnY&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=DPRP486V8089BA9QDGQ4&pd_rd_wg=svPSI&pd_rd_r=7d3f81e8-87fd-417a-9a59-cb749e47e702",
+      "link_clean": "https://www.amazon.com/dp/B08Y5RYPTS/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B08Y5RYPTS&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51hLDp9NYRL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/716abda1-50a7-497b-b043-7e5f255e6ecc.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/716abda1-50a7-497b-b043-7e5f255e6ecc.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.5,
+      "reviews": 14482,
+      "price": "$12.59",
+      "extracted_price": 12.59,
+      "old_price": "$13.99",
+      "extracted_old_price": 13.99
+    },
+    {
+      "position": 2,
+      "asin": "B0DF6M88FM",
+      "title": "lynxking Slip Lead Dog Leash Reflective, Heavy Duty Comfortable Strong Rope for Large Medium Small Dogs No Pull Pet Training (Black, Large 1/2in x 6ft-Slip Lead)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JBWwTYwgBFpHmsr2GKh6TOEAAAGejfbrfAEAAAH2AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDIgICAahtuD/clv1c_ek-wBYXWFbbazjI3YlNR34IoBl2ZtGz-NGyAwfTq88KpBcEu7_u5h1ldUT38-wuKoXKmVzPca6bDINtrSeq6spoetx-xx4lJdzYlniaW3-2yayHbzWhXHn6MornzrH9prWF46YB60xMBFJv0EPTom5r7odi4dtXoVIT2wDSygAYuactAibIhVJBGe_56CtT9sE2SjEFWIwtg5U2tN4hwljPOnRh8V69HmjSkilEh57DE5FfP60rjVbrloiS-CGP1Qjo3bSo-tBjU4aAC78wYdpXod4IqX8vze9YyWkatyRhg21eA2CgssUzZUy_TLr8giglyRtxUVXeCgpJfvwR1O19RaI5NX-LaD2HZVvHpL25ePNfjJUfHxbVT304w2iZ1sFM6Qeqsz9tkvEAhtt7ILm1WiSL8s2iTly9bsu5pJrpYryP19u_IZnOC5kUhlKIAW62cM9JPsfZfHX7zs8MWgV_EZa_AHUFlHOmgm1kPFKeDJU3fJgQZb_pIh1U8CW8P3Cm24xSP5Na082tWbQs0DJjBver9DMo2d62M3_4S0U6wkkV-ytlA5d0i_Jf270BEmgntGKvmhvW901Y2KI1vyavbC9nX6x9RjG2qX8nIB2tsdM0pc4kTYPXMM9WLiPWBBHsGRCjvQNzWe97U1qbYWWw0Dejs3CFHA2_Vw7IoUWkgrHWmH3M-zQgN61SD28UShjzncUa-Yjiik5fUnRoP9XYN13iDfSwGv-EZncXxs9sUAHPEHoIPcE5VRwJOa-y_6B6Skd7lY3TX-0FpFdEnk3gT1wMp5NT73JdazaOKoBlUkAypo8hF1ApUM266NT-Zn6XZyiLiW4nM4-ox0JrOiJkbDZpmncmLO8LUAQhbCpOug_pnWGZtOVLFp3nbVymSd9TGKcsGzf7jVaWubJg1y3A3FR0fwYTxNRzCC7GwrzunHG-7_wJkmqIrIua6S1uKo8aiILcSTM-FEY5Ltn4NAzqyzXeRD8I4HnOrvi0RhzyjeHNYTk6KqW0glXZ99m3mkSPYeFMHsnaLX28HvwuyuoxMhIgYCJbqus76Iamsb64wglzj0PmHmuOPN5qYlf-Sih_nO2DPoI1Xr3hH8n98sDQlGoqkesCbJCNu4Ymsc19Yx0W4nezQ_CqaXNQwJafqDDwH1AQ9g0WN-tQE5x1Ix84e6wTsPpv0Rn9yIip3txaIPMm-Mvsz5ir5Iiy3VoLfZuMMKR4pI8wu5zjzb2e8YSOWLYfWPv7mhznPIY7yJNbEm8voGA3X1189Y9caY6F9srB5uI5xSAxdguAmaaUjE9jQPAWBbDxPbh-gaqxpL90VbgxHS8tt4r2Ztyevz10RBiG1xu-EFp6eXIU7aAYPAsY_iRTWTe3gyVRkoHkNidzqPwGhoZQ-OORlLw1G3hUvAl_7w_N7IqF81pPgAi_c44o7_r7Dw4viRi04YAYXpGj474hGsRvpPxI-A8DeiLsKI__exgheLoqVSuEQBXhcm6vZZKYy0uuVWPFwy63CYpz_3MoLQBz4-0JEf9sx-w/https://www.amazon.com/dp/B0DF6M88FM/?_encoding=UTF8&pd_rd_i=B0DF6M88FM&pd_rd_i=B0DF6M88FM&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=c2HnY&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=DPRP486V8089BA9QDGQ4&pd_rd_wg=svPSI&pd_rd_r=7d3f81e8-87fd-417a-9a59-cb749e47e702",
+      "link_clean": "https://www.amazon.com/dp/B0DF6M88FM/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DF6M88FM&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51a58bcKLXL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/0770ba24-9266-4778-94cc-555fdb172cff.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/0770ba24-9266-4778-94cc-555fdb172cff.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.5,
+      "reviews": 1316,
+      "price": "$13.99",
+      "extracted_price": 13.99
+    },
+    {
+      "position": 3,
+      "asin": "B0D2PKZ9L8",
+      "title": "Heavy Duty Dog Leash for Large Dogs – 6FT Reflective Bungee with Padded Handles, Strong Carabiner Clip, No Pull Control for Medium & Large Breeds, Includes Poop Bag Holder & Treat Pouch (Royal Blue)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JGLu0I9znV2dxYx60OjniiYAAAGejfbrfQEAAAH2AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDIgICAIyT7-/clv1c_ek-YBQfWFcbSDn0nItMgDzpZHJmQrgDMCK4Yl0TmDUP4MUmRu1Bt-62NSHW_P3x5Z1SrRY9nSVs5wKnvjLZihrI9_6flZqPJd5m9c1Eq2O0FKLBEpMX3KYR4YPdhvBZ3Jlv9roaKD96RpdGsHuhW30BbpNKY9tXZAwQxzy233LIrMUUTJ97hHPazXw9cmF0uuCyioqOrf0dNnGf_qYVUl-iZIXUVBQEquEvA_yT2EkACLH0fJ_z0YpDmeEU1_-UDy2xJ-_P-QgfV5D3UI_tBfjEAsjN3EIC2_8wiTONp4M8naI5xF2jmIexpjiwXz9Pgj9zYTxpSLSMrjCgWsSc6yfbSoWVrrRYS-uPk2t69b7YjBc5nX-MNqixjVKywHVi84zDS4xBS0kmXSqn6DU1Cwp-gXUdNJCcwjwbeifNodnuHFFHe3W9P2o0QvkU5Rn7K4h1E5AqwhDvG-5JSehlFFrrIaXiiZXE6nOEgi94IINVKU5Ul7QQxYOKoydKzu7tCek8McKSXKu6z2rH6-t0w5M7YdN4JbWkBg6Pw53CFWO_GAXYrAdT4ANvi_JN191gC_3bXvLh0V2tbP_etSLom2UcQBXtlaD9Rt-QQ8FnUBGvvQKZOkw5yuWo8vzIPxBoEicSDidZNmEc6GeuRapOfZdu0zoWCBnaVj7X1xrbmNGtrchcmdViJ7Gb6DyHOEAcLK96FC5LPxrkYJ5DKz7ikmMhlBQe91LqjFYGDBAFFJ5hhdJsuOriKU5l3rEpZk82oaBEtNLqAPuMLtfyzIksgdiiv3BLqUIW-0QsyrZ6NMnTuDP1CiFDWbC2fKe66_NAvrjxUygXdxOhrRHWj3djXO7tf553_7Xej-m_J39tPcqhLN_mzAsuQaTf_CP8Lyk7U2JA4GVhd-W0qKmiC6kX0x6jtEIYNI2CIYqVDeM-HCDam5ymeAZQZ5R4r8eAYIzSmCSbZNBMNiz7Mg1oYk8gRCT26bAKLMm3QaiboeBU5HAIy26S9MSVX6etZO__PKdAGo3AW7ODB_kxpc1dvuDYYky0PtHBAqo-lKTJF4sgfq08tw4W2gSmkEtN8tSm9dexzOoDxXn2Kkp9nh0z7ov5qFgWXuD00zathaniDPJmv2uaS79LTmtYi4EGqQXs8fZ0dbdv0ftHsMHkMiPB_1919zRNUsl9QyNmsV_qmN7NlnzMUrZkTuTJ7iz1BcB_GRzV0HsB4Ihb6QWe_zF9kN422ZDBI36oK8EXiQWAiow7GnBnsZYM5e1p4ZFYTFkidq1l-BJjqwgzsMkqTMZxMB8t4UMGFpVIZd7DVqzr4P1ze-uyoYoTk8lAO8_rbJgBOC7nCDxaQjSMe6EMp0HwaGQ2ajZoeKegJxXxyWv_PtE1Dr3gGAkBB8fINkAdGuz1pDaaTKRIialS6ui9n2MlM0AkmdqHyfy13xNZJpYj5I0_SuKINbTsmiT2FiE5jsJI1dNKMRxOKvF9PimiH5rhO06s3itmrpq417iu1iWo_WVVwGoxdiSfyh9mM0UoYOZqX9oIWXQM/https://www.amazon.com/dp/B0D2PKZ9L8/?_encoding=UTF8&pd_rd_i=B0D2PKZ9L8&pd_rd_i=B0D2PKZ9L8&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=c2HnY&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=DPRP486V8089BA9QDGQ4&pd_rd_wg=svPSI&pd_rd_r=7d3f81e8-87fd-417a-9a59-cb749e47e702",
+      "link_clean": "https://www.amazon.com/dp/B0D2PKZ9L8/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0D2PKZ9L8&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/510BPuZygiL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/9f31aacb-5dfa-4e75-b653-134d173f40df.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/9f31aacb-5dfa-4e75-b653-134d173f40df.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 927,
+      "price": "$48.95",
+      "extracted_price": 48.95
+    },
+    {
+      "position": 4,
+      "asin": "B0DLVRPSX5",
+      "title": "Dog Chain Collars, Metal Choke Link Dog Collar Choker Training Heavy Duty Slip Martingale Puppy Collars for XS Small Medium Large Big XL Breed Dogs (Silver, M(Neck Max 18inch) D3.0mm)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JEL54OS_kvJ9kaeH4rE63mIAAAGejfbrfgEAAAH2AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDIgICA8vPIo/clv1c_ek-wBQfWKsTSnuebkwQLr12kISJXAmmjxBCBvXXWfJJmzem9qsDd4-k6SKRxQ4Qx3qOcTB_S40noF0RIiY1EXRJP13VK_oKz0vyYWsbMiNmzDa_thPHxrG727J1chtChJKghj0DU5_xEgcs_iMnA8-prYN2ZksX_gLwYD5SpyosFzXO63FalAtphCyv7pwxbFIQxVhuKXIDE--nvZ5jMuzj_TQ9uEUxn1h0rkOyuJgGh-mJsav2nEembrpFFI-Wc1XH0J-0kMSh5pQ-RcnGWLNNRzZ29ttb4MhREQAt25ZYwrWX6evBGiQjZ2rGDmvlgnX9YeOIiHR58RfWP-xJpwsDIa4HquBT7sYpbbHq5npb3y6zI1yFfhXXJLbwMiz1iYKKqbB_nXUjgwAv_aXgWcIheOS6RISfNebEcLB9qqr4ztD4c4OtqNxs3cMNHhHE1pcqFFBzDrs3ictn6OoPtvYvQ60BttMLQqGSfYNr-gqGeaRh-WCcWLeeamIVeEAxeZ9M4crOEKbFuyFb5bZUhFfiXRj4r44RclrgVNJSsWMmbMj9mBpPDg4RIOVEo8BSXg5hy6O0RQQz8YV55DONtBD-oOW1Lkz904b0mW_vVUD9LVerDO1F4Zk95cv7kHp6BdKT8LXY-R7VGFfWGnUIe9bsyZI8xcEVo2pa9sr6gkIky_3taADNPECWvaFjnzAyTNwMxe5hCvbXONEYgxGvPKwIDxhQe-RS4GKE2R40BrtN9UvWZ5oP_vdoNjGN7M_YZ4pU-0CfshGoB7zEU1vnTYEXVnvKCxiYTYJ4yx34xHeJ7lfakIUQxnxlEZdtWQ5k800057x-HcVN0ZVQdKylq1QOwhSLK2oZ8NduUzn-WyCW4L-NboSypnA2r8WPcWQaUl-VR1n7qP2H65bdbJGgpTBkw6xzNjAghHWdWhlOVkarWJsrWkCeh-cRaiDet1P5R-gvQ-yrGxE6WeMWyJ7BJqoTWAcm2L0Iw35bfR9LQO9csv7uPOI53b0pjjHJr6FCxssCjgWPgBqICBICPAux4yoGMwDcgEOoQh2-pOjg3MZ67nLctZB7r4ivxRtoKXCBeRwLN0jeenccJXLdiJ3LGuII3kCnmC8y-8-MbJaOZEjVkC8DZfAOzJS-CQNvUY8m6SNwP0WMOX4em-MR2O791JMfTneoTKtDhQS6fd2I3ffN71R1FKvdTAc_bEXq4SsBfeBgRuDzjQMhAj4jAonvhrPEpvHi8KH4NFnOHZOsPIxePJirL1vPrDOa0htVcMUZN--6GFqFsoQu4RB5GzTGiGSoG6WuJwEPebxZLc93IMD3gNeU0ECWxPV-Cz9w7XCBAlvod9r6Dg6Wa6-96Cj3ZEgAiBp8cmCN1YuWDmt_HfCa8BpDszlBUg7sui9DZgAFWy7iGWuyMhCtc_54ypz4akfKowikXOf03S67eI3cZA_jtaFjKz39psr3R0oUhAQ1P_9CvGBUBCa9bqT1Devoa7-cfl-ST9wgNyCKGIAYcetGdAUcwjFA4kcmdo04ZB6wR5wOpH9ZGjq2KcP6fn2wzxyFS5Q/https://www.amazon.com/dp/B0DLVRPSX5/?_encoding=UTF8&pd_rd_i=B0DLVRPSX5&pd_rd_i=B0DLVRPSX5&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=c2HnY&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=DPRP486V8089BA9QDGQ4&pd_rd_wg=svPSI&pd_rd_r=7d3f81e8-87fd-417a-9a59-cb749e47e702",
+      "link_clean": "https://www.amazon.com/dp/B0DLVRPSX5/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DLVRPSX5&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51pk0-20ArL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/61bf9671-b03d-4985-bf62-aea619fb0c10.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/61bf9671-b03d-4985-bf62-aea619fb0c10.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.2,
+      "reviews": 194,
+      "price": "$8.98",
+      "extracted_price": 8.98
+    },
+    {
+      "position": 5,
+      "asin": "B0F6D8HTKZ",
+      "title": "Choke Chain for Dogs,Heavy Metal Training Slip P Link Puppy Choker Martingale Collars for XXS XS Small Medium Large XL Breed Dogs (Silver, L)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JObkTWBJYQy4XNbUOFJBD0oAAAGejfbrfwEAAAH2AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDIgICCGa6PF/clv1c_ek-wxQfWLcTaTKXiZOfuuI-tb5sda7SKqh2Dm11Du31lZ5tViXS8MvfEwJefaUD7K45PTx9lrV5p2OpJ6zcsVToRuyW5lijcyRUaMwam3P-6CSvQhDJxrW3y9O3cZsGDyGgt3_AcqPPoSDSh_HhIetrv8J2ckG3tk_iEr2arjceeA4ve9aRwBmPuCuz2S6qNLOSp0rubvocFVejZPWkLtm-_OXsdhXomgYUQHRz6orKejVzPJ7r05LkOVnxf-QeXRAf7LgJDDZggbd5p4Tmoee_oj9kwgVuDGzgq4UrzR3qxuJoCfPnhSddfVThHnoLOe4Pv4t0K5LOIivGHF52LPravyh9zJzKnX5DT-3RPKKFY4L49dqgwxmRIz0J1TVA9N7pHxPSQJCrE0fE9ZMD9icqJRqS3fkA0hPAkk-ENt48mDx5aBEho0jnpHzhPcO9k0uqDUo9kpWVztuBGF45eiK5S3R3AdyT_Y-kOsqQol6fb0Vj92ATtzxWHT9qq-xmDavI5PtlEa0_FedhCB5zdcsdR1k8-MQmhoF57kGlc5V0TIE0ETsTyVfZtx4CqTecVgnKiaBQUy0Ltzwu31Wx_ykLpsTH4u2guzaMxUiRN60LDXizgCGfZLfypQ27BG0VffIv8r68ZGW1oU5L7OJHUemgj6mHzfLQ4CS9vW5CWr8sMLLF-Rmjti57pGdrc1s2QDzbDClAw_ThGEc8YBWpPS3yvj1efgLAf4HvgavepYSdyOvbZyixPZusoce1rY12wW7q1C7_4kCEGLO3_kQk8iWYgb_D4w6T4cUDKuBdxHPCpDeJcamOjD0tzUtWT7Ci6LDDj9BOggg333IT9ApKCiDRi2KxId5mk85svIjLSPEQD4gR3AWL62eGwHicbgBCj2jWejC9a2ETBYcvsFvMoKPLxZgNKcvu74xPS4i0Rx_s46kXEXLLvQK75qw_sAIKvPxL7TOEAB1It2AhzEkhIASPbgo7aJByhqqQReX1REFl88c2xHscj-VFpYMSSAS1vt_XM1kFygvL590tsm7G9hBgcs1s5aZhXXKxh79xGLKRvXqhjOHghG1T80CEOaHww0-nVu4kXWi8o0z1oF37GIri7LfD6ASDAySqpGsFFiI9ylsJR2qWOvReWELkzt2KJ00vxeJMF660seIdIkj6S0OGmVkGlVASiJSzU1kz2jKqn-Ev6a4JXwi7qo0P34l5by_zMFLEzUzcgg6ySWkbertCWl13zbW-pChYlB_N4z3n1UkNoVOnR4Oq7KqPhcnNveBreiCevet9nmZIcgBoRQcAN3l0VWZIKYUWHPhp0U8E0Gf2L1IPmbHxF-VpmtAWpRh8oqoj04h-Jax5b5AXCnJXB7KrCFYdYOD5h73g94npWw8GLCBve_8spg6tFPGHxya81aXxkz8B4hqPpRHDj601VdhydeuToeogSBSda-9WlsrJnXvZRa-hyKoRE_nSt0JvmgRlNGjYqytTCr1xjk5bLuy2twNkX9Hz38gnX-tgnO_bw7ZV2IsPvky5npfLy3L3cg_CO6RuocPKkELJnHAs/https://www.amazon.com/dp/B0F6D8HTKZ/?_encoding=UTF8&pd_rd_i=B0F6D8HTKZ&pd_rd_i=B0F6D8HTKZ&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=c2HnY&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=DPRP486V8089BA9QDGQ4&pd_rd_wg=svPSI&pd_rd_r=7d3f81e8-87fd-417a-9a59-cb749e47e702",
+      "link_clean": "https://www.amazon.com/dp/B0F6D8HTKZ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F6D8HTKZ&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/517oPEtxH3L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/1234768e-601d-4110-9bac-4c9823597590.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/1234768e-601d-4110-9bac-4c9823597590.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.1,
+      "reviews": 20,
+      "price": "$11.88",
+      "extracted_price": 11.88
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "text": "Customers find this leash to be of great quality and heavy-duty for large dogs, with a perfect slip-on design that works well for quick head placement. The product functions effectively for training, particularly with rambunctious pups, and customers appreciate its ease of use and comfort, noting it's soft to the touch and gentle on both hands and animals.",
+      "insights": [
+        {
+          "title": "Quality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 607,
+            "positive": 593,
+            "negative": 14
+          },
+          "summary": "Customers praise the quality of the leash, describing it as a great slip lead.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...The first one was chewed through unknowingly...great leash, I ordered the same one again. It’s easy to hold, perfect thickness and length....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2B8DQXW5140SJ"
+            },
+            {
+              "position": 2,
+              "snippet": "This is a great product. I have large dogs that can be difficult at times. This leash is comfortable to hold and the adjustment is easy....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RUUBVRUT7SGVQ"
+            },
+            {
+              "position": 3,
+              "snippet": "...the Aussie fur for the collar isn’t exactly a quick thing 😆 Great quality, love the real leather accents, feels comfortable to hold, they slide...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2E83VPKO923TX"
+            },
+            {
+              "position": 4,
+              "snippet": "...This is a good strong leash, well made, and very strong. The color is very attractive and other colors are available. I'm very happy with this choice.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1HPC3Q1KLG19R"
+            }
+          ]
+        },
+        {
+          "title": "Durability",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 281,
+            "positive": 242,
+            "negative": 39
+          },
+          "summary": "Customers find the leash durable, describing it as super strong and heavy-duty for large dogs, with one customer noting it holds up well to rain.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "This lease is pretty good, nice and sturdy. Doesn't seem cheaply made at all. The leather is a an excellent additional and adds to it's high quality.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3M2M6NB53Q5BY"
+            },
+            {
+              "position": 2,
+              "snippet": "I highly recommend this lead. It is durable yet comfortable. I have a puppy that I am training to walk on a leash and he did very well on this....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2LA78SIIP1BW5"
+            },
+            {
+              "position": 3,
+              "snippet": "Strong and sturdy enough for correction. It doesn't get stuck tight like I thought it would the ring moves freely loosening and tightening as needed....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2B2Q90S3ZO9H3"
+            },
+            {
+              "position": 4,
+              "snippet": "...The woven rope holds up really well, very durable. There is piece of leather on the end which is really nice too. The color is great as well.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3SS4WSMVALI1X"
+            }
+          ]
+        },
+        {
+          "title": "Slip quality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 216,
+            "positive": 185,
+            "negative": 31
+          },
+          "summary": "Customers praise the leash's slip-on design, noting it works well for quickly putting it on and taking it off any dog, with one customer mentioning it works particularly well for smaller breeds.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Great slip lead. I purchased it because our dog trainer recommended it. It gives us more control over our dog who used to pull me down the street....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1REMNYMXGY5GP"
+            },
+            {
+              "position": 2,
+              "snippet": "Great slip in a great color!",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3AMYYTE6YOMBD"
+            },
+            {
+              "position": 3,
+              "snippet": "Very high quality materials, soft and comfortable. The best slip lead I have seen so far. Highly recommended.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R28KG6HIDP7HF7"
+            },
+            {
+              "position": 4,
+              "snippet": "These are the best slip leads for any rescue group handling skittish dogs. They can save lives because dogs cannot slip out of them....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RQ1KKZ07Z6D6W"
+            }
+          ]
+        },
+        {
+          "title": "Functionality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 201,
+            "positive": 188,
+            "negative": 13
+          },
+          "summary": "Customers find that the leash works well, particularly for training, with one customer noting it's effective for strong pullers like Australian shepherd mixes.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...dog a salt & pepper color and it was nice and soft to hold and works great so I ordered another one for the 2nd dog a more red-pinkest color and it...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2ZM3T1F2QRGT9"
+            },
+            {
+              "position": 2,
+              "snippet": "This is a great leash! Durably made, looks great on, works well! I've received many compliments and inquiries as to where I got it.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R14RC98JO237W3"
+            },
+            {
+              "position": 3,
+              "snippet": "We have several of these leashes. They work great! I love that it can just slip on quickly. It can be adjusted to the size of your dogs neck....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RVMWY62RDYVC1"
+            },
+            {
+              "position": 4,
+              "snippet": "These are high quality, beautiful, and functional. Easy on/off....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2PW2BKQLUCZAQ"
+            }
+          ]
+        },
+        {
+          "title": "Training",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 172,
+            "positive": 170,
+            "negative": 2
+          },
+          "summary": "Customers find the leash effective for training, particularly for rambunctious puppies and Shepherd dogs, with one customer noting it's a miracle for dog owners and sitters.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Great training leash. Good quality!",
+              "link": "https://www.amazon.com/gp/customer-reviews/R30RU5JLETCJLG"
+            },
+            {
+              "position": 2,
+              "snippet": "...This is the only leash we will use. Great for training!!!",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2NHPLUHSVP32X"
+            },
+            {
+              "position": 3,
+              "snippet": "Great training tool! Finally found something (when worn correctly, up high to not choke the dog) the prevents pulling with a pull up....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1W3RY8PN4SN4"
+            },
+            {
+              "position": 4,
+              "snippet": "Nice lead. Good quality and the camo is on point. Good price. Perfect for training. It's the only one I use.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2IELDV17A8XA9"
+            }
+          ]
+        },
+        {
+          "title": "Ease of use",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 163,
+            "positive": 160,
+            "negative": 3
+          },
+          "summary": "Customers find the leash easy to use, particularly noting that it's simple to put on and take off their dogs.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Favorite leash style of this Canine Professional. Quick & easy to use. Applicable on many breeds w various neck sizes and body styles....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R13V7AF11JWL2X"
+            },
+            {
+              "position": 2,
+              "snippet": "...the dog around trying to clip the leash to the collar, it is simple and easy....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3UNOCOJY9P7HF"
+            },
+            {
+              "position": 3,
+              "snippet": "...It gives direct contact from your dog to you. Simple, and very effective, and it hasn't frayed like other leashes, so it slides as it is supposed to.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R22HFXEHWCIJ2F"
+            },
+            {
+              "position": 4,
+              "snippet": "Easy to put on and I don't have to worry about my lab wiggling out of it. Helpful hint when putting on. The neck part should form a \"P\"....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R3ODPYY16SIW6"
+            }
+          ]
+        },
+        {
+          "title": "Softness",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 131,
+            "positive": 118,
+            "negative": 13
+          },
+          "summary": "Customers appreciate the leash's softness, noting it feels nice in hand and is gentle around their neck, with one customer mentioning it's extremely fluffy.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...It is soft and not clunky. Its also comfortable to hold. We have a playful 7-month old German shepherd so I do NOT recommend this leash for training....",
+              "link": "https://www.amazon.com/gp/customer-reviews/REAZSZESDCZ2Q"
+            },
+            {
+              "position": 2,
+              "snippet": "This slip lead is great. It's pliable yet sturdy. I had bought a different one that wasn't pliable so it wouldn't lay around the dog's neck....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RYOTTF26GYEMF"
+            },
+            {
+              "position": 3,
+              "snippet": "...It's easy on/off for us in the ring, and it's strong and sturdy, yet very soft - so it feels good to hold....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2T9R5RRRF2PAX"
+            },
+            {
+              "position": 4,
+              "snippet": "soft on the hands, and our dog! Quality seems good also, but of course we haven't had our pit pulling on it or anything yet....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RN6CUK82CSM7B"
+            }
+          ]
+        },
+        {
+          "title": "Comfort",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 113,
+            "positive": 102,
+            "negative": 11
+          },
+          "summary": "Customers find the leash comfortable, particularly noting that it's easy on both their hands and the animal, with one customer mentioning it's not as harsh as a chain choke lead.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...I purchased one and I have to agree with him, it is great. Comfortable and soft and after my doberman got used to it, she looks forward to going for...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R21J11CNJ5Y77X"
+            },
+            {
+              "position": 2,
+              "snippet": "...It is soft and not clunky. Its also comfortable to hold. We have a playful 7-month old German shepherd so I do NOT recommend this leash for training....",
+              "link": "https://www.amazon.com/gp/customer-reviews/REAZSZESDCZ2Q"
+            },
+            {
+              "position": 3,
+              "snippet": "...Soft and easy on the hands, but sturdy and strong enough for my Doberman. Bought this in two sizes/colors. Very happy with this purchase.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1MEH1IMMJL1ZV"
+            },
+            {
+              "position": 4,
+              "snippet": "Nice tight loop holder, comfortable leash. Good on all size dogs",
+              "link": "https://www.amazon.com/gp/customer-reviews/RCFVTKQLJ9NBO"
+            }
+          ]
+        }
+      ],
+      "images": [
+        "https://m.media-amazon.com/images/I/81Be-Z9pnBL.jpg",
+        "https://m.media-amazon.com/images/I/81hr3GhwhQL.jpg",
+        "https://m.media-amazon.com/images/I/81Pc+86qfTL.jpg",
+        "https://m.media-amazon.com/images/I/81YsdJB44WL.jpg",
+        "https://m.media-amazon.com/images/I/710PqObM-5L.jpg",
+        "https://m.media-amazon.com/images/I/81J60todUvL.jpg",
+        "https://m.media-amazon.com/images/I/81MBXoEqHJL.jpg",
+        "https://m.media-amazon.com/images/I/81sMlkTzOBL.jpg",
+        "https://m.media-amazon.com/images/I/71lf2xce3AL.jpg",
+        "https://m.media-amazon.com/images/I/81P-PQjEujL.jpg",
+        "https://m.media-amazon.com/images/I/81uApIQZjqL.jpg",
+        "https://m.media-amazon.com/images/I/81poqmja2xL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 83,
+        "4 star": 10,
+        "3 star": 4,
+        "2 star": 1,
+        "1 star": 2
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "A Simple, Strong, and Effective Leash",
+        "text": "The Mendota Pet Slip Leash is an absolute must-have for anyone with a dog, especially if you're looking for something simple, durable, and easy to use. Made in the USA, this leash is high-quality and built to last. The slip design is perfect for quickly getting my dog in and out of the leash without any hassle, and it stays securely in place without being too tight or uncomfortable.What I really love about this leash is how lightweight and comfortable it feels, both for me and my dog. The material is sturdy but soft, which is great for long walks. It also has a great grip, so there’s no slipping from my hand, even if my dog pulls a little.Plus, the quality craftsmanship is obvious—the leash is strong and reliable, and I have confidence it will stand up to daily use. Whether you’re training or just out for a stroll, the Mendota Pet Slip Leash makes walks easier and more enjoyable. Highly recommend if you’re looking for a no-fuss, well-made leash!",
+        "rating": 5,
+        "date": "November 14, 2024",
+        "author": "sky",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AH4VM3O7E5EXGB3KRL4XDUTKXRGQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "3 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "size": "1/2 in x 6 ft",
+          "color": "Salt and Pepper"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Super nice and MADE IN USA",
+        "text": "(Note: I've worked as a professional dog trainer for the past 15 years.) YAY!!! This leash just WORKS in so many ways!!! Hooray and hats off to Mendota. (I bought three, I liked the first one so much: 1/2\" x 4', 1/2\" x 6', and 3/8\" by 4'.) Here are some of the things I love about this leash: the rope is not stiff and scratchy (comfier for me AND my dog, as well as being easier on his coat), the fastenings seem really secure, the slider that keeps the collar part from slipping open is reassuringly snug, the leashes come in various widths and lengths, and they color options are pretty nice--something for everyone. I have a 50-pound Spaniel who can pull like the cutest freight train you've ever seen. Harnesses are problematic because (a) they alter his natural gait, and (b) they almost immediately create terrible knots in his \"armpits.\" Martingale collars work pretty well with my dog, but he has wiggled around a couple of times when other people held his collar incorrectly and they basically let my dog slip out of his collar--YIKES!!! So, with some misgivings, I tried a slip lead (because he uses these in shows and rarely pulls in that context). The problem with slip leads, of course, is they just get tighter and tighter around your pulling dog's neck--not good at all!! Anyway, long story short, he seems to understand that when he's on a slip lead, he isn't supposed to pull--he simply doesn't do it. Would I recommend a sliplead for every dog? Of course not. But in the right setting, right dog, right handler, right positive training, right practice, etc., it can be a great tool. AND--it's great for those quick trips out into the yard at night while checking for critters! LAST POINT: the length INCLUDES THE NECK LOOP (\"collar\" part of the leash). so the 4' lead is really pretty short and will keep your dog right by your side. While you might want this in certain contexts, for everyday walking, I'd recommend the 6' length. And as far as width goes, the thicker the rope the fewer pounds per square inch of pressure on your dog's neck--so, the wider the rope, the comfier for your dog. The 1/2\" width is a great middle-ground type width for the vast majority of dogs. A++ to Mendota Products for getting this product really right, and doing it in the USA! These leashes are FAR better than any other rope-type lead I've seen, which might look cool but aren't as functional as leashes.",
+        "rating": 5,
+        "date": "February 11, 2020",
+        "author": "E. Lane",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AH2IHORAJBFYT2AHIO6BB4MMJRKA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/b5e56b23-96b0-4d47-9e2a-1a84d6f819ca._CR0%2C0%2C263%2C263_UX460_SX48_.jpg",
+        "helpful_votes": "26 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "size": "1/2 in x 6 ft",
+          "color": "Kelly Confetti"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Love these simple leads!",
+        "text": "These slip leads are very good quality and so handy to use! I keep one in my day pack in case I need to grab my dog quickly, or another dog, which happened once when a dog bolted out of a car when the owner was trying to get the leash shaped on her collar. I slipped it over the dog' head so easily and pulled it tight instantly. The owner was so grateful. What could have been a tragedy ended up so well. Same if you need to get your dog out of the house in a hurry for unexpected potty breaks in the middle of the night. These leads are just so useful and durable! Also great for daily walks. Just be sure to position it up high on the neck so you have good control with no pressure on the throat.",
+        "rating": 5,
+        "date": "February 14, 2026",
+        "author": "Rainier",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AE47CMYNKMHDCYW7ASUVNASKYSIA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "1/2 in x 6 ft",
+          "color": "Purple Confetti"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Comfortable and soft. Well made.",
+        "text": "Very nice! Soft to handle and strong.",
+        "rating": 5,
+        "date": "April 28, 2026",
+        "author": "Linda S. Hurley",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AH5LBS2DQH5OAZXV6I65Q7SXAGEQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "1/2 in x 6 ft",
+          "color": "Black Confetti"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Nice leashes",
+        "text": "These leashes are expensive, but are worth it. I have purchased a number of these leashes with no issues. I recently purchased a half inch black ice yellow lead that I am returning because of what I hope was a one-off production problem. The leather stop was so tight it was almost impossible to slide. I will be purchasing a replacement leash and will avoid the black ice colors that use black leather.",
+        "rating": 4,
+        "date": "January 4, 2026",
+        "author": "Grumpy old man",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHZ7MWK23QDCKJQTIM4JOVSUREFA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "2 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "size": "1/2 in x 6 ft",
+          "color": "Black Ice Yellow"
+        }
+      },
+      {
+        "position": 6,
+        "title": "Great slip leash",
+        "text": "Great slip leash. Well made and very strong",
+        "rating": 5,
+        "date": "March 2, 2026",
+        "author": "Me",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AERKFR3ZY25MKR2OQWUFWTAXCWZQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "1/2 in x 6 ft",
+          "color": "White"
+        }
+      },
+      {
+        "position": 7,
+        "title": "Great product",
+        "text": "Great slip leash !",
+        "rating": 5,
+        "date": "April 14, 2026",
+        "author": "JNLev",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHBIXUIU4BVIBE6CLP4QJXUITXKA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "1/2 in x 6 ft",
+          "color": "Black Ice Silver"
+        }
+      },
+      {
+        "position": 8,
+        "title": "Slip for the win!",
+        "text": "I bought this leash to use on my 60ibs Boxer/ Hound mix. He is a powerful puller if he sees something he really wants to get (rabbits, squirrels and birds). This allows for a superior amount of control over him, I also went with the shorter version to limit how much leash there ultimately was. I also really enjoy this lead because Samuel has an odd neck size for how big his chest is. This means most harnesses sized to his neck are too tight for his chest and harnesses sized to fix his chest are far too lose on his neck. The slip lead allows me choose what works best in the moment.The lead itself is made very nicely, the metal ring is nice and shiny and has not dulled after over a year of use. The leather has held up to rain, snow, mud without cracking. My only complaint with the material is if your dog bites there leash they can easily get through the actual rope part.Overall- This is a great tool to control your dog. However if your dog is strong you need to keep the lead high on the neck (right behind the ears) to really control them and this can be hard to maintain sometimes.",
+        "rating": 5,
+        "date": "May 10, 2019",
+        "author": "Matthew miller",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AE56AKJAA22LXSZ7TLBC2YD7WAIQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "1/2 in x 6 ft",
+          "color": "Salt and Pepper"
+        }
+      }
+    ],
+    "other_countries_reviews": [
+      {
+        "position": 1,
+        "title": "Muy buena correa",
+        "text": "Es una correa muy práctica, la uso en un weimaraner y todo excelente.",
+        "rating": 5,
+        "date": "May 27, 2020",
+        "author": "Luis Loera",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "3/8 in x 6 ft",
+          "color": "Orange"
+        },
+        "country": {
+          "code": "MX",
+          "name": "Mexico"
+        },
+        "language": {
+          "code": "es",
+          "name": "Spanish (Mexico)"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Wonderful size and length but already fraying.",
+        "text": "Purchased and used for a month. Love that it doesn't have stretch but is already fraying :( I use only to walk my dog (she doesn't chew or anything) but the handle is already going, not great for the price.",
+        "rating": 4,
+        "date": "June 15, 2023",
+        "author": "Amazon Customer",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "3/8 in x 6 ft",
+          "color": "Salt and Pepper"
+        },
+        "country": {
+          "code": "CA",
+          "name": "Canada"
+        },
+        "language": {
+          "code": "en",
+          "name": "English (Canada)"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Fabby",
+        "text": "Love these leads. Company kindly exchanged 3/8\" for 1/2\" as thicker.My last pair of Mendota leads last 8 yrs. So well made. Comfortable to hold, quality fixings. Very happy and fingers x they last just as long as my original Mendotas.",
+        "rating": 5,
+        "date": "April 30, 2016",
+        "author": "SG",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/ebca1226-ae34-4a9c-b531-b9f1d263e2fe._CR0%2C0%2C1536%2C1536_SX460_SX48_.jpg",
+        "verified_purchase": true,
+        "product": {
+          "size": "3/8 in x 4 ft, 6 ft",
+          "color": "Pink"
+        },
+        "country": {
+          "code": "GB",
+          "name": "United Kingdom"
+        },
+        "language": {
+          "code": "en",
+          "name": "English (United Kingdom)"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Well made lead",
+        "text": "The lead is strong, well made and the right length for my German Shepherd. It’s comfortable to hold.",
+        "rating": 5,
+        "date": "January 23, 2021",
+        "author": "Gillian Parkin",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "4 ft",
+          "color": "Night-Viz Black"
+        },
+        "country": {
+          "code": "GB",
+          "name": "United Kingdom"
+        },
+        "language": {
+          "code": "en",
+          "name": "English (United Kingdom)"
+        }
+      },
+      {
+        "position": 5,
+        "title": "The thing is great",
+        "text": "Not to be used as a long leash but as a training leash to keep dog close. Wear up high by chin as a dogs throat is closer to collar bone",
+        "rating": 5,
+        "date": "December 29, 2024",
+        "author": "William O'Hearon",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "3/8 in x 6 ft",
+          "color": "Orange"
+        },
+        "country": {
+          "code": "CA",
+          "name": "Canada"
+        },
+        "language": {
+          "code": "en",
+          "name": "English (Canada)"
+        }
+      }
+    ]
+  }
+}

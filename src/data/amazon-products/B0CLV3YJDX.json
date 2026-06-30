@@ -1,0 +1,924 @@
+{
+  "search_metadata": {
+    "id": "6a2e4c97a0cb10438c9a214a",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/VazSWMBFrup6dNzZ5e8iAQ/6a2e4c97a0cb10438c9a214a.json",
+    "created_at": "2026-06-14 06:39:19 UTC",
+    "processed_at": "2026-06-14 06:39:19 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0CLV3YJDX/?",
+    "raw_html_file": "https://serpapi.com/searches/VazSWMBFrup6dNzZ5e8iAQ/6a2e4c97a0cb10438c9a214a.html",
+    "total_time_taken": 7.08
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0CLV3YJDX",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0CLV3YJDX",
+    "title": "Frelaxy Emergency Blanket 2-Pack/4-Pack, Extra-Thick Extra-Large Space Blankets with Whistles, Storage Pouchs, and EVA case",
+    "link": "https://www.amazon.com/Frelaxy-Emergency-Extra-Thick-Extra-Large-Blankets/dp/B0CLV3YJDX/",
+    "link_clean": "https://www.amazon.com/dp/B0CLV3YJDX/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CLV3YJDX&device=desktop&engine=amazon_product",
+    "badges": [
+      "Amazon's Choice"
+    ],
+    "variants": [
+      {
+        "title": "Color",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0CLV3YJDX",
+            "name": "Blue - 2 Pack",
+            "image": "https://m.media-amazon.com/images/I/41Kjg7WPq8L._SS64_.jpg",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CLV3YJDX&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0B44X7YS2",
+            "name": "Army Green - 2 Pack",
+            "image": "https://m.media-amazon.com/images/I/4156Hx8cmmL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0B44X7YS2&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0B454K88W",
+            "name": "Army Green - 4 Pack",
+            "image": "https://m.media-amazon.com/images/I/51zJgfF2hCL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0B454K88W&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 4,
+            "asin": "B0CLV3WR3L",
+            "name": "Blue - 4 Pack",
+            "image": "https://m.media-amazon.com/images/I/51KgwAVF2zL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CLV3WR3L&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 5,
+            "asin": "B0B44NW944",
+            "name": "Orange - 2 Pack",
+            "image": "https://m.media-amazon.com/images/I/41EjBZStK2L._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0B44NW944&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 6,
+            "asin": "B0B455MNCD",
+            "name": "Orange - 4 Pack",
+            "image": "https://m.media-amazon.com/images/I/51-2weJQDCL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0B455MNCD&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the Frelaxy Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/71Ynql7JTpL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/71Ynql7JTpL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/817zxATnr5L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71lDVrjvKuL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81v4kqvzi1L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81d4sgBj7BL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71JP+o3DqLL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/718Q2UyHv3L._AC_SL1500_.jpg"
+    ],
+    "rating": 4.7,
+    "reviews": 770,
+    "price": "$13.99",
+    "extracted_price": 13.99,
+    "price_unit": "$7.00 / Count or 4 Count",
+    "extracted_price_unit": 7,
+    "prime": true,
+    "delivery": [
+      "FREE delivery Friday, June 19 on orders shipped by Amazon over $35",
+      "Or Prime members get FREE delivery Tomorrow, June 15. Join Prime",
+      "Arrives 6 days before Father's Day"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$13.99",
+      "extracted_price": 13.99,
+      "price_unit": "$7.00 / Count or 4 Count",
+      "extracted_price_unit": 7,
+      "delivery": [
+        "FREE delivery Friday, June 19 on orders shipped by Amazon over $35",
+        "Or Prime members get FREE delivery Tomorrow, June 15. Join Prime",
+        "Arrives 6 days before Father's Day"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "Frelaxy-US",
+          "details": {
+            "heading": "Sold by",
+            "content": "Frelaxy-US"
+          },
+          "link": {
+            "text": "Frelaxy-US",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A13VSJ3NCGIV1F&asin=B0CLV3YJDX&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "gift_options": {
+          "text": "Available at checkout Available at checkout This item is a gift. Change",
+          "details": {
+            "content": "Add gift options at checkout"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "material": "Polyethylene",
+    "color": "Blue - 2 Pack",
+    "brand": "Frelaxy",
+    "special_feature": "Lightweight, Waterproof",
+    "style": "Compact"
+  },
+  "about_item": [
+    "Whistles+Blankets for Double Protection: Each emergency blanket comes with a survival whistle to keep you warm and safe when needed.",
+    "2X THICKER THAN AVERAGE: Made of Durable 26umPE material, it is twice thicker than Average emergency blankets.",
+    "20% LARGE THAN STANDARD: The size of each blanket is 83\" x 60\", which is larger than regular blankets and provides full body protection.",
+    "Adventure essentials: Available in 2-packs and 4-packs, each blanket is only 3 ounces, so you can easily keep it in your car and in your backpack.",
+    "Package Contents: Comes with 2 Emergency Blankets, 2 Whistles, 2 Waterproof Storage Pouchs, and 1 EVA case."
+  ],
+  "bought_together": [
+    {
+      "position": 1,
+      "title": "Frelaxy Emergency Blanket 2-Pack/4-Pack, Extra-Thick Extra-Large Space Blankets with Whistles, Storage Pouchs, and EVA case",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71Ynql7JTpL._AC_UL116_SR116,116_.jpg",
+      "price": "$13.99",
+      "extracted_price": 13.99,
+      "price_unit": "$7.00/Count or 4 Count",
+      "extracted_price_unit": 7,
+      "delivery": [
+        "Get it as soon as Friday, Jun 19"
+      ],
+      "stock": "In Stock"
+    },
+    {
+      "position": 2,
+      "title": "Emergency Blanket 4-Pack Space Mylar Blankets Survival Gear and Supplies Reusable Thermal Camping Hunting Essentials First Aid Car Backpacking Marathon Kit Prepper Go Rave Bug Out Bag Foil Cold Winter",
+      "link": "https://www.amazon.com/Emergency-Blankets-Space-Mylar-Thermal/dp/B098KJMMGC/ref=pd_bxgy_thbs_d_sccl_1/132-2038699-0965657?pd_rd_w=vTtGs&content-id=amzn1.sym.9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_p=9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_r=GFKH0AES9B27NCHM3KY4&pd_rd_wg=Lt0CD&pd_rd_r=08a3538b-6945-430d-a703-79c245a2effd&pd_rd_i=B098KJMMGC&psc=1",
+      "asin": "B098KJMMGC",
+      "link_clean": "https://www.amazon.com/Emergency-Blankets-Space-Mylar-Thermal/dp/B098KJMMGC/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B098KJMMGC&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71eCGdR7nfL._AC_UL116_SR116,116_.jpg",
+      "price": "$6.99",
+      "extracted_price": 6.99,
+      "price_unit": "$1.75/count",
+      "extracted_price_unit": 1.75,
+      "delivery": [
+        "Get it as soon as Friday, Jun 19"
+      ],
+      "stock": "In Stock"
+    }
+  ],
+  "videos": [
+    {
+      "position": 1,
+      "title": "Get prepare for outdoor",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/5a9ae5d5-8590-404c-8604-2dcb331ab1da/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61LEx7e6gZL.jpg",
+      "duration": "0:20",
+      "vendor": "Simoneshop",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/911+gUCfr4L._CR0,0,1724,1724_._FMjpg_._SL34_.jpg",
+      "date": "Oct 31, 2025"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": "emergency blanket",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/c0556833-1cc8-4788-b109-0f3a7da19867.__CR0,0,970,600_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 2,
+      "title": "Larger and Thicker blanket",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/e9b8b82a-b599-4657-b053-3c22b5ba5a88.__CR0,0,970,600_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 3,
+      "title": "Survival Whistle",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/08e4e00c-e499-4d0f-8235-855634aaf52e.__CR0,0,970,600_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 4,
+      "title": "Durable",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/53e064c7-395a-4c4a-8d9a-119134d057db.__CR0,0,970,600_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 5,
+      "title": "compact and lightweight",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/ce83b1a7-aa35-49e4-b1d8-4d519a3b696b.__CR0,0,970,600_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 6,
+      "compare_with_similar": [
+        {
+          "position": 1,
+          "asin": "B0CSFF8C7C",
+          "title": "Emergency Sleeping Bag 1-Pack/2-Pack",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/a9542429-3666-48d5-8bb4-59fbc33ffbed.__CR0,0,150,300_PT0_SX150_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B0CSFF8C7C?ref=emc_s_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CSFF8C7C&device=desktop&engine=amazon_product",
+          "rating": 4.6,
+          "reviews": 209,
+          "main_function": "Extra-Thick and Compact Emergency Sleeping Bag Provide Full Body and Close Protection",
+          "package_included": "Emergency Sleeping Bag, Whistle, Waterproof Storage pouch and EVA case",
+          "color": "Orange /Army Green"
+        },
+        {
+          "position": 2,
+          "asin": "B0CM5S3YFQ",
+          "title": "Shelter + Bivy Set",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/6a958e02-31c4-4e88-9d83-f31b665e58d2.__CR0,0,150,300_PT0_SX150_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B0CM5S3YFQ?ref=emc_s_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CM5S3YFQ&device=desktop&engine=amazon_product",
+          "rating": 4.6,
+          "reviews": 192,
+          "main_function": "The Set includes a Survival Shelter (100%Waterproof & Wind-resistant) and an Emergency Sleeping Bag (Close Protect & Reflect Body Heat) for Double Protection in any Situation.",
+          "package_included": "1 Survival Shelter,1 Emergency Sleeping Bag, 2 Whistles, 2 Waterproof Storage pouches, 1 Paracord Rope (20ft), and 1 EVA case",
+          "color": "Blue / Orange"
+        },
+        {
+          "position": 3,
+          "asin": "B0DM4WHYTZ",
+          "title": "Emergency Tent 1-Pack/2-Pack",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/ad2c9550-8fb0-4d45-ace4-04d46c813298.__AC_SR150,300___.jpg",
+          "link": "https://www.amazon.com/dp/B0DM4WHYTZ?ref=emc_s_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DM4WHYTZ&device=desktop&engine=amazon_product",
+          "rating": 4.4,
+          "reviews": 135,
+          "main_function": "Room for 2 person & Easy Set-Up & Space-Saving",
+          "package_included": "‎Survival Tent, Whistle, Waterproof Storage pouch, Paracord Rope (20ft), EVA case",
+          "color": "Orange /Army Green"
+        }
+      ]
+    }
+  ],
+  "product_details": {
+    "color": "Blue - 2 Pack",
+    "style_name": "Compact",
+    "blanket_form": "Emergency Blanket",
+    "theme": "Space",
+    "pattern": "Solid",
+    "sport_type": "Camping",
+    "material_type": "Polyethylene",
+    "product_care_instructions": "Hand Wash Only",
+    "fabric_type": "Mylar",
+    "additional_features": "Lightweight, Waterproof",
+    "recommended_uses_for_product": "Backpacking, Camping, Hiking, Travel",
+    "seasons": "Winter",
+    "fabric_warmth_description": "Lightweight",
+    "water_resistance_level": "Waterproof",
+    "brand_name": "Frelaxy",
+    "age_range_description": "Adult",
+    "number_of_items": "2",
+    "included_components": "2 Emergency Blankets, 2 Whistles, 2 Waterproof Storage Pouches, 1 EVA Case",
+    "upc": "726323324349",
+    "manufacturer": "Frelaxy",
+    "best_sellers_rank": [
+      {
+        "text": "#53,918 in Sports & Outdoors (See Top 100 in Sports & Outdoors)",
+        "extracted_rank": 53918,
+        "link": "https://www.amazon.com/gp/bestsellers/sporting-goods/ref=pd_zg_ts_sporting-goods",
+        "link_text": "See Top 100 in Sports & Outdoors"
+      },
+      {
+        "text": "#49 in Camping Emergency Blankets",
+        "extracted_rank": 49,
+        "link": "https://www.amazon.com/gp/bestsellers/sporting-goods/3401221/ref=pd_zg_hrsr_sporting-goods",
+        "link_text": "Camping Emergency Blankets"
+      }
+    ],
+    "asin": "B0CLV3YJDX",
+    "customer_reviews": "4.7 out of 5 stars",
+    "rating": 4.7,
+    "reviews": 770,
+    "item_dimensions_l_x_w": "83\"L x 60\"W",
+    "size": "Full",
+    "unit_count": "2 Count",
+    "item_weight": "0.25 Kilograms"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0FR7ZX4NW",
+      "title": "Hero Privacy Pen | 3-in-1 Travel Privacy Tool | RF Signal Detector, Infrared Camera Lens Finder and Door Motion Alarm | Pocket-Sized, No App Needed, Rechargeable, 1 Pack",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JIqT60SCRipQ5Xu07RWQ9LsAAAGexNtGUQEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICDeIFiU/clv1c_ek-wBQfWLbbSTj1Tdz-Qio-tvz6rGnfhzpKCA1fmHqZW-m7thmt5HwNcUf2L-wvKwxnB6Fv5XF8xPYE1kPnhaLI9F1AxoIbT8Sht_MikugQKzVB2Kf-uhbz55eJeEuZ9V4vQ6CQYJhu8J_jqxgVEutDW2D0cllOilKCA_7fvyYoaXPEzXeLpJwFovuwfhD3cKiyGuMtFEQGcTbDV9-nYUELQPXwcz0oUURoqkPyuZzEdTSpiav0OcOj7vlVzsNtdVD5nKeIgMag2N-Ubkdr9wZc-OPKDIMvyFGoG6JC717zdKbNB0gxskG26nTZwrLt-Dt8I_CHguaxmUh4C43znonvIvHvkFJOw9m8IpS-HK29j1r47BJO6nusIPinrUV6PzdJFTv0zKKTxuOnGK8N3tZJRaSQtE-Z9uIx2BfW2iiKPP3t9VuADcKjOR96aVDToKA0nV-C54Z2GdYptJ0wgIe1hBFtrYOemajXVpol6ZpuSuzY95QJwoskrlCo-j98XwDe0_d1A3mEEYJRNMDC_DYSgZA3f_iecRDhF96K0F3mEMkTRJd5Cn95fNr0hLApD9RLA6ABvTIVUW29wCgIvSnOp0P2mJ-PIGKVus1bCgUr2Re6GB4ZmDzj4-ySux1-Vefp4r_yNRTz9lq2lOk1nUPq0ygeCAlZdzjWk5TCfO6hLdIBOkn6PwSXBRK5GdIwMad5nCowtN6g3tbwH38nkC79lwSa9rqojJQ_ChzbhJ8viXzwYTp6jvw-dntPdFDnKsIz0u5pq9uIxo5DnNgfyukNezps7Qc0WmTTV7gbQ_dV4p-H5pNH7wFWFSGSaZov_9Ws0-7Lj-bzIf3pMgU1IoBwbu6Dx8UhSVhZncTUnQVSYVHltj7BhIjeM5D8z1_jHkJzX9zJo7g8x7FTQ6gQDJyl7S0Kv-ldq3KpASBbKRtb_zBZ2so7FwOz5WPXwS51MzDj0sDFnwZPLbT21LcAGgk1CZfT5Muw_OTkJnHs2sZGawr8W6XNbmPiFxhPNf14G0sYkgmMIhcNxAqIO26zxz2AFHeMvpMYbQnIpPQNzD8O65Q6Wghx3R4ny5BKYJ4VBe9uZck0ywPzmDU9ZnaWoe9kQvwF4aV9gLDJ8WVUhsx9Tmdp-hyYbUdOSFahfh8SEgspM1G5mFUI0zBA9RlOrfQ4Vyp7_PeyHv0gdQBRNRyqCrn6TObmWyLFDbHbfRECz9HhLcUN-TbdYnyTTe199kYmdokgojgjdT0UC51bNzVcjVD3hHgOFcQY68ULCpnguTOQhaNotQqAD_ugpV8ySylbG35Wp0defJ1mFKzvt1_R6bXVbYJ4Lw756P4rNFxPWm0ujB9I-0E0zpBkjenkCKYBPVNXPEx4R7qj2nxt_erSLjESBgT6-aZs0WuAa5E7BZNky8qboCAQHFwJT8_a7qCfP6haHgmPmlyfPER5Ea8Pcwws-dy7tu7eII3zYtD_yLRR84rM2ai-UQH1yZzQbcu8flGTjRQdBkR-iLgYcevGFGcSJj80jiz1Be-4cBazXEgJKqtHGmb0onbGlv3kPhMspFA/https://www.amazon.com/dp/B0FR7ZX4NW/?_encoding=UTF8&pd_rd_i=B0FR7ZX4NW&pd_rd_i=B0FR7ZX4NW&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=2G06L&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=GFKH0AES9B27NCHM3KY4&pd_rd_wg=Lt0CD&pd_rd_r=08a3538b-6945-430d-a703-79c245a2effd",
+      "link_clean": "https://www.amazon.com/dp/B0FR7ZX4NW/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FR7ZX4NW&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/31qoFsTW-oL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c17f910d-9439-4ae9-94f7-380bff4ebc04.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c17f910d-9439-4ae9-94f7-380bff4ebc04.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 3.6,
+      "reviews": 40,
+      "price": "$69.99",
+      "extracted_price": 69.99
+    },
+    {
+      "position": 2,
+      "asin": "B07W7XQ8V7",
+      "title": "US Cargo Control 96\" x 80\" Extra Large Sound Dampening Blanket with Grommets, Light Blocking Acoustic Blanket for Wall Hanging and Studios, Machine Washable, 12LBS",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JIpLvvrf42j1IMduXL93irsAAAGexNtGUgEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICBNqOci/clv1c_ek-wBYHXFcbWznynI-MgDzpZHJmQrgbPf1oDmFzgFml1J06Bmuz4_MJvO3wzx039vSLw-mWau4ZiuvXstBI2RrMx__ViZoy1O-V5kuJqzYq6CSvsjDZxbG305PXsMf5yh9IHIESIgj7p5wTifkho8rS7INuI3pXywuUwyT2_3JILwe2bc5skZ3F45EC8CR049eUA8yoKnwrLmc6JdxmMuzj_Dc-uEVJo8kRIKtM18URCL5B-uTs3Bketz5SCYuWc8fDUby9mZsWZ-UTu5i-ndqZ0W2gAz87x8HghWOed3cALKWDLQQvspRy63cgBL0DBhbqZ_6M4QoDqZ90KU8x3vhYlfceJsRVnANMeERznLBURqglpInupYUQq2y_1EtT--lUheKnIAFJB1Q0fZPf_UOrI8BJcc5SVIm-9XMV0dhNUvGoJVS42CpBvcNMRqn10-uBgJ9gp7qZvsoK68K9-JhtLU6_jcpfZvZVAHrT8ObAw6R9oWRQj_FuM_E9bAYbVrN4COWyEKV1j6YlH3xpAb6I1Wb0x_AJVquqyKresdBUPXidJ2d22y8fuehasXLk1E6KFHTJL8OgXc60XsCrqaCPJcp9dEDX3TiMu2lVBsAHexfFQzKL7s7TAisOST8psRuk1Twcn9tNfOyELjHQSDXMVEWW5Wc-QooLIbOS9eBZafiygZ1TNuxaYNtK0Si9NLoExKwPjZOwiDYyQZmjPW3vOByyfcyFIn05vTY7h9X86joAFQ8H4vZoNoPlcKWiiaFwSIJWplsKS-Es8ufeGCEJNQnxvOMr3DDQRnCuSjvFBA33mNs749Vzfn7lOIrX7vzaKYhYzfu9xSBEUqTxVLWuNK3W2mDQbrWsLV1ndc9niGWFsBIO9vJeyyXjsfdcagP0buaCAEHOunCynbEgesGDRG4uLPIBV7Ks1e7c8Kn0UoMwhZODGNObqVhSZjgOskC_cy_7kvWlWucV-b_i-umTpetCD0Fai_uwH5_gkwXYCMdI4uivm54vsHxnVmEYLRU6Dg51-Phyx6yl0AimaFvf6e86pMCbrb967Huf2aO_JMRLsWrWmTri4VmjMD029kU3lqOpojJVAbJj5VyXfY2SF5MVvMWx8k0fIX2t39aiWq6g77LH7S2TOp0OFdAQtLwlvkKZnsOma3FdZVdsr_wBZYMKsIWUQgQhpl57Ca3MAD8QV19jezXypvVbEZOE4obqrdYkQKvPUHHg-T7NQY966d3sopQhQd3cKDGgi237yDTsLiK_wOrTgLbnfEFm9hnktrQ29zbSEDpo-uQf0ZbEqf3H8qAFujchGpByiHrq4uzxKQc4TRAc_oYRNG6m7njDDprMBXtvfUPUo9CCdG7-SdEa20E-MgGOCrLaV9azvP0aWwHKssSjtV95RIOJfaghGUA01XzeqlTWdbv72kJnT7xm4BKNOjmQxfN5tQeF8r6eoGqqA9b1x2P_SEhGrPiv-phkkbW-XiGOIwR_l1dlOVM9B1rfLT-ddDPuviM3yDoiAwRN8Fi4JSA/https://www.amazon.com/dp/B07W7XQ8V7/?_encoding=UTF8&pd_rd_i=B07W7XQ8V7&pd_rd_i=B07W7XQ8V7&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=2G06L&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=GFKH0AES9B27NCHM3KY4&pd_rd_wg=Lt0CD&pd_rd_r=08a3538b-6945-430d-a703-79c245a2effd",
+      "link_clean": "https://www.amazon.com/dp/B07W7XQ8V7/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07W7XQ8V7&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41ldLHuQXOL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/a6e778df-f5f8-4a24-a1e8-fb4df29c5593.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/a6e778df-f5f8-4a24-a1e8-fb4df29c5593.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.4,
+      "reviews": 1091,
+      "price": "$76.48",
+      "extracted_price": 76.48
+    },
+    {
+      "position": 3,
+      "asin": "B0C3LJZ1HD",
+      "title": "BlueHills Travel Blanket Pillow Compact Lightweight Pocket Size Airplane Traveling Essential Flight Trip Throw in Bag Portable Case Plane Accessory Navy Blue L04",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JKs4VCtHZNbwYK_fj0cgi3EAAAGexNtGUwEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICAsjpJI/clv1c_ek-wxfvXVcbeTfWXb9o-ITBwCaVHk6g5yzmpFH-3CgYEj4yjwP_zVZI_65HsxNp1LsYvWk16IlSv5h60mlNXMYC2qRW4CAmv_Lh1ctMW_NwyEsA7TW93Hl60YjjwqFGUNQnPU5IzIEGqBITXOSsEY0Cbodv01tXuBsn1zRsKHIdcGugcMgahT2FEG8yshtqnoYavAgN4mQ7Jw5AlwyCAUvMpsXUfpu4e7AzLAgG32bOha7_HAiHqo9HDfR5tVmoX-Oh5dxs0fyCQGfknU2JIa1NzoVwOX0cJu0zxr5l2ZvS0NTfpfWzRS037Q0xAuQAehDD0zsG6r_ORp518ioxHu5a4ZmVStuY32dSMpiuj8XB-0FQEcP4rqsQuK6zbYXSjbvROIqUtdkATGNPnO3BUFiOF9jenItPj2SfDnupgZAao36Ri7wLB7sk8iUHfwmFXTM-syiVQCreyiHxbncY-Nz9I7MqP5FhVCRbtMYv_HS4ZPYYQ5-_7Ybzh7VSF0EbksPVuL0yU_6AMkOHnU5jIXz5Io4waxXH3hmy37JVc2WU_HHWINznLu4Us3VyKQnp3KdoadJ73MOyGfQThXHEERclsRDIEe5fAVyKvuQG1YQZiiafW5S32NymMvg9YtLLe_UEdsWLG-cXxRfme_oFDiygQNr4gytZMngVdGJ3j_j20dUDf_N7PdVRuQ2v2CL_Ommuq9M00cChk9FYfwwz465oKDxn2_yWrpKj0L6j1O62pA_n64rwbUc_G_Chqxc2-eOGSwS0E7zs5AmMp8rVDlg9bt6USQKR4PdS4BPR4KAj9x-xCyb1LIr6JC5cNqsb1cFfJeXHGvPiXBGlkt7rDenlzMsmwd9nKTe7zuXorLLdD8LGQh-Yt8N4grApz8kazeIxlo0BfPIuFJ74GxqdyaCo2Ch03HYTdE2MTLpA8bAan4ve8wwpl2nZPcAvqRRuKK0fv8nCshOxIs8c6AtWsfiAd_Yw9MzIpUDltjyHXQUsj547TBI6mJhnvlqtQ6Vsu0CApo4-bp6akIcYdaa8WY32kBrdj8oso6AhykUkB2G2dJVxVcRwGutYt8PBifph3HqC_WIVnOPip7ZDDNy077P_qDzl9qkCEE55g5E3QoTDuGyo_U9f5qtuiDAC34ni5UTQaL3BrqeqUg_-vcByJ_2J5i5b8IVsXv4rPH_Y0-HpuNTKQ_PLiF314M15xaxYxKc4FBVqsiX-EziMkTXmol7n4tMxu5G5Sn5UDGq8wT1QquKvvc-he2CcF6_U2_ksrhTuIHRoxslFL5pA1CPwEhUUqJjLapTPZVmSUd6fgpHfz-RrdGbZM40vvaFrlpmdnfZ0pCi880zxZddWmqpLmgLAmyIAoMkuXN_XYMx8kGqHFByt11ADiSGxc1ToNHJSMK_aK4YIKoxtEmhxg0wZlja5N8TUVJ0ereh-2I35BEEOxLHB-RhmChWv2CaItp5YVXJVFy9KZtmnmKnQaKadDBaJlev-TD4tVhf0/https://www.amazon.com/dp/B0C3LJZ1HD/?_encoding=UTF8&pd_rd_i=B0C3LJZ1HD&pd_rd_i=B0C3LJZ1HD&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=2G06L&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=GFKH0AES9B27NCHM3KY4&pd_rd_wg=Lt0CD&pd_rd_r=08a3538b-6945-430d-a703-79c245a2effd",
+      "link_clean": "https://www.amazon.com/dp/B0C3LJZ1HD/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0C3LJZ1HD&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41mloTql-RL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/bc63fe18-9e51-4a3e-b460-5bdbc28ff0ab.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/bc63fe18-9e51-4a3e-b460-5bdbc28ff0ab.mp4/r/THUMBNAIL_1080P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 1488,
+      "price": "$28.45",
+      "extracted_price": 28.45
+    },
+    {
+      "position": 4,
+      "asin": "B0FGCPRY76",
+      "title": "Demiwise Fire Blankets for Home and Kitchen,8-Pack 40\"x40\" Emergency Fire Safety Blankets for People House Car Office Warehouse Emergency Survival Safety",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JHgymV16Bc-9ObtYWJwjaUsAAAGexNtGVAEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICC5OZ0Q/clv1c_ek-wxYHXErbWDQHEa4sesmPkEFXzGncr-TIKoFVg_6W_9pVOzrETx6IRYp12JsnGjmRK6Rahip209hcveL_uarI9EtO5zTm7C1hlj9NoW_0-h3L__nHQ6Ojw_6lEBzB6HiBjOhKLe12Om54f_1z8C9zTAN2XmjWqkwp2wzmsHC6f-ctdrQhtI7nYOU_SPuNs4NBBtTZCJT_QhYUvF0hBkKApt9-3gOpUZI0f8cklbrHCjD6HCUAZ0ookooRuff5J0q1MTurVRRRvy7ealKEkz6d8X4uOXxAZDGtmRyLXAFx5c9Q3Fnzj3XnNh4TFZTdW-pld0tRFgamcSBX_rjeSidhx1WEuXqJCCgjFpvGDU7M4MbCaJW-6eHpRuV1GjOq1joQU-D5xmMoW2a9CyvbrxA7BQEngpJpSwuWRpMEiOQTD3PrK4so6goAcIjP5pmTOImJL7_FZN8065pvmXkwWgUOPis479z43gBGDk-PBF-13QsryORN-Y4nHykhiILGlkvw_AyD0KKjMmuzPJSxpdZX2pPe-fs1zyXb3y6be1D8MvY7mE3mkI5gspIzvK07DR90fudBcEFRW1Xmzia_-3-Ha_77ZLlnF0_bHMKdxIeBkwFcUonL6DNUKaOk9CywMRU7jUeuKcpRI67cJm5OIFTYLNiveWa17c2KfpKRx7C9P5aItiqdJuVe1EHWkF7ci5PIAaNasx9N0sBEBe6Dej3natZrvRrPbZ_B8F0xrWYi3R9WicWXJ5qQzcXoEvZCku8JuPtEdQJOo2EL-jQ9M_DSMQvOdEBrJG70J0yUvThp_QonghL-deuloGse_qBiTCCBhK5QJ1eVnCpNhBZMjyH_x95UeYdDjjhbHPtmZUPqwjr-f9MIadel-9gOr2ubd0XkOfVbXt5bLJLwsXXdsE-w6V_IJ7KFI_MlprW87OFbxpHzUYlkLLC3svuVf-Ut23cnB2jql92SjSRUqqhTAhhj703DmOSa0D_GHOH1_wqR2ibEhViLkyIwKsqjJf4WqsDJTjt0eoMUBZ6k6SoBOvc_UtlZLIaFejNqBgyfE_hLIJx0TpmKHsh2PudaWUJJ1gj1Vn8iyhEVRwFTC066k3ebI1GbpWLndqNiBXN65_XbpdYmX1jgl1y-S16Ry3eTMLmWGwVVCIUHaUO2s9SRG0MBt4HnQitWTBP4EhnUZvxYiUbO6FMUM54YxGGdZ0cZmhex1W9DuLo2p0M6_MlQpP6xknd8v4NJf6DMxkYPveI36DrMk0PpfjeyVBpdiRfmJ4S6PGtDqwm6awKFgqAUJB_Bzw4HMFxywem6jkWBiK19BBEvjM-23JpkIW8Z1AQCRtThj5SuCgqRBH3E-5gHtK_DR59CatEzHMo9kap0hemYlzfhWUKrFqFv8UXacNXNbIEvAIrcyPfJcGTcnKx6cn4M3qMuLxniOOowag4dWIJUO7Y3l4or_tSR6bnCAHb9d6IVA8nTbRWu_QYhzUNegnL_KfErbnAea7h6mevb0oxOnPknSid6xuI1LyS-GGUL9KeiZEH04yfSHOfq9La00-dJt9vpS7_o/https://www.amazon.com/dp/B0FGCPRY76/?_encoding=UTF8&pd_rd_i=B0FGCPRY76&pd_rd_i=B0FGCPRY76&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=2G06L&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=GFKH0AES9B27NCHM3KY4&pd_rd_wg=Lt0CD&pd_rd_r=08a3538b-6945-430d-a703-79c245a2effd",
+      "link_clean": "https://www.amazon.com/dp/B0FGCPRY76/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FGCPRY76&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51oP6MVnyJL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/066a1ab6-d05f-40c5-bed8-9e63a154adf0.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/066a1ab6-d05f-40c5-bed8-9e63a154adf0.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.7,
+      "reviews": 349,
+      "price": "$47.35",
+      "extracted_price": 47.35
+    },
+    {
+      "position": 5,
+      "asin": "B07MXDMRNC",
+      "title": "DIBBATU Fire Blanket for Home and Kitchen, Fire Blankets Emergency for Home, Emergency Fire Blankets for House, Fireproof Blanket, Survival FireBlanket for Kitchen,Fireplace, Grill, BBQ",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JC3PqktpGzk0SoM5b7-sZXwAAAGexNtGVQEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDIgICD7s_8k/clv1c_ek-YBYHXKsTWXk6htqkfuiYIDHACm7WxNomgq0agYjsglrIsjSz6AGLx2b7WpbzqgreIWmSlXDeAB8tJFowFmScreg8XZ3KR8skvq4O6UN10kzCua_XiVkOwMvhxvViFW5o8hVT_4r1xAu32V3DS7xNfqMfsVlfspiScB9fLzAUVXWEXKjLHT8WXwJv8rj82DGVO1M4Ku0TP2ufX-3LUUjrXVA1blN8mgLInivKJEu3MeHyakU_U_AZ_p3LrZF-4PiBJMmY-CS1m5f6tk0xjRIs-wHo5zYDNg6XF5xhMygs5t9NU31DiR-D5zyqtSXuO0vwmLpuhm58yjGkqVUp7MnZoRySxN7kvvkKl4e7wTjQBpx0_q0NTfeoFRytyd0npo8-xxb1RlF1gnv6L7rzUlN94PcdpSI01dzgg8DDMDBFC1HK9bjBHD4v2qvm0WLF_xZCVmCqwYjz7j-dBChU24eCb6-EI3gcwFyKW7qV4QtMOl0iglDukmxRn3Rm2UETTWnfgU1WK-b9XkRI_sm8A1z0zWOpb42_9b-JoTPQSo2ai3LvT8L7G6jxA6qQG2Kw29CrWECuA2pWd-slLYeYC7BGKOHhO_2d3kCHXrl_Ij3tO1L8j6ub4PRO0Aa_qXBmGQHhzMAiuXzel9oTKsWLHqzhG7qgBRx45R1pE2U2LjqwUqBt_LzKpJS05wCIyma_le01JQHjAgX-gvSNqzrE65iPJ7j6ffzT-pC_9HWflJX_07Cxq5SL5PUQqcKPuur_LiL4mhZ2xe1ML7RPDzHERpQybayCj4y4FATnZgAT1v3-vcGp6PvtDbK9pCgD_mC25rWc_mlyfuDEXLv-8TJ6YDw5FoaclZf00YC4-0Y5W9svi4_0ghH3wvPDlyhkieDmlEu_IeKeAiXPZnayhKMzanN220BpHp1iSOP-3VapCEpxsNF6eOSJ8_6Egt1kbesyJyA8X1_iDsnjeZjheWjfR5pkW3P-v32uod59zmLD5SqigY7pr1so_j36YpFXhf45BfgqXWbDUiJ9_MtVuJlNGGiQ4MAdSdKXOpMtg7EC-mVuVs-pqdmRwPVmzJFFEWbEgz4K_CN2VUoecePpj8k8l5v_q9RNQsZSrtlsp_uB69MyH6K4ApgpZq63ALHc9TYLL5Kr76Asslg_b614NUgPBzyCSQ5iAianEvaU_6DH3C3z4aNAPieco7ixlYbu7zKwl0wY32yjUb1GN72ffN_bQ33bY2jOFo3UQFEU5gUMQ5dZcDhyJ1k4tz2kg8pHVbX2-KYQmKpdI71HxHzUGml23JTDdyzzUH4Ugj6Ng4gJ3cGbokbnKg6Dti97UWRy6UaMeSnUjBBJmdVkTsGx42M0adDGU_ZlkIhLcnyAfGxihRGviQ2csLS8sg-EaFspekYxz64FtY7vp9X8G9C0nBNWAHNxQSMw8Jbfdc8QUpINvcQMWKQnLwfMdnBn5M6FwsqmpVjjRr9pvAyIha6Khq4Sdx1ZnTBa72wpIzUpo3GaNaFo/https://www.amazon.com/dp/B07MXDMRNC/?_encoding=UTF8&pd_rd_i=B07MXDMRNC&pd_rd_i=B07MXDMRNC&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=2G06L&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=GFKH0AES9B27NCHM3KY4&pd_rd_wg=Lt0CD&pd_rd_r=08a3538b-6945-430d-a703-79c245a2effd",
+      "link_clean": "https://www.amazon.com/dp/B07MXDMRNC/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07MXDMRNC&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51XYBYVGoxL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/a4e4968e-3a74-46c9-b74c-99201fc9014c.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://d1f0esyb34c1g2.cloudfront.net/transcode/AssetLibrary/AssetLibrary/amzn1.assetlibrary.asset1.427fb79ea71aee6328d8d5647a4c4ba2:version_v1/aefccb6c-a2a0-4ead-a9ad-1e4895530b5b/1665992557267_THUMBNAIL-360P-FRAME-3-CAPTURE-2.0000001.jpg"
+      },
+      "rating": 4.8,
+      "reviews": 7733,
+      "price": "$13.99",
+      "extracted_price": 13.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "text": "Customers find the emergency blanket to be of great quality and appreciate its compact size and lightweight design. Moreover, the blanket effectively keeps them warm in cold weather, with one customer noting its effectiveness in shock situations. Additionally, they value its durability, reusability, and consider it excellent value for money.",
+      "insights": [
+        {
+          "title": "Emergency use",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 20,
+            "positive": 19,
+            "negative": 1
+          },
+          "summary": "Customers find the emergency blanket excellent for various uses, including keeping in cars, to-go bags, and as part of emergency kits.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "This is a fantastic product, not just for emergencies, but also so you don't have to over-pack for \"just-in-case\" situations....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2Y7R6ZMLBAGRB"
+            },
+            {
+              "position": 2,
+              "snippet": "perfect for a go bag",
+              "link": "https://www.amazon.com/gp/customer-reviews/RYJDEOOWJD2N6"
+            },
+            {
+              "position": 3,
+              "snippet": "It was very useful after finishing half marathon races in cold weather....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RMN6DGW1R4AVQ"
+            },
+            {
+              "position": 4,
+              "snippet": "Super lightweight and compact! Great combination for an emergency kit. This has been added to my emergency bug out kit in case of emergency....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2HG0SVHBIIULN"
+            }
+          ]
+        },
+        {
+          "title": "Quality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 20,
+            "positive": 20,
+            "negative": 0
+          },
+          "summary": "Customers are satisfied with the quality of the emergency blankets.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Appears to be a good product and it should work well.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R33YR0AQSIUW8O"
+            },
+            {
+              "position": 2,
+              "snippet": "...But, just looking at the packaging it seems to be well made. Can't comment on much else.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R94HU76UHZ6GS"
+            },
+            {
+              "position": 3,
+              "snippet": "The blankets are fine. Unless you are equipping an emergency vehicle, or often travel with a bunch of people, the case may be a little overkill.",
+              "link": "https://www.amazon.com/gp/customer-reviews/RG2PTFPUO1JLE"
+            },
+            {
+              "position": 4,
+              "snippet": "These are great quality. I love that they come in a case and have their own separate bags, and an emergency whistle....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1328KDTX1ZQXC"
+            }
+          ]
+        },
+        {
+          "title": "Size",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 14,
+            "positive": 14,
+            "negative": 0
+          },
+          "summary": "Customers like the size of the emergency blanket, noting that it is nice and compact.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Super lightweight and compact! Great combination for an emergency kit. This has been added to my emergency bug out kit in case of emergency....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2HG0SVHBIIULN"
+            },
+            {
+              "position": 2,
+              "snippet": "Nice size and nice packaging for my 72 hour back pack!👍",
+              "link": "https://www.amazon.com/gp/customer-reviews/R33UXXQXPE14IP"
+            },
+            {
+              "position": 3,
+              "snippet": "I wanted to keep spare mylar blankets around so I decided on these. Great size, case can be reused into a kit, whistles work great and little line...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R366BQU65YAONF"
+            },
+            {
+              "position": 4,
+              "snippet": "This item was bought for our emergency bags and is the perfect size and good quality material.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R16N85UG96HOOW"
+            }
+          ]
+        },
+        {
+          "title": "Value for money",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 10,
+            "positive": 8,
+            "negative": 2
+          },
+          "summary": "Customers find the emergency blanket to be an excellent value.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...It's compact, lightweight and fits perfectly in my bugout bag. It's affordable especially for 2",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2S3DB7JC7B9J0"
+            },
+            {
+              "position": 2,
+              "snippet": "...pretty nice as well & for the price, I thought this was an excellent value.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1VIQH2HRAE4RC"
+            },
+            {
+              "position": 3,
+              "snippet": "...Great for tge car!! Highly recommend!! Decent price too!!",
+              "link": "https://www.amazon.com/gp/customer-reviews/RCGGV7GRTC6X6"
+            },
+            {
+              "position": 4,
+              "snippet": "...They’re basically 2 standard size Mylar blankets put together. Not worth what I paid.",
+              "link": "https://www.amazon.com/gp/customer-reviews/RLCZ462QWPBZZ"
+            }
+          ]
+        },
+        {
+          "title": "Warmth",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 10,
+            "positive": 10,
+            "negative": 0
+          },
+          "summary": "Customers find the emergency blanket keeps them warm, particularly during cold weather emergencies.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "I just recently used this emergency blanket, it is warm and durable. It also appeared reusable....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2JAKCERPLOEDO"
+            },
+            {
+              "position": 2,
+              "snippet": "...They're really for emergencies, but will keep them warm. Nice product.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2ADHM9LMMZN69"
+            },
+            {
+              "position": 3,
+              "snippet": "...so much more compact and easy to keep than any actual blanket and so much warmer....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RCWH7J2WVZS21"
+            },
+            {
+              "position": 4,
+              "snippet": "...Kept me from freezing in the cold while waiting to pick up my gear at the baggage claim after a race is over, and on the train on my way home....",
+              "link": "https://www.amazon.com/gp/customer-reviews/RMN6DGW1R4AVQ"
+            }
+          ]
+        },
+        {
+          "title": "Durability",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 9,
+            "positive": 9,
+            "negative": 0
+          },
+          "summary": "Customers find the emergency blanket durable.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...These ones claimed to be twice as thick & durable as the standard silver space blankets are, which I would actually agree with after pulling one out...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1VIQH2HRAE4RC"
+            },
+            {
+              "position": 2,
+              "snippet": "...Super great design and seems very durable. I would highly recommend due to the value for the money.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2HG0SVHBIIULN"
+            },
+            {
+              "position": 3,
+              "snippet": "...I have one in my bag and one in my car. It appears to be very durable. Like I mentioned I have not had to use it yet....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R39DGTWU3EPPMY"
+            },
+            {
+              "position": 4,
+              "snippet": "These are good to have around; reusable, and sturdier than mylar coverings usually are.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R211S4X807X7B2"
+            }
+          ]
+        },
+        {
+          "title": "Reusability",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 8,
+            "positive": 8,
+            "negative": 0
+          },
+          "summary": "Customers find the emergency blanket reusable, with one mentioning that the case can be repurposed as a kit, and another noting that it can be simply rolled up for reuse.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Very pleased. Very thick and do the job well, and reusable, not at all like thinner emergency blankets which go crinkle crinkle and can only be used...",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2T2X9TURPEWOY"
+            },
+            {
+              "position": 2,
+              "snippet": "...Seems very durable and love that they are washable.",
+              "link": "https://www.amazon.com/gp/customer-reviews/RZQC8G5IXU128"
+            },
+            {
+              "position": 3,
+              "snippet": "...It also appeared reusable. It is of a higher quality than most disposable emergency blankets. I would highly recommend this item.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2JAKCERPLOEDO"
+            },
+            {
+              "position": 4,
+              "snippet": "...Great size, case can be reused into a kit, whistles work great and little line on the bag if you need some tinder....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R366BQU65YAONF"
+            }
+          ]
+        },
+        {
+          "title": "Lightweight",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 7,
+            "positive": 7,
+            "negative": 0
+          },
+          "summary": "Customers appreciate that the emergency blanket is lightweight.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...As small and lightweight as they are it just makes sense. You just never know if you or someone you come upon may need it. Good to be prepared!",
+              "link": "https://www.amazon.com/gp/customer-reviews/R1U6IYDDDK1YVR"
+            },
+            {
+              "position": 2,
+              "snippet": "...It’s compact, light weight, exactly what I was looking for.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2Q4DEVX5ZEK1H"
+            },
+            {
+              "position": 3,
+              "snippet": "...They are light and the cost wasn’t bad at all.",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2HEUOTOJKB3B0"
+            },
+            {
+              "position": 4,
+              "snippet": "Super lightweight and compact! Great combination for an emergency kit. This has been added to my emergency bug out kit in case of emergency....",
+              "link": "https://www.amazon.com/gp/customer-reviews/R2HG0SVHBIIULN"
+            }
+          ]
+        }
+      ],
+      "images": [
+        "https://m.media-amazon.com/images/I/51VJQR07vuL.jpg",
+        "https://m.media-amazon.com/images/I/7165aka4EwL.jpg",
+        "https://m.media-amazon.com/images/I/51YAUOMQ42L.jpg",
+        "https://m.media-amazon.com/images/I/81vOgl5nKvL.jpg",
+        "https://m.media-amazon.com/images/I/51ti31r+hPL.jpg",
+        "https://m.media-amazon.com/images/I/613VZX+rXcL.jpg",
+        "https://m.media-amazon.com/images/I/71pIRc0A-OL.jpg",
+        "https://m.media-amazon.com/images/I/71GtaAWmWQL.jpg",
+        "https://m.media-amazon.com/images/I/81oQm+xle2L.jpg",
+        "https://m.media-amazon.com/images/I/71ezXs7H-+L.jpg",
+        "https://m.media-amazon.com/images/I/81pmlQshCiL.jpg",
+        "https://m.media-amazon.com/images/I/81OlN4BQMqL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 83,
+        "4 star": 11,
+        "3 star": 4,
+        "2 star": 1,
+        "1 star": 1
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "No Need to Over-Pack for Camping. Just Bring This Along.",
+        "text": "This is a fantastic product, not just for emergencies, but also so you don't have to over-pack for \"just-in-case\" situations. We took this on a boat to an overnight trip to an island. It did get chillier than expected so using this over our regular gear kept us very comfortable. And it is totally reusable as you can fold it back up and it will fit back in the case. Highly recommend.",
+        "rating": 5,
+        "date": "January 6, 2026",
+        "author": "A. Gulbrandsen",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHZ2TMVADLO35H4HDYIPSMU7TQ2A?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "7 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Orange - 2 Pack"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Must have if you want your family prepared for anything!!",
+        "text": "Especially in the Northeast we have to have a survival kit in our cars and houses during winter. These are so much more compact and easy to keep than any actual blanket and so much warmer. Getting stuck in a storm and power outages are a real issue we have to always be prepared for. My kids, mom, and I have them in all our vehicles and at home. I know my family is always ready no matter what!",
+        "rating": 5,
+        "date": "February 3, 2026",
+        "author": "Jennifer Ball",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEN6HOX5SREYC6226Q2DST5N4R3Q?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "4 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Blue - 4 Pack"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Great quality product. You definitely don't want to be left in the cold without one!",
+        "text": "I purchased these with the intention of sandwiching them between a fleece lap blanket to be used in our side-by-side! This works wonderfully! They hold heat better than anything I've ever used. They are windproof and also keep you dry. I also use it in the house on chilly nights. I can't believe how toasty you become in such a short amount of time. When you remove the blanket, the air feels so cold instantly! I will be purchasing again to make more blankets!",
+        "rating": 5,
+        "date": "January 12, 2026",
+        "author": "S. Wilkinson",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFMN3CFIMKAUM3UYU2FL6ZDXX3KQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "2 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Orange - 2 Pack"
+        }
+      },
+      {
+        "position": 4,
+        "title": "A must product for a to-go bag",
+        "text": "I felt the price was very good. I have not opened it up. I have it for my to-go bag. I have quite a few of them actually. This brand and another the material seems good. Comes in a small little pack which is good for a to-go bag. I have one in my bag and one in my car. It appears to be very durable. Like I mentioned I have not had to use it yet. I feel more comfortable that I have one than not having one",
+        "rating": 5,
+        "date": "March 20, 2026",
+        "author": "JODI SILVER",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AELNEUKE4D6XUAC6YJDIM4SPYKTA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Orange - 2 Pack"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Small enough to carry in my bike bag",
+        "text": "I got this 2 pack of rain covers just in case I get caught in a rain storm when I’m way out on a long ride on my e-bikes. Because you never know it could be clear out and nice when you head out but weather is unpredictable sometimes. I hope I never have to use them but if I do then they will help hopefully. I like how compact they are and it comes with a whistle not sure what I’ll use that for but hey you never know lol. They are light and the cost wasn’t bad at all.",
+        "rating": 4,
+        "date": "March 24, 2025",
+        "author": "Don Seymour",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHQC2ZKL2725Q2ZUQ3H5KQALEY4A?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "4 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Blue - 2 Pack"
+        }
+      },
+      {
+        "position": 6,
+        "title": "Excellent quality",
+        "text": "Very pleased. Very thick and do the job well, and reusable, not at all like thinner emergency blankets which go crinkle crinkle and can only be used once or twice before tearing. Also I'm a fan of the pretty colors, mine is blue.",
+        "rating": 5,
+        "date": "January 18, 2026",
+        "author": "Judy Dushoff",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AH4BIOFDRIPCWFKXLRVI7PV7QZWQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "2 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Blue - 2 Pack"
+        }
+      },
+      {
+        "position": 7,
+        "title": "Happy",
+        "text": "Ordered these to use in hiking and to keep in the car for emergencies.",
+        "rating": 5,
+        "date": "December 25, 2025",
+        "author": "Frank",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AE3C4CHZAZY7C2QVUGQSC24PMKYQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Orange - 2 Pack"
+        }
+      },
+      {
+        "position": 8,
+        "title": "Good to keep the cold away",
+        "text": "Small easily fits in my backpack. I use on buses when I travel. Durable I have used for over 6 months with no problems. Simply roll up an reuse.",
+        "rating": 5,
+        "date": "September 21, 2025",
+        "author": "Karen Wilkins",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHEN7LQUTR7W4UCSV46F6ALF3EJA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/ee05e88f-6338-4c43-876c-4c6ff56389e4._CR0%2C0%2C1150%2C1150_SX460_SX48_.jpg",
+        "helpful_votes": "4 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Orange - 2 Pack"
+        }
+      }
+    ],
+    "other_countries_reviews": [
+      {
+        "position": 1,
+        "title": "Sera très utile en cas d'urgence.",
+        "text": "Pas encore utilisé, mais devrait faire l'affaire.Je considère que c'est un bon produit.",
+        "rating": 5,
+        "date": "April 23, 2024",
+        "author": "Jean-F",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Orange - 2 Pack"
+        },
+        "country": {
+          "code": "CA",
+          "name": "Canada"
+        },
+        "language": {
+          "code": "fr",
+          "name": "French (Canada)"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Nice and compact",
+        "text": "Part of my emergency kit for the cars and the four pack works nicely (two per car).",
+        "rating": 5,
+        "date": "April 15, 2024",
+        "author": "KYee",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Orange - 4 Pack"
+        },
+        "country": {
+          "code": "CA",
+          "name": "Canada"
+        },
+        "language": {
+          "code": "en",
+          "name": "English (Canada)"
+        }
+      },
+      {
+        "position": 3,
+        "title": "They are great.",
+        "text": "I hope I never have to use this product. They are going into my car in case of emergencies.",
+        "rating": 5,
+        "date": "February 26, 2025",
+        "author": "Lena Whelan",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Army Green - 4 Pack"
+        },
+        "country": {
+          "code": "CA",
+          "name": "Canada"
+        },
+        "language": {
+          "code": "en",
+          "name": "English (Canada)"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Emergency kit supplies",
+        "text": "Emergency kit supplies . Light weight.",
+        "rating": 5,
+        "date": "June 27, 2025",
+        "author": "Rory",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Army Green - 4 Pack"
+        },
+        "country": {
+          "code": "CA",
+          "name": "Canada"
+        },
+        "language": {
+          "code": "en",
+          "name": "English (Canada)"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Happy with my purchase",
+        "text": "I loved this purchase. Exactly as the description. I haven’t used them as yet but I have them just in case.",
+        "rating": 5,
+        "date": "February 26, 2026",
+        "author": "NsA",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Army Green - 2 Pack"
+        },
+        "country": {
+          "code": "CA",
+          "name": "Canada"
+        },
+        "language": {
+          "code": "en",
+          "name": "English (Canada)"
+        }
+      }
+    ]
+  }
+}

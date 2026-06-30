@@ -8,6 +8,7 @@ import { relaxationProducts } from './relaxation-products';
 import { relaxationConverterPages } from './relaxation-converter-pages';
 import { ROUTES } from './routes';
 import { trackerProducts } from './tracking-products';
+import { emergencyProducts } from './emergency-products';
 
 export type SitemapPageType = 'converter' | 'collector' | 'attractor' | 'informer';
 export type SitemapCollectorSubtype = 'section' | 'article';
@@ -37,6 +38,9 @@ export const TOPICS = [
   'gps-tracking',
   'lost-dog-safety',
   'flea-tick',
+  'snake-safety',
+  'trail-safety',
+  'emergency-prep',
 ] as const;
 
 export type SitemapTopic = typeof TOPICS[number];
@@ -141,6 +145,14 @@ function calmingHero(productId: string, badge: string, name?: string): SitemapHe
 function comfortHero(productId: string, badge: string, name?: string): SitemapHeroProduct {
   return productHero(
     relaxationProducts.find((product) => product.id === productId),
+    badge,
+    name
+  );
+}
+
+function emergencyHero(productId: string, badge: string, name?: string): SitemapHeroProduct {
+  return productHero(
+    emergencyProducts.find((product) => product.id === productId),
     badge,
     name
   );
@@ -452,6 +464,25 @@ export const staticSitemapSections: SitemapSection[] = [
         relatedLabel: 'All GPS Trackers',
         heroProduct: trackerHero('fi-series-3-plus', 'Best Everyday GPS', 'Fi Series 3+ GPS Collar'),
         pubDate: new Date('2026-03-18'),
+      }),
+      createSitemapPage({
+        baseTitle: 'Snake-Bite Emergency Kit for Dogs: What to Pack Before a Walk or Hike',
+        ogTitle: 'Snake-Bite Emergency Kit for Dogs on Walks and Hikes',
+        description:
+          'Build a practical dog snake-bite emergency kit for walks, hikes, and backyards: carry slings, first aid kits, and vet-ready supplies.',
+        href: ROUTES.dogSnakeBiteEmergencyKit,
+        pageType: 'converter',
+        topics: ['snake-safety', 'trail-safety', 'emergency-prep', 'travel', 'tracking'],
+        pinnedRelated: [
+          ROUTES.rattlesnakeSafetyForDogs,
+          ROUTES.trackingTop,
+          ROUTES.dogRanAwaySafety,
+          ROUTES.roadTrip,
+          ROUTES.coolingHydration,
+        ],
+        relatedLabel: 'Snake-Bite Emergency Kit',
+        heroProduct: emergencyHero('fido-pro-airlift-rescue-sling', 'Top Rescue Sling', 'Fido Pro Airlift Rescue Sling'),
+        pubDate: new Date('2026-06-26'),
       }),
       createSitemapPage({
         baseTitle: 'Fi Dog Collar Review: GPS Tracking for Everyday Dogs (2026)',

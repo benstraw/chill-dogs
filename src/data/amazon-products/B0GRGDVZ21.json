@@ -1,0 +1,456 @@
+{
+  "search_metadata": {
+    "id": "6a2e4c3abe918af84c8dc36a",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/rvm3Z1Alm5jqvWSFiJfqiQ/6a2e4c3abe918af84c8dc36a.json",
+    "created_at": "2026-06-14 06:37:46 UTC",
+    "processed_at": "2026-06-14 06:37:46 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0GRGDVZ21/?",
+    "raw_html_file": "https://serpapi.com/searches/rvm3Z1Alm5jqvWSFiJfqiQ/6a2e4c3abe918af84c8dc36a.html",
+    "total_time_taken": 7.97
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0GRGDVZ21",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0GRGDVZ21",
+    "title": "Vivifying Dog Lift Harness for Large Dogs, Soft Flannel Rear Leg Support Sling, Adjustable Dog Lifting Harness for Weak Back Legs, Senior Injured Disabled Dogs, ACL Surgery Mobility Assist, L, Gray",
+    "link": "https://www.amazon.com/Vivifying-Harness-Adjustable-Disabled-Mobility/dp/B0GRGDVZ21/",
+    "link_clean": "https://www.amazon.com/dp/B0GRGDVZ21/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GRGDVZ21&device=desktop&engine=amazon_product",
+    "variants": [
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0GRGKNDVG",
+            "name": "S",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GRGKNDVG&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0GRGLBGX6",
+            "name": "M",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GRGLBGX6&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0GRGDVZ21",
+            "name": "L",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GRGDVZ21&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 4,
+            "asin": "B0GRGS68NX",
+            "name": "XL",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GRGS68NX&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the Vivifying Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/71g9k5dSi8L._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/71g9k5dSi8L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71sIXPWRlIL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71FkxJX8+sL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71SZE-t+yqL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71YZc3JL3-L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71kF2Cl0YRL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71OEYAyMpOL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.2,
+    "reviews": 7,
+    "discount": "-27%",
+    "price": "$19.59",
+    "extracted_price": 19.59,
+    "price_unit": "$19.59 / count",
+    "extracted_price_unit": 19.59,
+    "old_price": "$26.99",
+    "extracted_old_price": 26.99,
+    "prime": true,
+    "delivery": [
+      "FREE delivery Friday, June 19 on orders shipped by Amazon over $35"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "buy_new": {
+      "caption": "Regular Price",
+      "price": "$26.99",
+      "extracted_price": 26.99,
+      "price_unit": "$26.99 / count",
+      "extracted_price_unit": 26.99,
+      "delivery": [
+        "FREE delivery Friday, June 19 on orders shipped by Amazon over $35"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "Vivifying Direct",
+          "details": {
+            "heading": "Sold by",
+            "content": "Vivifying Direct"
+          },
+          "link": {
+            "text": "Vivifying Direct",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A1IYPJF6KEYE26&asin=B0GRGDVZ21&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "size": "L",
+    "color": "Black",
+    "brand": "Vivifying",
+    "material": "Flannel, Nylon, Durable Outer Fabric",
+    "dog_breed_size": "Large"
+  },
+  "about_item": [
+    "Rear Leg Support for Large Dogs – Our dog lift harness helps large dogs with weak back legs, senior mobility needs, injury, disability, or post-surgery movement challenges. Use it for walking, standing, stairs, and car assistance",
+    "Soft Flannel for Gentle Support – This gray flannel rear leg support sling provides soft underbelly contact and helps reduce rubbing while lifting. It is a comfortable daily support option for dogs needing hip and joint mobility assistance",
+    "Upgraded Non-Slip Style Handle – The upgraded padded handle is designed to stay in place better and provide a more comfortable grip. This dog lifting harness helps owners support large dogs with improved control and less hand strain",
+    "Practical for Everyday Situations – Use this dog mobility harness at home, outdoors, on stairs, near the car, or when helping your dog stand up from lying down. It is washable, foldable, and easy to store after use",
+    "L Size Fit Guide – Size L is recommended for dogs weighing 60–109 lb. Pad width: 7.8 in. Front-to-back leg width: 9.5–13.4 in. Please measure the distance between front and rear legs before purchase"
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": "Dog Lift Harness",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/e9b2f4a2-6d22-4f3f-9435-e0eae9edf4af.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 2,
+      "title": "Dog Lift Harness",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/5fbcd57f-ac19-4824-b63b-c103ca28a7d4.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 3,
+      "title": "Great Mobility Aids for Dogs",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/cdad68eb-64f7-4bba-8b6e-6f97713c8c25.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 4,
+      "title": "Great Mobility Aids for Dogs",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/03b2dc82-c0a0-4b95-869a-4ece95e5a954.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 5,
+      "title": "Helping Injured DogsEnjoy Meals -Easily",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/d65724c3-6c79-4133-977f-e8c332f17d3a.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 6,
+      "title": "dog lift harness",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/b4a8da08-eaad-4fcb-88a7-0edd0e2fefdc.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 7
+    }
+  ],
+  "product_details": {
+    "product_dimensions": "27.95 x 7.87 x 0.78 inches; 13.44 ounces",
+    "item_model_number": "FZD-FLR-L",
+    "date_first_available": "March 6, 2026",
+    "manufacturer": "Vivifying",
+    "asin": "B0GRGDVZ21",
+    "best_sellers_rank": [
+      {
+        "text": "#18,783 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 18783,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#243 in Dog Hip & Joint Care",
+        "extracted_rank": 243,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/3024218011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Hip & Joint Care"
+      }
+    ],
+    "customer_reviews": "4.2 out of 5 stars",
+    "rating": 4.2,
+    "reviews": 7,
+    "brand_name": "Vivifying",
+    "pet_type": "Dog",
+    "model_number": "FZD-FLR-L",
+    "included_components": "Dog Hip and Leg Support Brace with Harness",
+    "unit_count": "1 Count",
+    "size": "L",
+    "dog_breed_size": "Large",
+    "weight_range": "60-109 lbs",
+    "breed_recommendation": "Large",
+    "color": "Black",
+    "material_type": "Flannel, Nylon, Durable Outer Fabric"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B07L3VLH5S",
+      "title": "LOOBANI Portable Dog Sling for Back Legs, Hip Support Harness to Help Lift Rear for Canine Aid Old K9 Cruciate Ligament Rehabilitation",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JOFP6kTN5a0RsP15zZyhy8sAAAGexNndnQEAAAH2AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDEgICBWVN8-/clv1c_ek-IBYXWFbbazs4rkzdsQ9qZdZIHJz_OtBR9inzoxp1wEsnatQ0Y5Mc5uR7R1DwbfW1My7Ky_Q6bKWQAn9xdiCLWVWCOO3iVZGn1Aabl_UjWG0ANap_yP0A4In11lWS_M3pxQDVZNhcCvMQEYZcCq_DbqdlMFmZLEIP1yTL6qOKH1eMYNwk0zVF4wl7ewyHO8HajJUnEFQS-0Pn_Be3oyn_fOXsjEqEGwJkHW13qJjOmo5tKVzT_Z8kOlQ6PZl4doNf9Z1Z0cOyAHLvA1BTC0B1B5rVwr7BzKHgQrjF_BG3-GBKwwssO2a7w2O-GIesuLy83vrFnPAOD48WGejoBWEfTdRMyFpt_7b9sSPtPDayUfJeJthz_iffe_cDbnU6PuesZRUIcj6Og0fcM4B58atYdBeRTv44tWxCtW1piGf6zUa2I3-wVx3yZjT_WQH82iG40EdemYC9xOTbNZjZOqPmIkUySruxB5ZCctNJOx8yB-jrKFBxfk1_xHE1Z3MVRdaFKHqO0UhocmZkf0VBCOfXei33VDDeQm1Ua_Wm53S0CxUcqFMFlHCcjUQvKNwaFbZ1EWLdKZX8F3KpVrpMqAGsfaQNgsTbCvepG6PJkJXX3fSWy3Af6DwPVw1_kG1hIb-JYZtV-iNuJOkr6LOeOxI_uvshph_osqx4M_cCww3gD0nWF4MtEDleGBk9GB3ip1anTMDlNzSKhy0Si2zPV8vZwE0vkPFomcfG66ccLm6dsWJ_R2flGGblukK9iI5uxGgkmg36GTRN7Ex1Vwc0bRX_LDpVBVOyVSJgXplm_3oTxSCg7Cy_qcUuJ86YfBg8_H4nm6S-zKpvpbi4JUlPfM-szH7qbTBO5pvY0y8Gvh8_WShIBUv80hA2mqCl4FslQhYRebG1rs8oxCyTI2N0KOi93Ts9uuNy_sLup-bghrzAen9kOIHdIn2WNQIvi6a9Dd58RgHHJmPZMgUuxTabRYvNTfDwuwOe2IWyYQ4iwQPOE5wgEXRlTZnzxVkGdiHq4GDTmnVYiyscaqSZrbsdkGQG0abWQzIHdxfBH0JcnSubcA8o-r59JUMMPtujD-l0qJrWipRixwqqdJkYjPUH90mJGhm6Byk28vzk5bm9xIbx8PpKxCY1UXjcWElWnjnXe60AduxfyH87mvAjzulWC8ytFHpDMYHUwiT5exRjP6QoA-cQczlnXqJkGzjswu56LK8M-cR3SBMEaoYR6lSvrIid29zpdQeYPwoSkY7uBs22aCllFqmpjP1l7P6IHHFSCjIBslCTlWnhXryyZwN1RINMzS63g4sTP05t54M3U2NtdpxUFg0xcqqErx6MArsPSUQqR77_xbbB78A732H1HViRdE6OiPqUdhGOzRdWgUH7qBsZ2XKH52PJs1Vu0cxeWBGQ-UIxcPIT_QFp7LXWiKGo0HM-MkdM5pGoajStfnFvX-W-rr5HCwPCxPARA6ByaHl8VNhVZDQZJtqNHi6d3ipga5arplaBNlz9chuax_JZ9AHqwzOQCDic/https://www.amazon.com/dp/B07L3VLH5S/?_encoding=UTF8&pd_rd_i=B07L3VLH5S&pd_rd_i=B07L3VLH5S&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=vTsJW&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=5ZFSVVDQM7XSV9471EEC&pd_rd_wg=hvmjx&pd_rd_r=33a3dd48-d69d-4cd8-9385-128bcf31d311",
+      "link_clean": "https://www.amazon.com/dp/B07L3VLH5S/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07L3VLH5S&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41t0UKK-F4L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/279afaba-42ca-47f1-8205-6d884679fdfe.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/279afaba-42ca-47f1-8205-6d884679fdfe.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.5,
+      "reviews": 13605,
+      "price": "$26.99",
+      "extracted_price": 26.99
+    },
+    {
+      "position": 2,
+      "asin": "B0FK56PWQR",
+      "title": "Dog Lift Harness for Male Dogs - 2-in-1 Full Body Support Aid & Sling, Comfortable & Chafe-Free for Post-Surgery Recovery and Elderly Dog Mobility, Hind Leg Assistance, Supports up to 40 Lbs (M)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JAoFVFcqgeLbOR105lAuuNcAAAGexNndngEAAAH2AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDEgICBlSsTR/clv1c_ek-IxQfWFbbaTPHXD5tyrleKjFOCmHGy-CbVFl_2HlQ16-8urxR5H4U9YfNkxnDneazuyGA77iXWM2zgswn6vZlAyAvHyYpBmihh_6b-xsTu6wU_-xgkjWTlksnV5IH1j4ajY3nOIFDeXtIscmoy-tWzwF2YmF309nTAT3CvwIMaQ3jfO5-k8kGDzBET3a5y0ACd7D_7L6cKsaf8vY2Sp-idP00tBQFaXFTCeyT6kGBSpSEO_BPFrZYqWhwqBVjrWkypM1oU4Bho3ofJtpdqHCitg9l-10K3YhoIKCY_sFoZK7d4bEX3UR9xjIzVD43c7xQAJy5KbydpiJ15If80VEZvj_2tDNrqvqT0Ht6z74YVN3GurR2P5uhwXMzaM796OfVwJz5xNtQPiDYL1tk5MnTqCIn7yclVlDrfjEE2Vd1llbYh0gBeVoRZxuUM3J1ytR7w4zOSHMj55NOfdu41TpJKQ5l5ER6Pq-OAaADZIfjYCVY6AwYctrI7r_JhSn_vPT1cNBRJZM7QY5h6ZQbxTjkaV4a6SpctfNTwYlUmTlETHL12zqiuNF1vFjDOajCwAXXy9jme0K9LrfJ79A_WdA-T8E--JDw1IUw7D6qD7fNEGcHyort96ePki8tDjYCDSVtN-ydNZxisBhThsGrvT9Mp9eBcsuuFyEB6oLh-Aqy-3QYESltf7HaDsNo44B10M4QkkduOhAQjtiEY-qQ-sAnYQM0jWEvIKNomKy_6Fw9keeEYGSTnPAahWajKH-NaHl_YCwOfzkvxIr8W1HqVfP35hVZ3a0hKU5EE_8qHZqt8LbV4Zlp2i-l0Sfd6qUYmBATYnDjFfUVTqQFX72kWI48bL0WgMwQaoBDSylCRNZkFYqbeK-6kzwjIcQ8_22ezJWOIa1k_2DoS18XMu1uPI3BjSi_M0F8zIqa3emm6BX2k7kQZFVcsqmiN--f_7Y1bkoC1CnuFW8P0Ogj0tPI3xCDXgnoXEMUUUZDi2dsa-yvKmUB80FMfuf5Dk79ickGXleCUr4l20abKjbq5JHkZNZogUx9yjbuQTKQY716NobocYqpjMAgcHgz80EEeCJS58_PGB-n9aeHIaO99_UGNcSvJcOQ9IZzjMTT8Ggr9w82IcMhzMe-avdRcxX_S6M07A7j19mOSETuM9NONeqxxF8MgcN_l6eBXkQOL2taM4uw7ThLCg_s0FrxUy4W9iXyG02_7H81MDU1vIc_xmm1WToxC-TmbXPepmpjvzDQrdCJ7bC9b472cScUtx5KdctUZiaXeTPPwxDX1QgTJ7XFGnlEmoXj-BDy5gWMmXjnEKZUOUMkYTqoUU7UqCLg0slDuwAxsUxFDhAZirMOSi71Gx2siGIfud4RYrFd95Jxpz5rqpJhLZUcjPMNjrasGPAQGDxrY4RaG5U7lSuEE3cX5rA-tKIIXaHfBOQiBO4ihcWwd5O6FAPWYSGmmHlIH58bOY60Fcj2ASpRZhd0vpQ0orPxOSxd0Ey-1WoQ6V8m3Dpvm_Mbfh9RCP00X5K98Dh57MnC175Q0wnADQc_lW5g/https://www.amazon.com/dp/B0FK56PWQR/?_encoding=UTF8&pd_rd_i=B0FK56PWQR&pd_rd_i=B0FK56PWQR&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=vTsJW&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=5ZFSVVDQM7XSV9471EEC&pd_rd_wg=hvmjx&pd_rd_r=33a3dd48-d69d-4cd8-9385-128bcf31d311",
+      "link_clean": "https://www.amazon.com/dp/B0FK56PWQR/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FK56PWQR&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/419BFuPQ6YL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/ea6861ac-5b5b-47c3-b59b-6c2e32252831.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/ea6861ac-5b5b-47c3-b59b-6c2e32252831.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.2,
+      "reviews": 20,
+      "price": "$58.99",
+      "extracted_price": 58.99
+    },
+    {
+      "position": 3,
+      "asin": "B0GWZRGVV9",
+      "title": "Allroaring Dog Lift Harness for Small Medium Dogs, Adjustable Doggy Back Leg Sling to Help Walk and Rehabilitate,Soft Padded Pet Support Harness for Arthritic,Disabled,Senior,Injured,Orange,M",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JHA5nkLUPzIyzTkK9JgGSS8AAAGexNndoAEAAAH2AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDEgICA9j_Ck/clv1c_ek-IBQf2LcTWXk4hOzIv7vt9-rhWrpuxrQMZHtByfE-T55AIhuz2RmLxQpbfM9W_jeetTMUh50zyLQxp0v-QdXEpeEbp3BpJE8-NklLWnkCmG8YvXqPjeaw5ZPNZQuzRtwOsQ8XjAi9qCIIfVU7G-tXXMB2dRxfolceIq_c6XCYyq9sPN6HJ9Ihi7niDDsz9hEUIZUpeeQrNvcCuJVzZllDG3L5SgqJ2PyBuY3Vmwq_4t3EfkoHwJk2FnB58Skm4oTo1cXlBxWnhSORlObeqLjdHUEBqMa9LuuGzGPV-E_yh1irBZFdwHNyFcTQzaEB1iQdBDpJ3g_4nWZRGHd5NrRHU_q2B1dvv1mhoaw7TUPxNqD89bxUN8QnzvwDRMkNXjv5vsPiNxxDpDehOJa1cHcP9xjJO1KN1Z3ZIvxhi4BX0KpQaxGVmmboSj2-90qGoOOn49IZQG9hZ1Dsh46VG-TN3C-8Cs2eH6I9VrtsWZ5Dga-OOVJOMaTYH7kLPRHscfupZzUQbS8Bky2z5TfcHODFG8S7bwG3ioEqDvUbHy4J4Tehn-hY_FKukU00_nZ5C79R30DYvniNKwcEUjARzQo_fvhEktiTiWo88TYgIUXkmNjcZdZIajL-HmEGoiKNEBoTzlldey2twFoaGLHTWRr1SL-mkL6-T6NoSutfDgzDObqePRkZAlRztwDuRJvnKJxtxWbFClsNbRB5v9DqeGD1WwRkQeEKAB1XzfXPtSMV5KG8HBJFHpUBmaCgqr32jg-j17Xv5X1c9JeUV5TaJC2DM2t2GSixTZISQjLz4q3MWrFX5sQbOiw-iz239vPbZkEEPBy7lEPATqqv34zFpSFTMaB6olvDzfShrGQO6VqwxKZCwvQHe8Biy8QZomC-VC4NIxVMUbKFEahvBTbTtuOY_qnJEmM2yVscBwWgFQ0o_z54R1MbTYcqmLldGs8ZOIuAYSPg8oZ7NpzsIv41Q-586__Pzh-wOvcgTEwXek6v3Gq8Lu34Bp9mpZPzqqOH7B1VGRR-NCUwcxI5jLN6QaCSJwBH5w5u5eaXm5izB7Nidwwctir_6w3Lkt_tKOjlEBtsGK6joS0qJXF1A9hepG6zRpkIFKZZOgMPeDs4zJPKrwhmoS7dlZbtu5q2MUslv-9gukwW5C6p_4-_JMZnRb1OHa4OE_72GBAnKkjg7W7A2mfcgc6_ciFFp3SOvfKe04utgVmzSlz6sLlf7TBNxtiynbXVLFvATDqyY3qGajdT181JD71hv7rirAXO78MXJqmu6hWg-LR8UTJUzbUvJZLSvDnBzhLN14Ynuf7EpEo4HYd8Ay8LZV0F5dSm2Fr4qRRAetslejA0adE05X2OBykCvXbLmWYFXmffOJfyMYxTZJe4K_4KvIT5aaCID8YDtjjusW_kNfrTwFDmHqmGrWF4UXfoa9Km_Ba6yTK2aBAD_ZSFCXMBA5FOtqohZjcKh_qSB-juXbcY-Nw08xbBFSeMQln-ziCDn0Ui1TmSeF_g8MdAg6c9WZckd-SJwohoPJ9pm6A4VHXp4LDQilyQ/https://www.amazon.com/dp/B0GWZRGVV9/?_encoding=UTF8&pd_rd_i=B0GWZRGVV9&pd_rd_i=B0GWZRGVV9&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=vTsJW&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=5ZFSVVDQM7XSV9471EEC&pd_rd_wg=hvmjx&pd_rd_r=33a3dd48-d69d-4cd8-9385-128bcf31d311",
+      "link_clean": "https://www.amazon.com/dp/B0GWZRGVV9/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GWZRGVV9&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41Z9bglPlkL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c149d4be-5f0f-4285-aef0-23bea72f9af1.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c149d4be-5f0f-4285-aef0-23bea72f9af1.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 5,
+      "reviews": 2,
+      "price": "$24.99",
+      "extracted_price": 24.99
+    },
+    {
+      "position": 4,
+      "asin": "B0FLPY2H6T",
+      "title": "HAPPYHAO Adjustable Dog Lift Harness, Dog Carry Sling Provides Rear Leg Support for Senior Dogs, Arthritis and After ACL Surgery Dogs,Suitable for Medium to Large Dogs,Blue XXL",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JIM_xENYAPIYs__8vYUIwQoAAAGexNndoQEAAAH2AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDEgICBENqtZ/clv1c_ek-IxYXWbcbWTBXUV5oY3gDJ7b2aFJg085_cJtr22lN7-M_fU4cDpQOUaii7dUAw96wtSMUcoUs57TSAnYvcW4nY-8AJRPMPb2YnzX52_ci1k1NDggOCpmn56BkU5fDd3Kmv3gWWSUaejpTrfBxTqMnvAFydhG3KSkwQbzYlxp5L8ft8G467mHoRBDF6qHzaDkVKRogJHgDFxxDhlRiQvy-6tX-cpF5GUEcXn6XZiDJCdCUjynxPMWQZMgKnRpnAC3Yb7WX_QtTrhPWIZnHW7DFBwriSUK-U8gz7IQaguDlku_N40b24knBq6gROi7lwq_H8TrSWZ-neIEuw-ytdtgMc3mvssJYS-FcjZvW1byogBZr_Xr8gCBKwI6NdsqDxSSNYM_nDBpumlb9SzrfruALBysTn5Yo--fCQpMHWAbPz1JZKxmmIMgIX4UpMuLlPEAjK5xloheqa5JNNue6Hbo-SWsIVoMhQS8MbegsMvGWw3ZQ1zFodVg_eKXmvNZQ0mYCa0rv3RK0-pS9g3ogyOtQxkGni0gR5aGsb01Cl1KMee4zCoe6KRrvoepMnGZc6FyQO4i6ZenInWeGrJr9oVxYr-v55JP2rjFLPBim9yajjeQUU_7M6dYcwHMRuFQ2qew93ojuL8vP_-2RJjTqNcdijhaY6OO1J3DrSDIq8d6oU2daOJm0M3BMALL8_LZOCn-Bw0MhYmzyYwyUaUj6bD-PhUJTYP7TA54092atAYYNqKsYSOfCg_a3LPsKXBzgXY8-RVh5B5tJfD9-HY0G81YOgaf3sLYUhdO2FMVSjC-dGCfJhP-ZI8bnJqyF9YwPGDkJgK9QlAD9B_TI81HwsM37r9fPqvwLjOXF8Vh-CLqs1GVRHz4r51-bW4HA24hb_YIJw7l81qcO0GdlfOSV4LMWk315xEQqiX3SplGuhxWCr1EACfHV_baaXCfK9YsjP7RloW5887kLVlHWFySOHuA7orlI4UNOWJM7mVL2FFg1O9fXxjun-mZbEShJbBwjF10KRQLw3EERE3BmuU-l8wQqEO1e4H_To9Rm3O_FeQcBKyATm_jLHLbYJcpjHgqVuwvQp4MKOWQQqBlp9xUFiEZlfT34p1ZiG0IoB7JY-Qoj7fN_I3OjPxfCnJHOaSD-YrHzz1Vgmc5xjGjUcweboB8Wl8ExOpgXNWM_ZQw_gidCwM30vWWE4Ho807Qg8uCT_4_a-kgfSuHX2zR_s63bYvhmoFjRvCzRXy6P4vQdFTXqRqQgEoNhQgmxD_4xIPjkgCT52ZA9fcYLYawwptVzGontE7KAE3EFQdH3KWYbNaYDM2UAQgeP5cMQT9q-b3xZTMF2U7rw0GEjkrygTtqEca7hdoaWDcp9qKcTdxKWtKqkTTbRwxnRyjmZ6XW4OKIP4tMhYxohqnvlN44YCmqwULz47UNwRHJ-VGp5F5s8CTV1QHIrbR0zWPa2cLoQl_An909XAS4d9aOdinSy6IwObSZkThmt3wddlC-duckKue_6pclqYL1Uzudjz0_6Z8cbk_LUcSWLpjzdIN3pbZphkUI6y/https://www.amazon.com/dp/B0FLPY2H6T/?_encoding=UTF8&pd_rd_i=B0FLPY2H6T&pd_rd_i=B0FLPY2H6T&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=vTsJW&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=5ZFSVVDQM7XSV9471EEC&pd_rd_wg=hvmjx&pd_rd_r=33a3dd48-d69d-4cd8-9385-128bcf31d311",
+      "link_clean": "https://www.amazon.com/dp/B0FLPY2H6T/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FLPY2H6T&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41uB3uxYE9L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/45ee1e4a-3072-4146-bd1f-536bf95097b9.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/45ee1e4a-3072-4146-bd1f-536bf95097b9.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 3.6,
+      "reviews": 18,
+      "price": "$39.99",
+      "extracted_price": 39.99
+    },
+    {
+      "position": 5,
+      "asin": "B0GS5LZBW5",
+      "title": "Yinchogee Dog Lift Harness for Large Dogs, Dog Sling Carrier with Lifting Handle for Mobility Assistance, Senior Dogs with Arthritis, Hip Dysplasia & Post-Surgery Recovery, XL",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JI5_IsbZsM03Ez0TAuuGfJwAAAGexNndogEAAAH2AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDEgICBASUTc/clv1c_ek-YBQf2LcTWXk4hOzIv7vt9-rhWrpsx-zHRvXUGpzp-S4a_ggWf8ysEFOQTkkXP1HGwK790QjKFYE9AayYMBQoBu604XIMRUKQDgOeg1O_ygxiSJMTSLC3__pXcdk4Qxg-13XI9oFjBWvMs-moq-d2zwF2YmF38sLzoDxSpSgIblLsNU5FDXCplqTb2rT3Nt46ukrt7v8XkdOR404FyWOpXe_RHhoPnghKg4LN9Fo4UqDXRGeiBtZE0yLQaX1KwqNx9X9_RCUlQRhWp3OXPw7FS-fuAKPVq22Z5ZxFwVBOsuUQjO6k0xe5ohzfG3DBbnndatrFnvIzHvcXCJD4H53fLdFMSdaQejBi1Gl5ltfkfX2Ch_uyuEibMsIgMr3iw_9vThycNHNlvYIeOJsqiHdTVfBUUaFHo50t5oPvJYhLSxl8AE2ei7tCn0_4jxZH4XWTkWgXaY9eGIuQSoCMmTpqIAdGYwaBdD5fdxDw7msyBbz3K1OxdQ0T-lE7FUmJxXfxV9_wjwN-Id30QJFRDCXWe4vTQxCGHshht7Gkb3b2cYC0qRvRlBGEjJ9QwKQuKGOV2jgfw7QddgvsZebh50koKjpC25oy7tWAOMWlWv1sv8scjctcpEjqcpJ_ngPqnIqMi488d6e8ERiq8Mg_3jxVxwsYehlpao0swFy_Hh9S2gC86PQy946iwWXNKfM2o1BfTjTEmiZgdF9V3K_3CsAfyK3gwdiNYU5kQZffNSrvW-DHUk9xpJjB-09GVvFB_7S5Xcw7JBx5h0wSMNFeZwUHpCJqeILVxwQaMTHY61eLO5CsbwzWiPa0mi6OAHYyrshdnInjnfn9_ig7U0EjalQKpjamCbNJ7-BPKnJelCCDzd2lgSArrM0y9EYJbcF8rnVfLLy63NdzKXg_BE4drQ9eFi2AacTTD6s1uML00yRPwM-B2bVHoe2k4GZMEGWw9rT8O6Ze0dTtLZOqQSbg7G2cabPFCTeBYmhm5loPTrzJQMUWu74iI6ONSi__i5i2RQF8m8MxUZM8DHatPZMGccBmHZAkZcfgagL31J-ub1WsV9sXR8YnuLXmnMBwvdnYCEJHqknfSd4Z8S-5ekvY_W6Wo26ge0o-QgcMHfoN7vCA1rxV9m4k90XDqubJxLfkuUlpVIYN_yLyUuT72dPomAUPhOMwS5YPIWikIcIx0454dbDOX5rvK33ugL2rXD1tiK-NQfniMgBQUcq_8n_EiKdRdfULr24PUYHNUBY_5pLkGzVKUKuruJsMbFq20n1S-3fjZXqOIeZciy9g7b81pd052ITA1hAMtjiRfto2NScj9L-BXNWPAzqRR89EDn7thC5YYTEtxaDldeBXM7b1YC7oIErNfSJ11HxSCn7LF8kI_TTmtsLa5u_g1E6mZ3Oci4KoZseBrva8umQXz7Q3i3HwG_auzcS--zATuIWHP3dnnTBnsL2LRn4fc_kaZeTt4F60Mt8EI7jKBCC-VB3h0t6jKoyWh2EDpwYtB6nB3rcQtAhmMHVPpWP94R1zkOEM/https://www.amazon.com/dp/B0GS5LZBW5/?_encoding=UTF8&pd_rd_i=B0GS5LZBW5&pd_rd_i=B0GS5LZBW5&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=vTsJW&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=5ZFSVVDQM7XSV9471EEC&pd_rd_wg=hvmjx&pd_rd_r=33a3dd48-d69d-4cd8-9385-128bcf31d311",
+      "link_clean": "https://www.amazon.com/dp/B0GS5LZBW5/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GS5LZBW5&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41UlI+80eeL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/054d2fb1-9811-439f-b529-9c3f18ebe659.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/054d2fb1-9811-439f-b529-9c3f18ebe659.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 3.2,
+      "reviews": 14,
+      "price": "$37.99",
+      "extracted_price": 37.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "images": [
+        "https://m.media-amazon.com/images/I/71ikNUaUayL.jpg",
+        "https://m.media-amazon.com/images/I/81jolgjMd6L.jpg",
+        "https://m.media-amazon.com/images/I/71y-5GElvDL.jpg",
+        "https://m.media-amazon.com/images/I/61PbrWgR49L.jpg",
+        "https://m.media-amazon.com/images/I/715fiaXQI5L.jpg",
+        "https://m.media-amazon.com/images/I/61GbgRWHEoL.jpg",
+        "https://m.media-amazon.com/images/I/61-OD4JMIVL.jpg",
+        "https://m.media-amazon.com/images/I/61u+yHs1tzL.jpg",
+        "https://m.media-amazon.com/images/I/61l10DwlxyL.jpg",
+        "https://m.media-amazon.com/images/I/71QSdfLiZrL.jpg",
+        "https://m.media-amazon.com/images/I/41eX3FzbOQL.jpg",
+        "https://m.media-amazon.com/images/I/71BCVjupaCL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 81,
+        "4 star": 0,
+        "3 star": 0,
+        "2 star": 0,
+        "1 star": 19
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Really helpful for arthritic dogs",
+        "text": "I have several large dogs, two of which are older and suffer from arthritis, including a Chocolate Lab and an Australian Shepherd. Both of them have trouble getting into the back of my SUV and even up onto the couch. Picking them up can be a challenge: if you hold them to close to their hips, it can hurt them. So I was looking for something to help lift them up and I found this.The quality is superlative. It is incredibly well made, very heavily reinforced, and with a lovely soft furry lining on the inside to ensure the dog does not have any discomfort. I did find the straps to be a little bit long but they are adjustable.I tried it first with my Australian shepherd, who only weighs 50 lb. It was very easy to lift him up, just be careful when you position it that any . . . male parts . . . are not caught inside this harness, or it will hurt them. I was able to get my dog to put his front paws on the couch and then use this to lift him up and it was quick, easy, and painless.I then tried it with my chocolate lab, she was much less receptive to it. But once I let her sniff the harness and see that it would not hurt her, she let me wrap it around her and I was able to get her both onto the couch and into the back of my SUV with much less trouble than I normally experience.This is incredibly helpful and I highly recommend it if you have a large dog with mobility challenges that you need to help. The price is very fair for what you get, the quality is excellent, and it does what it is supposed to do effectively and efficiently.",
+        "rating": 5,
+        "date": "June 3, 2026",
+        "author": "Amazon Customer",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEWV4CHWFZ72AZIIR4ODWQKIFSOQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/81jolgjMd6L.jpg",
+          "https://m.media-amazon.com/images/I/71ikNUaUayL.jpg",
+          "https://m.media-amazon.com/images/I/71y-5GElvDL.jpg"
+        ],
+        "product": {
+          "size": "L"
+        }
+      },
+      {
+        "position": 2,
+        "title": "A winner for a senior dog",
+        "text": "My 16 year old Aussie has arthritis in her back end and getting up forces all the weight on her front legs and is a struggle. As far as lifting her with the harness from a laying position, it takes some practice, as you have to get it under her which then makes her try and get up while you are trying to shove it under her. Once I got it under her and could grab the handles it made lifting her up less of a strain on her and me. This then gave her a chance to stabilize her balance.If she is already standing, putting the harness under her and using it to guide or stabilize her works pretty effortlessly. It also works ok to assist her up steps if she is able to do some of the forward motion.As for quality, this harness outweighs another I had tried as it has very nice soft fleece cushioning on the part surrounding her underbelly. The handles, material and stitching all seem durable. It even can be washed if it gets soiled.Other uses - dogs that have had surgery such as acl surgery would benefit from this to stabilize their surgery legs for standing and walking.Although I mention it takes some practice using it from a lay to stand position, I’m giving it 5 stars for its quality, softness and value. The handle is comfortable and there are side strap adjustments to accommodate your dog’s height.",
+        "rating": 5,
+        "date": "June 8, 2026",
+        "author": "Zena",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGIMZAC6C2PIR4VTDA3E6H6E3X2A?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "product": {
+          "size": "M"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Horrible Experience",
+        "text": "Our senior tripod was ill and unable to stand. We bought this hoping we could help him. He ended up falling and busting his nose and the trauma with his illness was not good. That being said I can't recommend this product.",
+        "rating": 1,
+        "date": "June 11, 2026",
+        "author": "Selina Hainley",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AF5LH5K5ZZFZCXJYWWQS2MVZ76VQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "M"
+        }
+      },
+      {
+        "position": 4,
+        "title": "The Cadillac of support slings",
+        "text": "This is an awesome product and honestly feels like the Cadillac of this type of support sling. The quality is excellent, the stitching feels strong, and the whole thing feels very well made.The inside is incredibly soft, which makes a big difference when using it with an older dog or a dog with mobility issues. It gives good support without feeling rough or uncomfortable against their belly. The handles are sturdy, and the adjustable straps make it easier to get a comfortable fit for both the dog and the person helping them.This is especially helpful for senior dogs, dogs with arthritis, back leg weakness, or pets recovering from surgery. It makes lifting, steadying, and helping them up steps or into a vehicle much easier and safer.Overall, I’m very impressed. It is soft, strong, supportive, and well worth having if your dog needs a little extra help getting around.",
+        "rating": 5,
+        "date": "June 12, 2026",
+        "author": "Jamie S",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGLIA45XKEPMGJQJ5O2VERQLJFYA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/81XL+SIUh0L.jpg",
+          "https://m.media-amazon.com/images/I/81Nnz-iokiL.jpg",
+          "https://m.media-amazon.com/images/I/81UP-aCgZjL.jpg"
+        ],
+        "product": {
+          "size": "L"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Sturdy sling",
+        "text": "We've used a few slings lately for our boxer with degenerative myelopathy. There's a couple I really like and one that looks nice but ends up bunching up under her. This one is like the ones we like. It's stiffer but soft and stays flat under her. At first I didn't think I'd like the velcro attachment to connect the handles but I actually do. I just wish that part was softer instead of slick material, it'd be easier on hands. I put it in the washer (in a washer bag I already had) and it came out well, it is hanging to dry right now. A couple of the other types I have I threw in the washer but this one said hang dry. Overall though this sling is strong and sturdy for our 70 lb boxer (we ordered large), and I wouldn't hesitate to buy another.",
+        "rating": 5,
+        "date": "June 7, 2026",
+        "author": "Tiffany",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHGON5RVAQE4OQDOZ4GVODXMHSZQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/61GbgRWHEoL.jpg",
+          "https://m.media-amazon.com/images/I/61l10DwlxyL.jpg",
+          "https://m.media-amazon.com/images/I/61-OD4JMIVL.jpg",
+          "https://m.media-amazon.com/images/I/61PbrWgR49L.jpg",
+          "https://m.media-amazon.com/images/I/715fiaXQI5L.jpg",
+          "https://m.media-amazon.com/images/I/61u+yHs1tzL.jpg",
+          "https://m.media-amazon.com/images/I/71QSdfLiZrL.jpg"
+        ],
+        "product": {
+          "size": "L"
+        }
+      },
+      {
+        "position": 6,
+        "title": "Awesome pet support strap!",
+        "text": "Very strong and well made dog support holder! my dog has back leg problems some times mainly from getting older and having short legs. she’s a corgi. this large size worked well for her! it’s very padded on the inside and makes holding them up not hurt them which I love.",
+        "rating": 5,
+        "date": "June 2, 2026",
+        "author": "Marlene Kingeter",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGWE3RL7UHQ2GLJCC6PLSWFVMAEQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/766ff454-5c6c-42e7-a743-dd800d554eca._CR0%2C0%2C375%2C375_UX460_SX48_.jpg",
+        "images": [
+          "https://m.media-amazon.com/images/I/61VBldR4AIL.jpg",
+          "https://m.media-amazon.com/images/I/61DbG4JVM1L.jpg",
+          "https://m.media-amazon.com/images/I/71BCVjupaCL.jpg",
+          "https://m.media-amazon.com/images/I/71XuYmRQ4FL.jpg",
+          "https://m.media-amazon.com/images/I/71lHEInGqGL.jpg"
+        ],
+        "helpful_votes": "One person found this helpful",
+        "product": {
+          "size": "L"
+        }
+      },
+      {
+        "position": 7,
+        "title": "SUPER HELPFUL",
+        "text": "This is a great device to have in the home. I have Poms and they have knee issues. Sometimes my Jo is in so much discomfort that I have to carry her to potty. This sling is the perfect solution. It is soft and can be adjusted for the comfort of both the put and the owner. Using this is super helpful and the dog can actually piddle without getting wet. I’m really glad to have this in my tool box.",
+        "rating": 5,
+        "date": "June 7, 2026",
+        "author": "Amazon Customer",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHI6BTWEUSUII54PFV76J2GVLW2Q?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/a3d392e8-1afc-4999-8668-272f12855741._CR0%2C0%2C432%2C432_UX460_SX48_.jpg",
+        "images": [
+          "https://m.media-amazon.com/images/I/41eX3FzbOQL.jpg"
+        ],
+        "product": {
+          "size": "S"
+        }
+      }
+    ]
+  }
+}

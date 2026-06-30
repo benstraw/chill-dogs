@@ -31,6 +31,8 @@ export const ROUTES = {
   airtagForDogs: '/gear/airtag-for-dogs/',
   dogRanAwaySafety: '/safety/what-to-do-if-your-dog-runs-away/',
   fleaTickPrevention: '/safety/natural-flea-and-tick-prevention-for-dogs/',
+  rattlesnakeSafetyForDogs: '/safety/rattlesnake-safety-for-dogs/',
+  dogSnakeBiteEmergencyKit: '/gear/dog-snake-bite-emergency-kit/',
   comfortHub: '/comforting/',
   comfortCalmingBeds: '/comforting/best-calming-dog-beds/',
   comfortOrthopedicBeds: '/comforting/best-orthopedic-dog-beds/',
