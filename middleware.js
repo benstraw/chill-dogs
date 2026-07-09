@@ -1,13 +1,9 @@
-interface AdminAuthEnvironment {
-  ADMIN_USERNAME?: string;
-  ADMIN_PASSWORD?: string;
-}
-
 export const config = {
   matcher: '/admin/:path*',
+  runtime: 'nodejs',
 };
 
-function constantTimeEqual(actual: string, expected: string): boolean {
+function constantTimeEqual(actual, expected) {
   const maxLength = Math.max(actual.length, expected.length);
   let difference = actual.length ^ expected.length;
 
@@ -18,7 +14,7 @@ function constantTimeEqual(actual: string, expected: string): boolean {
   return difference === 0;
 }
 
-function unauthorizedResponse(): Response {
+function unauthorizedResponse() {
   return new Response('Authentication required.', {
     status: 401,
     headers: {
@@ -30,9 +26,9 @@ function unauthorizedResponse(): Response {
 }
 
 export function authorizeAdminRequest(
-  request: Request,
-  environment: AdminAuthEnvironment
-): Response | undefined {
+  request,
+  environment
+) {
   const expectedUsername = environment.ADMIN_USERNAME?.trim();
   const expectedPassword = environment.ADMIN_PASSWORD;
 
@@ -69,7 +65,7 @@ export function authorizeAdminRequest(
   }
 }
 
-export default function middleware(request: Request): Response | undefined {
+export default function middleware(request) {
   return authorizeAdminRequest(request, {
     ADMIN_USERNAME: process.env.ADMIN_USERNAME,
     ADMIN_PASSWORD: process.env.ADMIN_PASSWORD,
