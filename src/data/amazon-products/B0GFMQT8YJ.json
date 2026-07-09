@@ -1,0 +1,479 @@
+{
+  "search_metadata": {
+    "id": "6a2e4c23f7e996099a3bf258",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/GoBBDzxCFcPv2Ud90BFeqQ/6a2e4c23f7e996099a3bf258.json",
+    "created_at": "2026-06-14 06:37:23 UTC",
+    "processed_at": "2026-06-14 06:37:23 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0GFMQT8YJ/?",
+    "raw_html_file": "https://serpapi.com/searches/GoBBDzxCFcPv2Ud90BFeqQ/6a2e4c23f7e996099a3bf258.html",
+    "total_time_taken": 5.59
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0GFMQT8YJ",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0GFMQT8YJ",
+    "title": "Wakytu Dog Emergency Rescue Sling - Lightweight Packable Lift Harness with Handle - Safe Transport for Small Medium Dogs - Ideal for Hiking Skiing（18.5-29.5lbs）",
+    "link": "https://www.amazon.com/Wakytu-Emergency-Rescue-Sling-Skiing%EF%BC%8818-5-29-5lbs%EF%BC%89/dp/B0GFMQT8YJ/",
+    "link_clean": "https://www.amazon.com/dp/B0GFMQT8YJ/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GFMQT8YJ&device=desktop&engine=amazon_product",
+    "variants": [
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0GFMTCKDB",
+            "name": "M（8.5-17.5lbs）",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GFMTCKDB&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0GFMQT8YJ",
+            "name": "L（18.5-29.5lbs）",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GFMQT8YJ&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0GFN3G1WZ",
+            "name": "XL（22-33lbs）",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GFN3G1WZ&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the wakytu Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/71bgbXfa7lL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/71bgbXfa7lL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71xt2hJU9NL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71qCPDhf9uL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71nuFiUA3xL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71v+bkfBPpL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71oqUWmA4uL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71RXzuA2MYL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71+OVOgdwFL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71gi74yY41L._AC_SL1500_.jpg"
+    ],
+    "rating": 4.8,
+    "reviews": 19,
+    "price": "$49.99",
+    "extracted_price": 49.99,
+    "delivery": [
+      "FREE delivery Friday, June 19",
+      "Or Prime members get FREE delivery Tomorrow, June 15. Join Prime"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$49.99",
+      "extracted_price": 49.99,
+      "delivery": [
+        "FREE delivery Friday, June 19",
+        "Or Prime members get FREE delivery Tomorrow, June 15. Join Prime"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "wakytu store-us",
+          "details": {
+            "heading": "Sold by",
+            "content": "wakytu store-us"
+          },
+          "link": {
+            "text": "wakytu store-us",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A3JT0RFPZAHPOU&asin=B0GFMQT8YJ&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "color": "Black",
+    "brand": "wakytu",
+    "product_dimensions": "20\"L x 0.04\"W x 17.3\"H",
+    "material": "Nylon",
+    "special_feature": "Personalized"
+  },
+  "about_item": [
+    "【Emergency Dog Carrying Sling】 Designed for hiking, skiing, and other outdoor activities, allowing you to safely carry your injured or sick dog using the dog lift from the trail to safety, even in rugged terrain.",
+    "【Lightweight and Packable】Just 18 oz, this incredibly lightweight rescue sling for dogs fits into a small stuff sack, making it an essential addition to store in your backpack to ensure you're always prepared for emergencies.",
+    "【Full Body Support 】Whether the front or rear legs need support, our dog backpack carrier and dog lift harness provide full body support. well-made buckles can withstand large pulling forces without bursting. it also stabilizes your dog and prevents them from struggling, allowing you to trim their nails with ease.​",
+    "【Widly Use 】This dog carrier backpack provides full body support for elderly dogs with weak legs or dogs suffering from orthopedic injuries, shoulder or hip dysplasia, hygromas, arthritis;It also works perfectly for daily use—carry your pup when it gets tired mid-walk, or strap it on during rainy days to keep your dog clean and dry.",
+    "【Quality Guarantee】: Wakytu offers an 3-year warranty service for our dog backpack carrier, dog carrier backpack and dog lift harness for small dogs & dog lift harness for large dogs. quality problems within 3 years can be replaced for free new models. so if you have any problems with your product, please feel free to contact us by email and we will get back to you as soon as possible within 24 hours."
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": "dog lift",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/7c6c446b-1f8e-4f9d-82c1-384e9ed5b405.__CR0,3,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 2,
+      "title": "dog lift",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/e5c78960-4cbb-457b-a681-ea603da3d207.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 3,
+      "carousel_images": [
+        {
+          "position": 1,
+          "title": "dog lift",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/933c9174-a8ec-4759-9cbe-793ccca34d08.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 2,
+          "title": "dog lift",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/b4aa4a44-c069-4785-ad0e-5558900fc026.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        }
+      ]
+    },
+    {
+      "position": 4
+    },
+    {
+      "position": 5,
+      "title": "dog lift",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/88800bf7-1486-44b5-83ba-16ead137e066.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 6,
+      "carousel_images": [
+        {
+          "position": 1,
+          "title": "dog lift",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/f542a956-6897-42f3-9c07-ade0e04912b3.__CR0,1,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 2,
+          "title": "dog lift",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/f7b7a721-c838-48c9-a3ec-e8b015989df7.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        }
+      ]
+    }
+  ],
+  "product_details": {
+    "product_dimensions": "20 x 0.04 x 17.3 inches; 1.1 Pounds",
+    "item_model_number": "C349",
+    "date_first_available": "January 8, 2026",
+    "manufacturer": "wakytu",
+    "asin": "B0GFMQT8YJ",
+    "best_sellers_rank": [
+      {
+        "text": "#45,173 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 45173,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#55 in Dog Carrier Slings",
+        "extracted_rank": 55,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/3024189011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Carrier Slings"
+      }
+    ],
+    "customer_reviews": "4.8 out of 5 stars",
+    "rating": 4.8,
+    "reviews": 19,
+    "brand_name": "wakytu",
+    "model_name": "C349",
+    "pet_type": "Dog",
+    "model_number": "C349",
+    "manufacturer_part_number": "C349",
+    "warranty_description": "No",
+    "included_components": "1",
+    "unit_count": "1.00 Count",
+    "target_audience": "All Breed Sizes, Dog, Nylon",
+    "item_dimensions_l_x_w_x_h": "20\"L x 0.04\"W x 17.3\"H",
+    "size": "L（18.5-29.5lbs）",
+    "additional_features": "Personalized",
+    "closure_type": "Buckle",
+    "dog_breed_size": "Medium, Small",
+    "compatible_with_vehicle_type": "Motorcycle",
+    "color": "Black",
+    "recommended_uses_for_product": "Hiking",
+    "maximum_weight_recommendation": "29.5 Pounds",
+    "material_type": "Nylon"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0FK56PWQR",
+      "title": "Dog Lift Harness for Male Dogs - 2-in-1 Full Body Support Aid & Sling, Comfortable & Chafe-Free for Post-Surgery Recovery and Elderly Dog Mobility, Hind Leg Assistance, Supports up to 40 Lbs (M)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JFiaUpYuWb1JVZ76_vqaBtYAAAGexNl7_QEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICCyGJl4/clv1c_ek-wxQfWarbaTBXUV5oo3gDJ7b2aFJiU8s9U5m9zPeNDINrK4npV-b5uMX-X7DXa4gyjRo1nV6-SmnWFk8bEym6Ba1hK7Yohmbh18MJg2s4kkxyWX_RYLSz97rW89v40XAzNayprDICZoMgvnsFj5cbPAN2ZlE0qS0wQbzYhwo4FQ_8Gtb6yYkkLU6-frk4ThjeZ8GFzd5dp5sT8Pi4KQMAbld2dFsalwVc2MhSWCTXkmVNP_Afgd_HrmPFhQFd7UXTSes0woiaPgnijyhARndiVU0sNCBwQREzcyg8MeCP_GFOr5b4_sGzk_9zTF3VtuTjeVtsI71TryFeGCHmp-t2xPzf7B8tEju_rlhYFTrZVZzwes4sRbDHd9V4vwQiGxQsZjAO6nI8fd-s5Od8q0ZTvXyNAE_zw2D-zrSngiY_A9JxcIuQ8I2N30lNWExOsFeeVMGoy8rJzMQYlhZFGnUkLtgcTrAQWDUb3uFx78meF-mifWQzAPeOz4y-SEVDbsL7XdDKVH3NKM3TH2AxDQU4-DD4j3uNxpKqsLNa8F23fnTeltFKiWmuSzzJJEBmE6y1XEBoYSPPw-LjTIB4Pn2eYmLW-Iyw6mhg1Qw4c3PWevQwiD8KbnbXDQ2uzwdJWpAUL-KCY1ghx7ApFNS_yAUT4o56fYFBnqI8C_ivYgZvpru5oI43bdT8DOp82MyG4uuhlY7iU_KkHuQEoiLQVw9hs_rE5GdmAFRx6XmHiGt0Ph9s-LAmyV817TEpFkzqyWT2gWWcE2j4BNdJFBOjBCZHfHVmFAMwQ9knCY2OqIjv9ppR8mS_216Hf24ZIBSkkPsTDFFb1RozMDdFsd0grYR0sqSx3nwFMX0e_5rIbrBNqarhJPMk-Qm04Tw-K3WF4oh-Mbv6RXhtMDiOzAowBpnoS71tbiL9nOJzRPH7EaltNwsrspUlqaDU85eYRmStbKTwyZ3ee_mrrh8V168BceL24JXMoDjjF0iNL_b1jH4scrom1H0nDc_wve57X7QFzZyhMwhWeEjVNDbWzyWdrEvaPp-ThvhURISo7WUxMPwD2jV13Xoa8TvOwudjZcaQMI8L1a2elXbuEdoIItzKdQ2wH3SBGaYZIYPZwYomgCYPbEBo9oxS3pDUZRDGkqHDiMM__-ZM5tEVcY-9f-uY0NsvuJxwjTU1V89mcs3ns517U2HE7bYc_4YpbZKMs_RPqmuZvLiS3JzVkxB-oXJSbG2NdzuUaOT2EPivcdoj4QZxFpl80FvfwCsH_JSQjgdES4SWK4wtuY8Jw7JI_0eiR2V8gGlqWep8Yr-1ELfIUbYLMVE0QRzQkFE8dtbGppGU5xQfE8rcxWRVN-lvTN5p--KKPk8lfcTqss7zsEaKjqge2swBJnitChhXOEbw3CGIGbItzkmFleuc0jSFSpNFrvaFUkrUJeduKJLmT4gbTv7QVohx0zSpk5Y_nrJYtPv-LNOIjiAZIDb4JBneU9-5ZODJzRpiWwVqA6W_EJ04RP7w2GtZ_XT9WJ4puTRTsjLuDdQ0ZL9aR1jL_Axqdsuw4agWP1Q/https://www.amazon.com/dp/B0FK56PWQR/?_encoding=UTF8&pd_rd_i=B0FK56PWQR&pd_rd_i=B0FK56PWQR&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=jpmYl&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=AS4VPVH9C3VWNXSFX63Z&pd_rd_wg=uaX5v&pd_rd_r=354d5350-6cfb-4a38-b889-3ee2c8c436c1",
+      "link_clean": "https://www.amazon.com/dp/B0FK56PWQR/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FK56PWQR&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/419BFuPQ6YL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/ea6861ac-5b5b-47c3-b59b-6c2e32252831.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/ea6861ac-5b5b-47c3-b59b-6c2e32252831.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.2,
+      "reviews": 20,
+      "price": "$58.99",
+      "extracted_price": 58.99
+    },
+    {
+      "position": 2,
+      "asin": "B0G1HGBXC8",
+      "title": "LIANZIMAU Dog Sling for Large Dogs Adjustable Hind Leg Support Lift Harness Senior Canine Mobility Aid Carrier for Back Legs Walking Rehabilitation",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JIi_FBxY1AqHIMf1t31-mDYAAAGexNl7_wEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICA_RM0Y/clv1c_ek-wxQfWLbbSDfHIgIfzke4AysoXLXbpi21Q80nCl3c8yvqeiNWm0ETQsm2Z4nyO2eyKBghGobMY7Q63Rfe9vYVF1X14why7w0tlj1Mov0qXujLK5S7MKyiQYnt1o9gInoRL56wYQux1j5nsRitSw8IT4N-eroVqY9UwjDCs1eY7fcOAmIArMeyx55RaKttM9etMm28j_6aL1Hf4rkDkuT-SB1e3jEqK5YbyrZKEyT6BlBck-9HeqXwa2vFt0hq2JEpB4es3cbi_oz8fyEHL2sZWvVX8nlw5sjAf4AFAqD2Eq69o070gkXCu9gTOi1W9rm94CX5EbHA0woWyUOXfjhEVG5NyXED7Fk9nADbwJuBnZnGmddBqmOpDQXEJrYnSC-f97JXtfKjw549ExXaijEmtapv-E7uoDbYjIpztztJLjwVihGmorgE37WLG3DRcfGc65wWfHblKkH40EoJzphLip1BGZJ30CEQrp1HQJQjWp40OlrkCJuUel5Qj4R4atExWPQFN_DbFlMJ4jVR1iVICZ2W-yD5F1PsE91iV0LMQO4z6od6KRIvoLPFy39pdQwaVFNyzwjfhoOUJiEHZMWzz9_xmZ_-AgB0i803guWCEMIh-snt8wl4kU6fJGIYZfcl1PijT5OFKQDirzxuajr_JRZ_39tDGFDVRbV0cItywggiqjSns3ibl2S0E7IG8ff4PruZgisuTxyx5fz2N2paSXf4RioEYsAAJgS8nIWz8kBYU3mIRn8vTHucMuKgL156khc9s-oMEp2vixPgQR0Z-shg-Ll-5yh5uWSOBmMKv9z4XELKcNCYN0SYGyGChLCqruaOm7PtLycgLn8YTUqRL2FtmIo1pHlhHfhf3R0J6ZK_BO7LvtbeYCwbiulSpJ5vR_DSudGN3FeIufs7uWthjR0OIzYa_QAhgZgNAL2q2_hgihS9xecOk7nQh9kDifDzdKLdVk1OfgB-k473sRBEVeH7c3y8ckg2s80VsOCFKX36i0mHnN5_IbEA5Vqv9fb2nSV7PXEvAK_Ri_Z7m05yRQqUjsUUSI_K7V0gDo4IfR4gk5lMAWXSTwW0BhX16pDjMNqYmtzTP_rdZ_GuwFu0HVEaC0dAwZfUHJSVt0AbV98647W-DlKJR56wPQV2u-_gEH33Eib85sOCgHylxDENgDt3AjiWkjMR-EWouLTnOtGkMj9Kwe5JQg9SR68MTC2Tiivg6zMhwU6SMn7CwP1Jl2jkQbnWahflio-Uq8WyEIjmoxzJWZDbFSm1rvL3j4mCnHoLG_qiTa9As04tVl8NwCe47f6NM3KKmsZqvN5_Gm-CjxuDiirvhul0IJyF2_oQkJz_BS8hXh02LtdIfAVjQFsSbVI6W6ukT_l1LmVwSgi3Ol_aYuHpzLc9_KKb7pagwkqfW6dM4x_7Dg2IMHTcK_xY2Glc4KuP2ACsqKX2zGCnYO3NbCbjQDvWM4gQLb8gPeqdZfHZRDDGWu6sTzDnqTKKwmIq5FE6zP5N5dZlXDte5fRM3s_8BW745j0IzWcy4NuAZepHnh21anXSvPpkbs-ux/https://www.amazon.com/dp/B0G1HGBXC8/?_encoding=UTF8&pd_rd_i=B0G1HGBXC8&pd_rd_i=B0G1HGBXC8&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=jpmYl&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=AS4VPVH9C3VWNXSFX63Z&pd_rd_wg=uaX5v&pd_rd_r=354d5350-6cfb-4a38-b889-3ee2c8c436c1",
+      "link_clean": "https://www.amazon.com/dp/B0G1HGBXC8/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G1HGBXC8&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41Fk3tnbF3L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c079dcd3-f4bc-42f8-88f2-06fece2ebb8a.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c079dcd3-f4bc-42f8-88f2-06fece2ebb8a.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 3.5,
+      "reviews": 38,
+      "price": "$25.99",
+      "extracted_price": 25.99
+    },
+    {
+      "position": 3,
+      "asin": "B0GX9KTW9H",
+      "title": "Dog Sling Carrier for Small Dogs with Bottom Support, Adjustable Pet Front Dog Carrier-Padded Strap Reducing Back Neck Pain, Anti-Anxiety Backpack for Travel Hiking Camping, Hands Free (Black,M)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JM9e8wNs8Vsg_PUJK_fB_EgAAAGexNl8AAEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICCo7V9i/clv1c_ek-wxQfWLcTaTBVEai7u5V7vNBUpfkvxMdvUhnBmbWnseptVidQMdqdTbVDDjrXFyErOjAryUrcYTcnGSh4DchUfa4Eg_nKO9E0c8FNHXcxQkzsBRhCDT-z6-mHkhmkiwSH_PEp3mjP9lNYvXvxz5cbPAN2ZlE0qK0wQbzYhxo5L8fvYHInJKOje7Dw68JOtzGyDbnVYFT-gRUTOlkrJJz6Pv1UdDkQn1JR63fjW9TQiXWc-f6WB61zQOoamCy_nGy-RVIs4sSh8pgI0YMhEcmEIX4wQT8_CYzVDWtI8gXSa01dTFAV6iL5amHxEDJWgONv_ReBHsS38J8TfrleyiTDJXMWdW3I48_-j4GoIprtWSsXe0QMBSz2CDZY2cxEJX5Zx4NjH2s6l_lYhoHWON4UzS5wNRTAVtqi8jN5-vo9cVeRkBWW4NpIaGjm5Rypa35Pr_zKS5QPMj2RJHEG-6EWxjfCLCFjS_SSpVaoVMHKdT58sFdupPatpLUa8y0DqQuyMmSQ6HjZ8TdhzTVjn_QRwfm_6kF2ZXZH62LBsFVz9iusmcgcpGuFo0s1F1FMbuYuY0y9pBQvq6H1lR62ms6_DOJ5-T84kbOVRamWE6W97HXsKYl1coD6fnlGCY59ewW0bQeLagKDw0n755n5wM9gtd0hPBRa9OXo7wB9I0MuyWAEsk7oDTJTiwJGuD_RR_2kqdDOLtRHEHuRiiIBI6AEkyq5QbEIRrQQ6WXUH1koSamsnn9HoatgaGE_ddf0h7joZJPtSUwunO26yw14whhyC-WY_OewvkPjBP0pz5HRe9qX6wvMgQuqUoT1MEGQqvw3K6pYC8p5kv2SA-f6Woc1HjjxqEk-zGegWhQzMHVlSETeP-6-jyvHZn_jFkkMfgHRcXOUG7XX6k9ME0xEYGoLtHFWsygFdYJ-bewggTb-poRk_rQIRTiQOrvLVUKkLHJPurfPnHQmOzWuOY85FzK8bQt5lKCNfbjPIf4o76o6aTzdQcqvfRaFoQYL2Y6mDkDfMkr5xzNkw4RP-NdX63tyxjNGKad59C7A1Yx42h7Iric5H9Y8vH0wgfOiBFYkoFIdCAk1aZmWw_8daINPTlcFJJtUAeR3fZUS22F6q_coVh0KJQIaEtF9m9dlHzNH-Y5wL8mM-ibbuLL6t4DhYNjG4cldQttraGQ0s63eHmClEjqG5qtmuu0H0nLhXOlu4wfskP0Wbaez7QKzbsbqfUozL5HasYSy7V8-YIGGsM5Z8If9sqDaK0uC4xnLUVD6aYyI5hkILlD5Cvn5-BH0YoyxdZ9nXdXMU4Oe9AHvkdgFbIAAFJze2-eTaHIcERzctbbvlNeQoVNVdjHFeHFvFqeXFyvHv6Y1SqWwe7yh8H8yq0fB-ut6syw_W1H-TgSX9qozIGKc8WKGQiEREUOTxe9tH99YOR4yv4zYFjUvZWSqNLroOSTkQJOtBasnHbGw1H1t2_28IgiSuiqhBEsYbl9--UwiulrWWAl7vUQ0hA3inRcpM9dVfp0DjTVbMZORWHhHO1Fm_nob9KeNovEzq044spm-7Gw/https://www.amazon.com/dp/B0GX9KTW9H/?_encoding=UTF8&pd_rd_i=B0GX9KTW9H&pd_rd_i=B0GX9KTW9H&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=jpmYl&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=AS4VPVH9C3VWNXSFX63Z&pd_rd_wg=uaX5v&pd_rd_r=354d5350-6cfb-4a38-b889-3ee2c8c436c1",
+      "link_clean": "https://www.amazon.com/dp/B0GX9KTW9H/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GX9KTW9H&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41IDMINlO-L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c0a5ed1a-c6a2-47f3-b2ea-f700397d95a0.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c0a5ed1a-c6a2-47f3-b2ea-f700397d95a0.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 14,
+      "price": "$41.99",
+      "extracted_price": 41.99
+    },
+    {
+      "position": 4,
+      "asin": "B07L3TTZLW",
+      "title": "LOOBANI Portable Dog Sling for Back Legs, Hip Support Harness to Help Lift Dogs Rear for Canine Aid and Old K9 Cruciate Ligament Rehabilitation",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JO0Nh4bhqbEEdthrtuIVhDgAAAGexNl8AQEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICAMoNDo/clv1c_ek-YBQfWLbbWz04LEDevO6gyYwtPqgADlaEUSlVgX5S_9tWD06F8x6IT4eBxpXu5LFJ-_8MStp2LjK9urdA8MspXRIEneiWbUjdFXqpg4Cp3gxyeHPTQLC799vW89v44HBbiC7JsFOy_BVT_JVts9NvpMD2ckU_avOaIJ_cKTgUZVGFPhuM1Nl6AIEngAcOiTdiSY0JeI3MAtdbctkkNpn45F101Dt_2jrKTLuqjGs1xix8oA7Hp2KHsgZ7rUWiavrQNpGSqH6PVjBLIdne17NxS_UV8rlA_wQz_4QFCiD2Hq694130gkTBZ-rFnB1W9pm94C_9UbHA0woLyEHJav8QCc73GAHOYJKUjeIYnQ7t52d_pMGER6m_zRga9qfL0nAAPSpVSSk1-tq2e22n3Gg3fu4t-yFPcEDzthoNHZBHxxUktWSUCHmoB4jMvca3AUmpNLtFZ2edJpptiXFEle4GRrXXqTqdSJAIEf_3P2MMRc3P_JeGnYqGyZreEtu9kiik-Fjz8qcjcWu1HhLvccCRnt_mOQ0tiplEbx6beHL6L_qLuk3mkWg_GkudVQJQbOF5dQMwPTET8B5e6xmYVgtFbYqGqM_DKyjPmU61UJPVLCBqhQ9jKjt4HwPguD5w0eY6QLOeMc7-5wVddVkqT-O8ALAkGPnwJK4YNH740CTT3lwN2dqgv6UZo2Xw5efmTP1IYaLi3w6QB2-cCELaaj-bh0ITaf7xBEU2SZDj5W1Gd4wPZObDCwK-p1f2aOkOnSIvhWALYnxjpo6fxxY01UX51rS5BCTK9Vby4xanjqZVUUn1C6i5pTslXPdohCxJCh3pqmYv82LUHqly8AUTpCMy3jRen1OzRabFl4kWrRlZXnpRxjXRboNGcblClnp9h6Y0K27UiGaa6epzCZ01haOku0HyQWrWBk2TH_pIt7ZPmCCKVYHfHfrqUzH3ZKWmH5jj5I86vi05Gw_leknNAIzj04OEZiNs03eEFCZ3fWfiPFdVMkFCb5FLn14sTMqI2TO1MbcOz1PkRQitOKjD4NeXUrXSsGoZl16GRw1yf7dzOIHQkEEmYTOUvF9K4gwFiD0VHVYe7YYhFz4Wu0-eSto1SQCBtAd3mhVLYfPZgQqAcfmUrOWHF2zYwcUi_9vh_DG4fAHLByMlhmlxdp9iTcVt1vrA08e0sACcz9Bxtew6C3BOoZSKMyeKbVdZT3lNsnsdrCPTKboOfcsfibolqeSswfMo11aoh0-IMH6O8kYV4tpxErpnB--uxeraGF_c2R1hsyxRpBuhSlLpFunMMkAxNiPu9U05lFuN4SdqTwHYYl6bm3FpvWkUNEFmFwWjM9WEuDlRV4QgZrga9olWVOfYTHsij8yBUbYTQBBMEqgbWO1qg5eefA7gZinVeGZl-uOOhfkgW-_Ma1-kb3RuGoxCeVm-ulOudCJMKaTR4ZI1pMS_yMNqYEDrdixTlWTcLgEjEYq-LgSRbaokd7q9kVElZLYcsdBPk3ou1TnKgeQLbBCyy-E9YvYXf4iKXM3EgBu5Fww/https://www.amazon.com/dp/B07L3TTZLW/?_encoding=UTF8&pd_rd_i=B07L3TTZLW&pd_rd_i=B07L3TTZLW&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=jpmYl&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=AS4VPVH9C3VWNXSFX63Z&pd_rd_wg=uaX5v&pd_rd_r=354d5350-6cfb-4a38-b889-3ee2c8c436c1",
+      "link_clean": "https://www.amazon.com/dp/B07L3TTZLW/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07L3TTZLW&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41t0UKK-F4L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/279afaba-42ca-47f1-8205-6d884679fdfe.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/279afaba-42ca-47f1-8205-6d884679fdfe.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.5,
+      "reviews": 13605,
+      "price": "$22.49",
+      "extracted_price": 22.49,
+      "old_price": "$24.99",
+      "extracted_old_price": 24.99
+    },
+    {
+      "position": 5,
+      "asin": "B0GKFKSCGL",
+      "title": "Hands-Free Cat Sling Carrier & Pet Sling for Small Dogs & Cats (3-14 lbs) - Ultra Soft Fleece Puppy Carrier with Wide Shoulder Strap for Back Pain Relief - Cozy Indoor/Outdoor Small Animal (Fruits)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JJctQVywiKBxCIDP79RBOTgAAAGexNl8AwEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICBB6KD3/clv1c_ek-YBQf2LcTWXk4hOzIv7vt9-rhWrpsx-4HU3BbK7ufaRiY0gKoDC6j46q7pl9bBxI6xO2N2sqaF2jRPa0YsBUgjz9r-9TKz1R3_N5P-_0AmqDUP85ksiWTl6knV5EEWxin5vVpxpj1lls-GL8lig_KzYN2SgiWqIORxSDaW_uZXEbunxhCjjFM6jk00KgImMsyh1FZxZx-YtDZct8WkExoxH22kqay_oskf2KOcaJLfeGL8RX03HmjPct-GkqfxEdlmOegncapwoA-Pz0GUjgNQmUprVo5hUuLxYHMNHlDOxEd7P3aLGx8okPwE3JioOh1sNT8ioKk8pIT_pveSgRuE3aifmLBLlQnFpnsZL3DcorCiW4YnOhmdf0P-LdLuk_wgebwnxbRk8uUiNYBno_T712VclyHO5RlQPe9OgKT4CJPmpOe-WF-iTzMjmSgpXR1HekMP4iToD_3kaUwJvhLJx7k8LvTISiAdnIjK8u4DaFjT43o9piGfqY8rqHBuYGF2tAFJroKCZy1vCJ35X5Hfx-oMM2RuMjTjxS-cl34TzLcrcMhO8NfZDe-mNlPzofVY6gAVXXfw8RZ94QK81GxAhWf_zzBa_Bp8E0zAUw3Rp8ETBkx4fC94ot0hoAYGNBixEgjkLeDLocecL1R65oucCFfvnTp9cmKTFGokMUayZOdzxTyN3Rdgfujus6qRMX3Jse-KKRNQ2ShYeDFWgAMjgf0M1ACi3MPMGf_iZSl-cg0cGqWeegLy4G6EChmSix9qUCm3DsCfNqMLKoLUR72YwQPpa9sZYUEDpP5QcNkTvPg1OJUg6wowW05mzfXiu5e5lRac9oEKpezqgalBKeeuQ5aJByKDmht4Rp08YCAUH69EYcPWjmE4SQdKF0T1ypWyOn-f-yS3h6l6fJNyABUqgJGzeBoUNqehcplkk355JJSIUWBIx-DrbmOH06mtulv98Tk0_RZiTt9RGRc-EklcxEv_KWlpLUH0cCIAllPOoJ5DQOXEv96i_txLhYgTWiXAAaKPsnMtCBtagmwgcNwOUW97ctMmorTh0tnxg6h4uMEXFGbUGxk81ucvzASnu7YM28oS60A5sibUNBz2dre7aFr6KrGZPpECdiC6ZgwUTNy9oTRJMB5VMHxg4npx3NXRWHF2HeJ1g8gm7Ngbxs6ggUTfIFhtPSuXP2SYHON1PPNT-FhcIwDDA8dWXRcQp5OTJCb1Xcag2j8N2rOpdUrdhs8uXaC6iXnvazl0Ki2UWLaAe58-PF1rzxFcLBecKxuaFRjhUYsQCodWmplz2uxk5EBrK4dfF0lEeOoOXApl30Aus8JWam3Ry0zR3l7N58XwMzOWhb-o418W2bNgOYw4bkc9KmBxY8fNpMxGqxfxWvrIksnwrItNwoQIcOucPKQP3jST1PGqXH0REr2vEyyQUU1e6IHMEx3vd8KvgxcnLxFlMIOrx7vIoovKcHwQJsZMNa9unzkFhCIwBpv76PKfsgCQNbKhQlPb42awu_ukG2YHrD4kZ-T8mLO40rIdNWyks4Pd5Q/https://www.amazon.com/dp/B0GKFKSCGL/?_encoding=UTF8&pd_rd_i=B0GKFKSCGL&pd_rd_i=B0GKFKSCGL&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=jpmYl&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=AS4VPVH9C3VWNXSFX63Z&pd_rd_wg=uaX5v&pd_rd_r=354d5350-6cfb-4a38-b889-3ee2c8c436c1",
+      "link_clean": "https://www.amazon.com/dp/B0GKFKSCGL/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GKFKSCGL&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/412rrP5k8SL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/b587df1c-8560-4171-a209-f3ee1b15f5a5.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/b587df1c-8560-4171-a209-f3ee1b15f5a5.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 5,
+      "reviews": 2,
+      "price": "$26.99",
+      "extracted_price": 26.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "images": [
+        "https://m.media-amazon.com/images/I/71EjQy4jArL.jpg",
+        "https://m.media-amazon.com/images/I/91s0XRI+p5L.jpg",
+        "https://m.media-amazon.com/images/I/91NUbHDAPpL.jpg",
+        "https://m.media-amazon.com/images/I/71YpqpHv6fL.jpg",
+        "https://m.media-amazon.com/images/I/71JUs8cCXJL.jpg",
+        "https://m.media-amazon.com/images/I/71c6bUd5BeL.jpg",
+        "https://m.media-amazon.com/images/I/7139p3J3C+L.jpg",
+        "https://m.media-amazon.com/images/I/71-T1a4nn6L.jpg",
+        "https://m.media-amazon.com/images/I/81QUaxlPZIL.jpg",
+        "https://m.media-amazon.com/images/I/8136jepWnIL.jpg",
+        "https://m.media-amazon.com/images/I/71-YYxocMNL.jpg",
+        "https://m.media-amazon.com/images/I/71O0lwcpstL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 78,
+        "4 star": 22,
+        "3 star": 0,
+        "2 star": 0,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Exactly what I needed.",
+        "text": "I used this as a way to socialize my ACD puppy, but not let him touch the floor in public areas (until his vaccine series was completed). Worked wonderfully to give me both hands free while shopping or whatever.",
+        "rating": 5,
+        "date": "May 3, 2026",
+        "author": "Magickal Maven",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFHJOJZVF3L5ZD6JVQXMUGP7SYVQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/1f8f5b4a-c1ff-4218-885a-1cc23152d996._CR0%2C116%2C652%2C652_SX460_SX48_.jpg",
+        "images": [
+          "https://m.media-amazon.com/images/I/71EjQy4jArL.jpg"
+        ],
+        "helpful_votes": "2 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "size": "L（18.5-29.5lbs）",
+          "color": "Black"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Must have emergency pet carrier sling",
+        "text": "This packable lift harness is exactly what I needed for piece of mind for emergencies. It is very much for emergency use in my household, but of course I had to test it out with my 15 lb pup first. She thankfully really didn't mind it. It took a minute to get her secured in there, but it was clear that it fit her snugly and I could move around really easily wearing the sling. It's a really great idea to have this for a dog or cat for natural disaster preparedness. I think it's absolutely worth the price. My pup felt really comfortable and we were able to move around and go for a walk without any discomfort for her or myself. She wasn't able to even attempt to get out. I think she felt really safe. The straps are very easy to adjust and tighten. There is a nice carrying case that comes with it. It's super well made and I think would last a few day trek if you needed to carry your animal a long. distance. I am so happy to have this for piece of mind!",
+        "rating": 5,
+        "date": "May 24, 2026",
+        "author": "Salish",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHDT3WQ7F6QLHTLKQSGDBVISCAUQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "product": {
+          "size": "L（18.5-29.5lbs）",
+          "color": "Black"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Your pet will feel safe in this carrier.",
+        "text": "This is an extremely well made, strong carrier. My dog felt completely at ease and supported. He is a 10lb maltipom. I am returning it because it will take too long to put on while on our walks. It will also be too hot in FL.",
+        "rating": 4,
+        "date": "April 26, 2026",
+        "author": "Cynsroom",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHBU6EWA7C26DELCRK7GFNB42F7Q?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "size": "M（8.5-17.5lbs）",
+          "color": "Black"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Great for cats too",
+        "text": "I ordered this sling for my big 15lb cats. I wanted a kind of \"cat handle\" I could use in situations where I need to care for my cats in ways they don't like such as giving pills, trimming nails, etc. One of my cats requires occasional enemas and it's very difficult to hold her in position to wash off her poopy little butt after the enema. This sling makes all of these things so much easier. After she's in the sling I can hold her in place with one hand and use my other hand to wash her butt or give her a pill.I also plan to use this to take her outside for fresh air but still have her secure if I need to grab her off the ground quickly. I can attach a leash to the sling and let her hang out on the ground and then just lift her up by the sling if necessary. The sling makes it easy to go on little walks with her comfortably sitting in the sling in front of me. I feel like it is a much better way to let her enjoy the fresh air rather than to cram her into a little enclosed backpack or something.The sling is very well made with solid stitching throughout. The buckles are easy to open and close and adjust and the medium size fits my 15lb cats well. I feel like my cats are very safe and secure when they are in the sling. The sling comes with a compact 12\" x 6\" storage bag and it is easy to quickly deploy when needed. Overall I'm very happy with the sling and am glad I ordered it.",
+        "rating": 5,
+        "date": "April 18, 2026",
+        "author": "Customer Review",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AH2WZGSUT2AUFREBPKWENS4CD2UA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/91NUbHDAPpL.jpg",
+          "https://m.media-amazon.com/images/I/91s0XRI+p5L.jpg"
+        ],
+        "helpful_votes": "One person found this helpful",
+        "product": {
+          "size": "M（8.5-17.5lbs）",
+          "color": "Black"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Works great for lifting and carrying your dog",
+        "text": "I got this sling so we could safely lift our Huskies in and out of our tornado shelter, which has a pretty steep ladder style stairway. This ended up being exactly what we needed. The sling fits our Huskies really well, and in our trial run it worked perfectly for lifting them in and out without a lot of struggle. What stood out most was how secure and supportive it felt. With something like this, that really matters because you want to feel confident that your dogs are supported well and not slipping around while you are carrying them. This did a great job of giving full support and made the whole process feel much safer and more manageable.I also like that it is practical to keep on hand for emergencies. It is one of those products you hope you never really need, but having it ready brings a lot of peace of mind. The quality also seems very good. It feels well made, sturdy, and like it can handle the weight and stress that comes with lifting larger dogs. This has been a really helpful purchase for our situation. It fits well, feels durable, and most importantly it worked exactly the way I needed it to when testing it with our Huskies. If you need a reliable way to lift and carry a larger dog in a situation where safety and support matter, this is a really solid option.",
+        "rating": 5,
+        "date": "April 14, 2026",
+        "author": "ChiefsFan88",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AE7QDBQSA2TEC7NKJC5BJJXGBSTQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/d1e24c97-fd39-41e2-8977-ce7ffc9ad401._CR0%2C0%2C500%2C500_SX460_SX48_.jpg",
+        "helpful_votes": "One person found this helpful",
+        "product": {
+          "size": "XL（22-33lbs）",
+          "color": "Black"
+        }
+      },
+      {
+        "position": 6,
+        "title": "Great design and quality made, convenient for when you're not able to carry your 20lb dog!",
+        "text": "This is a very sturdy carrier for a 18lb dog. It's well designed as there are no parts that rub against the sensitive parts of our pup's body, underlegs, and rear end. There's also an opening so their private parts are not uncomfortable. Folds up nicely and can be placed in your car trunk or in another tote if you are hiking. Straps can be adjusted and are made of solid materials.",
+        "rating": 5,
+        "date": "May 1, 2026",
+        "author": "SFCoffeebean",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHJDY3UC2V4N6BG3TMWBILQG24QA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/ff4f58d4-8461-4cdd-9893-784709bba7e5._CR0%2C0%2C373%2C373_UX460_SX48_.jpg",
+        "product": {
+          "size": "L（18.5-29.5lbs）",
+          "color": "Black"
+        }
+      },
+      {
+        "position": 7,
+        "title": "Adjusts for a great fit",
+        "text": "I got this as a way to carry a lazy or injured dog ( mine or one of the pups I foster) I have had a very difficult time getting my 20 lb dog into a sport backpack I got for hiking, she is very afraid of not having her feet on the ground. I thought maybe this would help her conquer her fear because it supports differently than a regular pack.I could tell this would end in success right away, she willingly stepped into the front leg holes, and gave me no resistance with her back legs. It has many straps to secure the pet, and uses different color clasps to make it easy to identify which strap goes where. There are 4 that strap from one side to the other, keeping it on, and they are very adjustable for a snug fit(which is very important). It also has a strap on each side that runs from the strap the human wears across the dog and attaches, this keeps the dog from wobbling up and down, and made my fearful dog actually enjoy her 'ride'. The human portion is a simple strap going from shoulder to shoulder that attaches to the dog carrier, and one strap over each shoulder. it also has a strap that goes across the chest for extra security, but it is not made for a large chested person. It is very lightweight and doesn't make you overheat when using on a hot day. The dog simply hangs there in a sling style feet down. The interesting thing was how calm and relaxed my pup was the whole time she was riding on my back. She kept her front paw sitting on my hip and her head leaned against my back. She seemed comfortable and didn't squirm while in it, also I noticed that instead of jumping out and running off like has happened with every other carrying item I have tried with her. I don't think that this is meant for long distance use, there is no padding anywhere on it, this is a bare bones model, something to keep in mind. My shoulders were quite sore the next morning. This would be a 5 star item if it had more padding around the leg holes in the sling. I think this is necessary, a few hours after our trial run, I noticed she was walking stiffly and when I was massaging her legs, she whimpered when I got to the part that was holding her weight. It seems well made with strong nylon straps, and I was not worried it would break and my dog would fall at any time.",
+        "rating": 4,
+        "date": "April 9, 2026",
+        "author": "The important stuff",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGBCSWXOOVN7MXTYR57XEOT3K3IQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/d7c1470f-64c5-457d-8eaa-a34f71054312._CR0%2C0%2C375%2C375_UX460_SX48_.jpg",
+        "product": {
+          "size": "L（18.5-29.5lbs）",
+          "color": "Black"
+        }
+      },
+      {
+        "position": 8,
+        "title": "Great fit",
+        "text": "I got this for my Frenchie with early IVDD. He also has a non-operable injured leg from when he was 6 months old and we wear a brace when we go to the park. He loves to chase the ball but he limps pretty bad towards the end of his plays. I wanted a sling for him that was easy to pack for that just-in-case so I had some peace of mind. I ordered an XL and he’s 37 pounds, so heavier than the max weight. It worked great and was simple to put on. He was really calm in it, and it was easy to get over my shoulders. It came in a packable little bag, so easy to store. If I had to say one thing negative, there’s not much padding on the shoulders, so with how heavy He is, my shoulders hurt after a fairly short time. But this will be for emergencies for us, and for that it works great.",
+        "rating": 5,
+        "date": "April 11, 2026",
+        "author": "Jolene W.",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGGRFM6AIRV6MMK2X772JR4AQUGQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/988b7155-9e8d-4c0f-91c5-3e89cc4011ef._CR0%2C0%2C500%2C500_SX460_SX48_.jpeg",
+        "images": [
+          "https://m.media-amazon.com/images/I/71JUs8cCXJL.jpg",
+          "https://m.media-amazon.com/images/I/71YpqpHv6fL.jpg",
+          "https://m.media-amazon.com/images/I/71c6bUd5BeL.jpg"
+        ],
+        "helpful_votes": "2 people found this helpful",
+        "product": {
+          "size": "XL（22-33lbs）",
+          "color": "Black"
+        }
+      }
+    ]
+  }
+}

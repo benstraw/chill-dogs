@@ -1,0 +1,607 @@
+{
+  "search_metadata": {
+    "id": "6a2e4c2a634a633e245ee72b",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/kb2LYTTBdyvsVgo5SLyqDw/6a2e4c2a634a633e245ee72b.json",
+    "created_at": "2026-06-14 06:37:30 UTC",
+    "processed_at": "2026-06-14 06:37:30 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0GH76XGKZ/?",
+    "raw_html_file": "https://serpapi.com/searches/kb2LYTTBdyvsVgo5SLyqDw/6a2e4c2a634a633e245ee72b.html",
+    "total_time_taken": 6.85
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0GH76XGKZ",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0GH76XGKZ",
+    "title": "Dog Lifting Harness for Medium Dogs, Dual Handle Dog Support Harness for Daily Walking Assistance, Male Dog-Friendly, Breathable & Easy On Mobility Aid, Red, M",
+    "link": "https://www.amazon.com/Lifting-Assistance-Dog-Friendly-Breathable-Mobility/dp/B0GH76XGKZ/",
+    "link_clean": "https://www.amazon.com/dp/B0GH76XGKZ/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GH76XGKZ&device=desktop&engine=amazon_product",
+    "variants": [
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0GH76XGKZ",
+            "name": "Medium",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GH76XGKZ&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0GH7PQXGM",
+            "name": "Large",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GH7PQXGM&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0GH7H4833",
+            "name": "X-Large",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GH7H4833&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the lafoty Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/71JmtA9r9qL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/71JmtA9r9qL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/810LhH23FYL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81wEh3Pih8L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81DR-b-5z2L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/8133Ld8OQUL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81XwORIIlEL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.9,
+    "reviews": 61,
+    "price": "$89.95",
+    "extracted_price": 89.95,
+    "price_unit": "$89.95 / count",
+    "extracted_price_unit": 89.95,
+    "prime": true,
+    "delivery": [
+      "FREE delivery Monday, June 22"
+    ],
+    "stock": "Only 7 left in stock - order soon."
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$89.95",
+      "extracted_price": 89.95,
+      "price_unit": "$89.95 / count",
+      "extracted_price_unit": 89.95,
+      "delivery": [
+        "FREE delivery Monday, June 22"
+      ],
+      "stock": "Only 7 left in stock - order soon.",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "LAFOTY-US",
+          "details": {
+            "heading": "Sold by",
+            "content": "LAFOTY-US"
+          },
+          "link": {
+            "text": "LAFOTY-US",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A2K6N9JZ4IUTOK&asin=B0GH76XGKZ&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "size": "Medium",
+    "color": "Red",
+    "pattern": "Solid",
+    "brand": "lafoty",
+    "material": "Nylon"
+  },
+  "about_item": [
+    "Lift & Walk with Confidence: Designed to support dogs with limited hind leg mobility, arthritis, or post-surgery recovery. Helps your dog stand, walk, and move safely with less strain.",
+    "Dual Handles for Flexible Control: Two integrated lift handles provide maximum control for different situations—perfect for stairs, walking assistance, or short lifts when your dog needs extra help.",
+    "Male Dog-Friendly, No Potty Interference: The thoughtful wrap design avoids belly pressure and does not interfere with potty needs, ensuring comfort and dignity for male dogs during daily use.",
+    "Lift Heavy Dogs with Less Effort: Distributes weight evenly to reduce strain on your back and arms. Ideal for stairs, car transfers, rehabilitation walks, and daily mobility support.",
+    "Breathable, Secure & Versatile Design: Soft, breathable fabric ensures all-day comfort. Converts to a standard harness, with an integrated handle that can also function as a dog leash.",
+    "Important Note Before Purchase – Accurate Sizing for Best Fit: Suitable for medium, large, and extra-large dogs. Please measure your dog carefully and choose the correct size for the best support and safety. If you have any issues (incorrect size, missing parts, or need adjustments), please contact us immediately for assistance."
+  ],
+  "videos": [
+    {
+      "position": 1,
+      "title": "Lafoty Dog Lifting Harness, Dual Handle Dog Support Harness",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/235ce163-709e-48aa-a94c-a7cc8c93a1eb/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61NNDdQ0E2L.jpg",
+      "duration": "0:51",
+      "vendor": "LAFOTY-US",
+      "date": "Feb 26, 2026"
+    },
+    {
+      "position": 2,
+      "title": "How to wear and adjust the harness?",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/b8936756-6158-46fc-99e0-879ea7281176/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/41qJ5Wwv11L.jpg",
+      "duration": "0:49",
+      "vendor": "LAFOTY-US",
+      "date": "Feb 26, 2026"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1
+    },
+    {
+      "position": 2,
+      "title": "Lafoty Dog Lift Harness for Large Dogs",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/b9c0739b-0a82-47ac-b01e-cb47b8d56004.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 3,
+      "title": "Lafoty Dog Lift Harness for Large Dogs",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/36d634ac-e99e-4a64-8e12-c77ea76dc6ca.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 4,
+      "title": "Lafoty Dog Lift Harness for Large Dogs",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/6210f3fb-1720-461e-83d7-e0672d2ee410.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 5,
+      "title": "Lafoty Dog Lift Harness for Large Dogs",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/896bbb78-9614-4538-bdbc-6c547710e0ab.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 6,
+      "title": "Lafoty Dog Lift Harness for Large Dogs",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/95abf700-4eda-4482-8f31-8c998c1cb30a.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    }
+  ],
+  "product_details": {
+    "package_dimensions": "11.93 x 7.68 x 3.03 inches; 1.1 Pounds",
+    "item_model_number": "LA-567",
+    "date_first_available": "January 16, 2026",
+    "manufacturer": "Lafoty",
+    "asin": "B0GH76XGKZ",
+    "best_sellers_rank": [
+      {
+        "text": "#30,524 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 30524,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#358 in Dog Vest Harnesses",
+        "extracted_rank": 358,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/3024192011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Vest Harnesses"
+      }
+    ],
+    "customer_reviews": "4.9 out of 5 stars",
+    "rating": 4.9,
+    "reviews": 61,
+    "brand_name": "lafoty",
+    "pet_type": "Dog",
+    "model_number": "LA-567",
+    "manufacturer_part_number": "LA-567",
+    "warranty_description": "2-year warranty, If you have any issues (incorrect size, missing parts, or need adjustments), please contact us immediately for assistance.",
+    "included_components": "Dog Lift Harness",
+    "unit_count": "1 Count",
+    "size": "Medium",
+    "item_weight": "1.1 Pounds",
+    "closure_type": "Buckle",
+    "dog_breed_size": "Medium",
+    "breed_recommendation": "Medium",
+    "color": "Red",
+    "pattern": "Solid",
+    "material_type": "Nylon",
+    "product_care_instructions": "Hand Wash Only"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0FK56PWQR",
+      "title": "Dog Lift Harness for Male Dogs - 2-in-1 Full Body Support Aid & Sling, Comfortable & Chafe-Free for Post-Surgery Recovery and Elderly Dog Mobility, Hind Leg Assistance, Supports up to 40 Lbs (M)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JIhDLgoCpXIwHe815QnozMQAAAGexNmaGQEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICBx4VmN/clv1c_ek-wxYHXFcbWDXHEa4sesmPkMDERPft4TWvb9lHqncH_0BZNX2wSW74HcHrvwXbve-ABVhlEobPQRveOF02b1HSijO3w1vcZu-xkBueWUMo37Z1vFpNHl3yZ4vNykpqgGl3Ho_Uqms8VpYt4FEHmS_NLIdmW5jXq8YXxyCTyqMaPycuGZ0wIjEr0AVlyotrKPolPtEpIA0ugtfKtNghy5m80n59Z5z8yVd9RNN936VLdNo52ubC9Moc1SJeGY1WbdXK0QsvCvaOI34lt5BGD_wmAMTNz0Thje9gv51W8lG64WGGrTVLq_VQyy6qmh7TCe5PFk6uFRSDFGPfdgJWy2qBrqHNTIPCjXlDTPE1AaLEg1rnfhHzEf2JOKy2KZCjeH0hAMK7J29z9JwYJRZoDETjo1LBz-vMJ_3L9gsQ3T9-_8bohkc25w1lj7WRTTlTS26Ua8fJPZXcZpT406nYgFZrEafqcZRHKQxESyl1knfkGTkwniq8RYkEuyLDI6t0DVBTYCx_47o6xOuZI7_FAQ_V-id6I7jjnTkMJwVUfN8E_2IKITfTlqqEH3EtK25KFmIli5fYQvhkwt885M6N2ZSCM3x-vx8S110BUXJLqQkJKYo3zIFJP1Z08X802k2qndJLDO0_2yaA1qw954EoJb-8L_OOIS7AcvsECHaamCGcnaxo5aK3veSWzvkWt1QRbWyqKmuuIicNgxxxc2FOKJ1mRho4uVRkYo53N6gjI9xoHWpZr5bBvIqa41Z77OkH5f2t21HP8Y7miBVoIl29ArpFhFZ6w9mL7ingZfkgGaNnBLCPxX2BUqii0t3vCAEbcQinizTJISKz_OHJMb9NrEJmEgZ_Byxvmy5eZvQzezgffAfbEEw6SbFnklrKYKEQz1rNEYR-6oW_tON7skZ0gVKZgCZVNfhqyDY7-ve6CYFNQ5XffdgI7we7waD0xsYKAIE4ypWeotKd1Zip9_MRce714JXMoDrgD9yjALyqp_P70r3G1m0jDa_wvmR335QdTaVhswg1E0jEKk_jqSej57_QvQ-HBshUBKSo_GVSOPwT3rV1XPl7e3TS7XWq9BfsnCeTIjDfmcehiWNKysxLlqfLawJ_fRzu7qwjLcImQCUaqcBJEs9I21DV4SHG7pnPiNM99-YO99UVkk2we2ZojPskuZwwn3jV9Lr0a7MuulylhnbY1zHg2rU3YBnHIfUqulCwz3nw41oUpUNoLB2QuCsYgpL0geHZPyzfRuQdFTbqRrcNC4PT7lv7vwxQjYRHOzqdxG5YxIvhCsak27ZXJIBchef51iOhuxU4taEKsWCUaiKNDtD1WuJQoL776ktAO7ioErbix0-gu87-GniJuMepiNj982bWbY_pQth4QBxc5nf1a6eJDTQtvLWAL_qGxsshCByJMRigy7_3SzXJo1i30P7abBiHan9dPEBlEfESk44MpQFOLbs7CFuhE7wiPPiz-kXuvhI6TUrR0wci-dHBa-b_FWukVGlDOn0ihjJLbdf6ajc0v0z0he2-bH6Tt8QxD9lRih5mWJtQ1dKUOnGyYeA/https://www.amazon.com/dp/B0FK56PWQR/?_encoding=UTF8&pd_rd_i=B0FK56PWQR&pd_rd_i=B0FK56PWQR&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=J0yCj&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=WXYPT8S4EA4F5M03DNHW&pd_rd_wg=fdwCv&pd_rd_r=314ff0c4-ada3-474a-8335-30dedc426411",
+      "link_clean": "https://www.amazon.com/dp/B0FK56PWQR/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FK56PWQR&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/419BFuPQ6YL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/ea6861ac-5b5b-47c3-b59b-6c2e32252831.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/ea6861ac-5b5b-47c3-b59b-6c2e32252831.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.2,
+      "reviews": 20,
+      "price": "$58.99",
+      "extracted_price": 58.99
+    },
+    {
+      "position": 2,
+      "asin": "B0GTV3MH65",
+      "title": "Arblina No Pull Dog Harness with Soft Padded, 3X Buckle Harness with Thick Handle for Medium Large Small Dogs, Ajustable Dog Harness with Front Clip for Walking,Training",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JKmYk4P9ZYumsLW2Vbpb8iwAAAGexNmaGwEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICAQu-p1/clv1c_ek-IBQH2LcTWXU4hOFIv7vt9oho-mJ4_5w6ykEagFpgmVgEdl0iMD1t6H_JSeETP1DGwU6xlnx5fXN27Mkd8K6nnAwl7nOo44maC9edu7a8Sbyg79yzpHhxIQzr8u1TTuYweTsH9Cb7BzK6IpP1g9ri7INmSnk_-4nRwiDGmxY8ZUbAXPvAXr-tSNLSIYTcKFKQN70Vda9-svaTcbvps2EpI9HUp43wikSE_OpuP1p3nQI-aa76C_SnvKmAJA9dFddiiBYbRJyEcWsgqexA5ax7CweS8eHE6L95WouIB9FYwODRVBtFYsWnGuT5A1cipd87UdBWl3yRZTGZYXQwxDunU1toS01p3vtXTOC88twfYGDVAM2Gv4X-uAK7E3mHnZSWG3gRSHHAeYUr2jprFhzyAB4MjycBzvDcNOta84rcEx9_Vl2Q6OuIQp_6WPMbcp2XUmgXCZRbGIsSq9cQVrcX5IJo9xvhdc7ucvFN-70VcM13PQDWILAgeV1YZdO0R-HbLotRC64WX9xyKaOjGEV4l78_p9ezcXYzI-E3f7uDnzS61BXYqcmaTDxGPIlbYuVvfF_P-d2Zws1ncnov_C_cuXao8-j7RiPw-0ZSnhFIFsP4ihNmY2LlVFIPdpWM7QxaB_ZAKJxd-3wpzfz07e-tmquV7UFiYoDi6Aw38H4T33rdbZDtHcSutS2gnzBSzj9sxJ4IApwyyr66coCmN_Ius9RT-x8uonsDmRG4m-Rc8_HufrcXV8_3XkvZUD2Qgw7PqMaqyhn6D7tc8Mykw2Ek8SG76_eYAWHcMriEfLpbBt-j6HLn5_edoXKfNbDw99Oh1mINAANAgbwhNSpeWMiE-1Y1mutgpEsx3FroxescXET98c2rcLRp293_YcMIO55TvPaSepejO525njgINZWYNT_CPL7MkHGZ-8mnS11L6r47freDeVcZaOe0cBRnt__HlyaOEhhhNttmQn40T2pWlPLpHWXc2wbq1fV-KR8Rhb9Q8kSlCvK6fjXTyIOlXaAjDK9PpYX_YzRXeiVeaGnSJN8GjWPKbnRgN4q5Q-LHo4ZYNxVErZt1muQicaDi1Ev7GcBfXXitFNPSkDBgtYZFlD8kh3eKHFnVZ5_hk-4qzVC5PJHnA2wDopgSc6nf-JtWytX5iNVinjl0vH02h3JESFJM-wSHLlk3ON5DajdSX6Am6k5ISl58DrUs2NGMmgh49HxQR6CXnZdjKCP0IyCcOOoU8ggHBjZlthfzcdMpexyTjT-gmSr4gY44cfLfsYIryVO5WTCpALr1kWm6al_J91Rs3vouYVMRBL9X9ZtvgsazJggShBEHFXwOATCSEuPBMLG3F4RpyNh4p_1FKHfg34PMXH6ieGUyXmcnzEeA5lq4S50IZLr_WeHtI2WBB0O6Q8b2XoeiqIaWmAoUAOsZmFCREo8NKzBm1Xn21VWjt9l9yqyPyS56xrbDJkIh49yCInoGlzTWjVdoZ_5661MHFQHQCk7UJWDq1GzLYIGe8EfQAbUZXJsTym2pD5MCxX8LtqiqHZxhMevMSDqSK/https://www.amazon.com/dp/B0GTV3MH65/?_encoding=UTF8&pd_rd_i=B0GTV3MH65&pd_rd_i=B0GTV3MH65&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=J0yCj&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=WXYPT8S4EA4F5M03DNHW&pd_rd_wg=fdwCv&pd_rd_r=314ff0c4-ada3-474a-8335-30dedc426411",
+      "link_clean": "https://www.amazon.com/dp/B0GTV3MH65/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GTV3MH65&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41Us+8+1O2L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/0c04562a-608d-48fe-9213-4c7296220378.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/0c04562a-608d-48fe-9213-4c7296220378.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.3,
+      "reviews": 20,
+      "price": "$26.99",
+      "extracted_price": 26.99
+    },
+    {
+      "position": 3,
+      "asin": "B07L3VLH5S",
+      "title": "LOOBANI Portable Dog Sling for Back Legs, Hip Support Harness to Help Lift Rear for Canine Aid Old K9 Cruciate Ligament Rehabilitation",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JHjtQoROxEEqb-AUg1Re2DsAAAGexNmaHAEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICB5Ay8p/clv1c_ek-YBQfWLbbSTg1Tdz-Qio-trwzSP_swl03SJlrymz04yvp11EoXvPgaep2yyhEFX6SYZjN8YvVqOzRtRRZLxfRCRIEneiWbUi9Fxq4u4MSvkgiOJ_RSLS777rVc9hG6XKwCJY2KYM0_8vRRENSEdZHaqrW8FlB2F8T-2g--jBeO-DFUXfHmCvgmLzBYk5cCGwyt9H87t1doBsT-PiQKwDuajJIZFgYlN1b2AhqWSc85QB99bzwwf_Q0PZasAIrpVZpcpZhtBqI-6t5DiiaW0LiR3MJgpUtVyh7scz8JSoK3KvJV-WHsom8fenQSS0HJ3R8-r6s4ggDBlArFAGgSqFuIj33EChOppJSAlHo6NsZqmsImQeAxTz3qlV68GI__Ih-iCyxJtpFbfpM0bdqoPTaKb6Y9G6Zdp1IK-QFfD7fkqFQElc2541mgcdaegOxlJTMr-2UV-yb2-6Enudon3WisVk4X2FpiJAFCKQTBkQP5KGV-M6sVbpg5twPrf5nrzpTz3Ls3xJ2ypjca3ugzOtSBiEnliD6ldDsXv7yOWiWEMEXRIe5GRbokTXEKt8MIPFz2NsXwS2YDskMdmO8n_GmKXa0oNrc7csEP2hSMLQOGYozevvAcOLXOnWq4pei3yRMn9TlEQ-XluRLchlDSCbFj6-zlPCMFoC-O5CqEJVkvjwWJYguJNSQd3uqgKgXxtkokz6u1lrXz14GvFpgg44H8BwDz1cfDvKjy1hlxA-dsLlXFtN84EUZyM1gj5sZz6n4nCbKAPu9Lw2v7zwEWdyqv3BLpUIWgURUWzDPNffrlJYDOC80VX4g2D4odfc9Hqdt57xsXNp_dCunT22vSwIqo27x5ypLOQnbkN-XquK3S6Z0i9Aj6foRnXJkNf03q3lKP99HOs5T19CgMiobsWpbCLLkB1REihTgLT6BaBnlc7CuBIQJIShFPGIkfCLxucsixMYxBjOPrkoixKJAGVuaBrQxgdxwmGqn3UVASpu2YSY79LI_8GoPeM_nZv7xViUx53gXlOIW-X4PuhAcwlZMfMBsNv6hyYyi8ZPNbmUBAyCr5wb_wgj8-IpJul116lDJmD5Q7Xgl5C3dX8GzDYM8M0tVeJpupfebmsgD3f2QYAxITbF0F8ifjZZAlHu--POHXTYfrZchGQEryNrdIB87EVqkqD2PLqQXrU2MjQLHKVQBQO3NlAHuRj-ZGBvRJ4CN5aoFgHs-XRRkf0NQFYMNxIprh3EXFlkK43bK4EFm3IPyzlxpQpG4GKLZaEynmfrIH8elwHWJNlh9YX21Xx-Zhpuou-z65_Gxg-nWSoRha6r2af2tLS8KW6eyN68QUt28era2t6JnIKF8HJspjGVZohx2LxjiQSAMKiiTeFXqKHrcHnJGj4yx69mfNjBFOiTWhmk3Z9RgF3NnsgR30iKSIVk9kpNerd08IZS0DRojfPl3FOfDe5BS6oIdwTRGvSUJExBmb6vxAbtY3SDFW-45a96pm9A7FCcu_3MSaQo_3w1tkZy3uY5OYs3NA1VRKmFbQUoKF/https://www.amazon.com/dp/B07L3VLH5S/?_encoding=UTF8&pd_rd_i=B07L3VLH5S&pd_rd_i=B07L3VLH5S&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=J0yCj&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=WXYPT8S4EA4F5M03DNHW&pd_rd_wg=fdwCv&pd_rd_r=314ff0c4-ada3-474a-8335-30dedc426411",
+      "link_clean": "https://www.amazon.com/dp/B07L3VLH5S/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07L3VLH5S&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41t0UKK-F4L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/279afaba-42ca-47f1-8205-6d884679fdfe.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/279afaba-42ca-47f1-8205-6d884679fdfe.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.5,
+      "reviews": 13605,
+      "price": "$26.99",
+      "extracted_price": 26.99
+    },
+    {
+      "position": 4,
+      "asin": "B0GX8MSGQT",
+      "title": "SlowTon No Pull Dog Harness - Heavy Duty Dog Harness and Leash Set for Medium Large Dogs, Reflective Tactical Harness with Soft Padded and Front Clip for Easy Walk and Training (Green, L)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JP53xCfISIsH30hgxVR8DhgAAAGexNmaHQEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDnCQAm/clv1c_ek-YBQf2FbbWzjI3k_cWe2v7-Llb6wPr-IDTelan_9C_jJpk3pC7gVld0ayL-wvqwxnhSI8Ph994IcRHVN5jhfyl2iVedqjvwykkELViWv10gxCaJ_RSLSz_9o3cdhBqH8YHegHWssuv152Im8LZmEBbpNfs9lUJU0VzzhuI7I4XiW8HpwxNYha8b-zODoXxB3cJ71ZXE6_4TLR99_jUd8KZ0rgsDeqfxJP0TvMVacyVk1tPF7QUZckWlb9fyQvBCgRuAvTPpptBdp094M7_0i1B5rVwnVYYsExIwgl1SCU_G3K_6d6MV_znnxxeEHaLoUoZ043nEYqWabz28H5ADdI5_ibXdGVkAePekQDiPBGxEWij8znH8dHF0OGzJKxckrEwcz1ovNvBL0QJQZsDEyiAQVUhglYK_yJ2t_UMfdCD0KmzxQURU5mq9bVWMQyIjEilVyzYNPWx8n_z6mJIgBPLarsG4ZcHHOEni9am3fkGb0MngmsRJKX3Z6pJonS9FzqPETJNEU9Sw3DV50aAwvV-Uw3-YjCUSS8QQSoft-fezshIDy3zkniR0q05d21jjNcGr47jsUMLlpEtDOjLJmU5RJOqm7yA3zxKXAiULQOGYowujvA8ODWPncJsQ1sbMT-x0bZcYS4oaNDrV1vh2K5sfZ5VF56V3Ob_w9E2gaDdymHMydbPbYCpBHibDJ22piaY2AZtnYpQGo6GwxgP9wF7BgAx1Qf7tKjy1Rl2A-WsLny04941EQZys91i5sZL6l4nCbqAPu9Lx5v7j1QplPVexEgGaUByzPdWzOG4UObLI83mh9TPhL-WIwZYvD9j5qsIhUZvDFr96oJnylkCsHcM_eqX3dn456-YegMjtOurBSvPCLms1RUJTt6A7ZNR8DTM8WsTccns5qPQEoN4yrAdt8o2TR2jkWCiJVXIyTEpvF4lJDfCQNQdIT_FhCPjqiEIH7kEJOipgpYhe0yZ834TSkFCm_foJgMvwwfT7l62KlHbCHZROo3MS82L0xfiSLAJWkvPkEiDhDirhSdiy8wOg3BAso8UKb0BhUKJ8KnnwTiwFKS2GVACKtR5KHi6wLublBMS8q5PwaW1R7TYK7fz6een4URa0otfJsD9TcIGoOqF4KfwGR_bi-ouISHDY6vB6Fkaaf-EiN-xcsk2OTyOBBwQB2D_Pyy-q7vlsrmQ4K6lDorzPod5p7fTPse_yVzxHwfyxFOPCkCYoDKNcsZMtFqq4sG8CEBnZ1LLbLGU1uediA1LCzLpLZaOmVOSuIxqHne9_1zPu-INodNtKThd4Lte6WvUX6w7waIbWrUmn3vq_d9JKWl5yPTUAvlYma7TXF3BHTGLvxXm7Z1xGqDvapZ3Nmz_tvujOBA1pxCuIGlE8BYqQDkBF8lpsZU22j2HFvKkTQtq5wUlSklA-9okG8Yn6UEOY-TFeDlwFK_AITZEbSCnoEognucVWRpOJYewhow4yGmn6DpQw6tXI9hSxq4V9itFSGo_WVVwdyBdABPXRB6Nfp04iwWdaTVp_YQ/https://www.amazon.com/dp/B0GX8MSGQT/?_encoding=UTF8&pd_rd_i=B0GX8MSGQT&pd_rd_i=B0GX8MSGQT&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=J0yCj&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=WXYPT8S4EA4F5M03DNHW&pd_rd_wg=fdwCv&pd_rd_r=314ff0c4-ada3-474a-8335-30dedc426411",
+      "link_clean": "https://www.amazon.com/dp/B0GX8MSGQT/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GX8MSGQT&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51Ua06l+YRL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/1d4a196f-1d71-4621-ab41-39cb7433e401.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/1d4a196f-1d71-4621-ab41-39cb7433e401.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.2,
+      "reviews": 794,
+      "price": "$19.99",
+      "extracted_price": 19.99
+    },
+    {
+      "position": 5,
+      "asin": "B0GWZRGVV9",
+      "title": "Allroaring Dog Lift Harness for Small Medium Dogs, Adjustable Doggy Back Leg Sling to Help Walk and Rehabilitate,Soft Padded Pet Support Harness for Arthritic,Disabled,Senior,Injured,Orange,M",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JAYfuM5wQVtnWC6G7abuew8AAAGexNmaHgEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICD3NZt5/clv1c_ek-wBQfWKsTSXn2ht7l_uhbICliUMm82pznU-nCWhfDbvqQQQXj_-7lvgf6RH9ayYPWlOMNL_RZhWrv2QWQ5TAJN24FKdaoZ6XO4QcZMnplnv-Xem0XjAnGI0lg2Lb4vLszJKf9758P7mmSGDS8iW9DWrE1clxRtntL2P98qbSdecuaD2OrIN9Dj5ywS9_1r3PCK3BNTT2aadOR40cBi3usTn33cDVgcIJ9S86kbHUKAG8wjMJkDlXM8zLY6_Y0G_-FvUV8VNVuXGw_IsHthkAjF3cusTiee-1flVhVxbBs8YfK3iNDacIafh60EJfmZoxx2509oRGSI_q6L56ow4zgbQTeWlyN48i1jZoy9GWdhbgyHWVWsXXAFX71i4lm0jTC-MQr7UZMQeAcXe07t721kCEODxr4mE4PAL7dyvMNF6DEYBHUhTxurshukCOUZ-b7htpAh7R0HpdVtI05AIemRRFireevZZTXZookLdpuS4khvKT-Qd1REWB5zwLngCjr8UAHzK64g27pMKLBWcL08IosVwzsbJJcaSFbbNpQ8Z79uFOqlCETMe6JpW8_Am5TwH8dSvWch_VmdTEopq3E_mPVO2DXSZg3juyU5myS6uotfnnbsNSdjvXfF97z3YNvHw3P-SYU-s-Mkta6opyZSMOdmBNQn9o1d7ekAuUQUPmzbWajDTR-orek_utVV_nK9eb73qkXD270rcy8AXYRGEY6qHsYZv4Uc-TyBMygBnfvvFLTdjw-CDLkNOXJ3PC6oA_rUjYa5UUnMBhgT9NE_frunYEUXkTTVNMQQihyIN0CdVC3pVcGESGeapm8w2jxMirAVWLe018s75Ki3zErBKDTZOXDZFwNu2iQrPd2qwglB_Nb2BX0vlhlZz8XWtjk8lIH_4dA8bc0iqJ4VYXYkXEgtU3zmBjRQ62Y0Mpc4zlZ9I2-ChLLHrBRnZhBkbLhCW-ZUtbXCQAWSpmxwhzFEbhfq9-G_t3I2LKMTM9Re-N08iXNbWNiDxpPNf5gG2r0ooshX0zQBAIJ6_uxVkeNm3KXUTxIIq-00r3uMKCrWC26AIRObUAXceGk9URM4Pvj4JJMqxDKJ4rLyG9HRdpqtkJ_kA7sDGUJ-bUhlW_OurEIAYRXTWx2XfRlg58T2kWEDzF_0bOraQHhT1mcC67yn65CZiT3X4svo6luPB12ZNLW8ittseDjs_qcEmx7b5VdWhpxq3S8_gYu8ZFgzb-TqokVyvDPNLLJGoztb7gD-Qg1yvKVThT75hxIposwhqAskbtAHbkYZYEapSC1oH8eXaHdxHVRoyfNjrUfQtgczb9faP3CEnt_hINYCZK8hBjlPgLa7ApjmoSpnmpYemvvxrdM_nJfQ8UPRnb7vzxqKr7OKrZIB9VNfGk5HUT3O8IVzkpOGggnXjGditMN79L67CdtgsbReMHE3cLBuGmitVxEBbDEu35wl5HBZpD_wLwT84bOyay-YQB1SZzSVcucbk6WT-cqN-CJlqUKPgt69OfqZj8Erq70Be24fBayBWQCKtI6LoInsvB6flk4DsTqmOw/https://www.amazon.com/dp/B0GWZRGVV9/?_encoding=UTF8&pd_rd_i=B0GWZRGVV9&pd_rd_i=B0GWZRGVV9&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=J0yCj&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=WXYPT8S4EA4F5M03DNHW&pd_rd_wg=fdwCv&pd_rd_r=314ff0c4-ada3-474a-8335-30dedc426411",
+      "link_clean": "https://www.amazon.com/dp/B0GWZRGVV9/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GWZRGVV9&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41Z9bglPlkL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c149d4be-5f0f-4285-aef0-23bea72f9af1.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c149d4be-5f0f-4285-aef0-23bea72f9af1.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 5,
+      "reviews": 2,
+      "price": "$24.99",
+      "extracted_price": 24.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "images": [
+        "https://m.media-amazon.com/images/I/71q4w+EdfQL.jpg",
+        "https://m.media-amazon.com/images/I/71nf878bD3L.jpg",
+        "https://m.media-amazon.com/images/I/71DhU4O0KBL.jpg",
+        "https://m.media-amazon.com/images/I/71VDpvQIa9L.jpg",
+        "https://m.media-amazon.com/images/I/719Qc3b9qfL.jpg",
+        "https://m.media-amazon.com/images/I/71wgZ7yIS0L.jpg",
+        "https://m.media-amazon.com/images/I/81hdgKgVFwL.jpg",
+        "https://m.media-amazon.com/images/I/71PG6mjRd8L.jpg",
+        "https://m.media-amazon.com/images/I/71LJ1fktfQL.jpg",
+        "https://m.media-amazon.com/images/I/71NpKqH+ChL.jpg",
+        "https://m.media-amazon.com/images/I/71p4L3s1o1L.jpg",
+        "https://m.media-amazon.com/images/I/81VBfOxj+CL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 90,
+        "4 star": 10,
+        "3 star": 0,
+        "2 star": 0,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Measure your dog and you will be happy",
+        "text": "Easy to adjust and was glad I followed their measurement suggestions. Several adjustments, but once it's set up, easy to put on and take off. Was very useful in getting large dog into vehicle. Plan on using it more as he ages and needs more assistance.",
+        "rating": 5,
+        "date": "May 31, 2026",
+        "author": "Vicki",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFE3HANEMRMNOF5AKSZ7GM2MAMKA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Red",
+          "size": "Large"
+        }
+      },
+      {
+        "position": 2,
+        "title": "ok",
+        "text": "worked",
+        "rating": 5,
+        "date": "May 13, 2026",
+        "author": "RPI64",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AE5JSPHTSNI53BGPTGZYWSKIG7ZQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Red",
+          "size": "X-Large"
+        }
+      },
+      {
+        "position": 3,
+        "title": "The Bionic Boost for Your Best Friend’s Golden Years",
+        "text": "When your loyal companion hits that stage where their spirit is willing but their hind legs are staging a protest, you realize that traditional care isn't enough to manage the physical toll on both of you. This dual-handle lifting harness functions less like a simple leash and more like a tactical mobility upgrade that restores a sense of autonomy to the dog while saving the owner's back from the repetitive strain of manual lifting. Unlike flimsy, gauze-like slings that shift around or put awkward pressure on the abdomen, this system is a robust, well-engineered piece of medical support. The front section serves as a heavy-duty harness in its own right, while the detachable rear portion transforms a difficult car transfer or a flight of stairs into a manageable, controlled assist that distributes weight evenly across the dog’s frame.The core of this design is the dual-handle architecture, which provides a surgical level of control. You aren't just hoisting them up; you are guiding their center of gravity from two strategic points at the shoulder and the hip, which is essential for dogs dealing with spinal sensitivities or surgical sites. For owners of male dogs, the \"U-cut\" design is a massive win for both hygiene and dignity, as it provides full rear-end support without interfering with potty breaks. It’s the kind of thoughtful engineering that prevents the messy, mid-walk complications often found in generic slings. The fabric is breathable and surprisingly soft, though the high-density straps are built to stay put, so measuring the thigh circumference is the most critical step to ensuring the fit remains comfortable rather than restrictive.While the cost sits higher than a basic retail harness, the craftsmanship justifies the investment for anyone navigating the long road of TPLO recovery or chronic arthritis. The stitching is impeccable and the hardware feels industrial-grade, yet the ability to unclip the rear portion for \"standard\" harness use makes it a versatile daily tool. It effectively turns a heavy-lifting struggle into a light, guided walk, preventing further injury to the dog's joints and the owner's lumbar. If you are debating between two sizes, the best strategy is to size up to ensure the leg loops don't pinch, especially if your dog has the broader build of a Lab or a Boxweiler. It is a high-performing, compassionate tool that turns a difficult season of aging into a much more graceful journey.",
+        "rating": 5,
+        "date": "April 27, 2026",
+        "author": "This is the Way",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AE2AQ6BGPL7PMP72WE3ZDLX2X3OQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/d1d15530-9a14-4a66-8e85-1d2a06c9f107._CR0%2C0%2C500%2C500_SX460_SX48_.jpg",
+        "helpful_votes": "2 people found this helpful",
+        "product": {
+          "color": "Red",
+          "size": "Medium"
+        }
+      },
+      {
+        "position": 4,
+        "title": "High Quality & Well Made, Good Design, Strong and Sturdy, Good Value, Recommend",
+        "text": "Having had the experience of caring for an elderly dog who developed hip and rear leg joint issues, I wish I had had access to a lift harness like this Lafoty Dog Lift Harness for Large Dogs at the time. Being disabled and having my own mobility issues, the task of caring for my dog and getting him from place to place, or even up and down flights of stairs was a real challenge for me, and was not any fun for him, either. Unfortunately, my previous dog (a Golden Retriever) I cared for has since passed on, but I have a new dog now (also a Golden Retriever, but slightly smaller), and while he is still young and in excellent health and condition, my previous experiences have definitely caused me to think ahead for those later years in my new dogs life when he may begin developing similar hip, rear leg and joint issues as my previous dog did, and I want to make sure that I am prepared in advance for that possibility and have some of the necessary equipment to make the experience easier on both myself and my dog.This lifting harness is visibly well made and designed, of high quality materials. The webbing and cushion material seems very strong, but also has a certain gentleness to it, and seems less likely to be abrasive to my dogs skin and body. The straps seem very strong and capable of helping to lift his 120 pounds. The construction of the harness is very well done and sturdy, with very nicely shaped padding sections and is accurately and securely sewn. The plastic buckles also seem good and strong and capable of withstanding my dogs weight.I am glad to have this harness for the future. I will be just as happy if my dog doesn't develop any issues with his joints, legs or hips and we don't have a need for this dog lift harness...but I want to be ready in case we ever do, so we will have it on stand-by. If we ultimately don't need it at all, I will give it to someone who's dog does need it.I can definitely recommend this Lafoty Dog Lift Harness for Large Dogs. It's price point is reasonable, and with this harness, you are definitely getting a quality piece of equipment. I happily give it a Full 5 Stars!",
+        "rating": 5,
+        "date": "April 3, 2026",
+        "author": "BandonTownMan",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AF7RM3XDFCP6BQZIJAG6NKOAHA4Q?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/e5adfe56-f7d8-47ef-a982-b2e727f75c1e._CR0%2C0%2C500%2C500_SX460_SX48_.jpg",
+        "images": [
+          "https://m.media-amazon.com/images/I/71DhU4O0KBL.jpg",
+          "https://m.media-amazon.com/images/I/71q4w+EdfQL.jpg",
+          "https://m.media-amazon.com/images/I/71nf878bD3L.jpg"
+        ],
+        "helpful_votes": "2 people found this helpful",
+        "product": {
+          "color": "Red",
+          "size": "Large"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Almost perfect",
+        "text": "It’s a great harness, does what it’s intended to do unfortunately it does chafe my dog in the groin area and I have to take it off nightly for his comfort. It’s well made and it really helped us feel better with him going down the stairs, he’s had a couple minor spills and this allows us to hold the handle and prevent that. I just wish the leg straps were a bit longer.",
+        "rating": 4,
+        "date": "May 25, 2026",
+        "author": "The Amazonians",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFMVXTA5IQXDN5ZC4B3GD7XWPDVQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/71wgZ7yIS0L.jpg"
+        ],
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "Red",
+          "size": "X-Large"
+        }
+      },
+      {
+        "position": 6,
+        "title": "A High-Quality, Essential Tool for Mobility Support",
+        "text": "​I purchased this medium-sized lift harness for my 6-year-old, 35 lb dog who struggles with IVDD and hip/joint issues. As his mobility starts to slow down, my vet recommended investing in a solid lift harness to help manage his condition and save my own back from the strain of lifting him manually. After trying this out, I am so glad I’m prepared with this specific model.​Fit and Adjustability:The fit is fantastic. There are so many different adjustment points that it feels like a custom fit tailored specifically to his body shape. It stays secure without shifting, which is crucial for a dog with spinal and joint sensitivities.​Quality and Design:I was honestly surprised by the quality—the front harness portion alone is better made than the standard everyday harnesses I usually buy. The materials feel heavy-duty and durable, and I can tell this is built to last for the long haul. It is truly an ingenious design for dogs needing extra assistance.​Ease of Use:The lift portion on the back works perfectly. Testing it out made a world of difference; it was significantly easier to support his weight compared to lifting him on my own. It’s a huge relief knowing I have this ready for when his mobility needs increase, as it will definitely protect my back as much as it helps him.​Value and Customer Service:The price point is excellent. I’ve previously spent the same amount on just a simple knee brace, so getting a full, high-quality lift system like this feels like a bargain. I also really appreciated the included booklet; it’s clear the company cares about their customers. They even encourage you to reach out if you have sizing or adjustment issues, which gives me a lot of confidence in the brand.​Overall:If you have a dog with IVDD or joint issues, don’t wait until things get worse to buy one of these. It’s better to be prepared with a high-quality tool like this. Highly recommended for the quality, price, and peace of mind it provides!",
+        "rating": 5,
+        "date": "April 8, 2026",
+        "author": "Amanda Baker",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHZTXN3ZKIXUUOTQSBEIY2JT4ZDA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "product": {
+          "color": "Red",
+          "size": "Medium"
+        }
+      },
+      {
+        "position": 7,
+        "title": "This is a lifesaver!!",
+        "text": "This is a fantastic tool to help you and your precious pup In times of surgery, recovery and post-op care, or for Dogs that may have disabilities, paralysis, or for your aging pup. When they get up there in age, many dogs will develop arthritis and other joint and bone issues, that can be very painful and debilitating. This brilliant device helps both your dog AND you. For your ailing pup, this can make the everyday life and every day activities a much less painful experience. And it helps you as a pet owner from having to witness the pain and agony that can come along with many issues and ailments, and for many reasons (including old age), in you're sweet fur baby. The brace itself is made incredibly well. Like impeccably well. The fabric used is strong and durable enough to keep its shape and be able to hold your pet where it's needed to- and securely- while maintaining a softer feel. It's not as rough and abrasive as, say, backpack fabric can be. The sewing is done perfectly. I have seen no loose strings or crooked seams. And the design is just made and thought through so well. Everything from the design and placement of certain straps, braces, and hardware- to the quality of the fabric and manufacturing- was chosen by design and for the betterment and comfort of your animal. It is a very well thought out medical assistive device. It is worth every cent of that $110 price tag. You simply cannot put a price on the relief from pain that this can save your sweet baby from experiencing. Just be sure to measure your pet thoroughly, even if you think you are certain of he or she's size. This will spare you from ordering the wrong size and making an expensive mistake.",
+        "rating": 5,
+        "date": "April 22, 2026",
+        "author": "Kjerstine King",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFIFGMAFWKZ3FIJLG3G7GRWU7B3Q?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/a3f2501e-228e-4965-95fb-93804ff1c8c0._CR0%2C0%2C466%2C466_SX460_SX48_.jpg",
+        "helpful_votes": "One person found this helpful",
+        "product": {
+          "color": "Red",
+          "size": "X-Large"
+        }
+      },
+      {
+        "position": 8,
+        "title": "I wish I had this sooner!",
+        "text": "Last year my dog had to have knee surgery. I wish we had this back then! Instead we had one of those padded straps that you wrap around their waist, and while it is effective, it's not nearly as easy to lift with it as this harness. The surgeon said that once one knee goes there's a 50% the other one will need the same surgery, so when I saw this I thought I'd be proactive and get it.Not only is this great for if your dog has had knee surgery, but it would also be great for mobility issues period. It has 2 handles, one between the shoulders, and one near the hips, you can easily lift your dog into and out of you vehicle if you need to. It also is good for everyday use because the back part unclips and the front is just a regular harness. This is very customizable, versatile, easy to use, has durable construction, and when I say you'll thank yourself later, I mean it! When I attached the longer handle to the back to see how it would be if she did need surgery on her other leg I was amazed at how much easier it was to lift her back end and control her movement than the other lift strap I have. It took hardly any muscle at all and she seemed to have an easier time too. I think it's due to the strap connection points, instead of looping around the waist where it is less stable and more weight to lift, it attaches at the hips. Do yourself a favor and buy this. Especially if you have a large or elderly dog. It is worth every penny!",
+        "rating": 5,
+        "date": "April 23, 2026",
+        "author": "Review",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGBYNEUH6CX7LRPAL4EXI3XJXLSQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/71VDpvQIa9L.jpg",
+          "https://m.media-amazon.com/images/I/71LJ1fktfQL.jpg",
+          "https://m.media-amazon.com/images/I/81hdgKgVFwL.jpg",
+          "https://m.media-amazon.com/images/I/719Qc3b9qfL.jpg",
+          "https://m.media-amazon.com/images/I/71PG6mjRd8L.jpg"
+        ],
+        "helpful_votes": "One person found this helpful",
+        "product": {
+          "color": "Red",
+          "size": "Medium"
+        }
+      }
+    ],
+    "other_countries_reviews": [
+      {
+        "position": 1,
+        "title": "Ottima imbracatura di sollevamento e mobilità per cani grandi",
+        "text": "Premetto che ho acquistato l'articolo tramite l'ottimo Amazon Vine, ma ciò non influisce in alcun modo sulla mia valutazione.L'imbracatura arriva in una bella scatola di cartone, e contiene l'imbracatura, la cinghia a di sostegno, e un ben fatto libretto d'istruzioni (purtroppo solo in Inglese).I materiali sono di buonissimo livello sia per quanto riguarda la robustezza che per comodità che dona all'Amico a quattro zampe tramite la comoda imbottitura.Personalmente ho un Rottweiler di 3 anni che purtroppo ha dei problemi di displasia alle anche....fortunatamente per ora non ha bisogno di un supporto di questo tipo, ma temo che tra qualche anno potrebbe tornare utile/indispensabile.....Ho comunque provato a utilizzare l'imbracatura e in primo luogo è idonea come misura (cosa non scontata....il Cane pesa circa 50kg.) e soprattutto fornisce un ottimo supporto a chI deve aiutare il cane, le due maniglie sono posizionate nei punti giusti per equilibrare (a seconda del problema del cane) il sostegno di cui abbisogna, la cinghia di sostegno risulta anch'essa molto comoda e robusta ed anche in questo caso \"gli agganci\" sono posti in modo tale che si riesca a equilibrare lo sforzo e la postura del cane nel modo più corretto.L'imbracatura a dire il vero può anche essere utilizzata come pettorina ed anche in questo caso risulta comoda e decisamente robusta (oltre che bella), nel caso in cui il cane abbia dei problemi non particolarmente gravi si può utilizzare il prodotto come pettorina in modo da abituare il cane e nel caso ne abbia bisogno (magari dopo una lunga camminata) essere già pronti ad aiutarlo magari ad alzarsi o a salire in auto se non addirittura a camminare.In conclusione:Ritengo questa imbracatura veramente ben fatta sia per i materiali che per la robustezza ed infine per l'ergonomia d'utilizzo.Il prezzo (al momento della recensione 110€ circa per la misura più grande) può apparire un po' caruccio....ma personalmente ritengo invece che questa imbracatura come rapporto qualità prezzo sia decisamente interessante.A parte il libretto d'istruzioni solo in Inglese, per ora non ho trovato altri difetti....per questo motivo...5 stelle.",
+        "rating": 5,
+        "date": "March 27, 2026",
+        "author": "Riccardo",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/722a21eb-47dd-4a08-a9c1-4308132d4f8b._CR0%2C0%2C500%2C500_SX460_SX48_.jpg",
+        "images": [
+          "https://m.media-amazon.com/images/I/71UA0blDb6L.jpg",
+          "https://m.media-amazon.com/images/I/71a-ljxqgTL.jpg",
+          "https://m.media-amazon.com/images/I/81zD8w+zPSL.jpg",
+          "https://m.media-amazon.com/images/I/81JOCsV5-qL.jpg",
+          "https://m.media-amazon.com/images/I/714prRJJZTL.jpg",
+          "https://m.media-amazon.com/images/I/7185mqiEb7L.jpg",
+          "https://m.media-amazon.com/images/I/71e-lpuD+9L.jpg",
+          "https://m.media-amazon.com/images/I/714YhrI3y6L.jpg",
+          "https://m.media-amazon.com/images/I/71sWNORCrGL.jpg"
+        ],
+        "product": {
+          "color": "Red",
+          "size": "X-Large"
+        },
+        "country": {
+          "code": "IT",
+          "name": "Italy"
+        },
+        "language": {
+          "code": "it",
+          "name": "Italian (Italy)"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Ayuda segura para peludos grandes",
+        "text": "Le compré este arnés a mi hija para su perro grande y es un salvavidas. Le permite ayudarlo a subir escaleras o entrar en el coche sin esfuerzo ni riesgo de lesiones.El diseño de cuerpo completo distribuye el peso de forma segura y las correas son ajustables, así que se adapta perfectamente al perro. Además, el material es resistente y cómodo, nada de rozaduras.En resumen: práctico, seguro y perfecto para cuidar a perros grandes sin complicaciones.",
+        "rating": 5,
+        "date": "April 5, 2026",
+        "author": "Savenia",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "product": {
+          "color": "Red",
+          "size": "Large"
+        },
+        "country": {
+          "code": "ES",
+          "name": "Spain"
+        },
+        "language": {
+          "code": "es",
+          "name": "Spanish (Spain)"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Pratique pour les grands chiens",
+        "text": "Ce harnais de levage Lafoty fait bonne impression. Il est simple et robuste et constitue clairement une aide pour aider les chiens vieillissants ou atteints de dysplasie avancée à se relever ou à monter dans la voiture grâce à sa double poignée.Un mode d'emploi détaillé est fourni avec des dessins explicatifs pour fixer le harnais sur son chien.J'ai pris ce modèle en taille XL pour mon berger allemand de 42 kg âgé de 10 ans passés. Malheureusement je n'ai pu lui essayer qu'une fois le harnais car la santé de mon chien a périclité brutalement et j'ai dû le faire endormir pour toujours.Je conseille vraiment ce harnais de levage pour chien. C'est vraiment pratique et cela soulage le chien que de pouvoir l'aider à se lever.",
+        "rating": 5,
+        "date": "April 28, 2026",
+        "author": "lolocven",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/81bed72d-bb49-43b2-a108-7ecc2a8eda3b._CR94%2C0%2C312%2C312_SX460_SX48_.jpg",
+        "images": [
+          "https://m.media-amazon.com/images/I/81o2iYGLS6L.jpg",
+          "https://m.media-amazon.com/images/I/619IZ00NIbL.jpg",
+          "https://m.media-amazon.com/images/I/81BJf3Vc3XL.jpg"
+        ],
+        "product": {
+          "color": "Red",
+          "size": "X-Large"
+        },
+        "country": {
+          "code": "FR",
+          "name": "France"
+        },
+        "language": {
+          "code": "fr",
+          "name": "French (France)"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Zuverlässige Unterstützung und Entlastung im Alltag mit meinem Hund",
+        "text": "Ich habe mir dieses Liftgeschirr in der Größe M für meinen mittelgroßen Hund angeschafft, da er aufgrund seines Alters zunehmend Schwierigkeiten mit der Kraft in den Hinterläufen bekommt. Besonders das Treppensteigen und der Einstieg ins Auto wurden in letzter Zeit immer mühsamer für uns beide. Das rote Geschirr von lafoty macht hier einen wirklich durchdachten Eindruck und hat sich in der Praxis als enorme Erleichterung erwiesen.Das Material ist überraschend leicht und wirkt durch die atmungsaktive Struktur sehr angenehm auf dem Fell. Ich hatte anfangs Bedenken, dass es meinen Rüden beim Laufen einschränken oder beim Geschäftemachen stören könnte, aber das Design ist an der Unterseite so geschnitten, dass alles frei bleibt. Er kann sich ganz normal bewegen und wird in seiner natürlichen Haltung nicht behindert. Die Polsterung scheint weich genug zu sein, dass auch bei längerem Tragen nichts scheuert oder drückt.Besonders praktisch finde ich das System mit den zwei Griffen. Man hat dadurch eine viel bessere Kontrolle und kann das Gewicht des Hundes gleichmäßig anheben, ohne sich selbst dabei den Rücken zu verrenken. Wenn wir an einer Treppe stehen, greife ich einfach kurz zu und kann ihm die nötige Stütze geben, damit er sicher oben ankommt. Es fühlt sich für ihn offenbar auch sicher an, da er nicht mehr so unsicher zögert wie früher. Die Verarbeitung der Nähte und der Schnallen wirkt stabil und belastbar, was mir ein gutes Gefühl gibt, wenn ich ihn tatsächlich einmal ein Stück anheben muss.Ein weiterer Vorteil ist, dass man es theoretisch wie ein normales Geschirr anbehalten kann. Die Handhabung beim Anlegen ist unkompliziert und geht nach zwei bis drei Malen sehr flott von der Hand. Die Farbe Rot ist zudem im Freien gut sichtbar, was ein netter Nebeneffekt ist. Insgesamt bietet dieses Hilfsmittel eine faire Unterstützung für Hunde mit Mobilitätseinschränkungen, ohne dabei klobig oder kompliziert zu wirken. Für den täglichen Gebrauch beim Gassigehen oder für die gezielte Hilfe im Haushalt ist es eine absolut sinnvolle Anschaffung, die den Alltag für Mensch und Tier deutlich entspannter macht.",
+        "rating": 5,
+        "date": "March 26, 2026",
+        "author": "Amazonier",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/33d8e29b-78ef-41ff-a164-853f713fb82b._CR0%2C0%2C494%2C494_SX460_SX48_.jpg",
+        "images": [
+          "https://m.media-amazon.com/images/I/81VX0oWtzXL.jpg"
+        ],
+        "product": {
+          "color": "Red",
+          "size": "Medium"
+        },
+        "country": {
+          "code": "DE",
+          "name": "Germany"
+        },
+        "language": {
+          "code": "de",
+          "name": "German (Germany)"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Once adjusted properly, it is an excellent harness!",
+        "text": "Once you dial in all the adjustments, it is an excellent harness. It works perfectly for helping our dog up and down the stairs after her surgery.",
+        "rating": 5,
+        "date": "May 21, 2026",
+        "author": "Mike W.",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "Red",
+          "size": "X-Large"
+        },
+        "country": {
+          "code": "CA",
+          "name": "Canada"
+        },
+        "language": {
+          "code": "en",
+          "name": "English (Canada)"
+        }
+      }
+    ]
+  }
+}

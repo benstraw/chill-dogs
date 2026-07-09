@@ -307,6 +307,32 @@ site_system:
       routes:
         - "/safety/what-to-do-if-your-dog-runs-away/"
 
+    - name: "Rattlesnake Safety for Dogs"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Capture rattlesnake emergency and prevention search intent, then route readers to the dog snake-bite emergency kit converter and GPS tracker comparison"
+      metric: "collector_to_converter_click to /gear/dog-snake-bite-emergency-kit/ and /gear/best-dog-gps-trackers/"
+      routes:
+        - "/safety/rattlesnake-safety-for-dogs/"
+      notes: >
+        Emergency-adjacent safety article leads with veterinary escalation, dog-carry guidance,
+        symptoms, treatment overview, prevention, aversion training, vaccine context, and what to pack.
+        It must not imply chill-dogs provides veterinary advice or that any product treats venom.
+
+    - name: "Snake-Bite Emergency Kit for Dogs"
+      type: "converter"
+      target_action: "Drive affiliate outbound clicks for transport, restraint, warmth, first-aid, phone, and visibility gear"
+      metric: "amazon_outbound_click rate + collector_to_converter_click from /safety/rattlesnake-safety-for-dogs/"
+      routes:
+        - "/gear/dog-snake-bite-emergency-kit/"
+      notes: >
+        Converter page is positioned as a transport and vet-readiness kit for suspected snakebite
+        emergencies, not a venom-removal or at-home treatment kit. Product categories include
+        carry slings, dog stretchers, first-aid kits, muzzle safety, warmth/control add-ons,
+        phone power, and visibility gear. Canonical products live in src/data/emergency-products.ts
+        and flow through product-catalog.ts and product-page-map.ts before appearing in
+        /admin/products/. SerpAPI-backed amazon-products cache entries are reference data only.
+
     - name: "Product browse"
       type: "converter"
       pillar: "all"
@@ -440,7 +466,8 @@ site_system:
     relaxation_products: "src/data/relaxation-products.ts — 78 products (calming beds, orthopedic beds, crates, carriers, travel beds, travel bags) with canonical editorial copy, optional Amazon ASIN/affiliate URL, optional merchant offers, and image thumbnails"
     tracking_products: "src/data/tracking-products.ts — 8 tracker products and 1 accessory product across cellular/off-grid/bluetooth/accessory types"
     raw_api_cache: "src/data/amazon-products/*.json — full SerpAPI/SearchAPI Amazon Product responses per ASIN; _index.json sidecar tracks fetchedAt/provider/title/image freshness diagnostics only and must not overwrite canonical product copy or images"
-    future_chewy_cache: "src/data/chewy-products/*.json — reserved future diagnostic cache for Chewy provider metadata by merchant product id or stable URL-derived key; mirror Amazon cache behavior without auto-overwriting editorial fields"
+    chewy_affiliate_tooling: "src/lib/affiliate/ and scripts/chewy-link.ts — internal Impact-backed Chewy affiliate link generation, using the live Impact tracking link when credentials are available and CHEWY_IMPACT_BASE_URL only as a verifiable fallback/cache"
+    chewy_cache: "src/data/chewy-products/*.json — diagnostic Impact catalog cache for Chewy product metadata and image URLs by catalog item id; _index.json sidecar tracks normalized review fields without auto-overwriting canonical product copy, images, or offers"
 
   architecture:
     frontend: "Astro 5 static site with scoped CSS and reusable modules"
