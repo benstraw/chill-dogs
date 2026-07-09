@@ -167,6 +167,10 @@ const itemListSchema = {
               <div class="product-grid">
                 {products.map((product, productIndex) => (
                   <article class="product-card" id={product.id}>
+                    <!-- TODO: Add images[] to EmergencyProduct and migrate this bespoke single-image
+                         markup to ProductImageFrame so snake-bite emergency gear cards support the
+                         shared multi-image gallery. Audit tracking/accessory and /shop/ cards at the
+                         same time; those surfaces also still render only a primary image. -->
                     {product.image && (
                       <div class="product-image">
                         <img src={product.image.src} alt={product.image.alt} loading="lazy" width="300" height="300" />
