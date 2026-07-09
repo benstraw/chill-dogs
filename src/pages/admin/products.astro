@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
+import AdminLayout from '@layouts/AdminLayout.astro';
 import { productCatalogItems } from '../../data/product-catalog';
 import { buildProductPageMap } from '../../data/product-page-map';
 import { merchants } from '../../data/products/merchants';
@@ -17,7 +17,7 @@ const merchantFilters = [
 ];
 ---
 
-<BaseLayout title="Product Catalog (Admin)" noindex={true} hideChrome={true}>
+<AdminLayout title="Product Catalog (Admin)">
   <div class="admin-products">
     <h1>Product Catalog</h1>
 
@@ -206,7 +206,7 @@ const merchantFilters = [
       </tbody>
     </table>
   </div>
-</BaseLayout>
+</AdminLayout>
 
 <script>
   const search = document.getElementById('search') as HTMLInputElement;
@@ -348,9 +348,7 @@ const merchantFilters = [
 
 <style>
   .admin-products {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: var(--space-lg);
+    width: 100%;
   }
 
   h1 {

@@ -359,11 +359,13 @@ site_system:
 
     - name: "Informer pages"
       type: "informer"
-      target_action: "Trust and compliance clarity"
+      target_action: "Trust, compliance, and accurate internal administration"
       metric: "No conversion obstruction"
       routes:
+        - "/admin/"
+        - "/admin/sitemap/"
         - "/admin/products/"
-        - "/content-sitemap/"
+        - "/admin/images/"
         - "/about/"
         - "/contact/"
         - "/privacy-policy/"
@@ -373,11 +375,12 @@ site_system:
         - "/subscribe/thanks/"
         - "/subscribe/confirmed/"
         - "/shelter-dog-charities/"
-      notes: "/admin/products/ is the canonical product inventory review page. Every product in any product data file must flow into this page through src/data/product-catalog.ts; do not hardcode product rows in the admin route. /content-sitemap/ is a hidden editor page that previews the complete build-time sitemap inventory from src/data/sitemap-inventory.ts, which merges static pages with article collection pages and final built share metadata, including post-build OG image rewrites."
+      notes: "/admin/ is the noindex admin landing page and links to the available admin tools. AdminLayout is the shared wrapper for all /admin/ pages and provides a Chill-Dogs logo link back to the admin landing page. /admin/sitemap/ previews the complete build-time sitemap inventory from src/data/sitemap-inventory.ts, which merges static pages with article collection pages and final built share metadata, including post-build OG image rewrites. /admin/products/ is the canonical product inventory review page. Every product in any product data file must flow into this page through src/data/product-catalog.ts; do not hardcode product rows in the admin route. /admin/images/ is the product image curation browser."
 
   modules:
     workhorse:
       - "BaseLayout"
+      - "AdminLayout"
       - "Hero"
       - "HeroExperiment"
       - "CoolingConverterPage"
@@ -473,6 +476,7 @@ site_system:
     frontend: "Astro 5 static site with scoped CSS and reusable modules"
     cms: "None (code-first content/config in repository)"
     hosting: "Static build deployment"
+    admin_security: "Root middleware.ts uses Vercel Routing Middleware matched only to /admin/:path* and requires HTTP Basic Auth credentials from ADMIN_USERNAME and ADMIN_PASSWORD. Missing configuration fails closed; credentials are never stored in the repository."
     seo_strategy: "collector captures intent; converter monetizes intent; variant routes remain canonicalized and noindex"
     sitemap_inventory: "src/data/sitemap-inventory.ts composes staticSitemapSections with article MDX collection entries at build time; future related-content derivation should use the complete inventory instead of static-only sections. Converter sitemap entries carry pubDate and optional lastUpdated metadata for homepage Browse Picks recency ordering."
     section_collectors: "src/data/section-collectors.ts defines cooling, calming, and comfort collector metadata, topic subsection grouping, topic coverage, priority ordering, dynamic CollectorBody card inventories, and CollectionPage hasPart schema from the complete sitemap inventory."

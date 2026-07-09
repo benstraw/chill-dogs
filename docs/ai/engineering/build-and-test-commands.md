@@ -44,7 +44,7 @@ Full production build. Runs all three pipeline phases:
 
 1. **Pre-build:** `watermark-images.mjs` (watermarks original photos) → `generate-og-images.mjs` (generates OG images for every eligible route)
 2. **Astro build:** outputs static HTML to `dist/`
-3. **Post-build:** `apply-first-page-image-og.mjs` → `apply-content-sitemap-share-preview.mjs` → `indexnow-submit.mjs`
+3. **Post-build:** `apply-first-page-image-og.mjs` → `apply-sitemap-share-preview.mjs` → `indexnow-submit.mjs`
 
 **Run before:** `bun run test` (the SEO meta test reads from `dist/`), deploying, or verifying final output.
 

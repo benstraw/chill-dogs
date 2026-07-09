@@ -150,7 +150,7 @@ Three phases run automatically via `bun run build`:
 
 2. **Astro build**: outputs static HTML to `dist/`
 
-3. **Post-build** (`scripts/`): `apply-first-page-image-og.mjs` → `apply-content-sitemap-share-preview.mjs` → `indexnow-submit.mjs`
+3. **Post-build** (`scripts/`): `apply-first-page-image-og.mjs` → `apply-sitemap-share-preview.mjs` → `indexnow-submit.mjs`
 
 ---
 
@@ -186,7 +186,13 @@ Three phases run automatically via `bun run build`:
 | `VERCEL_ENV` | Auto | Set by Vercel; controls staging noindex and Pinterest loading |
 | `MAINTENANCE_MODE` | Optional | Any truthy value shows maintenance page at `/` |
 | `INDEXNOW_KEY` | Prod | Key for IndexNow URL submission on deploy |
+| `ADMIN_USERNAME` | Vercel Production + Preview | HTTP Basic Auth username for all `/admin/*` routes |
+| `ADMIN_PASSWORD` | Vercel Production + Preview | HTTP Basic Auth password for all `/admin/*` routes |
 | `SERP_API_KEY` / `SEARCHAPI_KEY` | Scripts only | Amazon product metadata fetching |
+
+### Admin route protection
+
+Root `middleware.ts` is Vercel Routing Middleware scoped by its matcher to `/admin/:path*`. It protects the otherwise static admin HTML with HTTP Basic Authentication before CDN content is served. Credentials must come from `ADMIN_USERNAME` and `ADMIN_PASSWORD` environment variables and must never be committed. Missing configuration fails closed with HTTP 503; missing or invalid credentials return HTTP 401 with a Basic Auth challenge. Astro's local dev server does not execute this Vercel middleware. For local end-to-end verification in this repository, add both variables to the gitignored root `.env` and restart `vercel dev`; Vercel CLI 54 selects the existing `.env` for middleware and ignores `.env.local` and `.vercel/.env.development.local` during local execution.
 
 ---
 

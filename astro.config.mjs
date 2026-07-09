@@ -7,7 +7,6 @@ const EXCLUDED_SITEMAP_FRAGMENTS = [
   '/draft',
   '/v/',
   '/admin/',
-  '/content-sitemap/',
   '/privacy-policy/',
   '/terms/',
   '/subscribe/',

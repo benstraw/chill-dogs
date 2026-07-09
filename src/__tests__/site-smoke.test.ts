@@ -428,8 +428,8 @@ describe('site smoke tests', () => {
     expect(coolingOg.length).toBeGreaterThan(1024);
   });
 
-  it('renders the content sitemap with share preview metadata', () => {
-    const sitemapDoc = readBuiltPage(path.join('content-sitemap', 'index.html'));
+  it('renders the admin sitemap with share preview metadata', () => {
+    const sitemapDoc = readBuiltPage(path.join('admin', 'sitemap', 'index.html'));
 
     const contactRow = sitemapDoc.querySelector('[data-share-preview-row][data-href="/contact/"]');
     const roadTripRow = sitemapDoc.querySelector('[data-share-preview-row][data-href="/travel/dog-road-trip-gear/"]');
@@ -711,7 +711,7 @@ describe('site smoke tests', () => {
     expect(sitemap).toContain('/comforting/best-heavy-duty-dog-crates/');
     expect(sitemap).not.toContain('/cooling/v/');
     expect(sitemap).not.toContain('/calming/v/');
-    expect(sitemap).not.toContain('/content-sitemap/');
+    expect(sitemap).not.toContain('/admin/sitemap/');
     expect(sitemap).not.toContain('/privacy-policy/');
     expect(sitemap).not.toContain('/terms/');
     expect(sitemap).not.toContain('/subscribe/thanks/');
@@ -823,7 +823,7 @@ describe('site smoke tests', () => {
   });
 
   it('content pages have at least one JSON-LD script', () => {
-    const noSchemaExpected = ['404.html', 'privacy-policy', 'terms', 'content-sitemap', 'admin/', 'subscribe/', 'search/'];
+    const noSchemaExpected = ['404.html', 'privacy-policy', 'terms', 'admin/', 'subscribe/', 'search/'];
     const htmlFiles = collectHtmlFiles(distRoot);
     const failures: string[] = [];
 
@@ -905,7 +905,7 @@ describe('site smoke tests', () => {
     expect(llmsText).toContain('https://www.chill-dogs.com/cooling/best-cooling-products-for-dogs/');
     expect(llmsText).toContain('https://www.chill-dogs.com/travel/dog-road-trip-gear/');
     expect(llmsText).not.toContain('/v/a/');
-    expect(llmsText).not.toContain('/content-sitemap/');
+    expect(llmsText).not.toContain('/admin/sitemap/');
     expect(llmsText).not.toContain('/privacy-policy/');
   });
 });

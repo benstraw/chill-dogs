@@ -15,7 +15,7 @@ superseded_by:
 > **This document is archived.** It reflects the original planning decisions made at project start (2026-02-28) and is preserved as a record of initial intent. It is no longer maintained or authoritative.
 >
 > For current project context, use **CONTEXT.md**.
-> For the live page inventory and system definition, use **docs/system-definition.yaml** and **src/pages/content-sitemap.astro**.
+> For the live page inventory and system definition, use **docs/system-definition.yaml** and **src/pages/admin/sitemap.astro**.
 
 ---
 

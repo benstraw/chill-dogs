@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "astro dev",
     "prebuild": "node src/scripts/watermark-images.mjs && bun run src/scripts/generate-og-images.mjs",
-    "build": "astro build && node scripts/apply-first-page-image-og.mjs && node scripts/apply-content-sitemap-share-preview.mjs && node scripts/indexnow-submit.mjs",
+    "build": "astro build && node scripts/apply-first-page-image-og.mjs && node scripts/apply-sitemap-share-preview.mjs && node scripts/indexnow-submit.mjs",
     "og:gen": "bun run src/scripts/og-gen/generate.tsx",
     "og:force": "bun run src/scripts/og-gen/generate.tsx --force",
     "preview": "astro preview",

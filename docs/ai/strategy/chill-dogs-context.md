@@ -153,7 +153,7 @@ Use this as a readable orientation map. When coding, use `src/data/routes.ts`, `
 - `/privacy-policy/`
 - `/terms/`
 - `/admin/products/`
-- `/content-sitemap/`
+- `/admin/sitemap/`
 - `/subscribe/thanks/`
 - `/subscribe/confirmed/`
 

@@ -57,7 +57,7 @@ src/
 ├── pages/
 │   ├── cooling/              # Cooling hub + converters + v/[variant] experiments
 │   ├── calming/              # Calming hub + pillar + v/[variant] experiments
-│   └── content-sitemap.astro # Hidden editor-facing sitemap page (`/content-sitemap/`)
+│   └── admin/sitemap.astro   # Internal sitemap page (`/admin/sitemap/`)
 ├── styles/
 │   ├── tokens.css            # All design tokens (colors, spacing, type, radii)
 │   ├── hero.base.css         # Hero experiment base layout + theme tokens
@@ -86,7 +86,7 @@ Every page is exactly one type, set via the `pageType` frontmatter field:
 
 Cooling and calming pages are hand-authored in `src/pages/` using typed TypeScript product data rather than markdown frontmatter.
 
-There is also a hidden internal page at `/content-sitemap/` for editorial workflow, marked `noindex`.
+There is also an internal admin page at `/admin/sitemap/` for editorial workflow, marked `noindex`.
 
 ---
 
@@ -309,6 +309,15 @@ See [EXPERIMENTS.md](./EXPERIMENTS.md) for variant descriptions, hypotheses, and
 
 The repo is at [github.com/benstraw/chill-dogs](https://github.com/benstraw/chill-dogs), deployed via Vercel with automatic deploys on push to `main`.
 
+### Admin authentication
+
+All `/admin/*` routes are protected in deployed environments by Vercel Routing Middleware and HTTP Basic Authentication. Add both variables in Vercel Project Settings → Environment Variables for Production and Preview, then redeploy:
+
+- `ADMIN_USERNAME`
+- `ADMIN_PASSWORD`
+
+Use long, unique values. Do not commit credentials to the repository. If either variable is absent, admin requests fail closed with HTTP 503. Astro's local development server does not execute Vercel's root middleware. To test authentication locally in this repository, put both values in the gitignored root `.env` file and restart `vercel dev`. Vercel CLI 54 selects this repository's existing `.env` for its middleware runtime and ignores Astro's `.env.local` and pulled `.vercel/.env.development.local` files during `vercel dev`.
+
 **Vercel environment:** Vercel auto-detects Astro. No `vercel.json` required. If `bun` is not available on your Vercel team plan, add:
 
 ```json
@@ -347,7 +356,7 @@ Behavior:
 
 - Runs only when `VERCEL_ENV=production`
 - Uses `VERCEL_GIT_PREVIOUS_SHA` + `VERCEL_GIT_COMMIT_SHA` to submit changed `src/pages/**/*.astro` URLs
-- Excludes non-index targets such as admin pages, variant pages, and content sitemap
+- Excludes non-index targets such as admin pages and variant pages
 - Falls back to submitting `https://www.chill-dogs.com/sitemap-index.xml` if SHA data is missing or no indexable page routes changed
 
 Dry-run locally (no network submission):

@@ -19,7 +19,6 @@ const SECTION_RULES: Array<{ prefix: string; section: string }> = [
 
 const EXCLUDED_EXACT_PATHS = new Set([
   '/404/',
-  '/content-sitemap/',
   '/privacy-policy/',
   '/terms/',
   '/affiliate-disclosure/',
@@ -37,6 +36,10 @@ export function shouldExcludePath(path: string): boolean {
   const normalized = normalizePath(path);
 
   if (EXCLUDED_EXACT_PATHS.has(normalized)) {
+    return true;
+  }
+
+  if (normalized.startsWith('/admin/')) {
     return true;
   }
 
