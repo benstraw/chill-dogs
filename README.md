@@ -380,6 +380,7 @@ VERCEL_ENV=production INDEXNOW_KEY=example INDEXNOW_DRY_RUN=true bun run indexno
 - [ ] Evaluate hero experiment winner after 2 weeks / 200+ primary CTA clicks per variant; promote winner to default, retire losing variant URLs
 - [ ] Expand calming category: individual converter pages for anxiety-wraps, calming-treats, lick-mats, snuffle-mats (parallel to cooling converter structure)
 - [ ] Defer PostHog init (idle + interaction fallback); monitor early-bounce event loss and feature-flag flicker
+- [ ] Align Astro and MDX peer versions: use `@astrojs/mdx` v4 with the current Astro 5 stack, or upgrade Astro and its official integrations to v6 together; then remove the npm `legacy-peer-deps` workaround after verifying Vercel middleware packaging
 - [x] Review affiliate tag is active and approved in Amazon Associates dashboard (`chill-dogs-20`)
 - [x] Set up IndexNow for instant search engine indexing on deploy (Bing, Yandex, etc.)
 - [ ] Add third pillar: **Relaxing** — dog beds, plush toys, snuggly blankets, and cozy comfort gear
