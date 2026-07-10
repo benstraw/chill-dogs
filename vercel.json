@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "installCommand": "npm install",
+  "installCommand": "bun install && bun add --global npm@10.9.4 && if [ -d /vercel ]; then mkdir -p /vercel/.config/yarn/global/node_modules/.bin && ln -sf /vercel/.bun/bin/npm /vercel/.config/yarn/global/node_modules/.bin/npm && ln -sf /bun1/bun /vercel/.config/yarn/global/node_modules/.bin/node; fi",
   "buildCommand": "bun run build",
   "redirects": [
     {
