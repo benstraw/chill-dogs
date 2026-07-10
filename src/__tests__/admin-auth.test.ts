@@ -20,7 +20,7 @@ function basicAuthorization(username: string, password: string): string {
 describe('admin authentication middleware', () => {
   it('is scoped to every admin route', () => {
     expect(config.matcher).toBe('/admin/:path*');
-    expect(config.runtime).toBe('nodejs');
+    expect(config.runtime).toBeUndefined();
   });
 
   it('allows valid credentials to continue to the static admin page', () => {

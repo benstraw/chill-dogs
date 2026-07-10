@@ -2,7 +2,6 @@ import { next } from '@vercel/functions';
 
 export const config = {
   matcher: '/admin/:path*',
-  runtime: 'nodejs',
 };
 
 function constantTimeEqual(actual, expected) {
