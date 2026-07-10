@@ -1,3 +1,5 @@
+import { next } from '@vercel/functions';
+
 export const config = {
   matcher: '/admin/:path*',
   runtime: 'nodejs',
@@ -66,8 +68,10 @@ export function authorizeAdminRequest(
 }
 
 export default function middleware(request) {
-  return authorizeAdminRequest(request, {
+  const authenticationResponse = authorizeAdminRequest(request, {
     ADMIN_USERNAME: process.env.ADMIN_USERNAME,
     ADMIN_PASSWORD: process.env.ADMIN_PASSWORD,
   });
+
+  return authenticationResponse ?? next();
 }
