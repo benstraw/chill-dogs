@@ -311,7 +311,7 @@ The repo is at [github.com/benstraw/chill-dogs](https://github.com/benstraw/chil
 
 ### Admin authentication
 
-All `/admin/*` routes are protected in deployed environments by the root `middleware.js` using Vercel Routing Middleware and HTTP Basic Authentication. The middleware uses Vercel's default Edge runtime so it can guard static pages without invoking the Node/Bun function dependency packager. Authorized requests continue to the static Astro route through the official `next()` helper from `@vercel/functions`. Bun remains the authoritative package manager for installing dependencies and building the site. Add both variables in Vercel Project Settings → Environment Variables for Production and Preview, then redeploy:
+All `/admin/*` routes are protected in deployed environments by the dependency-free root `middleware.js` using Vercel Routing Middleware and HTTP Basic Authentication. The middleware uses Vercel's default Edge runtime and returns Vercel's `x-middleware-next` continuation response for authorized requests. Vercel CLI 55 unconditionally launches `npm` while packaging Routing Middleware, even when the middleware imports no packages, so Vercel installation is pinned to npm 10 while the actual site build and local development scripts continue to use Bun. `.npmrc` enables legacy peer resolution for the existing Astro/MDX disagreement during the Vercel install. Add both variables in Vercel Project Settings → Environment Variables for Production and Preview, then redeploy:
 
 - `ADMIN_USERNAME`
 - `ADMIN_PASSWORD`

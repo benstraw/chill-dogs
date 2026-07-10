@@ -1,8 +1,14 @@
-import { next } from '@vercel/functions';
-
 export const config = {
   matcher: '/admin/:path*',
 };
+
+function continueResponse() {
+  return new Response(null, {
+    headers: {
+      'x-middleware-next': '1',
+    },
+  });
+}
 
 function constantTimeEqual(actual, expected) {
   const maxLength = Math.max(actual.length, expected.length);
@@ -72,5 +78,5 @@ export default function middleware(request) {
     ADMIN_PASSWORD: process.env.ADMIN_PASSWORD,
   });
 
-  return authenticationResponse ?? next();
+  return authenticationResponse ?? continueResponse();
 }
