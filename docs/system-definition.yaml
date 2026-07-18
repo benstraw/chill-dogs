@@ -78,7 +78,7 @@ site_system:
         Cooling, Calming, Comfort, and Gear/Travel/Safety (violet, headed to /gear/).
         Each section shows the 3 latest articles for its theme, up to 5 compact
         converter links sorted lastUpdated ?? pubDate descending (each with a
-        "Compare →" affordance and hover lift/border-tint/arrow-nudge), and 2
+        "See Products →" affordance and hover lift/border-tint/arrow-nudge), and 2
         product picks from src/data/homepage-picks.ts rendered through the
         AffiliateLink machinery, so the homepage fires amazon_outbound_click directly.
         Section link positions follow homepage-{theme}-section-header / -articles / -converters.
