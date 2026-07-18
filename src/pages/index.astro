@@ -49,7 +49,7 @@ const orgSchema = {
   >
     <JsonLd slot="head" schema={websiteSchema} />
     <JsonLd slot="head" schema={orgSchema} />
-    <HomepageHero />
+    <HomepageHero featuredArticle={articleFeed.latestGuides[0]} />
 
     <HomepageBody articleFeed={articleFeed}>
       <section slot="newsletter" class="container homepage-signup">

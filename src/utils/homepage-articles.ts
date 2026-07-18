@@ -96,6 +96,35 @@ export function getHomepageConverters(limit = 15): HomepageConverterCard[] {
     }));
 }
 
+const HOMEPAGE_THEME_ORDER: HomepageArticleColor[] = ['cool', 'calm', 'comfort', 'gear'];
+
+function emptyThemeBuckets<T>(): Record<HomepageArticleColor, T[]> {
+  return Object.fromEntries(HOMEPAGE_THEME_ORDER.map((color) => [color, []])) as Record<
+    HomepageArticleColor,
+    T[]
+  >;
+}
+
+export function groupHomepageArticlesByTheme(
+  articles: HomepageArticleCard[]
+): Record<HomepageArticleColor, HomepageArticleCard[]> {
+  const buckets = emptyThemeBuckets<HomepageArticleCard>();
+  for (const article of articles) {
+    buckets[article.color].push(article);
+  }
+  return buckets;
+}
+
+export function groupHomepageConvertersByTheme(
+  converters: HomepageConverterCard[]
+): Record<HomepageArticleColor, HomepageConverterCard[]> {
+  const buckets = emptyThemeBuckets<HomepageConverterCard>();
+  for (const converter of converters) {
+    buckets[converter.color].push(converter);
+  }
+  return buckets;
+}
+
 export async function getHomepageArticleFeed(
   featuredCount = Number.POSITIVE_INFINITY
 ): Promise<HomepageArticleFeed> {

@@ -120,7 +120,7 @@ Section collectors (`/cooling/`, `/calming/`, `/comforting/`) also use sitemap t
 
 Converter entries in `src/data/content-sitemap.ts` must include `pubDate`. Use the first real publication date from git history when available. Set `lastUpdated` only for a material content or product refresh that should promote the converter in recency-based surfaces.
 
-The homepage Browse Picks list uses this metadata via `getHomepageConverters()`: it renders up to 15 converters sorted by `lastUpdated ?? pubDate` descending, with undated converters last. This ordering is homepage-specific; section collectors still use topic and priority routing rules.
+The homepage theme sections use this metadata via `getHomepageConverters()` + `groupHomepageConvertersByTheme()`: converters are sorted by `lastUpdated ?? pubDate` descending (undated last), grouped by theme, and each `HomepageSection` renders its theme's most recent few as compact links. This ordering is homepage-specific; section collectors still use topic and priority routing rules.
 
 ---
 

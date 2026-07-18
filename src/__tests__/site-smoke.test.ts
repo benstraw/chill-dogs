@@ -121,9 +121,17 @@ describe('site smoke tests', () => {
     const loveHeart = doc.querySelector<SVGElement>('.hp-v6-love-heart');
     const heroSlogan = doc.querySelector<HTMLElement>('.hp-v6-slogan');
     const canonical = doc.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    const paneArrows = doc.querySelectorAll('.hp-v6-pane .hp-v6-pane-arrow');
+    const heroFeatured = doc.querySelector<HTMLAnchorElement>(
+      'a[data-link-position="homepage-hero-featured"]'
+    );
 
     expect(coolingCta?.getAttribute('href')).toBe('/cooling/');
     expect(calmingCta?.getAttribute('href')).toBe('/calming/');
+    expect(paneArrows.length).toBe(3);
+    expect(heroFeatured?.getAttribute('data-track')).toBe('collector_to_converter_click');
+    expect(heroFeatured?.getAttribute('data-to-page')).toBe(heroFeatured?.getAttribute('href'));
+    expect(heroFeatured?.hasAttribute('data-cta')).toBe(false);
     expect(loveNote?.getAttribute('aria-label')).toBe('For the love of dogs');
     expect(loveNote?.textContent?.trim()).toBe('For the love of dogs');
     expect(loveHeart?.getAttribute('aria-hidden')).toBe('true');
@@ -133,30 +141,55 @@ describe('site smoke tests', () => {
     expect(canonical?.getAttribute('href')).toBe('https://www.chill-dogs.com/');
   });
 
-  it('links the homepage into featured converter and guide paths', () => {
+  it('links the homepage theme sections into converter and guide paths', () => {
     const doc = readBuiltPage('index.html');
 
-    const links = Array.from(doc.querySelectorAll<HTMLAnchorElement>('a')).map((link) =>
-      link.getAttribute('href')
+    const sectionHeaders = Array.from(
+      doc.querySelectorAll<HTMLAnchorElement>('a[data-link-position$="-section-header"]')
+    );
+    const headerTargets = Object.fromEntries(
+      sectionHeaders.map((link) => [link.getAttribute('data-link-position'), link.getAttribute('href')])
+    );
+    const linkPositions = new Set(
+      Array.from(doc.querySelectorAll<HTMLAnchorElement>('a[data-link-position]')).map((link) =>
+        link.getAttribute('data-link-position')
+      )
     );
     const lickMatLinks = Array.from(
       doc.querySelectorAll<HTMLAnchorElement>('a[href="/calming/best-lick-mats-for-dogs/"]')
     );
-    const travelCrateLinks = Array.from(
-      doc.querySelectorAll<HTMLAnchorElement>('a[href="/comforting/best-travel-crates-for-road-trips/"]')
+
+    expect(headerTargets).toEqual({
+      'homepage-cool-section-header': '/cooling/',
+      'homepage-calm-section-header': '/calming/',
+      'homepage-comfort-section-header': '/comforting/',
+      'homepage-gear-section-header': '/shop/',
+    });
+    for (const theme of ['cool', 'calm', 'comfort', 'gear']) {
+      expect(linkPositions).toContain(`homepage-${theme}-articles`);
+      expect(linkPositions).toContain(`homepage-${theme}-converters`);
+    }
+    expect(lickMatLinks.map((link) => link.getAttribute('data-link-position'))).toEqual([
+      'homepage-calm-converters',
+    ]);
+  });
+
+  it('fires the keystone affiliate event from homepage product picks', () => {
+    const doc = readBuiltPage('index.html');
+
+    const amazonPicks = Array.from(
+      doc.querySelectorAll<HTMLAnchorElement>(
+        'a[data-affiliate="true"][data-track-also="amazon_outbound_click"][data-page-type="attractor"]'
+      )
     );
 
-    expect(links).toContain('/calming/crate-training-for-dogs/');
-    expect(links).toContain('/gear/airtag-for-dogs/');
-    expect(links).toContain('/gear/fi-dog-collar-review/');
-    expect(links).toContain('/comforting/best-travel-crates-for-road-trips/');
-    expect(links).toContain('/calming/best-lick-mats-for-dogs/');
-    expect(lickMatLinks.map((link) => link.getAttribute('data-link-position'))).toEqual([
-      'homepage-converters',
-    ]);
-    expect(travelCrateLinks.map((link) => link.getAttribute('data-link-position'))).toEqual([
-      'homepage-converters',
-    ]);
+    expect(amazonPicks.length).toBeGreaterThanOrEqual(4);
+    for (const pick of amazonPicks) {
+      expect(pick.getAttribute('rel')).toContain('sponsored');
+      expect(pick.getAttribute('data-track')).toBe('affiliate_outbound_click');
+      expect(pick.getAttribute('data-page-type')).toBe('attractor');
+      expect(pick.getAttribute('data-page-slug')).toBe('/');
+    }
   });
 
   it('renders dynamic section collector inventories for articles and converters', () => {
@@ -373,12 +406,31 @@ describe('site smoke tests', () => {
 
   it('orders homepage article cards by article publish date', () => {
     const doc = readBuiltPage('index.html');
-    const renderedArticleLinks = [
-      ...Array.from(doc.querySelectorAll<HTMLAnchorElement>('.featured-grid [data-home-article="true"]')),
-      ...Array.from(doc.querySelectorAll<HTMLAnchorElement>('.more-grid [data-home-article="true"]')),
-    ].map((link) => link.getAttribute('href'));
+    const publishOrder = readArticlePublishOrder();
+    const themeFor = (href: string) =>
+      href.startsWith('/cooling/')
+        ? 'cool'
+        : href.startsWith('/calming/')
+          ? 'calm'
+          : href.startsWith('/comforting/')
+            ? 'comfort'
+            : 'gear';
 
-    expect(renderedArticleLinks).toEqual(readArticlePublishOrder());
+    const heroFeatured = doc
+      .querySelector<HTMLAnchorElement>('a[data-link-position="homepage-hero-featured"]')
+      ?.getAttribute('href');
+    expect(heroFeatured).toBe(publishOrder[0]);
+
+    for (const theme of ['cool', 'calm', 'comfort', 'gear']) {
+      const rendered = Array.from(
+        doc.querySelectorAll<HTMLAnchorElement>(`a[data-link-position="homepage-${theme}-articles"]`)
+      ).map((link) => link.getAttribute('href'));
+      const expected = publishOrder
+        .filter((href) => href !== heroFeatured && themeFor(href) === theme)
+        .slice(0, 3);
+
+      expect(rendered).toEqual(expected);
+    }
   });
 
   it('renders the inline signup on the homepage and excludes the footer signup from attractor and converter pages', () => {
@@ -484,20 +536,18 @@ describe('site smoke tests', () => {
     }
   });
 
-  it('publishes homepage Browse Picks with product-style OG images', () => {
+  it('publishes homepage theme sections with product pick images', () => {
     const homeDoc = readBuiltPage('index.html');
+    const sections = homeDoc.querySelectorAll('.home-section');
     const pickImages = Array.from(
-      homeDoc.querySelectorAll<HTMLImageElement>('[data-home-pick="true"] img')
+      homeDoc.querySelectorAll<HTMLImageElement>('.home-section .product-image-frame img')
     );
 
-    expect(pickImages).toHaveLength(3);
+    expect(sections).toHaveLength(4);
+    expect(pickImages.length).toBeGreaterThanOrEqual(4);
 
     for (const image of pickImages) {
-      const src = image.getAttribute('src');
-      expect(src).toBeTruthy();
-      expect(src?.startsWith('/og/')).toBe(true);
-      const asset = readFileSync(path.join(distRoot, src!.replace(/^\//, '')));
-      expect(asset.length).toBeGreaterThan(1024);
+      expect(image.getAttribute('src')).toBeTruthy();
     }
   });
 
