@@ -109,6 +109,7 @@ const sectionConverters = converters.slice(0, converterLimit);
           >
             <h4 class="more-title">{converter.title}</h4>
             <p class="more-desc">{converter.description}</p>
+            <span class="more-cta">Compare <span class="more-arrow" aria-hidden="true">→</span></span>
           </a>
         ))}
       </div>
@@ -301,22 +302,32 @@ const sectionConverters = converters.slice(0, converterLimit);
   .more-card {
     display: block;
     padding: var(--space-md) var(--space-lg);
+    border: 1px solid transparent;
     border-left: 3px solid;
     border-radius: 0 var(--radius-md) var(--radius-md) 0;
     background: var(--color-surface);
     text-decoration: none;
     color: var(--color-charcoal);
-    transition: transform var(--transition-fast);
+    transition:
+      transform var(--transition-fast),
+      box-shadow var(--transition-fast),
+      border-color var(--transition-fast);
   }
 
   .more-card:hover {
-    transform: translateX(3px);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   }
 
-  .more-card--cool    { border-color: hsl(200, 60%, 60%); }
-  .more-card--calm    { border-color: hsl(155, 42%, 57%); }
-  .more-card--comfort { border-color: hsl(345, 42%, 65%); }
-  .more-card--gear    { border-color: hsl(260, 40%, 62%); }
+  .more-card--cool    { border-left-color: hsl(200, 60%, 60%); }
+  .more-card--calm    { border-left-color: hsl(155, 42%, 57%); }
+  .more-card--comfort { border-left-color: hsl(345, 42%, 65%); }
+  .more-card--gear    { border-left-color: hsl(260, 40%, 62%); }
+
+  .more-card--cool:hover    { border-color: hsl(200, 60%, 60%); }
+  .more-card--calm:hover    { border-color: hsl(155, 42%, 57%); }
+  .more-card--comfort:hover { border-color: hsl(345, 42%, 65%); }
+  .more-card--gear:hover    { border-color: hsl(260, 40%, 62%); }
 
   .more-title {
     font-size: var(--text-sm);
@@ -330,6 +341,26 @@ const sectionConverters = converters.slice(0, converterLimit);
     font-size: var(--text-xs);
     color: var(--color-text-muted);
     line-height: var(--leading-relaxed);
+  }
+
+  .more-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    margin-top: var(--space-xs);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    color: var(--color-charcoal);
+    opacity: 0.85;
+  }
+
+  .more-arrow {
+    display: inline-block;
+    transition: transform var(--transition-fast);
+  }
+
+  .more-card:hover .more-arrow {
+    transform: translateX(3px);
   }
 
   .home-section-picks-grid {
@@ -369,7 +400,8 @@ const sectionConverters = converters.slice(0, converterLimit);
     .home-section-arrow,
     .article-card,
     .article-img,
-    .more-card {
+    .more-card,
+    .more-arrow {
       transition: none !important;
     }
   }

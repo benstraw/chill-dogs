@@ -10,8 +10,8 @@ import { productCatalogItems, type ProductCatalogItem } from './product-catalog'
 const HOMEPAGE_PICK_IDS: Record<ProductCatalogItem['pillar'], string[]> = {
   cooling: ['green-pet-shop-cooling-pad', 'ruffwear-swamp-cooler'],
   calming: ['thundershirt-classic', 'awoo-paradise-lick-mat'],
-  comfort: ['bedstill-donut-calming-bed'],
-  gear: ['fi-series-3-plus'],
+  comfort: ['bedstill-donut-calming-bed', 'cwawz-orthopedic-bolster'],
+  gear: ['fi-series-3-plus', 'apple-airtag-2nd-gen'],
 };
 
 export function getHomepagePicks(pillar: ProductCatalogItem['pillar']): ProductCatalogItem[] {

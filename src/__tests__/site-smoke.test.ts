@@ -175,6 +175,7 @@ describe('site smoke tests', () => {
       expect(linkPositions).toContain(`homepage-${theme}-articles`);
       expect(linkPositions).toContain(`homepage-${theme}-converters`);
     }
+    expect(doc.querySelector('.more-card .more-arrow')).not.toBeNull();
     expect(lickMatLinks.map((link) => link.getAttribute('data-link-position'))).toEqual([
       'homepage-calm-converters',
     ]);
