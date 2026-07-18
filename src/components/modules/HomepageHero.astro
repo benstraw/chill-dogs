@@ -17,8 +17,8 @@ const { featuredArticle } = Astro.props;
   data-hero-impression="true"
   aria-label="Homepage hero"
 >
-  <div class:list={['hp-v6', { 'hp-v6--with-featured': !!featuredArticle }]}>
-    <h1 class="hp-v6-sr-only">Chill-Dogs — Cooling & Calming Products for Dogs</h1>
+  <div class="hp-v6">
+    <h1 class="hp-v6-sr-only">Chill-Dogs — Cooling, Calming, Comfort & Gear for Dogs</h1>
     <div class="hp-v6-main">
       <div class="hp-v6-logo">
         <Image
@@ -62,40 +62,50 @@ const { featuredArticle } = Astro.props;
             <span class="hp-v6-pane-sub">Supportive beds, cozy blankets, and comforting toys for dogs of every age.</span>
             <span class="hp-v6-pane-cta">Explore <span class="hp-v6-pane-arrow" aria-hidden="true">→</span></span>
           </a>
+          <a class="hp-v6-pane hp-v6-pane--gear" href={ROUTES.gearHub} data-cta="gear" data-track="hero_click_gear">
+            <span class="hp-v6-pane-title">Gear Up</span>
+            <span class="hp-v6-pane-sub">GPS trackers, travel gear, and safety essentials for dogs on the go.</span>
+            <span class="hp-v6-pane-cta">Explore <span class="hp-v6-pane-arrow" aria-hidden="true">→</span></span>
+          </a>
         </div>
       </div>
     </div>
     {featuredArticle && (
-      <a
-        href={featuredArticle.href}
-        class="hp-v6-featured"
-        data-home-article="true"
-        data-track="collector_to_converter_click"
-        data-to-page={featuredArticle.href}
-        data-link-position="homepage-hero-featured"
-      >
-        <div class="hp-v6-featured-img-wrap">
-          <img
-            src={typeof featuredArticle.image === 'string' ? featuredArticle.image : featuredArticle.image.src}
-            alt=""
-            class="hp-v6-featured-img"
-            width="600"
-            height="315"
-            loading="eager"
-          />
-        </div>
-        <div class="hp-v6-featured-body">
-          <span class="hp-v6-featured-kicker">Latest guide</span>
-          <span class={`hp-v6-featured-label hp-v6-featured-label--${featuredArticle.color}`}>
-            {featuredArticle.label}
-          </span>
-          <h2 class="hp-v6-featured-title">{featuredArticle.title}</h2>
-          <p class="hp-v6-featured-desc">{featuredArticle.description}</p>
-          <span class="hp-v6-featured-read">
-            Read the latest <span class="hp-v6-featured-arrow" aria-hidden="true">→</span>
-          </span>
-        </div>
-      </a>
+      <div class="hp-v6-below">
+        <a
+          href={featuredArticle.href}
+          class="hp-v6-featured"
+          data-home-article="true"
+          data-track="collector_to_converter_click"
+          data-to-page={featuredArticle.href}
+          data-link-position="homepage-hero-featured"
+        >
+          <div class="hp-v6-featured-img-wrap">
+            <img
+              src={typeof featuredArticle.image === 'string' ? featuredArticle.image : featuredArticle.image.src}
+              alt=""
+              class="hp-v6-featured-img"
+              width="600"
+              height="315"
+              loading="eager"
+            />
+          </div>
+          <div class="hp-v6-featured-body">
+            <span class="hp-v6-featured-kicker">Latest guide</span>
+            <span class={`hp-v6-featured-label hp-v6-featured-label--${featuredArticle.color}`}>
+              {featuredArticle.label}
+            </span>
+            <h2 class="hp-v6-featured-title">{featuredArticle.title}</h2>
+            <p class="hp-v6-featured-desc">{featuredArticle.description}</p>
+            <span class="hp-v6-featured-read">
+              Read the latest <span class="hp-v6-featured-arrow" aria-hidden="true">→</span>
+            </span>
+          </div>
+        </a>
+        <a class="hp-v6-viewall" href={ROUTES.articles} data-cta="articles" data-track="hero_click_articles">
+          View all articles <span class="hp-v6-viewall-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
     )}
   </div>
 </section>

@@ -25,6 +25,7 @@ export const ROUTES = {
   roadTrip: '/travel/dog-road-trip-gear/',
   rhysRanAway: '/travel/rhys-ran-away-cerro-san-luis-obispo/',
   // Tracking cluster
+  gearHub: '/gear/',
   trackingTop: '/gear/best-dog-gps-trackers/',
   fiCollarReview: '/gear/fi-dog-collar-review/',
   garminTracking: '/gear/garmin-dog-tracking-collars/',
@@ -47,6 +48,7 @@ export const ROUTES = {
   comfortSleepArticle: '/comforting/how-much-do-dogs-sleep/',
   shop: '/shop/',
   search: '/search/',
+  articles: '/articles/',
   affiliateDisclosure: '/affiliate-disclosure/',
   privacyPolicy: '/privacy-policy/',
   terms: '/terms/',

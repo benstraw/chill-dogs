@@ -9,8 +9,7 @@ import { ROUTES } from '@data/routes';
 
 /**
  * One homepage theme section: latest articles for the theme, compact converter
- * links, and 1–2 affiliate product picks. The `gear` theme has no entry in
- * pillarThemes, so it gets equivalent custom props from the scoped CSS below.
+ * links, and 1–2 affiliate product picks.
  */
 interface Props {
   theme: HomepageArticleColor;
@@ -36,14 +35,14 @@ const {
   converterLimit = 5,
 } = Astro.props;
 
-const THEME_TO_PILLAR_KEY: Partial<Record<HomepageArticleColor, PillarThemeKey>> = {
+const THEME_TO_PILLAR_KEY: Record<HomepageArticleColor, PillarThemeKey> = {
   cool: 'cooling',
   calm: 'calming',
   comfort: 'comfort',
+  gear: 'gear',
 };
 
-const pillarKey = THEME_TO_PILLAR_KEY[theme];
-const themeStyle = pillarKey ? pillarThemeStyle(pillarThemes[pillarKey]) : undefined;
+const themeStyle = pillarThemeStyle(pillarThemes[THEME_TO_PILLAR_KEY[theme]]);
 
 const sectionArticles = articles.slice(0, articleLimit);
 const sectionConverters = converters.slice(0, converterLimit);
@@ -147,18 +146,6 @@ const sectionConverters = converters.slice(0, converterLimit);
     border-top: 1px solid var(--color-border);
   }
 
-  /* The gear theme has no pillarThemes entry; mirror the other pillars' custom
-     props with the established homepage gear palette so CTAs and placeholders
-     theme correctly. */
-  .home-section--gear {
-    --pillar-accent: hsl(220, 20%, 35%);
-    --pillar-accent-hover: hsl(220, 22%, 27%);
-    --pillar-accent-text: #ffffff;
-    --pillar-link: hsl(220, 20%, 35%);
-    --pillar-link-hover: hsl(220, 22%, 27%);
-    --pillar-soft-bg: hsl(220, 15%, 95%);
-  }
-
   .home-section-head {
     display: flex;
     align-items: baseline;
@@ -258,7 +245,7 @@ const sectionConverters = converters.slice(0, converterLimit);
   .article-label--cool    { color: hsl(200, 80%, 28%); }
   .article-label--calm    { color: hsl(155, 50%, 26%); }
   .article-label--comfort { color: hsl(345, 38%, 38%); }
-  .article-label--gear    { color: hsl(220, 20%, 35%); }
+  .article-label--gear    { color: hsl(262, 45%, 38%); }
 
   .article-title {
     font-family: var(--font-heading);
@@ -329,7 +316,7 @@ const sectionConverters = converters.slice(0, converterLimit);
   .more-card--cool    { border-color: hsl(200, 60%, 60%); }
   .more-card--calm    { border-color: hsl(155, 42%, 57%); }
   .more-card--comfort { border-color: hsl(345, 42%, 65%); }
-  .more-card--gear    { border-color: hsl(220, 20%, 55%); }
+  .more-card--gear    { border-color: hsl(260, 40%, 62%); }
 
   .more-title {
     font-size: var(--text-sm);

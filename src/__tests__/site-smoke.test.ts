@@ -126,12 +126,18 @@ describe('site smoke tests', () => {
       'a[data-link-position="homepage-hero-featured"]'
     );
 
+    const gearCta = doc.querySelector<HTMLAnchorElement>('a[data-track="hero_click_gear"]');
+    const viewAll = doc.querySelector<HTMLAnchorElement>('a[data-cta="articles"]');
+
     expect(coolingCta?.getAttribute('href')).toBe('/cooling/');
     expect(calmingCta?.getAttribute('href')).toBe('/calming/');
-    expect(paneArrows.length).toBe(3);
+    expect(gearCta?.getAttribute('href')).toBe('/gear/');
+    expect(paneArrows.length).toBe(4);
     expect(heroFeatured?.getAttribute('data-track')).toBe('collector_to_converter_click');
     expect(heroFeatured?.getAttribute('data-to-page')).toBe(heroFeatured?.getAttribute('href'));
     expect(heroFeatured?.hasAttribute('data-cta')).toBe(false);
+    expect(viewAll?.getAttribute('href')).toBe('/articles/');
+    expect(viewAll?.getAttribute('data-track')).toBe('hero_click_articles');
     expect(loveNote?.getAttribute('aria-label')).toBe('For the love of dogs');
     expect(loveNote?.textContent?.trim()).toBe('For the love of dogs');
     expect(loveHeart?.getAttribute('aria-hidden')).toBe('true');
@@ -163,7 +169,7 @@ describe('site smoke tests', () => {
       'homepage-cool-section-header': '/cooling/',
       'homepage-calm-section-header': '/calming/',
       'homepage-comfort-section-header': '/comforting/',
-      'homepage-gear-section-header': '/shop/',
+      'homepage-gear-section-header': '/gear/',
     });
     for (const theme of ['cool', 'calm', 'comfort', 'gear']) {
       expect(linkPositions).toContain(`homepage-${theme}-articles`);
@@ -190,6 +196,45 @@ describe('site smoke tests', () => {
       expect(pick.getAttribute('data-page-type')).toBe('attractor');
       expect(pick.getAttribute('data-page-slug')).toBe('/');
     }
+  });
+
+  it('renders the articles index in reverse publish order with pillar labels', () => {
+    const doc = readBuiltPage(path.join('articles', 'index.html'));
+    const publishOrder = readArticlePublishOrder();
+
+    const featured = doc.querySelector<HTMLAnchorElement>(
+      'a[data-link-position="articles-index-featured"]'
+    );
+    const gridLinks = Array.from(
+      doc.querySelectorAll<HTMLAnchorElement>('a[data-link-position="articles-index"]')
+    ).map((link) => link.getAttribute('href'));
+
+    expect(featured?.getAttribute('href')).toBe(publishOrder[0]);
+    expect(gridLinks).toEqual(publishOrder.slice(1));
+    expect(doc.querySelectorAll('h1')).toHaveLength(1);
+    expect(doc.querySelector('.article-label')).not.toBeNull();
+  });
+
+  it('renders the gear collector with tracking, safety, and travel inventories', () => {
+    const gearDoc = readBuiltPage(path.join('gear', 'index.html'));
+    const links = Array.from(gearDoc.querySelectorAll<HTMLAnchorElement>('a')).map((link) =>
+      link.getAttribute('href')
+    );
+    const headings = Array.from(
+      gearDoc.querySelectorAll<HTMLHeadingElement>('.section-heading')
+    ).map((heading) => heading.textContent);
+
+    expect(links).toEqual(
+      expect.arrayContaining([
+        '/gear/best-dog-gps-trackers/',
+        '/gear/fi-dog-collar-review/',
+        '/safety/what-to-do-if-your-dog-runs-away/',
+        '/travel/dog-road-trip-gear/',
+      ])
+    );
+    expect(headings).toEqual(
+      expect.arrayContaining(['GPS Trackers & Escape Safety', 'Trail & Emergency Prep'])
+    );
   });
 
   it('renders dynamic section collector inventories for articles and converters', () => {
@@ -235,6 +280,10 @@ describe('site smoke tests', () => {
       { page: path.join('comforting', 'index.html'), theme: 'comfort' },
       { page: path.join('comforting', 'best-anxiety-dog-crates', 'index.html'), theme: 'comfort' },
       { page: path.join('comforting', 'how-much-do-dogs-sleep', 'index.html'), theme: 'comfort' },
+      { page: path.join('gear', 'index.html'), theme: 'gear' },
+      { page: path.join('gear', 'fi-dog-collar-review', 'index.html'), theme: 'gear' },
+      { page: path.join('travel', 'dog-road-trip-gear', 'index.html'), theme: 'gear' },
+      { page: path.join('safety', 'what-to-do-if-your-dog-runs-away', 'index.html'), theme: 'gear' },
     ];
 
     for (const { page, theme } of cases) {
@@ -251,6 +300,13 @@ describe('site smoke tests', () => {
     expect(comfortDoc.documentElement.getAttribute('data-pillar-theme')).toBe('comfort');
     expect(comfortDoc.documentElement.getAttribute('style')).toContain('--color-nav-accent: hsl(345, 38%, 38%)');
     expect(activeNav?.getAttribute('href')).toBe('/comforting/');
+
+    const gearDoc = readBuiltPage(path.join('gear', 'fi-dog-collar-review', 'index.html'));
+    const gearActiveNav = gearDoc.querySelector<HTMLAnchorElement>('.main-nav a[aria-current="page"]');
+
+    expect(gearDoc.documentElement.getAttribute('data-pillar-theme')).toBe('gear');
+    expect(gearDoc.documentElement.getAttribute('style')).toContain('--color-nav-accent: hsl(262, 45%, 38%)');
+    expect(gearActiveNav?.getAttribute('href')).toBe('/gear/');
   });
 
   it('renders derived InternalLinkStrip links on migrated pages', () => {
