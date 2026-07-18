@@ -34,7 +34,7 @@ export interface CollectorBodyConfig {
   disclosureShowSafety?: boolean;
 }
 
-export type SectionCollectorKey = 'cooling' | 'calming' | 'comfort';
+export type SectionCollectorKey = 'cooling' | 'calming' | 'comfort' | 'gear';
 export type TopicSectionPageType = 'converter' | 'article';
 
 export interface TopicSectionDefinition {
@@ -56,7 +56,7 @@ export interface SectionCollectorDefinition {
   schemaName: string;
   description: string;
   hero: {
-    theme: 'cooling' | 'calming' | 'comfort';
+    theme: 'cooling' | 'calming' | 'comfort' | 'gear';
     headline: string;
     subhead: string;
     primaryCta: {
@@ -310,6 +310,87 @@ export const sectionCollectorDefinitions: Record<SectionCollectorKey, SectionCol
       },
     ],
     disclosureShowSafety: false,
+  },
+  gear: {
+    key: 'gear',
+    href: ROUTES.gearHub,
+    fromPage: 'gear-collector',
+    accent: 'gear',
+    title: 'Gear, Travel & Safety',
+    ogTitle: 'Dog Gear for Travel, Tracking & Safety | Top Picks',
+    schemaName: 'Gear, Travel & Safety for Dogs',
+    description:
+      'GPS trackers, travel gear, and safety essentials for adventurous dogs — from Fi and Garmin collars to snake-bite kits and road-trip prep.',
+    hero: {
+      theme: 'gear',
+      headline: 'Gear Up for the Adventure',
+      subhead: 'GPS trackers, travel setups, and safety gear for dogs on the go',
+      primaryCta: { label: 'See top GPS trackers', href: ROUTES.trackingTop },
+      secondaryCta: { label: 'Road trip gear guide', href: ROUTES.roadTrip },
+    },
+    topics: [
+      'tracking',
+      'gps-tracking',
+      'lost-dog-safety',
+      'snake-safety',
+      'trail-safety',
+      'emergency-prep',
+      'travel',
+      'road-trips',
+      'flying',
+      'carriers',
+    ],
+    startHref: ROUTES.trackingTop,
+    startDescription:
+      'Cellular, off-grid, and Bluetooth trackers compared — Fi, Garmin, and AirTag — with honest trade-offs for everyday and wilderness dogs.',
+    converterPriority: [
+      ROUTES.trackingTop,
+      ROUTES.dogSnakeBiteEmergencyKit,
+      ROUTES.comfortAirlineCarriers,
+      ROUTES.comfortTravelCrates,
+      ROUTES.coolingCar,
+      ROUTES.coolingHydration,
+    ],
+    articlePriority: [
+      ROUTES.fiCollarReview,
+      ROUTES.garminTracking,
+      ROUTES.airtagForDogs,
+      ROUTES.roadTrip,
+      ROUTES.dogRanAwaySafety,
+      ROUTES.rattlesnakeSafetyForDogs,
+      ROUTES.rhysRanAway,
+      ROUTES.travelFlyWithDog,
+    ],
+    topicSections: [
+      {
+        // gps-tracking (not the broad 'tracking') so the snake-bite kit, which
+        // also carries 'tracking', falls through to Trail & Emergency Prep.
+        heading: 'GPS Trackers & Escape Safety',
+        intro: 'Cellular, off-grid, and Bluetooth tracking compared — plus what to do if your dog gets loose.',
+        topics: ['gps-tracking', 'lost-dog-safety'],
+      },
+      {
+        heading: 'Trail & Emergency Prep',
+        intro: 'Snake-bite kits, trail safety, and the gear worth carrying before something goes wrong.',
+        topics: ['snake-safety', 'trail-safety', 'emergency-prep'],
+      },
+      {
+        // before Road Trips so 'travel'-tagged airline pages land here first
+        heading: 'Flying & Carriers',
+        intro: 'Airline-approved crates, carriers, and flying guides for dogs in the cabin or hold.',
+        topics: ['flying', 'carriers'],
+      },
+      {
+        heading: 'Road Trips & Travel',
+        intro: 'Car setups, hydration, and long-haul travel gear that has actually been road-tested.',
+        topics: ['road-trips', 'travel'],
+      },
+    ],
+    fallbackSection: {
+      heading: 'More Gear & Safety Paths',
+      intro: 'Additional tracking, travel, and safety comparisons that touch this section.',
+    },
+    disclosureShowSafety: true,
   },
 };
 

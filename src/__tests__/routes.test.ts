@@ -63,6 +63,23 @@ describe('route constants', () => {
     );
   });
 
+  it('keeps gear collector definition aligned to canonical routes', () => {
+    const gear = sectionCollectorDefinitions.gear;
+
+    expect(gear.href).toBe(ROUTES.gearHub);
+    expect(ROUTES.gearHub).toBe('/gear/');
+    expect(ROUTES.articles).toBe('/articles/');
+    expect(gear.hero.primaryCta.href).toBe(ROUTES.trackingTop);
+    expect(gear.hero.secondaryCta.href).toBe(ROUTES.roadTrip);
+    expect(gear.converterPriority).toEqual(
+      expect.arrayContaining([
+        ROUTES.trackingTop,
+        ROUTES.dogSnakeBiteEmergencyKit,
+        ROUTES.comfortAirlineCarriers,
+      ])
+    );
+  });
+
   it('keeps comfort collector definition aligned to canonical routes', () => {
     const comfort = sectionCollectorDefinitions.comfort;
 

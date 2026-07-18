@@ -135,6 +135,8 @@ vi.mock('@data/sitemap-inventory', () => ({
 import {
   getHomepageArticleFeed,
   getHomepageConverters,
+  groupHomepageArticlesByTheme,
+  groupHomepageConvertersByTheme,
   isHomepageArticle,
   mapHomepageArticle,
   resolveHomepageArticleTheme,
@@ -243,5 +245,40 @@ describe('homepage article feed', () => {
     expect(converters.at(-2)?.href).toBe('/gear/older-overflow-pick/');
     expect(converters.at(-1)?.href).toBe('/gear/undated-pick/');
     expect(converters.at(-1)?.image).toBeUndefined();
+  });
+
+  it('groups homepage articles by theme while preserving feed order', async () => {
+    const feed = await getHomepageArticleFeed();
+    const grouped = groupHomepageArticlesByTheme(feed.latestGuides);
+
+    expect(Object.keys(grouped).sort()).toEqual(['calm', 'comfort', 'cool', 'gear']);
+    expect(grouped.cool.map((article) => article.href)).toEqual([
+      '/cooling/how-hot-is-too-hot-for-dogs/',
+    ]);
+    expect(grouped.calm).toEqual([]);
+    expect(grouped.comfort).toEqual([]);
+    // Gear bucket collects /gear/, /travel/, and /safety/ articles in feed order.
+    expect(grouped.gear.map((article) => article.href)).toEqual([
+      '/gear/airtag-for-dogs/',
+      '/travel/how-to-fly-with-a-dog/',
+      '/gear/fi-dog-collar-review/',
+      '/safety/what-to-do-if-your-dog-runs-away/',
+      '/gear/garmin-dog-tracking-collars/',
+    ]);
+  });
+
+  it('groups homepage converters by theme while preserving recency order', () => {
+    const grouped = groupHomepageConvertersByTheme(getHomepageConverters(Number.POSITIVE_INFINITY));
+
+    expect(grouped.cool.map((converter) => converter.href)).toEqual(['/cooling/updated-pick/']);
+    expect(grouped.calm.map((converter) => converter.href)).toEqual([
+      '/calming/latest-published-pick/',
+    ]);
+    expect(grouped.comfort).toHaveLength(13);
+    expect(grouped.comfort[0]?.href).toBe('/comforting/dated-pick-01/');
+    expect(grouped.gear.map((converter) => converter.href)).toEqual([
+      '/gear/older-overflow-pick/',
+      '/gear/undated-pick/',
+    ]);
   });
 });

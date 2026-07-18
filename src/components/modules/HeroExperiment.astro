@@ -10,7 +10,7 @@
  */
 
 export type HeroVariant = 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i';
-export type HeroTheme = 'cooling' | 'calming' | 'comfort';
+export type HeroTheme = 'cooling' | 'calming' | 'comfort' | 'gear';
 
 interface Props {
   variant: HeroVariant;
@@ -23,7 +23,14 @@ interface Props {
 
 const { variant, theme, headline, subhead, primaryCta, secondaryCta } = Astro.props;
 
-const badgeLabel = theme === 'cooling' ? 'Beat the heat' : theme === 'comfort' ? 'Rest & comfort' : 'Find your calm';
+const badgeLabel =
+  theme === 'cooling'
+    ? 'Beat the heat'
+    : theme === 'comfort'
+      ? 'Rest & comfort'
+      : theme === 'gear'
+        ? 'Gear up'
+        : 'Find your calm';
 ---
 
 <section

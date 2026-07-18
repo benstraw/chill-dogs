@@ -1,8 +1,8 @@
-export type PillarThemeKey = 'cooling' | 'calming' | 'comfort';
+export type PillarThemeKey = 'cooling' | 'calming' | 'comfort' | 'gear';
 
 export interface PillarTheme {
   key: PillarThemeKey;
-  pathPrefix: string;
+  pathPrefixes: string[];
   accent: string;
   accentHover: string;
   accentText: string;
@@ -14,7 +14,7 @@ export interface PillarTheme {
 export const pillarThemes: Record<PillarThemeKey, PillarTheme> = {
   cooling: {
     key: 'cooling',
-    pathPrefix: '/cooling/',
+    pathPrefixes: ['/cooling/'],
     accent: 'hsl(200, 80%, 28%)',
     accentHover: 'hsl(200, 80%, 22%)',
     accentText: '#ffffff',
@@ -24,7 +24,7 @@ export const pillarThemes: Record<PillarThemeKey, PillarTheme> = {
   },
   calming: {
     key: 'calming',
-    pathPrefix: '/calming/',
+    pathPrefixes: ['/calming/'],
     accent: 'hsl(155, 50%, 26%)',
     accentHover: 'hsl(155, 52%, 20%)',
     accentText: '#ffffff',
@@ -34,7 +34,7 @@ export const pillarThemes: Record<PillarThemeKey, PillarTheme> = {
   },
   comfort: {
     key: 'comfort',
-    pathPrefix: '/comforting/',
+    pathPrefixes: ['/comforting/'],
     accent: 'hsl(345, 38%, 38%)',
     accentHover: 'hsl(345, 40%, 30%)',
     accentText: '#ffffff',
@@ -42,11 +42,23 @@ export const pillarThemes: Record<PillarThemeKey, PillarTheme> = {
     linkHover: '#6f343d',
     softBackground: 'hsl(345, 40%, 97%)',
   },
+  gear: {
+    key: 'gear',
+    pathPrefixes: ['/gear/', '/travel/', '/safety/'],
+    accent: 'hsl(262, 45%, 38%)',
+    accentHover: 'hsl(262, 47%, 30%)',
+    accentText: '#ffffff',
+    link: '#5b3d8c',
+    linkHover: '#43286f',
+    softBackground: 'hsl(262, 45%, 96%)',
+  },
 };
 
 export function resolvePillarThemeFromPath(pathname: string): PillarTheme | undefined {
   const normalizedPath = pathname.endsWith('/') ? pathname : `${pathname}/`;
-  return Object.values(pillarThemes).find((theme) => normalizedPath.startsWith(theme.pathPrefix));
+  return Object.values(pillarThemes).find((theme) =>
+    theme.pathPrefixes.some((prefix) => normalizedPath.startsWith(prefix))
+  );
 }
 
 export function pillarThemeStyle(theme: PillarTheme): string {
