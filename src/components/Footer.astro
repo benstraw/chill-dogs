@@ -118,6 +118,12 @@ const footerCategory = inferCategory(currentPath);
               Follow us on Pinterest
             </a>
           </li>
+          <li>
+            <a href={ROUTES.shelterCharities} class="charities-link">
+              <span class="charities-heart" aria-hidden="true">💙</span>
+              Dog Charities We Love
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -231,6 +237,18 @@ const footerCategory = inferCategory(currentPath);
   .pinterest-logo {
     width: 20px;
     height: 20px;
+    flex-shrink: 0;
+  }
+
+  .charities-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .charities-heart {
+    font-size: 20px;
+    line-height: 1;
     flex-shrink: 0;
   }
 
