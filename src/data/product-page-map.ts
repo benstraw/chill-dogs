@@ -144,7 +144,16 @@ export function buildProductPageMap(): ProductPageMap {
     href: ROUTES.naturalFleaTickProducts,
   };
   for (const p of fleaTickProducts.filter((product) =>
-    ['natural-spray', 'natural-spot-on', 'natural-shampoo', 'natural-collar'].includes(product.category)
+    [
+      'natural-spray',
+      'natural-spot-on',
+      'natural-shampoo',
+      'natural-collar',
+      'natural-tag',
+      'natural-chew',
+      'natural-ear',
+      'natural-surface',
+    ].includes(product.category)
   )) {
     addRef(map, p.id, fleaTickNaturalRef);
   }

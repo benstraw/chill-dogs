@@ -130,9 +130,9 @@ describe('multi-merchant product offers', () => {
       'bravecto-44-88',
       'frontline-plus-45-88',
       'seresto-large',
-      'wondercide-spray-lemongrass',
-      'wondercide-spot-on-medium',
-      'wondercide-shampoo-peppermint',
+      'wondercide-spray-lemongrass-32oz',
+      'wondercide-shampoo-amazon',
+      'trihood-flea-tick-tag',
       'rinseroo-original',
     ];
 

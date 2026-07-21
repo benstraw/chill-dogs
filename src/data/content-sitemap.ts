@@ -504,7 +504,7 @@ export const staticSitemapSections: SitemapSection[] = [
       createSitemapPage({
         baseTitle: 'Best Natural Flea and Tick Products for Dogs',
         description:
-          'Compare Wondercide-led natural flea and tick options for dogs — sprays, spot-ons, shampoos, and collars — with practical notes on reapplication and efficacy limits.',
+          'Compare natural flea and tick products for dogs — sprays, a shampoo, collars and tags, daily chews, and ear and home cleanup — with honest notes on real limits.',
         href: ROUTES.naturalFleaTickProducts,
         pageType: 'converter',
         topics: ['flea-tick', 'travel', 'road-trips'],
@@ -517,6 +517,7 @@ export const staticSitemapSections: SitemapSection[] = [
         ],
         relatedLabel: 'Natural Flea & Tick Products',
         pubDate: new Date('2026-06-30'),
+        lastUpdated: new Date('2026-07-21'),
       }),
       createSitemapPage({
         baseTitle: 'Dog Bath Tools for Flea Season',
