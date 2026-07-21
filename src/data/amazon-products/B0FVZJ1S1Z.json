@@ -1,0 +1,628 @@
+{
+  "search_metadata": {
+    "id": "6a5fb8157a3b05ea3109af50",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/2UNIRb5QGmYe4Gda46Xolw/6a5fb8157a3b05ea3109af50.json",
+    "created_at": "2026-07-21 18:19:01 UTC",
+    "processed_at": "2026-07-21 18:19:01 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0FVZJ1S1Z/?",
+    "raw_html_file": "https://serpapi.com/searches/2UNIRb5QGmYe4Gda46Xolw/6a5fb8157a3b05ea3109af50.html",
+    "total_time_taken": 7.52
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0FVZJ1S1Z",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0FVZJ1S1Z",
+    "title": "Wondercide - Multi-Surface Disinfectant Spray - 32 fl oz | Kills 99.99% Viruses & Bacteria, Fragrance Free Cleaner with Hypochlorous Acid for Home, Kitchen, Pet Areas",
+    "link": "https://www.amazon.com/Wondercide-Multi-Surface-Disinfectant-Fragrance-Hypochlorous/dp/B0FVZJ1S1Z/",
+    "link_clean": "https://www.amazon.com/dp/B0FVZJ1S1Z/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FVZJ1S1Z&device=desktop&engine=amazon_product",
+    "variants": [
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0FVZJ1S1Z",
+            "name": "32 Fl Oz (Pack of 1)",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FVZJ1S1Z&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0FYHHCKP9",
+            "name": "32 Fl Oz (Pack of 2)",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FYHHCKP9&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the Wondercide Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/61lnfenO+GL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/61lnfenO+GL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61lnfenO+GL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61dStWRXg3L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61ojVFjh8IL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71A2dpz5x+L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71XY6TluNQL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61zBv6JaKXL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/715VoFQ2NRL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61DVTsOp1IL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71P9zsJr6XL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.7,
+    "reviews": 42,
+    "bought_last_month": "400+ bought in past month",
+    "discount": "-5%",
+    "price": "$24.99",
+    "extracted_price": 24.99,
+    "price_unit": "$0.78 / fluid ounce",
+    "extracted_price_unit": 0.78,
+    "snap_ebt_eligible": true,
+    "prime": true,
+    "delivery": [
+      "FREE delivery Sunday, July 26 on orders shipped by Amazon over $35"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "buy_new": {
+      "caption": "One-time purchase",
+      "price": "$24.99",
+      "extracted_price": 24.99,
+      "price_unit": "$0.78 / fluid ounce",
+      "extracted_price_unit": 0.78,
+      "delivery": [
+        "FREE delivery Sunday, July 26 on orders shipped by Amazon over $35"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "Wondercide",
+          "details": {
+            "heading": "Sold by",
+            "content": "Wondercide"
+          },
+          "link": {
+            "text": "Wondercide",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A30UDMISXUF6FA&asin=B0FVZJ1S1Z&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    },
+    "subscribe_and_save": {
+      "caption": "Subscribe & Save",
+      "price": "$23.74",
+      "extracted_price": 23.74,
+      "price_unit": "$0.74 / fluid ounce",
+      "extracted_price_unit": 0.74,
+      "delivery": [
+        "FREE delivery Sunday, July 26 on orders shipped by Amazon over $35"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "Wondercide",
+          "details": {
+            "heading": "Sold by",
+            "content": "Wondercide"
+          },
+          "link": {
+            "text": "Wondercide",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A30UDMISXUF6FA&asin=B0FVZJ1S1Z&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "subscription": "No fees. Skip or cancel anytime."
+      }
+    }
+  },
+  "about_item": [
+    "POWERFUL SANITIZING PERFORMANCE: Wondercide’s Multi-Surface Disinfectant kills 99.99% of bacteria, viruses and fungi, including E. coli, Salmonella, Staph, Klebsiella pneumoniae, Listeria, MRSA, SARS-CoV-2 and Trichophyton interdigitale. This disinfecting spray tackles everyday household germs while killing odors at the source.",
+    "HEALTHIER WAY TO CLEAN WITH GENTLE AND SIMPLE INGREDIENTS: Made from salt, water, and electricity, this innovative formula breaks down into a saline solution after use - no harsh chemical residues, fumes, or overpowering odors, making it ideal for everyday cleaning.",
+    "SANITIZES FOOD-CONTACT SURFACES - NO RINSING REQUIRED: This sanitizer spray sanitizes food contact surfaces without rinsing, making it gentle enough to use on any washable hard, non-porous surface including kitchen counters, appliances, sinks, highchairs, utensils, pet bowls and feeding dishes, dog or cat chew toys, and high-touch areas where cleanliness matters most.",
+    "MULTI-SURFACE AND HOUSEHOLD VERSATILITY: Perfect for kitchens, bathrooms, showers, toilet seats, litter boxes, kennels, indoor playgrounds, and pet areas. This rinse free disinfectant spray can be used on glass, stainless steel, glazed ceramic tile, glazed porcelain, sealed granite or marble, vinyl tile, plastic laminate, sealed fiberglass, chrome, and finished wood. Will not whiten or bleach surfaces or clothes.",
+    "WORRY-FREE CONVENIENCE: This ready-to-use antibacterial spray requires no gloves or special equipment. Simply spray, let air dry, and relax - that’s it! No dyes, no fragrances, no harsh fumes to irritate pet noses, and no worries about your pet licking after cleaning. Disinfect fearlessly with a powerful cleaning essential for busy households to support easy, daily germ control, when used as directed."
+  ],
+  "bought_together": [
+    {
+      "position": 1,
+      "title": "Wondercide - Multi-Surface Disinfectant Spray - 32 fl oz | Kills 99.99% Viruses & Bacteria, Fragrance Free Cleaner with Hypochlorous Acid for Home, Kitchen, Pet Areas",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/61lnfenO+GL._AC_UL116_SR116,116_.jpg",
+      "price": "$24.99",
+      "extracted_price": 24.99,
+      "price_unit": "$0.78/fluid ounce",
+      "extracted_price_unit": 0.78,
+      "delivery": [
+        "Get it as soon as Sunday, Jul 26"
+      ],
+      "stock": "In Stock"
+    },
+    {
+      "position": 2,
+      "title": "Wondercide - Outdoor Pest Control Spray with Natural Essential Oils - Mosquito, Ant, Flea, Tick, Insect Repellent, Treatment, Killer - Safe Around Pets Kids 32 oz",
+      "link": "https://www.amazon.com/Wondercide-Ready-Natural-Outdoor-Control/dp/B074HZHPD9/ref=pd_bxgy_thbs_d_sccl_1/133-3334188-2122169?pd_rd_w=VwgWt&content-id=amzn1.sym.dcf559c6-d374-405e-a13e-133e852d81e1&pf_rd_p=dcf559c6-d374-405e-a13e-133e852d81e1&pf_rd_r=2JM59MHCXMQDTV0QSJAB&pd_rd_wg=GtjVB&pd_rd_r=5d888317-db8d-4e10-8ca2-c0e0ce2cca4f&pd_rd_i=B074HZHPD9&psc=1",
+      "asin": "B074HZHPD9",
+      "link_clean": "https://www.amazon.com/Wondercide-Ready-Natural-Outdoor-Control/dp/B074HZHPD9/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B074HZHPD9&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/7195CKaq33L._AC_UL116_SR116,116_.jpg",
+      "price": "$37.99",
+      "extracted_price": 37.99,
+      "price_unit": "$1.19/fluid ounce",
+      "extracted_price_unit": 1.19,
+      "delivery": [
+        "Get it as soon as Sunday, Jul 26"
+      ],
+      "stock": "In Stock"
+    },
+    {
+      "position": 3,
+      "title": "Wondercide - Flea, Tick & Mosquito Spray for Pets and Home with Natural Essential Oils - Killer, Control, Prevention, Treatment - Lemongrass 16 oz",
+      "link": "https://www.amazon.com/Wondercide-Flea-Mosquito-Control-Spray/dp/B01M8GFPXG/ref=pd_bxgy_thbs_d_sccl_2/133-3334188-2122169?pd_rd_w=VwgWt&content-id=amzn1.sym.dcf559c6-d374-405e-a13e-133e852d81e1&pf_rd_p=dcf559c6-d374-405e-a13e-133e852d81e1&pf_rd_r=2JM59MHCXMQDTV0QSJAB&pd_rd_wg=GtjVB&pd_rd_r=5d888317-db8d-4e10-8ca2-c0e0ce2cca4f&pd_rd_i=B01M8GFPXG&psc=1",
+      "asin": "B01M8GFPXG",
+      "link_clean": "https://www.amazon.com/Wondercide-Flea-Mosquito-Control-Spray/dp/B01M8GFPXG/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B01M8GFPXG&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/61bQPfAamAL._AC_UL116_SR116,116_.jpg",
+      "price": "$26.99",
+      "extracted_price": 26.99,
+      "price_unit": "$1.69/fluid ounce",
+      "extracted_price_unit": 1.69,
+      "delivery": [
+        "Get it as soon as Sunday, Jul 26"
+      ],
+      "stock": "In Stock"
+    }
+  ],
+  "videos": [
+    {
+      "position": 1,
+      "title": "Wondercide Disinfectant Spray for Home",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/a9119ee2-d086-4aba-97f7-aa2cecde34bc/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/71C2kxSBbLL.jpg",
+      "duration": "0:27",
+      "vendor": "Lily",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/81tko4n3NHL._CR0,0,1144,1144_._FMjpg_._SL34_.jpg",
+      "date": "May 28, 2026"
+    },
+    {
+      "position": 2,
+      "title": "Why I love this clean disinfectant for my toddler home",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/15f1754d-26fe-4979-bdb2-ea5a9d3e0cbd/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/A1jxo8iGvPL.png",
+      "duration": "1:16",
+      "vendor": "Marissa Wanders",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/C1Or-Vc3TWL._CR11,209,1716,1715_._FMjpg_._SL34_.jpg",
+      "date": "May 10, 2026"
+    },
+    {
+      "position": 3,
+      "title": "The cleanest surfaces with NO residual smell or feel!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/f0aac59c-2237-4494-8f8b-4295b5135cce/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/51JLO70zzmL.jpg",
+      "duration": "1:59",
+      "vendor": "Kat Boerner",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/61kRedjUGiL._CR0,0,711,711_._FMjpg_._SL34_.jpg",
+      "date": "Jun 16, 2026"
+    },
+    {
+      "position": 4,
+      "title": "What I Think About This Multi Surface Disinfectant Spray!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/baf5c670-537c-4183-b060-1a99bc4f48c0/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/A18ao9JfRwL.png",
+      "duration": "1:05",
+      "vendor": "The J Family Finds",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/51xoTCWVjaL._CR0,0,1024,1024_._FMjpg_._SL34_.jpg",
+      "date": "May 13, 2026"
+    },
+    {
+      "position": 5,
+      "title": "Is this overhyped?",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/601bf107-3695-46ba-8cb3-666726cb5a12/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/51-OJscPgGL.jpg",
+      "duration": "1:01",
+      "vendor": "Rachel Delao",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/B1zE+U+k64L._CR0,0,3024,3024_._FMjpg_._SL34_.jpg",
+      "date": "Jun 27, 2026"
+    },
+    {
+      "position": 6,
+      "title": "Safe and effective home disinfectant spray",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/e6f0dffa-92f2-4995-90e0-63d6d1e860cf/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/51PgoALfhXL.jpg",
+      "duration": "2:44",
+      "vendor": "Steph recommened",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/A1sbeSIZglL._CR0,0,3532,3532_._FMjpg_._SL34_.jpg",
+      "date": "Jul 1, 2026"
+    },
+    {
+      "position": 7,
+      "title": "Easy Spray and Go, Unboxing and Use Demo, 2 Spray Settings",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/e170bb81-f541-4f41-bf1c-e4f5fe2dde98/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/81JDvdYvmWL.jpg",
+      "duration": "0:26",
+      "vendor": "Classy Cheapskate",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/613-DTjaWiL._CR0,0,637,637_._FMjpg_._SL34_.jpg",
+      "date": "Jul 2, 2026"
+    },
+    {
+      "position": 8,
+      "title": "Pet Safe and Kid Friendly Multi-Surface Disinfectant Spray",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/ac11d098-14d5-4307-9b15-8c241282cb3c/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/A1hTN7jR90L.jpg",
+      "duration": "2:27",
+      "vendor": "Rachel Storm",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/A1It3uOaOcL._CR0,0,2544,2544_._FMjpg_._SL34_.jpg",
+      "date": "May 11, 2026"
+    },
+    {
+      "position": 9,
+      "title": "REVIEW: Wondercide Multi Surface Disinfectant",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/6d26e071-4aae-42d0-802c-1733dace00e5/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61CjwNP3xYL.jpg",
+      "duration": "1:32",
+      "vendor": "Dawn",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/71JvwQrpMTL._CR0,0,1213,1213_._FMjpg_._SL34_.jpg",
+      "date": "Jun 14, 2026"
+    },
+    {
+      "position": 10,
+      "title": "Powerful fragrance-free disinfectant spray",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/f2c34a68-16aa-4fbd-a79b-e4ac0fb9a5ed/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/71wS32a-n+L.jpg",
+      "duration": "0:35",
+      "vendor": "Taylor",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/B1RCzZNJkHL._CR0,0,3024,3024_._FMjpg_._SL34_.jpg",
+      "date": "May 26, 2026"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1
+    },
+    {
+      "position": 2,
+      "title": "Wondercide Multi-Surface Disinfectant",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/180d8ca9-4f87-4946-aba9-2c62dfa55dc7.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 3,
+      "title": "A healthier way to wipe up!",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/884eafa6-4f51-404c-938f-3b397257a423.__CR0,0,1464,600_PT0_SX1464_V1___.png"
+    },
+    {
+      "position": 4
+    },
+    {
+      "position": 5
+    }
+  ],
+  "product_details": {
+    "item_form": "Spray",
+    "scent": "Unscented",
+    "specific_uses_for_product": "All Purpose, Countertop",
+    "surface_recommendation": "Non-Porous Surfaces",
+    "special_features": "Antibacterial, Multi Purpose",
+    "contains_liquid_contents": "Yes",
+    "item_volume": "32 Fluid Ounces",
+    "unit_count": "32.0 Fluid Ounces",
+    "number_of_items": "1",
+    "size": "32 Fl Oz (Pack of 1)",
+    "brand_name": "Wondercide",
+    "manufacturer": "Wondercide",
+    "upc": "810075890341",
+    "part_number": "MSD032",
+    "best_sellers_rank": [
+      {
+        "text": "#48,658 in Health & Household (See Top 100 in Health & Household)",
+        "extracted_rank": 48658,
+        "link": "https://www.amazon.com/gp/bestsellers/hpc/ref=pd_zg_ts_hpc",
+        "link_text": "See Top 100 in Health & Household"
+      },
+      {
+        "text": "#56 in Disinfectant Sprays & Liquids",
+        "extracted_rank": 56,
+        "link": "https://www.amazon.com/gp/bestsellers/hpc/21579649011/ref=pd_zg_hrsr_hpc",
+        "link_text": "Disinfectant Sprays & Liquids"
+      }
+    ],
+    "asin": "B0FVZJ1S1Z",
+    "rating": 4.7,
+    "reviews": 42,
+    "material_features": "Fragrance Free",
+    "product_dimensions": "7 x 2.88 x 9 inches; 2.29 Pounds",
+    "date_first_available": "October 13, 2025"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B09MTZC1PW",
+      "title": "Earth Power Hypochlorous Acid 500 PPM Multipurpose Cleaner – Natural & Non-Toxic – Tile, Refrigerator, Shower, Countertop & Floor Cleaner – Family, Food & Pet Safe Cleaning Supplies – 32 oz",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JDQ6PLBo95o6eQVFxSyIR-8AAAGfhecqTwEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICCPSRBk/clv1c_ek-wxYHXKsTWDdVIKi5gyw8I6ZITF_AcLnOCI5jUjclg0earyTT3-xVIXU31ocetNpW94ifoTQexL12NjfY2ngzvxLn19rIiHGkNjQpAjWwuhhNBMpIL5_SK4_Z59gKQl93im_h9nBtwxat708OprvenpMcsFlbntuSshyfKzAMVVTPNv_6Hz1iyv9QYRuLKa5j5jBnbe2_YtaR8fsjM6h7ITK8VTIZ-7JInCpGJwX5Ai0hUPOX0iCt_xXINBV-ZHsxI8-1qel60kEndNBGgoQelpbo5wXDNBUQ05_QNyu4wcN79WeUBfUMuk_3hAlQ5bDYllqRCyDj43tsGwB-Tpt0K1DkxYolv-4Tiwe6LQjQzwQtBPthSfemvS1WNL-e1OuJ3KTuKER3J0UaTQw27pypyg72-IVtA733-X3iqYTkrQSgPzuoFSkiiAApFsVraC6qVmhq8pPfYjz0FXZ7fuKS_h5o6h7qtFCJO7fXDr9ON5nj0PtXlO9F0fd1VPLvp4SiLBIT-N_36w8EgemaiUPSuyUAYZhIk1fdO6Nf8SBG7Bb3-ydphYbEjH57KI2EctkFuEFFDVtX54MXJ3Z6F5Kh-72OTxF_f0niSNXcktzvxHE7_-0qWjHcbvdHacaJKIGHYQbTSKnQ7ah0Ttnst_PB6uSCiZRr9Ml9jUjCyIPoUv7AQIXb4keBVTHl0QpMoWOegXnTAKc8XUC1EDzJfGjgg2GVHVfnHMYkxW3XD1kSp4V_jRvPpel8vV8uNCdenZhMl4PvSYg_HO-ySw54OhqDt2pD5W_v4o3E7QWdm03rjydXXt2LOEQsw2xHDP20dTU3_7u4C9Y4vCgFJZFRDFOjnI_anFUDOlAKBuJjri7t4Lps2g8IFG62viNfmcNnYUO7Gr11d-YYhgvRiX8N2gNzGHiPNAaWgvahbXuPQxqt8330UzQE0i-rw9v4TsD_RmmtNYM3NkX1_5Uf5mU83NoUGdDBsce6J1H8Zxrhs-i7GsZ5X1ukbOZOL-e5M8224bp1aSr-9j3dnCy3tWJ9y7gaQyvCaYOw7Ob-ndL_nOXRKqr6I-aSxE5svdlYX_aOvKC2Uk_479Et7EtjP2rXhDoIdMHp0XusFp-SU3Qfjg07Oywz4o6G7d2c7YkMJSbeb0JVanu75AzmPHo742gFpFgr5P59MBR-qgjD2DqBI1IDTHwm0Sj9P6RddKlFkkTQUJBppG2_X7YUFSpG2raBqd1qgB491ugPuy8We70jBmbBpSzGscSZeqPOj56L7TMsrRZ6VOiUH4ZdZOkTS5GnZXJxwiBVMifG-uDQV3tUaNgxh2-YqJz6Shu4Uxx6I4yxavwGqJber7W0vA3S4Qul-KIbzLPKFPl6K08tx5OQehmBHj8QrycSfvg5a4P1rEJ8N865oPfxdvb_tnr-qYx4q__wBTBho_dk3_pyxaCdMXuT9uMvC-d37qNqDNwcwmBmyzbCPC487xntA-ZT6RxXSPmARP-UnUYKdHX-oqne-aSKQ20jyrVCgRUHnNzZInVVkneBVSTD9MaJn1CGLSHz9l6NkGNL5ixWQpQvJ7O-AVbJlx7XESqKZFxkUMqVJLA/https://www.amazon.com/dp/B09MTZC1PW/?_encoding=UTF8&pd_rd_i=B09MTZC1PW&pd_rd_i=B09MTZC1PW&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=IzlL8&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=2JM59MHCXMQDTV0QSJAB&pd_rd_wg=GtjVB&pd_rd_r=5d888317-db8d-4e10-8ca2-c0e0ce2cca4f",
+      "link_clean": "https://www.amazon.com/dp/B09MTZC1PW/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09MTZC1PW&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41-pRZZzU9L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/074ea30d-13bf-4a65-83a2-72aa6641afb7.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/074ea30d-13bf-4a65-83a2-72aa6641afb7.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.8,
+      "reviews": 118,
+      "price": "$19.99",
+      "extracted_price": 19.99,
+      "old_price": "$21.99",
+      "extracted_old_price": 21.99
+    },
+    {
+      "position": 2,
+      "asin": "B0BL8HD6R3",
+      "title": "Protexus Handheld Electrostatic Sprayer, Disinfectants and Sanitizers, Cordless Electric Spray Gun, Fogger Machine, 34oz Removable Tank, 4Hr Battery Runtime, 60-Micron Nozzle, Covers 2,800Sq Ft",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JG9eobQa86nHgL7wQu_neVsAAAGfhecqUAEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICCelkMS/clv1c_ek-YBfHXLcTWXmxhtwlAiFwLMKlTuQp9ZSQZg2ej3aNs_DGdDTrNObxwYxTJmmZ2c9BoRX_gDxCLSfiI6zbOYH-KB2vec7i6ypE3p8Px_2guqJWLiAZgoHsI0vl3sWhFa0fZnIheoCAK0Spxd2hUGrMLgNydmgVqIOWzTzKe5qKvOSmqdUaEnTsU1sPcx4pqhq6wfxzJHgbe4TzJH8gDxg8Cvd-7iAJ2h6nMyhoXzTygjHDcEl__5y0SOd8it9V4mJ5uYfJxsymQyvPDbfDMmsQtjKmTgj9zm6wF5yR6Gw-4eU4TB3ZZMlRLACHnFlO0ws0wHdm3AjvDZWjCvTaP2SMLhR0s2opmhXUi4E0nvol69FmKow9DjDFV-qbhQ9L6dbYRT6YN-bxFJ00vvnevM0U8CwcmTubVu76rXonfYleB6SeNJ1t9ZuFhvmu8xVnQVIq5Olg_BmeBxQkypD3y-QYS0Vf6JDa55zNelWFvLWgWoYGeG9-Fsanl5fHzcgNPIMGnHg8Mmhber0E-9ED4KSXXn4GbmF2kbr_0AKlao9caXsfZFEiufT6DtRIKgLNXeIsPoeOCKh1w56JmTi0d2ZRlTm-9vU8sYxJF_urXMQlAzpLRjWlezPL52fAxJQpyUS_lIWZgy-zebZAgHXcWYJvqo-laFovHkDZRq08cEmgJmoqqjStg3SaV2e08bIK8_YsProb7ORdrhiUEX_-W-tDlPFQlj9YC4oShWn85T3jLbk3ooYszpDXbQJtXXzwi1NqkB1-P2oMHh-tCevh77ryt2lRi9x9fD8DD2WIPs8LcZ-oQvfMoaoXuHMIUUsst2T1m-GqkXl3So-d0hZnIMY81fAw3zwS_k5dBOKHAejg5jVlSAh3cI3Q2ohg2pjlBlne1_7ltYUiSB19BGL81fPnsiJKy87c-9xe0uSIR_Kiv__k7rXBfCDcEG0InXTfrMsHcQi0ZcVbYkl_aibBaCLcDTqVQp2ye8iCkA_pioYW8bFwBgXeekbRrLG8ZtYgHBAL-g0suTekgjJcoDx4EPLNH5tj4gW2SIjmq0gIApYy7NmsYUQkFolVqGqTgj7VgGKYiAAzz2tK8Oj9ye3lYz_dreQKHkd1JzM5zpcd30tKuBQm2o595q_eDqc68VIn8cWs33nhOH3iDBbHD3yuVt-nYxZ39Q9OFVi8IY3fBFpSBOt8OBDAtNLWCV-LcmBFtv5t-a1hSEEUlcfKjeWAoP43dR7fWfwnXkLL5tvD6eCHF8xCxrFgQUSkGKgOYFtZT26TSoweJjiR7rH_67xnBdTvLdcuf685XOkEi0FPf4fVkAvClsGCXMMGGIa0GAOjWDUf7j8Nkmu2Eaaw_opgsFa1x58ltRc_4fl19VUw5FMXRfOcx-cmkeJIBOugO78jwJSXcdGTt3xjfr1zabUmM4b5u8tpa4Po3I3pakgh1SbqBcnVco1MlFtnylO0DjdKmvaO_guW3IB9O7ufooA14zUZ5QeC3OFumoSMfcWVy8ejTDdsf4bpVEU7h5JqgCQxBacnFE7zF0nTirtkI8eywPhR8VC8LBt6O1ZC8FQ/https://www.amazon.com/dp/B0BL8HD6R3/?_encoding=UTF8&pd_rd_i=B0BL8HD6R3&pd_rd_i=B0BL8HD6R3&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=IzlL8&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=2JM59MHCXMQDTV0QSJAB&pd_rd_wg=GtjVB&pd_rd_r=5d888317-db8d-4e10-8ca2-c0e0ce2cca4f",
+      "link_clean": "https://www.amazon.com/dp/B0BL8HD6R3/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0BL8HD6R3&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/31BSXNMI2iL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/0f6c345b-b84e-45c3-aa63-8a54e01036ba.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/0f6c345b-b84e-45c3-aa63-8a54e01036ba.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 3.9,
+      "reviews": 20,
+      "price": "$139.00",
+      "extracted_price": 139
+    },
+    {
+      "position": 3,
+      "asin": "B0DLXYZM42",
+      "title": "CleanBoss Botanical Disinfectant - 24 oz (Pack of 2) - Multi-Surface Cleaner - Kills 99.9% of Germs + Cold & Flu Viruses - Fresh Thyme Scent - No Rinse on Food Contact Surfaces - Pet Friendly",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JNHvG3cTrajNaay9DjLzy88AAAGfhecqUQEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICCo1zgx/clv1c_ek-wBXfWLcTSXk6hthlGgETDcGlTsWp9pVmCWY3rjcmUQxGquQKB9nXwTeXAQuqyVBtaBe9Kg5ZfHsIqV_3uQvz8AGl3tjuCz8XEqn_ucGZ0I0HuDEL7lQq5ZPh8fqKRNNoJvZu0Mhw_shirTibPzXTftH2ck0eaEn2431erTYwrQVu8Yctkf--apGSkRkoq26q6bl8KmQbJw9Al--DQkvARnwh-RAhwd4ZwItOvds_e9ESKgjRT6M5oil7XwtVftFgqBAD6ixFfZno1HdNS8J66TVavMbYOykTREsq4O0PPuIsoJX_fZip6dExhqSrEABZiXqhuKv3AsWqA183mJyZP-_QfZobq122WClh0bO4MUX5xglqqq9GpvWfdLluO8PAJybQt8LqGJbC4iVcoIr_rUGX9jBa_GiQSpNkcIvpeh9FbZev3bn-TafyveI8Rv51fEKziCrF_nKA6bOvjiJjs68672tfze_kqdaqhDXASYYsfG9tllqglcUtMbp1HUVdSEjw_BB2j3h-A6OIL7-r4X48amF2cSaraLK-leNfMAqomOswKw_ZyC9ovy1RprhUbzlG2EO7Wxgg_ofTHdLbACBfC2-KrLkwVSZyBY23maejYmclYElktfLf5eUBWUEpsxWyEovpNbuHCKXlFh9wWYDzuXstPEVr57VchEzAkJLKimE6ts3u1C5t6F1AMqOvXNO-yos9Khrro2OueusBVwMLX5Jm7mi6qhpFUCkUr8hBdC25Ud1Li_-5wz5Jm9qkFWgBQBeFpprChQUZbPm0xpN8zoQdtR5EnauIbeyvH4ze_azasT0gLo4zs6ihpIGdmwMjrHyOtsDssZJSVS-UrL7o0JAQYAKUnEyYjWnc_aX3dCFL__8XE1HPEh_a14nQRe6c5t3qjMWZpTFl1jTU9bV8jLOeT5JF_KDEnQYA9CnIYzsVeG3_0-xkpyoPoKthX1bow2seZ-kl0o410MVsKn4PIaMGiuqSkxb5H5Z5BEiAN7g-pW2yh3SzEifKW7rnzt0pGK2-f-h-gTNPzX9Vs5qbgziekaaKESWmv2pju7dfRI_F8U7cccnC9KWmm4x8JpOz74TzdjCaUpgawnq8M4m5gt9a2N5XrLtw9Ab-3NkiG-H5cgAdLO_wtxEpEoNKPzUHhMXVLPDxudPX3VkHSd-LIxLJU15FYByTxiBYO9cL8GXVTaNYjAgYKVp53qNZiDwCn-bovHYI23iwvzto_7EotzA0XSVeTNMGoRhszphRd2n3VtEY0jszFV2i4etzpnCpqqdCLb_FbA_zUS666ZAT3GwkIrAQ47tAbote52_qeJeekJigz7aNUk3T2YflYKwyYUlbfIpV4P3KdX2UO-TPNks6qdUaLsPgtUJ4uwHIGewGX5i5LsMe-h0v4j00d9yzr-bnOdI6RCbIGUAIMcG5nIr-KxQtZ_zBGVZtkkfNXz-m50Dvbi954Wh5L_z4RtkNnfnuBaesiZj97nMQ_Jrvg0lLRjp7lNJx9WLvlZmpSlf1ut5yIyieDrHm1-yGCug0H_Auz3lNfI202NXab/https://www.amazon.com/dp/B0DLXYZM42/?_encoding=UTF8&pd_rd_i=B0DLXYZM42&pd_rd_i=B0DLXYZM42&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=IzlL8&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=2JM59MHCXMQDTV0QSJAB&pd_rd_wg=GtjVB&pd_rd_r=5d888317-db8d-4e10-8ca2-c0e0ce2cca4f",
+      "link_clean": "https://www.amazon.com/dp/B0DLXYZM42/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DLXYZM42&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41Ecrd72yxL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/04fb531d-7404-422f-9e12-ea8edc756260.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/04fb531d-7404-422f-9e12-ea8edc756260.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.2,
+      "reviews": 853,
+      "price": "$23.99",
+      "extracted_price": 23.99,
+      "old_price": "$25.99",
+      "extracted_old_price": 25.99
+    },
+    {
+      "position": 4,
+      "asin": "B00HV2PVRM",
+      "title": "Amaziing Solutions Pet Stain and Odor Remover - Enzyme Cleaner, Pet Urine Odor Eliminator Spray - Floor & Carpet Cleaner Spray, Pet Deodorizers For Home, Fabric Spray W/Fresh, Clean Scent, 32oz Spray",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JH7v30bqZGCmjYw-1mF79YMAAAGfhecqUwEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICAEC-AR/clv1c_ek-YBfHXLcTWXlRht_WGI4-UbjTDGuQVkiQhQWej3aNswuj7kVXIwGHQO2cLGR5JjAUdSJzwjKfC5lDtnxERVDb4SMHcDBj6azvuJXD8cMRVDyG5riLXCtpmcpl1qFw9T2C078A9Sf33omJ-CznQmfOfAN6TsiUqkgJyxTa3lLI_CTp8DLHBrEJ7UwW7Wz2rTjmMvWgDrydoFmSwMEbUWE9Qt10NDsQ8s1YqbRjV7TygjPDvRxv94CwSNd8ih9V4m-bMS7E1513byrc6SopzKNIhMHtshz5z24wF5izaMBQ9SA0TzLCXXio4nGWUKZs-fbF9ESmuhzvDaaqGKFG6AegLjZ0s3orW5ytlJQCICDfdGhBG2O6kn3LxIu4KI_2DqjhQXH1DhZqAisRoNrbrkf-iqZPiVchY55t0v1u3pR-C0Du1CgsDRPNKDs0mr6jpnnZHfFxxvEcBxtPSjmy9kkK27c2vXqvTcH0RU6RqIHIRoDFm3rq6santFJLzdJJNIUGXFl0_hA3qo0Im8kBwgkmlnIEamJ-cbruY9g8SQY6Qm0MC3HnlMYcirfSLgL3blJ7k6yXBmv-h5F4eUwq_WeB92qVal4sQnOAR7whCb33ytcvLy9UudqaHKghlh-_CtxyxJ82a-dWnqBAMsElNBgXHERUAn0PFNpi6l83VFl0dGC8EDfy49wZWEJUVAbFhLHFh0IMPwJN0M0hMvZHqkO0orp3_FoClVs-A45EZX-k9nZOdxIgUzb4NLSi2M_pQstOxWiNB5cIPvzyVKLiyG8HRfa8EJcMC9lBKo_6xuRsDLDxHNmz8LsgaQl4qWvsE_vPscNHgebA6T0saGsFFqj8EUtYu4uOTNFdvrMTdAptyouwP3QhtNii6nFUKgJzVDladLvET4rmpRM5WHP_wxq3_1UGzXJjkrUeumzYr_ijziv-6TBb9AzxmmN_GEo_kFfNiN9luPAFdZuEqbeaSKA9BRywz-HpQsD_Estomod5yoS2Oq6cGEqDSMFMhnG06GzgJWUDx1FjZsQMxvuPc4jy52OvYtu1g4FGWmN7il4P2gmLGrwfQZZrqxiHC4N9a1UrbHQhyQ2oyt9xmPiN3yrl52seaEFzkAIybs2TgKhA6yFVtR18cqUb0UzT9GuqJ0wT-3KzKQibPr-hBGvoH8NGUmZEbJKsDMHq08EmZMapbZWo_Pi6KtmDw5Opi3zUkHL1jtUUS8HETDd7Z9ehTo-7GWj5DkfVOVW8gGhmBeV8R5BAQTYUPnhsI3yrwkdomB099DP9ieFJNmuuyFIr3A3m90tFQ8smV8C7idW40Y0bPmwjli1oDgw0MuYAjehiHcqKuby3jjR_q3XrVS6Co3GFP81r2W_kNwJWWcsmsBH6rcidW3cO7H2qWMSMhVcb4nCj-bE6vHep7c6jjRWq_P3yohSxjjbeLG5C9514sZRgh6PhQTaTxg26WGRvgLIelAm6JOpPyrywIRRASgHQSHh5qj9ExxNez_gsyVUjUTI8HXMWioqTaS1jctVriQaxmkGrh7OTwjxk/https://www.amazon.com/dp/B00HV2PVRM/?_encoding=UTF8&pd_rd_i=B00HV2PVRM&pd_rd_i=B00HV2PVRM&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=IzlL8&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=2JM59MHCXMQDTV0QSJAB&pd_rd_wg=GtjVB&pd_rd_r=5d888317-db8d-4e10-8ca2-c0e0ce2cca4f",
+      "link_clean": "https://www.amazon.com/dp/B00HV2PVRM/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B00HV2PVRM&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/410EbjNwsVL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/47964b78-bc34-432d-8941-f42f13366326.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://d1f0esyb34c1g2.cloudfront.net/transcode/AssetLibrary/AssetLibrary/amzn1.assetlibrary.asset1.3c2aa1a765ea2f2d2e9edaf55daa173f:version_v1/6338f7d5-4e31-4d39-bb2c-51812841222f/1671643349201_THUMBNAIL-360P-FRAME-3-CAPTURE-2.0000001.jpg"
+      },
+      "rating": 4.3,
+      "reviews": 1171,
+      "price": "$19.97",
+      "extracted_price": 19.97
+    },
+    {
+      "position": 5,
+      "asin": "B09WJLKZP1",
+      "title": "Wondercide - Fruit Fly Traps for Indoors - Fruit Fly Killer - Pet and People Safe - Made in USA & Plant Based - 5.4 oz - 2 Pack",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JGKrUfBV5tLTtNyXL_3cZU8AAAGfhecqVAEAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDIgICBHFji5/clv1c_ek-YBXfWasTaRc6yUFnGsEXD8GAjUW7FDPwbrm-O_ccqfW8mvLNvwItAxRn5x02IPhiDeXsSEMhQOzrmL5MAgLvzfMW-PW1zYTpqYWv5wkpXDjCjC3B5dowS7-BiRpLyV1Fr3cQfhxnypCxl1SbY1v8foNF8F1H8-gTopydLzAUWRVOtfxqNhPRy0HNdhwwy7AcTrVPlFwzqyfyN3phBcgfTj318wY7mnEqDPHSblortmIeyrm4USE5vCsbw8xrrB8XicTEVx13ZSpcmSst7ILIfIHxth76Qm6zh5yTKuO89wPpjFUhfstQSdmK2nUC1xszWBkm-4zvDPR-6UbPXDjA3Y9HU6IHrw6y2Hl5s8pi6t7uk7TxPTvg7t0zMMF6gVKy9lnO7U50_Z9J1AOxUAsQjyBI2joZ54auswOfqb4ju11CBeA4rQo5Wjs2k7gAQz1Pw8n2E6scB1g9JYcY6aylrTlyM0U9RCV8IpiK2tlXaZr4diErlfSlAR4aYY7oL1rwxOE-csmXXXeIyYrMwpnaCBDoPaqcwOqc1rJmOEsblfkE6EE8UywVA0LX58qC2vptLTqOqVD9dnU4W58jGsiXev2ylfU4kARLJG-rXLetAzdF6qF9ohb8tVwkKDVapo5YupHMLYmxWfw7kRPfrY0YUrq76vQ8fiQDKLMImmseVx3szQ8BX_wT-75Of5oAL2ftXjNjaok9KgsRu2Gvwtsz1PJQVj7Ua4pRBZoESC0-H5WFtKowEuJojPvJecPgRplOJXiNJhMLTPlfEYQHRvJ-q4bIxazNsTCYSK538umZcT19HZvQtrk9GGAJ54sEm4yiN9eaZRXeRCbPkSA67TQ6V8lXR6oX5Vz7qfModLtISHh632F3gqdFa1NRrJaJy-gDjCE5GZ8KoD9pCjxEu8pXeUvnHEnI8pofT0oeGreFS3Ui86eoqoeZQod23Z6i_mjNXNcA9TZgbJ0tlb0WJ18WAWtICV7qlizeZSWA51t_Fo4UsEEldtVzbMzuO4SsdaYwOhC19GxIywh-x0-kggVqg3DK7iOkrZpkgLLzMKUtCsekUE9jKm9b_m2GSYtclAITFWZ4iJgmHtwIADpO-OBd39_7fHOjsab5_4M4TXK26UoKxEETxS5ypR0OehXDNxE0P7ERurZ3_HXQRd9nT24A4soicSPhBVxF1PQmhzV47s37Vgepozg-ArBDv3UM9c4vbQHzGQ_0RadYg_OgEqh4TGQXUBZklY4_CcTrONyY4Mfy-ywJ5T1TYrWqq67KBfETcx-KDbTlhWG4SMmqCaCEcaWRZd7_otwBxDEAv7qJjm1ZUSJeOP_frCPBmyyc15sYrN_9V5GRTt_eJWnHC8beCThuxiELt9WQoUOovlihzcL-RObChPwHinOsp2YckUsUcg43uRgTL2sFZb4R-bFwGxpUN4E7OExiOIE8afqVcFr5jtG-iy-_jBX_4jMxdDVE1e7m66lAgSHqgsaPotwFJ5OizeHqFoiWqUEwRwLuy5nTcW0uduomt8utTTCWXHuB03wau5alxmdlKK6gNenb5FPxlCuIA6NpXmQ/https://www.amazon.com/dp/B09WJLKZP1/?_encoding=UTF8&pd_rd_i=B09WJLKZP1&pd_rd_i=B09WJLKZP1&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=IzlL8&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=2JM59MHCXMQDTV0QSJAB&pd_rd_wg=GtjVB&pd_rd_r=5d888317-db8d-4e10-8ca2-c0e0ce2cca4f",
+      "link_clean": "https://www.amazon.com/dp/B09WJLKZP1/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09WJLKZP1&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41kVX2KE57L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/eae1115b-1b28-4c52-98a5-4bb465de8228.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/eae1115b-1b28-4c52-98a5-4bb465de8228.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 3.5,
+      "reviews": 5531,
+      "price": "$21.99",
+      "extracted_price": 21.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "images": [
+        "https://m.media-amazon.com/images/I/717LameUKuL.jpg",
+        "https://m.media-amazon.com/images/I/71nv+d9y1JL.jpg",
+        "https://m.media-amazon.com/images/I/81b0hgJlsoL.jpg",
+        "https://m.media-amazon.com/images/I/71j6AU6ZJ2L.jpg",
+        "https://m.media-amazon.com/images/I/61AoOoAHMnL.jpg",
+        "https://m.media-amazon.com/images/I/51RYp2LPhhL.jpg",
+        "https://m.media-amazon.com/images/I/611bVzvbr4L.jpg",
+        "https://m.media-amazon.com/images/I/71ArG5EMzuL.jpg",
+        "https://m.media-amazon.com/images/I/71MUj1xPhKL.jpg",
+        "https://m.media-amazon.com/images/I/715DYui3LaL.jpg",
+        "https://m.media-amazon.com/images/I/61cHqVubcQL.jpg",
+        "https://m.media-amazon.com/images/I/71uBsTHyyzL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 73,
+        "4 star": 21,
+        "3 star": 6,
+        "2 star": 0,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Great Disinfectant!",
+        "text": "Great alternative to bleach!",
+        "rating": 5,
+        "date": "July 14, 2026",
+        "author": "X",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHDT5F3KHMDTZ6MRXUWX5J253QFQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "32 Fl Oz (Pack of 2)"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Better then expected",
+        "text": "Cleans well and eliminates Oder. I was pleasantly surprised for a non fragrance disinfectant spray. Will buy again.",
+        "rating": 5,
+        "date": "June 30, 2026",
+        "author": "MissMuffett",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEAET3TPA5NNTTTGK6NIA4VRZ2AQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "32 Fl Oz (Pack of 1)"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Wondercide-Safe for humans & dogs",
+        "text": "I do like how I can use on my dog bowls & sink without rinsing afterwards. I still do it for my dog bowls. You can smell a light scent of bleach, trace amount.The complaint that I have about it is the price! They should sell refills for less!",
+        "rating": 4,
+        "date": "July 8, 2026",
+        "author": "momoftwo",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHDMDQHJTH2S3QZMBXGB3FS2BW5A?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "32 Fl Oz (Pack of 1)"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Perfect cleaner for bathroom as a bleach alternative",
+        "text": "Perfect for cleaning the bathroom with no bleach.",
+        "rating": 5,
+        "date": "July 1, 2026",
+        "author": "Victoria McCart",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AH2NJ4IDRK47VZWA765ZIMLIMO7A?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "32 Fl Oz (Pack of 1)"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Awesome Product!!",
+        "text": "Awesome product!! We use it everywhere around the house. I highly recommend this product. Thanks Wondercide!! ⭐️⭐️⭐️⭐️⭐️",
+        "rating": 5,
+        "date": "February 26, 2026",
+        "author": "Amazon Customer",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGXWOQYMDNNHLTOP6RGTCN2OII6Q?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/717LameUKuL.jpg"
+        ],
+        "verified_purchase": true,
+        "product": {
+          "size": "32 Fl Oz (Pack of 1)"
+        }
+      },
+      {
+        "position": 6,
+        "title": "Smells amazing",
+        "text": "When I first got this spray, my first thought was, why so pricey? But I definitely get it now. This is a true limited ingredient disinfectant spray. 99.982% water and 0.018% hypochlorous acid. That's it. This is an extremely gentle disinfectant that doesn't require rinsing. You just have to clean first and then use this spray after.When sprayed, it doesn't have much of a scent, but if you smell the open bottle then it smells very much like a hotel pool. Which I honestly love that smell. It smells clean.I can't really speak to how effective it is because I don't take cultures from my countertops and other surfaces. But I trust that it is.The benefits of using this type of cleaner compared to other disinfectants is how much more gentle it is. It's not corrosive, safe for food surfaces and doesn't require rinsing. It is really great for daily use to wipe down surfaces around the house without leaving heavy chemical residue everywhere.I honestly like this stuff a lot. I think that I'm going to keep a bottle of it around the house from here on out because I like the thought of keeping surfaces disinfected without using harsh chemicals that require rinsing and leave residue behind.",
+        "rating": 5,
+        "date": "April 3, 2026",
+        "author": "Macy",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AE5Z3UF7O32CAZE2APV3Y6ATNYUA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/71j6AU6ZJ2L.jpg",
+          "https://m.media-amazon.com/images/I/61AoOoAHMnL.jpg",
+          "https://m.media-amazon.com/images/I/71nv+d9y1JL.jpg"
+        ],
+        "helpful_votes": "3 people found this helpful",
+        "product": {
+          "size": "32 Fl Oz (Pack of 1)"
+        }
+      },
+      {
+        "position": 7,
+        "title": "5 star assumes you know what this is - it's not a cleaner, it's a disinfectant",
+        "text": "This is not a replacement for simply green or fabuloso, this is a disinfectant, and a high maintenance one at that. This is a replacement for something like bleach, that you would use to disinfect, but safe, so think food surfaces, kids meal trays, pet food bowls AFTER you clean them.It is also a bit high maintenance, it is not a spray and wipe, it is a spray, let sit for a few minutes, then wipe.However, these complexities are only a downside if you don't know what this is and try to use it in place of whatever spray cleaner you have now. It is a very effective and safe disinfectant, with very specific usage.That said, it is a good product. I use it on pet bowls and as a final spray when my dog has an accident. I use it on plastic cutting boards as well.Smells clean, smells honestly a bit like clorox, but more mild.The reason I take a star off is both because it is a bit pricey and because Hypochlorous Acid breaks down with time. I wish the bottle had a use by date - after a certain point, it is just water, and I won't know when it is no longer effective.",
+        "rating": 4,
+        "date": "March 26, 2026",
+        "author": "Paul",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGH2LUD43VNB5YZLB7COJEEH5GQQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/81b0hgJlsoL.jpg"
+        ],
+        "helpful_votes": "7 people found this helpful",
+        "product": {
+          "size": "32 Fl Oz (Pack of 1)"
+        }
+      },
+      {
+        "position": 8,
+        "title": "Finally a cleaner I don't stress about",
+        "text": "Wondercide's disinfectant spray kinda snuck up on me. I grabbed it mostly outta curiosity since I got a dog who licks literally everything and I was nervous bout using anything harsh around him. First use was on his food bowl and some chew toys and I just... didn't stress at all. No rinsing needed, no fumes, no weird chemical smell. Just sprayed and let it air dry. That alone was worth it for me.Quality-wise this stuff holds up real good. It kills a solid list of germs including MRSA, Salmonella and even SARS-CoV-2 which was honestly more than I expected from something made outta salt water and electricity. Used it all over, kitchen counters bathroom sink, even the litter box area and it handled all of it without leaving any residue or bleaching anything out. My countertops still look fine and my fabrics haven't had any discoloring issues either.Value for money, yeah its competitive. You not paying for fancy fragrance or dye fillers, just functional clean. Design of the bottle is pretty basic nothing flashy but the spray nozzle works good and doesn't clog up. Functionality overall is where this thing really shines considering how many surfaces it covers without needing different products for each spot. Solid buy for busy households or anyone with pets kids or just general germ anxiety.",
+        "rating": 5,
+        "date": "March 23, 2026",
+        "author": "Amazon Customer",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGTGRTO3AKKBSETX26YIPWKG3KEA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/51RYp2LPhhL.jpg"
+        ],
+        "helpful_votes": "One person found this helpful",
+        "product": {
+          "size": "32 Fl Oz (Pack of 1)"
+        }
+      }
+    ]
+  }
+}
