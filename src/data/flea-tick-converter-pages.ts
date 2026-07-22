@@ -237,14 +237,14 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
     hero: {
       title: 'Best Natural Flea and Tick Products for Dogs',
       subtitle:
-        'This page is for owners who already know they want a lower-toxicity, plant-forward routine — sprays, a shampoo, collars and tags, daily chews, and ear and home cleanup. The honest trade-off is that natural options are best at prevention layers and light-load support, not at replacing heavy-duty conventional control in high-pressure regions.',
+        'These products have less toxicity than conventional flea and tick products, with an emphasis on natural ingredients and plant-based formulas.',
       disclaimer: 'As an Amazon Associate and a Chewy Affiliate, we earn from qualifying purchases.',
       primaryCta: { label: 'See Natural Sprays', href: '#sprays' },
       secondaryCta: { label: 'Read the Natural Guide', href: ROUTES.naturalFleaTickPrevention },
     },
     toc: [
       { label: 'What Natural Does Well', anchor: 'natural-fit' },
-      { label: 'Sprays', anchor: 'sprays' },
+      { label: 'Sprays & Oils', anchor: 'sprays' },
       { label: 'Shampoo', anchor: 'shampoo' },
       { label: 'Collars & Tags', anchor: 'collar' },
       { label: 'Daily Chews', anchor: 'chews' },
@@ -256,21 +256,26 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       {
         kind: 'prose',
         id: 'natural-fit',
-        heading: 'What natural prevention does best',
+        heading: 'What Natural Does Well',
         paragraphs: [
           'Natural flea and tick products make the most sense when you are trying to reduce pesticide load, your dog has lighter exposure, and you are willing to do the routine work that makes them more useful: coat checks, ear wipe-downs, bedding and pet-area cleanup, bath support, and fast reassessment when you still see pests.',
-          'They are a weaker fit for heavy infestation cleanup, dogs that spend a lot of time in tall grass or brush, and high tick-disease regions where strong conventional protection usually has the better evidence base.',
+          'Natural products may not be sufficient for heavy infestations, for dogs that spend a lot of time in tall grass or brush, or for regions with high tick-disease rates.',
         ],
       },
       {
         kind: 'product_section',
         id: 'sprays',
-        heading: 'Sprays: the most flexible natural starting point',
-        intro:
-          'Spray is the easiest natural format to understand because it matches the job: spray for contact coverage now, reapply often, and keep expectations realistic. The 32 oz Wondercide lemongrass bottle is sized to cover the dog and home areas, while Kate’s rosemary spray is a different brand and scent to compare. In mixed-pet homes, read the cat-safety language before using lemongrass.',
+        heading: 'Sprays & Oils',
+        intro: 'Sprays and oils for pets and household surfaces',
         positionOffset: 0,
-        columns: 2,
-        productIds: ['wondercide-spray-lemongrass-32oz', 'kates-rosemary-spray'],
+        columns: 3,
+        productIds: [
+          'wondercide-spray-lemongrass-32oz',
+          'kates-rosemary-spray',
+          'natures-dome-cedarwood-spray',
+          'isabellas-clearly-natural-spray',
+          'pure-natural-pet-spray',
+        ],
       },
       {
         kind: 'product_section',
@@ -278,7 +283,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Shampoo for bath-day support',
         intro:
           'Shampoo is not a prevention strategy by itself. It is a bath-day cleanup tool after exposure or during light flea pressure, and it makes coat checks and bath support easier to sustain.',
-        positionOffset: 2,
+        positionOffset: 5,
         columns: 1,
         productIds: ['wondercide-shampoo-amazon'],
         alt: true,
@@ -289,7 +294,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Collars and wearable tags for owners who prefer leave-on options',
         intro:
           'Wearable natural options are about steady prevention layering, not rescue-level control. A full collar is the simplest leave-on layer; a clip-on tag adds the same idea to a collar your dog already wears. Treat either as a convenience layer, not a substitute for evidence-heavy medication in high-exposure situations.',
-        positionOffset: 3,
+        positionOffset: 6,
         columns: 2,
         productIds: ['crobirware-natural-collar', 'trihood-flea-tick-tag'],
       },
@@ -299,7 +304,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Daily chews as a light internal layer',
         intro:
           'Oral natural chews are the weakest-evidence category on this page, so set expectations accordingly. A daily chew can be a light internal layer for owners who already dose easily, but it is a supplement alongside real prevention, not a stand-in for it.',
-        positionOffset: 5,
+        positionOffset: 8,
         columns: 1,
         productIds: ['lkdhfjc-flea-tick-chews'],
         alt: true,
@@ -310,7 +315,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Home and grooming cleanup that supports the routine',
         intro:
           'Flea season is a dog-plus-home problem, so a natural routine leans on cleanup between treatments. These are the support products for that half of the work: gentle ear wipe-downs after outdoor time and a fragrance-free surface cleaner for crates, floors, and pet zones. Neither treats the dog for fleas — they make the cleanup easier to keep up.',
-        positionOffset: 6,
+        positionOffset: 9,
         columns: 2,
         productIds: ['wondercide-rescue-ear-drops', 'wondercide-surface-disinfectant'],
       },
@@ -353,6 +358,9 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       productIds: [
         'wondercide-spray-lemongrass-32oz',
         'kates-rosemary-spray',
+        'natures-dome-cedarwood-spray',
+        'isabellas-clearly-natural-spray',
+        'pure-natural-pet-spray',
         'wondercide-shampoo-amazon',
         'crobirware-natural-collar',
         'trihood-flea-tick-tag',
