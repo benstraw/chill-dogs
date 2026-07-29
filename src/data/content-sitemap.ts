@@ -517,7 +517,7 @@ export const staticSitemapSections: SitemapSection[] = [
         ],
         relatedLabel: 'Natural Flea & Tick Products',
         pubDate: new Date('2026-06-30'),
-        lastUpdated: new Date('2026-07-21'),
+        lastUpdated: new Date('2026-07-28'),
       }),
       createSitemapPage({
         baseTitle: 'Dog Bath Tools for Flea Season',

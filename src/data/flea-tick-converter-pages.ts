@@ -271,7 +271,6 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         columns: 3,
         productIds: [
           'wondercide-spray-lemongrass-32oz',
-          'kates-rosemary-spray',
           'natures-dome-cedarwood-spray',
           'isabellas-clearly-natural-spray',
           'pure-natural-pet-spray',
@@ -283,7 +282,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Shampoo for bath-day support',
         intro:
           'Shampoo is not a prevention strategy by itself. It is a bath-day cleanup tool after exposure or during light flea pressure, and it makes coat checks and bath support easier to sustain.',
-        positionOffset: 5,
+        positionOffset: 4,
         columns: 1,
         productIds: ['wondercide-shampoo-amazon'],
         alt: true,
@@ -294,7 +293,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Collars and wearable tags for owners who prefer leave-on options',
         intro:
           'Wearable natural options are about steady prevention layering, not rescue-level control. A full collar is the simplest leave-on layer; a clip-on tag adds the same idea to a collar your dog already wears. Treat either as a convenience layer, not a substitute for evidence-heavy medication in high-exposure situations.',
-        positionOffset: 6,
+        positionOffset: 5,
         columns: 2,
         productIds: ['crobirware-natural-collar', 'trihood-flea-tick-tag'],
       },
@@ -304,7 +303,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Daily chews as a light internal layer',
         intro:
           'Oral natural chews are the weakest-evidence category on this page, so set expectations accordingly. A daily chew can be a light internal layer for owners who already dose easily, but it is a supplement alongside real prevention, not a stand-in for it.',
-        positionOffset: 8,
+        positionOffset: 7,
         columns: 1,
         productIds: ['lkdhfjc-flea-tick-chews'],
         alt: true,
@@ -315,7 +314,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Home and grooming cleanup that supports the routine',
         intro:
           'Flea season is a dog-plus-home problem, so a natural routine leans on cleanup between treatments. These are the support products for that half of the work: gentle ear wipe-downs after outdoor time and a fragrance-free surface cleaner for crates, floors, and pet zones. Neither treats the dog for fleas — they make the cleanup easier to keep up.',
-        positionOffset: 9,
+        positionOffset: 8,
         columns: 2,
         productIds: ['wondercide-rescue-ear-drops', 'wondercide-surface-disinfectant'],
       },
@@ -357,7 +356,6 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       url: `https://www.chill-dogs.com${ROUTES.naturalFleaTickProducts}`,
       productIds: [
         'wondercide-spray-lemongrass-32oz',
-        'kates-rosemary-spray',
         'natures-dome-cedarwood-spray',
         'isabellas-clearly-natural-spray',
         'pure-natural-pet-spray',

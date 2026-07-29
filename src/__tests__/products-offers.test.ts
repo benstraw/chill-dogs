@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
 import { emergencyProducts } from '../data/emergency-products';
+import { fleaTickConverterPages } from '../data/flea-tick-converter-pages';
 import { fleaTickProducts } from '../data/flea-tick-products';
 import { productCatalogItems, type ProductCatalogItem } from '../data/product-catalog';
 import { getAmazonOfferEntries, getOffers, getPrimaryOffer, getRequiredPrimaryOffer } from '../data/products/offers';
@@ -131,6 +132,9 @@ describe('multi-merchant product offers', () => {
       'frontline-plus-45-88',
       'seresto-large',
       'wondercide-spray-lemongrass-32oz',
+      'natures-dome-cedarwood-spray',
+      'isabellas-clearly-natural-spray',
+      'pure-natural-pet-spray',
       'wondercide-shampoo-amazon',
       'trihood-flea-tick-tag',
       'rinseroo-original',
@@ -152,6 +156,39 @@ describe('multi-merchant product offers', () => {
         }
       }
     }
+  });
+
+  it('keeps the refreshed natural spray and oil lineup complete and image-backed', () => {
+    const expectedProductIds = [
+      'wondercide-spray-lemongrass-32oz',
+      'natures-dome-cedarwood-spray',
+      'isabellas-clearly-natural-spray',
+      'pure-natural-pet-spray',
+    ];
+    const config = fleaTickConverterPages['best-natural-flea-and-tick-products-for-dogs'];
+    const spraySection = config.blocks.find((block) => block.kind === 'product_section' && block.id === 'sprays');
+
+    expect(spraySection?.kind).toBe('product_section');
+    if (spraySection?.kind !== 'product_section') {
+      throw new Error('Missing natural spray and oil product section');
+    }
+
+    expect(spraySection.productIds).toEqual(expectedProductIds);
+    expect(config.itemListSchema?.productIds).not.toContain('kates-rosemary-spray');
+    expect(fleaTickProducts.find((product) => product.id === 'kates-rosemary-spray')).toBeUndefined();
+
+    for (const productId of expectedProductIds) {
+      const product = fleaTickProducts.find((entry) => entry.id === productId);
+      expect(product, `${productId} missing from flea/tick products`).toBeTruthy();
+      expect(productCatalogItems.find((entry) => entry.id === productId), `${productId} missing from product catalog`).toBeTruthy();
+      expect(product?.image?.src, `${productId} missing product image`).toMatch(/^https:\/\//);
+      expect(product?.image?.alt, `${productId} missing image alt text`).not.toBe('');
+    }
+
+    expect(fleaTickProducts.find((product) => product.id === 'wondercide-spray-lemongrass-32oz')?.name)
+      .toBe('Wondercide Flea, Tick & Mosquito Spray');
+    expect(fleaTickProducts.find((product) => product.id === 'isabellas-clearly-natural-spray')?.badge)
+      .toBe('Natural oil spray');
   });
 
   it('keeps rendered/search/admin editorial fields canonical instead of provider metadata sourced', () => {
