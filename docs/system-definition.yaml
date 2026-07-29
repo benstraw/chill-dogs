@@ -63,22 +63,25 @@ site_system:
   page_inventory:
     - name: "Home"
       type: "attractor"
-      target_action: "Route visitors into cooling, calming, comforting, crate-training, and road-trip crate paths"
-      metric: "hero_click_cooling + hero_click_calming CTR + comfort block clicks"
+      target_action: "Route visitors into cooling, calming, comforting, and gear/travel/safety paths; surface top product picks for direct affiliate clicks"
+      metric: "hero_click_* CTR + collector_to_converter_click + amazon_outbound_click from homepage picks"
       notes: >
-        Home page hero includes a postcard-inspired "For the love of dogs" brand accent
-        under the paw logo, rendered as live text with an inline decorative SVG heart.
-        Home page includes a dusty rose color block introducing the Comfort & Rest collector
-        with tagline "Settle in." — positioned between HomepageHero and the start-prompt section.
-        The From the Guide section features all current article collectors with OG-image cards,
-        including static Astro article collectors like the tracking gear guides alongside MDX
-        guide entries such as How to Crate Train Your Dog, so the homepage article feed follows
-        sitemap page-type metadata rather than only the content collection.
-        The Browse Picks list renders up to 15 converter cards from static sitemap metadata,
-        sorted by lastUpdated ?? pubDate descending so newly published or materially refreshed
-        converter pages can surface without manual homepage card ordering. The first three eligible
-        converter cards with heroProduct metadata render as visual product-style OG cards on the
-        homepage; the remaining converter cards stay compact.
+        Home page hero keeps a fixed two-column brand row — paw logo with the
+        postcard-inspired "For the love of dogs" accent on the left, slogan plus the
+        FOUR theme panes (Cool Off, Calm Down, Settle In, Gear Up) on the right — and
+        never expands to three columns. Each pane carries an "Explore →" affordance
+        with hover lift/arrow-nudge. Below the brand row, still inside the hero, the
+        newest guide renders as a horizontal featured card (data-link-position
+        homepage-hero-featured) followed by a pill-style "View all articles" button
+        (data-track hero_click_articles) linking to /articles/.
+        Below the hero, HomepageBody renders four theme sections via HomepageSection:
+        Cooling, Calming, Comfort, and Gear/Travel/Safety (violet, headed to /gear/).
+        Each section shows the 3 latest articles for its theme, up to 5 compact
+        converter links sorted lastUpdated ?? pubDate descending (each with a
+        "See Products →" affordance and hover lift/border-tint/arrow-nudge), and 2
+        product picks from src/data/homepage-picks.ts rendered through the
+        AffiliateLink machinery, so the homepage fires amazon_outbound_click directly.
+        Section link positions follow homepage-{theme}-section-header / -articles / -converters.
         A homepage-inline email signup block sits below HomepageBody as a secondary capture path.
 
     - name: "Cooling"
@@ -101,6 +104,19 @@ site_system:
       target_action: "Route rest, crate, carrier, and travel-comfort intent to comfort converters"
       metric: "collector_to_converter_click to comfort converters"
       notes: "Section collector uses SectionCollectorPage with dynamic topic-matched converter and article cards from the complete sitemap inventory, grouped into topic subsections for beds, crates, flying/carriers/travel prep, and related comfort paths."
+
+    - name: "Gear, Travel & Safety"
+      type: "collector"
+      collector_subtype: "section"
+      target_action: "Route tracking, travel, and safety intent to gear converters"
+      metric: "collector_to_converter_click to gear converters"
+      notes: "Fourth main pillar (violet theme) at /gear/, replacing the former 301 redirect stub. Section collector uses SectionCollectorPage with dynamic topic-matched cards grouped into GPS trackers/escape safety, trail/emergency prep, road trips/travel, and flying/carriers subsections. Covers /gear/, /travel/, and /safety/ content."
+
+    - name: "All Articles"
+      type: "collector"
+      target_action: "Route article browsers into the latest guides across all four pillars"
+      metric: "collector_to_converter_click from articles-index link positions"
+      notes: "Reverse-chronological index of every article at /articles/, featured newest guide on top, with pillar theme color labels on each card. Linked from the homepage hero View all articles button."
 
     - name: "Cooling converters"
       type: "converter"
@@ -455,6 +471,7 @@ site_system:
       - "PinterestSave"
       - "Toc"
       - "RelatedGuides"
+      - "HomepageSection"
     showstopper:
       - "CoolingHubHeroDesert"
       - "CalmingHubHeroFireworks"
@@ -470,21 +487,24 @@ site_system:
       - "/cooling/"
       - "/calming/"
       - "/comforting/"
+      - "/gear/"
       - "/about/"
     pillar_theme_contract:
       source: "src/data/pillar-themes.ts"
-      rule: "Every page whose URL path starts with /cooling/, /calming/, or /comforting/ inherits its pillar theme in BaseLayout."
+      rule: "Every page whose URL path starts with /cooling/, /calming/, /comforting/, /gear/, /travel/, or /safety/ inherits its pillar theme in BaseLayout."
       active_state: "Top-nav active and hover colors use the resolved pillar accent via --color-nav-accent."
       themes:
         cooling: "cooling blue for links, buttons, hover states, and soft accents on /cooling/*"
         calming: "calming green for links, buttons, hover states, and soft accents on /calming/*"
         comfort: "dusty rose for links, buttons, hover states, and soft accents on /comforting/*; do not use sky blue or terracotta as the Comforting authority"
+        gear: "violet for links, buttons, hover states, and soft accents on /gear/*, /travel/*, and /safety/*; replaces the former grey gear palette"
 
   footer:
     sections:
-      - "Explore: cooling, calming, comforting, dog charities we love"
+      - "Explore: cooling, calming, comforting, gear, all products"
       - "Company: about, contact"
       - "Legal: privacy-policy, terms, affiliate-disclosure"
+      - "Social and community: Pinterest follow, then blue-heart dog charities we love link"
       - "Newsletter signup on non-converter pages only"
     final_cta: "Persistent affiliate disclosure, trust reinforcement, and secondary email capture on non-converter pages"
 
@@ -534,7 +554,7 @@ site_system:
     cms: "None (code-first content/config in repository)"
     hosting: "Static build deployment"
     seo_strategy: "collector captures intent; converter monetizes intent; variant routes remain canonicalized and noindex"
-    sitemap_inventory: "src/data/sitemap-inventory.ts composes staticSitemapSections with article MDX collection entries at build time; future related-content derivation should use the complete inventory instead of static-only sections. Converter sitemap entries carry pubDate and optional lastUpdated metadata for homepage Browse Picks recency ordering."
+    sitemap_inventory: "src/data/sitemap-inventory.ts composes staticSitemapSections with article MDX collection entries at build time; future related-content derivation should use the complete inventory instead of static-only sections. Converter sitemap entries carry pubDate and optional lastUpdated metadata for homepage theme-section converter recency ordering."
     section_collectors: "src/data/section-collectors.ts defines cooling, calming, and comfort collector metadata, topic subsection grouping, topic coverage, priority ordering, dynamic CollectorBody card inventories, and CollectionPage hasPart schema from the complete sitemap inventory."
 
   redirects:

@@ -49,6 +49,9 @@ const THEME_BY_PREFIX = [
   { prefix: '/cooling/', theme: 'cooling' },
   { prefix: '/calming/', theme: 'calming' },
   { prefix: '/comforting/', theme: 'comfort' },
+  { prefix: '/gear/', theme: 'gear' },
+  { prefix: '/travel/', theme: 'gear' },
+  { prefix: '/safety/', theme: 'gear' },
 ];
 
 function normalizeWhitespace(value) {
@@ -219,6 +222,16 @@ function renderOgSvg({ headline, cta, theme }) {
       pillInk: '#FFFFFF',
       blobA: '#A06068',
       blobB: '#C9AAAE',
+    },
+    gear: {
+      bg1: '#EFEAF6',
+      bg2: '#B7A8D3',
+      ink: '#2A1F45',
+      accent: '#5B3D8C',
+      pillBg: '#5B3D8C',
+      pillInk: '#FFFFFF',
+      blobA: '#7A5AAE',
+      blobB: '#B7A8D3',
     },
     neutral: {
       bg1: '#F0F0F0',

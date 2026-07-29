@@ -69,6 +69,26 @@
   --hx-cta-alt-hover: hsl(345, 42%, 60%);
 }
 
+/* ── Theme tokens: Gear ── */
+.hx--gear {
+  --hx-a1: hsl(262, 50%, 62%);    /* violet — primary accent */
+  --hx-a2: hsl(230, 42%, 34%);    /* deep indigo — second layer */
+  --hx-a3: hsl(282, 34%, 50%);    /* purple — third gradient layer */
+
+  --hx-dark: hsl(260, 40%, 10%);
+  --hx-light: hsl(262, 45%, 96%); /* lavender near-white — light-bg variants */
+  --hx-bg-mid: hsl(258, 20%, 88%);
+  --hx-dot-color: hsl(260, 35%, 70%);
+
+  --hx-cta-bg: hsl(262, 45%, 38%);
+  --hx-cta-text: #ffffff;
+  --hx-cta-hover: hsl(262, 47%, 30%);
+
+  --hx-cta-alt-bg: hsl(262, 50%, 62%);
+  --hx-cta-alt-text: hsl(260, 40%, 10%);
+  --hx-cta-alt-hover: hsl(262, 50%, 55%);
+}
+
 /* ── Base section ── */
 .hx {
   position: relative;

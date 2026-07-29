@@ -249,6 +249,37 @@ export const staticSitemapSections: SitemapSection[] = [
         relatedLabel: 'Comfort & Rest',
       }),
       createSitemapPage({
+        baseTitle: 'Gear, Travel & Safety',
+        ogTitle: 'Dog Gear for Travel, Tracking & Safety | Top Picks',
+        description:
+          'GPS trackers, travel gear, and safety essentials for adventurous dogs — from Fi and Garmin collars to snake-bite kits and road-trip prep.',
+        href: ROUTES.gearHub,
+        pageType: 'collector',
+        collectorSubtype: 'section',
+        topics: [
+          'tracking',
+          'gps-tracking',
+          'lost-dog-safety',
+          'snake-safety',
+          'trail-safety',
+          'emergency-prep',
+          'travel',
+          'road-trips',
+          'flying',
+          'carriers',
+        ],
+        relatedLabel: 'Gear, Travel & Safety',
+      }),
+      createSitemapPage({
+        baseTitle: 'All Articles',
+        ogTitle: 'All Dog Care Articles | Cooling, Calming, Comfort & Gear',
+        description:
+          'Every Chill-Dogs guide in one place — the latest cooling, calming, comfort, and gear articles for dogs, sorted by publish date.',
+        href: ROUTES.articles,
+        pageType: 'collector',
+        relatedLabel: 'All Articles',
+      }),
+      createSitemapPage({
         baseTitle: 'Search',
         description: 'Search all Chill-Dogs guides and products, then route to relevant product and guide pages.',
         href: ROUTES.search,

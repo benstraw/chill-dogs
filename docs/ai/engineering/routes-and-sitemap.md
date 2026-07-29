@@ -112,7 +112,7 @@ Use these frontmatter/config fields to control related content:
 
 `InternalLinkStrip` and `RelatedGuides` use `currentHref` prop for automated derivation. Do not add new manual related arrays.
 
-Section collectors (`/cooling/`, `/calming/`, `/comforting/`) also use sitemap topics. Their definitions in `src/data/section-collectors.ts` match indexable converters and article collectors by topic, group cards into first-match topic subsections, allow cross-topic pages to appear in multiple collectors, and preserve converter-first ordering within each subsection.
+Section collectors (`/cooling/`, `/calming/`, `/comforting/`, `/gear/`) also use sitemap topics. Their definitions in `src/data/section-collectors.ts` match indexable converters and article collectors by topic, group cards into first-match topic subsections, allow cross-topic pages to appear in multiple collectors, and preserve converter-first ordering within each subsection. `/gear/` is the fourth pillar (violet theme, covering gear/travel/safety content) — it replaced a former 301 redirect stub. `/articles/` is a reverse-chronological index of every article, linked from the homepage hero.
 
 ---
 
@@ -120,7 +120,7 @@ Section collectors (`/cooling/`, `/calming/`, `/comforting/`) also use sitemap t
 
 Converter entries in `src/data/content-sitemap.ts` must include `pubDate`. Use the first real publication date from git history when available. Set `lastUpdated` only for a material content or product refresh that should promote the converter in recency-based surfaces.
 
-The homepage Browse Picks list uses this metadata via `getHomepageConverters()`: it renders up to 15 converters sorted by `lastUpdated ?? pubDate` descending, with undated converters last. This ordering is homepage-specific; section collectors still use topic and priority routing rules.
+The homepage theme sections use this metadata via `getHomepageConverters()` + `groupHomepageConvertersByTheme()`: converters are sorted by `lastUpdated ?? pubDate` descending (undated last), grouped by theme, and each `HomepageSection` renders its theme's most recent few as compact links. This ordering is homepage-specific; section collectors still use topic and priority routing rules.
 
 ---
 

@@ -28,6 +28,12 @@ const STATIC_LINKS: LlmsLink[] = [
     explicitPriority: 955,
   },
   {
+    title: 'Gear, Travel & Safety Collector',
+    path: ROUTES.gearHub,
+    description: 'Overview of GPS tracking, travel, and safety gear categories and guides.',
+    explicitPriority: 950,
+  },
+  {
     title: 'Best Cooling Products for Dogs',
     path: ROUTES.coolingTop,
     description: 'Top cooling picks across mats, vests, bandanas, and frozen enrichment.',
