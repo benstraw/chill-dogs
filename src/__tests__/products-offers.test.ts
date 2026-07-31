@@ -191,6 +191,66 @@ describe('multi-merchant product offers', () => {
       .toBe('Natural oil spray');
   });
 
+  it('keeps the refreshed shampoo, wearable, and chew lineups complete and image-backed', () => {
+    const expectedSectionProductIds = {
+      shampoo: [
+        'wondercide-shampoo-amazon',
+        'skouts-honor-flea-tick-shampoo',
+        'hartz-natures-shield-shampoo',
+        'earth-animal-apothecary-shampoo',
+        'lillian-ruff-flea-tick-shampoo',
+        'top-performance-natural-shampoo',
+      ],
+      collar: [
+        'amdeiur-natural-flea-collar',
+        'solpetti-botanical-flea-collar',
+        'trihood-flea-tick-tag',
+        'routade-flea-tick-pendant',
+      ],
+      chews: [
+        'lkdhfjc-flea-tick-chews-200',
+        'only-natural-pet-barrier-bites',
+        'geynaw-flea-tick-chews',
+        'yotango-flea-tick-chews',
+        'beloved-pets-flea-tick-chews',
+        'dr-woow-flea-tick-chews',
+      ],
+    } satisfies Record<string, string[]>;
+
+    const config = fleaTickConverterPages['best-natural-flea-and-tick-products-for-dogs'];
+
+    for (const [sectionId, productIds] of Object.entries(expectedSectionProductIds)) {
+      const section = config.blocks.find((block) => block.kind === 'product_section' && block.id === sectionId);
+      expect(section?.kind, `missing ${sectionId} product section`).toBe('product_section');
+      if (section?.kind !== 'product_section') {
+        throw new Error(`Missing ${sectionId} product section`);
+      }
+
+      expect(section.productIds).toEqual(productIds);
+
+      for (const productId of productIds) {
+        const product = fleaTickProducts.find((entry) => entry.id === productId);
+        expect(product, `${productId} missing from flea/tick products`).toBeTruthy();
+        expect(productCatalogItems.find((entry) => entry.id === productId), `${productId} missing from product catalog`).toBeTruthy();
+        expect(product?.image?.src, `${productId} missing product image`).toMatch(/^https:\/\//);
+        expect(product?.image?.alt, `${productId} missing image alt text`).not.toBe('');
+        expect(config.itemListSchema?.productIds, `${productId} missing from ItemList schema`).toContain(productId);
+      }
+    }
+
+    for (const removedId of ['crobirware-natural-collar', 'lkdhfjc-flea-tick-chews']) {
+      expect(fleaTickProducts.find((product) => product.id === removedId), `${removedId} should be removed`).toBeUndefined();
+      expect(config.itemListSchema?.productIds).not.toContain(removedId);
+    }
+
+    for (const removedAsin of ['B0GSZH4JWF', 'B0H6B7W86G']) {
+      expect(
+        fleaTickProducts.some((product) => getOffers(product).some((offer) => offer.asin === removedAsin)),
+        `${removedAsin} should no longer be offered`,
+      ).toBe(false);
+    }
+  });
+
   it('keeps rendered/search/admin editorial fields canonical instead of provider metadata sourced', () => {
     const providerMetadata: ProviderMetadata = {
       fetchedAt: '2026-05-28T00:00:00.000Z',
