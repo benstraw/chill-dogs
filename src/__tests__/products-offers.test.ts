@@ -191,7 +191,7 @@ describe('multi-merchant product offers', () => {
       .toBe('Natural oil spray');
   });
 
-  it('keeps the refreshed shampoo, wearable, and chew lineups complete and image-backed', () => {
+  it('keeps the refreshed shampoo, wearable, chew, home, and grooming lineups complete and image-backed', () => {
     const expectedSectionProductIds = {
       shampoo: [
         'wondercide-shampoo-amazon',
@@ -236,6 +236,32 @@ describe('multi-merchant product offers', () => {
         expect(product?.image?.alt, `${productId} missing image alt text`).not.toBe('');
         expect(config.itemListSchema?.productIds, `${productId} missing from ItemList schema`).toContain(productId);
       }
+    }
+
+    const homeSupport = config.blocks.find((block) => block.kind === 'product_section' && block.id === 'home-support');
+    const groomingTools = config.blocks.find((block) => block.kind === 'product_section' && block.id === 'grooming-tools');
+
+    if (homeSupport?.kind !== 'product_section' || groomingTools?.kind !== 'product_section') {
+      throw new Error('Missing home-support or grooming-tools product section');
+    }
+
+    expect(homeSupport.productIds).toEqual(['tropiclean-flea-spray-home', 'wondercide-surface-disinfectant']);
+    expect(groomingTools.productIds).toEqual([
+      'green-pet-double-sided-flea-comb',
+      'ikkab-flea-comb-set',
+      'vomroju-flea-lice-comb-set',
+      'anrundar-grooming-kit',
+      'homesake-tick-remover-kit',
+      'ahhomatata-tick-twister-set',
+      'wondercide-rescue-ear-drops',
+    ]);
+
+    for (const productId of [...homeSupport.productIds, ...groomingTools.productIds]) {
+      const product = fleaTickProducts.find((entry) => entry.id === productId);
+      expect(product, `${productId} missing from flea/tick products`).toBeTruthy();
+      expect(productCatalogItems.find((entry) => entry.id === productId), `${productId} missing from product catalog`).toBeTruthy();
+      expect(product?.image?.src, `${productId} missing product image`).toMatch(/^https:\/\//);
+      expect(config.itemListSchema?.productIds, `${productId} missing from ItemList schema`).toContain(productId);
     }
 
     for (const removedId of ['crobirware-natural-collar', 'lkdhfjc-flea-tick-chews']) {

@@ -535,7 +535,7 @@ export const staticSitemapSections: SitemapSection[] = [
       createSitemapPage({
         baseTitle: 'Best Natural Flea and Tick Products for Dogs',
         description:
-          'Compare natural flea and tick products for dogs — sprays, shampoos, collars and tags, daily chews, and ear and home cleanup — with honest notes on real limits.',
+          'Compare natural flea and tick products for dogs — sprays, shampoos, collars and tags, daily chews, flea combs, and home cleanup — with honest notes on real limits.',
         href: ROUTES.naturalFleaTickProducts,
         pageType: 'converter',
         topics: ['flea-tick', 'travel', 'road-trips'],

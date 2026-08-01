@@ -153,6 +153,8 @@ export function buildProductPageMap(): ProductPageMap {
       'natural-chew',
       'natural-ear',
       'natural-surface',
+      'grooming-tool',
+      'tick-remover',
     ].includes(product.category)
   )) {
     addRef(map, p.id, fleaTickNaturalRef);
