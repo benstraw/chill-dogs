@@ -158,12 +158,44 @@ describe('multi-merchant product offers', () => {
     }
   });
 
+  it('wires the requested Chewy grooming and tick-tool offers into the flea/tick catalog', () => {
+    const expectedChewyCanonicalUrlsById = {
+      'duty-mitt-flea-tick-mitt': 'https://www.chewy.com/duty-mitt-tick-flea-repellent-mitt/dp/3976198',
+      'tweezerman-precision-flea-comb': 'https://www.chewy.com/tweezerman-precision-single-row-flea/dp/3969334',
+      'wahl-flea-finishing-comb': 'https://www.chewy.com/wahl-flea-finishing-dog-comb/dp/3514926',
+      'tweezerman-tick-removal-kit': 'https://www.chewy.com/tweezerman-tick-removal-kit-dogs/dp/3969342',
+      'tweezerman-tick-tweezer': 'https://www.chewy.com/tweezerman-tick-removal-tweezer-pets/dp/1522510',
+      'tickcheck-premium-tick-kit': 'https://www.chewy.com/tickcheck-premium-dog-tick-removal/dp/352001',
+      'tickcheck-remover-spoon': 'https://www.chewy.com/tickcheck-remover-spoon-tick-id-card/dp/352007',
+    } satisfies Record<string, string>;
+
+    const config = fleaTickConverterPages['best-natural-flea-and-tick-products-for-dogs'];
+
+    for (const [productId, canonicalUrl] of Object.entries(expectedChewyCanonicalUrlsById)) {
+      const product = fleaTickProducts.find((entry) => entry.id === productId);
+      expect(product, `${productId} missing from flea/tick products`).toBeTruthy();
+      expect(productCatalogItems.find((entry) => entry.id === productId), `${productId} missing from product catalog`).toBeTruthy();
+      expect(product?.image?.src, `${productId} missing product image`).toMatch(/^https:\/\//);
+      expect(product?.image?.alt, `${productId} missing image alt text`).not.toBe('');
+      expect(config.itemListSchema?.productIds, `${productId} missing from ItemList schema`).toContain(productId);
+
+      const offers = getOffers(product!);
+      expect(offers, `${productId} should be a Chewy-only offer`).toHaveLength(1);
+      const chewyOffer = offers.find((offer) => offer.merchant === 'chewy');
+      expect(chewyOffer, `${productId} missing Chewy offer`).toBeTruthy();
+      expect(chewyOffer!.url, `${productId} Chewy url must be an affiliate link`).toMatch(/^https:\/\/chewy\.sjv\.io\//);
+      expect(chewyOffer!.canonicalUrl, `${productId} canonicalUrl must be the raw Chewy product URL`).toBe(canonicalUrl);
+      expect(product?.asin, `${productId} should not carry an ASIN`).toBeUndefined();
+    }
+  });
+
   it('keeps the refreshed natural spray and oil lineup complete and image-backed', () => {
     const expectedProductIds = [
       'wondercide-spray-lemongrass-32oz',
       'natures-dome-cedarwood-spray',
       'isabellas-clearly-natural-spray',
       'pure-natural-pet-spray',
+      'duty-mitt-flea-tick-mitt',
     ];
     const config = fleaTickConverterPages['best-natural-flea-and-tick-products-for-dogs'];
     const spraySection = config.blocks.find((block) => block.kind === 'product_section' && block.id === 'sprays');
@@ -250,9 +282,15 @@ describe('multi-merchant product offers', () => {
       'green-pet-double-sided-flea-comb',
       'ikkab-flea-comb-set',
       'vomroju-flea-lice-comb-set',
+      'tweezerman-precision-flea-comb',
+      'wahl-flea-finishing-comb',
       'anrundar-grooming-kit',
       'homesake-tick-remover-kit',
       'ahhomatata-tick-twister-set',
+      'tweezerman-tick-removal-kit',
+      'tweezerman-tick-tweezer',
+      'tickcheck-premium-tick-kit',
+      'tickcheck-remover-spoon',
       'wondercide-rescue-ear-drops',
     ]);
 

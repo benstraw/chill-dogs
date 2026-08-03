@@ -244,7 +244,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
     },
     toc: [
       { label: 'What Natural Does Well', anchor: 'natural-fit' },
-      { label: 'Sprays & Oils', anchor: 'sprays' },
+      { label: 'Sprays, Oils & Wipe-Ons', anchor: 'sprays' },
       { label: 'Shampoos', anchor: 'shampoo' },
       { label: 'Collars & Tags', anchor: 'collar' },
       { label: 'Daily Chews', anchor: 'chews' },
@@ -266,8 +266,9 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       {
         kind: 'product_section',
         id: 'sprays',
-        heading: 'Sprays & Oils',
-        intro: 'Sprays and oils for pets and household surfaces',
+        heading: 'Sprays, Oils & Wipe-Ons',
+        intro:
+          'Sprays and oils for pets and household surfaces, plus a pre-saturated mitt for dogs that will not stand still for a spray bottle.',
         positionOffset: 0,
         columns: 3,
         productIds: [
@@ -275,6 +276,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
           'natures-dome-cedarwood-spray',
           'isabellas-clearly-natural-spray',
           'pure-natural-pet-spray',
+          'duty-mitt-flea-tick-mitt',
         ],
       },
       {
@@ -283,7 +285,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Shampoos for bath-day support',
         intro:
           'Shampoo is not a prevention strategy by itself. It is a bath-day cleanup tool after exposure or during light flea pressure, and it makes coat checks and bath support easier to sustain.',
-        positionOffset: 4,
+        positionOffset: 5,
         columns: 3,
         productIds: [
           'wondercide-shampoo-amazon',
@@ -301,7 +303,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Collars and wearable tags for owners who prefer leave-on options',
         intro:
           'Wearable natural options are about steady prevention layering, not rescue-level control. A full collar is the simplest leave-on layer; a clip-on tag adds the same idea to a collar your dog already wears. Treat either as a convenience layer, not a substitute for evidence-heavy medication in high-exposure situations.',
-        positionOffset: 10,
+        positionOffset: 11,
         columns: 2,
         productIds: [
           'amdeiur-natural-flea-collar',
@@ -316,7 +318,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Daily chews as a light internal layer',
         intro:
           'Oral natural chews are the weakest-evidence category on this page, so set expectations accordingly. A daily chew can be a light internal layer for owners who already dose easily, but it is a supplement alongside real prevention, not a stand-in for it.',
-        positionOffset: 14,
+        positionOffset: 15,
         columns: 3,
         productIds: [
           'lkdhfjc-flea-tick-chews-200',
@@ -334,7 +336,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Home cleanup that supports the routine',
         intro:
           'Flea season is a dog-plus-home problem, so a natural routine leans on cleanup between treatments. These are the support products for that half of the work: a spray you can use on the dog and its bedding, and a fragrance-free surface cleaner for crates, floors, and pet zones. Neither replaces washing and vacuuming — they make the cleanup easier to keep up.',
-        positionOffset: 20,
+        positionOffset: 21,
         columns: 2,
         productIds: ['tropiclean-flea-spray-home', 'wondercide-surface-disinfectant'],
       },
@@ -344,15 +346,21 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Combs, brushes, and tick-removal tools',
         intro:
           'Natural routines lean much harder on coat checks than conventional medication does, which makes these the cheapest high-value products on the page. A flea comb is how you catch a problem early, a brush that gets through the undercoat is how you reach skin on a thick coat, and a proper tick tool is how you get the head out without crushing the tick.',
-        positionOffset: 22,
+        positionOffset: 23,
         columns: 3,
         productIds: [
           'green-pet-double-sided-flea-comb',
           'ikkab-flea-comb-set',
           'vomroju-flea-lice-comb-set',
+          'tweezerman-precision-flea-comb',
+          'wahl-flea-finishing-comb',
           'anrundar-grooming-kit',
           'homesake-tick-remover-kit',
           'ahhomatata-tick-twister-set',
+          'tweezerman-tick-removal-kit',
+          'tweezerman-tick-tweezer',
+          'tickcheck-premium-tick-kit',
+          'tickcheck-remover-spoon',
           'wondercide-rescue-ear-drops',
         ],
         alt: true,
@@ -398,6 +406,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         'natures-dome-cedarwood-spray',
         'isabellas-clearly-natural-spray',
         'pure-natural-pet-spray',
+        'duty-mitt-flea-tick-mitt',
         'wondercide-shampoo-amazon',
         'skouts-honor-flea-tick-shampoo',
         'hartz-natures-shield-shampoo',
@@ -419,9 +428,15 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         'green-pet-double-sided-flea-comb',
         'ikkab-flea-comb-set',
         'vomroju-flea-lice-comb-set',
+        'tweezerman-precision-flea-comb',
+        'wahl-flea-finishing-comb',
         'anrundar-grooming-kit',
         'homesake-tick-remover-kit',
         'ahhomatata-tick-twister-set',
+        'tweezerman-tick-removal-kit',
+        'tweezerman-tick-tweezer',
+        'tickcheck-premium-tick-kit',
+        'tickcheck-remover-spoon',
         'wondercide-rescue-ear-drops',
       ],
     },
