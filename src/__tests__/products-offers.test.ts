@@ -4,7 +4,9 @@ import { emergencyProducts } from '../data/emergency-products';
 import { fleaTickConverterPages } from '../data/flea-tick-converter-pages';
 import { fleaTickProducts } from '../data/flea-tick-products';
 import { productCatalogItems, type ProductCatalogItem } from '../data/product-catalog';
+import { buildProductPageMap } from '../data/product-page-map';
 import { getAmazonOfferEntries, getOffers, getPrimaryOffer, getRequiredPrimaryOffer } from '../data/products/offers';
+import { ROUTES } from '../data/routes';
 import type { AffiliateOffer, ProviderMetadata } from '../data/products/types';
 
 describe('multi-merchant product offers', () => {
@@ -187,12 +189,32 @@ describe('multi-merchant product offers', () => {
   it('ships only the natural flea and tick converter in this release', () => {
     expect(Object.keys(fleaTickConverterPages)).toEqual(['best-natural-flea-and-tick-products-for-dogs']);
 
-    for (const deferredId of ['nexgard-10-24', 'seresto-large', 'rinseroo-original']) {
+    for (const deferredId of ['nexgard-10-24', 'seresto-large']) {
       expect(
         fleaTickProducts.find((product) => product.id === deferredId),
         `${deferredId} is deferred to the follow-up release`,
       ).toBeUndefined();
     }
+  });
+
+  it('keeps Rinseroo in the catalog for the article link even without its converter page', () => {
+    const rinseroo = fleaTickProducts.find((product) => product.id === 'rinseroo-original');
+    expect(rinseroo, 'rinseroo-original missing from flea/tick products').toBeTruthy();
+    expect(
+      productCatalogItems.find((entry) => entry.id === 'rinseroo-original'),
+      'rinseroo-original missing from product catalog',
+    ).toBeTruthy();
+
+    const offers = getOffers(rinseroo!);
+    expect(offers.map((offer) => offer.merchant)).toEqual(['amazon', 'chewy']);
+    expect(offers.find((offer) => offer.merchant === 'amazon')?.asin).toBe('B0CSF2LLS3');
+    expect(offers.find((offer) => offer.merchant === 'chewy')?.canonicalUrl)
+      .toBe('https://www.chewy.com/rinseroo-slip-on-sprayer-cat-portable/dp/3650750');
+
+    // The bath-tools converter is deferred, so the article carries the product instead.
+    expect(buildProductPageMap()['rinseroo-original']).toEqual([
+      { label: 'Natural Flea and Tick Prevention for Dogs', href: ROUTES.naturalFleaTickPrevention },
+    ]);
   });
 
   it('keeps the refreshed natural spray and oil lineup complete and image-backed', () => {

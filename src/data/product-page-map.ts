@@ -129,6 +129,12 @@ export function buildProductPageMap(): ProductPageMap {
     addRef(map, p.id, snakeBiteKitRef);
   }
 
+  // Inline AffiliateLink in src/content/articles/safety-natural-flea-and-tick-prevention-for-dogs.mdx
+  addRef(map, 'rinseroo-original', {
+    label: 'Natural Flea and Tick Prevention for Dogs',
+    href: ROUTES.naturalFleaTickPrevention,
+  });
+
   const fleaTickNaturalRef: PageRef = {
     label: 'Best Natural Flea and Tick Products for Dogs',
     href: ROUTES.naturalFleaTickProducts,

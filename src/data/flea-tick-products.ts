@@ -10,7 +10,8 @@ export type FleaTickProductCategory =
   | 'natural-ear'
   | 'natural-surface'
   | 'grooming-tool'
-  | 'tick-remover';
+  | 'tick-remover'
+  | 'bath-tool';
 
 export interface FleaTickProduct extends OfferBackedProduct {
   id: string;
@@ -878,6 +879,32 @@ export const fleaTickProducts: FleaTickProduct[] = [
       'Cheapest tick tool on this page and it comes three to a pack',
       'The spoon shape holds the tick after removal instead of losing it on the floor',
       'Carabiner and laminated instructions clip straight to a leash or pack strap',
+    ],
+  },
+  {
+    id: 'rinseroo-original',
+    name: 'Rinseroo Slip-On Sprayer',
+    category: 'bath-tool',
+    badge: 'Bath tool',
+    bestFor: 'Owners who want to make post-hike or flea-season baths less of a wrestling match.',
+    asin: 'B0CSF2LLS3',
+    amazonUrl: amazonUrl('B0CSF2LLS3'),
+    offers: [
+      amazonOffer('B0CSF2LLS3'),
+      chewyOffer('https://www.chewy.com/rinseroo-slip-on-sprayer-cat-portable/dp/3650750', 'natural-flea-and-tick-prevention-for-dogs'),
+    ],
+    image: {
+      src: 'https://m.media-amazon.com/images/I/61TF2a86MiL._SL500_.jpg',
+      alt: 'Rinseroo Slip-On Sprayer hose attachment for dog baths',
+    },
+    coverage: 'Bath setup convenience',
+    duration: 'Reusable bath accessory',
+    howItWorks: 'Turns an ordinary tub or shower into a faster rinse setup for dogs.',
+    bullets: [
+      'Best bath-convenience upgrade for apartment showers and guest tubs',
+      'Makes rinse-heavy flea cleanup routines more realistic to stick with',
+      'Check the fitting before you buy: the Amazon listing is the tub-faucet slip-on, the Chewy listing is the showerhead version',
+      'Not treatment on its own, but helpful when baths are part of the plan',
     ],
   },
 ];
