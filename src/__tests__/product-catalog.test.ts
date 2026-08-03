@@ -112,9 +112,19 @@ describe('admin product catalog data', () => {
         expect.objectContaining({ href: '/gear/dog-snake-bite-emergency-kit/' }),
       ])
     );
+    expect(pageMap['nexgard-10-24']).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ href: '/safety/best-flea-and-tick-medications-for-dogs/' }),
+      ])
+    );
     expect(pageMap['wondercide-spray-lemongrass-32oz']).toEqual(
       expect.arrayContaining([
         expect.objectContaining({ href: '/safety/best-natural-flea-and-tick-products-for-dogs/' }),
+      ])
+    );
+    expect(pageMap['rinseroo-original']).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ href: '/safety/dog-bath-tools-for-flea-season/' }),
       ])
     );
   });

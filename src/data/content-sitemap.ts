@@ -516,6 +516,23 @@ export const staticSitemapSections: SitemapSection[] = [
         pubDate: new Date('2026-06-26'),
       }),
       createSitemapPage({
+        baseTitle: 'Best Flea and Tick Medications for Dogs',
+        description:
+          'Compare the most common flea and tick medications for dogs — monthly and quarterly oral prescriptions, combo chews, OTC topicals, and Seresto collar trade-offs.',
+        href: ROUTES.fleaTickMedications,
+        pageType: 'converter',
+        topics: ['flea-tick', 'travel', 'road-trips'],
+        pinnedRelated: [
+          ROUTES.fleaTickPillar,
+          ROUTES.naturalFleaTickPrevention,
+          ROUTES.naturalFleaTickProducts,
+          ROUTES.fleaSeasonBathTools,
+          ROUTES.roadTrip,
+        ],
+        relatedLabel: 'Flea & Tick Medications',
+        pubDate: new Date('2026-06-30'),
+      }),
+      createSitemapPage({
         baseTitle: 'Best Natural Flea and Tick Products for Dogs',
         description:
           'Compare natural flea and tick products for dogs — sprays, shampoos, collars and tags, daily chews, flea combs, and home cleanup — with honest notes on real limits.',
@@ -524,11 +541,31 @@ export const staticSitemapSections: SitemapSection[] = [
         topics: ['flea-tick', 'travel', 'road-trips'],
         pinnedRelated: [
           ROUTES.naturalFleaTickPrevention,
+          ROUTES.fleaTickPillar,
+          ROUTES.fleaSeasonBathTools,
+          ROUTES.fleaTickMedications,
           ROUTES.roadTrip,
         ],
         relatedLabel: 'Natural Flea & Tick Products',
         pubDate: new Date('2026-06-30'),
         lastUpdated: new Date('2026-07-28'),
+      }),
+      createSitemapPage({
+        baseTitle: 'Dog Bath Tools for Flea Season',
+        description:
+          'Bath tools for flea season focus on cleanup and coat care, not miracle claims — especially slip-on tub sprayers and practical rinse routines.',
+        href: ROUTES.fleaSeasonBathTools,
+        pageType: 'converter',
+        topics: ['flea-tick', 'travel', 'road-trips'],
+        pinnedRelated: [
+          ROUTES.naturalFleaTickProducts,
+          ROUTES.naturalFleaTickPrevention,
+          ROUTES.fleaTickPillar,
+          ROUTES.fleaTickMedications,
+          ROUTES.roadTrip,
+        ],
+        relatedLabel: 'Flea-Season Bath Tools',
+        pubDate: new Date('2026-06-30'),
       }),
       createSitemapPage({
         baseTitle: 'Fi Dog Collar Review: GPS Tracking for Everyday Dogs (2026)',

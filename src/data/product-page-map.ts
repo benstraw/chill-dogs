@@ -129,11 +129,15 @@ export function buildProductPageMap(): ProductPageMap {
     addRef(map, p.id, snakeBiteKitRef);
   }
 
-  // Inline AffiliateLink in src/content/articles/safety-natural-flea-and-tick-prevention-for-dogs.mdx
-  addRef(map, 'rinseroo-original', {
-    label: 'Natural Flea and Tick Prevention for Dogs',
-    href: ROUTES.naturalFleaTickPrevention,
-  });
+  const fleaTickMedicationRef: PageRef = {
+    label: 'Best Flea and Tick Medications for Dogs',
+    href: ROUTES.fleaTickMedications,
+  };
+  for (const p of fleaTickProducts.filter((product) =>
+    ['rx-oral-monthly', 'rx-oral-quarterly', 'rx-oral-combo', 'otc-topical', 'otc-collar'].includes(product.category)
+  )) {
+    addRef(map, p.id, fleaTickMedicationRef);
+  }
 
   const fleaTickNaturalRef: PageRef = {
     label: 'Best Natural Flea and Tick Products for Dogs',
@@ -142,6 +146,7 @@ export function buildProductPageMap(): ProductPageMap {
   for (const p of fleaTickProducts.filter((product) =>
     [
       'natural-spray',
+      'natural-spot-on',
       'natural-shampoo',
       'natural-collar',
       'natural-tag',
@@ -154,6 +159,22 @@ export function buildProductPageMap(): ProductPageMap {
   )) {
     addRef(map, p.id, fleaTickNaturalRef);
   }
+
+  const fleaBathRef: PageRef = {
+    label: 'Dog Bath Tools for Flea Season',
+    href: ROUTES.fleaSeasonBathTools,
+  };
+  for (const p of fleaTickProducts.filter((product) =>
+    ['bath-tool', 'natural-shampoo'].includes(product.category)
+  )) {
+    addRef(map, p.id, fleaBathRef);
+  }
+
+  // Inline AffiliateLink in src/content/articles/safety-natural-flea-and-tick-prevention-for-dogs.mdx
+  addRef(map, 'rinseroo-original', {
+    label: 'Natural Flea and Tick Prevention for Dogs',
+    href: ROUTES.naturalFleaTickPrevention,
+  });
 
   return map;
 }
