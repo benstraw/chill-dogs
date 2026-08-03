@@ -189,6 +189,29 @@ describe('multi-merchant product offers', () => {
     }
   });
 
+  it('keeps the bath-tools page on a single Rinseroo product with both merchant offers', () => {
+    const config = fleaTickConverterPages['dog-bath-tools-for-flea-season'];
+    const bathTools = config.blocks.find((block) => block.kind === 'product_section' && block.id === 'bath-tools');
+
+    if (bathTools?.kind !== 'product_section') {
+      throw new Error('Missing bath-tools product section');
+    }
+
+    expect(bathTools.productIds).toEqual(['rinseroo-original']);
+    expect(config.itemListSchema?.productIds).toEqual(['rinseroo-original']);
+
+    const rinseroo = fleaTickProducts.find((entry) => entry.id === 'rinseroo-original');
+    expect(rinseroo, 'rinseroo-original missing from flea/tick products').toBeTruthy();
+
+    const offers = getOffers(rinseroo!);
+    expect(offers.map((offer) => offer.merchant)).toEqual(['amazon', 'chewy']);
+    expect(offers.find((offer) => offer.merchant === 'amazon')?.asin).toBe('B0CSF2LLS3');
+
+    const chewyOffer = offers.find((offer) => offer.merchant === 'chewy');
+    expect(chewyOffer!.url).toMatch(/^https:\/\/chewy\.sjv\.io\//);
+    expect(chewyOffer!.canonicalUrl).toBe('https://www.chewy.com/rinseroo-slip-on-sprayer-cat-portable/dp/3650750');
+  });
+
   it('keeps the refreshed natural spray and oil lineup complete and image-backed', () => {
     const expectedProductIds = [
       'wondercide-spray-lemongrass-32oz',
@@ -302,12 +325,12 @@ describe('multi-merchant product offers', () => {
       expect(config.itemListSchema?.productIds, `${productId} missing from ItemList schema`).toContain(productId);
     }
 
-    for (const removedId of ['crobirware-natural-collar', 'lkdhfjc-flea-tick-chews']) {
+    for (const removedId of ['crobirware-natural-collar', 'lkdhfjc-flea-tick-chews', 'rinseroo-shark-tank']) {
       expect(fleaTickProducts.find((product) => product.id === removedId), `${removedId} should be removed`).toBeUndefined();
       expect(config.itemListSchema?.productIds).not.toContain(removedId);
     }
 
-    for (const removedAsin of ['B0GSZH4JWF', 'B0H6B7W86G']) {
+    for (const removedAsin of ['B0GSZH4JWF', 'B0H6B7W86G', 'B0CSF14JZZ']) {
       expect(
         fleaTickProducts.some((product) => getOffers(product).some((offer) => offer.asin === removedAsin)),
         `${removedAsin} should no longer be offered`,

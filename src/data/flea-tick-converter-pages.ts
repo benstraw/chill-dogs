@@ -476,12 +476,12 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       {
         kind: 'product_section',
         id: 'bath-tools',
-        heading: 'Slip-on tub sprayers that make rinse-downs realistic',
+        heading: 'The slip-on sprayer that makes rinse-downs realistic',
         intro:
           'Rinseroo is the right kind of bath tool recommendation because it solves a real friction point. It helps owners rinse thoroughly in ordinary tubs and showers without pretending to be a medical treatment.',
         positionOffset: 0,
-        columns: 2,
-        productIds: ['rinseroo-original', 'rinseroo-shark-tank'],
+        columns: 1,
+        productIds: ['rinseroo-original'],
       },
       {
         kind: 'callout',
@@ -514,7 +514,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
     itemListSchema: {
       name: 'Dog Bath Tools for Flea Season',
       url: `https://www.chill-dogs.com${ROUTES.fleaSeasonBathTools}`,
-      productIds: ['rinseroo-original', 'rinseroo-shark-tank'],
+      productIds: ['rinseroo-original'],
     },
   },
 };
