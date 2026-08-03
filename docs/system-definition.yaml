@@ -323,6 +323,32 @@ site_system:
       routes:
         - "/safety/what-to-do-if-your-dog-runs-away/"
 
+    - name: "Natural Flea and Tick Prevention for Dogs"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Serve natural-first readers who already prefer a lower-toxicity routine and route them to the natural-product converter"
+      metric: "collector_to_converter_click to /safety/best-natural-flea-and-tick-products-for-dogs/"
+      routes:
+        - "/safety/natural-flea-and-tick-prevention-for-dogs/"
+      notes: >
+        Natural-first article in the flea/tick cluster. Carries the Wondercide label-reading,
+        cat-safety, bath-support, and veterinary-escalation content. The broad pillar article,
+        medications converter, and flea-season bath-tools converter are held for a follow-up
+        release; this article and its converter ship as a self-contained pair.
+
+    - name: "Best Natural Flea and Tick Products for Dogs"
+      type: "converter"
+      target_action: "Drive affiliate outbound clicks from readers who already want natural or lower-toxicity flea/tick products"
+      metric: "amazon_outbound_click rate + collector_to_converter_click from /safety/natural-flea-and-tick-prevention-for-dogs/"
+      routes:
+        - "/safety/best-natural-flea-and-tick-products-for-dogs/"
+      notes: >
+        Shared-config safety converter built from a curated set of natural pet products: plant-forward
+        sprays, oils, and a wipe-on repellent mitt; bath-day shampoos; collars and clip-on tags; daily
+        chews; home-cleanup sprays; and a grooming section of flea combs, brushes, tick-removal tools,
+        and ear drops. Spray, shampoo, chew, and grooming sections mix Amazon and Chewy offers. Frames
+        natural products as prevention layers and light-load support, not heavy-infestation rescue tools.
+
     - name: "Rattlesnake Safety for Dogs"
       type: "collector"
       collector_subtype: "article"
@@ -358,7 +384,8 @@ site_system:
         - "/shop/"
       notes: >
         Public-facing product catalog at /shop/. Shows all products from src/data/product-catalog.ts
-        with client-side filtering by pillar, category, and search. Linked from site footer.
+        with client-side filtering by pillar, category, and search, including the new safety pillar.
+        Linked from site footer.
         Page type is converter (not informer) because it drives Amazon affiliate clicks.
 
     - name: "Search"

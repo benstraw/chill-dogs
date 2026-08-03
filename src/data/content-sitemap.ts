@@ -37,6 +37,7 @@ export const TOPICS = [
   'tracking',
   'gps-tracking',
   'lost-dog-safety',
+  'flea-tick',
   'snake-safety',
   'trail-safety',
   'emergency-prep',
@@ -473,7 +474,7 @@ export const staticSitemapSections: SitemapSection[] = [
   },
   {
     title: 'Tracking & Safety',
-    description: 'GPS tracker converters and safety collectors — route lost-dog and tracking intent to affiliate product pages.',
+    description: 'GPS tracker converters and safety clusters — route lost-dog, flea/tick, and emergency intent to affiliate product pages.',
     pages: [
       createSitemapPage({
         baseTitle: 'Best Dog GPS Trackers: Cellular vs Off-Grid vs Bluetooth (2026)',
@@ -513,6 +514,21 @@ export const staticSitemapSections: SitemapSection[] = [
         relatedLabel: 'Snake-Bite Emergency Kit',
         heroProduct: emergencyHero('fido-pro-airlift-rescue-sling', 'Top Rescue Sling', 'Fido Pro Airlift Rescue Sling'),
         pubDate: new Date('2026-06-26'),
+      }),
+      createSitemapPage({
+        baseTitle: 'Best Natural Flea and Tick Products for Dogs',
+        description:
+          'Compare natural flea and tick products for dogs — sprays, shampoos, collars and tags, daily chews, flea combs, and home cleanup — with honest notes on real limits.',
+        href: ROUTES.naturalFleaTickProducts,
+        pageType: 'converter',
+        topics: ['flea-tick', 'travel', 'road-trips'],
+        pinnedRelated: [
+          ROUTES.naturalFleaTickPrevention,
+          ROUTES.roadTrip,
+        ],
+        relatedLabel: 'Natural Flea & Tick Products',
+        pubDate: new Date('2026-06-30'),
+        lastUpdated: new Date('2026-07-28'),
       }),
       createSitemapPage({
         baseTitle: 'Fi Dog Collar Review: GPS Tracking for Everyday Dogs (2026)',
@@ -742,12 +758,12 @@ export const staticSitemapSections: SitemapSection[] = [
     pages: [
       createSitemapPage({
         baseTitle: 'All Dog Products',
-        ogTitle: 'Browse All Dog Products — Cooling, Calming, Comfort & Gear',
+        ogTitle: 'Browse All Dog Products — Cooling, Comfort, and Safety',
         description:
-          'Browse our full catalog of researched dog products — cooling gear, calming aids, comfortable beds, crates, and GPS trackers. Filter by category.',
+          'Browse our full catalog of researched dog products — cooling gear, calming aids, comfort picks, GPS trackers, and flea-and-tick safety products.',
         href: ROUTES.shop,
         pageType: 'converter',
-        topics: ['cooling', 'calming', 'comfort', 'tracking'],
+        topics: ['cooling', 'calming', 'comfort', 'tracking', 'flea-tick'],
         pubDate: new Date('2026-05-07'),
       }),
     ],

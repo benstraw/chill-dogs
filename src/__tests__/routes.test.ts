@@ -34,6 +34,11 @@ describe('route constants', () => {
     expect(ROUTES.comfortPuppyCrates).toBe('/comforting/best-puppy-crates/');
   });
 
+  it('uses canonical natural flea and tick routes', () => {
+    expect(ROUTES.naturalFleaTickPrevention).toBe('/safety/natural-flea-and-tick-prevention-for-dogs/');
+    expect(ROUTES.naturalFleaTickProducts).toBe('/safety/best-natural-flea-and-tick-products-for-dogs/');
+  });
+
   it('uses canonical anxiety crates route', () => {
     expect(ROUTES.comfortAnxietyCrates).toBe('/comforting/best-anxiety-dog-crates/');
   });

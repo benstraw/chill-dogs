@@ -1,0 +1,452 @@
+{
+  "search_metadata": {
+    "id": "6a6c3bdefdfbab436ecbe9ae",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/EecvN4CQbRDBBXAOveOKpA/6a6c3bdefdfbab436ecbe9ae.json",
+    "created_at": "2026-07-31 06:08:30 UTC",
+    "processed_at": "2026-07-31 06:08:30 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0CFYJM6HN/?",
+    "raw_html_file": "https://serpapi.com/searches/EecvN4CQbRDBBXAOveOKpA/6a6c3bdefdfbab436ecbe9ae.html",
+    "total_time_taken": 8.44
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0CFYJM6HN",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0CFYJM6HN",
+    "title": "Only Natural Pet EasyDefense Barrier Bites Soft Flea Chews for Dogs - First Line of Defense Againts Fleas & Ticks, Boosts Immune System and Healthy Skin & Coat - (90 Bacon Flavored Soft Chews) 3 Pack",
+    "link": "https://www.amazon.com/Only-Natural-Pet-EasyDefense-Barrier/dp/B0CFYJM6HN/",
+    "link_clean": "https://www.amazon.com/dp/B0CFYJM6HN/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CFYJM6HN&device=desktop&engine=amazon_product",
+    "variants": [
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0148OU3VE",
+            "name": "90 Count (Pack of 1)",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0148OU3VE&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0CFYGNNW1",
+            "name": "90 Count (Pack of 2)",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CFYGNNW1&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0CFYJM6HN",
+            "name": "90 Count (Pack of 3)",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CFYJM6HN&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the Only Natural Pet Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/81aWNSjRDBL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/81aWNSjRDBL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71zIV6FymiL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71x-WS6edGL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71dpXrLYjhL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/714hFlaG41L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81-8uGgmFvL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71W6ngAN7aL._AC_SL1500_.jpg"
+    ],
+    "rating": 5,
+    "reviews": 4,
+    "price": "$74.99",
+    "extracted_price": 74.99,
+    "price_unit": "$25.00 / count",
+    "extracted_price_unit": 25,
+    "delivery": [
+      "FREE delivery August 6 - 12. Details",
+      "Or fastest delivery August 4 - 6. Details"
+    ],
+    "stock": "Only 10 left in stock - order soon."
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$74.99",
+      "extracted_price": 74.99,
+      "price_unit": "$25.00 / count",
+      "extracted_price_unit": 25,
+      "delivery": [
+        "FREE delivery August 6 - 12. Details",
+        "Or fastest delivery August 4 - 6. Details"
+      ],
+      "stock": "Only 10 left in stock - order soon.",
+      "features": {
+        "shipper_seller": {
+          "text": "SMART PETS ONLINE",
+          "details": {
+            "heading": "Shipper / Seller",
+            "content": "SMART PETS ONLINE"
+          },
+          "link": {
+            "text": "SMART PETS ONLINE",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A1LZB1G1JO30XR&asin=B0CFYJM6HN&ref_=dp_merchant_link"
+          }
+        },
+        "returns": {
+          "text": "Non-returnable due to Food safety reasons",
+          "details": {
+            "heading": "Non-returnable due to Food safety reasons",
+            "content": "This item is non-returnable due to potential safety risk as an ingestible product, but if the item arrives damaged or defective, you may request a refund or replacement through Your Orders by providing an image of the item and its defects."
+          },
+          "link": {
+            "text": "See return policy",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GKM69DUUYKQWKWX7&ref_=dp_ret_policy"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "item_form": "Chew",
+    "brand": "Only Natural Pet",
+    "flavor": "Bacon, Garlic",
+    "manufacturer": "Only Natural Pet",
+    "unit_count": "3 Count"
+  },
+  "about_item": [
+    "PREVENT FLEAS AND TICKS: Flea and tick protection for dogs in a tasty, bacon-flavored soft chew. A powerful and safe way to prevent fleas, ticks, and mosquitoes from the inside out. Put an end to fleas before they even begin, making it an essential part of your pet care routine."
+  ],
+  "videos": [
+    {
+      "position": 1,
+      "title": "My review for the barrier bites - Flea & ticks",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/fbacfe8a-acca-4fb6-8ebc-387449bf8817/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/A1-GapJytLL.png",
+      "duration": "1:12",
+      "vendor": "Krystal Rose Luong",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/91s3hra6aFL._CR0,0,1080,1080_._FMjpg_._SL34_.jpg",
+      "date": "Jul 17, 2024"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": "tick prevention dogs oral chewable pastillas pulgas perros 25 lbs chews chewables tablets dog grade",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/b85128c3-d075-4dc1-9809-d6620c5d4b19.__CR0,0,970,600_PT0_SX970_V1___.png"
+    },
+    {
+      "position": 2,
+      "title": "collar treatment pill ticks guard cats edible treats pounds 50 small soft large 23-110lbs medicina",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/8f14309e-b03e-4adb-a1d7-e909b109e4eb.__CR0,0,970,600_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 3,
+      "title": "garrapatas 100 fea flee tag k9 0-22lbs 10-24 trio 26-125 cat pet defense 44-88 lb perro medication",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/fea0d852-d5da-4643-8efa-a0a7e650189d.__CR0,0,970,600_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 4
+    },
+    {
+      "position": 5,
+      "features": [
+        {
+          "position": 1,
+          "title": "Protect from Fleas, Ticks and Mosquitoes",
+          "text": "These holistically formulated flea and tick chews for dogs provide daily protection in the form of a supplement. Shield your pet from the inside out against fleas, ticks, and other biting insects.",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/833c8ad7-77ea-45d3-aee4-009897ef337b.__CR0,0,300,300_PT0_SX300_V1___.png"
+        },
+        {
+          "position": 2,
+          "title": "Bacon-flavored",
+          "text": "Indulge your pet with the taste of bacon in Only Natural Pet EasyDefense Barrier Bites. These tasty chews provide a preventive solution your pet will adore, providing both enjoyment and protection.",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/337de494-4cdc-40e4-be27-885ce954556e.__CR0,0,300,300_PT0_SX300_V1___.png"
+        },
+        {
+          "position": 3,
+          "title": "Natural Ingredients",
+          "text": "Harnessing natural ingredients like garlic, brewer's yeast, and B-vitamins, these chews protect pets from fleas and ticks while promoting overall pet health, taking a holistic approach to well-being.",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/443e3da6-bdc1-422d-90f9-fdf6624dcf5d.__CR0,0,300,300_PT0_SX300_V1___.png"
+        }
+      ]
+    },
+    {
+      "position": 6,
+      "title": "rabbit kittens electric comb dose spot ferret essential oils repel earth animal care club rid wipes",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/48a393e9-e9e4-4296-91ef-41073a0da2e4.__CR0,0,970,600_PT0_SX970_V1___.png"
+    },
+    {
+      "position": 7,
+      "compare_with_similar": [
+        {
+          "position": 1,
+          "asin": "B0148OU3VE",
+          "title": "Only Natural Pet EasyDefense Barrier Bites Soft Flea Chews for Dogs - 1 Pack",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/edc955a6-168e-459b-a398-a977b2d027f5.__CR0,0,150,300_PT0_SX150_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B0148OU3VE?ref=emc_s_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0148OU3VE&device=desktop&engine=amazon_product",
+          "rating": 4.2,
+          "reviews": 171,
+          "price": "$26.99",
+          "extracted_price": 26.99,
+          "for_dog_or_cat": "Dogs",
+          "what_does_it_do": "Flea and Tick protection",
+          "item_form": "Soft Chews",
+          "pet_size": "Small Dog to Large Dog",
+          "made_in_the_usa": "✓",
+          "natural_ingredients": "✓"
+        },
+        {
+          "position": 2,
+          "asin": "B0CFYGNNW1",
+          "title": "Only Natural Pet EasyDefense Barrier Bites Soft Flea Chews for Dogs - 2 Pack",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/7e1b297d-9dc3-4610-a394-2f73bcb1384c.__CR0,0,150,300_PT0_SX150_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B0CFYGNNW1?ref=emc_s_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CFYGNNW1&device=desktop&engine=amazon_product",
+          "rating": 3.8,
+          "reviews": 9,
+          "price": "$49.99",
+          "extracted_price": 49.99,
+          "for_dog_or_cat": "Dogs",
+          "what_does_it_do": "Flea and Tick protection",
+          "item_form": "Soft Chews",
+          "pet_size": "Small Dog to Large Dog",
+          "made_in_the_usa": "✓",
+          "natural_ingredients": "✓"
+        },
+        {
+          "position": 3,
+          "asin": "B0CFYJM6HN",
+          "title": "Only Natural Pet EasyDefense Barrier Bites Soft Flea Chews for Dogs - 3 Pack",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/c82d108a-64b4-4074-b4b2-4e969db75c8c.__CR0,0,150,300_PT0_SX150_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B0CFYJM6HN?ref=emc_s_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CFYJM6HN&device=desktop&engine=amazon_product",
+          "rating": 5,
+          "reviews": 4,
+          "price": "$74.99",
+          "extracted_price": 74.99,
+          "for_dog_or_cat": "Dogs",
+          "what_does_it_do": "Flea and Tick protection",
+          "item_form": "Soft Chews",
+          "pet_size": "Small Dog to Large Dog",
+          "made_in_the_usa": "✓",
+          "natural_ingredients": "✓"
+        },
+        {
+          "position": 4,
+          "asin": "B0092F26MY",
+          "title": "Only Natural Pet Flea and Tick Prevention for Small Breed Dogs - Single",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/207f0291-607f-4670-adb6-de3287430ae8.__CR0,0,150,300_PT0_SX150_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B0092F26MY?ref=emc_s_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0092F26MY&device=desktop&engine=amazon_product",
+          "rating": 4,
+          "reviews": 298,
+          "price": "$17.11",
+          "extracted_price": 17.11,
+          "for_dog_or_cat": "Dogs",
+          "what_does_it_do": "Flea and Tick protection",
+          "item_form": "Squeeze-On Drops",
+          "pet_size": "Small Dog (up to 15 lbs)",
+          "made_in_the_usa": "✓",
+          "natural_ingredients": "✓"
+        },
+        {
+          "position": 5,
+          "asin": "B00UI4N9XI",
+          "title": "Only Natural Pet Flea and Tick Prevention for Medium Breed Dogs - Single",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/ae6db691-6b3f-46c7-a4e4-ad56bf52d637.__CR0,0,150,300_PT0_SX150_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B00UI4N9XI?ref=emc_s_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B00UI4N9XI&device=desktop&engine=amazon_product",
+          "rating": 4,
+          "reviews": 298,
+          "price": "$17.11",
+          "extracted_price": 17.11,
+          "for_dog_or_cat": "Dogs",
+          "what_does_it_do": "Flea and Tick protection",
+          "item_form": "Squeeze-On Drops",
+          "pet_size": "Medium Dogs (15 to 40 lbs)",
+          "made_in_the_usa": "✓",
+          "natural_ingredients": "✓"
+        },
+        {
+          "position": 6,
+          "asin": "B0092F14KE",
+          "title": "Only Natural Pet Flea and Tick Prevention for Cats - 3 Months Supply (Single)",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/c029e3d2-fb31-4b31-9f57-79edefc62fd9.__CR0,0,150,300_PT0_SX150_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B0092F14KE?ref=emc_s_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0092F14KE&device=desktop&engine=amazon_product",
+          "rating": 3.7,
+          "reviews": 342,
+          "price": "$21.99",
+          "extracted_price": 21.99,
+          "for_dog_or_cat": "Cats",
+          "what_does_it_do": "Flea and Tick protection",
+          "item_form": "Squeeze-On Drops",
+          "pet_size": "4 Month old Cat and up",
+          "made_in_the_usa": "✓",
+          "natural_ingredients": "✓"
+        }
+      ]
+    }
+  ],
+  "product_details": {
+    "item_model_number": "9990027.03",
+    "date_first_available": "August 26, 2023",
+    "manufacturer": "Only Natural Pet",
+    "asin": "B0CFYJM6HN",
+    "best_sellers_rank": [
+      {
+        "text": "#32,496 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 32496,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#41 in Dog Flea Pills",
+        "extracted_rank": 41,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/120957551011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Flea Pills"
+      }
+    ],
+    "customer_reviews": "5.0 out of 5 stars",
+    "rating": 5,
+    "reviews": 4,
+    "item_form": "Chew",
+    "flavor": "Bacon, Garlic",
+    "target_species": "Dog",
+    "specific_uses_for_product": "Coat",
+    "brand_name": "Only Natural Pet",
+    "unit_count": "3 Count",
+    "included_components": "90 Bacon Flavored Soft Chews",
+    "model_number": "9990027.03"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0CNHB1XN6",
+      "title": "Pawse Mighty Mushroom Chews Supplement for Dogs & Cats | Blend of Turkey Tail, Reishi, Chaga, Maitake & Shiitake | for Immune System, Lumps & Bumps, Gut Health & Skin Support | 60 Chews",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JIstfD8cN-HMCSo7I0Sit4EAAAGftsn3WAEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICDDGJ84/clv1c_ek-IBYHXKsTWXk6htqkk7vp5urhWHpqzLVxSphKgN9TreGyw01S_7-o2SJUf2uIWghq9AieqMjAw_yaByYqmEGBDHUmLiaKJf37XpKf2GsQVLxnmV6WdsEy65fsoDqI33xUAaKo77inawfQEm6Yt_cOvQFyYgD0q2aAA_7fpy4oSVLHZywg9yntMizk4cl5Dt8Ydlko_7zdoF4C_tkINYk7eG0YqUW8k2DgqaZIJa1MlTdOwKP6uFQsvYNld3piiq5GghHCiH0b7mHX1XnGVrNyRzBwFz6jI1p9vY3PJq53aM_eiLAV6O9hoGBIZ-xhG8gJ6EvRNIV4kJiTfLjaCicb0WCPpuEyZl_nVp9MSLIGGYqJNCnhOTBK1W1y19eOM7JsGUTD5G9RjTwrZ4QY68CMw2k3lH8tgZO6bgXq4FrPvhyVLjapgHhcRvmm8wdsZw81PuRBUceKBxUincZeo60UK0dQW4kuTG6GgJbwFE2Mu2X6ubbBNX6ShZQNECvOUTsAZlskAoXgamyPHVTnvxn6pDf9PcXift40Mx7HFWdaV783LSbwXq3hiVIsXROGvdLrXplAHKSwycJ2dGxB5R9HYLct_WCFfY-0f1Lf4KQQECTw65c6ZfIIgvRhzdJpenmuYLLuR41v6GpeJXPQOP1tdCuwpWESXRls5LkcsHceV53szg0by-I5MRsrlECZL9jr2m0HFeRwxx0B6T4S9uEbq5cmtd40MCYfjAIT1sDpaARD6cB2duxYeuldU5IF7s1YOwqql6Fozg0MjkhVDQ-fTX2mJII2g5ybZgATFs2kvR_sJCqnlJ9ZYC2uGQ0ehwa5wuODzCqk_NbKf0CF9ibBmVmo-kXwLHOpWX5Anq7TPZtP_DP4EMz1TlOPpeiEDSulVIox7qyojfBuANvM8qwG5Qp-unrYfHtDEI0pvbPuwbKmoZwQLi6xa77s3j6YryUqnBS5LJMOPUcwH-gbqB13GjOJWce8zAkDXcJYrFc3q3Ct06myR88HY3pcu8UjSqbPR23SxZdeKIttbZsfu_ko0CiEcTpvpNHInA97s7UpHlMAx4X49YXPN6SOwRF8cjRJ7M9GqG5UeYOWD4fHqaZobvUEUYU0NwuOM-TU6kgVoC8TZRJAQwi3DLOX1p8j66FONx3eDqdq--ASaLRl-EUaC5wvzSCJmtRLaNFjDGuLU1Empy6KdmpijaF7TsjQc7fkDPszCg-agRaKgL3E-YzkxAPzKCJgD3ldPWF_Q6CppqZdrhwmcDsIdf8VPKLkvYCCvLtoxpnC24BezHTO1WPqbaPgVvhlBB8IJEmzd4n7Z8AhXF7OeIAdXX6_JUvuIRomk_NxBuF6q96_wc6YVO4eG04W55EkHffabj26W30mFKYIdpO-TU3q5cpGaWNnQy1x9RekfTUEJT7wed3L382ZZBqIPxM-bB9I2Gg_6X_59W0FYRagG-EgInArO1gTwDhMDiZxAaEDYvIzmtKs3QgSwARiJ9bBc8aXw5iOZjWiSRsjQUrSW5e97B35Yvim0rE--36xCOEabwdaKYsmlkc3phKQe7Dd-VIeqB_NBX5BxJYJjZZvdWA/https://www.amazon.com/dp/B0CNHB1XN6/?_encoding=UTF8&pd_rd_i=B0CNHB1XN6&pd_rd_i=B0CNHB1XN6&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=mtAKY&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=A4J0DWSJYN2T66W5359X&pd_rd_wg=6f7XI&pd_rd_r=3219edf2-f094-43a3-8173-a559b29cce85",
+      "link_clean": "https://www.amazon.com/dp/B0CNHB1XN6/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CNHB1XN6&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41FpGxW3l+L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/a3694795-5580-46c8-a824-d2eafc145b63.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/a3694795-5580-46c8-a824-d2eafc145b63.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4,
+      "reviews": 46,
+      "price": "$37.98",
+      "extracted_price": 37.98
+    },
+    {
+      "position": 2,
+      "asin": "B071WCV19B",
+      "title": "Zesty Paws Allergy Immune Bites - Dog Allergy Chews, Dog Probiotics for Itchy Skin and Ears, Lamb, 90ct",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JIE6zjlR5DCGWRGGklh4WqkAAAGftsn3WQEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICCVVBu5/clv1c_ek-YBXfWLcTSXk6hthlGgETDcDZ7K8V5u5MIr2ej3aOUfdFrxKzOHXXA5C1bj5-xmPuKbHXYL--rI0_nQRbyr_9SIUi-UP4LSCo_L1gx6tm3iUToiwKjSjPltdeUB3M3-QyzstKuNw9Zomau2uSEEFNsxV6VjOVqkcnUbyuOxLafGGwTMij9L_cqI-qsEhNnr5fnGZlHBFXA2Obxn3hZYusbc5cNVU-_mQMOiHQRIbkgl7bXv0UV3V_WHZZCm41WxgguI65E3Wqb3V2k2r7iM96HbwjusvYt_Ce0rGGXwBb68z8XJrZ7ZLBt-KDgVdsRanW2OgkWhtf3W-MlvUayKQJ_VQTJsIibeSNAKKDSMsY9Xg5y7PPiMPCw6-TGRj2MKnmmucys19cMABOwsLbgibkWGv10D8jvuusYzk9sPIr7DNKbuDDshB2DtS42gWYcUDtsSql_ZJphtK2jqsFoz7Fkjg1dh5mrRUj3UM9WiLY7oUCDOxJNvSw6_Fk_tDhNLI5loxCuVemKGx9RipTdYXwFnV8vN2Ym0fykGAH9rsGjOVNRQXMqrdrSF48_az9qf1OC0UVIQBst6JKw4BwcQt4g_UIqeT5Tt1WhXZJKUAq-tjBmgpq8JhVDALJRoH9a6ukoHcwVFrYcC25kSFzT6gOoo5Ok86mNlhPzRIfy9ch_-18N6UDV5HF72hqnVyp7dYYIyEEi_muFMWEcHDJPOBp9ffsbf9bQru756gC0G4wzvLqScWbP0LBomWU-xiUp1Ipo5hHwvHUPgaMFVXtZSab855Pqap5cgOQ6Bid27bXU7ajtEjVFwgzm3GZ90wUHIe5Zdo40B-FgdTr_8b-jS8g5EmTv-NCL-hKjejxYxFKUEuLzqRPKjRkuRQ2Aop4vWPlLYbm-zY-R1ss3ja_UQH3NkgPRlTX48saCptn91fAHWtAZH4cxJJZAc-6oU8Zyk208tadJ1C3Qvc-Nh-kTvAQ3fpCUJYopZ4KB21XOiEK_pkYHGz2NmhO1AivfybOT13SFVhK8Ak4i4jJvZUef2rwknivFxOlTwO0sJEYCEIkhcOzeNV5E0qHbkUcmkqwEObQ4r5bTJ9CoIMY75s9dVWZC9v4lzVVNyxQ-SPdUvECmGID0he0NFzKYaPFj_Vp49HIqHXjNNSVwFNyyeEKm2MbITVWXuw98Ss2prkMGlD3_N-ke_UMRN24ACc_J-CUc6UAaFayn2dCNTGMEN48fATlS43I3SQve8lHC2PdlIuZPcfK2zVAQMStjVtXxkwaJjil8j_F1CBebrHkB7w_BtTvLdcuf7f6fOQFpiR-JkFtB5a_zReh0I1-1NY3LYKllVk2DDX76Lc3dYMNdsLXeYIscYV4e7TYB4nV6osgNkoVpjK32xIGPMUmH_KtBLqL3fqiRp7MoJceoYxwbePoHQVeXXg1X19FCiIg3yG_EfFmc0TGwA9Ta0Yk9EGVBFfwcFOTXrFSkFRD3gVbLVvhEIFH2qs-g_ZgGWhTHX3LUepI1MWA1BmIDwRCgu2QVW8RXHu5F67JuhVYNZLyUflIXZ8pa11Y9W1qXlEHK1a4/https://www.amazon.com/dp/B071WCV19B/?_encoding=UTF8&pd_rd_i=B071WCV19B&pd_rd_i=B071WCV19B&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=mtAKY&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=A4J0DWSJYN2T66W5359X&pd_rd_wg=6f7XI&pd_rd_r=3219edf2-f094-43a3-8173-a559b29cce85",
+      "link_clean": "https://www.amazon.com/dp/B071WCV19B/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B071WCV19B&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41sadA-FohL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c1e101c6-5ad0-4335-90aa-7053963c62f1.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c1e101c6-5ad0-4335-90aa-7053963c62f1.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.2,
+      "reviews": 100742,
+      "price": "$32.97",
+      "extracted_price": 32.97
+    },
+    {
+      "position": 3,
+      "asin": "B0F6VWCWL4",
+      "title": "Puyrzoe Flea and Tick Prevention for Cats, Chewable Cat Flea Treatment | Flea Treatment for Cats, Cat Flea Prevention | Skin & Coat | Immunity Support | Digestive, Cat Flea and Tick Treatment",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JIP7Jh6IoCJCAPhueqSPeUwAAAGftsn3WQEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICDLNWGz/clv1c_ek-wBQf2LcTWXk4hO6JAgMCVvh4-mJMvQhKr5E_GG3n8UezTR1AvZEK6stc1S76tiVxDjw1yPAhA-JvpZCTXsPmNxdt_eJt0-vlzWZt_rfx0g3KtIpIL5_SK4_Z59gKQl_Xb-tz6v-zmtyNyby3tTsRYocesFlTvluTshyfKzAsVdTPNvwLeG0xsvvh3l1pq_SpJwYeXekdL1ef3-06kMsuAl91oRQz3VW1OO5LRR1UadKepPeX0SKZfepc-eIf21PnjfgoUBXSQ28laglcO2rc3pl8xtwHxZRZwOgX6Wql65mcV1ZILfdf1DkJYqczFmO15II22IpU1Xy8v3IBBGTwgYyXS4LpAWYaS_vZQ3xoUMC5mEJArPl-iJzajPE2ajf_BnmXeWlRcV3VCmnq_6x3fcBZjs1w4YmH-7LqviJwQ2f5BF2Q2K6PFoUrPKO0iSf8QoKS_TWs4sd44dbhtnP7AbQx812lag2WpZI9YFtED4jNB_3Q6Zpi8WPsb-FKA2pSfuCBJPDbVUML-nVA1mVa64ASwiWIi75o_f0f8siu1gdaNSxeskULO-Yly19qw14v5UA4JgUV3izRngTonuKGDL_tcZypAzQg-nFcFSfA6CshJXqzJvCQj2edPHzidp2ZBqf5Rm59jGgut_11-cvijhaY60q3PXYZWNfe9d6oU2fjTJe0LTCBjLE8fLRKDlyBw0shEmzyYyyEaUj6bj-4hs4zeT7jABz6cFR_iO6b7owMRufCk_dJr3ImqcHj0rknO5jlHhMpXP9CFYQERoC_ZHr-ER-CyngvN2uKSqBkLocguPdBMBhZ3JfPpbyXSdB50v1hHBY16BgPjdhnEUeEXAtb4Kwac57NlNwQIfWwS9tbfOzfq0rSfYLFyQiPYgIgtFyvH8TWCMyn_osbU9Zew6MqJ2OE5rhDaES9nAcL0RDsEZSOuGCBO_NL2Sd1he6aT_2eukGBeiaPa6vTaYOpTHvKDmg3mXvFHPFrDjq9bh2U8ENbl2ISKsqmJxtwayGE2F-mqBKfxC2Ujt3ayncvs0zdboaFWDOqBgyfU_ho0B5kSpmCHsn2fber25kFXAoS4IVg4GOyxnc74CEuuDwQjy_fxJmPCnDbvlFXWMspBgvwJqjsfie-6N3-j2D8cHgYvfCySBu9omwp7SixdEFdOJMqhceYWmUEsicVgn9gO6x8Kh8-DTU46upBPOgX3a_2pFDbhj8Qplfct5IqqnuQ3pClbGWl7BQ90zz8TJ8eYTiicDtmThISO9oAZQks7DCNyi8utle7W51z9AhjjXaB4a4LQE52w_C8tUgBq6VijNM3jM_G3JpGI_4Kf1bjhj3RIEXVZ3Ne4HDWc4oAszoXTKJKdOWaO0_u5pegWhq1mi8QqycCfsgyaZ3y1oZ1lWgSELo23g4d5o0QPSTat-O7CxOpotzGXw-kPwNK-H0mWqNRyA06nICAvHTlSLBycb6M09LeCfH_iTgmVKwoOcoIGIKGkFfu7o4CtYdgXOgmFdpMI8YSH4co3PMewhHzXHfArGiw02TIiqPYhbhwq1qR2JnBdC7QUUKrZZChj804I3BohbWCG36I4BMLH/https://www.amazon.com/dp/B0F6VWCWL4/?_encoding=UTF8&pd_rd_i=B0F6VWCWL4&pd_rd_i=B0F6VWCWL4&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=mtAKY&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=A4J0DWSJYN2T66W5359X&pd_rd_wg=6f7XI&pd_rd_r=3219edf2-f094-43a3-8173-a559b29cce85",
+      "link_clean": "https://www.amazon.com/dp/B0F6VWCWL4/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F6VWCWL4&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51YT2kPezsL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/fac6b62b-fb19-46f8-9ae3-f36e51a87585.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/fac6b62b-fb19-46f8-9ae3-f36e51a87585.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4,
+      "reviews": 167,
+      "price": "$23.99",
+      "extracted_price": 23.99
+    },
+    {
+      "position": 4,
+      "asin": "B0DK3KCCB9",
+      "title": "Woyamay Flea and Tick Prevention for Cats, Chewable Flea Treatment for Cats | Natural Cat Flea and Tick Treatment Chews, Daily Oral Cat Flea Treatment, Flea Prevention for Cats, Chicken Flavor, 200 Chews",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JHiclRaXzYxlNynfRVtOxLcAAAGftsn3WgEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICA9xUR4/clv1c_ek-wxYHXKsTWDdVIKi5gyw8I6Yqzf_YVMg4K5zL5liqjGGPwkXXBICJXY-LmR3dnAzblaRF-PRxQ12-BEn_mVbsbTNtpXlWXc0QVKuLnXh0WK0mKiAdvoHuI0vlxsWjF2bF6XShntoYON8Hs5yQKMnRaptH81lTr2s31zRsKHQcaUk1pNSUQYeoUhf81RhxDS-Iydg9TD2eJVql-vXCMofiPBHsLMEv5DMI_i5EJa1MlnQP51P03Dketz5SG4uWc9eQBkFoU-JxhNR68vxKj86Z4W1QAz67B5J8WaKi1rZyD6WPLyYS58e_pjawVztPgD1_YO_gpIVxWSh5iTXnnu8O8Svn2Tt284JT4hDVr-YdlGP6OhYFSAWk25coT_gMVz9zKODtfdnpMf5zwrMn2LH3LHEmrJQo7d5YbJ8Gs7PtEVGAAlQ16olmkzWDQflSg-6mQcqIuu_630ntdE7hALx3IW0ity3sjLimwcrnMIDrzLglvqh4QR68qM-nZ7D-BZBzYvHDiGGgNXy1g0QgyNdQ50Aawi2JF9Tt196LsUhmYMMXRIe6Ofsa59oMhzFsNv56w-QBvRZ45C7L-DUi98YIlJfw8Z6ogXY_hTV8zkJ5RtPdrHxoXwvGK0U0loDmxrP4IMBH2_TW3eFzIjSJPcehFhK69LxVJ3DoSfIq8c4oUGNaOJmEM3BMArL4_KpOCk-BwUMhM2zzEMsgDe0DT4O0o7lAhc9Yol8j8J0BpIavCXE40jAsNruPXEgcdLrmY3-JFks8Ct7fp_RmlFgxW8xOuG61qRlW6xJrOmrCpyl9Rreahd554l0dyysenz7txBQaFduf2kNFbs9Cs72lS-Wt1Pl0PXFyO52kE__Sf4AfM5UDOd-ROo_ArnrUe4d4-gx824JU23-xDpvqsIk033jnyTdE8-wbjI-7fEvuhavqBpRnarQDhB6wMame9Q6WLR5JBe3UljOBTmgiSqpubI0hWsisuePkposEHoEQC7nlcHijwOYJwGW6reDxZwV_Q_KH_mhi0fKO6x5zjK85rZv6UhLHUS0WRbb_sB-eyFGtghzPl-2FIWrDwHARKS4phuxhHqevgKOs0hqXWHz1f5io_ItUBfIcKtwun87zBv33RJoZUHP-nDyAXXq8UuJNMvE_--COd4RQcpZ27-MM2KBY9tQzYEvDyT5bv-rLwitgNK-q0nrTLNtaLARG5hXP3aP2pkHfpj-YplfXlqkuKldbo16bDzvY00SimRm7L6IRMC6cQ56lFoNfeZp1GXbcLHOPMRgUpquyhihLRir146mKQJh2vQtHVYTLcpXhD_GmRsi8SGa4kLVpAtqIRBf9I01-3ls8pz4edZnmszMnBm-UKxo0LxpXx7jl5bgcPYciTOyhsccHcfXCJSbfZG1sBa8QYM7P7Tatho8AMSdKs-O5SyTVUix1UMIrPwPKOn2mWbrRSD0znIKAPmfgSDBBYb5M094eCZPujgvLYEuSsTW3t5K0rWaUjwSVl8JuAtfS8ZlCIr5yE4MrHQYbwhDzXHfArCqgE2TIkqJau9W6oG69_QC4J2xYQVKW0Z3TtExW69yYXCSkHaoSFK0CG/https://www.amazon.com/dp/B0DK3KCCB9/?_encoding=UTF8&pd_rd_i=B0DK3KCCB9&pd_rd_i=B0DK3KCCB9&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=mtAKY&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=A4J0DWSJYN2T66W5359X&pd_rd_wg=6f7XI&pd_rd_r=3219edf2-f094-43a3-8173-a559b29cce85",
+      "link_clean": "https://www.amazon.com/dp/B0DK3KCCB9/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DK3KCCB9&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51MQbPT3xmL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/f4becebf-48da-4908-b556-980f5350707b.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/f4becebf-48da-4908-b556-980f5350707b.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4,
+      "reviews": 596,
+      "price": "$23.99",
+      "extracted_price": 23.99
+    },
+    {
+      "position": 5,
+      "asin": "B0FCXTJDTH",
+      "title": "Flea and Tick Prevention for Cats – 500 Crunchy & Creamy Chews, Cat Flea Chewables with Skin & Coat Support – Oral Supplement for All Breeds & Ages – Natural Chicken Flavor",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JFi69sRE3YqnNR17sQ16ypsAAAGftsn3WwEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICAhWSaz/clv1c_ek-wxQfWbcbaTBXUV5oYIdbqdGl6mFmPmD1kRYrf2AE_e2_quH_VUAItPsC1lZoc4zZK2DxITVeendGBXsveuJktKoPNF4AnNT04_2ER3Q_myxEoJruUeDBBwjp0si5ZByO_Javbe5czlK6h_TOjoGIaoNCEVtXokNT-2z8aTMAaT0eFzt84nkKxnQ_a8xngKHzU5LsGnQbJw9Alu-BAMV7_hPe_gMz0sB5g_-BP6b2ha7-T8mYEJv1rlvh7A4VPuNrDYfEFZ13JBnXYyOprLNMfMHzoarBRLAdFPSH5shcjzJojEBU1w2PDVoIKLQ6lQpEYnWV2fbPxRo5SIOU-JFNn0BGD4eZmRhVSG_iS2m_0Ji_9BOqvM4cFv_zdAMX8U84UAHSN8wFJV9tpFrapYonj1RVSk2DGkin9nOuJv9-8rlnd-UoigqAcICv_5njOU2xJZmM5NNU6povi3VyVC06Pi_Yz0InzG9AFGOn60MMZCbu8tRBeY4klivSf6sU3M1J9ofyKxLSLXNVc9JsoLhq7izABa3eDf-rt82vc0k_rV6ojQ4WXc9f7u_sgbgPS5EA5ZZX0djub_WWgq64qTbyBbqUCyXVJoGFfSmGwflDZYlr6LrPDONNCu0KvVcotRmtiK_70Spu43wGm3FuGjv7V5e9KGHD2iNZBb1cZEjxFJHGUlWtsPbZW2r-inZQsCUBGhF779RTOWdztCBD8O1e9wvjlNoOin5_SVYh8Ms2MrTNgKZOF0PJycHoYvfJMydnQz08FyJK4HCL-iY9sLK2L0WPfAzHSXoxECqpsFhTvGN4EL2leQqPTHkky9akBbg3FVm_3NrsQpDJDiZHD7AQuBIUgFkMWZGkE34re4OTs5QDON8TSDL5i2LKrxnN1cFNiPWZ171BQIiJKdf3rEtbTSJglIOeCQablZ4ogTsCpZRnZVQUBzSQGruLXcFxurUolL1B4j9tZR8Cm2jx7O74hqk6rRFpRXf0H2AcQVxicJZVEoawMFWytSDxZyV8QPA5w8T49fL--x_wNp-EYGe6UhImoSmXxG9n6RglkLcBmf-T6TswijOREBQMWMzswLNqNNMpOcS2IQ0tR_xbDc_NWucScGQWjA8iqsQAVKInjSzAF1jZUrdXG9_muglJLfao-iCOd8RQUp526_ML2yUletOvHl9I69GJZmGRQpJUGVEky_mrZtjp4ARGlgfGcdWdo7bwqrP2L8HBKWwq5g50SC2sYsBOOXZzs6QdRF_GPn_ovH9HcmcLY7ofPSo2z16YgNlMZbe5NLJHRAaqQJQ2MTWgsQbXSOvgZp2awoNegBM3jPfG3JpGI94L_1bjhj_RIEd3hVdORHvXc8EfD4sAJUbB3pZglRiNNyAC_kR34tKOhlDlGHajewzJAB70K4pQhnaNPRrMWhqvPlTA1WRtgTtlIIa31_iSVQrwEMIZ9SdG-yDWC1LGrrDDqk5wCL5xAYT3QA0QPWwqiy9I9UZTMMuZA5O0isKk736Ex6EZ7b6JMUkObduwSZTOdjQSPOWoOiNxjI_jEqD7uJWLrMCNyFU9HY2UXUgCnZlHMLeTae474DOheU7ewtblj/https://www.amazon.com/dp/B0FCXTJDTH/?_encoding=UTF8&pd_rd_i=B0FCXTJDTH&pd_rd_i=B0FCXTJDTH&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=mtAKY&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=A4J0DWSJYN2T66W5359X&pd_rd_wg=6f7XI&pd_rd_r=3219edf2-f094-43a3-8173-a559b29cce85",
+      "link_clean": "https://www.amazon.com/dp/B0FCXTJDTH/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FCXTJDTH&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51uw7jk4Y7L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/714d6ac3-8e1c-4afc-8bb4-0b26c725fe9f.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/714d6ac3-8e1c-4afc-8bb4-0b26c725fe9f.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.1,
+      "reviews": 1000,
+      "price": "$20.39",
+      "extracted_price": 20.39,
+      "old_price": "$23.99",
+      "extracted_old_price": 23.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "customer_reviews": {
+        "5 star": 100,
+        "4 star": 0,
+        "3 star": 0,
+        "2 star": 0,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Be consistent",
+        "text": "These work but you'd have to be consistent with the dosage.",
+        "rating": 5,
+        "date": "December 25, 2024",
+        "author": "Nightingalekushh",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFFCMWOP6ELXO4LZ4V4PEEOWKYUA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/bcaf1801-f1b8-44fa-aa28-e6f10ff75518._CR0%2C0%2C500%2C500_SX460_SX48_.jpg",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "size": "90 Count (Pack of 3)"
+        }
+      }
+    ]
+  }
+}
