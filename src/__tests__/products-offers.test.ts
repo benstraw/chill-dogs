@@ -134,7 +134,7 @@ describe('multi-merchant product offers', () => {
       'frontline-plus-45-88',
       'seresto-large',
       'wondercide-spray-lemongrass-32oz',
-      'natures-dome-cedarwood-spray',
+      'natures-dome-peppermint-spray',
       'isabellas-clearly-natural-spray',
       'pure-natural-pet-spray',
       'wondercide-shampoo-amazon',
@@ -162,6 +162,7 @@ describe('multi-merchant product offers', () => {
 
   it('wires the requested Chewy grooming and tick-tool offers into the flea/tick catalog', () => {
     const expectedChewyCanonicalUrlsById = {
+      'natures-dome-peppermint-spray': 'https://www.chewy.com/natures-dome-peppermint-flea-tick/dp/3684310',
       'duty-mitt-flea-tick-mitt': 'https://www.chewy.com/duty-mitt-tick-flea-repellent-mitt/dp/3976198',
       'tweezerman-precision-flea-comb': 'https://www.chewy.com/tweezerman-precision-single-row-flea/dp/3969334',
       'wahl-flea-finishing-comb': 'https://www.chewy.com/wahl-flea-finishing-dog-comb/dp/3514926',
@@ -223,7 +224,7 @@ describe('multi-merchant product offers', () => {
   it('keeps the refreshed natural spray and oil lineup complete and image-backed', () => {
     const expectedProductIds = [
       'wondercide-spray-lemongrass-32oz',
-      'natures-dome-cedarwood-spray',
+      'natures-dome-peppermint-spray',
       'isabellas-clearly-natural-spray',
       'pure-natural-pet-spray',
       'duty-mitt-flea-tick-mitt',
@@ -251,7 +252,7 @@ describe('multi-merchant product offers', () => {
     expect(fleaTickProducts.find((product) => product.id === 'wondercide-spray-lemongrass-32oz')?.name)
       .toBe('Wondercide Flea, Tick & Mosquito Spray');
     expect(fleaTickProducts.find((product) => product.id === 'isabellas-clearly-natural-spray')?.badge)
-      .toBe('Natural oil spray');
+      .toBe('Natural oil');
   });
 
   it('keeps the refreshed shampoo, wearable, chew, home, and grooming lineups complete and image-backed', () => {
@@ -333,7 +334,12 @@ describe('multi-merchant product offers', () => {
       expect(config.itemListSchema?.productIds, `${productId} missing from ItemList schema`).toContain(productId);
     }
 
-    for (const removedId of ['crobirware-natural-collar', 'lkdhfjc-flea-tick-chews', 'rinseroo-shark-tank']) {
+    for (const removedId of [
+      'crobirware-natural-collar',
+      'lkdhfjc-flea-tick-chews',
+      'rinseroo-shark-tank',
+      'natures-dome-cedarwood-spray',
+    ]) {
       expect(fleaTickProducts.find((product) => product.id === removedId), `${removedId} should be removed`).toBeUndefined();
       expect(config.itemListSchema?.productIds).not.toContain(removedId);
     }
