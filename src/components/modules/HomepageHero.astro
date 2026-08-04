@@ -11,6 +11,7 @@ interface Props {
 const { featuredArticle } = Astro.props;
 ---
 
+<div class="hp-hero-root" data-hero-root="true">
 <section
   class="hp-hero"
   data-hero-variant="v6"
@@ -70,45 +71,47 @@ const { featuredArticle } = Astro.props;
         </div>
       </div>
     </div>
-    {featuredArticle && (
-      <div class="hp-v6-below">
-        <a
-          href={featuredArticle.href}
-          class="hp-v6-featured"
-          data-home-article="true"
-          data-track="collector_to_converter_click"
-          data-to-page={featuredArticle.href}
-          data-link-position="homepage-hero-featured"
-        >
-          <div class="hp-v6-featured-img-wrap">
-            <img
-              src={typeof featuredArticle.image === 'string' ? featuredArticle.image : featuredArticle.image.src}
-              alt=""
-              class="hp-v6-featured-img"
-              width="600"
-              height="315"
-              loading="eager"
-            />
-          </div>
-          <div class="hp-v6-featured-body">
-            <span class="hp-v6-featured-kicker">Latest guide</span>
-            <span class={`hp-v6-featured-label hp-v6-featured-label--${featuredArticle.color}`}>
-              {featuredArticle.label}
-            </span>
-            <h2 class="hp-v6-featured-title">{featuredArticle.title}</h2>
-            <p class="hp-v6-featured-desc">{featuredArticle.description}</p>
-            <span class="hp-v6-featured-read">
-              Read the latest <span class="hp-v6-featured-arrow" aria-hidden="true">→</span>
-            </span>
-          </div>
-        </a>
-        <a class="hp-v6-viewall" href={ROUTES.articles} data-cta="articles" data-track="hero_click_articles">
-          View all articles <span class="hp-v6-viewall-arrow" aria-hidden="true">→</span>
-        </a>
-      </div>
-    )}
   </div>
 </section>
+
+{featuredArticle && (
+  <div class="hp-v6-below">
+    <a
+      href={featuredArticle.href}
+      class="hp-v6-featured"
+      data-home-article="true"
+      data-track="collector_to_converter_click"
+      data-to-page={featuredArticle.href}
+      data-link-position="homepage-hero-featured"
+    >
+      <div class="hp-v6-featured-img-wrap">
+        <img
+          src={typeof featuredArticle.image === 'string' ? featuredArticle.image : featuredArticle.image.src}
+          alt=""
+          class="hp-v6-featured-img"
+          width="600"
+          height="315"
+          loading="eager"
+        />
+      </div>
+      <div class="hp-v6-featured-body">
+        <span class="hp-v6-featured-kicker">Latest guide</span>
+        <span class={`hp-v6-featured-label hp-v6-featured-label--${featuredArticle.color}`}>
+          {featuredArticle.label}
+        </span>
+        <h2 class="hp-v6-featured-title">{featuredArticle.title}</h2>
+        <p class="hp-v6-featured-desc">{featuredArticle.description}</p>
+        <span class="hp-v6-featured-read">
+          Read the latest <span class="hp-v6-featured-arrow" aria-hidden="true">→</span>
+        </span>
+      </div>
+    </a>
+    <a class="hp-v6-viewall" href={ROUTES.articles} data-cta="articles" data-track="hero_click_articles">
+      View all articles <span class="hp-v6-viewall-arrow" aria-hidden="true">→</span>
+    </a>
+  </div>
+)}
+</div>
 
 <script>
   (function () {
@@ -127,7 +130,11 @@ const { featuredArticle } = Astro.props;
     var hero = document.querySelector('[data-hero-impression="true"]');
     if (!hero) return;
 
-    hero.addEventListener('click', function (e) {
+    // The featured-guide block sits outside the hero section (below the gradient
+    // bar), so delegate CTA clicks from the wrapper that holds both.
+    var heroRoot = document.querySelector('[data-hero-root="true"]') || hero;
+
+    heroRoot.addEventListener('click', function (e) {
       var cta = (e.target as Element).closest('[data-cta]') as HTMLElement | null;
       if (!cta) return;
       trackHeroCtaClick({ cta: cta.dataset.cta!, href: (cta as HTMLAnchorElement).href });
