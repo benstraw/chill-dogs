@@ -147,7 +147,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         columns: 3,
         productIds: [
           'wondercide-spray-lemongrass-32oz',
-          'natures-dome-cedarwood-spray',
+          'natures-dome-peppermint-spray',
           'isabellas-clearly-natural-spray',
           'pure-natural-pet-spray',
           'duty-mitt-flea-tick-mitt',
@@ -277,7 +277,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       url: `https://www.chill-dogs.com${ROUTES.naturalFleaTickProducts}`,
       productIds: [
         'wondercide-spray-lemongrass-32oz',
-        'natures-dome-cedarwood-spray',
+        'natures-dome-peppermint-spray',
         'isabellas-clearly-natural-spray',
         'pure-natural-pet-spray',
         'duty-mitt-flea-tick-mitt',
