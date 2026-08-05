@@ -218,6 +218,19 @@ describe('multi-merchant product offers', () => {
     ]);
   });
 
+  it('offers the Wondercide shampoo on both Amazon and Chewy', () => {
+    const shampoo = fleaTickProducts.find((entry) => entry.id === 'wondercide-shampoo-amazon');
+    expect(shampoo, 'wondercide-shampoo-amazon missing from flea/tick products').toBeTruthy();
+
+    const offers = getOffers(shampoo!);
+    expect(offers.map((offer) => offer.merchant)).toEqual(['amazon', 'chewy']);
+    expect(offers.find((offer) => offer.merchant === 'amazon')?.asin).toBe('B09WLSNZZC');
+
+    const chewy = offers.find((offer) => offer.merchant === 'chewy');
+    expect(chewy!.url).toMatch(/^https:\/\/chewy\.sjv\.io\//);
+    expect(chewy!.canonicalUrl).toBe('https://www.chewy.com/wondercide-flea-tick-peppermint-cat/dp/639662');
+  });
+
   it('keeps the refreshed natural spray and oil lineup complete and image-backed', () => {
     const expectedProductIds = [
       'wondercide-spray-lemongrass-32oz',
@@ -256,7 +269,6 @@ describe('multi-merchant product offers', () => {
     const expectedSectionProductIds = {
       shampoo: [
         'wondercide-shampoo-amazon',
-        'skouts-honor-flea-tick-shampoo',
         'hartz-natures-shield-shampoo',
         'earth-animal-apothecary-shampoo',
         'lillian-ruff-flea-tick-shampoo',
@@ -336,6 +348,7 @@ describe('multi-merchant product offers', () => {
       'lkdhfjc-flea-tick-chews',
       'rinseroo-shark-tank',
       'natures-dome-cedarwood-spray',
+      'skouts-honor-flea-tick-shampoo',
     ]) {
       expect(fleaTickProducts.find((product) => product.id === removedId), `${removedId} should be removed`).toBeUndefined();
       expect(config.itemListSchema?.productIds).not.toContain(removedId);
