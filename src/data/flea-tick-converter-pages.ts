@@ -282,14 +282,13 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       {
         kind: 'product_section',
         id: 'shampoo',
-        heading: 'Shampoos for bath-day support',
+        heading: 'Shampoos for Bath-day Support',
         intro:
-          'Shampoo is not a prevention strategy by itself. It is a bath-day cleanup tool after exposure or during light flea pressure, and it makes coat checks and bath support easier to sustain.',
+          'Shampoos are useful for prevention and after flea and tick exposure. They also help make regular coat checks part of the routine.',
         positionOffset: 5,
         columns: 3,
         productIds: [
           'wondercide-shampoo-amazon',
-          'skouts-honor-flea-tick-shampoo',
           'hartz-natures-shield-shampoo',
           'earth-animal-apothecary-shampoo',
           'lillian-ruff-flea-tick-shampoo',
@@ -303,7 +302,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Collars and wearable tags for owners who prefer leave-on options',
         intro:
           'Wearable natural options are about steady prevention layering, not rescue-level control. A full collar is the simplest leave-on layer; a clip-on tag adds the same idea to a collar your dog already wears. Treat either as a convenience layer, not a substitute for evidence-heavy medication in high-exposure situations.',
-        positionOffset: 11,
+        positionOffset: 10,
         columns: 2,
         productIds: [
           'amdeiur-natural-flea-collar',
@@ -318,7 +317,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Daily chews as a light internal layer',
         intro:
           'Oral natural chews are the weakest-evidence category on this page, so set expectations accordingly. A daily chew can be a light internal layer for owners who already dose easily, but it is a supplement alongside real prevention, not a stand-in for it.',
-        positionOffset: 15,
+        positionOffset: 14,
         columns: 3,
         productIds: [
           'lkdhfjc-flea-tick-chews-200',
@@ -336,7 +335,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Home cleanup that supports the routine',
         intro:
           'Flea season is a dog-plus-home problem, so a natural routine leans on cleanup between treatments. These are the support products for that half of the work: a spray you can use on the dog and its bedding, and a fragrance-free surface cleaner for crates, floors, and pet zones. Neither replaces washing and vacuuming — they make the cleanup easier to keep up.',
-        positionOffset: 21,
+        positionOffset: 20,
         columns: 2,
         productIds: ['tropiclean-flea-spray-home', 'wondercide-surface-disinfectant'],
       },
@@ -346,7 +345,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Combs, brushes, and tick-removal tools',
         intro:
           'Natural routines lean much harder on coat checks than conventional medication does, which makes these the cheapest high-value products on the page. A flea comb is how you catch a problem early, a brush that gets through the undercoat is how you reach skin on a thick coat, and a proper tick tool is how you get the head out without crushing the tick.',
-        positionOffset: 23,
+        positionOffset: 22,
         columns: 3,
         productIds: [
           'green-pet-double-sided-flea-comb',
@@ -408,7 +407,6 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         'pure-natural-pet-spray',
         'duty-mitt-flea-tick-mitt',
         'wondercide-shampoo-amazon',
-        'skouts-honor-flea-tick-shampoo',
         'hartz-natures-shield-shampoo',
         'earth-animal-apothecary-shampoo',
         'lillian-ruff-flea-tick-shampoo',
