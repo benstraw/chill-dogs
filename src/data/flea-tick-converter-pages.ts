@@ -173,9 +173,9 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       {
         kind: 'product_section',
         id: 'collar',
-        heading: 'Collars and wearable tags for owners who prefer leave-on options',
+        heading: 'Collars and Wearable Tags',
         intro:
-          'Wearable natural options are about steady prevention layering, not rescue-level control. A full collar is the simplest leave-on layer; a clip-on tag adds the same idea to a collar your dog already wears. Treat either as a convenience layer, not a substitute for evidence-heavy medication in high-exposure situations.',
+          'These products use natural ingredients to provide protection for months at a time.',
         positionOffset: 10,
         columns: 2,
         productIds: [
