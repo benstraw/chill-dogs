@@ -3,7 +3,7 @@ title: Engineering Architecture
 type: canonical
 domain: engineering
 status: active
-updated: 2026-06-10
+updated: 2026-08-06
 tags:
   - chill-dogs
   - engineering
@@ -124,10 +124,18 @@ Vanilla CSS with custom properties. No runtime overhead.
 
 ### Shared conversion UI system
 
-The conversion surface (product cards + affiliate CTAs) is built from shared primitives. **Prefer these over bespoke per-component CSS** when building or editing product cards, CTAs, or product grids.
+The conversion surface (product cards + affiliate CTAs) is built from shared primitives. **Every converter product card must compose these — do not hand-roll a card surface, image frame, bullet list, or CTA stack.** A card that re-implements one silently drifts from the rest of the site: it misses shared fixes and picks up differences nobody chose (the flea/tick card did exactly this, and shipped with unmarked bullets, a tinted image background, and no shadow or hover until it was folded back onto the primitives).
+
+**If a primitive cannot express what a card needs, add an opt-in prop to the primitive** — defaulted off so existing callers are untouched — rather than forking it locally. `ProductCardShell`'s `fill` and `id` props came from that path.
 
 - **CTA buttons** — `src/styles/cta.css` defines the `.ui-cta` button and is imported globally in `BaseLayout`. Drive it through `MerchantAffiliateLink.astro`'s presentation props: `variant` (`primary` / `secondary` / `ghost`), `size` (`compact` / `standard` / `wide`), `tone` (`pillar` / `neutral` / `merchant`), rendered as `data-variant` / `data-size` / `data-tone`. Defaults: primary / standard / pillar. Passing any of the three opts the link into `.ui-cta`. Merchant-specific styling (e.g. Chewy blue) stays authoritative via the scoped `data-merchant` selector in `MerchantAffiliateLink`. Raw internal CTAs can use `class="ui-cta"` directly.
-- **Product-card primitives** — `src/components/modules/primitives/`: `ProductCardShell` (surface / radius / shadow / hover + padded body), `ProductImageFrame` (4:3 image shell + shared placeholder), `ProductBulletList` (`+`-marker list), `AffiliateOfferStack` (maps `getOffers(product)` to `MerchantAffiliateLink` with primary/secondary variants; `topGap` + `resolveLabel` props). The cooling / calming / comfort cards compose these; `BrowseProductCard` keeps a bespoke sand/footer shell and only reuses `AffiliateOfferStack`.
+- **Product-card primitives** — `src/components/modules/primitives/`:
+  - `ProductCardShell` — surface / radius / shadow / hover + padded body. Props: `fill` (card stretches to its grid row and the body grows, so CTAs line up across a row of cards with uneven copy), `id` (deep-link anchor). Both default off.
+  - `ProductImageFrame` — 4:3 image shell, `<Image>` with width/height, `onerror` swap to the shared placeholder silhouette in the pillar accent, white tile behind the product photo.
+  - `ProductBulletList` — `+`-marker list in the pillar accent. Required: `reset.css` sets `list-style: none` globally, so a hand-rolled `<ul>` renders with no marker at all.
+  - `AffiliateOfferStack` — maps `getOffers(product)` to `MerchantAffiliateLink` with primary/secondary variants; `topGap` + `resolveLabel` props.
+
+  The cooling / calming / comfort / gear / safety (flea-tick) cards all compose these. `BrowseProductCard` is the **only** sanctioned exception — its sand/border/footer layout is a different thing, not drift — and it still reuses `AffiliateOfferStack`. Card-specific extras with no primitive (badges, spec `<dl>`s, "Why it fits" / "Caution" notes) stay local to the card.
 - **Product grids** — `.ui-grid` / `.ui-grid--1` / `--2` / `--3` in `src/styles/utilities.css` is the shared product-grid vocabulary. It owns columns / gap / responsive only; callers keep their own page-specific max-width, centering, and margins. Canonical collapse: 3→2 cols at 1024px, any 2→1 col at 768px. Used by the converter, cooling, and gear product grids. The separate `.cards-grid--*` family is for collector hub grids; `shop/` uses a bespoke compact catalog grid (left intentionally separate).
 
 ---
@@ -135,7 +143,7 @@ The conversion surface (product cards + affiliate CTAs) is built from shared pri
 ## Images
 
 - **Local images:** Use `<Image>` from `astro:assets` — never raw `<img>`. Astro optimizes at build time.
-- **External images (Amazon CDN):** Cannot be optimized at build time (no `image.domains` configured). The `ProductImageFrame` primitive renders product images via `<Image>`, which passes remote Amazon URLs through unchanged; outside the primitive, raw `<img>` is also acceptable for external images.
+- **External images (Amazon / Chewy CDN):** Cannot be optimized at build time (no `image.domains` configured). Product images must go through the `ProductImageFrame` primitive, which renders them via `<Image>` — remote URLs pass through unchanged, but you still get the width/height attributes that prevent layout shift and the `onerror` fallback to the placeholder. Raw `<img>` is acceptable only for external images outside a product card.
 - **Original site photography:** Must be watermarked before use. See watermarking pipeline in build-and-test-commands.md.
 
 ---
