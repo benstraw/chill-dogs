@@ -282,7 +282,6 @@ describe('multi-merchant product offers', () => {
       ],
       chews: [
         'lkdhfjc-flea-tick-chews-200',
-        'only-natural-pet-barrier-bites',
         'geynaw-flea-tick-chews',
         'yotango-flea-tick-chews',
         'beloved-pets-flea-tick-chews',

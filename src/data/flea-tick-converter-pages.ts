@@ -188,14 +188,13 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       {
         kind: 'product_section',
         id: 'chews',
-        heading: 'Daily chews as a light internal layer',
+        heading: 'Daily Chews',
         intro:
-          'Oral natural chews are the weakest-evidence category on this page, so set expectations accordingly. A daily chew can be a light internal layer for owners who already dose easily, but it is a supplement alongside real prevention, not a stand-in for it.',
+          'Daily chews work best as a supplement to your flea and tick routine. These products use natural ingredients that also help boost your dog’s immune system and support a healthy coat and skin.',
         positionOffset: 14,
         columns: 3,
         productIds: [
           'lkdhfjc-flea-tick-chews-200',
-          'only-natural-pet-barrier-bites',
           'geynaw-flea-tick-chews',
           'yotango-flea-tick-chews',
           'beloved-pets-flea-tick-chews',
@@ -290,7 +289,6 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         'trihood-flea-tick-tag',
         'routade-flea-tick-pendant',
         'lkdhfjc-flea-tick-chews-200',
-        'only-natural-pet-barrier-bites',
         'geynaw-flea-tick-chews',
         'yotango-flea-tick-chews',
         'beloved-pets-flea-tick-chews',
