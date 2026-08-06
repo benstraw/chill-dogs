@@ -146,8 +146,6 @@ export function buildProductPageMap(): ProductPageMap {
       'natural-collar',
       'natural-tag',
       'natural-chew',
-      'natural-ear',
-      'natural-surface',
       'grooming-tool',
       'tick-remover',
     ].includes(product.category)

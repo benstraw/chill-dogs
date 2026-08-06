@@ -310,14 +310,18 @@ describe('multi-merchant product offers', () => {
       }
     }
 
-    const homeSupport = config.blocks.find((block) => block.kind === 'product_section' && block.id === 'home-support');
+    expect(
+      config.blocks.some((block) => block.kind === 'product_section' && block.id === 'home-support'),
+      'home-support section should be removed',
+    ).toBe(false);
+    expect(config.toc.some((entry) => entry.anchor === 'home-support')).toBe(false);
+
     const groomingTools = config.blocks.find((block) => block.kind === 'product_section' && block.id === 'grooming-tools');
 
-    if (homeSupport?.kind !== 'product_section' || groomingTools?.kind !== 'product_section') {
-      throw new Error('Missing home-support or grooming-tools product section');
+    if (groomingTools?.kind !== 'product_section') {
+      throw new Error('Missing grooming-tools product section');
     }
 
-    expect(homeSupport.productIds).toEqual(['tropiclean-flea-spray-home', 'wondercide-surface-disinfectant']);
     expect(groomingTools.productIds).toEqual([
       'green-pet-double-sided-flea-comb',
       'ikkab-flea-comb-set',
@@ -331,10 +335,9 @@ describe('multi-merchant product offers', () => {
       'tweezerman-tick-tweezer',
       'tickcheck-premium-tick-kit',
       'tickcheck-remover-spoon',
-      'wondercide-rescue-ear-drops',
     ]);
 
-    for (const productId of [...homeSupport.productIds, ...groomingTools.productIds]) {
+    for (const productId of groomingTools.productIds) {
       const product = fleaTickProducts.find((entry) => entry.id === productId);
       expect(product, `${productId} missing from flea/tick products`).toBeTruthy();
       expect(productCatalogItems.find((entry) => entry.id === productId), `${productId} missing from product catalog`).toBeTruthy();
@@ -348,12 +351,16 @@ describe('multi-merchant product offers', () => {
       'rinseroo-shark-tank',
       'natures-dome-cedarwood-spray',
       'skouts-honor-flea-tick-shampoo',
+      'only-natural-pet-barrier-bites',
+      'wondercide-rescue-ear-drops',
+      'wondercide-surface-disinfectant',
+      'tropiclean-flea-spray-home',
     ]) {
       expect(fleaTickProducts.find((product) => product.id === removedId), `${removedId} should be removed`).toBeUndefined();
       expect(config.itemListSchema?.productIds).not.toContain(removedId);
     }
 
-    for (const removedAsin of ['B0GSZH4JWF', 'B0H6B7W86G', 'B0CSF14JZZ']) {
+    for (const removedAsin of ['B0GSZH4JWF', 'B0H6B7W86G', 'B0CSF14JZZ', 'B0CFYJM6HN', 'B0DWZLB7LX', 'B0FVZJ1S1Z', 'B01DS73GTI']) {
       expect(
         fleaTickProducts.some((product) => getOffers(product).some((offer) => offer.asin === removedAsin)),
         `${removedAsin} should no longer be offered`,

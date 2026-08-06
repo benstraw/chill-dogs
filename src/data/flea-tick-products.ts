@@ -7,8 +7,6 @@ export type FleaTickProductCategory =
   | 'natural-collar'
   | 'natural-tag'
   | 'natural-chew'
-  | 'natural-ear'
-  | 'natural-surface'
   | 'grooming-tool'
   | 'tick-remover'
   | 'bath-tool';
@@ -472,74 +470,6 @@ export const fleaTickProducts: FleaTickProduct[] = [
       'No artificial flavors or preservatives',
       'Natural ingredients include Vitamin B1, Vitamin B6, Vitamin B12, Coriander Seed, Pumpkin Powder, and Coconut Oil MCT',
       'Made in USA',
-    ],
-  },
-  {
-    id: 'wondercide-rescue-ear-drops',
-    name: 'Wondercide Rescue Ear Drops for Dogs & Cats (4 oz)',
-    category: 'natural-ear',
-    badge: 'Grooming support',
-    bestFor: 'Owners who want a gentle ear cleaner for routine wax and outdoor-debris cleanup.',
-    asin: 'B0DWZLB7LX',
-    amazonUrl: amazonUrl('B0DWZLB7LX'),
-    offers: [amazonOffer('B0DWZLB7LX')],
-    image: {
-      src: 'https://m.media-amazon.com/images/I/61QoLofSAWL._SL500_.jpg',
-      alt: 'Wondercide Rescue Ear Drops for Dogs and Cats, 4 oz',
-    },
-    coverage: 'Routine ear cleaning',
-    duration: 'As-needed cleaning',
-    howItWorks: 'Hypochlorous ear drops for wiping out wax and outdoor grime during grooming.',
-    caution: 'This is cleaning support, not a treatment for ear infections; see your vet for pain, discharge, or persistent head-shaking.',
-    bullets: [
-      'Hypochlorous formula for routine ear wipe-downs after outdoor time',
-      'Handy when you are already checking coat and ears for pests after grassy walks',
-      'For cleanup only; escalate suspected ear infections to a vet',
-    ],
-  },
-  {
-    id: 'wondercide-surface-disinfectant',
-    name: 'Wondercide Multi-Surface Disinfectant Spray, Fragrance-Free (32 oz)',
-    category: 'natural-surface',
-    badge: 'Home support',
-    bestFor: 'Owners who want a fragrance-free cleaner for pet areas as part of flea-season cleanup.',
-    asin: 'B0FVZJ1S1Z',
-    amazonUrl: amazonUrl('B0FVZJ1S1Z'),
-    offers: [amazonOffer('B0FVZJ1S1Z')],
-    image: {
-      src: 'https://m.media-amazon.com/images/I/61lnfenO+GL._SL500_.jpg',
-      alt: 'Wondercide Multi-Surface Disinfectant Spray, fragrance-free, 32 oz',
-    },
-    coverage: 'Home and pet-area surfaces',
-    duration: 'Reusable cleaner',
-    howItWorks: 'Fragrance-free hypochlorous-acid surface spray for crates, floors, and pet zones during cleanup.',
-    bullets: [
-      'Fragrance-free hypochlorous cleaner for crates, floors, and pet-zone surfaces',
-      'Supports the environmental-cleanup half of flea season that dog products cannot cover',
-      'A surface cleaner for the home, not a flea treatment for the dog itself',
-    ],
-  },
-  {
-    id: 'tropiclean-flea-spray-home',
-    name: 'TropiClean Maximum Strength Flea Spray for Dogs & Home (16 oz)',
-    category: 'natural-surface',
-    badge: 'Home & pet spray',
-    bestFor: 'Owners who want one bottle for the dog and the bedding, carpet, and furniture it sleeps on.',
-    asin: 'B01DS73GTI',
-    amazonUrl: amazonUrl('B01DS73GTI'),
-    offers: [amazonOffer('B01DS73GTI')],
-    image: {
-      src: 'https://m.media-amazon.com/images/I/71VbhkahZ+L._SL500_.jpg',
-      alt: 'TropiClean Maximum Strength Flea Spray for Dogs and Home, 16 oz',
-    },
-    coverage: 'Dog coat plus home surfaces',
-    duration: 'Reusable spray',
-    howItWorks: 'Dual-purpose spray labeled for dogs and for the bedding and surfaces around them.',
-    caution: 'Read the label before spraying near cats and keep pets off treated surfaces until they dry.',
-    bullets: [
-      'One bottle covers the dog and the bedding, carpet, and furniture it uses',
-      'The most-reviewed home product on this page by a wide margin',
-      'Environmental cleanup still needs washing and vacuuming, not spray alone',
     ],
   },
   {

@@ -104,7 +104,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
     slug: 'best-natural-flea-and-tick-products-for-dogs',
     title: 'Best Natural Flea and Tick Products for Dogs',
     description:
-      'Compare natural flea and tick products for dogs — sprays, shampoos, collars and tags, daily chews, flea combs, and home cleanup — with honest notes on real limits.',
+      'Compare natural flea and tick products for dogs — sprays, shampoos, collars and tags, daily chews, and flea combs — with honest notes on what they really do.',
     ogTitle: 'Best Natural Flea and Tick Products for Dogs (2026)',
     pageSlug: 'best-natural-flea-and-tick-products-for-dogs',
     currentHref: ROUTES.naturalFleaTickProducts,
@@ -122,7 +122,6 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       { label: 'Shampoos', anchor: 'shampoo' },
       { label: 'Collars & Tags', anchor: 'collar' },
       { label: 'Daily Chews', anchor: 'chews' },
-      { label: 'Home Cleanup', anchor: 'home-support' },
       { label: 'Combs & Tick Tools', anchor: 'grooming-tools' },
       { label: 'Where Natural Stops', anchor: 'natural-limits' },
       { label: 'FAQ', anchor: 'faq' },
@@ -204,16 +203,6 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       },
       {
         kind: 'product_section',
-        id: 'home-support',
-        heading: 'Home cleanup that supports the routine',
-        intro:
-          'Flea season is a dog-plus-home problem, so a natural routine leans on cleanup between treatments. These are the support products for that half of the work: a spray you can use on the dog and its bedding, and a fragrance-free surface cleaner for crates, floors, and pet zones. Neither replaces washing and vacuuming — they make the cleanup easier to keep up.',
-        positionOffset: 20,
-        columns: 2,
-        productIds: ['tropiclean-flea-spray-home', 'wondercide-surface-disinfectant'],
-      },
-      {
-        kind: 'product_section',
         id: 'grooming-tools',
         heading: 'Combs, brushes, and tick-removal tools',
         intro:
@@ -233,7 +222,6 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
           'tweezerman-tick-tweezer',
           'tickcheck-premium-tick-kit',
           'tickcheck-remover-spoon',
-          'wondercide-rescue-ear-drops',
         ],
         alt: true,
       },
@@ -264,7 +252,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         {
           question: 'Should I choose a spray, shampoo, collar, tag, or chew?',
           answer:
-            'Spray is the best place to start if you want flexibility and understand reapplication. The shampoos, ear drops, and surface cleaner are cleanup support rather than prevention, while collars and clip-on tags are leave-on convenience layers. Daily chews are the lightest-evidence option here, so treat them as a supplement, not your main protection.',
+            'Spray is the best place to start if you want flexibility and understand reapplication. The shampoos are bath-day support rather than prevention, while collars and clip-on tags are leave-on convenience layers. Daily chews are the lightest-evidence option here, so treat them as a supplement, not your main protection.',
         },
       ],
     },
@@ -293,8 +281,6 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         'yotango-flea-tick-chews',
         'beloved-pets-flea-tick-chews',
         'dr-woow-flea-tick-chews',
-        'tropiclean-flea-spray-home',
-        'wondercide-surface-disinfectant',
         'green-pet-double-sided-flea-comb',
         'ikkab-flea-comb-set',
         'vomroju-flea-lice-comb-set',
@@ -307,7 +293,6 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         'tweezerman-tick-tweezer',
         'tickcheck-premium-tick-kit',
         'tickcheck-remover-spoon',
-        'wondercide-rescue-ear-drops',
       ],
     },
   },
