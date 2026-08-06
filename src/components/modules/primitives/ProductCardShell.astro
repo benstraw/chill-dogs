@@ -6,12 +6,22 @@
  * body. Pass the image element into the `image` slot (e.g. <ProductImageFrame />)
  * and the card body into the default slot.
  *
+ * `fill` opts into the equal-height variant: the card stretches to its grid row
+ * and the body grows, so CTAs line up across a row of cards with uneven copy.
+ * `id` anchors the card for deep links.
+ *
  * BrowseProductCard intentionally does NOT use this shell — its sand/border/footer
  * layout is a different thing, not drift.
  */
+interface Props {
+  id?: string;
+  fill?: boolean;
+}
+
+const { id, fill = false } = Astro.props;
 ---
 
-<div class="product-card">
+<div class:list={['product-card', fill && 'product-card--fill']} id={id}>
   <slot name="image" />
   <div class="product-card-body">
     <slot />
@@ -33,5 +43,18 @@
 
   .product-card-body {
     padding: var(--space-lg);
+  }
+
+  .product-card--fill {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .product-card--fill .product-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    flex: 1;
   }
 </style>
