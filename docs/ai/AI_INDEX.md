@@ -108,6 +108,14 @@ You are starting any task and need to know which docs apply.
 
 ---
 
+### Setting up an environment, or a script fails on a key or a network error
+
+**Read:**
+- [`engineering/environment-and-integrations.md`](engineering/environment-and-integrations.md) — Env vars and outbound hosts per script, plus local/web/CI/Vercel config
+- [`engineering/build-and-test-commands.md`](engineering/build-and-test-commands.md) — What each command does
+
+---
+
 ## Related knowledge
 
 - [`AGENT_START.md`](AGENT_START.md) — Core operating brief

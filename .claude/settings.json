@@ -1,0 +1,34 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/session-start.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Bash(bun install)",
+      "Bash(bun run build)",
+      "Bash(bun run test)",
+      "Bash(bun run test:smoke)",
+      "Bash(bun run test:coverage)",
+      "Bash(bun run check:asins:*)",
+      "Bash(bun run check:amazon:*)",
+      "Bash(bun run check:ai-docs)",
+      "Bash(bun run chewy-link:*)",
+      "Bash(bun run fetch:chewy:*)",
+      "Bash(bun run og:gen)",
+      "Bash(bunx vitest run:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)"
+    ]
+  }
+}
