@@ -496,6 +496,7 @@ site_system:
     seo_strategy: "collector captures intent; converter monetizes intent; variant routes remain canonicalized and noindex"
     sitemap_inventory: "src/data/sitemap-inventory.ts composes staticSitemapSections with article MDX collection entries at build time; future related-content derivation should use the complete inventory instead of static-only sections. Converter sitemap entries carry pubDate and optional lastUpdated metadata for homepage theme-section converter recency ordering."
     section_collectors: "src/data/section-collectors.ts defines cooling, calming, and comfort collector metadata, topic subsection grouping, topic coverage, priority ordering, dynamic CollectorBody card inventories, and CollectionPage hasPart schema from the complete sitemap inventory."
+    discovery_surfaces: "The XML sitemap (astro.config.mjs) and llms.txt (src/pages/llms.txt.ts) share one exclusion list in src/data/discovery-exclusions.ts. llms.txt is generated from the complete sitemap inventory — every registered page that is not noindex and not excluded is listed, so new pages appear automatically. It is never a hand-curated subset; src/__tests__/llms-coverage.test.ts fails the build if llms.txt and the XML sitemap disagree on any indexable URL."
 
   redirects:
     # Production: vercel.json → redirects array (true HTTP redirect at Vercel edge).

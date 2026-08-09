@@ -27,7 +27,7 @@ Test non-trivial logic in isolation. Skip trivial getters, filters, and pass-thr
 **What we test:**
 
 - `analytics.ts` — PostHog dispatch, graceful degradation without PostHog, event delegation via `closest()`, `data-*` attribute mapping to snake_case props
-- `llms.ts` — path normalization edge cases, `dedupeAndRankLinks` dedup/exclusion behavior, `buildLlmsMarkdown` output structure (maxLinks, section grouping, empty inputs)
+- `llms.ts` — path normalization edge cases, `dedupeAndRankLinks` dedup/exclusion behavior, page-kind ranking, exclusion parity with the shared discovery list, `buildLlmsMarkdown` output structure (uncapped output, maxLinks, section grouping, empty inputs)
 - `og.ts` — headline derivation priority and site-suffix stripping, `clampOgText` boundary behavior (exact limit, no word boundary, normal truncation), CTA defaults and overrides, route eligibility logic
 - `src/scripts/og-gen/**` — product-style OG eligibility by `heroProduct`, committed asset coverage and stale-input manifest checks, route filename derivation, summary fallback, title splitting, cache key/copy behavior, and `heroProduct` validation
 - `breadcrumbs.ts` — already fully covered, no changes needed
@@ -66,6 +66,7 @@ Smoke tests build the site once and verify critical output. They catch integrati
 - 404 and policy pages are noindex
 - Sitemap includes all content routes and excludes variant pages
 - llms.txt includes all sections, key links, and excludes private/variant paths
+- llms.txt and the XML sitemap list exactly the same indexable URLs — llms.txt omits nothing indexable and lists nothing noindex
 
 **What we do NOT test:**
 
@@ -90,7 +91,8 @@ Vitest covers the fast utility/data boundary and the build smoke layer. Keep thi
 | File | Tests | What it covers |
 |---|---|---|
 | `analytics.test.ts` | 6 | PostHog dispatch, degradation, delegation, attr mapping |
-| `llms.test.ts` | 11 | Path normalization, dedup, exclusion, markdown output |
+| `llms.test.ts` | 18 | Path normalization, dedup, exclusion, page-kind ranking, markdown output |
+| `llms-coverage.test.ts` | 6 | llms.txt / XML sitemap alignment across all indexable pages |
 | `og.test.ts` | 8 | Headline derivation, clamping, CTA, eligibility |
 | `product-og.test.ts` | 12 | Hero-product OG eligibility, committed assets and manifest freshness, text helpers, cache behavior, validation |
 | `breadcrumbs.test.ts` | 3 | Schema generation, special labels |
