@@ -167,6 +167,13 @@ describe('multi-merchant product offers', () => {
       'tickcheck-remover-spoon': 'https://www.chewy.com/tickcheck-remover-spoon-tick-id-card/dp/352007',
     } satisfies Record<string, string>;
 
+    // Chewy-listed products that also carry an Amazon offer. Everything else in the
+    // map above must stay Chewy-only.
+    const alsoOnAmazonById = {
+      'tweezerman-precision-flea-comb': 'B0GK34GTCC',
+      'wahl-flea-finishing-comb': 'B079SYNQQ5',
+    } satisfies Record<string, string>;
+
     const config = fleaTickConverterPages['best-natural-flea-and-tick-products-for-dogs'];
 
     for (const [productId, canonicalUrl] of Object.entries(expectedChewyCanonicalUrlsById)) {
@@ -178,12 +185,21 @@ describe('multi-merchant product offers', () => {
       expect(config.itemListSchema?.productIds, `${productId} missing from ItemList schema`).toContain(productId);
 
       const offers = getOffers(product!);
-      expect(offers, `${productId} should be a Chewy-only offer`).toHaveLength(1);
       const chewyOffer = offers.find((offer) => offer.merchant === 'chewy');
       expect(chewyOffer, `${productId} missing Chewy offer`).toBeTruthy();
       expect(chewyOffer!.url, `${productId} Chewy url must be an affiliate link`).toMatch(/^https:\/\/chewy\.sjv\.io\//);
       expect(chewyOffer!.canonicalUrl, `${productId} canonicalUrl must be the raw Chewy product URL`).toBe(canonicalUrl);
-      expect(product?.asin, `${productId} should not carry an ASIN`).toBeUndefined();
+
+      const expectedAsin = (alsoOnAmazonById as Record<string, string | undefined>)[productId];
+
+      if (expectedAsin) {
+        expect(offers, `${productId} should offer both Amazon and Chewy`).toHaveLength(2);
+        expect(offers[0]?.merchant, `${productId} should lead with the Amazon offer`).toBe('amazon');
+        expect(product?.asin, `${productId} should carry its Amazon ASIN`).toBe(expectedAsin);
+      } else {
+        expect(offers, `${productId} should be a Chewy-only offer`).toHaveLength(1);
+        expect(product?.asin, `${productId} should not carry an ASIN`).toBeUndefined();
+      }
     }
   });
 
