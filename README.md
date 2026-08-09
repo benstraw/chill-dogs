@@ -24,7 +24,12 @@ This project requires `bun@1.3.6`.
 
 ```bash
 bun install --frozen-lockfile
+cp .env.example .env   # Fill in only what you need; .env is gitignored
 ```
+
+Nothing in `.env` is required for `dev`, `build`, or `test`. The keys matter only for the merchant-data and indexing scripts — see [`docs/ai/engineering/environment-and-integrations.md`](./docs/ai/engineering/environment-and-integrations.md) for which variable and which outbound host each script needs.
+
+In Claude Code on the web, `.claude/hooks/session-start.sh` handles install, `.env`, and a warm build automatically; set the variables on the environment rather than committing them.
 
 ---
 
@@ -38,6 +43,28 @@ bun run test      # Full Vitest suite
 bun run test:smoke # Built-site smoke tests for key pages
 bun run test:coverage # Coverage for src/utils and src/scripts
 ```
+
+Merchant data and indexing:
+
+```bash
+bun run check:asins       # Are all product ASINs still live on Amazon?
+bun run check:amazon      # Local Amazon cache coverage, freshness, drift
+bun run check:ai-docs     # Validate the docs/ai knowledge graph
+bun run fetch:chewy       # Pull Chewy catalog metadata from Impact (diagnostic only)
+bun run chewy-link:verify # Confirm Impact credentials resolve
+bun run indexnow:submit   # Manually submit URLs to IndexNow
+```
+
+---
+
+## Continuous integration
+
+| Workflow | Trigger | What it does |
+|---|---|---|
+| [`.github/workflows/ci.yml`](./.github/workflows/ci.yml) | Push to `main`, every PR | `bun install` → `build` → `vitest run` → `check:ai-docs` |
+| [`.github/workflows/integration-checks.yml`](./.github/workflows/integration-checks.yml) | Weekly (Mon 13:00 UTC), manual | `check:asins`, `check:amazon --fail-on-stale`, `chewy-link:verify` |
+
+The merchant checks live in Actions because runners have unrestricted outbound access; sandboxed agent containers reach only the hosts on their network allowlist. Impact credentials come from repository secrets and the Chewy step self-skips when they are unset.
 
 ---
 

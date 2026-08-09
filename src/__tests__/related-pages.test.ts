@@ -19,6 +19,7 @@ function createPage(input: {
 
   return {
     href: input.href,
+    baseTitle: title,
     pageType: input.pageType ?? 'converter',
     collectorSubtype: input.collectorSubtype,
     topics: input.topics,

@@ -21,7 +21,8 @@ import {
   type AmazonCacheProvider,
 } from '../src/scripts/amazon-cache-freshness';
 import { writeFile, mkdir, access } from 'fs/promises';
-import { join } from 'path';
+import { dirname, join } from 'path';
+import { fileURLToPath } from 'url';
 
 // --- CLI args ---
 const args = process.argv.slice(2);
@@ -114,7 +115,7 @@ if (stale) {
 }
 
 // --- Output directory ---
-const OUT_DIR = join(import.meta.dir, '..', 'src', 'data', 'amazon-products');
+const OUT_DIR = join(dirname(fileURLToPath(import.meta.url)), '..', 'src', 'data', 'amazon-products');
 await mkdir(OUT_DIR, { recursive: true });
 
 // --- Build product list ---

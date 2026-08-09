@@ -48,6 +48,7 @@ const suggestedSearchPaths = [
 
 <script>
   import Fuse from 'fuse.js';
+  import type { FuseResult } from 'fuse.js';
   import { track } from '@scripts/analytics';
 
   type PageItem = {
@@ -82,7 +83,7 @@ const suggestedSearchPaths = [
   const suggestedPathsEl = document.getElementById('suggested-paths') as HTMLDivElement;
 
   let fuse: Fuse<SearchItem> | null = null;
-  let lastResults: Fuse.FuseResult<SearchItem>[] = [];
+  let lastResults: FuseResult<SearchItem>[] = [];
   let activeFilter: FilterKey = 'all';
   let currentQuery = '';
 
@@ -202,7 +203,7 @@ const suggestedSearchPaths = [
     `;
   }
 
-  function applyFilter(results: Fuse.FuseResult<SearchItem>[]): Fuse.FuseResult<SearchItem>[] {
+  function applyFilter(results: FuseResult<SearchItem>[]): FuseResult<SearchItem>[] {
     if (activeFilter === 'all') return results;
     if (activeFilter === 'product') return results.filter((r) => r.item.type === 'product');
     // 'article' covers both converter and collector page types.
@@ -215,7 +216,7 @@ const suggestedSearchPaths = [
     return item.type === 'page' ? item.title : item.name;
   }
 
-  function rankResult(result: Fuse.FuseResult<SearchItem>, query: string): number {
+  function rankResult(result: FuseResult<SearchItem>, query: string): number {
     const normalizedQuery = query.toLowerCase();
     const title = getSearchTitle(result.item).toLowerCase();
     const exactTitleBonus = title.includes(normalizedQuery) ? -0.18 : 0;
@@ -230,7 +231,7 @@ const suggestedSearchPaths = [
     return (result.score ?? 1) + exactTitleBonus + typeBonus;
   }
 
-  function sortResults(results: Fuse.FuseResult<SearchItem>[], query: string): Fuse.FuseResult<SearchItem>[] {
+  function sortResults(results: FuseResult<SearchItem>[], query: string): FuseResult<SearchItem>[] {
     return [...results].sort((a, b) => rankResult(a, query) - rankResult(b, query));
   }
 
