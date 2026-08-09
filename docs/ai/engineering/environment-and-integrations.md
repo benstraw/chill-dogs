@@ -27,31 +27,53 @@ A script fails with a missing-key error or a network error, you are setting up a
 
 ---
 
-## The two independent requirements
+## The three independent requirements
 
-Every integration script needs **both**:
+Every integration script needs **all three**:
 
 1. **Credentials** — environment variables (below).
 2. **Network egress** — sandboxed agent containers only reach hosts on the environment's allowlist. A blocked host returns `403 CONNECT tunnel failed` from the agent proxy, which surfaces as a generic fetch failure inside the script.
+3. **An HTTP client that works through the proxy** — see below. In a proxied container this rules out every Bun-run script regardless of 1 and 2.
 
-A script with valid keys still fails if its host is not allowlisted. Check the host before assuming the key is wrong.
+These fail independently and look alike from inside a script. Check all three before assuming a key is wrong.
+
+### Bun's fetch does not work through the agent proxy
+
+In Claude Code web containers, egress goes through a local CONNECT proxy (`HTTPS_PROXY=http://127.0.0.1:<port>`) that re-terminates TLS with its own CA. Bun's `fetch` opens the tunnel and then fails the TLS handshake inside it:
+
+```
+< 200 Connection Established
+FAIL ECONNRESET  The socket connection was closed unexpectedly.
+```
+
+Verified on bun 1.3.11 against multiple allowlisted hosts, with the env proxy, with an explicit `proxy:` option, and with an explicit `tls: { ca }` pointed at the bundle — all four fail identically. The proxy logs no relay failure, so this is Bun's side, not a blocked host. Same requests succeed from `curl`, and from Node's fetch with `NODE_USE_ENV_PROXY=1` (Node >= 22.21).
+
+Consequences:
+
+- `check:asins`, `fetch:chewy`, `chewy-link`, and `scripts/fetch-amazon-data.ts` all run under `bun run` and therefore **cannot make network calls in a proxied container**, even with credentials set and hosts allowlisted. Run them via `.github/workflows/integration-checks.yml` instead.
+- `indexnow:submit` and the build's submit step run under `node`, so they work in-container once `INDEXNOW_KEY` is set.
+- Do not "fix" this by disabling TLS verification. Porting the scripts off Bun is not worth it either — Node cannot run them as-is (its type stripping works, but the extensionless relative imports fail `ERR_MODULE_NOT_FOUND`), so it would mean adding a TS loader dependency to work around a bug in one container.
 
 ---
 
 ## Script requirements
 
-| Command | Env vars | Outbound host |
-|---|---|---|
-| `bun run dev` | none (PostHog silent without `PUBLIC_POSTHOG_KEY`) | none |
-| `bun run build` | `PUBLIC_SITE_URL`; `INDEXNOW_KEY` for the final submit step | `api.indexnow.org` (submit step only; self-skips unless `VERCEL_ENV=production`) |
-| `bun run test` / `test:smoke` / `test:coverage` | none | none |
-| `bun run check:amazon` | none | none — reads the local cache only |
-| `bun run check:asins` | none | `www.amazon.com` |
-| `bun run check:ai-docs` | none | none |
-| `bun run indexnow:submit` | `INDEXNOW_KEY` | `api.indexnow.org` |
-| `bun run fetch:chewy` | `IMPACT_ACCOUNT_SID`, `IMPACT_AUTH_TOKEN`, `CHEWY_IMPACT_CAMPAIGN_ID`, optional `CHEWY_IMPACT_CATALOG_ID` | `api.impact.com` |
-| `bun run chewy-link` | `IMPACT_ACCOUNT_SID`, `IMPACT_AUTH_TOKEN`, `CHEWY_IMPACT_CAMPAIGN_ID`, `CHEWY_IMPACT_AD_ID` (or `CHEWY_IMPACT_BASE_URL` to skip the API) | `api.impact.com`, `www.chewy.com` |
-| `scripts/fetch-amazon-data.ts` | `SERP_API_KEY` (preferred) or `SEARCHAPI_KEY` (backup) | `serpapi.com` or `www.searchapi.io` |
+"Runtime" is the HTTP client the network calls go through, which decides whether the script works in a proxied container (see above).
+
+| Command | Env vars | Outbound host | Runtime |
+|---|---|---|---|
+| `bun run dev` | none (PostHog silent without `PUBLIC_POSTHOG_KEY`) | none | — |
+| `bun run build` | `PUBLIC_SITE_URL`; `INDEXNOW_KEY` for the final submit step | `api.indexnow.org` (submit step only; self-skips unless `VERCEL_ENV=production`) | node |
+| `bun run test` / `test:smoke` / `test:coverage` | none | none | — |
+| `bun run check:amazon` | none | none — reads the local cache only | — |
+| `bun run check:asins` | none | `www.amazon.com` | **bun** |
+| `bun run check:ai-docs` | none | none | — |
+| `bun run indexnow:submit` | `INDEXNOW_KEY` | `api.indexnow.org` | node |
+| `bun run fetch:chewy` | `IMPACT_ACCOUNT_SID`, `IMPACT_AUTH_TOKEN`, `CHEWY_IMPACT_CAMPAIGN_ID`, optional `CHEWY_IMPACT_CATALOG_ID` | `api.impact.com` | **bun** |
+| `bun run chewy-link` | `IMPACT_ACCOUNT_SID`, `IMPACT_AUTH_TOKEN`, `CHEWY_IMPACT_CAMPAIGN_ID`, `CHEWY_IMPACT_AD_ID` (or `CHEWY_IMPACT_BASE_URL` to skip the API) | `api.impact.com`, `www.chewy.com` | **bun** |
+| `scripts/fetch-amazon-data.ts` | `SERP_API_KEY` (preferred) or `SEARCHAPI_KEY` (backup) | `serpapi.com` or `www.searchapi.io` | **bun** |
+
+Rows marked **bun** cannot reach the network from a proxied agent container. Run them in GitHub Actions.
 
 The full allowlist for a container that should run everything:
 
@@ -84,9 +106,18 @@ Configured on the environment, not in the repo:
 1. Runs `bun install` (`node_modules` is not committed).
 2. Writes `.env` from whichever of those variables the environment supplies, so `import.meta.env` and `process.env` agree.
 3. Runs `bun run build` to warm `dist/`, so `bunx vitest run` works immediately — the `seo-meta` test reads `dist/`.
-4. Prints a readiness line per integration script naming any missing variables.
+4. Probes every outbound host in parallel with `curl`, then prints one readiness line per integration script.
 
 Set `CHILL_DOGS_SKIP_BUILD=true` to skip step 3.
+
+The readiness line reports the first blocker it finds, so fix them in the order printed:
+
+| Label | Meaning | Fix |
+|---|---|---|
+| `ready` | runnable right now | — |
+| `no-keys` | env vars unset | add them under Environment settings → Environment variables |
+| `blocked` | host off the allowlist (`curl` cannot open the tunnel) | add the host under Environment settings → Network access |
+| `no-proxy` | keys and host fine, but the script runs under Bun | run it in GitHub Actions; see the Bun section above |
 
 ### GitHub Actions
 

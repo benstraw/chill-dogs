@@ -83,9 +83,18 @@ else
   fi
 fi
 
-# Default the site URL so OG/canonical URLs build correctly even with no config.
-if [ -z "${PUBLIC_SITE_URL:-}" ] && [ -n "${CLAUDE_ENV_FILE:-}" ]; then
-  echo 'export PUBLIC_SITE_URL="https://www.chill-dogs.com"' >> "$CLAUDE_ENV_FILE"
+if [ -n "${CLAUDE_ENV_FILE:-}" ]; then
+  # Default the site URL so OG/canonical URLs build correctly with no config.
+  if [ -z "${PUBLIC_SITE_URL:-}" ]; then
+    echo 'export PUBLIC_SITE_URL="https://www.chill-dogs.com"' >> "$CLAUDE_ENV_FILE"
+  fi
+
+  # Node 22's built-in fetch ignores HTTPS_PROXY unless this is set. Without it
+  # the .mjs scripts (indexnow-submit, the OG image fetches) cannot reach any
+  # host when the container routes egress through a proxy.
+  if [ -n "${HTTPS_PROXY:-}" ] && [ -z "${NODE_USE_ENV_PROXY:-}" ]; then
+    echo 'export NODE_USE_ENV_PROXY=1' >> "$CLAUDE_ENV_FILE"
+  fi
 fi
 
 # --- 3. Warm the build -----------------------------------------------------
@@ -103,31 +112,89 @@ if [ "${CHILL_DOGS_SKIP_BUILD:-}" != "true" ] && command -v bun >/dev/null 2>&1;
 fi
 
 # --- 4. Readiness report ---------------------------------------------------
+# A script can fail for three independent reasons, so all three are checked:
+# missing credentials, a host the egress policy blocks, and an HTTP client that
+# cannot use the proxy. Reporting only on credentials calls a script "ready"
+# when it cannot reach anything.
+
+# Reachability: probed in parallel so the whole sweep costs one timeout, not six.
+probe_host() {
+  local host="$1"
+  local out="$2"
+  # --head keeps the probe cheap; any HTTP status counts as reachable, since
+  # only the CONNECT tunnel is being tested. A blocked host fails the tunnel
+  # (curl exit 56, "CONNECT tunnel failed, response 403").
+  if curl -sS -I -o /dev/null -m 6 "https://${host}" 2>/dev/null; then
+    echo "reachable" > "$out"
+  else
+    echo "BLOCKED" > "$out"
+  fi
+}
+
+HOSTS=(www.amazon.com serpapi.com www.searchapi.io api.impact.com www.chewy.com api.indexnow.org)
+probe_dir="$(mktemp -d)"
+for host in "${HOSTS[@]}"; do
+  probe_host "$host" "$probe_dir/$host" &
+done
+wait
+
+blocked_hosts=()
+host_state() {
+  cat "$probe_dir/$1" 2>/dev/null || echo BLOCKED
+}
+for host in "${HOSTS[@]}"; do
+  [ "$(host_state "$host")" = "BLOCKED" ] && blocked_hosts+=("$host")
+done
+
+# Runtime: Bun's fetch cannot complete the TLS handshake inside a proxy CONNECT
+# tunnel — it fails ECONNRESET against every allowlisted host, while Node's
+# fetch (with NODE_USE_ENV_PROXY=1) and curl succeed against the same hosts.
+# So in a proxied container the Bun-based scripts cannot make network calls
+# even when their hosts are reachable. Verified on bun 1.3.11.
+bun_net_broken=false
+[ -n "${HTTPS_PROXY:-}" ] && bun_net_broken=true
+
+# report_script <label> <runtime: bun|node|none> <host or -> [env keys...]
 report_script() {
-  local label="$1"
-  shift
+  local label="$1" runtime="$2" host="$3"
+  shift 3
   local missing=()
   for key in "$@"; do
     [ -z "${!key:-}" ] && missing+=("$key")
   done
-  if [ ${#missing[@]} -eq 0 ]; then
-    echo "[chill-dogs]   ready:   $label"
+
+  if [ ${#missing[@]} -gt 0 ]; then
+    echo "[chill-dogs]   no-keys:  $label — needs ${missing[*]}"
+  elif [ "$host" != "-" ] && [ "$(host_state "$host")" = "BLOCKED" ]; then
+    echo "[chill-dogs]   blocked:  $label — $host is off the network allowlist"
+  elif [ "$host" != "-" ] && [ "$runtime" = "bun" ] && [ "$bun_net_broken" = true ]; then
+    echo "[chill-dogs]   no-proxy: $label — bun fetch cannot use this container's proxy"
   else
-    echo "[chill-dogs]   missing: $label — needs ${missing[*]}"
+    echo "[chill-dogs]   ready:    $label"
   fi
 }
 
 echo "[chill-dogs] Integration script readiness:"
-report_script "bun run check:amazon (local cache only)"
-report_script "bun run check:asins (needs egress to amazon.com)"
-report_script "bun run fetch:chewy" IMPACT_ACCOUNT_SID IMPACT_AUTH_TOKEN CHEWY_IMPACT_CAMPAIGN_ID
-report_script "bun run chewy-link" IMPACT_ACCOUNT_SID IMPACT_AUTH_TOKEN CHEWY_IMPACT_CAMPAIGN_ID CHEWY_IMPACT_AD_ID
-report_script "scripts/fetch-amazon-data.ts (SerpAPI)" SERP_API_KEY
-report_script "scripts/fetch-amazon-data.ts (SearchAPI)" SEARCHAPI_KEY
-report_script "bun run indexnow:submit" INDEXNOW_KEY
+report_script "bun run check:amazon (local cache only)" none -
+report_script "bun run check:asins" bun www.amazon.com
+report_script "bun run fetch:chewy" bun api.impact.com IMPACT_ACCOUNT_SID IMPACT_AUTH_TOKEN CHEWY_IMPACT_CAMPAIGN_ID
+report_script "bun run chewy-link" bun api.impact.com IMPACT_ACCOUNT_SID IMPACT_AUTH_TOKEN CHEWY_IMPACT_CAMPAIGN_ID CHEWY_IMPACT_AD_ID
+report_script "scripts/fetch-amazon-data.ts (SerpAPI)" bun serpapi.com SERP_API_KEY
+report_script "scripts/fetch-amazon-data.ts (SearchAPI)" bun www.searchapi.io SEARCHAPI_KEY
+report_script "bun run indexnow:submit" node api.indexnow.org INDEXNOW_KEY
 
-echo "[chill-dogs] Scripts that call out to amazon.com, serpapi.com, searchapi.io,"
-echo "[chill-dogs] api.impact.com, chewy.com, or api.indexnow.org need those hosts"
-echo "[chill-dogs] on the environment's network allowlist. See docs/ai/engineering/environment-and-integrations.md"
+rm -rf "$probe_dir"
+
+if [ ${#blocked_hosts[@]} -gt 0 ]; then
+  echo "[chill-dogs] Blocked hosts: ${blocked_hosts[*]}"
+  echo "[chill-dogs] Add them under Environment settings → Network access."
+fi
+
+if [ "$bun_net_broken" = true ]; then
+  echo "[chill-dogs] Anything marked no-proxy runs in GitHub Actions instead:"
+  echo "[chill-dogs] .github/workflows/integration-checks.yml (workflow_dispatch)."
+fi
+
+echo "[chill-dogs] Details: docs/ai/engineering/environment-and-integrations.md"
 
 exit 0

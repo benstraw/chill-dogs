@@ -45,7 +45,7 @@ jobs:
         run: bun run check:amazon -- --fail-on-stale 2>&1 | tee amazon-cache-report.txt
 
       - name: Verify Chewy Impact credentials
-        if: ${{ github.event.inputs.check == 'all' || github.event.inputs.check == 'chewy' }}
+        if: ${{ github.event.inputs.check == '' || github.event.inputs.check == 'all' || github.event.inputs.check == 'chewy' }}
         env:
           IMPACT_ACCOUNT_SID: ${{ secrets.IMPACT_ACCOUNT_SID }}
           IMPACT_AUTH_TOKEN: ${{ secrets.IMPACT_AUTH_TOKEN }}
