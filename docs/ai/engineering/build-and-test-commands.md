@@ -142,12 +142,21 @@ Use for manual re-submission after a batch of content changes.
 ### `bun run check:ai-docs`
 
 Validates the AI knowledge graph in `docs/ai/`. Checks:
-- All `.md` files have YAML frontmatter
-- Required frontmatter keys are present (`title`, `type`, `domain`, `status`, `updated`, `tags`, `related`)
-- Each file has `## Use this when` and `## Related knowledge` sections
-- Relative Markdown links resolve to existing files
+- All `.md` files have frontmatter that parses as YAML
+- Required frontmatter keys are present and non-empty (`title`, `type`, `domain`, `status`, `updated`, `tags`, `related`)
+- Each file has `## Use this when` and `## Related knowledge` sections (`type: plan` uses `## Context`)
+- `related:` entries resolve to existing files, relative to the doc's own directory
+- Relative Markdown links resolve, **including their `#anchors`**
 
-Run after adding or modifying files in `docs/ai/`.
+Run after adding or modifying files in `docs/ai/`. Takes an optional directory argument (`node scripts/validate-ai-docs.mjs <dir>`), which is how its own test suite drives it.
+
+It is built to be lenient about legitimate Markdown variation, so that a failure means real rot rather than a style disagreement:
+
+- Fenced code blocks are stripped before anything is extracted, so a doc that *demonstrates* a link, a heading, or frontmatter never has the example validated as real.
+- Anchors match GitHub's slug algorithm — formatting and punctuation stripped, repeated headings suffixed `-1`, `-2` — and also accept explicit `{#custom-id}` and `<a id="…">` anchors.
+- A mistyped anchor gets a "did you mean" suggestion rather than a bare failure.
+
+`src/__tests__/validate-ai-docs.test.ts` pins both directions: that it catches rot, and that the cases above do not trip it. Add a case there before tightening a rule — a doc linter that cries wolf gets disabled, and then nothing is checked at all.
 
 ---
 
