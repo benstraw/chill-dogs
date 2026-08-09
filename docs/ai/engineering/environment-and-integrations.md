@@ -124,6 +124,10 @@ The readiness line reports the first blocker it finds, so fix them in the order 
 - `.github/workflows/ci.yml` — build, test, and `check:ai-docs` on every push to `main` and every PR.
 - `.github/workflows/integration-checks.yml` — weekly (and `workflow_dispatch`) run of `check:asins`, `check:amazon --fail-on-stale`, and `chewy-link:verify`.
 
+The three checks run under `continue-on-error` so one failure cannot suppress the others, and a final gate step fails the job on any of their outcomes. On failure the workflow files a `merchant-check` issue assigned to `benstraw`, or comments on the open one if it already exists — a long-lived dead link produces one issue with a comment per week, not a new issue every Monday. Close the issue once fixed; the next failure opens a fresh one. Reports upload as artifacts (`merchant-check-reports`, 90 days) and per-check outcomes land in the job summary.
+
+Note: GitHub disables scheduled workflows after 60 days without repository activity. On a quiet stretch this check stops running rather than failing, which looks identical to passing — re-enable it from the Actions tab.
+
 Runners have unrestricted egress, which makes Actions the reliable home for the network-dependent merchant checks when the agent container's allowlist does not cover them. Impact credentials come from repository secrets (`IMPACT_ACCOUNT_SID`, `IMPACT_AUTH_TOKEN`, `CHEWY_IMPACT_CAMPAIGN_ID`, `CHEWY_IMPACT_AD_ID`); the Chewy step self-skips when they are absent.
 
 ### Vercel

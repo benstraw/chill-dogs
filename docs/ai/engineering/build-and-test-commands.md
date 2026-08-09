@@ -101,6 +101,15 @@ bun run check:asins -- --quiet # Issues only
 
 **Env vars needed:** None. This checks Amazon product pages directly.
 
+Results split into two kinds, because they call for different responses:
+
+- **Dead links** (`REMOVED`, `UNAVAILABLE`, `ERROR n`) — the product is gone or unbuyable. Fix the product record.
+- **Inconclusive** (`RATE LIMITED`, `UNKNOWN`, `FETCH ERROR`) — Amazon would not answer. Says nothing about the product. Retried twice with backoff under a 5-minute global budget before being recorded.
+
+Exits 1 on any dead link, and also when more than 25% of results are inconclusive — a run that could not see Amazon has not verified anything, and reporting it as a pass would be worse than reporting nothing. Amazon throttles unauthenticated traffic from shared CI runner IPs, so the inconclusive path is normal there, not a bug.
+
+**Cannot run in a proxied agent container** — it runs under Bun. See [`environment-and-integrations.md`](environment-and-integrations.md).
+
 ---
 
 ### `bun run check:amazon`
