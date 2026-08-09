@@ -98,11 +98,11 @@ export function getHomepageConverters(limit = 15): HomepageConverterCard[] {
 
 const HOMEPAGE_THEME_ORDER: HomepageArticleColor[] = ['cool', 'calm', 'comfort', 'gear'];
 
+// Spelled out rather than built from HOMEPAGE_THEME_ORDER: the literal is
+// checked against the union, so adding a colour fails to compile here instead
+// of silently producing a bucket map with a missing key.
 function emptyThemeBuckets<T>(): Record<HomepageArticleColor, T[]> {
-  return Object.fromEntries(HOMEPAGE_THEME_ORDER.map((color) => [color, []])) as Record<
-    HomepageArticleColor,
-    T[]
-  >;
+  return { cool: [], calm: [], comfort: [], gear: [] };
 }
 
 export function groupHomepageArticlesByTheme(

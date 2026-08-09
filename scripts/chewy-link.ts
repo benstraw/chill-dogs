@@ -15,16 +15,19 @@ interface ChewyLinkCliOptions extends ChewyAffiliateOptions {
   chewyProductUrl: string;
 }
 
-interface CsvInputRow {
+// Type aliases rather than interfaces: formatCsv constrains its rows to
+// Record<string, string | undefined>, and only a type alias picks up the
+// implicit index signature that constraint needs.
+type CsvInputRow = {
   name: string;
   chewy_url: string;
   article_slug?: string;
   placement?: string;
-}
+};
 
-interface CsvOutputRow extends CsvInputRow {
+type CsvOutputRow = CsvInputRow & {
   affiliate_url: string;
-}
+};
 
 const args = process.argv.slice(2);
 

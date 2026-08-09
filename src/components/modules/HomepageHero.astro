@@ -86,7 +86,7 @@ const { featuredArticle } = Astro.props;
     >
       <div class="hp-v6-featured-img-wrap">
         <img
-          src={typeof featuredArticle.image === 'string' ? featuredArticle.image : featuredArticle.image.src}
+          src={featuredArticle.image}
           alt=""
           class="hp-v6-featured-img"
           width="600"
