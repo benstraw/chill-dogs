@@ -172,6 +172,7 @@ describe('multi-merchant product offers', () => {
     const alsoOnAmazonById = {
       'tweezerman-precision-flea-comb': 'B0GK34GTCC',
       'wahl-flea-finishing-comb': 'B079SYNQQ5',
+      'tweezerman-tick-removal-kit': 'B0GK3BSK56',
     } satisfies Record<string, string>;
 
     const config = fleaTickConverterPages['best-natural-flea-and-tick-products-for-dogs'];
