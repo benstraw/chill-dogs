@@ -13,6 +13,7 @@ const SECTION_RULES: Array<{ prefix: string; section: string }> = [
   { prefix: '/cooling/', section: 'Cooling Guides' },
   { prefix: '/calming/', section: 'Calming Guides' },
   { prefix: '/travel/', section: 'Travel Guides' },
+  { prefix: '/lifestyle/', section: 'Lifestyle Guides' },
   { prefix: '/about/', section: 'About' },
   { prefix: '/contact/', section: 'About' },
 ];
