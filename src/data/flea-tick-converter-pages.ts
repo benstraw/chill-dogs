@@ -204,9 +204,9 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       {
         kind: 'product_section',
         id: 'grooming-tools',
-        heading: 'Combs, brushes, and tick-removal tools',
+        heading: 'Combs, Grooming Sets, and Tick-Removal Tools',
         intro:
-          'Natural routines lean much harder on coat checks than conventional medication does, which makes these the cheapest high-value products on the page. A flea comb is how you catch a problem early, a brush that gets through the undercoat is how you reach skin on a thick coat, and a proper tick tool is how you get the head out without crushing the tick.',
+          'Coat checks are an integral part of any flea and tick prevention routine. Flea combs allow you to catch a problem early, brushes allow you to get through the undercoat and reach skin on a thick coat, and a tick tool helps you remove a tick entirely without leaving any part of it embedded in your dog.',
         positionOffset: 22,
         columns: 3,
         productIds: [
