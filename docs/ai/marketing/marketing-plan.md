@@ -3,7 +3,7 @@ title: Marketing Plan
 type: canonical
 domain: marketing
 status: active
-updated: 2026-05-03
+updated: 2026-08-10
 tags:
   - chill-dogs
   - marketing
@@ -85,7 +85,7 @@ See [`newsletter-guide.md`](newsletter-guide.md) for format.
 
 ### 4. Paid (low priority)
 
-No active paid budget defined. Hero experiment variant pages (`/v/`, `/cooling/v/`, `/calming/v/`) exist to test conversion messaging for potential future paid campaigns.
+No active paid budget defined. Homepage hero experiment pages under `/v/` remain available to test conversion messaging for potential future paid campaigns. The retired `/cooling/v/` and `/calming/v/` routes are no longer built.
 
 ---
 

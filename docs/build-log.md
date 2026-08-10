@@ -615,3 +615,35 @@ low-effort SEO hygiene and can improve SERP URL presentation.
   - confirms `BreadcrumbList` exists on indexable routes,
   - confirms no breadcrumb schema is injected on `noindex` pages.
 - Full suite passes with breadcrumb coverage added.
+
+---
+
+## Phase 14 — Retire Section Collector Hero Variants
+
+**Goal:** Remove an unused experiment system while preserving the live
+variant-C presentation on the cooling, calming, comfort, and gear section
+collectors.
+
+### What changed
+
+- Deleted the 17 noindex `/cooling/v/` and `/calming/v/` pages. They were
+  absent from the sitemap and canonicalized to production collectors, so no
+  redirects were added.
+- Replaced `HeroExperiment.astro` with `SectionHero.astro`; the shared
+  `SectionCollectorPage` still receives pillar-specific hero content from
+  `src/data/section-collectors.ts`.
+- Folded the variant-C background and spotlight styles into `hero.base.css`,
+  then deleted `hero.variants.css` and the orphaned
+  `CalmingHubHeroFireworks.astro` component.
+- Kept `hero_cta_click` tracking with `page` and `cta` properties. The retired
+  `variant` property remains only on historical PostHog events.
+- Made `bunx astro check` a blocking CI step after the unreachable E/G branch
+  and its final type error disappeared.
+
+### Verification
+
+- `bunx astro check` reports zero errors.
+- Build and smoke coverage verify the four section collectors render themed,
+  tracked heroes and that the retired routes are absent from `dist/`.
+- Before/after browser checks cover `/cooling/`, `/calming/`, `/comforting/`,
+  and `/gear/`.

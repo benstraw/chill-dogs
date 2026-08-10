@@ -1,19 +1,25 @@
-# Hero Experiment System
+# Hero Experiments
 
-Lightweight, color-based hero experiments for the Cooling and Calming hub pages.
-No images, no heavy JS, no third-party animation libraries.
+## Retired Section Collector Hero Experiment
+
+The former color-based experiments for the Cooling and Calming section
+collectors were retired on August 10, 2026. The `/cooling/v/` and `/calming/v/`
+routes, `HeroExperiment.astro`, `hero.variants.css`, and the orphaned calming
+fireworks hero were deleted. The production variant-C presentation now lives
+in `SectionHero.astro` and `hero.base.css` without experiment branching.
+
+The descriptions below are retained as a historical record only. They do not
+describe routes or components that are currently available.
 
 ## URLs
 
 | Page     | Control (canonical)   | Variants                                |
 |----------|-----------------------|-----------------------------------------|
-| Cooling  | `/cooling/`           | `/cooling/v/a/` … `/cooling/v/h/`      |
-| Calming  | `/calming/`           | `/calming/v/a/` … `/calming/v/g/`      |
 | Homepage | `/`                   | `/v/v1/` … `/v/v5/`                    |
 
-All variant pages carry `<meta name="robots" content="noindex, follow">` and
-a canonical link pointing to the control URL. The body content below the hero
-is identical across control and all variants.
+Homepage variant pages carry `<meta name="robots" content="noindex, follow">`
+and a canonical link pointing to `/`. The retired section collector variants
+were also noindex and canonicalized, so their removal requires no redirects.
 
 ---
 
@@ -21,8 +27,8 @@ is identical across control and all variants.
 
 | Page    | Status   | Winner      | Notes                                                  |
 |---------|----------|-------------|--------------------------------------------------------|
-| Cooling | Active   | —           | Variant A is control; variant H (Playful Animated) added for comparison |
-| Calming | Complete | Variant A   | Aurora Wash promoted to default; variant URLs remain live |
+| Cooling | Retired | Variant C presentation retained | Variant routes no longer build |
+| Calming | Retired | Variant C presentation retained | Variant routes no longer build |
 | Homepage | Active  | —           | v1 is current default; collecting data                 |
 
 ---
@@ -166,9 +172,9 @@ category's promise at a glance.
 
 ---
 
-## Tracking Implementation
+## Historical Section Collector Tracking
 
-All variants instrument two event surfaces:
+The retired variants instrumented two event surfaces:
 
 ### 1. `data-*` attributes on the DOM
 
@@ -201,17 +207,20 @@ go through `track()`.
 
 ---
 
-## CSS Architecture
+## Retired CSS Architecture
 
 | File | Purpose |
 |------|---------|
-| `src/styles/hero.base.css` | Theme tokens (cooling/calming), base layout, typography, CTA focus states, mobile breakpoints |
-| `src/styles/hero.variants.css` | Per-variant background, color, and effect rules (a–h; variant h styles are self-contained in CoolingHubHero.astro) |
-| `src/components/modules/HeroExperiment.astro` | Component template for variants a–g; imports both CSS files; handles variant-specific markup differences |
-| `src/components/modules/CoolingHubHero.astro` | Self-contained component for variant h; SVG art, CSS dog, glass card, and all styles scoped within |
+| `src/styles/hero.base.css` | Current SectionHero theme tokens, variant-C presentation, layout, typography, CTA focus states, and mobile breakpoints |
+| `src/components/modules/SectionHero.astro` | Current shared hero for cooling, calming, comfort, and gear section collectors |
 
-Both CSS files are imported inside the Astro component's `<style>` block and
-are scoped to the component via Astro's data-attribute mechanism.
+The former `hero.variants.css`, `HeroExperiment.astro`, and
+`CalmingHubHeroFireworks.astro` files were deleted with the section variant
+routes. `CoolingHubHero.astro` remains independently available outside this
+retired system.
+
+The current CSS file is imported inside `SectionHero.astro` and scoped to the
+component through Astro's generated scope attribute.
 
 ---
 
@@ -227,7 +236,7 @@ are scoped to the component via Astro's data-attribute mechanism.
 
 ---
 
-## Measurement Checklist
+## Historical Measurement Checklist
 
 Before declaring a winner:
 

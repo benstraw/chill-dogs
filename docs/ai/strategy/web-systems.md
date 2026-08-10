@@ -3,7 +3,7 @@ title: Web Systems Framework — Applied to Chill-Dogs
 type: canonical
 domain: strategy
 status: active
-updated: 2026-05-23
+updated: 2026-08-10
 tags:
   - chill-dogs
   - web-systems
@@ -63,7 +63,7 @@ Every page on the site belongs to exactly one type. Mixing types is not allowed.
 - **Purpose:** Convert paid or social campaign traffic.
 - **Characteristics:** High visual clarity, campaign-specific messaging.
 - **Metric:** Campaign conversion rate.
-- **Chill-Dogs examples:** `/` (homepage), hero experiment variant pages
+- **Chill-Dogs example:** `/` (homepage)
 
 ### Informer
 
@@ -91,19 +91,19 @@ All pages are built from modules.
 
 Reusable, content-agnostic. Build for reuse. Avoid hardcoded content.
 
-Examples: `Hero`, `SectionCollectorPage`, `CollectorBody`, `FAQ`, `Disclosure`, `InternalLinkStrip`, `Toc`, `CoolingProductCard`, `RelaxationProductCard`
+Examples: `Hero`, `SectionHero`, `SectionCollectorPage`, `CollectorBody`, `FAQ`, `Disclosure`, `InternalLinkStrip`, `Toc`, `CoolingProductCard`, `RelaxationProductCard`
 
 ### Showstopper modules
 
 High-impact, custom, complex. Use sparingly — high fragility, high cost. Never stack two showstoppers on one page.
 
-Examples: `CoolingHubHeroDesert`, `CalmingHubHeroFireworks`, 404 visual
+Examples: `CoolingHubHeroDesert`, 404 visual
 
 ### High-touch modules
 
 Require careful testing and iteration. Cannot be blindly copied.
 
-Examples: `HomepageHero` variants, collector variant routes, Road Trip collector narrative
+Examples: `HomepageHero` variants, Road Trip collector narrative
 
 ---
 
