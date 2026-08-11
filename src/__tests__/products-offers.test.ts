@@ -173,6 +173,9 @@ describe('multi-merchant product offers', () => {
       'tweezerman-precision-flea-comb': 'B0GK34GTCC',
       'wahl-flea-finishing-comb': 'B079SYNQQ5',
       'tweezerman-tick-removal-kit': 'B0GK3BSK56',
+      'tweezerman-tick-tweezer': 'B0D236JZGJ',
+      'tickcheck-premium-tick-kit': 'B075DKL3Z6',
+      'tickcheck-remover-spoon': 'B07K4F66LH',
     } satisfies Record<string, string>;
 
     const config = fleaTickConverterPages['best-natural-flea-and-tick-products-for-dogs'];
