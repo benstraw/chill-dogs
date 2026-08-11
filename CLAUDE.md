@@ -45,7 +45,15 @@ bun run check:asins -- --quiet  # Same, issues only
 bun run check:amazon     # Check local Amazon cache coverage, freshness, and drift
 bun run indexnow:submit  # Manually submit all URLs to IndexNow API
 bun run check:ai-docs    # Validate AI knowledge graph frontmatter and links
+bun run fetch:chewy      # Pull Chewy catalog metadata from Impact (diagnostic only)
+bun run chewy-link:verify # Confirm Impact credentials resolve
+bun run og:gen           # Generate product-style OG share images
 ```
+
+Scripts that need API keys or outbound network access (`check:asins`, `fetch:chewy`,
+`chewy-link`, `fetch-amazon-data.ts`, `indexnow:submit`) are documented in
+[`docs/ai/engineering/environment-and-integrations.md`](docs/ai/engineering/environment-and-integrations.md).
+In a sandboxed container, a blocked host and a missing key look alike — check both.
 
 ## SEO meta constraints (enforced by tests)
 

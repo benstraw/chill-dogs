@@ -1,0 +1,46 @@
+---
+export type SectionHeroTheme = 'cooling' | 'calming' | 'comfort' | 'gear';
+
+interface Props {
+  theme: SectionHeroTheme;
+  headline: string;
+  subhead: string;
+  primaryCta: { label: string; href: string };
+  secondaryCta?: { label: string; href: string };
+}
+
+const { theme, headline, subhead, primaryCta, secondaryCta } = Astro.props;
+---
+
+<section class={`hx hx--${theme}`} aria-label="Page hero">
+  <div class="hx-inner">
+    <h1 class="hx-title">{headline}</h1>
+    <p class="hx-subhead">{subhead}</p>
+    <div class="hx-ctas">
+      <a
+        href={primaryCta.href}
+        class="hx-cta hx-cta--primary"
+        data-track="hero_cta_click"
+        data-page={theme}
+        data-cta="primary"
+      >
+        {primaryCta.label}
+      </a>
+      {secondaryCta && (
+        <a
+          href={secondaryCta.href}
+          class="hx-cta hx-cta--secondary"
+          data-track="hero_cta_click"
+          data-page={theme}
+          data-cta="secondary"
+        >
+          {secondaryCta.label}
+        </a>
+      )}
+    </div>
+  </div>
+</section>
+
+<style>
+  @import '../../styles/hero.base.css';
+</style>

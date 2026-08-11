@@ -97,6 +97,25 @@ Do not edit `sitemap-inventory.ts` directly for page registration — edit `cont
 
 ---
 
+## Discovery surfaces: XML sitemap and llms.txt
+
+Both public discovery surfaces derive from the same data. Neither is a curated list.
+
+| Surface | Built by | Source |
+|---|---|---|
+| `sitemap-0.xml` | `@astrojs/sitemap` in `astro.config.mjs` | Every built route, minus the shared exclusions |
+| `llms.txt` | `src/pages/llms.txt.ts` | Complete sitemap inventory, minus `noindex` and the shared exclusions |
+
+**Shared exclusions live in `src/data/discovery-exclusions.ts`.** Both surfaces import `isExcludedFromDiscovery()`, so a fragment added there disappears from both at once. Do not add a second exclusion list.
+
+A page appears in `llms.txt` automatically once it is registered in `content-sitemap.ts` (or is an MDX article with a `canonicalPath`). There is nothing to curate — do not reintroduce a hand-maintained link array in `llms.txt.ts`. Ordering-only nudges for high-intent pages go in `PRIORITY_OVERRIDES`; they move a page within its section and never decide whether it is listed.
+
+`src/__tests__/llms-coverage.test.ts` fails if `llms.txt` omits any indexable sitemap URL, lists a URL absent from the sitemap, or lists a `noindex` page.
+
+Sections in `llms.txt` come from path prefix (`LLMS_SECTION_ORDER` in `src/utils/llms.ts`). When adding a new top-level path prefix, add a matching section rule — otherwise its pages still appear, but under `Core Pages`.
+
+---
+
 ## Related content system
 
 Related links derive from the complete sitemap inventory automatically. Do not add manual related arrays.

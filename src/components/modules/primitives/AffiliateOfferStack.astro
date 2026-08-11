@@ -9,7 +9,9 @@ import type { AffiliateOffer } from '@data/products/types';
  *
  * `resolveLabel` lets callers override the button copy per offer (cooling uses the
  * page CTA label for Amazon; browse appends an arrow). Defaults to the merchant's
- * configured `ctaCopy`.
+ * configured `ctaCopy`. Returning `undefined` for an offer falls back to
+ * MerchantAffiliateLink's own chain — the offer's `label`, then `ctaCopy` — which
+ * is how callers style one merchant and leave the rest alone.
  *
  * `topGap` adds the per-offer top margin the pillar converter cards carry; browse's
  * compact footer CTAs pass `topGap={false}` to stay flush.
@@ -23,7 +25,7 @@ interface Props {
   pageSlug?: string;
   position?: string | number;
   topGap?: boolean;
-  resolveLabel?: (offer: AffiliateOffer, index: number) => string;
+  resolveLabel?: (offer: AffiliateOffer, index: number) => string | undefined;
 }
 
 const {

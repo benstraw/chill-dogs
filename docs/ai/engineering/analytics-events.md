@@ -3,7 +3,7 @@ title: Analytics Events
 type: canonical
 domain: engineering
 status: active
-updated: 2026-05-24
+updated: 2026-08-10
 tags:
   - chill-dogs
   - engineering
@@ -57,8 +57,8 @@ Add `data-track="event_name"` to any HTML element. Additional `data-*` attribute
 ```html
 <button
   data-track="hero_cta_click"
-  data-variant="a"
   data-page="cooling"
+  data-cta="primary"
 >
   See Cooling Picks
 </button>
@@ -72,7 +72,7 @@ Import `track` from `src/scripts/analytics.ts` for non-click events:
 
 ```typescript
 import { track } from '@scripts/analytics';
-track('hero_impression', { variant: 'a', page: 'cooling' });
+track('hero_impression', { page: 'home' });
 ```
 
 ---
@@ -82,8 +82,8 @@ track('hero_impression', { variant: 'a', page: 'cooling' });
 | Event | Trigger | Key Properties |
 |---|---|---|
 | `amazon_outbound_click` | Click on any `AffiliateLink` component | `asin`, `product_name`, `page_slug`, `position` |
-| `hero_cta_click` | Click on section collector or variant hero CTA | `variant`, `page`, `cta` (primary/secondary) |
-| `hero_impression` | Hero is 50% visible (IntersectionObserver) | `variant`, `page` |
+| `hero_cta_click` | Click on a section collector or homepage hero CTA | Section collectors: `page`, `cta` (primary/secondary); homepage: `cta`, `href` |
+| `hero_impression` | Homepage hero is 50% visible (IntersectionObserver) | — |
 | `collector_to_converter_click` | Click on internal link from collector to converter | `from_slug`, `to_slug` |
 | `toc_click` | Click on table of contents link | `anchor`, `page_slug` |
 | `pinterest_save_click` | Click on an opt-in Pinterest save card or save button | `page_slug`, `pin_title`, `placement`, `media` |
@@ -93,6 +93,12 @@ track('hero_impression', { variant: 'a', page: 'cooling' });
 | `email_signup_submit` | Form submitted | — |
 | `search_query` | User search produces results (fired after 150 ms debounce) | `query`, `result_count`, `filter` |
 | `search_result_click` | User clicks a page or product result card from `/search/` | `result_href`, `result_title`, `result_type`, `query` |
+
+Section collector hero events emitted before August 10, 2026 include
+`variant: "c"`. The section hero variant system was retired on that date, so
+new `hero_cta_click` events from `/cooling/`, `/calming/`, `/comforting/`, and
+`/gear/` intentionally omit `variant`. Historical PostHog events keep their
+original shape.
 
 ---
 

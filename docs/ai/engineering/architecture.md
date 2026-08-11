@@ -3,7 +3,7 @@ title: Engineering Architecture
 type: canonical
 domain: engineering
 status: active
-updated: 2026-08-06
+updated: 2026-08-11
 tags:
   - chill-dogs
   - engineering
@@ -173,11 +173,10 @@ Three phases run automatically via `bun run build`:
 
 ## A/B experiment variants
 
-- `/cooling/v/{a–i}/` — cooling section collector hero variants
-- `/calming/v/{a–h}/` — calming section collector hero variants
 - `/v/{v1–v5}/` — 5 homepage hero variants
-- All are `noindex` with canonical pointing to the production collector URL
-- Winners promoted to default; variant URLs retired
+- All are `noindex` with canonical pointing to the homepage
+- The retired `/cooling/v/` and `/calming/v/` section hero routes are no longer built
+- Section collectors share `SectionHero.astro`, with pillar-specific content and theme tokens supplied by `src/data/section-collectors.ts`
 
 ---
 

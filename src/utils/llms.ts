@@ -1,7 +1,23 @@
+import { isExcludedFromDiscovery } from '@data/discovery-exclusions';
+
+/**
+ * How a page earns its place in the ordering. Mirrors the sitemap page types,
+ * splitting collectors into section collectors and article collectors so
+ * section landing pages lead their section and prose guides trail the
+ * converters they support.
+ */
+export type LlmsPageKind =
+  | 'attractor'
+  | 'section-collector'
+  | 'converter'
+  | 'article-collector'
+  | 'informer';
+
 export interface LlmsLink {
   title: string;
   path: string;
   description?: string;
+  pageKind?: LlmsPageKind;
   explicitPriority?: number;
 }
 
@@ -9,21 +25,39 @@ interface RankedLlmsLink extends LlmsLink {
   priority: number;
 }
 
+export const LLMS_SECTION_ORDER = [
+  'Core Pages',
+  'Cooling Guides',
+  'Calming Guides',
+  'Comfort & Rest Guides',
+  'Gear & Tracking Guides',
+  'Safety Guides',
+  'Travel Guides',
+  'About',
+] as const;
+
 const SECTION_RULES: Array<{ prefix: string; section: string }> = [
   { prefix: '/cooling/', section: 'Cooling Guides' },
   { prefix: '/calming/', section: 'Calming Guides' },
+  { prefix: '/comforting/', section: 'Comfort & Rest Guides' },
+  { prefix: '/gear/', section: 'Gear & Tracking Guides' },
+  { prefix: '/safety/', section: 'Safety Guides' },
   { prefix: '/travel/', section: 'Travel Guides' },
   { prefix: '/about/', section: 'About' },
   { prefix: '/contact/', section: 'About' },
+  { prefix: '/affiliate-disclosure/', section: 'About' },
+  { prefix: '/shelter-dog-charities/', section: 'About' },
 ];
 
-const EXCLUDED_EXACT_PATHS = new Set([
-  '/404/',
-  '/content-sitemap/',
-  '/privacy-policy/',
-  '/terms/',
-  '/affiliate-disclosure/',
-]);
+const PAGE_KIND_PRIORITY: Record<LlmsPageKind, number> = {
+  attractor: 960,
+  'section-collector': 940,
+  converter: 900,
+  'article-collector': 860,
+  informer: 500,
+};
+
+const EXCLUDED_EXACT_PATHS = new Set(['/404/']);
 
 export function normalizePath(path: string): string {
   if (!path.startsWith('/')) {
@@ -40,7 +74,7 @@ export function shouldExcludePath(path: string): boolean {
     return true;
   }
 
-  if (normalized.includes('/v/')) {
+  if (isExcludedFromDiscovery(normalized)) {
     return true;
   }
 
@@ -66,6 +100,10 @@ export function rankLlmsLink(link: LlmsLink): number {
 
   if (path === '/') {
     return 1000;
+  }
+
+  if (link.pageKind) {
+    return PAGE_KIND_PRIORITY[link.pageKind];
   }
 
   if (path === '/cooling/' || path === '/calming/') {
@@ -138,7 +176,7 @@ export function buildLlmsMarkdown(options: {
     shortParagraph,
     baseUrl,
     links,
-    maxLinks = 40,
+    maxLinks = Number.POSITIVE_INFINITY,
   } = options;
 
   const selected = dedupeAndRankLinks(links).slice(0, maxLinks);
@@ -151,12 +189,11 @@ export function buildLlmsMarkdown(options: {
     grouped.set(section, sectionLinks);
   }
 
+  // Any section a future SECTION_RULES entry introduces still gets emitted,
+  // appended after the known order rather than silently dropped.
   const sectionOrder = [
-    'Core Pages',
-    'Cooling Guides',
-    'Calming Guides',
-    'Travel Guides',
-    'About',
+    ...LLMS_SECTION_ORDER,
+    ...Array.from(grouped.keys()).filter((section) => !LLMS_SECTION_ORDER.includes(section as never)),
   ];
 
   const lines: string[] = [

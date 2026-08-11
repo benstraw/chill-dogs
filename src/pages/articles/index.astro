@@ -47,7 +47,7 @@ const schema = {
       >
         <div class="featured-img-wrap">
           <img
-            src={typeof featured.image === 'string' ? featured.image : featured.image.src}
+            src={featured.image}
             alt=""
             class="featured-img"
             width="600"
@@ -77,7 +77,7 @@ const schema = {
           >
             <div class="article-img-wrap">
               <img
-                src={typeof article.image === 'string' ? article.image : article.image.src}
+                src={article.image}
                 alt=""
                 class="article-img"
                 width="400"

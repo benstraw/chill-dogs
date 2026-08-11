@@ -123,6 +123,8 @@ engineering/seo-and-schema.md             # Canonical URLs, OG meta, JSON-LD
     ↓
 engineering/build-and-test-commands.md    # What to run before finishing
     ↓
+engineering/environment-and-integrations.md   # Env vars, network allowlist, CI, session setup
+    ↓
 checklists/coding-agent-finish-checklist.md   # Final gate
 ```
 

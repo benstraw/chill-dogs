@@ -8,7 +8,7 @@
 
 site_system:
   status: "active"
-  as_of: "2026-06-05"
+  as_of: "2026-08-10"
   owner: "chill-dogs"
   purpose: "Define the website as a modular conversion system and keep implementation aligned."
 
@@ -422,7 +422,7 @@ site_system:
     workhorse:
       - "BaseLayout"
       - "Hero"
-      - "HeroExperiment"
+      - "SectionHero"
       - "CoolingConverterPage"
       - "CalmingConverterPage"
       - "RelaxationConverterPage"
@@ -440,12 +440,10 @@ site_system:
       - "RelatedGuides"
       - "HomepageSection"
     showstopper:
-      - "CoolingHubHeroDesert"
-      - "CalmingHubHeroFireworks"
       - "404 visual page"
     high_touch:
       - "HomepageHero variants"
-      - "collector variant routes (/v/, /cooling/v/, /calming/v/)"
+      - "homepage variant routes (/v/)"
       - "Road Trip collector narrative"
 
   nav:
@@ -520,9 +518,10 @@ site_system:
     frontend: "Astro 5 static site with scoped CSS and reusable modules"
     cms: "None (code-first content/config in repository)"
     hosting: "Static build deployment"
-    seo_strategy: "collector captures intent; converter monetizes intent; variant routes remain canonicalized and noindex"
+    seo_strategy: "collector captures intent; converter monetizes intent; homepage variant routes remain canonicalized and noindex"
     sitemap_inventory: "src/data/sitemap-inventory.ts composes staticSitemapSections with article MDX collection entries at build time; future related-content derivation should use the complete inventory instead of static-only sections. Converter sitemap entries carry pubDate and optional lastUpdated metadata for homepage theme-section converter recency ordering."
-    section_collectors: "src/data/section-collectors.ts defines cooling, calming, and comfort collector metadata, topic subsection grouping, topic coverage, priority ordering, dynamic CollectorBody card inventories, and CollectionPage hasPart schema from the complete sitemap inventory."
+    section_collectors: "src/data/section-collectors.ts defines cooling, calming, comfort, and gear collector metadata, shared SectionHero content/theme inputs, topic subsection grouping, topic coverage, priority ordering, dynamic CollectorBody card inventories, and CollectionPage hasPart schema from the complete sitemap inventory. The retired /cooling/v/ and /calming/v/ hero experiment routes are no longer built."
+    discovery_surfaces: "The XML sitemap (astro.config.mjs) and llms.txt (src/pages/llms.txt.ts) share one exclusion list in src/data/discovery-exclusions.ts. llms.txt is generated from the complete sitemap inventory — every registered page that is not noindex and not excluded is listed, so new pages appear automatically. It is never a hand-curated subset; src/__tests__/llms-coverage.test.ts fails the build if llms.txt and the XML sitemap disagree on any indexable URL."
 
   redirects:
     # Production: vercel.json → redirects array (true HTTP redirect at Vercel edge).
@@ -550,4 +549,5 @@ site_system:
       - "hero_impression"
       - "toc_click"
       - "pinterest_save_click"
+    hero_cta_properties: "SectionHero emits page + cta; section collector events before 2026-08-10 also contain variant=c. HomepageHero emits cta + href. Historical PostHog events retain their original properties."
     funnel_definition: "collector or attractor entry -> converter click -> affiliate_outbound_click; Amazon links dual-fire amazon_outbound_click during dashboard migration"
