@@ -635,6 +635,11 @@ collectors.
 - Folded the variant-C background and spotlight styles into `hero.base.css`,
   then deleted `hero.variants.css` and the orphaned
   `CalmingHubHeroFireworks.astro` component.
+- Deleted `CoolingHubHero.astro` and `CoolingHubHeroDesert.astro`, the
+  self-contained variant-H and variant-I heroes. Removing the `/cooling/v/`
+  route left them with no importers.
+- Refreshed `README.md`, which still described the section hero variants and
+  `hero.variants.css` as live.
 - Kept `hero_cta_click` tracking with `page` and `cta` properties. The retired
   `variant` property remains only on historical PostHog events.
 - Made `bunx astro check` a blocking CI step after the unreachable E/G branch

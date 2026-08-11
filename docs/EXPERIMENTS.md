@@ -167,8 +167,8 @@ category's promise at a glance.
 **Primary metric:** Hero primary CTA click-through rate vs variant A control
 **Secondary metric:** Downstream affiliate link clicks on `/best-cooling-products-for-dogs/`
 
-**URL:** `/cooling/v/h/`
-**Component:** `src/components/modules/CoolingHubHero.astro`
+**URL:** `/cooling/v/h/` (retired)
+**Component:** `src/components/modules/CoolingHubHero.astro` (deleted)
 
 ---
 
@@ -214,10 +214,11 @@ go through `track()`.
 | `src/styles/hero.base.css` | Current SectionHero theme tokens, variant-C presentation, layout, typography, CTA focus states, and mobile breakpoints |
 | `src/components/modules/SectionHero.astro` | Current shared hero for cooling, calming, comfort, and gear section collectors |
 
-The former `hero.variants.css`, `HeroExperiment.astro`, and
-`CalmingHubHeroFireworks.astro` files were deleted with the section variant
-routes. `CoolingHubHero.astro` remains independently available outside this
-retired system.
+The former `hero.variants.css`, `HeroExperiment.astro`,
+`CalmingHubHeroFireworks.astro`, `CoolingHubHero.astro`, and
+`CoolingHubHeroDesert.astro` files were deleted with the section variant
+routes. The last two were only ever mounted by the retired `/cooling/v/h/` and
+`/cooling/v/i/` routes and had no other importers.
 
 The current CSS file is imported inside `SectionHero.astro` and scoped to the
 component through Astro's generated scope attribute.

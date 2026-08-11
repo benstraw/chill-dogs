@@ -97,7 +97,7 @@ Examples: `Hero`, `SectionHero`, `SectionCollectorPage`, `CollectorBody`, `FAQ`,
 
 High-impact, custom, complex. Use sparingly — high fragility, high cost. Never stack two showstoppers on one page.
 
-Examples: `CoolingHubHeroDesert`, 404 visual
+Examples: 404 visual
 
 ### High-touch modules
 
