@@ -228,11 +228,11 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       {
         kind: 'callout',
         id: 'natural-limits',
-        heading: 'Where natural products stop making sense',
+        heading: 'When Natural Is Not Enough',
         tone: 'info',
         paragraphs: [
-          'If you still see live fleas after cleaning, your dog is chewing raw spots, or you live in a serious tick-disease region, the practical next step is usually a conventional medication conversation with your vet.',
-          `If you want the routine that makes these products worth buying — coat checks, bedding cleanup, and knowing when to escalate — read <a href="${ROUTES.naturalFleaTickPrevention}">the natural flea and tick prevention guide</a> before you shop.`,
+          'If you continue to see live fleas on your dog, if your dog is chewing raw spots, or if you live in a region with heavy flea and tick infestation, consult your veterinarian, as pharmaceutical treatments may be necessary.',
+          `For more information on natural flea and tick prevention, see <a href="${ROUTES.naturalFleaTickPrevention}">the natural flea and tick prevention guide</a>.`,
         ],
       },
     ],
@@ -242,17 +242,17 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         {
           question: 'Do natural flea and tick products really work?',
           answer:
-            'They can help, especially as prevention layers and light-load support, but the evidence base is thinner than for conventional medications. The more exposure your dog has and the higher your regional tick risk is, the more that evidence gap matters.',
+            'For many dogs, yes, especially if your dog tends to spend a lot of time indoors. For dogs that live outside much of the time, play often in dog runs, or live in a region with high flea and tick infestation, pharmaceutical treatments may be necessary.',
         },
         {
-          question: 'Is Wondercide safe around cats?',
+          question: 'Are natural dog flea and tick treatments safe around cats?',
           answer:
-            'Some Wondercide products are labeled for cats, but that does not make every scent or every dog product safe for mixed-pet improvisation. Treat cat safety as a label-reading issue, not as a brand-level assumption.',
+            'Some products are labeled for use on dogs and cats, and some are safe to use around cats, but that does not make every scent or every dog product safe for cats. Peppermint essential oil in particular can be toxic to cats. Read product labels carefully if you have cats in your house.',
         },
         {
           question: 'Should I choose a spray, shampoo, collar, tag, or chew?',
           answer:
-            'Spray is the best place to start if you want flexibility and understand reapplication. The shampoos are bath-day support rather than prevention, while collars and clip-on tags are leave-on convenience layers. Daily chews are the lightest-evidence option here, so treat them as a supplement, not your main protection.',
+            'Sprays allow flexibility but require frequent reapplication. Shampoos work to repel fleas and ticks on contact, rather than prevention. Collars and tags provide protection for months at a time. Daily chews are best used as a supplement rather than your main protection.',
         },
       ],
     },
