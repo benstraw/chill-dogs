@@ -12,6 +12,10 @@ const HOMEPAGE_PICK_IDS: Record<ProductCatalogItem['pillar'], string[]> = {
   calming: ['thundershirt-classic', 'awoo-paradise-lick-mat'],
   comfort: ['bedstill-donut-calming-bed', 'cwawz-orthopedic-bolster'],
   gear: ['fi-series-3-plus', 'apple-airtag-2nd-gen'],
+  // No safety section on the homepage yet, so there is nothing to pick. Kept as an
+  // explicit key rather than widening the Record: a new pillar should keep failing
+  // the type check until someone decides what it surfaces.
+  safety: [],
 };
 
 export function getHomepagePicks(pillar: ProductCatalogItem['pillar']): ProductCatalogItem[] {
