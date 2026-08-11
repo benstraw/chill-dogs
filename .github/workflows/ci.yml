@@ -42,11 +42,7 @@ jobs:
         run: bun run check:ai-docs
 
       - name: Type check
-        # Non-blocking: `astro check` reports 1 pre-existing error as of
-        # 2026-08-09 (HeroExperiment.astro's variant E/G comparison, which needs
-        # a product decision rather than a type fix). Flip this to a hard
-        # failure once that is resolved and the count reaches zero.
-        run: bunx astro check || true
+        run: bunx astro check
 
       - name: Report Amazon cache freshness
         # Local-cache only, no network. Informational: a stale cache should not

@@ -59,7 +59,7 @@ registry.
 
 | URL | Type | Target action | Metric | Layout |
 |---|---|---|---|---|
-| `/cooling/` | attractor | Route to `/cooling/best-cooling-products-for-dogs/` | CTA click-through | `BaseLayout` + `HeroExperiment` |
+| `/cooling/` | collector | Route to `/cooling/best-cooling-products-for-dogs/` and related cooling converters | Collector-to-converter click-through | `SectionCollectorPage` + `SectionHero` |
 | `/cooling/best-cooling-products-for-dogs/` | collector | Route to individual product converter pages | Traffic + click-through to converters | `BaseLayout` |
 | `/cooling/cooling-mats/` | converter | Affiliate click to Amazon (cooling mats) | Conversion rate | `BaseLayout` |
 | `/cooling/cooling-bandanas/` | converter | Affiliate click to Amazon (cooling bandanas) | Conversion rate | `BaseLayout` |
@@ -70,7 +70,7 @@ registry.
 
 | URL | Type | Target action | Metric | Layout |
 |---|---|---|---|---|
-| `/calming/` | attractor | Route to `/calming/best-calming-products-for-anxious-dogs/` | CTA click-through | `BaseLayout` + `HeroExperiment` |
+| `/calming/` | collector | Route to `/calming/best-calming-products-for-anxious-dogs/` and related calming converters | Collector-to-converter click-through | `SectionCollectorPage` + `SectionHero` |
 | `/calming/best-calming-products-for-anxious-dogs/` | collector | Route to product converters | Traffic + click-through to converters | `BaseLayout` |
 | `/calming/best-thundershirt-alternatives/` | collector | Route to anxiety-wrap converters | Traffic + click-through | `BaseLayout` |
 
@@ -100,13 +100,13 @@ registry.
 | `/terms/` | informer | Legal compliance |
 | `/contact/` | informer | Administrative contact |
 
-### Hero Experiment Variants (noindex)
+### Homepage Hero Experiment Variants (noindex)
 
 | URL pattern | Canonical | Purpose |
 |---|---|---|
-| `/cooling/v/{a–g}/` | `/cooling/` | A/B test hero variants |
-| `/calming/v/{a–g}/` | `/calming/` | A/B test hero variants |
 | `/v/{v1–v5}/` | `/` | A/B test homepage hero variants |
+
+The retired `/cooling/v/` and `/calming/v/` routes are no longer built.
 
 ---
 
@@ -120,7 +120,7 @@ Build these first and default to reusing them before creating new ones.
 | Module | File | Purpose |
 |---|---|---|
 | `Hero` | `modules/Hero.astro` | Static hero for converter/collector pages |
-| `HeroExperiment` | `modules/HeroExperiment.astro` | A/B-testable hero for hub pages (variants a–g) |
+| `SectionHero` | `modules/SectionHero.astro` | Shared themed hero for section collectors |
 | `HomepageHero` | `modules/HomepageHero.astro` | Split-pane homepage hero (variants v1–v5) |
 | `HomepageBody` | `modules/HomepageBody.astro` | Below-hero content (Top Guides + Latest Posts) |
 | `CoolingHubBody` | `modules/CoolingHubBody.astro` | Category grid for cooling hub |
@@ -148,7 +148,6 @@ Used sparingly. These have higher complexity and fragility.
 
 | Module | File | Why showstopper |
 |---|---|---|
-| `HeroExperiment` | `modules/HeroExperiment.astro` | 7 visual variants, CSS animation (variant F), backdrop-filter (variant E), complex CSS architecture |
 | `HomepageHero` | `modules/HomepageHero.astro` | Split-pane, 5 variants, JS toggle (v4), IntersectionObserver impression tracking |
 
 **Rule:** Never stack two showstopper modules on the same page.
@@ -222,7 +221,7 @@ architecture:
   hosting: Vercel (primary); netlify.toml present as fallback
   seo_strategy:
     - Canonical URLs enforced on all pages (BaseLayout)
-    - noindex on hero experiment variant URLs
+    - noindex on homepage hero experiment variant URLs
     - Sitemap via @astrojs/sitemap with priority tuning
     - robots.txt via astro-robots-txt
     - JSON-LD structured data (WebSite, Organization, CollectionPage, ItemList,
@@ -269,8 +268,8 @@ for Astro builds.
 tracking:
   keystone_event: amazon_outbound_click
   page_conversion_events:
-    - hero_cta_click (variant, page, cta)
-    - hero_impression (variant)
+    - hero_cta_click (page, cta) for section collectors; (cta, href) for homepage
+    - hero_impression for homepage
     - collector_to_converter_click
   funnel_defined: true
   implementation:
@@ -285,8 +284,8 @@ tracking:
 | Event | Parameters | Trigger |
 |---|---|---|
 | `amazon_outbound_click` | `product_id`, `page_slug`, `position` | Click on any AffiliateLink |
-| `hero_cta_click` | `variant`, `page`, `cta` (primary/secondary) | Click on hub page hero CTA |
-| `hero_impression` | `variant` | Hero is 50% visible (IntersectionObserver) |
+| `hero_cta_click` | Section collectors: `page`, `cta`; homepage: `cta`, `href` | Click on a section collector or homepage hero CTA |
+| `hero_impression` | — | Homepage hero is 50% visible (IntersectionObserver) |
 | `collector_to_converter_click` | `from_slug`, `to_slug` | Click on internal link from collector to converter |
 
 ---
@@ -335,8 +334,6 @@ documentation. See also the TODO section in `README.md`.
   `amazon_outbound_click` events
 - [ ] Assets: add `/public/og-default.jpg` (currently referenced, missing)
 - [ ] Assets: add `/public/favicon.svg` (currently referenced, missing)
-- [ ] Hero experiments: evaluate cooling/calming winners (need 200+ clicks per
-  variant over 2+ weeks); promote winner to default and retire variant URLs
 - [ ] Homepage hero: evaluate v1–v5 winner; same criteria
 - [ ] Calming category expansion: add individual converter pages for
   `anxiety-wraps`, `calming-treats`, `lick-mats`, `snuffle-mats`

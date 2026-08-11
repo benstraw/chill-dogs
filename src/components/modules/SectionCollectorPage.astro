@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
-import HeroExperiment from '@components/modules/HeroExperiment.astro';
+import SectionHero from '@components/modules/SectionHero.astro';
 import CollectorBody from '@components/modules/CollectorBody.astro';
 import JsonLd from '@components/JsonLd.astro';
 import { getSectionCollectorPageData, type SectionCollectorKey } from '@data/section-collectors';
@@ -20,8 +20,7 @@ const { definition, body, schema } = await getSectionCollectorPageData(collector
   pillarTheme={definition.accent}
 >
   <JsonLd slot="head" schema={schema} />
-  <HeroExperiment
-    variant="c"
+  <SectionHero
     theme={definition.hero.theme}
     headline={definition.hero.headline}
     subhead={definition.hero.subhead}

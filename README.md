@@ -82,13 +82,12 @@ src/
 │   ├── ConverterLayout.astro # Money pages with product grids
 │   └── PostLayout.astro      # SEO collector and editorial pages
 ├── pages/
-│   ├── cooling/              # Cooling hub + converters + v/[variant] experiments
-│   ├── calming/              # Calming hub + pillar + v/[variant] experiments
+│   ├── cooling/              # Cooling hub + converters
+│   ├── calming/              # Calming hub + pillar
 │   └── content-sitemap.astro # Hidden editor-facing sitemap page (`/content-sitemap/`)
 ├── styles/
 │   ├── tokens.css            # All design tokens (colors, spacing, type, radii)
-│   ├── hero.base.css         # Hero experiment base layout + theme tokens
-│   └── hero.variants.css     # 7 hero variant styles (A–G)
+│   └── hero.base.css         # SectionHero theme tokens, layout, and presentation
 └── utils/
     ├── collection-helpers.ts # getSlugFromId, getCategoryFromId, etc.
     └── types.ts              # PageType, Category, Product interfaces
@@ -310,12 +309,13 @@ The component enforces `rel="nofollow sponsored noopener"`, `target="_blank"`, a
 
 ## Hero experiments
 
-Seven color-based hero variants (A–G) run as alternate URLs:
+Five homepage hero variants run as alternate URLs:
 
-- `/cooling/v/a/` … `/cooling/v/g/`
-- `/calming/v/a/` … `/calming/v/g/`
+- `/v/v1/` … `/v/v5/`
 
-All variant pages carry `noindex, follow` and canonical links pointing to the hub pages. The current default hero on `/cooling/` and `/calming/` is variant A (Aurora Wash).
+All variant pages carry `noindex, follow` and canonical links pointing to `/`.
+
+The section collector hero experiment was retired on August 10, 2026. The `/cooling/v/` and `/calming/v/` routes no longer build; `/cooling/`, `/calming/`, `/comforting/`, and `/gear/` all render the shared themed `SectionHero`.
 
 See [EXPERIMENTS.md](./EXPERIMENTS.md) for variant descriptions, hypotheses, and tracking setup.
 
