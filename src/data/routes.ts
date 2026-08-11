@@ -31,6 +31,8 @@ export const ROUTES = {
   garminTracking: '/gear/garmin-dog-tracking-collars/',
   airtagForDogs: '/gear/airtag-for-dogs/',
   dogRanAwaySafety: '/safety/what-to-do-if-your-dog-runs-away/',
+  naturalFleaTickPrevention: '/safety/natural-flea-and-tick-prevention-for-dogs/',
+  naturalFleaTickProducts: '/safety/best-natural-flea-and-tick-products-for-dogs/',
   rattlesnakeSafetyForDogs: '/safety/rattlesnake-safety-for-dogs/',
   dogSnakeBiteEmergencyKit: '/gear/dog-snake-bite-emergency-kit/',
   comfortHub: '/comforting/',

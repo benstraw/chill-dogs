@@ -6,6 +6,7 @@
 import { coolingProducts, categoryMeta } from './cooling-products';
 import { calmingProducts } from './calming-products';
 import { emergencyProducts } from './emergency-products';
+import { fleaTickProducts } from './flea-tick-products';
 import { relaxationProducts } from './relaxation-products';
 import { accessoryProducts, trackerProducts } from './tracking-products';
 import { coolingConverterPageConfigs } from './cooling-converter-pages';
@@ -40,6 +41,7 @@ export function buildProductPageMap(): ProductPageMap {
   for (const p of trackerProducts) map[p.id] = [];
   for (const p of accessoryProducts) map[p.id] = [];
   for (const p of emergencyProducts) map[p.id] = [];
+  for (const p of fleaTickProducts) map[p.id] = [];
 
   for (const [slug, config] of Object.entries(coolingConverterPageConfigs)) {
     const href = `/cooling/${slug}/`;
@@ -125,6 +127,30 @@ export function buildProductPageMap(): ProductPageMap {
   };
   for (const p of emergencyProducts) {
     addRef(map, p.id, snakeBiteKitRef);
+  }
+
+  // Inline AffiliateLink in src/content/articles/safety-natural-flea-and-tick-prevention-for-dogs.mdx
+  addRef(map, 'rinseroo-original', {
+    label: 'Natural Flea and Tick Prevention for Dogs',
+    href: ROUTES.naturalFleaTickPrevention,
+  });
+
+  const fleaTickNaturalRef: PageRef = {
+    label: 'Best Natural Flea and Tick Products for Dogs',
+    href: ROUTES.naturalFleaTickProducts,
+  };
+  for (const p of fleaTickProducts.filter((product) =>
+    [
+      'natural-spray',
+      'natural-shampoo',
+      'natural-collar',
+      'natural-tag',
+      'natural-chew',
+      'grooming-tool',
+      'tick-remover',
+    ].includes(product.category)
+  )) {
+    addRef(map, p.id, fleaTickNaturalRef);
   }
 
   return map;

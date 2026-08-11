@@ -1,0 +1,181 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import JsonLd from '@components/JsonLd.astro';
+import Hero from '@components/modules/Hero.astro';
+import Toc from '@components/modules/Toc.astro';
+import FAQ from '@components/modules/FAQ.astro';
+import Disclosure from '@components/modules/Disclosure.astro';
+import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
+import FleaTickProductCard from '@components/modules/FleaTickProductCard.astro';
+import {
+  buildFleaTickItemListSchema,
+  getRequiredFleaTickProducts,
+  type FleaTickBlock,
+  type FleaTickConverterPageConfig,
+} from '@data/flea-tick-converter-pages';
+
+interface Props {
+  config: FleaTickConverterPageConfig;
+}
+
+const { config } = Astro.props;
+const schema = config.itemListSchema ? buildFleaTickItemListSchema(config.itemListSchema) : null;
+
+function sectionClass(block: FleaTickBlock): string {
+  return block.alt ? 'ft-section ft-section--alt' : 'ft-section';
+}
+---
+
+<BaseLayout title={config.title} ogTitle={config.ogTitle} description={config.description}>
+  {schema && <JsonLd slot="head" schema={schema} />}
+
+  <Hero
+    title={config.hero.title}
+    subtitle={config.hero.subtitle}
+    disclaimer={config.hero.disclaimer}
+    primaryCta={config.hero.primaryCta}
+    secondaryCta={config.hero.secondaryCta}
+    pageSlug={config.pageSlug}
+  />
+
+  {config.toc && <Toc headings={config.toc} pageSlug={config.pageSlug} />}
+
+  <div class="ft-page">
+    {config.blocks.map((block) => (
+      block.kind === 'product_section' ? (
+        <section class={sectionClass(block)} id={block.id}>
+          <div class="ft-inner">
+            <h2>{block.heading}</h2>
+            {block.intro && <p class="ft-intro">{block.intro}</p>}
+            <div class={`ft-grid ft-grid--${block.columns}`}>
+              {getRequiredFleaTickProducts(block.productIds).map((product, index) => (
+                <FleaTickProductCard
+                  product={product}
+                  pageSlug={config.pageSlug}
+                  position={block.positionOffset + index + 1}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : block.kind === 'callout' ? (
+        <section class={sectionClass(block)} id={block.id}>
+          <div class="ft-inner">
+            <aside class:list={['ft-callout', `ft-callout--${block.tone ?? 'info'}`]}>
+              <h2>{block.heading}</h2>
+              {block.paragraphs.map((paragraph) => <p set:html={paragraph} />)}
+            </aside>
+          </div>
+        </section>
+      ) : (
+        <section class={sectionClass(block)} id={block.id}>
+          <div class="ft-inner prose">
+            <h2>{block.heading}</h2>
+            {block.intro && <p class="ft-intro">{block.intro}</p>}
+            {block.paragraphs.map((paragraph) => <p set:html={paragraph} />)}
+          </div>
+        </section>
+      )
+    ))}
+
+    <Disclosure />
+
+    {config.faq && (
+      <section id="faq" class="ft-section">
+        <div class="ft-inner">
+          <FAQ faqs={config.faq.items} heading={config.faq.heading} />
+        </div>
+      </section>
+    )}
+
+    {config.internalLinkStripHeading && (
+      <section class="ft-section">
+        <div class="ft-inner">
+          <InternalLinkStrip
+            heading={config.internalLinkStripHeading}
+            currentHref={config.currentHref}
+            limit={config.internalLinkStripLimit}
+            fromPage={config.pageSlug}
+          />
+        </div>
+      </section>
+    )}
+  </div>
+</BaseLayout>
+
+<style>
+  .ft-section {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+
+  .ft-section--alt {
+    background: var(--color-bg-alt);
+  }
+
+  .ft-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .ft-intro {
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-muted);
+    max-width: var(--max-width-prose);
+    margin-bottom: var(--space-xl);
+  }
+
+  .ft-grid {
+    display: grid;
+    gap: var(--space-lg);
+  }
+
+  .ft-grid--1 {
+    grid-template-columns: minmax(0, 760px);
+  }
+
+  .ft-grid--2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ft-grid--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .ft-callout {
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    border: 1px solid var(--color-border);
+  }
+
+  .ft-callout--info {
+    background: #f3f6ef;
+  }
+
+  .ft-callout--warning {
+    background: #fff2ee;
+    border-color: #efc0b2;
+  }
+
+  .ft-callout h2,
+  .ft-callout p {
+    margin-top: 0;
+  }
+
+  .ft-callout p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 920px) {
+    .ft-grid--2,
+    .ft-grid--3 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .ft-section {
+      padding: var(--space-xl) var(--space-md);
+    }
+  }
+</style>
