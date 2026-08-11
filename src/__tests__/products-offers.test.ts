@@ -172,6 +172,17 @@ describe('multi-merchant product offers', () => {
       'tickcheck-remover-spoon': 'https://www.chewy.com/tickcheck-remover-spoon-tick-id-card/dp/352007',
     } satisfies Record<string, string>;
 
+    // Chewy-listed products that also carry an Amazon offer. Everything else in the
+    // map above must stay Chewy-only.
+    const alsoOnAmazonById = {
+      'tweezerman-precision-flea-comb': 'B0GK34GTCC',
+      'wahl-flea-finishing-comb': 'B079SYNQQ5',
+      'tweezerman-tick-removal-kit': 'B0GK3BSK56',
+      'tweezerman-tick-tweezer': 'B0D236JZGJ',
+      'tickcheck-premium-tick-kit': 'B075DKL3Z6',
+      'tickcheck-remover-spoon': 'B07K4F66LH',
+    } satisfies Record<string, string>;
+
     const config = fleaTickConverterPages['best-natural-flea-and-tick-products-for-dogs'];
 
     for (const [productId, canonicalUrl] of Object.entries(expectedChewyCanonicalUrlsById)) {
@@ -183,12 +194,21 @@ describe('multi-merchant product offers', () => {
       expect(config.itemListSchema?.productIds, `${productId} missing from ItemList schema`).toContain(productId);
 
       const offers = getOffers(product!);
-      expect(offers, `${productId} should be a Chewy-only offer`).toHaveLength(1);
       const chewyOffer = offers.find((offer) => offer.merchant === 'chewy');
       expect(chewyOffer, `${productId} missing Chewy offer`).toBeTruthy();
       expect(chewyOffer!.url, `${productId} Chewy url must be an affiliate link`).toMatch(/^https:\/\/chewy\.sjv\.io\//);
       expect(chewyOffer!.canonicalUrl, `${productId} canonicalUrl must be the raw Chewy product URL`).toBe(canonicalUrl);
-      expect(product?.asin, `${productId} should not carry an ASIN`).toBeUndefined();
+
+      const expectedAsin = (alsoOnAmazonById as Record<string, string | undefined>)[productId];
+
+      if (expectedAsin) {
+        expect(offers, `${productId} should offer both Amazon and Chewy`).toHaveLength(2);
+        expect(offers[0]?.merchant, `${productId} should lead with the Amazon offer`).toBe('amazon');
+        expect(product?.asin, `${productId} should carry its Amazon ASIN`).toBe(expectedAsin);
+      } else {
+        expect(offers, `${productId} should be a Chewy-only offer`).toHaveLength(1);
+        expect(product?.asin, `${productId} should not carry an ASIN`).toBeUndefined();
+      }
     }
   });
 
@@ -285,7 +305,6 @@ describe('multi-merchant product offers', () => {
       ],
       chews: [
         'lkdhfjc-flea-tick-chews-200',
-        'only-natural-pet-barrier-bites',
         'geynaw-flea-tick-chews',
         'yotango-flea-tick-chews',
         'beloved-pets-flea-tick-chews',
@@ -314,14 +333,18 @@ describe('multi-merchant product offers', () => {
       }
     }
 
-    const homeSupport = config.blocks.find((block) => block.kind === 'product_section' && block.id === 'home-support');
+    expect(
+      config.blocks.some((block) => block.kind === 'product_section' && block.id === 'home-support'),
+      'home-support section should be removed',
+    ).toBe(false);
+    expect(config.toc.some((entry) => entry.anchor === 'home-support')).toBe(false);
+
     const groomingTools = config.blocks.find((block) => block.kind === 'product_section' && block.id === 'grooming-tools');
 
-    if (homeSupport?.kind !== 'product_section' || groomingTools?.kind !== 'product_section') {
-      throw new Error('Missing home-support or grooming-tools product section');
+    if (groomingTools?.kind !== 'product_section') {
+      throw new Error('Missing grooming-tools product section');
     }
 
-    expect(homeSupport.productIds).toEqual(['tropiclean-flea-spray-home', 'wondercide-surface-disinfectant']);
     expect(groomingTools.productIds).toEqual([
       'green-pet-double-sided-flea-comb',
       'ikkab-flea-comb-set',
@@ -335,10 +358,9 @@ describe('multi-merchant product offers', () => {
       'tweezerman-tick-tweezer',
       'tickcheck-premium-tick-kit',
       'tickcheck-remover-spoon',
-      'wondercide-rescue-ear-drops',
     ]);
 
-    for (const productId of [...homeSupport.productIds, ...groomingTools.productIds]) {
+    for (const productId of groomingTools.productIds) {
       const product = fleaTickProducts.find((entry) => entry.id === productId);
       expect(product, `${productId} missing from flea/tick products`).toBeTruthy();
       expect(productCatalogItems.find((entry) => entry.id === productId), `${productId} missing from product catalog`).toBeTruthy();
@@ -352,12 +374,16 @@ describe('multi-merchant product offers', () => {
       'rinseroo-shark-tank',
       'natures-dome-cedarwood-spray',
       'skouts-honor-flea-tick-shampoo',
+      'only-natural-pet-barrier-bites',
+      'wondercide-rescue-ear-drops',
+      'wondercide-surface-disinfectant',
+      'tropiclean-flea-spray-home',
     ]) {
       expect(fleaTickProducts.find((product) => product.id === removedId), `${removedId} should be removed`).toBeUndefined();
       expect(config.itemListSchema?.productIds).not.toContain(removedId);
     }
 
-    for (const removedAsin of ['B0GSZH4JWF', 'B0H6B7W86G', 'B0CSF14JZZ']) {
+    for (const removedAsin of ['B0GSZH4JWF', 'B0H6B7W86G', 'B0CSF14JZZ', 'B0CFYJM6HN', 'B0DWZLB7LX', 'B0FVZJ1S1Z', 'B01DS73GTI']) {
       expect(
         fleaTickProducts.some((product) => getOffers(product).some((offer) => offer.asin === removedAsin)),
         `${removedAsin} should no longer be offered`,

@@ -230,7 +230,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
     slug: 'best-natural-flea-and-tick-products-for-dogs',
     title: 'Best Natural Flea and Tick Products for Dogs',
     description:
-      'Compare natural flea and tick products for dogs — sprays, shampoos, collars and tags, daily chews, flea combs, and home cleanup — with honest notes on real limits.',
+      'Compare natural flea and tick products for dogs — sprays, shampoos, collars and tags, daily chews, and flea combs — with honest notes on what they really do.',
     ogTitle: 'Best Natural Flea and Tick Products for Dogs (2026)',
     pageSlug: 'best-natural-flea-and-tick-products-for-dogs',
     currentHref: ROUTES.naturalFleaTickProducts,
@@ -248,7 +248,6 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       { label: 'Shampoos', anchor: 'shampoo' },
       { label: 'Collars & Tags', anchor: 'collar' },
       { label: 'Daily Chews', anchor: 'chews' },
-      { label: 'Home Cleanup', anchor: 'home-support' },
       { label: 'Combs & Tick Tools', anchor: 'grooming-tools' },
       { label: 'Where Natural Stops', anchor: 'natural-limits' },
       { label: 'FAQ', anchor: 'faq' },
@@ -314,14 +313,13 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       {
         kind: 'product_section',
         id: 'chews',
-        heading: 'Daily chews as a light internal layer',
+        heading: 'Daily Chews',
         intro:
-          'Oral natural chews are the weakest-evidence category on this page, so set expectations accordingly. A daily chew can be a light internal layer for owners who already dose easily, but it is a supplement alongside real prevention, not a stand-in for it.',
+          'Daily chews work best as a supplement to your flea and tick routine. These products use natural ingredients that also help boost your dog’s immune system and support a healthy coat and skin.',
         positionOffset: 14,
         columns: 3,
         productIds: [
           'lkdhfjc-flea-tick-chews-200',
-          'only-natural-pet-barrier-bites',
           'geynaw-flea-tick-chews',
           'yotango-flea-tick-chews',
           'beloved-pets-flea-tick-chews',
@@ -331,20 +329,10 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       },
       {
         kind: 'product_section',
-        id: 'home-support',
-        heading: 'Home cleanup that supports the routine',
-        intro:
-          'Flea season is a dog-plus-home problem, so a natural routine leans on cleanup between treatments. These are the support products for that half of the work: a spray you can use on the dog and its bedding, and a fragrance-free surface cleaner for crates, floors, and pet zones. Neither replaces washing and vacuuming — they make the cleanup easier to keep up.',
-        positionOffset: 20,
-        columns: 2,
-        productIds: ['tropiclean-flea-spray-home', 'wondercide-surface-disinfectant'],
-      },
-      {
-        kind: 'product_section',
         id: 'grooming-tools',
-        heading: 'Combs, brushes, and tick-removal tools',
+        heading: 'Combs, Grooming Sets, and Tick-Removal Tools',
         intro:
-          'Natural routines lean much harder on coat checks than conventional medication does, which makes these the cheapest high-value products on the page. A flea comb is how you catch a problem early, a brush that gets through the undercoat is how you reach skin on a thick coat, and a proper tick tool is how you get the head out without crushing the tick.',
+          'Coat checks are an integral part of any flea and tick prevention routine. Flea combs allow you to catch a problem early, brushes allow you to get through the undercoat and reach skin on a thick coat, and a tick tool helps you remove a tick entirely without leaving any part of it embedded in your dog.',
         positionOffset: 22,
         columns: 3,
         productIds: [
@@ -360,17 +348,16 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
           'tweezerman-tick-tweezer',
           'tickcheck-premium-tick-kit',
           'tickcheck-remover-spoon',
-          'wondercide-rescue-ear-drops',
         ],
         alt: true,
       },
       {
         kind: 'callout',
         id: 'natural-limits',
-        heading: 'Where natural products stop making sense',
+        heading: 'When Natural Is Not Enough',
         tone: 'info',
         paragraphs: [
-          'If you still see live fleas after cleaning, your dog is chewing raw spots, or you live in a serious tick-disease region, the practical next step is usually a conventional medication conversation with your vet.',
+          'If you continue to see live fleas on your dog, if your dog is chewing raw spots, or if you live in a region with heavy flea and tick infestation, consult your veterinarian, as pharmaceutical treatments may be necessary.',
           `If you want the full conventional-vs-natural picture before deciding, go back to <a href="${ROUTES.fleaTickPillar}">the broad flea and tick guide</a>. If you already know you need conventional protection, skip straight to <a href="${ROUTES.fleaTickMedications}">the medications comparison</a>.`,
         ],
       },
@@ -381,17 +368,17 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         {
           question: 'Do natural flea and tick products really work?',
           answer:
-            'They can help, especially as prevention layers and light-load support, but the evidence base is thinner than for conventional medications. The more exposure your dog has and the higher your regional tick risk is, the more that evidence gap matters.',
+            'For many dogs, yes, especially if your dog tends to spend a lot of time indoors. For dogs that live outside much of the time, play often in dog runs, or live in a region with high flea and tick infestation, pharmaceutical treatments may be necessary.',
         },
         {
-          question: 'Is Wondercide safe around cats?',
+          question: 'Are natural dog flea and tick treatments safe around cats?',
           answer:
-            'Some Wondercide products are labeled for cats, but that does not make every scent or every dog product safe for mixed-pet improvisation. Treat cat safety as a label-reading issue, not as a brand-level assumption.',
+            'Some products are labeled for use on dogs and cats, and some are safe to use around cats, but that does not make every scent or every dog product safe for cats. Peppermint essential oil in particular can be toxic to cats. Read product labels carefully if you have cats in your house.',
         },
         {
           question: 'Should I choose a spray, shampoo, collar, tag, or chew?',
           answer:
-            'Spray is the best place to start if you want flexibility and understand reapplication. The shampoos, ear drops, and surface cleaner are cleanup support rather than prevention, while collars and clip-on tags are leave-on convenience layers. Daily chews are the lightest-evidence option here, so treat them as a supplement, not your main protection.',
+            'Sprays allow flexibility but require frequent reapplication. Shampoos work to repel fleas and ticks on contact, rather than prevention. Collars and tags provide protection for months at a time. Daily chews are best used as a supplement rather than your main protection.',
         },
       ],
     },
@@ -416,13 +403,10 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         'trihood-flea-tick-tag',
         'routade-flea-tick-pendant',
         'lkdhfjc-flea-tick-chews-200',
-        'only-natural-pet-barrier-bites',
         'geynaw-flea-tick-chews',
         'yotango-flea-tick-chews',
         'beloved-pets-flea-tick-chews',
         'dr-woow-flea-tick-chews',
-        'tropiclean-flea-spray-home',
-        'wondercide-surface-disinfectant',
         'green-pet-double-sided-flea-comb',
         'ikkab-flea-comb-set',
         'vomroju-flea-lice-comb-set',
@@ -435,7 +419,6 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         'tweezerman-tick-tweezer',
         'tickcheck-premium-tick-kit',
         'tickcheck-remover-spoon',
-        'wondercide-rescue-ear-drops',
       ],
     },
   },
