@@ -1,0 +1,774 @@
+{
+  "search_metadata": {
+    "id": "6a7b7019ef15ce6968724067",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/XJgAlN9WF5ipdRZz2H584A/6a7b7019ef15ce6968724067.json",
+    "created_at": "2026-08-11 18:55:21 UTC",
+    "processed_at": "2026-08-11 18:55:21 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0DV56FRNC/?",
+    "raw_html_file": "https://serpapi.com/searches/XJgAlN9WF5ipdRZz2H584A/6a7b7019ef15ce6968724067.html",
+    "total_time_taken": 11.25
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0DV56FRNC",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0DV56FRNC",
+    "title": "NexGard® (afoxolaner) Flea and Tick Protection for Dogs Oral Soft Beef Flavored Chewables,10.1 to 24 lbs. (Blue Box) 3 Chews (3 Month Supply)",
+    "link": "https://www.amazon.com/NexGard%C2%AE-afoxolaner-Protection-Flavored-Chewables/dp/B0DV56FRNC/",
+    "link_clean": "https://www.amazon.com/dp/B0DV56FRNC/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DV56FRNC&device=desktop&engine=amazon_product",
+    "variants": [
+      {
+        "title": "Flavor Name",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0DYGL8FJ1",
+            "name": "1ct",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DYGL8FJ1&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0DV56FRNC",
+            "name": "3ct",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DV56FRNC&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0DYGK1H6X",
+            "name": "6ct",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DYGK1H6X&device=desktop&engine=amazon_product"
+          }
+        ]
+      },
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0DYG193SV",
+            "name": "4-10 lbs",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DYG193SV&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0DV56FRNC",
+            "name": "10.1-24 lbs",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DV56FRNC&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0DV56XVW6",
+            "name": "24.1-60 lbs",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DV56XVW6&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 4,
+            "asin": "B0DV577Z7Q",
+            "name": "60.1-121 lbs",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DV577Z7Q&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the Nexgard Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/713lny03M7L._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/713lny03M7L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/818mgFx30UL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81H4THGzxXL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81sTSvE15UL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81JZF6jcnOL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71NeQMvxKnL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/91a7ImaCL3L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81tonu7cptL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.8,
+    "reviews": 205,
+    "bought_last_month": "100+ bought in past month",
+    "price": "$93.29",
+    "extracted_price": 93.29,
+    "price_unit": "$31.10 / count",
+    "extracted_price_unit": 31.1,
+    "delivery": [
+      "Typically delivered in 3-6 days. Ships after prescription approval. Pet & clinic info required at checkout."
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "buy_new": {
+      "caption": "One-time purchase",
+      "price": "$93.29",
+      "extracted_price": 93.29,
+      "price_unit": "$31.10 / count",
+      "extracted_price_unit": 31.1,
+      "delivery": [
+        "Typically delivered in 3-6 days. Ships after prescription approval. Pet & clinic info required at checkout."
+      ],
+      "stock": "In Stock",
+      "features": {
+        "shipper_seller": {
+          "text": "Vetsource",
+          "details": {
+            "heading": "Shipper / Seller",
+            "content": "Vetsource"
+          },
+          "link": {
+            "text": "Vetsource",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A30DESBCBKPH4C&asin=B0DV56FRNC&ref_=dp_merchant_link"
+          }
+        },
+        "returns": {
+          "text": "Non-returnable due to Food safety reasons",
+          "details": {
+            "heading": "Non-returnable due to Food safety reasons",
+            "content": "This item is non-returnable due to potential safety risk as an ingestible product, but if the item arrives damaged or defective, you may request a refund or replacement through Your Orders by providing an image of the item and its defects."
+          },
+          "link": {
+            "text": "See return policy",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GKM69DUUYKQWKWX7&ref_=dp_ret_policy"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    },
+    "subscribe_and_save": {
+      "caption": "Subscribe & Save",
+      "price": "$93.29",
+      "extracted_price": 93.29,
+      "price_unit": "$31.10 / count",
+      "extracted_price_unit": 31.1,
+      "delivery": [
+        "Typically delivered in 3-6 days. Ships after prescription approval. Pet & clinic info required at checkout."
+      ],
+      "stock": "In Stock",
+      "features": {
+        "shipper_seller": {
+          "text": "Vetsource",
+          "details": {
+            "heading": "Shipper / Seller",
+            "content": "Vetsource"
+          },
+          "link": {
+            "text": "Vetsource",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A30DESBCBKPH4C&asin=B0DV56FRNC&ref_=dp_merchant_link"
+          }
+        },
+        "returns": {
+          "text": "Non-returnable due to Food safety reasons",
+          "details": {
+            "heading": "Non-returnable due to Food safety reasons",
+            "content": "This item is non-returnable due to potential safety risk as an ingestible product, but if the item arrives damaged or defective, you may request a refund or replacement through Your Orders by providing an image of the item and its defects."
+          },
+          "link": {
+            "text": "See return policy",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GKM69DUUYKQWKWX7&ref_=dp_ret_policy"
+          }
+        },
+        "subscription": "No fees. Skip or cancel anytime."
+      }
+    }
+  },
+  "about_item": [
+    "#1 vet-recommended flea and tick control that kills fleas fast, before they can lay eggs.¹",
+    "This flea and tick treatment product is FDA-approved to prevent Lyme infections as a direct result of killing black-legged ticks.",
+    "Kills fleas and ticks all month long.",
+    "#1-preferred by dogs.² Each NexGard (afoxolaner) flea and tick chewable is easy to give because dogs love the delicious beef flavor.³",
+    "Safe for dogs and puppies as young as 8 weeks, weighing 4 pounds or more."
+  ],
+  "bought_together": [
+    {
+      "position": 1,
+      "title": "NexGard® (afoxolaner) Flea and Tick Protection for Dogs Oral Soft Beef Flavored Chewables,10.1 to 24 lbs. (Blue Box) 3 Chews (3 Month Supply)",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/713lny03M7L._AC_UL116_SR116,116_.jpg",
+      "price": "$93.29",
+      "extracted_price": 93.29,
+      "price_unit": "$31.10/count",
+      "extracted_price_unit": 31.1,
+      "delivery": [
+        "Get it Aug 13 - 15"
+      ],
+      "stock": "In Stock"
+    },
+    {
+      "position": 2,
+      "title": "HEARTGARD® Plus (ivermectin/pyrantel) Real-Beef Chewables for Dogs up to 25 lbs (Blue Box) 6 Month Supply of Chews (Heartworm Disease Preventive)",
+      "link": "https://www.amazon.com/HEARTGARD%C2%AE-ivermectin-Real-Beef-Chewables-Preventive/dp/B0080B193I/ref=pd_bxgy_thbs_d_sccl_1/146-5799074-5657924?pd_rd_w=FCfEn&content-id=amzn1.sym.9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_p=9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_r=3E7FGCM3QG8H2VJW4NH2&pd_rd_wg=GOxqy&pd_rd_r=8737dc5c-e335-4acc-b545-1435e3822feb&pd_rd_i=B0080B193I&psc=1",
+      "asin": "B0080B193I",
+      "link_clean": "https://www.amazon.com/HEARTGARD%C2%AE-ivermectin-Real-Beef-Chewables-Preventive/dp/B0080B193I/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0080B193I&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71Ky2fAy8UL._AC_UL116_SR116,116_.jpg",
+      "price": "$59.59",
+      "extracted_price": 59.59,
+      "price_unit": "$9.93/count",
+      "extracted_price_unit": 9.93,
+      "stock": "In Stock"
+    }
+  ],
+  "related_products": [
+    {
+      "position": 1,
+      "asin": "B0FTPP5WS7",
+      "title": "PetArmor Extend Flea & Tick Treatment & Prevention Collar for Cats, 8 Months of Protection, 1 Count",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0NTA3NDIxOTg4OTAwNzQ3OjE3ODY0NzQ1MzA6c3BfZGV0YWlsMjozMDExMzAzMzA0MTU3MDI6Ojo6&url=%2Fdp%2FB0FTPP5WS7%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0FTPP5WS7%26pd_rd_w%3DUVwTI%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D3E7FGCM3QG8H2VJW4NH2%26pd_rd_wg%3DGOxqy%26pd_rd_r%3D8737dc5c-e335-4acc-b545-1435e3822feb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0FTPP5WS7/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FTPP5WS7&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81M6HT4Ja6L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.3,
+      "reviews": 291,
+      "price": "$44.99",
+      "extracted_price": 44.99,
+      "price_unit": "$44.99 / count",
+      "extracted_price_unit": 44.99
+    },
+    {
+      "position": 2,
+      "asin": "B0FTQ28FWL",
+      "title": "PetArmor Extend Large Dog Flea and Tick Treatment & Prevention, Collar for Large Dogs Above 18 lbs., 8 Months of Protection, Odorless & Non-Greasy, Waterproof, Kills Fleas, Ticks, and Larvae, 1 Count",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0NTA3NDIxOTg4OTAwNzQ3OjE3ODY0NzQ1MzA6c3BfZGV0YWlsMjozMDExMzAzNjEwMDMwMDI6Ojo6&url=%2Fdp%2FB0FTQ28FWL%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0FTQ28FWL%26pd_rd_w%3DUVwTI%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D3E7FGCM3QG8H2VJW4NH2%26pd_rd_wg%3DGOxqy%26pd_rd_r%3D8737dc5c-e335-4acc-b545-1435e3822feb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0FTQ28FWL/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FTQ28FWL&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81TmqRC+SFL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.2,
+      "reviews": 402,
+      "price": "$44.99",
+      "extracted_price": 44.99,
+      "price_unit": "$44.99 / count",
+      "extracted_price_unit": 44.99
+    },
+    {
+      "position": 3,
+      "asin": "B0GV2JL462",
+      "title": "Flea and Tick Prevention for Dogs Chewables, Dog Flea and Tick Treatment | Dog Flea & Tick Control Chews with Fish Oil & B Vitamins for Skin & Coat, Digestion & Immune Support, Chicken Flavor.",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0NTA3NDIxOTg4OTAwNzQ3OjE3ODY0NzQ1MzA6c3BfZGV0YWlsMjozMDEzNzU5MDY0MTMzMDI6Ojo6&url=%2Fdp%2FB0GV2JL462%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0GV2JL462%26pd_rd_w%3DUVwTI%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D3E7FGCM3QG8H2VJW4NH2%26pd_rd_wg%3DGOxqy%26pd_rd_r%3D8737dc5c-e335-4acc-b545-1435e3822feb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0GV2JL462/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GV2JL462&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71ZSm7Xj6ML._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.6,
+      "reviews": 29,
+      "price": "$29.99",
+      "extracted_price": 29.99,
+      "price_unit": "$0.07 / gram",
+      "extracted_price_unit": 0.07,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 4,
+      "asin": "B0H68SVCLV",
+      "title": "Natural Flea and Tick Pendant for Dogs with 2 Silicone Buckles 4 Refills, Water Resistant Dog Flea and Tick Collar Repellent Accessory for Indoor Outdoor Flea and Tick Prevention, COLLAR NOT INCLUDED",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0NTA3NDIxOTg4OTAwNzQ3OjE3ODY0NzQ1MzA6c3BfZGV0YWlsMjozMDEzNzExMTkxNjE5MDI6Ojo6&url=%2Fdp%2FB0H68SVCLV%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0H68SVCLV%26pd_rd_w%3DUVwTI%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D3E7FGCM3QG8H2VJW4NH2%26pd_rd_wg%3DGOxqy%26pd_rd_r%3D8737dc5c-e335-4acc-b545-1435e3822feb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0H68SVCLV/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0H68SVCLV&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81korJDYRHL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 5,
+      "reviews": 2,
+      "price": "$35.92",
+      "extracted_price": 35.92,
+      "price_unit": "$5.99 / count",
+      "extracted_price_unit": 5.99,
+      "save_with_coupon": "You pay $32.32"
+    },
+    {
+      "position": 5,
+      "asin": "B00008DFGY",
+      "title": "FRONTLINE Plus Flea & Tick Spot Treatment for Small Breed Dogs 5-22 lbs. (Orange) Count of 3 | Trusted by pet owners for over 20 years, kills fleas, ticks & chewing lice, waterproof 24 hr",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0NTA3NDIxOTg4OTAwNzQ3OjE3ODY0NzQ1MzA6c3BfZGV0YWlsMjozMDA4ODYzOTIwMDgwMDI6Ojo6&url=%2Fdp%2FB00008DFGY%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB00008DFGY%26pd_rd_w%3DUVwTI%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D3E7FGCM3QG8H2VJW4NH2%26pd_rd_wg%3DGOxqy%26pd_rd_r%3D8737dc5c-e335-4acc-b545-1435e3822feb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B00008DFGY/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B00008DFGY&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71Zhun4CMyL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 49558,
+      "discount": "-5%",
+      "price": "$40.98",
+      "extracted_price": 40.98,
+      "price_unit": "$40.98 / count",
+      "extracted_price_unit": 40.98,
+      "old_price": "null"
+    },
+    {
+      "position": 6,
+      "asin": "B0H5WFY7H5",
+      "title": "Flea and Tick Prevention for Dogs, Imidacloprid Soft Chews for Medium & Large Dogs ...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0NTA3NDIxOTg4OTAwNzQ3OjE3ODY0NzQ1MzA6c3BfZGV0YWlsMjozMDEzNzIwODIzMTYzMDI6Ojo6&url=%2Fdp%2FB0H5WFY7H5%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0H5WFY7H5%26pd_rd_w%3DUVwTI%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D3E7FGCM3QG8H2VJW4NH2%26pd_rd_wg%3DGOxqy%26pd_rd_r%3D8737dc5c-e335-4acc-b545-1435e3822feb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0H5WFY7H5/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0H5WFY7H5&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/712LeZBrz1L._AC_UF480,480_SR480,480_.jpg",
+      "price": "$32.99",
+      "extracted_price": 32.99,
+      "price_unit": "$16.50 / count",
+      "extracted_price_unit": 16.5
+    },
+    {
+      "position": 7,
+      "asin": "B00B8CG602",
+      "title": "Seresto Flea & Tick Collar For Dogs Over 18 lbs., Treatment & Prevention, Vet-Recommend, 8 Month Protection",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0NTA3NDIxOTg4OTAwNzQ3OjE3ODY0NzQ1MzA6c3BfZGV0YWlsMjoyMDAwMzc5NTIzNjI4OTg6Ojo6&url=%2Fdp%2FB00B8CG602%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB00B8CG602%26pd_rd_w%3DUVwTI%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D3E7FGCM3QG8H2VJW4NH2%26pd_rd_wg%3DGOxqy%26pd_rd_r%3D8737dc5c-e335-4acc-b545-1435e3822feb%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B00B8CG602/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B00B8CG602&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "#1 Best Seller"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/71Z9LppzSnL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.5,
+      "reviews": 114580,
+      "price": "$59.92",
+      "extracted_price": 59.92
+    }
+  ],
+  "videos": [
+    {
+      "position": 1,
+      "title": "How to order Pet Medications on Amazon",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/61c6f828-8696-4153-9dae-1c44abbc30c9/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/41Kx2RPujBL.jpg",
+      "duration": "1:20",
+      "vendor": "Vetsource",
+      "date": "Mar 13, 2026"
+    },
+    {
+      "position": 2,
+      "title": "Why My Dog's Been on NexGard for 8+ Years!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/b740a1e6-9626-4824-8f1b-78018bc8bdc1/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/814G8GjFWbL.png",
+      "duration": "0:21",
+      "vendor": "AdorkableBliss | Rozilla",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/B1lgrxGR2uL._CR1396,518,1210,1210_._FMjpg_._SL34_.jpg",
+      "date": "Jul 30, 2025"
+    },
+    {
+      "position": 3,
+      "title": "Prescription Flea & Tick Prevention for Dogs",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/21591b2e-cb67-4e58-814e-08ed2603f68f/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/81Yw7NRrE5L.jpg",
+      "duration": "0:40",
+      "vendor": "Madison Breedlove",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/71+Vsnv1pzL._CR0,0,1170,1170_._FMjpg_._SL34_.jpg",
+      "date": "Sep 3, 2025"
+    },
+    {
+      "position": 4,
+      "title": "My Honest Thoughts on NexGard Flea and Tick Protection",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/6ba29566-5ace-40b7-a2b7-de8746d89ce8/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/71yaDfSpziL.jpg",
+      "duration": "0:45",
+      "vendor": "Michelle Selent",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/713DCjUMAkL._CR0,0,1125,1125_._FMjpg_._SL34_.jpg",
+      "date": "Apr 2, 2026"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": "nexgardchewable",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/1caa4bef-180f-41a3-af0a-3b0b87d56958.__CR0,0,970,300_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 2,
+      "title": "nexgardchew",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/e4cf12f3-0999-4e7c-bdfb-1171f2851564.__CR0,0,970,300_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 3,
+      "title": "nexgardchew",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/217e141a-f9ca-46a1-a326-c90a2aff3e56.__CR0,0,970,300_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 4,
+      "title": "Nexgardchew",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/ac1ff25c-3e3b-461f-9c0b-bd8e67ace6ee.__CR0,12,1860,575_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 5,
+      "title": "Nexgardchew",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/19325422-f048-4adf-851e-b82746734d1b.__CR0,12,1860,575_PT0_SX970_V1___.jpg"
+    }
+  ],
+  "product_details": {
+    "package_dimensions": "5 x 5 x 1 inches; 1.6 ounces",
+    "item_model_number": "25072407PK",
+    "date_first_available": "January 27, 2025",
+    "manufacturer": "Boehringer Ingelheim",
+    "asin": "B0DV56FRNC",
+    "best_sellers_rank": [
+      {
+        "text": "#3,814 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 3814,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#5 in Prescription Dog Medications",
+        "extracted_rank": 5,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/204337591011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Prescription Dog Medications"
+      }
+    ],
+    "customer_reviews": "4.8 out of 5 stars",
+    "rating": 4.8,
+    "reviews": 205,
+    "item_weight": "1.6 ounces",
+    "item_package_dimensions_l_x_w_x_h": "5 x 5 x 1 inches",
+    "brand_name": "Nexgard",
+    "target_audience_keyword": "dogs",
+    "directions": "NexGard ® (afoxolaner) chews are given orally once a month, at the minimum dosage of 1.14 mg/lb (2.5 mg/kg)., To minimize the likelihood of flea reinfestation, it is important to treat all animals within a household with an approved flea control product., NexGard chews can be administered with or without food. Care should be taken that the dog consumes the complete dose, and treated animals should be observed for a few minutes to ensure that part of the dose is not lost or refused. If it is suspected that any of the dose has been lost or if vomiting occurs within two hours of administration, redose with another full dose. If a dose is missed, administer NexGard chew and resume a monthly dosing schedule., Treatment with NexGard may begin at any time of the year., Flea Treatment and Protection: Treatment with NexGard may begin at any time of the year. In areas where fleas are common year-round, monthly treatment with NexGard should continue the entire year without interruption.",
+    "model_name": "Nexgard Chewables for Dogs",
+    "color": "Blue",
+    "size": "10.1-24 lbs",
+    "number_of_items": "3",
+    "included_components": "Package includes 3 month supply",
+    "specific_uses_for_product": "Parasites"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B01G3V3P0Q",
+      "title": "Nutramax Cosequin Joint Supplement for Dogs, Skin & Coat, Soft Chews,120ct | Glucosamine & Chondroitin for Dogs with MSM, Omega-3s, Supports Joints, Skin and Coat Health, All Ages & Sizes",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JP6vuslpgSrXqM3IWUhBF4UAAAGf8i4HwQEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICAwUrs3/clv1c_ek-wBfHXEsTW3uLbkz9lydv98LgzDJqz9ajgpoeql37edQKgIIGLTptrntlxArmbNh1KDye6xnyEocqsn8Hu9AzzXX-VP9S9U00UK-JsV10UByC58kBcbMb2_tU0ZvcwREx0LRRJt9kZKD2yWLQi3HXsodDMNlTtmKTmxVOSjCQcWn1xhqwF-5m0nAUGY_q1SfpPREOmGxGs7dQdZenD9LHNCcM1FlSsmo-pGmywEmvtdL-qBfZ2oeG0sWI6omyHiqceEkaGTv22mEpVVkA45SyA-Pt6dQD4BQJWKE9-0ibhxK_sWOUCHf172miiDiQSXr5eBWOz03G71rY7AXeCPTzTIxur7crx4TPoxLJKIfXq0XVNgBn3Ilt9y2g-b4i_-zEfnqDgh2j27Nq6Z6xlGVOTTjl8KnfCyllfK0RpvcBF4zrOz15fpJmjpX8BnHHatkDndTruNy-cLSuxqvbe0ocsG5A6crkKDN8i4uK9MroP_eZz9x3zy6ZBvZ-BFqN0XzavdfF498b5F8b8WKzNeYWJfQFGDwVk9B8xkDaDMRGhz0yjLZ0m7vKZSU4qdcM0LWx6ksqaIywcgbl88hmuPBLLMgdkSSFVqPybhHZMvkLfPJoAvAwqYH3Ls5hRwRFsB6ZQFSNftc_5C426eDuuZJ_lIf9mJE4QB7SMDMgLwN97AH3LTzhFwSSSXBNpBz9zHklGWbnRiRU2AA7KWEmSYz_c7Tx_ITa8i17N1zY15--349riBILr_ldZA0PXlSiN60CKENqKfLciUqX4nQK9qI3gxu4CFoLObwlXpgJf_0B5nmok6aElZ-D_f7fueBfAnyfFNBHK4xlmSzKDbBPD4bC5YCqYjW5Jt7eS61MpcLSeaj5RxM-GnJuTySrR2X2b8QJyYyl2pz-pVXphl0nraF7e3qK1EZ0QBbJHzMTpbJCKPpHGkhmEfik54f7VoTynZHKY-tl4fAakQGvi06Vf-nz1DikYMScvv252I6HxXwdYX3np1RUNq3tdY7vYlZgopKim8KhXezUl5vD9Qy0LPQRPxh5PDPx4_zMeHbrlH_xvc13XZlL6IJ99IAdWRyGstAofQvjVtvUEz-AeSb5bnyHoEiecYyXiaGN_QA8KlzZSlj8hl1gecineIstp04S96DNrrd7lLb4CrwRKivm2ncClzd0wlf6iJvT31YJpOSfKnYiWcPHoQiILgwqfUsj9PDFDX-Evb4DRCMfyV28cyVPbs8Zc-6hiI9ckfSqne0wQzkRWCPZwkKm3Yx16OpkmW8JuN9bYnHM5jd_VblaSqCrW6cW2LEM9G4dGi7THtMS3xvUMHKsUei-v4i4V0Zs6Y2BVcPaEaqiOE1w9RA8PJdQDlFveRnPm2ok6YJ_JC3RIQP4_hbEhJ5ENxLf4E2FdHVitNT5xkt4inpGPDHMdueF_WvotkPeg3-lvJRwCzl4zmj30zu0BL1DMvL5-mqgTFOYh504pnaZJ8grRl4TttP27AKUs2Uqktomz9anbzZwOSAVbJgFussWdO444z0UON6l-DlzoFtNUBsGxJkbAUdm-468JEQ/https://www.amazon.com/dp/B01G3V3P0Q/?_encoding=UTF8&pd_rd_i=B01G3V3P0Q&pd_rd_i=B01G3V3P0Q&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=IbUmv&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=3E7FGCM3QG8H2VJW4NH2&pd_rd_wg=GOxqy&pd_rd_r=8737dc5c-e335-4acc-b545-1435e3822feb",
+      "link_clean": "https://www.amazon.com/dp/B01G3V3P0Q/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B01G3V3P0Q&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41T5f9tbEQL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/35d64507-ec9f-41ba-ab83-92cfe92e0302.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/35d64507-ec9f-41ba-ab83-92cfe92e0302.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.7,
+      "reviews": 20049,
+      "price": "$39.99",
+      "extracted_price": 39.99
+    },
+    {
+      "position": 2,
+      "asin": "B07Q1TKTP9",
+      "title": "Capstar (nitenpyram) Cat Flea Treatment, Fast-Acting Oral Flea Treatment for Cats 2-25 lbs, Vet-Recommended Medication Tablets Start Killing in 30 Minutes, 6 Doses",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JCNWyncni-vQNt2RLsBEIGsAAAGf8i4HwgEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICCLIk1N/clv1c_ek-YBXfWLcTSXk6hthlGgETDcDZ7K8V5Eyfy-TJhG9sPG0JdxKzOebhCpT-bk4WqNMnipzuMAhAwJ0DV_qWfEJP3WmelP2xX2Tx3ibtD_nxm3jG_fzAJvo0z6-ByBpJzVFawAA_IAu61F9f1ycTxgpzBRZg8l1PmgoTzDbKo3ZBPsaufG9PXlJDoqcnaBIsmC1_5ZNMMF7HA1sbR3_hZomscdBctTUi_gRsCjDaLmtrcTUNpYf52PZls-hD1w0vZ2GMtpn0DnInjpbIVkGcbm1IFsKsoIMFpNF_nLMTe7RO6OvoH7wlTWgSA0WAdo2jVA_kL91xQrkjBtNiY_yFy_C2S7GiQpk_EW4NW0IA43EdYk7WFsrFp0wBciruNFkaW5Huop42cQSWASJ6Mk0cVZGxmggoh1WuL37zxYml-qxZGATPuO1Z1AivHO7BVsA6y1hfdu1ZLa_cpZncOByiYYVNHJMgj1ILN_Wggi-s9E-YfwQPdRrt5jRJ0vVUoDU7x52ibBJJWIX7agxk_zY_a3d9714hNPe94jojKonylqhmXNQpoVwjgl-TtNFIFSMIPrf7-qXZXFPMvNGL_afvuIwpMwLcvwXxR39GPgWAH-48QeSkytxLmbGeuprl3x16CXJZtG7lYP6YeE7tJDnEpeH57PeyXr-mNb8euQxGHRsBZKrByNuGN-kmdSh3-8kkdq02S7xD1m0qWyfLKD4kQUAMNkkfy87JM79rLFoJFoTHWI8zZPAyoBpjuDPKUWVBXTLaGiG0Np8TNLQU6L9b16k82i_Lk7lk8jcU_M9vQWtodJuO8SZMU4fW5tQmsjfd2YGDinKv_nq-Pf06aKa1DHz890FJjwMz2yXjRyIDcR2mCziMJ5Fg7dqO6TLTvNIwZkaS8gzYJzICJbdGTDs7hMJY8nnqh_pzq0tYND9X18Xhff8Gswt0-WDAWJhW8LLGWrhrrt9fVWxQc2I8673oPYNz1jpyFs3VPX5b_Ed4655NSzuBB8eGaO2AOPnEKbSmTl31EFwx4POQZL9_Uor0kQa6caDM-n5DqudZTAHvEwXbQlDL19n8onKCWiP23ENdphA9R5PBWzCOLyORIA1zx4uOgkt4jDfAdun1pyvNSi7a1hudIUViCEkJYvq9PKFIDVXD5Yq-8AKH3DxGsbX_p9hZBWRvj70_E-GuUQkR1a47S3rtSH7AZ3QYZkToWYGFpK0AStApzVL4l5RTW2N4PaYR4C8sxb0VZ7Fq9gLD0lXFhzPmrxjaArRomYw_fuLle2ZTlfdBiKcU3ZCde9hQIZHwlsGyUTbqhnF75WEWacBsh5oUxeHlj7wanCbc5uTfFO6nb-MGJVxWB1gUEbX-OWq86fuxSXBoMzJkm5YTwwJpi5r1BY26ukwo2vJ4p8YCB1tURN6GRvCKCMlxHOM2X241G1uHt4EyPzlKNoU3pE9oxgQJDMIRpiSn0Kci5NjCN4rOfOWhu5TnkOO_Ta7re9oPzw474aQKrJA2VQdesOP1ki7ftWJDrb8WbBr4ZSEMSC9NLYd_dGNuIQuk59dZ-GZtTTxF_mL3tjnp5/https://www.amazon.com/dp/B07Q1TKTP9/?_encoding=UTF8&pd_rd_i=B07Q1TKTP9&pd_rd_i=B07Q1TKTP9&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=IbUmv&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=3E7FGCM3QG8H2VJW4NH2&pd_rd_wg=GOxqy&pd_rd_r=8737dc5c-e335-4acc-b545-1435e3822feb",
+      "link_clean": "https://www.amazon.com/dp/B07Q1TKTP9/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07Q1TKTP9&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41KHf8+qc-L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c9e2cc7d-3531-4662-a163-0d8403bed997.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c9e2cc7d-3531-4662-a163-0d8403bed997.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.4,
+      "reviews": 38568,
+      "price": "$42.97",
+      "extracted_price": 42.97
+    },
+    {
+      "position": 3,
+      "asin": "B0FCXTJDTH",
+      "title": "Flea and Tick Prevention for Cats – 500 Crunchy & Creamy Chews, Cat Flea Chewables with Skin & Coat Support – Oral Supplement for All Breeds & Ages – Natural Chicken Flavor",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JFy-ee76pYWBIRAlbKGmchkAAAGf8i4HwwEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICD6O_Hz/clv1c_ek-wxQfWLcTaTBVEai7mSw7J7cmzeeYVAkry-SNhG9sP20OdjefNry10Yy7qf7QQ13nmpyfcmoZY1d-eW5x7wcEAj5l74v-Lwcv0IuZG7PgmSx2obTf8WiIYQ_h-iGaZQ-Ki7QijBvah2BbyRttc3izayF2dlVE6EnRh7_eqxptH6cteI6SL3dMvD-MoAFzqz8IRfQRIdxeolWW0MET4hjcJFW13rOay7GwGOy49IRI6fdn0S6QDR9vg-8ZwclrrF43ay40Z6LqMAJu-o3863LV3ptwAp4Hp49EzCgX5mi5H5uM01TIMfeb1DkpgoUw9mO19IJ31Xps1n1bMi9ewa4ZgvwTm0v_g9YPCkRFE4xOJoKHIvPRiwgp_VHOHGdzvM1K_xKhjHPtmGT-B562Beb8-o6Hqa2a3nbiF3VfukcjBQDxLH8OWfgWbFVfZ_rcVAcxPuxBUYapM9ljHAnPTeb_QwtgsIxW-M1GQEcoeJl9xZLO8iir8bOnhE0lF_64iJ7J8rfpaw3SKTBFc9Js07hurS-kLU3i6EzcvCBiNR9LTBNHQEVMnEshG2mRos28rSlWdjAAVz1fbsh03ml2r2r3xIgtwl2CT3DMlzP4h7KJDAa-JvxrAdJUtF1bIQfyhbK7u6e-FYZ-G3oSBsPaMP1vfCt4pshefWknrWySPtEK10P9_ODgnqSPw6p74oRT6OIaq_KKsW-QFoR3gFhIbX0Lq5YmcjyqePFfG7uMKNDmyjwD-cF2NO5VGcigW7Df2G_aR0aoFH93TpAO_CnEQUw8p_JJ6iRCrDmknY7G6eYQyO3o0SX-bwpcaCXXnUuak3g0xSvQPTabK5Af8kFSpOif3FpEakOinSkjZPYrNr6A-raDlNqIG_1XPAalZShoik9sd4KdKch2uSDvqOLxtAJ0bZS-h-dBfqc9GxdegrFFYzVs2JAStORpw0mpSy8rXLfmMgKrLm_7XzPPgC9bzfzwe5ZYwc4LPXjIHQEhjip9Xx_cpEcg1ihvk0QJnMjrl5MzOED-9f5-2x9wJpNkcxTPH2pDM8U_zonLmQAlkKcDkf-v7TkwijOREBbYW61wISOpsgPAk-vSOnch4VEwpk8si1_N2ZmzAnDYtlVnSstJF8vRXxFq0y_IsAAF-2ACFR2cZUGboFjLgrYCVjywdHP9MvBcCcusEM9HD4fX05XqLtLr37sMPmB2HmhhpEjHonfq6ds1hShSc9nM8Bc5ERX9VZwIZb_A9YGFLbCaP2TBOEwqxEXYB0xhWNvVjRUIS6IM6hsqk89g6iibgSoN1Txbk48ixWO_Wiutyd9suL2xuFQtwMbyaEr4PEYJov-oagACXplJWmK1fDX1z0Sie2FQrrcZXAjq1Nzofy4S5OsruvXAVYd75i7hXKkz4UlOxeDro4lyqa8Ijy8n_7QSNkpC4v2U_Gb-j_LWdnfNdr1ed_SSMExMvGtyZolNSoysRTH3vsGw6bOMAr7p8VjlOkL1Se7MbKTs9d-EcDElFicnkq5YlzuWDqXEGmX6J7c0WfdkqghZJ0r6xpUjlEns7ekExQN1QjZmWU-qUWjuEJkBs-4ZZP8Efc1DLWta2/https://www.amazon.com/dp/B0FCXTJDTH/?_encoding=UTF8&pd_rd_i=B0FCXTJDTH&pd_rd_i=B0FCXTJDTH&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=IbUmv&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=3E7FGCM3QG8H2VJW4NH2&pd_rd_wg=GOxqy&pd_rd_r=8737dc5c-e335-4acc-b545-1435e3822feb",
+      "link_clean": "https://www.amazon.com/dp/B0FCXTJDTH/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FCXTJDTH&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51uw7jk4Y7L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/714d6ac3-8e1c-4afc-8bb4-0b26c725fe9f.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/714d6ac3-8e1c-4afc-8bb4-0b26c725fe9f.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.1,
+      "reviews": 1041,
+      "price": "$22.79",
+      "extracted_price": 22.79,
+      "old_price": "$23.99",
+      "extracted_old_price": 23.99
+    },
+    {
+      "position": 4,
+      "asin": "B01N6PQ02G",
+      "title": "Deley Naturals Dog Probiotic Chews - 4 Billion CFU Probiotics for Dogs with Digestive Enzymes & Prebiotics - Grain Free Soft Chews for Gut Health & Digestive Support - 120 Chicken Chews Made in USA",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JMDCmFJTHbKMzLO5UrU9mbIAAAGf8i4HxgEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICAfEULl/clv1c_ek-wxYXWLcTWTBVEai7mSw7J7cmzeeYVAkry-SNhG9sPx0NdsPvN5iJ0vdc1G4MSY6Mxk3LoIDVR8BuXQKhpHC30X0TUtnue2gL7aqSmWcAXk9X7aO9-EDu2qil0o2U7g3JmrKxysxJSQ539DOiVYoQpL5yfmk3KEsJ0RDOrytb3mekYA2pZTr3UWI48sqU8SKeyzv1JEArK2czNLtjBdQRRr_W_gMQchgZF5WC32bWha7_TDqRU_F7vi2Z3clrr347bu50Z6Lq0SFDrv1E63LX3uVhAr8HRbRKWlGx6m6t75mM01aKLfub1fkpgochhtDB0zgVPMCjyTy8L4K_Hwm8GnKr21_OXpPpIYO41MaY9MhNLzfkp2rkOrfcHCpLpOiCMEZLls2ZkiYgPrnHPO7ktRAzd_-ZmMPG40QX2NmzHI4TL4soqAoAcITMpcY1flLScVPwmHBirErWbH_vDO8P6Q3nOBRJSV6BKxffYcaoqmqfvtca7Zm1tW0_gFi6Mi33fEM2zBrby-8dOCH_DSGzfzMEIA2RM8l2sD_nSdAq7ZTE_44y7C3AjUAXdfqdHJl81BV2y-UmhR92kFqP1H3NfqP3Hz54OSo8U-dkGWaIXRvfEGZL1O9e7oatjIBayW8wFrEfuDFQ3MzD3NJn2Ap-eP_TJaUHOrjoSapAkkc5P5WINGpPO9Jb56-D-omyyUYwIfgbdJ5Y1odDRTpqRKhWRvb4Z6KGckBCKwrDW03v2Sv3uMpP0mAHxRQwz-JVivZ-Gq8rCLEd2V4DPREK9VzYVI7ql_rsw_MeAjNfURUqslCyAzwt4xqXZodDAT57dv17vZFVR0dRNco5RY6b-cuy-P1Rpv77BgkPzGkjhekBsq9VMOmwZ4WJM7KlQ9-Kd0a21-xVtaOdr0oAAWjdscew-V_wJ9KdI_gkp926Wsmg-ZROsbr1BBD_YK0lNYIK7rZMYkKC_-eJkyLrLy-z1WgX6UHDmOWbED_GHOH1_wqR2iTEbGGJbmMBT_JYyGrBf_MTs7NpOjZ4rA_y7Bz7hB5UzxAHJl5abaMT2bbHlVd5c-GenmwoRZiCFN8ZWza7hwomG1cGvxhngEXWUzM_K4rVN0HEt2rldqNiHXd45-HbpdvmX1jgn3utYHRZr5EgYoF2F-hsLVW4HeF8-sX7fH4GN43nQjtXzFPYgd8WzNgAc024HF3DVmn-PGhGqcu5z_745sGtDUTYG8bUiA9oyASGQSFsfNCOW2Z3s2QdpG-X6TimcDlmSfHrUFuZCTABYmGsUtlJmbe9tFJVT4ZoYpj3bUWnLudCL2dLkT_Tizlj19JuI4ZA6pqoPRnPwrt9dvx-uJeUGJqe-IXO0xIwszosg1Dn8zYVC5Ywsn26r4EFHj8QrycCfblqscKbLHV4BS8BpL423rNdJdaiA46Yt__yESRho_dk1evbqAcsBhrHmz0HMDU0IgtDU2rbhICY_U-i2fAKHlAR7lIiG-RrRt431KW-B5NrL0eIdDaCZKQYnW-1q57P_ERzIDi-bGdVVBcnkuGUGnk1cT0IzRo-A0gPyB0tMvQ0mrQVzlO4QNDAaLw7eIJ5hA2V8nB6aSA/https://www.amazon.com/dp/B01N6PQ02G/?_encoding=UTF8&pd_rd_i=B01N6PQ02G&pd_rd_i=B01N6PQ02G&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=IbUmv&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=3E7FGCM3QG8H2VJW4NH2&pd_rd_wg=GOxqy&pd_rd_r=8737dc5c-e335-4acc-b545-1435e3822feb",
+      "link_clean": "https://www.amazon.com/dp/B01N6PQ02G/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B01N6PQ02G&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41VFaoz1JnL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/89a5a2bb-26d1-4acc-8429-36a642071483.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/89a5a2bb-26d1-4acc-8429-36a642071483.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.3,
+      "reviews": 5571,
+      "price": "$29.96",
+      "extracted_price": 29.96
+    },
+    {
+      "position": 5,
+      "asin": "B0F6TRH8JP",
+      "title": "Puyrzoe Flea and Tick Prevention for Dogs, Dog Flea and Tick Treatment Chew | 5-In-1 Flea and Tick Chews, Flea & Tick Prevention | Hip & Joint | Skin & Coat | Immunity Support | Digestive for All Breeds",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JChJTvV4L0GJr5LKYRhVwj4AAAGf8i4HxwEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICBFUMZP/clv1c_ek-wxQfWLcTaTBVEai7mSw7J7cmzeeYVAkry-SNhG9tDnNGLQMGPUf2DFa21BfeDiVxDj02obQEpcAuwLHjJiTq1X0TUtnue2gJ715vmWW23i5fyEFINtR66YP9cHiKRhfP8JpFJeYyjLlO1IuVVUgHU4d6QjnVqlEB7yzasnG7f224ANDDUQZIvuB9Eq5yX0NdwYcVDEArK2czNLtjBdQRRLw4-DVsj3K5LnFye6y4sCadNGiu2ZNH9fR5t1psxxmv_xLNaJl3NbspAhuOIa1dzlDezqfRypeVViH97W3a1NbM8TRkyT0zmyjQ707cnwTd6_LjqU_26PoFavJgFebvBtacpETaLIffrrtUk4vbbhDZUDzQXujx7r8fljaVcqOWiww0z0w5TXVyhsoBXF04qEtHn9Rp7TsIFW0zm2avCw_rK4so6goAcIjP5pmTOImJNpyIpHBgLNf5P8nAhF5qeRchklGZrJAMID_VPHPf_JwoSdtgaJjm_qQ8w6xsRM5kKCN2Z3XbNl-L-R_R86kkDhmdlXG4975rfv0iPWpGVh1XNt3S8cSPe-UtSz15ioXfntkLcynDt7NRVmoioG0dZkZCr5iD4iYlNU-e3zMIBSYLMLhCrbfKdC2aywdW1qHxSGNBKj18SEgCoiRqmhr716296AHDHmDZRqyn8idqR1nOLJ429vCVZqjehvZwuMUBGmFpx-BRrABWC_giG-NBdwM2W8B0bHaWhenO58SODKXNwNZH0wPISZyWSHPGGre6sTHLqyE7cEVdh-UUP-UeNQnOdEBrJG70tkP75BOBwFgFN7A-jvegSvFDv0SKUWn7vZHVR0dRLTlqWR2T8J8rzzEwolm27dPwG_3Qv8Gft7QDON8TCdAyhEjO1h9J_ox_2b5Y2WZtf7rxNwx1KFMnTSJglIGOBQaY571xghr06xvkOgQZjqCAHRLhD6aQcXtQPhcLOD3j_GSysolQBNkHY5uzpNpXad_cHTOeU3DQ8bIresK6ROn_63rOWtwadgaAMEMIsjnuiqhBcJnLzaJqxCelZVbyS5DGNmPkbw5n48ZL_sbz8J0iWwR0XF8f-HyYhd1UGmHCXBtP6rVrZLpW9CeVGEUqQsmVAxubyPJI9yCYspTuQr4nMiHiY9hqxPTmmRL-MbI3PSvNRKQMryf9KlXVKbS2DiBp_ImccA3dYR6zOFMUM54bxGWdZ0cZmhXuBSkapXMlclokAsApZ2znbDxC6TBYcr-F4eimOjGGXT_xi8MA6nTb1FkxSSQQcaH14RbZc8Z5oWatWkU7isD2KaS4hW_j8ICMti-s7piJHKITNYP0S1LxU2wP3OOHJBNxRi2sHTBocnVWMSLwnokZXnG14GfBPueAr2UioOurus3AVYZ7ZS0VX6kz-0tl4YG0YhxIV7lP94QVjmSxtzpx3Slo40nRgDimayl5TAbJA1hqEEhMvWswR4af25T1-TBAL_D44eN2ZWC0E63QxP3Lfbq2yrT_pTv6O_MnajojsrJdbxmG7qeQZU4YQCJYVAKW8x1W7aO5sQZNRTEkinK81cEIxeNHumYj14AzzdpLI5ccj2SwH64bOaGM/https://www.amazon.com/dp/B0F6TRH8JP/?_encoding=UTF8&pd_rd_i=B0F6TRH8JP&pd_rd_i=B0F6TRH8JP&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=IbUmv&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=3E7FGCM3QG8H2VJW4NH2&pd_rd_wg=GOxqy&pd_rd_r=8737dc5c-e335-4acc-b545-1435e3822feb",
+      "link_clean": "https://www.amazon.com/dp/B0F6TRH8JP/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0F6TRH8JP&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51TQ1OlKOwL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/188219f8-37c0-4a03-8b4c-a3ac2d43d2ea.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/188219f8-37c0-4a03-8b4c-a3ac2d43d2ea.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.3,
+      "reviews": 408,
+      "price": "$19.19",
+      "extracted_price": 19.19,
+      "old_price": "$23.99",
+      "extracted_old_price": 23.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "text": "Customers find the flea and tick medication effective, reporting no issues with fleas or ticks. The product receives positive feedback for its quality. While some customers consider it good value for money, others find it expensive.",
+      "insights": [
+        {
+          "title": "Effectiveness",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 17,
+            "positive": 16,
+            "negative": 1
+          },
+          "summary": "Customers find the flea and tick medication effective, reporting no issues with fleas or ticks. One customer mentions it saved them a trip to the vet.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Works great in easier than going to the vet",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1BX103TBCG23I"
+            },
+            {
+              "position": 2,
+              "snippet": "...And it did its job, no fleas or ticks, especially when camping!!",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1QQKED1TLGRLH"
+            },
+            {
+              "position": 3,
+              "snippet": "Came on time and is effective !",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R15UL6YDWTNC1K"
+            },
+            {
+              "position": 4,
+              "snippet": "...Easy chewable and they work great!",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2RBV4B0YHO2DZ"
+            }
+          ]
+        },
+        {
+          "title": "Quality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 6,
+            "positive": 6,
+            "negative": 0
+          },
+          "summary": "Customers find the product to be of good quality.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Great product! Only one I ever use! I have had two dog (chow and a chihuahua) and never once did I have side effects or health issues....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1QQKED1TLGRLH"
+            },
+            {
+              "position": 2,
+              "snippet": "Very good and safe",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2HF24XIKT5EGP"
+            },
+            {
+              "position": 3,
+              "snippet": "As many people know, this is a phenomenal product....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2Q1JK4UIBN01E"
+            },
+            {
+              "position": 4,
+              "snippet": "Good product but very expense.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2EEZI55BGFU01"
+            }
+          ]
+        },
+        {
+          "title": "Value for money",
+          "sentiment": "mixed",
+          "mentions": {
+            "total": 6,
+            "positive": 2,
+            "negative": 4
+          },
+          "summary": "Customers have mixed opinions about the medication's value for money, with some finding it good value while others consider it expensive.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "It was slightly less expensive than from local vet. Easy prescription approval process.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R4LK3CDRI1MZE"
+            },
+            {
+              "position": 2,
+              "snippet": "Good price!",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R3C2FAF2E78HFC"
+            },
+            {
+              "position": 3,
+              "snippet": "Very expensive for this product",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RVKZ9T43WD4DH"
+            },
+            {
+              "position": 4,
+              "snippet": "Expensive but worth it",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1Q21EWS3VXHYZ"
+            }
+          ]
+        }
+      ],
+      "images": [
+        "https://m.media-amazon.com/images/I/71UgWidyfRL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 88,
+        "4 star": 7,
+        "3 star": 2,
+        "2 star": 0,
+        "1 star": 3
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "It works great but $$$",
+        "text": "It works great for my dog. No fleas or ticks but you may need a loan or payment program!",
+        "rating": 5,
+        "date": "July 19, 2026",
+        "author": "Christopher Cumming",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AG5L36UJREEBIKH4JCFNLUMBEPFQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "flavor_name": "6ct",
+          "size": "10.1-24 lbs"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Fleet for dog",
+        "text": "Very good and safe",
+        "rating": 5,
+        "date": "June 6, 2026",
+        "author": "Mayre torres",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHQLGSUA547LN4MDBRXMWX4GOW4Q?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "flavor_name": "1ct",
+          "size": "10.1-24 lbs"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Great product! No side effects!!",
+        "text": "Great product! Only one I ever use! I have had two dog (chow and a chihuahua) and never once did I have side effects or health issues. And it did its job, no fleas or ticks, especially when camping!!",
+        "rating": 5,
+        "date": "March 3, 2026",
+        "author": "Angela Bissell",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AH2UPRCCRJNAY4N434NNISHIEC5A?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "flavor_name": "1ct",
+          "size": "10.1-24 lbs"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Expensive but worth it",
+        "text": "Only thing that has ever worked for my dog.",
+        "rating": 5,
+        "date": "July 27, 2026",
+        "author": "Angela",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AG24LFE4VXAUXH6LEH3O7C6SREBA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "flavor_name": "6ct",
+          "size": "10.1-24 lbs"
+        }
+      },
+      {
+        "position": 5,
+        "title": "It works",
+        "text": "I haven't used the one I ordered, but got this brand from my vet and it works great. My dog is highly allergic to fleas and this keeps everything at bay. I think all of this stuff is ridiculously expensive but this isn't any more so than others. In fact it may be a little less. No smell because the dog eats it. He seems to gobble it right up.",
+        "rating": 5,
+        "date": "February 10, 2026",
+        "author": "Marianne",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHUEXNY2MZ532I4P62MVRGSC7ZEQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "flavor_name": "3ct",
+          "size": "10.1-24 lbs"
+        }
+      },
+      {
+        "position": 6,
+        "title": "Safe and effective",
+        "text": "This is a lifesaver to aid against ticks.",
+        "rating": 5,
+        "date": "April 18, 2026",
+        "author": "Theresa Fragale",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFHX35BZ3LUDUADYQVW7KV66YBHQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "flavor_name": "6ct",
+          "size": "10.1-24 lbs"
+        }
+      },
+      {
+        "position": 7,
+        "title": "It Works?",
+        "text": "No fleas or ticks seen and our dogs are still alive. So far, so good",
+        "rating": 4,
+        "date": "September 11, 2025",
+        "author": "Mark R. Souto",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHEAXRINEANLTBJOBBC6NI46AKRA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "3 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "flavor_name": "6ct",
+          "size": "10.1-24 lbs"
+        }
+      },
+      {
+        "position": 8,
+        "title": "Best",
+        "text": "When we first got our dog from people who didn't have the time for her & she was kept outside 24/7The young women said she was perfectly healthy & nothing was wrong with her... come to find out she was positive for heartworms & 18 pounds solid ribs showing & sticking out face sunken in. So my vet whom iv used the last 10 years redid her vaccines & everything & put her on the best stuff.. our baby is now almost 25 pounds& healthy & happy 😊 high protein wet food was the best for her to get her weight up & vitamins.",
+        "rating": 5,
+        "date": "March 28, 2026",
+        "author": "Desiree",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AE36NGPHR4IFEJHGO4WAPY45N5WA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "flavor_name": "3ct",
+          "size": "10.1-24 lbs"
+        }
+      }
+    ]
+  }
+}
