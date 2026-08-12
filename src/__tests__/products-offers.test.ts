@@ -212,16 +212,18 @@ describe('multi-merchant product offers', () => {
     }
   });
 
-  it('keeps the bath-tools page on a single Rinseroo product with both merchant offers', () => {
+  it('leads the bath-tools page with Rinseroo on both merchant offers', () => {
     const config = fleaTickConverterPages['dog-bath-tools-for-flea-season'];
-    const bathTools = config.blocks.find((block) => block.kind === 'product_section' && block.id === 'bath-tools');
+    const rinseSetups = config.blocks.find(
+      (block) => block.kind === 'product_section' && block.id === 'rinse-setups'
+    );
 
-    if (bathTools?.kind !== 'product_section') {
-      throw new Error('Missing bath-tools product section');
+    if (rinseSetups?.kind !== 'product_section') {
+      throw new Error('Missing rinse-setups product section');
     }
 
-    expect(bathTools.productIds).toEqual(['rinseroo-original']);
-    expect(config.itemListSchema?.productIds).toEqual(['rinseroo-original']);
+    expect(rinseSetups.productIds[0]).toBe('rinseroo-original');
+    expect(config.itemListSchema?.productIds[0]).toBe('rinseroo-original');
 
     const rinseroo = fleaTickProducts.find((entry) => entry.id === 'rinseroo-original');
     expect(rinseroo, 'rinseroo-original missing from flea/tick products').toBeTruthy();
@@ -236,9 +238,43 @@ describe('multi-merchant product offers', () => {
 
     // Carried by both the bath-tools converter and the inline article link.
     expect(buildProductPageMap()['rinseroo-original']).toEqual([
-      { label: 'Dog Bath Tools for Flea Season', href: ROUTES.fleaSeasonBathTools },
+      { label: 'Dog Bath Tools', href: ROUTES.fleaSeasonBathTools },
       { label: 'Natural Flea and Tick Prevention for Dogs', href: ROUTES.naturalFleaTickPrevention },
     ]);
+  });
+
+  it('keeps every bath-tools product image-backed, Amazon-linked, and in the ItemList schema', () => {
+    const config = fleaTickConverterPages['dog-bath-tools-for-flea-season'];
+    const sectionIds = config.blocks
+      .filter((block) => block.kind === 'product_section')
+      .flatMap((block) => (block.kind === 'product_section' ? block.productIds : []));
+
+    expect(sectionIds).toHaveLength(19);
+    expect(new Set(sectionIds).size, 'bath-tools products must be unique across sections').toBe(sectionIds.length);
+    expect(config.itemListSchema?.productIds).toEqual(sectionIds);
+
+    for (const id of sectionIds) {
+      const product = fleaTickProducts.find((entry) => entry.id === id);
+      expect(product, `${id} missing from flea/tick products`).toBeTruthy();
+      expect(product!.image?.src, `${id} needs an image`).toMatch(/^https:\/\/m\.media-amazon\.com\/images\//);
+      expect(product!.image?.alt, `${id} needs image alt text`).toBeTruthy();
+      expect(product!.bullets.length, `${id} needs bullets`).toBeGreaterThan(0);
+
+      const amazon = getOffers(product!).find((offer) => offer.merchant === 'amazon');
+      expect(amazon?.url, `${id} needs a tagged Amazon offer`).toContain('tag=chill-dogs-20');
+      expect(amazon?.asin, `${id} needs an ASIN`).toBe(product!.asin);
+    }
+  });
+
+  it('starts each bath-tools section at the running product position', () => {
+    const config = fleaTickConverterPages['dog-bath-tools-for-flea-season'];
+    let expectedOffset = 0;
+
+    for (const block of config.blocks) {
+      if (block.kind !== 'product_section') continue;
+      expect(block.positionOffset, `${block.id} positionOffset`).toBe(expectedOffset);
+      expectedOffset += block.productIds.length;
+    }
   });
 
   it('offers the Wondercide shampoo on both Amazon and Chewy', () => {

@@ -551,9 +551,10 @@ export const staticSitemapSections: SitemapSection[] = [
         lastUpdated: new Date('2026-07-28'),
       }),
       createSitemapPage({
-        baseTitle: 'Dog Bath Tools for Flea Season',
+        baseTitle: 'Dog Bath Tools',
+        ogTitle: 'Dog Bath Tools: Sprayers, Brushes, and Drying Gear',
         description:
-          'Bath tools for flea season focus on cleanup and coat care, not miracle claims — especially slip-on tub sprayers and practical rinse routines.',
+          'Compare dog bath tools that make washing realistic — sprayers, shampoo brushes and scrubbers, multi-tool grooming kits, and drying robes and towels.',
         href: ROUTES.fleaSeasonBathTools,
         pageType: 'converter',
         topics: ['flea-tick', 'travel', 'road-trips'],
@@ -564,8 +565,9 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.fleaTickMedications,
           ROUTES.roadTrip,
         ],
-        relatedLabel: 'Flea-Season Bath Tools',
+        relatedLabel: 'Dog Bath Tools',
         pubDate: new Date('2026-06-30'),
+        lastUpdated: new Date('2026-08-12'),
       }),
       createSitemapPage({
         baseTitle: 'Fi Dog Collar Review: GPS Tracking for Everyday Dogs (2026)',

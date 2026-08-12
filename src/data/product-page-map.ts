@@ -12,6 +12,7 @@ import { accessoryProducts, trackerProducts } from './tracking-products';
 import { coolingConverterPageConfigs } from './cooling-converter-pages';
 import { calmingConverterPages } from './calming-converter-pages';
 import { relaxationConverterPages } from './relaxation-converter-pages';
+import { fleaTickConverterPages } from './flea-tick-converter-pages';
 import { ROUTES } from './routes';
 
 export interface PageRef {
@@ -158,14 +159,18 @@ export function buildProductPageMap(): ProductPageMap {
     addRef(map, p.id, fleaTickNaturalRef);
   }
 
+  // The bath-tools converter mixes categories (bath tools plus a shared grooming kit),
+  // so read its lineup off the page config rather than filtering by category.
   const fleaBathRef: PageRef = {
-    label: 'Dog Bath Tools for Flea Season',
+    label: 'Dog Bath Tools',
     href: ROUTES.fleaSeasonBathTools,
   };
-  for (const p of fleaTickProducts.filter((product) =>
-    ['bath-tool', 'natural-shampoo'].includes(product.category)
-  )) {
-    addRef(map, p.id, fleaBathRef);
+  for (const block of fleaTickConverterPages['dog-bath-tools-for-flea-season'].blocks) {
+    if (block.kind === 'product_section') {
+      for (const id of block.productIds) {
+        addRef(map, id, fleaBathRef);
+      }
+    }
   }
 
   // Inline AffiliateLink in src/content/articles/safety-natural-flea-and-tick-prevention-for-dogs.mdx

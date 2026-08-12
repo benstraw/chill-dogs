@@ -372,16 +372,19 @@ site_system:
         chew, and grooming sections mix Amazon and Chewy offers. Frames natural products as prevention
         layers and light-load support, not heavy-infestation rescue tools.
 
-    - name: "Dog Bath Tools for Flea Season"
+    - name: "Dog Bath Tools"
       type: "converter"
-      target_action: "Drive affiliate outbound clicks on bath-support tools that help owners execute flea-season cleanup routines"
+      target_action: "Drive affiliate outbound clicks on bath-support tools that help owners execute bath and flea-season cleanup routines"
       metric: "amazon_outbound_click rate + collector_to_converter_click from the natural guide and broad pillar"
       routes:
         - "/safety/dog-bath-tools-for-flea-season/"
       notes: >
-        Shared-config safety converter centered on a single Rinseroo slip-on sprayer, offered on both
-        Amazon and Chewy, plus cleanup workflow support. The page explicitly positions baths as support
-        and coat-care help, not as standalone flea treatment.
+        Shared-config safety converter organized around the four friction points of a dog bath:
+        sprayers and rinse setups (Rinseroo on Amazon and Chewy, an outdoor faucet wand, a cordless
+        bucket pump), bath brushes and shampoo scrubbers, multi-tool bath and grooming kits, and
+        drying robes and towel sets. The Anrundar grooming kit is shared with the natural flea/tick
+        converter. The page explicitly positions baths as support and coat-care help, not as
+        standalone flea treatment. URL keeps its original flea-season slug.
 
     - name: "Rattlesnake Safety for Dogs"
       type: "collector"
