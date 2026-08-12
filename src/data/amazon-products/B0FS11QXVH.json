@@ -1,0 +1,326 @@
+{
+  "search_metadata": {
+    "id": "6a7c02156539a2a35ec6b3fe",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/l8_xmocqOlXRbg8Vt3j55Q/6a7c02156539a2a35ec6b3fe.json",
+    "created_at": "2026-08-12 05:18:13 UTC",
+    "processed_at": "2026-08-12 05:18:13 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0FS11QXVH/?",
+    "raw_html_file": "https://serpapi.com/searches/l8_xmocqOlXRbg8Vt3j55Q/6a7c02156539a2a35ec6b3fe.html",
+    "total_time_taken": 6.31
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0FS11QXVH",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0FS11QXVH",
+    "title": "Dog brush Dog Grooming Kit 3PS： self-cleaning slicker brush dog Deshedding Tool&TPR Dog Bath Brush for dogs cats horse Home Travel (green)",
+    "link": "https://www.amazon.com/Grooming-self-cleaning-slicker-Deshedding-Travel/dp/B0FS11QXVH/",
+    "link_clean": "https://www.amazon.com/dp/B0FS11QXVH/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FS11QXVH&device=desktop&engine=amazon_product",
+    "variants": [
+      {
+        "title": "Color",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0FS11QXVH",
+            "name": "green",
+            "image": "https://m.media-amazon.com/images/I/41l4rmS5K3L._SS64_.jpg",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FS11QXVH&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0FS14VDY4",
+            "name": "white",
+            "image": "https://m.media-amazon.com/images/I/411QXWoM61L._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FS14VDY4&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Brand: CXTIEFANZYL",
+    "thumbnail": "https://m.media-amazon.com/images/I/41l4rmS5K3L._SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/61QxgdHGJuL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61H1Ga0DPYL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51rj6CdL1tL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51myD96KOTL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51ikKNSgDrL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71ISG2BCdJL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/7184QYkpzyL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61KZSipz19L._SL1024_.jpg"
+    ],
+    "rating": 4.4,
+    "reviews": 5,
+    "bought_last_month": "50+ bought in past month",
+    "discount": "-6%",
+    "price": "$6.75",
+    "extracted_price": 6.75,
+    "old_price": "$7.15",
+    "extracted_old_price": 7.15,
+    "prime": true,
+    "delivery": [
+      "FREE delivery Monday, August 17 on orders shipped by Amazon over $35",
+      "Or Prime members get FREE delivery Tomorrow, August 13. Order within 9 hrs 56 mins. Join Prime"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$6.75",
+      "extracted_price": 6.75,
+      "delivery": [
+        "FREE delivery Monday, August 17 on orders shipped by Amazon over $35",
+        "Or Prime members get FREE delivery Tomorrow, August 13. Order within 9 hrs 56 mins. Join Prime"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "ZYLCX",
+          "details": {
+            "heading": "Sold by",
+            "content": "ZYLCX"
+          },
+          "link": {
+            "text": "ZYLCX",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=AOLPNQCVONU27&asin=B0FS11QXVH&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "about_item": [
+    "1.【Home Pet Owners: Tired of Fur-Clogged Homes?】​​ Professional 3 in 1 Cat Grooming Kit & Dog Deshedding Tool - Complete set tackles shedding/mats/bathing in one go.Using this cat brush every week can reduce furniture adhesion！",
+    "2.【Stop Painful Pulling: Self-Healing Pet Brush Tech】​​ Self-Cleaning Slicker Pet Brush removes Most of the bottom layer floating hair.135°bent needles + rubber tips glide under fur, zero scratch guarantee​for sensitive pets.",
+    "3.【Transform Scared Baths into Happy Spa Time】​​ Dog Bath Brush massages with TPR bristles while evenly spreading dog deshedding shampoo.Adjustable strap keeps hands steady - ​anxiety drops.",
+    "4.【Conquer Mats Anywhere: Double-Action Grooming】​​ Undercoat Rake for Dogs Cats + Dematting Tool Combo: Shred tough mats/remove dead fur in seconds.Safe for paws/ears/tail​ - no vet trips for mat injuries!",
+    "5.【Vet-Approved Safety for Indoor Lifestyles】​​ Cat Dog Brushes for Indoor Cats Dogs use food-grade TPR & stainless steel.Ergonomically designed and reduces the amount of fluttering hair, making it a choice for pet owners."
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": "Using this cat brush every week can reduce furniture adhesion",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/adbe50c6-6e56-435f-8014-2faed9cb4a1a.__CR0,0,970,600_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 2,
+      "title": "Self-Cleaning Slicker Pet Brush removes Most of the bottom layer floating hair",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/c01b78eb-f14f-41f7-856a-a7890c76ded1.__CR0,0,970,600_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 3,
+      "title": "Dog Bath Brush massages with TPR bristles while evenly spreading dog deshedding shampoo",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/918e7f2a-815e-4786-9b52-5b8c7201dc14.__CR0,0,970,600_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 4,
+      "title": "Undercoat Rake for Dogs Cats + Dematting Tool Combo",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/e8ee8a7d-77f7-4db0-acb8-51b7f35dfe31.__CR0,0,970,600_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 5,
+      "title": "Ergonomically designed and reduces the amount of fluttering hair, making it a choice for pet owners.",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/41e90989-7fce-40b2-a7b1-097157c64205.__CR0,0,970,600_PT0_SX970_V1___.jpg"
+    }
+  ],
+  "product_details": {
+    "brand_name": "CXTIEFANZYL",
+    "product_benefits": "pet grooming kit",
+    "manufacturer": "zhongshan huanjiechuangxiangkeji CO.,LTD",
+    "upc": "743127518002",
+    "best_sellers_rank": [
+      {
+        "text": "#19,998 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 19998,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#101 in Dog Brushes",
+        "extracted_rank": 101,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/2975363011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Brushes"
+      }
+    ],
+    "asin": "B0FS11QXVH",
+    "rating": 4.4,
+    "reviews": 5,
+    "item_dimensions_l_x_w_x_h": "4.61\"L x 2.95\"W x 7.76\"H",
+    "unit_count": "1 Count",
+    "item_weight": "12.32 ounces",
+    "number_of_items": "3",
+    "bristle_material": "Stainless Steel, TPR Rubber",
+    "handle_material": "Plastic",
+    "material_type": "plastic TPR metal",
+    "color": "green",
+    "additional_features": "Slicker Brush",
+    "product_dimensions": "4.61 x 2.95 x 7.76 inches; 12.32 ounces"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0FGPLYLXM",
+      "title": "LetsFeed Pet Steam Brush for Dogs & Cats, 3-in-1 Shedding Grooming Tool | Self Cleaning Spray Comb with Mist, Dog Brush for Shedding, Cat Brush for Hair Removal, Long Haired Pet, Waterless Shampoo",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JBPQLgPX9WDMQCQRGM36QxwAAAGf9Gg23QEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDEgICBL-S7s/clv1c_ek-YBXf2asTWRuwy9wNOjGTeGXbfIuV7YDgobjLSrg27IVi_rFxn6KM7oz0T_lNG2x1eeePF1K-VZdBsdgVggfyxigl28JPqCjonk_Vqya-SgycBMHCXTOr92kFExrhGMFr9yHDN_Kazx5xKmGemeNbHsB2emw3nh-bsr2cry40plccxboXkpIXgsRlTnSf3NsadVmuJngZ_VerZ21VPZS4Ljc4aBp_2hcPUxDAdmxOuSAA37APA68NsUbmeYWmXC3z7YFcsGQGbdsdHinko1l3heul8EBG5STUpIZBIWXaniEUCTEUmB-Uu9oQ9nalsHr98Ex_UuepWI4mAO2m5U9XuPjMoTNf7vQxrzPRQs3v9q6DM1xEqTVDpwKk2MW8RFd9Y74xdU26MyMxPWW63dz9T2Sx7Q2VXdCDZq4otLMHsGSNfzdn83wVG4fAQgr0KQjcrgsXPNGBBsy3v-txWOJTHB__QrA1UYKpBNwDB-M5WsKEVlesQYEFNzIvoRF2odpOU7B9YHUaBtulwb_z2xztCUxG_OIKeuuba7XARXyxbCSEIW8HDgEmf9cR8sEJIiJMjZR0E5pXeFJcobwehEY0kprNYQ1fhg1ld5JnUumcGhnQKIDfJGQAY-MbA7JN3gRL-f1Z-t3gN8Lu8bYwHt2VtpBGt50gmvngsgHKLybhjeHbt9QXyj0xztNUnbysVgXzRoznqdjqlH1II_i09A0cBeKcgRdq3M3FhZXrC_qIIMi8KzmI6a1Slmu679GrDb7KfpA23E5uRPwVB-BzDcG5UQACXsSqbe6_tznVBSeKxt58L4tnf1pFzQzop7xtIySMscPmSKRnqihGS0DCkFV5ILqSYzGYkx9Mcbl0o2MOR013EMkNd2wopgFcrCXrhewx-wUeluoYwwtWI3V0u1lHZ54jHL3acTl_GVg4kkYvTyZ---r3kVze0NCv8GKfOcfXONzd_S4tWy6lV4VBUoyBTqgbbPVu3d8m46YHLUPhmSAhkDaI7sQQp0lfbPbDqLvm5_8LwK64uaRdiDZz0P8o7KgonWQow_6jH7wbAbcSZDiSSFOABWBjmqsw-Vxqx0EaoNRCPdCIZ6K-KXqDminWQyex7s9V8u_7oat7GzfUR6QSZ5h9ZHsK3kSAiWe9CHSldiyiT1IGwBLbL3jui3fLR2yXniAiWd_nW5XgV-aIZH9V5cXI1oBeWipEn2suBs3iDCy9E0x50Q41VIrlv6kUFT4CJntec3nirotIrSZozkeju2MfrBW875Mwsd0mB-D_UmQcRTEh0dO4hN6FyS60gmmo4UH_L38Gqfifw0kNgdoFCvPYYHmA3FdlnVkx1mnWSJ1zLEM2SZDRZ9-qrQeq0qk4PxMo3MsHTM6ceEIPbx1FtP-5Dkmxpps5R5ywmI1zwnzl_BhM8sNQpUUuuy3E-iq9mo_9KxPsUNGnOeRlcySmxgQo1Jh3w6yx52ycShEKDkPkoWHP3gbxHTvrRBgRJk28_zSxoWNLMO47AcL-0WfZ1Bjj7zjlqQwFuNFU9TZlHcHzf_3pfwCarT4bLswPh2Fb232oEob-O2Y8/https://www.amazon.com/dp/B0FGPLYLXM/?_encoding=UTF8&pd_rd_i=B0FGPLYLXM&pd_rd_i=B0FGPLYLXM&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=xpxSp&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=T77B33DCAMB2VE3KRVSS&pd_rd_wg=IgdaE&pd_rd_r=4e10c522-309b-43a7-bc91-fe100367fd22",
+      "link_clean": "https://www.amazon.com/dp/B0FGPLYLXM/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FGPLYLXM&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41DKxEoPvIL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/20b7d51c-dcbb-4021-bf2d-cebd44c1b5d5.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/20b7d51c-dcbb-4021-bf2d-cebd44c1b5d5.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.3,
+      "reviews": 1595,
+      "price": "$19.99",
+      "extracted_price": 19.99
+    },
+    {
+      "position": 2,
+      "asin": "B0H6KDT2L7",
+      "title": "Bamboo Slicker Brush for Long Haired Dogs, Dog Brush for Doodles and Curly Coats, Detangling Grooming Brush for Daily Use with Ergonomic Handle",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JBhCvFVxCLdy8IRuE3cQCxkAAAGf9Gg23gEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDEgICAvA44V/clv1c_ek-wxQfWKrTaTBVEai7mSw7J7cmzeeYVBTKkUbrvjcnusjjVWgH9PtMq2_-f736SifSa-G7cChsU1_Hi8C_Bv_LZ3XtCXtZeWGyrUebSzNwOW8CM6T3yNQR4YPJxDAAHmtTZo_5yd4d_zeUKjs5p4eBbodC4tmzOmvRwjTC84G5PimdlVg5k3OOPLk60UL1-NECq0kN7v8esleLhDWmJtnO_SQsdhXpmcAvm8JuTlGrKyRaMf2VZmaG6uRAGb9x-yel3cV8VKkPT87MeDPEaaqa6JHpAAnmLNXAuscBjEwSeMqt_x_Gc-Tt1ZNESwYlrijOvBcNKA1XbyJeiPtVhepNTikJQEjkgY3Md4QCSvGaR3WuVyecni0xRirK5QFL3Euwev9AvfvK_5O2H29mHsjOCGyJe8wBwv8_8nAWduzKeEcof_G9x3M4oOAUpxV_GYj2WPleNAnr2H-BHfskj56rAbhlG_dfppwFKFxzNlsJCkK8T3VcR7kAsxIzLb12uD5tzslP2pK26xM94R-R660nDXR-9hucv-l0MDCnVZuI5dT3Hw4j7y9WZA-AnNl3yCP_sgSIBoN20l727mz9sY4y7BMCNpGFLqWVkXVkhH7gs3nQL3_zC7_ydkByItOxfxULzT9JNOe7xEXQpheJ9CVAurOr2makXcVnrIySPOijcKVBHi1bw-I7QhOvlkOtPmdR0LIgRtHlbxUFi8bw-b0Lq5cm8jyqOfFc-H0bVUAC-TwDycF29uxaGfSj2uL3TCPBe8J0Lo866crlaDSv4JnEXLCYYYyaTJShR4NfS69xrxNEMZ2VEXC97TSxzdA2GlpiqpZ09AI9GfXH2fNews5KroMq44HrLUX334kv8vqW0APAYMOzp1-4Ez_Y28hHvqINwLXy5pWyjZDlpW91pr6E5AjymiZNX3D2YbxDn0RO9FlizhwZKRe2tStJfLIc0aS68nTKMUkXJ7odYrvEuiZ0aC0Ql3CNcZk7_EvTX1EWPPku3OP_7zn7HaUAZCms8aTbPSJbIXGBxjVe9rXMuPkluuJYBDPcKLfJjUEjDo4YfR44k7lMQWUSTwX0BZH28rVDYhyWwRoXuZF_lE86KMkO7bUfjWlju7Xon9lrT31SDTr9ea00_eFf2dA1ZgHzpqVASx_kFKFjYMZ0R3XZQAIwDuF80jx28jMRWPXY_YdJp0qhghphbfUHEA9JpMh0YSXKAysAkX-RbAaCts5lX4hbPZnxaHwsOTNiNanwghcdzVEdl56rull7Rp8qIxJgKo2O6BnrJsqUBlgvCD230THENG_Y8gfi3pJAEg8ooXQTpCZ0rv631G8oq-VLPdC-RrOZmC4Q0U1C4PZKabSzkg7qZlpvLhIUOCk23vK-tjJST8GnZMcJXyS3Hrx2LEUWpxXztTJZ1y_Yd4ZUrtn5wr2GDT6yOyt_xn6KaCjx8plGN9pJG8x5Hpnveq8n44j-Qv-PAfs3Jfc300BQ3KJFGWAo7frjykT4psqgFLSBZapHXd5A3TdIouth4CzS4jy1MW1SdeaXXuvoOkxajAwnvFaBHSNquExjJDyKXLXjgmxyQmN2kKHjPebo/https://www.amazon.com/dp/B0H6KDT2L7/?_encoding=UTF8&pd_rd_i=B0H6KDT2L7&pd_rd_i=B0H6KDT2L7&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=xpxSp&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=T77B33DCAMB2VE3KRVSS&pd_rd_wg=IgdaE&pd_rd_r=4e10c522-309b-43a7-bc91-fe100367fd22",
+      "link_clean": "https://www.amazon.com/dp/B0H6KDT2L7/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0H6KDT2L7&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41coml4IryL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/8e2bfa64-d59a-44e1-a196-c534551f4742.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/8e2bfa64-d59a-44e1-a196-c534551f4742.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 3.8,
+      "reviews": 5,
+      "price": "$19.99",
+      "extracted_price": 19.99
+    },
+    {
+      "position": 3,
+      "asin": "B0GYT491Q5",
+      "title": "Rhykin GroomPro Dog Deshedding Brush | Pet Hair Remover for All Coat Types | Dog Home Grooming Undercoat Tool - Reduce Pet Hair on Furniture, Clothing, and Floors",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JANTLy67D0IeGhQvekMASHwAAAGf9Gg23wEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDEgICBsC8wg/clv1c_ek-IBXvWVcbW3TK2ZyrC7XdcuEa5bm8JvvK38cKqyg4sQ0JyT8EApf6K-0-Q-FUE3RjTewE6TkFN8ow3qHFsgZXcCXFCKzaF5R3_993H2I0-yZdiFJNPk_yY4vtSkpq7YCoqItNv-Tdie-ppFMxE-Zibo9eIhlVZwuQwzSW31FZ_G6T2lYOPBkKZZ3wA8Jt4tgcalVNbf0ZLSKf4u-7huy6CL8RyIN6aoFdgg7eXiDXkshU-viCV5PkBUX1eWZBzny04YVdUeM6KafdXjPqMcmdrj9lAPVXmAx3scj_GSQK1kER8FYfp5ywqMUzf34PGOxOEr9MJ5IEMve0qh1Mz8NqwEEWQcRVh4XMZUcwm0Nd-2GuphSBQEJEYAUJ3OvUICuSC4bbRUKD4-TH8ZRHXQ_eZcuNirjoYZD8qaSUqS2rD7Kg82NwovmXbbG4PzOjFGbggeBl_FlUH2sOGRw3DDlkWr8Ex_HLeUfuHQi_7sx5K6be2WyRyXkzGB5HdoCwMuTCsmDfvyb7X5NOK-aCidKTier_IHLI2c6meDU1_BZJo3tF3X1EsrxnWJjXXXJsijoaz1JhiCcIp8crYQJYXrWqcHTzfuhtM2Zg4SgVrQYlbImrJ1jVdUidHU813QZN2QAcb0JjM5-SYgZGF2N5PkY5Os4bBCm66mHOXgFBzKgZymN7SgjyK_ivTGHXUH7Vj7HIgbMGXR5j5kR0dGLzPEjQGgs3k5xgCj-QZjU87V3xtqmvFqhgFUOPXo9_kLYGznYIBa_yyYmQP_Du_IPIsve11HDwGwC775r-mBnabxc_IY3Zf8pBJXpQX7WH7xDZ6VXVz9hNuuMH9_hMjGFs7YGNAoP25b1ob5aikoRSyMFwDaBtk-KYzxjMSr_zrUxU2CpRGGfUCTTnDTSfu9KMl54gRSa-9vwJQW-ksSrWItEYB5swOKPNmK7w1GPKNs8P3nvwGCqdgFm6_Vx9qGgYp-oOs1KaRfmShnF0FjtiYb5HugpVww9y9GTVEfSrglkMTdLoo1f_xVDp2wecWHesbnkqspEeP2ZyZTJ2fuJ-moVH9QwGu_zkRsm2XcmalHty0Vbhs92PDT63-oNGVX9-tVXKDFrMrRnuSnwnO9SOKY40xIHGbpBjiTK9XqqY3fcUohH3FoSvNTdaU562h88Fx70OrSS-GxCKg9Y7CLgyOSV-lTYAEZMjxyaXNwiuRMjLW1Lziq22ianOgOxEbtXSgGI5wvN3S12uiok-PYdXLeg_4o8PoRGmHtLxXQxF4cyFMorT49Jl9Ciyl6pswl5WFJXsx8PIL-CbvNC-oKSztLrsVLOqhlcBaSu-dza8CRUlEV_FICgBQwRxuZXSnX9aFihjCS8lfKEIcXi4Nq-JXO3IpgXqOlMDEai3LPkelXXA8MqCXDr-e4PdbxAdYYJ3FwZZuAf8bAdzL9kgF7VwN_nCf1saAKHwZWmCTsdqE8aVokHCiL8w9e2mH0jF6uBwkUYpdeTZhZsOijHo7hVjGo7K_T03PjJAxpO_TZ_75D7DjWgqu1T-PN9B2EQ2_KIk2G3wM0A/https://www.amazon.com/dp/B0GYT491Q5/?_encoding=UTF8&pd_rd_i=B0GYT491Q5&pd_rd_i=B0GYT491Q5&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=xpxSp&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=T77B33DCAMB2VE3KRVSS&pd_rd_wg=IgdaE&pd_rd_r=4e10c522-309b-43a7-bc91-fe100367fd22",
+      "link_clean": "https://www.amazon.com/dp/B0GYT491Q5/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GYT491Q5&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41nDUUnDQXL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/871ee9bc-6f60-4b50-9335-a249749dc175.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/871ee9bc-6f60-4b50-9335-a249749dc175.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.2,
+      "reviews": 90,
+      "price": "$35.00",
+      "extracted_price": 35
+    },
+    {
+      "position": 4,
+      "asin": "B0HBLB267M",
+      "title": "Dematting Comb for Dogs and Cats, 2026 New Undercoat Rake Pet Brush for Long Hair, 2-in-1 Dual-Sided Deshedding Dog Brush Removes Tangles Knots and Loose Fur, Grooming Tool for Thick Coats (Blue L)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JOcaEOAb3lt_QGNcmXU9TKoAAAGf9Gg24AEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDEgICDGJMNx/clv1c_ek-wBYXWKrTaXn2htwHHuI-tb5sd6_I4CzYDa2Kql0Z5QgaBF_ij3CzZPmBdxsLDoaaL0A5WmemnhU8UnJFVOHDYjcvLSSkVUBesvLaH3o4-StEvNvWNCwjgYnl5q8jTGFrTPJyqEyDiNpKGAcN3-sR7odiWntVzutSRzr6jwJ4v-DwhN4EORRxKMATRR52joePT4lNbfkZLGGT3rwSTYOKpFbfXQDYkGa99zPyqJyEdPKD-ZR4yrbb1zJNGF0r4o-atZKtkZgU-M7CxbnNJEJfqfEJLzajYTmFxY6yQqINachdoAXIJm0oYmBUBqF-Nmg8zrmVYAL1_LubHn7T13aykSiO7wSgSEujf96cEQzM40aVy_bLsbVAPRGimGtmVC90PsXTS6_6ATdA0Ic7O5dv9n_xnJgh1Zww37dtgHCEPrHQEch2-YhbyXm-QnlNzU40cfCD6tGnHa4oc0b2tkvvIilpp62tjHi3YD7p2dnvTPol7VjqQ4njxUsd2QNW9Sz1UjObGeQ5KseHSGBcPNJWJiGa63w4pn5lGL5D4V-fYSZBg-oRGGPHd-THkdMY5kcU9gemAPXYz5kDcYrfm5G_M0R6z977G9t2UefaWyax3-MUm0waU876AdfZeK6GzdKKNZInkRRXwUdNv1hxjlBDQDUrk8fwiaVl_tCQus7aHjncHvm779uFi2V3QJZTNJ0cqc8w8GOTNYE5P5gr400oHdfb3d2eroLj0Xby31eGQSn6hlbRse6ascS728HZyzHC889b9TvU97ebbTHq15B4k61O3d5sczSHqt7vtb2LgPRVHteYzoaBmvJ6ZlzKteJ6eYf9D9N46JClhGH9gVUYO7BJprwKmPBKlurPxSg21APDPkVeDF9zU4Zgs_9bWZBn6mMZ_u92g0Z77amuYMNzzVUctUWBEyFSmQjYp9k-oJVVDBFFIVSbBY93sP8s3oZi7BCsuTKPMlK3oYLPAcXfeRq49mHmUx89-FJnTpQzaNuEufDodrkqdcuLTw--ocamGdbg5gengIHs54SstRSNjkPisRx6A_OYHTOaj4J3CPnOuuZcy2RL1BpT01wF6U4Gcsb1Swr5YGBK-ydc5EqbYtc3m3wmQuC6DI2TljGP9dSZ5dFLw2k2ECfKkgLJpxW68V5x1HGoApL8G4o0gtX4Su97bD9fR1HGOdZGvWSee1_9MCEcFXnMDaPIlZR7HXY9Gr9j4F6lzDlqNmFub4bm8Wp0h4TWzl9euDLRnO504ejyYr4xkoNcE81BfkDnY_0wss71O4AugGfJdW_TVL9CqZeQpU9doQdr3W3pDO3Yih2aLiXWULS3NE3B4gJ_GK3MfKJWCnWDPDn2sPM7qiejnJyI0RGEqEyhw7_qN5lw0_9Nhc4Qj_mGWVYVuwQ1iLqUMzo3r9TRLlH0BGr2sFa6-f062toWpAHZy4BGnQDpXsbWvCxbYFqC_k-tmJtr2G2iiyYC9amT_wLIp7fbJCumcc7o8xd3B2gMFuLQ9GyPaGueQoJYwu97FA7YozMAYyY7uMqLBzj5l4uGtjdaDASYmiXyk/https://www.amazon.com/dp/B0HBLB267M/?_encoding=UTF8&pd_rd_i=B0HBLB267M&pd_rd_i=B0HBLB267M&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=xpxSp&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=T77B33DCAMB2VE3KRVSS&pd_rd_wg=IgdaE&pd_rd_r=4e10c522-309b-43a7-bc91-fe100367fd22",
+      "link_clean": "https://www.amazon.com/dp/B0HBLB267M/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0HBLB267M&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/31wT29paOQL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/a4c62b57-7a6d-41ab-9af0-c055a40c52fb.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/a4c62b57-7a6d-41ab-9af0-c055a40c52fb.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 5,
+      "reviews": 2,
+      "price": "$12.99",
+      "extracted_price": 12.99
+    },
+    {
+      "position": 5,
+      "asin": "B0GKNR2469",
+      "title": "Pet Dematting Comb for Dogs & Cats, 45° Stainless Steel Undercoat Rake Removes Mats, Knots, Tangles & Loose Fur, Grooming Brush for Long & Short Haired Pets, Ergonomic Natural Bamboo Handle",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JJCKzTvQut1wwnTz4OWch18AAAGf9Gg24QEAAAH2AQBvbm9fdHhuX2JpZDYgICBvbm9fdHhuX2ltcDEgICBr77zq/clv1c_ek-wxQHWKsTSTBVEai5mSw7I6YmzefYVAgoM-qPklioEe2KtF0JuqgjAHa3IGq9S8K2c3BAszGWe3GJL5S-ovwWv--3ZsayTJnn329eymdk-m0QDwhsC52Xp-FkU5fObS0WT9hj6tYYETCrAqmemaJHapu08F1FOFsDuyWdCDAQeRMGLDJ5p5lrjNR99uKVySNhp9-rKmAbN8_nPV5iNu0hRPf-dFkcSFahpkPypJiEdNo6-urF1uZA2f_T6a0q0MvOM4qhvZsW58PCDxcG0rNyRzEV-ttb8MNRHoDMVZI1SqWv2epBKk-Wt9gi8y7lgqdH8bpSpodkJihA1iovKinMWirpJ2aNCCkjFpNGDD3CsIrOaC78E5GQTIsgDmW6w3XMFr6FnpJrKf8WTNri3kgOjpUUVLYSvP0US8henroko6UHxb_EQRi1or0xAi_krKsMgs84L_-a_V6OYF_uTbk_65_wKH7S7VMUUfa53Foy67G5iM79ifalQQPRxM5YWEncS2dqkfQ3qo8MmSvjoCfcmvGJbMau8eHMB8YMSScyQ2k8CXEblMEeZ-WuwZ8mxNjekvhlDRhzy8y719AxHaHnye00XMmz0lZkP0qyLhv3XnuxabrJLNt7yAqqpdEuA6qMtxz7AT_9-6NdGab61USjbV3ehhqhLMsLF9LsuZRhNZcnTUYnoOnEw6nPUWJq6oHPAlj4mRdIF573jeIGPONp-ozvpGBwem4sK6QA0KwSwsrmC-RMDBIr92I6mj1a5aDOKJ_tR7Xbh10j5baWq1eJRk0XiriWjv7wHbrYkiiFh3ZxLh8nlY3Pi2j43uaMzFunHANYqQlEVPl8iuWkQyWmZgz9G0Ijn4tx_jwQ0wW-rMtuxW3QP8whYbEx6tWJTFrIKgv5ewZtigfBtED9SERVuiFmjONbNFkE7_24GOXg-ZBWMan1YFhuwAcAET3vhvtNFCaukf9tlxIrLAPxmzdzRmqeGjqhdbhNQnyI86o62594NtoMK8U-KYEw9GfuIahFknlPaJDnpSGZMNxZFOpzU3syKad57C4g1Ywk2h7MrYaP1Kqce2Hn8fOgbZOetsLRCAs1admXS_882wm0EP6607ahS7bh1lJXM5Lp-FoihEdReRKvDv_58nSLbFA7VKt4P0fJomxa1dNxv9dRGUMJtYBnQjNWBBWnW9m22CVptSwGH66V8nMjKmdiRpghQgX8GCU6pf8lcUIoYMA14G6AknV8viAilZpYi2hryDxxo8qepkI6UrVhWJiEBXdeJ4ZI6Bq2W_w7zVhexf_REInnQD0t6nc_gISstBbPzTswhfpCfo2HyXrpw_PXZYofhi_1ZKZRGUj9-XVXkIhMVAOu6wsIOMvOiWzv4zLyS6piwG36CTg8mBvkzf1K6us6-2n5SukkODfykTQ1FQBqHuHjptSKt-t2EmV4_CdgaBuUc2bCY4jk97XEL_GMzJAOT9mP8Xw85BGWFUByP2wlLbv0_8k_VNyAe8YTBLhIa5yIFudwAH7pCL0yuCKu_nEKduTLRAZC9UMm7N133702RyrGhZdpYqDWy6iUKRqyO0yBi0S4KmOoy6GBAJw/https://www.amazon.com/dp/B0GKNR2469/?_encoding=UTF8&pd_rd_i=B0GKNR2469&pd_rd_i=B0GKNR2469&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=xpxSp&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=T77B33DCAMB2VE3KRVSS&pd_rd_wg=IgdaE&pd_rd_r=4e10c522-309b-43a7-bc91-fe100367fd22",
+      "link_clean": "https://www.amazon.com/dp/B0GKNR2469/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GKNR2469&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41+v0vZhoML._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/33e29985-6557-4f97-a297-fc810d4d68b4.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/33e29985-6557-4f97-a297-fc810d4d68b4.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.5,
+      "reviews": 39,
+      "price": "$13.99",
+      "extracted_price": 13.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "images": [
+        "https://m.media-amazon.com/images/I/71yfLAPtliL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 69,
+        "4 star": 0,
+        "3 star": 31,
+        "2 star": 0,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "The rubber desheder is a game changer",
+        "text": "Excellence",
+        "rating": 5,
+        "date": "December 21, 2025",
+        "author": "Tami Rathburn",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEONTGZCQWOXYJYJULRSZGNZ3YEA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "white"
+        }
+      },
+      {
+        "position": 2,
+        "title": "One out of three brushes works well",
+        "text": "The only brush in the set I was able to get much fur with is the one pictured. And it works really, really well. I was able to remove a ton of loose fur with it. The other two barely did anything. I think the value is okay given how well the one brush works, but probably not worth buying the full set for only one brush.",
+        "rating": 3,
+        "date": "December 5, 2025",
+        "author": "AC",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGN6G5L7FMLQ5DXP5Q3GTX336NPA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/71yfLAPtliL.jpg"
+        ],
+        "helpful_votes": "One person found this helpful",
+        "product": {
+          "color": "green"
+        }
+      }
+    ]
+  }
+}
