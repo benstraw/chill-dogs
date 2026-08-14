@@ -17,9 +17,13 @@ const pageSlug = 'fi-dog-collar-review';
 
 const fiProducts = getTrackersByType('cellular').filter(p => p.id === 'fi-series-3-plus');
 const fiProduct = fiProducts[0];
+// Fi's Amazon listing is the buy path the page is built around; the hero CTA and the
+// Best For CTA share it so there is one offer to keep current, not two.
+const heroOffer = fiProduct ? getOffers(fiProduct).find((o) => o.merchant === 'amazon') : undefined;
 const stuntPuppyCollar = accessoryProducts.find(a => a.id === 'stunt-puppy-fi-collar')!
 
 const tocHeadings = [
+  { label: 'Quick Answers', anchor: 'quick-answers' },
   { label: 'What Fi Is', anchor: 'what-fi-is' },
   { label: 'How It Works', anchor: 'how-it-works' },
   { label: 'Pros & Cons', anchor: 'pros-cons' },
@@ -28,14 +32,18 @@ const tocHeadings = [
   { label: 'FAQ', anchor: 'faq' },
 ];
 
+// `short` marks the questions that gate the buying decision. They answer up top in one
+// line each; the full answers stay in the FAQ at the bottom.
 const faqs = [
   {
     question: 'Does Fi collar work without WiFi?',
+    short: 'Yes — it uses LTE cellular, not WiFi. No home network needed, but it needs cell signal.',
     answer:
       'Fi uses LTE cellular, not WiFi. It works anywhere with LTE signal — no home network required. However, without LTE signal (in remote wilderness, mountains, or dead zones) the collar cannot report location.',
   },
   {
     question: 'Does the Fi collar require a subscription?',
+    short: 'Yes — required, not optional. The collar is bought separately and stops tracking without an active plan.',
     answer:
       'Yes. Fi requires a monthly or annual subscription to access the LTE tracking network. The collar hardware is purchased separately. Without a subscription, you lose real-time tracking.',
   },
@@ -46,11 +54,13 @@ const faqs = [
   },
   {
     question: 'Is Fi waterproof?',
+    short: 'Yes — IP68 rated. Rain, mud, and swimming are fine.',
     answer:
       'The Fi Series 3+ collar is rated IP68 waterproof.  It handles rain, mud, and swimming. This is one of the practical advantages of Fi over some competing cellular trackers.',
   },
   {
     question: 'How long does the Fi battery last?',
+    short: 'Up to 3 months in standard mode — but only days if you leave live tracking running.',
     answer:
       'Battery life varies significantly by tracking mode. In standard mode with moderate use, Fi claims its battery lasts up to 3 months. In heavy real-time tracking mode (continuous updates), the battery depletes much faster — often within a few days.  Actual battery life depends heavily on how actively the location is being polled.',
   },
@@ -60,6 +70,8 @@ const faqs = [
       'Fi works on hiking trails that have LTE coverage, which includes most popular trails near populated areas. It does not work in true wilderness, backcountry, or remote mountains without cell signal. Before taking Fi on a hiking trip, check the cell coverage map for your specific trail.',
   },
 ];
+
+const quickAnswers = faqs.filter((faq) => faq.short);
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -91,7 +103,15 @@ const articleSchema = {
   <Hero
     title="Fi Dog Collar Review"
     subtitle="Cellular GPS tracking for everyday dogs — city walks, parks, travel. Here's what it does well, what it costs, and where it stops working."
-    primaryCta={{ label: 'See All GPS Trackers', href: ROUTES.trackingTop }}
+    disclaimer="As an Amazon Associate, we earn from qualifying purchases."
+    primaryCta={heroOffer
+      ? {
+          label: 'Check Price on Fi Series 3+',
+          href: heroOffer.url,
+          offer: heroOffer,
+          product: { id: fiProduct.id, name: fiProduct.name, category: fiProduct.type },
+        }
+      : { label: 'See All GPS Trackers', href: ROUTES.trackingTop }}
     secondaryCta={{ label: 'Off-Grid Alternative (Garmin)', href: ROUTES.garminTracking }}
     pageSlug={pageSlug}
   />
@@ -99,6 +119,24 @@ const articleSchema = {
   <div class="converter-content">
 
     <Toc headings={tocHeadings} pageSlug={pageSlug} />
+
+    <!-- Quick answers -->
+    <section class="content-section content-section--alt" id="quick-answers">
+      <div class="section-inner">
+        <h2>Quick Answers</h2>
+        <dl class="quick-answers">
+          {quickAnswers.map((faq) => (
+            <div class="quick-answer">
+              <dt class="qa-question">{faq.question}</dt>
+              <dd class="qa-answer">{faq.short}</dd>
+            </div>
+          ))}
+        </dl>
+        <p class="qa-more">
+          <a href="#faq">Full answers, plus accuracy and hiking coverage &rarr;</a>
+        </p>
+      </div>
+    </section>
 
     <!-- What Fi Is -->
     <section class="content-section" id="what-fi-is">
@@ -196,33 +234,6 @@ const articleSchema = {
           Fi is a strong fit for a specific kind of dog and owner.
         </p>
 
-        <div class="fi-buy-cta">
-          {fiProduct ? (
-            <AffiliateOfferStack
-              offers={getOffers(fiProduct)}
-              product={{ id: fiProduct.id, name: fiProduct.name, category: fiProduct.type }}
-              pageType="converter"
-              pageSlug={pageSlug}
-              position="fi-review"
-              resolveLabel={(offer) =>
-                offer.merchant === 'amazon'
-                  ? 'Shop Fi Series 3+ on Amazon (12-mo membership)'
-                  : undefined
-              }
-            />
-          ) : (
-            <AffiliateLink
-              href="https://www.amazon.com/dp/B0FH8GDBLX?tag=chill-dogs-20"
-              data-track="amazon_outbound_click"
-              data-asin="B0FH8GDBLX"
-              data-product-name="Fi Series 3+ GPS Collar (12-mo membership)"
-              class="ui-cta"
-            >
-              Shop Fi Series 3+ on Amazon (12-mo membership)
-            </AffiliateLink>
-          )}
-          <p class="fi-buy-note">Includes 12-month membership — best per-month value for Fi</p>
-        </div>
         <div class="best-for-list">
           <div class="best-for-item best-for-item--yes">
             <span class="bfi-icon">✓</span>
@@ -259,6 +270,34 @@ const articleSchema = {
               <p class="bfi-desc">Rural coverage is inconsistent. Garmin off-grid systems are the standard in this use case for good reason — they work everywhere with no subscription.</p>
             </div>
           </div>
+        </div>
+
+        <div class="fi-buy-cta">
+          {fiProduct ? (
+            <AffiliateOfferStack
+              offers={getOffers(fiProduct)}
+              product={{ id: fiProduct.id, name: fiProduct.name, category: fiProduct.type }}
+              pageType="converter"
+              pageSlug={pageSlug}
+              position="fi-review"
+              resolveLabel={(offer) =>
+                offer.merchant === 'amazon'
+                  ? 'Shop Fi Series 3+ on Amazon (12-mo membership)'
+                  : undefined
+              }
+            />
+          ) : (
+            <AffiliateLink
+              href="https://www.amazon.com/dp/B0FH8GDBLX?tag=chill-dogs-20"
+              data-track="amazon_outbound_click"
+              data-asin="B0FH8GDBLX"
+              data-product-name="Fi Series 3+ GPS Collar (12-mo membership)"
+              class="ui-cta"
+            >
+              Shop Fi Series 3+ on Amazon (12-mo membership)
+            </AffiliateLink>
+          )}
+          <p class="fi-buy-note">Includes 12-month membership — best per-month value for Fi</p>
         </div>
 
         <!-- Stunt Puppy Accessory Card -->
@@ -319,6 +358,24 @@ const articleSchema = {
     <!-- FAQ -->
     <section id="faq">
       <FAQ faqs={faqs} heading="Fi Collar FAQ" />
+      {heroOffer && (
+        <div class="fi-faq-cta">
+          <p class="fi-faq-cta-note">
+            If Fi covers where your dog actually goes, the 12-month membership bundle is the
+            lowest per-month way in.
+          </p>
+          <AffiliateLink
+            href={heroOffer.url}
+            data-asin={heroOffer.asin}
+            data-product-name={fiProduct.name}
+            data-product-id={fiProduct.id}
+            position="faq-bottom"
+            class="ui-cta"
+          >
+            Check Price on Fi Series 3+
+          </AffiliateLink>
+        </div>
+      )}
     </section>
 
     <Disclosure />
@@ -574,10 +631,50 @@ const articleSchema = {
     margin: 0;
   }
 
+  /* Quick answers */
+  .quick-answers {
+    display: grid;
+    gap: var(--space-md);
+    margin: 0 0 var(--space-md);
+  }
+
+  .quick-answer {
+    border-left: 3px solid var(--color-primary);
+    padding-left: var(--space-md);
+  }
+
+  .qa-question {
+    font-weight: var(--weight-semibold);
+    color: var(--color-text);
+    margin: 0 0 var(--space-xs);
+  }
+
+  .qa-answer {
+    margin: 0;
+    color: var(--color-text-muted);
+  }
+
+  .qa-more {
+    margin: 0;
+    font-size: var(--text-sm);
+  }
+
   /* Fi buy CTA */
   .fi-buy-cta {
+    margin-top: var(--space-xl);
     margin-bottom: var(--space-xl);
     max-width: 28rem;
+  }
+
+  .fi-faq-cta {
+    max-width: 28rem;
+    margin: var(--space-xl) auto 0;
+    text-align: center;
+  }
+
+  .fi-faq-cta-note {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-sm);
   }
 
   .fi-buy-note {

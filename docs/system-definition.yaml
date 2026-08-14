@@ -297,10 +297,18 @@ site_system:
     - name: "Fi Dog Collar Review"
       type: "collector"
       collector_subtype: "article"
-      target_action: "Route everyday GPS-tracker intent to Fi purchase paths and off-grid seekers to Garmin/tracker comparison pages"
+      target_action: "Answer Fi purchase questions on the page and convert that intent to Fi outbound clicks; route off-grid seekers to Garmin"
       metric: "amazon_outbound_click rate + collector_to_converter_click to /gear/best-dog-gps-trackers/ and /gear/garmin-dog-tracking-collars/"
       routes:
         - "/gear/fi-dog-collar-review/"
+      notes: >
+        Search-entry page — the large majority of its traffic arrives from search engines on
+        Fi-specific questions, so the buying questions (subscription, LTE vs WiFi, battery,
+        waterproofing) answer in a Quick Answers block above the body rather than only in the
+        closing FAQ. Affiliate CTAs sit at the three points where intent peaks: hero, after the
+        Best For reasons, and after the FAQ answers. Amazon prices are never stated on the page
+        per the Associates operating agreement; cost is described structurally and the number
+        lives behind the CTA.
 
     - name: "Garmin Dog Tracking Collars"
       type: "collector"
