@@ -243,26 +243,43 @@ describe('multi-merchant product offers', () => {
     ]);
   });
 
-  it('keeps every bath-tools product image-backed, Amazon-linked, and in the ItemList schema', () => {
+  it('keeps every bath-tools product image-backed, merchant-linked, and in the ItemList schema', () => {
     const config = fleaTickConverterPages['dog-bath-tools-for-flea-season'];
     const sectionIds = config.blocks
       .filter((block) => block.kind === 'product_section')
       .flatMap((block) => (block.kind === 'product_section' ? block.productIds : []));
 
-    expect(sectionIds).toHaveLength(19);
+    expect(sectionIds).toHaveLength(28);
     expect(new Set(sectionIds).size, 'bath-tools products must be unique across sections').toBe(sectionIds.length);
     expect(config.itemListSchema?.productIds).toEqual(sectionIds);
 
     for (const id of sectionIds) {
       const product = fleaTickProducts.find((entry) => entry.id === id);
       expect(product, `${id} missing from flea/tick products`).toBeTruthy();
-      expect(product!.image?.src, `${id} needs an image`).toMatch(/^https:\/\/m\.media-amazon\.com\/images\//);
+      // Chewy-exclusive records are image-backed from Chewy's CDN rather than Amazon's.
+      expect(product!.image?.src, `${id} needs an image`).toMatch(
+        /^https:\/\/(m\.media-amazon\.com\/images|image\.chewy\.com)\//
+      );
       expect(product!.image?.alt, `${id} needs image alt text`).toBeTruthy();
       expect(product!.bullets.length, `${id} needs bullets`).toBeGreaterThan(0);
 
-      const amazon = getOffers(product!).find((offer) => offer.merchant === 'amazon');
-      expect(amazon?.url, `${id} needs a tagged Amazon offer`).toContain('tag=chill-dogs-20');
-      expect(amazon?.asin, `${id} needs an ASIN`).toBe(product!.asin);
+      const offers = getOffers(product!);
+      expect(offers.length, `${id} needs at least one merchant offer`).toBeGreaterThan(0);
+
+      const amazon = offers.find((offer) => offer.merchant === 'amazon');
+      if (amazon) {
+        expect(amazon.url, `${id} needs a tagged Amazon offer`).toContain('tag=chill-dogs-20');
+        expect(amazon.asin, `${id} needs an ASIN`).toBe(product!.asin);
+      } else {
+        // No Amazon listing we could match exactly, so the record must stand on its Chewy offer
+        // and must not carry a stray ASIN or legacy Amazon URL.
+        expect(
+          offers.some((offer) => offer.merchant === 'chewy'),
+          `${id} has no Amazon offer, so it needs a Chewy offer`
+        ).toBe(true);
+        expect(product!.asin, `${id} is Chewy-only and must not carry an ASIN`).toBeUndefined();
+        expect(product!.amazonUrl, `${id} is Chewy-only and must not carry an Amazon URL`).toBeUndefined();
+      }
     }
   });
 

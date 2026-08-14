@@ -1,0 +1,990 @@
+{
+  "search_metadata": {
+    "id": "6a7ed9cef6d5ee520a0c7c87",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/3Jm5Sp98uE-RzKceDYNuLA/6a7ed9cef6d5ee520a0c7c87.json",
+    "created_at": "2026-08-14 09:03:10 UTC",
+    "processed_at": "2026-08-14 09:03:10 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B07HG3H519/?",
+    "raw_html_file": "https://serpapi.com/searches/3Jm5Sp98uE-RzKceDYNuLA/6a7ed9cef6d5ee520a0c7c87.html",
+    "total_time_taken": 7.5
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B07HG3H519",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "categories": [
+      {
+        "position": 1,
+        "name": "Pet Supplies",
+        "link": "https://www.amazon.com/pet-shops-dogs-cats-hamsters-kittens/b/ref=dp_bc_1?ie=UTF8&node=2619533011",
+        "node": "2619533011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2619533011"
+      },
+      {
+        "position": 2,
+        "name": "Dogs",
+        "link": "https://www.amazon.com/dogs-supplies-training-beds-collars-grooming/b/ref=dp_bc_2?ie=UTF8&node=2975312011",
+        "node": "2975312011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975312011"
+      },
+      {
+        "position": 3,
+        "name": "Grooming",
+        "link": "https://www.amazon.com/dogs-grooming-supplies-clippers-shedding/b/ref=dp_bc_3?ie=UTF8&node=2975362011",
+        "node": "2975362011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975362011"
+      },
+      {
+        "position": 4,
+        "name": "Shower & Bath Supplies",
+        "link": "https://www.amazon.com/dog-shower-bath-accessories/b/ref=dp_bc_4?ie=UTF8&node=2975375011",
+        "node": "2975375011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975375011"
+      },
+      {
+        "position": 5,
+        "name": "Showerheads & Sprayers",
+        "link": "https://www.amazon.com/Dog-Showerheads-Sprayers/b/ref=dp_bc_5?ie=UTF8&node=23727019011",
+        "node": "23727019011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=23727019011"
+      }
+    ],
+    "asin": "B07HG3H519",
+    "title": "Deluxe Indoor Outdoor Dog Wash Kit for Shower and Garden Hose w/Water Pressure Control, Splash Shield & Rubber Scrubbing Attachment. Fast & Easy Dog Bath. Cleaning for Short & Long Hair Pet",
+    "link": "https://www.amazon.com/Wondurdog-Grooming-Pressure-Versions-Available/dp/B07HG3H519/",
+    "link_clean": "https://www.amazon.com/dp/B07HG3H519/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07HG3H519&device=desktop&engine=amazon_product",
+    "badges": [
+      "Amazon's Choice"
+    ],
+    "brand": "Visit the Wondurdog Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/812zMlhYMXL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/812zMlhYMXL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/814bKdNEfJL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/710lims04VL._AC_SL1414_.jpg",
+      "https://m.media-amazon.com/images/I/91gWBasjX7L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61oBzVhIbDL._AC_SL1414_.jpg",
+      "https://m.media-amazon.com/images/I/81wyapWRZsL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61muNkG4dtL._AC_SL1414_.jpg",
+      "https://m.media-amazon.com/images/I/81UwO8laNnL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.6,
+    "reviews": 171,
+    "price": "$64.99",
+    "extracted_price": 64.99,
+    "prime": true,
+    "delivery": [
+      "FREE delivery Wednesday, August 19",
+      "Or Prime members get FREE delivery Tomorrow, August 15. Order within 5 hrs 41 mins. Join Prime"
+    ],
+    "stock": "Only 15 left in stock - order soon."
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$64.99",
+      "extracted_price": 64.99,
+      "delivery": [
+        "FREE delivery Wednesday, August 19",
+        "Or Prime members get FREE delivery Tomorrow, August 15. Order within 5 hrs 41 mins. Join Prime"
+      ],
+      "stock": "Only 15 left in stock - order soon.",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "Wondurdog",
+          "details": {
+            "heading": "Sold by",
+            "content": "Wondurdog"
+          },
+          "link": {
+            "text": "Wondurdog",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A3MZSR7W6TFU04&asin=B07HG3H519&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "packaging": {
+          "text": "Ships in product packaging",
+          "details": {
+            "heading": "Ships in product packaging",
+            "content": "This item has been tested to certify it can ship safely in its original box or bag to avoid unnecessary packaging. Since 2015, we have reduced the weight of outbound packaging per shipment by 41% on average, that’s over 2 million tons of packaging material.If you still require Amazon packaging for this item, choose \"Ship in Amazon packaging\" at checkout. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/sipp_home"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "brand": "Wondurdog",
+    "style": "Adjustable",
+    "shape": "Oval",
+    "material": "Deluxe Shower Kit & Garden Hose Attachment (Variable Pressure)",
+    "finish_type": "Polished"
+  },
+  "about_item": [
+    "INNOVATIVE BRUSH DESIGN: No more getting soaked! Our patented rubber splash shield and bath hose attachment will keep you dry as you groom and massage your dog. It's the ultimate choice in grooming comfort for both you and your pet.",
+    "PRESSURE CONTROL VALVE: The deluxe kit comes with an adjustable water pressure valve. You can control how fast you want the water to come out! Bathe, brush, rinse, start and stop with one hand while also controlling water pressure.",
+    "EASY FOR YOU & YOUR DOG: Baths are a great time for you and your dog to bond. Our massaging brush will feel great on your dog as you clean that messy fur. Enjoy a stress-free and enjoyable bath time!",
+    "GREAT FOR ALL AGES: Ergonomic and easy to use, this handheld shower attachment leaves you with an extra hand free, so you can comfort your pet while bathing them. Reach all four paws with the extra-long eight-foot hose. Plus, it's easy to use for all ages!",
+    "PACKAGE DETAILS: This grooming kit comes with the patented chrome Wondurdog shower brush head and splash shield, an 8-foot flexible stainless-steel hose, suction cup holder for shower wall, a 3-way shower diverter to easy click from human shower to dog bathing station."
+  ],
+  "related_products": [
+    {
+      "position": 1,
+      "asin": "B0CZ74CM6P",
+      "title": "3 Mode Dog Shower Attachment with Long Hose & Outdoor Adapter | High Pressure, Buil...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTozMzQxMTMxODQ0ODY1NDI1OjE3ODY2OTgxOTU6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTMxNDkwMzI1NzUwMjo6Ojo&url=%2Fdp%2FB0CZ74CM6P%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0CZ74CM6P%26pd_rd_w%3D7OUG2%26content-id%3Damzn1.sym.4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_p%3D4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_r%3D4B52NKP4EVD04BX55688%26pd_rd_wg%3DjUsO6%26pd_rd_r%3Defb7e4e2-75dc-48e9-8749-79e6e724afe0%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0CZ74CM6P/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CZ74CM6P&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/710f8Z9fKOL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.7,
+      "reviews": 81,
+      "price": "$29.99",
+      "extracted_price": 29.99,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 2,
+      "asin": "B07CV3F6DS",
+      "title": "Wondurdog Outdoor Dog Wash Garden Hose Nozzle for Bath and Quick Paw Rinses. Splash Shield Handle and Rubber Grooming Brush. Metal Connection. Swivels on Hose with Water Pressure Control.",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTozMzQxMTMxODQ0ODY1NDI1OjE3ODY2OTgxOTU6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTIwMDY3ODIyNDAwMjo6Ojo&url=%2Fdp%2FB07CV3F6DS%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB07CV3F6DS%26pd_rd_w%3D7OUG2%26content-id%3Damzn1.sym.4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_p%3D4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_r%3D4B52NKP4EVD04BX55688%26pd_rd_wg%3DjUsO6%26pd_rd_r%3Defb7e4e2-75dc-48e9-8749-79e6e724afe0%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B07CV3F6DS/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07CV3F6DS&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71ZNmVSRUQL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.5,
+      "reviews": 511,
+      "price": "$39.99",
+      "extracted_price": 39.99
+    },
+    {
+      "position": 3,
+      "asin": "B0865SF5TQ",
+      "title": "G-Promise 2 Mode Dog Shower Attachment with Extra Long Hose | High Pressure, with Flow Control Lever, Easy to Install, No-Drill Hook Mount",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTozMzQxMTMxODQ0ODY1NDI1OjE3ODY2OTgxOTU6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDgwMzI4NjA2ODUwMjo6Ojo&url=%2Fdp%2FB0865SF5TQ%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0865SF5TQ%26pd_rd_w%3D7OUG2%26content-id%3Damzn1.sym.4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_p%3D4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_r%3D4B52NKP4EVD04BX55688%26pd_rd_wg%3DjUsO6%26pd_rd_r%3Defb7e4e2-75dc-48e9-8749-79e6e724afe0%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0865SF5TQ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0865SF5TQ&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/6182SNKeAzL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.7,
+      "reviews": 2307,
+      "price": "$38.99",
+      "extracted_price": 38.99,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 4,
+      "asin": "B0C9QSGJGY",
+      "title": "Dog Shower Attachment with 6.6Ft Long Shower Hose & Metal 3-Way Diverter | Dog Wash...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTozMzQxMTMxODQ0ODY1NDI1OjE3ODY2OTgxOTU6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTM2NTA0OTM5MzQwMjo6Ojo&url=%2Fdp%2FB0C9QSGJGY%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0C9QSGJGY%26pd_rd_w%3D7OUG2%26content-id%3Damzn1.sym.4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_p%3D4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_r%3D4B52NKP4EVD04BX55688%26pd_rd_wg%3DjUsO6%26pd_rd_r%3Defb7e4e2-75dc-48e9-8749-79e6e724afe0%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0C9QSGJGY/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0C9QSGJGY&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/810foYagXKL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.1,
+      "reviews": 521,
+      "discount": "-9%",
+      "price": "$29.93",
+      "extracted_price": 29.93,
+      "old_price": "null"
+    },
+    {
+      "position": 5,
+      "asin": "B0C93MMF4C",
+      "title": "High Pressure3 Mode Dog Shower Attachment with ON/OFF Switch | With ON/OFF Switch, ...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTozMzQxMTMxODQ0ODY1NDI1OjE3ODY2OTgxOTU6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDMyODU0NTMzMTkwMjo6Ojo&url=%2Fdp%2FB0C93MMF4C%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0C93MMF4C%26pd_rd_w%3D7OUG2%26content-id%3Damzn1.sym.4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_p%3D4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_r%3D4B52NKP4EVD04BX55688%26pd_rd_wg%3DjUsO6%26pd_rd_r%3Defb7e4e2-75dc-48e9-8749-79e6e724afe0%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0C93MMF4C/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0C93MMF4C&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "Amazon's Choice"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/71gdNG4s-TL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.7,
+      "reviews": 609,
+      "price": "$39.99",
+      "extracted_price": 39.99,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 6,
+      "asin": "B0FHJR3Q7P",
+      "title": "G-Promise 3 Mode Dog Shower Attachment with Pause Mode | High Pressure, Built-In Brush for Wash & Groom, Extra Long Hose, for Indoor & Outdoor Use",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTozMzQxMTMxODQ0ODY1NDI1OjE3ODY2OTgxOTU6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTA5NzUyNjQwNzYwMjo6Ojo&url=%2Fdp%2FB0FHJR3Q7P%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0FHJR3Q7P%26pd_rd_w%3D7OUG2%26content-id%3Damzn1.sym.4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_p%3D4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_r%3D4B52NKP4EVD04BX55688%26pd_rd_wg%3DjUsO6%26pd_rd_r%3Defb7e4e2-75dc-48e9-8749-79e6e724afe0%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0FHJR3Q7P/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FHJR3Q7P&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71d+jEtoXNL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.5,
+      "reviews": 119,
+      "price": "$43.99",
+      "extracted_price": 43.99,
+      "climate_pledge_friendly": true
+    },
+    {
+      "position": 7,
+      "asin": "B08ZLSMRLC",
+      "title": "Dog Shower Attachment Metal, YDmeet Pet Shower Attachment for Fast and Clean Pet Bathing and Dog Washing, Brass Shower diverter, Adjustable Pet Shower Sprayer, 8 ft Hose and Shower Holder, Brushed",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTozMzQxMTMxODQ0ODY1NDI1OjE3ODY2OTgxOTU6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTIwOTk1NzI0NjgwMjo6Ojo&url=%2Fdp%2FB08ZLSMRLC%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB08ZLSMRLC%26pd_rd_w%3D7OUG2%26content-id%3Damzn1.sym.4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_p%3D4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_r%3D4B52NKP4EVD04BX55688%26pd_rd_wg%3DjUsO6%26pd_rd_r%3Defb7e4e2-75dc-48e9-8749-79e6e724afe0%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B08ZLSMRLC/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B08ZLSMRLC&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/61RShJUGDXL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 167,
+      "price": "$38.99",
+      "extracted_price": 38.99
+    }
+  ],
+  "videos": [
+    {
+      "position": 1,
+      "title": "Wondurdog Dog Wash Kits For Shower",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/146e69c2-d5c8-40f2-b8c3-116b8ae17186/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/A11w7Ztl8lL.png",
+      "duration": "0:52",
+      "vendor": "Wondurdog",
+      "date": "Sep 22, 2021"
+    },
+    {
+      "position": 2,
+      "title": "YES.",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/c7203cfc-4712-49af-82c1-bbfcb16ff3b3/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/31ncvvrlEXL.jpg",
+      "duration": "0:28",
+      "vendor": "trhowell",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SL34_.png",
+      "date": "Dec 18, 2022"
+    },
+    {
+      "position": 3,
+      "title": "Horrible - water leaks everywhere",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/1d9d1ad9-7f06-42f7-a346-45139056dcef/embedded.cc.default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/51sVuVdF5wL.jpg",
+      "duration": "0:38",
+      "vendor": "Amanda B.",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SL34_.png",
+      "date": "Jan 27, 2025"
+    },
+    {
+      "position": 4,
+      "title": "Lasted a year",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/df2e277a-9a31-4a42-a958-95dd2e5c2082/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/51zlhtuTUeL.jpg",
+      "duration": "0:32",
+      "vendor": "Aswathy K.",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SL34_.png",
+      "date": "Mar 26, 2024"
+    },
+    {
+      "position": 5,
+      "title": "Installation Video - Wondurdog Deluxe Dog Wash Kit",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/ddae00a2-f024-4ce4-8b6c-00ceb40370db/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/71Ny8wHQ71L.jpg",
+      "duration": "3:42",
+      "vendor": "Damon",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/S/amazon-avatars-global/2066e68a-3ae3-4d77-8a51-9d59c638cd2c._CR71%2C0%2C357%2C357_SX460_._SL34_.jpg",
+      "date": "Jan 1, 2021"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1
+    },
+    {
+      "position": 2
+    },
+    {
+      "position": 3,
+      "carousel_images": [
+        {
+          "position": 1,
+          "title": "Image of dog being bathed in the bathroom with Wondurdog Quality Dog Wash Kit",
+          "image": "https://m.media-amazon.com/images/S/aplus-media/sc/59bf82dd-8d67-4332-a377-4cfc196494cc.__CR0,447,2448,1003_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 2,
+          "title": "Indoor dog shower kit",
+          "image": "https://m.media-amazon.com/images/S/aplus-media/sc/d49be897-3cea-4300-9e3f-1847f2339fcb.__CR0,0,1464,600_PT0_SX1464_V1___.png"
+        },
+        {
+          "position": 3,
+          "title": "Quality indoor / Outdoor Kit",
+          "image": "https://m.media-amazon.com/images/S/aplus-media/sc/4fe35cdd-3dc2-4436-8b26-5d60eb2d0036.__CR0,0,1464,600_PT0_SX1464_V1___.png"
+        },
+        {
+          "position": 4,
+          "title": "Image of Deluxe Indoor and Outdoor Dog wash Kits side by side",
+          "image": "https://m.media-amazon.com/images/S/aplus-media/sc/adfcbdfd-b6a0-4112-b228-5f4fa08c529c.__CR0,0,1464,600_PT0_SX1464_V1___.png"
+        },
+        {
+          "position": 5,
+          "title": "Handheld",
+          "image": "https://m.media-amazon.com/images/S/aplus-media/sc/45967dbc-3994-49ad-a5d6-a04d0175177f.__CR0,422,3648,1495_PT0_SX1464_V1___.jpg"
+        }
+      ]
+    },
+    {
+      "position": 4,
+      "compare_with_similar": [
+        {
+          "position": 1,
+          "asin": "B07HG3H519",
+          "title": "Deluxe Indoor Shower Kit",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media/sc/df6031e7-c905-44a3-adcb-68e59a7ab892.__CR111,0,1778,2000_PT0_SX200_V1___.png",
+          "link": "https://www.amazon.com/dp/B07HG3H519?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07HG3H519&device=desktop&engine=amazon_product",
+          "rating": 4.6,
+          "reviews": 171,
+          "price": "$64.99",
+          "extracted_price": 64.99,
+          "patented_white_brush_w_shield": "✘",
+          "patent_chrome_brush_w_shield": "✔",
+          "connects_to_shower_pipe": "✔",
+          "connects_to_a_garden_hose": "✘",
+          "water_pressure_control_indoor": "✔",
+          "water_pressure_control_outside": "✘",
+          "all_metal_hose_8ft": "✔",
+          "recoil_hose_stretches_11ft": "✘",
+          "suction_cup_holder": "✔",
+          "connects_to_handheld_shower": "✘",
+          "donation_to_the_pet_fund": "✔"
+        },
+        {
+          "position": 2,
+          "asin": "B079Z4ZKBM",
+          "title": "Quality Indoor Shower Kit",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media/sc/0f6092ae-07fc-440a-8d94-8e23badcdd88.__CR111,0,1778,2000_PT0_SX200_V1___.png",
+          "link": "https://www.amazon.com/dp/B079Z4ZKBM?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B079Z4ZKBM&device=desktop&engine=amazon_product",
+          "rating": 4.7,
+          "reviews": 520,
+          "price": "$59.99",
+          "extracted_price": 59.99,
+          "patented_white_brush_w_shield": "✔",
+          "patent_chrome_brush_w_shield": "✘",
+          "connects_to_shower_pipe": "✔",
+          "connects_to_a_garden_hose": "✘",
+          "water_pressure_control_indoor": "✘",
+          "water_pressure_control_outside": "✘",
+          "all_metal_hose_8ft": "✔",
+          "recoil_hose_stretches_11ft": "✘",
+          "suction_cup_holder": "✔",
+          "connects_to_handheld_shower": "✘",
+          "donation_to_the_pet_fund": "✔"
+        },
+        {
+          "position": 3,
+          "asin": "B084WZMKNP",
+          "title": "Quality Indoor / Outdoor",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media/sc/224da2f3-9695-4e7a-8c16-417701306d91.__CR222,0,3556,4001_PT0_SX200_V1___.png",
+          "link": "https://www.amazon.com/dp/B084WZMKNP?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B084WZMKNP&device=desktop&engine=amazon_product",
+          "rating": 4.3,
+          "reviews": 28,
+          "patented_white_brush_w_shield": "✔",
+          "patent_chrome_brush_w_shield": "✘",
+          "connects_to_shower_pipe": "✔",
+          "connects_to_a_garden_hose": "✔",
+          "water_pressure_control_indoor": "✘",
+          "water_pressure_control_outside": "✔",
+          "all_metal_hose_8ft": "✔",
+          "recoil_hose_stretches_11ft": "✘",
+          "suction_cup_holder": "✔",
+          "connects_to_handheld_shower": "✘",
+          "donation_to_the_pet_fund": "✔"
+        },
+        {
+          "position": 4,
+          "asin": "B084X232TT",
+          "title": "Deluxe Indoor / Outdoor",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media/sc/a74dc1ed-f44a-4237-9009-3e3076752692.__CR111,0,1778,2000_PT0_SX200_V1___.png",
+          "link": "https://www.amazon.com/dp/B084X232TT?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B084X232TT&device=desktop&engine=amazon_product",
+          "rating": 4.5,
+          "reviews": 83,
+          "price": "$69.99",
+          "extracted_price": 69.99,
+          "patented_white_brush_w_shield": "✘",
+          "patent_chrome_brush_w_shield": "✔",
+          "connects_to_shower_pipe": "✔",
+          "connects_to_a_garden_hose": "✔",
+          "water_pressure_control_indoor": "✔",
+          "water_pressure_control_outside": "✔",
+          "all_metal_hose_8ft": "✔",
+          "recoil_hose_stretches_11ft": "✘",
+          "suction_cup_holder": "✔",
+          "connects_to_handheld_shower": "✘",
+          "donation_to_the_pet_fund": "✔"
+        },
+        {
+          "position": 5,
+          "asin": "B08WRMY7Y1",
+          "title": "Handheld Shower Extension",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/36bfd489-d75e-489e-9af9-b052fe2a5ea3.__CR111,0,1778,2000_PT0_SX200_V1___.png",
+          "link": "https://www.amazon.com/dp/B08WRMY7Y1?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B08WRMY7Y1&device=desktop&engine=amazon_product",
+          "rating": 4.8,
+          "reviews": 10,
+          "price": "$36.99",
+          "extracted_price": 36.99,
+          "patented_white_brush_w_shield": "✔",
+          "patent_chrome_brush_w_shield": "✘",
+          "connects_to_shower_pipe": "✘",
+          "connects_to_a_garden_hose": "✔",
+          "water_pressure_control_indoor": "✘",
+          "water_pressure_control_outside": "✘",
+          "all_metal_hose_8ft": "✘",
+          "recoil_hose_stretches_11ft": "✔",
+          "suction_cup_holder": "✘",
+          "connects_to_handheld_shower": "✔",
+          "donation_to_the_pet_fund": "✔"
+        }
+      ]
+    },
+    {
+      "position": 5
+    },
+    {
+      "position": 6
+    },
+    {
+      "position": 7
+    }
+  ],
+  "product_details": {
+    "installation_type": "Wall Mounted",
+    "flow_rate_description": "Adjustable",
+    "number_of_settings": "1",
+    "number_of_jets": "1",
+    "setting_type": "Massage",
+    "style_name": "Adjustable",
+    "shape": "Oval",
+    "finish_types": "Polished",
+    "color": "Deluxe Shower Kit & Garden Hose Attachment (Variable Pressure)",
+    "material_type": "Deluxe Shower Kit & Garden Hose Attachment (Variable Pressure)",
+    "item_dimensions_l_x_w": "97\"L x 8\"W",
+    "hose_length": "8 feet",
+    "brand_name": "Wondurdog",
+    "model_number": "WD004",
+    "unit_count": "1 Count",
+    "number_of_items": "1",
+    "upc": "860114001627",
+    "included_components": "8ft Metal Shower Hose, Deluxe Dog Shower Brush, Garden Hose Adapter, Shower Diverter, Suction Cup Holder",
+    "item_type_name": "Dog Wash Kit",
+    "manufacturer": "Wondurdog",
+    "best_sellers_rank": [
+      {
+        "text": "#116,125 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 116125,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#93 in Dog Showerheads & Sprayers",
+        "extracted_rank": 93,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/23727019011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Showerheads & Sprayers"
+      }
+    ],
+    "asin": "B07HG3H519",
+    "customer_reviews": "4.6 out of 5 stars",
+    "rating": 4.6,
+    "reviews": 171
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0CX533F2Z",
+      "title": "BRIGHT SHOWERS High Pressure Shower Head with Handheld, 9 Spray Settings Showerhead Built in Power Wash to Clean Tub and Pets, Extra Long 69\" Hose, Adjustable Bracket, Brushed Nickel",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JKkrpprc3WLeV9cwjKEHOnEAAAGf_4LkjQEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICBb32av/clv1c_ek-YBfHXLcTWXmxhtwlAiFwLMKlTuQp9ZSQZD7rrjclUTBUd9rTd0pKS_vuHKLpuRFxDj41ZpbtZ1N167WrOnTfICPm7fJtG2zh3hQKMib0HyZvaaKDH9wBAnnt8pQLBdlkM3lvnGtdI8ZH4KmMV7yyV_RX8llDOIkTxBbKo3ZAvsaucHdOXxtSW8FFm_V0hyEQMQivp0wfOkbwt13th8GtIjTqdBkScvh8GslE1xjhSs7BrgKLk2HtqGXEO2MpHjk3wjt83JLo1kOs8wCXGWM5xrBtBX6zABl5ghoNP1zocheGhYHQlqwkwXoAP-vxWzeyTwEkgzQ0TtbmX-vrzA85HLUDEhHYKc0TRe42sHGHUHaOmSryurTTUGO91b4_W7dicnFaMsGB-XMOK-wtLLwr5Igfyo8Wja_wTCVcZ-whBDx7ux8B6Z-EQuCnM5qhSfaYUywZ_E9fl2zOazXy0IrLTO9xVs5SmiUIYPDfHGw02bbDXAddGgL1h3GeFELbnGyxQh8unOeCALN3wBhQpY54P2Ow5cXyet00lJU9jRZqI3nWOgASfq_RhWtiIrp3mItWsqvOGg0xiaZYSBbG2DHk5VuNf7gBYUDKhGafqWrlwIrIZjezSW4kw-Qw7It8Bo5b5ggL2zK-3U01k7cnSEfSBVCBPsSkY7bbN6PzZg5bwdhfthg1FIIW3mElaIgQupsZhswRsavrkES0QPVKQ1GqJX4mlOSSOfOeF7uRKJM-xpohZlngTn4_EQ7PuuMbzCHBQ8IH3ddMK7pXj-zm1Z135QyQ7dbhGRQhut7-tZ0kT8QRy8UNiFmjeOKNiYkbKd7IYxrP_KLQVtayVrT5CQQwDfIv4siykWGf0p4JHTSCkEWnjt61bpI4h8tAkWCGpEC_LeLKpfcQqKyLIVNx06hPBqBjryb36d_i1yfc9NQ4iRPo0ldZoIwsyViSL9lAI7QxkINhV8-lHZu7BOv819qZjDQK4datlrX4x03H_kutCg-QZfP3RpYkZg6l5ItppOBuTXbwgipwvDC0eNvQu7wtECuRv9oskyLuEuw_U_gYjOg9puuc-Cg8gMTXHLsFz4mNfiVjnPiUssrxNGxYKO6ECoSkPSiZDpuJTDkXvAqduX_YoY1YBkD9RIp193MLkYMSgrB0IfLsvpRJWIOKRjVRBwwpFRJzUC5_UVHk5gRYs-EgdSy6VXyhzDZx9j-dQKg1CN4UIxNOzoJkIk-A3mA3p9ypZJeX-EoIf9-R-e_fAIUUojtSeXhcbk6z7dAijoc7nFSoabifbctuU6WSRSGAxulgUKn0wAbyJiZbdInglmK8IG9O6UyE78bzTQkhpqcolfl0AHy9zfgbnqqoMFS1558ltI-8OexUaJ6ANWFKp-diiyrGkuPIAOekK_7hr3G4CW8eoJW5bLuvjJ9D9Qz6ZF1pTcLlVP5L9Qht-lNV8X-p0yC7WSakcqwz-Bjj_A7eAnveeUbY-4MMNjiqL_n55wV2HuLSj--SNA1eZ3Pqd5XDVoHoIbYtr57rgCSxh6cnGErzJ0nTH4dgJVkyKd-GTkLH7EcjswJOKcA/https://www.amazon.com/dp/B0CX533F2Z/?_encoding=UTF8&pd_rd_i=B0CX533F2Z&pd_rd_i=B0CX533F2Z&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=kUekT&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=4B52NKP4EVD04BX55688&pd_rd_wg=jUsO6&pd_rd_r=efb7e4e2-75dc-48e9-8749-79e6e724afe0",
+      "link_clean": "https://www.amazon.com/dp/B0CX533F2Z/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CX533F2Z&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51D94MVgBHL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/ae560f68-4e4f-4da0-826e-7da9cf53925f.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/ae560f68-4e4f-4da0-826e-7da9cf53925f.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.7,
+      "reviews": 296,
+      "price": "$39.98",
+      "extracted_price": 39.98
+    },
+    {
+      "position": 2,
+      "asin": "B0C4LLZZX9",
+      "title": "RV Shower Head with Hose, High Pressure 5 Mode Shower head Replacement, Showerheads for RV/Campers, Travel Trailer, Motorhome for Water Saving, Handheld Shower Head Holder and Hose, On Off Switch",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JIipUYvVjtU5aBADT1oVhZkAAAGf_4LkjgEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICDCKwEe/clv1c_ek-wxfHXLcTWDVVAWi4kasJ9BF4_6vJrlBHZAPBZHA9NjnEBWjGE-puzKcVAY-KBoVVAcbJJktoqaCvwQjOWQk86RNd4a7BTki_EVzXQCczzASDjAm4x3MF2z9Q8dnIywBJPvjumptwINrLyOQ_lWDLtbVqbmx3KEsXk3xm4yJ5f-mgWCLQFzTI2qN5fMUWZcigMnse4RAPF1-jVh9FQ8-31NVV-AUejAQ5h5g1qBUiUeEeU32EsqQ6h6A5_l8V6VoBYqQZhOIMqd5eEZXrkzAj7ue3gVVY1BVy_ifBD0xo8i6GRbnUnqwVs-KDnVN-SamW2vghGVQIXrXslPUaS8SN-_K-Fk2Dbeyd1_fJIURgMWgx67oyZahTEQ65Eojpw-cPMiGG1_T5FrGY4suEWn8WhUhXzadIEq_Tmx8XwuYMmrIfOZ6vTe0YyY50IvZWYqJS6P-LRBg8K2BMRdJRjF_1xyYWRMtkZ5aLJBmYT_kFtEHrm111ktIMP-P1w9rRNufiIKxoxPL-1r6O8uZtmsGiFboNs2Q7_pZLlumKFrC-eB4rxlZS0Jq-hS8g1SMLbRJlyMQAxOrJtDbtxumpYt3lr2A1bWNdeafk6fG5BZWdD0AphC8dQ5k1PFpGqpODLssrNTbgCmbDO0-DK-PDWuzwlRw9yRw69xmrbddLrztY2Y_jsUkOE0bV6QvuWpdD3v1Qa4SwrxVgUp7jdElV_amb2ffXiHCBcpeFiKy7Vx93-ypm_debPeZNqI1p8xCUpxA1o7hPwfnX3wt0WQagly4__C-Rw1Orc1DqicTWKYSgh5VB0qdIkVbL7Z4pWoszsdhvjYMdXrQFQF9PtCWx8HPdj6ajBjR9GnqMpJqFHVR2XR1npSpiVAjm1hAiIXKHWRQIx2w5D1c8PMtImMMg1EUPfuHUTGQhb1T-r4nEy6ERdLII7fa1ZcKNJRhpOT5VEdmRMaYKXvmiSFt5mM9XaOGYRzBkJzQD8u8sO87Tote1bXhSVH_UW67a68NG4nE2H0wSLtlUfFl4MKcyrJ13f0ufg3yjOEGihgplxAGH1FNvh3nuERdHzmHadjjYTTWVXAzSVJ97pQhJfarnVKiqo_n20kTDdDz4Qh9fqhwZjsQm0_0hC5gRx4Z9GB8jKGR62v6qDd-p3CLeqt1A4fXUIBgXr7KyRfnq4ZRnC-kqzVsMfyUkw1HZd_Xy2dDuzL112yS1K8Fs_yz8-3nZlddOLKkwMsSUkQsmVq2Fn6oJCM8m8P_oWlKOHnbjvFYZStaGYkWeFUQbvqmZJ3I1ogEPRcs-P7cb0_ITLV3TtraAGugdX9j91uu9SsOpNTHsE8v9bBN7VrLyu4Lil_7fFxN84vSSb1ZNcwh-EECPbC5DrTGW9zdz4QIMlgKEXayMNJjQAOVV88Z_GOqKUp60z5BcPw2Rik7E11aA3V0wSnMZTW3CzoZ00tS-cL0OkswvkgzwReNJ3wXMrhQOi_Qr7-CUzOByBFvOE-mImm28FUuAbgmOQfTPaUYYjcx291_-5iXoWDPgoTZ5dDWytzIkSlGsXyEIlpIqQOl0Yr5eNusylp4sUKFM6T-BgZFOPFajeC1WyMQ/https://www.amazon.com/dp/B0C4LLZZX9/?_encoding=UTF8&pd_rd_i=B0C4LLZZX9&pd_rd_i=B0C4LLZZX9&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=kUekT&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=4B52NKP4EVD04BX55688&pd_rd_wg=jUsO6&pd_rd_r=efb7e4e2-75dc-48e9-8749-79e6e724afe0",
+      "link_clean": "https://www.amazon.com/dp/B0C4LLZZX9/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0C4LLZZX9&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51oNnHrJ6CL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/127e40fe-0290-4d1f-90f6-67c1eb4a17b8.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/127e40fe-0290-4d1f-90f6-67c1eb4a17b8.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.4,
+      "reviews": 3303,
+      "price": "$22.94",
+      "extracted_price": 22.94,
+      "old_price": "$26.99",
+      "extracted_old_price": 26.99
+    },
+    {
+      "position": 3,
+      "asin": "B0HCQ37Y89",
+      "title": "High-Pressure Hose Nozzle Metal Fits Garden Hoses with 3 Spray Modes (Jet/Mist/Shower), Heavy Duty Metal Direct Spray Hose Gun for Watering Plants, Lawn, Car Washing, Patio, Pet 1PCS",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JG_GhT6cwPWUN3rd7rKQQpoAAAGf_4LkjwEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICBHsU-t/clv1c_ek-wBfHXUsbWHn2mJrbO8xPASX0CAxh7zswvqrcL19rJ7Qwb6Jko_Wa_mSptNVVTxdpewC-lnmFZVGd0xWJy9J_7fbZpKwbfm7Ct_8tTqwnzwwAtMoGtwVWIF314pSKBdlkM31sRLjuoUauUJ_B-ya6IopnMFlX2-oTwqZXoSIMLf1t93kRDbnA3_-kXUi6PuW0CcV4hzhaplWD4un7N2AqrUBZtYF5mRZtCKrSeeNAiCtiNIRx8119aCNyCesbe-Gcpp1HfylThrwg5GEuOPeBvq6kCTjQ_oj26CRbXwgTOIvw_318QAYiL3TSpE6NEycrPoqKgNcUaVhMtg3d5hB6m4JnTb0rAWrFIc2Yw1oovBTK3YA4B5PNLtzBQq8MG9aU00yjxT0t2FsDHuvYP_8knkiLxycoEpzYM5lzScYbKo1POnQrXKxdhW7g_huWn2sHoSBUSRld7494EAX59ZTFH-L4j1HEwe8lDmhwVf8CnJUdNMNzFtv8U5t3Xn07q-AEZwvHDw_2FKMjeS6ppJlrfvMooboBOK02AXSmQkKeggs05Q6bSyJVIByipLoVk6spVmTFgXls9bZXbpEvW7OxZlsSmrQQSgq5tcFy924Xgp51oLdTSrtQmpax2RfG2LwMWUsYCmbDOEo8eDvxJe8Y9Pg69ilHzIcQjyuUah9BNvTV5L7FTebfRAL2SsMhXGW0dRbGggdcqBLfJPj7iNS4ciWS_3wUE1ZNt6ojQeZvjMCIztCm5pgAM-V845xJ1mpnDc28OJ4IQChIJbE9JEbtyovEeZCsvRlNu0ZR4SgS9PLoB5wBqt__Ef06C05mTNucKKbF6ZnyWtdiXpT3GRGmXe6HEyvoJFmtjw7OI_-UI1t8f2AfkmX1FStQyMBz6uZ8gsWKLfMv9acnTYZi4mlVl1_Wx8MrZ8MW9nJ4mUuay_ssRCkylekkgpxzDjwhd19Jc-XJ-qvso4gsWCAmQgiFH0YNeoYDKmfXwRDuLwaeMG0sP2x_l0BrY-_Us-h1HOjJ3ul_3Kk8Rt_IG3Cchr7fSwiX2YNxRiokTVli-2mceCfpaf16X3N6ScZza8HFpzcuTxrW1uRDl0Y9msLJSssEsGA4bM_eg8CmIcxSb_HLsr4jmPs9NeOfPq2ii6-C1rXJTd7h-_i-c7zRT1qBjouvNozBLkCZC6-nN6TCOCK4IYkhVQkGz6qkdl9PAiUAB9Cafy1zEydZHn8kzTJhpsVRrq6qM32t-i8vOV07PiQm4tU1FdtsSJAh11qf-eYTfZ9vyC3douXSOnN8zh4PVCwx0iTJAPcT44lXBVaw35wNPWiUdnm6sveiS4qT2uaJtpwFtBOeHp9CYCBgt4se4GRlfF7Xtoy1xI9BpeOktYyy08SORLcMyDfGAGYAthP1CkRxRyFWSdafv-KaHgokB_cEfw89L_VWOc96z1P34Jyu8dkm6SDymNQIADP8zyv6fRmj9tECQiwmlSeSkCAZMkCD6Rx7nVF-jDX_bV8SdWhMZtqtFTrkxppyHuhwIlCRU221i99JeGtCGQRsUk9y1wjuA45YhfsTbV-zl/https://www.amazon.com/dp/B0HCQ37Y89/?_encoding=UTF8&pd_rd_i=B0HCQ37Y89&pd_rd_i=B0HCQ37Y89&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=kUekT&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=4B52NKP4EVD04BX55688&pd_rd_wg=jUsO6&pd_rd_r=efb7e4e2-75dc-48e9-8749-79e6e724afe0",
+      "link_clean": "https://www.amazon.com/dp/B0HCQ37Y89/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0HCQ37Y89&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/413IyHs1XUL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/184ca24d-0841-421d-a244-4db411288f72.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/184ca24d-0841-421d-a244-4db411288f72.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 5,
+      "reviews": 2,
+      "price": "$28.99",
+      "extracted_price": 28.99
+    },
+    {
+      "position": 4,
+      "asin": "B0BB5DV24G",
+      "title": "BESAQUO 9 Functions High Pressure Shower Head with Handheld,Built-in Pause Mode&Power Wash,Non-Clogging Nozzles,6ft Hose&Bracket",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JIRvVgIJMEz3uwjt6BjDhwEAAAGf_4LkkAEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICDuTa1-/clv1c_ek-wxYHXKsTWDdVIKi5gyw8I6ZITF_AcLnOCc8o72cm1j3FJ0XHCbZSzudmHPmpiu3kI2YvOsVtkhFunwWaGnTaQr0W9NoJsdyEIfg2y39gdTTFLMuumknGjrBnVp3Qfw7AZWdhiKU55BtF5hsvweevPv8OottTqlJSwF6eKDIYFRDOtvoOY_QyNZWPsKVOfx4e912iOV_PAz-Dl5ygS02mVwMtahkykvqRH5yXXidrYTFuuYEIVyaXUCSz1x0rZwGMvp23DSoHNDwg57GdbGFIFWE8jtrcAciQ4Wv_ZrBO6KvpH_wlT2gWA1RTJI6uF-SrPJaOgRG1dduczg0cpV81M5WmHhWc896kCPtomInsSCfCSfoN4DDFGjZd6vImeAUkIKV4JX2djZi-EyALQxqLpoF5kbyY1iVAehmkDAKJWeT8hyLX-L7w7zl9a4HQkKEecNA1AGzsL0iqwz7Y_fq05YbvabPe2XbeR0Xkf79xIFEBY8JYh7AeMP3DWXemDkFJWUwbDv5xUvw8BOpbqwhyGeyoYaumLzX_2jdL_VRjiocsLIw_HVfpW7mdZg1dEgUv4WXNRIZ4jK2-zZ9N_1uIkcXV78DA0ClPruIGb7SHb-WJIrFPehjUmqDTXO64WpVsHOYlxwXh0g70jsPQ0ckPfOvfCjX4i27jmtqacCVZFb5W4ihPewfap5hOyMQPem1_qn-HHPuQ_fQx-PSqI4z723IyKuLq6Z5ckC2Ar29hx_ixZdgKqBrK5nzXr1SitJDAAgGY1Z1E-tywvxA4X4eJgJzHY2enkL7qdQ1wvOdwiJ_mJ-45DwdYUytERfLEYaiOC7enoeE7nLzbjnHiL6B58l3uQrPevSInHjp4zKDk8miQ4661idYoYqFZR8KeWLcdeJPHCR8mIDgqaaRRgV5CHO7GG0UT46-P-jmjaSKC4VNCrwg3lD1qA-ZZGAJG8w0U5dIRpbyrn987FGruBIfggNA-Bzg17jp1aA7TrpZaMar1bkgfLTJ-Z9ejEFG-id6n9dFfrVDZCmU3Y4wkNj8mu1avonkjPel9mKHU9pbrWClCSFMcj-2fd8ABLK73oAGolVZJW3Mh3PxS_1BbzX-QwuoIpNTxDDo8YwxQdy2f9tvn-Wi3gUxr8JN4G1rVnOaCxr9nlKsfSb_p4asSmxaiKKFoNaRAYt6YZtQdl_xLzGP3u4RPzuHnXywcPnFF6PtpHKT8r79yJdsGZfl5aG4BOnk1nkdBlz5QNzmu6G75Gx5WRYTXzcR6lk5S7bD9NANo2ZaxtOPfZwjOEkI8anKb8KQNvdtFp1NrkphBfiRwaNmdImsqDlLkZR7LO654THqwVpTPwKFMWwBmET8-yZA-ep65X1zx0TeSfMxP-9CpqTqsFph-MS1TcztRtCD0K9VWpH3eDERnhs-ir-Tku2y5ycw9TsBNQ-DV7SvIFIh3XNgLr_5pFliQMgrc6zc5jSoVDaAYpvHZeoVf5KYb9jyvPuBU0bW2E2kkYaEc28wFfCoatDwtgwxk52UM7D1vvLb0j7c9e6PKSKvN5pZQiYuv8V9oTvNI0lvel2zFzVILfjUFRjU2W0YkNFh8lAc4SEtU/https://www.amazon.com/dp/B0BB5DV24G/?_encoding=UTF8&pd_rd_i=B0BB5DV24G&pd_rd_i=B0BB5DV24G&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=kUekT&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=4B52NKP4EVD04BX55688&pd_rd_wg=jUsO6&pd_rd_r=efb7e4e2-75dc-48e9-8749-79e6e724afe0",
+      "link_clean": "https://www.amazon.com/dp/B0BB5DV24G/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0BB5DV24G&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51Vh23ndgCL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c5652c4c-2f73-4958-9533-3ae240b5b58d.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c5652c4c-2f73-4958-9533-3ae240b5b58d.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.5,
+      "reviews": 5910,
+      "price": "$29.95",
+      "extracted_price": 29.95
+    },
+    {
+      "position": 5,
+      "asin": "B0CYZ2CLGJ",
+      "title": "RV Shower Head with Hose, High Pressure 7-Mode RV Shower Head Replacement for RV, Camper, Van, Travel Trailer, Motorhome and Boat, White",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JLYXoQOjJUFsodzqOZ29sfoAAAGf_4LkkQEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICAAeqHi/clv1c_ek-IBXfWLcTSXk6hthlGgETDcGlTsWp9pTkZf83rjcmUw3io8UTTWrjq9pBBO-ExgefZKSQ75Plc1MWy7WJmin_n4Kl9etCt-H-ur41P1GCcybm7L5IbF5SC4_J59sKQl_3qaHhHJrvj9F-hQ1Aqw-TErslcl1bggkQphyfLzA8RbXPNv4oXb_l4NBkj-Fx5cLY6zOrOnAHZ0_Blu4DQU4EJWc1-RAuThUdgMlV-aC6g6r-Ty2iWsJDdu59T0Jswh3TzlAZKJnUtTtpABiOIc19y6ieziPuTnfXNdGF9VHpNK7uonS_vSS4uFsmJd0kXccPFPenUSjBQY8FavJ80dTtHzh-YMAid9xR_23HaXCxG4vfaTBbg3XnkpPdZVZTDao3CcknsfTwCG9KxeXckIGnWEWmpW2DXR8YDU4XENIfSZvlfZ-OXvhUQvm38vhPxVNFfUmg_DrB_3sCy69LvdjhW7d2v7uv__Tkh2XHvHQFtDDFk3r470ahxLIKkQ0CyS527Fl2_fQ3So8M-8sDoCffUWTrgC50llMswqXSCef6tIW2n5bCG7r8HKpPuw9XKcHA17XYQDAc0tqPZDOqpe2fQ2FMap6XI4k5r11dwvueDRe6a6ecjWCKquEWPgmF2fbETBJPbSHWGW-WFmkL2F2dIMGYFuF66HmMYfmpEMQSq5MdrjwuC388AxJFyvHt3XBVayfzjsgNwAS2oZgu8CeQh9XjBRWGwGG3qJOUzctzjX9b4Mvq51J8H5PPDkN3QJg0RzSkxte8Luf6zgqn7L2xa3n2a6CKb0gZEfXY-iQuRexysn3Bjs1tRYgx-bVqDyuSgm_LdfWz6ypHn7K7JPq0ofgg6bCqXqcOpHdcfqVWPecpZ7UMDMG4PrXowYmpJ8-B92748Uk-t6NCTTlgyLm7xCAHGL2or7Vs3EoPRogeepcMAb1Zz4nDOxcjwU3xOk59fpducD9qaF7G57H9kE606QvTGceb3nMmGAZP4GooCs7mcMcaly5GRjHjZH0qeRBfaBl2lp8JjVMAromtaaqM2tP7yjy9Dn5cRf80g_tzTHB50DGZMA8hlmZuK4NeamvrdUm6LJdhsJ5K1k96NXXKDcrsjRuNTgQrO9SHheIk94bIm-SDOOEuZf2cMdpwxliYXZ2fFrEAYVthnvCzwbyPRTLwcThjgmxkx3Pp_J1zQZBc_Xp1HGdBrZEwmSjs3RxAFlmVxsSLYT33tTxDkNFW34Uv8RiC6ziXDzpKVzJMzynCgmhnzOFsCsJ-rI8erv3IT0CZIV4qTqIVajULZRukXRzG9kqmjSBP9qoPilmVzJV5LsXvUHekoF6O0llrITwhrkcAew9J6n1XcI31yU_xKgKJcGioQbBu2vmDk11r-p3OEn8lIiw9yw91obPzUN1PNn0cmRvDyR-mb1Gdt-M20FlYdQvSAGWhXvVmeXVtD-AC05-eVNlYMjMf6uJkQpsfEtTJrgXCB0RLXm6X15s_rw-hmkWM3FBv-5CsxzV1uM_TEUcVShx0oyaqWDwiNGRTmOF9anK_c7qouOtpUi31wLa0h2A/https://www.amazon.com/dp/B0CYZ2CLGJ/?_encoding=UTF8&pd_rd_i=B0CYZ2CLGJ&pd_rd_i=B0CYZ2CLGJ&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=kUekT&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=4B52NKP4EVD04BX55688&pd_rd_wg=jUsO6&pd_rd_r=efb7e4e2-75dc-48e9-8749-79e6e724afe0",
+      "link_clean": "https://www.amazon.com/dp/B0CYZ2CLGJ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CYZ2CLGJ&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41G4GK6KQdL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/56e80cb6-0911-4270-81b8-3724ee691727.mov/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/56e80cb6-0911-4270-81b8-3724ee691727.mov/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.5,
+      "reviews": 339,
+      "price": "$22.99",
+      "extracted_price": 22.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "text": "Customers find this dog shower head to be of high quality, easy to install, and appreciate that it's easier than using cups of water to wash their pets. Moreover, the adjustable water pressure and functionality receive positive feedback, and customers consider it well worth the price. Additionally, they like its cleansing capabilities, with one customer noting how the brush-like bristles help clean through thick hair. However, customers disagree on whether the shower head is leak-proof.",
+      "insights": [
+        {
+          "title": "Quality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 26,
+            "positive": 25,
+            "negative": 1
+          },
+          "summary": "Customers find the showerhead to be of high quality, with one customer specifically mentioning its excellent water pressure.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...There’s really no risk at all in buying this. It’s a great product and if you do have any issues, their customer service will definitely be able to...",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R28BXLF34Q03NB"
+            },
+            {
+              "position": 2,
+              "snippet": "Excellent product! Simple to install..took me less than 10 minutes. No leaks or drips Great pressure...",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RAYXDUV2DWEIH"
+            },
+            {
+              "position": 3,
+              "snippet": "Awesome product! I was able to install and use the same day with absolutely no problems....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2V3AC8MX9KONU"
+            },
+            {
+              "position": 4,
+              "snippet": "...Everything else is metal. I would still buy this again. It is well made and the rinse head with the built in comb is fantastic....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2KBHG99EYVM8S"
+            }
+          ]
+        },
+        {
+          "title": "Installation",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 22,
+            "positive": 22,
+            "negative": 0
+          },
+          "summary": "Customers find the showerhead easy to install and use.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Very very satisfied! Easy to install, easy to use, great adjustable water pressure, and handy shut off switch. Love long hose as well!",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1G9T8KGBX1FCV"
+            },
+            {
+              "position": 2,
+              "snippet": "Easy installation, works better than any I’ve used over the years and reasonably priced.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2NAYLQ37F5O17"
+            },
+            {
+              "position": 3,
+              "snippet": "Super easy to install, very well made and works perfectly. Love the scrubber fingers and so do our Mals. Great Product at a great price....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R3QQLY0RPM6KLE"
+            },
+            {
+              "position": 4,
+              "snippet": "...Installation was a breeze. I attach hose directly to my shower outlet for grooming, and remove once done until next time....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RHI1CR969HUI8"
+            }
+          ]
+        },
+        {
+          "title": "Ease of use",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 18,
+            "positive": 18,
+            "negative": 0
+          },
+          "summary": "Customers find the dog shower easy to use, with several mentioning it's easier than using cups of water and takes about 10 minutes to wash their pets. One customer notes that the on/off feature works well even with soapy hands.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Very very satisfied! Easy to install, easy to use, great adjustable water pressure, and handy shut off switch. Love long hose as well!",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1G9T8KGBX1FCV"
+            },
+            {
+              "position": 2,
+              "snippet": "...Wet’s my poodles hair and gets the soap out quickly.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2KBHG99EYVM8S"
+            },
+            {
+              "position": 3,
+              "snippet": "...in the way, the adjustability of the water flow and on/off was easy even with soapy hands and the shorter hair dog appreciated the rubber teeth for...",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RXOL7VS6T3DPV"
+            },
+            {
+              "position": 4,
+              "snippet": "...It cut my cleansing time from 25-30 minutes to less then 10 minutes. The best part, no leaning and my back didn’t bother me at all....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RH5LYQVMHHC8P"
+            }
+          ]
+        },
+        {
+          "title": "Functionality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 12,
+            "positive": 10,
+            "negative": 2
+          },
+          "summary": "Customers find that the showerhead works well, with one mentioning that the long hose with the sprayer works perfectly.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "TLDR: Shower head works great, hose is durable, built in flow rate regulator and on/off switch work great....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R14XFWAQ6BBVBV"
+            },
+            {
+              "position": 2,
+              "snippet": "works well and my dogs are clean again",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1T4W8F2Q5X9ZQ"
+            },
+            {
+              "position": 3,
+              "snippet": "Super easy to install, very well made and works perfectly. Love the scrubber fingers and so do our Mals. Great Product at a great price....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R3QQLY0RPM6KLE"
+            },
+            {
+              "position": 4,
+              "snippet": "Overall it works well. It does leak when using the regular shower head....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R14U1AE8XAQ38O"
+            }
+          ]
+        },
+        {
+          "title": "Water pressure",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 12,
+            "positive": 12,
+            "negative": 0
+          },
+          "summary": "Customers appreciate the showerhead's adjustable water pressure feature.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...No leaks or drips Great pressure Can use diverter to flow shower head only, attachment only, or both at same time...",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RAYXDUV2DWEIH"
+            },
+            {
+              "position": 2,
+              "snippet": "...Super strong water pressure, but so nice can be adjusted. Hose is super light and long. Really happy with this purchase and highly recommend!",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RH2L3F78C447H"
+            },
+            {
+              "position": 3,
+              "snippet": "...It is easy to adjust water pressure and my dogs seem to like the rubber grooming brush, leaning into it during rinses.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R38XVKLXEV1EJJ"
+            },
+            {
+              "position": 4,
+              "snippet": "...The sprayer has wonderful pressure and the convenience of being able to hang it on the wall and turn it off on the sprayer is wonderful....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1TFL0DGT8YLMM"
+            }
+          ]
+        },
+        {
+          "title": "Value for money",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 9,
+            "positive": 9,
+            "negative": 0
+          },
+          "summary": "Customers find the showerhead to be well worth the price.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...to try out the hose and he was highly impressed and said it was well worth the money I spent.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RH5LYQVMHHC8P"
+            },
+            {
+              "position": 2,
+              "snippet": "...Love the scrubber fingers and so do our Mals. Great Product at a great price. Fast Shipping too !",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R3QQLY0RPM6KLE"
+            },
+            {
+              "position": 3,
+              "snippet": "...Pros: Easy to install Looks decent Easy to use Inexpensive; when you consider grooming cost out of the home...",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2V3AC8MX9KONU"
+            },
+            {
+              "position": 4,
+              "snippet": "...installation, works better than any I’ve used over the years and reasonably priced.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2NAYLQ37F5O17"
+            }
+          ]
+        },
+        {
+          "title": "Cleansing",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 8,
+            "positive": 8,
+            "negative": 0
+          },
+          "summary": "Customers find the showerhead effective at cleaning their pets, with one mentioning that the brush-like bristles help clean through thick curls, while another notes it provides thorough rinsing during baths.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...I can be in the shower with my boy and not get soaked. I can’t believe how much fur it drags out!!! After one year this is still how I feel.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2EFZ0CY3YN0BV"
+            },
+            {
+              "position": 2,
+              "snippet": "...The brush-like bristles help clean through the dogs thick curls while soothing my dogs with its pseudo massage. Installation was a breeze....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RHI1CR969HUI8"
+            },
+            {
+              "position": 3,
+              "snippet": "...I love the rubber tooth comb head both for rinsing down to the skin and also massaging in shampoo/conditioner with or without the water on....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2VHA544RKIMNE"
+            },
+            {
+              "position": 4,
+              "snippet": "...My curly haired dog in particular was a breeze. The massaging bristles combed out her fur while I shampooed....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RO0SKKVMEN79L"
+            }
+          ]
+        },
+        {
+          "title": "Leak-proof",
+          "sentiment": "mixed",
+          "mentions": {
+            "total": 12,
+            "positive": 8,
+            "negative": 4
+          },
+          "summary": "Customers have mixed experiences with the showerhead's leak-proof design, with some reporting no leaks or drips while others mention water leaking everywhere.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...I hand tighten every time and experience no leaks. The hose and sprayer are made of quality material. I expect to use this for years on end.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RHI1CR969HUI8"
+            },
+            {
+              "position": 2,
+              "snippet": "...There were leaks at every connection point and in hose. I was unable to use at all. Will not purchase another and already returned.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2194W4T2VLSUP"
+            },
+            {
+              "position": 3,
+              "snippet": "...Simple to install..took me less than 10 minutes. No leaks or drips Great pressure...",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RAYXDUV2DWEIH"
+            },
+            {
+              "position": 4,
+              "snippet": "...I did have a plumber install and have had no problems with leakage....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R38XVKLXEV1EJJ"
+            }
+          ]
+        }
+      ],
+      "images": [
+        "https://m.media-amazon.com/images/I/71YhuBnc53L.jpg",
+        "https://m.media-amazon.com/images/I/71UDFHKnoXL.jpg",
+        "https://m.media-amazon.com/images/I/81W7wNlQ2vL.jpg",
+        "https://m.media-amazon.com/images/I/71bRq5X7q-L.jpg",
+        "https://m.media-amazon.com/images/I/81kF3LmbhmL.jpg",
+        "https://m.media-amazon.com/images/I/71xsR7fsl0L.jpg",
+        "https://m.media-amazon.com/images/I/51IC0EK9HmL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 81,
+        "4 star": 10,
+        "3 star": 2,
+        "2 star": 2,
+        "1 star": 5
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Great product for the price; a must have for large dog breed owners.",
+        "text": "Awesome product! I was able to install and use the same day with absolutely no problems. My GSD is skittish of baths, but I was able to bathe her in a timely fashion without stressing her out. Overall it made bath time bearable for her and easier for me. If you have a large dog I would consider this a must have.Pros:Easy to installLooks decentEasy to useInexpensive; when you consider grooming cost out of the home (one trip is already over the price of this kit), or even those wash your dog yourself places (two trips and I’m already over the cost of the kit).Cons:The surface is shiny and prone to scratches when you use pliers to tighten. And you MUST use pliers. The instructions state as much. You cannot get a tight enough seal to avoid leaking around the threads without using them. HOWEVER, the leaking is minimal and does not hamper the use of the shower head or dog wash, so if you didn’t want to use pliers you could do so.",
+        "rating": 5,
+        "date": "January 13, 2020",
+        "author": "C. Berry",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AF4GVP5MTWNL3H2TMFY7LIMENU7A?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/81kF3LmbhmL.jpg",
+          "https://m.media-amazon.com/images/I/71bRq5X7q-L.jpg"
+        ],
+        "helpful_votes": "2 people found this helpful",
+        "verified_purchase": true
+      },
+      {
+        "position": 2,
+        "title": "Makes bath time easy!",
+        "text": "This is absolutely the best shower attachment I’ve tried for my dogs. Easy to use, flips easily between shower head and attachment. I did have a plumber install and have had no problems with leakage. It is easy to adjust water pressure and my dogs seem to like the rubber grooming brush, leaning into it during rinses.",
+        "rating": 5,
+        "date": "March 7, 2025",
+        "author": "Four O’Clock wishes",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHKFQOBDUAS5QBDMIISMCJCVFGMQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true
+      },
+      {
+        "position": 3,
+        "title": "Game Changer",
+        "text": "I can finally groom my dogs! I have two Portuguese Water Dogs and have struggled for years trying to groom them at home due to a lack of quality equipment. You can't go wrong with this item! The long hose with the sprayer works perfectly. The sprayer is beyond practical and is a luxury compared to my past grooming attemps at wetting and rinsing. The sprayer has an on/off spray tab and a water pressure dial. The brush-like bristles help clean through the dogs thick curls while soothing my dogs with its pseudo massage.Installation was a breeze. I attach hose directly to my shower outlet for grooming, and remove once done until next time. You have to use new plumbers tape every time after removing the old plumbers tape. I hand tighten every time and experience no leaks.The hose and sprayer are made of quality material. I expect to use this for years on end.",
+        "rating": 5,
+        "date": "July 2, 2024",
+        "author": "Alecia",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGPKDI6XGDYBS2RA6KIRJD2HHMBQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true
+      },
+      {
+        "position": 4,
+        "title": "Very good product but shipping issue?",
+        "text": "Just used this today on my 35 pound baby boy and omg it’s so awesome! So much easier than using cups of water to wash him. I love that there are two adjusters on the nozzle; one for water pressure and an on/off switch so you don’t waste a bunch of water. This product is very well made. No issues with leaking or anything. The only reason why I’m giving 4 stars is because they don’t ship to my zip code. I had to have them ship it to my mom in Vegas and I picked it up while visiting her. I live in Los Angeles, so you would think they could ship here, but no. Thankfully I have my mom in Vegas, but if I didn’t have her, I would not have been able to get this product.",
+        "rating": 4,
+        "date": "April 5, 2021",
+        "author": "Chloe",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFDZYXPCPYI2OWW2I5S6REGTCU6Q?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true
+      },
+      {
+        "position": 5,
+        "title": "Game changer",
+        "text": "I have three puppies that constantly need baths after rolling in God knows what in the yard, this Amazon find was incredible, the husband installed it in no time and I just washed the pups in no time. Awesome product!",
+        "rating": 5,
+        "date": "September 16, 2025",
+        "author": "PV",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEMY52FWBMQ7RSW5E6EYWLL6MDYQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true
+      },
+      {
+        "position": 6,
+        "title": "Horrible - water leaks everywhere",
+        "text": "I had high hopes for this product based upon reviews and total sales. There were leaks at every connection point and in hose. I was unable to use at all.Will not purchase another and already returned.",
+        "rating": 1,
+        "date": "January 27, 2025",
+        "author": "Amanda B.",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AH7WP77Z2MIMCLN5A4YSAYBXPRRQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "video": {
+          "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/1d9d1ad9-7f06-42f7-a346-45139056dcef/embedded.cc.default.vertical.jobtemplate.hls.m3u8",
+          "thumbnail": "https://m.media-amazon.com/images/I/51sVuVdF5wL._SY500_.jpg"
+        },
+        "verified_purchase": true
+      },
+      {
+        "position": 7,
+        "title": "Where has this been all my life?!?!!",
+        "text": "This product is AMAZING! I live in an apartment with two 100+ pounds American bulldogs. There is a dog wash run that is filthy and I've stopped taking my dogs to it to bathe them in a tub filled with mildew, feces, etc. The shower heads inside the apartment are attached, so it makes it really hard to get a good rinse especially underneath my boys. I've been using a plastic cup and splashing their bellies to rinse and it's been a nightmare and baths take way too long. But not anymore! This thing saves me so much time! And it's so easy to install and use. My back would be in so much pain before, but now I barely have to bend over. And I can tell the dogs are so much happier not being blasted by a shower head to the face from 6 feet above them. I am so glad I bought this! Genius!!",
+        "rating": 5,
+        "date": "October 4, 2023",
+        "author": "I. Green",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGIE72D6IKUKB3ZZXSJHSB2HAS2A?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "2 people found this helpful",
+        "verified_purchase": true
+      },
+      {
+        "position": 8,
+        "title": "Finally, a dog washer that works.",
+        "text": "Installed in 8 minutes and washing the dog in 10 minutes. I has the power I need for the big dog and then I adjust the flow with one hand and wash the small dog. Very impressed and seems like great quality. I really like the one handed operation and they like the massage end.",
+        "rating": 5,
+        "date": "June 19, 2020",
+        "author": "Eric",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGHKMOK2HEE7GV6FWAESH47WUQWQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/b03d7dd9-e908-4751-afff-53af23bd00e4._CR62%2C0%2C375%2C375_SX460_SX48_.jpg",
+        "helpful_votes": "2 people found this helpful",
+        "verified_purchase": true
+      }
+    ]
+  }
+}
