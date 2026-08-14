@@ -9,10 +9,17 @@ import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
 import JsonLd from '@components/JsonLd.astro';
 import AffiliateLink from '@components/AffiliateLink.astro';
 import { getTrackersByType } from '@data/tracking-products';
+import { getOffers } from '@data/products/offers';
 
 const pageSlug = 'airtag-for-dogs';
 const bluetoothProducts = getTrackersByType('bluetooth');
 const airtagProduct = bluetoothProducts.find((product) => product.id === 'apple-airtag-2nd-gen') ?? bluetoothProducts[0];
+// Same buy path the hero, the mid-page CTA and the post-FAQ CTA all share, so there is
+// one offer to keep current and every CTA carries identical instrumentation.
+const airtagOffer = airtagProduct ? getOffers(airtagProduct).find((o) => o.merchant === 'amazon') : undefined;
+const airtagProductMeta = airtagProduct
+  ? { id: airtagProduct.id, name: airtagProduct.name, category: airtagProduct.type }
+  : undefined;
 
 const tocHeadings = [
   { label: 'What AirTag Actually Is', anchor: 'what-it-is' },
@@ -75,8 +82,16 @@ const collectionSchema = {
   <Hero
     title="AirTag for Dogs: What It Can and Can't Do"
     subtitle="AirTag is popular, affordable, and widely misunderstood. Here's an honest look at what Bluetooth crowd-sourcing actually means for a dog that runs away."
-    primaryCta={{ label: 'See All GPS Trackers', href: ROUTES.trackingTop }}
-    secondaryCta={{ label: 'Need Real GPS?', href: ROUTES.fiCollarReview }}
+    disclaimer="As an Amazon Associate, we earn from qualifying purchases."
+    primaryCta={airtagOffer
+      ? {
+          label: 'Check Price on Apple AirTag',
+          href: airtagOffer.url,
+          offer: airtagOffer,
+          product: airtagProductMeta,
+        }
+      : { label: 'See All GPS Trackers', href: ROUTES.trackingTop }}
+    secondaryCta={{ label: 'Need Real GPS Instead?', href: ROUTES.trackingTop }}
     pageSlug={pageSlug}
   />
 
@@ -202,16 +217,18 @@ const collectionSchema = {
           </div>
         </div>
 
-        {airtagProduct?.amazonUrl && airtagProduct.asin && (
+        {airtagOffer && (
           <div class="section-shop-cta">
             <AffiliateLink
-              href={airtagProduct.amazonUrl}
-              data-track="amazon_outbound_click"
-              data-asin={airtagProduct.asin}
+              href={airtagOffer.url}
+              data-asin={airtagOffer.asin}
               data-product-name={airtagProduct.name}
+              data-product-id={airtagProduct.id}
+              data-product-category={airtagProduct.type}
+              position="when-it-makes-sense"
               class="ui-cta"
             >
-              Shop AirTag on Amazon
+              Check Price on Apple AirTag
             </AffiliateLink>
             <p class="section-shop-note">
               Best fit for Apple users who want a low-cost backup tag, not a standalone GPS tracker.
@@ -291,6 +308,25 @@ const collectionSchema = {
     <!-- FAQ -->
     <section id="faq">
       <FAQ faqs={faqs} heading="AirTag for Dogs FAQ" />
+      {airtagOffer && (
+        <div class="faq-shop-cta">
+          <p class="faq-shop-note">
+            If a Bluetooth tag is what you actually want — a cheap collar tag for a dog who
+            stays in populated areas — AirTag is the one to get.
+          </p>
+          <AffiliateLink
+            href={airtagOffer.url}
+            data-asin={airtagOffer.asin}
+            data-product-name={airtagProduct.name}
+            data-product-id={airtagProduct.id}
+            data-product-category={airtagProduct.type}
+            position="faq-bottom"
+            class="ui-cta"
+          >
+            Check Price on Apple AirTag
+          </AffiliateLink>
+        </div>
+      )}
     </section>
 
     <!-- Closing CTA -->
@@ -518,6 +554,17 @@ const collectionSchema = {
     font-size: var(--text-sm);
     color: var(--color-text-muted);
     margin: var(--space-xs) 0 0;
+  }
+
+  .faq-shop-cta {
+    max-width: 28rem;
+    margin: var(--space-xl) auto 0;
+    text-align: center;
+  }
+
+  .faq-shop-note {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-sm);
   }
 
   .comparison-cta {
