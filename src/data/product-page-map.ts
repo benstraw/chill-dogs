@@ -135,10 +135,6 @@ export function buildProductPageMap(): ProductPageMap {
   // (the grooming and tick tools appear on three), so a filter would either miss a
   // page or claim a product appears somewhere it does not.
   const fleaTickPageRefs: Record<string, PageRef> = {
-    'best-flea-and-tick-medications-for-dogs': {
-      label: 'Best Flea and Tick Medications for Dogs',
-      href: ROUTES.fleaTickMedications,
-    },
     'best-natural-flea-and-tick-products-for-dogs': {
       label: 'Best Natural Flea and Tick Products for Dogs',
       href: ROUTES.naturalFleaTickProducts,

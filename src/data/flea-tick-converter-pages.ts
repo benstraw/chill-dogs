@@ -100,132 +100,6 @@ export function buildFleaTickItemListSchema(
 }
 
 export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig> = {
-  'best-flea-and-tick-medications-for-dogs': {
-    slug: 'best-flea-and-tick-medications-for-dogs',
-    title: 'Best Flea and Tick Medications for Dogs',
-    description:
-      'Compare the most common flea and tick medications for dogs — monthly and quarterly oral prescriptions, combo chews, OTC topicals, and Seresto collar trade-offs.',
-    ogTitle: 'Best Flea and Tick Medications for Dogs (2026)',
-    pageSlug: 'best-flea-and-tick-medications-for-dogs',
-    currentHref: ROUTES.fleaTickMedications,
-    hero: {
-      title: 'Best Flea and Tick Medications for Dogs',
-      subtitle:
-        'If you already know you need stronger, conventional protection, this is the fast decision page. Compare oral prescriptions, combo chews, OTC topicals, and collars with the real trade-offs around convenience, cat safety, and neurologic risk warnings.',
-      disclaimer: 'As an Amazon Associate and a Chewy Affiliate, we earn from qualifying purchases.',
-      primaryCta: { label: 'See Oral Prescriptions', href: '#oral-rx' },
-      secondaryCta: { label: 'Read the Full Flea & Tick Guide', href: ROUTES.fleaTickPillar },
-    },
-    toc: [
-      { label: 'How To Choose', anchor: 'how-to-choose' },
-      { label: 'Oral Prescriptions', anchor: 'oral-rx' },
-      { label: 'Combo Chews', anchor: 'combo-rx' },
-      { label: 'OTC Topicals', anchor: 'otc-topicals' },
-      { label: 'Collar Option', anchor: 'otc-collars' },
-      { label: 'Safety Notes', anchor: 'safety-notes' },
-      { label: 'FAQ', anchor: 'faq' },
-    ],
-    blocks: [
-      {
-        kind: 'prose',
-        id: 'how-to-choose',
-        heading: 'How to choose the right medication category',
-        paragraphs: [
-          'Oral prescriptions are the easiest fit for owners who want no-mess dosing and strong tick protection. Quarterly Bravecto works best for people who hate monthly reminders. Combo chews make the most sense when you already need heartworm coverage and want one monthly parasite routine instead of two.',
-          'OTC topicals still make sense for owners who want to avoid a prescription, but they are more application-sensitive and can be a poor fit for households with cats if permethrin is involved. Collars are the convenience play. They can work well, but they deserve the same careful label reading and reaction monitoring as any other parasite product.',
-        ],
-      },
-      {
-        kind: 'product_section',
-        id: 'oral-rx',
-        heading: 'Oral monthly and quarterly prescriptions',
-        intro:
-          'These are the highest-conviction picks for owners who want conventional flea and tick control without greasy topicals. All prescription products here require a veterinarian prescription. Chewy pharmacy orders also require prescription upload at checkout.',
-        positionOffset: 0,
-        columns: 3,
-        productIds: ['nexgard-10-24', 'simparica-22-44', 'bravecto-44-88'],
-      },
-      {
-        kind: 'product_section',
-        id: 'combo-rx',
-        heading: 'Combo chews for flea, tick, and heartworm coverage',
-        intro:
-          'These are the best fit when you want fewer parasite products to remember each month. They are still prescription medications and still deserve the same seizure-history and adverse-event conversation as the rest of the isoxazoline class.',
-        positionOffset: 3,
-        columns: 2,
-        productIds: ['nexgard-plus-33-66', 'simparica-trio-22-44'],
-        alt: true,
-      },
-      {
-        kind: 'product_section',
-        id: 'otc-topicals',
-        heading: 'OTC topicals when you want no prescription',
-        intro:
-          'These are the main over-the-counter choices for owners who want flea-and-tick coverage without scheduling a vet visit first. The trade-off is more label-reading, more application mess, and in permethrin products a real cat-safety concern.',
-        positionOffset: 5,
-        columns: 2,
-        productIds: ['frontline-plus-45-88', 'k9-advantix-21-55'],
-      },
-      {
-        kind: 'product_section',
-        id: 'otc-collars',
-        heading: 'Long-duration collar option',
-        intro:
-          'Seresto appeals to owners who want one product to last most of the season. That convenience is real. So is the need to read the updated safety context and monitor for reactions after applying it.',
-        positionOffset: 7,
-        columns: 1,
-        productIds: ['seresto-large'],
-        alt: true,
-      },
-      {
-        kind: 'callout',
-        id: 'safety-notes',
-        heading: 'Safety notes that matter before you buy',
-        tone: 'warning',
-        paragraphs: [
-          'Isoxazoline products such as NexGard, Bravecto, Simparica, Simparica Trio, and NexGard Plus carry an FDA neurologic adverse-event warning for tremors, ataxia, and seizures. The FDA still says they are safe and effective for most dogs, but seizure history should absolutely be part of the buying decision.',
-          'Permethrin products such as K9 Advantix II are a genuine cat-safety issue. If cats groom the treated dog or sleep pressed against it, choose a different category unless your vet says otherwise.',
-          'Seresto remains on the market after EPA review, but it is still reasonable to read the current safety history before choosing it for convenience alone.',
-        ],
-      },
-    ],
-    faq: {
-      heading: 'Flea and Tick Medication FAQ',
-      items: [
-        {
-          question: 'Do I need a prescription for flea and tick prevention?',
-          answer:
-            'For the oral prescription products and combo chews on this page, yes. Frontline Plus, K9 Advantix II, and Seresto are over the counter. If your dog has seizure history, liver or kidney concerns, or you live in a high tick-disease region, a vet visit is worth it even when OTC options exist.',
-        },
-        {
-          question: 'What is the difference between NexGard and Bravecto?',
-          answer:
-            'The big practical difference is dosing schedule. NexGard is monthly. Bravecto is roughly every 12 weeks. Both are oral prescription products in the isoxazoline class, so the FDA neurologic warning conversation applies to both.',
-        },
-        {
-          question: 'Can I use dog flea medication if I have cats?',
-          answer:
-            'You need to be especially careful with permethrin-containing products such as K9 Advantix II. Those are not a casual multi-pet-household choice. If cats live in the home, default to products that do not create that transfer risk unless your veterinarian gives a clear plan.',
-        },
-      ],
-    },
-    internalLinkStripHeading: 'More Flea, Tick, and Outdoor Safety Guides',
-    internalLinkStripLimit: 6,
-    itemListSchema: {
-      name: 'Best Flea and Tick Medications for Dogs',
-      url: `https://www.chill-dogs.com${ROUTES.fleaTickMedications}`,
-      productIds: [
-        'nexgard-10-24',
-        'simparica-22-44',
-        'bravecto-44-88',
-        'nexgard-plus-33-66',
-        'simparica-trio-22-44',
-        'frontline-plus-45-88',
-        'k9-advantix-21-55',
-        'seresto-large',
-      ],
-    },
-  },
   'best-natural-flea-and-tick-products-for-dogs': {
     slug: 'best-natural-flea-and-tick-products-for-dogs',
     title: 'Best Natural Flea and Tick Products for Dogs',
@@ -368,7 +242,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         tone: 'info',
         paragraphs: [
           'If you continue to see live fleas on your dog, if your dog is chewing raw spots, or if you live in a region with heavy flea and tick infestation, consult your veterinarian, as pharmaceutical treatments may be necessary.',
-          `If you want the full conventional-vs-natural picture before deciding, go back to <a href="${ROUTES.fleaTickPillar}">the broad flea and tick guide</a>. If you already know you need conventional protection, skip straight to <a href="${ROUTES.fleaTickMedications}">the medications comparison</a>.`,
+          `If you want the full picture before deciding, go back to <a href="${ROUTES.fleaTickPillar}">the broad flea and tick guide</a>. If you already know you need stronger protection, see <a href="${ROUTES.fleaTickProducts}">the no-prescription flea and tick products page</a>.`,
         ],
       },
     ],
@@ -474,7 +348,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         paragraphs: [
           'The no-prescription decision comes down to how you want to apply protection. A spot-on topical is a monthly job you can forget, but it is application-sensitive: it has to go on skin rather than fur, and the dog has to stay dry while it sets. A collar removes the monthly reminder entirely and runs for months, at the cost of something being fastened around the dog the whole time.',
           'Whichever you pick, the second half of this page matters just as much. No product on the market is a perfect barrier, and ticks in particular are found rather than prevented. A comb and a tick tool are what turn "my dog has protection" into "I would notice if something got through."',
-          `If you want prescription orals, combo chews, or the brand-name lineup including Seresto, those live on <a href="${ROUTES.fleaTickMedications}">the medications comparison</a>. If you would rather start with plant-based options, see <a href="${ROUTES.naturalFleaTickProducts}">the natural products page</a>.`,
+          `If you would rather start with plant-based options, see <a href="${ROUTES.naturalFleaTickProducts}">the natural products page</a>. For prescription options, talk to your veterinarian — we do not compare prescription medications here.`,
         ],
       },
       {
@@ -704,7 +578,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         tone: 'info',
         paragraphs: [
           `If you are bathing because your dog already feels buggy, itchy, or dirty after exposure, pair the setup tool here with a real shampoo plan such as <a href="${ROUTES.naturalFleaTickProducts}">the natural products page</a> and with bedding cleanup at home.`,
-          `If you are still seeing live fleas after baths, move up to <a href="${ROUTES.fleaTickMedications}">the medications comparison</a> or back to <a href="${ROUTES.fleaTickPillar}">the full decision guide</a>.`,
+          `If you are still seeing live fleas after baths, move up to <a href="${ROUTES.fleaTickProducts}">the flea and tick products page</a> or back to <a href="${ROUTES.fleaTickPillar}">the full decision guide</a>.`,
         ],
       },
     ],

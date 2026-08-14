@@ -525,25 +525,6 @@ export const staticSitemapSections: SitemapSection[] = [
         pubDate: new Date('2026-06-26'),
       }),
       createSitemapPage({
-        baseTitle: 'Best Flea and Tick Medications for Dogs',
-        description:
-          'Compare the most common flea and tick medications for dogs — monthly and quarterly oral prescriptions, combo chews, OTC topicals, and Seresto collar trade-offs.',
-        href: ROUTES.fleaTickMedications,
-        pageType: 'converter',
-        topics: ['flea-tick', 'travel', 'road-trips'],
-        pinnedRelated: [
-          ROUTES.fleaTickPillar,
-          ROUTES.fleaTickProducts,
-          ROUTES.naturalFleaTickPrevention,
-          ROUTES.naturalFleaTickProducts,
-          ROUTES.fleaSeasonBathTools,
-          ROUTES.roadTrip,
-        ],
-        relatedLabel: 'Flea & Tick Medications',
-        pubDate: new Date('2026-06-30'),
-        lastUpdated: new Date('2026-08-14'),
-      }),
-      createSitemapPage({
         baseTitle: 'Best Natural Flea and Tick Products for Dogs',
         description:
           'Compare natural flea and tick products for dogs — sprays, shampoos, collars and tags, daily chews, and flea combs — with honest notes on what they really do.',
@@ -554,7 +535,6 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.naturalFleaTickPrevention,
           ROUTES.fleaTickPillar,
           ROUTES.fleaSeasonBathTools,
-          ROUTES.fleaTickMedications,
           ROUTES.fleaTickProducts,
           ROUTES.roadTrip,
         ],
@@ -575,7 +555,6 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.naturalFleaTickProducts,
           ROUTES.naturalFleaTickPrevention,
           ROUTES.fleaTickPillar,
-          ROUTES.fleaTickMedications,
           ROUTES.fleaTickProducts,
           ROUTES.roadTrip,
         ],
@@ -592,7 +571,6 @@ export const staticSitemapSections: SitemapSection[] = [
         pageType: 'converter',
         topics: ['flea-tick', 'travel', 'road-trips'],
         pinnedRelated: [
-          ROUTES.fleaTickMedications,
           ROUTES.naturalFleaTickProducts,
           ROUTES.fleaTickPillar,
           ROUTES.naturalFleaTickPrevention,

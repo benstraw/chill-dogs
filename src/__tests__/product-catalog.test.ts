@@ -112,9 +112,9 @@ describe('admin product catalog data', () => {
         expect.objectContaining({ href: '/gear/dog-snake-bite-emergency-kit/' }),
       ])
     );
-    expect(pageMap['nexgard-10-24']).toEqual(
+    expect(pageMap['petarmor-plus-89-132']).toEqual(
       expect.arrayContaining([
-        expect.objectContaining({ href: '/safety/best-flea-and-tick-medications-for-dogs/' }),
+        expect.objectContaining({ href: '/safety/best-flea-and-tick-products-for-dogs/' }),
       ])
     );
     expect(pageMap['wondercide-spray-lemongrass-32oz']).toEqual(

@@ -129,10 +129,9 @@ describe('multi-merchant product offers', () => {
 
   it('wires flea-and-tick offers into the safety catalog with valid affiliate URLs', () => {
     const expectedOfferIds = [
-      'nexgard-10-24',
-      'bravecto-44-88',
-      'frontline-plus-45-88',
-      'seresto-large',
+      'petarmor-plus-89-132',
+      'vectra-3d-xl-95-plus',
+      'udyoude-flea-collar-large-2pack',
       'wondercide-spray-lemongrass-32oz',
       'natures-dome-peppermint-spray',
       'isabellas-clearly-natural-spray',

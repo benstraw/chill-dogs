@@ -327,7 +327,7 @@ site_system:
       type: "collector"
       collector_subtype: "article"
       target_action: "Capture broad flea/tick search intent, then route conventional-med buyers to the medications converter and natural-first readers to the specialist natural guide and related converters"
-      metric: "collector_to_converter_click to /safety/best-flea-and-tick-medications-for-dogs/, /safety/best-natural-flea-and-tick-products-for-dogs/, and /safety/dog-bath-tools-for-flea-season/"
+      metric: "collector_to_converter_click to /safety/best-flea-and-tick-products-for-dogs/, /safety/best-natural-flea-and-tick-products-for-dogs/, and /safety/dog-bath-tools-for-flea-season/"
       routes:
         - "/safety/flea-and-tick-prevention-for-dogs/"
       notes: >
@@ -346,18 +346,6 @@ site_system:
       notes: >
         Specialist natural sub-article in the flea/tick cluster. Keeps the Wondercide label-reading,
         cat-safety, bath-support, and escalation content, but no longer carries the full broad-intent role.
-
-    - name: "Best Flea and Tick Medications for Dogs"
-      type: "converter"
-      target_action: "Drive affiliate outbound clicks from high-intent conventional-medication shoppers"
-      metric: "amazon_outbound_click rate + collector_to_converter_click from /safety/flea-and-tick-prevention-for-dogs/"
-      routes:
-        - "/safety/best-flea-and-tick-medications-for-dogs/"
-      notes: >
-        Shared-config safety converter covering oral prescriptions, combo chews, OTC topicals,
-        and collar options. Includes prescription-upload callout, balanced isoxazoline warning,
-        permethrin cat-toxicity framing, and Seresto EPA-context note. Products are canonical in
-        src/data/flea-tick-products.ts and flow through product-catalog.ts and product-page-map.ts.
 
     - name: "Best Natural Flea and Tick Products for Dogs"
       type: "converter"
