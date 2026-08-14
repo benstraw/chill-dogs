@@ -372,6 +372,22 @@ site_system:
         chew, and grooming sections mix Amazon and Chewy offers. Frames natural products as prevention
         layers and light-load support, not heavy-infestation rescue tools.
 
+    - name: "Best Flea and Tick Products for Dogs"
+      type: "converter"
+      target_action: "Drive affiliate outbound clicks from shoppers who want flea/tick protection without a prescription, plus the detection and removal tools that go with it"
+      metric: "amazon_outbound_click rate + collector_to_converter_click from /safety/flea-and-tick-prevention-for-dogs/"
+      routes:
+        - "/safety/best-flea-and-tick-products-for-dogs/"
+      notes: >
+        Shared-config safety converter for the no-prescription lane: OTC spot-on topicals and
+        long-wear flea collars, followed by the combs, grooming sets, and tick-removal tools for
+        whatever gets through. Deliberately scoped away from the medications converter, which keeps
+        Rx orals, combo chews, and the brand-name OTC/Seresto lineup. The 12 grooming and tick-tool
+        records plus the Tick Key are shared verbatim with the natural converter rather than moved —
+        product-page-map.ts resolves all four flea/tick converters off their page configs so a
+        record can appear on several pages without a category filter mislabeling it. Vectra 3D is
+        permethrin-based and carries the same cat-toxicity caution as K9 Advantix II.
+
     - name: "Dog Bath Tools"
       type: "converter"
       target_action: "Drive affiliate outbound clicks on bath-support tools that help owners execute bath and flea-season cleanup routines"

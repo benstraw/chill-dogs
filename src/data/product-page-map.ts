@@ -130,45 +130,40 @@ export function buildProductPageMap(): ProductPageMap {
     addRef(map, p.id, snakeBiteKitRef);
   }
 
-  const fleaTickMedicationRef: PageRef = {
-    label: 'Best Flea and Tick Medications for Dogs',
-    href: ROUTES.fleaTickMedications,
+  // Every flea/tick converter reads its lineup off its own page config. Category
+  // filters cannot express these pages: records are deliberately shared across them
+  // (the grooming and tick tools appear on three), so a filter would either miss a
+  // page or claim a product appears somewhere it does not.
+  const fleaTickPageRefs: Record<string, PageRef> = {
+    'best-flea-and-tick-medications-for-dogs': {
+      label: 'Best Flea and Tick Medications for Dogs',
+      href: ROUTES.fleaTickMedications,
+    },
+    'best-natural-flea-and-tick-products-for-dogs': {
+      label: 'Best Natural Flea and Tick Products for Dogs',
+      href: ROUTES.naturalFleaTickProducts,
+    },
+    'best-flea-and-tick-products-for-dogs': {
+      label: 'Best Flea and Tick Products for Dogs',
+      href: ROUTES.fleaTickProducts,
+    },
+    'dog-bath-tools-for-flea-season': {
+      label: 'Dog Bath Tools',
+      href: ROUTES.fleaSeasonBathTools,
+    },
   };
-  for (const p of fleaTickProducts.filter((product) =>
-    ['rx-oral-monthly', 'rx-oral-quarterly', 'rx-oral-combo', 'otc-topical', 'otc-collar'].includes(product.category)
-  )) {
-    addRef(map, p.id, fleaTickMedicationRef);
-  }
 
-  const fleaTickNaturalRef: PageRef = {
-    label: 'Best Natural Flea and Tick Products for Dogs',
-    href: ROUTES.naturalFleaTickProducts,
-  };
-  for (const p of fleaTickProducts.filter((product) =>
-    [
-      'natural-spray',
-      'natural-spot-on',
-      'natural-shampoo',
-      'natural-collar',
-      'natural-tag',
-      'natural-chew',
-      'grooming-tool',
-      'tick-remover',
-    ].includes(product.category)
-  )) {
-    addRef(map, p.id, fleaTickNaturalRef);
-  }
+  for (const [slug, config] of Object.entries(fleaTickConverterPages)) {
+    const ref = fleaTickPageRefs[slug];
+    if (!ref) {
+      throw new Error(`Missing product-page-map entry for flea/tick converter: ${slug}`);
+    }
 
-  // The bath-tools converter mixes categories (bath tools plus a shared grooming kit),
-  // so read its lineup off the page config rather than filtering by category.
-  const fleaBathRef: PageRef = {
-    label: 'Dog Bath Tools',
-    href: ROUTES.fleaSeasonBathTools,
-  };
-  for (const block of fleaTickConverterPages['dog-bath-tools-for-flea-season'].blocks) {
-    if (block.kind === 'product_section') {
-      for (const id of block.productIds) {
-        addRef(map, id, fleaBathRef);
+    for (const block of config.blocks) {
+      if (block.kind === 'product_section') {
+        for (const id of block.productIds) {
+          addRef(map, id, ref);
+        }
       }
     }
   }

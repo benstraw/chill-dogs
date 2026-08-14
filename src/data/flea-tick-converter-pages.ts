@@ -442,6 +442,152 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       ],
     },
   },
+  'best-flea-and-tick-products-for-dogs': {
+    slug: 'best-flea-and-tick-products-for-dogs',
+    title: 'Best Flea and Tick Products for Dogs',
+    description:
+      'Compare no-prescription flea and tick products for dogs — spot-on topicals and long-wear collars — plus the combs and tick tools for whatever gets through.',
+    ogTitle: 'Best Flea and Tick Products for Dogs (2026)',
+    pageSlug: 'best-flea-and-tick-products-for-dogs',
+    currentHref: ROUTES.fleaTickProducts,
+    hero: {
+      title: 'Best Flea and Tick Products for Dogs',
+      subtitle:
+        'Everything here is available without a prescription. Spot-on topicals and long-wear collars do the preventing, and combs and tick tools handle the part prevention never fully covers — finding and removing what still makes it onto your dog.',
+      disclaimer: 'As an Amazon Associate and a Chewy Affiliate, we earn from qualifying purchases.',
+      primaryCta: { label: 'See Spot-On Topicals', href: '#otc-topicals' },
+      secondaryCta: { label: 'Read the Full Flea & Tick Guide', href: ROUTES.fleaTickPillar },
+    },
+    toc: [
+      { label: 'How To Choose', anchor: 'how-to-choose' },
+      { label: 'Spot-On Topicals', anchor: 'otc-topicals' },
+      { label: 'Collars', anchor: 'otc-collars' },
+      { label: 'Combs & Tick Tools', anchor: 'grooming-tools' },
+      { label: 'Safety Notes', anchor: 'safety-notes' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    blocks: [
+      {
+        kind: 'prose',
+        id: 'how-to-choose',
+        heading: 'How to choose without a prescription',
+        paragraphs: [
+          'The no-prescription decision comes down to how you want to apply protection. A spot-on topical is a monthly job you can forget, but it is application-sensitive: it has to go on skin rather than fur, and the dog has to stay dry while it sets. A collar removes the monthly reminder entirely and runs for months, at the cost of something being fastened around the dog the whole time.',
+          'Whichever you pick, the second half of this page matters just as much. No product on the market is a perfect barrier, and ticks in particular are found rather than prevented. A comb and a tick tool are what turn "my dog has protection" into "I would notice if something got through."',
+          `If you want prescription orals, combo chews, or the brand-name lineup including Seresto, those live on <a href="${ROUTES.fleaTickMedications}">the medications comparison</a>. If you would rather start with plant-based options, see <a href="${ROUTES.naturalFleaTickProducts}">the natural products page</a>.`,
+        ],
+      },
+      {
+        kind: 'product_section',
+        id: 'otc-topicals',
+        heading: 'Topical spot-on treatments',
+        intro:
+          'Monthly liquid doses applied directly to the skin between the shoulder blades. Compare them on weight band first — a dose sized for the wrong band is the most common reason a topical underperforms — then on whether you need repellency or just kill.',
+        positionOffset: 0,
+        columns: 3,
+        productIds: ['petarmor-plus-89-132', 'vectra-3d-xl-95-plus', 'trioak-topical-medium-23-44'],
+      },
+      {
+        kind: 'product_section',
+        id: 'otc-collars',
+        heading: 'Flea and tick collars',
+        intro:
+          'Collars trade the monthly application for months of continuous wear. They are the most realistic option if a monthly reminder is the thing that keeps failing, and the count you buy should match your household rather than the headline price.',
+        positionOffset: 3,
+        columns: 3,
+        productIds: ['udyoude-flea-collar-large-2pack', 'cabins-flea-collar-4pack', 'zafelous-flea-collar-2pack'],
+        alt: true,
+      },
+      {
+        kind: 'product_section',
+        id: 'grooming-tools',
+        heading: 'Combs, grooming sets, and tick-removal tools',
+        intro:
+          'Prevention reduces what reaches your dog; it does not make coat checks optional. A flea comb catches an early problem while it is still small, and a proper tick tool removes the whole tick instead of leaving mouthparts embedded. These are the same tools we recommend on the natural page — the job does not change based on what prevention you chose.',
+        positionOffset: 6,
+        columns: 3,
+        productIds: [
+          'green-pet-double-sided-flea-comb',
+          'ikkab-flea-comb-set',
+          'vomroju-flea-lice-comb-set',
+          'tweezerman-precision-flea-comb',
+          'wahl-flea-finishing-comb',
+          'anrundar-grooming-kit',
+          'homesake-tick-remover-kit',
+          'ahhomatata-tick-twister-set',
+          'tweezerman-tick-removal-kit',
+          'tweezerman-tick-tweezer',
+          'tickcheck-premium-tick-kit',
+          'tickcheck-remover-spoon',
+          'tick-key-original-7pack',
+        ],
+      },
+      {
+        kind: 'callout',
+        id: 'safety-notes',
+        heading: 'Safety notes that matter before you buy',
+        tone: 'warning',
+        paragraphs: [
+          'Permethrin is the one to check for. Vectra 3D contains it, and permethrin is genuinely toxic to cats. If cats groom the treated dog or sleep pressed against it, choose a different product unless your vet says otherwise.',
+          'Apply topicals to skin, not fur, and keep the dog dry for the window the label specifies. Most complaints that a spot-on "did nothing" trace back to application rather than the product.',
+          'Collars need the same attention as any other pesticide product. Check the skin under the collar for the first week, and take it off if you see redness or hair loss.',
+          'If you are still finding live fleas after a full cycle on any of these, that is the signal to talk to your vet rather than to stack another OTC product on top.',
+        ],
+      },
+    ],
+    faq: {
+      heading: 'Flea and Tick Product FAQ',
+      items: [
+        {
+          question: 'Are over-the-counter flea and tick products as good as prescription ones?',
+          answer:
+            'For many dogs they are enough, particularly with lighter exposure. Prescription orals generally have stronger and faster tick coverage and skip the application problem entirely. The honest trade-off is that OTC products ask more of you — correct weight band, correct application, and a dry dog afterward.',
+        },
+        {
+          question: 'Should I use a topical or a collar?',
+          answer:
+            'Pick based on which one you will actually keep up. A topical is a monthly task that is easy to forget or apply badly; a collar runs for months but stays on the dog continuously. Do not use both at once without asking your vet — that is stacking pesticides, not doubling protection.',
+        },
+        {
+          question: 'Do I still need a flea comb if my dog is on prevention?',
+          answer:
+            'Yes. Prevention lowers the odds but does not make your dog untouchable, and ticks especially need to be found rather than repelled. A weekly comb pass after walks in grass or brush is what catches a problem while it is still one or two pests.',
+        },
+        {
+          question: 'Can I use these products if I have cats?',
+          answer:
+            'Read the label for permethrin, which is toxic to cats and appears in Vectra 3D on this page. Even products without it deserve a check if your cat grooms the dog. When in doubt, ask your vet for a plan that covers both animals.',
+        },
+      ],
+    },
+    internalLinkStripHeading: 'More Flea, Tick, and Outdoor Safety Guides',
+    internalLinkStripLimit: 6,
+    itemListSchema: {
+      name: 'Best Flea and Tick Products for Dogs',
+      url: `https://www.chill-dogs.com${ROUTES.fleaTickProducts}`,
+      productIds: [
+        'petarmor-plus-89-132',
+        'vectra-3d-xl-95-plus',
+        'trioak-topical-medium-23-44',
+        'udyoude-flea-collar-large-2pack',
+        'cabins-flea-collar-4pack',
+        'zafelous-flea-collar-2pack',
+        'green-pet-double-sided-flea-comb',
+        'ikkab-flea-comb-set',
+        'vomroju-flea-lice-comb-set',
+        'tweezerman-precision-flea-comb',
+        'wahl-flea-finishing-comb',
+        'anrundar-grooming-kit',
+        'homesake-tick-remover-kit',
+        'ahhomatata-tick-twister-set',
+        'tweezerman-tick-removal-kit',
+        'tweezerman-tick-tweezer',
+        'tickcheck-premium-tick-kit',
+        'tickcheck-remover-spoon',
+        'tick-key-original-7pack',
+      ],
+    },
+  },
   'dog-bath-tools-for-flea-season': {
     slug: 'dog-bath-tools-for-flea-season',
     title: 'Dog Bath Tools',
