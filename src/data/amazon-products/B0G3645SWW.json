@@ -1,0 +1,652 @@
+{
+  "search_metadata": {
+    "id": "6a7ed5cafbbebbedf33f9b85",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/_Y5H2VhgcKbAGLy_mv8q-A/6a7ed5cafbbebbedf33f9b85.json",
+    "created_at": "2026-08-14 08:46:02 UTC",
+    "processed_at": "2026-08-14 08:46:02 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0G3645SWW/?",
+    "raw_html_file": "https://serpapi.com/searches/_Y5H2VhgcKbAGLy_mv8q-A/6a7ed5cafbbebbedf33f9b85.html",
+    "total_time_taken": 9.86
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0G3645SWW",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "categories": [
+      {
+        "position": 1,
+        "name": "Pet Supplies",
+        "link": "https://www.amazon.com/pet-shops-dogs-cats-hamsters-kittens/b/ref=dp_bc_1?ie=UTF8&node=2619533011",
+        "node": "2619533011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2619533011"
+      },
+      {
+        "position": 2,
+        "name": "Dogs",
+        "link": "https://www.amazon.com/dogs-supplies-training-beds-collars-grooming/b/ref=dp_bc_2?ie=UTF8&node=2975312011",
+        "node": "2975312011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975312011"
+      },
+      {
+        "position": 3,
+        "name": "Grooming",
+        "link": "https://www.amazon.com/dogs-grooming-supplies-clippers-shedding/b/ref=dp_bc_3?ie=UTF8&node=2975362011",
+        "node": "2975362011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975362011"
+      },
+      {
+        "position": 4,
+        "name": "Shampoos & Conditioners",
+        "link": "https://www.amazon.com/dog-shampoos-conditioners/b/ref=dp_bc_4?ie=UTF8&node=2975371011",
+        "node": "2975371011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975371011"
+      },
+      {
+        "position": 5,
+        "name": "Shampoos",
+        "link": "https://www.amazon.com/dog-shampoos/b/ref=dp_bc_5?ie=UTF8&node=2975374011",
+        "node": "2975374011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975374011"
+      }
+    ],
+    "asin": "B0G3645SWW",
+    "title": "Organic Dog Shampoo for Sensitive Skin - Natural Lavender Oil Pet Wash for Itch Relief, Flea & Tick Defense - Calming & Hypoallergenic Puppy Grooming Supplies - Deodorizing Moisturizing (Lavender)",
+    "link": "https://www.amazon.com/Organic-Shampoo-Sensitive-Skin-Hypoallergenic/dp/B0G3645SWW/",
+    "link_clean": "https://www.amazon.com/dp/B0G3645SWW/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G3645SWW&device=desktop&engine=amazon_product",
+    "variants": [
+      {
+        "title": "Scent",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0G3645SWW",
+            "name": "Lavender",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G3645SWW&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0G36BKQPW",
+            "name": "Lemongrass",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G36BKQPW&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Brand: Lavender",
+    "thumbnail": "https://m.media-amazon.com/images/I/71PA6IbnCRL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/71PA6IbnCRL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81aWt0AWi9L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81k4TlMNKsL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/810oJbf24NL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81--uqIs8ZL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81dHJgPOaEL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81+e1NW1SKL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/910QEW4cWkL._AC_SL1500_.jpg"
+    ],
+    "rating": 5,
+    "reviews": 14,
+    "bought_last_month": "100+ bought in past month",
+    "discount": "-10%",
+    "price": "$17.99",
+    "extracted_price": 17.99,
+    "price_unit": "$1.33 / fluid ounce",
+    "extracted_price_unit": 1.33,
+    "old_price": "$19.99",
+    "extracted_old_price": 19.99,
+    "delivery": [
+      "FREE delivery Wednesday, August 19 on orders shipped by Amazon over $35"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "buy_new": {
+      "caption": "Regular Price",
+      "price": "$19.99",
+      "extracted_price": 19.99,
+      "price_unit": "$1.48 / fluid ounce",
+      "extracted_price_unit": 1.48,
+      "delivery": [
+        "FREE delivery Wednesday, August 19 on orders shipped by Amazon over $35"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "Bamboli USA",
+          "details": {
+            "heading": "Sold by",
+            "content": "Bamboli USA"
+          },
+          "link": {
+            "text": "Bamboli USA",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A1ARBYH0DKYU8L&asin=B0G3645SWW&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    },
+    "subscribe_and_save": {
+      "caption": "Subscribe & Save",
+      "price": "$19.99",
+      "extracted_price": 19.99,
+      "price_unit": "$1.48 / fluid ounce",
+      "extracted_price_unit": 1.48,
+      "delivery": [
+        "FREE delivery Wednesday, August 19 on orders shipped by Amazon over $35"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "Bamboli USA",
+          "details": {
+            "heading": "Sold by",
+            "content": "Bamboli USA"
+          },
+          "link": {
+            "text": "Bamboli USA",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A1ARBYH0DKYU8L&asin=B0G3645SWW&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "subscription": "No fees. Skip or cancel anytime."
+      }
+    }
+  },
+  "item_specifications": {
+    "brand": "Lavender",
+    "scent": "Lavender",
+    "product_benefits": "Calming Aromatherapy for Anxiety, Deep Moisturizing & Conditioning, Promotes Wound Healing, Soothes Itchy & Dry Skin",
+    "recommended_uses_for_product": "Cleaning",
+    "material_type_free": "Silicones"
+  },
+  "about_item": [
+    "IMMEDIATE ITCH RELIEF & CALMING AROMATHERAPY Specially formulated for dogs with dry, itchy, or sensitive skin. Infused with high-grade Organic Lavender Essential Oil, this soothing wash hydrates the skin to relieve scratching urges caused by dryness. The natural aromatic scent turns stressful bath times into a relaxing spa experience, significantly reducing tension for nervous pets during grooming.",
+    "PERFECT COMPANION FOR OUTDOOR DOGS Enjoy peace of mind during your walks. While we do not use harsh chemicals, our potent lavender formula provides a deep clean that removes mud, grass stains, and outdoor grime effortlessly. It leaves an invisible, fragrant layer on your pet's coat, ensuring they return from their adventures in the park or woods smelling fresh and looking pristine.",
+    "EXCLUSIVE \"FARM TO BOTTLE\" PURITY We are not just sellers; we are the \"Farmers.\" Sourced directly from our own 1,000,000 lavender seedlings grown in the pristine Sea-Forest-Village triangle. We cultivate with eco-friendly methods and distill the oils ourselves. No middlemen, just 100% traceable, hand-harvested purity from our soil to your home.",
+    "HYPOALLERGENIC & PH BALANCED FORMULA Your dog’s skin is 3x thinner than human skin and requires special care. Dr. Lavender is pH-balanced specifically for canines to preserve natural skin oils. Free from parabens, sulfates, synthetic dyes, and harsh soaps, making it the safest choice for puppies, senior dogs, and breeds prone to seasonal skin sensitivities.",
+    "DEEP MOISTURIZING & COAT RESTORATION Prevents dry flakes and dullness by deeply hydrating the skin. Our nutrient-rich formula nourishes dry, brittle fur from root to tip, leaving the coat feeling silky soft, detangled, and easy to brush. Perfect for restoring the natural shine of dull coats without leaving any greasy residue.",
+    "LONG-LASTING ODOR CONTROL & FRESHNESS Unlike other shampoos that simply mask odors with artificial perfumes, our natural ingredients neutralize \"wet dog smell\" at the source. It leaves a gentle, long-lasting floral scent that keeps your furry friend smelling fresh for days, as if they just rolled in a lavender field.",
+    "CRUELTY-FREE & SATISFACTION PROMISE We love animals as much as you do. Our products are never tested on animals and are packaged in eco-friendly materials. We are confident in our premium quality; if you or your pet are not completely satisfied with the soothing results."
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": "Dr. Lavender Organic Dog Shampoo for Itchy Skin",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/942117ea-05e9-44f9-8c2e-501d99881876.__CR0,0,970,600_PT0_SX970_V1___.png"
+    },
+    {
+      "position": 2,
+      "title": "Natural Lavender Oil Pet Wash Calming Dog Bath Supplies",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/86197a76-896e-4dc9-afa8-71e3c845f3e0.__CR0,0,970,600_PT0_SX970_V1___.png"
+    },
+    {
+      "position": 3,
+      "title": "Hypoallergenic Puppy Shampoo for Sensitive Skin Ingredients",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/f01c1a92-4f82-444c-b95f-f759a1693d72.__CR0,0,970,600_PT0_SX970_V1___.png"
+    },
+    {
+      "position": 4,
+      "title": "Before and After Dog Coat Grooming Shiny Fur",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/eee28e13-dfa8-4c02-bdab-1bb5709ddb77.__CR0,0,970,600_PT0_SX970_V1___.png"
+    },
+    {
+      "position": 5,
+      "title": "Organic Farm Lavender Field Dog Shampoo Production Process",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/14e92c06-7566-43fc-aac9-83fca5f92bec.__CR0,0,970,600_PT0_SX970_V1___.png"
+    }
+  ],
+  "product_details": {
+    "product_dimensions": "2.44 x 2.44 x 6.69 inches; 1.04 pounds",
+    "item_model_number": "DR1402",
+    "date_first_available": "November 21, 2025",
+    "manufacturer": "DR.LAVENDER",
+    "asin": "B0G3645SWW",
+    "best_sellers_rank": [
+      {
+        "text": "#33,448 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 33448,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#326 in Dog Shampoos",
+        "extracted_rank": 326,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/2975374011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Shampoos"
+      }
+    ],
+    "customer_reviews": "5.0 out of 5 stars",
+    "rating": 5,
+    "reviews": 14,
+    "brand_name": "Lavender",
+    "unit_count": "13.5 Fluid Ounces",
+    "included_components": "1 x 400ml Dog Shampoo Bottle",
+    "model_number": "DR1402",
+    "warranty_description": "x",
+    "manufacturer_part_number": "DR1402",
+    "scent_name": "Lavender",
+    "product_benefits": "Calming Aromatherapy for Anxiety, Deep Moisturizing & Conditioning, Promotes Wound Healing, Soothes Itchy & Dry Skin",
+    "item_form": "Liquid",
+    "target_species": "Dog",
+    "pet_type": "Dog",
+    "recommended_uses_for_product": "Cleaning",
+    "material_type_free": "Silicones",
+    "special_ingredients": "Organic Lavender",
+    "liquid_volume": "5.4 fluid ounces"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0GY5L6VYK",
+      "title": "Natural Dog Company Oatmeal Shampoo & Sensitive Skin Conditioner Bundle for Dogs – Anti-Itch, Hypoallergenic Oatmeal Formula with Manuka Honey & Chamomile, Moisturizing, Deodorizing & Detangling Groom",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JK8_LmWYwckr1UIjKRX7M-cAAAGf_3M5iwEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICB47mZh/clv1c_ek-wBfHXUsbWHn2mJrbO8xPASX0CAxh7zswvqrcL19pZcwvJ2bbq1Y1cnmuEVt6brmPVUml4TTLr8LjAUIoJky9SO9q8XFLXn1EUq3vM8ppzk3JPGnk2nbb9zvU0Z_Q3yot0PgaLUcZUp0_mXW-7V1rRtP2clUn6Ei0431arSYgrQVu8ffnJAhQOI4fblo4QbhWBscB7P8VK019_vVlm36ExH10VrsRz2bqDbVIh67A1w_DSpsRuCQMp6dqWxvtNGIwDseYg8QB5pe6RcpEJUDLPICBVED_xLQQ0oItm5W5grAnSQlomkTj-e-0FCo9f75EAyxiCViOqKJv-8ffKSUu3drK5fVL2c5e4KWyuQCNN7mPX8rcLo59ypTfN9wfcUUQzTWDhTzAuoG32w9tbsaJHpV-eE2yGSs4yqo9DTJ88x9IitV22xC7Q5mARpjvIKIzervQgDTaZf9V2gLHVQA5EPa1Aht-mClvjDTBfIObmiIH_OQMwR8hIRMMEv8-X4TcqSAlyaL4ke_ZlPurrvb1lYg2-8u-JNDsF94mOicLfoXH0i-FR_0NWMkUoHAdboVJKdWnOwgbR_s3nAq_iQyTL5j2oRQWPYQT77n19L8TUlfmoe8eiU53ZqPxWXl6x8-TjBWO7EGhCz4rbpRBIlbAb5kEqf6zWdlyVNGLbj8Ss0Dzv3XjUm8NCsbt1GFmOiv-xJUhfFUMP2Y8H_h091iqBlIujPTmBheILk7EIehDvcPI0Nmmmrmx7Nm-yNBvbLmeOewv7wui2s8SHctQJC6hcEEee_H9eQp66P4zrB21jJfodmJr3TrShSU6CF2IdCtuXeXvgPmzLh7pXHr5AhkwRTC7rRf2aDF-k_Wn0j7TB0H4xz6Qv_Q3Rvx-x1xyMKDh__l1vOW8fPTBMETb-NhzUbRFpXa_JvTtx6hrPpBhq4OfR7OuEDwiiaX7_VyuePxdNKY-qswLbamSKEWAR7HXNdhQvYNgSXKlmdkZ9cBZP1Pntl1RQm2MBO1SZhpMt2fWbqp2V2GVHxF7JjXjVmL30rwDvqzCyVQnnRMOngQ1Fe1k71TbD0xPVFgHSckQFGBfja5dWNRgAH56-iHmBpZJHTgYHlJ73fDsw0H6k0AX0UgYDQhS_V8RnSWDnm_h4xifGzS3zPoFbfO_JXIOl--CiyX_bdQbx2FNeRABrSIOHdwt0hCbu8XmsZx4lUvllOxp3efXBjspuStqEnI2UajVnhn2gP9wZUmermFqo9kkCxbesr3vmG2oTU-uZ1yoKjUWudZTYzTvvajeyfDgo9RaenISmDcfHFV1vvS0X1t2lty84Y4WHYAnbZrh94Od6KUN7Y4q5dg4eV1T8cMTZPMCD3Sw6juBeGU-f02XQXeou-FKDFcssQ-F68jVzlCNTI8muGfA6IOtkVyhCz0re_yCSLsBtvFUGMkUD1oDPBrcCD7QusVgbXoutAMzLIsFiJ3Xp-2KH7YZAVtjZDSVfaa9WArQj0VaXTzz-V5tj_CUCW_kohZ259k2tTCWKNmgleOqT44M-DX51_vUKle8pfm-iBDiAt-w/https://www.amazon.com/dp/B0GY5L6VYK/?_encoding=UTF8&pd_rd_i=B0GY5L6VYK&pd_rd_i=B0GY5L6VYK&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=enRlB&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=7T7050HSYW1YTFEJ77QD&pd_rd_wg=22Ti6&pd_rd_r=95b2c055-41a4-45e2-8657-e3111ba13794",
+      "link_clean": "https://www.amazon.com/dp/B0GY5L6VYK/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GY5L6VYK&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41mgR20rybL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/f44959f1-20c8-4725-8bf0-56c1baf76e93.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/f44959f1-20c8-4725-8bf0-56c1baf76e93.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 3.7,
+      "reviews": 3,
+      "price": "$27.12",
+      "extracted_price": 27.12,
+      "old_price": "$30.98",
+      "extracted_old_price": 30.98
+    },
+    {
+      "position": 2,
+      "asin": "B0FFL5J5KD",
+      "title": "Wondercide - Flea & Tick Shampoo for Dogs and Cats - Cedarwood - 12 Fl oz | Flea and Tick Treatment with Natural Essential Oils - for Pets Over 4 Months - Powered by Plants",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JFbo5Nj-91s7SDk9kAdcMhcAAAGf_3M5jAEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICDr0wZp/clv1c_ek-YBXf2asTWRuwy9wNOjGTeGWly_GpsPcLPBqPkjOh1Gr6HYmvAwJvJlUt5SPh8TxvV2sJpCVj8EZlW6bfpX6k0nsziabhz3EoHUvVZqfD0k3BvPmmn0m8jjNHEJnIu0VRH1cRxRtgLOggWJaMzjnv_N72clXE6Ese2SDG7wvb3megeBSZqJ5Ars5GAnhKb7anDiw51CGaJUef-2UHd2rIdOU5bVB7nnfak6qqSR12eRKtoJ6O95nA2_9mmvG9mym_Vcs3k-xZeItHl3pBBlSGpA6WTYJQIOb3edmF7U35NK78czXktT28iorOj706p0PilEp3DWzabMfoCyAxMTXA961VvFT7ZSQMhixk0F-GAZ3_TLYoUtzxbemm94_UFYizpP48P-FkAOSldLeG6v1oqV_6tSJCSwozt1JyKwgMeR-iFPXHkxx0YyN0WhaQ8UBs9zwX8PIXICzUBmUPevJW7hqY2NsUtk2GeknLGKXR6Dem59mJ4wVB8PUUID07R0XKTBG5-2gmmTMIAdmTlu9S-eSZYdmKMf-aaycqsgz0bBfKsUZJ0qW8XdEX-CFRujx2K6TrYBeIv0CIfVoamXox0QVB4OTf_N0208lveWpRzU7x_miFEiHGDRQcCq43L5mawr8PofAOYlqmmV9rmsmRSS6cMOvK-lZhohMmZSPYwzX7mIxwmYy_Dw1fqKq6I8VioNFV8awAxyFp5CBlLLranXbSrL4W7IXewvR9NLuBv3jeweP-i3dxYmfTjXX6hQ4gGmGUNS-Ew55jKsHIsag82S1OGRuv1E45QkxL4dIgyJ8GlBJdTN-oQWi2NuX_BdXDEMErJTCULSNVMdOy_YHbsIPWP05LgKpzsZRCA4m_ynGjW6_YbtfwG1z2SIQNYx_2hF17dU75QZrIDBTQWUDxSLgAmh51fs0lpkZYMhRzC926NlpkZq6_OAavsKYQs8iyEx8jADy8s7Al3Artp79Bh9rFW5Dhqe0b1YGYkPJq76VYAa1WPA8H5gxCGZMFWzbIjFI6nEDpbgQXmFO-UfImBwCH-WRNnukTZ2tWDo6C7uM1VDOaXG94dPiXSnxYeZYhUU0YB-4_-NPj5QTDTHxrcgKxGzyefcRFqrwvmylfedS95JLzOcq7W8n1w6nvx2-zO0rN_HcL1gwg6m9dS64KTqUj6d7x0Yiq07jodVpk3SZqbbTbucA62vTe2fRP0F4o8QFP2VpWi5pGFRf8lmlx_FMQrkrk3B5QaOCoII2YkBLp9q_qLDN2viiF1YYkwiy7MRwyN0nPLI0uzxmPd0mW1x7KtXcW9hn94Zw1QxJBnPoysg06aITk_9CEoyMQYq_cPf0VA8HcuQyE7jQq2OGx53SvCYk0dOZwsDQy7ge7YQM9cxmBqcGCkCDpE6Ss6zWCcbImvlqgbEjujqfpDKbIgivf4vsmi5VPeZpoAJi7G7vpRqAo1Jh0Q6yz520ahwwcQpIs0d7HoqOa2cu46RKSQcM1BnrW5CQkw2UyFN6cXv6uDz7j7csLLL5dfxYS3mu5uzLBmlFUCtxyUuWGKVQDiUztZGxz76PRqFAk/https://www.amazon.com/dp/B0FFL5J5KD/?_encoding=UTF8&pd_rd_i=B0FFL5J5KD&pd_rd_i=B0FFL5J5KD&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=enRlB&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=7T7050HSYW1YTFEJ77QD&pd_rd_wg=22Ti6&pd_rd_r=95b2c055-41a4-45e2-8657-e3111ba13794",
+      "link_clean": "https://www.amazon.com/dp/B0FFL5J5KD/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FFL5J5KD&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/31gXbAnvprL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/a448423c-c316-43ce-9748-039c4cf6c0eb.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/a448423c-c316-43ce-9748-039c4cf6c0eb.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.4,
+      "reviews": 2483,
+      "price": "$19.99",
+      "extracted_price": 19.99
+    },
+    {
+      "position": 3,
+      "asin": "B0FY981RB2",
+      "title": "Nonaste Oatmeal & Aloe Dog Shampoo, Itchy Skin & Deodorizing, 16 oz, Pk 1 | USDA-Certified Organic Aloe & Oatmeal Soothe Itchy, Dry & Sensitive Skin. Deodorizing, Gentle Dog Wash. Light Fresh Scent.",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JKg6cTgraoBsgccs69wksroAAAGf_3M5jQEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICBRfM54/clv1c_ek-wxYHXKsTWDdVIKi5gyw8I6ZITF_AcLnOCI7j4lqqqe7pwqbG_OqtKcaUGO-EAirc8byGL4-SCW1A7AamqrAY3Xkjwf2qmeGt-EuAz3Am8uhnD7Jiw-qxM-YFsJvM62iItlKJo47meLA68qWyNlYWepcfMFlbjuuS8ByfKzQUVdTMtv4MPLk-QMihfQgfrdN2XVUczMwXE3VRdduZg8GvIinuDCFyEppAB8BENyjDQgz4IuK4MoFuGYWkBotI3hEmKl6HtPYRD6sCPIoaQ0BiDy-m3IYOYP5OGEug53h_RWVRTcCQeUKToCzjw9S2t1uMdQslKdcZw6hQ1_9rnQd5Hm4Im3OO5sOowOc9Xi8S5jxv7GkZa_SqaOjAZcGTjh4NiuOXciUEudFP7PBlh65cm6gdYm_Nne_MQn7PEyoWaFPmYolvZLo_CGzWEXLD_BjQ1yyUwZXxbOf5BaCWql9wbfsoXsuHB2JniVOJNJy-LIPYvMgLhUsdm3XtpfFFRG-9djFd0JwIH2LlQxVo1Y50_eUYW_G3Vi21_X5ZJ2cl8BcXmAQkpW5osf7bFt7M8JRU7WL2cdlD8SpNZkxlixNHvkpV6yPJRzvHhsWAXG6FhYZVEC43q0xq8GrQAmkrROcnkCaZVXjxmwtI_dfFVsPHp22HFNxs_np1_658CNYYkikJ3NSGzW7YkKlNEEDv57eEG5NYls9WecplrDzxI8FkuFjqECgmqHIa44JZ95yHWGdQZpOYrP-BKxxGpH1RXfupBhcv1Z1awIQIaLZDlaQ80V7NE79WvDo5QV5BX8MSZWvJS-lQNRBIWWoj05jgZ8CYVJXN3D0j0l6Cj36BeUoW6yxgWkdcRQh4BXsm1Vj6hHAGL0k83wJNhU4tnnIzBVIM9kytcKU6wt9seY6PdKhCNiITaHOgpyZTsGpgh3mXF5ZHQXmFFgzt5sihfCA5mUBniwWLBxhMd_rpKCs00VOoMbB-vRqsUwnFc3fwclVLjKGej5iA2DP1ofGkggJIDXIKss2RTC0dX6dgAVzAeTyq7dSuGIvBLOnvejvrQj1wORFhIAyKq8v-KPo_qigZvBJTP8wMrLrs-KfDYR09p-OsutSesTu4cv1NVN2KeuZY5rHPYNucw7BsE11RxFrO8huWZlZicVqmpmkapQJVXYXaZrNuEph2Iaql6Qh0BXtPTMLI4MiFkLpW-n1hYAi8kBOh4Dj496ETdgCjAJVSrjmisrRiNvtuJOvRomFyFTvsOnyS5xCStcKhJEPppHgCfkTfP6EUxDqqVeHP-kQrwJ1VyIwt38t6GIKHtI_5dZFYrrIXry8fVWZpOUZDmi7BfsY3f2mPLj9xjap1ZoQ3LcSd04XO9pp0RCuhr1S_vQC_Bt2uD8_PMQ_yjyxoeLIJw8_kGKejQQ0Z8ksx5epXFTSFGR2_9oIQAqYh0S0NlNrsKTaz6Bgyn0-u1JcFnyDVt8JmOkl3swicbq3-VmeK0aPzypW2ctYr3hkm69uwMeCbyQxNVHWqWF6ngchq8Z0r1WnbtXTr9yMQ-FSrq1K5BlaAw6utja3327L-QvwXjp6_mKoG1gpL7VXiw8mXpsx9ZKdA5WA/https://www.amazon.com/dp/B0FY981RB2/?_encoding=UTF8&pd_rd_i=B0FY981RB2&pd_rd_i=B0FY981RB2&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=enRlB&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=7T7050HSYW1YTFEJ77QD&pd_rd_wg=22Ti6&pd_rd_r=95b2c055-41a4-45e2-8657-e3111ba13794",
+      "link_clean": "https://www.amazon.com/dp/B0FY981RB2/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FY981RB2&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/31Ku5uOY46L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c641595b-685d-457d-a757-f5e13e3f9a6d.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c641595b-685d-457d-a757-f5e13e3f9a6d.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.4,
+      "reviews": 27,
+      "price": "$21.99",
+      "extracted_price": 21.99
+    },
+    {
+      "position": 4,
+      "asin": "B0G241P7R1",
+      "title": "Flea Spray for Home & Pets - Flea and Tick Prevention for Dogs - Plant Based Repellent with Natural Essential Oils for Dog Flea Treatment Protection - Lemongrass Scent - 16 Fl Oz",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JKx_ggV-cK8tlTB_2kMsrpQAAAGf_3M5jgEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICDNxLqo/clv1c_ek-YBYHXFcbWDn2nI7cAJ16WpAySueZcdNpG9IPQj4-JZP6O9FzV5kjO660gg6DEvUIbPXNhCoI08bjAoJ4ZoRevF9rbfwfuGy0tf6jY7_JwAyCtImmlUG8jzLFEpnEqzWxHHqVNnpi_5mIoZovBjGN1yo0clEmi0sWRjraqx55LOaqdF93iIGOcZZiO5NjZ8FIQ7kklyzfoFWb7DM7K9ibQi1Y1YFqilhB-cbM84yIag-Z1iUfWvBp750IDJ5-JPsCqe81i8hZeJlDhH7I5cyuCrVwO31kNO8wStIN7lW476aMUVYKDfdb3ntiNV98UcHFlBMvUyPB5xj5FfUJ_UjWYzrG2hLTsnk6XFQTjNXbDHK-sttKRwOdfU-3hBUsCAOuF2NEK7Q4EUr081oZf5ERjijZeUmFiQcrnsI-OBzeUhC-OsrtURwt_r_g3wYZ12tN-pUuSAuzmAjBZnZYo6w3mpfg8n0nXGje5QmWRc05NwncEgQhtUddm7b9uDV_Xm_ddPUe05KrIKZy_o8liq9ShM0CYg2z_d4WvjlJ-KcITfXOLOzZjOFGAHXFpQedNFtgb1SNiqGRZ3KYVKznGdsiR6LUXddwvk8RFjNVyQy6A_UttKp_ywgnQeKO3EPQjAQHSFQ9i2yg4UEKxFll03yXVQbX5WMyhLE9d_4tbpYI85EFX0WGzn9-5gVvPvAAP6-1rLcmTq800YrLrPzgI6FkiFSYkdp8bYUsgGFRhVjOi1FZ6MxHss-0egO81DAwfSEQUqpyFb8oJiEcZFzpAjVBpds1VMAilp-qGInfW6IkDvIckmnV_qYJstRBTkHVh84yVRqgbJk5pPxOPHfw7Ej22ELhWvu5OGGz4VEjr7LQ6ZbzLSWqaP1rmtStF67fMvXm297kNYUuSA155GK81XPmrxMQS3uIgDnOH1rT8-aivjfk7rbQuBscEe0IgHTeb9mL7ZcJ6fwXBVs7Jv-z0wJA5EizPfKjYV1JAR_VmoH27bCw5ZI9f0RgWxnwMoC2T1aWK7T5uV1ukYcuqFP_uwWg3Kpvi_CHwAjpiycdeLcAZfS7v5ChLokpAt3D6wquztWIR1GuF_QjUdzCVKJ6piWJEl8nX1Y3wv31B8b3VTGmI-UA_vsnuXliIcMchL4xwcJBrXjDZVVTetEq20laC92XY8lj0WFgzG58ZikAEUemQGhD0aGsHAYMWabvvaT6AT7nHr2kyn_AOh4uBAp9fVHGwv0Q2jKOseVEXQdVUlSs6UUouZ7cb8saDHDeQVuZTWr4sftfNbFz7R6Y2gE9QTY8jxPw15Ss2WQY4Gmeh4TNlAvC9A3r5dKGGO-ib4_-yP8_GRNSvfWw4RmvXkFM2ZnvX-BhCtDxpASEw-JhKz9h6Va1Fnf4zyvVUEELFaCZczWCcbImvl5Q7EjtDrWcYlUeXfjPXrpHC6ZA3iBP0uB5c0SmxkyPSUwnNEGRDHXgdFGbXr3jDZqroqBypx5cmj3HR7rX6ZiirEXr3EAdUa9w_nX32VezQS8r4FcfpBpS9eagjVLv4iNQAbiiUiMGtvmb5WPnSH7vu_WTvtGk/https://www.amazon.com/dp/B0G241P7R1/?_encoding=UTF8&pd_rd_i=B0G241P7R1&pd_rd_i=B0G241P7R1&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=enRlB&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=7T7050HSYW1YTFEJ77QD&pd_rd_wg=22Ti6&pd_rd_r=95b2c055-41a4-45e2-8657-e3111ba13794",
+      "link_clean": "https://www.amazon.com/dp/B0G241P7R1/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G241P7R1&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/31LwTYren7L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c1fb7cf6-5f91-4a3c-ba4e-2db866070558.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c1fb7cf6-5f91-4a3c-ba4e-2db866070558.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.2,
+      "reviews": 39,
+      "price": "$19.99",
+      "extracted_price": 19.99
+    },
+    {
+      "position": 5,
+      "asin": "B0FYM2ZXFF",
+      "title": "STUCK SOAP Dog Shampoo 500ml for Sensitive Skin – Jeju Camellia & Centella Asiatica, pH 5.5-6.5, Allergen-Minimized Cedar & Bergamot Scent, K-Beauty Vegan Formula (Silent Grove)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JDOpbKwIoWTO1yyK2lM26FcAAAGf_3M5jwEAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICCwuX4A/clv1c_ek-YBfHXLcTWXmxhtwlAiFwLMKlTuQp9ZSQZAWCk3UNswuhryqxOQKUuQeL-GesXodRoBZ8Lc-jA5gD3iFjpXxs130ziaIIgYC9sv5FLitkh6p3baCKBr8N2T-4QvjKx2BUhgV4Jqy94ig4cXg_tWUnihdqfjnVrlNjA6R-6rYeYV1clLmEqOuTLVWmStt6cUZxAAAapCGaIUeHwwUbV2vIdOU5blB_nnfak7KryB12aRKtqR-O19kS8z8499c52VMDioAYBOAOEWf-MZfmYTMZ3uLPsltLGi71VHpHWW1YOmEpbEKRb9gm8R6tkWpC5JWbFx9IKo0Quq7HhiL1g-cdhPG7ghgdtlgFALiOzIkYdWgyicISfahTEBn2iyUze1EGK_aA8F4RllL3W5zcOBkFWp--cBhv-NqqGV0D0g1t8hsJ07-JFSorUsqqUWNF_ifqNgFalbSk2fKoxV2U0wGyPfTIVXorgr2kVZIKi78bW5cRGAXF9MRZg5QyP67HacEaG4G3JJq0R4Do3spvip-V2_-CidRP_JGxRiOJbLBwEPTSH8jmbyVroA3EB3-Y8tgUtbuLrW48Kk4ddFfpTtKwV2Qhk13B5i_Eouhuk4CVG4lxFIrl2szFXwpy9ooyw3vrSHWWOba3iF2OvdsAN1DlKm_9Bdc5iBZCaQiPpK8LaQMnjV7Hse9vzyATW0Jvao3LBlr4G29xxqcpjesuQcnwtWr8bX9Mvdp18FsxLxx_-voHoS4QTzOsME6-ydErDb6ebJA2zk4WXPwPpKRgCcG7c-KFPiNsbkSg5oVYimKdoQJsjjH-deiuMZwd33pNChnsspDa64OxkOwNv696OLsgQFiic2-Ig78T8b4sGR7ScskgETtKcarnB8O9MYVr0a8BqucitFQRyqEsrcuRVoHzanplh12IUfPxi71-qBedxMOON_q80RQhQFHH9VB71Z7zPDQfaeiLZZWCfDKGTkF1SYkIHIp-CqghSAXc8xn5VmOVlM7T6lKhGgkZtB_0MLaTqGwf4PioJdJNQFAY4NUmTVpyRaCWCVpLhI96CIHoc_RJGksjEUmfeWO1XqoU4YKXO38yT_fqnsJ-XHkiMJxPhkjR9QbPKxDgoAuYK06vm_rZie5a76gxkk1M5STL17FwBJNo7_EiSmDo4PPlqusCOqEzWEbjunUVh2rNXcDQwSUjZqmgH6ctJn5LumgB-yM3n8BBcvj7yrmkwRcKO2wflvVSFBWqx1n5TZa6hi7-NSUimKr8fP-lfCzeCerpTIdqUQI4YuaqiQ4EwvBcmQedn8aQo4o4bArDMTWIEiEvAH0F8Y6OYWq7tMyhiuCtv_EmVecyokiPIx95PwknvYGusnodSZJMahKAvBt-D1e0hihl4JQgXbu30nUgK4D3yNEhbRlBRN7jM4NxRe7qOaEKHJZu0JK5OXDPrm3k8J--eOS-q4OOh0pX0bNF-CVD-S3AHD2frI3SPVTeuI7meqJk29cXoxuniy6ducj2ede69o_4ZiAyEIxv1-MPcCP3Q0CnFUrnX-UJHEQe2mhB3Yyo7LtY0R-MS_fWr5rL9xJY/https://www.amazon.com/dp/B0FYM2ZXFF/?_encoding=UTF8&pd_rd_i=B0FYM2ZXFF&pd_rd_i=B0FYM2ZXFF&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=enRlB&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=7T7050HSYW1YTFEJ77QD&pd_rd_wg=22Ti6&pd_rd_r=95b2c055-41a4-45e2-8657-e3111ba13794",
+      "link_clean": "https://www.amazon.com/dp/B0FYM2ZXFF/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FYM2ZXFF&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41ZuVIFBmYL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/ad92fc33-846a-46ba-82e1-e2785497d291.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/ad92fc33-846a-46ba-82e1-e2785497d291.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.7,
+      "reviews": 40,
+      "price": "$39.99",
+      "extracted_price": 39.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "text": "Customers find the dog shampoo effective, with one noting it gets through thick coats and another mentioning it helps keep fleas away. The product receives positive feedback for its fragrance, softness, and lathering properties.",
+      "insights": [
+        {
+          "title": "Fragrance",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 10,
+            "positive": 10,
+            "negative": 0
+          },
+          "summary": "Customers like the fragrance of the shampoo.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "My dog loved it and it smells so good!!!",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R13218VJ43GMU5"
+            },
+            {
+              "position": 2,
+              "snippet": "I can say it's the best shampoo I've used for my dog. It also smells really good",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R30701FZ3KZSP"
+            },
+            {
+              "position": 3,
+              "snippet": "...well, rinses out easily, and leaves my dog’s coat soft, shiny, and smelling fresh....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RBHXO0G3CC5FR"
+            },
+            {
+              "position": 4,
+              "snippet": "Smells good leave my dogs hair nice and soft",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RXCPXWN8NKRAR"
+            }
+          ]
+        },
+        {
+          "title": "Cleansing",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 6,
+            "positive": 6,
+            "negative": 0
+          },
+          "summary": "Customers find the shampoo effective, noting it cleans well and rinses quickly. One customer mentions it gets through thick coats, while another reports it helps keep fleas away.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...without being overpowering, and the shampoo lathers well and rinses out easily. My dog's coat felt soft and clean after the bath....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R27NBK950VSBCN"
+            },
+            {
+              "position": 2,
+              "snippet": "...a premium feel, and the lemon scent is completely natural, crisp, and clean—not like harsh chemical cleaners at all....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R24L6VS2XL0BQ3"
+            },
+            {
+              "position": 3,
+              "snippet": "...dirt magnet, and this shampoo is the only thing that completely knocks out the grime and bad odors....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RVUTCLJ9DRGFX"
+            },
+            {
+              "position": 4,
+              "snippet": "Smell good and I think it helps keep the fleas away",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RXCPXWN8NKRAR"
+            }
+          ]
+        },
+        {
+          "title": "Softness",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 6,
+            "positive": 6,
+            "negative": 0
+          },
+          "summary": "Customers find the shampoo incredibly soft, with one mentioning its premium feel.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...It lathers well, rinses out easily, and leaves my dog’s coat soft, shiny, and smelling fresh....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RBHXO0G3CC5FR"
+            },
+            {
+              "position": 2,
+              "snippet": "...My dog's coat felt soft and clean after the bath. I also appreciate that it's made for sensitive skin....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R27NBK950VSBCN"
+            },
+            {
+              "position": 3,
+              "snippet": "...rinses out super fast, and leaves the fur looking bright and incredibly soft. It’s gentle on the skin and gets the job done perfectly!",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RVUTCLJ9DRGFX"
+            },
+            {
+              "position": 4,
+              "snippet": "Smells good leave my dogs hair nice and soft",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RXCPXWN8NKRAR"
+            }
+          ]
+        },
+        {
+          "title": "Lathering",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 5,
+            "positive": 5,
+            "negative": 0
+          },
+          "summary": "Customers like how the shampoo lathers.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...It lathers well, rinses out easily, and leaves my dog’s coat soft, shiny, and smelling fresh....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RBHXO0G3CC5FR"
+            },
+            {
+              "position": 2,
+              "snippet": "...lavender scent is pleasant without being overpowering, and the shampoo lathers well and rinses out easily....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R27NBK950VSBCN"
+            },
+            {
+              "position": 3,
+              "snippet": "...It creates a great lather that gets right through a thick coat, rinses out super fast, and leaves the fur looking bright and incredibly soft....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RVUTCLJ9DRGFX"
+            },
+            {
+              "position": 4,
+              "snippet": "...It lathers up really well and leaves my cat’s coat super soft and clean. Highly recommend it!",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2XICWKB8G1WB2"
+            }
+          ]
+        }
+      ],
+      "images": [
+        "https://m.media-amazon.com/images/I/616dwNg8acL.jpg",
+        "https://m.media-amazon.com/images/I/71W5AQZe1LL.jpg",
+        "https://m.media-amazon.com/images/I/61w6CNz4UIL.jpg",
+        "https://m.media-amazon.com/images/I/71bZoib5kLL.jpg",
+        "https://m.media-amazon.com/images/I/71mOEwNHaPL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 100,
+        "4 star": 0,
+        "3 star": 0,
+        "2 star": 0,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Smells like a high-end doggy spa, and it actually calmed my hyper pup!",
+        "text": "Smells like a bright, high-end doggy spa, and it totally refreshed my hyper pup!Yorum: I’m always skeptical of pet shampoos because my dog has sensitive skin, but this stuff is incredible. It’s a unique find with a premium feel, and the lemon scent is completely natural, crisp, and clean—not like harsh chemical cleaners at all.The real test was bath time: my dog usually fights me, but the bright, uplifting lemon oil actually made the whole process feel like a refreshing spa day. The shampoo lathers beautifully, rinses out clean, and left his coat insanely soft and shiny with absolutely zero skin irritation. Days later, he still smells incredibly fresh and citrusy instead of reverting back to that \"wet dog\" smell. The 13.5 oz bottle will last a while—definitely worth it for a little doggy luxury!",
+        "rating": 5,
+        "date": "June 15, 2026",
+        "author": "Vedat",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AH3LIVVKDJURFYPVIHYJJ6JSGY5Q?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "scent": "Lemongrass"
+        }
+      },
+      {
+        "position": 2,
+        "title": "5 star review amazing",
+        "text": "I’ve been using this shampoo on my dog for a few weeks, and I’m very happy with the results. It lathers well, rinses out easily, and leaves my dog’s coat soft, shiny, and smelling fresh. It didn’t irritate my dog’s skin, and the scent isn’t overpowering. I would definitely buy it again.",
+        "rating": 5,
+        "date": "July 26, 2026",
+        "author": "mevlut bocut",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFNRB4E7N3GHR6P76U7LBCEHPJYQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/616dwNg8acL.jpg"
+        ],
+        "helpful_votes": "2 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "scent": "Lavender"
+        }
+      },
+      {
+        "position": 3,
+        "title": "The ultimate deep clean for my mud-loving dog!",
+        "text": "My dog is a total dirt magnet, and this shampoo is the only thing that completely knocks out the grime and bad odors. The lavender oil scent is absolutely wonderful—very natural, relaxing, and it keeps that stubborn \"dirty dog\" smell away for days. It creates a great lather that gets right through a thick coat, rinses out super fast, and leaves the fur looking bright and incredibly soft. It’s gentle on the skin and gets the job done perfectly!",
+        "rating": 5,
+        "date": "June 15, 2026",
+        "author": "Ramazan gültekin",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEP3HWLTDDKPZ43HZXCO7J7EEX6Q?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "scent": "Lavender"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Gentle and Pleasant Scent",
+        "text": "I recently purchased this shampoo for my dog, and so far I'm very happy with it. The lavender scent is pleasant without being overpowering, and the shampoo lathers well and rinses out easily. My dog's coat felt soft and clean after the bath.I also appreciate that it's made for sensitive skin. It's still too early to comment on the long-term benefits, but my first impression has been very positive. Overall, a great product and I would purchase it again.",
+        "rating": 5,
+        "date": "June 12, 2026",
+        "author": "Ipek",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFHWALJ7CXC7IJLWULPLX4DSVBAA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "scent": "Lavender"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Smells amazing and leaves the coat so soft!",
+        "text": "Absolutely love this shampoo!I recently bought Dr. Lavender's Pet Shampoo and I am incredibly happy with the results. It has a beautiful, calming lavender scent that isn't overwhelming at all. It lathers up really well and leaves my cat’s coat super soft and clean. Highly recommend it!",
+        "rating": 5,
+        "date": "June 14, 2026",
+        "author": "Huri",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEO4S4HVBLIK4JZQKGE5TBXQNPUA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/61w6CNz4UIL.jpg",
+          "https://m.media-amazon.com/images/I/71bZoib5kLL.jpg"
+        ],
+        "helpful_votes": "2 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "scent": "Lavender"
+        }
+      },
+      {
+        "position": 6,
+        "title": "Smell good and I think it helps keep the fleas away",
+        "text": "Smells good leave my dogs hair nice and soft",
+        "rating": 5,
+        "date": "July 6, 2026",
+        "author": "Carmen roeder",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHMOZJIT47BOTLYOYEXLZQFGLV6A?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "scent": "Lavender"
+        }
+      },
+      {
+        "position": 7,
+        "title": "Smell so good!",
+        "text": "I really like it. Smell so good is well. For sure I will buy that item again. And highly recommend!",
+        "rating": 5,
+        "date": "August 1, 2026",
+        "author": "Aghami Mehdiyev",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHMDJWMYWZ6E2XVSYNXPVF6CP5MA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "scent": "Lavender"
+        }
+      },
+      {
+        "position": 8,
+        "title": "Love it",
+        "text": "Awesome shampoo. And the smell is beautiful",
+        "rating": 5,
+        "date": "August 8, 2026",
+        "author": "Mary Salvestrini",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AF3XFRR7RPMPC5MVRBOPXQ6DYFJQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "scent": "Lavender"
+        }
+      }
+    ]
+  }
+}

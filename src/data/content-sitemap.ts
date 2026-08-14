@@ -558,7 +558,7 @@ export const staticSitemapSections: SitemapSection[] = [
         relatedLabel: 'Natural Flea & Tick Products',
         heroProduct: safetyHero('wondercide-spray-lemongrass-32oz', 'Best Overall Spray', 'Wondercide Flea, Tick & Mosquito Spray'),
         pubDate: new Date('2026-06-30'),
-        lastUpdated: new Date('2026-07-28'),
+        lastUpdated: new Date('2026-08-14'),
       }),
       createSitemapPage({
         baseTitle: 'Dog Bath Tools',

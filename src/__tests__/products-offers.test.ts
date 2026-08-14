@@ -332,10 +332,17 @@ describe('multi-merchant product offers', () => {
         'earth-animal-apothecary-shampoo',
         'lillian-ruff-flea-tick-shampoo',
         'top-performance-natural-shampoo',
+        'fav-paws-waterless-foam-shampoo',
+        'dr-lavender-organic-sensitive-shampoo',
+        'wahl-oatmeal-dry-skin-shampoo',
       ],
       collar: [
         'amdeiur-natural-flea-collar',
         'solpetti-botanical-flea-collar',
+        'tenerolike-essential-oil-collar-5pack',
+        'crobirware-natural-flea-collar-6pack',
+        'craveit-flea-tick-collar-large',
+        'njkpuyt-flea-collar-small-4pack',
         'trihood-flea-tick-tag',
         'routade-flea-tick-pendant',
       ],
@@ -345,6 +352,8 @@ describe('multi-merchant product offers', () => {
         'yotango-flea-tick-chews',
         'beloved-pets-flea-tick-chews',
         'dr-woow-flea-tick-chews',
+        'lkdhfjc-natural-defense-chews-200',
+        'petrivium-flea-tick-chews-150',
       ],
     } satisfies Record<string, string[]>;
 
@@ -394,6 +403,7 @@ describe('multi-merchant product offers', () => {
       'tweezerman-tick-tweezer',
       'tickcheck-premium-tick-kit',
       'tickcheck-remover-spoon',
+      'tick-key-original-7pack',
     ]);
 
     for (const productId of groomingTools.productIds) {
