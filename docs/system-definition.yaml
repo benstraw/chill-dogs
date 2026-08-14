@@ -374,6 +374,9 @@ site_system:
         phone power, and visibility gear. Canonical products live in src/data/emergency-products.ts
         and flow through product-catalog.ts and product-page-map.ts before appearing in
         /admin/products/. SerpAPI-backed amazon-products cache entries are reference data only.
+        The hero product doubles as the single above-the-fold affiliate CTA. Each category shows
+        only its `featured` picks by default; the rest of the catalog stays in an expander, so the
+        default view surfaces 17 of 47 products rather than all of them at once.
 
     - name: "Product browse"
       type: "converter"

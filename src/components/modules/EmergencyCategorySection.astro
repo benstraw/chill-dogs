@@ -1,0 +1,143 @@
+---
+import EmergencyProductCard from './EmergencyProductCard.astro';
+import {
+  emergencyCategoryMeta,
+  getAdditionalEmergencyProducts,
+  getFeaturedEmergencyProducts,
+  type EmergencyProductCategory,
+} from '@data/emergency-products';
+
+/**
+ * One category block on the snake-bite converter: the curated picks render in the
+ * default grid, and the rest of the catalog sits behind an expander so the page
+ * opens with a handful of decisions rather than every product at once.
+ */
+interface Props {
+  category: EmergencyProductCategory;
+  pageSlug: string;
+}
+
+const { category, pageSlug } = Astro.props;
+
+const meta = emergencyCategoryMeta[category];
+const featured = getFeaturedEmergencyProducts(category);
+const additional = getAdditionalEmergencyProducts(category);
+---
+
+<section class="product-section" id={category}>
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">{meta.label}</span>
+      <h2>{meta.title}</h2>
+      <p>{meta.intro}</p>
+    </div>
+
+    {featured.length > 0 && (
+      <div class="product-grid">
+        {featured.map((product, index) => (
+          <EmergencyProductCard
+            product={product}
+            pageSlug={pageSlug}
+            position={`${category}-featured-${index + 1}`}
+          />
+        ))}
+      </div>
+    )}
+
+    {additional.length > 0 && (
+      <details class="more-options">
+        <summary>
+          Show {additional.length} more {additional.length === 1 ? 'option' : 'options'}
+        </summary>
+        <div class="product-grid product-grid--more">
+          {additional.map((product, index) => (
+            <EmergencyProductCard
+              product={product}
+              pageSlug={pageSlug}
+              position={`${category}-more-${index + 1}`}
+            />
+          ))}
+        </div>
+      </details>
+    )}
+  </div>
+</section>
+
+<style>
+  .product-section {
+    padding: var(--space-2xl) 0;
+  }
+
+  .product-section:nth-of-type(even) {
+    background: var(--color-surface);
+  }
+
+  .section-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-lg);
+  }
+
+  .section-label {
+    display: inline-block;
+    margin-bottom: var(--space-sm);
+    color: var(--color-accent);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: var(--text-2xl);
+    line-height: var(--leading-tight);
+    margin: 0 0 var(--space-md);
+  }
+
+  .section-header {
+    max-width: var(--max-width-prose);
+    margin-bottom: var(--space-xl);
+  }
+
+  .section-header p {
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-xl);
+    align-items: stretch;
+  }
+
+  .more-options {
+    margin-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-lg);
+  }
+
+  .more-options summary {
+    cursor: pointer;
+    color: var(--color-accent);
+    font-weight: var(--weight-semibold);
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .product-grid--more {
+    margin-top: var(--space-lg);
+  }
+
+  @media (max-width: 980px) {
+    .product-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 700px) {
+    .product-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

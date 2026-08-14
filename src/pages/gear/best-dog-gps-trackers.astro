@@ -147,18 +147,6 @@ const itemListSchema = {
           </p>
         </div>
 
-        <p class="section-cta-line">
-          <a
-            href={ROUTES.fiCollarReview}
-            class="inline-cta"
-            data-track="collector_to_converter_click"
-            data-from-page={pageSlug}
-            data-to-page={ROUTES.fiCollarReview}
-            data-link-position="cellular-section"
-          >
-            Read the full Fi Collar review →
-          </a>
-        </p>
       </div>
     </section>
 
@@ -182,18 +170,6 @@ const itemListSchema = {
           ))}
         </div>
 
-        <p class="section-cta-line">
-          <a
-            href={ROUTES.garminTracking}
-            class="inline-cta"
-            data-track="collector_to_converter_click"
-            data-from-page={pageSlug}
-            data-to-page={ROUTES.garminTracking}
-            data-link-position="offgrid-section"
-          >
-            See the full Garmin dog tracking guide →
-          </a>
-        </p>
       </div>
     </section>
 
@@ -224,18 +200,6 @@ const itemListSchema = {
           ))}
         </div>
 
-        <p class="section-cta-line">
-          <a
-            href={ROUTES.airtagForDogs}
-            class="inline-cta"
-            data-track="collector_to_converter_click"
-            data-from-page={pageSlug}
-            data-to-page={ROUTES.airtagForDogs}
-            data-link-position="bluetooth-section"
-          >
-            AirTag for dogs: what it can and can't do →
-          </a>
-        </p>
       </div>
     </section>
 
@@ -339,7 +303,7 @@ const itemListSchema = {
     <InternalLinkStrip
       heading="More Dog Tracking + Safety Guides"
       currentHref={ROUTES.trackingTop}
-      limit={6}
+      limit={3}
       fromPage={pageSlug}
     />
   </div>
@@ -521,22 +485,6 @@ const itemListSchema = {
     color: var(--color-text-muted);
     line-height: var(--leading-relaxed);
     margin: 0;
-  }
-
-  /* Inline CTA */
-  .section-cta-line {
-    margin-top: var(--space-md);
-  }
-
-  .inline-cta {
-    font-size: var(--text-sm);
-    font-weight: var(--weight-semibold);
-    color: var(--color-primary);
-    text-decoration: none;
-  }
-
-  .inline-cta:hover {
-    text-decoration: underline;
   }
 
   /* Decision table */

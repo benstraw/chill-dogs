@@ -1,6 +1,7 @@
 {
   "installCommand": "bun install",
   "buildCommand": "bun run build",
+  "trailingSlash": true,
   "redirects": [
     {
       "source": "/join",
