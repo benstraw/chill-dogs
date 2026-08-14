@@ -1850,7 +1850,6 @@ export const fleaTickProducts: FleaTickProduct[] = [
       alt: 'Fido Fave 1500W professional grooming pet hair blow dryer for dogs and cats',
     },
     coverage: 'Drying',
-    duration: '—',
     howItWorks: 'Nine airflow levels and a 86–140 °F temperature range, with three nozzles for different coat jobs.',
     bullets: [
       'Temperature is adjustable rather than on/off, which is the safety difference from using a human hair dryer',
