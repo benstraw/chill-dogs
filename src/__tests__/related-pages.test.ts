@@ -272,12 +272,12 @@ describe('related pages', () => {
           collectorSubtype: 'article',
           topics: ['flea-tick', 'travel'],
           pinnedRelated: [
-            ROUTES.fleaTickMedications,
+            ROUTES.fleaTickProducts,
             ROUTES.naturalFleaTickPrevention,
             ROUTES.naturalFleaTickProducts,
           ],
         }),
-        createPage({ href: ROUTES.fleaTickMedications, topics: ['flea-tick', 'travel'] }),
+        createPage({ href: ROUTES.fleaTickProducts, topics: ['flea-tick', 'travel'] }),
         createPage({
           href: ROUTES.naturalFleaTickPrevention,
           pageType: 'collector',
@@ -292,7 +292,7 @@ describe('related pages', () => {
     const related = await getRelatedPages({ currentHref: ROUTES.fleaTickPillar, sections, limit: 4 });
 
     expect(related.map((page) => page.href)).toEqual(expect.arrayContaining([
-      ROUTES.fleaTickMedications,
+      ROUTES.fleaTickProducts,
       ROUTES.naturalFleaTickPrevention,
       ROUTES.naturalFleaTickProducts,
     ]));
