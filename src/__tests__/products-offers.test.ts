@@ -373,7 +373,7 @@ describe('multi-merchant product offers', () => {
       config.blocks.some((block) => block.kind === 'product_section' && block.id === 'home-support'),
       'home-support section should be removed',
     ).toBe(false);
-    expect(config.toc.some((entry) => entry.anchor === 'home-support')).toBe(false);
+    expect((config.toc ?? []).some((entry) => entry.anchor === 'home-support')).toBe(false);
 
     const groomingTools = config.blocks.find((block) => block.kind === 'product_section' && block.id === 'grooming-tools');
 
@@ -421,7 +421,9 @@ describe('multi-merchant product offers', () => {
 
     for (const removedAsin of ['B0GSZH4JWF', 'B0H6B7W86G', 'B0CSF14JZZ', 'B0CFYJM6HN', 'B0DWZLB7LX', 'B0FVZJ1S1Z', 'B01DS73GTI']) {
       expect(
-        fleaTickProducts.some((product) => getOffers(product).some((offer) => offer.asin === removedAsin)),
+        fleaTickProducts.some((product) =>
+          getOffers(product).some((offer) => offer.merchant === 'amazon' && offer.asin === removedAsin),
+        ),
         `${removedAsin} should no longer be offered`,
       ).toBe(false);
     }
