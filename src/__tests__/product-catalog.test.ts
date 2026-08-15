@@ -112,7 +112,7 @@ describe('admin product catalog data', () => {
         expect.objectContaining({ href: '/gear/dog-snake-bite-emergency-kit/' }),
       ])
     );
-    expect(pageMap['petarmor-plus-89-132']).toEqual(
+    expect(pageMap['vectra-3d-xl-95-plus']).toEqual(
       expect.arrayContaining([
         expect.objectContaining({ href: '/safety/best-flea-and-tick-products-for-dogs/' }),
       ])

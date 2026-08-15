@@ -78,8 +78,6 @@ function sectionClass(block: FleaTickBlock): string {
       )
     ))}
 
-    <Disclosure />
-
     {config.faq && (
       <section id="faq" class="ft-section">
         <div class="ft-inner">
@@ -87,6 +85,8 @@ function sectionClass(block: FleaTickBlock): string {
         </div>
       </section>
     )}
+
+    <Disclosure />
 
     {config.internalLinkStripHeading && (
       <section class="ft-section">

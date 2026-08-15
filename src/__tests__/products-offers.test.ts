@@ -129,7 +129,6 @@ describe('multi-merchant product offers', () => {
 
   it('wires flea-and-tick offers into the safety catalog with valid affiliate URLs', () => {
     const expectedOfferIds = [
-      'petarmor-plus-89-132',
       'vectra-3d-xl-95-plus',
       'udyoude-flea-collar-large-2pack',
       'wondercide-spray-lemongrass-32oz',
@@ -348,16 +347,12 @@ describe('multi-merchant product offers', () => {
         'earth-animal-apothecary-shampoo',
         'lillian-ruff-flea-tick-shampoo',
         'top-performance-natural-shampoo',
-        'fav-paws-waterless-foam-shampoo',
-        'dr-lavender-organic-sensitive-shampoo',
-        'wahl-oatmeal-dry-skin-shampoo',
       ],
       collar: [
         'amdeiur-natural-flea-collar',
         'solpetti-botanical-flea-collar',
         'tenerolike-essential-oil-collar-5pack',
         'crobirware-natural-flea-collar-6pack',
-        'craveit-flea-tick-collar-large',
         'njkpuyt-flea-collar-small-4pack',
         'trihood-flea-tick-tag',
         'routade-flea-tick-pendant',

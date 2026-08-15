@@ -132,7 +132,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         id: 'natural-fit',
         heading: 'What Natural Does Well',
         paragraphs: [
-          'Natural flea and tick products make the most sense when you are trying to reduce pesticide load, your dog has lighter exposure, and you are willing to do the routine work that makes them more useful: coat checks, ear wipe-downs, bedding and pet-area cleanup, bath support, and fast reassessment when you still see pests.',
+          "Natural flea and tick products make the most sense when you are trying to reduce your dog's exposure to toxic ingredients, your dog has lighter exposure to pests, and you are willing to do the routine work that makes them more useful: coat checks, ear wipe-downs, bedding and pet-area cleanup, and bath support.",
           'Natural products may not be sufficient for heavy infestations, for dogs that spend a lot of time in tall grass or brush, or for regions with high tick-disease rates.',
         ],
       },
@@ -157,7 +157,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         id: 'shampoo',
         heading: 'Shampoos for Bath-day Support',
         intro:
-          'Shampoos are useful for prevention and after flea and tick exposure. They also help make regular coat checks part of the routine. Two entries here are bath-day support rather than pest control: a waterless foam for dogs that will not take a full bath, and an oatmeal dry-skin shampoo that makes no flea claim at all but keeps frequent washing from leaving the skin raw.',
+          'Shampoos are useful for prevention and after flea and tick exposure. They also help make regular coat checks part of the routine.',
         positionOffset: 5,
         columns: 3,
         productIds: [
@@ -166,9 +166,6 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
           'earth-animal-apothecary-shampoo',
           'lillian-ruff-flea-tick-shampoo',
           'top-performance-natural-shampoo',
-          'fav-paws-waterless-foam-shampoo',
-          'dr-lavender-organic-sensitive-shampoo',
-          'wahl-oatmeal-dry-skin-shampoo',
         ],
         alt: true,
       },
@@ -178,14 +175,13 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Collars and Wearable Tags',
         intro:
           'These products use natural ingredients to provide protection for months at a time.',
-        positionOffset: 13,
+        positionOffset: 10,
         columns: 2,
         productIds: [
           'amdeiur-natural-flea-collar',
           'solpetti-botanical-flea-collar',
           'tenerolike-essential-oil-collar-5pack',
           'crobirware-natural-flea-collar-6pack',
-          'craveit-flea-tick-collar-large',
           'njkpuyt-flea-collar-small-4pack',
           'trihood-flea-tick-tag',
           'routade-flea-tick-pendant',
@@ -197,7 +193,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Daily Chews',
         intro:
           'Daily chews work best as a supplement to your flea and tick routine. These products use natural ingredients that also help boost your dog’s immune system and support a healthy coat and skin.',
-        positionOffset: 21,
+        positionOffset: 17,
         columns: 3,
         productIds: [
           'lkdhfjc-flea-tick-chews-200',
@@ -216,7 +212,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Combs, Grooming Sets, and Tick-Removal Tools',
         intro:
           'Coat checks are an integral part of any flea and tick prevention routine. Flea combs allow you to catch a problem early, brushes allow you to get through the undercoat and reach skin on a thick coat, and a tick tool helps you remove a tick entirely without leaving any part of it embedded in your dog.',
-        positionOffset: 28,
+        positionOffset: 24,
         columns: 3,
         productIds: [
           'green-pet-double-sided-flea-comb',
@@ -242,7 +238,6 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         tone: 'info',
         paragraphs: [
           'If you continue to see live fleas on your dog, if your dog is chewing raw spots, or if you live in a region with heavy flea and tick infestation, consult your veterinarian, as pharmaceutical treatments may be necessary.',
-          `If you want the full picture before deciding, go back to <a href="${ROUTES.fleaTickPillar}">the broad flea and tick guide</a>. If you already know you need stronger protection, see <a href="${ROUTES.fleaTickProducts}">the no-prescription flea and tick products page</a>.`,
         ],
       },
     ],
@@ -282,14 +277,10 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         'earth-animal-apothecary-shampoo',
         'lillian-ruff-flea-tick-shampoo',
         'top-performance-natural-shampoo',
-        'fav-paws-waterless-foam-shampoo',
-        'dr-lavender-organic-sensitive-shampoo',
-        'wahl-oatmeal-dry-skin-shampoo',
         'amdeiur-natural-flea-collar',
         'solpetti-botanical-flea-collar',
         'tenerolike-essential-oil-collar-5pack',
         'crobirware-natural-flea-collar-6pack',
-        'craveit-flea-tick-collar-large',
         'njkpuyt-flea-collar-small-4pack',
         'trihood-flea-tick-tag',
         'routade-flea-tick-pendant',
@@ -327,14 +318,16 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
     hero: {
       title: 'Best Flea and Tick Products for Dogs',
       subtitle:
-        'Everything here is available without a prescription. Spot-on topicals and long-wear collars do the preventing, and combs and tick tools handle the part prevention never fully covers — finding and removing what still makes it onto your dog.',
+        'Topical treatments, long-wear collars and tick-removal tools. Everything here is available without a prescription.'
+        + ` For products that use only natural ingredients, see <a href="${ROUTES.naturalFleaTickProducts}">the natural products page</a>.`
+        + ' For prescription options, consult your veterinarian.',
       disclaimer: 'As an Amazon Associate and a Chewy Affiliate, we earn from qualifying purchases.',
-      primaryCta: { label: 'See Spot-On Topicals', href: '#otc-topicals' },
+      primaryCta: { label: 'See Topical Treatments', href: '#otc-topicals' },
       secondaryCta: { label: 'Read the Full Flea & Tick Guide', href: ROUTES.fleaTickPillar },
     },
     toc: [
       { label: 'How To Choose', anchor: 'how-to-choose' },
-      { label: 'Spot-On Topicals', anchor: 'otc-topicals' },
+      { label: 'Topical Treatments', anchor: 'otc-topicals' },
       { label: 'Collars', anchor: 'otc-collars' },
       { label: 'Combs & Tick Tools', anchor: 'grooming-tools' },
       { label: 'Safety Notes', anchor: 'safety-notes' },
@@ -344,22 +337,19 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       {
         kind: 'prose',
         id: 'how-to-choose',
-        heading: 'How to choose without a prescription',
+        heading: 'How to Choose',
         paragraphs: [
-          'The no-prescription decision comes down to how you want to apply protection. A spot-on topical is a monthly job you can forget, but it is application-sensitive: it has to go on skin rather than fur, and the dog has to stay dry while it sets. A collar removes the monthly reminder entirely and runs for months, at the cost of something being fastened around the dog the whole time.',
-          'Whichever you pick, the second half of this page matters just as much. No product on the market is a perfect barrier, and ticks in particular are found rather than prevented. A comb and a tick tool are what turn "my dog has protection" into "I would notice if something got through."',
-          `If you would rather start with plant-based options, see <a href="${ROUTES.naturalFleaTickProducts}">the natural products page</a>. For prescription options, talk to your veterinarian — we do not compare prescription medications here.`,
+          'Topical treatments are applied monthly. They must go on skin rather than fur, and the dog has to stay dry while it sets. Collars provide protection for several months, but they must be worn at all times.',
         ],
       },
       {
         kind: 'product_section',
         id: 'otc-topicals',
-        heading: 'Topical spot-on treatments',
-        intro:
-          'Monthly liquid doses applied directly to the skin between the shoulder blades. Compare them on weight band first — a dose sized for the wrong band is the most common reason a topical underperforms — then on whether you need repellency or just kill.',
+        heading: 'Topical Treatments',
+        intro: 'Monthly liquid doses applied directly to the skin between the shoulder blades.',
         positionOffset: 0,
         columns: 3,
-        productIds: ['petarmor-plus-89-132', 'vectra-3d-xl-95-plus', 'trioak-topical-medium-23-44'],
+        productIds: ['vectra-3d-xl-95-plus', 'trioak-topical-medium-23-44'],
       },
       {
         kind: 'product_section',
@@ -367,7 +357,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Flea and tick collars',
         intro:
           'Collars trade the monthly application for months of continuous wear. They are the most realistic option if a monthly reminder is the thing that keeps failing, and the count you buy should match your household rather than the headline price.',
-        positionOffset: 3,
+        positionOffset: 2,
         columns: 3,
         productIds: ['udyoude-flea-collar-large-2pack', 'cabins-flea-collar-4pack', 'zafelous-flea-collar-2pack'],
         alt: true,
@@ -378,7 +368,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Combs, grooming sets, and tick-removal tools',
         intro:
           'Prevention reduces what reaches your dog; it does not make coat checks optional. A flea comb catches an early problem while it is still small, and a proper tick tool removes the whole tick instead of leaving mouthparts embedded. These are the same tools we recommend on the natural page — the job does not change based on what prevention you chose.',
-        positionOffset: 6,
+        positionOffset: 5,
         columns: 3,
         productIds: [
           'green-pet-double-sided-flea-comb',
@@ -440,7 +430,6 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       name: 'Best Flea and Tick Products for Dogs',
       url: `https://www.chill-dogs.com${ROUTES.fleaTickProducts}`,
       productIds: [
-        'petarmor-plus-89-132',
         'vectra-3d-xl-95-plus',
         'trioak-topical-medium-23-44',
         'udyoude-flea-collar-large-2pack',
