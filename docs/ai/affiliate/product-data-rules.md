@@ -15,6 +15,7 @@ related:
   - disclosure-rules.md
   - ../engineering/architecture.md
   - ../engineering/build-and-test-commands.md
+  - ../engineering/product-variants.md
 ---
 
 # Product Data Rules
@@ -104,6 +105,14 @@ Chewy links are stored as merchant offers. Generate and verify Chewy affiliate l
 
 For Chewy-only products, omit `asin` and `amazonUrl`; add at least one active Chewy offer instead. Product pages and
 schema use the primary merchant offer, while Amazon-only scripts ignore products without Amazon offers.
+
+## Products sold in several sizes or packs
+
+When one product is several merchant listings — a topical per weight band, a robe per dog size, a spray per scent —
+do not add a record per listing. Add a `variantGroup` to the single record instead, and keep the existing ASIN as the
+default variant so `asin` / `amazonUrl` / `offers` still describe the card. Full rules, including where to source
+variant ASINs and why variant offers must stay out of `offers`, are in
+[`../engineering/product-variants.md`](../engineering/product-variants.md).
 
 ---
 

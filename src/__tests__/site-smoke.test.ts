@@ -685,6 +685,55 @@ describe('site smoke tests', () => {
     }
   });
 
+  it('renders a variant picker without adding affiliate CTAs to the card', () => {
+    const doc = readBuiltPage(path.join('safety', 'dog-bath-tools-for-flea-season', 'index.html'));
+    const card = doc.querySelector<HTMLElement>('#tuff-pupper-drying-bathrobe');
+    const picker = card?.querySelector<HTMLElement>('[data-variant-picker]');
+
+    expect(picker).not.toBeNull();
+    expect(picker?.getAttribute('data-variant-selected')).toBe('large');
+
+    const chips = Array.from(picker!.querySelectorAll<HTMLAnchorElement>('[data-variant-option]'));
+    expect(chips).toHaveLength(8);
+
+    for (const chip of chips) {
+      // Chips reach every ASIN without JS, but must not fire the keystone
+      // event — otherwise a card with a picker would out-count one without.
+      expect(chip.href).toContain('tag=chill-dogs-20');
+      expect(relTokens(chip)).toEqual(['noopener', 'noreferrer', 'sponsored']);
+      expect(chip.getAttribute('data-affiliate')).toBeNull();
+      expect(chip.getAttribute('data-track')).toBeNull();
+    }
+
+    // Every size ASIN is linked in the static HTML.
+    const chipAsins = chips.map((chip) => chip.href.match(/\/dp\/([A-Z0-9]{10})/)?.[1]);
+    expect(new Set(chipAsins).size).toBe(8);
+
+    // The card still carries exactly one tracked CTA, on the default variant.
+    const cardCtas = getAffiliateLinks(card!);
+    expect(cardCtas).toHaveLength(1);
+    expect(cardCtas[0].getAttribute('data-asin')).toBe('B0BY9GBMXX');
+    expectTrackedAffiliateLink(cardCtas[0]);
+
+    // The serialized offer table the picker script reads on selection.
+    const table = JSON.parse(picker!.getAttribute('data-variant-offers') || '{}');
+    expect(Object.keys(table)).toHaveLength(8);
+    expect(table['xx-large'].merchants.amazon.asin).toBe('B0BY9C72VY');
+  });
+
+  it('keeps affiliate CTA positions contiguous on a page carrying a variant picker', () => {
+    const doc = readBuiltPage(path.join('safety', 'dog-bath-tools-for-flea-season', 'index.html'));
+    const positions = getAffiliateLinks(doc)
+      .map((link) => link.getAttribute('data-position'))
+      .filter((position): position is string => position !== null)
+      .map(Number);
+
+    expect(positions.length).toBeGreaterThan(0);
+    expect([...new Set(positions)].sort((a, b) => a - b)).toEqual(
+      Array.from({ length: 28 }, (_, i) => i + 1),
+    );
+  });
+
   it('marks the custom 404 page as noindex', () => {
     const doc = readBuiltPage('404.html');
     const robots = doc.querySelector('meta[name="robots"]');

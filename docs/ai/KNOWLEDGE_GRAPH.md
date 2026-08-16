@@ -137,6 +137,8 @@ affiliate/amazon-associates-rules.md      # Tag, component, rel attributes, comp
     ↓
 affiliate/product-data-rules.md           # Where data lives, how to add products
     ↓
+engineering/product-variants.md           # One product, several listings: sizes, packs, colorways
+    ↓
 affiliate/disclosure-rules.md             # FTC disclosure placement
     ↓
 writing/product-copy-rules.md             # Language standards for product claims
