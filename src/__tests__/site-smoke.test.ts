@@ -19,7 +19,16 @@ function collectHtmlFiles(dir: string): string[] {
   return files;
 }
 
+/**
+ * Reuses an existing dist/ (CI and `bun run test` build before running vitest,
+ * and the other dist-reading specs already assume that). Only builds when dist/
+ * is absent, so a standalone `test:smoke` still works. Set FORCE_SMOKE_BUILD=1
+ * to rebuild regardless.
+ */
 function buildSite() {
+  const distIsBuilt = existsSync(path.join(distRoot, 'index.html'));
+  if (distIsBuilt && process.env.FORCE_SMOKE_BUILD !== '1') return;
+
   execFileSync('bun', ['run', 'build'], {
     cwd: projectRoot,
     stdio: 'pipe',
@@ -110,7 +119,9 @@ function isRedirectStub(html: string): boolean {
 describe('site smoke tests', () => {
   beforeAll(() => {
     buildSite();
-  }, 30_000);
+    // Generous: only the no-dist fallback path actually builds, and a cold
+    // build runs well past two minutes on slower machines.
+  }, 300_000);
 
   it('renders the homepage with both primary navigation CTAs', () => {
     const doc = readBuiltPage('index.html');

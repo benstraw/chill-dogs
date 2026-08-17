@@ -1,10 +1,62 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { track, init } from '../scripts/analytics';
+import { track, init, shouldCaptureAnalytics } from '../scripts/analytics';
+
+// jsdom runs on localhost, where capture is off by default. The suite opts in through
+// the same escape hatch a developer would use, which keeps it exercised.
+function optIn() {
+  window.localStorage.setItem('chill-dogs:analytics', 'on');
+}
+
+describe('shouldCaptureAnalytics', () => {
+  it('captures on the production host', () => {
+    expect(shouldCaptureAnalytics('www.chill-dogs.com')).toBe(true);
+    expect(shouldCaptureAnalytics('chill-dogs.com')).toBe(true);
+  });
+
+  it('does not capture on local dev servers', () => {
+    for (const h of ['localhost', '127.0.0.1', '0.0.0.0', '::1', '127.0.0.53', 'foo.localhost']) {
+      expect(shouldCaptureAnalytics(h), h).toBe(false);
+    }
+  });
+
+  it('does not capture on private network addresses', () => {
+    for (const h of ['192.168.1.14', '10.0.0.7', '172.16.0.3', '172.31.255.1']) {
+      expect(shouldCaptureAnalytics(h), h).toBe(false);
+    }
+  });
+
+  it('does not capture on any Vercel preview host', () => {
+    for (const h of [
+      'chill-dogs-navy.vercel.app',
+      'chill-dogs-git-claude-chill-dogs-conv-6dcb1f-benstraws-projects.vercel.app',
+    ]) {
+      expect(shouldCaptureAnalytics(h), h).toBe(false);
+    }
+  });
+
+  it('still captures on hosts that merely contain a blocked term', () => {
+    expect(shouldCaptureAnalytics('vercel.app.chill-dogs.com')).toBe(true);
+    expect(shouldCaptureAnalytics('localhost.chill-dogs.com')).toBe(true);
+  });
+});
 
 describe('track', () => {
+  beforeEach(optIn);
+
   afterEach(() => {
     vi.restoreAllMocks();
+    window.localStorage.clear();
     delete (window as any).posthog;
+  });
+
+  it('does not capture on a dev host without the opt-in', () => {
+    window.localStorage.clear();
+    const capture = vi.fn();
+    (window as any).posthog = { capture };
+
+    track('test_event', { label: 'foo' });
+
+    expect(capture).not.toHaveBeenCalled();
   });
 
   it('calls window.posthog.capture when posthog is available', () => {
@@ -34,10 +86,12 @@ describe('track', () => {
 describe('init — click tracking', () => {
   beforeEach(() => {
     document.body.innerHTML = '';
+    optIn();
   });
 
   afterEach(() => {
     vi.restoreAllMocks();
+    window.localStorage.clear();
     delete (window as any).posthog;
   });
 
