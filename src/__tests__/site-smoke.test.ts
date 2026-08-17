@@ -77,9 +77,9 @@ function firstMainImageAbsolute(doc: Document): string | null {
   return new URL(src, 'https://www.chill-dogs.com').href;
 }
 
-function getAffiliateLinks(doc: Document): HTMLAnchorElement[] {
+function getAffiliateLinks(root: ParentNode): HTMLAnchorElement[] {
   return Array.from(
-    doc.querySelectorAll<HTMLAnchorElement>('a[data-affiliate="true"][data-track="affiliate_outbound_click"]')
+    root.querySelectorAll<HTMLAnchorElement>('a[data-affiliate="true"][data-track="affiliate_outbound_click"]')
   );
 }
 
