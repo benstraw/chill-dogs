@@ -87,7 +87,48 @@ export const fleaTickProducts: FleaTickProduct[] = [
       'Mosquito coverage matters if heartworm exposure or evening yard time is a concern',
       'Waterproof after 24 hours, and available without a prescription',
       'Permethrin makes this a dog-only-household product; see the caution before buying',
+      'Dosing is by weight band, so use the size selector below to land on the listing for your dog',
     ],
+    variantGroup: {
+      axis: {
+        id: 'dog-size',
+        label: 'Dog weight',
+        hint: 'Weigh your dog first — a band too low underdoses, and the bands do not overlap.',
+      },
+      defaultVariantId: 'over-95',
+      variants: [
+        {
+          id: '5-10',
+          label: '5–10 lbs',
+          longLabel: 'Extra small dogs, 5 to 10 lbs, 3-month supply',
+          offers: [amazonOffer('B071ZZHCB8')],
+        },
+        {
+          id: '11-20',
+          label: '11–20 lbs',
+          longLabel: 'Small dogs, 11 to 20 lbs, 3-month supply',
+          offers: [amazonOffer('B071G1CW6Z')],
+        },
+        {
+          id: '21-55',
+          label: '21–55 lbs',
+          longLabel: 'Medium dogs, 21 to 55 lbs, 3-month supply',
+          offers: [amazonOffer('B072PSXSNM')],
+        },
+        {
+          id: '56-95',
+          label: '56–95 lbs',
+          longLabel: 'Large dogs, 56 to 95 lbs, 3-month supply',
+          offers: [amazonOffer('B071JS3N2K')],
+        },
+        {
+          id: 'over-95',
+          label: 'Over 95 lbs',
+          longLabel: 'Extra large dogs, over 95 lbs, 3-month supply',
+          offers: [amazonOffer('B071JS3MYK')],
+        },
+      ],
+    },
   },
   {
     id: 'trioak-topical-medium-23-44',
