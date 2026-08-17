@@ -19,7 +19,16 @@ function collectHtmlFiles(dir: string): string[] {
   return files;
 }
 
+/**
+ * Reuses an existing dist/ (CI and `bun run test` build before running vitest,
+ * and the other dist-reading specs already assume that). Only builds when dist/
+ * is absent, so a standalone `test:smoke` still works. Set FORCE_SMOKE_BUILD=1
+ * to rebuild regardless.
+ */
 function buildSite() {
+  const distIsBuilt = existsSync(path.join(distRoot, 'index.html'));
+  if (distIsBuilt && process.env.FORCE_SMOKE_BUILD !== '1') return;
+
   execFileSync('bun', ['run', 'build'], {
     cwd: projectRoot,
     stdio: 'pipe',
@@ -77,9 +86,9 @@ function firstMainImageAbsolute(doc: Document): string | null {
   return new URL(src, 'https://www.chill-dogs.com').href;
 }
 
-function getAffiliateLinks(doc: Document): HTMLAnchorElement[] {
+function getAffiliateLinks(root: ParentNode): HTMLAnchorElement[] {
   return Array.from(
-    doc.querySelectorAll<HTMLAnchorElement>('a[data-affiliate="true"][data-track="affiliate_outbound_click"]')
+    root.querySelectorAll<HTMLAnchorElement>('a[data-affiliate="true"][data-track="affiliate_outbound_click"]')
   );
 }
 
@@ -110,7 +119,9 @@ function isRedirectStub(html: string): boolean {
 describe('site smoke tests', () => {
   beforeAll(() => {
     buildSite();
-  }, 30_000);
+    // Generous: only the no-dist fallback path actually builds, and a cold
+    // build runs well past two minutes on slower machines.
+  }, 300_000);
 
   it('renders the homepage with both primary navigation CTAs', () => {
     const doc = readBuiltPage('index.html');
@@ -683,6 +694,55 @@ describe('site smoke tests', () => {
     for (const link of affiliateLinks) {
       expectTrackedAffiliateLink(link);
     }
+  });
+
+  it('renders a variant picker without adding affiliate CTAs to the card', () => {
+    const doc = readBuiltPage(path.join('safety', 'dog-bath-tools-for-flea-season', 'index.html'));
+    const card = doc.querySelector<HTMLElement>('#tuff-pupper-drying-bathrobe');
+    const picker = card?.querySelector<HTMLElement>('[data-variant-picker]');
+
+    expect(picker).not.toBeNull();
+    expect(picker?.getAttribute('data-variant-selected')).toBe('large');
+
+    const chips = Array.from(picker!.querySelectorAll<HTMLAnchorElement>('[data-variant-option]'));
+    expect(chips).toHaveLength(8);
+
+    for (const chip of chips) {
+      // Chips reach every ASIN without JS, but must not fire the keystone
+      // event — otherwise a card with a picker would out-count one without.
+      expect(chip.href).toContain('tag=chill-dogs-20');
+      expect(relTokens(chip)).toEqual(['noopener', 'noreferrer', 'sponsored']);
+      expect(chip.getAttribute('data-affiliate')).toBeNull();
+      expect(chip.getAttribute('data-track')).toBeNull();
+    }
+
+    // Every size ASIN is linked in the static HTML.
+    const chipAsins = chips.map((chip) => chip.href.match(/\/dp\/([A-Z0-9]{10})/)?.[1]);
+    expect(new Set(chipAsins).size).toBe(8);
+
+    // The card still carries exactly one tracked CTA, on the default variant.
+    const cardCtas = getAffiliateLinks(card!);
+    expect(cardCtas).toHaveLength(1);
+    expect(cardCtas[0].getAttribute('data-asin')).toBe('B0BY9GBMXX');
+    expectTrackedAffiliateLink(cardCtas[0]);
+
+    // The serialized offer table the picker script reads on selection.
+    const table = JSON.parse(picker!.getAttribute('data-variant-offers') || '{}');
+    expect(Object.keys(table)).toHaveLength(8);
+    expect(table['xx-large'].merchants.amazon.asin).toBe('B0BY9C72VY');
+  });
+
+  it('keeps affiliate CTA positions contiguous on a page carrying a variant picker', () => {
+    const doc = readBuiltPage(path.join('safety', 'dog-bath-tools-for-flea-season', 'index.html'));
+    const positions = getAffiliateLinks(doc)
+      .map((link) => link.getAttribute('data-position'))
+      .filter((position): position is string => position !== null)
+      .map(Number);
+
+    expect(positions.length).toBeGreaterThan(0);
+    expect([...new Set(positions)].sort((a, b) => a - b)).toEqual(
+      Array.from({ length: 28 }, (_, i) => i + 1),
+    );
   });
 
   it('marks the custom 404 page as noindex', () => {

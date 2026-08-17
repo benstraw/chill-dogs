@@ -87,7 +87,48 @@ export const fleaTickProducts: FleaTickProduct[] = [
       'Mosquito coverage matters if heartworm exposure or evening yard time is a concern',
       'Waterproof after 24 hours, and available without a prescription',
       'Permethrin makes this a dog-only-household product; see the caution before buying',
+      'Dosing is by weight band, so use the size selector below to land on the listing for your dog',
     ],
+    variantGroup: {
+      axis: {
+        id: 'dog-size',
+        label: 'Dog weight',
+        hint: 'Weigh your dog first — a band too low underdoses, and the bands do not overlap.',
+      },
+      defaultVariantId: 'over-95',
+      variants: [
+        {
+          id: '5-10',
+          label: '5–10 lbs',
+          longLabel: 'Extra small dogs, 5 to 10 lbs, 3-month supply',
+          offers: [amazonOffer('B071ZZHCB8')],
+        },
+        {
+          id: '11-20',
+          label: '11–20 lbs',
+          longLabel: 'Small dogs, 11 to 20 lbs, 3-month supply',
+          offers: [amazonOffer('B071G1CW6Z')],
+        },
+        {
+          id: '21-55',
+          label: '21–55 lbs',
+          longLabel: 'Medium dogs, 21 to 55 lbs, 3-month supply',
+          offers: [amazonOffer('B072PSXSNM')],
+        },
+        {
+          id: '56-95',
+          label: '56–95 lbs',
+          longLabel: 'Large dogs, 56 to 95 lbs, 3-month supply',
+          offers: [amazonOffer('B071JS3N2K')],
+        },
+        {
+          id: 'over-95',
+          label: 'Over 95 lbs',
+          longLabel: 'Extra large dogs, over 95 lbs, 3-month supply',
+          offers: [amazonOffer('B071JS3MYK')],
+        },
+      ],
+    },
   },
   {
     id: 'trioak-topical-medium-23-44',
@@ -1332,14 +1373,32 @@ export const fleaTickProducts: FleaTickProduct[] = [
       src: 'https://m.media-amazon.com/images/I/61OK8kwHFxL._SL500_.jpg',
       alt: 'Tuff Pupper blue microfiber dog bathrobe with adjustable hood and belly strap',
     },
-    coverage: 'Seven sizes',
+    coverage: 'Eight sizes',
     howItWorks: 'Straps a heavy microfiber layer to the dog so it keeps drying while you clean up the bathroom.',
     bullets: [
       '800 GSM microfiber holds several times its weight in water, which cuts towel time considerably',
       'Belly strap and rear leg straps keep it on a dog that will not stand still',
       'Also useful after rainy walks and beach trips, not just baths',
-      'Measure the back length against the size chart — seven sizes means it is easy to order the wrong one',
+      'Sized by back length, so measure before ordering — the size selector below goes straight to the right listing',
     ],
+    variantGroup: {
+      axis: {
+        id: 'dog-size',
+        label: 'Size',
+        hint: 'Measure your dog from collar to tail base and check the listing size chart.',
+      },
+      defaultVariantId: 'large',
+      variants: [
+        { id: 'x-small', label: 'X-Small', offers: [amazonOffer('B0BY9C5HFB')] },
+        { id: 'small', label: 'Small', offers: [amazonOffer('B0BY9CT5FF')] },
+        { id: 'medium', label: 'Medium', offers: [amazonOffer('B0BY9CZMBJ')] },
+        { id: 'large', label: 'Large', offers: [amazonOffer('B0BY9GBMXX')] },
+        { id: 'x-large', label: 'X-Large', offers: [amazonOffer('B0BY9F964J')] },
+        { id: 'xx-large', label: 'XX-Large', offers: [amazonOffer('B0BY9C72VY')] },
+        { id: 'xxx-large', label: 'XXX-Large', offers: [amazonOffer('B0BY9HHQ48')] },
+        { id: 'giant', label: 'Giant', offers: [amazonOffer('B0CK4LFD8S')] },
+      ],
+    },
   },
   {
     id: 'paw-mountain-3-piece-bath-set',
