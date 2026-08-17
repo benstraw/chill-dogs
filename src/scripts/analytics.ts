@@ -13,8 +13,36 @@ declare global {
   }
 }
 
+/**
+ * Local dev servers and Vercel preview deploys were producing roughly half of all raw
+ * events, which makes conversion rates on the real site unreadable. Capture is off on
+ * those hosts by default. Set `localStorage['chill-dogs:analytics'] = 'on'` to opt a
+ * dev session back in when you need to test tracking.
+ *
+ * The PostHog loader in src/components/Analytics.astro applies the same rule inline —
+ * it has to, because it is an is:inline script and cannot import this module. Keep the
+ * two in sync.
+ */
+export function shouldCaptureAnalytics(hostname: string): boolean {
+  if (hostname === 'localhost' || hostname === '127.0.0.1' || hostname === '::1' || hostname === '0.0.0.0') return false;
+  if (hostname.endsWith('.localhost')) return false;
+  if (/^(127\.|10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.)/.test(hostname)) return false;
+  if (hostname.endsWith('.vercel.app')) return false;
+  return true;
+}
+
+function capturingEnabled(): boolean {
+  try {
+    if (window.localStorage.getItem('chill-dogs:analytics') === 'on') return true;
+  } catch {
+    // storage blocked; fall through to host rules
+  }
+  return shouldCaptureAnalytics(window.location.hostname);
+}
+
 export function track(eventName: string, props: Record<string, any>): void {
   if (typeof window === 'undefined') return;
+  if (!capturingEnabled()) return;
 
   if (window.posthog && typeof window.posthog.capture === 'function') {
     window.posthog.capture(eventName, props);
