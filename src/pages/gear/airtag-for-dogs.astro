@@ -308,25 +308,6 @@ const collectionSchema = {
     <!-- FAQ -->
     <section id="faq">
       <FAQ faqs={faqs} heading="AirTag for Dogs FAQ" />
-      {airtagOffer && (
-        <div class="faq-shop-cta">
-          <p class="faq-shop-note">
-            If a Bluetooth tag is what you actually want — a cheap collar tag for a dog who
-            stays in populated areas — AirTag is the one to get.
-          </p>
-          <AffiliateLink
-            href={airtagOffer.url}
-            data-asin={airtagOffer.asin}
-            data-product-name={airtagProduct.name}
-            data-product-id={airtagProduct.id}
-            data-product-category={airtagProduct.type}
-            position="faq-bottom"
-            class="ui-cta"
-          >
-            Check Price on Apple AirTag
-          </AffiliateLink>
-        </div>
-      )}
     </section>
 
     <!-- Closing CTA -->
@@ -554,17 +535,6 @@ const collectionSchema = {
     font-size: var(--text-sm);
     color: var(--color-text-muted);
     margin: var(--space-xs) 0 0;
-  }
-
-  .faq-shop-cta {
-    max-width: 28rem;
-    margin: var(--space-xl) auto 0;
-    text-align: center;
-  }
-
-  .faq-shop-note {
-    color: var(--color-text-muted);
-    margin-bottom: var(--space-sm);
   }
 
   .comparison-cta {
