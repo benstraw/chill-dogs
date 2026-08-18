@@ -26,6 +26,12 @@ export interface EmergencyProduct {
   sizingNote?: string;
   ctaLabel?: string;
   image?: { src: string; alt: string };
+  /**
+   * Surfaced in the default view of the snake-bite converter. Everything else in
+   * the category stays in the catalog and renders behind the "more options"
+   * expander, so the page opens with a handful of decisions instead of all 47.
+   */
+  featured?: boolean;
 }
 
 export const emergencyCategoryMeta: Record<EmergencyProductCategory, { label: string; title: string; intro: string }> = {
@@ -113,6 +119,7 @@ const carryReviewCandidates: EmergencyProduct[] = [
   },
   {
     id: 'onetigris-full-body-dog-carry-sling',
+    featured: true,
     name: 'OneTigris Full Body Dog Carry Sling',
     category: 'carry',
     badge: 'Full-Body Carry Sling',
@@ -163,6 +170,7 @@ const carryReviewCandidates: EmergencyProduct[] = [
   },
   {
     id: 'ruffwear-backtrak-evacuation-kit',
+    featured: true,
     name: 'Ruffwear BackTrak Evacuation Kit',
     category: 'carry',
     badge: 'Carry Harness',
@@ -220,6 +228,7 @@ const carryReviewCandidates: EmergencyProduct[] = [
 const stretcherReviewCandidates: EmergencyProduct[] = [
   {
     id: 'veehoo-dog-stretcher',
+    featured: true,
     name: 'Veehoo Dog Stretcher',
     category: 'stretcher',
     badge: 'Dog Stretcher',
@@ -240,6 +249,7 @@ const stretcherReviewCandidates: EmergencyProduct[] = [
   },
   {
     id: 'patient-aid-portable-stretcher',
+    featured: true,
     name: 'Patient Aid Portable Stretcher & Gurney',
     category: 'stretcher',
     badge: 'Soft Stretcher',
@@ -323,6 +333,7 @@ const firstAidReviewCandidates: EmergencyProduct[] = [
   },
   {
     id: 'arca-pet-reflective-first-aid-pouch',
+    featured: true,
     name: 'ARCA PET Dog First Aid Kit',
     category: 'first-aid',
     badge: 'First Aid Kit',
@@ -361,6 +372,7 @@ const firstAidReviewCandidates: EmergencyProduct[] = [
   },
   {
     id: 'adventure-dog-medical-kit-vet-in-a-box',
+    featured: true,
     name: 'Adventure Dog Medical Kit - Vet in a Box',
     category: 'first-aid',
     badge: 'First Aid Kit',
@@ -434,6 +446,7 @@ const firstAidReviewCandidates: EmergencyProduct[] = [
 const warmthReviewCandidates: EmergencyProduct[] = [
   {
     id: 'sierra-madre-emergency-sleeping-bag',
+    featured: true,
     name: 'Sierra Madre Emergency Sleeping Bag',
     category: 'warmth-control',
     badge: 'Sleeping Bag',
@@ -516,6 +529,7 @@ const slipLeadReviewCandidates: EmergencyProduct[] = [
   },
   {
     id: 'mendota-products-large-slip-lead',
+    featured: true,
     name: 'Mendota Products Slip Lead',
     category: 'warmth-control',
     badge: 'Slip Lead',
@@ -591,6 +605,7 @@ const preventionReviewCandidates: EmergencyProduct[] = [
   },
   {
     id: 'cuktech-25000mah-power-bank',
+    featured: true,
     name: 'CUKTECH 25,000mAh Power Bank',
     category: 'prevention',
     badge: 'Power Bank',
@@ -653,6 +668,7 @@ const preventionReviewCandidates: EmergencyProduct[] = [
   },
   {
     id: 'nebo-mycro-450-headlamp',
+    featured: true,
     name: 'NEBO MYCRO 450 Headlamp',
     category: 'prevention',
     badge: 'Headlamp',
@@ -694,6 +710,7 @@ const preventionReviewCandidates: EmergencyProduct[] = [
   },
   {
     id: 'nitecore-nu25-headlamp',
+    featured: true,
     name: 'Nitecore NU25 360 Lumen Triple Output',
     category: 'prevention',
     badge: 'Headlamp',
@@ -777,6 +794,7 @@ const preventionReviewCandidates: EmergencyProduct[] = [
 export const emergencyProducts: EmergencyProduct[] = [
   {
     id: 'fido-pro-airlift-rescue-sling',
+    featured: true,
     name: 'Fido Pro Airlift Emergency Dog Rescue Sling',
     category: 'carry',
     badge: 'Rescue Sling',
@@ -894,6 +912,7 @@ export const emergencyProducts: EmergencyProduct[] = [
   },
   {
     id: 'kurgo-50-piece-dog-first-aid-kit',
+    featured: true,
     name: 'Kurgo 50-Piece Dog First Aid Kit',
     category: 'first-aid',
     badge: 'First Aid Kit',
@@ -949,6 +968,7 @@ export const emergencyProducts: EmergencyProduct[] = [
   ...firstAidReviewCandidates,
   {
     id: 'swiss-safe-mylar-emergency-blankets',
+    featured: true,
     name: 'Swiss Safe Mylar Emergency Blankets',
     category: 'warmth-control',
     badge: 'MYLAR BLANKET',
@@ -973,6 +993,7 @@ export const emergencyProducts: EmergencyProduct[] = [
   ...preventionReviewCandidates,
   {
     id: 'hipypaw-basket-silicone-muzzle',
+    featured: true,
     name: 'HipyPaw Basket Silicone Dog Muzzle',
     category: 'muzzle',
     badge: 'Dog Muzzle',
@@ -992,6 +1013,7 @@ export const emergencyProducts: EmergencyProduct[] = [
   },
   {
     id: 'vinchini-3d-mesh-muzzle',
+    featured: true,
     name: 'VINCHINI 3D Air Mesh Dog Muzzle',
     category: 'muzzle',
     badge: 'Best Mesh',
@@ -1050,6 +1072,7 @@ export const emergencyProducts: EmergencyProduct[] = [
   },
   {
     id: 'tviaoh-small-dog-muzzle',
+    featured: true,
     name: 'TVIAOH Small Dog Muzzle',
     category: 'muzzle',
     badge: 'Best for Small Dogs',
@@ -1107,4 +1130,21 @@ export const emergencyProducts: EmergencyProduct[] = [
 
 export function getEmergencyProductsByCategory(category: EmergencyProductCategory): EmergencyProduct[] {
   return emergencyProducts.filter((product) => product.category === category);
+}
+
+/**
+ * The curated picks the converter shows by default. Falls back to the first
+ * entry in the category so a category can never render an empty grid if its
+ * `featured` flags are ever dropped.
+ */
+export function getFeaturedEmergencyProducts(category: EmergencyProductCategory): EmergencyProduct[] {
+  const inCategory = getEmergencyProductsByCategory(category);
+  const featured = inCategory.filter((product) => product.featured);
+  return featured.length > 0 ? featured : inCategory.slice(0, 1);
+}
+
+/** Everything else in the category — rendered behind the "more options" expander. */
+export function getAdditionalEmergencyProducts(category: EmergencyProductCategory): EmergencyProduct[] {
+  const featuredIds = new Set(getFeaturedEmergencyProducts(category).map((product) => product.id));
+  return getEmergencyProductsByCategory(category).filter((product) => !featuredIds.has(product.id));
 }

@@ -3,6 +3,7 @@ import { describe, expect, it } from 'vitest';
 import { calmingProducts } from '../data/calming-products';
 import { coolingProducts } from '../data/cooling-products';
 import { emergencyProducts } from '../data/emergency-products';
+import { fleaTickProducts } from '../data/flea-tick-products';
 import { productCatalogItems } from '../data/product-catalog';
 import { buildProductPageMap } from '../data/product-page-map';
 import { relaxationProducts } from '../data/relaxation-products';
@@ -55,6 +56,7 @@ describe('admin product catalog data', () => {
       ...trackerProducts,
       ...accessoryProducts,
       ...emergencyProducts,
+      ...fleaTickProducts,
     ];
     const catalogIds = productCatalogItems.map((product) => product.id);
 
@@ -69,7 +71,7 @@ describe('admin product catalog data', () => {
     for (const product of productCatalogItems) {
       expect(product.id).toBeTruthy();
       expect(product.name).toBeTruthy();
-      expect(product.pillar).toMatch(/^(cooling|calming|comfort|gear)$/);
+      expect(product.pillar).toMatch(/^(cooling|calming|comfort|gear|safety)$/);
       expect(product.category).toBeTruthy();
       if (product.amazonUrl) {
         expect(product.amazonUrl).toContain('tag=chill-dogs-20');
@@ -108,6 +110,11 @@ describe('admin product catalog data', () => {
     expect(pageMap['fido-pro-airlift-rescue-sling']).toEqual(
       expect.arrayContaining([
         expect.objectContaining({ href: '/gear/dog-snake-bite-emergency-kit/' }),
+      ])
+    );
+    expect(pageMap['wondercide-spray-lemongrass-32oz']).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ href: '/safety/best-natural-flea-and-tick-products-for-dogs/' }),
       ])
     );
   });

@@ -3,7 +3,7 @@ title: Converter Page Checklist
 type: checklist
 domain: checklists
 status: active
-updated: 2026-06-05
+updated: 2026-08-06
 tags:
   - chill-dogs
   - checklist
@@ -34,6 +34,7 @@ Finishing any converter page before marking work as done.
 - [ ] Amazon links use `AffiliateLink.astro` — no plain `<a>` tags for Amazon URLs
 - [ ] Affiliate tag `chill-dogs-20` present in every Amazon URL
 - [ ] Product data sourced from canonical data file (`cooling-products.ts`, `calming-products.ts`, `relaxation-products.ts`, etc.) — not hardcoded in page
+- [ ] Product cards compose the shared primitives (`ProductCardShell`, `ProductImageFrame`, `ProductBulletList`, `AffiliateOfferStack`) — no hand-rolled card surface, image frame, bullet list, or CTA stack. Missing capability = new opt-in prop on the primitive, not a local fork
 - [ ] `Disclosure` component appears before product CTAs
 - [ ] Product claims are research-based — not fake hands-on testing
 - [ ] No "vet-approved" / "vet-recommended" language unless sourced with documentation

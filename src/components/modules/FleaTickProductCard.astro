@@ -1,0 +1,114 @@
+---
+import AffiliateOfferStack from './primitives/AffiliateOfferStack.astro';
+import ProductBulletList from './primitives/ProductBulletList.astro';
+import ProductCardShell from './primitives/ProductCardShell.astro';
+import ProductImageFrame from './primitives/ProductImageFrame.astro';
+import type { FleaTickProduct } from '@data/flea-tick-products';
+import { getOffers } from '@data/products/offers';
+
+interface Props {
+  product: FleaTickProduct;
+  pageSlug: string;
+  position: string | number;
+}
+
+const { product, pageSlug, position } = Astro.props;
+const offers = getOffers(product);
+
+const metadata = [
+  product.activeIngredient ? { label: 'Active', value: product.activeIngredient } : null,
+  product.coverage ? { label: 'Coverage', value: product.coverage } : null,
+  product.duration ? { label: 'Duration', value: product.duration } : null,
+  product.rxRequired ? { label: 'Rx', value: 'Prescription required' } : null,
+].filter(Boolean);
+---
+
+<ProductCardShell id={product.id} fill>
+  <ProductImageFrame slot="image" image={product.image} />
+
+  <p class="ft-card__badge">{product.badge}</p>
+  <h3 class="ft-card__name">{product.name}</h3>
+  <p class="ft-card__best-for">{product.bestFor}</p>
+
+  {metadata.length > 0 && (
+    <dl class="ft-card__meta">
+      {metadata.map((item) => item && (
+        <div>
+          <dt>{item.label}</dt>
+          <dd>{item.value}</dd>
+        </div>
+      ))}
+    </dl>
+  )}
+
+  <ProductBulletList bullets={product.bullets} />
+
+  {product.howItWorks && <p class="ft-card__note"><strong>Why it fits:</strong> {product.howItWorks}</p>}
+  {product.caution && <p class="ft-card__note ft-card__note--warning"><strong>Caution:</strong> {product.caution}</p>}
+
+  <AffiliateOfferStack
+    offers={offers}
+    product={{ id: product.id, name: product.name, category: product.category }}
+    pageType="converter"
+    pageSlug={pageSlug}
+    position={position}
+    resolveLabel={(offer, index) => {
+      if (offer.merchant === 'amazon') {
+        return product.ctaLabel ?? (index === 0 ? 'Check price on Amazon' : 'See on Amazon');
+      }
+
+      return product.rxRequired ? 'Check price on Chewy (Rx upload)' : 'Check price on Chewy';
+    }}
+  />
+</ProductCardShell>
+
+<style>
+  .ft-card__badge {
+    margin: 0;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+    font-weight: var(--weight-semibold);
+  }
+
+  .ft-card__name {
+    margin: 0;
+    font-size: var(--text-lg);
+    line-height: var(--leading-snug);
+  }
+
+  .ft-card__best-for,
+  .ft-card__note {
+    margin: 0;
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    font-size: var(--text-sm);
+  }
+
+  .ft-card__note--warning {
+    color: #7a251e;
+  }
+
+  .ft-card__meta {
+    display: grid;
+    gap: var(--space-xs);
+    margin: 0;
+  }
+
+  .ft-card__meta div {
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    gap: var(--space-xs);
+    font-size: var(--text-sm);
+  }
+
+  .ft-card__meta dt {
+    font-weight: var(--weight-semibold);
+  }
+
+  .ft-card__meta dd {
+    margin: 0;
+    color: var(--color-text-muted);
+  }
+</style>

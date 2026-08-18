@@ -19,6 +19,7 @@ Do not skip the task-specific docs.
 - Valid page types: `converter`, `collector`, `attractor`, `informer`. Do not invent new types.
 - Do not hardcode internal routes - import from `src/data/routes.ts`.
 - Use `AffiliateLink.astro` for all Amazon outbound links.
+- **Product cards on converters must compose the shared primitives in `src/components/modules/primitives/`** (`ProductCardShell`, `ProductImageFrame`, `ProductBulletList`, `AffiliateOfferStack`). Do not hand-roll a card surface, image frame, bullet list, or CTA stack. If a primitive is missing something, add an opt-in prop to the primitive rather than forking it locally. Card-specific extras (badges, spec lists, notes) stay local. `BrowseProductCard` is the one sanctioned exception.
 - Use the existing related-content system (`src/utils/related-pages.ts`). Do not add manual related arrays.
 - Run relevant tests/build checks before finishing.
 - **Never merge, close, or squash a pull request without explicit confirmation.** Phrases like "push the PR up", "put it up for review", or "send it up" mean push the branch and open/update the PR — NOT merge it. Only run `gh pr merge` when the user says exactly that.
@@ -44,7 +45,15 @@ bun run check:asins -- --quiet  # Same, issues only
 bun run check:amazon     # Check local Amazon cache coverage, freshness, and drift
 bun run indexnow:submit  # Manually submit all URLs to IndexNow API
 bun run check:ai-docs    # Validate AI knowledge graph frontmatter and links
+bun run fetch:chewy      # Pull Chewy catalog metadata from Impact (diagnostic only)
+bun run chewy-link:verify # Confirm Impact credentials resolve
+bun run og:gen           # Generate product-style OG share images
 ```
+
+Scripts that need API keys or outbound network access (`check:asins`, `fetch:chewy`,
+`chewy-link`, `fetch-amazon-data.ts`, `indexnow:submit`) are documented in
+[`docs/ai/engineering/environment-and-integrations.md`](docs/ai/engineering/environment-and-integrations.md).
+In a sandboxed container, a blocked host and a missing key look alike — check both.
 
 ## SEO meta constraints (enforced by tests)
 

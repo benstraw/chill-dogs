@@ -8,7 +8,7 @@
 
 site_system:
   status: "active"
-  as_of: "2026-08-09"
+  as_of: "2026-08-18"
   owner: "chill-dogs"
   purpose: "Define the website as a modular conversion system and keep implementation aligned."
 
@@ -315,10 +315,18 @@ site_system:
     - name: "Fi Dog Collar Review"
       type: "collector"
       collector_subtype: "article"
-      target_action: "Route everyday GPS-tracker intent to Fi purchase paths and off-grid seekers to Garmin/tracker comparison pages"
+      target_action: "Answer Fi purchase questions on the page and convert that intent to Fi outbound clicks; route off-grid seekers to Garmin"
       metric: "amazon_outbound_click rate + collector_to_converter_click to /gear/best-dog-gps-trackers/ and /gear/garmin-dog-tracking-collars/"
       routes:
         - "/gear/fi-dog-collar-review/"
+      notes: >
+        Search-entry page — the large majority of its traffic arrives from search engines on
+        Fi-specific questions, so the buying questions (subscription, LTE vs WiFi, battery,
+        waterproofing) answer in a Quick Answers block above the body rather than only in the
+        closing FAQ. Affiliate CTAs sit at the three points where intent peaks: hero, after the
+        Best For reasons, and after the FAQ answers. Amazon prices are never stated on the page
+        per the Associates operating agreement; cost is described structurally and the number
+        lives behind the CTA.
 
     - name: "Garmin Dog Tracking Collars"
       type: "collector"
@@ -340,6 +348,32 @@ site_system:
       metric: "collector_to_converter_click to /gear/best-dog-gps-trackers/ and /travel/rhys-ran-away-cerro-san-luis-obispo/"
       routes:
         - "/safety/what-to-do-if-your-dog-runs-away/"
+
+    - name: "Natural Flea and Tick Prevention for Dogs"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Serve natural-first readers who already prefer a lower-toxicity routine and route them to the natural-product converter"
+      metric: "collector_to_converter_click to /safety/best-natural-flea-and-tick-products-for-dogs/"
+      routes:
+        - "/safety/natural-flea-and-tick-prevention-for-dogs/"
+      notes: >
+        Natural-first article in the flea/tick cluster. Carries the Wondercide label-reading,
+        cat-safety, bath-support, and veterinary-escalation content. The broad pillar article,
+        medications converter, and flea-season bath-tools converter are held for a follow-up
+        release; this article and its converter ship as a self-contained pair.
+
+    - name: "Best Natural Flea and Tick Products for Dogs"
+      type: "converter"
+      target_action: "Drive affiliate outbound clicks from readers who already want natural or lower-toxicity flea/tick products"
+      metric: "amazon_outbound_click rate + collector_to_converter_click from /safety/natural-flea-and-tick-prevention-for-dogs/"
+      routes:
+        - "/safety/best-natural-flea-and-tick-products-for-dogs/"
+      notes: >
+        Shared-config safety converter built from a curated set of natural pet products: plant-forward
+        sprays, oils, and a wipe-on repellent mitt; bath-day shampoos; collars and clip-on tags; daily
+        chews; and a grooming section of flea combs, brushes, and tick-removal tools. Spray, shampoo,
+        chew, and grooming sections mix Amazon and Chewy offers. Frames natural products as prevention
+        layers and light-load support, not heavy-infestation rescue tools.
 
     - name: "Rattlesnake Safety for Dogs"
       type: "collector"
@@ -366,6 +400,9 @@ site_system:
         phone power, and visibility gear. Canonical products live in src/data/emergency-products.ts
         and flow through product-catalog.ts and product-page-map.ts before appearing in
         /admin/products/. SerpAPI-backed amazon-products cache entries are reference data only.
+        The hero product doubles as the single above-the-fold affiliate CTA. Each category shows
+        only its `featured` picks by default; the rest of the catalog stays in an expander, so the
+        default view surfaces 17 of 47 products rather than all of them at once.
 
     - name: "Product browse"
       type: "converter"
@@ -376,7 +413,8 @@ site_system:
         - "/shop/"
       notes: >
         Public-facing product catalog at /shop/. Shows all products from src/data/product-catalog.ts
-        with client-side filtering by pillar, category, and search. Linked from site footer.
+        with client-side filtering by pillar, category, and search, including the new safety pillar.
+        Linked from site footer.
         Page type is converter (not informer) because it drives Amazon affiliate clicks.
 
     - name: "Search"
@@ -413,7 +451,7 @@ site_system:
     workhorse:
       - "BaseLayout"
       - "Hero"
-      - "HeroExperiment"
+      - "SectionHero"
       - "CoolingConverterPage"
       - "CalmingConverterPage"
       - "RelaxationConverterPage"
@@ -431,12 +469,10 @@ site_system:
       - "RelatedGuides"
       - "HomepageSection"
     showstopper:
-      - "CoolingHubHeroDesert"
-      - "CalmingHubHeroFireworks"
       - "404 visual page"
     high_touch:
       - "HomepageHero variants"
-      - "collector variant routes (/v/, /cooling/v/, /calming/v/)"
+      - "homepage variant routes (/v/)"
       - "Road Trip collector narrative"
 
   nav:
@@ -511,9 +547,10 @@ site_system:
     frontend: "Astro 5 static site with scoped CSS and reusable modules"
     cms: "None (code-first content/config in repository)"
     hosting: "Static build deployment"
-    seo_strategy: "collector captures intent; converter monetizes intent; variant routes remain canonicalized and noindex"
+    seo_strategy: "collector captures intent; converter monetizes intent; homepage variant routes remain canonicalized and noindex"
     sitemap_inventory: "src/data/sitemap-inventory.ts composes staticSitemapSections with article MDX collection entries at build time; future related-content derivation should use the complete inventory instead of static-only sections. Converter sitemap entries carry pubDate and optional lastUpdated metadata for homepage theme-section converter recency ordering."
-    section_collectors: "src/data/section-collectors.ts defines cooling, calming, and comfort collector metadata, topic subsection grouping, topic coverage, priority ordering, dynamic CollectorBody card inventories, and CollectionPage hasPart schema from the complete sitemap inventory."
+    section_collectors: "src/data/section-collectors.ts defines cooling, calming, comfort, and gear collector metadata, shared SectionHero content/theme inputs, topic subsection grouping, topic coverage, priority ordering, dynamic CollectorBody card inventories, and CollectionPage hasPart schema from the complete sitemap inventory. The retired /cooling/v/ and /calming/v/ hero experiment routes are no longer built."
+    discovery_surfaces: "The XML sitemap (astro.config.mjs) and llms.txt (src/pages/llms.txt.ts) share one exclusion list in src/data/discovery-exclusions.ts. llms.txt is generated from the complete sitemap inventory — every registered page that is not noindex and not excluded is listed, so new pages appear automatically. It is never a hand-curated subset; src/__tests__/llms-coverage.test.ts fails the build if llms.txt and the XML sitemap disagree on any indexable URL."
 
   redirects:
     # Production: vercel.json → redirects array (true HTTP redirect at Vercel edge).
@@ -541,4 +578,5 @@ site_system:
       - "hero_impression"
       - "toc_click"
       - "pinterest_save_click"
+    hero_cta_properties: "SectionHero emits page + cta; section collector events before 2026-08-10 also contain variant=c. HomepageHero emits cta + href. Historical PostHog events retain their original properties."
     funnel_definition: "collector or attractor entry -> converter click -> affiliate_outbound_click; Amazon links dual-fire amazon_outbound_click during dashboard migration"

@@ -3,7 +3,7 @@ title: Coding Agent Finish Checklist
 type: checklist
 domain: checklists
 status: active
-updated: 2026-05-06
+updated: 2026-08-06
 tags:
   - chill-dogs
   - checklist
@@ -30,6 +30,7 @@ Finishing any coding task — new page, component change, data file update, util
 ## Checklist
 
 - [ ] Reused existing modules where possible — did not create new components when existing ones could be configured
+- [ ] Product cards compose the primitives in `src/components/modules/primitives/` — did not hand-roll a card surface, image frame, bullet list, or CTA stack; extended a primitive with an opt-in prop instead of forking it
 - [ ] Did not invent page types — used only `converter`, `collector`, `attractor`, `informer`
 - [ ] Did not use "hub" in code, comments, or specs — used `collector`
 - [ ] Did not hardcode internal route strings where `ROUTES` constants exist in `src/data/routes.ts`

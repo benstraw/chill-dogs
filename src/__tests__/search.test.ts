@@ -16,7 +16,7 @@ describe('search index — product data shape', () => {
   });
 
   it('every product has a valid pillar', () => {
-    const validPillars = new Set(['cooling', 'calming', 'comfort', 'gear']);
+    const validPillars = new Set(['cooling', 'calming', 'comfort', 'gear', 'safety']);
     for (const p of productCatalogItems) {
       expect(validPillars.has(p.pillar), `${p.id} invalid pillar: ${p.pillar}`).toBe(true);
     }

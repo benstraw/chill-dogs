@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
 import type { SitemapPage, SitemapSection, SitemapTopic } from '../data/content-sitemap';
+import { ROUTES } from '../data/routes';
 import { getCompleteSitemapSections } from '../data/sitemap-inventory';
 import { getRelatedPages, toLinkStripItems, toRelatedGuideCards } from '../utils/related-pages';
 
@@ -19,6 +20,7 @@ function createPage(input: {
 
   return {
     href: input.href,
+    baseTitle: title,
     pageType: input.pageType ?? 'converter',
     collectorSubtype: input.collectorSubtype,
     topics: input.topics,
@@ -259,5 +261,25 @@ describe('related pages', () => {
         expect(relatedPage.href).not.toBe(page.href);
       }
     }
+  });
+
+  it('keeps the natural flea and tick guide and converter related to each other', async () => {
+    const sections = [
+      createSection('Safety', [
+        createPage({
+          href: ROUTES.naturalFleaTickPrevention,
+          pageType: 'collector',
+          collectorSubtype: 'article',
+          topics: ['flea-tick', 'travel'],
+          pinnedRelated: [ROUTES.naturalFleaTickProducts],
+        }),
+        createPage({ href: ROUTES.naturalFleaTickProducts, topics: ['flea-tick', 'travel'] }),
+        createPage({ href: ROUTES.roadTrip, topics: ['travel'] }),
+      ]),
+    ];
+
+    const related = await getRelatedPages({ currentHref: ROUTES.naturalFleaTickPrevention, sections, limit: 4 });
+
+    expect(related[0]?.href).toBe(ROUTES.naturalFleaTickProducts);
   });
 });

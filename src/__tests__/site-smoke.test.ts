@@ -19,7 +19,16 @@ function collectHtmlFiles(dir: string): string[] {
   return files;
 }
 
+/**
+ * Reuses an existing dist/ (CI and `bun run test` build before running vitest,
+ * and the other dist-reading specs already assume that). Only builds when dist/
+ * is absent, so a standalone `test:smoke` still works. Set FORCE_SMOKE_BUILD=1
+ * to rebuild regardless.
+ */
 function buildSite() {
+  const distIsBuilt = existsSync(path.join(distRoot, 'index.html'));
+  if (distIsBuilt && process.env.FORCE_SMOKE_BUILD !== '1') return;
+
   execFileSync('bun', ['run', 'build'], {
     cwd: projectRoot,
     stdio: 'pipe',
@@ -110,7 +119,9 @@ function isRedirectStub(html: string): boolean {
 describe('site smoke tests', () => {
   beforeAll(() => {
     buildSite();
-  }, 30_000);
+    // Generous: only the no-dist fallback path actually builds, and a cold
+    // build runs well past two minutes on slower machines.
+  }, 300_000);
 
   it('renders the homepage with both primary navigation CTAs', () => {
     const doc = readBuiltPage('index.html');
@@ -268,6 +279,34 @@ describe('site smoke tests', () => {
     expect(coolingGuideCards[0]?.querySelector('.cat-card-badge')?.textContent).toBe('Guide');
     expect(coolingGuideCards[0]?.querySelector('img')?.getAttribute('src')).toBeTruthy();
     expect(coolingConverterCards[0]?.querySelector('img')).toBeNull();
+  });
+
+  it('renders tracked themed section heroes without retired variant markup or routes', () => {
+    const cases = [
+      { page: path.join('cooling', 'index.html'), theme: 'cooling' },
+      { page: path.join('calming', 'index.html'), theme: 'calming' },
+      { page: path.join('comforting', 'index.html'), theme: 'comfort' },
+      { page: path.join('gear', 'index.html'), theme: 'gear' },
+    ];
+
+    for (const { page, theme } of cases) {
+      const doc = readBuiltPage(page);
+      const hero = doc.querySelector<HTMLElement>('section[aria-label="Page hero"]');
+      const ctas = Array.from(
+        hero?.querySelectorAll<HTMLAnchorElement>('a[data-track="hero_cta_click"]') ?? []
+      );
+
+      expect(hero).not.toBeNull();
+      expect(hero?.classList.contains('hx')).toBe(true);
+      expect(hero?.classList.contains(`hx--${theme}`)).toBe(true);
+      expect(hero?.classList.contains('hx--c')).toBe(false);
+      expect(hero?.getAttribute('data-hero-variant')).toBeNull();
+      expect(ctas.map((cta) => cta.getAttribute('data-cta'))).toEqual(['primary', 'secondary']);
+      expect(ctas.every((cta) => cta.getAttribute('data-page') === theme)).toBe(true);
+    }
+
+    expect(existsSync(path.join(distRoot, 'cooling', 'v'))).toBe(false);
+    expect(existsSync(path.join(distRoot, 'calming', 'v'))).toBe(false);
   });
 
   it('applies pillar themes to all pages under pillar URL paths', () => {
