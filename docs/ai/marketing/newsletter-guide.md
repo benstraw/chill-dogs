@@ -3,7 +3,7 @@ title: Newsletter Guide
 type: canonical
 domain: marketing
 status: active
-updated: 2026-05-03
+updated: 2026-08-19
 tags:
   - chill-dogs
   - newsletter
@@ -13,6 +13,7 @@ tags:
 related:
   - marketing-plan.md
   - utm-rules.md
+  - charity-outreach-program.md
   - ../writing/article-writing-guide.md
   - ../writing/medical-and-vet-claim-guardrails.md
 ---
@@ -114,5 +115,6 @@ The newsletter reader is a fellow dog owner. Write to them directly and usefully
 
 - [`utm-rules.md`](utm-rules.md) — UTM parameter format
 - [`marketing-plan.md`](marketing-plan.md) — Channel strategy and KPIs
+- [`charity-outreach-program.md`](charity-outreach-program.md) — Coordinating charity spotlight issues
 - [`../writing/article-writing-guide.md`](../writing/article-writing-guide.md) — Article voice and structure
 - [`../writing/medical-and-vet-claim-guardrails.md`](../writing/medical-and-vet-claim-guardrails.md) — Health claim rules

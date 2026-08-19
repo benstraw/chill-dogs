@@ -85,6 +85,18 @@ You are starting any task and need to know which docs apply.
 
 ---
 
+### Contacting a charity or running a charity newsletter spotlight
+
+**Read:**
+- [`marketing/charity-outreach-program.md`](marketing/charity-outreach-program.md) — Three-touch outreach sequence, rollout schedule, tracker, success measures
+- [`marketing/newsletter-guide.md`](marketing/newsletter-guide.md) — Format and link rules for the spotlight issue
+- [`marketing/utm-rules.md`](marketing/utm-rules.md) — UTM tagging for links sent to charities
+- [`writing/medical-and-vet-claim-guardrails.md`](writing/medical-and-vet-claim-guardrails.md) — Claim guardrails for outreach copy
+
+**Checklist:** [`checklists/marketing-publish-checklist.md`](checklists/marketing-publish-checklist.md)
+
+---
+
 ### Changing routes, sitemap, schema, or architecture
 
 **Read:**
