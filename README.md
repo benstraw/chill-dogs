@@ -10,7 +10,6 @@
   <a href="https://www.chill-dogs.com/"><img alt="Website status" src="https://img.shields.io/website?url=https%3A%2F%2Fwww.chill-dogs.com&amp;up_message=online&amp;down_message=out%20for%20a%20walk&amp;style=for-the-badge&amp;logo=googlechrome&amp;logoColor=white"></a>
   <a href="https://vercel.com/"><img alt="Deployed on Vercel" src="https://img.shields.io/badge/deploys-Vercel-000000?style=for-the-badge&amp;logo=vercel&amp;logoColor=white"></a>
   <a href="https://www.chill-dogs.com/affiliate-disclosure/"><img alt="Amazon Associates" src="https://img.shields.io/badge/Amazon-Associates-FF9900?style=for-the-badge&amp;logo=amazon&amp;logoColor=white"></a>
-  <img alt="Dogs consulted: all of them" src="https://img.shields.io/badge/dogs%20consulted-all%20of%20them-87B7C7?style=for-the-badge">
 </p>
 
 <p align="center">
