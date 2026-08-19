@@ -16,10 +16,10 @@ import BaseLayout from '@layouts/BaseLayout.astro';
         favorite charities, helping to improve the lives of dogs inside and out of our shelters.
       </p>
 
-      <article class="charity" id="15-out-of-10-foundation">
+      <article class="charity" id="fifteen-out-of-ten-foundation">
         <h2 class="charity-name">
           15 out of 10 Foundation
-          <a class="charity-anchor" href="#15-out-of-10-foundation" aria-label="Link to 15 out of 10 Foundation">#</a>
+          <a class="charity-anchor" href="#fifteen-out-of-ten-foundation" aria-label="Link to 15 out of 10 Foundation">#</a>
         </h2>
         <p class="charity-logo-wrap">
           <img
@@ -148,6 +148,15 @@ import BaseLayout from '@layouts/BaseLayout.astro';
           PAW-SOME MISSION
           <a class="charity-anchor" href="#paw-some-mission" aria-label="Link to PAW-SOME MISSION">#</a>
         </h2>
+        <p class="charity-logo-wrap">
+          <img
+            src="https://sirdariusbrown.com/cdn/shop/files/Sir_Darius_Brown_Logo_20x_f6f956cd-0e7b-4b27-bf0c-b98c5f16557c_400x.png?v=1636769819"
+            alt="Sir Darius Brown logo"
+            class="charity-logo"
+            loading="lazy"
+            decoding="async"
+          />
+        </p>
         <p>
           Sir Darius Brown began sewing bow ties at the age of 8. A lifelong dog lover, he decided to
           help shelter dogs get adopted by making them bow ties to help get them noticed. In 2022, he
@@ -196,13 +205,15 @@ import BaseLayout from '@layouts/BaseLayout.astro';
           Rolling Dog Farm
           <a class="charity-anchor" href="#rolling-dog-farm" aria-label="Link to Rolling Dog Farm">#</a>
         </h2>
-        <img
-          src="https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-1/310302024_488211616673609_1419817390131643100_n.jpg?stp=dst-jpg_tt6&cstp=mx239x239&ctp=s239x239&_nc_cat=110&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=risndhMryjsQ7kNvwE0eGEd&_nc_oc=AdpuywJ_JwXAjAl3n0wrDNoZIz3VeexALbhR4_Yms_qy7ajjzeZ18laVWG5rn50I5oI&_nc_zt=24&_nc_ht=scontent-lax3-1.xx&_nc_gid=EwAlOofw_i5xjhA4nCgYeQ&_nc_ss=7b289&oh=00_AQAWp501wVAHePyCrwbU5RxvfCgvRp0CxBL7UoMs-i57xw&oe=6A4925E6"
-          alt="Rolling Dog Farm logo"
-          class="charity-logo"
-          loading="lazy"
-          decoding="async"
-        />
+        <p class="charity-logo-wrap">
+          <img
+            src="https://rollingdogfarm.org/wp-content/uploads/2017/01/rolling-dog-disabled-farm.png"
+            alt="Rolling Dog Farm logo"
+            class="charity-logo"
+            loading="lazy"
+            decoding="async"
+          />
+        </p>
         <p>
           Rolling Dog Farm is a 501(c)(3) nonprofit sanctuary in the White Mountains of northern New
           Hampshire for dogs that most shelters struggle to place — blind, blind and deaf, missing a
@@ -360,21 +371,37 @@ import BaseLayout from '@layouts/BaseLayout.astro';
     text-decoration-color: currentColor;
   }
 
+  /*
+   * Logos are hotlinked from each charity's own site and most are transparent
+   * PNGs, so they need a backdrop we control rather than the page's blue-grey
+   * tint. White suits dark and full-colour marks; reversed (white) logos opt
+   * into the charcoal tile instead — that is what --dark is for.
+   *
+   * The logo box is a fixed 340x96 with object-fit: contain, so every tile is the
+   * same height whatever each file's intrinsic size is, the artwork is never
+   * distorted, and the row is reserved before the remote image loads — these are
+   * hotlinked, so we cannot know their dimensions to set width/height attributes.
+   */
   .charity-logo-wrap {
+    display: flex;
+    align-items: center;
     margin: var(--space-sm) 0 var(--space-md);
+    padding: var(--space-md);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
   }
 
   .charity-logo-wrap--dark {
     background: var(--color-charcoal);
-    border-radius: var(--radius-md);
-    padding: var(--space-md);
+    border-color: var(--color-charcoal);
   }
 
   .charity-logo {
     display: block;
-    max-width: 100%;
     width: min(100%, 340px);
-    max-height: 96px;
+    height: 96px;
     object-fit: contain;
+    object-position: left center;
   }
 </style>
