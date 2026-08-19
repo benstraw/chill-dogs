@@ -1,404 +1,114 @@
-# chill-dogs
+<p align="center">
+  <a href="https://www.chill-dogs.com/"><img src="public/images/paw-logo.png" alt="Chill-Dogs" width="140"></a>
+</p>
 
-Amazon Associates affiliate site for dog cooling, calming, and relaxing products. Built as a static site and deployed to Vercel.
+<h1 align="center">Chill-Dogs</h1>
 
-**Live:** https://www.chill-dogs.com
+<p align="center"><em>For the love of dogs.</em></p>
 
----
+<p align="center">
+  <a href="https://www.chill-dogs.com/"><img alt="Website status" src="https://img.shields.io/website?url=https%3A%2F%2Fwww.chill-dogs.com&amp;up_message=online&amp;down_message=out%20for%20a%20walk&amp;style=for-the-badge&amp;logo=googlechrome&amp;logoColor=white"></a>
+  <a href="https://vercel.com/"><img alt="Deployed on Vercel" src="https://img.shields.io/badge/deploys-Vercel-000000?style=for-the-badge&amp;logo=vercel&amp;logoColor=white"></a>
+  <a href="https://www.chill-dogs.com/affiliate-disclosure/"><img alt="Amazon Associates" src="https://img.shields.io/badge/Amazon-Associates-FF9900?style=for-the-badge&amp;logo=amazon&amp;logoColor=white"></a>
+  <img alt="Dogs consulted: all of them" src="https://img.shields.io/badge/dogs%20consulted-all%20of%20them-87B7C7?style=for-the-badge">
+</p>
 
-## Stack
+<p align="center">
+  <a href="https://astro.build/"><img alt="Built with Astro" src="https://img.shields.io/badge/built%20with-Astro%205-BC52EE?style=flat-square&amp;logo=astro&amp;logoColor=white"></a>
+  <a href="https://bun.sh/"><img alt="Runs on Bun" src="https://img.shields.io/badge/runs%20on-Bun-FBF0DF?style=flat-square&amp;logo=bun&amp;logoColor=black"></a>
+  <a href="https://www.typescriptlang.org/"><img alt="TypeScript" src="https://img.shields.io/badge/typed%20with-TypeScript-3178C6?style=flat-square&amp;logo=typescript&amp;logoColor=white"></a>
+  <img alt="Styled with CSS, no Tailwind" src="https://img.shields.io/badge/styled%20with-CSS%2C%20no%20Tailwind-663399?style=flat-square">
+  <a href="https://posthog.com/"><img alt="Analytics by PostHog" src="https://img.shields.io/badge/measured%20with-PostHog-F54E00?style=flat-square&amp;logo=posthog&amp;logoColor=white"></a>
+</p>
 
-| | |
-|---|---|
-| Framework | Astro 5 (SSG) |
-| Runtime / package manager | Bun |
-| Styling | Vanilla CSS, custom properties |
-| Fonts | Nunito Variable (headings), Inter (body) via `@fontsource` |
-| Deploy | Vercel |
+<p align="center">
+  <a href="https://github.com/benstraw/chill-dogs/commits/main"><img alt="Last commit" src="https://img.shields.io/github/last-commit/benstraw/chill-dogs?style=flat-square&amp;logo=github"></a>
+  <a href="https://github.com/benstraw/chill-dogs/graphs/commit-activity"><img alt="Commit activity" src="https://img.shields.io/github/commit-activity/m/benstraw/chill-dogs?style=flat-square&amp;logo=github"></a>
+  <a href="https://github.com/benstraw/chill-dogs"><img alt="Repository size" src="https://img.shields.io/github/repo-size/benstraw/chill-dogs?style=flat-square&amp;logo=github"></a>
+</p>
 
----
+Somewhere right now there is a dog panting on a kitchen floor, a dog hiding in a
+bathtub because of fireworks, and a dog who has decided the only acceptable bed is
+the one you are currently sitting on. [Chill-Dogs](https://www.chill-dogs.com/) is
+for the people trying to fix that — a small, researched catalog of the gear that
+actually helps, so nobody has to scroll through ten thousand near-identical listings
+at eleven at night.
 
-## Setup
+This repository is the whole site. Chill-Dogs earns Amazon Associates commissions on
+the products it recommends, and the code is public so anyone curious about how that
+works can read every line of it — the product data, the disclosure rules, the tests,
+the guardrails on what the copy is allowed to claim.
 
-This project requires `bun@1.3.6`.
+## Three ways to make a dog comfortable
 
-```bash
-bun install --frozen-lockfile
-cp .env.example .env   # Fill in only what you need; .env is gitignored
-```
+The paw up top runs sky blue to sage green to dusty rose, which is not decoration —
+those are the three theme colors, and each one is a section of the site.
 
-Nothing in `.env` is required for `dev`, `build`, or `test`. The keys matter only for the merchant-data and indexing scripts — see [`docs/ai/engineering/environment-and-integrations.md`](./docs/ai/engineering/environment-and-integrations.md) for which variable and which outbound host each script needs.
+**[Cooling](https://www.chill-dogs.com/cooling/)** is the summer problem. Mats,
+vests, bandanas, freezable toys, hot-car gear, travel water, and the honest answer to
+"how hot is too hot for a walk?"
 
-In Claude Code on the web, `.claude/hooks/session-start.sh` handles install, `.env`, and a warm build automatically; set the variables on the environment rather than committing them.
+**[Calming](https://www.chill-dogs.com/calming/)** is the year-round one. Anxiety
+wraps and ThunderShirt alternatives, lick mats, crate training, car anxiety, and how
+to build a room a dog will actually settle in on the fourth of July.
 
----
+**[Comforting](https://www.chill-dogs.com/comforting/)** is where the dog ends up
+once everything else is sorted. Orthopedic and calming beds, crates that don't look
+like crates, airline carriers, and how much sleep a dog is supposed to get anyway.
 
-## Commands
+Threading through all three: travel, gear, and safety — road-trip packing, flying
+with a dog, GPS trackers, and what to do in the twenty minutes after a dog runs off,
+which is a guide written from experience nobody wanted to gain.
 
-```bash
-bun run dev       # Dev server at localhost:4321
-bun run build     # Static build → dist/
-bun run preview   # Preview the built site
-bun run test      # Full Vitest suite
-bun run test:smoke # Built-site smoke tests for key pages
-bun run test:coverage # Coverage for src/utils and src/scripts
-```
+## Under the hood
 
-Merchant data and indexing:
+Static Astro 5, built with Bun, deployed on Vercel. No CMS, no database, no backend —
+every product is a typed TypeScript record, so a bad ASIN or a missing field is a
+compile error rather than a broken page someone finds three weeks later. Styling is
+vanilla CSS driven by a single token file; there is no Tailwind and no component
+library. Social share images are rendered at build time with Satori, which means the
+preview card for a product page is generated from the same data the page is.
 
-```bash
-bun run check:asins       # Are all product ASINs still live on Amazon?
-bun run check:amazon      # Local Amazon cache coverage, freshness, drift
-bun run check:ai-docs     # Validate the docs/ai knowledge graph
-bun run fetch:chewy       # Pull Chewy catalog metadata from Impact (diagnostic only)
-bun run chewy-link:verify # Confirm Impact credentials resolve
-bun run indexnow:submit   # Manually submit URLs to IndexNow
-```
+## Every page has exactly one job
 
----
+The site is built as a conversion system, and the interesting constraint is that every
+page must declare which of four jobs it does. **Converters** exist to send a qualified
+click to Amazon. **Collectors** catch search intent and route it to the right
+converter. **Attractors** turn campaign and social traffic into a first useful click.
+**Informers** handle legal and trust.
 
-## Continuous integration
+One page, one type, one metric. A collector that starts growing its own product
+comparison tables is a bug, not a feature, and the page-type field is what makes that
+argument settleable instead of a matter of taste. The full model lives in
+[`docs/system-definition.yaml`](./docs/system-definition.yaml).
 
-| Workflow | Trigger | What it does |
-|---|---|---|
-| [`.github/workflows/ci.yml`](./.github/workflows/ci.yml) | Push to `main`, every PR | `bun install` → `build` → `vitest run` → `check:ai-docs` |
-| [`.github/workflows/integration-checks.yml`](./.github/workflows/integration-checks.yml) | Weekly (Mon 13:00 UTC), manual | `check:asins`, `check:amazon --fail-on-stale`, `chewy-link:verify` |
+## The repo is written for robots too
 
-The merchant checks live in Actions because runners have unrestricted outbound access; sandboxed agent containers reach only the hosts on their network allowlist. Impact credentials come from repository secrets and the Chewy step self-skips when they are unset.
+Most projects document themselves for people. This one also documents itself for the
+AI agents that work on it. [`docs/ai/`](./docs/ai/) is a Markdown knowledge graph —
+an operating brief, a task router, a dependency map, and thirty-odd domain documents
+covering everything from affiliate compliance to how to write a product bullet. There
+is a generated `/llms.txt` for crawlers, `CLAUDE.md` and `AGENTS.md` for coding
+agents, and a validator that fails CI when a cross-link rots or a doc's frontmatter
+drifts. Documentation that can go stale silently will, so this documentation can't.
 
----
+## Keeping it honest
 
-## Project structure
-
-```
-src/
-├── components/        # Shared UI components
-│   └── modules/       # Page-level modules (Hero, ProductCard, FAQ, etc.)
-├── data/
-│   ├── cooling-products.ts   # 11 cooling products (typed)
-│   └── calming-products.ts   # 8 calming products (typed)
-├── layouts/
-│   ├── BaseLayout.astro      # HTML shell, head, header/footer
-│   ├── ConverterLayout.astro # Money pages with product grids
-│   └── PostLayout.astro      # SEO collector and editorial pages
-├── pages/
-│   ├── cooling/              # Cooling hub + converters
-│   ├── calming/              # Calming hub + pillar
-│   └── content-sitemap.astro # Hidden editor-facing sitemap page (`/content-sitemap/`)
-├── styles/
-│   ├── tokens.css            # All design tokens (colors, spacing, type, radii)
-│   └── hero.base.css         # SectionHero theme tokens, layout, and presentation
-└── utils/
-    ├── collection-helpers.ts # getSlugFromId, getCategoryFromId, etc.
-    └── types.ts              # PageType, Category, Product interfaces
-```
-
----
-
-## Page types
-
-Every page is exactly one type, set via the `pageType` frontmatter field:
-
-| Type | Job | Layout | Primary metric |
-|---|---|---|---|
-| `converter` | Sell via affiliate links | ConverterLayout | Conversion rate |
-| `collector` | Capture organic traffic, route to converters | PostLayout | Traffic + click-through |
-| `attractor` | Convert campaign/social traffic | PostLayout | Campaign conversion |
-| `informer` | Admin/legal (about, privacy, terms) | — | None |
+Every outbound Amazon link goes through one component that enforces
+`rel="nofollow sponsored noopener"` and the affiliate tag — there is no way to
+hand-roll a link that skips the disclosure. The copy guardrails ban "vet-approved",
+"vet-recommended", and any claim that a product was physically tested, because none of
+that would be true; the site researches, compares, and curates, and says so in those
+words. A scheduled job re-checks every tracked ASIN against Amazon so dead product
+links surface as a failing build rather than a dead end for a reader. Thirty-one test
+files stand between a change and `main`.
 
 ---
 
-## Routing
-
-Cooling and calming pages are hand-authored in `src/pages/` using typed TypeScript product data rather than markdown frontmatter.
-
-There is also a hidden internal page at `/content-sitemap/` for editorial workflow, marked `noindex`.
-
----
-
-## llms.txt
-
-`/llms.txt` is generated by the Astro endpoint at `src/pages/llms.txt.ts` and built to `dist/llms.txt`.
-
-- Important pages are curated in `STATIC_LINKS` inside `src/pages/llms.txt.ts`.
-- If you add a new important page, add one entry to `STATIC_LINKS`.
-
----
-
-## Styling
-
-Design tokens live entirely in `src/styles/tokens.css`. No Tailwind.
-
-**Color palette:**
-
-| Token | Value | Used for |
-|---|---|---|
-| `--color-sky` | `#87b7c7` | Cooling theme, primary |
-| `--color-sage` | `#8fa98b` | Calming theme, accent |
-| `--color-rose` | `#b56f76` | Relaxing theme *(TBD)* |
-| `--color-sand` | `#e8dcc8` | Backgrounds |
-| `--color-cream` | `#f5f0e8` | Surfaces |
-| `--color-terracotta` | `#c4704b` | Accent alt |
-| `--color-charcoal` | `#2d2d2d` | Text |
-
-**Path aliases** (configured in `tsconfig.json`):
-
-```
-@components/  →  src/components/
-@layouts/     →  src/layouts/
-@styles/      →  src/styles/
-@data/        →  src/data/
-@utils/       →  src/utils/
-```
-
----
-
-## Per-page OG images
-
-General per-page OG images are generated automatically at build time into `public/og/` by:
-
-```bash
-bun run src/scripts/generate-og-images.mjs
-```
-
-This runs automatically via the `prebuild` script before `astro build`.
-
-### Default behavior
-
-- Pages with a `heroProduct` entry in `src/data/content-sitemap.ts` use the product-style OG template with one featured product image.
-- Pages without `heroProduct` stay on the general OG template, even if they are converters. Browse/search pages such as `/shop/` should not use `heroProduct`.
-- Every eligible route gets a generated OG JPEG at `/og/<route-slug>.jpg`, including `noindex` pages such as `/subscribe/`.
-- Product-style OG JPGs are generated locally and committed under `public/og/`; Vercel does not render or fetch remote product images during deploy builds.
-- Product-style outputs and downloaded product images are cached under `.cache/og-gen/` for local regeneration.
-- The committed `src/scripts/og-gen/product-og-manifest.json` records the current render input keys so tests fail when a title, summary, theme, or `heroProduct` change needs fresh JPGs.
-- After build, pages that render images in `<main>` automatically set `og:image` and `twitter:image` to the first on-page image.
-- If no image is rendered in `<main>`, metadata falls back to the generated route OG image.
-- Routes without generated OG assets, such as `/v/` experiment variants, `404`, admin/internal pages, and legal policy pages, fall back to `/og-default.jpg`.
-
-When adding or changing `heroProduct`, run `bun run og:force`, visually inspect the changed product-style images, and commit the matching `public/og/<route-slug>.jpg` files plus `src/scripts/og-gen/product-og-manifest.json`. New product-style OG JPGs need `git add -f public/og/<route-slug>.jpg` because generated OG outputs are ignored by default. Product image downloads may still come from `.cache/og-gen/images/`.
-
-### Frontmatter overrides (posts collection)
-
-Use optional frontmatter fields when you need per-page control:
-
-```yaml
-ogHeadline: "Short custom OG headline"
-ogCta: "Custom CTA text"
-ogTheme: cooling # cooling | calming | neutral
-ogImage: "/og/my-manual-image.jpg" # explicit override, bypasses auto route image
-```
-
-Override priority:
-
-1. `ogImage` (explicit image path)
-2. Auto-generated route image (`/og/<route-slug>.jpg`) when eligible
-3. `/og-default.jpg` fallback
-
-Text priority:
-
-1. Headline: `ogHeadline` -> `seoTitle` -> `title`
-2. CTA: `ogCta` -> page-type default (`converter`, `collector`, `attractor`, `informer`)
-
----
-
-## Analytics
-
-Event tracking uses **PostHog** as the sole analytics provider, proxied through `woof.chill-dogs.com`.
-
-If PostHog is not configured, events log to the browser console in dev mode.
-
-### How it works
-
-1. `src/components/Analytics.astro` loads provider scripts and calls `init()` globally (included via `BaseLayout.astro`)
-2. `src/scripts/analytics.ts` sets up a single `click` event delegation listener on `[data-track]` attributes
-3. Every click on an element with `data-track="event_name"` fires to PostHog
-4. Additional `data-*` attributes on the same element are sent as event properties (e.g. `data-product-name`, `data-asin`, `data-position`)
-
-### Tracked events
-
-| Event name | Fired from | Purpose |
-|---|---|---|
-| `hero_click_cooling` | HeroSection | Homepage CTA → cooling hub |
-| `hero_click_calming` | HeroSection | Homepage CTA → calming hub |
-| `amazon_outbound_click` | ProductCards, ComparisonTable, BonusCallout | Outbound affiliate click |
-| `collector_to_converter_click` | HubBody, SummaryBlock, InternalLinkStrip | Internal routing from collector → converter pages |
-| `toc_click` | Toc | Table of contents navigation |
-| `newsletter_cta_click` | Contextual article newsletter CTAs | Article → newsletter signup landing page |
-
-### Adding a tracked element
-
-Add `data-track="your_event_name"` to any clickable element. Extra `data-*` attributes become event props:
-
-```html
-<a href="/cooling/cooling-mats/" data-track="collector_to_converter_click" data-destination="cooling-mats">
-  See cooling mats
-</a>
-```
-
-### Programmatic tracking
-
-Import `track()` directly when you need to fire events outside of click delegation:
-
-```ts
-import { track } from '../scripts/analytics';
-track('custom_event', { key: 'value' });
-```
-
----
-
-## Testing
-
-The test suite is split into fast unit tests and a built-site smoke layer:
-
-| Command | What it checks |
-|---|---|
-| `bun run test` | Full Vitest suite |
-| `bun run test:smoke` | Builds the site and verifies key rendered `.astro` output |
-| `bun run test:coverage` | Coverage report for `src/utils/**` and `src/scripts/**` |
-
-The smoke tests are intentionally narrow and stable. They verify:
-
-- homepage funnel CTAs route to `/cooling/` and `/calming/`
-- key converter pages emit Amazon affiliate links with required attributes and the `chill-dogs-20` tag
-- legal and SEO basics like `noindex`, canonical tags, `robots.txt`, and sitemap output
-
-Pre-commit runs both the Vitest suite and the smoke tests, so broken rendered output blocks commits before it reaches `main`.
-
----
-
-## ASIN validity check
-
-Products can go out of stock or be removed from Amazon without warning. The ASIN check script hits `amazon.com/dp/{ASIN}` directly for every product in the catalog and reports any that are unavailable or gone.
-
-```bash
-bun run check:asins           # check all ~92 ASINs, print full table
-bun run check:asins -- --quiet  # issues only (clean output for periodic checks)
-```
-
-No API key required. Takes about 75 seconds (800ms delay between requests to avoid rate limiting). Exits with code `1` if any issues are found.
-
-**Status meanings:**
-
-| Status | Meaning |
-|---|---|
-| `OK` | Product page found with title |
-| `UNAVAILABLE` | Page exists but item can't be bought |
-| `REMOVED` | 404 or redirected off the product page |
-| `RATE LIMITED` | Amazon throttled the request — re-run in a few minutes |
-| `UNKNOWN` | 200 response but couldn't confirm product title (CAPTCHA likely) |
-
-Run this after adding new products or periodically to catch stale affiliate links before they affect revenue.
-
----
-
-## Affiliate links
-
-All Amazon links must use the `AffiliateLink` component — never a plain `<a>` tag:
-
-```astro
-import AffiliateLink from '@components/AffiliateLink.astro';
-
-<AffiliateLink href="https://amazon.com/dp/ASIN?tag=chill-dogs-20">
-  Check price on Amazon
-</AffiliateLink>
-```
-
-The component enforces `rel="nofollow sponsored noopener"`, `target="_blank"`, and `data-affiliate="true"`. The Associates tag is `chill-dogs-20`.
-
----
-
-## Hero experiments
-
-Five homepage hero variants run as alternate URLs:
-
-- `/v/v1/` … `/v/v5/`
-
-All variant pages carry `noindex, follow` and canonical links pointing to `/`.
-
-The section collector hero experiment was retired on August 10, 2026. The `/cooling/v/` and `/calming/v/` routes no longer build; `/cooling/`, `/calming/`, `/comforting/`, and `/gear/` all render the shared themed `SectionHero`.
-
-See [EXPERIMENTS.md](./EXPERIMENTS.md) for variant descriptions, hypotheses, and tracking setup.
-
----
-
-## Strategy and build docs
-
-| File | Purpose |
-|---|---|
-| [docs/web-systems-adventure-mode.md](./docs/web-systems-adventure-mode.md) | The modular conversion-system framework governing all site decisions |
-| [docs/site-plan.md](./docs/site-plan.md) | Applied system plan for chill-dogs: keystone metrics, page inventory, module registry, architecture decisions, analytics events |
-| [docs/build-log.md](./docs/build-log.md) | Chronological build phases — strategy → architecture → modules → pages → SEO → experiments → analytics → backlog |
-| [EXPERIMENTS.md](./EXPERIMENTS.md) | Hero A/B experiment details, variant descriptions, tracking setup, measurement checklists |
-
----
-
-## Deploy
-
-The repo is at [github.com/benstraw/chill-dogs](https://github.com/benstraw/chill-dogs), deployed via Vercel with automatic deploys on push to `main`.
-
-**Vercel environment:** Vercel auto-detects Astro. No `vercel.json` required. If `bun` is not available on your Vercel team plan, add:
-
-```json
-// vercel.json
-{
-  "installCommand": "bun install",
-  "buildCommand": "bun run build",
-  "outputDirectory": "dist"
-}
-```
-
-### IndexNow on deploy
-
-`bun run build` now runs Astro build and then an IndexNow submission script.
-
-Required Vercel env var:
-
-- `INDEXNOW_KEY` (your generated key; deployed as `https://www.chill-dogs.com/<KEY>.txt`)
-- Set this manually in Vercel Project Settings → Environment Variables (the build script reads it; it does not create it).
-
-Setup:
-
-1. Generate a key locally: `openssl rand -hex 16`
-2. In Vercel, open Project Settings → Environment Variables
-3. Add `INDEXNOW_KEY` with that value for `Production`
-4. Redeploy production (`main`)
-5. Verify key file is live at `https://www.chill-dogs.com/<INDEXNOW_KEY>.txt`
-
-Optional env vars:
-
-- `INDEXNOW_ENDPOINT` (default `https://api.indexnow.org/indexnow`)
-- `INDEXNOW_SITE_ORIGIN` (default `https://www.chill-dogs.com`)
-- `INDEXNOW_DRY_RUN` (default `false`)
-
-Behavior:
-
-- Runs only when `VERCEL_ENV=production`
-- Uses `VERCEL_GIT_PREVIOUS_SHA` + `VERCEL_GIT_COMMIT_SHA` to submit changed `src/pages/**/*.astro` URLs
-- Excludes non-index targets such as admin pages, variant pages, and content sitemap
-- Falls back to submitting `https://www.chill-dogs.com/sitemap-index.xml` if SHA data is missing or no indexable page routes changed
-
-Dry-run locally (no network submission):
-
-```bash
-VERCEL_ENV=production INDEXNOW_KEY=example INDEXNOW_DRY_RUN=true bun run indexnow:submit
-```
-
----
-
-## TODO
-
-- [x] Connect Vercel project and set up auto-deploy from `main`
-- [x] Point `chill-dogs.com` domain to Vercel; confirm SSL
-- [x] Set up analytics — PostHog (primary) via `src/components/Analytics.astro` with global `init()` and `data-track` event delegation
-- [x] **Set up PostHog reverse proxy** — Managed proxy at `woof.chill-dogs.com` active; `api_host` updated in `Analytics.astro`.
-- [x] Add OG image (`/public/og-default.jpg`)
-- [x] Add favicon (`/public/favicon.ico`)
-- [x] Generate per-page OG images with dynamic headline + CTA text (`src/scripts/generate-og-images.mjs`)
-- [ ] Implement feature flag–driven hero experiments (replace hardcoded variants)
-- [ ] Evaluate hero experiment winner after 2 weeks / 200+ primary CTA clicks per variant; promote winner to default, retire losing variant URLs
-- [ ] Expand calming category: individual converter pages for anxiety-wraps, calming-treats, lick-mats, snuffle-mats (parallel to cooling converter structure)
-- [ ] Defer PostHog init (idle + interaction fallback); monitor early-bounce event loss and feature-flag flicker
-- [x] Review affiliate tag is active and approved in Amazon Associates dashboard (`chill-dogs-20`)
-- [x] Set up IndexNow for instant search engine indexing on deploy (Bing, Yandex, etc.)
-- [ ] Add third pillar: **Relaxing** — dog beds, plush toys, snuggly blankets, and cozy comfort gear
-- [x] Redo the entire article about Thundershirt alternatives
+[Visit the site](https://www.chill-dogs.com/) ·
+[Cooling](https://www.chill-dogs.com/cooling/) ·
+[Calming](https://www.chill-dogs.com/calming/) ·
+[Comforting](https://www.chill-dogs.com/comforting/) ·
+[Affiliate disclosure](https://www.chill-dogs.com/affiliate-disclosure/) ·
+[AI docs](./docs/ai/AI_INDEX.md) ·
+[Roadmap](./docs/roadmap.md)
