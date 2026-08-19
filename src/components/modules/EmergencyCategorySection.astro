@@ -1,5 +1,6 @@
 ---
 import EmergencyProductCard from './EmergencyProductCard.astro';
+import DisclosureBar from './primitives/DisclosureBar.astro';
 import {
   emergencyCategoryMeta,
   getAdditionalEmergencyProducts,
@@ -45,20 +46,22 @@ const additional = getAdditionalEmergencyProducts(category);
     )}
 
     {additional.length > 0 && (
-      <details class="more-options">
-        <summary>
-          Show {additional.length} more {additional.length === 1 ? 'option' : 'options'}
-        </summary>
-        <div class="product-grid product-grid--more">
-          {additional.map((product, index) => (
-            <EmergencyProductCard
-              product={product}
-              pageSlug={pageSlug}
-              position={`${category}-more-${index + 1}`}
-            />
-          ))}
-        </div>
-      </details>
+      <div class="more-options">
+        <DisclosureBar
+          label={`Show ${additional.length} more ${additional.length === 1 ? 'option' : 'options'}`}
+          expandedLabel="Show fewer options"
+        >
+          <div class="product-grid product-grid--more">
+            {additional.map((product, index) => (
+              <EmergencyProductCard
+                product={product}
+                pageSlug={pageSlug}
+                position={`${category}-more-${index + 1}`}
+              />
+            ))}
+          </div>
+        </DisclosureBar>
+      </div>
     )}
   </div>
 </section>
@@ -112,17 +115,6 @@ const additional = getAdditionalEmergencyProducts(category);
 
   .more-options {
     margin-top: var(--space-xl);
-    border-top: 1px solid var(--color-border);
-    padding-top: var(--space-lg);
-  }
-
-  .more-options summary {
-    cursor: pointer;
-    color: var(--color-accent);
-    font-weight: var(--weight-semibold);
-    min-height: 44px;
-    display: flex;
-    align-items: center;
   }
 
   .product-grid--more {
