@@ -1054,4 +1054,31 @@ describe('site smoke tests', () => {
     expect(llmsText).not.toContain('/content-sitemap/');
     expect(llmsText).not.toContain('/privacy-policy/');
   });
+  it('gives every charity a stable anchor id and matching deep-link handle', () => {
+    // These ids are linked from the newsletter, so renaming one silently breaks
+    // links that are already out in the wild.
+    const doc = readBuiltPage('shelter-dog-charities/index.html');
+    const charities = [...doc.querySelectorAll('article.charity')];
+
+    expect(charities.length).toBe(doc.querySelectorAll('.prose h2').length);
+    expect(charities.map((el) => el.id)).toEqual([
+      '15-out-of-10-foundation',
+      'cuddly',
+      'every-bark-counts',
+      'fixn-fidos',
+      'paw-some-mission',
+      'reducing-animal-stress',
+      'rolling-dog-farm',
+      'tails-that-teach',
+      'wild-tunes',
+    ]);
+
+    for (const charity of charities) {
+      const handle = charity.querySelector('h2 a.charity-anchor');
+      expect(handle?.getAttribute('href'), `anchor handle for #${charity.id}`).toBe(
+        `#${charity.id}`
+      );
+      expect(handle?.getAttribute('aria-label')).toBeTruthy();
+    }
+  });
 });
