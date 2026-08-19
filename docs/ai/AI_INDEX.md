@@ -89,6 +89,7 @@ You are starting any task and need to know which docs apply.
 
 **Read:**
 - [`marketing/charity-outreach-program.md`](marketing/charity-outreach-program.md) — Three-touch outreach sequence, rollout schedule, tracker, success measures
+- [`marketing/charity-outreach-templates.md`](marketing/charity-outreach-templates.md) — Email copy for each touch, placeholders, week 1 drafts
 - [`marketing/newsletter-guide.md`](marketing/newsletter-guide.md) — Format and link rules for the spotlight issue
 - [`marketing/utm-rules.md`](marketing/utm-rules.md) — UTM tagging for links sent to charities
 - [`writing/medical-and-vet-claim-guardrails.md`](writing/medical-and-vet-claim-guardrails.md) — Claim guardrails for outreach copy

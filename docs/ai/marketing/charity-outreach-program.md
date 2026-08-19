@@ -12,6 +12,7 @@ tags:
   - backlinks
   - marketing
 related:
+  - charity-outreach-templates.md
   - newsletter-guide.md
   - marketing-plan.md
   - utm-rules.md
@@ -60,6 +61,8 @@ Make the coverage genuinely useful to the charity before asking them to help amp
 ---
 
 ## The three-touch sequence
+
+Copy for all three touches, plus personalized week 1 drafts, lives in [`charity-outreach-templates.md`](charity-outreach-templates.md).
 
 ### Touch 1 — Initial introduction
 
@@ -200,6 +203,7 @@ These are supporting metrics. They do not replace the keystone event `amazon_out
 
 ## Related knowledge
 
+- [`charity-outreach-templates.md`](charity-outreach-templates.md) — Email copy for all three touches, plus week 1 drafts
 - [`newsletter-guide.md`](newsletter-guide.md) — Email format, voice, and link rules for the spotlight itself
 - [`marketing-plan.md`](marketing-plan.md) — Channel strategy, KPIs, organic-first posture
 - [`utm-rules.md`](utm-rules.md) — UTM parameter format for links sent to charities
