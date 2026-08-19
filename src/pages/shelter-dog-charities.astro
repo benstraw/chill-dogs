@@ -420,16 +420,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
   .charity-divider span {
     flex: 1;
     height: 2px;
-    --divider-line: color-mix(in srgb, var(--color-border) 70%, var(--color-text-muted));
-  }
-
-  /* Reaching full strength at 40% keeps the middle solid instead of mostly fade. */
-  .charity-divider span:first-child {
-    background: linear-gradient(90deg, transparent, var(--divider-line) 40%);
-  }
-
-  .charity-divider span:last-child {
-    background: linear-gradient(90deg, var(--divider-line) 60%, transparent);
+    background: color-mix(in srgb, var(--color-border) 70%, var(--color-text-muted));
   }
 
   .charity-divider i {
