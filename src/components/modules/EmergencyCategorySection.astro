@@ -48,8 +48,10 @@ const additional = getAdditionalEmergencyProducts(category);
     {additional.length > 0 && (
       <div class="more-options">
         <DisclosureBar
-          label={`Show ${additional.length} more ${additional.length === 1 ? 'option' : 'options'}`}
-          expandedLabel="Show fewer options"
+          label={`Show ${additional.length} more ${
+            additional.length === 1 ? 'recommendation' : 'recommendations'
+          }`}
+          expandedLabel="Show fewer recommendations"
         >
           <div class="product-grid product-grid--more">
             {additional.map((product, index) => (
