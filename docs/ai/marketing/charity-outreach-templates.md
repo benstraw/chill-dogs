@@ -226,7 +226,17 @@ Thanks for the work you do.
 Chill-Dogs
 ```
 
-**Note:** Cuddly is a fundraising platform, not a rescue. The listing and any outreach should describe it that way. If it is ever the newsletter spotlight, the story is likely a partner rescue's campaign rather than Cuddly itself.
+**Note:** Cuddly is a **for-profit company**, not a charity — The Cuddly Group, Inc., incorporated in Delaware, which raised a $4M Series A from Lead Edge Capital in 2020 and describes itself as a "for-good startup." It is a fundraising and wish-list platform, not a rescue.
+
+This matters for outreach in three ways:
+
+- Never call Cuddly a charity or a nonprofit in an email. "Platform," "organization," or "company" are accurate; the draft above uses "organizations" in the opening line for exactly this reason.
+- The 501(c)(3) verification we praise applies to the **partner rescues**, not to Cuddly itself. Do not blur the two.
+- Cuddly states it takes 0% of monetary donations (97% to the rescue, 3% to payment processing). Attribute that to them rather than asserting it as our own finding.
+
+Their own listing links to a Better Business Bureau profile filed under *marketing consultant* — a business category, not a charity one.
+
+If Cuddly is ever the newsletter spotlight, the story is a partner rescue's campaign rather than the platform itself.
 
 ### Every Bark Counts
 
