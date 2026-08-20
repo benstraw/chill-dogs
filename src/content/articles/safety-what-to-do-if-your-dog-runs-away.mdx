@@ -18,6 +18,7 @@ import Toc from '@components/modules/Toc.astro';
 import FAQ from '@components/modules/FAQ.astro';
 import Disclosure from '@components/modules/Disclosure.astro';
 import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
+import { ROUTES } from '@data/routes';
 
 
 export const tocHeadings = [
@@ -354,6 +355,9 @@ export const faqs = [
           data-to-page="/travel/rhys-ran-away-cerro-san-luis-obispo/"
           data-link-position="closing"
         >Read: When Rhys Ran Away</a>
+      </div>
+      <div class="closing-note">
+        Once your dog is home, the shelters that field these calls run largely on volunteers. Our guide to <a href={ROUTES.lifestyleDogTimeWithoutOwning} data-track="collector_to_converter_click" data-from-page="what-to-do-if-your-dog-runs-away" data-to-page={ROUTES.lifestyleDogTimeWithoutOwning} data-link-position="closing">spending time with dogs without owning one</a> covers volunteer walking, shelter field trips, and short-term fostering.
       </div>
     </div>
   </section>
