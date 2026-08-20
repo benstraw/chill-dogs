@@ -119,6 +119,15 @@
   font-weight: var(--weight-bold);
 }
 
+/* Opt out of the check-mark bullet for lists that are not a benefits summary. */
+.summary-list--plain li {
+  padding-left: 0;
+}
+
+.summary-list--plain li::before {
+  content: none;
+}
+
 /* ── Article photos ──────────────────────────────────────────── */
 .trip-photo {
   margin: var(--space-2xl) 0;
@@ -375,7 +384,8 @@
 /* ── Prose context overrides — beat utilities.css .prose ul { list-style: disc } ── */
 .prose .story-list,
 .prose .step-list,
-.prose .checklist {
+.prose .checklist,
+.prose .summary-list--plain {
   list-style: none;
   padding: 0;
 }
