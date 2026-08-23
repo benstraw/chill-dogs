@@ -26,81 +26,85 @@
   <a href="https://github.com/benstraw/chill-dogs"><img alt="Repository size" src="https://img.shields.io/github/repo-size/benstraw/chill-dogs?style=flat-square&amp;logo=github"></a>
 </p>
 
-Somewhere right now there is a dog panting on a kitchen floor, a dog hiding in a
-bathtub because of fireworks, and a dog who has decided the only acceptable bed is
-the one you are currently sitting on. [Chill-Dogs](https://www.chill-dogs.com/) is
-for the people trying to fix that — a small, researched catalog of the gear that
-actually helps, so nobody has to scroll through ten thousand near-identical listings
-at eleven at night.
+[Chill-Dogs](https://www.chill-dogs.com/) is dedicated to improving the lives of dogs
+and their owners. The hot dog panting on the kitchen floor, the scared dog cowering in a
+bathtub because of fireworks, the old dog who now needs an orthopedic bed. It is a small,
+researched catalog of top-rated gear and informative guides for new and experienced dog
+owners.
 
-This repository is the whole site. Chill-Dogs earns Amazon Associates commissions on
-the products it recommends, and the code is public so anyone curious about how that
-works can read every line of it — the product data, the disclosure rules, the tests,
-the guardrails on what the copy is allowed to claim.
+This repository is the whole site. Chill-Dogs earns Amazon Associates and Chewy Affiliate
+commissions on the products it recommends, and the code is public so anyone curious about
+how that works can read every line of it: the product data, the disclosure rules, the
+tests, and the guardrails on what the copy is allowed to claim.
 
-## Three ways to make a dog comfortable
+## Four Ways to Make a Dog More Chill
 
-The paw up top runs sky blue to sage green to dusty rose, which is not decoration —
-those are the three theme colors, and each one is a section of the site.
+The dog paw logo runs sky blue to sage green to dusty rose. Those are the first three
+theme colors, and each one is a section of the site. A fourth pillar, gear, carries its
+own violet theme rather than a place in the paw.
 
-**[Cooling](https://www.chill-dogs.com/cooling/)** is the summer problem. Mats,
-vests, bandanas, freezable toys, hot-car gear, travel water, and the honest answer to
-"how hot is too hot for a walk?"
+**[Cooling](https://www.chill-dogs.com/cooling/)** is about cooling down a hot dog. Mats,
+vests, bandanas, freezable toys, hot-car gear, travel water, and "how hot is too hot for a
+walk?"
 
-**[Calming](https://www.chill-dogs.com/calming/)** is the year-round one. Anxiety
-wraps and ThunderShirt alternatives, lick mats, crate training, car anxiety, and how
-to build a room a dog will actually settle in on the fourth of July.
+**[Calming](https://www.chill-dogs.com/calming/)** is about relaxing an anxious dog.
+Anxiety wraps and ThunderShirt alternatives, lick mats, crate training, car anxiety, and
+how to mollify a scared dog on the Fourth of July.
 
-**[Comforting](https://www.chill-dogs.com/comforting/)** is where the dog ends up
-once everything else is sorted. Orthopedic and calming beds, crates that don't look
-like crates, airline carriers, and how much sleep a dog is supposed to get anyway.
+**[Comforting](https://www.chill-dogs.com/comforting/)** is about providing a safe and
+soothing place for a dog to retreat to. Orthopedic and calming beds, crates that give dogs
+a sense of security, airline carriers, and how much sleep dogs need at different stages of
+their lives.
 
-Threading through all three: travel, gear, and safety — road-trip packing, flying
-with a dog, GPS trackers, and what to do in the twenty minutes after a dog runs off,
-which is a guide written from experience nobody wanted to gain.
+**[Gear](https://www.chill-dogs.com/gear/)** is about the equipment that makes traveling with a dog easier, safer, and more
+enjoyable: road-trip packing, flying with a dog, GPS trackers, and what to do in the
+twenty minutes after a dog runs off — a guide written from experience nobody wanted to
+gain.
 
-## Under the hood
+## Under the Hood
 
-Static Astro 5, built with Bun, deployed on Vercel. No CMS, no database, no backend —
-every product is a typed TypeScript record, so a bad ASIN or a missing field is a
-compile error rather than a broken page someone finds three weeks later. Styling is
-vanilla CSS driven by a single token file; there is no Tailwind and no component
-library. Social share images are rendered at build time with Satori, which means the
-preview card for a product page is generated from the same data the page is.
+Static Astro 5, built with Bun, deployed on Vercel. No CMS, no database, and no backend.
+Every product is a typed TypeScript record, so a missing field is a compile error rather
+than a broken page someone finds later. Styling is vanilla CSS driven by a single token
+file. There is no Tailwind and no component library. Per-page share images are rendered at
+build time with Satori; the product-style ones are generated locally and committed, so a
+deploy never has to reach out to a merchant for an image.
 
-## Every page has exactly one job
+## Every Page Has Exactly One Job
 
-The site is built as a conversion system, and the interesting constraint is that every
-page must declare which of four jobs it does. **Converters** exist to send a qualified
-click to Amazon. **Collectors** catch search intent and route it to the right
-converter. **Attractors** turn campaign and social traffic into a first useful click.
-**Informers** handle legal and trust.
+The site is built as a conversion system. The interesting constraint is that every page
+must declare which of four jobs it does. **Converters** exist to send a qualified click to
+Amazon or Chewy. **Collectors** catch search intent and route it to the right converter.
+**Attractors** turn campaign and social traffic into a first useful click. **Informers**
+handle legal and trust.
 
-One page, one type, one metric. A collector that starts growing its own product
-comparison tables is a bug, not a feature, and the page-type field is what makes that
-argument settleable instead of a matter of taste. The full model lives in
+One page, one type, one metric. The full model lives in
 [`docs/system-definition.yaml`](./docs/system-definition.yaml).
 
-## The repo is written for robots too
+## The Repo Is Written for Robots Too
 
-Most projects document themselves for people. This one also documents itself for the
-AI agents that work on it. [`docs/ai/`](./docs/ai/) is a Markdown knowledge graph —
-an operating brief, a task router, a dependency map, and thirty-odd domain documents
-covering everything from affiliate compliance to how to write a product bullet. There
-is a generated `/llms.txt` for crawlers, `CLAUDE.md` and `AGENTS.md` for coding
-agents, and a validator that fails CI when a cross-link rots or a doc's frontmatter
-drifts. Documentation that can go stale silently will, so this documentation can't.
+Most projects document themselves for people. This one also documents itself for the AI
+agents that work on it. [`docs/ai/`](./docs/ai/) is a Markdown knowledge graph. It is an
+operating brief, a task router, a dependency map, and twenty-five domain documents
+covering everything from affiliate compliance to how to write a product bullet. There is a
+generated `/llms.txt` for crawlers, `CLAUDE.md` and `AGENTS.md` for coding agents, and a
+validator that fails CI when a cross-link rots or a doc's frontmatter drifts. Documentation
+that can go stale silently will, so this documentation can't.
 
-## Keeping it honest
+## Keeping It Honest
 
-Every outbound Amazon link goes through one component that enforces
-`rel="nofollow sponsored noopener"` and the affiliate tag — there is no way to
-hand-roll a link that skips the disclosure. The copy guardrails ban "vet-approved",
-"vet-recommended", and any claim that a product was physically tested, because none of
-that would be true; the site researches, compares, and curates, and says so in those
-words. A scheduled job re-checks every tracked ASIN against Amazon so dead product
-links surface as a failing build rather than a dead end for a reader. Thirty-one test
-files stand between a change and `main`.
+Every Amazon and Chewy product link renders through one component, which sets
+`rel="sponsored noopener noreferrer"` and the tracking attributes the disclosure and
+analytics rely on. The test
+suite is what keeps it that way: a build fails if an affiliate link loses its tag, or if a
+raw merchant anchor sneaks onto a page without the tracking the disclosure depends on. The
+copy guardrails ban "vet-approved", "vet-recommended", and any health claim the sourcing
+does not support. First-hand language is allowed only for products actually handled, which
+are marked as such on the product record; everything else says researched, compared, and
+curated, because that is what happened. A weekly job re-checks every tracked ASIN against
+Amazon and files a tracking issue when one goes dead, so stale affiliate links surface as
+work rather than as a dead end for a reader. Thirty-one test files stand between a change
+and `main`.
 
 ---
 
@@ -108,6 +112,7 @@ files stand between a change and `main`.
 [Cooling](https://www.chill-dogs.com/cooling/) ·
 [Calming](https://www.chill-dogs.com/calming/) ·
 [Comforting](https://www.chill-dogs.com/comforting/) ·
+[Gear](https://www.chill-dogs.com/gear/) ·
 [Affiliate disclosure](https://www.chill-dogs.com/affiliate-disclosure/) ·
 [AI docs](./docs/ai/AI_INDEX.md) ·
 [Roadmap](./docs/roadmap.md)
