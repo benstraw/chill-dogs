@@ -42,6 +42,15 @@ export interface FleaTickProductSectionBlock {
   id?: string;
   intro?: string;
   alt?: boolean;
+  /**
+   * Products shown before the "Show N more" bar; the rest sit behind a
+   * `DisclosureBar`. Omit to render the whole section open.
+   *
+   * House rule: set this to 6 (two full grid rows) once a section would hide at
+   * least 3 products. Below that the bar costs the reader more than the scroll
+   * it saves, so leave the section open.
+   */
+  visibleCount?: number;
 }
 
 export type FleaTickBlock = FleaTickProseBlock | FleaTickCalloutBlock | FleaTickProductSectionBlock;
@@ -214,6 +223,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
           'Coat checks are an integral part of any flea and tick prevention routine. Flea combs allow you to catch a problem early, brushes allow you to get through the undercoat and reach skin on a thick coat, and a tick tool helps you remove a tick entirely without leaving any part of it embedded in your dog.',
         positionOffset: 24,
         columns: 3,
+        visibleCount: 6,
         productIds: [
           'green-pet-double-sided-flea-comb',
           'ikkab-flea-comb-set',
@@ -370,6 +380,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
           'Prevention reduces what reaches your dog; it does not make coat checks optional. A flea comb catches an early problem while it is still small, and a proper tick tool removes the whole tick instead of leaving mouthparts embedded. These are the same tools we recommend on the natural page — the job does not change based on what prevention you chose.',
         positionOffset: 5,
         columns: 3,
+        visibleCount: 6,
         productIds: [
           'green-pet-double-sided-flea-comb',
           'ikkab-flea-comb-set',
@@ -511,6 +522,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
           'A bath brush does two jobs at once: it works shampoo down through the coat to the skin where dirt and dander sit, and it gives you a reason to run your hands over the whole dog. Pick on coat type and on how the brush stays attached to a wet hand.',
         positionOffset: 6,
         columns: 3,
+        visibleCount: 6,
         productIds: [
           'we-love-doodles-long-pin-bath-brush',
           'oleamuo-self-cleaning-bath-brush',

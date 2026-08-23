@@ -7,6 +7,7 @@ import FAQ from '@components/modules/FAQ.astro';
 import Disclosure from '@components/modules/Disclosure.astro';
 import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
 import FleaTickProductCard from '@components/modules/FleaTickProductCard.astro';
+import DisclosureBar from '@components/modules/primitives/DisclosureBar.astro';
 import {
   buildFleaTickItemListSchema,
   getRequiredFleaTickProducts,
@@ -24,6 +25,26 @@ const schema = config.itemListSchema ? buildFleaTickItemListSchema(config.itemLi
 function sectionClass(block: FleaTickBlock): string {
   return block.alt ? 'ft-section ft-section--alt' : 'ft-section';
 }
+
+/**
+ * Split each product section into the cards that render open and the ones that sit
+ * behind the "Show N more" bar. Resolving once here keeps the template from
+ * re-reading the product list per grid.
+ *
+ * The two halves stay in `productIds` order and the hidden grid renders directly
+ * after the visible one, so `positionOffset + index + 1` still walks 1..N across
+ * the page — a collapsed `<details>` keeps its cards in the DOM.
+ */
+const blocks = config.blocks.map((block) => {
+  if (block.kind !== 'product_section') {
+    return { block, visible: [], hidden: [] };
+  }
+
+  const products = getRequiredFleaTickProducts(block.productIds);
+  const cut = block.visibleCount ?? products.length;
+
+  return { block, visible: products.slice(0, cut), hidden: products.slice(cut) };
+});
 ---
 
 <BaseLayout title={config.title} ogTitle={config.ogTitle} description={config.description}>
@@ -41,14 +62,14 @@ function sectionClass(block: FleaTickBlock): string {
   {config.toc && <Toc headings={config.toc} pageSlug={config.pageSlug} />}
 
   <div class="ft-page">
-    {config.blocks.map((block) => (
+    {blocks.map(({ block, visible, hidden }) => (
       block.kind === 'product_section' ? (
         <section class={sectionClass(block)} id={block.id}>
           <div class="ft-inner">
             <h2>{block.heading}</h2>
             {block.intro && <p class="ft-intro">{block.intro}</p>}
             <div class={`ft-grid ft-grid--${block.columns}`}>
-              {getRequiredFleaTickProducts(block.productIds).map((product, index) => (
+              {visible.map((product, index) => (
                 <FleaTickProductCard
                   product={product}
                   pageSlug={config.pageSlug}
@@ -56,6 +77,24 @@ function sectionClass(block: FleaTickBlock): string {
                 />
               ))}
             </div>
+            {hidden.length > 0 && (
+              <div class="ft-more">
+                <DisclosureBar
+                  label={`Show ${hidden.length} more ${hidden.length === 1 ? 'option' : 'options'}`}
+                  expandedLabel="Show fewer options"
+                >
+                  <div class={`ft-grid ft-grid--${block.columns} ft-grid--more`}>
+                    {hidden.map((product, index) => (
+                      <FleaTickProductCard
+                        product={product}
+                        pageSlug={config.pageSlug}
+                        position={block.positionOffset + visible.length + index + 1}
+                      />
+                    ))}
+                  </div>
+                </DisclosureBar>
+              </div>
+            )}
           </div>
         </section>
       ) : block.kind === 'callout' ? (
@@ -140,6 +179,14 @@ function sectionClass(block: FleaTickBlock): string {
 
   .ft-grid--3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .ft-more {
+    margin-top: var(--space-xl);
+  }
+
+  .ft-grid--more {
+    margin-top: var(--space-lg);
   }
 
   .ft-callout {

@@ -745,6 +745,70 @@ describe('site smoke tests', () => {
     );
   });
 
+  it('hides the overflow of a deep product section behind the disclosure bar', () => {
+    const doc = readBuiltPage(
+      path.join('safety', 'best-flea-and-tick-products-for-dogs', 'index.html'),
+    );
+    const section = doc.querySelector<HTMLElement>('#grooming-tools');
+    const disclosure = section?.querySelector<HTMLDetailsElement>('details.disclosure-bar');
+
+    expect(section).not.toBeNull();
+    expect(disclosure).not.toBeNull();
+
+    // Six cards render open; the rest sit inside the collapsed disclosure.
+    const allCards = section!.querySelectorAll('.product-card');
+    const hiddenCards = disclosure!.querySelectorAll('.product-card');
+
+    expect(allCards).toHaveLength(13);
+    expect(hiddenCards).toHaveLength(7);
+    expect(allCards.length - hiddenCards.length).toBe(6);
+
+    // The label states the count and swaps on open, so only one is ever read out.
+    expect(disclosure!.querySelector('.disclosure-bar__label--collapsed')?.textContent).toBe(
+      'Show 7 more options',
+    );
+    expect(disclosure!.querySelector('.disclosure-bar__label--expanded')?.textContent).toBe(
+      'Show fewer options',
+    );
+
+    // Native <details> keeps the overflow in the DOM: hidden products stay
+    // crawlable and their CTAs stay tracked, so the expander costs no coverage.
+    const hiddenCtas = getAffiliateLinks(disclosure!);
+    expect(hiddenCtas.length).toBeGreaterThanOrEqual(7);
+    for (const link of hiddenCtas) {
+      expectTrackedAffiliateLink(link);
+    }
+  });
+
+  it('keeps affiliate CTA positions contiguous across a disclosure bar', () => {
+    const doc = readBuiltPage(
+      path.join('safety', 'best-flea-and-tick-products-for-dogs', 'index.html'),
+    );
+    const positions = getAffiliateLinks(doc)
+      .map((link) => link.getAttribute('data-position'))
+      .filter((position): position is string => position !== null)
+      .map(Number);
+
+    expect([...new Set(positions)].sort((a, b) => a - b)).toEqual(
+      Array.from({ length: 18 }, (_, i) => i + 1),
+    );
+  });
+
+  it('leaves a product section open when too few products would be hidden', () => {
+    const doc = readBuiltPage(
+      path.join('safety', 'dog-bath-tools-for-flea-season', 'index.html'),
+    );
+
+    // 9 products, 3 hidden — over the threshold, so the bar renders.
+    expect(
+      doc.querySelector('#bath-brushes details.disclosure-bar'),
+    ).not.toBeNull();
+
+    // 7 products would hide only 1, and 6 would hide none. Both stay open.
+    expect(doc.querySelector('#drying details.disclosure-bar')).toBeNull();
+    expect(doc.querySelector('#bath-kits details.disclosure-bar')).toBeNull();
+  });
+
   it('marks the custom 404 page as noindex', () => {
     const doc = readBuiltPage('404.html');
     const robots = doc.querySelector('meta[name="robots"]');
