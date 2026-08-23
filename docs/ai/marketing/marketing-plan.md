@@ -3,7 +3,7 @@ title: Marketing Plan
 type: canonical
 domain: marketing
 status: active
-updated: 2026-08-10
+updated: 2026-08-19
 tags:
   - chill-dogs
   - marketing
@@ -15,6 +15,7 @@ related:
   - pinterest-launch-plan.md
   - newsletter-guide.md
   - utm-rules.md
+  - charity-outreach-program.md
   - ../strategy/chill-dogs-context.md
 ---
 
@@ -83,7 +84,15 @@ Announce new articles and guides to existing audience. Drives return visits and 
 
 See [`newsletter-guide.md`](newsletter-guide.md) for format.
 
-### 4. Paid (low priority)
+### 4. Charity outreach (earned links and story supply)
+
+Relationship-building with the organizations featured on `/shelter-dog-charities/`. Editorial first: coverage is unpaid and unsponsored, and the ask for sharing comes only after a feature publishes.
+
+**Strategy:** Three-touch sequence per charity — introduction, pre-publication check-in, post-publication follow-up. Yields earned backlinks, referral traffic, and a pipeline of original story material.
+
+See [`charity-outreach-program.md`](charity-outreach-program.md) for the sequence, schedule, and tracker.
+
+### 5. Paid (low priority)
 
 No active paid budget defined. Homepage hero experiment pages under `/v/` remain available to test conversion messaging for potential future paid campaigns. The retired `/cooling/v/` and `/calming/v/` routes are no longer built.
 
@@ -144,5 +153,6 @@ New articles and converter pages should be driven by:
 - [`pinterest-launch-plan.md`](pinterest-launch-plan.md) — Pinterest boards, pins, cadence
 - [`newsletter-guide.md`](newsletter-guide.md) — Email format and rules
 - [`utm-rules.md`](utm-rules.md) — UTM parameter format
+- [`charity-outreach-program.md`](charity-outreach-program.md) — Charity relationships and spotlight coordination
 - [`../strategy/chill-dogs-context.md`](../strategy/chill-dogs-context.md) — Full site context and categories
 - [`../checklists/marketing-publish-checklist.md`](../checklists/marketing-publish-checklist.md) — Publish checklist
