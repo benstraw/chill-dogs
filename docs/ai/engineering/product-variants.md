@@ -3,7 +3,7 @@ title: Product Variant System
 type: canonical
 domain: engineering
 status: active
-updated: 2026-08-16
+updated: 2026-08-24
 tags:
   - chill-dogs
   - engineering
@@ -159,25 +159,29 @@ Affiliate CTAs on a variant card gain `variant_option` and `variant_axis` proper
 
 `tuff-pupper-drying-bathrobe` in `src/data/flea-tick-products.ts`, on `/safety/dog-bath-tools-for-flea-season/`. Eight dog sizes, every ASIN taken from Amazon's own variant list in the cached payload for `B0BY9GBMXX`. `large` is the default, matching the record's legacy `asin`.
 
-### Not yet converted: Vectra 3D
+### Multi-merchant variants: Vectra 3D
 
-`vectra-3d-xl-95-plus` is the clearest case for this system — it ships as one card for dogs over 95 lbs while Vectra sells five weight bands. Its sibling ASINs are **not** in the cache (`B071JS3MYK.json` has no `variants` array), so they need sourcing from live listings first. The shape once they are:
+`vectra-3d-xl-95-plus` in `src/data/flea-tick-products.ts`, on
+`/safety/best-flea-and-tick-products-for-dogs/`. Five weight bands, each carrying **both** an Amazon
+and a Chewy offer, with `over-95` as the default so the record's legacy `asin` still describes the card.
 
-```ts
-variantGroup: {
-  axis: { id: 'dog-size', label: 'Dog weight', hint: 'Match your dog to the weight band on the box.' },
-  defaultVariantId: 'lb-95-plus',
-  variants: [
-    { id: 'lb-5-10',   label: '5–10 lb',  offers: [amazonOffer('TODO(asin)')] },
-    { id: 'lb-11-20',  label: '11–20 lb', offers: [amazonOffer('TODO(asin)')] },
-    { id: 'lb-21-55',  label: '21–55 lb', offers: [amazonOffer('TODO(asin)')] },
-    { id: 'lb-56-95',  label: '56–95 lb', offers: [amazonOffer('TODO(asin)')] },
-    { id: 'lb-95-plus', label: '95+ lb',  offers: [amazonOffer('B071JS3MYK')] },
-  ],
-},
-```
+This is the reference for a variant group whose variants are multi-merchant. The picker repoints both
+CTAs at once — selecting `21–55 lbs` sends the Amazon button to that band's ASIN and the Chewy button to
+that band's Chewy listing — so the card still renders exactly two buttons, the same as it did with one
+merchant and no variants.
 
-Do not ship placeholder ASINs. Source them, then fill the group in.
+Two things this record settles:
+
+- **Variant offers stay merchant-parallel.** Each variant lists Amazon first, then Chewy, in the same
+  order as `product.offers`. The default variant's offers must match `product.offers` URL-for-URL, so
+  when you add a merchant to the default band you add it to `product.offers` in the same position.
+- **Dose counts differ per merchant.** Amazon sells every band as a 3-month supply; Chewy's listings for
+  these bands are a mix of 3-dose and 6-dose. So the `longLabel`s name the weight band only. Do not put a
+  supply count in a variant label unless it holds for every merchant on that variant.
+
+Its Amazon sibling ASINs are **not** in the cache (`B071JS3MYK.json` has no `variants` array) — they were
+sourced from live listings. Chewy part numbers come from the `/dp/<id>` segment of the canonical Chewy URL,
+which `chewyOffer()` parses into `merchantProductId`.
 
 ---
 
