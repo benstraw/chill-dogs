@@ -862,16 +862,6 @@
   margin-bottom: var(--space-xl);
 }
 
-/* Footnote line under the closing CTA buttons. */
-.closing-inner .closing-note {
-  margin-top: var(--space-xl);
-}
-
-.closing-inner .closing-note p {
-  margin-bottom: 0;
-  font-size: var(--text-sm);
-}
-
 .closing-buttons {
   display: flex;
   gap: var(--space-md);
