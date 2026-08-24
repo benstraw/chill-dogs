@@ -1054,4 +1054,41 @@ describe('site smoke tests', () => {
     expect(llmsText).not.toContain('/content-sitemap/');
     expect(llmsText).not.toContain('/privacy-policy/');
   });
+  it('gives every charity a stable anchor id and matching deep-link handle', () => {
+    // These ids are linked from the newsletter, so renaming one silently breaks
+    // links that are already out in the wild.
+    const doc = readBuiltPage('shelter-dog-charities/index.html');
+    const charities = [...doc.querySelectorAll('article.charity')];
+
+    expect(charities.length).toBe(doc.querySelectorAll('.prose h2').length);
+    expect(charities.map((el) => el.id)).toEqual([
+      'fifteen-out-of-ten-foundation',
+      'cuddly',
+      'every-bark-counts',
+      'fixn-fidos',
+      'paw-some-mission',
+      'reducing-animal-stress',
+      'rolling-dog-farm',
+      'tails-that-teach',
+      'wild-tunes',
+    ]);
+
+    for (const charity of charities) {
+      const handle = charity.querySelector('h2 a.charity-anchor');
+      expect(handle?.getAttribute('href'), `anchor handle for #${charity.id}`).toBe(
+        `#${charity.id}`
+      );
+      expect(handle?.getAttribute('aria-label')).toBeTruthy();
+
+      // An id starting with a digit is legal HTML but not a valid CSS selector,
+      // so `querySelector('#' + hash)` throws on it. Keep ids selector-safe.
+      expect(charity.id).toMatch(/^[a-z][a-z0-9-]*$/);
+    }
+
+    // Charity logos are hotlinked. Facebook's CDN signs its URLs with an
+    // expiry, so a logo sourced from there dies on its own schedule.
+    for (const logo of doc.querySelectorAll('img.charity-logo')) {
+      expect(logo.getAttribute('src'), logo.getAttribute('alt') ?? '').not.toContain('fbcdn.net');
+    }
+  });
 });

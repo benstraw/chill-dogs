@@ -20,6 +20,7 @@ Do not skip the task-specific docs.
 - Do not hardcode internal routes - import from `src/data/routes.ts`.
 - Use `AffiliateLink.astro` for all Amazon outbound links.
 - **Product cards on converters must compose the shared primitives in `src/components/modules/primitives/`** (`ProductCardShell`, `ProductImageFrame`, `ProductBulletList`, `AffiliateOfferStack`). Do not hand-roll a card surface, image frame, bullet list, or CTA stack. If a primitive is missing something, add an opt-in prop to the primitive rather than forking it locally. Card-specific extras (badges, spec lists, notes) stay local. `BrowseProductCard` is the one sanctioned exception.
+- **"Show N more" expanders use the `DisclosureBar` primitive** (`src/components/modules/primitives/DisclosureBar.astro`) — a full-width outlined bar on the pillar accent. Do not hand-roll a bare `<summary>` text link.
 - Use the existing related-content system (`src/utils/related-pages.ts`). Do not add manual related arrays.
 - Run relevant tests/build checks before finishing.
 - **Never merge, close, or squash a pull request without explicit confirmation.** Phrases like "push the PR up", "put it up for review", or "send it up" mean push the branch and open/update the PR — NOT merge it. Only run `gh pr merge` when the user says exactly that.

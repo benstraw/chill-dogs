@@ -103,6 +103,10 @@ marketing/utm-rules.md                    # UTM parameter format for external li
     ↓
 marketing/newsletter-guide.md             # Email format and link rules
     ↓
+marketing/charity-outreach-program.md     # Charity relationships, spotlight coordination, tracker
+    ↓
+marketing/charity-outreach-templates.md   # Email copy for each touch in the sequence
+    ↓
 writing/medical-and-vet-claim-guardrails.md   # What not to claim in marketing copy
     ↓
 checklists/marketing-publish-checklist.md # Final gate

@@ -68,9 +68,7 @@ const ctaClass = isCta ? ['ui-cta', className].filter(Boolean).join(' ') : class
   data-position={position !== undefined ? String(position) : undefined}
   data-destination={merchant.domain}
   {...rest}
->
-  <slot>{label ?? offer.label ?? merchant.ctaCopy}</slot>
-</a>
+><slot>{label ?? offer.label ?? merchant.ctaCopy}</slot></a>
 
 <style>
   a[data-merchant="chewy"] {
