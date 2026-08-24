@@ -3,7 +3,7 @@ title: Environment and Integrations
 type: canonical
 domain: engineering
 status: active
-updated: 2026-08-09
+updated: 2026-08-24
 tags:
   - chill-dogs
   - engineering
@@ -85,6 +85,49 @@ api.impact.com
 www.chewy.com
 api.indexnow.org
 ```
+
+Add `mcp.impact.com` as well if the container should reach the impact.com MCP server (below). No script needs it — only the Claude Code connection does.
+
+---
+
+## impact.com MCP server
+
+Registered in `.mcp.json` at project scope, so it travels with the repo:
+
+```json
+{
+  "mcpServers": {
+    "impact": {
+      "type": "http",
+      "url": "https://mcp.impact.com/mcp"
+    }
+  }
+}
+```
+
+This is impact.com's own cloud-hosted server, and it is a **read/write connection to the live partner account** — the same account the Chewy commissions run through. Treat it accordingly.
+
+Unlike everything else on this page it takes no environment variables. Auth is OAuth 2.1, negotiated by the MCP client at connect time, and the token is scoped to the impact.com user permissions of whoever authorizes it. Credentials never enter the repo, `.env`, or the model's context, so `IMPACT_ACCOUNT_SID` / `IMPACT_AUTH_TOKEN` are irrelevant here — those stay for the Bun scripts.
+
+Two things gate the connection, both outside the repo:
+
+1. **An account admin enables MCP** at impact.com → User Profile → Settings → Tools → MCP. Off by default.
+2. **Each client authorizes once** in a browser. Every LLM client gets its own revocable token, so Claude Code, Cursor, and ChatGPT each authorize separately and revoke separately.
+
+First use of a project-scoped server prompts for approval — expected, and it is per-developer.
+
+### It does not work in a sandboxed agent container
+
+Two independent blockers, and neither has a workaround from inside the container:
+
+- `mcp.impact.com` is not on the default egress allowlist, so the CONNECT fails with 403.
+- The OAuth handshake needs a browser that can complete a redirect.
+
+Authorize on a local machine. Adding the host to Environment settings → Network access clears the first blocker but not the second.
+
+### Not the same as the npm package
+
+Searching for this turns up a third-party `impact-mcp-server` package that runs locally over stdio and reads `IMPACT_ACCOUNT_SID` / `IMPACT_AUTH_TOKEN`. Unaffiliated with impact.com and not what `.mcp.json` points at.
 
 ---
 
