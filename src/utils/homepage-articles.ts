@@ -31,6 +31,7 @@ const ARTICLE_THEME_BY_PREFIX: Array<{
   { prefix: '/travel/', label: 'Travel', color: 'gear' },
   { prefix: '/safety/', label: 'Safety', color: 'gear' },
   { prefix: '/gear/', label: 'Gear', color: 'gear' },
+  { prefix: '/lifestyle/', label: 'Lifestyle', color: 'gear' },
 ];
 
 export function resolveHomepageArticleTheme(canonicalPath: string): Pick<HomepageArticleCard, 'label' | 'color'> {

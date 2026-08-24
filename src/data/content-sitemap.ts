@@ -42,6 +42,9 @@ export const TOPICS = [
   'snake-safety',
   'trail-safety',
   'emergency-prep',
+  'shelters',
+  'volunteering',
+  'fostering',
 ] as const;
 
 export type SitemapTopic = typeof TOPICS[number];

@@ -44,7 +44,7 @@ export const pillarThemes: Record<PillarThemeKey, PillarTheme> = {
   },
   gear: {
     key: 'gear',
-    pathPrefixes: ['/gear/', '/travel/', '/safety/'],
+    pathPrefixes: ['/gear/', '/travel/', '/safety/', '/lifestyle/'],
     accent: 'hsl(262, 45%, 38%)',
     accentHover: 'hsl(262, 47%, 30%)',
     accentText: '#ffffff',

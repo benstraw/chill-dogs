@@ -8,7 +8,7 @@
 
 site_system:
   status: "active"
-  as_of: "2026-08-10"
+  as_of: "2026-08-18"
   owner: "chill-dogs"
   purpose: "Define the website as a modular conversion system and keep implementation aligned."
 
@@ -278,6 +278,26 @@ site_system:
       metric: "collector_to_converter_click to comfort converters"
       routes:
         - "/comforting/how-much-do-dogs-sleep/"
+
+    - name: "Ways to Spend Time With Dogs Without Owning One"
+      type: "collector"
+      collector_subtype: "article"
+      pillar: "lifestyle"
+      target_action: "Build top-of-funnel brand reach and route dog-curious traffic into the article library"
+      metric: "collector_to_converter_click to crate training, lost-dog safety, sleep, and road trip pages"
+      routes:
+        - "/lifestyle/how-to-spend-time-with-dogs-without-owning-one/"
+      notes: >
+        First page in the /lifestyle/ namespace. Community/brand article on volunteer, foster,
+        and recreational ways to spend time with dogs without ownership. Deliberately carries no
+        Amazon product placement and no affiliate cards, so its keystone event is internal
+        engagement rather than amazon_outbound_click. Sections 1-4 (day trips, volunteer walking,
+        sleepovers, short-term fostering) are written in plain benefit terms per issue #318; the
+        cortisol and adoption-rate study citations that previously carried them were removed.
+        The "Which option fits you?" decision table was removed per issue #327; the article now
+        runs the ten numbered options straight into "Find Programs Near You" and the FAQ.
+        Excludes all paid dog-walking, pet-sitting, and gig-work angles by design.
+        /lifestyle/ resolves to the gear pillar theme and the "Lifestyle" homepage card label.
 
     - name: "Rhys Ran Away (Cerro San Luis Obispo)"
       type: "collector"

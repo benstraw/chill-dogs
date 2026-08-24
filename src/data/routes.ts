@@ -55,6 +55,7 @@ export const ROUTES = {
   privacyPolicy: '/privacy-policy/',
   terms: '/terms/',
   shelterCharities: '/shelter-dog-charities/',
+  lifestyleDogTimeWithoutOwning: '/lifestyle/how-to-spend-time-with-dogs-without-owning-one/',
   subscribe: '/subscribe/',
   subscribeThanks: '/subscribe/thanks/',
   subscribeConfirmed: '/subscribe/confirmed/',
