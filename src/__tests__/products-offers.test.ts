@@ -347,6 +347,8 @@ describe('multi-merchant product offers', () => {
         'earth-animal-apothecary-shampoo',
         'lillian-ruff-flea-tick-shampoo',
         'top-performance-natural-shampoo',
+        'tevrapet-naturals-flea-tick-shampoo',
+        'we-love-doodles-flea-tick-shampoo',
       ],
       collar: [
         'amdeiur-natural-flea-collar',

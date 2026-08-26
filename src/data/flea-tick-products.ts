@@ -339,6 +339,49 @@ export const fleaTickProducts: FleaTickProduct[] = [
     ],
   },
   {
+    id: 'tevrapet-naturals-flea-tick-shampoo',
+    name: 'TevraPet Naturals Flea & Tick Dog & Cat Shampoo',
+    category: 'natural-shampoo',
+    badge: 'Natural shampoo',
+    bestFor: 'A small bottle for households that bathe both dogs and cats',
+    offers: [
+      chewyOffer('https://www.chewy.com/tevrapet-naturals-flea-tick-dog-cat/dp/332995', 'best-natural-flea-and-tick-products-for-dogs'),
+    ],
+    image: {
+      src: 'https://image.chewy.com/catalog/general/images/moe/068b8723-5c52-77b1-8000-960839338a78._AC_SS1800_V1_.jpg',
+      alt: 'TevraPet Naturals Flea & Tick Dog & Cat Shampoo, 8 fl oz bottle',
+    },
+    ctaLabel: 'Check price on Chewy',
+    bullets: [
+      'Covers fleas, ticks, and mosquitoes in a single wash',
+      'Hypoallergenic formula aimed at pets with sensitive skin',
+      'Labeled for use on both dogs and cats',
+      '8 fl oz — the smallest bottle in this section, useful for trying a formula before committing',
+    ],
+  },
+  {
+    id: 'we-love-doodles-flea-tick-shampoo',
+    name: 'We Love Doodles 5-in-1 Flea & Tick Peppermint Dog Shampoo',
+    category: 'natural-shampoo',
+    badge: 'Natural shampoo',
+    bestFor: 'Thick and curly coats that mat easily after a bath',
+    offers: [
+      chewyOffer('https://www.chewy.com/we-love-doodles-flea-tick-dog-shampoo/dp/3987470', 'best-natural-flea-and-tick-products-for-dogs'),
+    ],
+    image: {
+      src: 'https://image.chewy.com/catalog/general/images/moe/069a9dd9-cb30-7478-8000-553f5f4ab2bf._AC_SS1800_V1_.jpg',
+      alt: 'We Love Doodles 5-in-1 Flea & Tick Peppermint Dog Shampoo, 16 fl oz bottle',
+    },
+    ctaLabel: 'Check price on Chewy',
+    bullets: [
+      'Peppermint formula that cleans the coat and repels fleas and ticks',
+      'No harsh chemicals, and formulated for all coat types',
+      'Lifts dirt without stripping the coat of its natural oils',
+      'Peppermint oil can be toxic to cats — this one is labeled for dogs only',
+      '16 fl oz bottle',
+    ],
+  },
+  {
     id: 'wondercide-spray-lemongrass-32oz',
     name: 'Wondercide Flea, Tick & Mosquito Spray',
     category: 'natural-spray',

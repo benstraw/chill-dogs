@@ -177,6 +177,8 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
           'earth-animal-apothecary-shampoo',
           'lillian-ruff-flea-tick-shampoo',
           'top-performance-natural-shampoo',
+          'tevrapet-naturals-flea-tick-shampoo',
+          'we-love-doodles-flea-tick-shampoo',
         ],
         alt: true,
       },
@@ -186,7 +188,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Collars and Wearable Tags',
         intro:
           'These products use natural ingredients to provide protection for months at a time.',
-        positionOffset: 10,
+        positionOffset: 12,
         columns: 2,
         productIds: [
           'amdeiur-natural-flea-collar',
@@ -204,7 +206,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Daily Chews',
         intro:
           'Daily chews work best as a supplement to your flea and tick routine. These products use natural ingredients that also help boost your dog’s immune system and support a healthy coat and skin.',
-        positionOffset: 17,
+        positionOffset: 19,
         columns: 3,
         productIds: [
           'lkdhfjc-flea-tick-chews-200',
@@ -223,7 +225,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Combs, Grooming Sets, and Tick-Removal Tools',
         intro:
           'Coat checks are an integral part of any flea and tick prevention routine. Flea combs allow you to catch a problem early, brushes allow you to get through the undercoat and reach skin on a thick coat, and a tick tool helps you remove a tick entirely without leaving any part of it embedded in your dog.',
-        positionOffset: 24,
+        positionOffset: 26,
         columns: 3,
         visibleCount: 6,
         productIds: [
@@ -289,6 +291,8 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         'earth-animal-apothecary-shampoo',
         'lillian-ruff-flea-tick-shampoo',
         'top-performance-natural-shampoo',
+        'tevrapet-naturals-flea-tick-shampoo',
+        'we-love-doodles-flea-tick-shampoo',
         'amdeiur-natural-flea-collar',
         'solpetti-botanical-flea-collar',
         'tenerolike-essential-oil-collar-5pack',
