@@ -790,7 +790,7 @@ describe('site smoke tests', () => {
       .map(Number);
 
     expect([...new Set(positions)].sort((a, b) => a - b)).toEqual(
-      Array.from({ length: 18 }, (_, i) => i + 1),
+      Array.from({ length: 17 }, (_, i) => i + 1),
     );
   });
 

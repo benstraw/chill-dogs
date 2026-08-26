@@ -364,12 +364,12 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       {
         kind: 'product_section',
         id: 'otc-collars',
-        heading: 'Flea and tick collars',
+        heading: 'Flea and Tick Collars',
         intro:
-          'Collars trade the monthly application for months of continuous wear. They are the most realistic option if a monthly reminder is the thing that keeps failing, and the count you buy should match your household rather than the headline price.',
+          'Collars provide flea and tick protection for months at a time. They must be worn continuously for full effect.',
         positionOffset: 2,
         columns: 3,
-        productIds: ['udyoude-flea-collar-large-2pack', 'cabins-flea-collar-4pack', 'zafelous-flea-collar-2pack'],
+        productIds: ['udyoude-flea-collar-large-2pack', 'cabins-flea-collar-4pack'],
         alt: true,
       },
       {
@@ -378,7 +378,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Combs, grooming sets, and tick-removal tools',
         intro:
           'Prevention reduces what reaches your dog; it does not make coat checks optional. A flea comb catches an early problem while it is still small, and a proper tick tool removes the whole tick instead of leaving mouthparts embedded. These are the same tools we recommend on the natural page — the job does not change based on what prevention you chose.',
-        positionOffset: 5,
+        positionOffset: 4,
         columns: 3,
         visibleCount: 6,
         productIds: [
@@ -445,7 +445,6 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         'trioak-topical-medium-23-44',
         'udyoude-flea-collar-large-2pack',
         'cabins-flea-collar-4pack',
-        'zafelous-flea-collar-2pack',
         'green-pet-double-sided-flea-comb',
         'ikkab-flea-comb-set',
         'vomroju-flea-lice-comb-set',
