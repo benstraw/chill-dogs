@@ -406,7 +406,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         tone: 'warning',
         bullets: true,
         paragraphs: [
-          'Permethrin is toxic to cats. Do not use products that contain Permethrin if you have cats in your home.',
+          'Permethrin is toxic to cats. Do not use products that contain permethrin if you have cats in your home.',
           'Apply topicals to skin, not fur, and keep the dog dry for the window the label specifies. Many complaints that a spot-on "did nothing" trace back to application error rather than the product.',
           'Collars need the same attention as any other pesticide product. Check the skin under the collar for the first week, and take it off if you see redness or hair loss.',
           'If you are still finding live fleas or ticks after a full cycle of any of these products, consult your veterinarian, as your dog may require prescription medication.',
@@ -434,7 +434,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         {
           question: 'Can I use these products if I have cats?',
           answer:
-            'Permethrin is toxic to cats. Products that contain Permethrin should not be used in households with cats. Check all labels to ensure that they are safe for use around cats. When in doubt, consult your veterinarian.',
+            'Permethrin is toxic to cats. Products that contain permethrin should not be used in households with cats. Check all labels to ensure that they are safe for use around cats. When in doubt, consult your veterinarian.',
         },
       ],
     },
