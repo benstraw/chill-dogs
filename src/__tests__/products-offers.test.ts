@@ -311,6 +311,7 @@ describe('multi-merchant product offers', () => {
       'natures-dome-peppermint-spray',
       'isabellas-clearly-natural-spray',
       'pure-natural-pet-spray',
+      'ortho-pawz-natural-flea-tick-spray',
       'duty-mitt-flea-tick-mitt',
     ];
     const config = fleaTickConverterPages['best-natural-flea-and-tick-products-for-dogs'];

@@ -160,6 +160,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
           'natures-dome-peppermint-spray',
           'isabellas-clearly-natural-spray',
           'pure-natural-pet-spray',
+          'ortho-pawz-natural-flea-tick-spray',
           'duty-mitt-flea-tick-mitt',
         ],
       },
@@ -169,7 +170,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Shampoos for Bath-day Support',
         intro:
           'Shampoos are useful for prevention and after flea and tick exposure. They also help make regular coat checks part of the routine.',
-        positionOffset: 5,
+        positionOffset: 6,
         columns: 3,
         productIds: [
           'wondercide-shampoo-amazon',
@@ -188,7 +189,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Collars and Wearable Tags',
         intro:
           'These products use natural ingredients to provide protection for months at a time.',
-        positionOffset: 12,
+        positionOffset: 13,
         columns: 2,
         productIds: [
           'amdeiur-natural-flea-collar',
@@ -206,7 +207,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Daily Chews',
         intro:
           'Daily chews work best as a supplement to your flea and tick routine. These products use natural ingredients that also help boost your dog’s immune system and support a healthy coat and skin.',
-        positionOffset: 19,
+        positionOffset: 20,
         columns: 3,
         productIds: [
           'lkdhfjc-flea-tick-chews-200',
@@ -225,7 +226,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Combs, Grooming Sets, and Tick-Removal Tools',
         intro:
           'Coat checks are an integral part of any flea and tick prevention routine. Flea combs allow you to catch a problem early, brushes allow you to get through the undercoat and reach skin on a thick coat, and a tick tool helps you remove a tick entirely without leaving any part of it embedded in your dog.',
-        positionOffset: 26,
+        positionOffset: 27,
         columns: 3,
         visibleCount: 6,
         productIds: [
@@ -285,6 +286,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         'natures-dome-peppermint-spray',
         'isabellas-clearly-natural-spray',
         'pure-natural-pet-spray',
+        'ortho-pawz-natural-flea-tick-spray',
         'duty-mitt-flea-tick-mitt',
         'wondercide-shampoo-amazon',
         'hartz-natures-shield-shampoo',
@@ -345,6 +347,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       { label: 'How To Choose', anchor: 'how-to-choose' },
       { label: 'Topical Treatments', anchor: 'otc-topicals' },
       { label: 'Collars', anchor: 'otc-collars' },
+      { label: 'Plant-Based Options', anchor: 'natural-options' },
       { label: 'Combs & Tick Tools', anchor: 'grooming-tools' },
       { label: 'Safety Notes', anchor: 'safety-notes' },
       { label: 'FAQ', anchor: 'faq' },
@@ -380,12 +383,27 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       },
       {
         kind: 'product_section',
+        id: 'natural-options',
+        heading: 'Plant-Based Sprays and Shampoos',
+        intro:
+          'These use plant oils rather than the pesticides in the sections above, so they ask more of your routine and suit lighter exposure. This is a short sample — the full range lives on the natural products page.',
+        positionOffset: 4,
+        columns: 3,
+        productIds: [
+          'ortho-pawz-natural-flea-tick-spray',
+          'tevrapet-naturals-flea-tick-shampoo',
+          'we-love-doodles-flea-tick-shampoo',
+        ],
+      },
+      {
+        kind: 'product_section',
         id: 'grooming-tools',
         heading: 'Combs, Grooming Sets, and Tick-Removal Tools',
         intro:
           'Coat checks are an integral part of any flea and tick prevention routine. Flea combs allow you to catch a problem early, brushes allow you to get through the undercoat and reach skin on a thick coat, and a tick tool helps you remove a tick entirely without leaving any part of it embedded in your dog.',
-        positionOffset: 4,
+        positionOffset: 7,
         columns: 3,
+        alt: true,
         visibleCount: 6,
         productIds: [
           'green-pet-double-sided-flea-comb',
@@ -452,6 +470,9 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         'trioak-topical-medium-23-44',
         'udyoude-flea-collar-large-2pack',
         'cabins-flea-collar-4pack',
+        'ortho-pawz-natural-flea-tick-spray',
+        'tevrapet-naturals-flea-tick-shampoo',
+        'we-love-doodles-flea-tick-shampoo',
         'green-pet-double-sided-flea-comb',
         'ikkab-flea-comb-set',
         'vomroju-flea-lice-comb-set',

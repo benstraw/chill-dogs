@@ -469,6 +469,28 @@ export const fleaTickProducts: FleaTickProduct[] = [
     ],
   },
   {
+    id: 'ortho-pawz-natural-flea-tick-spray',
+    name: 'Ortho Pawz All Natural Dog & Cat Flea & Tick Spray',
+    category: 'natural-spray',
+    badge: 'Natural spray',
+    bestFor: 'A citrus-oil spray for households with both dogs and cats',
+    offers: [
+      chewyOffer('https://www.chewy.com/ortho-pawz-all-natural-dog-cat-flea/dp/4320046', 'best-natural-flea-and-tick-products-for-dogs'),
+    ],
+    image: {
+      src: 'https://image.chewy.com/catalog/general/images/moe/06a0f626-39ae-75fc-8000-fb139d5f7291._AC_SS1800_V1_.jpg',
+      alt: 'Ortho Pawz All Natural Dog & Cat Flea & Tick Spray, 8 fl oz bottle',
+    },
+    ctaLabel: 'Check price on Chewy',
+    bullets: [
+      'Citrus oil formula rather than synthetic pesticides',
+      'Targets fleas, ticks, mosquitoes, lice, and mites on contact',
+      'Labeled for daily use on dogs and cats, including puppies and kittens',
+      'Can also be used on bedding and grooming tools',
+      'Made in the USA, 8 fl oz bottle',
+    ],
+  },
+  {
     id: 'duty-mitt-flea-tick-mitt',
     name: 'The Duty Mitt Tick & Flea Repellent Mitt for Dogs',
     category: 'natural-spray',
