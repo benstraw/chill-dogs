@@ -765,10 +765,10 @@ describe('site smoke tests', () => {
 
     // The label states the count and swaps on open, so only one is ever read out.
     expect(disclosure!.querySelector('.disclosure-bar__label--collapsed')?.textContent).toBe(
-      'Show 7 more options',
+      'Show 7 more recommendations',
     );
     expect(disclosure!.querySelector('.disclosure-bar__label--expanded')?.textContent).toBe(
-      'Show fewer options',
+      'Show fewer recommendations',
     );
 
     // Native <details> keeps the overflow in the DOM: hidden products stay

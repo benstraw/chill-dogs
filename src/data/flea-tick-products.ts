@@ -1019,6 +1019,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
       'Attachable to collars or bags',
       'Made in USA',
     ],
+    caution: 'If the bite site stays inflamed or symptoms follow, save the tick and call your vet.',
   },
   {
     id: 'rinseroo-original',

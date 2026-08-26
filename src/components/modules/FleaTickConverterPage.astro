@@ -80,8 +80,10 @@ const blocks = config.blocks.map((block) => {
             {hidden.length > 0 && (
               <div class="ft-more">
                 <DisclosureBar
-                  label={`Show ${hidden.length} more ${hidden.length === 1 ? 'option' : 'options'}`}
-                  expandedLabel="Show fewer options"
+                  label={`Show ${hidden.length} more ${
+                    hidden.length === 1 ? 'recommendation' : 'recommendations'
+                  }`}
+                  expandedLabel="Show fewer recommendations"
                 >
                   <div class={`ft-grid ft-grid--${block.columns} ft-grid--more`}>
                     {hidden.map((product, index) => (
@@ -102,7 +104,13 @@ const blocks = config.blocks.map((block) => {
           <div class="ft-inner">
             <aside class:list={['ft-callout', `ft-callout--${block.tone ?? 'info'}`]}>
               <h2>{block.heading}</h2>
-              {block.paragraphs.map((paragraph) => <p set:html={paragraph} />)}
+              {block.bullets ? (
+                <ul class="ft-callout__list">
+                  {block.paragraphs.map((paragraph) => <li set:html={paragraph} />)}
+                </ul>
+              ) : (
+                block.paragraphs.map((paragraph) => <p set:html={paragraph} />)
+              )}
             </aside>
           </div>
         </section>
@@ -211,6 +219,13 @@ const blocks = config.blocks.map((block) => {
 
   .ft-callout p:last-child {
     margin-bottom: 0;
+  }
+
+  .ft-callout__list {
+    margin: 0;
+    padding-left: 1.25rem;
+    display: grid;
+    gap: var(--space-sm);
   }
 
   @media (max-width: 920px) {

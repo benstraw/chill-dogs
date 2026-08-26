@@ -30,6 +30,8 @@ export interface FleaTickCalloutBlock {
   paragraphs: string[];
   id?: string;
   tone?: 'info' | 'warning';
+  /** Opt in to rendering the paragraphs as a bulleted list. */
+  bullets?: boolean;
   alt?: boolean;
 }
 
@@ -375,9 +377,9 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       {
         kind: 'product_section',
         id: 'grooming-tools',
-        heading: 'Combs, grooming sets, and tick-removal tools',
+        heading: 'Combs, Grooming Sets, and Tick-Removal Tools',
         intro:
-          'Prevention reduces what reaches your dog; it does not make coat checks optional. A flea comb catches an early problem while it is still small, and a proper tick tool removes the whole tick instead of leaving mouthparts embedded. These are the same tools we recommend on the natural page — the job does not change based on what prevention you chose.',
+          'Coat checks are an integral part of any flea and tick prevention routine. Flea combs allow you to catch a problem early, brushes allow you to get through the undercoat and reach skin on a thick coat, and a tick tool helps you remove a tick entirely without leaving any part of it embedded in your dog.',
         positionOffset: 4,
         columns: 3,
         visibleCount: 6,
@@ -400,13 +402,14 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       {
         kind: 'callout',
         id: 'safety-notes',
-        heading: 'Safety notes that matter before you buy',
+        heading: 'Safety Notes',
         tone: 'warning',
+        bullets: true,
         paragraphs: [
-          'Permethrin is the one to check for. Vectra 3D contains it, and permethrin is genuinely toxic to cats. If cats groom the treated dog or sleep pressed against it, choose a different product unless your vet says otherwise.',
-          'Apply topicals to skin, not fur, and keep the dog dry for the window the label specifies. Most complaints that a spot-on "did nothing" trace back to application rather than the product.',
+          'Permethrin is toxic to cats. Do not use products that contain Permethrin if you have cats in your home.',
+          'Apply topicals to skin, not fur, and keep the dog dry for the window the label specifies. Many complaints that a spot-on "did nothing" trace back to application error rather than the product.',
           'Collars need the same attention as any other pesticide product. Check the skin under the collar for the first week, and take it off if you see redness or hair loss.',
-          'If you are still finding live fleas after a full cycle on any of these, that is the signal to talk to your vet rather than to stack another OTC product on top.',
+          'If you are still finding live fleas or ticks after a full cycle of any of these products, consult your veterinarian, as your dog may require prescription medication.',
         ],
       },
     ],
@@ -416,22 +419,22 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         {
           question: 'Are over-the-counter flea and tick products as good as prescription ones?',
           answer:
-            'For many dogs they are enough, particularly with lighter exposure. Prescription orals generally have stronger and faster tick coverage and skip the application problem entirely. The honest trade-off is that OTC products ask more of you — correct weight band, correct application, and a dry dog afterward.',
+            'For many dogs, yes, particularly with lighter exposure. Prescription orals generally have stronger and faster tick coverage and may be necessary if you live in an area with heavy pest infestation.',
         },
         {
-          question: 'Should I use a topical or a collar?',
+          question: 'Should I use a topical treatment or a collar?',
           answer:
-            'Pick based on which one you will actually keep up. A topical is a monthly task that is easy to forget or apply badly; a collar runs for months but stays on the dog continuously. Do not use both at once without asking your vet — that is stacking pesticides, not doubling protection.',
+            'Both are effective, so choose based on which routine you will actually maintain. A topical is a monthly task and requires proper application; a collar must be replaced every 6-8 months but stays on the dog continuously. Do not use both at once without asking your vet — that is stacking pesticides, not doubling protection.',
         },
         {
-          question: 'Do I still need a flea comb if my dog is on prevention?',
+          question: 'Do I still need a flea comb if my dog is using prevention products?',
           answer:
-            'Yes. Prevention lowers the odds but does not make your dog untouchable, and ticks especially need to be found rather than repelled. A weekly comb pass after walks in grass or brush is what catches a problem while it is still one or two pests.',
+            'Yes. Prevention lowers the odds of infestation, but ticks especially need to be found and removed. Use a comb weekly and after walks in tall grass or brush.',
         },
         {
           question: 'Can I use these products if I have cats?',
           answer:
-            'Read the label for permethrin, which is toxic to cats and appears in Vectra 3D on this page. Even products without it deserve a check if your cat grooms the dog. When in doubt, ask your vet for a plan that covers both animals.',
+            'Permethrin is toxic to cats. Products that contain Permethrin should not be used in households with cats. Check all labels to ensure that they are safe for use around cats. When in doubt, consult your veterinarian.',
         },
       ],
     },
