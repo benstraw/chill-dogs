@@ -400,7 +400,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
     hero: {
       title: 'Dog Bath Tools',
       subtitle:
-        'A bath is not a replacement for flea and tick prevention, but it makes exposure cleanup and coat maintenance far more realistic. These are the tools that reduce friction at each stage — getting water on the dog, working shampoo through the coat, checking the skin, and drying off afterward.',
+        'These products can make bath time easier and more enjoyable for you and your dog. They can also help you to check your dog for fleas and ticks.',
       disclaimer: 'As an Amazon Associate and a Chewy Affiliate, we earn from qualifying purchases.',
       primaryCta: { label: 'See Sprayers and Rinse Setups', href: '#rinse-setups' },
       secondaryCta: { label: 'See Flea and Tick Products', href: ROUTES.fleaTickProducts },
@@ -418,18 +418,17 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       {
         kind: 'prose',
         id: 'bath-strategy',
-        heading: 'What bath tools actually solve',
+        heading: 'What Bath Tools Solve',
         paragraphs: [
-          'Bath tools solve the routine problem. They make rinse-downs easier after grassy walks, muddy hikes, and early-flea-warning moments when you want to inspect the coat thoroughly. They do not replace medication, environmental cleanup, or veterinary escalation when the dog is genuinely infested.',
-          'Every bath has the same four friction points: getting water where you need it, working shampoo down to the skin, seeing what is actually in the coat, and drying the dog before it shakes off across the house. The sections below are organized around those four steps, so you can buy for whichever one keeps derailing your routine rather than buying a whole shelf of gear.',
+          "Bath tools make it easier for you to maintain your dog's bathing routine. This is especially important if your dog spends a lot of time outdoors on grassy walks, muddy hikes, or in dusty dog-runs. They can also help you to check your dog for fleas and ticks.",
         ],
       },
       {
         kind: 'product_section',
         id: 'rinse-setups',
-        heading: 'Sprayers and rinse setups',
+        heading: 'Sprayers and Rinse Setups',
         intro:
-          'The hardest part of most baths is water delivery, not soap. These cover the places dogs actually get washed: an indoor tub or shower, an outdoor tap, a folding station you set up anywhere, and nowhere near plumbing at all.',
+          'These products make it easier to wash your dog, indoors, outdoors, or just about anywhere.',
         positionOffset: 0,
         columns: 3,
         productIds: [

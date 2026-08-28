@@ -210,7 +210,7 @@ describe('multi-merchant product offers', () => {
     }
   });
 
-  it('leads the bath-tools page with Rinseroo on both merchant offers', () => {
+  it('leads the bath-tools page with Rinseroo on its Amazon offer alone', () => {
     const config = fleaTickConverterPages['dog-bath-tools-for-flea-season'];
     const rinseSetups = config.blocks.find(
       (block) => block.kind === 'product_section' && block.id === 'rinse-setups'
@@ -226,13 +226,11 @@ describe('multi-merchant product offers', () => {
     const rinseroo = fleaTickProducts.find((entry) => entry.id === 'rinseroo-original');
     expect(rinseroo, 'rinseroo-original missing from flea/tick products').toBeTruthy();
 
+    // The Chewy listing is the showerhead version, not the tub-faucet slip-on the card shows,
+    // so per issue #348 this record stands on its Amazon offer alone.
     const offers = getOffers(rinseroo!);
-    expect(offers.map((offer) => offer.merchant)).toEqual(['amazon', 'chewy']);
+    expect(offers.map((offer) => offer.merchant)).toEqual(['amazon']);
     expect(offers.find((offer) => offer.merchant === 'amazon')?.asin).toBe('B0CSF2LLS3');
-
-    const chewyOffer = offers.find((offer) => offer.merchant === 'chewy');
-    expect(chewyOffer!.url).toMatch(/^https:\/\/chewy\.sjv\.io\//);
-    expect(chewyOffer!.canonicalUrl).toBe('https://www.chewy.com/rinseroo-slip-on-sprayer-cat-portable/dp/3650750');
 
     // Carried by both the bath-tools converter and the inline article link.
     expect(buildProductPageMap()['rinseroo-original']).toEqual([
