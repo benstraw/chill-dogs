@@ -237,7 +237,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     amazonUrl: amazonUrl('B09WLSNZZC'),
     offers: [
       amazonOffer('B09WLSNZZC'),
-      chewyOffer('https://www.chewy.com/wondercide-flea-tick-peppermint-cat/dp/639662', 'best-natural-flea-and-tick-products-for-dogs'),
+      chewyOffer('https://www.chewy.com/wondercide-flea-tick-peppermint-cat/dp/639662', 'best-flea-and-tick-products-for-dogs'),
     ],
     image: {
       src: 'https://m.media-amazon.com/images/I/61ylsHHZN5L._SL500_.jpg',
@@ -260,7 +260,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     amazonUrl: amazonUrl('B0BW2NS3DC'),
     offers: [
       amazonOffer('B0BW2NS3DC'),
-      chewyOffer('https://www.chewy.com/hartz-natures-shield-natural-flea/dp/766534', 'best-natural-flea-and-tick-products-for-dogs'),
+      chewyOffer('https://www.chewy.com/hartz-natures-shield-natural-flea/dp/766534', 'best-flea-and-tick-products-for-dogs'),
     ],
     image: {
       src: 'https://m.media-amazon.com/images/I/71oQsRJMGYL._SL500_.jpg',
@@ -284,7 +284,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     amazonUrl: amazonUrl('B094451Q3H'),
     offers: [
       amazonOffer('B094451Q3H'),
-      chewyOffer('https://www.chewy.com/earth-animal-apothecary-natural-flea/dp/1992606', 'best-natural-flea-and-tick-products-for-dogs'),
+      chewyOffer('https://www.chewy.com/earth-animal-apothecary-natural-flea/dp/1992606', 'best-flea-and-tick-products-for-dogs'),
     ],
     image: {
       src: 'https://m.media-amazon.com/images/I/71Su0t-7xiL._SL500_.jpg',
@@ -303,7 +303,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     badge: 'Natural shampoo',
     bestFor: 'Natural essential oils help to repel fleas and ticks',
     offers: [
-      chewyOffer('https://www.chewy.com/lillian-ruff-flea-tick-dog-shampoo-16/dp/380716', 'best-natural-flea-and-tick-products-for-dogs'),
+      chewyOffer('https://www.chewy.com/lillian-ruff-flea-tick-dog-shampoo-16/dp/380716', 'best-flea-and-tick-products-for-dogs'),
     ],
     image: {
       src: 'https://image.chewy.com/is/image/catalog/354486_MAIN._AC_SX500_SY400_QL75_V1640041368_.jpg',
@@ -325,7 +325,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     badge: 'Natural shampoo',
     bestFor: 'Kills fleas and ticks on contact, and helps to prevent future reinfestation',
     offers: [
-      chewyOffer('https://www.chewy.com/top-performance-natural-flea-tick-dog/dp/237221', 'best-natural-flea-and-tick-products-for-dogs'),
+      chewyOffer('https://www.chewy.com/top-performance-natural-flea-tick-dog/dp/237221', 'best-flea-and-tick-products-for-dogs'),
     ],
     image: {
       src: 'https://image.chewy.com/catalog/general/images/top-performance-natural-flea-tick-dog-cat-shampoo-17fl-oz-bottle/img-388419._AC_SX500_SY400_QL75_V1_.jpg',
@@ -345,7 +345,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     badge: 'Natural shampoo',
     bestFor: 'A small bottle for households that bathe both dogs and cats',
     offers: [
-      chewyOffer('https://www.chewy.com/tevrapet-naturals-flea-tick-dog-cat/dp/332995', 'best-natural-flea-and-tick-products-for-dogs'),
+      chewyOffer('https://www.chewy.com/tevrapet-naturals-flea-tick-dog-cat/dp/332995', 'best-flea-and-tick-products-for-dogs'),
     ],
     image: {
       src: 'https://image.chewy.com/catalog/general/images/moe/068b8723-5c52-77b1-8000-960839338a78._AC_SS1800_V1_.jpg',
@@ -366,7 +366,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     badge: 'Natural shampoo',
     bestFor: 'Thick and curly coats that mat easily after a bath',
     offers: [
-      chewyOffer('https://www.chewy.com/we-love-doodles-flea-tick-dog-shampoo/dp/3987470', 'best-natural-flea-and-tick-products-for-dogs'),
+      chewyOffer('https://www.chewy.com/we-love-doodles-flea-tick-dog-shampoo/dp/3987470', 'best-flea-and-tick-products-for-dogs'),
     ],
     image: {
       src: 'https://image.chewy.com/catalog/general/images/moe/069a9dd9-cb30-7478-8000-553f5f4ab2bf._AC_SS1800_V1_.jpg',
@@ -392,7 +392,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     amazonUrl: amazonUrl('B00V75QXEY'),
     offers: [
       amazonOffer('B00V75QXEY'),
-      chewyOffer('https://www.chewy.com/wondercide-flea-tick-dogs-home/dp/253125', 'best-natural-flea-and-tick-products-for-dogs'),
+      chewyOffer('https://www.chewy.com/wondercide-flea-tick-dogs-home/dp/253125', 'best-flea-and-tick-products-for-dogs'),
     ],
     image: {
       src: 'https://m.media-amazon.com/images/I/61rdopZGPgL._SL500_.jpg',
@@ -415,7 +415,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     badge: 'Natural oil spray',
     bestFor: 'Peppermint oil helps kill and repel fleas, ticks, larvae and eggs',
     offers: [
-      chewyOffer('https://www.chewy.com/natures-dome-peppermint-flea-tick/dp/3684310', 'best-natural-flea-and-tick-products-for-dogs'),
+      chewyOffer('https://www.chewy.com/natures-dome-peppermint-flea-tick/dp/3684310', 'best-flea-and-tick-products-for-dogs'),
     ],
     image: {
       src: 'https://image.chewy.com/catalog/general/images/moe/06984af5-d2d4-7fe4-8000-06bc2273adb8._AC_SX500_SY400_QL75_V1_.jpg',
@@ -434,7 +434,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     badge: 'Natural oil',
     bestFor: 'A blend of essential oils in a nourishing sweet almond oil base for flea and tick protection',
     offers: [
-      chewyOffer('https://www.chewy.com/isabellas-clearly-natural-flea-tick/dp/3701295', 'best-natural-flea-and-tick-products-for-dogs'),
+      chewyOffer('https://www.chewy.com/isabellas-clearly-natural-flea-tick/dp/3701295', 'best-flea-and-tick-products-for-dogs'),
     ],
     image: {
       src: 'https://image.chewy.com/catalog/general/images/moe/0693338a-c450-70cd-8000-f2fc87404143._AC_SX500_SY400_QL75_V1_.jpg',
@@ -455,7 +455,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     badge: 'Natural spray',
     bestFor: 'Made with peppermint and cedarwood oils to repel pests',
     offers: [
-      chewyOffer('https://www.chewy.com/pure-natural-pets-dog-flea-tick-spray/dp/2037798', 'best-natural-flea-and-tick-products-for-dogs'),
+      chewyOffer('https://www.chewy.com/pure-natural-pets-dog-flea-tick-spray/dp/2037798', 'best-flea-and-tick-products-for-dogs'),
     ],
     image: {
       src: 'https://image.chewy.com/catalog/general/images/moe/06846cfa-8b42-7c48-8000-dc24e263997a._AC_SX500_SY400_QL75_V1_.jpg',
@@ -475,7 +475,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     badge: 'Natural spray',
     bestFor: 'A citrus-oil spray for households with both dogs and cats',
     offers: [
-      chewyOffer('https://www.chewy.com/ortho-pawz-all-natural-dog-cat-flea/dp/4320046', 'best-natural-flea-and-tick-products-for-dogs'),
+      chewyOffer('https://www.chewy.com/ortho-pawz-all-natural-dog-cat-flea/dp/4320046', 'best-flea-and-tick-products-for-dogs'),
     ],
     image: {
       src: 'https://image.chewy.com/catalog/general/images/moe/06a0f626-39ae-75fc-8000-fb139d5f7291._AC_SS1800_V1_.jpg',
@@ -497,7 +497,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     badge: 'Repellent mitt',
     bestFor: 'Made with a potent blend of essential oils to effectively repel fleas and ticks',
     offers: [
-      chewyOffer('https://www.chewy.com/duty-mitt-tick-flea-repellent-mitt/dp/3976198', 'best-natural-flea-and-tick-products-for-dogs'),
+      chewyOffer('https://www.chewy.com/duty-mitt-tick-flea-repellent-mitt/dp/3976198', 'best-flea-and-tick-products-for-dogs'),
     ],
     image: {
       src: 'https://image.chewy.com/catalog/general/images/moe/06a18a09-de4c-71d9-8000-2064d1284dec._AC_SX500_SY400_QL75_V1_.jpg',
@@ -733,7 +733,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     badge: 'Daily chew',
     bestFor: 'Flea, tick and mosquito protection',
     offers: [
-      chewyOffer('https://www.chewy.com/beloved-pets-flea-tick-prevention/dp/3614782', 'best-natural-flea-and-tick-products-for-dogs'),
+      chewyOffer('https://www.chewy.com/beloved-pets-flea-tick-prevention/dp/3614782', 'best-flea-and-tick-products-for-dogs'),
     ],
     image: {
       src: 'https://image.chewy.com/catalog/general/images/moe/0690cb47-856a-7977-8000-ba707982b1df._AC_SX500_SY400_QL75_V1_.jpg',
@@ -756,7 +756,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     amazonUrl: amazonUrl('B0GX95TKVQ'),
     offers: [
       amazonOffer('B0GX95TKVQ'),
-      chewyOffer('https://www.chewy.com/dr-woow-flea-tick-prevention-chews/dp/4356846', 'best-natural-flea-and-tick-products-for-dogs'),
+      chewyOffer('https://www.chewy.com/dr-woow-flea-tick-prevention-chews/dp/4356846', 'best-flea-and-tick-products-for-dogs'),
     ],
     image: {
       src: 'https://image.chewy.com/catalog/general/images/moe/06a1d985-386b-785a-8000-852baa7b79d6._AC_SX500_SY400_QL75_V1_.jpg',
@@ -882,7 +882,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     amazonUrl: amazonUrl('B0GK34GTCC'),
     offers: [
       amazonOffer('B0GK34GTCC'),
-      chewyOffer('https://www.chewy.com/tweezerman-precision-single-row-flea/dp/3969334', 'best-natural-flea-and-tick-products-for-dogs'),
+      chewyOffer('https://www.chewy.com/tweezerman-precision-single-row-flea/dp/3969334', 'best-flea-and-tick-products-for-dogs'),
     ],
     image: {
       src: 'https://image.chewy.com/catalog/general/images/moe/0699c28a-a53f-7941-8000-078536bb9a5b._AC_SX500_SY400_QL75_V1_.jpg',
@@ -904,7 +904,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     amazonUrl: amazonUrl('B079SYNQQ5'),
     offers: [
       amazonOffer('B079SYNQQ5'),
-      chewyOffer('https://www.chewy.com/wahl-flea-finishing-dog-comb/dp/3514926', 'best-natural-flea-and-tick-products-for-dogs'),
+      chewyOffer('https://www.chewy.com/wahl-flea-finishing-dog-comb/dp/3514926', 'best-flea-and-tick-products-for-dogs'),
     ],
     image: {
       src: 'https://image.chewy.com/catalog/general/images/moe/068e80e8-8957-7b24-8000-2c6aecad578d._AC_SX500_SY400_QL75_V1_.jpg',
@@ -981,7 +981,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     amazonUrl: amazonUrl('B0GK3BSK56'),
     offers: [
       amazonOffer('B0GK3BSK56'),
-      chewyOffer('https://www.chewy.com/tweezerman-tick-removal-kit-dogs/dp/3969342', 'best-natural-flea-and-tick-products-for-dogs'),
+      chewyOffer('https://www.chewy.com/tweezerman-tick-removal-kit-dogs/dp/3969342', 'best-flea-and-tick-products-for-dogs'),
     ],
     image: {
       src: 'https://image.chewy.com/catalog/general/images/moe/0699c28a-9afb-7ff9-8000-fbbc8d9dafca._AC_SX500_SY400_QL75_V1_.jpg',
@@ -1005,7 +1005,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     amazonUrl: amazonUrl('B0D236JZGJ'),
     offers: [
       amazonOffer('B0D236JZGJ'),
-      chewyOffer('https://www.chewy.com/tweezerman-tick-removal-tweezer-pets/dp/1522510', 'best-natural-flea-and-tick-products-for-dogs'),
+      chewyOffer('https://www.chewy.com/tweezerman-tick-removal-tweezer-pets/dp/1522510', 'best-flea-and-tick-products-for-dogs'),
     ],
     image: {
       src: 'https://image.chewy.com/catalog/general/images/moe/0682dd37-1a86-72c4-8000-51c51e9d964f._AC_SX500_SY400_QL75_V1_.jpg',
@@ -1028,7 +1028,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     amazonUrl: amazonUrl('B075DKL3Z6'),
     offers: [
       amazonOffer('B075DKL3Z6'),
-      chewyOffer('https://www.chewy.com/tickcheck-premium-dog-tick-removal/dp/352001', 'best-natural-flea-and-tick-products-for-dogs'),
+      chewyOffer('https://www.chewy.com/tickcheck-premium-dog-tick-removal/dp/352001', 'best-flea-and-tick-products-for-dogs'),
     ],
     image: {
       src: 'https://image.chewy.com/catalog/general/images/tickcheck-premium-dog-tick-removal-kit/img-436238._AC_SX500_SY400_QL75_V1_.jpg',
@@ -1053,7 +1053,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     amazonUrl: amazonUrl('B07K4F66LH'),
     offers: [
       amazonOffer('B07K4F66LH'),
-      chewyOffer('https://www.chewy.com/tickcheck-remover-spoon-tick-id-card/dp/352007', 'best-natural-flea-and-tick-products-for-dogs'),
+      chewyOffer('https://www.chewy.com/tickcheck-remover-spoon-tick-id-card/dp/352007', 'best-flea-and-tick-products-for-dogs'),
     ],
     image: {
       src: 'https://image.chewy.com/catalog/general/images/tickcheck-remover-spoon-with-tick-id-card-3-pack/img-202294._AC_SX500_SY400_QL75_V1_.jpg',
