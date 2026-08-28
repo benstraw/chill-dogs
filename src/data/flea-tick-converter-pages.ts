@@ -70,6 +70,11 @@ export interface FleaTickConverterPageConfig {
   faq?: { heading: string; items: Array<{ question: string; answer: string }> };
   internalLinkStripHeading?: string;
   internalLinkStripLimit?: number;
+  /**
+   * Mark `natural-*` category products with the sage plant-based treatment. Only the merged
+   * flea/tick converter sets this — the mark is meaningless on a page that is all one kind.
+   */
+  markNaturalProducts?: boolean;
   itemListSchema?: {
     name: string;
     url: string;

@@ -16,12 +16,20 @@
 interface Props {
   id?: string;
   fill?: boolean;
+  /**
+   * Opt into a coloured left edge. `natural` is the sage plant-based mark used by the
+   * flea/tick converter. Decorative only — callers must carry the meaning in text too.
+   */
+  accent?: 'natural';
 }
 
-const { id, fill = false } = Astro.props;
+const { id, fill = false, accent } = Astro.props;
 ---
 
-<div class:list={['product-card', fill && 'product-card--fill']} id={id}>
+<div
+  class:list={['product-card', fill && 'product-card--fill', accent && `product-card--accent-${accent}`]}
+  id={id}
+>
   <slot name="image" />
   <div class="product-card-body">
     <slot />
@@ -56,5 +64,9 @@ const { id, fill = false } = Astro.props;
     flex-direction: column;
     gap: var(--space-sm);
     flex: 1;
+  }
+
+  .product-card--accent-natural {
+    border-left: 4px solid var(--color-sage);
   }
 </style>

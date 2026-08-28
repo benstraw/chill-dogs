@@ -74,6 +74,7 @@ const blocks = config.blocks.map((block) => {
                   product={product}
                   pageSlug={config.pageSlug}
                   position={block.positionOffset + index + 1}
+                  markNatural={config.markNaturalProducts}
                 />
               ))}
             </div>
@@ -91,6 +92,7 @@ const blocks = config.blocks.map((block) => {
                         product={product}
                         pageSlug={config.pageSlug}
                         position={block.positionOffset + visible.length + index + 1}
+                        markNatural={config.markNaturalProducts}
                       />
                     ))}
                   </div>
