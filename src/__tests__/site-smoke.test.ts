@@ -790,8 +790,50 @@ describe('site smoke tests', () => {
       .map(Number);
 
     expect([...new Set(positions)].sort((a, b) => a - b)).toEqual(
-      Array.from({ length: 20 }, (_, i) => i + 1),
+      Array.from({ length: 44 }, (_, i) => i + 1),
     );
+  });
+
+  it('marks only the natural products on the merged flea and tick page', () => {
+    const doc = readBuiltPage(
+      path.join('safety', 'best-flea-and-tick-products-for-dogs', 'index.html'),
+    );
+
+    const marked = [...doc.querySelectorAll('.product-card--accent-natural')]
+      .map((card) => card.getAttribute('id'))
+      .filter((id): id is string => id !== null);
+
+    // Every natural-* category product on the page, and nothing else.
+    expect(marked).toHaveLength(27);
+    expect(marked).toEqual(
+      expect.arrayContaining([
+        'ortho-pawz-natural-flea-tick-spray',
+        'duty-mitt-flea-tick-mitt',
+        'tevrapet-naturals-flea-tick-shampoo',
+        'amdeiur-natural-flea-collar',
+        'trihood-flea-tick-tag',
+        'lkdhfjc-flea-tick-chews-200',
+      ]),
+    );
+
+    // Conventional pesticide products must never carry the plant-based mark.
+    for (const id of [
+      'vectra-3d-xl-95-plus',
+      'trioak-topical-medium-23-44',
+      'udyoude-flea-collar-large-2pack',
+      'cabins-flea-collar-4pack',
+      'green-pet-double-sided-flea-comb',
+    ]) {
+      expect(marked, `${id} must not be marked natural`).not.toContain(id);
+    }
+
+    // The mark cannot be colour-only: each marked card carries a spoken label.
+    expect(doc.body.innerHTML.match(/Natural product: /g) ?? []).toHaveLength(27);
+
+    // The legend that explains the mark, and the anchor inbound links land on.
+    const legend = doc.querySelector('#natural-options');
+    expect(legend, 'missing #natural-options legend block').toBeTruthy();
+    expect(legend?.querySelector('h2')?.textContent).toMatch(/Natural/);
   });
 
   it('leaves a product section open when too few products would be hidden', () => {
