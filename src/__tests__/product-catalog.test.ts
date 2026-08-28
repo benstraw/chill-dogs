@@ -119,7 +119,7 @@ describe('admin product catalog data', () => {
     );
     expect(pageMap['wondercide-spray-lemongrass-32oz']).toEqual(
       expect.arrayContaining([
-        expect.objectContaining({ href: '/safety/best-natural-flea-and-tick-products-for-dogs/' }),
+        expect.objectContaining({ href: '/safety/best-flea-and-tick-products-for-dogs/' }),
       ])
     );
     expect(pageMap['rinseroo-original']).toEqual(

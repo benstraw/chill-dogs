@@ -274,7 +274,7 @@ describe('related pages', () => {
           pinnedRelated: [
             ROUTES.fleaTickProducts,
             ROUTES.naturalFleaTickPrevention,
-            ROUTES.naturalFleaTickProducts,
+            ROUTES.fleaSeasonBathTools,
           ],
         }),
         createPage({ href: ROUTES.fleaTickProducts, topics: ['flea-tick', 'travel'] }),
@@ -284,7 +284,6 @@ describe('related pages', () => {
           collectorSubtype: 'article',
           topics: ['flea-tick', 'travel'],
         }),
-        createPage({ href: ROUTES.naturalFleaTickProducts, topics: ['flea-tick', 'travel'] }),
         createPage({ href: ROUTES.fleaSeasonBathTools, topics: ['flea-tick'] }),
       ]),
     ];
@@ -294,7 +293,7 @@ describe('related pages', () => {
     expect(related.map((page) => page.href)).toEqual(expect.arrayContaining([
       ROUTES.fleaTickProducts,
       ROUTES.naturalFleaTickPrevention,
-      ROUTES.naturalFleaTickProducts,
+      ROUTES.fleaSeasonBathTools,
     ]));
   });
 });

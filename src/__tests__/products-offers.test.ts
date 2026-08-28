@@ -181,7 +181,7 @@ describe('multi-merchant product offers', () => {
       'tickcheck-remover-spoon': 'B07K4F66LH',
     } satisfies Record<string, string>;
 
-    const config = fleaTickConverterPages['best-natural-flea-and-tick-products-for-dogs'];
+    const config = fleaTickConverterPages['best-flea-and-tick-products-for-dogs'];
 
     for (const [productId, canonicalUrl] of Object.entries(expectedChewyCanonicalUrlsById)) {
       const product = fleaTickProducts.find((entry) => entry.id === productId);
@@ -314,7 +314,7 @@ describe('multi-merchant product offers', () => {
       'ortho-pawz-natural-flea-tick-spray',
       'duty-mitt-flea-tick-mitt',
     ];
-    const config = fleaTickConverterPages['best-natural-flea-and-tick-products-for-dogs'];
+    const config = fleaTickConverterPages['best-flea-and-tick-products-for-dogs'];
     const spraySection = config.blocks.find((block) => block.kind === 'product_section' && block.id === 'sprays');
 
     expect(spraySection?.kind).toBe('product_section');
@@ -352,12 +352,14 @@ describe('multi-merchant product offers', () => {
         'we-love-doodles-flea-tick-shampoo',
       ],
       collar: [
+        'udyoude-flea-collar-large-2pack',
+        'cabins-flea-collar-4pack',
         'amdeiur-natural-flea-collar',
         'solpetti-botanical-flea-collar',
         'tenerolike-essential-oil-collar-5pack',
+        'trihood-flea-tick-tag',
         'crobirware-natural-flea-collar-6pack',
         'njkpuyt-flea-collar-small-4pack',
-        'trihood-flea-tick-tag',
         'routade-flea-tick-pendant',
       ],
       chews: [
@@ -371,7 +373,7 @@ describe('multi-merchant product offers', () => {
       ],
     } satisfies Record<string, string[]>;
 
-    const config = fleaTickConverterPages['best-natural-flea-and-tick-products-for-dogs'];
+    const config = fleaTickConverterPages['best-flea-and-tick-products-for-dogs'];
 
     for (const [sectionId, productIds] of Object.entries(expectedSectionProductIds)) {
       const section = config.blocks.find((block) => block.kind === 'product_section' && block.id === sectionId);

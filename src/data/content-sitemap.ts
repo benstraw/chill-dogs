@@ -525,25 +525,6 @@ export const staticSitemapSections: SitemapSection[] = [
         pubDate: new Date('2026-06-26'),
       }),
       createSitemapPage({
-        baseTitle: 'Best Natural Flea and Tick Products for Dogs',
-        description:
-          'Compare natural flea and tick products for dogs — sprays, shampoos, collars and tags, daily chews, and flea combs — with honest notes on what they really do.',
-        href: ROUTES.naturalFleaTickProducts,
-        pageType: 'converter',
-        topics: ['flea-tick', 'travel', 'road-trips'],
-        pinnedRelated: [
-          ROUTES.naturalFleaTickPrevention,
-          ROUTES.fleaTickPillar,
-          ROUTES.fleaSeasonBathTools,
-          ROUTES.fleaTickProducts,
-          ROUTES.roadTrip,
-        ],
-        relatedLabel: 'Natural Flea & Tick Products',
-        heroProduct: safetyHero('wondercide-spray-lemongrass-32oz', 'Best Overall Spray', 'Wondercide Flea, Tick & Mosquito Spray'),
-        pubDate: new Date('2026-06-30'),
-        lastUpdated: new Date('2026-08-14'),
-      }),
-      createSitemapPage({
         baseTitle: 'Dog Bath Tools',
         ogTitle: 'Dog Bath Tools: Sprayers, Brushes, and Drying Gear',
         description:
@@ -552,10 +533,9 @@ export const staticSitemapSections: SitemapSection[] = [
         pageType: 'converter',
         topics: ['flea-tick', 'travel', 'road-trips'],
         pinnedRelated: [
-          ROUTES.naturalFleaTickProducts,
+          ROUTES.fleaTickProducts,
           ROUTES.naturalFleaTickPrevention,
           ROUTES.fleaTickPillar,
-          ROUTES.fleaTickProducts,
           ROUTES.roadTrip,
         ],
         relatedLabel: 'Dog Bath Tools',
@@ -566,12 +546,11 @@ export const staticSitemapSections: SitemapSection[] = [
         baseTitle: 'Best Flea and Tick Products for Dogs',
         ogTitle: 'Best Flea and Tick Products for Dogs (2026)',
         description:
-          'Compare no-prescription flea and tick products for dogs — spot-on topicals and long-wear collars — plus the combs and tick tools for what gets through.',
+          'Compare no-prescription flea and tick products for dogs — topicals, sprays, shampoos, collars, chews, and tick tools, conventional and natural side by side.',
         href: ROUTES.fleaTickProducts,
         pageType: 'converter',
         topics: ['flea-tick', 'travel', 'road-trips'],
         pinnedRelated: [
-          ROUTES.naturalFleaTickProducts,
           ROUTES.fleaTickPillar,
           ROUTES.naturalFleaTickPrevention,
           ROUTES.fleaSeasonBathTools,

@@ -33,7 +33,6 @@ export const ROUTES = {
   dogRanAwaySafety: '/safety/what-to-do-if-your-dog-runs-away/',
   fleaTickPillar: '/safety/flea-and-tick-prevention-for-dogs/',
   naturalFleaTickPrevention: '/safety/natural-flea-and-tick-prevention-for-dogs/',
-  naturalFleaTickProducts: '/safety/best-natural-flea-and-tick-products-for-dogs/',
   fleaTickProducts: '/safety/best-flea-and-tick-products-for-dogs/',
   fleaSeasonBathTools: '/safety/dog-bath-tools-for-flea-season/',
   rattlesnakeSafetyForDogs: '/safety/rattlesnake-safety-for-dogs/',

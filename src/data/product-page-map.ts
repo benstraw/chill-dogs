@@ -132,13 +132,9 @@ export function buildProductPageMap(): ProductPageMap {
 
   // Every flea/tick converter reads its lineup off its own page config. Category
   // filters cannot express these pages: records are deliberately shared across them
-  // (the grooming and tick tools appear on three), so a filter would either miss a
-  // page or claim a product appears somewhere it does not.
+  // (the grooming kit appears on two), so a filter would either miss a page or claim
+  // a product appears somewhere it does not.
   const fleaTickPageRefs: Record<string, PageRef> = {
-    'best-natural-flea-and-tick-products-for-dogs': {
-      label: 'Best Natural Flea and Tick Products for Dogs',
-      href: ROUTES.naturalFleaTickProducts,
-    },
     'best-flea-and-tick-products-for-dogs': {
       label: 'Best Flea and Tick Products for Dogs',
       href: ROUTES.fleaTickProducts,

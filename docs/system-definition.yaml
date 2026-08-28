@@ -334,8 +334,8 @@ site_system:
     - name: "Flea and Tick Prevention for Dogs"
       type: "collector"
       collector_subtype: "article"
-      target_action: "Capture broad flea/tick search intent, then route conventional-med buyers to the medications converter and natural-first readers to the specialist natural guide and related converters"
-      metric: "collector_to_converter_click to /safety/best-flea-and-tick-products-for-dogs/, /safety/best-natural-flea-and-tick-products-for-dogs/, and /safety/dog-bath-tools-for-flea-season/"
+      target_action: "Capture broad flea/tick search intent, then route buyers to the single flea/tick products converter and natural-first readers to the specialist natural guide"
+      metric: "collector_to_converter_click to /safety/best-flea-and-tick-products-for-dogs/ and /safety/dog-bath-tools-for-flea-season/"
       routes:
         - "/safety/flea-and-tick-prevention-for-dogs/"
       notes: >
@@ -347,42 +347,32 @@ site_system:
     - name: "Natural Flea and Tick Prevention for Dogs"
       type: "collector"
       collector_subtype: "article"
-      target_action: "Serve natural-first readers who already prefer a lower-toxicity routine, then route them to natural-product and bath-tool converters while keeping a path back to the broad pillar and medication comparison"
-      metric: "collector_to_converter_click to /safety/best-natural-flea-and-tick-products-for-dogs/ and /safety/dog-bath-tools-for-flea-season/"
+      target_action: "Serve natural-first readers who already prefer a lower-toxicity routine, then route them to the plant-based options on the products converter and to bath tools, keeping a path back to the broad pillar"
+      metric: "collector_to_converter_click to /safety/best-flea-and-tick-products-for-dogs/#natural-options and /safety/dog-bath-tools-for-flea-season/"
       routes:
         - "/safety/natural-flea-and-tick-prevention-for-dogs/"
       notes: >
         Specialist natural sub-article in the flea/tick cluster. Keeps the Wondercide label-reading,
         cat-safety, bath-support, and escalation content, but no longer carries the full broad-intent role.
 
-    - name: "Best Natural Flea and Tick Products for Dogs"
-      type: "converter"
-      target_action: "Drive affiliate outbound clicks from readers who already want natural or lower-toxicity flea/tick products"
-      metric: "amazon_outbound_click rate + collector_to_converter_click from /safety/natural-flea-and-tick-prevention-for-dogs/"
-      routes:
-        - "/safety/best-natural-flea-and-tick-products-for-dogs/"
-      notes: >
-        Shared-config safety converter built from a curated set of natural pet products: plant-forward
-        sprays, oils, and a wipe-on repellent mitt; bath-day shampoos; collars and clip-on tags; daily
-        chews; and a grooming section of flea combs, brushes, and tick-removal tools. Spray, shampoo,
-        chew, and grooming sections mix Amazon and Chewy offers. Frames natural products as prevention
-        layers and light-load support, not heavy-infestation rescue tools.
-
     - name: "Best Flea and Tick Products for Dogs"
       type: "converter"
-      target_action: "Drive affiliate outbound clicks from shoppers who want flea/tick protection without a prescription, plus the detection and removal tools that go with it"
+      target_action: "Drive affiliate outbound clicks from shoppers who want flea/tick protection without a prescription — conventional or natural — plus the detection and removal tools that go with it"
       metric: "amazon_outbound_click rate + collector_to_converter_click from /safety/flea-and-tick-prevention-for-dogs/"
       routes:
         - "/safety/best-flea-and-tick-products-for-dogs/"
       notes: >
-        Shared-config safety converter for the no-prescription lane: OTC spot-on topicals and
-        long-wear flea collars, followed by the combs, grooming sets, and tick-removal tools for
-        whatever gets through. Deliberately scoped away from the medications converter, which keeps
-        Rx orals, combo chews, and the brand-name OTC/Seresto lineup. The 12 grooming and tick-tool
-        records plus the Tick Key are shared verbatim with the natural converter rather than moved —
-        product-page-map.ts resolves all four flea/tick converters off their page configs so a
-        record can appear on several pages without a category filter mislabeling it. Vectra 3D is
-        permethrin-based and carries the same cat-toxicity caution as K9 Advantix II.
+        The single flea/tick products converter, covering the whole no-prescription lane in one page.
+        Sections run by product type rather than by philosophy — topicals, sprays and wipe-ons,
+        shampoos, collars and tags, daily chews, then combs, grooming sets, and tick-removal tools.
+        44 products, 27 of them natural. The former natural converter was merged in here behind a
+        301; its products were not moved into a separate block but distributed into the section for
+        the job they do, and marked with a sage border, a tinted badge, and a screen-reader label so
+        the distinction survives without a second page. The #natural-options block explains that mark
+        and is the landing anchor for inbound natural links. Deliberately scoped away from the
+        medications converter, which keeps Rx orals, combo chews, and the brand-name OTC/Seresto
+        lineup. Vectra 3D is permethrin-based and carries the same cat-toxicity caution as
+        K9 Advantix II.
 
     - name: "Dog Bath Tools"
       type: "converter"
