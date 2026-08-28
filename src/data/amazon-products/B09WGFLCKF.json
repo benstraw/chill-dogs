@@ -1,0 +1,397 @@
+{
+  "search_metadata": {
+    "id": "6a7ed60dbb48adc3b146f157",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/BegM_cYUCdEsmk2UbJpdyA/6a7ed60dbb48adc3b146f157.json",
+    "created_at": "2026-08-14 08:47:09 UTC",
+    "processed_at": "2026-08-14 08:47:09 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B09WGFLCKF/?",
+    "raw_html_file": "https://serpapi.com/searches/BegM_cYUCdEsmk2UbJpdyA/6a7ed60dbb48adc3b146f157.html",
+    "total_time_taken": 14.31
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B09WGFLCKF",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "categories": [
+      {
+        "position": 1,
+        "name": "Pet Supplies",
+        "link": "https://www.amazon.com/pet-shops-dogs-cats-hamsters-kittens/b/ref=dp_bc_1?ie=UTF8&node=2619533011",
+        "node": "2619533011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2619533011"
+      },
+      {
+        "position": 2,
+        "name": "Dogs",
+        "link": "https://www.amazon.com/dogs-supplies-training-beds-collars-grooming/b/ref=dp_bc_2?ie=UTF8&node=2975312011",
+        "node": "2975312011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975312011"
+      },
+      {
+        "position": 3,
+        "name": "Flea & Tick Control",
+        "link": "https://www.amazon.com/dog-flea-lice-tick-control/b/ref=dp_bc_3?ie=UTF8&node=2975384011",
+        "node": "2975384011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975384011"
+      },
+      {
+        "position": 4,
+        "name": "Topical Treatments",
+        "link": "https://www.amazon.com/b/ref=dp_bc_4?ie=UTF8&node=120957552011",
+        "node": "120957552011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=120957552011"
+      },
+      {
+        "position": 5,
+        "name": "Flea Drops",
+        "link": "https://www.amazon.com/dog-flea-drops/b/ref=dp_bc_5?ie=UTF8&node=2975389011",
+        "node": "2975389011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975389011"
+      }
+    ],
+    "asin": "B09WGFLCKF",
+    "title": "Tick Key The Original Tick Key, Rainbow, 7 Pack | Compact & Portable, Safe and Highly Effective Tick Detaching Tool for Cats & Dogs, Comes in Multicolor 3 Pack",
+    "link": "https://www.amazon.com/Original-Tick-Key-Detaching-Device/dp/B09WGFLCKF/",
+    "link_clean": "https://www.amazon.com/dp/B09WGFLCKF/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B09WGFLCKF&device=desktop&engine=amazon_product",
+    "badges": [
+      "Customers usually keep this item."
+    ],
+    "brand": "Visit the The Tick Key Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/81DKpuQxnvL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/81DKpuQxnvL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81UHgLYPnWL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81cErBTl6gL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/710a49s+ISL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81MRhgz7lLL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81IAjzgE9eL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.9,
+    "reviews": 20,
+    "price": "$44.99",
+    "extracted_price": 44.99,
+    "price_unit": "$6.43 / count",
+    "extracted_price_unit": 6.43,
+    "delivery": [
+      "FREE delivery Wednesday, August 19"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "buy_new": {
+      "caption": "One-time purchase",
+      "price": "$44.99",
+      "extracted_price": 44.99,
+      "price_unit": "$6.43 / count",
+      "extracted_price_unit": 6.43,
+      "delivery": [
+        "FREE delivery Wednesday, August 19"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "Paragon Trading Post",
+          "details": {
+            "heading": "Sold by",
+            "content": "Paragon Trading Post"
+          },
+          "link": {
+            "text": "Paragon Trading Post",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A28HM7RRBP8HN5&asin=B09WGFLCKF&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    },
+    "subscribe_and_save": {
+      "caption": "Subscribe & Save",
+      "price": "$44.99",
+      "extracted_price": 44.99,
+      "price_unit": "$6.43 / count",
+      "extracted_price_unit": 6.43,
+      "delivery": [
+        "FREE delivery Wednesday, August 19"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "Paragon Trading Post",
+          "details": {
+            "heading": "Sold by",
+            "content": "Paragon Trading Post"
+          },
+          "link": {
+            "text": "Paragon Trading Post",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A28HM7RRBP8HN5&asin=B09WGFLCKF&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "subscription": "No fees. Skip or cancel anytime."
+      }
+    }
+  },
+  "about_item": [
+    "MADE IN THE USA: 100% American product - The Tick Key are made in the USA and are characterized by their strict quality standards. These are the only ORIGINAL Tick removal devices in the market",
+    "DETACHES TICKS WITH EASE: The Original Tick Key uses natural forward leverage to extract tick heads quickly and safely. Detaches ticks of every size and kind without touching or harming them",
+    "ADVENTURE WITHOUT FEAR: Whether hiking, camping, hunting, fishing, gardening, or even playing sports outdoors, ticks present a serious threat. Take an Original Tick Key with you wherever you go and enjoy nature with the peace of mind afforded by an intuitive, reliable tool for detaching ticks",
+    "WORKS ON ANIMALS: Your favorite furry companions can benefit from your Original Tick Key too! No more brushing fur away to try to squeeze out a stubborn tick, risking its decapitation and injury to your pet - just apply an Original Tick Key and detick in seconds",
+    "HUGE UTILITY IN A TINY TOOL: Measuring 2.5 inches long, 1.5 inches wide, and only a sixteenth of an inch thick, Original Tick Keys are conveniently portable and make a practical addition to any keychain, backpack, hunting kit, or tackle box",
+    "RAINBOW 7 PACK VALUE: This pack includes seven colorful tick removal tools in vibrant rainbow colors, providing multiple units for different locations, family members, or outdoor gear sets to ensure you always have tick protection available"
+  ],
+  "bought_together": [
+    {
+      "position": 1,
+      "title": "Tick Key The Original Tick Key, Rainbow, 7 Pack | Compact & Portable, Safe and Highly Effective Tick Detaching Tool for Cats & Dogs, Comes in Multicolor 3 Pack",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81DKpuQxnvL._AC_UL116_SR116,116_.jpg",
+      "price": "$44.99",
+      "extracted_price": 44.99,
+      "price_unit": "$6.43/count",
+      "extracted_price_unit": 6.43,
+      "delivery": [
+        "Get it as soon as Wednesday, Aug 19"
+      ],
+      "stock": "In Stock"
+    },
+    {
+      "position": 2,
+      "title": "Sawyer Products Premium Permethrin Insect Repellent for Clothing, Gear & Tents",
+      "link": "https://www.amazon.com/Sawyer-Products-SP6572-Permethrin-Repellent/dp/B07CD9NFB4/ref=pd_bxgy_thbs_d_sccl_1/000-0000000-0000000?pd_rd_w=HTJRz&content-id=amzn1.sym.9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_p=9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_r=TD2D1BRPC9YN76CSTE3Z&pd_rd_wg=N9chy&pd_rd_r=1f394bf4-02d8-4557-8e3b-090890887f15&pd_rd_i=B07CD9NFB4&psc=1",
+      "asin": "B07CD9NFB4",
+      "link_clean": "https://www.amazon.com/Sawyer-Products-SP6572-Permethrin-Repellent/dp/B07CD9NFB4/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07CD9NFB4&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81drsTLaouL._AC_UL116_SR116,116_.jpg",
+      "price": "$35.10",
+      "extracted_price": 35.1,
+      "price_unit": "$1.46/fluid ounce",
+      "extracted_price_unit": 1.46,
+      "delivery": [
+        "Get it as soon as Wednesday, Aug 19"
+      ],
+      "stock": "In Stock"
+    },
+    {
+      "position": 3,
+      "title": "Tick Key Original Tick Key, 6 Pack Assorted Colors | Compact & Portable, Safe and Highly Effective Tick Detaching Tool for Cats & Dogs, Comes in 6 Pack Assorted Colors",
+      "link": "https://www.amazon.com/Tick-Key-Products/dp/B01FT69GHM/ref=pd_bxgy_thbs_d_sccl_2/000-0000000-0000000?pd_rd_w=HTJRz&content-id=amzn1.sym.9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_p=9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_r=TD2D1BRPC9YN76CSTE3Z&pd_rd_wg=N9chy&pd_rd_r=1f394bf4-02d8-4557-8e3b-090890887f15&pd_rd_i=B01FT69GHM&psc=1",
+      "asin": "B01FT69GHM",
+      "link_clean": "https://www.amazon.com/Tick-Key-Products/dp/B01FT69GHM/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B01FT69GHM&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81+1qiM-r3L._AC_UL116_SR116,116_.jpg",
+      "price": "$33.29",
+      "extracted_price": 33.29,
+      "price_unit": "$5.55/count",
+      "extracted_price_unit": 5.55,
+      "delivery": [
+        "Get it as soon as Thursday, Aug 20"
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "position": 1,
+      "title": "The Original Tick Key - Remove Ticks with ease!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/831b2473-1254-4c5c-8e87-4006a29b822b/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/51-RhZIr6KL.jpg",
+      "duration": "0:30",
+      "vendor": "Paragon Trading Post",
+      "date": "Apr 19, 2023"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": "1",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/985af86d-e936-4718-bf8e-20ce16196d61.__CR0,0,970,300_PT0_SX970_V1___.png"
+    },
+    {
+      "position": 2,
+      "title": "2",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/bbeab5e9-4861-494d-a620-6d11eb6aba0c.__CR0,0,970,300_PT0_SX970_V1___.png"
+    },
+    {
+      "position": 3,
+      "title": "4",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/37888c9c-893b-4cdb-bfdd-622ad10ea8aa.__CR0,0,970,300_PT0_SX970_V1___.png"
+    },
+    {
+      "position": 4,
+      "title": "3",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/fddeda1b-7acb-49d3-986e-5c7edbd92238.__CR0,0,970,300_PT0_SX970_V1___.png"
+    },
+    {
+      "position": 5,
+      "title": "remove",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/98d3ac98-2655-4c18-9665-d0553eeb1b19.__CR0,0,970,300_PT0_SX970_V1___.png"
+    },
+    {
+      "position": 6,
+      "title": "8",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/ecc313a4-40c8-454a-b9ef-afb808a81425.__CR0,0,970,300_PT0_SX970_V1___.png"
+    },
+    {
+      "position": 7,
+      "title": "5",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/689f8cf6-e978-4825-b9bf-5614b7a53149.__CR0,0,970,300_PT0_SX970_V1___.png"
+    }
+  ],
+  "product_details": {
+    "package_dimensions": "4.84 x 3.11 x 0.63 inches; 1.45 ounces",
+    "date_first_available": "March 24, 2022",
+    "manufacturer": "Tick Key Products, LLC",
+    "asin": "B09WGFLCKF",
+    "best_sellers_rank": [
+      {
+        "text": "#72,015 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 72015,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#147 in Dog Flea Drops",
+        "extracted_rank": 147,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/2975389011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Flea Drops"
+      }
+    ],
+    "customer_reviews": "4.9 out of 5 stars",
+    "rating": 4.9,
+    "reviews": 20,
+    "item_weight": "1.44 ounces",
+    "item_package_dimensions_l_x_w_x_h": "4.84 x 3.11 x 0.63 inches",
+    "brand_name": "The Tick Key",
+    "target_audience_keyword": "dogs",
+    "color": "Multicolor",
+    "number_of_items": "7",
+    "included_components": "7 Tick Keys",
+    "specific_uses_for_product": "Hiking, Camping, Hunting, Fishing, Gardening, Outdoor Sports"
+  },
+  "reviews_information": {
+    "summary": {
+      "customer_reviews": {
+        "5 star": 93,
+        "4 star": 7,
+        "3 star": 0,
+        "2 star": 0,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "As good as a claw hammer on nails.",
+        "text": "I have used other tick removal devices with limited success and unlimited frustration. Original Tick Key is the real deal. It works quickly and completely, removing all of the offensive bugger on the very first try.There are other copy versions of the Original Tick Key at lower prices available. I prefer to invest in an item that I KNOW works…price vs, peace-of-mind. No brainer for me.",
+        "rating": 5,
+        "date": "July 28, 2026",
+        "author": "Detroit Paul",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AF4VK5JZJMF5GJBEGMRS4M3RASTQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true
+      },
+      {
+        "position": 2,
+        "title": "Useful tool for all and good value",
+        "text": "Original and best tick key for removing those nasty ticks. Purchased this quantity for all my family members. Easy to use, easy to disinfect and portable. Recommend highly!",
+        "rating": 5,
+        "date": "June 8, 2026",
+        "author": "Deborah",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHGXQ7LGZPPUTFFLW2KMLEDYZJVA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true
+      },
+      {
+        "position": 3,
+        "title": "Great product",
+        "text": "As described and fast delivery.",
+        "rating": 5,
+        "date": "April 26, 2026",
+        "author": "Benjie Pearson",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEFHKFBBYL2QOSEY5MZ7STKKV7FA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true
+      },
+      {
+        "position": 4,
+        "title": "This little product is a Must Have Item!",
+        "text": "I live in a remote rural mountain area next to a lake so using other products to protect from ticks doesn't always guarantee that you won't find one on yourself or a pet. This gadget works great, it easily removes those ticks that have attached to you and it works quickly/painlessly. I am so glad I ordered the multi-pak so I can have one on all my keychains & back-waist packs (work & personal). I have been using it more on my dogs after walks in the forests surrounding my property. It really gets all parts of the tick removed, I always look with a magnifying glass to make sure the \"sucking\" part of the head is still attached. If it were left in it could cause a nasty infection. I highly recommend this gadget if you are a hiker/camper or live near a wooded area.",
+        "rating": 5,
+        "date": "September 22, 2023",
+        "author": "The Desert Bee",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFZNHOOUZO6GYWRRN56GCRCXF6NA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/2a310a6c-a249-4c5a-8c2e-ad3805ffed67._CR0%2C0%2C474%2C474_SX460_SX48_.jpg",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true
+      },
+      {
+        "position": 5,
+        "title": "This product absolutely works!!!",
+        "text": "We have purchased these several times. All our children have one and given many friends these as well.This key is a game changer when you need to remove an embedded tick.If you don’t have them get them!!!!",
+        "rating": 5,
+        "date": "August 31, 2023",
+        "author": "Beth",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEJ6J2545FLWNNLRLGA662XYTUQQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true
+      },
+      {
+        "position": 6,
+        "title": "Easy to carry & easy to use.",
+        "text": "These are great to add to your key chain or carry in a purse, glove compartment, etc. We have them in every vehicle, along with a zip lock bag in case the tick needs to be sent in for ID & analysis.",
+        "rating": 5,
+        "date": "December 9, 2024",
+        "author": "Tnwalkermom",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEXHVCBFXIXPU7XZGGHJ22EXQE2A?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true
+      }
+    ]
+  }
+}

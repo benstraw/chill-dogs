@@ -86,9 +86,9 @@ function firstMainImageAbsolute(doc: Document): string | null {
   return new URL(src, 'https://www.chill-dogs.com').href;
 }
 
-function getAffiliateLinks(doc: Document): HTMLAnchorElement[] {
+function getAffiliateLinks(root: ParentNode): HTMLAnchorElement[] {
   return Array.from(
-    doc.querySelectorAll<HTMLAnchorElement>('a[data-affiliate="true"][data-track="affiliate_outbound_click"]')
+    root.querySelectorAll<HTMLAnchorElement>('a[data-affiliate="true"][data-track="affiliate_outbound_click"]')
   );
 }
 
@@ -694,6 +694,161 @@ describe('site smoke tests', () => {
     for (const link of affiliateLinks) {
       expectTrackedAffiliateLink(link);
     }
+  });
+
+  it('renders a variant picker without adding affiliate CTAs to the card', () => {
+    const doc = readBuiltPage(path.join('safety', 'dog-bath-tools-for-flea-season', 'index.html'));
+    const card = doc.querySelector<HTMLElement>('#tuff-pupper-drying-bathrobe');
+    const picker = card?.querySelector<HTMLElement>('[data-variant-picker]');
+
+    expect(picker).not.toBeNull();
+    expect(picker?.getAttribute('data-variant-selected')).toBe('large');
+
+    const chips = Array.from(picker!.querySelectorAll<HTMLAnchorElement>('[data-variant-option]'));
+    expect(chips).toHaveLength(8);
+
+    for (const chip of chips) {
+      // Chips reach every ASIN without JS, but must not fire the keystone
+      // event — otherwise a card with a picker would out-count one without.
+      expect(chip.href).toContain('tag=chill-dogs-20');
+      expect(relTokens(chip)).toEqual(['noopener', 'noreferrer', 'sponsored']);
+      expect(chip.getAttribute('data-affiliate')).toBeNull();
+      expect(chip.getAttribute('data-track')).toBeNull();
+    }
+
+    // Every size ASIN is linked in the static HTML.
+    const chipAsins = chips.map((chip) => chip.href.match(/\/dp\/([A-Z0-9]{10})/)?.[1]);
+    expect(new Set(chipAsins).size).toBe(8);
+
+    // The card still carries exactly one tracked CTA, on the default variant.
+    const cardCtas = getAffiliateLinks(card!);
+    expect(cardCtas).toHaveLength(1);
+    expect(cardCtas[0].getAttribute('data-asin')).toBe('B0BY9GBMXX');
+    expectTrackedAffiliateLink(cardCtas[0]);
+
+    // The serialized offer table the picker script reads on selection.
+    const table = JSON.parse(picker!.getAttribute('data-variant-offers') || '{}');
+    expect(Object.keys(table)).toHaveLength(8);
+    expect(table['xx-large'].merchants.amazon.asin).toBe('B0BY9C72VY');
+  });
+
+  it('keeps affiliate CTA positions contiguous on a page carrying a variant picker', () => {
+    const doc = readBuiltPage(path.join('safety', 'dog-bath-tools-for-flea-season', 'index.html'));
+    const positions = getAffiliateLinks(doc)
+      .map((link) => link.getAttribute('data-position'))
+      .filter((position): position is string => position !== null)
+      .map(Number);
+
+    expect(positions.length).toBeGreaterThan(0);
+    expect([...new Set(positions)].sort((a, b) => a - b)).toEqual(
+      Array.from({ length: 28 }, (_, i) => i + 1),
+    );
+  });
+
+  it('hides the overflow of a deep product section behind the disclosure bar', () => {
+    const doc = readBuiltPage(
+      path.join('safety', 'best-flea-and-tick-products-for-dogs', 'index.html'),
+    );
+    const section = doc.querySelector<HTMLElement>('#grooming-tools');
+    const disclosure = section?.querySelector<HTMLDetailsElement>('details.disclosure-bar');
+
+    expect(section).not.toBeNull();
+    expect(disclosure).not.toBeNull();
+
+    // Six cards render open; the rest sit inside the collapsed disclosure.
+    const allCards = section!.querySelectorAll('.product-card');
+    const hiddenCards = disclosure!.querySelectorAll('.product-card');
+
+    expect(allCards).toHaveLength(13);
+    expect(hiddenCards).toHaveLength(7);
+    expect(allCards.length - hiddenCards.length).toBe(6);
+
+    // The label states the count and swaps on open, so only one is ever read out.
+    expect(disclosure!.querySelector('.disclosure-bar__label--collapsed')?.textContent).toBe(
+      'Show 7 more recommendations',
+    );
+    expect(disclosure!.querySelector('.disclosure-bar__label--expanded')?.textContent).toBe(
+      'Show fewer recommendations',
+    );
+
+    // Native <details> keeps the overflow in the DOM: hidden products stay
+    // crawlable and their CTAs stay tracked, so the expander costs no coverage.
+    const hiddenCtas = getAffiliateLinks(disclosure!);
+    expect(hiddenCtas.length).toBeGreaterThanOrEqual(7);
+    for (const link of hiddenCtas) {
+      expectTrackedAffiliateLink(link);
+    }
+  });
+
+  it('keeps affiliate CTA positions contiguous across a disclosure bar', () => {
+    const doc = readBuiltPage(
+      path.join('safety', 'best-flea-and-tick-products-for-dogs', 'index.html'),
+    );
+    const positions = getAffiliateLinks(doc)
+      .map((link) => link.getAttribute('data-position'))
+      .filter((position): position is string => position !== null)
+      .map(Number);
+
+    expect([...new Set(positions)].sort((a, b) => a - b)).toEqual(
+      Array.from({ length: 44 }, (_, i) => i + 1),
+    );
+  });
+
+  it('marks only the natural products on the merged flea and tick page', () => {
+    const doc = readBuiltPage(
+      path.join('safety', 'best-flea-and-tick-products-for-dogs', 'index.html'),
+    );
+
+    const marked = [...doc.querySelectorAll('.product-card--accent-natural')]
+      .map((card) => card.getAttribute('id'))
+      .filter((id): id is string => id !== null);
+
+    // Every natural-* category product on the page, and nothing else.
+    expect(marked).toHaveLength(27);
+    expect(marked).toEqual(
+      expect.arrayContaining([
+        'ortho-pawz-natural-flea-tick-spray',
+        'duty-mitt-flea-tick-mitt',
+        'tevrapet-naturals-flea-tick-shampoo',
+        'amdeiur-natural-flea-collar',
+        'trihood-flea-tick-tag',
+        'lkdhfjc-flea-tick-chews-200',
+      ]),
+    );
+
+    // Conventional pesticide products must never carry the plant-based mark.
+    for (const id of [
+      'vectra-3d-xl-95-plus',
+      'trioak-topical-medium-23-44',
+      'udyoude-flea-collar-large-2pack',
+      'cabins-flea-collar-4pack',
+      'green-pet-double-sided-flea-comb',
+    ]) {
+      expect(marked, `${id} must not be marked natural`).not.toContain(id);
+    }
+
+    // The mark cannot be colour-only: each marked card carries a spoken label.
+    expect(doc.body.innerHTML.match(/Natural product: /g) ?? []).toHaveLength(27);
+
+    // The legend that explains the mark, and the anchor inbound links land on.
+    const legend = doc.querySelector('#natural-options');
+    expect(legend, 'missing #natural-options legend block').toBeTruthy();
+    expect(legend?.querySelector('h2')?.textContent).toMatch(/Natural/);
+  });
+
+  it('leaves a product section open when too few products would be hidden', () => {
+    const doc = readBuiltPage(
+      path.join('safety', 'dog-bath-tools-for-flea-season', 'index.html'),
+    );
+
+    // 9 products, 3 hidden — over the threshold, so the bar renders.
+    expect(
+      doc.querySelector('#bath-brushes details.disclosure-bar'),
+    ).not.toBeNull();
+
+    // 7 products would hide only 1, and 6 would hide none. Both stay open.
+    expect(doc.querySelector('#drying details.disclosure-bar')).toBeNull();
+    expect(doc.querySelector('#bath-kits details.disclosure-bar')).toBeNull();
   });
 
   it('marks the custom 404 page as noindex', () => {

@@ -3,7 +3,7 @@ title: Environment and Integrations
 type: canonical
 domain: engineering
 status: active
-updated: 2026-08-09
+updated: 2026-08-26
 tags:
   - chill-dogs
   - engineering
@@ -74,6 +74,12 @@ Consequences:
 | `scripts/fetch-amazon-data.ts` | `SERP_API_KEY` (preferred) or `SEARCHAPI_KEY` (backup) | `serpapi.com` or `www.searchapi.io` | **bun** |
 
 Rows marked **bun** cannot reach the network from a proxied agent container. Run them in GitHub Actions.
+
+`www.chewy.com` appears in the allowlist only because `chewy-link` resolves canonical product URLs against it.
+**Chewy product pages themselves are behind Kasada bot protection and return `429` to every automated client**
+(`WebFetch`, `curl`, headless and in-app browsers), on a local machine as much as in a container. Never source
+Chewy product titles, images, or bullets by fetching a `/dp/` page — use the Impact catalog via `fetch:chewy`.
+See [`../affiliate/product-data-rules.md`](../affiliate/product-data-rules.md#chewy-impact-workflow).
 
 The full allowlist for a container that should run everything:
 

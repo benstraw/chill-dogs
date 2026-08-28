@@ -35,6 +35,7 @@ Finishing any converter page before marking work as done.
 - [ ] Affiliate tag `chill-dogs-20` present in every Amazon URL
 - [ ] Product data sourced from canonical data file (`cooling-products.ts`, `calming-products.ts`, `relaxation-products.ts`, etc.) — not hardcoded in page
 - [ ] Product cards compose the shared primitives (`ProductCardShell`, `ProductImageFrame`, `ProductBulletList`, `AffiliateOfferStack`) — no hand-rolled card surface, image frame, bullet list, or CTA stack. Missing capability = new opt-in prop on the primitive, not a local fork
+- [ ] A product section over 6 products hides the remainder behind `DisclosureBar` — but only when 3+ would be hidden; below that the section stays open. Check `data-position` still runs 1..N across the page
 - [ ] `Disclosure` component appears before product CTAs
 - [ ] Product claims are research-based, unless the product carries `handsOn` — then first-hand copy stays within what its `note` covers
 - [ ] No "vet-approved" / "vet-recommended" language unless sourced with documentation

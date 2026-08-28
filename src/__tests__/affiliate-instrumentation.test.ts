@@ -74,9 +74,17 @@ describe('affiliate instrumentation', () => {
 
   /**
    * Raw <a> tags pointing at Amazon that never went through AffiliateLink are neither
-   * tagged nor instrumented. /admin/products/ is the internal catalog diagnostic — it
-   * links out to every ASIN on purpose and is not a monetised surface, so it is the one
-   * allowed source. Any other page appearing here is a real regression.
+   * tagged nor instrumented. Two sources are allowed:
+   *
+   * - /admin/products/, the internal catalog diagnostic — it links out to every ASIN on
+   *   purpose and is not a monetised surface.
+   * - ProductVariantPicker chips, which are untracked by design: they repoint the CTA
+   *   rather than replacing it, and instrumenting them would inflate click counts on
+   *   cards with a selector relative to cards without one. They are still real anchors
+   *   so no-JS visitors and crawlers reach every ASIN, which is what the tag assertion
+   *   below protects. See docs/ai/engineering/product-variants.md.
+   *
+   * Any other page appearing here is a real regression.
    */
   it('does not add new uninstrumented Amazon anchors', () => {
     const raw = new Set<string>();
@@ -89,10 +97,29 @@ describe('affiliate instrumentation', () => {
         const href = attr(tag, 'href') ?? '';
         if (!/amazon\.com/.test(href)) continue;
         if (attr(tag, 'data-track') || attr(tag, 'data-track-also')) continue;
+        if (attr(tag, 'data-variant-option')) continue;
         raw.add(page);
       }
     }
 
     expect([...raw].sort()).toEqual([]);
+  });
+
+  it('every variant chip carries the associate tag', () => {
+    const untagged: string[] = [];
+
+    for (const { file, html } of pages) {
+      for (const tag of anchorsIn(html)) {
+        if (!attr(tag, 'data-variant-option')) continue;
+
+        const href = attr(tag, 'href') ?? '';
+        if (!/amazon\.com/.test(href)) continue;
+        if (!href.includes('tag=chill-dogs-20')) {
+          untagged.push(`${relative(DIST, file)} :: ${href.slice(0, 90)}`);
+        }
+      }
+    }
+
+    expect(untagged).toEqual([]);
   });
 });

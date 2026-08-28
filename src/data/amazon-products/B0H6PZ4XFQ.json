@@ -1,0 +1,369 @@
+{
+  "search_metadata": {
+    "id": "6a7ed5e3703f172514d038d8",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/dSyNnvGX5nC3-GLHDLSp5Q/6a7ed5e3703f172514d038d8.json",
+    "created_at": "2026-08-14 08:46:27 UTC",
+    "processed_at": "2026-08-14 08:46:27 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0H6PZ4XFQ/?",
+    "raw_html_file": "https://serpapi.com/searches/dSyNnvGX5nC3-GLHDLSp5Q/6a7ed5e3703f172514d038d8.html",
+    "total_time_taken": 9.36
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0H6PZ4XFQ",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "categories": [
+      {
+        "position": 1,
+        "name": "Pet Supplies",
+        "link": "https://www.amazon.com/pet-shops-dogs-cats-hamsters-kittens/b/ref=dp_bc_1?ie=UTF8&node=2619533011",
+        "node": "2619533011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2619533011"
+      },
+      {
+        "position": 2,
+        "name": "Dogs",
+        "link": "https://www.amazon.com/dogs-supplies-training-beds-collars-grooming/b/ref=dp_bc_2?ie=UTF8&node=2975312011",
+        "node": "2975312011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975312011"
+      },
+      {
+        "position": 3,
+        "name": "Flea & Tick Control",
+        "link": "https://www.amazon.com/dog-flea-lice-tick-control/b/ref=dp_bc_3?ie=UTF8&node=2975384011",
+        "node": "2975384011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975384011"
+      },
+      {
+        "position": 4,
+        "name": "Flea & Tick Collars",
+        "link": "https://www.amazon.com/dog-flea-tick-collars/b/ref=dp_bc_4?ie=UTF8&node=2975386011",
+        "node": "2975386011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975386011"
+      }
+    ],
+    "asin": "B0H6PZ4XFQ",
+    "title": "6 Packs Flea & Tick Collar for Dogs | Natural Flea & Tick Prevention Dog Collar, Waterproof Suitable for All Breeds & Sizes, 26 inch Black Gold",
+    "link": "https://www.amazon.com/Packs-Flea-Tick-Collar-Dogs/dp/B0H6PZ4XFQ/",
+    "link_clean": "https://www.amazon.com/dp/B0H6PZ4XFQ/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0H6PZ4XFQ&device=desktop&engine=amazon_product",
+    "brand": "Visit the Crobirware Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/81KJ9XIFoNL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/81KJ9XIFoNL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81qndgllToL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81n3jx5sSnL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81raWT2jjrL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/8167y2-Q4CL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81LERnz1JOL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71c-B-cgxWL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81OIArSHYbL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81gNoqkTWML._AC_SL1500_.jpg"
+    ],
+    "rating": 5,
+    "reviews": 2,
+    "price": "$19.99",
+    "extracted_price": 19.99,
+    "prime": true,
+    "delivery": [
+      "FREE delivery Wednesday, August 19 on orders shipped by Amazon over $35",
+      "Or Prime members get FREE delivery Sunday, August 16. Join Prime"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$19.99",
+      "extracted_price": 19.99,
+      "delivery": [
+        "FREE delivery Wednesday, August 19 on orders shipped by Amazon over $35",
+        "Or Prime members get FREE delivery Sunday, August 16. Join Prime"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "LifeLify INC",
+          "details": {
+            "heading": "Sold by",
+            "content": "LifeLify INC"
+          },
+          "link": {
+            "text": "LifeLify INC",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A82IMVA4ZTP4O&asin=B0H6PZ4XFQ&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "brand": "Crobirware",
+    "item_form": "Collar",
+    "scent": "Natural",
+    "item_weight": "10 g",
+    "active_ingredients": "Cedarwood Oil, Lemongrass Oil, Rosemary Oil, Lemongrass Oil",
+    "dog_breed_size": "All",
+    "unit_count": "6 Count",
+    "color": "grey",
+    "age_range_description": "All Life Stages",
+    "number_of_packs": "1"
+  },
+  "about_item": [
+    "NATURAL ESSENTIAL OIL BLEND FOR DAILY CARE: Made with a thoughtfully selected blend of Cedarwood, Geranium, Lemongrass, and Rosemary essential oils. The botanical aroma creates a fresh outdoor-inspired experience for your dog during everyday activities.",
+    "6 PACK VALUE FOR MULTIPLE DOGS & LONG-TERM USE: Includes 6 individually packaged collars, perfect for households with multiple dogs or for keeping replacement collars ready. Enjoy convenient everyday pet care without frequent repurchasing.",
+    "WATERPROOF & READY FOR OUTDOOR ADVENTURES: Designed for active dogs, this waterproof collar withstands daily outdoor activities, rainy walks, and playtime. No need to remove it during normal outdoor routines.",
+    "SOFT, LIGHTWEIGHT & COMFORTABLE FIT: Made from flexible material with a smooth surface that feels comfortable around your dog's neck. The adjustable design allows a customized fit for puppies, small, medium, and large breeds.",
+    "ADJUSTABLE DESIGN FOR MOST DOG SIZES: Fits neck sizes up to 26 inches. Simply adjust the collar length and trim the excess for a secure fit suitable for different breeds and lifestyles."
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": "6PCS Flea &amp;amp; Tick Collar for Dogs",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/4ad9d306-6969-471f-b8c1-8471d8f8cbee.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 2,
+      "title": "How the Dog Flea Collar Works",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/f3d48dfa-86e6-4a3b-9c5a-6f7f2cbc62d0.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 3,
+      "title": "If your dog exhibits any of these behaviors, please take them seriously.",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/0be193f0-4250-4f34-9689-607878e96c7f.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 4,
+      "title": "Great product",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/768279da-7c9f-4d5c-810a-5aa267b51010.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 5,
+      "title": "Waterproof Design",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/b1df16b9-f832-408e-86a8-efbff16818b3.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 6,
+      "carousel_images": [
+        {
+          "position": 1,
+          "title": "Comfort That Feels Like Nothing at All",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/0b772034-42bd-4f11-a27c-aa7f7f91f35e.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 2,
+          "title": "Natural Essential Oils Formula",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/9bfe4c4e-14f4-47f8-9fb0-54955f967731.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 3,
+          "title": "How to Use",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/753bf32c-efac-49a9-b0f4-3a2ddf397dd0.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+        }
+      ]
+    },
+    {
+      "position": 7,
+      "title": "Dog&amp;#39;s best friend.",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/44b4a43c-a05f-426b-bd0f-6363302c6907.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    }
+  ],
+  "product_details": {
+    "package_dimensions": "4.21 x 3.31 x 2.6 inches; 0.35 ounces",
+    "item_model_number": "DC6PBG",
+    "date_first_available": "July 25, 2026",
+    "manufacturer": "Crobirware",
+    "asin": "B0H6PZ4XFQ",
+    "best_sellers_rank": [
+      {
+        "text": "#13,701 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 13701,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#22 in Dog Flea Collars",
+        "extracted_rank": 22,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/2975386011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Flea Collars"
+      }
+    ],
+    "customer_reviews": "5.0 out of 5 stars",
+    "rating": 5,
+    "reviews": 2,
+    "brand_name": "Crobirware",
+    "unit_count": "6 Count",
+    "age_range_description": "All Life Stages",
+    "included_components": "Flea & Tick Collar for Dogs 6 Packs",
+    "model_number": "DC6PBG",
+    "item_form": "Collar",
+    "scent_name": "Natural",
+    "dog_breed_size": "All",
+    "pet_type": "Dog",
+    "item_weight": "10 g",
+    "active_ingredients": "Cedarwood Oil, Lemongrass Oil, Rosemary Oil, Lemongrass Oil"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0G2427FBP",
+      "title": "Flea Spray for Home & Pets - Flea and Tick Prevention for Dogs - Plant Based Repellent with Natural Essential Oils for Dog Flea Treatment Protection - Peppermint Scent - 16 Fl Oz",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JPlRVC8FLVm4N6owxGTWsWkAAAGf_3OfugEAAAH2AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDIgICAYwEgl/clv1c_ek-YBfHXLcTWXmxhtwlAiFwLMKlTuQp9ZSQZp2nxuw-PeMpwaQjrOmRvng9aYSKAoRlaBe8Kq-aL8ywADp0fk-L7VuUhzqKikmhGKj9OCWbU6ZX_SSzxYZghkhzwpHkBp3nbayM_bnyZG5WMDmfcdJdD0hGcmyVKEsDk3wH-RPafGGwLMhidJTF1LOy0YblykrpEVb4nzgmplGD-tGbDyHorEAYZLm4XNpxPDLgZG5AiDDu1p388TL3ljYQ04Z-Sv5vQYi-y3c46fdbe7ODr5u6x3bp6sv_oNvzuAE4i-Z3-HFJ17zObyBGUi25FxEaMBEPNIKOg4AFrLqH7QD3HRsnIDQG5RmH99640PhvGzGB5wnGC_FOvkzdp04_pt0dWrzrmdiPnGkR7IYEEhKL2arpmsLMQw1wYQm70z8WApHk8xGk0goa6IK0af3abQIqrvIi6P-LT5s8FIuEJfDa1AOA48g5dh5FvjMX5J8tWiLcrvUSBJRCd2iM6_Fk-1DjxLK6BLJouPBDTQRpGSl2mjVIDfU8rt0km2fxYYPlcrsGjuU_BWtkKq_5Gyuattpb2rZHSw-1PJCeij6cuFyNpWP1fFugApQOr2CunRs2uqDVtYJLyeGLfZeePnCn4oPan2YqXEALWTF96986M3fzmQhvmwIAKou25Wnjpd5hfSHbiRUDDihPewXUT30_3LZ6I8SI8HIo-_3RYxDLKz1C_377Ikym2CoHpGEAZ4_dtpzHeI8wffAysxpn-xCGrvckxs1RkzxDrl1w-QwnTYkSxHQaS3yIUblnUU3FgUDMGE_XDLCXfvwDJ7E4lG8x-lPz67jIU4z4JL5V2I-Vi_oDrP0nZMNSVtW2L3UveMj7DzawfA_mf1tP66tAt1GO__B4rd3T2wXaNZa0oO1QVkAw-45a2Pa7OTkJpfyhNuBn9DAxOwnLMNuk24ikUJhW8LPD2rv1IicHfXxQc2F_LSQqzdRmNzMN3mr7G6sxkhiNhsVotD3Gjvq1vnfb1HivfybPT13SJCBJ8g3Jg6KBLYJ3im5UjlivlvjEizZUdBCG02DDyqxtQrTcC7qCZFYNUPMmqjXF6-4p7r7nmqREqmbu_X7z_Oib0pDHZyAw-Cve0h8AmBI9Umj9EI7CEKPGj7Qr8xMzdO-3q4eTg_qzLjega5MaP4GVXOqX-NIEWo9YlW3F6ZcJCxLJ1uNW2EOCr9dzZuAOKWUyt7ccQx-qv5dTjzT34q2wrNyz-nXDQz-Ugw5PYNVyR_mdVHa4sNMCLN_R3dPYVmSYECgligTwx0niETNxwtrxWskqoq34cdi3gU4x1psmlapOLK0m2Gt8_3tp4Pqnb-N1t4bSweE1QVpS1Uq86fuRSWFqMy5giVIHz2JpiZa1FZW-umwoGvJ7lKSBLl2P1aO1XmOO86DmBDIAoo0NngC_nrf9K5BO1dmo_J5tHsTJJvGHaVGbkE1IgzU-9Oi5F67Bdn6HsqJ6VcO465HtOe5IRsfiScYr4FAO06P1_XRzu1YxLc0DtEodpBpT9-aklVr3ouNQA1SiVXkIDcyGs4mWuhjbZmhcjzkU/https://www.amazon.com/dp/B0G2427FBP/?_encoding=UTF8&pd_rd_i=B0G2427FBP&pd_rd_i=B0G2427FBP&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=oQRp0&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=KM1SRWPCKGQBEK3W9RS7&pd_rd_wg=akxlC&pd_rd_r=b0f167c9-388d-434c-8e72-d4c2a64083fa",
+      "link_clean": "https://www.amazon.com/dp/B0G2427FBP/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G2427FBP&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/31gnjeAYV2L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/39b377b6-9f4c-47cf-839a-b05d3aad446a.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/39b377b6-9f4c-47cf-839a-b05d3aad446a.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "price": "$12.99",
+      "extracted_price": 12.99
+    },
+    {
+      "position": 2,
+      "asin": "B0FVLZHK7G",
+      "title": "Woyamay Flea and Tick Prevention for Dogs, Dog Flea and Tick Treatment | Natural Dog Tick and Flea Treatment, 500 Crunchy Flea and Tick Chews for Dogs, Oral Flea Treatment for Dogs, Chicken Flavor",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JAIveypYE7601V5A_7AhuiMAAAGf_3OfugEAAAH2AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDIgICDL9jCp/clv1c_ek-wBfHXLcTWXmxhtwlAiFwLMKlTuQp95U7yJS9uGxv-ZDFdCvrMP-TKlS27J7RuJE5Gjw221mhird21CfLWQKzPSPmbvaB_3yik7GO8iZC6mtPjAypot2pOv2kUpnMP4_Aj9dfyqxpiHx5TtzFff_UehcXclFbeckQhbncqyZo1qYvdmp5jxNPsp-cdV8WFrmGi8VIBNcVI1e_nW1rqolrWVA1bVFa6kcH2MIsy46IqDeVNhxfFlaZda4fNaOf-xA9RRB91DWiQUd4reyMsvVM7aAptwNvPSsQQpfI5iALAuMs4ORaMfteXyingPrSVcMPltcyoivB5xpZn04IMRGU8uAUFM6lHTFYD-JbfvkrS5MQbTf7_kXnShSDqXbeYnvKUPUAF37iSij874w66l17L-ptLIlSSbLbyIAyHF3mvPmQkAtw2b0ouyG6PaSqInvZHfFJxzCKnVw1Jcc5bY5kMh5wyBB0dFU5LtsKpvlkoZlZS-ev2E6lCB5aYLFqXknby3iO3fw3So8E-ysX46W0ReYuaP_D_GJsAvP6Def6EkXqd3HnlAYeitfQpw1eaT4sOpYOoEgZKbjIH3BzuWVnRnjES8Yvs-uGEczRinQ3HB4kfCx7U472QZ60iMPTiYHuDCLlvgMVOOAAYOPymwYvdkCZqzOW91DHM8LtubsXWi1wgUapfnzxW2Ku-7_SPOClqTxODsnugHVVa0Kw-Rgf5cU2e0gBe8EX_BiREKbCHwfkZWlUCQ2cgx1-DeRq5Zhk-WNZm6l56vZgfe3MROM-xWGAe8QqKArEJXJg8RCPaNhJJfZ-UOFoLq8U_QalQut7AdtTnV4VyBAqcspbPYq_Rc2uaPMmUEViElTIB5jQXCeo5o-nf1xruqA-0atSgLIAV1nQVRsfMHnqa0t7nzYvwRcqV0YQZYA6esazgTNIgQX8wWUk1WVp-tkPwL0mShgxYSH2e1yT9ekPewczxNOfmNOgA1FQwdmt8xdaLqawFqSlOrvKSC3ndzx2gbHeCLGFtrmuqIFlseT3zE_FvPjWg0AxiumD7nlo60azHk15EA8OT50PTBOZ4tgBBClwqrXJwDWVGMDKLeq4z8cwls0CqCg2p4uuDvgU5zWePItdscq0svuzglYfv6q95JczUQ1R4-JWXPOZQjPrkn-yKzwRhzGWnu63SECs4_c3F6ddJblq07gc3ZMakNeUENc5adedlgQ_moFQQxJIgZGA89eAoHYZWxKTN1nk-WEoMTysRpGdeuhkCObDlMCS6_YsxraJacFGUu-hA86_QnJJuR9z1m06aWpjHkrE2O6ZXRBr4urcEa_5FKVNt5WctmUKNrzsoHSlW-omQ_EU37ZhcroEq7QSJFDgfgrUc9jSI6hDLs_i0ECQRumPPMUGWN15PnnBmt5VieBgESJ3KhRks1SSlwThgf9kVH-komHbLjeszr73MO06JtKqk_jPj2LkmuarB6G7lSlpcxfL2n5iQn4_NmLELvCbcW8cooo2LSEc30Q5KrvN8adF5CbFSjMgyQUnlPIacixtUvgIzWo5iUgPzA0tErW2mrQbEku1X2PO3U4I9q06bgOX8k9IE5g/https://www.amazon.com/dp/B0FVLZHK7G/?_encoding=UTF8&pd_rd_i=B0FVLZHK7G&pd_rd_i=B0FVLZHK7G&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=oQRp0&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=KM1SRWPCKGQBEK3W9RS7&pd_rd_wg=akxlC&pd_rd_r=b0f167c9-388d-434c-8e72-d4c2a64083fa",
+      "link_clean": "https://www.amazon.com/dp/B0FVLZHK7G/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FVLZHK7G&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51DfG5+jIzL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/82d54d8c-c0da-4904-adf8-43ce1382a171.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/82d54d8c-c0da-4904-adf8-43ce1382a171.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.2,
+      "reviews": 242,
+      "price": "$20.89",
+      "extracted_price": 20.89,
+      "old_price": "$21.99",
+      "extracted_old_price": 21.99
+    },
+    {
+      "position": 3,
+      "asin": "B0FQ252ZV9",
+      "title": "Flea Collar for Cats, Cat Flea and Tick Treatment, 4-Pack, 32 Months, Grey | Waterproof and Adjustable Collars for Flea and Tick Prevention; One Size Fits Cats of All Breeds and Life Stages",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JL6yWi4-qX9hQ_H42PThwYwAAAGf_3OfuwEAAAH2AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDIgICBONNXt/clv1c_ek-wxfHXLcTWDVVAWi4kasJ9BF4_6vJrlBHZAPCZHQ9NsuQaSu6J6OOmxWqXPjBLvCU31tuLQ_X1h4VbDo0HF6XqThFIH6PpwWgNGG6rz2wuhhMqMo4bE7SCoX91vsrhd_tDosMkdXOQJFXf0AH1TEwL4d6AvnXrl0D9yjWGrFaeXGA7auyTe-IyrIkiWym0zVeS11kGvMRI1e_n23KU0gpxrxNvRAzzsW7Po3SOijKtCFhUksO95hE2f6F2O28Hyr8aAiYyiu9j-fov8UZvTgo-3H4I3YLdDabFblfomj7mavdpVnBQJgi_FzaPgCvnWKwWkR0EUMKcx9R92iffUyh6jwqdCNIkDNRFidkUFyBMT7be0Ud15dhq67Ou-wR4sbfahvPaBVNwPGbD1wVYjFaoMJLtGo-puN5L4Yi0A0OCtuoARLtUW8ISY6wghrWQW1nnUMfsj1qr48-kpvDF2MZrAoSVUtkREZPZ9mYXxkINEGbilVEdtAC9-51eZ0uW7NbXNDzWG_3VKMjcS7poJlomLkE4rvV8-5OBEQgeJ8Cz3XrTAXMoU9pWB4e7e7dpT51m_4epfC-WvawaTr1hIdFAtctrp8GrFkrdrXZ0-2Nk-AoGfnIKOlQfBR-JkHzYbMA5rIgOq6BnYYxHTTsLh7_lzwq3P7Wbhf7KCZXSf5Izxb7mJyzOsjPHgkf3qkllIISZrZv-JwPEqjgtHlzoa7YnljZyAfUIIfvp8-_WI0guLUuaSE_SFN971KSL_POk2yRXNaw5x5KwZ6fOk78v0X3koAGZ5H17gTaimukI-E09B7UGB2PlDVubyGtyJ80LGKNhVzyKO1xUCUqMhM-4f7-qVnucPAAdOZCHkq86cjNCnFSX8sQNR5b8_K5fu3ZxOKlqV71-f-7kDoZZpklVvIrKUXFZ5SSdN7XZfUnRwYtwPz4UrR00i6noev_b0S_Xm-s9bsJKFvx_AUf5uV9HKsUY9jFsYeaBafg0zbjo2qdGSf4qdEdrFlPM0a5x4vJVXICAIMQ1TnfV6TmC0Gh7Tj6NqhGu3qFUQbWjtsWao9R0QZgcFEABEkbz8cXGyl4uq6MZAeVMPNlP2WIg9AriRfECxJM_4wZSxMfJzksU4pYkGYPSPvfMCqUG4C1Ez3H2WcYxp6cmPQXjS05zspaowFrDyHOv78AH6_7-oZiCvPi4edZuRMcZyGtpax966QRueADS4oxfyOYBSlkcIxMjodMtxLtjw7Anp7S9yZLV2Dvel61nOu79cqoBFTmi9u6Uro4pjxYV498VOofi_E-xuqrhRXAuKzgNlLJJcI6pERABtF2SOTWxZ_46_2j9uvI5d1W5klYA8lNS8mT88M031bAQQSXRsL306htyNdAew0ccFcVa_iUk1weR8AtYlXBNRzNsvyNo_E8PXxARwA0wwSRCjAuLziPo65MF5i025X2IWtW7U8sltdo40_rIwnWGYAewABUbMk0lX2uyJKnAb07-qsoswVefhAKPDpLXx_odKtLOr3SwIaEkShdsZeydYQtlyPIV9g-MD3Bb8t29NaH8ClQVz412b_3tnstS6OrzrmF-aXelgEqpn7yFaxc/https://www.amazon.com/dp/B0FQ252ZV9/?_encoding=UTF8&pd_rd_i=B0FQ252ZV9&pd_rd_i=B0FQ252ZV9&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=oQRp0&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=KM1SRWPCKGQBEK3W9RS7&pd_rd_wg=akxlC&pd_rd_r=b0f167c9-388d-434c-8e72-d4c2a64083fa",
+      "link_clean": "https://www.amazon.com/dp/B0FQ252ZV9/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FQ252ZV9&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41HnkCOYldL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/93dfc925-fc58-4dfb-9e1f-84860eb88106.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/93dfc925-fc58-4dfb-9e1f-84860eb88106.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 3.9,
+      "reviews": 90,
+      "price": "$21.75",
+      "extracted_price": 21.75,
+      "old_price": "$23.99",
+      "extracted_old_price": 23.99
+    },
+    {
+      "position": 4,
+      "asin": "B0FXWJ7S9L",
+      "title": "Puyrzoe Flea Collar for Cats 4 Pack, Natural Cat Flea Prevention Collar | 32-Month Flea Protection for Cats, Cat Flea and Tick Prevention for Cats & Kittens, Cat Flea Treatment, 2 Pink & 2 Blue",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JALkyfUs97rNS33uNczpzSwAAAGf_3OfvAEAAAH2AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDIgICAqJ3cy/clv1c_ek-wBff3asTWRewy9ANOjGTeGWly_GpsPaHPBm-A_ccqfS_n6_3IPuR3wMiuSk3I26m7UjuQnPXSSXVJho09I8IY5zsaPOFsLorunX2znU8WTTEtoMlDo-2V9d1s5vI-2iKVedUtSJoc9uzM-_gtp7KZpd7U9tXsjvTK5yfKzQEVZVMtv5PcsJAtihVZEzP6BzI5V7latzfoFWb7LELV2vIdNZUtzIZ-phAmCXGJEumMaPjakR_Fd-BOrfVdTuf-xAtQNoIBAxZeIiml5pBC1AGp9WarbJQIPd74Myx1nsdfrhaCHQaq-jGezyqDAtBASS4pf9uEoz_kY6DXuEvdPC8970mqY9GFdM5YFRjnJX4vzrGsUqrx9V3UaHlrTCjwHZwyTWw6M8X_aAnwt-y5gd14LUdc11HQAjPNDJc238b7u1_mslB55jfEueu8JdjQQv1fkAg_DrL_J-AKkLzy-W0siOBcj2Hq_TlR_PrmBu-bkEQdVGknyap5LIKEPyO-h_zbpzuEF-8IO85JhvnXzJWe6jfKTh0irVtQ57Dn6l78LY6Hbr3fCnSkMY3EEPjHRN421mb2MjsSy0Nw-JKuBdUjxOgh46jbOPthigBgnQv36d7T_fthpRvVPt9gqsreoeQY6_oXQ3VLjjCs0FhzEcep9AAGRj4CQbb91GSaIHHkIoYsCQTiSw1zydQGYUlowUp6gyLanCelH9IY_g09E4_DGIDw2TS093HmBQWxqYvy7Ww3tglAGzEE-KefaK2Zfv1N1OzOAmyM1tafcNQB-7zrLq-o-GN3S5jqpneH9KqWjxTxeBF4U0a5n3C7uaaCyF_IDU44Kp86KAVjG9F1dYV6cuvFEVyDM-rVki2_LSjGeLO1WzpgSx_cqTrAHekW0r9epp-NxuIhEsCYUKIm0QbcilN8GM3AATLYl8onQVuXzRYRPX_V-4f2znb1fVBGRrMxABowalJdo_cTI9Lzd-Ay2V4Nelii9sFTN0oEq8oiu1lvv-cZHWgMn8AQ9sRHLTAJv8Ir3hOnM2IRuyHllaYqraRZdO3khoMY52lybj6AjrCPECqezpdGpFfz-7NlLGqNzixGfRxFw_UIrpMmjqKsFYKGX5UYV53OvV1CFWO3gIrTbAEU_OaZTcpZNwf3djwkZ0igGyOBilrt-oSYbgY7hEf3QUZK5EhepnQwk107eQvJWaTLwrRVo4z_8SNNJhZd-AWlRohuvLCxuaffrteaV7wR3B1kSmkRLQufbSjW0NlgRqvcnvnvyo_PWvG8QbDkJ7n4t8aCuxey-lok12CZewnVPLC7ztP3gnyA6d9LMV6EUgnGEZVl6cl82vshkkWt6gS_D9-yR3Q7mYMJGejKzrnQtRBGUmzYXo3_RTygaGhVM8gspMA44aVcdNgArxyHzc-kABglpKbpxQ04_aTCj_3i1oTh91El7u6KlGl-ugFkDdma5zq6ZNISaVFUK8Xa-tmQG-n5kD7yy4IpMYUccFw3_ivxswKPDKLfxfoFKlZExJM46hxwSHxwX9Q0-uBxed7l6oskcuxM4hdB47PBrLoQ_1ATgpdVRVlN-B0_bIWtyHEaT-uOBenDsroe/https://www.amazon.com/dp/B0FXWJ7S9L/?_encoding=UTF8&pd_rd_i=B0FXWJ7S9L&pd_rd_i=B0FXWJ7S9L&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=oQRp0&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=KM1SRWPCKGQBEK3W9RS7&pd_rd_wg=akxlC&pd_rd_r=b0f167c9-388d-434c-8e72-d4c2a64083fa",
+      "link_clean": "https://www.amazon.com/dp/B0FXWJ7S9L/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FXWJ7S9L&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41n-CJWTp7L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/6d238aa3-3a53-4e5a-93ee-558196e92065.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/6d238aa3-3a53-4e5a-93ee-558196e92065.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4,
+      "reviews": 200,
+      "price": "$22.61",
+      "extracted_price": 22.61,
+      "old_price": "$23.99",
+      "extracted_old_price": 23.99
+    },
+    {
+      "position": 5,
+      "asin": "B0GV2JL462",
+      "title": "Flea and Tick Prevention for Dogs Chewables, Dog Flea and Tick Treatment | Dog Flea & Tick Control Chews with Fish Oil & B Vitamins for Skin & Coat, Digestion & Immune Support, Chicken Flavor.",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JOVXzdH3zTMLLmDhRkz2aVQAAAGf_3OfvQEAAAH2AQBvbm9fdHhuX2JpZDcgICBvbm9fdHhuX2ltcDIgICBczD4y/clv1c_ek-wBff3ErTa3ut7cOoEbugzoh05WFHJpwxcJHGql0Z5huZPZjjJJt1yWY21ncUEdqjBLQCFF1r4qYLK-WWqLQWV31ziaAJ_JWnV9g3SHQkujJKLKLOUQhhDwzp2pA4p5ynPAVR4Ab1kQbQL-5-a7bPRuJ2elWEKEhFQj7ep0KzvuaubR_1RITrQuQNsYLVMWGf5AgzKGgbG2VzpXwgBJC_Kix95QtgHrI0Dmsg1ZtDaDosHjwKs2gZUMgOugW3GPK4jNOobFPv7zLm4hJkm9ed8XarnINJJKpQ4MycpbKY3G9ujVWiRtcyadXz23FCyxk72ACmh5CWBvV7qQbX3MYs1Jf80PivA5zPjZxBKm3TVnay8lGnNQlD0ouc7P-HBB9RM11MiAljZjQP81c3VmA9K5tMNILQTGcnuXQmvoKaaFed35wm-3wVH6fFQNn9apQZQGksdGULw9-47vXoRZSqPepRG3dqCw8wPEjG6aEP07ESywtMRKkEM1MBZ8z0CuBtqB-T43o4QMpaGYhps1vYQEYtpbD61aDhRv0h_TpK1z4XOoc5Cn9Zftr0vKKaaedNkoZ3MYtVKaPkKnCQhNjFk-6jSQdCLiX4rT6NYzqrZEToVddd0Lfq98V3bBrNkWA1wD-fiGrMwyQwPdS6O5Yudv_6pZT19ufGLkVAyrOz2G6UBGpHue4dUeQYQD_X1i1UrZGOVWjQiu5aGAtZXjKvf20xhehhf7MiMHf5MkCk2nZOt-dMAIV6Q3qsStofj3ZGLwpHjFQLcNUloxVYodCUvL6a1shsMlRhgKwjO2WVznYafserPOtCaS3NEY4mQyUmgscD7iLkTOdGXCzD0IslA_Ce1HutcD8l333Z0AHQ2eW0-d8BBm4Wanr6cizYgutY7iSWGLW10XtvbR79CoTcBOl6N6vO6y1FbUiryUdgEFjrQ199CmftnuSHzVMPTeQPCmHCGN3l2yKzfhkkfeoEThQmk9uziUorvoOffuODNiYL76_qlO2z0s6nbsNYFal2RYrxaOtuKwx2DV9DELxSkNEtjfQpWV_XIPaIibhYgxWfwlB898NnBWRG3bKexDPW5i8KD9qYGmEm3F1R6a6YRVuhjvkN_JKKBQmspzOZAJIdyOZM0LqUBkEkthxtEouO2hmfBbFDZgWQex4IMMwafyj0Ft609K0-5Fh3hxy9KtP-ihjts-DjuwshML1S-sSWVWQZgTUQ4hxQGY-_TIDSck1EhhXZdbVmu_z3YhCjbHS6EVLxXZ6NizW6b1hgxWIegzmYFdcUDflDPhmyAyn4m285yhOxRERpwVLAESRHY4G5T-NeEnS1gtrOBXRMaj7spStI-FA0TpBlidvoCCa6lcLwq4pSy0WDnykcQBwaEBnyOiX9v8tzYViEQNis-A2WNlo90kbp42Ik7AUBfJmJ_ECJSGkdnhJ-PJujqIWBVrjTnZk9EYl-7r-6qVq0ysdZXNoy-Go5DhTEpA5rupsNGVq3kJaqKq6zjTJ9l8W2TH8FcXI0l1S142o_4fUK9ebJxDiUVDHPxM9Ioxyn6UyL5Dl0NA1Xo3J3KCAVFycCos65m3nlF5RQICQg/https://www.amazon.com/dp/B0GV2JL462/?_encoding=UTF8&pd_rd_i=B0GV2JL462&pd_rd_i=B0GV2JL462&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=oQRp0&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=KM1SRWPCKGQBEK3W9RS7&pd_rd_wg=akxlC&pd_rd_r=b0f167c9-388d-434c-8e72-d4c2a64083fa",
+      "link_clean": "https://www.amazon.com/dp/B0GV2JL462/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GV2JL462&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51cxeeI2rCL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/9fec6bde-3923-405e-be63-58c9f3784f82.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/9fec6bde-3923-405e-be63-58c9f3784f82.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 38,
+      "price": "$25.99",
+      "extracted_price": 25.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "images": [
+        "https://m.media-amazon.com/images/I/71uS8vu-g8L.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 100,
+        "4 star": 0,
+        "3 star": 0,
+        "2 star": 0,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Soft and Comfortable for My Dog",
+        "text": "The collar is lightweight, flexible, and comfortable for my dog to wear every day. He adjusted to it quickly and doesn’t seem bothered by it at all.",
+        "rating": 5,
+        "date": "July 27, 2026",
+        "author": "Keith j knobloch",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AH5TWWGQUV7AFUX5XZFPNGOJWO6A?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/71uS8vu-g8L.jpg"
+        ]
+      },
+      {
+        "position": 2,
+        "title": "Perfect for Outdoor Adventures",
+        "text": "My lovely puppy spends a lot of time outside, and this collar is a convenient addition to his daily routine. The waterproof design makes it great for walks, rain, and outdoor activities.",
+        "rating": 5,
+        "date": "July 27, 2026",
+        "author": "Nicole roberts",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEOHDTYQPZKB365DTQ77XUURGMOQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/538797b4-4606-414e-bcf8-da7d04aabe51._CR0%2C0%2C375%2C375_UX460_SX48_.jpg",
+        "images": [
+          "https://m.media-amazon.com/images/I/71tSoKRs3FL.jpg"
+        ]
+      }
+    ]
+  }
+}

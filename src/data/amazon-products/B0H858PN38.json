@@ -1,0 +1,626 @@
+{
+  "search_metadata": {
+    "id": "6a7ed646ab28c663436101bb",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/2TC1Ujl7AM46QUkdTRyjgQ/6a7ed646ab28c663436101bb.json",
+    "created_at": "2026-08-14 08:48:06 UTC",
+    "processed_at": "2026-08-14 08:48:06 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0H858PN38/?",
+    "raw_html_file": "https://serpapi.com/searches/2TC1Ujl7AM46QUkdTRyjgQ/6a7ed646ab28c663436101bb.html",
+    "total_time_taken": 13.51
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0H858PN38",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "categories": [
+      {
+        "position": 1,
+        "name": "Pet Supplies",
+        "link": "https://www.amazon.com/pet-shops-dogs-cats-hamsters-kittens/b/ref=dp_bc_1?ie=UTF8&node=2619533011",
+        "node": "2619533011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2619533011"
+      },
+      {
+        "position": 2,
+        "name": "Dogs",
+        "link": "https://www.amazon.com/dogs-supplies-training-beds-collars-grooming/b/ref=dp_bc_2?ie=UTF8&node=2975312011",
+        "node": "2975312011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975312011"
+      },
+      {
+        "position": 3,
+        "name": "Flea & Tick Control",
+        "link": "https://www.amazon.com/dog-flea-lice-tick-control/b/ref=dp_bc_3?ie=UTF8&node=2975384011",
+        "node": "2975384011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975384011"
+      },
+      {
+        "position": 4,
+        "name": "Flea & Tick Collars",
+        "link": "https://www.amazon.com/dog-flea-tick-collars/b/ref=dp_bc_4?ie=UTF8&node=2975386011",
+        "node": "2975386011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975386011"
+      }
+    ],
+    "asin": "B0H858PN38",
+    "title": "Flea and Tick Prevention for Dogs - Flea Collar - 4 Count - Adjustable",
+    "link": "https://www.amazon.com/Flea-Tick-Prevention-Dogs-Adjustable/dp/B0H858PN38/",
+    "link_clean": "https://www.amazon.com/dp/B0H858PN38/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0H858PN38&device=desktop&engine=amazon_product",
+    "brand": "Brand: cabins",
+    "thumbnail": "https://m.media-amazon.com/images/I/81J9AWjy75L._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/81J9AWjy75L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71zOun0KmbL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81Ud7nM7ScL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81GEkPD+Q5L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61hiUa5AAoL._AC_SL1200_.jpg"
+    ],
+    "rating": 4.8,
+    "reviews": 187,
+    "bought_last_month": "600+ bought in past month",
+    "discount": "-7%",
+    "price": "$25.99",
+    "extracted_price": 25.99,
+    "price_unit": "$6.50 / count",
+    "extracted_price_unit": 6.5,
+    "old_price": "$27.99",
+    "extracted_old_price": 27.99,
+    "delivery": [
+      "FREE delivery Wednesday, August 19 on orders shipped by Amazon over $35",
+      "Or Prime members get FREE delivery Tomorrow, August 15. Order within 5 hrs 56 mins. Join Prime"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$25.99",
+      "extracted_price": 25.99,
+      "price_unit": "$6.50 / count",
+      "extracted_price_unit": 6.5,
+      "delivery": [
+        "FREE delivery Wednesday, August 19 on orders shipped by Amazon over $35",
+        "Or Prime members get FREE delivery Tomorrow, August 15. Order within 5 hrs 56 mins. Join Prime"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "Famurai Inc",
+          "details": {
+            "heading": "Sold by",
+            "content": "Famurai Inc"
+          },
+          "link": {
+            "text": "Famurai Inc",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=AM814ALIPOMW1&asin=B0H858PN38&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "about_item": [
+    "Extended Value 4-Collar Bundle: Maximize your dog's safety with our 4-pack set. This bundle provides a long-lasting barrier, ensuring consistent and effective defense without the need for messy monthly applications or expensive single-unit alternatives.",
+    "Complete Fleas Ticks Control: Our advanced flea treatment for dogs is specifically engineered to repel and eliminate ticks, fleas, larvae, and lice upon contact. The formula acts quickly to stop pests and maintain a clean environment for your dog.",
+    "Universal Adjustable Design: One size fits all breeds perfectly. This dog flea collar features an easy-to-use buckle system, making it an ideal flea collar for large dogs, medium breeds, and small dogs alike; simply trim the excess length for a custom, secure fit.",
+    "Fully Waterproof Performance: Designed for active dogs, this flea and tick prevention for dogs remains 100% effective after swimming, bathing, or playing in the rain. There is no need to remove the collar, providing non-stop protection in any environment.",
+    "Non-Greasy & Comfortable Fit: Unlike traditional topical drops, our flea treatment for dogs offers a clean and dry experience. It is designed to be gentle on your dog's skin while remaining professional-grade and tough on unwanted insects."
+  ],
+  "bought_together": [
+    {
+      "position": 1,
+      "title": "Flea and Tick Prevention for Dogs - Flea Collar - 4 Count - Adjustable",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81J9AWjy75L._AC_UL116_SR116,116_.jpg",
+      "price": "$25.99",
+      "extracted_price": 25.99,
+      "price_unit": "$6.50/count",
+      "extracted_price_unit": 6.5,
+      "delivery": [
+        "Get it as soon as Wednesday, Aug 19"
+      ],
+      "stock": "In Stock"
+    },
+    {
+      "position": 2,
+      "title": "Flea and Tick Prevention for Dogs Chewables 200Ct - Flea and Tick Chews Supplement, Vet Recommended Supplement Chews, Skin & Coat Support for Dogs, Puppies, All Breeds & Sizes",
+      "link": "https://www.amazon.com/Flea-Tick-Prevention-Chewables-200Ct/dp/B0GZVHGG97/ref=pd_bxgy_thbs_d_sccl_1/135-3053432-1382861?pd_rd_w=jI6Vw&content-id=amzn1.sym.9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_p=9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_r=AEZ3HVTHCH8HS421JTY4&pd_rd_wg=bEkpR&pd_rd_r=4678289d-9883-4eb7-b121-fb98d94ef42b&pd_rd_i=B0GZVHGG97&psc=1",
+      "asin": "B0GZVHGG97",
+      "link_clean": "https://www.amazon.com/Flea-Tick-Prevention-Chewables-200Ct/dp/B0GZVHGG97/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GZVHGG97&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/716TEfWtORL._AC_UL116_SR116,116_.jpg",
+      "price": "$19.99",
+      "extracted_price": 19.99,
+      "price_unit": "$0.10/count",
+      "extracted_price_unit": 0.1,
+      "delivery": [
+        "Get it as soon as Wednesday, Aug 19"
+      ],
+      "stock": "In Stock"
+    },
+    {
+      "position": 3,
+      "title": "Veterinary Formula Flea and Tick Shampoo for Dogs and Cats, 16 oz",
+      "link": "https://www.amazon.com/Veterinary-Formula-Clinical-Care-Shampoo/dp/B0037Z6VKS/ref=pd_bxgy_thbs_d_sccl_2/135-3053432-1382861?pd_rd_w=jI6Vw&content-id=amzn1.sym.9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_p=9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_r=AEZ3HVTHCH8HS421JTY4&pd_rd_wg=bEkpR&pd_rd_r=4678289d-9883-4eb7-b121-fb98d94ef42b&pd_rd_i=B0037Z6VKS&psc=1",
+      "asin": "B0037Z6VKS",
+      "link_clean": "https://www.amazon.com/Veterinary-Formula-Clinical-Care-Shampoo/dp/B0037Z6VKS/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0037Z6VKS&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/61HgiPsZ1fL._AC_UL116_SR116,116_.jpg",
+      "price": "$9.92",
+      "extracted_price": 9.92,
+      "delivery": [
+        "Get it as soon as Wednesday, Aug 19"
+      ],
+      "stock": "In Stock"
+    }
+  ],
+  "videos": [
+    {
+      "position": 1,
+      "title": "High Hopes, Dashed to Bits",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/a09495f1-60cc-4339-bce2-2d77616b3efe/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/31FAfdX7CBL.jpg",
+      "duration": "0:11",
+      "vendor": "Amy",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SL34_.png",
+      "date": "Aug 6, 2026"
+    }
+  ],
+  "product_details": {
+    "package_dimensions": "6.02 x 3.94 x 1.42 inches; 0.16 ounces",
+    "item_model_number": "CLRXX",
+    "department": "a",
+    "date_first_available": "July 14, 2023",
+    "manufacturer": "cabins",
+    "asin": "B0H858PN38",
+    "best_sellers_rank": [
+      {
+        "text": "#12,770 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 12770,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#21 in Dog Flea Collars",
+        "extracted_rank": 21,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/2975386011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Flea Collars"
+      }
+    ],
+    "customer_reviews": "4.8 out of 5 stars",
+    "rating": 4.8,
+    "reviews": 187,
+    "item_weight": "4.54 g",
+    "item_package_dimensions_l_x_w_x_h": "6.02 x 3.94 x 1.42 inches",
+    "brand_name": "cabins",
+    "target_audience_keyword": "Dogs",
+    "directions": "Collar",
+    "model_name": "CLRXX",
+    "color": "Grey",
+    "material": "Brass",
+    "care_instructions": "Hand Wash",
+    "style": "Modern",
+    "breed_recommendation": "All Breed Sizes",
+    "included_components": "Collar",
+    "specific_uses_for_product": "Collar"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "name": "Sponsored ad from KYGNE. Shop KYGNE.",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JA2YOkLCnTrWnsDkgC4ss34AAAGf_3UwGQEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICCSA9WW/clv1c_ek-wBfHXKrTWXmxhtwlAiFwLMC57Ksn5qBg-dM2g3SNDSRFgnnUMeLae4XL5hTt7reUGzRDN5oETOxARq4w9t5AL-uOCZhMj6Ux61c7FUNy0Aq_shHYhz2zsjpGkN9tbjArr18irmpSgbIuMO53putHHos0clgmoFMT750MKDQYWxB0NTqKoHOjjKC3v5R3bntiC501PR9eo5kX_sZtUlz-aHEpqIV6hDuzVnH7t1845aIGf07TkS29vUHpeyQ-RCSQ4YVUUYMqKacXgu2iK0LiR3MJgZah00p7syaxIUtC8dsVhv5rhum8DeoZ8G1H_O5MGgZ-cNt_uJM0o5q0OoM31HeZHMqQ5lTRX9KnGU6yseYmpIHTO6GBGfyW9DqqHXp8_pXlOXRrc-zbPeF7lL7n63yhmk3BQSgadQjr8lg-B9KroPA4H4sBPHLp_fN3EN72GJJzjpiX-FQwe-24CWatQnAKnx9te2iHOqVEA5hfqVK0tbeQZJcD_luttWogBTM9XwOVu88r3J7ZWJv5YLU9jVy1JwjnxK_ulZIpfEBWqoS45IZLNV6_7Eh6q1neAX_c014_VyIsdwPELEGbvcBR56JOKj0CWNfl5aGbto5RfGPJUcKnMMfDlmEeLbjHqRrp4bWeYZBCUFRgI9OvuZk-RZDltm81yV7EMlAcIPxA-QxGJztPE6-ZQjoIg9sFo0ooAqduvBPVJrPSjS2tg3WRhtdy6iaCptyH057JRp5AT_1U3MZ2vJzCExAB6UaCwrKTEfxjXSjZMjbyhm21TqrHya2XFEkRN2BkqWUNeg23HqWqZQpcG-98a9VJU7EkqKUHPPaiEA6ipwlMsA9PC9m_gpsJjz0KqkzPYEX3el3hiolxhXprfH63EvJ9OzJlSb9UA4ffrcGmH5SpfOfJPzSw4Brjk6Kq3_x60RobmDdJUYVqJRoC3wnTbqZZt_wC46Xy9-FLPhWhWtpKo8tLQ7qs0lbxLDp5MvzSaNTm3bczDI93hgxFA8aqAQ0OGDZANGfWxGSZvqYtPT1MKGfhHKQsVrqcTf5gao5FwwDUk4asMlIVZi2jjjIOsRBvpla_Oh8SSit7T6dcx6djhcIJkoyfwx0r00Pas_WFkVZmAGZmcDoF_fUPviE9zjdMv4jyFzY-dpTjs4XrksrM-HxpSGCirX8ddhrPTaDR1zWRss5tS5TH9IsAA8eMVNRCS2xQmUptv4YtfWsdeZE0UDte4oyHECvquWPbiw_srsnLDRsJ7zCYpmvwSXBuu2eaSyLYN5o4PKTG3lKTcL6lCYCslOnX_mV6ZxwnE4VTleTgbHJfXUejPvFa1fqkQ_dc3I9KcaB1zPdPszP6Yfn1y_Wnre60hCsHdWRnOt914saKeU079w40rbBF8aE260VAw4gLMi5LvkYvUSx_JechaFwm3TD-2ukYr4YrkZq6CFz90Nz_3T9xjvVXkDNzTgGW-QgDhFK0sB3Dv7UrPGlsWfHNweTJ6t_ZFAIs3xDI_3kSWUtk2hYZcUKbycVNCVmqcqYE-WUvk1K_D8sxPoPzZyJXxJH5M2x29H8_93R7vUYQjhw/https://www.amazon.com/stores/page/F6344934-C5CA-498E-995C-E303EBA417ED/?_encoding=UTF8&store_ref=SB_A04007312UFH179QXIMO3-A006914536HUOOIKI2OU9&pd_rd_plhdr=t&aaxitk=382fe2f2e1e58f3d37f1c8b06891a382&hsa_cr_id=0&lp_slot=desktop-arbies&lp_page_asin=B0H858PN38&pd_rd_i=ad1&ref_=sbx_be_dp_arbies_mbd_mb0_bkgd&pd_rd_w=6fPre&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=AEZ3HVTHCH8HS421JTY4&pd_rd_wg=bEkpR&pd_rd_r=4678289d-9883-4eb7-b121-fb98d94ef42b"
+    },
+    {
+      "position": 2,
+      "name": "Sponsored ad from Carmelie. Shop Carmelie.",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JGc00YAieoRkxXiXKFSFou0AAAGf_3UwGgEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICBeWbno/clv1c_ek-YBYHXErbWDn2nI7cAJ16WtD5jqvTdqgo3MGnjHetDPMp0nsfkFtwGsOuY3xN4S0xnF7uo3F5J7ZRbPx2HEGiYfcifCL9YO6NuHs04zIo-6CUzssMB5mnh9FkUZfJ4cTB25qR7olpGOdhFCw86k6rZqj2MF1Xuctbaiw_qrYQSXweFhUuD7Odrk8GvEYkbkh0SNlkTD-YIVS99uVCsofiPBFtLcMseTpb0K50G4bQ_k5HLg7EHWHCW4dn7SWAi3maTeHPhjOfwW7VIyX9VW0Sxwrfmlv9dbNEhfRq9P5lUchdoIZK9hOZKMmeK373RissySF5EVfcpjpYIkoM6wKNY_g5d8RP22CTjBe1RC0DSBZZHarZ5YeW8cB_IVyMON9rKh6tzS1IMUj6o5ttnsWKF_1NejBDF4S-g8XTwB2kJ6foUEg26IlakEMEeQeNlBTM3e4XPBH9FhLJS_UYgFR-eVkpvuKxjIAFKCQTdkcLsKmR286SRJrHqjiawKieYsI51DOdrci8v9pGKiWDhpU8dRQGcLgpvY_z1nDTIYdd0xd24nx26ktnIsneS2Hg0CzA9h-0x0VbH0bR4SoYpdhVrZmXc_FFe-_udDdd_Qe0YZCBx7TBBw02Dv6bWAmh-4OwBlz73EstvllZ-_3xuf3xDgEU7W0Ru-3wpFyvlQfWFLSQaQt7Y4iWNtU_SgxxlVCYYVZFU2vZcx46iiB0tjf7t1dlRw3rt4Q2iLpjsw6cckvs-Fi4YpUDaV6C2Bb64I1kJ3VPm8AN7xd0S3ElAc6ORvqR_HW5HL7cBoas6bF20Z4anXtLgIgLqEjW3T3oqWXjPTaiCOqhR8lGtI-Gu5zxeV2-lNDYhXqCuCzjueLxwEaeduOEAmgh_p7EBDrXk9WWcFh9vA4Jf9hke6ePP4O3l68sEvC_X5tCGAJAzZ83_IPDM1h0NFYmzD38FoM5dU40aXr7h96ljfCZtm4q2IHQ3MpXRCXBwqAjK_k8zmHJ767KFr98vbweSBqeF7YcrEM2aRC-aDarEDKDilaX2Nv1iXrLZwy289kP5529bhwVssx1lAyw93imw59vJGPMVEBu6AXnXugGMz3KzR4gMoCKQHKVCM4tQvSNR7yPO_e-bckam7XuDr5qOrANGcLN1O7Z6gcCfvK56mURR8UtdV_UjKdDaXWu9Xavb2Jc8Xl509GTGeEukHIfvy8hm8ShtvaWiNlpfDLvvVyfRPPnV38zNf4c0_7FLzkvF7S46rlLa7m9ZgnRkDAYSzpcCErVohVa7VArnvOmWS8G4iny6AnuLpZOyquhEPMAmIJaFdoV-sI8MsqZgx0WMiabrCuBRriPamjqLQGkW0xf-SfyW5-g8ua_ybJznqYt2vMdzB8w8wkJWFPQV4mNKdmoEW8v8Ns2DmSJpOGYflO6_lNevszlDfaJqNiP4aHaT1nS7ixlaivoaVZ03Mv7HlGr3o2e6jlHFIntgC8a_IRSdNWTG-QJ2I6Ezx2_twXt_101AYuprLxBKbShtz-qMyE_oF4RRIRI/https://www.amazon.com/stores/page/CB84B0E8-C71E-4898-B059-BC37EAD53602/?_encoding=UTF8&store_ref=SB_A01515992ZV5SFC7O734I-A07057553IENPGVZ6MMU3&pd_rd_plhdr=t&aaxitk=bcdeb7a80dce2e362aff012b24afe7b0&hsa_cr_id=0&lp_slot=desktop-arbies&lp_page_asin=B0H858PN38&pd_rd_i=ad2&ref_=sbx_be_dp_arbies_mbd_mb1_bkgd&pd_rd_w=6fPre&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=AEZ3HVTHCH8HS421JTY4&pd_rd_wg=bEkpR&pd_rd_r=4678289d-9883-4eb7-b121-fb98d94ef42b"
+    },
+    {
+      "position": 3,
+      "name": "Sponsored ad from dog flea and tick treatment. Shop dog flea and tick treatment.",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JAIwep2GDgIgHwQfy3837I0AAAGf_3UwGwEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICAFaV0P/clv1c_ek-wBfHXFbbWzjK3YivOrRfcuXaZLg9JTLhg9kb1t4HWNjliJmvY0JzB51sJe3FNXaOaIhhIjLNr87Dk1HvPmzuxtut8QpHyq-xgBtuJH9RXDwGn3p2R-G7-5FkU5fG_RQnAPQCsIVRJu-Di9gTfo7rTqj2MFlXuctbCy2_qbYUSXyf1Eu3qm9avZJBy1KUNPYCnv50JBxeolGcwN0LYvjcJlW03bCbylkciYy_m8t3RT3d0Ni6y5NQSPiUit9V0YqaMFiZvzSfiQQAjGL-lEuudjaXjNP7Cbk7YwSA_buf_GprTUAo1w6uJQCEnBluwwkzmhip-Yr1XayrmCNl7wSFqzTtrBiV2gTxAH8WamO8Tpqj8FOrwMjfYNOh42KXwlfFTPakbb1T11uERYmBTt1o2-p17LFDS3NCxg3zYBzfuR2JkAtwmL0qgyWZL43ntDFfR5ZS-OZmA0yQY0R1x0UJR_UJUmWLS_TgpuXETPSF7k0WRVXFHyaguFValhqB9H8rtD4xktMlr1PZrbCsGsUThfJmE2zLKY00PZFQmAguBfz6jnnzxh9-7bNHoTwwwfYpD0Aq7Y33UpGnb7uLaKR-pmsGEsKMWP7h2KZs3wbbYFvoUfJ5b66JyACmizY7TKn91BC8LKJlIctC2qSyNks4aKF6Wy5qYQzh0i9oIGfOIV6TtyLjAX9uC6VmoJtFfbyWjqqlGLsh1EO5-Pr21e8GVCebm9ZC256zpSv2aO8aoTIvKAOAgq5DSEpDp5BhFDeuQU-CmnKVnirDXEgMqynay745dLowHcPfuLfMjmS5Z2WA3obIgiVMGdzt1eORd0e47EBVmhgXhh8GyYxhtb5xuh43VSdIyClRPPGz2Ox1cZNd90Qx2rV49TNcc-j6Li7M46sEncvGaMOJfOdPTRzaIuc7readTKxTfEBodfBB0dq9_22eMICwp9XJn5mMQkPVZ57p-6GRCV8TCmmR18BuMvahe2MCAsSmQSX-o4UX1BoY2maZyCn6Y4bN-lveN01C3ZGLMA5DdCCqwwW7qGnTT91ycP8Dh6vtBoM-M5Bs7SKzS4gv-9-4DtWg1nkEHxNy3fNCetTXzXJVqfbJXHBJUkXRxBzgWZ-Hz1-4XaaexpgBahgYvEoJ9xDUGHQ3oKOV9BKcqUu60JVZMqt7eDPiePmCve6LpG2ag1hAGbWo_sV0GSVM7JHyIP7O-uaU6xxxJnF149QsBJ7svuAiuij3uCdL1AbDh8F4LROh0cT0D9v_UkDzKmeKAAJa0kTDgivWlU8Gqhh1h_FAykKQmimtT0-dxIUyiw-hsjTMFw7v0BF9SHQwjyca3yfzrE5pOoSAtDSDDy3isB5J6MrGJGqjRQK4SNvxqPCzBlkPwHSWJrnv1evL8QIcf0_8hRrkS17tmYIV-7sd7Fjfi6jRAqKB31rlrZWdoNi6LKytb7EfQIrgOaXnE0jJUi2UCCgNULJTLxNw2v_QLIOhfR05WhHyU2pm7PyQTdaq61SJfebdX2K4QiUU_hSVfZppOOJ9UW308bbL63gzvcGfK6lIL4XisfOlisjLfNfVf9HHnhfLOycM/https://www.amazon.com/stores/page/7E74855F-E79E-480F-80C2-408882061E5B/?_encoding=UTF8&store_ref=SB_A043418024NZV9KRYBE5S-A05073711NEB6AAN0ZHX4&pd_rd_plhdr=t&aaxitk=9c6946ff0a2be72346d4ef30b7c7eb0e&hsa_cr_id=0&lp_slot=desktop-arbies&lp_page_asin=B0H858PN38&pd_rd_i=ad3&ref_=sbx_be_dp_arbies_mbd_mb2_bkgd&pd_rd_w=6fPre&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=AEZ3HVTHCH8HS421JTY4&pd_rd_wg=bEkpR&pd_rd_r=4678289d-9883-4eb7-b121-fb98d94ef42b"
+    },
+    {
+      "position": 4,
+      "name": "Sponsored ad from Puyrzoe. Shop Puyrzoe.",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JGGOw8K7oav_l_7aT2toxgQAAAGf_3UwHAEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDEgICArdhbN/clv1c_ek-wBfHXFbbWzjK3YivOrRfcuXaZLg9JTLhg9kb1t4EihNCS9xEUHmql2m1-6gj-igfBmTVKI8hI7YC3QtpT2d2JMfORX22_dpPdDmgH_UgnlQ9ppxLbuzA4IvtgymoBvjG6YXFTPu8QF3yjn9HqPgHZ8N0bnlHKkiOg7vWrxpN3aQveatzFusOnlSgNTfgrnbRnpOx6RrfoF2X8IE3dwrIdMUwrFB7mnPakTBOpCi2tZLvqgRPEd-hPpfUkRhvBOeAWTNt-PHPND0rmv0sO2rU3plhAtwHRbRQxJvX4-cb8jw0gJWeb5ipMzzQ747En8KHlOUyo_qqZ-xZ_6yZ9Av3bm7ElELkB2eWCJuqjMQJqkEyEKJAvjvqe5TAWk9u64sB8sSuGQbyeaDnvX6-IddVWuoIu0AHY1_32JgFfhyg_EnliW9oOM3-dY6-w3xLOOzhvsMxqVKxyUjAcrcFc2xaU8sm2mttH6wFtsTqHGw0xnTBQHdNml4OReUPibyyO10TJLYq3pSljdfyKQN5J1xYTYh8RsMixjtLiNGJdaAvRipPiDMyB0hnelAjrOycBf78w_W_qe7C9710hA_D_HewqRBXp0XtNhgf33yf3SNoWOK9jWAwpgyvjANhyEmJaVbilW-gGnOGocpUDKYBkTlekP9wk_XFTykJ6CK5KY9zZXFBGxXl4fpsZPyc-sEo3XrVAWfsW6KdKmr8KjpjciquC55MqNcSIpCSY6DeMcQ3t4Upe_5GGE2ztwy9hindSUSwkxMeNBqk7_zQ7aWROZaCjpHcfzhplvkFJcnDbO6SuVXgqMqKybVYTa6FNb2rL-AlCNVnKL5avsURu6BIKuhrpAu_hhUwDc0jK_r3ynKuRb74HuAqUcg_8Obo5FWdF6znjyMil8FPh5g8wjKr8T9ra5AcKY6VUhOBvnXa0DpufCg1s0wMjN2LBHjudrKHjSDGD5GkM6GSTU-99kv-9cfwc-L8nucSmGEbnHOcxMt9AUY7xYR1ARJlmqrmdmQpzM3fwqXhZN-8Wu_Hb7KQYV_CnL0nGyaYEZbUDtOmXmi5_SqgLAak35dDw91lobNcrUpyv7Dw0CJcBo-mUk7lvwCuU2YNZuQZc4F5eYV2wRV33_dc7INo4rzrk0jQD3XgBy5e0JI-tRXvI4lRyFFsMNNFJ-4ig4UZ3GGQ6yNro4DGqSEXhkOmzqXnf95L1qQ1CkMryE8LiSpn4fUIf9277gpnjxohpJrB3YUoD1Wwh_MwJao0cLyuQKshcuSDRmliJEB8lFmG-sYqdGS9g2KkBqC7p8S7CYSdmHLmQknxe-TF4EnO3r0uDIVLROa8EfXBJiCLoSrAMODrtaCtZHIdp-h6kHFD8sQCbBVEdAZPCCXC8mQydiWpc9vwTYoOnqwGhB_wN9MJr4drJw8_Wl2ksVNqwqaOFRtNaEavS7AEvLdEOTTB2HZcGL_OTCP0MT8BmlbU8bPjYQAVjV-JUCHpdxTLQkP72lzIYjV3bR5kElSo2zA8Umf9ORcn4P_WOZy_Zo_p2RKR55N31tyIf2ylpl0lQ4YC6LwA5WYEl-HCJ9UeoGwxj3w/https://www.amazon.com/stores/page/699834CE-184A-48B0-8526-E3E4EA5EBE1D/?_encoding=UTF8&store_ref=SB_A07786382UWSZGYEVHZWM-A07707503KVYX415F1XYS&pd_rd_plhdr=t&aaxitk=87f2bd560351d2bd9ba2648099be3bca&hsa_cr_id=0&lp_slot=desktop-arbies&lp_page_asin=B0H858PN38&pd_rd_i=ad4&ref_=sbx_be_dp_arbies_mbd_mb3_bkgd&pd_rd_w=6fPre&content-id=amzn1.sym.d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_p=d4d91f0b-2ea5-4099-b125-c8f96930ac21&pf_rd_r=AEZ3HVTHCH8HS421JTY4&pd_rd_wg=bEkpR&pd_rd_r=4678289d-9883-4eb7-b121-fb98d94ef42b"
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "text": "Customers find the stimulation device works exceptionally well and is easy to use, with one noting it has all the necessary functions. The product receives positive feedback for its appearance, size, and build quality, and customers appreciate its value for money, with one mentioning it's durable for its price. Customers find it extremely useful.",
+      "insights": [
+        {
+          "title": "Value for money",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 75,
+            "positive": 73,
+            "negative": 2
+          },
+          "summary": "Customers find the product excellent for its price, with one mentioning it is durable for the cost.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Strongly recommend. Small, fast, easy to use. Great value.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2Q6COKNSKGY16"
+            },
+            {
+              "position": 2,
+              "snippet": "Hope it works for a long time. Great price, recommend buying....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RUMNEJ1J9HSRB"
+            },
+            {
+              "position": 3,
+              "snippet": "...Thank you, guys! Very pleased with my purchase,good value for money,looks lovely.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R3SVE8K11MEBNF"
+            },
+            {
+              "position": 4,
+              "snippet": "Worth the price and not worth debating it versus anything more expensive. It's functional, Its easy to use and compact.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1084C3N1M4F4O"
+            }
+          ]
+        },
+        {
+          "title": "Functionality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 73,
+            "positive": 72,
+            "negative": 1
+          },
+          "summary": "Customers find that the device works exceptionally well and is reliable, with one customer noting it has all the necessary functions.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Wow! Works great finally we got sleep!",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R3A5NDMHWF4HOY"
+            },
+            {
+              "position": 2,
+              "snippet": "Better than expected for the price! Works Well! Very user friendly! No problems with it! It is perfect, this is what I've wanted.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R3FF7SIGK5NX5U"
+            },
+            {
+              "position": 3,
+              "snippet": "...It's functional, Its easy to use and compact.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1084C3N1M4F4O"
+            },
+            {
+              "position": 4,
+              "snippet": "I like the style, design and its functionality. Recommend! Just got this item. It's a simple product, but works amazingly.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RPB9IB0NIQF9A"
+            }
+          ]
+        },
+        {
+          "title": "Quality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 65,
+            "positive": 64,
+            "negative": 1
+          },
+          "summary": "Customers find the product to be of good quality, with one customer noting that both the quality and appearance exceeded their expectations.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...Works amazing! Very easy to use also! I’m glad I chose this one. Great product!",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2LYZMUPVZU4E"
+            },
+            {
+              "position": 2,
+              "snippet": "Love it. . Everything seems good quality. Unpacked and used as soon ss i received itWould definitely recommend!",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R3FWBZSM2K2ZOQ"
+            },
+            {
+              "position": 3,
+              "snippet": "Good product. It was worth the money, exactly what I expected and came on time!",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R29VS7C6DF8BAP"
+            },
+            {
+              "position": 4,
+              "snippet": "I am really satisified with this product! Excellent product and customer service",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R3LRE1MGPYB08P"
+            }
+          ]
+        },
+        {
+          "title": "Ease of use",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 54,
+            "positive": 54,
+            "negative": 0
+          },
+          "summary": "Customers find the product easy to use.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "I am so glad I spent the money on this product Easy to use, as I said, exactly what I was looking for. Thanks!",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1MQ2S1D6LFG9F"
+            },
+            {
+              "position": 2,
+              "snippet": "...I’m pretty pleased 😊 Everything I expected, very easy to use. 🔥🔥🔥",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2H2FSCQKVS9I"
+            },
+            {
+              "position": 3,
+              "snippet": "Super easy to use. Looks nice and stylish. Great little device. Nothing fancy, but works very well!",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RBODA9MA4FQAP"
+            },
+            {
+              "position": 4,
+              "snippet": "...Great for the value. This is a very stylish but most of all simple to use.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R165BC5DGDLPPH"
+            }
+          ]
+        },
+        {
+          "title": "Appearance",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 41,
+            "positive": 39,
+            "negative": 2
+          },
+          "summary": "Customers love the appearance of the product, with one mentioning its appealing design.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "It's a great buy! Everything about it is perfect! Looks nice! does the job well.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R39NIIADNH2CK1"
+            },
+            {
+              "position": 2,
+              "snippet": "...I have no complaints. It came really fast. Great product!! It's nice looking and sturdy.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1Z3TODIJ426Z3"
+            },
+            {
+              "position": 3,
+              "snippet": "...Another very important tool I purchased from Amazon. Great design and attractive product that's simple to use.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1KXYHULK5PBP4"
+            },
+            {
+              "position": 4,
+              "snippet": "Perfect size, look, durability and ease of use....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RE5VCQGRL1UK3"
+            }
+          ]
+        },
+        {
+          "title": "Size",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 24,
+            "positive": 22,
+            "negative": 2
+          },
+          "summary": "Customers like the size of the product, describing it as good and compact.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...It's functional, Its easy to use and compact.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1084C3N1M4F4O"
+            },
+            {
+              "position": 2,
+              "snippet": "Strongly recommend. Small, fast, easy to use. Great value.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2Q6COKNSKGY16"
+            },
+            {
+              "position": 3,
+              "snippet": "...But in fact it was the perfect size. Honestly, I love everything about this product! I hope it doesn't get any bad reviews, it's perfect!❤️",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2BYROB3ODHDED"
+            },
+            {
+              "position": 4,
+              "snippet": "Good size, good price good quality. Nothing fancy, but it's okay, I like it. It was very good for the value.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1IZSEHO0TIO0O"
+            }
+          ]
+        },
+        {
+          "title": "Build quality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 9,
+            "positive": 9,
+            "negative": 0
+          },
+          "summary": "Customers find the product well made.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Affordable and well made. Very comfortable to use and works nicely. Simple but useful. Price is Ok....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R52ACAEIJIOZD"
+            },
+            {
+              "position": 2,
+              "snippet": "Sturdy, easy to use, well built and functional. Absolutely fits my purpose. Happy with purchase. Thank you 😊 Exactly what I expected.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2DTVQ7QFAQWJX"
+            },
+            {
+              "position": 3,
+              "snippet": "Very good quality and looks elegant.. Would purchase again. Nicely made, works as needed…",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1B90GJU63Z6VT"
+            },
+            {
+              "position": 4,
+              "snippet": "Well constructed",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1MQ2S1D6LFG9F"
+            }
+          ]
+        },
+        {
+          "title": "Usefulness",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 8,
+            "positive": 8,
+            "negative": 0
+          },
+          "summary": "Customers find the product extremely useful, with one mentioning it's an addition to their everyday life.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Compact and extremely useful",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R4EWICHDZ0LR1"
+            },
+            {
+              "position": 2,
+              "snippet": "Sturdy, easy to use, well built and functional. Absolutely fits my purpose. Happy with purchase. Thank you 😊 Exactly what I expected.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2DTVQ7QFAQWJX"
+            },
+            {
+              "position": 3,
+              "snippet": "...This things is compact, light, easy to use and addition my everyday life",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1CF4YK3JB3R5S"
+            },
+            {
+              "position": 4,
+              "snippet": "...Very comfortable to use and works nicely. Simple but useful. Price is Ok. Very good quality compared to those I tried earlier.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R52ACAEIJIOZD"
+            }
+          ]
+        }
+      ],
+      "customer_reviews": {
+        "5 star": 93,
+        "4 star": 0,
+        "3 star": 2,
+        "2 star": 2,
+        "1 star": 3
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Fantastic Product",
+        "text": "Definitely, it deserves 5 stars! Also I like that's super easy to use and high value of it! Looks nice and works well.",
+        "rating": 5,
+        "date": "July 28, 2023",
+        "author": "Tatsiana",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGKZDAVT5CRR6YPVOYXMTY6CC4KQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "8 people found this helpful",
+        "verified_purchase": true
+      },
+      {
+        "position": 2,
+        "title": "Great product for a great price",
+        "text": "Definitely worth the money. Perfect size and design. Works amazing! Very easy to use also! I’m glad I chose this one. Great product!",
+        "rating": 5,
+        "date": "August 6, 2023",
+        "author": "Ivan",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEF3TMAVOB6MDMKT35ZJ4KEEDPMQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "4 people found this helpful",
+        "verified_purchase": true
+      },
+      {
+        "position": 3,
+        "title": "Budget friendly, highly efficient",
+        "text": "Well done all around. The 5 star ratings drew my attention. I didn't believe that it's possible to have a good product for a low price. But I was really surprised. I love the design, look, feel of it. It is easy to operate and works great!",
+        "rating": 5,
+        "date": "October 27, 2023",
+        "author": "Irina Frumes",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AE6KUZTUPZ7WOHAV22VW73QPRPSQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "11 people found this helpful",
+        "verified_purchase": true
+      },
+      {
+        "position": 4,
+        "title": "Perfect product",
+        "text": "I easily recommend. It does everything I want it to , easy to use, size is great , the price is good-nothing I don’t like.",
+        "rating": 5,
+        "date": "August 7, 2023",
+        "author": "Kuzmenko Zhanna",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEEEL6BVXOSPW2VTWOOY2QMKXTFA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "2 people found this helpful",
+        "verified_purchase": true
+      },
+      {
+        "position": 5,
+        "title": "Works great!",
+        "text": "Wow! Works great finally we got sleep!",
+        "rating": 5,
+        "date": "July 18, 2026",
+        "author": "Ramon Spears",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AECDRXLN2OQWSROKFDLQF3RRTB7Q?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true
+      },
+      {
+        "position": 6,
+        "title": "Great value and quality",
+        "text": "This is a good purchase for a great price: very easy to use, nice design Works perfect and has proven durability.",
+        "rating": 5,
+        "date": "September 5, 2023",
+        "author": "Amazon customer since 2021",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEC2YOPASSUHNFBY44FD6IWSPBNA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/1f3d9f70-32ba-44f7-9f54-c868e140ef74._CR0%2C0%2C333%2C333_UX460_SX48_.jpg",
+        "helpful_votes": "5 people found this helpful",
+        "verified_purchase": true
+      },
+      {
+        "position": 7,
+        "title": "Easy to use and comfortable Review👍👍👍",
+        "text": "Easy to use and comfortableReview: I give this product 5 stars and would buy it again or recommend to friends. Very happy with this investment 🙂 This thing is spot on! It's a GREAT looking and functioning too",
+        "rating": 5,
+        "date": "August 18, 2023",
+        "author": "Anastasiia",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHLHND72RY3XY4KKERZN3KHM6P3A?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "5 people found this helpful",
+        "verified_purchase": true
+      },
+      {
+        "position": 8,
+        "title": "Like it really useful and easy to use",
+        "text": "I would recommend it to anyone. Great product at a great value!!! All in all I couldn’t be more impressed with how great this product turned out to be.",
+        "rating": 5,
+        "date": "November 14, 2023",
+        "author": "Jelena",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHK7DSZVM5M22EHQLBXV3L5CXO3A?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/87d10904-65e8-45d1-a65a-1be381f449ff._CR62%2C0%2C375%2C375_SX460_SX48_.jpg",
+        "helpful_votes": "5 people found this helpful",
+        "verified_purchase": true
+      }
+    ]
+  }
+}

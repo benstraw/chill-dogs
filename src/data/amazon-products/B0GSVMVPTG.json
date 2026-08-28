@@ -1,0 +1,371 @@
+{
+  "search_metadata": {
+    "id": "6a7c023af73e4d76bd922290",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/2JbP-9iLXrRoTm97lUyaZw/6a7c023af73e4d76bd922290.json",
+    "created_at": "2026-08-12 05:18:50 UTC",
+    "processed_at": "2026-08-12 05:18:50 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0GSVMVPTG/?",
+    "raw_html_file": "https://serpapi.com/searches/2JbP-9iLXrRoTm97lUyaZw/6a7c023af73e4d76bd922290.html",
+    "total_time_taken": 7.43
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0GSVMVPTG",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0GSVMVPTG",
+    "title": "Rechargeable Portable Pet Shower Head Dog Bath Supplies for Indoor Outdoor | Dog Bathing Accessories with LED Display Temperature, IPX8 Waterproof Shower Pump Pet Grooming Tool for Yard Camping",
+    "link": "https://www.amazon.com/Rechargeable-Portable-Shower-Supplies-Outdoor/dp/B0GSVMVPTG/",
+    "link_clean": "https://www.amazon.com/dp/B0GSVMVPTG/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GSVMVPTG&device=desktop&engine=amazon_product",
+    "brand": "Brand: FLY2SKY",
+    "thumbnail": "https://m.media-amazon.com/images/I/819yJ4yfm6L._AC_SX342_SY445_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/819yJ4yfm6L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71EU8ArSQdL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81NjJAwCRzL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81KeweL1ngL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81ZdP6B8nRL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81hgNnra1mL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81WQdkDYJcL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81dwOIXd6YL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81Qd656GXnL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.4,
+    "reviews": 5,
+    "bought_last_month": "50+ bought in past month",
+    "price": "$33.99",
+    "extracted_price": 33.99,
+    "prime": true,
+    "delivery": [
+      "FREE delivery Monday, August 17 on orders shipped by Amazon over $35",
+      "Or Prime members get FREE delivery Tomorrow, August 13. Order within 14 hrs 21 mins. Join Prime"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$33.99",
+      "extracted_price": 33.99,
+      "delivery": [
+        "FREE delivery Monday, August 17 on orders shipped by Amazon over $35",
+        "Or Prime members get FREE delivery Tomorrow, August 13. Order within 14 hrs 21 mins. Join Prime"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "FH trade store",
+          "details": {
+            "heading": "Sold by",
+            "content": "FH trade store"
+          },
+          "link": {
+            "text": "FH trade store",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A136YUU8TQ2L2Q&asin=B0GSVMVPTG&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "gift_options": {
+          "text": "Available at checkout Available at checkout This item is a gift. Change",
+          "details": {
+            "content": "Add gift options at checkout"
+          }
+        }
+      }
+    }
+  },
+  "protection_plan": [
+    {
+      "position": 1,
+      "asin": "B07QD3HCG3",
+      "link": "https://www.amazon.com/dp/B07QD3HCG3/",
+      "title": "3-Year Protection Plan",
+      "price": "$5.99",
+      "extracted_price": 5.99
+    },
+    {
+      "position": 2,
+      "asin": "B07QB569DS",
+      "link": "https://www.amazon.com/dp/B07QB569DS/",
+      "title": "4-Year Protection Plan",
+      "price": "$7.99",
+      "extracted_price": 7.99
+    },
+    {
+      "position": 3,
+      "asin": "B07RZ3LSHM",
+      "link": "https://www.amazon.com/dp/B07RZ3LSHM/",
+      "title": "Complete Protect: One plan covers all eligible past and future purchases (Best Value)",
+      "price": "$16.99/month",
+      "extracted_price": 16.99
+    }
+  ],
+  "item_specifications": {
+    "brand": "FLY2SKY",
+    "color": "Black",
+    "power_source": "Battery Powered",
+    "material": "Plastic",
+    "product_dimensions": "1\"L x 1\"W x 1\"H"
+  },
+  "about_item": [
+    "Portable Shower Kit for Pets: Bath your pets anywhere, without the need for fixed shower equipment or extended shower hose. There are no more venue restrictions. You can easily give a bath treatment to your dog in yard, indoor and outdoor camping. Let your dog enjoy the joy of bathing",
+    "6000mAh Large Battery & Long Runtime: Rechargeable portable shower pump battery runs 120-150 mins after 3-hour full charge. One charge serves dogs of all sizes with no frequent recharging. Consistent water pressure helps with bathing tasks, avoids anxiety caused by battery issues when bathing pets outdoors",
+    "IPX8 Waterproof & Anti-Clog Structure: IPX8 full waterproof for full immersion use. Anti-clog filter blocks hair and debris, easy to detach and clean. Non-slip base keeps pump steady, sealed chargin, port for longer service life",
+    "Pet Friendly LED Display: Dog shower pump features an clearly LED display for a power status and water temperature. Outdoor shower kit From 32-140°F, you can keep pets safe while your pets enjoying bathing. Note: No heating function",
+    "3-in-1 Multifunctional Dog Showerhead: Combining soft silicone dog bath brush, water spray rinser and massage function to remove loose hair, dirt and soap suds. Dog shower attachment soothes anxious pets and bring a enjoyable bathing. Ideal for daily cleaning and hair detangling",
+    "Convenient Storage & Suitable for Any Occasions: Multi-use portable camping shower outdoor shower with a mesh organizer bag is ideal for Camping Essentials, Pet Washing, Kid's Baths, Car Cleaning and Plant Watering, among other uses and portability makes a great gift for outdoor enthusiasts"
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": "1",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/1ce765f1-8ff4-49cc-a0fb-1049687ca8b0.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 2,
+      "title": "2",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/27f012ee-a0f4-471f-9c5d-ae6e87bd29e0.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 3,
+      "title": "3",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/04bd2f74-e55d-45e8-8f0a-8716df7d42a3.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 4,
+      "title": "4",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/bb48c367-7832-4577-bb34-66935244dd49.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 5,
+      "title": "5",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/3b709b62-6c62-4e8e-81c4-fb3d60a3e118.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 6,
+      "title": "66",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/3f812e98-18ad-449d-a84a-6a96cce157f6.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 7,
+      "title": "77",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/86e19f70-d37e-42ef-b5f2-5ca0d88afbb2.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    }
+  ],
+  "product_details": {
+    "power_source": "Battery Powered",
+    "water_resistance_level": "Waterproof",
+    "battery_life": "120 minutes",
+    "number_of_batteries": "2 12V batteries required.",
+    "material_type": "Plastic",
+    "item_dimensions_l_x_w_x_h": "1\"L x 1\"W x 1\"H",
+    "color": "Black",
+    "brand_name": "FLY2SKY",
+    "model_number": "HFCW26010",
+    "manufacturer": "FLY2SKY",
+    "manufacturer_warranty_description": "30 days.",
+    "unit_count": "1 Count",
+    "included_components": "Shower",
+    "manufacturer_part_number": "HFCW26010",
+    "number_of_items": "1",
+    "best_sellers_rank": [
+      {
+        "text": "#56,363 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 56363,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#55 in Dog Showerheads & Sprayers",
+        "extracted_rank": 55,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/23727019011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Showerheads & Sprayers"
+      }
+    ],
+    "asin": "B0GSVMVPTG",
+    "customer_reviews": "4.6 out of 5 stars",
+    "rating": 4.6,
+    "reviews": 5
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0D7PZGZSF",
+      "title": "PETHROOM Ultra Absorbent Pet Towel | Quick-Drying, Soft Microfiber Dog & Cat Bath Towel | Lightweight, Durable, Fast Water-Soaking | Ideal for All Breeds (Medium) 15.7\" x 31.5\"",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JLOuRVv6Gp4hx1CH1YDQQpQAAAGf9GjMoAEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDIgICCGnpAi/clv1c_ek-Ixff3FcTWTLXhnN8c-_tQinqSsAp9-SgZMzv5uw_vQS6qntbNrDhx2Yagm2QqY9OW-gD0aWDAkjyU-0WqLxc3XBJpDY2Tusst2NG2ENQ1ip3aRnw0PLl67vIE1hPxY1GQCJMkl3IZ0AK3z4ZkpSyvcF2YkHeuUlygDvSr1pNH6QveSlAnsZMs7RUaFKycLnSVa5Gir8cLVOVquVXIKuy3_kqvVB5GrEwigSLu9rzNQDnke8f47K3TU8JF-9qVh_LWwyZPkedhYRCn0YXCzBdjX4qWnxAZCE34zqP4bZrwGPG7-6QDOHiXMJFwWuzkApHYnWMOfbPxRoZaYmXad8z4uWweT5pJY1k4lyY1RvpYCNU6kL3CD4bR79l2LYy1STCldL-Pzr_gebbH1f6j2yyk3fQ3i79NiQajk04174-WF_fz3W9P3EwIvkQpxR5a4XymztCwBDvmG7Pim8gU-UOkns_AZBHKQ5Fhyl1inZmn4TWGsdIQBVMqtEZdpdStE7hjC7eUxnHhrCbmcSX9qOHLGD1iLGkBgoNgJ7eFWPcGgjcrAuwv-bktFfCGicBbwMAlI7Orck1l34G6WsjV1TKwEkszpWebzRBUWooEgkLt7-ME3jIsRz3E5GvOW4HQZ8GZ8FaUeO_nsqCiC64-fLHxDr5ZEwee3-6IHqagwrbTRLgTaF3zfyX4JXmDlp7lfWcPke-LOfNLutBCmzxyZVhhno5uWRkAIZ0N2gjo9xMHWhZ4uqOdIiaz1X66NgH5e2ty1HP9Y7mCTeTavs668pJ5uIoqqKtbYbF6fkgabBnCC4PnTNqfU0GNa84KDWu7_upNDZPu372dOPoxsfVSeaEX6r1z-_4z6ygorZT8s2PtBdDVW7tk6oqLNyLkCPeWlZIKD_rqGhuBfLSqJMwkS2R2YBZo_4SV2QfEYFVTzke14XoTVRzQE5NzVDhtnOF7qAPOu5VEvBSDpA2IqQlD-JcZq8pyOP-fbvP2C5dHSbHsjdHeLgrgZmapaBiEwHnIdUYqlDHFX7GVaLSA2VfwHa5xT_GMKTfozDSMOIeala3X8j6xHQZ9VlM88uhK8Gw9P_KskXnGYyOQeP8YgsTWl7e0XKjS4tllUMYN-gf0z0ehEdcOupzFP_nnF3eA5SVSzxBnDNYUJPNSRvDG-HUQ4LgNWVpk4dwJRGhaWIJyBrO0nLpA2FWIRzyfKS5wPbmES9ql6dDqrPwHduKadUSrHeHAVU_6SzL7F5frCV9O3Mbaa9FeR0p4jQIK61uymvbmW7u3Ao8l3Rz1fH1SWRRTn_FcA_-g44G62RnaTsaBOPCuHx_DKzEKriLVFJ4Zi8CuaHLp1_Q01NReDE1eHCpdzYIBaK4KWyi_SjfxkhZS834lhqXwCjyErjZB9B1yBu4SYdfCIDE8PBtx3d0Kwh_ZeHNVJjS5Ztd6vpSzCI1ybLJAtgSEECMv2uwRIZvmKfYkMrvuM2y6DLWyQ8z_Q4lKnq4MsuaAB96lhE7Gp10wALrZFPQS5R3gT12q1KiaCQONOWoOiJyla50RpU5B-OKrF6t_AA5p2xYTWPQbZzN3TEQRPT38BFvpo8idokOM/https://www.amazon.com/dp/B0D7PZGZSF/?_encoding=UTF8&pd_rd_i=B0D7PZGZSF&pd_rd_i=B0D7PZGZSF&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=1CJiB&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=WVF54E76MM6282FBDMFG&pd_rd_wg=uOM5B&pd_rd_r=9075e572-51a7-4755-873b-3041d0e0568c",
+      "link_clean": "https://www.amazon.com/dp/B0D7PZGZSF/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0D7PZGZSF&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41eMyG7X10L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/e6935f3a-7567-494c-bb87-d187a0d160cf.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/e6935f3a-7567-494c-bb87-d187a0d160cf.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.5,
+      "reviews": 89,
+      "price": "$19.99",
+      "extracted_price": 19.99
+    },
+    {
+      "position": 2,
+      "asin": "B0DR186FMG",
+      "title": "Raxurt Foldable Dog Pool, 72'' Large Dog Pool for Large Dogs with Reinforced Sidewalls for Stability, Portable Pet Bath Tub for Indoor Outdoor Backyard Use",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JHXWRF-Ib81jEcPxT7Tp_fkAAAGf9GjMoQEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDIgICAWqoVK/clv1c_ek-YBff3Vcba3jI2mMVSJvBwCvKxcAcQ-YNuBs-yNiFxzG8y_lwwpgJx0S_cSVXQN_KLSAg0CR396PDl8kVr7szxV5RPvBz2UXw4cjt7rf3wB1B7a3BJvg8T6-BiRpLzV2GLiU9LzSVZ-AuEF51G-P-9rA0cklP4tgSonxZqzZwKAdt93XQBg7-wgJ7Bd6xmjfASSl0mHwzKyfyNrphBcgdRLx4-DUszFKkcxFye6S4sCb9NGiCqZdsBJbGO0pWwx0sarbA7SBDfCr9WvZx-vI7mfoO80NPRbRYUGfU5-sb8jw0l1RAySE8uZgjgPpR10PInMgtRkp4V739qUf8UB_MByOdGOk81_oCrO-qjMRCJoCxBvthClWf8lSWn3LMIZywNNnBYVz0cga4-6dlZhESAOm5fyQTVtiRNIri8CuBqF8zkbtHXYpB_Kb2MTWHHGzjtygH4UhfmnXzbEHVY2xbk7MyP5EuTaWHDx4tfq2t4PdZk8u-rHKSh_WB_vcdHWPAZkvl4oQXZR99sOZnoBFAw6yDVvB10HiAN5ktyVZyOZghNpySXqaGGXI1vZOmv7lIL2lm7ZtBgSj-NEGNdPTxjj6V32qbX7ubPsdjI_3sgar_KQSQkSP3vn-iNRlaFG0N9naoZFKfvxkswgCTAYjynJyyQgK_yPHtsWTAS92Kn8kU84dcZJc54PF84qbFqeE0ZeaHCOc8WWN1BP07Q67wSahwgPjQ-rUQiWbuiWS5rOqv57ACRpVZqsAixtMplSr9LOuhWjHZj10guEaXK1FrCtlFLudubcy13eBrjzMK5V5yzBGk2NqnEVJSCqzGCZXksACh_L1tUqlQU69OWS4i9ZowvMiesxnBL0whh4dEJ-KlgHLMivck_2GFZFhqhr749XdSaYlb1FVy-G5JWIZ-s--5CBN4gcg4UZ8LgQCCUKgeQPD4nOBbLancFaT6a_R5MAP0l7XNs4ZmW-XPi2OpW4zZAwagytCbFxe0p_ouM82ekGVOgGEHn3ByN8tIiInZaaeafWcpHC1_331NYdoBZdCmdmi51qou1Drb8rJkf_ChSgYQ6XQH8pdxlWT5O5wYvEarjNUt_yoKKYx-tfbh3JTKQx5goUufNMCwrbfujEHxN_W3a5mlUgDP8GrE21sVuVCCa2UuGCEz3IW1IIOxjRx1HQC9iQ0iHWTBhy5zP93vtuDMrSEIp6cNePBgYtKSCfLnY04eJWyz_NoWGMuYwYpEda--oVnDqe9GsrGWjKCnwU7A5iI4NSAf85KUecwDHw752kJSReJJKFryCmTIZ2ITwpQMyFxLB4z_fFmFY5udKXzDsBo5XeIlsKksZLpGc8ZNNmgAlaBvkxppxbPrICT9ygHFZBCvo--Y40iRT98x9YoixgzShgKpB7C76VI_mb32Jb2T_YTsliypEr_ij2auByo768uQp-PuobeNr3jIqE6n179AvGutH7vx-0Jsin6U9MSLWzdwCw3mSipTECIwTHmRsr-Mv7AHX-XmQZ-bb5AxUHEs8PQwa3qYBubmmUDbU4zhHIfj7J5YywKxuAwC2u5LfCJWUfkXvrA/https://www.amazon.com/dp/B0DR186FMG/?_encoding=UTF8&pd_rd_i=B0DR186FMG&pd_rd_i=B0DR186FMG&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=1CJiB&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=WVF54E76MM6282FBDMFG&pd_rd_wg=uOM5B&pd_rd_r=9075e572-51a7-4755-873b-3041d0e0568c",
+      "link_clean": "https://www.amazon.com/dp/B0DR186FMG/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DR186FMG&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41bxXhbSQZL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/23c275bb-8460-42e7-8d3f-9b2e14845c92.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/23c275bb-8460-42e7-8d3f-9b2e14845c92.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.3,
+      "reviews": 206,
+      "price": "$32.98",
+      "extracted_price": 32.98,
+      "old_price": "$59.99",
+      "extracted_old_price": 59.99
+    },
+    {
+      "position": 3,
+      "asin": "B0DQSQGL2H",
+      "title": "Peteast Dog Pool for Large Dogs, Foldable Hard Plastic, 71 x 39 x 12 in | Extra Large Collapsible Pet Bath Tub with Non-Slip Base for Indoor, Outdoor and Backyard Use, Blue",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JJ7NhEHKvbmzzyPSPMKSVusAAAGf9GjMogEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDIgICAFebs-/clv1c_ek-IBXXWUrbe3jK2ZyrC7XdcOO1Dnzj4zkSPhGLDzd7QkFzNIQf1FcOjt5Hg8tq9BwBfy4bZZP8ZZq4Rhr85f4kU_Z6vss7ALhSZKuJnWdwwiZDiRlw4fJl87vIE1hPxo4g96KeEWIbSW-GrW2Tm2zSvcF2YkHeuUlygDvSr1ptH6QveSiXix-3Yg3ZfhJ3bnrHfdMhp3QXH0uKhjTzgkvEJuZdvVB-jll8EOy49KRM6_dj0azd8us3lQzY0-_qdd6HOwzAx8ymwUQthZ_KtWgU5oVhh7r4CCaXxwslY8ChhIWE2T71c5nLjJE1goSggOM0VvLjuTuu6PkvEi5Wwj0t-Uo3b3qPUAJ5MYPa1MaY_MhGV8870K_DZt9gLlHm2loH4pPZwbryXyV51AO60WxsNxAa2iYcpfEVW2VRjEqL_qGQkChy4-ygDw5lzi_lBl5RKp6I2Mo0h7zPTXUx8j2cEzY6PZmXfThEbOBa6oPMvAxdz5vt9Zo-VWkG8DnwFJQKxTPsgpW4yQ7jAJbS8kPPx-HsJ09HgaDVi2Wmtdk-nOxP0q18lgr3s9BHmemuV7Zokz89RlGLU69WobOmP9_9CvBIy4VgGLHwYWH7g0Mv5wQKGQaRedhRTBz7761A8awFiqd1Y-QHh78YKK4GHiBDUTe6pYaTQVlPLPMLG3OeR13Pzw355joUt2RzAqiHiOG45nJjhtHEjxabRz1p-3_tI5zmECyqSPke-4edKKLlpvVtGlTBss9QevkPX-CAaXm2hoCMF7xs3gyInkyVDuabtj2gjJbWggwdql7ssbw1SqRuXagcrqtDMtj_dhm9TTZxz9QHkgNWctApq73JHEReGNi-aZX4otKUNbCpFcuQIVpnZPidAb9CN655xVZnZ6MMCfuzKyj-1dcz6yEUnAYVnLNjFkTzJcXCYpXPmbt_UwRJRMcXFA3lBDfAuufUYF4IyjTKA7sP1BHzGP1h4QNwH39ihXZyX9FA-h1jekwrH-haOBxgMWJKl9mYAvZCt1venCTOQi9nPWbL86UhT_mzrEcMZjjBSi3izdjFcRobeRPhdHLCT_cF3Whzd6z2uJAHWV766UdbzOqVMDVJxfz2MIUeysHmkiPryCzi5kDFh-qNDCJ3VcxQNdF_c6bDdHUW4DUj6GKZGuJCUS2Fw_5FdX7vGEd1hnr5B4bBf9FocXKZ0i1C0sBgN3P1tC3s-b9BR333acI0U9Gbwm_w4LWxzTfolkDXquKMvyKU-CD426_3y0nnKUcKNJ4qvUUhm4vbZARC0h_wj4v1e9RB3tNI-tSXhNXH99L1WmX14u6uo49viVdDtdC7GcE5DXT6qAIoJjNlklDV2jljrFmbbXvy7sSWK2hdQ1wMjhipmNkAHCQpcgvzUhcvUa11qRyYIJ-Xp67WKw6MrxWVLQB3Xqc64erCJFptUp5FPGJj7OKT36sxVpjtaNn8g_WP7qLhmQw8GfqqecjhFYFEhyg0CcmX64eWGb0JT0hFuHMZ6fe_sq5ZHxGVxIDGVUQS6jSyUFU8K2lPEso92MeJdzEounK91cGIxeNDiBzX099C5uH45u54xCEA6ojovP5I/https://www.amazon.com/dp/B0DQSQGL2H/?_encoding=UTF8&pd_rd_i=B0DQSQGL2H&pd_rd_i=B0DQSQGL2H&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=1CJiB&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=WVF54E76MM6282FBDMFG&pd_rd_wg=uOM5B&pd_rd_r=9075e572-51a7-4755-873b-3041d0e0568c",
+      "link_clean": "https://www.amazon.com/dp/B0DQSQGL2H/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DQSQGL2H&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/419Y+chUhWL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/a510621a-d33b-45d2-888e-2c7b81d3d781.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/a510621a-d33b-45d2-888e-2c7b81d3d781.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.3,
+      "reviews": 1012,
+      "price": "$26.99",
+      "extracted_price": 26.99,
+      "old_price": "$37.99",
+      "extracted_old_price": 37.99
+    },
+    {
+      "position": 4,
+      "asin": "B0CSF2LLS3",
+      "title": "Rinseroo Slip-On Bathtub Faucet Sprayer Attachment, 5 Foot Hose | Ultra-Flex Dog Shower Hose Adapter, Portable with Sprayer Pet Showerhead, Attach Tub Spout, No Install for Speedy Washing",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JHYNj9vobTsuJLZeigwMDqsAAAGf9GjMowEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDIgICCDsKi0/clv1c_ek-YBXvWVcbW3TK2ZyrC7XdcOO1Dnzj4zkRfq8-yNiFxzG-ivVQwpv6K-y_0kTkcQQFVZ5_Kt9ht8ow3nZOXJ90a4v87oJQO0Tf7iq92_cR0m1Ntmnm2yrvz0NW0Z_cwBFlFkxPZSZQWAHNp9NRjcUDo4d6Ojh16kqezSjetpPJ_mOkQbeLRahUytA25dJ8wlmFF8mKLlLfoFWX8IEHd-rIdOc5blB7n3cq07KqSB12eRKtqJ-N15XD-fNkmhI9-Y-DU5nCvb03HTojNG2xvTksJg878lkMW9hAevYAT-o7S9PDoTnAA-RHTIowdUuVgdyXE_sqJVAaVauMlPUaSIQpxrH9QZl90KL79Z_9b88S9NoU8I0jZnSKU7_d7Q7J4xxgSJDPYzuivvJP4zbylmb4ZkQohOWqL37x7Os0qf4YkLDg2SKPTa0az-rMVhpWYqeG9P24kukY6EEKDunUuzzFebzS_lo8ASFNABLNRgMgrocwMaXvHkBZsPUUoC07RsEL0VxSCJTK2TMIAdmZlvMU-OSpYZmT8fwZW0pGFvV-dlJfukp3JboIvpKjG2KL2Nda_9JdlmSh9VHj5gQL9Kmm0iyqWnWzROJSUsTZtxDvGlpp1Lx5T0qOQcR33H-MTD-17scrVMZAmIPBhO4gpRBrKQ4kmadmxGukx_cqBhYHEmsR3sSA8PSXK6JOjRekkcHyltSB5LZrshZnvT4qzXy7fGzqUCoHpEEYZ5_ayJgHWY8zp-vavBnLxxBFN7cnRB1NkxxaLZNaxzgvTYAYhgmLAHdkJivRIK7qhwgL7amxr_KOQ-uQRRfKdG7jlUI0QtHKMU8cSbn3ATgxifDpEWcvLArYT-tMBhqBvLrXb-W31lk3nis1K8L15_RdrhRZTrOIEOn5zJnJS3kNLJE2yRt9gKMD38V0cPwocOSyfTuPMTPwH3CyFeHmhAEJB1Ud92ljFPtvB4m9WgEAhkqvQCznJu-Tj38NvZxAoOSFXzzNssC05MMUDjRzRwYFixZrT7RkrJcVN8dxzQnD2zT0xbO9GA4rIcMGCUjnneB-nQk8XMhYPz8j6vhfpFcyUiCVcn5NQOPlnKP8o23ZFY8cEPbNWDu_Rgg_jhcu5e3wKnNvuyLDfHuqVO0nBkwUKxjQGd7kHi4TB6jEQuFeKlhT2od5U61dLEHkpronvGB2ffZWTbj3NBcqqjsxTEgimf_RoSkeyTgnV_xYrKOOvSUjkYf_NPxvkegZyXpES7zTUPIjIIUFE2NWgJUVjFIL4I7eMsbaV782zw6xn-T52TxE6a09iF80SgRlra-QonsitOUsn5g7ndEWuCU-4ixdK9mZE-lpRWgordWEg-jHpOISeHeFQS04tBLmOK3wKlgw-yVxmPzTmCvd1wVMRHGIL9ThWi9oc9Qu4O-SFe3OeW6UTI0QmgCflvf9K5BNXdno3J6pnufZ5vEB82_STDKfTlfhuDNJ9CuH0R67sqOafkh8d2gXNR3NGnrVNyZRwEwOy6tx_XRzuXY1VEVBla5mcFWxhacnFEr_FyvQJbOeJSSen-iUYxRi0ajf2LvF2Ng/https://www.amazon.com/dp/B0CSF2LLS3/?_encoding=UTF8&pd_rd_i=B0CSF2LLS3&pd_rd_i=B0CSF2LLS3&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=1CJiB&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=WVF54E76MM6282FBDMFG&pd_rd_wg=uOM5B&pd_rd_r=9075e572-51a7-4755-873b-3041d0e0568c",
+      "link_clean": "https://www.amazon.com/dp/B0CSF2LLS3/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CSF2LLS3&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41cfK3v65EL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/17d706aa-f330-45b4-9e20-5df5b04abfd8.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/17d706aa-f330-45b4-9e20-5df5b04abfd8.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 3.8,
+      "reviews": 3590,
+      "price": "$33.95",
+      "extracted_price": 33.95
+    },
+    {
+      "position": 5,
+      "asin": "B07CV3F6DS",
+      "title": "Wondurdog Outdoor Dog Wash Garden Hose Nozzle for Bath and Quick Paw Rinses. Splash Shield Handle and Rubber Grooming Brush. Metal Connection. Swivels on Hose with Water Pressure Control.",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JFtkUIsywKkSsw_AdODlHcQAAAGf9GjMpAEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDIgICCWpPBe/clv1c_ek-YBfv3VcbW3jI2m8VSJvBwCvKxcAcQ-ZN3hnO2NaERJlj3RJMAln2Uk7kn91qq4vbLmgcmriAb87Dg9OxekqhlBChGSDcxVYfh7lnWukAnqKkjQcg6CGn2Ahm2JJ9hwUeK2OuycIb1kY5jrc8f_spLYJ0ekk35qMCIjxSpx5BDgYyibjI5xDIvKyfedQG4TdcO7EVPZ7cogtR8NyOI4CudlJod5MeQzzhWvWIrpsY-MTVhbmpIvpUnHq6kBv_m6TBcuZZtY4wivef2uQa22FoxgH5BvTCH3R4McE60-sSYIPN_H2gsIa1xjszLjz5horK2aRdUuerW0m8xqEz-jTC_odXIh0mRYHKX367sQavFUi1maix6mQ5mna0qCr85JZ-9AsYb4MoUIqTKA46k22y8X_Q3jUnbvIzs6IzXZD_2_0wCQg_R6gkm2Uzad7wt7In2zlCR1Hz8c44HsRtN2kgBnfqi-23FXwdKaYz2o6kLezI-5xnQdlREWjezAVWtE_iH06b4sXE8nCGWoBrqlvbUpMbI85SmlJ2XLk8NnsOOsVeyX-5CRbsgyYM_BqsiYHZUN6txV9Vyt_lHyLe8_PzKfb-I_Kd8bvpGOUuCmYohMvKm4UBNbCOMo66F4ixa2klpUjoLcdQVowXmfjVJ8ZBuxJ6NKVGAGNiG6aKg4r7TlBsvlRfbGfVJetDSsQM3SU0JoevyIXFYGjCqZrNWnJQjhr8c1qElZh89J0iTxxteoMuNvti7-O3D2ZmmJtcBXvke3rkFQILIGRT6nQ9z9DLzUvCaBBYGoI8VWve5bLhQIYrMP8-WN6ZHdudp2oF6ixgsKNBdxzfQptRKOMzL8dlyl9DOwGFH4WfcnI_Jznj4IOwPPZZ5ng3H8a4xnHmNWUbvXDv0w6mrGmQp_gd9xGsC8IVenjRdtolJh3iNGv-vXXDUFl_sOZ_OZjU-rQr-Mja78zolyyl03niJM8AI_z9MxKrvK6rjiDz79bOVg_AmulYAS1WMA_F584_yOz4xx7Tk-l7li4NUGnTZEAggaKyHkxYEkK9iZsKEWfI9vKi7uC0HKq_q_n-dHS6IqPHrTxjBleWbM0bC6ucTm00uGa27SFV4a7PZizgLIQn3EepZ6D1wy2lJOSYUQRTfW_xcdTTfQzh2zwjMCRLChYyg8Jfy0g6cPLGUfAJQMSMBusTmbScallbmGzPAQia2z_rwsNjTcEqQ_b4MNLgvq31EAHK7NqR1aclp0dUhLM0qr-cgGls03c89yY-4DPyHXCVWbdkeDm9BIVxxMq1VEphL8_sKVZ5usDDgpA7s8K55pliIpaK4d8Buk23Zpc-m0iYd_GZx5y8K5af9O4mJ1_tzWWZ55CCS6jeY7Gm9UpWPzylc5kk6xB86GsWolPYdSW-0W_66RTcIIQyUwBY__2cH6x2ty4wrCE_Pmhqjxu-3vPtkpDzf3-T81NN-cJ6jNjCJ47Df_2hs0-WboLPjPT8NENqw84Na2mtq_rofsc-2sJttixYDXjsxtn81qEo4nIWUkeVovUZeGlJtQKzOIfJAvaHD2kQ3_NQ74ifk/https://www.amazon.com/dp/B07CV3F6DS/?_encoding=UTF8&pd_rd_i=B07CV3F6DS&pd_rd_i=B07CV3F6DS&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=1CJiB&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=WVF54E76MM6282FBDMFG&pd_rd_wg=uOM5B&pd_rd_r=9075e572-51a7-4755-873b-3041d0e0568c",
+      "link_clean": "https://www.amazon.com/dp/B07CV3F6DS/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07CV3F6DS&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41301D-LuNL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/81ab568c-7ddc-41a9-8ce7-609e2c9e3a89.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/81ab568c-7ddc-41a9-8ce7-609e2c9e3a89.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.5,
+      "reviews": 511,
+      "price": "$39.99",
+      "extracted_price": 39.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "images": [
+        "https://m.media-amazon.com/images/I/61fyicWNP5L.jpg",
+        "https://m.media-amazon.com/images/I/51GZ9h4iRKL.jpg",
+        "https://m.media-amazon.com/images/I/51aTLgD9GmL.jpg",
+        "https://m.media-amazon.com/images/I/51Ux3CjaNxL.jpg",
+        "https://m.media-amazon.com/images/I/51uAw7QOO9L.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 58,
+        "4 star": 42,
+        "3 star": 0,
+        "2 star": 0,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Levels Up My Tub",
+        "text": "I have 2 active herding mix dogs and we do a lot of stuff outdoors so the need arises frequently to have to bathe them. I only have a regular sized bathtub/shower with a fixed shower head so bathing them at home has always been a bit annoying and I found myself going to self bathing places instead, but that does add up in cost especially with 2 of them. I wanted this water pump mostly for at home use just to make that process easier and save me money in the long run.Assembling this whole thing is very easy. It is pretty self explanatory how it all goes together. The water pressure is good, don't expect anything too crazy because it isn't that high powered. But it is certainly enough to rinse the shampoo off and is a big upgrade to me using a cup to pour water over them. I especially like to see the temperature being displayed. Admittedly, that is less important at home where I can control the water temperature easily but I think it will be very helpful for using it in the yard or out adventuring to make sure my sweet dogs are as comfortable as possible.Make sure that the pump is fully submerged or you will run into problems quickly!This pump is pretty small and it comes with a convenient mesh carry bag so it be taken with you on adventures. Now, I am unlikely to be using something like this while camping. But, I do think it will come on handy on day trips when I can use fresh water to rinse to rinse river water off my dogs after a play session when they are already wet. Also, this summer I plan to use it in the yard in our kiddie pools to help rinse dogs and keep them cool in the heat.I was pretty happy with the ease of use of this pump and the overall quality. I was a little skeptical when I got it, but I do like it. Just remember, don't expect like a garden hose level of pressure and make sure to always keep the pump submerged and only use it with fresh water, not mucky water that will clog it quickly. It seems like a great addition to the at home bathing supplies of an adventure dog!",
+        "rating": 5,
+        "date": "June 26, 2026",
+        "author": "Kara",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFS2R3BSQFCFRJ6QHQCQXLDJNRFA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/5d0bd521-34d9-418d-a257-0b3db9342d58._CR62%2C0%2C375%2C375_SX460_SX48_.jpg",
+        "helpful_votes": "2 people found this helpful"
+      },
+      {
+        "position": 2,
+        "title": "Works Well!",
+        "text": "I have a Bichon, born white, but he prefers mud colored hair and as stinky as he can get... rolling on stink bugs, goose poop, etc is a favorite activity. We prefer not to bring him in our tub with all these {not} delightful things on him. Enter, this outdoor shower, the ability to use warmish water in the outside setting is very goodA couple observations. This shower provides the water flow and the easy use for our purpose. It is pretty much lightweight, good size to hold in hand and wash the dog. The quality seems reasonable and with care, as long as the pump holds up, it should, with care, last.A couple technical issues: the pump has to be full submerged so a bucket of water doesn't last very far. It take about 3 buckets to get my small dog wet, shampooed and rinsed and keeping the pump under water the whole time is kind of tricky. We don't have outside faucet, so that means carrying out buckets of water before starting, if we start and refill bucket we then have to chase the {wet} dog who is covered in mud again. The pump is kind of big in the bucket, making quite a bit of the water unusable without refill.I'm not sure about the price, it seems reasonable, but I have never purchased one of the outdoor showers to compare it to.I do think it is a good product and when we work out the issue of having enough water available to keep constant flow I will be really happy. Maybe a kid pool that I leave in the sun to warm the water, then just another bucket for final rinse would work.",
+        "rating": 4,
+        "date": "July 18, 2026",
+        "author": "Linda Thinks",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFVAQKTYUR4Q324G7DURJHAHAYJQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful"
+      },
+      {
+        "position": 3,
+        "title": "Good, Portable Dog Shower with Easy Setup",
+        "text": "I ordered this portable dog shower because I needed to improve the process I use for bathing my two dogs. Now, instead of dumping water on them to rinse them, I can make their bath times a little more pleasant and efficient by rinsing them with an even, steady flow of water.Setting up the shower is very easy. I just attached the hose to the pump, made sure the pump was completely submerged in water, and turned the pump on to start the shower. I liked that the pump is quiet and shows both the remaining battery percentage as well as the water temperature. Sometimes, while I’m bathing my dogs, I get a little worried that I’m using water that is too hot or too cold, so being able to see the water temperature right there on the pump is reassuring.So far I haven’t experienced any problems using this dog shower. It’s a pretty simple thing to use and it works as advertised. The pump itself feels pretty durable and seems like it’ll keep working well for a while to come. I would recommend this to others who need a quick and easy way to bathe a pet.",
+        "rating": 5,
+        "date": "June 22, 2026",
+        "author": "B. Jones",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGJT32OHEX4SUNYYZDBQBNMFVTSQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/402a9cfc-cb92-4aad-9378-9431cdc38af0._CR0%2C0%2C375%2C375_UX460_SX48_.jpg",
+        "images": [
+          "https://m.media-amazon.com/images/I/61fyicWNP5L.jpg",
+          "https://m.media-amazon.com/images/I/51aTLgD9GmL.jpg",
+          "https://m.media-amazon.com/images/I/51Ux3CjaNxL.jpg",
+          "https://m.media-amazon.com/images/I/51GZ9h4iRKL.jpg",
+          "https://m.media-amazon.com/images/I/51uAw7QOO9L.jpg"
+        ],
+        "helpful_votes": "One person found this helpful"
+      },
+      {
+        "position": 4,
+        "title": "Well designed dog grooming wand",
+        "text": "What makes this stand out from the many generic portable shower pumps is the dog shower wand. The silicone comb design lets me work the water down through the fur while gently massaging my dog at the same time. It helps rinse shampoo much better than a regular shower head and my dog seemed much more relaxed during bath time. The pump itself feels like the same style used on many portable camping showers but the quality is good for the price. The LED display is easy to read and showing both the battery level and water temperature is a nice feature even though it does not heat the water. The water pressure is steady and the anti clog filter is easy to remove for cleaning after dealing with pet hair. I also like the portability. The included storage bag keeps everything together and the rechargeable battery means I do not have to worry about cords while bathing outside. The IPX8 waterproof design adds confidence when using it around water and the non slip base helps with stability while the pump is running. It is also versatile enough for camping rinsing muddy boots washing the car or watering plants but the grooming wand is what really separates it from the many other portable shower kits on the market. Durability is mixed. Yes it’s strong for what it is but I wouldn’t neglect it at all. The materials are decent. I place it around consumer/ commercial grade. Overall I think it offers good value for money with good quality ease of use portability durability and compatibility for a variety of outdoor and pet care tasks.",
+        "rating": 4,
+        "date": "July 2, 2026",
+        "author": "Adam .A.",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFGUGXEOYSFTI6ENCIPE3RQKR2QA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful"
+      }
+    ]
+  }
+}

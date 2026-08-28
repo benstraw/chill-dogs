@@ -14,6 +14,9 @@ export default defineConfig({
       destination: 'https://www.chill-dogs.com/subscribe/?utm_source=postcard&utm_medium=print&utm_campaign=offline_flyer',
     },
     '/travel/rhys-road-trip-chill-kit/': '/travel/dog-road-trip-gear/',
+    // Merged into the single flea/tick converter; natural products now live there,
+    // marked with the plant-based treatment. Live for weeks, so this must be a 301.
+    '/safety/best-natural-flea-and-tick-products-for-dogs/': '/safety/best-flea-and-tick-products-for-dogs/',
   },
   integrations: [
     mdx(),
