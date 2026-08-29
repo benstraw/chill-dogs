@@ -1,32 +1,24 @@
 /* ─────────────────────────────────────────────────────────────────────────────
-   hero.base.css — Shared layout, typography, tokens, and focus states
-   for the HeroExperiment component system.
+   hero.base.css — Theme tokens, layout, and presentation for SectionHero.
    All selectors are scoped via Astro's component data attribute when imported
-   inside a <style> block in HeroExperiment.astro.
+   inside SectionHero.astro's <style> block.
 ───────────────────────────────────────────────────────────────────────────── */
 
 /* ── Theme tokens: Cooling ── */
 .hx--cooling {
-  /* Accent palette (used in gradient backgrounds) */
+  /* Accent palette (used in the spotlight background) */
   --hx-a1: hsl(195, 65%, 55%);    /* bright sky — highlights, dot color */
-  --hx-a2: hsl(215, 75%, 28%);    /* deep navy — second layer, split dark half */
+  --hx-a2: hsl(215, 75%, 28%);    /* deep navy */
   --hx-a3: hsl(180, 55%, 42%);    /* teal — third gradient layer */
 
   /* Background surfaces */
-  --hx-dark: hsl(215, 60%, 10%);  /* very dark navy — dark-bg variants */
-  --hx-light: hsl(195, 70%, 96%); /* near-white sky — light-bg variants */
+  --hx-light: hsl(195, 70%, 96%); /* near-white sky */
   --hx-bg-mid: hsl(200, 28%, 88%);/* mid-tone cool — gradient endpoints */
-  --hx-dot-color: hsl(200, 50%, 65%);
 
   /* CTA — dark enough for AA on white (≥ 4.5:1) */
   --hx-cta-bg: hsl(200, 80%, 28%);
   --hx-cta-text: #ffffff;
   --hx-cta-hover: hsl(200, 80%, 22%);
-
-  /* CTA for dark-bg variants — bright accent, dark text */
-  --hx-cta-alt-bg: hsl(195, 65%, 55%);
-  --hx-cta-alt-text: hsl(215, 60%, 10%);
-  --hx-cta-alt-hover: hsl(195, 65%, 48%);
 }
 
 /* ── Theme tokens: Calming ── */
@@ -35,18 +27,12 @@
   --hx-a2: hsl(268, 24%, 38%);    /* muted plum */
   --hx-a3: hsl(160, 38%, 30%);    /* forest green */
 
-  --hx-dark: hsl(268, 38%, 10%);
   --hx-light: hsl(150, 30%, 96%);
   --hx-bg-mid: hsl(155, 18%, 88%);
-  --hx-dot-color: hsl(150, 28%, 68%);
 
   --hx-cta-bg: hsl(155, 50%, 26%);
   --hx-cta-text: #ffffff;
   --hx-cta-hover: hsl(155, 52%, 20%);
-
-  --hx-cta-alt-bg: hsl(150, 34%, 50%);
-  --hx-cta-alt-text: hsl(268, 38%, 10%);
-  --hx-cta-alt-hover: hsl(150, 34%, 43%);
 }
 
 /* ── Theme tokens: Comfort ── */
@@ -55,18 +41,26 @@
   --hx-a2: hsl(20, 35%, 52%);     /* warm terracotta — second layer */
   --hx-a3: hsl(330, 30%, 58%);    /* muted mauve — third gradient layer */
 
-  --hx-dark: hsl(345, 30%, 12%);
-  --hx-light: hsl(345, 40%, 97%); /* blush near-white — light-bg variants */
+  --hx-light: hsl(345, 40%, 97%); /* blush near-white */
   --hx-bg-mid: hsl(20, 20%, 90%); /* warm sand — gradient endpoints */
-  --hx-dot-color: hsl(345, 30%, 75%);
 
   --hx-cta-bg: hsl(345, 38%, 38%);
   --hx-cta-text: #ffffff;
   --hx-cta-hover: hsl(345, 40%, 30%);
+}
 
-  --hx-cta-alt-bg: hsl(345, 42%, 68%);
-  --hx-cta-alt-text: hsl(345, 30%, 12%);
-  --hx-cta-alt-hover: hsl(345, 42%, 60%);
+/* ── Theme tokens: Gear ── */
+.hx--gear {
+  --hx-a1: hsl(262, 50%, 62%);    /* violet — primary accent */
+  --hx-a2: hsl(230, 42%, 34%);    /* deep indigo — second layer */
+  --hx-a3: hsl(282, 34%, 50%);    /* purple — third gradient layer */
+
+  --hx-light: hsl(262, 45%, 96%); /* lavender near-white */
+  --hx-bg-mid: hsl(258, 20%, 88%);
+
+  --hx-cta-bg: hsl(262, 45%, 38%);
+  --hx-cta-text: #ffffff;
+  --hx-cta-hover: hsl(262, 47%, 30%);
 }
 
 /* ── Base section ── */
@@ -75,6 +69,29 @@
   overflow: hidden;
   padding: 5rem 1.5rem;
   text-align: center;
+  background: linear-gradient(
+    150deg,
+    var(--hx-light) 0%,
+    var(--hx-bg-mid) 100%
+  );
+  color: var(--color-charcoal, #2d2d2d);
+}
+
+.hx::before {
+  content: '';
+  position: absolute;
+  inset: -30% -15%;
+  background: conic-gradient(
+    from 240deg at 50% 120%,
+    transparent 0deg,
+    var(--hx-a1) 45deg,
+    var(--hx-a3) 90deg,
+    var(--hx-a2) 120deg,
+    transparent 160deg
+  );
+  filter: blur(72px);
+  opacity: 0.38;
+  pointer-events: none;
 }
 
 .hx-inner {
@@ -100,6 +117,7 @@
   max-width: 560px;
   margin-left: auto;
   margin-right: auto;
+  color: var(--color-text-muted);
 }
 
 /* ── CTAs ── */
@@ -134,7 +152,7 @@
   border-radius: 0.375rem;
 }
 
-/* Light-bg variants: dark CTA for AA contrast */
+/* Dark CTA for AA contrast on the light hero background. */
 .hx-cta--primary {
   background: var(--hx-cta-bg);
   color: var(--hx-cta-text);
@@ -156,50 +174,6 @@
 .hx-cta--secondary:hover {
   background: var(--hx-cta-bg);
   color: var(--hx-cta-text);
-}
-
-/* Dark-bg overrides for variants a, b, e */
-.hx--a .hx-cta--primary,
-.hx--b .hx-cta--primary,
-.hx--e .hx-cta--primary {
-  background: var(--hx-cta-alt-bg);
-  color: var(--hx-cta-alt-text);
-  border-color: var(--hx-cta-alt-bg);
-}
-
-.hx--a .hx-cta--primary:hover,
-.hx--b .hx-cta--primary:hover,
-.hx--e .hx-cta--primary:hover {
-  background: var(--hx-cta-alt-hover);
-  border-color: var(--hx-cta-alt-hover);
-}
-
-.hx--a .hx-cta--secondary,
-.hx--b .hx-cta--secondary,
-.hx--e .hx-cta--secondary {
-  color: rgba(240, 248, 255, 0.88);
-  border-color: rgba(240, 248, 255, 0.45);
-}
-
-.hx--a .hx-cta--secondary:hover,
-.hx--b .hx-cta--secondary:hover,
-.hx--e .hx-cta--secondary:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(240, 248, 255, 0.7);
-}
-
-/* ── Badge (variant g) ── */
-.hx-badge {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.09em;
-  padding: 0.28rem 0.8rem;
-  background: var(--hx-cta-bg);
-  color: #ffffff;
-  border-radius: 9999px;
-  margin-bottom: 1.25rem;
 }
 
 /* ── Mobile ── */

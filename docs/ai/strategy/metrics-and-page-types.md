@@ -3,7 +3,7 @@ title: Keystone Metric and Page Type Definitions
 type: canonical
 domain: strategy
 status: active
-updated: 2026-05-23
+updated: 2026-08-10
 tags:
   - chill-dogs
   - page-types
@@ -114,9 +114,9 @@ Long-form informational guides.
 - Clear route to a converter or collector
 - Limited lifespan for campaign-specific variants
 
-**Examples:** `/` (homepage), hero experiment variant pages (`/cooling/v/a/`, etc.)
+**Examples:** `/` (homepage) and its noindex `/v/` experiment variants
 
-**Note:** Hero experiment variant pages are `noindex` with a canonical pointing to the production URL. Winners get promoted to the default; variant URLs are retired.
+**Note:** Homepage experiment pages are `noindex` with a canonical pointing to `/`. The retired `/cooling/v/` and `/calming/v/` routes are no longer built; their production pages are section collectors.
 
 ---
 

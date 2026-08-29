@@ -1,0 +1,192 @@
+---
+import ProductCardShell from './primitives/ProductCardShell.astro';
+import ProductImageFrame from './primitives/ProductImageFrame.astro';
+import ProductBulletList from './primitives/ProductBulletList.astro';
+import AffiliateOfferStack from './primitives/AffiliateOfferStack.astro';
+import type { EmergencyProduct } from '@data/emergency-products';
+import { merchants } from '@data/products/merchants';
+import { getOffers } from '@data/products/offers';
+
+interface Props {
+  product: EmergencyProduct;
+  pageSlug: string;
+  position: string;
+}
+
+const { product, pageSlug, position } = Astro.props;
+
+const offers = getOffers(product);
+---
+
+<div class="emergency-card">
+  <ProductCardShell id={product.id} fill>
+    <ProductImageFrame slot="image" image={product.image} />
+
+    <p class="emergency-card__badge">{product.badge}</p>
+    <h3 class="emergency-card__name">{product.name}</h3>
+    <p class="emergency-card__use">{product.useCase}</p>
+
+    <ProductBulletList bullets={product.bullets} />
+
+    {product.howItHelps && (
+      <p class="emergency-card__note"><strong>How it helps:</strong> {product.howItHelps}</p>
+    )}
+    {product.sizingNote && (
+      <p class="emergency-card__note"><strong>Fit note:</strong> {product.sizingNote}</p>
+    )}
+    {product.caution && (
+      <p class="emergency-card__note emergency-card__note--caution"><strong>Caution:</strong> {product.caution}</p>
+    )}
+
+    {(product.pros?.length || product.cons?.length) && (
+      <div class="emergency-card__pros-cons">
+        {product.pros?.length ? (
+          <div>
+            <p class="emergency-card__mini-heading emergency-card__mini-heading--pros">Pros</p>
+            <ul class="emergency-card__list emergency-card__list--pros">
+              {product.pros.map((item) => <li>{item}</li>)}
+            </ul>
+          </div>
+        ) : null}
+        {product.cons?.length ? (
+          <div>
+            <p class="emergency-card__mini-heading emergency-card__mini-heading--cons">Cons</p>
+            <ul class="emergency-card__list emergency-card__list--cons">
+              {product.cons.map((item) => <li>{item}</li>)}
+            </ul>
+          </div>
+        ) : null}
+      </div>
+    )}
+
+    <div class="emergency-card__offers">
+      <AffiliateOfferStack
+        offers={offers}
+        product={{ id: product.id, name: product.name, category: product.category }}
+        pageType="converter"
+        pageSlug={pageSlug}
+        position={position}
+        resolveLabel={(offer) =>
+          offer.merchant === 'amazon'
+            ? (product.ctaLabel ?? 'Check Price on Amazon')
+            : merchants[offer.merchant].ctaCopy
+        }
+      />
+    </div>
+  </ProductCardShell>
+</div>
+
+<style>
+  .emergency-card {
+    height: 100%;
+  }
+
+  .emergency-card :global(.product-card) {
+    height: 100%;
+  }
+
+  .emergency-card__badge {
+    color: var(--color-accent);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .emergency-card__name {
+    font-size: var(--text-xl);
+    line-height: var(--leading-tight);
+    margin: 0 0 var(--space-xs);
+  }
+
+  .emergency-card__use {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin: 0 0 var(--space-sm);
+  }
+
+  .emergency-card__note {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    border-left: 3px solid var(--color-border);
+    padding-left: var(--space-md);
+    margin: 0;
+  }
+
+  .emergency-card__note strong {
+    color: var(--color-text);
+  }
+
+  .emergency-card__note--caution {
+    border-left-color: var(--color-accent);
+  }
+
+  .emergency-card__pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-md);
+    margin-top: var(--space-xs);
+  }
+
+  .emergency-card__mini-heading {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0 0 var(--space-sm);
+  }
+
+  .emergency-card__mini-heading--pros {
+    color: var(--color-sage);
+  }
+
+  .emergency-card__mini-heading--cons {
+    color: var(--color-terracotta);
+  }
+
+  .emergency-card__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .emergency-card__list li {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    line-height: var(--leading-normal);
+    margin-bottom: var(--space-xs);
+    padding-left: var(--space-md);
+    position: relative;
+  }
+
+  .emergency-card__list--pros li::before,
+  .emergency-card__list--cons li::before {
+    position: absolute;
+    left: 0;
+    font-weight: var(--weight-bold);
+  }
+
+  .emergency-card__list--pros li::before {
+    content: '+';
+    color: var(--color-sage);
+  }
+
+  .emergency-card__list--cons li::before {
+    content: '-';
+    color: var(--color-terracotta);
+  }
+
+  .emergency-card__offers {
+    margin-top: auto;
+  }
+
+  @media (max-width: 700px) {
+    .emergency-card__pros-cons {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

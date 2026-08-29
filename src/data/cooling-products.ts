@@ -588,11 +588,5 @@ export const categoryMeta: Record<ProductCategory, CategoryMeta> = {
           'Not necessarily. Built-in dispenser bottles (Springer Flip, MalsiPree, Highwave) handle both the water carry and the drinking surface in one unit. A separate collapsible bowl is most useful if you carry a standard bottle or want to offer water from a stream, tap, or water fountain without bringing a dispenser bottle.',
       },
     ],
-    internalLinks: [
-      { label: 'How to Fly With a Dog', href: '/travel/how-to-fly-with-a-dog/' },
-      { label: 'Dog Road Trip Gear', href: '/travel/dog-road-trip-gear/' },
-      { label: 'Car Cooling for Dogs', href: '/cooling/car-cooling-for-dogs/' },
-      { label: 'All Cooling Products', href: '/cooling/best-cooling-products-for-dogs/' },
-    ],
   },
 };

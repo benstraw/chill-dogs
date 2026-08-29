@@ -34,6 +34,11 @@ describe('route constants', () => {
     expect(ROUTES.comfortPuppyCrates).toBe('/comforting/best-puppy-crates/');
   });
 
+  it('uses canonical natural flea and tick routes', () => {
+    expect(ROUTES.naturalFleaTickPrevention).toBe('/safety/natural-flea-and-tick-prevention-for-dogs/');
+    expect(ROUTES.naturalFleaTickProducts).toBe('/safety/best-natural-flea-and-tick-products-for-dogs/');
+  });
+
   it('uses canonical anxiety crates route', () => {
     expect(ROUTES.comfortAnxietyCrates).toBe('/comforting/best-anxiety-dog-crates/');
   });
@@ -59,6 +64,23 @@ describe('route constants', () => {
         ROUTES.calmingAlternatives,
         ROUTES.calmingLickMats,
         ROUTES.calmingCar,
+      ])
+    );
+  });
+
+  it('keeps gear collector definition aligned to canonical routes', () => {
+    const gear = sectionCollectorDefinitions.gear;
+
+    expect(gear.href).toBe(ROUTES.gearHub);
+    expect(ROUTES.gearHub).toBe('/gear/');
+    expect(ROUTES.articles).toBe('/articles/');
+    expect(gear.hero.primaryCta.href).toBe(ROUTES.trackingTop);
+    expect(gear.hero.secondaryCta.href).toBe(ROUTES.roadTrip);
+    expect(gear.converterPriority).toEqual(
+      expect.arrayContaining([
+        ROUTES.trackingTop,
+        ROUTES.dogSnakeBiteEmergencyKit,
+        ROUTES.comfortAirlineCarriers,
       ])
     );
   });

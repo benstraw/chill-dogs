@@ -9,6 +9,7 @@ import { relaxationConverterPages } from './relaxation-converter-pages';
 import { ROUTES } from './routes';
 import { trackerProducts } from './tracking-products';
 import { emergencyProducts } from './emergency-products';
+import { fleaTickProducts } from './flea-tick-products';
 
 export type SitemapPageType = 'converter' | 'collector' | 'attractor' | 'informer';
 export type SitemapCollectorSubtype = 'section' | 'article';
@@ -37,6 +38,7 @@ export const TOPICS = [
   'tracking',
   'gps-tracking',
   'lost-dog-safety',
+  'flea-tick',
   'snake-safety',
   'trail-safety',
   'emergency-prep',
@@ -165,6 +167,14 @@ function trackerHero(productId: string, badge: string, name?: string): SitemapHe
   );
 }
 
+function safetyHero(productId: string, badge: string, name?: string): SitemapHeroProduct {
+  return productHero(
+    fleaTickProducts.find((product) => product.id === productId),
+    badge,
+    name
+  );
+}
+
 function resolveShareTitle(baseTitle: string, ogTitle?: string): string {
   if (baseTitle === 'Home') {
     return 'Chill-Dogs — Cooling & Calming Products for Dogs';
@@ -246,6 +256,37 @@ export const staticSitemapSections: SitemapSection[] = [
         collectorSubtype: 'section',
         topics: ['comfort', 'sleep', 'beds', 'orthopedic', 'crates', 'crate-training', 'flying', 'carriers', 'travel'],
         relatedLabel: 'Comfort & Rest',
+      }),
+      createSitemapPage({
+        baseTitle: 'Gear, Travel & Safety',
+        ogTitle: 'Dog Gear for Travel, Tracking & Safety | Top Picks',
+        description:
+          'GPS trackers, travel gear, and safety essentials for adventurous dogs — from Fi and Garmin collars to snake-bite kits and road-trip prep.',
+        href: ROUTES.gearHub,
+        pageType: 'collector',
+        collectorSubtype: 'section',
+        topics: [
+          'tracking',
+          'gps-tracking',
+          'lost-dog-safety',
+          'snake-safety',
+          'trail-safety',
+          'emergency-prep',
+          'travel',
+          'road-trips',
+          'flying',
+          'carriers',
+        ],
+        relatedLabel: 'Gear, Travel & Safety',
+      }),
+      createSitemapPage({
+        baseTitle: 'All Articles',
+        ogTitle: 'All Dog Care Articles | Cooling, Calming, Comfort & Gear',
+        description:
+          'Every Chill-Dogs guide in one place — the latest cooling, calming, comfort, and gear articles for dogs, sorted by publish date.',
+        href: ROUTES.articles,
+        pageType: 'collector',
+        relatedLabel: 'All Articles',
       }),
       createSitemapPage({
         baseTitle: 'Search',
@@ -442,7 +483,7 @@ export const staticSitemapSections: SitemapSection[] = [
   },
   {
     title: 'Tracking & Safety',
-    description: 'GPS tracker converters and safety collectors — route lost-dog and tracking intent to affiliate product pages.',
+    description: 'GPS tracker converters and safety clusters — route lost-dog, flea/tick, and emergency intent to affiliate product pages.',
     pages: [
       createSitemapPage({
         baseTitle: 'Best Dog GPS Trackers: Cellular vs Off-Grid vs Bluetooth (2026)',
@@ -482,6 +523,22 @@ export const staticSitemapSections: SitemapSection[] = [
         relatedLabel: 'Snake-Bite Emergency Kit',
         heroProduct: emergencyHero('fido-pro-airlift-rescue-sling', 'Top Rescue Sling', 'Fido Pro Airlift Rescue Sling'),
         pubDate: new Date('2026-06-26'),
+      }),
+      createSitemapPage({
+        baseTitle: 'Best Natural Flea and Tick Products for Dogs',
+        description:
+          'Compare natural flea and tick products for dogs — sprays, shampoos, collars and tags, daily chews, and flea combs — with honest notes on what they really do.',
+        href: ROUTES.naturalFleaTickProducts,
+        pageType: 'converter',
+        topics: ['flea-tick', 'travel', 'road-trips'],
+        pinnedRelated: [
+          ROUTES.naturalFleaTickPrevention,
+          ROUTES.roadTrip,
+        ],
+        relatedLabel: 'Natural Flea & Tick Products',
+        heroProduct: safetyHero('wondercide-spray-lemongrass-32oz', 'Best Overall Spray', 'Wondercide Flea, Tick & Mosquito Spray'),
+        pubDate: new Date('2026-06-30'),
+        lastUpdated: new Date('2026-07-28'),
       }),
       createSitemapPage({
         baseTitle: 'Fi Dog Collar Review: GPS Tracking for Everyday Dogs (2026)',
@@ -711,12 +768,12 @@ export const staticSitemapSections: SitemapSection[] = [
     pages: [
       createSitemapPage({
         baseTitle: 'All Dog Products',
-        ogTitle: 'Browse All Dog Products — Cooling, Calming, Comfort & Gear',
+        ogTitle: 'Browse All Dog Products — Cooling, Comfort, and Safety',
         description:
-          'Browse our full catalog of researched dog products — cooling gear, calming aids, comfortable beds, crates, and GPS trackers. Filter by category.',
+          'Browse our full catalog of researched dog products — cooling gear, calming aids, comfort picks, GPS trackers, and flea-and-tick safety products.',
         href: ROUTES.shop,
         pageType: 'converter',
-        topics: ['cooling', 'calming', 'comfort', 'tracking'],
+        topics: ['cooling', 'calming', 'comfort', 'tracking', 'flea-tick'],
         pubDate: new Date('2026-05-07'),
       }),
     ],

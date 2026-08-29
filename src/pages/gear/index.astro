@@ -1,9 +1,5 @@
 ---
-// TODO: Replace with a proper /tracking/ collector hub once the gear cluster is
-// moved to /tracking/ (best-dog-gps-trackers, fi-dog-collar-review,
-// garmin-dog-tracking-collars, airtag-for-dogs). See breadcrumbs.ts — the
-// intermediate segment URL must resolve to avoid GSC 404 errors.
-// Tracked in: move tracking cluster from /gear/ to /tracking/
-export const prerender = true;
-return Astro.redirect('/gear/best-dog-gps-trackers/', 301);
+import SectionCollectorPage from '@components/modules/SectionCollectorPage.astro';
 ---
+
+<SectionCollectorPage collectorKey="gear" />

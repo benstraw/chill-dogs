@@ -9,12 +9,13 @@ const allProducts = productCatalogItems;
 const total = allProducts.length;
 const pageMap = buildProductPageMap();
 
-const pillars = ['cooling', 'calming', 'comfort', 'gear'] as const;
+const pillars = ['cooling', 'calming', 'comfort', 'gear', 'safety'] as const;
 const pillarLabels: Record<string, string> = {
   cooling: 'Cooling',
   calming: 'Calming',
   comfort: 'Comfort',
   gear: 'Gear',
+  safety: 'Safety',
 };
 
 const categoriesByPillar: Record<string, string[]> = {};
@@ -31,8 +32,8 @@ for (const pillar of pillars) {
 
 <BaseLayout
   title="All Dog Products | Chill Dogs"
-  ogTitle="Browse All Dog Products — Cooling, Calming, Comfort & Gear"
-  description="Browse our full catalog of researched dog products — cooling gear, calming aids, comfortable beds, crates, and GPS trackers. Filter by category."
+  ogTitle="Browse All Dog Products — Cooling, Comfort, and Safety"
+  description="Browse our full catalog of researched dog products — cooling gear, calming aids, comfort picks, GPS trackers, and flea-and-tick safety products."
   canonicalUrl={ROUTES.shop}
 >
   <div class="shop-page">
@@ -41,7 +42,7 @@ for (const pillar of pillars) {
     <header class="shop-header">
       <div class="container">
         <h1>All Products</h1>
-        <p class="shop-lede">Every product we've curated across cooling, calming, comfort, and gear.</p>
+        <p class="shop-lede">Every product we've curated across cooling, calming, comfort, gear, and safety.</p>
       </div>
     </header>
 

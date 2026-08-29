@@ -85,6 +85,19 @@ You are starting any task and need to know which docs apply.
 
 ---
 
+### Contacting a charity or running a charity newsletter spotlight
+
+**Read:**
+- [`marketing/charity-outreach-program.md`](marketing/charity-outreach-program.md) — Three-touch outreach sequence, rollout schedule, tracker, success measures
+- [`marketing/charity-outreach-templates.md`](marketing/charity-outreach-templates.md) — Email copy for each touch, placeholders, week 1 drafts
+- [`marketing/newsletter-guide.md`](marketing/newsletter-guide.md) — Format and link rules for the spotlight issue
+- [`marketing/utm-rules.md`](marketing/utm-rules.md) — UTM tagging for links sent to charities
+- [`writing/medical-and-vet-claim-guardrails.md`](writing/medical-and-vet-claim-guardrails.md) — Claim guardrails for outreach copy
+
+**Checklist:** [`checklists/marketing-publish-checklist.md`](checklists/marketing-publish-checklist.md)
+
+---
+
 ### Changing routes, sitemap, schema, or architecture
 
 **Read:**
@@ -105,6 +118,14 @@ You are starting any task and need to know which docs apply.
 - [`engineering/analytics-events.md`](engineering/analytics-events.md) — Preserve tracking attributes
 
 **Checklist:** [`checklists/coding-agent-finish-checklist.md`](checklists/coding-agent-finish-checklist.md)
+
+---
+
+### Setting up an environment, or a script fails on a key or a network error
+
+**Read:**
+- [`engineering/environment-and-integrations.md`](engineering/environment-and-integrations.md) — Env vars and outbound hosts per script, plus local/web/CI/Vercel config
+- [`engineering/build-and-test-commands.md`](engineering/build-and-test-commands.md) — What each command does
 
 ---
 

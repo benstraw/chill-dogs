@@ -7,25 +7,26 @@ import FAQ from '@components/modules/FAQ.astro';
 import Disclosure from '@components/modules/Disclosure.astro';
 import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
 import JsonLd from '@components/JsonLd.astro';
-import MerchantAffiliateLink from '@components/MerchantAffiliateLink.astro';
-import ProductBulletList from '@components/modules/primitives/ProductBulletList.astro';
-import {
-  emergencyCategoryMeta,
-  emergencyProducts,
-  getEmergencyProductsByCategory,
-  type EmergencyProductCategory,
-} from '@data/emergency-products';
-import { merchants } from '@data/products/merchants';
-import { getOffers } from '@data/products/offers';
+import EmergencyCategorySection from '@components/modules/EmergencyCategorySection.astro';
+import { emergencyProducts, type EmergencyProductCategory } from '@data/emergency-products';
+import { getPrimaryOffer } from '@data/products/offers';
 
 const pageSlug = 'dog-snake-bite-emergency-kit';
 
 const categories: EmergencyProductCategory[] = ['carry', 'stretcher', 'first-aid', 'muzzle', 'warmth-control', 'prevention'];
 
+/**
+ * The hero pick doubles as the page's single above-the-fold CTA. It is the same
+ * product `content-sitemap.ts` already designates as this page's heroProduct, so
+ * the share image and the primary CTA stay in sync.
+ */
+const heroProduct = emergencyProducts.find((product) => product.id === 'fido-pro-airlift-rescue-sling');
+const heroOffer = heroProduct ? getPrimaryOffer(heroProduct) : undefined;
+
 const tocHeadings = [
-  { label: 'Safety Note', anchor: 'safety-note' },
   { label: 'Six Jobs', anchor: 'six-jobs' },
   { label: 'Carry Slings', anchor: 'carry' },
+  { label: 'Safety Note', anchor: 'safety-note' },
   { label: 'Dog Stretchers', anchor: 'stretcher' },
   { label: 'First Aid Kits', anchor: 'first-aid' },
   { label: 'Muzzle Safety', anchor: 'muzzle' },
@@ -90,12 +91,41 @@ const itemListSchema = {
     title="Snake-Bite Emergency Kit for Dogs"
     subtitle="The best snakebite emergency kit has nothing to do with venom removal. It is gear that helps you carry, control, and warm your dog as you get to a veterinarian as soon as possible."
     disclaimer="As an Amazon Associate and a Chewy Affiliate, we earn from qualifying purchases."
-    primaryCta={{ label: 'Start With Carry Gear', href: '#carry' }}
+    primaryCta={
+      heroOffer && heroProduct
+        ? {
+            label: 'Check Price on the Top Rescue Sling',
+            href: heroOffer.url,
+            offer: heroOffer,
+            product: { id: heroProduct.id, name: heroProduct.name, category: heroProduct.category },
+          }
+        : { label: 'Start With Carry Gear', href: '#carry' }
+    }
     secondaryCta={{ label: 'Read the Safety Guide', href: ROUTES.rattlesnakeSafetyForDogs }}
     pageSlug={pageSlug}
   />
 
   <div class="converter-content">
+    <Toc headings={tocHeadings} pageSlug={pageSlug} />
+
+    <section class="jobs-section" id="six-jobs">
+      <div class="section-inner">
+        <h2>Items in your kit should allow you to:</h2>
+        <div class="job-grid">
+          <div class="job-card"><strong>Carry</strong><span>Move your dog without making them walk.</span></div>
+          <div class="job-card"><strong>Control</strong><span>Keep a scared dog secure around cars, trails, and doors.</span></div>
+          <div class="job-card"><strong>Restrain</strong><span>Reduce pain-biting risk by using a muzzle when it is safe to do so.</span></div>
+          <div class="job-card"><strong>Warm</strong><span>Keep your dog quiet and warm on the way to care.</span></div>
+          <div class="job-card"><strong>Call</strong><span>Keep phone power available to reach the emergency vet.</span></div>
+          <div class="job-card"><strong>Prepare</strong><span>Keep clean supplies and vet info ready.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <Disclosure />
+
+    <EmergencyCategorySection category={categories[0]} pageSlug={pageSlug} />
+
     <section class="safety-section" id="safety-note">
       <div class="section-inner">
         <span class="section-label">Read first</span>
@@ -134,94 +164,9 @@ const itemListSchema = {
       </div>
     </section>
 
-    <Toc headings={tocHeadings} pageSlug={pageSlug} />
-
-    <section class="jobs-section" id="six-jobs">
-      <div class="section-inner">
-        <h2>Items in your kit should allow you to:</h2>
-        <div class="job-grid">
-          <div class="job-card"><strong>Carry</strong><span>Move your dog without making them walk.</span></div>
-          <div class="job-card"><strong>Control</strong><span>Keep a scared dog secure around cars, trails, and doors.</span></div>
-          <div class="job-card"><strong>Restrain</strong><span>Reduce pain-biting risk by using a muzzle when it is safe to do so.</span></div>
-          <div class="job-card"><strong>Warm</strong><span>Keep your dog quiet and warm on the way to care.</span></div>
-          <div class="job-card"><strong>Call</strong><span>Keep phone power available to reach the emergency vet.</span></div>
-          <div class="job-card"><strong>Prepare</strong><span>Keep clean supplies and vet info ready.</span></div>
-        </div>
-      </div>
-    </section>
-
-    <Disclosure />
-
-    {categories.map((category) => {
-      const meta = emergencyCategoryMeta[category];
-      const products = getEmergencyProductsByCategory(category);
-      return (
-        <section class={`product-section product-section--${category}`} id={category}>
-          <div class="section-inner">
-            <div class="section-header">
-              <span class="section-label">{meta.label}</span>
-              <h2>{meta.title}</h2>
-              <p>{meta.intro}</p>
-            </div>
-            {products.length > 0 && (
-              <div class="product-grid">
-                {products.map((product, productIndex) => (
-                  <article class="product-card" id={product.id}>
-                    <!-- TODO: Add images[] to EmergencyProduct and migrate this bespoke single-image
-                         markup to ProductImageFrame so snake-bite emergency gear cards support the
-                         shared multi-image gallery. Audit tracking/accessory and /shop/ cards at the
-                         same time; those surfaces also still render only a primary image. -->
-                    {product.image && (
-                      <div class="product-image">
-                        <img src={product.image.src} alt={product.image.alt} loading="lazy" width="300" height="300" />
-                      </div>
-                    )}
-                    <div class="product-body">
-                      <p class="badge">{product.badge}</p>
-                      <h3>{product.name}</h3>
-                      <p class="use-case">{product.useCase}</p>
-                      <ProductBulletList bullets={product.bullets} />
-                      {product.howItHelps && <p class="how-it-helps"><strong>How it helps:</strong> {product.howItHelps}</p>}
-                      {product.sizingNote && <p class="note"><strong>Fit note:</strong> {product.sizingNote}</p>}
-                      {product.caution && <p class="note note--caution"><strong>Caution:</strong> {product.caution}</p>}
-                      {(product.pros?.length || product.cons?.length) && (
-                        <div class="pros-cons">
-                          {product.pros?.length ? (
-                            <div>
-                              <p class="mini-heading">Pros</p>
-                              <ul>{product.pros.map((item) => <li>{item}</li>)}</ul>
-                            </div>
-                          ) : null}
-                          {product.cons?.length ? (
-                            <div>
-                              <p class="mini-heading">Cons</p>
-                              <ul>{product.cons.map((item) => <li>{item}</li>)}</ul>
-                            </div>
-                          ) : null}
-                        </div>
-                      )}
-                      <div class="product-cta-wrap">
-                        {getOffers(product).map((offer, offerIndex) => (
-                          <MerchantAffiliateLink
-                            offer={offer}
-                            product={{ id: product.id, name: product.name, category: product.category }}
-                            class={`product-cta${offerIndex > 0 ? ' product-cta--secondary' : ''}`}
-                            label={offer.merchant === 'amazon' ? (product.ctaLabel ?? 'Check Price on Amazon') : merchants[offer.merchant].ctaCopy}
-                            pageType="converter"
-                            pageSlug={pageSlug}
-                            position={`${category}-${productIndex + 1}-${offerIndex + 1}`}
-                          />
-                        ))}
-                      </div>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            )}
-          </div>
-        </section>
-      );
-    })}
+    {categories.slice(1).map((category) => (
+      <EmergencyCategorySection category={category} pageSlug={pageSlug} />
+    ))}
 
     <section class="skip-section" id="skip-these">
       <div class="section-inner">
@@ -263,12 +208,10 @@ const itemListSchema = {
 
   .safety-section,
   .jobs-section,
-  .skip-section,
-  .product-section {
+  .skip-section {
     padding: var(--space-2xl) 0;
   }
 
-  .product-section:nth-of-type(even),
   .jobs-section,
   .skip-section {
     background: var(--color-surface);
@@ -290,12 +233,6 @@ const itemListSchema = {
     margin: 0 0 var(--space-md);
   }
 
-  .section-header {
-    max-width: var(--max-width-prose);
-    margin-bottom: var(--space-xl);
-  }
-
-  .section-header p,
   .safety-section p,
   .skip-item p {
     color: var(--color-text-muted);
@@ -303,9 +240,15 @@ const itemListSchema = {
   }
 
   .do-dont-grid,
-  .job-grid,
   .job-grid {
+    display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-md);
+  }
+
+  .do-dont-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: var(--space-lg);
   }
 
   .do-dont-card,
@@ -322,13 +265,11 @@ const itemListSchema = {
     margin: 0 0 var(--space-sm);
   }
 
-  .do-dont-card ul,
-  .pros-cons ul {
+  .do-dont-card ul {
     padding-left: 1.1rem;
   }
 
-  .do-dont-card li,
-  .pros-cons li {
+  .do-dont-card li {
     color: var(--color-text-muted);
     line-height: var(--leading-relaxed);
   }
@@ -358,109 +299,6 @@ const itemListSchema = {
     line-height: var(--leading-relaxed);
   }
 
-  .product-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--space-xl);
-  }
-
-  .product-card {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-md);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    background: var(--color-surface);
-    padding: var(--space-lg);
-  }
-
-  .product-image {
-    min-height: 180px;
-    border-radius: var(--radius-sm);
-    background: #fff;
-    border: 1px solid var(--color-border);
-    display: grid;
-    place-items: center;
-    overflow: hidden;
-    padding: var(--space-md);
-  }
-
-  .product-image img {
-    max-width: 180px;
-    max-height: 180px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    display: block;
-  }
-
-  .badge {
-    color: var(--color-accent);
-    font-size: var(--text-sm);
-    font-weight: var(--weight-bold);
-    margin: 0 0 var(--space-xs);
-    text-transform: uppercase;
-  }
-
-  .product-card h3 {
-    font-size: var(--text-xl);
-    margin: 0 0 var(--space-sm);
-  }
-
-  .use-case,
-  .how-it-helps,
-  .note {
-    color: var(--color-text-muted);
-    line-height: var(--leading-relaxed);
-  }
-
-  .note {
-    border-left: 3px solid var(--color-border);
-    padding-left: var(--space-md);
-  }
-
-  .note--caution {
-    border-left-color: var(--color-accent);
-  }
-
-  .pros-cons {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--space-md);
-    margin-top: var(--space-md);
-  }
-
-  .mini-heading {
-    color: var(--color-text);
-    font-weight: var(--weight-semibold);
-    margin: 0 0 var(--space-xs);
-  }
-
-  .product-cta-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-sm);
-    margin-top: var(--space-lg);
-  }
-
-  .product-cta {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 44px;
-    border-radius: var(--radius-sm);
-    background: var(--color-accent);
-    color: #fff;
-    font-weight: var(--weight-semibold);
-    padding: var(--space-sm) var(--space-lg);
-    text-decoration: none;
-  }
-
-  .product-cta:hover {
-    color: #fff;
-    filter: brightness(0.95);
-  }
-
   .skip-list {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -468,21 +306,17 @@ const itemListSchema = {
   }
 
   @media (max-width: 980px) {
-    .product-grid,
     .job-grid,
     .skip-list {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 
   @media (max-width: 700px) {
     .do-dont-grid,
-    .pros-cons {
+    .job-grid,
+    .skip-list {
       grid-template-columns: 1fr;
-    }
-
-    .product-image {
-      min-height: 160px;
     }
   }
 </style>

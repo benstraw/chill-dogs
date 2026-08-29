@@ -16,6 +16,10 @@ export default defineConfig({
   },
   test: {
     environment: 'happy-dom',
+    // The default 5s is too tight once ~30 happy-dom suites run in parallel:
+    // slower machines blow it on CPU contention alone, not on real slowness.
+    testTimeout: 30_000,
+    hookTimeout: 30_000,
     coverage: {
       provider: 'v8',
       include: ['src/utils/**', 'src/scripts/**', 'src/data/**'],

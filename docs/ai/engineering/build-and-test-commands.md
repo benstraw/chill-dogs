@@ -14,6 +14,7 @@ related:
   - architecture.md
   - routes-and-sitemap.md
   - seo-and-schema.md
+  - environment-and-integrations.md
 ---
 
 # Build and Test Commands
@@ -100,6 +101,15 @@ bun run check:asins -- --quiet # Issues only
 
 **Env vars needed:** None. This checks Amazon product pages directly.
 
+Results split into two kinds, because they call for different responses:
+
+- **Dead links** (`REMOVED`, `UNAVAILABLE`, `ERROR n`) — the product is gone or unbuyable. Fix the product record.
+- **Inconclusive** (`RATE LIMITED`, `UNKNOWN`, `FETCH ERROR`) — Amazon would not answer. Says nothing about the product. Retried twice with backoff under a 5-minute global budget before being recorded.
+
+Exits 1 on any dead link, and also when more than 25% of results are inconclusive — a run that could not see Amazon has not verified anything, and reporting it as a pass would be worse than reporting nothing. Amazon throttles unauthenticated traffic from shared CI runner IPs, so the inconclusive path is normal there, not a bug.
+
+**Cannot run in a proxied agent container** — it runs under Bun. See [`environment-and-integrations.md`](environment-and-integrations.md).
+
 ---
 
 ### `bun run check:amazon`
@@ -132,12 +142,76 @@ Use for manual re-submission after a batch of content changes.
 ### `bun run check:ai-docs`
 
 Validates the AI knowledge graph in `docs/ai/`. Checks:
-- All `.md` files have YAML frontmatter
-- Required frontmatter keys are present (`title`, `type`, `domain`, `status`, `updated`, `tags`, `related`)
-- Each file has `## Use this when` and `## Related knowledge` sections
-- Relative Markdown links resolve to existing files
+- All `.md` files have frontmatter that parses as YAML
+- Required frontmatter keys are present and non-empty (`title`, `type`, `domain`, `status`, `updated`, `tags`, `related`)
+- Each file has `## Use this when` and `## Related knowledge` sections (`type: plan` uses `## Context`)
+- `related:` entries resolve to existing files, relative to the doc's own directory
+- Relative Markdown links resolve, **including their `#anchors`**
 
-Run after adding or modifying files in `docs/ai/`.
+Run after adding or modifying files in `docs/ai/`. Takes an optional directory argument (`node scripts/validate-ai-docs.mjs <dir>`), which is how its own test suite drives it.
+
+It is built to be lenient about legitimate Markdown variation, so that a failure means real rot rather than a style disagreement:
+
+- Fenced code blocks are stripped before anything is extracted, so a doc that *demonstrates* a link, a heading, or frontmatter never has the example validated as real.
+- Anchors match GitHub's slug algorithm — formatting and punctuation stripped, repeated headings suffixed `-1`, `-2` — and also accept explicit `{#custom-id}` and `<a id="…">` anchors.
+- A mistyped anchor gets a "did you mean" suggestion rather than a bare failure.
+
+`src/__tests__/validate-ai-docs.test.ts` pins both directions: that it catches rot, and that the cases above do not trip it. Add a case there before tightening a rule — a doc linter that cries wolf gets disabled, and then nothing is checked at all.
+
+---
+
+### `bun run fetch:chewy`
+
+Pulls Chewy product metadata from the Impact catalog API. Runs `scripts/fetch-chewy-data.ts`.
+
+Data written by this script is **diagnostic only** — canonical product copy, image choices, and merchant offers stay hand-edited in `src/data/products/`. Never let a fetch overwrite editorial copy.
+
+```bash
+bun run fetch:chewy --search "cooling mat"
+bun run fetch:chewy --item-id 12345
+bun run fetch:chewy --stale --days 60   # Refresh only stale cache entries
+bun run fetch:chewy --clear-cache
+```
+
+**Env vars needed:** `IMPACT_ACCOUNT_SID`, `IMPACT_AUTH_TOKEN`, `CHEWY_IMPACT_CAMPAIGN_ID`. Optional `CHEWY_IMPACT_CATALOG_ID` sets a default for `--catalog-id`.
+
+---
+
+### `bun run chewy-link`
+
+Mints Chewy affiliate tracking links through Impact. Runs `scripts/chewy-link.ts`.
+
+```bash
+bun run chewy-link --url https://www.chewy.com/dp/12345
+bun run chewy-link:verify          # Confirm Impact credentials resolve
+bun run chewy-link:csv input.csv   # Batch-convert a CSV of Chewy URLs
+```
+
+**Env vars needed:** `IMPACT_ACCOUNT_SID`, `IMPACT_AUTH_TOKEN`, `CHEWY_IMPACT_CAMPAIGN_ID`, `CHEWY_IMPACT_AD_ID`. Setting `CHEWY_IMPACT_BASE_URL` to a pre-resolved tracking base skips the Impact API round trip.
+
+---
+
+### `scripts/fetch-amazon-data.ts`
+
+Fetches Amazon product metadata into the local provider cache. Not wired to a `package.json` script — invoke it directly:
+
+```bash
+bun run scripts/fetch-amazon-data.ts --help
+```
+
+Like the Chewy fetch, output is diagnostic only and must not auto-overwrite product copy or images. Verify results afterwards with `bun run check:amazon`.
+
+**Env vars needed:** `SERP_API_KEY` (preferred, 250 free searches/month) or `SEARCHAPI_KEY` (backup, 100/month). The script picks whichever is set.
+
+---
+
+### `bun run og:gen` / `bun run og:force`
+
+Generates product-style OG share images via Satori. `og:force` regenerates images that already exist.
+
+Generated files land in `public/og/`, which is gitignored except for product-style JPGs that are committed deliberately with `git add -f`.
+
+**Env vars needed:** None. `PUBLIC_SITE_URL` affects the URLs baked into the images.
 
 ---
 
@@ -151,6 +225,7 @@ Run after adding or modifying files in `docs/ai/`.
 | Added or changed products | `bun run check:amazon` and `bun run check:asins` |
 | Added or changed `docs/ai/` files | `bun run check:ai-docs` |
 | Verify final production output | `bun run build && bun run preview` |
+| A script fails on a missing key or a network error | [`environment-and-integrations.md`](environment-and-integrations.md) |
 
 ---
 
@@ -179,3 +254,4 @@ Commits are blocked if tests fail. Fix the issue before retrying — do not skip
 - [`architecture.md`](architecture.md) — Build pipeline details and file structure
 - [`routes-and-sitemap.md`](routes-and-sitemap.md) — What needs to be updated when pages change
 - [`seo-and-schema.md`](seo-and-schema.md) — OG meta constraints enforced by tests
+- [`environment-and-integrations.md`](environment-and-integrations.md) — Env vars, network allowlist, CI, and session setup

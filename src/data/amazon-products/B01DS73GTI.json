@@ -1,0 +1,917 @@
+{
+  "search_metadata": {
+    "id": "6a6d844b932b0e1f55a65090",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/obMdu5YHSm1Y3-ySpLMxSQ/6a6d844b932b0e1f55a65090.json",
+    "created_at": "2026-08-01 05:29:47 UTC",
+    "processed_at": "2026-08-01 05:29:47 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B01DS73GTI/?",
+    "raw_html_file": "https://serpapi.com/searches/obMdu5YHSm1Y3-ySpLMxSQ/6a6d844b932b0e1f55a65090.html",
+    "total_time_taken": 7.21
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B01DS73GTI",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B01DS73GTI",
+    "title": "TropiClean Maximum Strength Flea Spray for Dogs and Home, 16oz",
+    "link": "https://www.amazon.com/TropiClean-Natural-Bedding-Strength-Family-Friendly/dp/B01DS73GTI/",
+    "link_clean": "https://www.amazon.com/dp/B01DS73GTI/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B01DS73GTI&device=desktop&engine=amazon_product",
+    "variants": [
+      {
+        "title": "Scent",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B01DS73GTI",
+            "name": "Dog Spray",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B01DS73GTI&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0DNRM32MC",
+            "name": "Easy Mist",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DNRM32MC&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B06XF42529",
+            "name": "Yard Spray",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B06XF42529&device=desktop&engine=amazon_product"
+          }
+        ]
+      },
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B01DS73GTI",
+            "name": "16 Fl Oz (Pack of 1)",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B01DS73GTI&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0DNRM32MC",
+            "name": "14 oz",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DNRM32MC&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B06XF42529",
+            "name": "32 Fl Oz (Pack of 1)",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B06XF42529&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the TropiClean Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/71VbhkahZ+L._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/71VbhkahZ+L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71jBa+fy5QL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81Bk33YHUEL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/814+hkhLdLL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/714FQmcA8yL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81uc2i4+pXL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81hmXVgN7CL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81FnpOPwJNL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.3,
+    "reviews": 4818,
+    "bought_last_month": "1K+ bought in past month",
+    "discount": "-5%",
+    "price": "$14.99",
+    "extracted_price": 14.99,
+    "price_unit": "$0.94 / fluid ounce",
+    "extracted_price_unit": 0.94,
+    "save_with_coupon": "Save an extra 15% on your first Subscribe and Save order.",
+    "prime": true,
+    "delivery": [
+      "FREE delivery Thursday, August 6 on orders shipped by Amazon over $35"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "buy_new": {
+      "caption": "One-time purchase",
+      "price": "$14.99",
+      "extracted_price": 14.99,
+      "price_unit": "$0.94 / fluid ounce",
+      "extracted_price_unit": 0.94,
+      "delivery": [
+        "FREE delivery Thursday, August 6 on orders shipped by Amazon over $35"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "Cosmos Pet Care",
+          "details": {
+            "heading": "Sold by",
+            "content": "Cosmos Pet Care"
+          },
+          "link": {
+            "text": "Cosmos Pet Care",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=AMRMVU45RSYKX&asin=B01DS73GTI&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    },
+    "subscribe_and_save": {
+      "caption": "Subscribe & Save",
+      "price": "$14.24",
+      "extracted_price": 14.24,
+      "price_unit": "$0.89 / fluid ounce",
+      "extracted_price_unit": 0.89,
+      "delivery": [
+        "FREE delivery Thursday, August 6 on orders shipped by Amazon over $35"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "Cosmos Pet Care",
+          "details": {
+            "heading": "Sold by",
+            "content": "Cosmos Pet Care"
+          },
+          "link": {
+            "text": "Cosmos Pet Care",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=AMRMVU45RSYKX&asin=B01DS73GTI&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "subscription": "No fees. Skip or cancel anytime."
+      }
+    }
+  },
+  "item_ingredients": [
+    "Active Ingredients: Clove Oil 0.17%, Lemongrass Oil 1.53%, Cedarwood Oil 0.13%, Cinnamon Oil 0.18%, Sodium Lauryl Sulfate 2.50% Inert Ingredients: Water, Isopropyl Alcohol, Glycerin 95.49% TOTAL: 100%"
+  ],
+  "item_specifications": {
+    "brand": "TropiClean",
+    "item_form": "Spray",
+    "scent": "Dog Spray",
+    "item_weight": "16 ounces",
+    "active_ingredients": "Lemongrass Oil, Clove Oil, Cedarwood Oil, Cinnamon Oil, Sodium Lauryl Sulfate",
+    "item_volume": "16 fluid ounces",
+    "allergen_information": "Gluten Free",
+    "unit_count": "16 Fluid Ounces",
+    "color": "Dog Spray",
+    "age_range_description": "Adult"
+  },
+  "about_item": [
+    "PET & BEDDING SPRAY — Flea and tick prevention for dogs is guaranteed to kill fleas, ticks, larvae and eggs by contact and repels pests for up to two weeks. Scent of lemongrass & cedarwood oil creates a natural home essence."
+  ],
+  "bought_together": [
+    {
+      "position": 1,
+      "title": "TropiClean Maximum Strength Flea Spray for Dogs and Home, 16oz",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71VbhkahZ+L._AC_UL116_SR116,116_.jpg",
+      "price": "$14.50",
+      "extracted_price": 14.5,
+      "price_unit": "$0.91/fluid ounce",
+      "extracted_price_unit": 0.91,
+      "delivery": [
+        "Get it as soon as Friday, Aug 7"
+      ],
+      "stock": "Only 1 left in stock - order soon."
+    },
+    {
+      "position": 2,
+      "title": "TropiClean Flea and Tick Shampoo for Dogs, Max Strength Formula, 20oz",
+      "link": "https://www.amazon.com/TropiClean-FTMXSH20Z-Parent-Shampoos-only/dp/B01EUMTKLS/ref=pd_bxgy_thbs_d_sccl_1/000-0000000-0000000?pd_rd_w=8W0tq&content-id=amzn1.sym.9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_p=9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_r=DA1T4PRT7X64G3M2HX4T&pd_rd_wg=USGZr&pd_rd_r=4deae8e2-ae9e-4fb8-bc0f-06c73ad37533&pd_rd_i=B01EUMTKLS&psc=1",
+      "asin": "B01EUMTKLS",
+      "link_clean": "https://www.amazon.com/TropiClean-FTMXSH20Z-Parent-Shampoos-only/dp/B01EUMTKLS/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B01EUMTKLS&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/710AI93Fk3L._AC_UL116_SR116,116_.jpg",
+      "price": "$17.99",
+      "extracted_price": 17.99,
+      "price_unit": "$0.90/fluid ounce",
+      "extracted_price_unit": 0.9,
+      "stock": "In Stock"
+    }
+  ],
+  "videos": [
+    {
+      "position": 1,
+      "title": "Flea &amp; tick spray for your dog!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/b3a16171-1544-42f2-814c-167652760719/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61zA0Zu1MlL.jpg",
+      "duration": "0:18",
+      "vendor": "Golden Finds",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/512Q5QX5j9L._CR0,0,388,388_._FMjpg_._SL34_.jpg",
+      "date": "Apr 25, 2026"
+    },
+    {
+      "position": 2,
+      "title": "FINALLY! A NATURAL Flea & Tick Dog & Bed Spray - Nice Scent!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/1be6f664-212a-48e9-8244-520848f87ad0/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61yeFq8ekkL.jpg",
+      "duration": "1:57",
+      "vendor": "Paul Cline",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/41RbiCpZkNL._CR0,0,250,250_._FMjpg_._SL34_.jpg",
+      "date": "Apr 25, 2026"
+    },
+    {
+      "position": 3,
+      "title": "Honest review, must watch!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/bf902f13-3528-4593-85e2-dc876e3dc49c/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61Qz4vBBKyL.jpg",
+      "duration": "0:37",
+      "vendor": "Michelle",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/B1-IjXAkkUL._CR0,0,3022,3022_._FMjpg_._SL34_.jpg",
+      "date": "Jan 14, 2024"
+    },
+    {
+      "position": 4,
+      "title": "Can This Product Really Repel Fleas? This Is My Experience..",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/85bc2af3-4a7d-4c40-8fd0-1c8edf83612e/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/A1ObJjs1yhL.jpg",
+      "duration": "0:29",
+      "vendor": "🏆 Top-Rated Review: Jonny✅",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/71eGXyVOM8L._CR7,8,591,592_._FMjpg_._SL34_.jpg",
+      "date": "May 10, 2023"
+    },
+    {
+      "position": 5,
+      "title": "TropiClean Natural Flea & Tick Dog & Bedding Spray",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/3ad4b6c3-5966-43c7-aa55-495f8247e35b/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/51lUk1lsN4L.jpg",
+      "duration": "0:18",
+      "vendor": "Cosmos Corporation",
+      "date": "Aug 16, 2019"
+    },
+    {
+      "position": 6,
+      "title": "Does this dog groomer recommend?!?",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/15c5a417-d663-49b5-9f78-83bf8d15b0d9/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/91mvVmxxmzL.jpg",
+      "duration": "0:33",
+      "vendor": "✅ Shop Redeemed ✅",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/912OidElC8L._CR0,0,2320,2320_._FMjpg_._SL34_.jpg",
+      "date": "Feb 24, 2024"
+    },
+    {
+      "position": 7,
+      "title": "Fight fleas + ticks naturally, made with natural active ingredients!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/514d041d-8181-4e98-856a-27ecf2bb02c0/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61i5g8J+fUL.jpg",
+      "duration": "0:18",
+      "vendor": "Cosmos Corporation",
+      "date": "Aug 16, 2019"
+    },
+    {
+      "position": 8,
+      "title": "What You Must Know Before Buying (Honest Review)",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/7ab5a83f-b8f0-4f8b-8719-6a9d44ba2014/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/91PWlRIOWKL.png",
+      "duration": "0:50",
+      "vendor": "Kevin (Honest Reviewer)",
+      "vendor_thumbnail": "https://images-na.ssl-images-amazon.com/images/S/influencer-profile-image-prod/logo/kevin-financialtutor_1668792750497_original._FMjpg_._SL34_.jpeg",
+      "date": "Jan 2, 2023"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": "1",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/2f2f544e-d93c-4093-8de9-b061f7587f1b.__CR0,0,3050,1250_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 2,
+      "carousel_images": [
+        {
+          "position": 1,
+          "title": "5",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/eeec7648-aecd-4b8e-9a8a-24c3db159da5.__CR0,0,3050,1250_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 2,
+          "title": "4",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/ade3d960-f2c7-423d-9670-651fa5be7dad.__CR0,0,3050,1250_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 3,
+          "title": "3",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/8f2d6d71-ac47-4c15-8c2c-8bfdb0018c7c.__CR0,0,3050,1250_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 4,
+          "title": "6",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/94f7b070-30d2-447d-b509-1e22be408635.__CR0,0,3050,1250_PT0_SX1464_V1___.jpg"
+        },
+        {
+          "position": 5,
+          "title": "7",
+          "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/6026a775-8107-4d16-9845-acacaed5cb10.__CR0,0,3050,1250_PT0_SX1464_V1___.jpg"
+        }
+      ]
+    },
+    {
+      "position": 3,
+      "title": "8",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/f65625ac-a46b-434f-a229-39cad05e78bc.__CR0,0,3050,1250_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 4
+    },
+    {
+      "position": 5,
+      "title": "9",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/c43dd090-e976-4d9e-bd61-536381a5be87.__CR0,0,3050,1250_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 6,
+      "compare_with_similar": [
+        {
+          "position": 1,
+          "asin": "B01EUMTNY2",
+          "title": "Home & Dog Spray",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/9e11e99b-a012-4b26-a0d1-f7f34a567c3f.__CR56,0,889,1000_PT0_SX200_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B01EUMTNY2?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B01EUMTNY2&device=desktop&engine=amazon_product",
+          "rating": 4.3,
+          "reviews": 2470,
+          "price": "$22.99",
+          "extracted_price": 22.99,
+          "safe_for_use_on_pet": "✔",
+          "repels_fleas_on_ticks": "✔",
+          "naturally_derived_ingredients": "✔",
+          "indoor_pest_prevention": "✔",
+          "moisturizes_dry_skin": "✔"
+        },
+        {
+          "position": 2,
+          "asin": "B0DNRKKZDZ",
+          "title": "Laundry Additive",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/2261704a-27be-46f4-b8b7-28851baccff5.__CR0,0,200,225_PT0_SX200_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B0DNRKKZDZ?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DNRKKZDZ&device=desktop&engine=amazon_product",
+          "rating": 4.3,
+          "reviews": 135,
+          "price": "$19.99",
+          "extracted_price": 19.99,
+          "safe_for_use_on_pet": "✔",
+          "repels_fleas_on_ticks": "✔",
+          "naturally_derived_ingredients": "✔",
+          "indoor_pest_prevention": "✔",
+          "moisturizes_dry_skin": "✘"
+        },
+        {
+          "position": 3,
+          "asin": "B06XF42529",
+          "title": "Yard Spray",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/6ba32c4b-0b50-4007-954c-477ec3fbf0c8.__CR5,0,337,379_PT0_SX200_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B06XF42529?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B06XF42529&device=desktop&engine=amazon_product",
+          "rating": 4.3,
+          "reviews": 4818,
+          "price": "$26.99",
+          "extracted_price": 26.99,
+          "safe_for_use_on_pet": "✘",
+          "repels_fleas_on_ticks": "✔",
+          "naturally_derived_ingredients": "✔",
+          "indoor_pest_prevention": "✔",
+          "moisturizes_dry_skin": "✘"
+        },
+        {
+          "position": 4,
+          "asin": "B01EUMTOAK",
+          "title": "Soothing Dog Shampoo",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/41455fc2-27df-4715-8d5d-f27077d32cfb.__CR0,0,200,225_PT0_SX200_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B01EUMTOAK?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B01EUMTOAK&device=desktop&engine=amazon_product",
+          "rating": 4.6,
+          "reviews": 1161,
+          "price": "$17.99",
+          "extracted_price": 17.99,
+          "safe_for_use_on_pet": "✔",
+          "repels_fleas_on_ticks": "✔",
+          "naturally_derived_ingredients": "✔",
+          "indoor_pest_prevention": "✔",
+          "moisturizes_dry_skin": "✔"
+        },
+        {
+          "position": 5,
+          "asin": "B01DS73GTI",
+          "title": "Dog Spray",
+          "thumbnail": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/731dc5db-d592-4774-b038-2a943733c95d.__CR0,48,560,630_PT0_SX200_V1___.jpg",
+          "link": "https://www.amazon.com/dp/B01DS73GTI?ref=emc_p_m_5_i_atc",
+          "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B01DS73GTI&device=desktop&engine=amazon_product",
+          "rating": 4.3,
+          "reviews": 4818,
+          "price": "$14.99",
+          "extracted_price": 14.99,
+          "safe_for_use_on_pet": "✔",
+          "repels_fleas_on_ticks": "✔",
+          "naturally_derived_ingredients": "✔",
+          "indoor_pest_prevention": "✔",
+          "moisturizes_dry_skin": "✔"
+        }
+      ]
+    }
+  ],
+  "product_details": {
+    "product_dimensions": "3.7 x 2.47 x 9.14 inches; 1 pounds",
+    "manufacturer_recommended_age": "1 month and up",
+    "item_model_number": "FTPTSP16Z",
+    "date_first_available": "May 1, 2016",
+    "manufacturer": "Cosmos Corporation",
+    "asin": "B01DS73GTI",
+    "best_sellers_rank": [
+      {
+        "text": "#5,054 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 5054,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#9 in Dog Flea Sprays",
+        "extracted_rank": 9,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/3031965011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Flea Sprays"
+      }
+    ],
+    "customer_reviews": "4.3 out of 5 stars",
+    "rating": 4.3,
+    "reviews": 4818,
+    "brand_name": "TropiClean",
+    "unit_count": "16 Fluid Ounces",
+    "age_range_description": "Adult",
+    "upc": "645095160026",
+    "global_trade_identification_number": "00645095160026",
+    "included_components": "TropiClean Natural* Flea & Tick Pet & Bedding Spray for Dogs, 16 oz",
+    "item_type_name": "TropiClean Natural* Flea & Tick Pet & Bedding Spray for Dogs, 16 oz - Made in USA",
+    "model_number": "FTPTSP16Z",
+    "manufacturer_part_number": "FTPTSP16Z",
+    "warranty_description": "We partner with retailers regarding all returns in accordance with each retailer’s return policy. If you wish to return your product(s), please bring the remaining product(s) along with your receipt to the retailer you purchased it from for return consideration.",
+    "item_form": "Spray",
+    "scent_name": "Dog Spray",
+    "target_species": "Dog",
+    "item_weight": "16 ounces",
+    "volume": "16 fluid ounces",
+    "allergen_information": "Gluten Free",
+    "active_ingredients": "Lemongrass Oil, Clove Oil, Cedarwood Oil, Cinnamon Oil, Sodium Lauryl Sulfate"
+  },
+  "reviews_information": {
+    "summary": {
+      "text": "Customers find the flea spray effective, working immediately and killing fleas on contact, while appreciating its pleasant scent and natural ingredients. The product is easy to use and safe for pets, with one customer noting it's particularly suitable for households with children. While some customers consider it good value for money, others find it overpriced for its size, and experiences with side effects are mixed, with some reporting their dogs are more comfortable while others experienced allergic reactions.",
+      "insights": [
+        {
+          "title": "Effectiveness",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 271,
+            "positive": 199,
+            "negative": 72
+          },
+          "summary": "Customers find the flea spray effective, noting it works immediately and kills fleas well. One customer mentions it works well in addition to oral medications.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Great product! Immediately after the 1st application my dogs completely stopped scratching! No more fleas! My babies are now resting comfortably!...",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R16B8OZK5XFNE4"
+            },
+            {
+              "position": 2,
+              "snippet": "...It is all natural and works GREAT! We always had problems in the past with ticks with where we live but didn't want to put chemicals on our kiddos....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RQJRUD21NVUAZ"
+            },
+            {
+              "position": 3,
+              "snippet": "Doesn’t work. Sprayed dog as recommended, fleas still there.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1LRMZ3G2L1XBV"
+            },
+            {
+              "position": 4,
+              "snippet": "Good Product. Versatile. Not an overall flea killer though, if that's what you're seeking....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R75N4P7SK47K7"
+            }
+          ]
+        },
+        {
+          "title": "Scent",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 245,
+            "positive": 195,
+            "negative": 50
+          },
+          "summary": "Customers like the scent of the flea spray, describing it as wonderful.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "This stiff smells great! I don't onow if it works, because I use it as a precautionary measure, but it makes the pet beds and cat tower smell nice.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R302CAACEI525E"
+            },
+            {
+              "position": 2,
+              "snippet": "This stuff is so awesome. First of all, it's natural, it smells good, it goes on easy, I can use it directly on my pup as well as on her bedding and...",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RDO99BE5TIB6O"
+            },
+            {
+              "position": 3,
+              "snippet": "...It smells nice and I saw no ticks on him (I even used it on myself in my hair and on my ankles just in case). I saw no more ticks after that....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1NPICG0IT63ZP"
+            },
+            {
+              "position": 4,
+              "snippet": "It didn't work for me and it lathers a bit much. The scent is strong but I didn't mind it.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R147JDJT5N96CG"
+            }
+          ]
+        },
+        {
+          "title": "Natural",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 32,
+            "positive": 32,
+            "negative": 0
+          },
+          "summary": "Customers appreciate that this flea spray contains natural ingredients.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "This stuff is so awesome. First of all, it's natural, it smells good, it goes on easy, I can use it directly on my pup as well as on her bedding and...",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RDO99BE5TIB6O"
+            },
+            {
+              "position": 2,
+              "snippet": "...Very good product. No harmful or toxic chemicals to worry about...all natural. Very safe. Very effective....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1DQYRKEY87L85"
+            },
+            {
+              "position": 3,
+              "snippet": "Natural product that works",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RRP56U7OVPBIO"
+            },
+            {
+              "position": 4,
+              "snippet": "I love the smell and that it's a natural flea spray.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R4BRM12ZATTMC"
+            }
+          ]
+        },
+        {
+          "title": "Ease of use",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 27,
+            "positive": 27,
+            "negative": 0
+          },
+          "summary": "Customers find the flea spray easy to use, with one mentioning it's easy to comb out.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...It smells good and easy to use but it doesn’t help at all!!! My dog is still scratching hard and I can see very active fleas, new bites, red skin....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2Y221J03G1P6V"
+            },
+            {
+              "position": 2,
+              "snippet": "Works quickly and is easy to apply. The orange smell is so much better than regular flea sprays! Will buy again if needed, good value for the money.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RVI8B02MQJ54H"
+            },
+            {
+              "position": 3,
+              "snippet": "...Of course I also treated the dogs as well. Super easy to use and it smells heavenly. It's just expensive, but worth it for us.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2G3R04REW3YCV"
+            },
+            {
+              "position": 4,
+              "snippet": "The ease of use and smell of the product were fine; but if it doesn’t keep ticks out of the yard it might as well be water....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R22234QBWUA3BH"
+            }
+          ]
+        },
+        {
+          "title": "Safety",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 21,
+            "positive": 17,
+            "negative": 4
+          },
+          "summary": "Customers find the flea spray safe for pets, with one customer noting it's not detrimental to animals or furniture.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...replenished daily which isn't as convenient as a spray, but it's both safe and effective. I do Not recommend this product AT ALL!",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R32585SM8A2DBP"
+            },
+            {
+              "position": 2,
+              "snippet": "...It seems to work very well & we like the fact that it is pet safe. The price is fair & delivery was very fast. Will continue to order from this seller",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RH561GTJ7DC8O"
+            },
+            {
+              "position": 3,
+              "snippet": "...and water mixture works much much better and is cheap and safe for animals.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2G1EL09TI5MNE"
+            },
+            {
+              "position": 4,
+              "snippet": "I love that this is non-toxic. The smell was great and it was easy to apply. One bottle covered our entire backyard.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2RIJMO5LTU10A"
+            }
+          ]
+        },
+        {
+          "title": "Flea killing",
+          "sentiment": "mixed",
+          "mentions": {
+            "total": 173,
+            "positive": 107,
+            "negative": 66
+          },
+          "summary": "Customers have mixed experiences with the flea spray's effectiveness, with some reporting it kills fleas on contact and others saying it doesn't work at all.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Smelled good, kills fleas, wasn’t leaking when delivered, water resistance is great, good price too....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/REFGKEC3D87K1"
+            },
+            {
+              "position": 2,
+              "snippet": "Used it a few times..it does not kill fleas..had to go get flea meds to get rid of them",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R16XFPSZ0K7CY6"
+            },
+            {
+              "position": 3,
+              "snippet": "...I saw no more ticks after that. It irritated my dog and made him sneeze though so I ended up having to wash it off.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1NPICG0IT63ZP"
+            },
+            {
+              "position": 4,
+              "snippet": "Kills on contact. My dog loves to dig and roll in the grass. We treat the yard but yeah - fleas. This product works. The shampoo is great as well.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R3T9Z8QI9SC1WW"
+            }
+          ]
+        },
+        {
+          "title": "Value for money",
+          "sentiment": "mixed",
+          "mentions": {
+            "total": 43,
+            "positive": 22,
+            "negative": 21
+          },
+          "summary": "Customers have mixed opinions about the flea spray's value for money, with some finding it a good value while others say it's not worth the price.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...fleas, wasn’t leaking when delivered, water resistance is great, good price too. Dog didn’t mind the smell and it works like it says on bottle....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/REFGKEC3D87K1"
+            },
+            {
+              "position": 2,
+              "snippet": "This is a waste of money. I’ve purchased a different, product with a different scent. Decided I would give this one a try. Not worth it.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2NV4B5WV5SONW"
+            },
+            {
+              "position": 3,
+              "snippet": "...I have not used the product so I'm not sure what to expect. It is affordable and has a pleasant smell. Hopefully it works as good as it smells",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R3E5LM9VY3OX0R"
+            },
+            {
+              "position": 4,
+              "snippet": "Not Worth It.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2E1K5V43CC037"
+            }
+          ]
+        },
+        {
+          "title": "Side effects",
+          "sentiment": "mixed",
+          "mentions": {
+            "total": 32,
+            "positive": 18,
+            "negative": 14
+          },
+          "summary": "Customers have mixed experiences with the flea spray's side effects, with some reporting that their dogs are more comfortable and stop itching, while others mention that it made their pets sick and caused sneezing.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...Just bought 2nd bottle. Smell is somewhat strong, but pleasant, natural, lemongrass smell. Covers 'dog smells' at same time. Win-win!...",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2DS3UCK3ARVKV"
+            },
+            {
+              "position": 2,
+              "snippet": "MADE MY DOG very sick! After emailing the company (since Amazon does not offer returns for this product), I was denied a refund by the company....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R13XECCM29SZLN"
+            },
+            {
+              "position": 3,
+              "snippet": "adopted a dog with fleas... but this took care of our outside run. No more itching when they come back inside!...",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2G3R04REW3YCV"
+            },
+            {
+              "position": 4,
+              "snippet": "...I saw no more ticks after that. It irritated my dog and made him sneeze though so I ended up having to wash it off.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1NPICG0IT63ZP"
+            }
+          ]
+        }
+      ],
+      "images": [
+        "https://m.media-amazon.com/images/I/71jV8jaLAaL.jpg",
+        "https://m.media-amazon.com/images/I/81M6Gdfm-bL.jpg",
+        "https://m.media-amazon.com/images/I/51uxD2x5mjL.jpg",
+        "https://m.media-amazon.com/images/I/71t68C+T5fL.jpg",
+        "https://m.media-amazon.com/images/I/81n9o5YEMxL.jpg",
+        "https://m.media-amazon.com/images/I/61dN39fxVEL.jpg",
+        "https://m.media-amazon.com/images/I/71NtQZcU-HL.jpg",
+        "https://m.media-amazon.com/images/I/61C5sAIz-UL.jpg",
+        "https://m.media-amazon.com/images/I/71U4owbTVGL.jpg",
+        "https://m.media-amazon.com/images/I/716I47izs+L.jpg",
+        "https://m.media-amazon.com/images/I/61PB-WKDRlL.jpg",
+        "https://m.media-amazon.com/images/I/71Y8VeC03pL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 64,
+        "4 star": 16,
+        "3 star": 10,
+        "2 star": 4,
+        "1 star": 6
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Natural Flea/tick dog spray",
+        "text": "This worked so well on my small chihuahua. We sprayed her a small amount and the fleas literally just started falling off! Its quiet and easy to use. It has a nice smell also. It's not too overwhelming and mostly it didn't bother my dog. We like this spray!",
+        "rating": 5,
+        "date": "July 1, 2026",
+        "author": "Fancy Duran",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AH2Z63WPY5QTTQDJX73QFHX3UN6Q?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "scent": "Easy Mist",
+          "size": "14 oz"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Smells great",
+        "text": "Works like magic! Smells great and effective. I use it on all my dogs.",
+        "rating": 5,
+        "date": "July 9, 2026",
+        "author": "Elizabeth",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHPXNFSFBHXJFQXN5FRXCTHK7YIQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "scent": "Dog Spray",
+          "size": "16 Fl Oz (Pack of 1)"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Fast Acting",
+        "text": "Works as advertised, pleasant tropical lingering smell serves as deoderizer as well.",
+        "rating": 4,
+        "date": "January 26, 2026",
+        "author": "Javier Vasquez",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFBBWZBP44MO33FFX4K4NXKQXQ4Q?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/226b5a47-aff7-419e-9e04-5df0d80e35a9._CR0%2C0%2C375%2C375_UX460_SX48_.jpg",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "scent": "Dog Spray",
+          "size": "16 Fl Oz (Pack of 1)"
+        }
+      },
+      {
+        "position": 4,
+        "title": "My new flea treatment favorite!!! It DEFINITELY works!",
+        "text": "This stuff works !!! My only complaint is the cost, but it DEFINITELY works and I love that it doesn't contain the chemical pesticides. This keeps the fleas off my dogs for about 2 weeks. I spray my dogs wetting the top of the fur and work it in with gloved hands. I make sure to get every spot but spray it on my hands to rub around the face and head and genitalia. This product has been a lifesaver This summer for me and my dogs. After being displaced from our home, we moved in with family and the area is TERRIBLE for fleas. This helped significantly along with other products to help get a major flea infestation under control in about 2 weeks. I appreciate the smell which smells like citrus, but I've wondered how unpleasant it might be for dogs because its on the strong side.If you want a natural product that works, THIS IS IT!",
+        "rating": 5,
+        "date": "July 21, 2025",
+        "author": "mswilson",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEH7QEYBS7FOVGPVDDMW6NARXWDQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "28 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "scent": "Dog Spray",
+          "size": "16 Fl Oz (Pack of 1)"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Tropiclean natural maximum strength flea and tick",
+        "text": "not effective.",
+        "rating": 3,
+        "date": "June 30, 2026",
+        "author": "William Tram",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHUPMAHZHT5BEJNWVWZ5JIAGYT3Q?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "scent": "Dog Spray",
+          "size": "16 Fl Oz (Pack of 1)"
+        }
+      },
+      {
+        "position": 6,
+        "title": "Flea and Tick spray",
+        "text": "Great",
+        "rating": 5,
+        "date": "July 20, 2026",
+        "author": "Dee",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFGAIPD2SIG2LZKP7E5EQZ2C4QNQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "scent": "Dog Spray",
+          "size": "16 Fl Oz (Pack of 1)"
+        }
+      },
+      {
+        "position": 7,
+        "title": "Does work",
+        "text": "I bought the spray and shampoo. It doesn't magically kill every flea the first use but it has made a difference. Found a lot of dead fleas in my dogs coat. Will be using daily until they are all gone. It is kind of soapy on dogs with thick hair, like my Pomeranian. The smell is nice. I'm pleased with the results I've had so far.",
+        "rating": 5,
+        "date": "June 16, 2026",
+        "author": "Kindle Customer",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEMBTOWNSGHXNC3SHNAVALTCZWRQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "scent": "Dog Spray",
+          "size": "16 Fl Oz (Pack of 1)"
+        }
+      },
+      {
+        "position": 8,
+        "title": "Doesn't work",
+        "text": "This doesn't work at all I spray on the flea, the flea starts jumping I gave lots of bunch of spray at the flea still tries to scape I have to grab the flea and squeeze it myself. I gave it one star cause it helps me to grab the flea so I can kill it myself.",
+        "rating": 1,
+        "date": "May 30, 2026",
+        "author": "Bf",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFDWX2PCRVJRYCCAGTHFGUL7T6IA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/e31993e6-b348-4d34-95fa-e666fbc10a4c._CR328%2C0%2C843%2C843_SX460_SX48_.jpg",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "scent": "Dog Spray",
+          "size": "16 Fl Oz (Pack of 1)"
+        }
+      }
+    ]
+  }
+}

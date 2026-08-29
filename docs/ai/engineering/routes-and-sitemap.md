@@ -97,6 +97,25 @@ Do not edit `sitemap-inventory.ts` directly for page registration — edit `cont
 
 ---
 
+## Discovery surfaces: XML sitemap and llms.txt
+
+Both public discovery surfaces derive from the same data. Neither is a curated list.
+
+| Surface | Built by | Source |
+|---|---|---|
+| `sitemap-0.xml` | `@astrojs/sitemap` in `astro.config.mjs` | Every built route, minus the shared exclusions |
+| `llms.txt` | `src/pages/llms.txt.ts` | Complete sitemap inventory, minus `noindex` and the shared exclusions |
+
+**Shared exclusions live in `src/data/discovery-exclusions.ts`.** Both surfaces import `isExcludedFromDiscovery()`, so a fragment added there disappears from both at once. Do not add a second exclusion list.
+
+A page appears in `llms.txt` automatically once it is registered in `content-sitemap.ts` (or is an MDX article with a `canonicalPath`). There is nothing to curate — do not reintroduce a hand-maintained link array in `llms.txt.ts`. Ordering-only nudges for high-intent pages go in `PRIORITY_OVERRIDES`; they move a page within its section and never decide whether it is listed.
+
+`src/__tests__/llms-coverage.test.ts` fails if `llms.txt` omits any indexable sitemap URL, lists a URL absent from the sitemap, or lists a `noindex` page.
+
+Sections in `llms.txt` come from path prefix (`LLMS_SECTION_ORDER` in `src/utils/llms.ts`). When adding a new top-level path prefix, add a matching section rule — otherwise its pages still appear, but under `Core Pages`.
+
+---
+
 ## Related content system
 
 Related links derive from the complete sitemap inventory automatically. Do not add manual related arrays.
@@ -112,7 +131,7 @@ Use these frontmatter/config fields to control related content:
 
 `InternalLinkStrip` and `RelatedGuides` use `currentHref` prop for automated derivation. Do not add new manual related arrays.
 
-Section collectors (`/cooling/`, `/calming/`, `/comforting/`) also use sitemap topics. Their definitions in `src/data/section-collectors.ts` match indexable converters and article collectors by topic, group cards into first-match topic subsections, allow cross-topic pages to appear in multiple collectors, and preserve converter-first ordering within each subsection.
+Section collectors (`/cooling/`, `/calming/`, `/comforting/`, `/gear/`) also use sitemap topics. Their definitions in `src/data/section-collectors.ts` match indexable converters and article collectors by topic, group cards into first-match topic subsections, allow cross-topic pages to appear in multiple collectors, and preserve converter-first ordering within each subsection. `/gear/` is the fourth pillar (violet theme, covering gear/travel/safety content) — it replaced a former 301 redirect stub. `/articles/` is a reverse-chronological index of every article, linked from the homepage hero.
 
 ---
 
@@ -120,7 +139,7 @@ Section collectors (`/cooling/`, `/calming/`, `/comforting/`) also use sitemap t
 
 Converter entries in `src/data/content-sitemap.ts` must include `pubDate`. Use the first real publication date from git history when available. Set `lastUpdated` only for a material content or product refresh that should promote the converter in recency-based surfaces.
 
-The homepage Browse Picks list uses this metadata via `getHomepageConverters()`: it renders up to 15 converters sorted by `lastUpdated ?? pubDate` descending, with undated converters last. This ordering is homepage-specific; section collectors still use topic and priority routing rules.
+The homepage theme sections use this metadata via `getHomepageConverters()` + `groupHomepageConvertersByTheme()`: converters are sorted by `lastUpdated ?? pubDate` descending (undated last), grouped by theme, and each `HomepageSection` renders its theme's most recent few as compact links. This ordering is homepage-specific; section collectors still use topic and priority routing rules.
 
 ---
 

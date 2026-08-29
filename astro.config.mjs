@@ -3,14 +3,7 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import robotsTxt from 'astro-robots-txt';
 
-const EXCLUDED_SITEMAP_FRAGMENTS = [
-  '/draft',
-  '/v/',
-  '/admin/',
-  '/privacy-policy/',
-  '/terms/',
-  '/subscribe/',
-];
+import { isExcludedFromDiscovery } from './src/data/discovery-exclusions.ts';
 
 export default defineConfig({
   site: 'https://www.chill-dogs.com',
@@ -25,7 +18,7 @@ export default defineConfig({
   integrations: [
     mdx(),
     sitemap({
-      filter: (page) => !EXCLUDED_SITEMAP_FRAGMENTS.some((fragment) => page.includes(fragment)),
+      filter: (page) => !isExcludedFromDiscovery(page),
       serialize: (item) => {
         if (item.url === 'https://www.chill-dogs.com/') {
           item.priority = 1.0;

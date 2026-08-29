@@ -1,6 +1,7 @@
 import { calmingProducts } from './calming-products';
 import { coolingProducts } from './cooling-products';
 import { emergencyProducts } from './emergency-products';
+import { fleaTickProducts } from './flea-tick-products';
 import { getOffers } from './products/offers';
 import type { AffiliateOffer } from './products/types';
 import { relaxationProducts } from './relaxation-products';
@@ -9,7 +10,7 @@ import { accessoryProducts, trackerProducts } from './tracking-products';
 export interface ProductCatalogItem {
   id: string;
   name: string;
-  pillar: 'cooling' | 'calming' | 'comfort' | 'gear';
+  pillar: 'cooling' | 'calming' | 'comfort' | 'gear' | 'safety';
   category: string;
   asin?: string;
   amazonUrl?: string;
@@ -95,5 +96,18 @@ export const productCatalogItems: ProductCatalogItem[] = [
     considerIf: product.caution,
     whyItWorks: product.useCase,
     source: 'src/data/emergency-products.ts',
+  })),
+  ...fleaTickProducts.map((product) => ({
+    id: product.id,
+    name: product.name,
+    pillar: 'safety' as const,
+    category: product.category,
+    asin: product.asin,
+    amazonUrl: product.amazonUrl,
+    offers: getOffers(product),
+    bullets: [...product.bullets],
+    image: product.image,
+    note: product.howItWorks,
+    source: 'src/data/flea-tick-products.ts',
   })),
 ];

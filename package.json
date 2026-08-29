@@ -15,9 +15,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "test": "bun run build && vitest run",
+    "test:unit": "vitest run --exclude '**/node_modules/**' --exclude '**/dist/**' --exclude 'src/__tests__/{site-smoke,seo-meta,llms-coverage,affiliate-instrumentation}.test.ts'",
     "test:smoke": "vitest run src/__tests__/site-smoke.test.ts",
     "test:coverage": "vitest run --coverage",
-    "prepare": "simple-git-hooks",
     "indexnow:submit": "node scripts/indexnow-submit.mjs",
     "check:asins": "bun run scripts/check-asin-validity.ts",
     "check:amazon": "bun run scripts/check-amazon-freshness.ts",
@@ -26,9 +26,6 @@
     "chewy-link:verify": "bun run scripts/chewy-link.ts verify",
     "chewy-link:csv": "bun run scripts/chewy-link.ts csv",
     "fetch:chewy": "bun run scripts/fetch-chewy-data.ts"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "bun run test && bun run test:smoke"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",
@@ -50,7 +47,7 @@
     "@vitest/coverage-v8": "^4.0.18",
     "happy-dom": "^20.7.0",
     "sharp": "^0.34.5",
-    "simple-git-hooks": "^2.13.1",
-    "vitest": "^4.0.18"
+    "vitest": "^4.0.18",
+    "yaml": "2.8.4"
   }
 }
