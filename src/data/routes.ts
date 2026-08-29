@@ -63,3 +63,13 @@ export const ROUTES = {
   subscribeThanks: '/subscribe/thanks/',
   subscribeConfirmed: '/subscribe/confirmed/',
 } as const;
+
+/**
+ * URL for a product's detail page.
+ *
+ * The `id` is the slug — see the id-stability rule in CLAUDE.md and
+ * `src/__tests__/product-slugs.test.ts`. Renaming an id retires this URL.
+ */
+export function shopProductRoute(productId: string): string {
+  return `${ROUTES.shop}${productId}/`;
+}

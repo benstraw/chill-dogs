@@ -3,7 +3,7 @@ title: Engineering Architecture
 type: canonical
 domain: engineering
 status: active
-updated: 2026-08-11
+updated: 2026-08-29
 tags:
   - chill-dogs
   - engineering
@@ -166,6 +166,11 @@ Three phases run automatically via `bun run build`:
 ## Content collections
 
 - `src/content/config.ts` — Astro content collection schema for the `articles` collection
+- `src/data/product-galleries.ts` — tool-managed multi-image galleries keyed by product id,
+  written by `bun run admin:serve`. Read it through `getProductImages()` in
+  `src/data/products/images.ts`, which prefers a record-level `images` override, then this
+  store, then the product's single `image`. Galleries render only on `/shop/<id>/` detail
+  pages; converter cards stay single-image.
 - `src/content/articles/` — MDX files. `canonicalPath` frontmatter = page URL
 - MDX articles are **auto-discovered** — no manual registration in `content-sitemap.ts` needed
 - All other page types require manual registration in `src/data/content-sitemap.ts`

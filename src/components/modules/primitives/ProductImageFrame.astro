@@ -1,4 +1,16 @@
 ---
+/**
+ * Product image surface, with an optional thumbnail gallery.
+ *
+ * Pass `image` alone for the single-image case — that is what every converter card
+ * does, and it stays that way deliberately: a converter card's job is the CTA, not
+ * browsing photos.
+ *
+ * Pass `images` (2+) to get the gallery: a scrollable thumbnail strip that swaps the
+ * main image on click. Only the `/shop/<id>/` detail pages do this. Build the array
+ * with `getProductImages()` from `src/data/products/images.ts` rather than reading
+ * `product.images` directly, so the curated gallery store is consulted.
+ */
 import { Image } from 'astro:assets';
 
 interface Props {

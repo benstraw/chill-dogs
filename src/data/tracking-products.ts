@@ -27,6 +27,9 @@ export interface TrackerProduct {
   subscriptionNote?: string;
   /** Product image from Amazon CDN */
   image?: { src: string; alt: string };
+  /** Hand-authored gallery override. Normally galleries live in src/data/product-galleries.ts;
+   *  read both through getProductImages() in src/data/products/images.ts. */
+  images?: readonly { src: string; alt: string }[];
 }
 
 export interface AccessoryProduct {
@@ -37,6 +40,9 @@ export interface AccessoryProduct {
   offers?: AffiliateOffer[];
   note: string;
   image?: { src: string; alt: string };
+  /** Hand-authored gallery override. Normally galleries live in src/data/product-galleries.ts;
+   *  read both through getProductImages() in src/data/products/images.ts. */
+  images?: readonly { src: string; alt: string }[];
 }
 
 export const trackerProducts: TrackerProduct[] = [

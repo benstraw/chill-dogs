@@ -1,6 +1,21 @@
 ---
+/**
+ * Admin image browser — pick the gallery images for each product.
+ *
+ * Reads the local Amazon cache in `src/data/amazon-products/` and shows every candidate
+ * photo next to what the product currently uses. Selections are saved through the local
+ * companion server (`bun run admin:serve`), which rewrites `src/data/product-galleries.ts`.
+ * With no server reachable — production, where this page sits behind Basic Auth and there
+ * is no repo to write to — it falls back to copying a paste-ready snippet.
+ *
+ * Every product appears, not just the ones with an ASIN: products sourced from Chewy have
+ * no Amazon cache entry but still have editorial images worth reviewing and reordering.
+ */
 import AdminLayout from '@layouts/AdminLayout.astro';
+import DisclosureBar from '@components/modules/primitives/DisclosureBar.astro';
 import { productCatalogItems } from '../../data/product-catalog';
+import { getProductImages } from '../../data/products/images';
+import { normalizeMerchantImageUrl } from '../../utils/merchant-images';
 
 const cacheGlob = import.meta.glob<Record<string, unknown>>(
   '../../data/amazon-products/*.json',
@@ -35,22 +50,47 @@ for (const [path, module] of Object.entries(cacheGlob)) {
   }
 }
 
-const products = productCatalogItems
-  .filter((p) => p.asin)
-  .map((p) => ({
-    id: p.id,
-    name: p.name,
-    asin: p.asin!,
-    pillar: p.pillar,
-    editorialImages: p.images ?? (p.image ? [p.image] : []),
-    cacheImages: cacheImagesByAsin.get(p.asin!) ?? [],
+/**
+ * Cache URLs are normalised here, at render time, so a tile shows the exact URL that
+ * will be written. Showing the raw URL and normalising only on save is how the old
+ * double-modifier bug stayed invisible.
+ */
+const products = productCatalogItems.map((product) => {
+  const cacheImages = (product.asin ? cacheImagesByAsin.get(product.asin) ?? [] : []).map(
+    (image) => ({ ...image, link: normalizeMerchantImageUrl(image.link) })
+  );
+
+  // Editorial images keep their own alt text — overwriting it with the product name on
+  // every round-trip is how hand-written alts used to get destroyed.
+  const editorialImages = getProductImages(product).map((image) => ({
+    src: image.src,
+    alt: image.alt,
   }));
 
-const noAsinProducts = productCatalogItems.filter((p) => !p.asin);
-const pillars = [...new Set(products.map((p) => p.pillar))];
+  return {
+    id: product.id,
+    name: product.name,
+    asin: product.asin ?? '',
+    pillar: product.pillar,
+    editorialImages,
+    cacheImages,
+    hasGallery: editorialImages.length >= 2,
+  };
+});
+
+const pillars = [...new Set(products.map((p) => p.pillar))].sort();
+const withoutCache = products.filter((p) => p.cacheImages.length === 0).length;
 ---
 
 <AdminLayout title="Image Browser (Admin)">
+  <!-- Zoom icon defined once and referenced per tile. Inlined, it was 1502 copies of
+       335 bytes — half a megabyte of the page. -->
+  <svg width="0" height="0" aria-hidden="true" style="position:absolute">
+    <symbol id="admin-zoom-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
+    </symbol>
+  </svg>
+
   <div class="img-admin">
     <h1>Image Browser</h1>
 
@@ -75,6 +115,7 @@ const pillars = [...new Set(products.map((p) => p.pillar))];
       </div>
       <div class="toolbar-footer">
         <span class="count"><span id="visible-count">{products.length}</span> of {products.length}</span>
+        <span class="save-mode" id="save-mode" data-mode="checking">Checking for local save server…</span>
         <button class="clear-btn" id="clear-filters" type="button">Clear filters</button>
       </div>
     </div>
@@ -104,50 +145,73 @@ const pillars = [...new Set(products.map((p) => p.pillar))];
             </div>
           </div>
 
-          <!-- Section 1: all cache images -->
+          <!-- Section 1: candidate images from the Amazon cache.
+               Collapsed by default. `<details>` still ships the markup, so this is not a
+               payload win — it is a usability and rendering one: closed content is not
+               laid out and its images are never decoded, so the page is navigable instead
+               of being 1500 thumbnails deep. The payload win came from the icon sprite. -->
           {product.cacheImages.length > 0 ? (
-            <div class="cache-grid">
-              {product.cacheImages.map((img) => (
-                <div class="cache-tile" data-add-src={img.link} data-add-alt={product.name} data-add-to={product.id}>
-                  <img src={img.link} alt="" loading="lazy" aria-hidden="true" />
-                  <span class="tile-variant">{img.variant}</span>
-                  <button
-                    class="tile-zoom"
-                    data-zoom-src={img.link}
-                    data-zoom-label={img.variant}
-                    type="button"
-                    aria-label="View full size"
-                  >
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                  </button>
-                </div>
-              ))}
-            </div>
+            <DisclosureBar
+              label={`Show ${product.cacheImages.length} cache image${product.cacheImages.length === 1 ? '' : 's'}`}
+              expandedLabel="Hide cache images"
+            >
+              <div class="cache-grid">
+                {product.cacheImages.map((img) => (
+                  <div class="cache-tile" data-add-src={img.link} data-add-alt={product.name} data-add-to={product.id}>
+                    <img src={img.link} alt="" loading="lazy" aria-hidden="true" />
+                    <span class="tile-variant">{img.variant}</span>
+                    <button
+                      class="tile-zoom"
+                      data-zoom-src={img.link}
+                      data-zoom-label={img.variant}
+                      type="button"
+                      aria-label="View full size"
+                    >
+                      <svg class="tile-zoom__icon" width="11" height="11" aria-hidden="true"><use href="#admin-zoom-icon" /></svg>
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </DisclosureBar>
           ) : (
-            <p class="no-cache">No cache images for this ASIN.</p>
+            <p class="no-cache">
+              {product.asin
+                ? 'No cache images for this ASIN — run bun run check:amazon to refresh.'
+                : 'No Amazon ASIN. Reorder or remove the existing images below.'}
+            </p>
           )}
 
-          <!-- Section 2: selected images -->
+          <!-- Section 2: the gallery as it will be saved. Order matters — the first
+               image is the product's primary, so the tray is reorderable. -->
           <div class="selected-section">
-            <span class="selected-label">Selected:</span>
-            <div class="selected-tray" data-tray={product.id}>
-              {product.editorialImages.map((img) => (
-                <div class="tray-thumb tray-thumb--existing" data-tray-src={img.src} data-tray-alt={product.name}>
+            <span class="selected-label">Gallery:</span>
+            <div class="selected-tray" data-tray={product.id} data-product-name={product.name}>
+              {product.editorialImages.map((img, index) => (
+                <div class="tray-thumb tray-thumb--existing" data-tray-src={img.src} data-tray-alt={img.alt}>
                   <img src={img.src} alt="" width={64} height={64} loading="lazy" aria-hidden="true" />
+                  {index === 0 && <span class="tray-primary" title="Primary image">1st</span>}
+                  <div class="tray-order">
+                    <button class="tray-move" data-move="-1" type="button" aria-label="Move earlier">‹</button>
+                    <button class="tray-move" data-move="1" type="button" aria-label="Move later">›</button>
+                  </div>
                   <button class="tray-remove" type="button" aria-label="Remove">×</button>
                 </div>
               ))}
             </div>
-            <button class="copy-btn" data-copy-array={product.id} type="button">Copy array</button>
+            <div class="tray-actions">
+              <button class="save-btn" data-save-gallery={product.id} type="button">Save</button>
+              <button class="copy-btn" data-copy-array={product.id} type="button">Copy array</button>
+            </div>
           </div>
         </div>
       ))}
 
-      {noAsinProducts.length > 0 && (
-        <details class="no-asin-section">
-          <summary>{noAsinProducts.length} products without an ASIN</summary>
-          <ul>{noAsinProducts.map((p) => <li>{p.name}</li>)}</ul>
-        </details>
+      {withoutCache > 0 && (
+        <p class="no-asin-section">
+          {withoutCache} of {products.length} products have no cached Amazon images — mostly
+          Chewy-sourced items. They are listed above with their existing gallery, which can
+          still be reordered or trimmed.
+        </p>
       )}
     </div>
   </div>
@@ -163,6 +227,8 @@ const pillars = [...new Set(products.map((p) => p.pillar))];
 </AdminLayout>
 
 <script>
+  import { isSameMerchantImage } from '../../utils/merchant-images';
+
   // ── Toast ──────────────────────────────────────────────────────────────────
   const toast = document.getElementById('toast')!;
   let toastTimer: ReturnType<typeof setTimeout>;
@@ -193,10 +259,6 @@ const pillars = [...new Set(products.map((p) => p.pillar))];
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.open) closeZoom(); });
 
   // ── Tray helpers ───────────────────────────────────────────────────────────
-  function normSrc(raw: string) {
-    return raw.replace(/\.jpg$/i, '._SL500_.jpg');
-  }
-
   function makeTrayThumb(src: string, alt: string): HTMLElement {
     const div = document.createElement('div');
     div.className = 'tray-thumb tray-thumb--new';
@@ -212,6 +274,19 @@ const pillars = [...new Set(products.map((p) => p.pillar))];
     img.setAttribute('aria-hidden', 'true');
     div.appendChild(img);
 
+    const order = document.createElement('div');
+    order.className = 'tray-order';
+    for (const [delta, label, glyph] of [[-1, 'Move earlier', '\u2039'], [1, 'Move later', '\u203a']] as const) {
+      const move = document.createElement('button');
+      move.className = 'tray-move';
+      move.type = 'button';
+      move.dataset.move = String(delta);
+      move.setAttribute('aria-label', label);
+      move.textContent = glyph;
+      order.appendChild(move);
+    }
+    div.appendChild(order);
+
     const btn = document.createElement('button');
     btn.className = 'tray-remove';
     btn.type = 'button';
@@ -220,6 +295,40 @@ const pillars = [...new Set(products.map((p) => p.pillar))];
     div.appendChild(btn);
 
     return div;
+  }
+
+  /** Alt text for a newly picked image: distinct per view, never five identical strings. */
+  function defaultAlt(productName: string, index: number): string {
+    return index === 0 ? productName : `${productName} — view ${index + 1}`;
+  }
+
+  /** Re-marks which thumb is primary and re-numbers the default alts after any change. */
+  function refreshTray(tray: HTMLElement) {
+    const productName = tray.dataset.productName ?? '';
+    const thumbs = Array.from(tray.querySelectorAll<HTMLElement>('.tray-thumb'));
+
+    thumbs.forEach((thumb, index) => {
+      thumb.querySelector('.tray-primary')?.remove();
+      if (index === 0) {
+        const badge = document.createElement('span');
+        badge.className = 'tray-primary';
+        badge.title = 'Primary image';
+        badge.textContent = '1st';
+        thumb.insertBefore(badge, thumb.querySelector('.tray-order'));
+      }
+
+      // Only renumber the alts this tool generated. A hand-written alt is left alone.
+      const alt = thumb.dataset.trayAlt ?? '';
+      const isGenerated = alt === productName || /— view \d+$/.test(alt);
+      if (isGenerated) thumb.dataset.trayAlt = defaultAlt(productName, index);
+    });
+  }
+
+  function trayImages(tray: HTMLElement) {
+    return Array.from(tray.querySelectorAll<HTMLElement>('.tray-thumb')).map((el) => ({
+      src: el.dataset.traySrc!,
+      alt: el.dataset.trayAlt!,
+    }));
   }
 
   // ── Main click handler ─────────────────────────────────────────────────────
@@ -234,41 +343,64 @@ const pillars = [...new Set(products.map((p) => p.pillar))];
       return;
     }
 
+    // Reorder within the tray — the first image is the product's primary.
+    const moveBtn = target.closest<HTMLElement>('.tray-move');
+    if (moveBtn) {
+      const thumb = moveBtn.closest<HTMLElement>('.tray-thumb')!;
+      const tray = thumb.closest<HTMLElement>('[data-tray]')!;
+      const thumbs = Array.from(tray.querySelectorAll<HTMLElement>('.tray-thumb'));
+      const from = thumbs.indexOf(thumb);
+      const to = from + Number(moveBtn.dataset.move);
+      if (to < 0 || to >= thumbs.length) return;
+
+      if (to < from) tray.insertBefore(thumb, thumbs[to]);
+      else tray.insertBefore(thumb, thumbs[to].nextSibling);
+      refreshTray(tray);
+      return;
+    }
+
     // Remove from tray
     if (target.closest('.tray-remove')) {
       const thumb = target.closest<HTMLElement>('.tray-thumb')!;
       const tray  = thumb.closest<HTMLElement>('[data-tray]')!;
       const src   = thumb.dataset.traySrc!;
       const pid   = tray.dataset.tray!;
-      // un-select matching cache tile
-      document.querySelector<HTMLElement>(`[data-add-to="${pid}"][data-add-src="${src.replace('._SL500_', '')}"]`)
-        ?.classList.remove('cache-tile--selected');
-      // handle both raw and _SL500_ variants
+
+      // Match on the underlying photo. Comparing strings after splicing `._SL500_` in
+      // and out missed every URL that already carried a different modifier.
       document.querySelectorAll<HTMLElement>(`[data-add-to="${pid}"]`).forEach((tile) => {
-        if (normSrc(tile.dataset.addSrc!) === src) tile.classList.remove('cache-tile--selected');
+        if (isSameMerchantImage(tile.dataset.addSrc!, src)) {
+          tile.classList.remove('cache-tile--selected');
+        }
       });
       thumb.remove();
+      refreshTray(tray);
       return;
     }
 
     // Add/remove via cache tile click
     const tile = target.closest<HTMLElement>('[data-add-src]');
     if (tile) {
-      const raw = tile.dataset.addSrc!;
-      const alt = tile.dataset.addAlt!;
+      // Tiles already carry normalised URLs — the page normalises at render time so the
+      // thumbnail you see is the URL that gets written.
+      const src = tile.dataset.addSrc!;
       const pid = tile.dataset.addTo!;
-      const src = normSrc(raw);
       const tray = document.querySelector<HTMLElement>(`[data-tray="${pid}"]`);
       if (!tray) return;
 
-      const existing = tray.querySelector<HTMLElement>(`[data-tray-src="${src}"]`);
+      const existing = Array.from(tray.querySelectorAll<HTMLElement>('.tray-thumb')).find((thumb) =>
+        isSameMerchantImage(thumb.dataset.traySrc!, src)
+      );
+
       if (existing) {
         existing.remove();
         tile.classList.remove('cache-tile--selected');
       } else {
-        tray.appendChild(makeTrayThumb(src, alt));
+        const count = tray.querySelectorAll('.tray-thumb').length;
+        tray.appendChild(makeTrayThumb(src, defaultAlt(tray.dataset.productName ?? '', count)));
         tile.classList.add('cache-tile--selected');
       }
+      refreshTray(tray);
       return;
     }
 
@@ -277,17 +409,92 @@ const pillars = [...new Set(products.map((p) => p.pillar))];
     if (copyBtn) {
       const pid   = copyBtn.dataset.copyArray!;
       const tray  = document.querySelector<HTMLElement>(`[data-tray="${pid}"]`);
-      const items = Array.from(tray?.querySelectorAll<HTMLElement>('.tray-thumb') ?? []);
+      if (!tray) return;
+      const items = trayImages(tray);
       if (!items.length) { showToast('No images selected'); return; }
-      const lines = items.map((el) => `  { src: "${el.dataset.traySrc}", alt: "${el.dataset.trayAlt}" }`);
+      const lines = items.map((img) => `    { src: '${img.src}', alt: '${img.alt.replace(/'/g, "\\'")}' },`);
       try {
-        await navigator.clipboard.writeText(`// ${pid}\nimages: [\n${lines.join(',\n')}\n],`);
+        await navigator.clipboard.writeText(`  '${pid}': [\n${lines.join('\n')}\n  ],`);
         showToast(`Copied ${items.length} image${items.length !== 1 ? 's' : ''}`);
       } catch {
         showToast('Copy failed');
       }
     }
   });
+
+  // ── Local save server ──────────────────────────────────────────────────────
+  //
+  // The site is a static build with no adapter, so there is no API route to POST to —
+  // an on-demand endpoint would fail `astro build`. Instead a small companion server
+  // (`bun run admin:serve`) writes src/data/product-galleries.ts. When it is not running
+  // (production, where this page is behind Basic Auth and there is no repo to write to)
+  // the page degrades to the clipboard snippet it always had.
+  const SAVE_SERVER = 'http://127.0.0.1:4322';
+  const modeEl = document.getElementById('save-mode')!;
+  let canSave = false;
+
+  function setMode(mode: 'checking' | 'live' | 'offline', text: string) {
+    modeEl.dataset.mode = mode;
+    modeEl.textContent = text;
+    document.querySelectorAll<HTMLButtonElement>('.save-btn').forEach((btn) => {
+      btn.hidden = mode !== 'live';
+    });
+    document.querySelectorAll<HTMLButtonElement>('.copy-btn').forEach((btn) => {
+      btn.hidden = mode === 'live';
+    });
+  }
+
+  async function probeSaveServer() {
+    try {
+      const response = await fetch(`${SAVE_SERVER}/health`, { signal: AbortSignal.timeout(1500) });
+      canSave = response.ok;
+    } catch {
+      canSave = false;
+    }
+
+    setMode(
+      canSave ? 'live' : 'offline',
+      canSave ? 'Saving to src/data/product-galleries.ts' : 'Read-only — run bun run admin:serve to save'
+    );
+  }
+
+  document.addEventListener('click', async (e) => {
+    const saveBtn = (e.target as Element).closest<HTMLElement>('[data-save-gallery]');
+    if (!saveBtn || !canSave) return;
+
+    const productId = saveBtn.dataset.saveGallery!;
+    const tray = document.querySelector<HTMLElement>(`[data-tray="${productId}"]`);
+    if (!tray) return;
+
+    const images = trayImages(tray);
+    try {
+      const response = await fetch(`${SAVE_SERVER}/gallery`, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ productId, images }),
+      });
+
+      if (!response.ok) {
+        const detail = await response.text();
+        showToast(`Save failed: ${detail.slice(0, 80)}`);
+        return;
+      }
+
+      showToast(
+        images.length === 0
+          ? `Cleared gallery for ${productId}`
+          : `Saved ${images.length} image${images.length === 1 ? '' : 's'}`
+      );
+      tray.querySelectorAll('.tray-thumb--new').forEach((thumb) => {
+        thumb.classList.replace('tray-thumb--new', 'tray-thumb--existing');
+      });
+    } catch (error) {
+      showToast(`Save failed: ${error instanceof Error ? error.message : 'server unreachable'}`);
+      await probeSaveServer();
+    }
+  });
+
+  probeSaveServer();
 
   // ── Filters ────────────────────────────────────────────────────────────────
   const rows        = Array.from(document.querySelectorAll<HTMLElement>('.product-row'));
@@ -492,6 +699,7 @@ const pillars = [...new Set(products.map((p) => p.pillar))];
   .pillar-tag--calming { background: #ede9fe; color: #6d28d9; }
   .pillar-tag--comfort { background: #fef3c7; color: #b45309; }
   .pillar-tag--gear    { background: #dcfce7; color: #15803d; }
+  .pillar-tag--safety  { background: #fee2e2; color: #b91c1c; }
 
   /* Badges */
   .badge { font-size: 11px; padding: 2px 8px; border-radius: 999px; }
@@ -689,4 +897,77 @@ const pillars = [...new Set(products.map((p) => p.pillar))];
   }
   .no-asin-section summary { cursor: pointer; font-weight: var(--weight-bold); }
   .no-asin-section ul { margin-top: var(--space-sm); padding-left: var(--space-md); }
+
+  /* ── Save mode + tray controls ─────────────────────────────────────────── */
+  .save-mode {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .save-mode[data-mode='checking'] { background: #f1f5f9; color: #475569; }
+  .save-mode[data-mode='live']     { background: #dcfce7; color: #15803d; }
+  .save-mode[data-mode='offline']  { background: #fef3c7; color: #92400e; }
+
+  .tray-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .save-btn {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 14px;
+    border-radius: 6px;
+    background: #15803d;
+    color: #fff;
+    border: 1px solid #15803d;
+  }
+  .save-btn:hover { background: #166534; }
+
+  /* Order matters: the first image is the product's primary. */
+  .tray-primary {
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    z-index: 2;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 3px 4px;
+    border-radius: 4px;
+    background: #15803d;
+    color: #fff;
+  }
+
+  .tray-order {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.12s;
+  }
+  .tray-thumb:hover .tray-order,
+  .tray-thumb:focus-within .tray-order { opacity: 1; }
+
+  .tray-move {
+    width: 20px;
+    height: 18px;
+    font-size: 13px;
+    line-height: 1;
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    border-radius: 3px;
+  }
+  .tray-move:hover { background: rgba(0, 0, 0, 0.85); }
+
+  .no-asin-section {
+    margin-top: 16px;
+    font-size: 12px;
+    color: #64748b;
+  }
 </style>

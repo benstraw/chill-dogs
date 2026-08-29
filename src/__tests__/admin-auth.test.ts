@@ -20,7 +20,10 @@ function basicAuthorization(username: string, password: string): string {
 describe('admin authentication middleware', () => {
   it('is scoped to every admin route', () => {
     expect(config.matcher).toBe('/admin/:path*');
-    expect(config.runtime).toBeUndefined();
+    // Pinning a runtime here is what broke Vercel's middleware packaging before; the
+    // default Edge runtime is deliberate. Cast because the literal has no such key —
+    // that is exactly the state being asserted.
+    expect((config as Record<string, unknown>).runtime).toBeUndefined();
   });
 
   it('allows valid credentials to continue to the static admin page', () => {

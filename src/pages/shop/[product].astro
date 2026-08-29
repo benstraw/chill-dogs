@@ -1,0 +1,306 @@
+---
+/**
+ * Product detail page — `/shop/<product-id>/`.
+ *
+ * One page per catalog product. Two jobs: a direct-link target for Pinterest and
+ * social, and indexable surface for long-tail product queries that the category
+ * converters do not cover.
+ *
+ * The slug is the product `id`, which makes that id a public URL — see the stability
+ * rule in CLAUDE.md. Products below the copy bar still build (direct links keep
+ * working) but carry `noindex`, which also exempts them from the meta-length and
+ * llms.txt coverage tests.
+ *
+ * Page type is `converter`: it exists to move a visitor to an affiliate offer.
+ */
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Disclosure from '@components/modules/Disclosure.astro';
+import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
+import JsonLd from '@components/JsonLd.astro';
+import PinterestSave from '@components/modules/PinterestSave.astro';
+import AffiliateOfferStack from '@components/modules/primitives/AffiliateOfferStack.astro';
+import ProductBulletList from '@components/modules/primitives/ProductBulletList.astro';
+import ProductImageFrame from '@components/modules/primitives/ProductImageFrame.astro';
+import { productCatalogItems, type ProductCatalogItem } from '@data/product-catalog';
+import { buildProductPageMap, type PageRef } from '@data/product-page-map';
+import { getProductImages } from '@data/products/images';
+import { productShareImage } from '@data/product-share-images';
+import { ROUTES, shopProductRoute } from '@data/routes';
+import type { PillarThemeKey } from '@data/pillar-themes';
+import {
+  categoryLabel,
+  isIndexableProduct,
+  pillarLabel,
+  productOgDescription,
+  productOgTitleMap,
+} from '@utils/product-meta';
+
+export async function getStaticPaths() {
+  // Titles are resolved across the whole catalog because a duplicate is a property of
+  // the set — two products genuinely share the name "Rubyloo Dog First Aid Kit".
+  const titles = productOgTitleMap(productCatalogItems);
+  const pageMap = buildProductPageMap();
+
+  return productCatalogItems.map((product) => {
+    const appearsOn = pageMap[product.id] ?? [];
+
+    return {
+      params: { product: product.id },
+      props: {
+        product,
+        ogTitle: titles.get(product.id)!,
+        appearsOn,
+        shareImage: productShareImage(product.id),
+      },
+    };
+  });
+}
+
+interface Props {
+  product: ProductCatalogItem;
+  ogTitle: string;
+  appearsOn: PageRef[];
+  shareImage: string;
+}
+
+const { product, ogTitle, appearsOn, shareImage } = Astro.props;
+
+const images = getProductImages(product);
+const primaryImage = images[0];
+const description = productOgDescription(product);
+const indexable = isIndexableProduct(product);
+const canonicalPath = shopProductRoute(product.id);
+const pillar = pillarLabel(product.pillar);
+const category = categoryLabel(product.category);
+
+// `safety` has no theme of its own; it shares the gear palette.
+const THEME_BY_PILLAR: Record<string, PillarThemeKey> = {
+  cooling: 'cooling',
+  calming: 'calming',
+  comfort: 'comfort',
+  gear: 'gear',
+  safety: 'gear',
+};
+
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: product.name,
+  description,
+  ...(primaryImage ? { image: images.map((image) => image.src) } : {}),
+  ...(product.asin ? { sku: product.asin } : {}),
+  category,
+  offers: product.offers.map((offer) => ({
+    '@type': 'Offer',
+    url: offer.url,
+    availability: 'https://schema.org/InStock',
+    seller: {
+      '@type': 'Organization',
+      name: offer.merchant === 'amazon' ? 'Amazon' : 'Chewy',
+    },
+  })),
+};
+---
+
+<BaseLayout
+  title={product.name}
+  ogTitle={ogTitle}
+  description={description}
+  canonicalUrl={new URL(canonicalPath, Astro.site).href}
+  noindex={!indexable}
+  pillarTheme={THEME_BY_PILLAR[product.pillar]}
+  ogImage={shareImage}
+>
+  <JsonLd schema={productSchema} />
+
+  <article class="product-detail">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href={ROUTES.home}>Home</a>
+      <span aria-hidden="true">/</span>
+      <a href={ROUTES.shop}>All Products</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">{product.name}</span>
+    </nav>
+
+    <div class="detail-grid">
+      <div class="detail-media">
+        <ProductImageFrame image={product.image} images={images} width={640} height={480} />
+        {images.length > 1 && (
+          <p class="photo-count">{images.length} photos</p>
+        )}
+      </div>
+
+      <div class="detail-body">
+        <span class={`pillar-badge pillar-badge--${product.pillar}`}>{pillar}</span>
+        <h1>{product.name}</h1>
+        <p class="detail-category">{category}</p>
+
+        {product.bullets.length > 0 && <ProductBulletList bullets={[...product.bullets]} />}
+
+        {product.signalNote && <p class="detail-note">{product.signalNote}</p>}
+        {product.subscriptionNote && <p class="detail-note">{product.subscriptionNote}</p>}
+        {product.note && !product.bullets.includes(product.note) && (
+          <p class="detail-note">{product.note}</p>
+        )}
+
+        <AffiliateOfferStack
+          offers={product.offers}
+          product={{ id: product.id, name: product.name, category: product.category }}
+          tone="pillar"
+          size="wide"
+          pageType="converter"
+          pageSlug={product.id}
+          position="detail-primary"
+        />
+
+        {primaryImage && (
+          <PinterestSave
+            title={product.name}
+            description={description}
+            imageSrc={primaryImage.src}
+            imageAlt={primaryImage.alt}
+            canonicalPath={canonicalPath}
+            pageSlug={product.id}
+            placement="product-detail"
+          />
+        )}
+      </div>
+    </div>
+
+    {appearsOn.length > 0 && (
+      <section class="appears-on">
+        <h2>Where we cover this</h2>
+        <p class="appears-lede">
+          The guides that compare {product.name} against the rest of the {category.toLowerCase()} we researched.
+        </p>
+        <ul>
+          {appearsOn.map((ref) => (
+            <li><a href={ref.href}>{ref.label}</a></li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <Disclosure />
+
+    <InternalLinkStrip heading={`More ${pillar} Guides`} currentHref={ROUTES.shop} limit={4} fromPage={product.id} />
+
+    <p class="back-to-shop"><a href={ROUTES.shop}>← Browse all products</a></p>
+  </article>
+</BaseLayout>
+
+<style>
+  .product-detail {
+    max-width: var(--container-md, 960px);
+    margin: 0 auto;
+    padding: var(--space-lg) var(--space-md) var(--space-2xl);
+  }
+
+  .crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
+  }
+
+  .crumbs a {
+    color: var(--pillar-link);
+  }
+
+  .detail-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: var(--space-xl);
+    align-items: start;
+  }
+
+  .detail-media {
+    border: 1px solid var(--color-border, #e5e2dc);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+
+  .photo-count {
+    margin: 0;
+    padding: var(--space-xs) var(--space-sm);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    background: #fff;
+  }
+
+  .pillar-badge {
+    display: inline-block;
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 2px var(--space-xs);
+    border-radius: var(--radius-sm);
+    background: var(--pillar-soft-bg, #f1efe9);
+    color: var(--pillar-link);
+  }
+
+  .detail-body h1 {
+    margin: var(--space-xs) 0 var(--space-2xs);
+    font-size: var(--text-2xl);
+    line-height: var(--leading-tight);
+  }
+
+  .detail-category {
+    margin: 0 0 var(--space-md);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+
+  .detail-note {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin: 0 0 var(--space-sm);
+  }
+
+  .appears-on {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border, #e5e2dc);
+  }
+
+  .appears-on h2 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-2xs);
+  }
+
+  .appears-lede {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-sm);
+  }
+
+  .appears-on ul {
+    display: grid;
+    gap: var(--space-2xs);
+    list-style: none;
+    padding: 0;
+  }
+
+  .appears-on a {
+    color: var(--pillar-link);
+  }
+
+  .back-to-shop {
+    margin-top: var(--space-xl);
+    font-size: var(--text-sm);
+  }
+
+  .back-to-shop a {
+    color: var(--pillar-link);
+  }
+
+  @media (max-width: 720px) {
+    .detail-grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--space-lg);
+    }
+  }
+</style>

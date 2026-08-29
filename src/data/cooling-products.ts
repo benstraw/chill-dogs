@@ -46,13 +46,6 @@ export const coolingProducts: CoolingProduct[] = [
       'Lightweight and portable for travel, crates, or outdoor use',
     ],
     image: { src: 'https://m.media-amazon.com/images/I/71n1Mod8sRL._SL500_.jpg', alt: 'The Green Pet Shop Cooling Pet Pad' },
-    images: [
-      { src: 'https://m.media-amazon.com/images/I/71n1Mod8sRL._SL500_.jpg', alt: 'The Green Pet Shop Cooling Pet Pad' },
-      { src: 'https://m.media-amazon.com/images/I/71MXHIDpUBL._SL500_.jpg', alt: 'The Green Pet Shop Cooling Pet Pad' },
-      { src: 'https://m.media-amazon.com/images/I/71Om+cKd5XL._SL500_.jpg', alt: 'The Green Pet Shop Cooling Pet Pad' },
-      { src: 'https://m.media-amazon.com/images/I/81cKDlNKZ+L._SL500_.jpg', alt: 'The Green Pet Shop Cooling Pet Pad' },
-      { src: 'https://m.media-amazon.com/images/I/71D6hq8Mn6L._SL500_.jpg', alt: 'The Green Pet Shop Cooling Pet Pad' },
-    ],
   },
   {
     id: 'kh-cool-bed-iii',
@@ -67,16 +60,6 @@ export const coolingProducts: CoolingProduct[] = [
       'No electricity required — fill once and it stays cool for hours',
     ],
     image: { src: 'https://m.media-amazon.com/images/I/61xAcMN3KJL._SL500_.jpg', alt: 'K&H Cool Bed III' },
-    images: [
-      { src: 'https://m.media-amazon.com/images/I/61xAcMN3KJL._SL500_.jpg', alt: 'K&H Cool Bed III' },
-      { src: 'https://m.media-amazon.com/images/I/71nHNL9TV8L._SL500_.jpg', alt: 'K&H Cool Bed III' },
-      { src: 'https://m.media-amazon.com/images/I/81PwNbMhfDL._SL500_.jpg', alt: 'K&H Cool Bed III' },
-      { src: 'https://m.media-amazon.com/images/I/81x+gAB1lwL._SL500_.jpg', alt: 'K&H Cool Bed III' },
-      { src: 'https://m.media-amazon.com/images/I/91On6DUWqTL._SL500_.jpg', alt: 'K&H Cool Bed III' },
-      { src: 'https://m.media-amazon.com/images/I/81a9tab1fkS._SL500_.jpg', alt: 'K&H Cool Bed III' },
-      { src: 'https://m.media-amazon.com/images/I/81adXGHA5cL._SL500_.jpg', alt: 'K&H Cool Bed III' },
-      { src: 'https://m.media-amazon.com/images/I/81LImFJUBwS._SL500_.jpg', alt: 'K&H Cool Bed III' },
-    ],
   },
   {
     id: 'k9-ballistics-elevated-cooling-bed',
@@ -106,15 +89,6 @@ export const coolingProducts: CoolingProduct[] = [
       'Wipes clean easily with a damp cloth',
     ],
     image: { src: 'https://m.media-amazon.com/images/I/71JPOml6KrL._SL500_.jpg', alt: 'Arf Pets Self Cooling Mat' },
-    images: [
-      { src: 'https://m.media-amazon.com/images/I/71JPOml6KrL._SL500_.jpg', alt: 'Arf Pets Self Cooling Mat' },
-      { src: 'https://m.media-amazon.com/images/I/71hO1uOTPfL._SL500_.jpg', alt: 'Arf Pets Self Cooling Mat' },
-      { src: 'https://m.media-amazon.com/images/I/81ytzUB53tS._SL500_.jpg', alt: 'Arf Pets Self Cooling Mat' },
-      { src: 'https://m.media-amazon.com/images/I/91eq0jE6WRS._SL500_.jpg', alt: 'Arf Pets Self Cooling Mat' },
-      { src: 'https://m.media-amazon.com/images/I/81FsAd-FaNS._SL500_.jpg', alt: 'Arf Pets Self Cooling Mat' },
-      { src: 'https://m.media-amazon.com/images/I/61rvG3bjROS._SL500_.jpg', alt: 'Arf Pets Self Cooling Mat' },
-      { src: 'https://m.media-amazon.com/images/I/51oIzHyEYvS._SL500_.jpg', alt: 'Arf Pets Self Cooling Mat' },
-    ],
   },
 
   // Cooling Bandanas

@@ -26,6 +26,9 @@ export interface FleaTickProduct extends OfferBackedProduct {
   rxRequired?: boolean;
   ctaLabel?: string;
   image?: { src: string; alt: string };
+  /** Hand-authored gallery override. Normally galleries live in src/data/product-galleries.ts;
+   *  read both through getProductImages() in src/data/products/images.ts. */
+  images?: readonly { src: string; alt: string }[];
 }
 
 const CHEWY_TRACKING_BASE = 'https://chewy.sjv.io/c/7067825/3054490/32975';

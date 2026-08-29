@@ -3,7 +3,7 @@ title: Environment and Integrations
 type: canonical
 domain: engineering
 status: active
-updated: 2026-08-09
+updated: 2026-08-29
 tags:
   - chill-dogs
   - engineering
@@ -68,6 +68,7 @@ Consequences:
 | `bun run check:amazon` | none | none — reads the local cache only | — |
 | `bun run check:asins` | none | `www.amazon.com` | **bun** |
 | `bun run check:ai-docs` | none | none | — |
+| `bun run admin:serve` | none | none — binds 127.0.0.1:4322, writes the repo | — |
 | `bun run indexnow:submit` | `INDEXNOW_KEY` | `api.indexnow.org` | node |
 | `bun run fetch:chewy` | `IMPACT_ACCOUNT_SID`, `IMPACT_AUTH_TOKEN`, `CHEWY_IMPACT_CAMPAIGN_ID`, optional `CHEWY_IMPACT_CATALOG_ID` | `api.impact.com` | **bun** |
 | `bun run chewy-link` | `IMPACT_ACCOUNT_SID`, `IMPACT_AUTH_TOKEN`, `CHEWY_IMPACT_CAMPAIGN_ID`, `CHEWY_IMPACT_AD_ID` (or `CHEWY_IMPACT_BASE_URL` to skip the API) | `api.impact.com`, `www.chewy.com` | **bun** |
@@ -85,6 +86,35 @@ api.impact.com
 www.chewy.com
 api.indexnow.org
 ```
+
+---
+
+## The admin gallery writer (`bun run admin:serve`)
+
+`/admin/images/` is a static page. It can read the Amazon cache at build time but has no
+way to write back — the site is `output: 'static'` with no adapter, so adding an Astro API
+route would fail `astro build`. `scripts/admin-image-server.ts` is the writer, run as a
+separate process:
+
+```bash
+bun run admin:serve   # 127.0.0.1:4322 — the writer
+bun run dev           # localhost:4321 — the site
+```
+
+The page probes `GET /health` on load and shows which mode it is in:
+
+- **reachable** → the Save button writes `src/data/product-galleries.ts`
+- **not reachable** → falls back to copying a paste-ready snippet, which is the only
+  behaviour available in production, where the admin pages sit behind Basic Auth on a
+  static build with no repository to write to
+
+It needs no keys and makes no outbound calls, so it works in a proxied container. It does
+have write access to the repository, so it binds to loopback only, requires a localhost
+`Origin`, and rejects any payload whose `productId` is not a real catalog product or whose
+image URLs are not https on a known merchant CDN. Do not expose it off your machine.
+
+Saves rewrite the whole gallery file rather than patching it, so formatting is normalised
+on every save and a save for one product cannot corrupt another's entry.
 
 ---
 

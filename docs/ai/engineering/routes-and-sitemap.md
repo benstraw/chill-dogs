@@ -3,7 +3,7 @@ title: Routes and Sitemap
 type: canonical
 domain: engineering
 status: active
-updated: 2026-06-05
+updated: 2026-08-29
 tags:
   - chill-dogs
   - engineering
@@ -173,6 +173,29 @@ When a live/indexed URL changes slug:
 - Add a redirect entry in `docs/system-definition.yaml` under `redirects:`
 - Add the HTTP redirect to `vercel.json` → `redirects` array (true 301 at Vercel edge)
 - Add a meta-refresh fallback to `astro.config.mjs` → `redirects` block for local dev
+
+---
+
+## Product ids are public URLs
+
+Every product in `src/data/*-products.ts` is built as a detail page at `/shop/<id>/`.
+That makes the `id` field a **public, indexed URL**, not an internal key.
+
+- Renaming a product's `name` is free. It changes page copy and nothing else.
+- Renaming a product's `id` retires a live URL. Pinterest pins, Google results, and
+  every `appearsOn` link pointing at it break.
+
+To rename an id, treat it as the slug change it is: keep the old entry in
+`src/data/product-url-history.ts`, then add **both** redirects listed above for
+`/shop/<old-id>/`.
+
+`src/__tests__/product-slugs.test.ts` enforces this. It fails the build when an id in
+the history file no longer builds and has no redirect, when two products share an id,
+when an id is not URL-safe kebab-case, or when a new product is missing from the
+history file — and it prints the exact lines to paste.
+
+Prefer editing the `name` and leaving the `id` alone. An id that reads a little
+tersely is not worth a URL change.
 
 ---
 

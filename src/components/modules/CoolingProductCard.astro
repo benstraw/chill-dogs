@@ -22,7 +22,7 @@ const offers = isAmazon ? getOffers(product) : [];
 ---
 
 <ProductCardShell>
-  <ProductImageFrame slot="image" image={product.image} images={product.images} />
+  <ProductImageFrame slot="image" image={product.image} />
   <h3 class="cp-name">{product.name}</h3>
   {product.rhysApproved && (
     <div class="cp-rhys-badge">Rhys Approved Product</div>

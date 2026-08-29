@@ -10,6 +10,14 @@ import { ROUTES } from './routes';
 import { trackerProducts } from './tracking-products';
 import { emergencyProducts } from './emergency-products';
 import { fleaTickProducts } from './flea-tick-products';
+import { productCatalogItems } from './product-catalog';
+import { productShareImage } from './product-share-images';
+import { shopProductRoute } from './routes';
+import {
+  isIndexableProduct,
+  productOgDescription,
+  productOgTitleMap,
+} from '@utils/product-meta';
 
 export type SitemapPageType = 'converter' | 'collector' | 'attractor' | 'informer';
 export type SitemapCollectorSubtype = 'section' | 'article';
@@ -211,6 +219,9 @@ export function createSitemapPage(input: SitemapPageInput): SitemapPage {
     },
   };
 }
+
+/** Section title for the generated product detail pages. */
+export const PRODUCT_SECTION_TITLE = 'Products';
 
 export const staticSitemapSections: SitemapSection[] = [
   {
@@ -885,4 +896,37 @@ export const staticSitemapSections: SitemapSection[] = [
       }),
     ],
   },
+  productSitemapSection(),
 ];
+
+/**
+ * One converter page per catalog product at `/shop/<id>/`.
+ *
+ * Generated rather than hand-listed: 214 entries would rot the moment a product is
+ * added. Registering here is what puts these pages in llms.txt — `llms.txt` is built
+ * from the complete inventory, and `src/__tests__/llms-coverage.test.ts` fails the
+ * build if it and the XML sitemap disagree on any indexable URL.
+ *
+ * Products under the copy bar are marked `noindex`, which keeps them out of both
+ * surfaces and out of the meta-length test while still building the page.
+ */
+function productSitemapSection(): SitemapSection {
+  const titles = productOgTitleMap(productCatalogItems);
+
+  return {
+    title: PRODUCT_SECTION_TITLE,
+    description:
+      'Per-product detail pages generated from the catalog. Direct-link targets for social and long-tail product search; thin products build but stay noindex.',
+    pages: productCatalogItems.map((product) =>
+      createSitemapPage({
+        baseTitle: product.name,
+        ogTitle: titles.get(product.id),
+        description: productOgDescription(product),
+        href: shopProductRoute(product.id),
+        pageType: 'converter',
+        noindex: !isIndexableProduct(product),
+        ogImage: productShareImage(product.id),
+      })
+    ),
+  };
+}

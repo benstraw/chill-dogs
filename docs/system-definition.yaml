@@ -399,6 +399,26 @@ site_system:
         Linked from site footer.
         Page type is converter (not informer) because it drives Amazon affiliate clicks.
 
+    - name: "Product detail"
+      type: "converter"
+      pillar: "all"
+      target_action: "Convert direct social and long-tail search traffic on a single product"
+      metric: "amazon_outbound_click rate, pinterest_save_click"
+      routes:
+        - "/shop/<product-id>/"
+      notes: >
+        One generated page per catalog product at /shop/<id>/, built by src/pages/shop/[product].astro
+        from src/data/product-catalog.ts. The slug is the product id, which makes ids public URLs —
+        see architecture.product_urls. Direct-link target for Pinterest and extra surface for long-tail
+        product queries the category converters do not cover. This is the only surface that renders the
+        multi-image gallery; converter cards stay single-image.
+        Registered as the "Products" section of staticSitemapSections so llms.txt and the XML sitemap
+        pick them up automatically. Products below the copy bar in src/utils/product-meta.ts
+        (2+ bullets, 120+ chars) still build but carry noindex, which also exempts them from the
+        og meta-length and llms coverage tests. Currently 195 indexable of 214.
+        og:image reuses the generated OG card of the first guide featuring the product; there is no
+        per-product OG card yet because generate-og-images.mjs only walks src/pages/**/*.astro.
+
     - name: "Search"
       type: "collector"
       target_action: "Surface pages and products by keyword; route users to converters"
@@ -536,6 +556,7 @@ site_system:
     seo_strategy: "collector captures intent; converter monetizes intent; homepage variant routes remain canonicalized and noindex"
     sitemap_inventory: "src/data/sitemap-inventory.ts composes staticSitemapSections with article MDX collection entries at build time; future related-content derivation should use the complete inventory instead of static-only sections. Converter sitemap entries carry pubDate and optional lastUpdated metadata for homepage theme-section converter recency ordering."
     section_collectors: "src/data/section-collectors.ts defines cooling, calming, comfort, and gear collector metadata, shared SectionHero content/theme inputs, topic subsection grouping, topic coverage, priority ordering, dynamic CollectorBody card inventories, and CollectionPage hasPart schema from the complete sitemap inventory. The retired /cooling/v/ and /calming/v/ hero experiment routes are no longer built."
+    product_urls: "Every product in src/data/*-products.ts builds a detail page at /shop/<id>/, so the id field is a public indexed URL rather than an internal key. Renaming a product name is free; renaming an id retires a live URL and requires redirects in both vercel.json and astro.config.mjs with the old id retained in src/data/product-url-history.ts. src/__tests__/product-slugs.test.ts enforces id uniqueness, URL-safe kebab-case, redirect coverage for retired ids, and history-file completeness."
     discovery_surfaces: "The XML sitemap (astro.config.mjs) and llms.txt (src/pages/llms.txt.ts) share one exclusion list in src/data/discovery-exclusions.ts. llms.txt is generated from the complete sitemap inventory — every registered page that is not noindex and not excluded is listed, so new pages appear automatically. It is never a hand-curated subset; src/__tests__/llms-coverage.test.ts fails the build if llms.txt and the XML sitemap disagree on any indexable URL."
 
   redirects:

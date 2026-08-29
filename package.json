@@ -12,6 +12,7 @@
     "build": "astro build && node scripts/apply-first-page-image-og.mjs && node scripts/apply-sitemap-share-preview.mjs && node scripts/indexnow-submit.mjs",
     "og:gen": "bun run src/scripts/og-gen/generate.tsx",
     "og:force": "bun run src/scripts/og-gen/generate.tsx --force",
+    "admin:serve": "bun run scripts/admin-image-server.ts",
     "preview": "astro preview",
     "astro": "astro",
     "test": "bun run build && vitest run",
