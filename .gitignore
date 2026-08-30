@@ -8,6 +8,10 @@ dist/
 # Generated share images. Product-style OG JPGs are committed with git add -f and stay tracked.
 public/og/*
 !public/og/
+# Generated Pinterest pins — same convention as public/og/: rendered locally by
+# `bun run pins:gen`, force-added once reviewed so placeholder runs never ship.
+public/pins/*
+!public/pins/
 .vercel/
 
 # watermarked images (generated at build time)

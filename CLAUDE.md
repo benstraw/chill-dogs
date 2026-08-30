@@ -50,8 +50,17 @@ bun run check:ai-docs    # Validate AI knowledge graph frontmatter and links
 bun run fetch:chewy      # Pull Chewy catalog metadata from Impact (diagnostic only)
 bun run chewy-link:verify # Confirm Impact credentials resolve
 bun run og:gen           # Generate product-style OG share images
+bun run pins:gen         # Generate 1000x1500 Pinterest pins for /shop/ product pages
 bun run admin:serve      # Local writer for /admin/images/ (see below); no network, no keys
 ```
+
+`pins:gen` renders one 1000x1500 Pinterest pin per product into `public/pins/`, which
+`PinterestSave` on `/shop/<id>/` hands to Pinterest. Without a pin, the Save button falls
+back to the raw product photo — a square catalogue shot with no title or branding, in a
+ratio Pinterest crops. It fetches product photos from the merchant CDN, so it **needs
+network** and will not run in a sandboxed agent container; add `--placeholder` to preview
+the template offline with a stand-in photo, and `--only <id>` to render one product.
+Pins are gitignored like `public/og/` — force-add the ones you have reviewed.
 
 `admin:serve` runs alongside `bun run dev`. It is the local companion for the
 `/admin/images/` browser: with it running, Save writes `src/data/product-galleries.ts`;
