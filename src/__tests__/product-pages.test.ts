@@ -11,16 +11,20 @@
  * half of that bargain.
  */
 
+import { existsSync, readFileSync } from 'node:fs';
+import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 
 import {
   PRODUCT_SECTION_TITLE,
+  isProductDetailPage,
   staticSitemapSections,
   type SitemapPage,
 } from '../data/content-sitemap';
 import { productCatalogItems } from '../data/product-catalog';
 import { buildProductPageMap } from '../data/product-page-map';
 import { shopProductRoute } from '../data/routes';
+import { getHomepageConverters } from '../utils/homepage-articles';
 import { isIndexableProduct } from '../utils/product-meta';
 
 const productSection = staticSitemapSections.find(
@@ -69,15 +73,27 @@ describe('product page registration', () => {
 });
 
 describe('product pages are reachable', () => {
-  it('has no product page without a route into it', () => {
-    // Every product is listed on the /shop/ browse hub, which is in the site nav, so
-    // none of these is orphaned. This asserts the data behind that page covers them all.
-    const browsable = new Set(productCatalogItems.map((product) => product.id));
-    const unreachable = productPages
-      .map((page) => page.href.replace('/shop/', '').replace(/\/$/, ''))
-      .filter((id) => !browsable.has(id));
+  it('is linked from the /shop/ browse page', () => {
+    // This asserts the built HTML, not the data behind it. An earlier version of this
+    // test compared page ids against catalog ids, which is tautological — it passed
+    // while all 214 pages were orphaned, reachable only from the XML sitemap and the
+    // noindex admin sitemap. A bulk page set with no internal links is what search
+    // engines treat as doorway pages.
+    const shopHtml = path.join(process.cwd(), 'dist/shop/index.html');
+    if (!existsSync(shopHtml)) {
+      throw new Error('No dist/shop/index.html found. Run `bun run build` first.');
+    }
 
-    expect(unreachable).toEqual([]);
+    const html = readFileSync(shopHtml, 'utf8');
+    const linked = new Set(
+      Array.from(html.matchAll(/href="(\/shop\/[a-z0-9][a-z0-9-]*\/)"/g)).map((match) => match[1])
+    );
+
+    const unlinked = productCatalogItems
+      .map((product) => shopProductRoute(product.id))
+      .filter((href) => !linked.has(href));
+
+    expect(unlinked).toEqual([]);
   });
 
   it('links most products back to a guide that features them', () => {
@@ -90,6 +106,29 @@ describe('product pages are reachable', () => {
     );
 
     expect(orphans.length).toBeLessThanOrEqual(5);
+  });
+});
+
+describe('product pages stay out of guide surfaces', () => {
+  it('keeps them off the homepage Compare picks list', () => {
+    // getHomepageConverters() takes every `converter` in the inventory. Registering 214
+    // product pages as converters put an individual product on the homepage next to
+    // "Best Cooling Mats for Dogs"; by sheer count they would crowd it out entirely.
+    const leaked = getHomepageConverters(50)
+      .filter((converter) => /^\/shop\/[a-z0-9-]+\/$/.test(converter.href))
+      .map((converter) => `${converter.href} (${converter.title})`);
+
+    expect(leaked).toEqual([]);
+  });
+
+  it('identifies detail pages without matching the browse page itself', () => {
+    const detail = productPages[0]!;
+    expect(isProductDetailPage(detail)).toBe(true);
+
+    const browse = staticSitemapSections
+      .flatMap((section) => section.pages)
+      .find((page) => page.href === '/shop/');
+    expect(browse && isProductDetailPage(browse)).toBe(false);
   });
 });
 

@@ -223,6 +223,18 @@ export function createSitemapPage(input: SitemapPageInput): SitemapPage {
 /** Section title for the generated product detail pages. */
 export const PRODUCT_SECTION_TITLE = 'Products';
 
+/**
+ * True for a generated `/shop/<id>/` product detail page.
+ *
+ * These are registered as converters — they exist to reach an offer — but they are not
+ * comparison guides, and anything that surfaces "our converters" to a reader means the
+ * guides. Without this the homepage's Compare picks and the section collectors both pull
+ * individual products in alongside real guides.
+ */
+export function isProductDetailPage(page: SitemapPage): boolean {
+  return page.href.startsWith(ROUTES.shop) && page.href !== ROUTES.shop;
+}
+
 export const staticSitemapSections: SitemapSection[] = [
   {
     title: 'Entry Points',

@@ -1,6 +1,6 @@
 import { getCompleteSitemapPages } from '@data/sitemap-inventory';
 import type { SitemapPage } from '@data/content-sitemap';
-import { staticSitemapSections } from '@data/content-sitemap';
+import { isProductDetailPage, staticSitemapSections } from '@data/content-sitemap';
 
 export type HomepageArticleColor = 'cool' | 'calm' | 'comfort' | 'gear';
 
@@ -75,7 +75,10 @@ export interface HomepageConverterCard {
 export function getHomepageConverters(limit = 15): HomepageConverterCard[] {
   return staticSitemapSections
     .flatMap((s) => s.pages)
-    .filter((p) => p.pageType === 'converter')
+    // Comparison guides only. Product detail pages are converters too, but "Compare
+    // picks" offering a single product next to "Best Cooling Mats for Dogs" is a
+    // category error — and with 214 of them, they crowd the list by sheer count.
+    .filter((p) => p.pageType === 'converter' && !isProductDetailPage(p))
     .sort((a, b) => {
       const aDate = a.lastUpdated ?? a.pubDate;
       const bDate = b.lastUpdated ?? b.pubDate;
