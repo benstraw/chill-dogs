@@ -109,6 +109,68 @@ describe('product pages are reachable', () => {
   });
 });
 
+describe('converter contract on the built page', () => {
+  const sample = ['kh-cool-bed-iii', 'thundershirt-classic', 'fi-series-3-plus'];
+
+  function articleHtml(productId: string): string {
+    const file = path.join(process.cwd(), 'dist/shop', productId, 'index.html');
+    if (!existsSync(file)) {
+      throw new Error(`No dist/shop/${productId}/index.html. Run \`bun run build\` first.`);
+    }
+    const html = readFileSync(file, 'utf8');
+    return /<article class="product-detail"[\s\S]*?<\/article>/.exec(html)?.[0] ?? '';
+  }
+
+  it('puts the affiliate disclosure before the CTA', () => {
+    // Converter checklist: "Disclosure appears before product CTAs". The first version
+    // of this page rendered it four sections below the CTA on all 214 pages.
+    for (const productId of sample) {
+      const article = articleHtml(productId);
+      const disclosure = article.indexOf('class="disc');
+      const cta = article.indexOf('data-affiliate="true"');
+
+      expect(disclosure, `${productId}: no disclosure`).toBeGreaterThan(-1);
+      expect(cta, `${productId}: no affiliate CTA`).toBeGreaterThan(-1);
+      expect(disclosure, `${productId}: disclosure must precede the CTA`).toBeLessThan(cta);
+    }
+  });
+
+  it('keeps one affiliate CTA block, with no share action competing beside it', () => {
+    for (const productId of sample) {
+      const article = articleHtml(productId);
+      const cta = article.indexOf('data-affiliate="true"');
+      const pinterest = article.indexOf('pinterest_save_click');
+
+      // Pinterest is a share action, not a conversion. It belongs below the fold, after
+      // the CTA has had its chance.
+      if (pinterest > -1) {
+        expect(pinterest, `${productId}: Pinterest save must sit after the CTA`).toBeGreaterThan(cta);
+      }
+    }
+  });
+
+  it('offers related guides from the product\'s own pillar', () => {
+    // currentHref used to be ROUTES.shop, so every product got the same four links under
+    // a heading naming its pillar — "More Cooling Guides" linking to fireworks.
+    const cooling = articleHtml('kh-cool-bed-iii');
+    const strip = /<nav class="ils[\s\S]*?<\/nav>/.exec(cooling)?.[0] ?? '';
+    const links = Array.from(strip.matchAll(/href="([^"]+)"/g)).map((match) => match[1]);
+
+    expect(links.length).toBeGreaterThan(0);
+    expect(links.some((href) => href.startsWith('/cooling/'))).toBe(true);
+  });
+
+  it('never offers another product page as a related guide', () => {
+    for (const productId of sample) {
+      const strip = /<nav class="ils[\s\S]*?<\/nav>/.exec(articleHtml(productId))?.[0] ?? '';
+      expect(
+        Array.from(strip.matchAll(/href="(\/shop\/[a-z0-9-]+\/)"/g)).map((m) => m[1]),
+        `${productId}: related guides should be guides`
+      ).toEqual([]);
+    }
+  });
+});
+
 describe('product pages stay out of guide surfaces', () => {
   it('keeps them off the homepage Compare picks list', () => {
     // getHomepageConverters() takes every `converter` in the inventory. Registering 214

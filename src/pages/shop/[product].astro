@@ -82,6 +82,23 @@ const THEME_BY_PILLAR: Record<string, PillarThemeKey> = {
   safety: 'gear',
 };
 
+/**
+ * The section collector whose related guides suit this product.
+ *
+ * Passing `ROUTES.shop` here gave all 214 pages the same four links — computed for the
+ * browse page — under a heading that claimed the product's pillar, so a cooling product
+ * advertised "More Cooling Guides" and linked to fireworks and lick mats.
+ */
+const COLLECTOR_BY_PILLAR: Record<string, string> = {
+  cooling: ROUTES.coolingHub,
+  calming: ROUTES.calmingHub,
+  comfort: ROUTES.comfortHub,
+  gear: ROUTES.gearHub,
+  safety: ROUTES.gearHub,
+};
+
+const relatedFrom = COLLECTOR_BY_PILLAR[product.pillar] ?? ROUTES.shop;
+
 const productSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
@@ -143,6 +160,10 @@ const productSchema = {
           <p class="detail-note">{product.note}</p>
         )}
 
+        <!-- Disclosure sits before the CTA, per the converter checklist: the reader
+             sees the affiliate relationship before the link, not four sections later. -->
+        <Disclosure showSafety={false} />
+
         <AffiliateOfferStack
           offers={product.offers}
           product={{ id: product.id, name: product.name, category: product.category }}
@@ -152,18 +173,6 @@ const productSchema = {
           pageSlug={product.id}
           position="detail-primary"
         />
-
-        {primaryImage && (
-          <PinterestSave
-            title={product.name}
-            description={description}
-            imageSrc={primaryImage.src}
-            imageAlt={primaryImage.alt}
-            canonicalPath={canonicalPath}
-            pageSlug={product.id}
-            placement="product-detail"
-          />
-        )}
       </div>
     </div>
 
@@ -181,11 +190,20 @@ const productSchema = {
       </section>
     )}
 
-    <Disclosure />
+    {primaryImage && (
+      <PinterestSave
+        title={product.name}
+        description={description}
+        imageSrc={primaryImage.src}
+        imageAlt={primaryImage.alt}
+        canonicalPath={canonicalPath}
+        pageSlug={product.id}
+        placement="product-detail"
+        eyebrow="Save this product"
+      />
+    )}
 
-    <InternalLinkStrip heading={`More ${pillar} Guides`} currentHref={ROUTES.shop} limit={4} fromPage={product.id} />
-
-    <p class="back-to-shop"><a href={ROUTES.shop}>← Browse all products</a></p>
+    <InternalLinkStrip heading={`More ${pillar} Guides`} currentHref={relatedFrom} limit={4} fromPage={product.id} />
   </article>
 </BaseLayout>
 
@@ -242,6 +260,16 @@ const productSchema = {
     color: var(--pillar-link);
   }
 
+  /*
+   * Disclosure is a full-width section elsewhere, so it carries --space-2xl vertical
+   * padding. In this card column that pushed the CTA a further 96px down the page, and
+   * the converter contract wants the CTA above the fold.
+   */
+  .detail-body :global(.disc) {
+    padding: 0;
+    margin-bottom: var(--space-md);
+  }
+
   .detail-body h1 {
     margin: var(--space-xs) 0 var(--space-2xs);
     font-size: var(--text-2xl);
@@ -285,15 +313,6 @@ const productSchema = {
   }
 
   .appears-on a {
-    color: var(--pillar-link);
-  }
-
-  .back-to-shop {
-    margin-top: var(--space-xl);
-    font-size: var(--text-sm);
-  }
-
-  .back-to-shop a {
     color: var(--pillar-link);
   }
 

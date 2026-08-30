@@ -418,6 +418,11 @@ site_system:
         og meta-length and llms coverage tests. Currently 195 indexable of 214.
         og:image reuses the generated OG card of the first guide featuring the product; there is no
         per-product OG card yet because generate-og-images.mjs only walks src/pages/**/*.astro.
+        Catalog layer: a converter by type but not a converter guide — generated, single-product,
+        no comparison. Excluded from the homepage Compare picks, section collectors, and related
+        strips via isProductDetailPage(), which by count would otherwise crowd all three out.
+        Sits outside the collector -> converter funnel, so collector_to_converter_click does not
+        measure it. See docs/ai/strategy/metrics-and-page-types.md.
 
     - name: "Search"
       type: "collector"
