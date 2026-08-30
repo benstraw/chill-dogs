@@ -3,7 +3,7 @@ title: Product Data Rules
 type: canonical
 domain: affiliate
 status: active
-updated: 2026-05-06
+updated: 2026-08-26
 tags:
   - chill-dogs
   - affiliate
@@ -15,6 +15,7 @@ related:
   - disclosure-rules.md
   - ../engineering/architecture.md
   - ../engineering/build-and-test-commands.md
+  - ../engineering/product-variants.md
 ---
 
 # Product Data Rules
@@ -76,6 +77,43 @@ than the canonical editorial record, surface it for manual editorial review inst
 Chewy links are stored as merchant offers. Generate and verify Chewy affiliate links with the Impact-backed tooling in
 [`../../affiliate-links.md`](../../affiliate-links.md).
 
+### Source Chewy product data from Impact, never from chewy.com
+
+**`www.chewy.com` product pages are behind Kasada bot protection and answer `429` to every automated client.**
+That includes `WebFetch`, `curl`, headless/in-app browsers, and browser automation. This is not a rate limit that
+clears on retry and it is not specific to sandboxed sessions — a local machine with full network access gets the
+same `429`. Do not try to scrape, retry, wait out, or spoof a user agent past it.
+
+The Impact catalog API is the sanctioned source and returns everything a product record needs. Start here:
+
+```bash
+bun run fetch:chewy -- --search "<brand + product words>"
+```
+
+Notes on using it:
+
+- **The `/dp/<number>` in a Chewy URL is usually NOT the Impact `CatalogItemId`.** Do not build
+  `--item-id product_24727_<dp-number>` from a `/dp/` URL; it 404s. Search by name first, then read the
+  `CatalogItemId` off the result.
+- **Confirm identity via the cached record's `Url` field**, which embeds the canonical `chewy.com/.../dp/<number>`
+  path. That is how you prove a search hit is the listing the issue actually asked for.
+- Once you know the `CatalogItemId`, the reproducible single fetch is
+  `bun run fetch:chewy -- --item-id product_24727_<CatalogItemId>`.
+- **`--search` is broad and caches every loose match** — often 200+ files under `src/data/chewy-products/`.
+  Clean up before committing: `git clean -f src/data/chewy-products/` and
+  `git checkout -- src/data/chewy-products/_index.json`, then re-fetch only the items you need by `--item-id`.
+- `image.chewy.com` is *not* behind the bot wall. Image URLs from the cached `ImageUrl` field are directly
+  reachable, so you can verify one with a plain `curl -o /dev/null -w '%{http_code}'` before shipping a card.
+- The cached `Bullets` array is frequently empty. Write card bullets yourself from `Description`, per the
+  editorial rule above — do not paste the marketing prose verbatim.
+- An empty `Asin` field means Impact knows of no Amazon match. That is *not* proof one does not exist, but it does
+  mean you have nothing to verify against: keep the product Chewy-only rather than guessing at an ASIN.
+
+Credentials live in `.env` (`IMPACT_ACCOUNT_SID`, `IMPACT_AUTH_TOKEN`, `CHEWY_IMPACT_CAMPAIGN_ID`,
+`CHEWY_IMPACT_CATALOG_ID`). Note that `bun run chewy-link:verify` additionally needs `CHEWY_IMPACT_BASE_URL`, so
+that command can fail while `fetch:chewy` works fine — check the specific variable rather than assuming no
+credentials are present.
+
 1. Find or fetch the Chewy catalog item with `bun run fetch:chewy -- --search "product name"` or `bun run fetch:chewy -- --catalog-id <catalog-id> --item-id <item-id>`.
 2. Generate the Impact affiliate link from the canonical Chewy product URL with `bun run chewy-link -- "https://www.chewy.com/example-product/dp/123456" --article <page-slug> --placement <placement>`.
 3. Add a Chewy offer to the relevant canonical product record in `src/data/**`.
@@ -104,6 +142,14 @@ Chewy links are stored as merchant offers. Generate and verify Chewy affiliate l
 
 For Chewy-only products, omit `asin` and `amazonUrl`; add at least one active Chewy offer instead. Product pages and
 schema use the primary merchant offer, while Amazon-only scripts ignore products without Amazon offers.
+
+## Products sold in several sizes or packs
+
+When one product is several merchant listings — a topical per weight band, a robe per dog size, a spray per scent —
+do not add a record per listing. Add a `variantGroup` to the single record instead, and keep the existing ASIN as the
+default variant so `asin` / `amazonUrl` / `offers` still describe the card. Full rules, including where to source
+variant ASINs and why variant offers must stay out of `offers`, are in
+[`../engineering/product-variants.md`](../engineering/product-variants.md).
 
 ---
 

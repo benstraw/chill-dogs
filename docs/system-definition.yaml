@@ -351,18 +351,29 @@ site_system:
       routes:
         - "/safety/what-to-do-if-your-dog-runs-away/"
 
+    - name: "Flea and Tick Prevention for Dogs"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Capture broad flea/tick search intent, then route conventional-med buyers to the medications converter and natural-first readers to the specialist natural guide and related converters"
+      metric: "collector_to_converter_click to /safety/best-flea-and-tick-products-for-dogs/, /safety/best-natural-flea-and-tick-products-for-dogs/, and /safety/dog-bath-tools-for-flea-season/"
+      routes:
+        - "/safety/flea-and-tick-prevention-for-dogs/"
+      notes: >
+        Broad pillar article for the flea/tick cluster. Covers exposure, geography, seasonality,
+        conventional medication categories, prescription-vs-OTC trade-offs, natural-option summary,
+        medication-risk framing, and clear veterinary escalation. This is the upstream collector
+        that competes for head-term flea/tick searches.
+
     - name: "Natural Flea and Tick Prevention for Dogs"
       type: "collector"
       collector_subtype: "article"
-      target_action: "Serve natural-first readers who already prefer a lower-toxicity routine and route them to the natural-product converter"
-      metric: "collector_to_converter_click to /safety/best-natural-flea-and-tick-products-for-dogs/"
+      target_action: "Serve natural-first readers who already prefer a lower-toxicity routine, then route them to natural-product and bath-tool converters while keeping a path back to the broad pillar and medication comparison"
+      metric: "collector_to_converter_click to /safety/best-natural-flea-and-tick-products-for-dogs/ and /safety/dog-bath-tools-for-flea-season/"
       routes:
         - "/safety/natural-flea-and-tick-prevention-for-dogs/"
       notes: >
-        Natural-first article in the flea/tick cluster. Carries the Wondercide label-reading,
-        cat-safety, bath-support, and veterinary-escalation content. The broad pillar article,
-        medications converter, and flea-season bath-tools converter are held for a follow-up
-        release; this article and its converter ship as a self-contained pair.
+        Specialist natural sub-article in the flea/tick cluster. Keeps the Wondercide label-reading,
+        cat-safety, bath-support, and escalation content, but no longer carries the full broad-intent role.
 
     - name: "Best Natural Flea and Tick Products for Dogs"
       type: "converter"
@@ -376,6 +387,41 @@ site_system:
         chews; and a grooming section of flea combs, brushes, and tick-removal tools. Spray, shampoo,
         chew, and grooming sections mix Amazon and Chewy offers. Frames natural products as prevention
         layers and light-load support, not heavy-infestation rescue tools.
+
+    - name: "Best Flea and Tick Products for Dogs"
+      type: "converter"
+      target_action: "Drive affiliate outbound clicks from shoppers who want flea/tick protection without a prescription, plus the detection and removal tools that go with it"
+      metric: "amazon_outbound_click rate + collector_to_converter_click from /safety/flea-and-tick-prevention-for-dogs/"
+      routes:
+        - "/safety/best-flea-and-tick-products-for-dogs/"
+      notes: >
+        Shared-config safety converter for the no-prescription lane: OTC spot-on topicals and
+        long-wear flea collars, followed by the combs, grooming sets, and tick-removal tools for
+        whatever gets through. Deliberately scoped away from the medications converter, which keeps
+        Rx orals, combo chews, and the brand-name OTC/Seresto lineup. The 12 grooming and tick-tool
+        records plus the Tick Key are shared verbatim with the natural converter rather than moved —
+        product-page-map.ts resolves all four flea/tick converters off their page configs so a
+        record can appear on several pages without a category filter mislabeling it. Vectra 3D is
+        permethrin-based and carries the same cat-toxicity caution as K9 Advantix II.
+
+    - name: "Dog Bath Tools"
+      type: "converter"
+      target_action: "Drive affiliate outbound clicks on bath-support tools that help owners execute bath and flea-season cleanup routines"
+      metric: "amazon_outbound_click rate + collector_to_converter_click from the natural guide and broad pillar"
+      routes:
+        - "/safety/dog-bath-tools-for-flea-season/"
+      notes: >
+        Shared-config safety converter organized around the four friction points of a dog bath:
+        sprayers and rinse setups (Rinseroo, an outdoor faucet wand, a cordless bucket pump, both
+        Wondurdog splash-shield kits, and the Furesh folding wash station), bath brushes and shampoo
+        scrubbers, multi-tool bath and grooming kits, and drying and cleanup — robes, towel sets,
+        two microfiber towels, a low-noise adjustable dryer, a high-velocity force dryer, and a
+        waterless dry-shampoo applicator. 28 products total. Nine records carry Chewy offers; the
+        Wondurdog outdoor nozzle and the Furesh tub carry both Amazon and Chewy CTAs, and the other
+        seven Chewy additions are Chewy-only because their Amazon listings are different bundles or
+        colorways. The Anrundar grooming kit is shared with the natural flea/tick converter. The
+        page explicitly positions baths as support and coat-care help, not as standalone flea
+        treatment. URL keeps its original flea-season slug.
 
     - name: "Rattlesnake Safety for Dogs"
       type: "collector"

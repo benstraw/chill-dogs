@@ -12,6 +12,7 @@ import { accessoryProducts, trackerProducts } from './tracking-products';
 import { coolingConverterPageConfigs } from './cooling-converter-pages';
 import { calmingConverterPages } from './calming-converter-pages';
 import { relaxationConverterPages } from './relaxation-converter-pages';
+import { fleaTickConverterPages } from './flea-tick-converter-pages';
 import { ROUTES } from './routes';
 
 export interface PageRef {
@@ -129,29 +130,45 @@ export function buildProductPageMap(): ProductPageMap {
     addRef(map, p.id, snakeBiteKitRef);
   }
 
+  // Every flea/tick converter reads its lineup off its own page config. Category
+  // filters cannot express these pages: records are deliberately shared across them
+  // (the grooming and tick tools appear on three), so a filter would either miss a
+  // page or claim a product appears somewhere it does not.
+  const fleaTickPageRefs: Record<string, PageRef> = {
+    'best-natural-flea-and-tick-products-for-dogs': {
+      label: 'Best Natural Flea and Tick Products for Dogs',
+      href: ROUTES.naturalFleaTickProducts,
+    },
+    'best-flea-and-tick-products-for-dogs': {
+      label: 'Best Flea and Tick Products for Dogs',
+      href: ROUTES.fleaTickProducts,
+    },
+    'dog-bath-tools-for-flea-season': {
+      label: 'Dog Bath Tools',
+      href: ROUTES.fleaSeasonBathTools,
+    },
+  };
+
+  for (const [slug, config] of Object.entries(fleaTickConverterPages)) {
+    const ref = fleaTickPageRefs[slug];
+    if (!ref) {
+      throw new Error(`Missing product-page-map entry for flea/tick converter: ${slug}`);
+    }
+
+    for (const block of config.blocks) {
+      if (block.kind === 'product_section') {
+        for (const id of block.productIds) {
+          addRef(map, id, ref);
+        }
+      }
+    }
+  }
+
   // Inline AffiliateLink in src/content/articles/safety-natural-flea-and-tick-prevention-for-dogs.mdx
   addRef(map, 'rinseroo-original', {
     label: 'Natural Flea and Tick Prevention for Dogs',
     href: ROUTES.naturalFleaTickPrevention,
   });
-
-  const fleaTickNaturalRef: PageRef = {
-    label: 'Best Natural Flea and Tick Products for Dogs',
-    href: ROUTES.naturalFleaTickProducts,
-  };
-  for (const p of fleaTickProducts.filter((product) =>
-    [
-      'natural-spray',
-      'natural-shampoo',
-      'natural-collar',
-      'natural-tag',
-      'natural-chew',
-      'grooming-tool',
-      'tick-remover',
-    ].includes(product.category)
-  )) {
-    addRef(map, p.id, fleaTickNaturalRef);
-  }
 
   return map;
 }

@@ -129,12 +129,15 @@ describe('multi-merchant product offers', () => {
 
   it('wires flea-and-tick offers into the safety catalog with valid affiliate URLs', () => {
     const expectedOfferIds = [
+      'vectra-3d-xl-95-plus',
+      'udyoude-flea-collar-large-2pack',
       'wondercide-spray-lemongrass-32oz',
       'natures-dome-peppermint-spray',
       'isabellas-clearly-natural-spray',
       'pure-natural-pet-spray',
       'wondercide-shampoo-amazon',
       'trihood-flea-tick-tag',
+      'rinseroo-original',
     ];
 
     for (const productId of expectedOfferIds) {
@@ -207,35 +210,86 @@ describe('multi-merchant product offers', () => {
     }
   });
 
-  it('ships only the natural flea and tick converter in this release', () => {
-    expect(Object.keys(fleaTickConverterPages)).toEqual(['best-natural-flea-and-tick-products-for-dogs']);
+  it('leads the bath-tools page with Rinseroo on both merchant offers', () => {
+    const config = fleaTickConverterPages['dog-bath-tools-for-flea-season'];
+    const rinseSetups = config.blocks.find(
+      (block) => block.kind === 'product_section' && block.id === 'rinse-setups'
+    );
 
-    for (const deferredId of ['nexgard-10-24', 'seresto-large']) {
-      expect(
-        fleaTickProducts.find((product) => product.id === deferredId),
-        `${deferredId} is deferred to the follow-up release`,
-      ).toBeUndefined();
+    if (rinseSetups?.kind !== 'product_section') {
+      throw new Error('Missing rinse-setups product section');
     }
-  });
 
-  it('keeps Rinseroo in the catalog for the article link even without its converter page', () => {
-    const rinseroo = fleaTickProducts.find((product) => product.id === 'rinseroo-original');
+    expect(rinseSetups.productIds[0]).toBe('rinseroo-original');
+    expect(config.itemListSchema?.productIds[0]).toBe('rinseroo-original');
+
+    const rinseroo = fleaTickProducts.find((entry) => entry.id === 'rinseroo-original');
     expect(rinseroo, 'rinseroo-original missing from flea/tick products').toBeTruthy();
-    expect(
-      productCatalogItems.find((entry) => entry.id === 'rinseroo-original'),
-      'rinseroo-original missing from product catalog',
-    ).toBeTruthy();
 
     const offers = getOffers(rinseroo!);
     expect(offers.map((offer) => offer.merchant)).toEqual(['amazon', 'chewy']);
     expect(offers.find((offer) => offer.merchant === 'amazon')?.asin).toBe('B0CSF2LLS3');
-    expect(offers.find((offer) => offer.merchant === 'chewy')?.canonicalUrl)
-      .toBe('https://www.chewy.com/rinseroo-slip-on-sprayer-cat-portable/dp/3650750');
 
-    // The bath-tools converter is deferred, so the article carries the product instead.
+    const chewyOffer = offers.find((offer) => offer.merchant === 'chewy');
+    expect(chewyOffer!.url).toMatch(/^https:\/\/chewy\.sjv\.io\//);
+    expect(chewyOffer!.canonicalUrl).toBe('https://www.chewy.com/rinseroo-slip-on-sprayer-cat-portable/dp/3650750');
+
+    // Carried by both the bath-tools converter and the inline article link.
     expect(buildProductPageMap()['rinseroo-original']).toEqual([
+      { label: 'Dog Bath Tools', href: ROUTES.fleaSeasonBathTools },
       { label: 'Natural Flea and Tick Prevention for Dogs', href: ROUTES.naturalFleaTickPrevention },
     ]);
+  });
+
+  it('keeps every bath-tools product image-backed, merchant-linked, and in the ItemList schema', () => {
+    const config = fleaTickConverterPages['dog-bath-tools-for-flea-season'];
+    const sectionIds = config.blocks
+      .filter((block) => block.kind === 'product_section')
+      .flatMap((block) => (block.kind === 'product_section' ? block.productIds : []));
+
+    expect(sectionIds).toHaveLength(28);
+    expect(new Set(sectionIds).size, 'bath-tools products must be unique across sections').toBe(sectionIds.length);
+    expect(config.itemListSchema?.productIds).toEqual(sectionIds);
+
+    for (const id of sectionIds) {
+      const product = fleaTickProducts.find((entry) => entry.id === id);
+      expect(product, `${id} missing from flea/tick products`).toBeTruthy();
+      // Chewy-exclusive records are image-backed from Chewy's CDN rather than Amazon's.
+      expect(product!.image?.src, `${id} needs an image`).toMatch(
+        /^https:\/\/(m\.media-amazon\.com\/images|image\.chewy\.com)\//
+      );
+      expect(product!.image?.alt, `${id} needs image alt text`).toBeTruthy();
+      expect(product!.bullets.length, `${id} needs bullets`).toBeGreaterThan(0);
+
+      const offers = getOffers(product!);
+      expect(offers.length, `${id} needs at least one merchant offer`).toBeGreaterThan(0);
+
+      const amazon = offers.find((offer) => offer.merchant === 'amazon');
+      if (amazon) {
+        expect(amazon.url, `${id} needs a tagged Amazon offer`).toContain('tag=chill-dogs-20');
+        expect(amazon.asin, `${id} needs an ASIN`).toBe(product!.asin);
+      } else {
+        // No Amazon listing we could match exactly, so the record must stand on its Chewy offer
+        // and must not carry a stray ASIN or legacy Amazon URL.
+        expect(
+          offers.some((offer) => offer.merchant === 'chewy'),
+          `${id} has no Amazon offer, so it needs a Chewy offer`
+        ).toBe(true);
+        expect(product!.asin, `${id} is Chewy-only and must not carry an ASIN`).toBeUndefined();
+        expect(product!.amazonUrl, `${id} is Chewy-only and must not carry an Amazon URL`).toBeUndefined();
+      }
+    }
+  });
+
+  it('starts each bath-tools section at the running product position', () => {
+    const config = fleaTickConverterPages['dog-bath-tools-for-flea-season'];
+    let expectedOffset = 0;
+
+    for (const block of config.blocks) {
+      if (block.kind !== 'product_section') continue;
+      expect(block.positionOffset, `${block.id} positionOffset`).toBe(expectedOffset);
+      expectedOffset += block.productIds.length;
+    }
   });
 
   it('offers the Wondercide shampoo on both Amazon and Chewy', () => {
@@ -257,6 +311,7 @@ describe('multi-merchant product offers', () => {
       'natures-dome-peppermint-spray',
       'isabellas-clearly-natural-spray',
       'pure-natural-pet-spray',
+      'ortho-pawz-natural-flea-tick-spray',
       'duty-mitt-flea-tick-mitt',
     ];
     const config = fleaTickConverterPages['best-natural-flea-and-tick-products-for-dogs'];
@@ -293,10 +348,15 @@ describe('multi-merchant product offers', () => {
         'earth-animal-apothecary-shampoo',
         'lillian-ruff-flea-tick-shampoo',
         'top-performance-natural-shampoo',
+        'tevrapet-naturals-flea-tick-shampoo',
+        'we-love-doodles-flea-tick-shampoo',
       ],
       collar: [
         'amdeiur-natural-flea-collar',
         'solpetti-botanical-flea-collar',
+        'tenerolike-essential-oil-collar-5pack',
+        'crobirware-natural-flea-collar-6pack',
+        'njkpuyt-flea-collar-small-4pack',
         'trihood-flea-tick-tag',
         'routade-flea-tick-pendant',
       ],
@@ -306,6 +366,8 @@ describe('multi-merchant product offers', () => {
         'yotango-flea-tick-chews',
         'beloved-pets-flea-tick-chews',
         'dr-woow-flea-tick-chews',
+        'lkdhfjc-natural-defense-chews-200',
+        'petrivium-flea-tick-chews-150',
       ],
     } satisfies Record<string, string[]>;
 
@@ -355,6 +417,7 @@ describe('multi-merchant product offers', () => {
       'tweezerman-tick-tweezer',
       'tickcheck-premium-tick-kit',
       'tickcheck-remover-spoon',
+      'tick-key-original-7pack',
     ]);
 
     for (const productId of groomingTools.productIds) {

@@ -28,7 +28,7 @@ const metadata = [
 
   <p class="ft-card__badge">{product.badge}</p>
   <h3 class="ft-card__name">{product.name}</h3>
-  <p class="ft-card__best-for">{product.bestFor}</p>
+  {product.bestFor && <p class="ft-card__best-for">{product.bestFor}</p>}
 
   {metadata.length > 0 && (
     <dl class="ft-card__meta">
@@ -49,6 +49,7 @@ const metadata = [
   <AffiliateOfferStack
     offers={offers}
     product={{ id: product.id, name: product.name, category: product.category }}
+    variantGroup={product.variantGroup}
     pageType="converter"
     pageSlug={pageSlug}
     position={position}

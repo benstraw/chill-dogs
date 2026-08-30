@@ -34,9 +34,14 @@ describe('route constants', () => {
     expect(ROUTES.comfortPuppyCrates).toBe('/comforting/best-puppy-crates/');
   });
 
-  it('uses canonical natural flea and tick routes', () => {
+  it('uses canonical flea and tick cluster routes', () => {
+    expect(ROUTES.fleaTickPillar).toBe('/safety/flea-and-tick-prevention-for-dogs/');
     expect(ROUTES.naturalFleaTickPrevention).toBe('/safety/natural-flea-and-tick-prevention-for-dogs/');
     expect(ROUTES.naturalFleaTickProducts).toBe('/safety/best-natural-flea-and-tick-products-for-dogs/');
+    expect(ROUTES.fleaTickProducts).toBe('/safety/best-flea-and-tick-products-for-dogs/');
+    expect(ROUTES.fleaSeasonBathTools).toBe('/safety/dog-bath-tools-for-flea-season/');
+    // The medications converter was removed; the cluster must not regain a route to it.
+    expect(ROUTES).not.toHaveProperty('fleaTickMedications');
   });
 
   it('uses canonical anxiety crates route', () => {
