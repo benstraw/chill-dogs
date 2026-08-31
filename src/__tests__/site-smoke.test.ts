@@ -3,6 +3,8 @@ import { execFileSync } from 'node:child_process';
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import path from 'node:path';
 
+import { MIDDLEWARE_ONLY_ROUTES } from '../data/routes';
+
 const projectRoot = path.resolve(__dirname, '../..');
 const distRoot = path.join(projectRoot, 'dist');
 
@@ -1001,6 +1003,8 @@ describe('site smoke tests', () => {
         const href = match[1];
         const skipAsset = /\.(ico|png|jpg|jpeg|webp|svg|pdf|xml|txt|webmanifest|css|js)$/i.test(href);
         if (skipAsset) continue;
+        // Admin auth routes are served by the edge middleware and never built.
+        if (MIDDLEWARE_ONLY_ROUTES.includes(href)) continue;
         // Check if the path resolves to a file or directory with index.html
         const asFile = path.join(distRoot, href);
         const asIndex = path.join(distRoot, href, 'index.html');

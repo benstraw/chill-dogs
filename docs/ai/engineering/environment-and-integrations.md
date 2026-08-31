@@ -105,7 +105,7 @@ The page probes `GET /health` on load and shows which mode it is in:
 
 - **reachable** → the Save button writes `src/data/product-galleries.ts`
 - **not reachable** → falls back to copying a paste-ready snippet, which is the only
-  behaviour available in production, where the admin pages sit behind Basic Auth on a
+  behaviour available in production, where the admin pages sit behind GitHub sign-in on a
   static build with no repository to write to
 
 It needs no keys and makes no outbound calls, so it works in a proxied container. It does

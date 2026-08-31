@@ -52,6 +52,9 @@ export const ROUTES = {
   adminSitemap: '/admin/sitemap/',
   adminProducts: '/admin/products/',
   adminImages: '/admin/images/',
+  adminLogin: '/admin/auth/login/',
+  adminLogout: '/admin/auth/logout/',
+  adminBasicLogin: '/admin/auth/basic/',
   shop: '/shop/',
   search: '/search/',
   articles: '/articles/',
@@ -63,6 +66,18 @@ export const ROUTES = {
   subscribeThanks: '/subscribe/thanks/',
   subscribeConfirmed: '/subscribe/confirmed/',
 } as const;
+
+/**
+ * Admin auth routes handled entirely by root `middleware.js` at the Vercel edge.
+ * They are real URLs but never build to a file in `dist/`, so link-integrity
+ * checks have to skip them.
+ */
+export const MIDDLEWARE_ONLY_ROUTES: readonly string[] = [
+  ROUTES.adminLogin,
+  ROUTES.adminLogout,
+  ROUTES.adminBasicLogin,
+  '/admin/auth/callback/',
+];
 
 /**
  * URL for a product's detail page.

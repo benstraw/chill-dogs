@@ -199,13 +199,28 @@ Three phases run automatically via `bun run build`:
 | `VERCEL_ENV` | Auto | Set by Vercel; controls staging noindex and Pinterest loading |
 | `MAINTENANCE_MODE` | Optional | Any truthy value shows maintenance page at `/` |
 | `INDEXNOW_KEY` | Prod | Key for IndexNow URL submission on deploy |
-| `ADMIN_USERNAME` | Vercel Production + Preview | HTTP Basic Auth username for all `/admin/*` routes |
-| `ADMIN_PASSWORD` | Vercel Production + Preview | HTTP Basic Auth password for all `/admin/*` routes |
+| `GITHUB_OAUTH_CLIENT_ID` | Vercel Production | GitHub OAuth App client id for admin sign-in |
+| `GITHUB_OAUTH_CLIENT_SECRET` | Vercel Production | GitHub OAuth App client secret |
+| `ADMIN_SESSION_SECRET` | Vercel Production | HMAC key for the admin session cookie |
+| `ADMIN_GITHUB_LOGINS` | Vercel Production | Comma-separated GitHub logins allowed into `/admin/*` |
+| `ADMIN_USERNAME` | Vercel Preview (fallback) | HTTP Basic Auth username for all `/admin/*` routes |
+| `ADMIN_PASSWORD` | Vercel Preview (fallback) | HTTP Basic Auth password for all `/admin/*` routes |
 | `SERP_API_KEY` / `SEARCHAPI_KEY` | Scripts only | Amazon product metadata fetching |
 
 ### Admin route protection
 
-Root `middleware.js` is dependency-free Vercel Routing Middleware scoped by its matcher to `/admin/:path*`. It protects the otherwise static admin HTML with HTTP Basic Authentication before CDN content is served. Authorized requests return Vercel's `x-middleware-next` continuation response. The middleware uses Vercel's default Edge runtime and imports no packages. Bun is the sole package manager: the repository keeps only `bun.lock`, and Vercel installs dependencies with `bun install`. Do not add an npm lockfile because Vercel's isolated middleware packager will otherwise select npm despite the Bun package-manager declaration. Credentials must come from `ADMIN_USERNAME` and `ADMIN_PASSWORD` environment variables and must never be committed. Missing configuration fails closed with HTTP 503; missing or invalid credentials return HTTP 401 with a Basic Auth challenge. Astro's local dev server does not execute this Vercel middleware. For local end-to-end verification in this repository, add both variables to the gitignored root `.env` and restart `vercel dev`; Vercel CLI 54 selects the existing `.env` for middleware and ignores `.env.local` and `.vercel/.env.development.local` during local execution.
+Root `middleware.js` is dependency-free Vercel Routing Middleware scoped by its matcher to `/admin/:path*`. It protects the otherwise static admin HTML before CDN content is served. Authorized requests return Vercel's `x-middleware-next` continuation response. The middleware uses Vercel's default Edge runtime and imports no packages. Bun is the sole package manager: the repository keeps only `bun.lock`, and Vercel installs dependencies with `bun install`. Do not add an npm lockfile because Vercel's isolated middleware packager will otherwise select npm despite the Bun package-manager declaration.
+
+There are two ways in, and both end in the same signed session cookie:
+
+- **GitHub OAuth (primary).** `/admin/auth/login/` mints a `state`, stores it in the short-lived `cd_admin_state` cookie, and redirects to GitHub with no scopes requested. `/admin/auth/callback/` verifies the state, exchanges the code, reads `login` from `GET https://api.github.com/user`, and checks it case-insensitively against `ADMIN_GITHUB_LOGINS`. The GitHub access token is used once and never stored.
+- **HTTP Basic (fallback).** A correct `Authorization: Basic` header is accepted on any admin path, and `/admin/auth/basic/` issues the challenge in a browser. This exists because a GitHub OAuth App registers exactly one callback URL, so Vercel preview deployments — which get generated hostnames — cannot use GitHub login.
+
+The session cookie `cd_admin_session` is `v1.<base64url(payload)>.<base64url(HMAC-SHA256)>` signed with `ADMIN_SESSION_SECRET` via `crypto.subtle`, valid for 8 hours, and set `HttpOnly; SameSite=Lax; Path=/admin` plus `Secure` on https. `/admin/auth/logout/` clears it. None of the `/admin/auth/*` routes is a built page — they exist only at the edge, which is why `src/data/routes.ts` exports `MIDDLEWARE_ONLY_ROUTES` for the smoke suite's link-integrity check to skip.
+
+Configuration fails closed. Nothing configured returns 503; GitHub configured with an empty `ADMIN_GITHUB_LOGINS` also returns 503, so an empty allowlist can never read as "any GitHub account". With only `ADMIN_USERNAME` / `ADMIN_PASSWORD` set, every admin path falls back to a plain 401 Basic challenge. Unauthenticated browser requests in GitHub mode get a 302 to `/admin/auth/login/`, and the `next` parameter is only honored when it resolves inside `/admin/`.
+
+Astro's local dev server does not execute this Vercel middleware. For local end-to-end verification, add the variables to the gitignored root `.env` and restart `vercel dev`; Vercel CLI 54 selects the existing `.env` for middleware and ignores `.env.local` and `.vercel/.env.development.local` during local execution.
 
 ---
 
