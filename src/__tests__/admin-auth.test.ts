@@ -357,13 +357,134 @@ describe('github login', () => {
     expect(callback?.status).toBe(502);
     expect(cookieFrom(callback, 'cd_admin_session')).toBeUndefined();
   });
+});
 
-  it('clears the session on sign out', async () => {
-    const response = await authorizeAdminRequest(adminRequest('/admin/auth/logout/'), githubOnly);
+describe('admin auth routes exist in every configuration mode', () => {
+  // Regression: these four are served only by the middleware and are never
+  // built to files, so passing one through means a CDN 404. Basic-only is the
+  // mode preview deployments actually run in.
+  const authRoutes = ['/admin/auth/login/', '/admin/auth/callback/', '/admin/auth/basic/', '/admin/auth/logout/'];
+
+  it('never falls through to the CDN in basic-only mode', async () => {
+    const credentialed = basicAuthorization(basicOnly.ADMIN_USERNAME, basicOnly.ADMIN_PASSWORD);
+
+    for (const route of authRoutes) {
+      const response = await authorizeAdminRequest(
+        adminRequest(route, { authorization: credentialed }),
+        basicOnly
+      );
+
+      expect(response, `${route} passed through and would 404`).toBeDefined();
+    }
+  });
+
+  it('points the login route at the basic door when GitHub is not configured', async () => {
+    const response = await authorizeAdminRequest(
+      adminRequest('/admin/auth/login/?next=%2Fadmin%2Fproducts%2F'),
+      basicOnly
+    );
 
     expect(response?.status).toBe(302);
-    expect(response?.headers.get('location')).toBe('/admin/auth/login/');
+    expect(response?.headers.get('location')).toBe('/admin/auth/basic/?next=%2Fadmin%2Fproducts%2F');
+  });
+
+  it('explains rather than 404s when a GitHub callback arrives at a basic-only deployment', async () => {
+    const response = await authorizeAdminRequest(
+      adminRequest('/admin/auth/callback/?code=abc&state=xyz'),
+      basicOnly
+    );
+
+    expect(response?.status).toBe(503);
+    expect(await response?.text()).toContain('GitHub sign-in is not configured');
+  });
+
+  it('issues no session cookie when there is no secret to sign it with', async () => {
+    const response = await authorizeAdminRequest(
+      adminRequest('/admin/auth/basic/', {
+        authorization: basicAuthorization(basicOnly.ADMIN_USERNAME, basicOnly.ADMIN_PASSWORD),
+      }),
+      basicOnly
+    );
+
+    expect(response?.status).toBe(302);
+    // Signing with an absent secret would HMAC the literal string "undefined".
+    expect(cookieFrom(response, 'cd_admin_session')).toBeUndefined();
+  });
+});
+
+describe('signing out', () => {
+  const signedOut = 'cd_admin_signed_out=1';
+
+  it('clears the session and marks the browser signed out', async () => {
+    const response = await authorizeAdminRequest(adminRequest('/admin/auth/logout/'), githubOnly);
+
+    expect(response?.status).toBe(200);
+    expect(await response?.text()).toContain('Signed out');
     expect(attributesFor(response, 'cd_admin_session')).toContain('Max-Age=0');
+    expect(cookieFrom(response, 'cd_admin_signed_out')).toBe('1');
+  });
+
+  it('keeps a browser out even while it replays cached basic credentials', async () => {
+    const credentialed = basicAuthorization(basicOnly.ADMIN_USERNAME, basicOnly.ADMIN_PASSWORD);
+
+    for (const environment of [basicOnly, bothModes]) {
+      const response = await authorizeAdminRequest(
+        adminRequest('/admin/products/', { authorization: credentialed, cookie: signedOut }),
+        environment
+      );
+
+      expect(response?.status).toBe(200);
+      expect(await response?.text()).toContain('Signed out');
+    }
+  });
+
+  it('keeps a browser out even if a session cookie survives', async () => {
+    const token = await createSessionToken(SESSION_SECRET, { sub: 'benstraw', via: 'github' });
+    const response = await authorizeAdminRequest(
+      adminRequest('/admin/', {
+        cookie: `cd_admin_session=${encodeURIComponent(token)}; ${signedOut}`,
+      }),
+      githubOnly
+    );
+
+    expect(response?.status).toBe(200);
+    expect(await response?.text()).toContain('Signed out');
+  });
+
+  it('does not affect CLI clients, which send no cookies', async () => {
+    const response = await authorizeAdminRequest(
+      adminRequest('/admin/products/', {
+        authorization: basicAuthorization(basicOnly.ADMIN_USERNAME, basicOnly.ADMIN_PASSWORD),
+      }),
+      bothModes
+    );
+
+    expect(response).toBeUndefined();
+  });
+
+  it('offers the sign-in door this deployment actually has', async () => {
+    const github = await authorizeAdminRequest(adminRequest('/admin/auth/logout/'), githubOnly);
+    const basic = await authorizeAdminRequest(adminRequest('/admin/auth/logout/'), basicOnly);
+
+    expect(await github?.text()).toContain('href="/admin/auth/login/"');
+    expect(await basic?.text()).toContain('href="/admin/auth/basic/"');
+  });
+
+  it('lifts the mark when the visitor deliberately signs in again', async () => {
+    const viaBasic = await authorizeAdminRequest(
+      adminRequest('/admin/auth/basic/', {
+        authorization: basicAuthorization(basicOnly.ADMIN_USERNAME, basicOnly.ADMIN_PASSWORD),
+        cookie: signedOut,
+      }),
+      bothModes
+    );
+    const viaGithub = await authorizeAdminRequest(
+      adminRequest('/admin/auth/login/', { cookie: signedOut }),
+      githubOnly
+    );
+
+    expect(attributesFor(viaBasic, 'cd_admin_signed_out')).toContain('Max-Age=0');
+    expect(attributesFor(viaGithub, 'cd_admin_signed_out')).toContain('Max-Age=0');
   });
 });
 

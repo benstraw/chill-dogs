@@ -26,8 +26,14 @@ const BASIC_PATH = '/admin/auth/basic/';
 
 const SESSION_COOKIE = 'cd_admin_session';
 const STATE_COOKIE = 'cd_admin_state';
+// Set on sign-out. A browser caches HTTP Basic credentials and re-sends them
+// forever, so clearing the session alone would let the very next request walk
+// back in. This marker suppresses the Basic-header shortcut until the visitor
+// deliberately signs in again. CLI clients send no cookies and never see it.
+const SIGNED_OUT_COOKIE = 'cd_admin_signed_out';
 const SESSION_TTL_SECONDS = 8 * 60 * 60;
 const STATE_TTL_SECONDS = 10 * 60;
+const SIGNED_OUT_TTL_SECONDS = 12 * 60 * 60;
 
 const GITHUB_AUTHORIZE_URL = 'https://github.com/login/oauth/authorize';
 const GITHUB_TOKEN_URL = 'https://github.com/login/oauth/access_token';
@@ -256,6 +262,33 @@ function notConfiguredResponse(detail = 'Admin authentication is not configured.
   });
 }
 
+function isSignedOut(request) {
+  return readCookie(request, SIGNED_OUT_COOKIE) === '1';
+}
+
+/** Whichever sign-in door this deployment actually has. */
+function signInPath(configuration) {
+  return configuration.githubConfigured ? LOGIN_PATH : BASIC_PATH;
+}
+
+function signedOutPage(configuration, cookies = []) {
+  return messageResponse(
+    200,
+    'Signed out',
+    'You are signed out of the Chill-Dogs admin.',
+    [{ href: signInPath(configuration), label: 'Sign in again' }],
+    cookies
+  );
+}
+
+function signOut(url, configuration) {
+  return signedOutPage(configuration, [
+    clearCookie(SESSION_COOKIE, url),
+    clearCookie(STATE_COOKIE, url),
+    serializeCookie(SIGNED_OUT_COOKIE, '1', url, SIGNED_OUT_TTL_SECONDS),
+  ]);
+}
+
 /* -------------------------------------------------------------------------- */
 /* Configuration                                                               */
 /* -------------------------------------------------------------------------- */
@@ -365,6 +398,7 @@ function startGithubLogin(url, configuration) {
 
   return redirectResponse(authorize.toString(), [
     serializeCookie(STATE_COOKIE, state, url, STATE_TTL_SECONDS),
+    clearCookie(SIGNED_OUT_COOKIE, url),
   ]);
 }
 
@@ -468,6 +502,7 @@ async function completeGithubLogin(request, url, configuration, now) {
   return redirectResponse(decodeState(returnedState), [
     serializeCookie(SESSION_COOKIE, token, url, SESSION_TTL_SECONDS),
     clearCookie(STATE_COOKIE, url),
+    clearCookie(SIGNED_OUT_COOKIE, url),
   ]);
 }
 
@@ -480,15 +515,22 @@ async function basicSignIn(request, url, configuration, now) {
     return unauthorizedResponse();
   }
 
-  const token = await createSessionToken(
-    configuration.sessionSecret,
-    { sub: configuration.basicUsername, via: 'basic' },
-    now
-  );
+  // Signing in here is deliberate, so it lifts a previous sign-out.
+  const cookies = [clearCookie(SIGNED_OUT_COOKIE, url)];
 
-  return redirectResponse(safeNextPath(url.searchParams.get('next')), [
-    serializeCookie(SESSION_COOKIE, token, url, SESSION_TTL_SECONDS),
-  ]);
+  // Basic-only deployments have no ADMIN_SESSION_SECRET to sign with; the
+  // browser's cached credentials carry the session instead. Minting a token
+  // without a secret would HMAC with the literal string "undefined".
+  if (configuration.sessionSecret) {
+    const token = await createSessionToken(
+      configuration.sessionSecret,
+      { sub: configuration.basicUsername, via: 'basic' },
+      now
+    );
+    cookies.push(serializeCookie(SESSION_COOKIE, token, url, SESSION_TTL_SECONDS));
+  }
+
+  return redirectResponse(safeNextPath(url.searchParams.get('next')), cookies);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -515,25 +557,37 @@ export async function authorizeAdminRequest(request, environment, now = Date.now
     );
   }
 
-  // Basic-only deployments keep the original behaviour: challenge every path.
-  if (!configuration.githubConfigured) {
-    return basicHeaderMatches(request, configuration) ? undefined : unauthorizedResponse();
-  }
-
+  // These four exist only here at the edge and are never built to files, so
+  // every configuration mode has to handle them — letting one fall through to
+  // the CDN is a 404.
   switch (path) {
     case LOGIN_PATH:
-      return startGithubLogin(url, configuration);
+      return configuration.githubConfigured
+        ? startGithubLogin(url, configuration)
+        : redirectResponse(
+            `${BASIC_PATH}?next=${encodeURIComponent(safeNextPath(url.searchParams.get('next')))}`
+          );
     case CALLBACK_PATH:
-      return completeGithubLogin(request, url, configuration, now);
+      return configuration.githubConfigured
+        ? completeGithubLogin(request, url, configuration, now)
+        : notConfiguredResponse('GitHub sign-in is not configured for this deployment.');
     case BASIC_PATH:
       return basicSignIn(request, url, configuration, now);
     case LOGOUT_PATH:
-      return redirectResponse(LOGIN_PATH, [
-        clearCookie(SESSION_COOKIE, url),
-        clearCookie(STATE_COOKIE, url),
-      ]);
+      return signOut(url, configuration);
     default:
       break;
+  }
+
+  // Signing out has to outlast the browser's cached Basic credentials, so it
+  // beats both the header shortcut and any surviving session cookie.
+  if (isSignedOut(request)) {
+    return signedOutPage(configuration);
+  }
+
+  // Basic-only deployments keep the original behaviour: challenge every path.
+  if (!configuration.githubConfigured) {
+    return basicHeaderMatches(request, configuration) ? undefined : unauthorizedResponse();
   }
 
   // CLI clients cannot follow the browser redirect dance, so a correct Basic

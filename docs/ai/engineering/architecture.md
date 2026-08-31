@@ -211,14 +211,25 @@ Three phases run automatically via `bun run build`:
 
 Root `middleware.js` is dependency-free Vercel Routing Middleware scoped by its matcher to `/admin/:path*`. It protects the otherwise static admin HTML before CDN content is served. Authorized requests return Vercel's `x-middleware-next` continuation response. The middleware uses Vercel's default Edge runtime and imports no packages. Bun is the sole package manager: the repository keeps only `bun.lock`, and Vercel installs dependencies with `bun install`. Do not add an npm lockfile because Vercel's isolated middleware packager will otherwise select npm despite the Bun package-manager declaration.
 
-There are two ways in, and both end in the same signed session cookie:
+There are two ways in:
 
 - **GitHub OAuth (primary).** `/admin/auth/login/` mints a `state`, stores it in the short-lived `cd_admin_state` cookie, and redirects to GitHub with no scopes requested. `/admin/auth/callback/` verifies the state, exchanges the code, reads `login` from `GET https://api.github.com/user`, and checks it case-insensitively against `ADMIN_GITHUB_LOGINS`. The GitHub access token is used once and never stored.
 - **HTTP Basic (fallback).** A correct `Authorization: Basic` header is accepted on any admin path, and `/admin/auth/basic/` issues the challenge in a browser. This exists because a GitHub OAuth App registers exactly one callback URL, so Vercel preview deployments — which get generated hostnames — cannot use GitHub login.
 
-The session cookie `cd_admin_session` is `v1.<base64url(payload)>.<base64url(HMAC-SHA256)>` signed with `ADMIN_SESSION_SECRET` via `crypto.subtle`, valid for 8 hours, and set `HttpOnly; SameSite=Lax; Path=/admin` plus `Secure` on https. `/admin/auth/logout/` clears it. None of the `/admin/auth/*` routes is a built page — they exist only at the edge, which is why `src/data/routes.ts` exports `MIDDLEWARE_ONLY_ROUTES` for the smoke suite's link-integrity check to skip.
+The four `/admin/auth/*` routes exist only at the edge and are never built to files, so **every configuration mode must handle all four**; letting one fall through to the CDN is a 404. Behaviour by mode:
 
-Configuration fails closed. Nothing configured returns 503; GitHub configured with an empty `ADMIN_GITHUB_LOGINS` also returns 503, so an empty allowlist can never read as "any GitHub account". With only `ADMIN_USERNAME` / `ADMIN_PASSWORD` set, every admin path falls back to a plain 401 Basic challenge. Unauthenticated browser requests in GitHub mode get a 302 to `/admin/auth/login/`, and the `next` parameter is only honored when it resolves inside `/admin/`.
+| Route | GitHub mode | Basic-only mode |
+|---|---|---|
+| `login/` | redirect to GitHub | redirect to `/admin/auth/basic/` |
+| `callback/` | exchange code, check allowlist | 503, explaining GitHub is not configured |
+| `basic/` | challenge, then issue a session cookie | challenge; no cookie without a session secret |
+| `logout/` | signed-out page | signed-out page |
+
+The session cookie `cd_admin_session` is `v1.<base64url(payload)>.<base64url(HMAC-SHA256)>` signed with `ADMIN_SESSION_SECRET` via `crypto.subtle`, valid for 8 hours, and set `HttpOnly; SameSite=Lax; Path=/admin` plus `Secure` on https. Basic-only deployments have no secret to sign with, so no cookie is minted there and the browser's cached credentials carry the session instead.
+
+**Signing out** clears the session cookie *and* sets a `cd_admin_signed_out` marker cookie for 12 hours. The marker is what makes sign-out real: a browser caches HTTP Basic credentials and re-sends them on every subsequent request, and a correct Basic header is otherwise accepted on any admin path, so clearing the session alone would let the very next request straight back in. While the marker is present, every admin path returns the signed-out page regardless of credentials or surviving session. CLI clients send no cookies and are unaffected, so `curl -u` keeps working. Either sign-in door — `/admin/auth/login/` or `/admin/auth/basic/` — clears the marker, so signing back in is one deliberate click.
+
+Configuration fails closed. Nothing configured returns 503; GitHub configured with an empty `ADMIN_GITHUB_LOGINS` also returns 503, so an empty allowlist can never read as "any GitHub account". With only `ADMIN_USERNAME` / `ADMIN_PASSWORD` set, non-auth admin paths fall back to a plain 401 Basic challenge. Unauthenticated browser requests in GitHub mode get a 302 to `/admin/auth/login/`, and the `next` parameter is only honored when it resolves inside `/admin/`. None of the auth routes is a built page, which is why `src/data/routes.ts` exports `MIDDLEWARE_ONLY_ROUTES` for the smoke suite's link-integrity check to skip.
 
 Astro's local dev server does not execute this Vercel middleware. For local end-to-end verification, add the variables to the gitignored root `.env` and restart `vercel dev`; Vercel CLI 54 selects the existing `.env` for middleware and ignores `.env.local` and `.vercel/.env.development.local` during local execution.
 
