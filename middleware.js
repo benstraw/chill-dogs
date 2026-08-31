@@ -31,9 +31,14 @@ const STATE_COOKIE = 'cd_admin_state';
 // back in. This marker suppresses the Basic-header shortcut until the visitor
 // deliberately signs in again. CLI clients send no cookies and never see it.
 const SIGNED_OUT_COOKIE = 'cd_admin_signed_out';
+// Set alongside the one 401 that forces a fresh password prompt after sign-out.
+// The browser replays cached credentials automatically, so refusing the first
+// attempt is the only way to make it ask; the retry carries this cookie.
+const CHALLENGE_COOKIE = 'cd_admin_challenge';
 const SESSION_TTL_SECONDS = 8 * 60 * 60;
 const STATE_TTL_SECONDS = 10 * 60;
 const SIGNED_OUT_TTL_SECONDS = 12 * 60 * 60;
+const CHALLENGE_TTL_SECONDS = 5 * 60;
 
 const GITHUB_AUTHORIZE_URL = 'https://github.com/login/oauth/authorize';
 const GITHUB_TOKEN_URL = 'https://github.com/login/oauth/access_token';
@@ -241,15 +246,17 @@ function messageResponse(status, heading, message, links = [], cookies = []) {
   return new Response(body, { status, headers });
 }
 
-function unauthorizedResponse() {
-  return new Response('Authentication required.', {
-    status: 401,
-    headers: {
-      ...NO_STORE_HEADERS,
-      'Content-Type': 'text/plain; charset=utf-8',
-      'WWW-Authenticate': 'Basic realm="Chill-Dogs Admin", charset="UTF-8"',
-    },
+function unauthorizedResponse(cookies = []) {
+  const headers = new Headers({
+    ...NO_STORE_HEADERS,
+    'Content-Type': 'text/plain; charset=utf-8',
+    'WWW-Authenticate': 'Basic realm="Chill-Dogs Admin", charset="UTF-8"',
   });
+  for (const cookie of cookies) {
+    headers.append('Set-Cookie', cookie);
+  }
+
+  return new Response('Authentication required.', { status: 401, headers });
 }
 
 function notConfiguredResponse(detail = 'Admin authentication is not configured.') {
@@ -511,12 +518,20 @@ async function basicSignIn(request, url, configuration, now) {
     return notConfiguredResponse('The Basic Auth fallback is not configured.');
   }
 
-  if (!basicHeaderMatches(request, configuration)) {
-    return unauthorizedResponse();
+  const challenged = readCookie(request, CHALLENGE_COOKIE) === '1';
+
+  // Returning from an explicit sign-out, refuse the first attempt even when the
+  // credentials are correct. Otherwise the browser replays what it cached and
+  // signs the visitor straight back in without ever asking. The 401 makes it
+  // prompt; the retry arrives with the challenge cookie and is accepted.
+  if ((isSignedOut(request) && !challenged) || !basicHeaderMatches(request, configuration)) {
+    return unauthorizedResponse([
+      serializeCookie(CHALLENGE_COOKIE, '1', url, CHALLENGE_TTL_SECONDS),
+    ]);
   }
 
   // Signing in here is deliberate, so it lifts a previous sign-out.
-  const cookies = [clearCookie(SIGNED_OUT_COOKIE, url)];
+  const cookies = [clearCookie(SIGNED_OUT_COOKIE, url), clearCookie(CHALLENGE_COOKIE, url)];
 
   // Basic-only deployments have no ADMIN_SESSION_SECRET to sign with; the
   // browser's cached credentials carry the session instead. Minting a token

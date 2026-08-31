@@ -470,21 +470,78 @@ describe('signing out', () => {
     expect(await basic?.text()).toContain('href="/admin/auth/basic/"');
   });
 
-  it('lifts the mark when the visitor deliberately signs in again', async () => {
-    const viaBasic = await authorizeAdminRequest(
+  it('makes the basic door ask for the password again, instead of replaying the cache', async () => {
+    const credentialed = basicAuthorization(basicOnly.ADMIN_USERNAME, basicOnly.ADMIN_PASSWORD);
+
+    // A browser auto-sends what it cached, so correct credentials are refused
+    // once — otherwise "Sign in again" signs you in without ever asking.
+    const firstAttempt = await authorizeAdminRequest(
+      adminRequest('/admin/auth/basic/', { authorization: credentialed, cookie: signedOut }),
+      basicOnly
+    );
+
+    expect(firstAttempt?.status).toBe(401);
+    expect(firstAttempt?.headers.get('www-authenticate')).toContain('Chill-Dogs Admin');
+    expect(cookieFrom(firstAttempt, 'cd_admin_challenge')).toBe('1');
+
+    // What the visitor types arrives with the challenge cookie and is accepted.
+    const retry = await authorizeAdminRequest(
+      adminRequest('/admin/auth/basic/', {
+        authorization: credentialed,
+        cookie: `${signedOut}; cd_admin_challenge=1`,
+      }),
+      basicOnly
+    );
+
+    expect(retry?.status).toBe(302);
+    expect(retry?.headers.get('location')).toBe('/admin/');
+    expect(attributesFor(retry, 'cd_admin_signed_out')).toContain('Max-Age=0');
+    expect(attributesFor(retry, 'cd_admin_challenge')).toContain('Max-Age=0');
+  });
+
+  it('still rejects wrong credentials on the retry', async () => {
+    const response = await authorizeAdminRequest(
+      adminRequest('/admin/auth/basic/', {
+        authorization: basicAuthorization(basicOnly.ADMIN_USERNAME, 'wrong'),
+        cookie: `${signedOut}; cd_admin_challenge=1`,
+      }),
+      basicOnly
+    );
+
+    expect(response?.status).toBe(401);
+  });
+
+  it('does not challenge twice when the visitor never signed out', async () => {
+    const response = await authorizeAdminRequest(
       adminRequest('/admin/auth/basic/', {
         authorization: basicAuthorization(basicOnly.ADMIN_USERNAME, basicOnly.ADMIN_PASSWORD),
-        cookie: signedOut,
       }),
-      bothModes
+      basicOnly
     );
-    const viaGithub = await authorizeAdminRequest(
+
+    expect(response?.status).toBe(302);
+  });
+
+  it('lifts the mark when the visitor signs in with GitHub', async () => {
+    const response = await authorizeAdminRequest(
       adminRequest('/admin/auth/login/', { cookie: signedOut }),
       githubOnly
     );
 
-    expect(attributesFor(viaBasic, 'cd_admin_signed_out')).toContain('Max-Age=0');
-    expect(attributesFor(viaGithub, 'cd_admin_signed_out')).toContain('Max-Age=0');
+    expect(attributesFor(response, 'cd_admin_signed_out')).toContain('Max-Age=0');
+  });
+
+  it('keeps the visitor out if they cancel the password prompt', async () => {
+    const response = await authorizeAdminRequest(
+      adminRequest('/admin/', {
+        authorization: basicAuthorization(basicOnly.ADMIN_USERNAME, basicOnly.ADMIN_PASSWORD),
+        cookie: `${signedOut}; cd_admin_challenge=1`,
+      }),
+      basicOnly
+    );
+
+    expect(response?.status).toBe(200);
+    expect(await response?.text()).toContain('Signed out');
   });
 });
 
