@@ -219,15 +219,19 @@ describe('github login', () => {
     expect(response?.headers.get('cache-control')).toBe('no-store');
   });
 
-  it('redirects the login route to GitHub and stores the state', async () => {
+  it('renders a sign-in page carrying a state-matched GitHub link', async () => {
     const response = await authorizeAdminRequest(
       adminRequest('/admin/auth/login/?next=%2Fadmin%2Fproducts%2F'),
       githubOnly
     );
 
-    expect(response?.status).toBe(302);
+    expect(response?.status).toBe(200);
 
-    const location = new URL(response?.headers.get('location') ?? '');
+    const html = (await response?.text()) ?? '';
+    expect(html).toContain('Sign in with GitHub');
+
+    const href = html.match(/class="button" href="([^"]+)"/)?.[1] ?? '';
+    const location = new URL(href.replace(/&amp;/g, '&'));
     expect(location.origin + location.pathname).toBe('https://github.com/login/oauth/authorize');
     expect(location.searchParams.get('client_id')).toBe('client-id');
     expect(location.searchParams.get('redirect_uri')).toBe(
@@ -236,8 +240,8 @@ describe('github login', () => {
     // No scope is requested — GET /user needs none to return the login.
     expect(location.searchParams.get('scope')).toBeNull();
 
-    const state = location.searchParams.get('state') ?? '';
-    expect(cookieFrom(response, 'cd_admin_state')).toBe(state);
+    // The link and the cookie must carry the same state or the callback fails.
+    expect(cookieFrom(response, 'cd_admin_state')).toBe(location.searchParams.get('state'));
 
     const attributes = attributesFor(response, 'cd_admin_state');
     expect(attributes).toContain('HttpOnly');
@@ -246,13 +250,21 @@ describe('github login', () => {
     expect(attributes).toContain('Path=/admin');
   });
 
+  it('offers the password fallback only where it is configured', async () => {
+    const withBasic = await authorizeAdminRequest(adminRequest('/admin/auth/login/'), bothModes);
+    const withoutBasic = await authorizeAdminRequest(adminRequest('/admin/auth/login/'), githubOnly);
+
+    expect(await withBasic?.text()).toContain('/admin/auth/basic/');
+    expect(await withoutBasic?.text()).not.toContain('/admin/auth/basic/');
+  });
+
   it('refuses to redirect anywhere outside /admin/ after login', async () => {
     const response = await authorizeAdminRequest(
       adminRequest('/admin/auth/login/?next=https%3A%2F%2Fevil.example.com%2F'),
       githubOnly
     );
 
-    const state = new URL(response?.headers.get('location') ?? '').searchParams.get('state') ?? '';
+    const state = cookieFrom(response, 'cd_admin_state') ?? '';
     const encodedNext = state.slice(state.indexOf('.') + 1);
     const decodedNext = atob(encodedNext.replace(/-/g, '+').replace(/_/g, '/'));
 
@@ -378,14 +390,18 @@ describe('admin auth routes exist in every configuration mode', () => {
     }
   });
 
-  it('points the login route at the basic door when GitHub is not configured', async () => {
+  it('points the sign-in page at the password door when GitHub is not configured', async () => {
     const response = await authorizeAdminRequest(
       adminRequest('/admin/auth/login/?next=%2Fadmin%2Fproducts%2F'),
       basicOnly
     );
 
-    expect(response?.status).toBe(302);
-    expect(response?.headers.get('location')).toBe('/admin/auth/basic/?next=%2Fadmin%2Fproducts%2F');
+    expect(response?.status).toBe(200);
+
+    const html = (await response?.text()) ?? '';
+    expect(html).toContain('/admin/auth/basic/?next=%2Fadmin%2Fproducts%2F');
+    expect(html).not.toContain('github.com');
+    expect(html).toContain('GitHub sign-in is not configured here');
   });
 
   it('explains rather than 404s when a GitHub callback arrives at a basic-only deployment', async () => {
@@ -462,12 +478,12 @@ describe('signing out', () => {
     expect(response).toBeUndefined();
   });
 
-  it('offers the sign-in door this deployment actually has', async () => {
+  it('sends the visitor back through the sign-in page in either mode', async () => {
     const github = await authorizeAdminRequest(adminRequest('/admin/auth/logout/'), githubOnly);
     const basic = await authorizeAdminRequest(adminRequest('/admin/auth/logout/'), basicOnly);
 
     expect(await github?.text()).toContain('href="/admin/auth/login/"');
-    expect(await basic?.text()).toContain('href="/admin/auth/basic/"');
+    expect(await basic?.text()).toContain('href="/admin/auth/login/"');
   });
 
   it('makes the basic door ask for the password again, instead of replaying the cache', async () => {

@@ -209,18 +209,18 @@ Three phases run automatically via `bun run build`:
 
 ### Admin route protection
 
-Root `middleware.js` is dependency-free Vercel Routing Middleware scoped by its matcher to `/admin/:path*`. It protects the otherwise static admin HTML before CDN content is served. Authorized requests return Vercel's `x-middleware-next` continuation response. The middleware uses Vercel's default Edge runtime and imports no packages. Bun is the sole package manager: the repository keeps only `bun.lock`, and Vercel installs dependencies with `bun install`. Do not add an npm lockfile because Vercel's isolated middleware packager will otherwise select npm despite the Bun package-manager declaration.
+Root `middleware.js` is dependency-free Vercel Routing Middleware scoped by its matcher to `/admin/:path*`. It protects the otherwise static admin HTML before CDN content is served. Authorized requests return Vercel's `x-middleware-next` continuation response. The middleware uses Vercel's default Edge runtime and imports no packages. Its own pages (sign-in, signed-out, errors) inline a small copy of the brand tokens from `src/styles/tokens.css`, because Astro inlines a per-page stylesheet at build time and these routes are never built. Bun is the sole package manager: the repository keeps only `bun.lock`, and Vercel installs dependencies with `bun install`. Do not add an npm lockfile because Vercel's isolated middleware packager will otherwise select npm despite the Bun package-manager declaration.
 
 There are two ways in:
 
-- **GitHub OAuth (primary).** `/admin/auth/login/` mints a `state`, stores it in the short-lived `cd_admin_state` cookie, and redirects to GitHub with no scopes requested. `/admin/auth/callback/` verifies the state, exchanges the code, reads `login` from `GET https://api.github.com/user`, and checks it case-insensitively against `ADMIN_GITHUB_LOGINS`. The GitHub access token is used once and never stored.
+- **GitHub OAuth (primary).** `/admin/auth/login/` renders a sign-in page — Chill-Dogs mark, a "Sign in with GitHub" button, and a link to the password fallback where one is configured — rather than bouncing the visitor to github.com unannounced. Rendering it mints a `state`, stored in the short-lived `cd_admin_state` cookie and carried on the button's authorize URL, which requests no scopes. `/admin/auth/callback/` verifies the state, exchanges the code, reads `login` from `GET https://api.github.com/user`, and checks it case-insensitively against `ADMIN_GITHUB_LOGINS`. The GitHub access token is used once and never stored.
 - **HTTP Basic (fallback).** A correct `Authorization: Basic` header is accepted on any admin path, and `/admin/auth/basic/` issues the challenge in a browser. This exists because a GitHub OAuth App registers exactly one callback URL, so Vercel preview deployments — which get generated hostnames — cannot use GitHub login.
 
 The four `/admin/auth/*` routes exist only at the edge and are never built to files, so **every configuration mode must handle all four**; letting one fall through to the CDN is a 404. Behaviour by mode:
 
 | Route | GitHub mode | Basic-only mode |
 |---|---|---|
-| `login/` | redirect to GitHub | redirect to `/admin/auth/basic/` |
+| `login/` | sign-in page with a GitHub button | sign-in page pointing at the password door |
 | `callback/` | exchange code, check allowlist | 503, explaining GitHub is not configured |
 | `basic/` | challenge, then issue a session cookie | challenge; no cookie without a session secret |
 | `logout/` | signed-out page | signed-out page |

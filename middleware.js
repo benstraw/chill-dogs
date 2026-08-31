@@ -222,19 +222,46 @@ function redirectResponse(location, cookies = []) {
   return new Response(null, { status: 302, headers });
 }
 
-function messageResponse(status, heading, message, links = [], cookies = []) {
-  const actions = links
-    .map((link) => `<p><a href="${link.href}">${link.label}</a></p>`)
-    .join('');
-  const body = `<!doctype html><html lang="en"><head><meta charset="utf-8">` +
+/**
+ * The middleware's own pages. They cannot use the site's CSS — Astro inlines a
+ * per-page stylesheet at build time and these routes are never built — so the
+ * brand tokens from src/styles/tokens.css are mirrored here deliberately.
+ * /images/ sits outside the /admin matcher, so the logo loads unauthenticated.
+ */
+function renderPage(title, bodyHtml) {
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8">` +
     `<meta name="viewport" content="width=device-width, initial-scale=1">` +
-    `<meta name="robots" content="noindex, nofollow"><title>${heading}</title>` +
-    `<style>body{font-family:system-ui,sans-serif;margin:0;min-height:100vh;display:grid;` +
-    `place-items:center;background:#f0f4f6;color:#1d2b32}main{max-width:32rem;padding:2rem;` +
-    `text-align:center}h1{font-size:1.5rem;margin:0 0 .75rem}p{margin:.5rem 0;line-height:1.5}` +
-    `a{color:#0f6f8c}</style></head><body><main><h1>${heading}</h1><p>${message}</p>` +
-    `${actions}</main></body></html>`;
+    `<meta name="robots" content="noindex, nofollow"><title>${title} · Chill-Dogs Admin</title>` +
+    `<style>` +
+    `:root{--bg:#f0f4f6;--surface:#fff;--text:#2d2d2d;--muted:#595959;` +
+    `--link:#345765;--border:#c5d4dc;--accent:#5e7a5a}` +
+    `*{box-sizing:border-box}` +
+    `body{margin:0;min-height:100vh;display:grid;place-items:center;padding:1.5rem;` +
+    `background:var(--bg);color:var(--text);` +
+    `font-family:Inter,system-ui,sans-serif;line-height:1.5}` +
+    `main{width:100%;max-width:26rem;background:var(--surface);border:1px solid var(--border);` +
+    `border-radius:1rem;padding:2.5rem 2rem;text-align:center;` +
+    `box-shadow:0 1px 3px rgba(45,45,45,.06)}` +
+    `img{width:3rem;height:3rem;object-fit:contain}` +
+    `.eyebrow{margin:.75rem 0 0;color:var(--accent);font-size:.75rem;font-weight:700;` +
+    `letter-spacing:.08em;text-transform:uppercase}` +
+    `h1{margin:.25rem 0 .5rem;font-family:Nunito,system-ui,sans-serif;font-size:1.5rem}` +
+    `p{margin:0 0 1.5rem;color:var(--muted)}` +
+    `.button{display:flex;align-items:center;justify-content:center;gap:.5rem;` +
+    `width:100%;padding:.75rem 1rem;border-radius:.5rem;background:var(--text);color:#fff;` +
+    `font-size:1rem;font-weight:600;text-decoration:none}` +
+    `.button:hover{background:#000}` +
+    `.button svg{width:1.25rem;height:1.25rem;fill:currentColor}` +
+    `.alt{display:inline-block;margin-top:1.25rem;color:var(--link);font-size:.875rem}` +
+    `.note{margin:1.5rem 0 0;font-size:.8125rem;color:var(--muted)}` +
+    `</style></head><body><main>` +
+    `<img src="/images/paw-logo.png" alt="">` +
+    `<p class="eyebrow">Chill-Dogs</p>` +
+    bodyHtml +
+    `</main></body></html>`;
+}
 
+function htmlResponse(status, title, bodyHtml, cookies = []) {
   const headers = new Headers({
     ...NO_STORE_HEADERS,
     'Content-Type': 'text/html; charset=utf-8',
@@ -243,7 +270,52 @@ function messageResponse(status, heading, message, links = [], cookies = []) {
     headers.append('Set-Cookie', cookie);
   }
 
-  return new Response(body, { status, headers });
+  return new Response(renderPage(title, bodyHtml), { status, headers });
+}
+
+const GITHUB_MARK =
+  '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>';
+
+function messageResponse(status, heading, message, links = [], cookies = []) {
+  const actions = links
+    .map((link) => `<p><a class="alt" href="${link.href}">${link.label}</a></p>`)
+    .join('');
+
+  return htmlResponse(status, heading, `<h1>${heading}</h1><p>${message}</p>${actions}`, cookies);
+}
+
+/**
+ * The sign-in landing page. Rendering it rather than redirecting straight to
+ * github.com means the visitor sees where they are going before they leave.
+ */
+function loginPage(url, configuration, cookies = []) {
+  const next = safeNextPath(url.searchParams.get('next'));
+  const parts = ['<h1>Admin sign-in</h1>'];
+
+  if (configuration.githubConfigured) {
+    parts.push('<p>Sign in with the GitHub account on the admin allowlist.</p>');
+    parts.push(
+      `<a class="button" href="${githubAuthorizeUrl(url, configuration, cookies)}">` +
+        `${GITHUB_MARK}<span>Sign in with GitHub</span></a>`
+    );
+    if (configuration.basicConfigured) {
+      parts.push(
+        `<p><a class="alt" href="${BASIC_PATH}?next=${encodeURIComponent(next)}">` +
+          'Use the password fallback instead</a></p>'
+      );
+    }
+  } else {
+    parts.push('<p>This deployment uses the admin password.</p>');
+    parts.push(
+      `<a class="button" href="${BASIC_PATH}?next=${encodeURIComponent(next)}">Continue</a>`
+    );
+    parts.push(
+      '<p class="note">GitHub sign-in is not configured here. Preview deployments ' +
+        'fall back to the password because a GitHub OAuth App registers one callback URL.</p>'
+    );
+  }
+
+  return htmlResponse(200, 'Admin sign-in', parts.join(''), cookies);
 }
 
 function unauthorizedResponse(cookies = []) {
@@ -273,17 +345,12 @@ function isSignedOut(request) {
   return readCookie(request, SIGNED_OUT_COOKIE) === '1';
 }
 
-/** Whichever sign-in door this deployment actually has. */
-function signInPath(configuration) {
-  return configuration.githubConfigured ? LOGIN_PATH : BASIC_PATH;
-}
-
 function signedOutPage(configuration, cookies = []) {
   return messageResponse(
     200,
     'Signed out',
     'You are signed out of the Chill-Dogs admin.',
-    [{ href: signInPath(configuration), label: 'Sign in again' }],
+    [{ href: LOGIN_PATH, label: 'Sign in again' }],
     cookies
   );
 }
@@ -393,7 +460,12 @@ function decodeState(state) {
   }
 }
 
-function startGithubLogin(url, configuration) {
+function escapeAttribute(value) {
+  return value.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+}
+
+/** Builds the authorize URL and appends the state cookie the callback checks. */
+function githubAuthorizeUrl(url, configuration, cookies) {
   const state = encodeState(safeNextPath(url.searchParams.get('next')));
   const authorize = new URL(GITHUB_AUTHORIZE_URL);
   // No `scope`: GET /user returns the authorizing user's public profile, which
@@ -403,10 +475,8 @@ function startGithubLogin(url, configuration) {
   authorize.searchParams.set('state', state);
   authorize.searchParams.set('allow_signup', 'false');
 
-  return redirectResponse(authorize.toString(), [
-    serializeCookie(STATE_COOKIE, state, url, STATE_TTL_SECONDS),
-    clearCookie(SIGNED_OUT_COOKIE, url),
-  ]);
+  cookies.push(serializeCookie(STATE_COOKIE, state, url, STATE_TTL_SECONDS));
+  return escapeAttribute(authorize.toString());
 }
 
 async function fetchGithubLogin(code, url, configuration) {
@@ -577,11 +647,8 @@ export async function authorizeAdminRequest(request, environment, now = Date.now
   // the CDN is a 404.
   switch (path) {
     case LOGIN_PATH:
-      return configuration.githubConfigured
-        ? startGithubLogin(url, configuration)
-        : redirectResponse(
-            `${BASIC_PATH}?next=${encodeURIComponent(safeNextPath(url.searchParams.get('next')))}`
-          );
+      // Reaching the sign-in page is deliberate, so it lifts a previous sign-out.
+      return loginPage(url, configuration, [clearCookie(SIGNED_OUT_COOKIE, url)]);
     case CALLBACK_PATH:
       return configuration.githubConfigured
         ? completeGithubLogin(request, url, configuration, now)
