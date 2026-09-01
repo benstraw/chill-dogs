@@ -261,10 +261,11 @@ function renderPage(title, bodyHtml) {
     `</main></body></html>`;
 }
 
-function htmlResponse(status, title, bodyHtml, cookies = []) {
+function htmlResponse(status, title, bodyHtml, cookies = [], extraHeaders = {}) {
   const headers = new Headers({
     ...NO_STORE_HEADERS,
     'Content-Type': 'text/html; charset=utf-8',
+    ...extraHeaders,
   });
   for (const cookie of cookies) {
     headers.append('Set-Cookie', cookie);
@@ -276,12 +277,18 @@ function htmlResponse(status, title, bodyHtml, cookies = []) {
 const GITHUB_MARK =
   '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>';
 
-function messageResponse(status, heading, message, links = [], cookies = []) {
+function messageResponse(status, heading, message, links = [], cookies = [], extraHeaders = {}) {
   const actions = links
     .map((link) => `<p><a class="alt" href="${link.href}">${link.label}</a></p>`)
     .join('');
 
-  return htmlResponse(status, heading, `<h1>${heading}</h1><p>${message}</p>${actions}`, cookies);
+  return htmlResponse(
+    status,
+    heading,
+    `<h1>${heading}</h1><p>${message}</p>${actions}`,
+    cookies,
+    extraHeaders
+  );
 }
 
 /**
@@ -319,26 +326,21 @@ function loginPage(url, configuration, cookies = []) {
 }
 
 function unauthorizedResponse(cookies = []) {
-  const headers = new Headers({
-    ...NO_STORE_HEADERS,
-    'Content-Type': 'text/plain; charset=utf-8',
-    'WWW-Authenticate': 'Basic realm="Chill-Dogs Admin", charset="UTF-8"',
-  });
-  for (const cookie of cookies) {
-    headers.append('Set-Cookie', cookie);
-  }
-
-  return new Response('Authentication required.', { status: 401, headers });
+  // The browser only renders this body if the visitor dismisses the password
+  // dialog, so it is a dead end unless it offers a way back. The
+  // WWW-Authenticate header has to stay or the dialog stops appearing at all.
+  return messageResponse(
+    401,
+    'Password required',
+    'The Chill-Dogs admin is password protected.',
+    [{ href: LOGIN_PATH, label: 'Try again' }],
+    cookies,
+    { 'WWW-Authenticate': 'Basic realm="Chill-Dogs Admin", charset="UTF-8"' }
+  );
 }
 
 function notConfiguredResponse(detail = 'Admin authentication is not configured.') {
-  return new Response(detail, {
-    status: 503,
-    headers: {
-      ...NO_STORE_HEADERS,
-      'Content-Type': 'text/plain; charset=utf-8',
-    },
-  });
+  return messageResponse(503, 'Admin unavailable', detail);
 }
 
 function isSignedOut(request) {
@@ -647,8 +649,12 @@ export async function authorizeAdminRequest(request, environment, now = Date.now
   // the CDN is a 404.
   switch (path) {
     case LOGIN_PATH:
-      // Reaching the sign-in page is deliberate, so it lifts a previous sign-out.
-      return loginPage(url, configuration, [clearCookie(SIGNED_OUT_COOKIE, url)]);
+      // Reaching a landing page is not authenticating, so the sign-out mark has
+      // to survive it — only a completed sign-in lifts that. What this page does
+      // reset is the challenge, making it the "start over" door: without that,
+      // dismissing the password dialog would leave the challenge spent and the
+      // next attempt would hand back the browser's cached credentials in silence.
+      return loginPage(url, configuration, [clearCookie(CHALLENGE_COOKIE, url)]);
     case CALLBACK_PATH:
       return configuration.githubConfigured
         ? completeGithubLogin(request, url, configuration, now)

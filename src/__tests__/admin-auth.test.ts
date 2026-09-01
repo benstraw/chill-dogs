@@ -538,13 +538,56 @@ describe('signing out', () => {
     expect(response?.status).toBe(302);
   });
 
-  it('lifts the mark when the visitor signs in with GitHub', async () => {
-    const response = await authorizeAdminRequest(
+  it('keeps the mark alive across the sign-in page', async () => {
+    // Reaching a landing page is not authenticating. Clearing the mark here
+    // let the password door accept the browser's cached credentials silently,
+    // which is the whole thing sign-out exists to prevent.
+    const landing = await authorizeAdminRequest(
+      adminRequest('/admin/auth/login/', { cookie: signedOut }),
+      basicOnly
+    );
+
+    expect(attributesFor(landing, 'cd_admin_signed_out')).not.toContain('Max-Age=0');
+
+    const door = await authorizeAdminRequest(
+      adminRequest('/admin/auth/basic/', {
+        authorization: basicAuthorization(basicOnly.ADMIN_USERNAME, basicOnly.ADMIN_PASSWORD),
+        cookie: signedOut,
+      }),
+      basicOnly
+    );
+
+    expect(door?.status).toBe(401);
+  });
+
+  it('resets a spent challenge so a dismissed prompt cannot be walked past', async () => {
+    // After dismissing the dialog the challenge cookie is already set, so
+    // without this reset the next attempt would replay the cache and be let in.
+    const landing = await authorizeAdminRequest(
+      adminRequest('/admin/auth/login/', { cookie: `${signedOut}; cd_admin_challenge=1` }),
+      basicOnly
+    );
+
+    expect(attributesFor(landing, 'cd_admin_challenge')).toContain('Max-Age=0');
+  });
+
+  it('lifts the mark when GitHub sign-in actually completes', async () => {
+    const landing = await authorizeAdminRequest(
       adminRequest('/admin/auth/login/', { cookie: signedOut }),
       githubOnly
     );
+    const state = cookieFrom(landing, 'cd_admin_state') ?? '';
 
-    expect(attributesFor(response, 'cd_admin_signed_out')).toContain('Max-Age=0');
+    stubGitHub('benstraw');
+    const callback = await authorizeAdminRequest(
+      adminRequest(`/admin/auth/callback/?code=abc123&state=${encodeURIComponent(state)}`, {
+        cookie: `cd_admin_state=${encodeURIComponent(state)}; ${signedOut}`,
+      }),
+      githubOnly
+    );
+
+    expect(callback?.status).toBe(302);
+    expect(attributesFor(callback, 'cd_admin_signed_out')).toContain('Max-Age=0');
   });
 
   it('keeps the visitor out if they cancel the password prompt', async () => {
@@ -558,6 +601,29 @@ describe('signing out', () => {
 
     expect(response?.status).toBe(200);
     expect(await response?.text()).toContain('Signed out');
+  });
+});
+
+describe('the middleware renders its own pages', () => {
+  it('styles the challenge a visitor sees after dismissing the dialog', async () => {
+    const response = await authorizeAdminRequest(adminRequest('/admin/'), basicOnly);
+
+    expect(response?.status).toBe(401);
+    expect(response?.headers.get('content-type')).toContain('text/html');
+    // Dropping this header would stop the browser prompting at all.
+    expect(response?.headers.get('www-authenticate')).toContain('Chill-Dogs Admin');
+
+    const html = (await response?.text()) ?? '';
+    expect(html).toContain('Password required');
+    expect(html).toContain('href="/admin/auth/login/"');
+  });
+
+  it('styles the fail-closed page too', async () => {
+    const response = await authorizeAdminRequest(adminRequest('/admin/'), {});
+
+    expect(response?.status).toBe(503);
+    expect(response?.headers.get('content-type')).toContain('text/html');
+    expect(await response?.text()).toContain('Admin authentication is not configured');
   });
 });
 
