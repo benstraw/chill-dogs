@@ -23,6 +23,7 @@ const LOGIN_PATH = '/admin/auth/login/';
 const CALLBACK_PATH = '/admin/auth/callback/';
 const LOGOUT_PATH = '/admin/auth/logout/';
 const BASIC_PATH = '/admin/auth/basic/';
+const GITHUB_PATH = '/admin/auth/github/';
 
 const SESSION_COOKIE = 'cd_admin_session';
 const STATE_COOKIE = 'cd_admin_state';
@@ -302,7 +303,7 @@ function loginPage(url, configuration, cookies = []) {
   if (configuration.githubConfigured) {
     parts.push('<p>Sign in with the GitHub account on the admin allowlist.</p>');
     parts.push(
-      `<a class="button" href="${githubAuthorizeUrl(url, configuration, cookies)}">` +
+      `<a class="button" href="${GITHUB_PATH}?next=${encodeURIComponent(next)}">` +
         `${GITHUB_MARK}<span>Sign in with GitHub</span></a>`
     );
     if (configuration.basicConfigured) {
@@ -462,12 +463,15 @@ function decodeState(state) {
   }
 }
 
-function escapeAttribute(value) {
-  return value.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
-}
-
-/** Builds the authorize URL and appends the state cookie the callback checks. */
-function githubAuthorizeUrl(url, configuration, cookies) {
+/**
+ * Mints the state and hands the visitor to GitHub. This is a route rather than
+ * a link built into the sign-in page because state minted at render time ages
+ * from when the page was drawn: leave the tab open past the cookie's life, or
+ * draw the page a second time in another tab, and the button carries a state
+ * the cookie no longer holds. Minting on the click means the cookie is always
+ * seconds old, and repeat renders mint nothing at all.
+ */
+function startGithubLogin(url, configuration) {
   const state = encodeState(safeNextPath(url.searchParams.get('next')));
   const authorize = new URL(GITHUB_AUTHORIZE_URL);
   // No `scope`: GET /user returns the authorizing user's public profile, which
@@ -477,8 +481,9 @@ function githubAuthorizeUrl(url, configuration, cookies) {
   authorize.searchParams.set('state', state);
   authorize.searchParams.set('allow_signup', 'false');
 
-  cookies.push(serializeCookie(STATE_COOKIE, state, url, STATE_TTL_SECONDS));
-  return escapeAttribute(authorize.toString());
+  return redirectResponse(authorize.toString(), [
+    serializeCookie(STATE_COOKIE, state, url, STATE_TTL_SECONDS),
+  ]);
 }
 
 async function fetchGithubLogin(code, url, configuration) {
@@ -541,11 +546,35 @@ async function completeGithubLogin(request, url, configuration, now) {
   const returnedState = url.searchParams.get('state') ?? '';
   const expectedState = readCookie(request, STATE_COOKIE) ?? '';
 
-  if (!code || !returnedState || !expectedState || !constantTimeEqual(returnedState, expectedState)) {
+  // Naming which check failed: collapsing these into one message made the page
+  // useless for working out what actually went wrong.
+  if (!code) {
+    return messageResponse(
+      403,
+      'Sign-in could not be completed',
+      'GitHub did not return an authorization code.',
+      [{ href: LOGIN_PATH, label: 'Start again' }],
+      [clearCookie(STATE_COOKIE, url)]
+    );
+  }
+
+  if (!expectedState) {
+    return messageResponse(
+      403,
+      'Sign-in expired',
+      'This browser is not holding a sign-in in progress. That happens if the attempt ' +
+        'sat unfinished for more than ten minutes, or if it began on a different address ' +
+        'from the one GitHub returned to.',
+      [{ href: LOGIN_PATH, label: 'Start again' }],
+      [clearCookie(STATE_COOKIE, url)]
+    );
+  }
+
+  if (!returnedState || !constantTimeEqual(returnedState, expectedState)) {
     return messageResponse(
       403,
       'Sign-in could not be verified',
-      'The sign-in state did not match. This usually means the attempt expired.',
+      'The sign-in GitHub returned does not match the one this browser started.',
       [{ href: LOGIN_PATH, label: 'Start again' }],
       [clearCookie(STATE_COOKIE, url)]
     );
@@ -655,6 +684,10 @@ export async function authorizeAdminRequest(request, environment, now = Date.now
       // dismissing the password dialog would leave the challenge spent and the
       // next attempt would hand back the browser's cached credentials in silence.
       return loginPage(url, configuration, [clearCookie(CHALLENGE_COOKIE, url)]);
+    case GITHUB_PATH:
+      return configuration.githubConfigured
+        ? startGithubLogin(url, configuration)
+        : notConfiguredResponse('GitHub sign-in is not configured for this deployment.');
     case CALLBACK_PATH:
       return configuration.githubConfigured
         ? completeGithubLogin(request, url, configuration, now)

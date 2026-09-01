@@ -219,7 +219,7 @@ describe('github login', () => {
     expect(response?.headers.get('cache-control')).toBe('no-store');
   });
 
-  it('renders a sign-in page carrying a state-matched GitHub link', async () => {
+  it('renders a sign-in page that mints no state of its own', async () => {
     const response = await authorizeAdminRequest(
       adminRequest('/admin/auth/login/?next=%2Fadmin%2Fproducts%2F'),
       githubOnly
@@ -229,9 +229,22 @@ describe('github login', () => {
 
     const html = (await response?.text()) ?? '';
     expect(html).toContain('Sign in with GitHub');
+    expect(html).toContain('/admin/auth/github/?next=%2Fadmin%2Fproducts%2F');
 
-    const href = html.match(/class="button" href="([^"]+)"/)?.[1] ?? '';
-    const location = new URL(href.replace(/&amp;/g, '&'));
+    // State minted at render time ages from when the page was drawn, which is
+    // what made a stale tab or a second render fail at the callback.
+    expect(cookieFrom(response, 'cd_admin_state')).toBeUndefined();
+  });
+
+  it('mints the state when the visitor sets off for GitHub', async () => {
+    const response = await authorizeAdminRequest(
+      adminRequest('/admin/auth/github/?next=%2Fadmin%2Fproducts%2F'),
+      githubOnly
+    );
+
+    expect(response?.status).toBe(302);
+
+    const location = new URL(response?.headers.get('location') ?? '');
     expect(location.origin + location.pathname).toBe('https://github.com/login/oauth/authorize');
     expect(location.searchParams.get('client_id')).toBe('client-id');
     expect(location.searchParams.get('redirect_uri')).toBe(
@@ -239,8 +252,6 @@ describe('github login', () => {
     );
     // No scope is requested — GET /user needs none to return the login.
     expect(location.searchParams.get('scope')).toBeNull();
-
-    // The link and the cookie must carry the same state or the callback fails.
     expect(cookieFrom(response, 'cd_admin_state')).toBe(location.searchParams.get('state'));
 
     const attributes = attributesFor(response, 'cd_admin_state');
@@ -248,6 +259,52 @@ describe('github login', () => {
     expect(attributes).toContain('Secure');
     expect(attributes).toContain('SameSite=Lax');
     expect(attributes).toContain('Path=/admin');
+  });
+
+  it('survives the sign-in page being drawn twice', async () => {
+    // A reload, a second tab, or a back-navigation. Each render used to
+    // overwrite the state cookie, so following the older page failed.
+    const first = await authorizeAdminRequest(adminRequest('/admin/auth/login/'), githubOnly);
+    const firstHtml = (await first?.text()) ?? '';
+    await authorizeAdminRequest(adminRequest('/admin/auth/login/'), githubOnly);
+
+    const href = firstHtml.match(/class="button" href="([^"]+)"/)?.[1] ?? '';
+    const departure = await authorizeAdminRequest(adminRequest(href), githubOnly);
+    const state = cookieFrom(departure, 'cd_admin_state') ?? '';
+
+    expect(state).not.toBe('');
+
+    stubGitHub('benstraw');
+    const callback = await authorizeAdminRequest(
+      adminRequest(`/admin/auth/callback/?code=abc123&state=${encodeURIComponent(state)}`, {
+        cookie: `cd_admin_state=${encodeURIComponent(state)}`,
+      }),
+      githubOnly
+    );
+
+    expect(callback?.status).toBe(302);
+    expect(callback?.headers.get('location')).toBe('/admin/');
+  });
+
+  it('is unavailable where GitHub is not configured', async () => {
+    const response = await authorizeAdminRequest(adminRequest('/admin/auth/github/'), basicOnly);
+
+    expect(response?.status).toBe(503);
+  });
+
+  it('names which check failed at the callback', async () => {
+    const cases = [
+      ['/admin/auth/callback/?state=abc', 'cd_admin_state=abc', 'Sign-in could not be completed'],
+      ['/admin/auth/callback/?code=x&state=abc', undefined, 'Sign-in expired'],
+      ['/admin/auth/callback/?code=x&state=abc', 'cd_admin_state=other', 'Sign-in could not be verified'],
+    ] as const;
+
+    for (const [path, cookie, heading] of cases) {
+      const response = await authorizeAdminRequest(adminRequest(path, { cookie }), githubOnly);
+
+      expect(response?.status).toBe(403);
+      expect(await response?.text()).toContain(heading);
+    }
   });
 
   it('offers the password fallback only where it is configured', async () => {
@@ -260,7 +317,7 @@ describe('github login', () => {
 
   it('refuses to redirect anywhere outside /admin/ after login', async () => {
     const response = await authorizeAdminRequest(
-      adminRequest('/admin/auth/login/?next=https%3A%2F%2Fevil.example.com%2F'),
+      adminRequest('/admin/auth/github/?next=https%3A%2F%2Fevil.example.com%2F'),
       githubOnly
     );
 
@@ -272,11 +329,11 @@ describe('github login', () => {
   });
 
   it('signs in an allowlisted GitHub account and returns to the requested page', async () => {
-    const login = await authorizeAdminRequest(
-      adminRequest('/admin/auth/login/?next=%2Fadmin%2Fproducts%2F'),
+    const departure = await authorizeAdminRequest(
+      adminRequest('/admin/auth/github/?next=%2Fadmin%2Fproducts%2F'),
       githubOnly
     );
-    const state = cookieFrom(login, 'cd_admin_state') ?? '';
+    const state = cookieFrom(departure, 'cd_admin_state') ?? '';
 
     const fetchMock = stubGitHub('benstraw');
     const callback = await authorizeAdminRequest(
@@ -305,8 +362,8 @@ describe('github login', () => {
   });
 
   it('matches allowlist entries case-insensitively', async () => {
-    const login = await authorizeAdminRequest(adminRequest('/admin/auth/login/'), githubOnly);
-    const state = cookieFrom(login, 'cd_admin_state') ?? '';
+    const departure = await authorizeAdminRequest(adminRequest('/admin/auth/github/'), githubOnly);
+    const state = cookieFrom(departure, 'cd_admin_state') ?? '';
 
     stubGitHub('secondowner');
     const callback = await authorizeAdminRequest(
@@ -321,8 +378,8 @@ describe('github login', () => {
   });
 
   it('rejects a GitHub account that is not on the allowlist', async () => {
-    const login = await authorizeAdminRequest(adminRequest('/admin/auth/login/'), githubOnly);
-    const state = cookieFrom(login, 'cd_admin_state') ?? '';
+    const departure = await authorizeAdminRequest(adminRequest('/admin/auth/github/'), githubOnly);
+    const state = cookieFrom(departure, 'cd_admin_state') ?? '';
 
     stubGitHub('random-visitor');
     const callback = await authorizeAdminRequest(
@@ -355,8 +412,8 @@ describe('github login', () => {
   });
 
   it('surfaces a GitHub failure instead of signing anyone in', async () => {
-    const login = await authorizeAdminRequest(adminRequest('/admin/auth/login/'), githubOnly);
-    const state = cookieFrom(login, 'cd_admin_state') ?? '';
+    const departure = await authorizeAdminRequest(adminRequest('/admin/auth/github/'), githubOnly);
+    const state = cookieFrom(departure, 'cd_admin_state') ?? '';
 
     stubGitHub(null);
     const callback = await authorizeAdminRequest(
@@ -375,7 +432,13 @@ describe('admin auth routes exist in every configuration mode', () => {
   // Regression: these four are served only by the middleware and are never
   // built to files, so passing one through means a CDN 404. Basic-only is the
   // mode preview deployments actually run in.
-  const authRoutes = ['/admin/auth/login/', '/admin/auth/callback/', '/admin/auth/basic/', '/admin/auth/logout/'];
+  const authRoutes = [
+    '/admin/auth/login/',
+    '/admin/auth/github/',
+    '/admin/auth/callback/',
+    '/admin/auth/basic/',
+    '/admin/auth/logout/',
+  ];
 
   it('never falls through to the CDN in basic-only mode', async () => {
     const credentialed = basicAuthorization(basicOnly.ADMIN_USERNAME, basicOnly.ADMIN_PASSWORD);
@@ -572,11 +635,11 @@ describe('signing out', () => {
   });
 
   it('lifts the mark when GitHub sign-in actually completes', async () => {
-    const landing = await authorizeAdminRequest(
-      adminRequest('/admin/auth/login/', { cookie: signedOut }),
+    const departure = await authorizeAdminRequest(
+      adminRequest('/admin/auth/github/', { cookie: signedOut }),
       githubOnly
     );
-    const state = cookieFrom(landing, 'cd_admin_state') ?? '';
+    const state = cookieFrom(departure, 'cd_admin_state') ?? '';
 
     stubGitHub('benstraw');
     const callback = await authorizeAdminRequest(

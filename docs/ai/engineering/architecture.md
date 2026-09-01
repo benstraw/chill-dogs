@@ -213,7 +213,7 @@ Root `middleware.js` is dependency-free Vercel Routing Middleware scoped by its 
 
 There are two ways in:
 
-- **GitHub OAuth (primary).** `/admin/auth/login/` renders a sign-in page — Chill-Dogs mark, a "Sign in with GitHub" button, and a link to the password fallback where one is configured — rather than bouncing the visitor to github.com unannounced. Rendering it mints a `state`, stored in the short-lived `cd_admin_state` cookie and carried on the button's authorize URL, which requests no scopes. `/admin/auth/callback/` verifies the state, exchanges the code, reads `login` from `GET https://api.github.com/user`, and checks it case-insensitively against `ADMIN_GITHUB_LOGINS`. The GitHub access token is used once and never stored.
+- **GitHub OAuth (primary).** `/admin/auth/login/` renders a sign-in page — Chill-Dogs mark, a "Sign in with GitHub" button, and a link to the password fallback where one is configured — rather than bouncing the visitor to github.com unannounced. The page itself mints nothing; the button points at `/admin/auth/github/`, which mints the `state`, stores it in the short-lived `cd_admin_state` cookie, and redirects to GitHub requesting no scopes. Minting on the click rather than on the render is deliberate: state created at render time ages from when the page was drawn, so a tab left open past the cookie's life — or a second render, which overwrites the cookie and strands the first page's button — failed at the callback. Nothing is minted until the click, and the click consumes it immediately. `/admin/auth/callback/` verifies the state — reporting separately whether the code was missing, the browser held no sign-in in progress, or the state genuinely mismatched, since one shared message made the page useless for diagnosis — then exchanges the code, reads `login` from `GET https://api.github.com/user`, and checks it case-insensitively against `ADMIN_GITHUB_LOGINS`. The GitHub access token is used once and never stored.
 - **HTTP Basic (fallback).** A correct `Authorization: Basic` header is accepted on any admin path, and `/admin/auth/basic/` issues the challenge in a browser. This exists because a GitHub OAuth App registers exactly one callback URL, so Vercel preview deployments — which get generated hostnames — cannot use GitHub login.
 
 The four `/admin/auth/*` routes exist only at the edge and are never built to files, so **every configuration mode must handle all four**; letting one fall through to the CDN is a 404. Behaviour by mode:
@@ -221,6 +221,7 @@ The four `/admin/auth/*` routes exist only at the edge and are never built to fi
 | Route | GitHub mode | Basic-only mode |
 |---|---|---|
 | `login/` | sign-in page with a GitHub button | sign-in page pointing at the password door |
+| `github/` | mints state, redirects to GitHub | 503, explaining GitHub is not configured |
 | `callback/` | exchange code, check allowlist | 503, explaining GitHub is not configured |
 | `basic/` | challenge, then issue a session cookie | challenge; no cookie without a session secret |
 | `logout/` | signed-out page | signed-out page |

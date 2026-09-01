@@ -76,6 +76,7 @@ export const MIDDLEWARE_ONLY_ROUTES: readonly string[] = [
   ROUTES.adminLogin,
   ROUTES.adminLogout,
   ROUTES.adminBasicLogin,
+  '/admin/auth/github/',
   '/admin/auth/callback/',
 ];
 
