@@ -10,17 +10,19 @@
 import { describe, expect, it } from 'vitest';
 
 import { productCatalogItems } from '../data/product-catalog';
+import { PRODUCT_PAGES_INDEXABLE } from '../utils/product-meta';
 import {
   PRODUCT_META_LIMITS as LIMITS,
   categoryLabel,
   htmlAttrLength,
   isIndexableProduct,
+  meetsProductCopyBar,
   productOgDescription,
   productOgTitle,
   productOgTitleMap,
 } from '../utils/product-meta';
 
-const indexable = productCatalogItems.filter(isIndexableProduct);
+const indexable = productCatalogItems.filter(meetsProductCopyBar);
 
 describe('og:title for every indexable product', () => {
   it('has products to check', () => {
@@ -101,7 +103,7 @@ describe('og:description for every indexable product', () => {
 
 describe('indexing gate', () => {
   it('indexes the substantial majority and gates only genuinely thin products', () => {
-    const gated = productCatalogItems.filter((product) => !isIndexableProduct(product));
+    const gated = productCatalogItems.filter((product) => !meetsProductCopyBar(product));
 
     // A guard against the gate silently swallowing the catalog after a data refactor.
     expect(gated.length).toBeLessThan(productCatalogItems.length * 0.2);
@@ -115,8 +117,23 @@ describe('indexing gate', () => {
         bullets.length >= LIMITS.MIN_BULLETS &&
         bullets.join(' ').length >= LIMITS.MIN_BULLET_CHARS;
 
-      expect(isIndexableProduct(product), product.id).toBe(expected);
+      expect(meetsProductCopyBar(product), product.id).toBe(expected);
     }
+  });
+});
+
+describe('the indexing switch', () => {
+  it('keeps every product page out of the index while it is off', () => {
+    // ~200 generated pages on a site of ~65 is the shape that draws site-wide
+    // quality demotion, so they ship noindex and are switched on deliberately.
+    if (PRODUCT_PAGES_INDEXABLE) {
+      expect(productCatalogItems.some(isIndexableProduct)).toBe(true);
+      return;
+    }
+
+    expect(productCatalogItems.every((product) => !isIndexableProduct(product))).toBe(true);
+    // The copy bar still has real opinions, ready for when it is turned on.
+    expect(productCatalogItems.some(meetsProductCopyBar)).toBe(true);
   });
 });
 

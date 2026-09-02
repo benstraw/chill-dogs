@@ -260,7 +260,26 @@ export function productOgDescription(product: ProductMetaSource): string {
 }
 
 /**
- * Whether a product page is worth indexing.
+ * Master switch for indexing the generated product detail pages.
+ *
+ * They add ~200 programmatically generated pages to a site of roughly 65. That
+ * ratio, on near-template affiliate pages, is the shape that draws site-wide
+ * quality demotion — and what is at risk is the hand-written converters that
+ * earn, not the new pages. So they ship `noindex` and out of the XML sitemap:
+ * the URLs work from day one for Pinterest pins, direct links and internal
+ * navigation, while indexing is switched on deliberately once the set has been
+ * reviewed — ideally a pillar at a time, watching Search Console between.
+ *
+ * Flip this to `true` to hand the decision back to the per-product quality gate
+ * below. Nothing else needs changing: the page meta, llms.txt and the sitemap
+ * all read through `isIndexableProduct`.
+ */
+export const PRODUCT_PAGES_INDEXABLE = false;
+
+/**
+ * The per-product copy bar, kept separate from the switch above so it stays
+ * tested and enforced while indexing is off — the copy has to be right before
+ * it is worth indexing, not after.
  *
  * 214 near-empty pages would read to Google as thin content and can drag down the whole
  * set, so products below this bar still build — direct Pinterest links and internal
@@ -268,9 +287,13 @@ export function productOgDescription(product: ProductMetaSource): string {
  * meta-length and llms.txt coverage tests, so this doubles as the escape hatch for
  * products whose copy is not written yet. Fill the copy in and the page joins the index.
  */
-export function isIndexableProduct(product: ProductMetaSource): boolean {
+export function meetsProductCopyBar(product: ProductMetaSource): boolean {
   const bullets = product.bullets.map((bullet) => bullet.trim()).filter(Boolean);
   return bullets.length >= MIN_BULLETS && bullets.join(' ').length >= MIN_BULLET_CHARS;
+}
+
+export function isIndexableProduct(product: ProductMetaSource): boolean {
+  return PRODUCT_PAGES_INDEXABLE && meetsProductCopyBar(product);
 }
 
 export const PRODUCT_META_LIMITS = {

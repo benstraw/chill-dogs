@@ -209,6 +209,25 @@ Use these exact values. Do not invent new topic strings.
 
 ---
 
+## Product detail page indexing
+
+`/shop/<id>/` pages are built for all 214 catalog products but ship **noindex and out of the
+XML sitemap**, gated by `PRODUCT_PAGES_INDEXABLE` in `src/utils/product-meta.ts`.
+
+Adding ~200 programmatically generated pages to a site of roughly 65 is the shape that draws
+site-wide quality demotion, and the pages at risk are the hand-written converters that earn.
+The URLs still work from day one — Pinterest pins, direct links and internal navigation all
+resolve — so only long-tail search discovery waits. Flip the switch to `true` to hand the
+decision back to `meetsProductCopyBar`, the per-product copy bar that stays enforced meanwhile.
+
+Both surfaces read through `isIndexableProduct`, so they cannot drift: llms.txt filters on
+`noindex` directly, and the XML sitemap filter in `astro.config.mjs` excludes
+`noindexProductPaths()` from `src/data/product-indexing.ts`. That module is deliberately
+alias-free because config is evaluated before the `@` aliases it declares exist. Before this,
+the sitemap honoured only `EXCLUDED_DISCOVERY_FRAGMENTS`, so all 214 pages were submitted
+including the 19 thin ones already carrying `noindex` — contradictory signals that Search
+Console reports as an error.
+
 ## Related knowledge
 
 - [`architecture.md`](architecture.md) — Stack, file structure, content collections

@@ -13,6 +13,7 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 
+import { noindexProductPaths } from '../data/product-indexing';
 import { productCatalogItems } from '../data/product-catalog';
 import { PUBLISHED_PRODUCT_IDS } from '../data/product-url-history';
 
@@ -103,5 +104,27 @@ describe('published product URLs stay reachable', () => {
       (id, index) => PUBLISHED_PRODUCT_IDS.indexOf(id) !== index
     );
     expect(duplicates).toEqual([]);
+  });
+});
+
+describe('noindex pages stay off the sitemap', () => {
+  it('never submits a product URL that carries noindex', () => {
+    // Submitting a URL while telling crawlers not to index it is an error in
+    // Search Console, not a warning. llms.txt always filtered on noindex; the
+    // XML sitemap did not, so all 214 product pages were being submitted
+    // including the 19 thin ones.
+    const sitemap = readFileSync(path.join(root, 'dist', 'sitemap-0.xml'), 'utf8');
+    const submitted = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
+
+    const submittedProducts = submitted.filter((url) => /\/shop\/[^/]+\/$/.test(url));
+    const noindexProducts = [...noindexProductPaths()];
+
+    for (const routePath of noindexProducts) {
+      expect(submitted).not.toContain(`https://www.chill-dogs.com${routePath}`);
+    }
+
+    // While the switch is off that is the whole catalog; the browse page stays.
+    expect(submittedProducts).toEqual([]);
+    expect(submitted).toContain('https://www.chill-dogs.com/shop/');
   });
 });
