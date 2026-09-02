@@ -333,8 +333,9 @@ function unauthorizedResponse(cookies = []) {
   return messageResponse(
     401,
     'Password required',
-    'The Chill-Dogs admin is password protected.',
-    [{ href: LOGIN_PATH, label: 'Try again' }],
+    'The Chill-Dogs admin is password protected. If no password box appeared, ' +
+      'your browser is declining to ask again — reload the page, or sign in another way.',
+    [{ href: LOGIN_PATH, label: 'Back to sign-in' }],
     cookies,
     { 'WWW-Authenticate': 'Basic realm="Chill-Dogs Admin", charset="UTF-8"' }
   );
@@ -681,9 +682,23 @@ export async function authorizeAdminRequest(request, environment, now = Date.now
     );
   }
 
-  // These four exist only here at the edge and are never built to files, so
-  // every configuration mode has to handle them — letting one fall through to
-  // the CDN is a 404.
+  // An already-authenticated visitor has no business being shown a sign-in page
+  // or challenged for a password they do not need: send them where they were
+  // going. Sign-out is excluded, for obvious reasons.
+  if (path === LOGIN_PATH || path === BASIC_PATH || path === GITHUB_PATH) {
+    const active = await verifySessionToken(
+      configuration.sessionSecret,
+      readCookie(request, SESSION_COOKIE),
+      now
+    );
+    if (active) {
+      return redirectResponse(safeNextPath(url.searchParams.get('next')));
+    }
+  }
+
+  // These exist only here at the edge and are never built to files, so every
+  // configuration mode has to handle them — letting one fall through to the
+  // CDN is a 404.
   switch (path) {
     case LOGIN_PATH:
       // Reaching a landing page is not authenticating, so the sign-out mark has

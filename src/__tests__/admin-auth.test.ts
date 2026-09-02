@@ -535,6 +535,46 @@ describe('admin auth routes exist in every configuration mode', () => {
   });
 });
 
+describe('an already-signed-in visitor', () => {
+  async function signedInRequest(pathname: string) {
+    const token = await createSessionToken(SESSION_SECRET, { sub: 'benstraw', via: 'github' });
+    return adminRequest(pathname, {
+      cookie: `cd_admin_session=${encodeURIComponent(token)}`,
+      navigation: true,
+    });
+  }
+
+  it('is not shown a sign-in page or challenged for a password it does not need', async () => {
+    // Being asked to authenticate again while holding a valid session is a dead
+    // end: the password door answered 401 to someone already signed in.
+    for (const door of ['/admin/auth/login/', '/admin/auth/basic/', '/admin/auth/github/']) {
+      const response = await authorizeAdminRequest(await signedInRequest(door), bothModes);
+
+      expect(response?.status, door).toBe(302);
+      expect(response?.headers.get('location'), door).toBe('/admin/');
+    }
+  });
+
+  it('is returned to the page it was headed for', async () => {
+    const response = await authorizeAdminRequest(
+      await signedInRequest('/admin/auth/login/?next=%2Fadmin%2Fproducts%2F'),
+      bothModes
+    );
+
+    expect(response?.headers.get('location')).toBe('/admin/products/');
+  });
+
+  it('can still sign out', async () => {
+    const response = await authorizeAdminRequest(
+      await signedInRequest('/admin/auth/logout/'),
+      bothModes
+    );
+
+    expect(response?.status).toBe(200);
+    expect(await response?.text()).toContain('Signed out');
+  });
+});
+
 describe('signing out', () => {
   const signedOut = 'cd_admin_signed_out=1';
 
