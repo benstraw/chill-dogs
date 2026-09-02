@@ -3,7 +3,7 @@ title: Converter Page Checklist
 type: checklist
 domain: checklists
 status: active
-updated: 2026-08-23
+updated: 2026-08-30
 tags:
   - chill-dogs
   - checklist
@@ -24,6 +24,17 @@ Gate checklist for publishing or updating a converter page.
 ## Use this when
 
 Finishing any converter page before marking work as done.
+
+---
+
+## Not for catalog pages
+
+`/shop/<product-id>/` detail pages are converters but follow a narrower contract — see
+the catalog layer section in
+[`../strategy/metrics-and-page-types.md`](../strategy/metrics-and-page-types.md). They are
+generated, so most items below are enforced by tests rather than checked by hand. What
+still applies to them: `Disclosure` before the CTA, canonical product data, shared
+primitives, product schema, and sitemap registration.
 
 ---
 

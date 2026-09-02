@@ -3,7 +3,7 @@ title: Engineering Architecture
 type: canonical
 domain: engineering
 status: active
-updated: 2026-08-11
+updated: 2026-08-29
 tags:
   - chill-dogs
   - engineering
@@ -159,13 +159,18 @@ Three phases run automatically via `bun run build`:
 
 2. **Astro build**: outputs static HTML to `dist/`
 
-3. **Post-build** (`scripts/`): `apply-first-page-image-og.mjs` → `apply-content-sitemap-share-preview.mjs` → `indexnow-submit.mjs`
+3. **Post-build** (`scripts/`): `apply-first-page-image-og.mjs` → `apply-sitemap-share-preview.mjs` → `indexnow-submit.mjs`
 
 ---
 
 ## Content collections
 
 - `src/content/config.ts` — Astro content collection schema for the `articles` collection
+- `src/data/product-galleries.ts` — tool-managed multi-image galleries keyed by product id,
+  written by `bun run admin:serve`. Read it through `getProductImages()` in
+  `src/data/products/images.ts`, which prefers a record-level `images` override, then this
+  store, then the product's single `image`. Galleries render only on `/shop/<id>/` detail
+  pages; converter cards stay single-image.
 - `src/content/articles/` — MDX files. `canonicalPath` frontmatter = page URL
 - MDX articles are **auto-discovered** — no manual registration in `content-sitemap.ts` needed
 - All other page types require manual registration in `src/data/content-sitemap.ts`
@@ -194,7 +199,40 @@ Three phases run automatically via `bun run build`:
 | `VERCEL_ENV` | Auto | Set by Vercel; controls staging noindex and Pinterest loading |
 | `MAINTENANCE_MODE` | Optional | Any truthy value shows maintenance page at `/` |
 | `INDEXNOW_KEY` | Prod | Key for IndexNow URL submission on deploy |
+| `GITHUB_OAUTH_CLIENT_ID` | Vercel Production | GitHub OAuth App client id for admin sign-in |
+| `GITHUB_OAUTH_CLIENT_SECRET` | Vercel Production | GitHub OAuth App client secret |
+| `ADMIN_SESSION_SECRET` | Vercel Production | HMAC key for the admin session cookie |
+| `ADMIN_GITHUB_LOGINS` | Vercel Production | Comma-separated GitHub logins allowed into `/admin/*` |
+| `ADMIN_USERNAME` | Vercel Preview (fallback) | HTTP Basic Auth username for all `/admin/*` routes |
+| `ADMIN_PASSWORD` | Vercel Preview (fallback) | HTTP Basic Auth password for all `/admin/*` routes |
 | `SERP_API_KEY` / `SEARCHAPI_KEY` | Scripts only | Amazon product metadata fetching |
+
+### Admin route protection
+
+Root `middleware.js` is dependency-free Vercel Routing Middleware scoped by its matcher to `/admin/:path*`. It protects the otherwise static admin HTML before CDN content is served. Authorized requests return Vercel's `x-middleware-next` continuation response. The middleware uses Vercel's default Edge runtime and imports no packages. Its own pages — sign-in, signed-out, the 401 a visitor sees after dismissing the password dialog, and the fail-closed 503 — inline a small copy of the brand tokens from `src/styles/tokens.css`, because Astro inlines a per-page stylesheet at build time and these routes are never built. Bun is the sole package manager: the repository keeps only `bun.lock`, and Vercel installs dependencies with `bun install`. Do not add an npm lockfile because Vercel's isolated middleware packager will otherwise select npm despite the Bun package-manager declaration.
+
+There are two ways in:
+
+- **GitHub OAuth (primary).** `/admin/auth/login/` renders a sign-in page — Chill-Dogs mark, a "Sign in with GitHub" button, and a link to the password fallback where one is configured — rather than bouncing the visitor to github.com unannounced. The page itself mints nothing; the button points at `/admin/auth/github/`, which mints the `state`, stores it in the short-lived `cd_admin_state` cookie, and redirects to GitHub requesting no scopes. Minting on the click rather than on the render is deliberate: state created at render time ages from when the page was drawn, so a tab left open past the cookie's life — or a second render, which overwrites the cookie and strands the first page's button — failed at the callback. Nothing is minted until the click, and the click consumes it immediately. `/admin/auth/callback/` verifies the state — reporting separately whether the code was missing, the browser held no sign-in in progress, or the state genuinely mismatched, since one shared message made the page useless for diagnosis — then exchanges the code, reads `login` from `GET https://api.github.com/user`, and checks it case-insensitively against `ADMIN_GITHUB_LOGINS`. The GitHub access token is used once and never stored.
+- **HTTP Basic (fallback).** A correct `Authorization: Basic` header admits tooling on any admin path — CLI clients cannot follow the redirect dance — but **not** a browser page load, which is identified by `Sec-Fetch-Mode: navigate`. Browsers replay cached Basic credentials on every request forever, so honouring one there would walk the visitor past GitHub and make the primary sign-in unreachable wherever both are configured. A browser reaches the fallback deliberately, through `/admin/auth/basic/`. Basic-only deployments are unaffected: with no GitHub config there is nothing to shadow, so browser Basic auth works as it always did, which is what preview deployments run on. This exists because a GitHub OAuth App registers exactly one callback URL, so Vercel preview deployments — which get generated hostnames — cannot use GitHub login.
+
+A visitor who already holds a valid session is redirected away from `login/`, `basic/` and `github/` to wherever they were headed, rather than being shown a sign-in page or challenged for a password they do not need — `logout/` is deliberately excluded. The `/admin/auth/*` routes exist only at the edge and are never built to files, so **every configuration mode must handle all of them**; letting one fall through to the CDN is a 404. Behaviour by mode:
+
+| Route | GitHub mode | Basic-only mode |
+|---|---|---|
+| `login/` | sign-in page with a GitHub button | sign-in page pointing at the password door |
+| `github/` | mints state, redirects to GitHub | 503, explaining GitHub is not configured |
+| `callback/` | exchange code, check allowlist | 503, explaining GitHub is not configured |
+| `basic/` | challenge, then issue a session cookie | challenge; no cookie without a session secret |
+| `logout/` | signed-out page | signed-out page |
+
+The session cookie `cd_admin_session` is `v1.<base64url(payload)>.<base64url(HMAC-SHA256)>` signed with `ADMIN_SESSION_SECRET` via `crypto.subtle`, valid for 8 hours, and set `HttpOnly; SameSite=Lax; Path=/admin` plus `Secure` on https. Basic-only deployments have no secret to sign with, so no cookie is minted there and the browser's cached credentials carry the session instead.
+
+**Signing out** clears the session cookie *and* sets a `cd_admin_signed_out` marker cookie for 12 hours. The marker is what makes sign-out real: a browser caches HTTP Basic credentials and re-sends them on every subsequent request, and a correct Basic header is otherwise accepted on any admin path, so clearing the session alone would let the very next request straight back in. While the marker is present, every admin path returns the signed-out page regardless of credentials or surviving session. CLI clients send no cookies and are unaffected, so `curl -u` keeps working. Only a *completed* sign-in clears the marker — the callback on the GitHub side, a submitted password on the other. Reaching the sign-in page does not, since landing on a page is not authenticating; what that page resets is the challenge below, making it the "start over" door. The basic door refuses the **first** attempt after a sign-out even when the credentials are correct, setting a short-lived `cd_admin_challenge` cookie and returning 401 so the browser prompts for the password; the retry carries that cookie and is accepted. Dismissing the dialog leaves that challenge spent, which is why the 401 page routes "Try again" back through the sign-in page rather than straight at the door. Without this the browser would replay its cached credentials and sign the visitor straight back in without ever asking, which is not a sign-out. This is the practical limit of HTTP Basic: the server cannot make a browser forget credentials, only refuse them.
+
+Configuration fails closed. Nothing configured returns 503; GitHub configured with an empty `ADMIN_GITHUB_LOGINS` also returns 503, so an empty allowlist can never read as "any GitHub account". With only `ADMIN_USERNAME` / `ADMIN_PASSWORD` set, non-auth admin paths fall back to a plain 401 Basic challenge. Unauthenticated browser requests in GitHub mode get a 302 to `/admin/auth/login/`, and the `next` parameter is only honored when it resolves inside `/admin/`. None of the auth routes is a built page, which is why `src/data/routes.ts` exports `MIDDLEWARE_ONLY_ROUTES` for the smoke suite's link-integrity check to skip.
+
+Astro's local dev server does not execute this Vercel middleware. For local end-to-end verification, add the variables to the gitignored root `.env` and restart `vercel dev`; Vercel CLI 54 selects the existing `.env` for middleware and ignores `.env.local` and `.vercel/.env.development.local` during local execution.
 
 ---
 

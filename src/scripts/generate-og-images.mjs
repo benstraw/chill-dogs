@@ -24,7 +24,6 @@ const PRODUCT_OG_ROUTES = new Set(
 
 const EXCLUDED_STATIC_ROUTES = new Set([
   '/404/',
-  '/content-sitemap/',
   '/privacy-policy/',
   '/terms/',
 ]);

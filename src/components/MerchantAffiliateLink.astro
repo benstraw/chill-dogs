@@ -71,16 +71,21 @@ const ctaClass = isCta ? ['ui-cta', className].filter(Boolean).join(' ') : class
 ><slot>{label ?? offer.label ?? merchant.ctaCopy}</slot></a>
 
 <style>
-  a[data-merchant="chewy"] {
+  /*
+   * Brand colours for `.ui-cta` callers live in src/styles/cta.css, which is the
+   * single home for them. This scoped rule covers only the non-`.ui-cta` case —
+   * a caller that passes no variant/size/tone and so renders a plain anchor.
+   * `:not(.ui-cta)` keeps it from re-entering the cascade fight in cta.css.
+   */
+  a[data-merchant="chewy"]:not(.ui-cta) {
     background: #1c49c2;
-    color: #fff !important;
+    color: #fff;
     border-color: #1c49c2;
   }
 
-  a[data-merchant="chewy"]:hover {
+  a[data-merchant="chewy"]:not(.ui-cta):hover {
     background: #001a70;
     border-color: #001a70;
-    color: #fff !important;
+    color: #fff;
   }
-
 </style>

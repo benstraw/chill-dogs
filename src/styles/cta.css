@@ -12,8 +12,12 @@
  * on un-themed pages (see tokens.css defaults).
  *
  * Defaults: variant=primary, size=standard, tone=pillar.
- * Merchant tone is intentionally NOT handled here — MerchantAffiliateLink's scoped
- * `a[data-merchant="chewy"]` rule stays authoritative and wins on specificity.
+ *
+ * Merchant branding lives at the bottom of this file and is the single home for it.
+ * It has to outrank the tone+variant rules above — `.ui-cta[data-tone][data-variant]`
+ * is (0,3,0), so a bare `.ui-cta[data-merchant='…']` at (0,2,0) loses and the brand
+ * fill silently disappears the moment a merchant is rendered as a secondary offer.
+ * Keep the doubled selector below; it is what makes the override actually hold.
  */
 
 .ui-cta {
@@ -93,19 +97,32 @@
   color: var(--color-charcoal);
 }
 
-/* ---- merchant override: chewy stays blue regardless of tone/variant ---- */
-.ui-cta[data-merchant='chewy'] {
+/* ---- merchant override: chewy stays blue regardless of tone/variant ----
+ *
+ * AffiliateOfferStack renders offer 0 as primary and the rest as secondary, so a
+ * Chewy offer paired with Amazon arrives here as
+ * `[data-tone='neutral'][data-variant='secondary']` — (0,3,0). The second selector
+ * in each pair below is (0,4,0) purely to outrank that; without it Chewy keeps its
+ * white text but loses its blue fill, and only when it is the sole offer.
+ *
+ * `border` is set as the shorthand, not just `border-color`, because the secondary
+ * rule sets the shorthand and would otherwise reinstate its own border-style/width.
+ */
+.ui-cta[data-merchant='chewy'],
+.ui-cta[data-tone][data-variant][data-merchant='chewy'] {
   background: #1c49c2;
   color: #fff;
-  border-color: #1c49c2;
+  border: 1px solid #1c49c2;
 }
 
-.ui-cta[data-merchant='chewy']:hover {
+.ui-cta[data-merchant='chewy']:hover,
+.ui-cta[data-tone][data-variant][data-merchant='chewy']:hover {
   background: #001a70;
   color: #fff;
-  border-color: #001a70;
+  border: 1px solid #001a70;
 }
 
-.ui-cta[data-merchant='chewy']:focus-visible {
+.ui-cta[data-merchant='chewy']:focus-visible,
+.ui-cta[data-tone][data-variant][data-merchant='chewy']:focus-visible {
   outline-color: #1c49c2;
 }

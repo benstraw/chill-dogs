@@ -54,6 +54,7 @@ export interface ProductEditorialFields {
   readonly name: string;
   readonly bullets: readonly string[];
   readonly image?: ProductImage;
+  readonly images?: readonly ProductImage[];
   readonly signalNote?: string;
   readonly subscriptionNote?: string;
   readonly note?: string;

@@ -8,7 +8,8 @@ interface BreadcrumbItem {
 const SEGMENT_LABELS: Record<string, string> = {
   'privacy-policy': 'Privacy Policy',
   'affiliate-disclosure': 'Affiliate Disclosure',
-  'content-sitemap': 'Content Sitemap',
+  admin: 'Admin',
+  sitemap: 'Sitemap',
 };
 
 function toTitleCase(value: string): string {

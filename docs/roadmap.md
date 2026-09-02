@@ -13,6 +13,8 @@ is the historical record and its Phase 8 backlog is kept as-written for that rea
       calming-treats, lick-mats, snuffle-mats (parallel to cooling converter structure)
 - [ ] Defer PostHog init (idle + interaction fallback); monitor early-bounce event loss
       and feature-flag flicker
+- [ ] Align Astro and MDX peer versions: use `@astrojs/mdx` v4 with the current
+      Astro 5 stack, or upgrade Astro and its official integrations to v6 together
 - [ ] Add third pillar: **Relaxing** — dog beds, plush toys, snuggly blankets, and cozy
       comfort gear
 

@@ -76,7 +76,7 @@ export function isAutoOgEligible({ pathname }: AutoOgOptions): boolean {
     return false;
   }
 
-  if (pathname === '/content-sitemap/' || pathname === '/privacy-policy/' || pathname === '/terms/') {
+  if (pathname === '/privacy-policy/' || pathname === '/terms/') {
     return false;
   }
 

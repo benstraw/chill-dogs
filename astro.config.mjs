@@ -4,6 +4,11 @@ import sitemap from '@astrojs/sitemap';
 import robotsTxt from 'astro-robots-txt';
 
 import { isExcludedFromDiscovery } from './src/data/discovery-exclusions.ts';
+import { noindexProductPaths } from './src/data/product-indexing.ts';
+
+// A noindex page has no business in the sitemap: submitting a URL while telling
+// crawlers not to index it is an error in Search Console, not a warning.
+const NOINDEX_PATHS = noindexProductPaths();
 
 export default defineConfig({
   site: 'https://www.chill-dogs.com',
@@ -18,7 +23,8 @@ export default defineConfig({
   integrations: [
     mdx(),
     sitemap({
-      filter: (page) => !isExcludedFromDiscovery(page),
+      filter: (page) =>
+        !isExcludedFromDiscovery(page) && !NOINDEX_PATHS.has(new URL(page).pathname),
       serialize: (item) => {
         if (item.url === 'https://www.chill-dogs.com/') {
           item.priority = 1.0;

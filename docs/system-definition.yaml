@@ -419,6 +419,31 @@ site_system:
         Linked from site footer.
         Page type is converter (not informer) because it drives Amazon affiliate clicks.
 
+    - name: "Product detail"
+      type: "converter"
+      pillar: "all"
+      target_action: "Convert direct social and long-tail search traffic on a single product"
+      metric: "amazon_outbound_click rate, pinterest_save_click"
+      routes:
+        - "/shop/<product-id>/"
+      notes: >
+        One generated page per catalog product at /shop/<id>/, built by src/pages/shop/[product].astro
+        from src/data/product-catalog.ts. The slug is the product id, which makes ids public URLs —
+        see architecture.product_urls. Direct-link target for Pinterest and extra surface for long-tail
+        product queries the category converters do not cover. This is the only surface that renders the
+        multi-image gallery; converter cards stay single-image.
+        Registered as the "Products" section of staticSitemapSections so llms.txt and the XML sitemap
+        pick them up automatically. Products below the copy bar in src/utils/product-meta.ts
+        (2+ bullets, 120+ chars) still build but carry noindex, which also exempts them from the
+        og meta-length and llms coverage tests. Currently 195 indexable of 214.
+        og:image reuses the generated OG card of the first guide featuring the product; there is no
+        per-product OG card yet because generate-og-images.mjs only walks src/pages/**/*.astro.
+        Catalog layer: a converter by type but not a converter guide — generated, single-product,
+        no comparison. Excluded from the homepage Compare picks, section collectors, and related
+        strips via isProductDetailPage(), which by count would otherwise crowd all three out.
+        Sits outside the collector -> converter funnel, so collector_to_converter_click does not
+        measure it. See docs/ai/strategy/metrics-and-page-types.md.
+
     - name: "Search"
       type: "collector"
       target_action: "Surface pages and products by keyword; route users to converters"
@@ -433,11 +458,13 @@ site_system:
 
     - name: "Informer pages"
       type: "informer"
-      target_action: "Trust and compliance clarity"
+      target_action: "Trust, compliance, and accurate internal administration"
       metric: "No conversion obstruction"
       routes:
+        - "/admin/"
+        - "/admin/sitemap/"
         - "/admin/products/"
-        - "/content-sitemap/"
+        - "/admin/images/"
         - "/about/"
         - "/contact/"
         - "/privacy-policy/"
@@ -447,11 +474,12 @@ site_system:
         - "/subscribe/thanks/"
         - "/subscribe/confirmed/"
         - "/shelter-dog-charities/"
-      notes: "/admin/products/ is the canonical product inventory review page. Every product in any product data file must flow into this page through src/data/product-catalog.ts; do not hardcode product rows in the admin route. /content-sitemap/ is a hidden editor page that previews the complete build-time sitemap inventory from src/data/sitemap-inventory.ts, which merges static pages with article collection pages and final built share metadata, including post-build OG image rewrites."
+      notes: "/admin/ is the noindex admin landing page and links to the available admin tools. AdminLayout is the shared wrapper for all /admin/ pages and provides a Chill-Dogs logo link back to the admin landing page. /admin/sitemap/ previews the complete build-time sitemap inventory from src/data/sitemap-inventory.ts, which merges static pages with article collection pages and final built share metadata, including post-build OG image rewrites. /admin/products/ is the canonical product inventory review page. Every product in any product data file must flow into this page through src/data/product-catalog.ts; do not hardcode product rows in the admin route. /admin/images/ is the product image curation browser."
 
   modules:
     workhorse:
       - "BaseLayout"
+      - "AdminLayout"
       - "Hero"
       - "SectionHero"
       - "CoolingConverterPage"
@@ -549,9 +577,11 @@ site_system:
     frontend: "Astro 5 static site with scoped CSS and reusable modules"
     cms: "None (code-first content/config in repository)"
     hosting: "Static build deployment"
+    admin_security: "Dependency-free root middleware.js uses Vercel Routing Middleware matched only to /admin/:path*, runs on Vercel's default Edge runtime, and continues authorized requests with Vercel's x-middleware-next response header. Primary sign-in is GitHub OAuth: /admin/auth/login/, /admin/auth/callback/, and /admin/auth/logout/ are handled entirely at the edge and never build to files, with the returned GitHub login checked against the ADMIN_GITHUB_LOGINS allowlist and an HMAC-signed cd_admin_session cookie issued from ADMIN_SESSION_SECRET. HTTP Basic Auth from ADMIN_USERNAME and ADMIN_PASSWORD remains as the fallback for preview deployments and CLI clients, offered in a browser at /admin/auth/basic/. Where GitHub is also configured a cached Basic header admits tooling but not a browser page load (identified by Sec-Fetch-Mode: navigate), so a browser replaying stored credentials cannot bypass GitHub sign-in. All four auth routes are handled in every configuration mode, because passing one through to the static CDN is a 404. Signing out clears the session and sets a cd_admin_signed_out marker cookie, without which a browser replaying its cached Basic credentials would be readmitted immediately; CLI clients send no cookies and are unaffected. Bun is the sole package manager and bun.lock is the only package lockfile; adding an npm lockfile makes Vercel's isolated middleware packager incorrectly select npm. Missing configuration and an empty allowlist both fail closed with 503; credentials are never stored in the repository."
     seo_strategy: "collector captures intent; converter monetizes intent; homepage variant routes remain canonicalized and noindex"
     sitemap_inventory: "src/data/sitemap-inventory.ts composes staticSitemapSections with article MDX collection entries at build time; future related-content derivation should use the complete inventory instead of static-only sections. Converter sitemap entries carry pubDate and optional lastUpdated metadata for homepage theme-section converter recency ordering."
     section_collectors: "src/data/section-collectors.ts defines cooling, calming, comfort, and gear collector metadata, shared SectionHero content/theme inputs, topic subsection grouping, topic coverage, priority ordering, dynamic CollectorBody card inventories, and CollectionPage hasPart schema from the complete sitemap inventory. The retired /cooling/v/ and /calming/v/ hero experiment routes are no longer built."
+    product_urls: "Product detail pages ship noindex and out of the XML sitemap behind the PRODUCT_PAGES_INDEXABLE switch in src/utils/product-meta.ts: ~200 generated pages on a site of ~65 is the shape that draws site-wide quality demotion, so the URLs work for Pinterest and direct links from day one while indexing is enabled deliberately, ideally a pillar at a time. meetsProductCopyBar is the per-product bar that applies once the switch is on, and stays enforced meanwhile. A noindex page is never submitted in the sitemap. Every product in src/data/*-products.ts builds a detail page at /shop/<id>/, so the id field is a public indexed URL rather than an internal key. Renaming a product name is free; renaming an id retires a live URL and requires redirects in both vercel.json and astro.config.mjs with the old id retained in src/data/product-url-history.ts. src/__tests__/product-slugs.test.ts enforces id uniqueness, URL-safe kebab-case, redirect coverage for retired ids, and history-file completeness."
     discovery_surfaces: "The XML sitemap (astro.config.mjs) and llms.txt (src/pages/llms.txt.ts) share one exclusion list in src/data/discovery-exclusions.ts. llms.txt is generated from the complete sitemap inventory — every registered page that is not noindex and not excluded is listed, so new pages appear automatically. It is never a hand-curated subset; src/__tests__/llms-coverage.test.ts fails the build if llms.txt and the XML sitemap disagree on any indexable URL."
 
   redirects:

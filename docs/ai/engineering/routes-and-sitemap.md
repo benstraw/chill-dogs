@@ -3,7 +3,7 @@ title: Routes and Sitemap
 type: canonical
 domain: engineering
 status: active
-updated: 2026-06-05
+updated: 2026-08-29
 tags:
   - chill-dogs
   - engineering
@@ -176,6 +176,29 @@ When a live/indexed URL changes slug:
 
 ---
 
+## Product ids are public URLs
+
+Every product in `src/data/*-products.ts` is built as a detail page at `/shop/<id>/`.
+That makes the `id` field a **public, indexed URL**, not an internal key.
+
+- Renaming a product's `name` is free. It changes page copy and nothing else.
+- Renaming a product's `id` retires a live URL. Pinterest pins, Google results, and
+  every `appearsOn` link pointing at it break.
+
+To rename an id, treat it as the slug change it is: keep the old entry in
+`src/data/product-url-history.ts`, then add **both** redirects listed above for
+`/shop/<old-id>/`.
+
+`src/__tests__/product-slugs.test.ts` enforces this. It fails the build when an id in
+the history file no longer builds and has no redirect, when two products share an id,
+when an id is not URL-safe kebab-case, or when a new product is missing from the
+history file — and it prints the exact lines to paste.
+
+Prefer editing the `name` and leaving the `id` alone. An id that reads a little
+tersely is not worth a URL change.
+
+---
+
 ## Topics taxonomy
 
 Valid `topics` values are defined in `src/data/content-sitemap.ts` as the `TOPICS` const:
@@ -185,6 +208,25 @@ Valid `topics` values are defined in `src/data/content-sitemap.ts` as the `TOPIC
 Use these exact values. Do not invent new topic strings.
 
 ---
+
+## Product detail page indexing
+
+`/shop/<id>/` pages are built for all 214 catalog products but ship **noindex and out of the
+XML sitemap**, gated by `PRODUCT_PAGES_INDEXABLE` in `src/utils/product-meta.ts`.
+
+Adding ~200 programmatically generated pages to a site of roughly 65 is the shape that draws
+site-wide quality demotion, and the pages at risk are the hand-written converters that earn.
+The URLs still work from day one — Pinterest pins, direct links and internal navigation all
+resolve — so only long-tail search discovery waits. Flip the switch to `true` to hand the
+decision back to `meetsProductCopyBar`, the per-product copy bar that stays enforced meanwhile.
+
+Both surfaces read through `isIndexableProduct`, so they cannot drift: llms.txt filters on
+`noindex` directly, and the XML sitemap filter in `astro.config.mjs` excludes
+`noindexProductPaths()` from `src/data/product-indexing.ts`. That module is deliberately
+alias-free because config is evaluated before the `@` aliases it declares exist. Before this,
+the sitemap honoured only `EXCLUDED_DISCOVERY_FRAGMENTS`, so all 214 pages were submitted
+including the 19 thin ones already carrying `noindex` — contradictory signals that Search
+Console reports as an error.
 
 ## Related knowledge
 
