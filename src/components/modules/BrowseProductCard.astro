@@ -186,12 +186,27 @@ const pillarLabels: Record<string, string> = {
     margin: 0;
   }
 
+  /* Markers match ProductBulletList on the converter cards. The global reset
+     clears list-style, so without one the indent is reserved and nothing is
+     drawn — unpunctuated bullets then read as one run-on paragraph. */
   .card-bullets {
     font-size: var(--text-xs);
     color: var(--color-text-muted);
     line-height: var(--leading-relaxed);
     margin: 0;
-    padding-left: 1rem;
+  }
+
+  .card-bullets li {
+    position: relative;
+    padding-left: var(--space-md);
+  }
+
+  .card-bullets li::before {
+    content: '+';
+    position: absolute;
+    left: 0;
+    color: var(--pillar-link);
+    font-weight: var(--weight-bold);
   }
 
   .card-footer {
