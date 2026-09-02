@@ -32,11 +32,14 @@ const bothModes = { ...githubOnly, ...basicOnly };
 
 function adminRequest(
   pathname: string,
-  init: { authorization?: string; cookie?: string } = {}
+  init: { authorization?: string; cookie?: string; navigation?: boolean } = {}
 ): Request {
   const headers: Record<string, string> = {};
   if (init.authorization) headers.authorization = init.authorization;
   if (init.cookie) headers.cookie = init.cookie;
+  // What a browser sends on a top-level page load. Its absence is what marks a
+  // request as tooling — curl and friends send no Sec-Fetch headers at all.
+  if (init.navigation) headers['sec-fetch-mode'] = 'navigate';
 
   return new Request(`https://www.chill-dogs.com${pathname}`, { headers });
 }
@@ -180,6 +183,47 @@ describe('basic auth fallback', () => {
         authorization: basicAuthorization(basicOnly.ADMIN_USERNAME, basicOnly.ADMIN_PASSWORD),
       }),
       bothModes
+    );
+
+    expect(response).toBeUndefined();
+  });
+
+  it('does not let a cached basic header carry a browser past GitHub', async () => {
+    // Browsers replay cached credentials on every request forever. Honouring
+    // one on a page load would make GitHub sign-in unreachable wherever both
+    // are configured — the primary auth path silently bypassed.
+    const response = await authorizeAdminRequest(
+      adminRequest('/admin/products/', {
+        authorization: basicAuthorization(basicOnly.ADMIN_USERNAME, basicOnly.ADMIN_PASSWORD),
+        navigation: true,
+      }),
+      bothModes
+    );
+
+    expect(response?.status).toBe(302);
+    expect(response?.headers.get('location')).toContain('/admin/auth/login/');
+  });
+
+  it('still lets a browser reach the password door deliberately', async () => {
+    const response = await authorizeAdminRequest(
+      adminRequest('/admin/auth/basic/', {
+        authorization: basicAuthorization(basicOnly.ADMIN_USERNAME, basicOnly.ADMIN_PASSWORD),
+        navigation: true,
+      }),
+      bothModes
+    );
+
+    expect(response?.status).toBe(302);
+    expect(response?.headers.get('location')).toBe('/admin/');
+  });
+
+  it('leaves basic-only deployments alone, which is what previews run on', async () => {
+    const response = await authorizeAdminRequest(
+      adminRequest('/admin/products/', {
+        authorization: basicAuthorization(basicOnly.ADMIN_USERNAME, basicOnly.ADMIN_PASSWORD),
+        navigation: true,
+      }),
+      basicOnly
     );
 
     expect(response).toBeUndefined();

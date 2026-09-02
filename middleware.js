@@ -344,6 +344,14 @@ function notConfiguredResponse(detail = 'Admin authentication is not configured.
   return messageResponse(503, 'Admin unavailable', detail);
 }
 
+/**
+ * A browser's top-level page load. Browsers set Sec-Fetch-Mode on every request
+ * and script cannot forge it; curl and other tooling send nothing at all.
+ */
+function isBrowserNavigation(request) {
+  return request.headers.get('sec-fetch-mode') === 'navigate';
+}
+
 function isSignedOut(request) {
   return readCookie(request, SIGNED_OUT_COOKIE) === '1';
 }
@@ -711,9 +719,17 @@ export async function authorizeAdminRequest(request, environment, now = Date.now
     return basicHeaderMatches(request, configuration) ? undefined : unauthorizedResponse();
   }
 
-  // CLI clients cannot follow the browser redirect dance, so a correct Basic
-  // header is accepted on any admin path.
-  if (configuration.basicConfigured && basicHeaderMatches(request, configuration)) {
+  // A correct Basic header still admits CLI clients, which cannot follow the
+  // browser redirect dance. It must not admit a browser page load: browsers
+  // replay cached Basic credentials on every request forever, so honouring one
+  // here walks the visitor past GitHub entirely and makes the primary sign-in
+  // unreachable wherever both are configured. Browsers reach the password
+  // fallback deliberately, through /admin/auth/basic/.
+  if (
+    configuration.basicConfigured &&
+    !isBrowserNavigation(request) &&
+    basicHeaderMatches(request, configuration)
+  ) {
     return undefined;
   }
 
