@@ -20,6 +20,7 @@ export interface ProductCatalogItem {
   secondaryLabel?: string;
   bullets: string[];
   image?: { src: string; alt: string };
+  images?: readonly { src: string; alt: string }[];
   signalNote?: string;
   subscriptionNote?: string;
   note?: string;
@@ -63,6 +64,7 @@ export const productCatalogItems: ProductCatalogItem[] = [
     secondaryLabel: product.secondaryLabel,
     bullets: [...product.bullets],
     image: product.image,
+    images: product.images,
     signalNote: product.signalNote,
     subscriptionNote: product.subscriptionNote,
     source: 'src/data/tracking-products.ts',
@@ -77,6 +79,7 @@ export const productCatalogItems: ProductCatalogItem[] = [
     offers: getOffers(product),
     bullets: [product.note],
     image: product.image,
+    images: product.images,
     note: product.note,
     source: 'src/data/tracking-products.ts',
   })),
@@ -91,6 +94,7 @@ export const productCatalogItems: ProductCatalogItem[] = [
     bullets: [...product.bullets],
     bestFor: product.bestFor,
     image: product.image,
+    images: product.images,
     sizingNote: product.sizingNote,
     howItHelps: product.howItHelps,
     considerIf: product.caution,
@@ -108,6 +112,7 @@ export const productCatalogItems: ProductCatalogItem[] = [
     variantGroup: product.variantGroup,
     bullets: [...product.bullets],
     image: product.image,
+    images: product.images,
     note: product.howItWorks,
     source: 'src/data/flea-tick-products.ts',
   })),

@@ -1,49 +1,104 @@
 ---
+/**
+ * Product image surface, with an optional thumbnail gallery.
+ *
+ * Pass `image` alone for the single-image case — that is what every converter card
+ * does, and it stays that way deliberately: a converter card's job is the CTA, not
+ * browsing photos.
+ *
+ * Pass `images` (2+) to get the gallery: a scrollable thumbnail strip that swaps the
+ * main image on click. Only the `/shop/<id>/` detail pages do this. Build the array
+ * with `getProductImages()` from `src/data/products/images.ts` rather than reading
+ * `product.images` directly, so the curated gallery store is consulted.
+ */
 import { Image } from 'astro:assets';
 
-/**
- * 4:3 product image shell shared by the converter cards.
- *
- * Renders an Astro <Image> (optimized, lazy) when an image is provided, otherwise
- * the shared placeholder silhouette. The placeholder/accent colour comes from the
- * active pillar theme via --pillar-link, so it themes per pillar automatically.
- */
 interface Props {
   image?: { src: string; alt: string };
+  images?: readonly { src: string; alt: string }[];
   width?: number;
   height?: number;
 }
 
-const { image, width = 400, height = 300 } = Astro.props;
+const { image, images, width = 400, height = 300 } = Astro.props;
+
+const gallery = images && images.length >= 2 ? images : null;
+const primary = gallery ? gallery[0] : image;
 ---
 
-<div class="product-image-frame">
-  {image ? (
-    <Image
-      src={image.src}
-      alt={image.alt}
-      width={width}
-      height={height}
-      loading="lazy"
-      onerror="this.style.display='none';this.parentElement.classList.add('product-image-frame--fallback')"
-    />
-  ) : (
-    <div class="product-image-frame__placeholder" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="48" height="48" fill="currentColor" aria-hidden="true">
-        <path d="M50 15c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zm-20 25c-3.3 0-6 2.7-6 6v4c0 8.8 11.2 16 26 16s26-7.2 26-16v-4c0-3.3-2.7-6-6-6H30zm-8 30c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm56 0c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zM36 78c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm28 0c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z"/>
-      </svg>
+<div class="product-image-frame" data-image-gallery={gallery ? '' : undefined}>
+  <div class="product-image-frame__main">
+    {primary ? (
+      <Image
+        src={primary.src}
+        alt={primary.alt}
+        width={width}
+        height={height}
+        loading="lazy"
+        onerror="this.style.display='none';this.closest('.product-image-frame').classList.add('product-image-frame--fallback')"
+      />
+    ) : (
+      <div class="product-image-frame__placeholder" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="48" height="48" fill="currentColor" aria-hidden="true">
+          <path d="M50 15c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zm-20 25c-3.3 0-6 2.7-6 6v4c0 8.8 11.2 16 26 16s26-7.2 26-16v-4c0-3.3-2.7-6-6-6H30zm-8 30c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm56 0c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zM36 78c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm28 0c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z"/>
+        </svg>
+      </div>
+    )}
+  </div>
+
+  {gallery && (
+    <div class="product-image-frame__thumbs" role="list">
+      {gallery.map((img, i) => (
+        <button
+          class:list={['pif-thumb', { 'pif-thumb--active': i === 0 }]}
+          data-thumb-src={img.src}
+          data-thumb-alt={img.alt}
+          aria-label={`View image ${i + 1} of ${gallery.length}`}
+          aria-pressed={i === 0 ? 'true' : 'false'}
+          type="button"
+          role="listitem"
+        >
+          <img src={img.src} alt="" loading="lazy" aria-hidden="true" />
+        </button>
+      ))}
     </div>
   )}
 </div>
 
+<script>
+  document.addEventListener('click', (e) => {
+    const thumb = (e.target as Element).closest<HTMLButtonElement>('[data-thumb-src]');
+    if (!thumb) return;
+    const gallery = thumb.closest<HTMLElement>('[data-image-gallery]');
+    if (!gallery) return;
+
+    const mainImg = gallery.querySelector<HTMLImageElement>('.product-image-frame__main img');
+    if (mainImg) {
+      mainImg.src = thumb.dataset.thumbSrc!;
+      mainImg.alt = thumb.dataset.thumbAlt!;
+    }
+
+    gallery.querySelectorAll<HTMLButtonElement>('.pif-thumb').forEach((t) => {
+      t.classList.remove('pif-thumb--active');
+      t.setAttribute('aria-pressed', 'false');
+    });
+    thumb.classList.add('pif-thumb--active');
+    thumb.setAttribute('aria-pressed', 'true');
+  });
+</script>
+
 <style>
   .product-image-frame {
-    aspect-ratio: 4 / 3;
     overflow: hidden;
     background: var(--color-bg-alt);
   }
 
-  .product-image-frame img {
+  .product-image-frame__main {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+  }
+
+  .product-image-frame__main img {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -60,5 +115,46 @@ const { image, width = 400, height = 300 } = Astro.props;
   .product-image-frame__placeholder {
     color: var(--pillar-link);
     opacity: 0.5;
+  }
+
+  .product-image-frame__thumbs {
+    display: flex;
+    gap: 6px;
+    padding: 8px 6px 6px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    background: #fff;
+  }
+
+  .product-image-frame__thumbs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .pif-thumb {
+    flex: 0 0 auto;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    background: var(--color-bg-alt);
+    cursor: pointer;
+    overflow: hidden;
+    transition: border-color 0.15s;
+  }
+
+  .pif-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .pif-thumb:hover {
+    border-color: var(--pillar-link, #666);
+  }
+
+  .pif-thumb--active {
+    border-color: var(--pillar-link, #333);
   }
 </style>

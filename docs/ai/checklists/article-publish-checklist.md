@@ -3,7 +3,7 @@ title: Article Publish Checklist
 type: checklist
 domain: checklists
 status: active
-updated: 2026-05-03
+updated: 2026-08-23
 tags:
   - chill-dogs
   - checklist
@@ -40,7 +40,7 @@ Finishing any article collector page before marking work as done.
 - [ ] Links route to relevant converter pages (not just any internal page)
 - [ ] Product cards include `Disclosure` component when present on the page
 - [ ] No vet-authority claims ("vet-approved," "vet-recommended," "clinically proven")
-- [ ] No fake hands-on testing claims ("we tested," "in our testing")
+- [ ] First-hand claims ("we tested," "in our testing") only for products carrying `handsOn`; everything else uses research language
 - [ ] Health emergencies covered include escalation language ("contact your vet immediately")
 - [ ] Added to sitemap inventory (`src/data/content-sitemap.ts`) if not MDX — MDX auto-discovers from `canonicalPath`
 - [ ] `topics` frontmatter set to relevant values from the `TOPICS` const in `content-sitemap.ts`

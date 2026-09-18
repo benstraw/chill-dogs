@@ -5,7 +5,13 @@ import {
   sectionCollectorDefinitions,
   type SectionCollectorDefinition,
 } from '../data/section-collectors';
-import { staticSitemapSections, type SitemapPage, type SitemapSection, type SitemapTopic } from '../data/content-sitemap';
+import {
+  PRODUCT_SECTION_TITLE,
+  staticSitemapSections,
+  type SitemapPage,
+  type SitemapSection,
+  type SitemapTopic,
+} from '../data/content-sitemap';
 
 function createPage(input: {
   href: string;
@@ -249,8 +255,13 @@ describe('section collectors', () => {
     }));
   });
 
-  it('keeps every indexable static converter on at least one section collector', () => {
+  it('keeps every indexable converter guide on at least one section collector', () => {
+    // Scoped to the hand-authored converter guides, which is what section collectors
+    // curate. Product detail pages are also converters but reach visitors a different
+    // way — from the /shop/ hub and from the guides that feature them — so they are
+    // covered by their own assertion below rather than by topic matching here.
     const converters = staticSitemapSections
+      .filter((section) => section.title !== PRODUCT_SECTION_TITLE)
       .flatMap((section) => section.pages)
       .filter((page) => page.pageType === 'converter' && !page.noindex);
     const collectorHrefs = new Set(

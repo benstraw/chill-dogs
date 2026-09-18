@@ -1,0 +1,973 @@
+---
+/**
+ * Admin image browser — pick the gallery images for each product.
+ *
+ * Reads the local Amazon cache in `src/data/amazon-products/` and shows every candidate
+ * photo next to what the product currently uses. Selections are saved through the local
+ * companion server (`bun run admin:serve`), which rewrites `src/data/product-galleries.ts`.
+ * With no server reachable — production, where this page sits behind Basic Auth and there
+ * is no repo to write to — it falls back to copying a paste-ready snippet.
+ *
+ * Every product appears, not just the ones with an ASIN: products sourced from Chewy have
+ * no Amazon cache entry but still have editorial images worth reviewing and reordering.
+ */
+import AdminLayout from '@layouts/AdminLayout.astro';
+import DisclosureBar from '@components/modules/primitives/DisclosureBar.astro';
+import { productCatalogItems } from '../../data/product-catalog';
+import { getProductImages } from '../../data/products/images';
+import { normalizeMerchantImageUrl } from '../../utils/merchant-images';
+
+const cacheGlob = import.meta.glob<Record<string, unknown>>(
+  '../../data/amazon-products/*.json',
+  { eager: true }
+);
+
+interface CacheImage {
+  link: string;
+  variant: string;
+}
+
+const cacheImagesByAsin = new Map<string, CacheImage[]>();
+for (const [path, module] of Object.entries(cacheGlob)) {
+  if (path.includes('_index')) continue;
+  const data = module as Record<string, any>;
+
+  // SearchAPI format: data.product.images = [{link, variant}]
+  const searchApiProduct = data?.product;
+  if (searchApiProduct?.asin && searchApiProduct?.images?.length) {
+    cacheImagesByAsin.set(searchApiProduct.asin, searchApiProduct.images);
+    continue;
+  }
+
+  // SerpAPI format: data.product_results.thumbnails = [url, url, ...]
+  const serpProduct = data?.product_results;
+  if (serpProduct?.asin && serpProduct?.thumbnails?.length) {
+    const imgs: CacheImage[] = (serpProduct.thumbnails as string[]).map((url, i) => ({
+      link: url,
+      variant: i === 0 ? 'MAIN' : `PT${String(i).padStart(2, '0')}`,
+    }));
+    cacheImagesByAsin.set(serpProduct.asin, imgs);
+  }
+}
+
+/**
+ * Cache URLs are normalised here, at render time, so a tile shows the exact URL that
+ * will be written. Showing the raw URL and normalising only on save is how the old
+ * double-modifier bug stayed invisible.
+ */
+const products = productCatalogItems.map((product) => {
+  const cacheImages = (product.asin ? cacheImagesByAsin.get(product.asin) ?? [] : []).map(
+    (image) => ({ ...image, link: normalizeMerchantImageUrl(image.link) })
+  );
+
+  // Editorial images keep their own alt text — overwriting it with the product name on
+  // every round-trip is how hand-written alts used to get destroyed.
+  const editorialImages = getProductImages(product).map((image) => ({
+    src: image.src,
+    alt: image.alt,
+  }));
+
+  return {
+    id: product.id,
+    name: product.name,
+    asin: product.asin ?? '',
+    pillar: product.pillar,
+    editorialImages,
+    cacheImages,
+    hasGallery: editorialImages.length >= 2,
+  };
+});
+
+const pillars = [...new Set(products.map((p) => p.pillar))].sort();
+const withoutCache = products.filter((p) => p.cacheImages.length === 0).length;
+---
+
+<AdminLayout title="Image Browser (Admin)">
+  <!-- Zoom icon defined once and referenced per tile. Inlined, it was 1502 copies of
+       335 bytes — half a megabyte of the page. -->
+  <svg width="0" height="0" aria-hidden="true" style="position:absolute">
+    <symbol id="admin-zoom-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
+    </symbol>
+  </svg>
+
+  <div class="img-admin">
+    <h1>Image Browser</h1>
+
+    <div class="toolbar">
+      <input type="text" id="search" placeholder="Search products…" autocomplete="off" />
+      <div class="filter-group">
+        <span class="filter-label">Pillar</span>
+        <div class="chips">
+          {pillars.map((p) => (
+            <button class="chip" data-filter="pillar" data-value={p} type="button">{p}</button>
+          ))}
+        </div>
+      </div>
+      <div class="filter-group">
+        <span class="filter-label">Images</span>
+        <div class="chips">
+          <button class="chip" data-filter="status" data-value="has-cache" type="button">Has cache</button>
+          <button class="chip" data-filter="status" data-value="multi-cache" type="button">2+ cache</button>
+          <button class="chip" data-filter="status" data-value="has-editorial" type="button">Has editorial</button>
+          <button class="chip" data-filter="status" data-value="needs-editorial" type="button">Needs editorial</button>
+        </div>
+      </div>
+      <div class="toolbar-footer">
+        <span class="count"><span id="visible-count">{products.length}</span> of {products.length}</span>
+        <span class="save-mode" id="save-mode" data-mode="checking">Checking for local save server…</span>
+        <button class="clear-btn" id="clear-filters" type="button">Clear filters</button>
+      </div>
+    </div>
+
+    <div class="product-list" id="product-list">
+      {products.map((product) => (
+        <div
+          class="product-row"
+          data-pillar={product.pillar}
+          data-has-cache={product.cacheImages.length > 0 ? 'true' : 'false'}
+          data-cache-count={product.cacheImages.length}
+          data-has-editorial={product.editorialImages.length > 0 ? 'true' : 'false'}
+          data-name={product.name.toLowerCase()}
+        >
+          <div class="product-row__header">
+            <div class="product-row__meta">
+              <span class="product-row__name">{product.name}</span>
+              <span class="product-row__asin">{product.asin}</span>
+              <span class:list={['pillar-tag', `pillar-tag--${product.pillar}`]}>{product.pillar}</span>
+            </div>
+            <div class="product-row__badges">
+              {product.editorialImages.length > 0
+                ? <span class="badge badge--ok">{product.editorialImages.length} editorial</span>
+                : <span class="badge badge--missing">no editorial</span>
+              }
+              <span class="badge badge--cache">{product.cacheImages.length} cache</span>
+            </div>
+          </div>
+
+          <!-- Section 1: candidate images from the Amazon cache.
+               Collapsed by default. `<details>` still ships the markup, so this is not a
+               payload win — it is a usability and rendering one: closed content is not
+               laid out and its images are never decoded, so the page is navigable instead
+               of being 1500 thumbnails deep. The payload win came from the icon sprite. -->
+          {product.cacheImages.length > 0 ? (
+            <DisclosureBar
+              label={`Show ${product.cacheImages.length} cache image${product.cacheImages.length === 1 ? '' : 's'}`}
+              expandedLabel="Hide cache images"
+            >
+              <div class="cache-grid">
+                {product.cacheImages.map((img) => (
+                  <div class="cache-tile" data-add-src={img.link} data-add-alt={product.name} data-add-to={product.id}>
+                    <img src={img.link} alt="" loading="lazy" aria-hidden="true" />
+                    <span class="tile-variant">{img.variant}</span>
+                    <button
+                      class="tile-zoom"
+                      data-zoom-src={img.link}
+                      data-zoom-label={img.variant}
+                      type="button"
+                      aria-label="View full size"
+                    >
+                      <svg class="tile-zoom__icon" width="11" height="11" aria-hidden="true"><use href="#admin-zoom-icon" /></svg>
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </DisclosureBar>
+          ) : (
+            <p class="no-cache">
+              {product.asin
+                ? 'No cache images for this ASIN — run bun run check:amazon to refresh.'
+                : 'No Amazon ASIN. Reorder or remove the existing images below.'}
+            </p>
+          )}
+
+          <!-- Section 2: the gallery as it will be saved. Order matters — the first
+               image is the product's primary, so the tray is reorderable. -->
+          <div class="selected-section">
+            <span class="selected-label">Gallery:</span>
+            <div class="selected-tray" data-tray={product.id} data-product-name={product.name}>
+              {product.editorialImages.map((img, index) => (
+                <div class="tray-thumb tray-thumb--existing" data-tray-src={img.src} data-tray-alt={img.alt}>
+                  <img src={img.src} alt="" width={64} height={64} loading="lazy" aria-hidden="true" />
+                  {index === 0 && <span class="tray-primary" title="Primary image">1st</span>}
+                  <div class="tray-order">
+                    <button class="tray-move" data-move="-1" type="button" aria-label="Move earlier">‹</button>
+                    <button class="tray-move" data-move="1" type="button" aria-label="Move later">›</button>
+                  </div>
+                  <button class="tray-remove" type="button" aria-label="Remove">×</button>
+                </div>
+              ))}
+            </div>
+            <div class="tray-actions">
+              <button class="save-btn" data-save-gallery={product.id} type="button">Save</button>
+              <button class="copy-btn" data-copy-array={product.id} type="button">Copy array</button>
+            </div>
+          </div>
+        </div>
+      ))}
+
+      {withoutCache > 0 && (
+        <p class="no-asin-section">
+          {withoutCache} of {products.length} products have no cached Amazon images — mostly
+          Chewy-sourced items. They are listed above with their existing gallery, which can
+          still be reordered or trimmed.
+        </p>
+      )}
+    </div>
+  </div>
+
+  <!-- Zoom modal -->
+  <dialog id="zoom-modal">
+    <button id="zoom-close" type="button" aria-label="Close">×</button>
+    <img id="zoom-img" src="" alt="" />
+    <p id="zoom-label"></p>
+  </dialog>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+</AdminLayout>
+
+<script>
+  import { isSameMerchantImage } from '../../utils/merchant-images';
+
+  // ── Toast ──────────────────────────────────────────────────────────────────
+  const toast = document.getElementById('toast')!;
+  let toastTimer: ReturnType<typeof setTimeout>;
+  function showToast(msg: string) {
+    toast.textContent = msg;
+    toast.classList.add('toast--visible');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('toast--visible'), 2500);
+  }
+
+  // ── Zoom modal ─────────────────────────────────────────────────────────────
+  const modal   = document.getElementById('zoom-modal') as HTMLDialogElement;
+  const zoomImg = document.getElementById('zoom-img') as HTMLImageElement;
+  const zoomLbl = document.getElementById('zoom-label')!;
+
+  function openZoom(src: string, label: string) {
+    zoomImg.src = src;
+    zoomLbl.textContent = label;
+    modal.showModal();
+  }
+  function closeZoom() {
+    modal.close();
+    zoomImg.src = '';
+  }
+
+  document.getElementById('zoom-close')!.addEventListener('click', closeZoom);
+  modal.addEventListener('click', (e) => { if (e.target === modal) closeZoom(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.open) closeZoom(); });
+
+  // ── Tray helpers ───────────────────────────────────────────────────────────
+  function makeTrayThumb(src: string, alt: string): HTMLElement {
+    const div = document.createElement('div');
+    div.className = 'tray-thumb tray-thumb--new';
+    div.dataset.traySrc = src;
+    div.dataset.trayAlt = alt;
+
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = '';
+    img.width = 64;
+    img.height = 64;
+    img.loading = 'lazy';
+    img.setAttribute('aria-hidden', 'true');
+    div.appendChild(img);
+
+    const order = document.createElement('div');
+    order.className = 'tray-order';
+    for (const [delta, label, glyph] of [[-1, 'Move earlier', '\u2039'], [1, 'Move later', '\u203a']] as const) {
+      const move = document.createElement('button');
+      move.className = 'tray-move';
+      move.type = 'button';
+      move.dataset.move = String(delta);
+      move.setAttribute('aria-label', label);
+      move.textContent = glyph;
+      order.appendChild(move);
+    }
+    div.appendChild(order);
+
+    const btn = document.createElement('button');
+    btn.className = 'tray-remove';
+    btn.type = 'button';
+    btn.setAttribute('aria-label', 'Remove');
+    btn.textContent = '×';
+    div.appendChild(btn);
+
+    return div;
+  }
+
+  /** Alt text for a newly picked image: distinct per view, never five identical strings. */
+  function defaultAlt(productName: string, index: number): string {
+    return index === 0 ? productName : `${productName} — view ${index + 1}`;
+  }
+
+  /** Re-marks which thumb is primary and re-numbers the default alts after any change. */
+  function refreshTray(tray: HTMLElement) {
+    const productName = tray.dataset.productName ?? '';
+    const thumbs = Array.from(tray.querySelectorAll<HTMLElement>('.tray-thumb'));
+
+    thumbs.forEach((thumb, index) => {
+      thumb.querySelector('.tray-primary')?.remove();
+      if (index === 0) {
+        const badge = document.createElement('span');
+        badge.className = 'tray-primary';
+        badge.title = 'Primary image';
+        badge.textContent = '1st';
+        thumb.insertBefore(badge, thumb.querySelector('.tray-order'));
+      }
+
+      // Only renumber the alts this tool generated. A hand-written alt is left alone.
+      const alt = thumb.dataset.trayAlt ?? '';
+      const isGenerated = alt === productName || /— view \d+$/.test(alt);
+      if (isGenerated) thumb.dataset.trayAlt = defaultAlt(productName, index);
+    });
+  }
+
+  function trayImages(tray: HTMLElement) {
+    return Array.from(tray.querySelectorAll<HTMLElement>('.tray-thumb')).map((el) => ({
+      src: el.dataset.traySrc!,
+      alt: el.dataset.trayAlt!,
+    }));
+  }
+
+  // ── Main click handler ─────────────────────────────────────────────────────
+  document.addEventListener('click', async (e) => {
+    const target = e.target as Element;
+
+    // Zoom button
+    const zoomBtn = target.closest<HTMLElement>('[data-zoom-src]');
+    if (zoomBtn) {
+      e.stopPropagation();
+      openZoom(zoomBtn.dataset.zoomSrc!, zoomBtn.dataset.zoomLabel ?? '');
+      return;
+    }
+
+    // Reorder within the tray — the first image is the product's primary.
+    const moveBtn = target.closest<HTMLElement>('.tray-move');
+    if (moveBtn) {
+      const thumb = moveBtn.closest<HTMLElement>('.tray-thumb')!;
+      const tray = thumb.closest<HTMLElement>('[data-tray]')!;
+      const thumbs = Array.from(tray.querySelectorAll<HTMLElement>('.tray-thumb'));
+      const from = thumbs.indexOf(thumb);
+      const to = from + Number(moveBtn.dataset.move);
+      if (to < 0 || to >= thumbs.length) return;
+
+      if (to < from) tray.insertBefore(thumb, thumbs[to]);
+      else tray.insertBefore(thumb, thumbs[to].nextSibling);
+      refreshTray(tray);
+      return;
+    }
+
+    // Remove from tray
+    if (target.closest('.tray-remove')) {
+      const thumb = target.closest<HTMLElement>('.tray-thumb')!;
+      const tray  = thumb.closest<HTMLElement>('[data-tray]')!;
+      const src   = thumb.dataset.traySrc!;
+      const pid   = tray.dataset.tray!;
+
+      // Match on the underlying photo. Comparing strings after splicing `._SL500_` in
+      // and out missed every URL that already carried a different modifier.
+      document.querySelectorAll<HTMLElement>(`[data-add-to="${pid}"]`).forEach((tile) => {
+        if (isSameMerchantImage(tile.dataset.addSrc!, src)) {
+          tile.classList.remove('cache-tile--selected');
+        }
+      });
+      thumb.remove();
+      refreshTray(tray);
+      return;
+    }
+
+    // Add/remove via cache tile click
+    const tile = target.closest<HTMLElement>('[data-add-src]');
+    if (tile) {
+      // Tiles already carry normalised URLs — the page normalises at render time so the
+      // thumbnail you see is the URL that gets written.
+      const src = tile.dataset.addSrc!;
+      const pid = tile.dataset.addTo!;
+      const tray = document.querySelector<HTMLElement>(`[data-tray="${pid}"]`);
+      if (!tray) return;
+
+      const existing = Array.from(tray.querySelectorAll<HTMLElement>('.tray-thumb')).find((thumb) =>
+        isSameMerchantImage(thumb.dataset.traySrc!, src)
+      );
+
+      if (existing) {
+        existing.remove();
+        tile.classList.remove('cache-tile--selected');
+      } else {
+        const count = tray.querySelectorAll('.tray-thumb').length;
+        tray.appendChild(makeTrayThumb(src, defaultAlt(tray.dataset.productName ?? '', count)));
+        tile.classList.add('cache-tile--selected');
+      }
+      refreshTray(tray);
+      return;
+    }
+
+    // Copy array
+    const copyBtn = target.closest<HTMLElement>('[data-copy-array]');
+    if (copyBtn) {
+      const pid   = copyBtn.dataset.copyArray!;
+      const tray  = document.querySelector<HTMLElement>(`[data-tray="${pid}"]`);
+      if (!tray) return;
+      const items = trayImages(tray);
+      if (!items.length) { showToast('No images selected'); return; }
+      const lines = items.map((img) => `    { src: '${img.src}', alt: '${img.alt.replace(/'/g, "\\'")}' },`);
+      try {
+        await navigator.clipboard.writeText(`  '${pid}': [\n${lines.join('\n')}\n  ],`);
+        showToast(`Copied ${items.length} image${items.length !== 1 ? 's' : ''}`);
+      } catch {
+        showToast('Copy failed');
+      }
+    }
+  });
+
+  // ── Local save server ──────────────────────────────────────────────────────
+  //
+  // The site is a static build with no adapter, so there is no API route to POST to —
+  // an on-demand endpoint would fail `astro build`. Instead a small companion server
+  // (`bun run admin:serve`) writes src/data/product-galleries.ts. When it is not running
+  // (production, where this page is behind Basic Auth and there is no repo to write to)
+  // the page degrades to the clipboard snippet it always had.
+  const SAVE_SERVER = 'http://127.0.0.1:4322';
+  const modeEl = document.getElementById('save-mode')!;
+  let canSave = false;
+
+  function setMode(mode: 'checking' | 'live' | 'offline', text: string) {
+    modeEl.dataset.mode = mode;
+    modeEl.textContent = text;
+    document.querySelectorAll<HTMLButtonElement>('.save-btn').forEach((btn) => {
+      btn.hidden = mode !== 'live';
+    });
+    document.querySelectorAll<HTMLButtonElement>('.copy-btn').forEach((btn) => {
+      btn.hidden = mode === 'live';
+    });
+  }
+
+  async function probeSaveServer() {
+    try {
+      const response = await fetch(`${SAVE_SERVER}/health`, { signal: AbortSignal.timeout(1500) });
+      canSave = response.ok;
+    } catch {
+      canSave = false;
+    }
+
+    setMode(
+      canSave ? 'live' : 'offline',
+      canSave ? 'Saving to src/data/product-galleries.ts' : 'Read-only — run bun run admin:serve to save'
+    );
+  }
+
+  document.addEventListener('click', async (e) => {
+    const saveBtn = (e.target as Element).closest<HTMLElement>('[data-save-gallery]');
+    if (!saveBtn || !canSave) return;
+
+    const productId = saveBtn.dataset.saveGallery!;
+    const tray = document.querySelector<HTMLElement>(`[data-tray="${productId}"]`);
+    if (!tray) return;
+
+    const images = trayImages(tray);
+    try {
+      const response = await fetch(`${SAVE_SERVER}/gallery`, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ productId, images }),
+      });
+
+      if (!response.ok) {
+        const detail = await response.text();
+        showToast(`Save failed: ${detail.slice(0, 80)}`);
+        return;
+      }
+
+      showToast(
+        images.length === 0
+          ? `Cleared gallery for ${productId}`
+          : `Saved ${images.length} image${images.length === 1 ? '' : 's'}`
+      );
+      tray.querySelectorAll('.tray-thumb--new').forEach((thumb) => {
+        thumb.classList.replace('tray-thumb--new', 'tray-thumb--existing');
+      });
+    } catch (error) {
+      showToast(`Save failed: ${error instanceof Error ? error.message : 'server unreachable'}`);
+      await probeSaveServer();
+    }
+  });
+
+  probeSaveServer();
+
+  // ── Filters ────────────────────────────────────────────────────────────────
+  const rows        = Array.from(document.querySelectorAll<HTMLElement>('.product-row'));
+  const countEl     = document.getElementById('visible-count')!;
+  const searchInput = document.getElementById('search') as HTMLInputElement;
+  const active: Record<string, string> = {};
+
+  function applyFilters() {
+    const q = searchInput.value.toLowerCase().trim();
+    let n = 0;
+    rows.forEach((row) => {
+      const ok =
+        (!q || row.dataset.name!.includes(q)) &&
+        (!active.pillar || row.dataset.pillar === active.pillar) &&
+        (!active.status || (() => {
+          if (active.status === 'has-cache')       return row.dataset.hasCache === 'true';
+          if (active.status === 'multi-cache')     return Number(row.dataset.cacheCount) > 1;
+          if (active.status === 'has-editorial')   return row.dataset.hasEditorial === 'true';
+          if (active.status === 'needs-editorial') return row.dataset.hasEditorial === 'false';
+          return true;
+        })());
+      row.hidden = !ok;
+      if (ok) n++;
+    });
+    countEl.textContent = String(n);
+  }
+
+  searchInput.addEventListener('input', applyFilters);
+
+  document.querySelectorAll<HTMLButtonElement>('.chip').forEach((chip) => {
+    chip.addEventListener('click', () => {
+      const { filter, value } = chip.dataset as { filter: string; value: string };
+      if (active[filter] === value) {
+        delete active[filter];
+        chip.classList.remove('chip--active');
+      } else {
+        document.querySelectorAll(`.chip[data-filter="${filter}"]`).forEach((c) => c.classList.remove('chip--active'));
+        active[filter] = value;
+        chip.classList.add('chip--active');
+      }
+      applyFilters();
+    });
+  });
+
+  document.getElementById('clear-filters')!.addEventListener('click', () => {
+    Object.keys(active).forEach((k) => delete active[k]);
+    document.querySelectorAll('.chip--active').forEach((c) => c.classList.remove('chip--active'));
+    searchInput.value = '';
+    applyFilters();
+  });
+</script>
+
+<style is:global>
+  /* Tray styles must be global — JS-created elements don't receive Astro scoped attributes */
+  .tray-thumb {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    border-radius: 6px;
+    flex-shrink: 0;
+  }
+  .tray-thumb img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    display: block;
+    border-radius: 5px;
+  }
+  .tray-thumb--existing { border: 2px solid #4caf50; }
+  .tray-thumb--existing img { background: #f0fdf4; }
+  .tray-thumb--new { border: 2px solid #ca8a04; }
+  .tray-thumb--new img { background: #fefce8; }
+  .tray-remove {
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    width: 16px;
+    height: 16px;
+    background: #ef4444;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  .tray-remove:hover { background: #b91c1c; }
+</style>
+
+<style>
+  /* ── Page ──────────────────────────────────────────────────────────────── */
+  .img-admin {
+    max-width: 1100px;
+    margin: 0 auto;
+    font-family: var(--font-body);
+    color: var(--color-text);
+  }
+
+  h1 { font-size: var(--text-2xl); font-weight: var(--weight-bold); margin-bottom: var(--space-md); }
+
+  /* ── Toolbar ────────────────────────────────────────────────────────────── */
+  .toolbar {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border, #e0e0e0);
+    border-radius: 8px;
+    padding: var(--space-md);
+    margin-bottom: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #search {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--color-border, #ccc);
+    border-radius: 6px;
+    font-size: var(--text-sm);
+    background: #fff;
+  }
+
+  .filter-group { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+  .filter-label {
+    font-size: 10px;
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--color-text-muted, #888);
+    white-space: nowrap;
+  }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+
+  .chip {
+    padding: 3px 11px;
+    border: 1px solid var(--color-border, #ccc);
+    border-radius: 999px;
+    background: #fff;
+    font-size: var(--text-xs);
+    cursor: pointer;
+  }
+  .chip:hover { border-color: #333; }
+  .chip--active { background: #333; color: #fff; border-color: #333; }
+
+  .toolbar-footer { display: flex; align-items: center; gap: var(--space-md); }
+  .count { font-size: var(--text-sm); color: var(--color-text-muted, #666); }
+  .clear-btn {
+    font-size: var(--text-xs);
+    padding: 3px 11px;
+    border: 1px solid var(--color-border, #ccc);
+    border-radius: 6px;
+    background: #fff;
+    cursor: pointer;
+  }
+
+  /* ── Product rows ───────────────────────────────────────────────────────── */
+  .product-list { display: flex; flex-direction: column; gap: var(--space-md); }
+
+  .product-row {
+    border: 1px solid var(--color-border, #e0e0e0);
+    border-radius: 8px;
+    padding: var(--space-md);
+    background: #fff;
+  }
+
+  .product-row__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-md);
+    margin-bottom: var(--space-sm);
+    flex-wrap: wrap;
+  }
+
+  .product-row__meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .product-row__name { font-weight: var(--weight-bold); font-size: var(--text-sm); }
+  .product-row__asin {
+    font-family: monospace;
+    font-size: var(--text-xs);
+    color: #888;
+    background: var(--color-bg-alt);
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .product-row__badges { display: flex; gap: 6px; flex-shrink: 0; }
+
+  /* Pillar tags */
+  .pillar-tag {
+    font-size: 10px;
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 2px 8px;
+    border-radius: 999px;
+  }
+  .pillar-tag--cooling { background: #dbeafe; color: #1d4ed8; }
+  .pillar-tag--calming { background: #ede9fe; color: #6d28d9; }
+  .pillar-tag--comfort { background: #fef3c7; color: #b45309; }
+  .pillar-tag--gear    { background: #dcfce7; color: #15803d; }
+  .pillar-tag--safety  { background: #fee2e2; color: #b91c1c; }
+
+  /* Badges */
+  .badge { font-size: 11px; padding: 2px 8px; border-radius: 999px; }
+  .badge--ok      { background: #dcfce7; color: #15803d; }
+  .badge--missing { background: #fee2e2; color: #b91c1c; }
+  .badge--cache   { background: #f1f5f9; color: #475569; }
+
+  /* ── Section 1: cache grid ──────────────────────────────────────────────── */
+  .cache-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: var(--space-sm);
+  }
+
+  .cache-tile {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    background: #fafafa;
+    cursor: pointer;
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: border-color 0.12s;
+  }
+  .cache-tile:hover { border-color: #999; }
+  .cache-tile--selected { border-color: #ca8a04; background: #fefce8; }
+
+  .cache-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .tile-variant {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.45);
+    color: #fff;
+    font-size: 9px;
+    font-family: monospace;
+    text-align: center;
+    padding: 2px 0;
+    pointer-events: none;
+  }
+
+  .tile-zoom {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 20px;
+    height: 20px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+  }
+  .tile-zoom:hover { background: rgba(0,0,0,0.85); }
+
+  .no-cache { font-size: var(--text-xs); color: #888; margin: 0 0 var(--space-sm); }
+
+  /* ── Section 2: selected tray ───────────────────────────────────────────── */
+  .selected-section {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: var(--space-sm);
+    border-top: 1px solid #eee;
+    min-height: 40px;
+  }
+
+  .selected-label {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    color: #888;
+    padding-top: 8px;
+    white-space: nowrap;
+  }
+
+  .selected-tray {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    flex: 1;
+  }
+
+  .copy-btn {
+    padding: 5px 12px;
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+    align-self: flex-start;
+    margin-top: 4px;
+  }
+  .copy-btn:hover { border-color: #333; background: #f9f9f9; }
+
+  /* ── Zoom modal ─────────────────────────────────────────────────────────── */
+  #zoom-modal {
+    border: none;
+    background: transparent;
+    padding: 0;
+    max-width: 90vw;
+    max-height: 90vh;
+    outline: none;
+  }
+
+  #zoom-modal[open] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #zoom-modal::backdrop {
+    background: rgba(0, 0, 0, 0.88);
+  }
+
+  #zoom-img {
+    max-width: 85vw;
+    max-height: 82vh;
+    object-fit: contain;
+    border-radius: 6px;
+    background: #fff;
+    padding: 8px;
+    display: block;
+  }
+
+  #zoom-label {
+    color: #bbb;
+    font-size: var(--text-sm);
+    font-family: monospace;
+    margin: 0;
+  }
+
+  #zoom-close {
+    position: fixed;
+    top: 18px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    background: rgba(255,255,255,0.15);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #zoom-close:hover { background: rgba(255,255,255,0.3); }
+
+  /* ── Toast ──────────────────────────────────────────────────────────────── */
+  .toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: #333;
+    color: #fff;
+    padding: 9px 18px;
+    border-radius: 8px;
+    font-size: var(--text-sm);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.18s, transform 0.18s;
+    z-index: 100;
+  }
+  .toast--visible { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  /* ── No-ASIN section ────────────────────────────────────────────────────── */
+  .no-asin-section {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: var(--space-md);
+    background: var(--color-bg-alt);
+    font-size: var(--text-sm);
+    color: #666;
+  }
+  .no-asin-section summary { cursor: pointer; font-weight: var(--weight-bold); }
+  .no-asin-section ul { margin-top: var(--space-sm); padding-left: var(--space-md); }
+
+  /* ── Save mode + tray controls ─────────────────────────────────────────── */
+  .save-mode {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .save-mode[data-mode='checking'] { background: #f1f5f9; color: #475569; }
+  .save-mode[data-mode='live']     { background: #dcfce7; color: #15803d; }
+  .save-mode[data-mode='offline']  { background: #fef3c7; color: #92400e; }
+
+  .tray-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .save-btn {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 14px;
+    border-radius: 6px;
+    background: #15803d;
+    color: #fff;
+    border: 1px solid #15803d;
+  }
+  .save-btn:hover { background: #166534; }
+
+  /* Order matters: the first image is the product's primary. */
+  .tray-primary {
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    z-index: 2;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 3px 4px;
+    border-radius: 4px;
+    background: #15803d;
+    color: #fff;
+  }
+
+  .tray-order {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.12s;
+  }
+  .tray-thumb:hover .tray-order,
+  .tray-thumb:focus-within .tray-order { opacity: 1; }
+
+  .tray-move {
+    width: 20px;
+    height: 18px;
+    font-size: 13px;
+    line-height: 1;
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    border-radius: 3px;
+  }
+  .tray-move:hover { background: rgba(0, 0, 0, 0.85); }
+
+  .no-asin-section {
+    margin-top: 16px;
+    font-size: 12px;
+    color: #64748b;
+  }
+</style>

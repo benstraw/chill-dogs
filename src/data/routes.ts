@@ -50,6 +50,13 @@ export const ROUTES = {
   comfortFurnitureCrates: '/comforting/best-furniture-dog-crates/',
   comfortHeavyDutyCrates: '/comforting/best-heavy-duty-dog-crates/',
   comfortSleepArticle: '/comforting/how-much-do-dogs-sleep/',
+  adminHome: '/admin/',
+  adminSitemap: '/admin/sitemap/',
+  adminProducts: '/admin/products/',
+  adminImages: '/admin/images/',
+  adminLogin: '/admin/auth/login/',
+  adminLogout: '/admin/auth/logout/',
+  adminBasicLogin: '/admin/auth/basic/',
   shop: '/shop/',
   search: '/search/',
   articles: '/articles/',
@@ -57,7 +64,31 @@ export const ROUTES = {
   privacyPolicy: '/privacy-policy/',
   terms: '/terms/',
   shelterCharities: '/shelter-dog-charities/',
+  lifestyleDogTimeWithoutOwning: '/lifestyle/how-to-spend-time-with-dogs-without-owning-one/',
   subscribe: '/subscribe/',
   subscribeThanks: '/subscribe/thanks/',
   subscribeConfirmed: '/subscribe/confirmed/',
 } as const;
+
+/**
+ * Admin auth routes handled entirely by root `middleware.js` at the Vercel edge.
+ * They are real URLs but never build to a file in `dist/`, so link-integrity
+ * checks have to skip them.
+ */
+export const MIDDLEWARE_ONLY_ROUTES: readonly string[] = [
+  ROUTES.adminLogin,
+  ROUTES.adminLogout,
+  ROUTES.adminBasicLogin,
+  '/admin/auth/github/',
+  '/admin/auth/callback/',
+];
+
+/**
+ * URL for a product's detail page.
+ *
+ * The `id` is the slug — see the id-stability rule in CLAUDE.md and
+ * `src/__tests__/product-slugs.test.ts`. Renaming an id retires this URL.
+ */
+export function shopProductRoute(productId: string): string {
+  return `${ROUTES.shop}${productId}/`;
+}

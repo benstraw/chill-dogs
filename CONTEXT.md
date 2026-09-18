@@ -246,7 +246,7 @@ This list is a practical orientation map. When coding, use `src/data/routes.ts` 
 - `/privacy-policy/`
 - `/terms/`
 - `/admin/products/`
-- `/content-sitemap/`
+- `/admin/sitemap/`
 - `/subscribe/thanks/`
 - `/subscribe/confirmed/`
 

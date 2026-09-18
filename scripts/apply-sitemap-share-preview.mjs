@@ -2,7 +2,7 @@ import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 
 const distRoot = path.resolve('dist');
-const sitemapPath = path.join(distRoot, 'content-sitemap', 'index.html');
+const sitemapPath = path.join(distRoot, 'admin', 'sitemap', 'index.html');
 const siteOrigin = 'https://www.chill-dogs.com';
 
 function escapeRegExp(value) {
@@ -85,7 +85,7 @@ function extractShareMetadata(pageHtml) {
 
 function main() {
   if (!existsSync(sitemapPath)) {
-    console.log('[content-sitemap] skipped share preview rewrite: content sitemap not found');
+    console.log('[sitemap] skipped share preview rewrite: admin sitemap not found');
     return;
   }
 
@@ -128,7 +128,7 @@ function main() {
     writeFileSync(sitemapPath, nextHtml, 'utf8');
   }
 
-  console.log(`[content-sitemap] updated share preview rows from built page metadata on ${updatedCount} page(s)`);
+  console.log(`[sitemap] updated share preview rows from built page metadata on ${updatedCount} page(s)`);
 }
 
 main();

@@ -8,6 +8,8 @@ interface Props {
   pageSlug: string;
   placement: string;
   ctaLabel?: string;
+  /** Overrides the "Save this guide" eyebrow — product pages are not guides. */
+  eyebrow?: string;
 }
 
 const {
@@ -19,6 +21,7 @@ const {
   pageSlug,
   placement,
   ctaLabel = 'Save to Pinterest',
+  eyebrow = 'Save this guide',
 } = Astro.props;
 
 const pageUrl = new URL(canonicalPath, 'https://www.chill-dogs.com').href;
@@ -60,7 +63,7 @@ const saveHref = saveUrl.href;
     />
   </a>
   <div class="pinterest-save__body">
-    <p class="pinterest-save__eyebrow">Save this guide</p>
+    <p class="pinterest-save__eyebrow">{eyebrow}</p>
     <p class="pinterest-save__title">{title}</p>
     <p class="pinterest-save__description">{description}</p>
     <a

@@ -3,7 +3,7 @@ title: Converter Page Checklist
 type: checklist
 domain: checklists
 status: active
-updated: 2026-08-06
+updated: 2026-08-30
 tags:
   - chill-dogs
   - checklist
@@ -27,6 +27,17 @@ Finishing any converter page before marking work as done.
 
 ---
 
+## Not for catalog pages
+
+`/shop/<product-id>/` detail pages are converters but follow a narrower contract — see
+the catalog layer section in
+[`../strategy/metrics-and-page-types.md`](../strategy/metrics-and-page-types.md). They are
+generated, so most items below are enforced by tests rather than checked by hand. What
+still applies to them: `Disclosure` before the CTA, canonical product data, shared
+primitives, product schema, and sitemap registration.
+
+---
+
 ## Checklist
 
 - [ ] Page type is `converter`
@@ -37,7 +48,7 @@ Finishing any converter page before marking work as done.
 - [ ] Product cards compose the shared primitives (`ProductCardShell`, `ProductImageFrame`, `ProductBulletList`, `AffiliateOfferStack`) — no hand-rolled card surface, image frame, bullet list, or CTA stack. Missing capability = new opt-in prop on the primitive, not a local fork
 - [ ] A product section over 6 products hides the remainder behind `DisclosureBar` — but only when 3+ would be hidden; below that the section stays open. Check `data-position` still runs 1..N across the page
 - [ ] `Disclosure` component appears before product CTAs
-- [ ] Product claims are research-based — not fake hands-on testing
+- [ ] Product claims are research-based, unless the product carries `handsOn` — then first-hand copy stays within what its `note` covers
 - [ ] No "vet-approved" / "vet-recommended" language unless sourced with documentation
 - [ ] Schema present (FAQPage if FAQ exists, appropriate structured data for product listings)
 - [ ] Related content uses the approved related-content system only (`topics`, `pinnedRelated`, `excludeRelated`, `relatedLabel` in sitemap config) — no new manual related arrays

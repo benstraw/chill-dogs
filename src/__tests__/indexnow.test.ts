@@ -28,7 +28,7 @@ describe('indexnow-lib', () => {
 
   it('excludes non-indexable page files', () => {
     expect(mapPageFileToUrl('src/pages/admin/products.astro')).toBeNull();
-    expect(mapPageFileToUrl('src/pages/content-sitemap.astro')).toBeNull();
+    expect(mapPageFileToUrl('src/pages/admin/sitemap.astro')).toBeNull();
     expect(mapPageFileToUrl('src/pages/privacy-policy.astro')).toBeNull();
     expect(mapPageFileToUrl('src/pages/terms.astro')).toBeNull();
     expect(mapPageFileToUrl('src/pages/subscribe/thanks.astro')).toBeNull();

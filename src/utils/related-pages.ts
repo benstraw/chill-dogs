@@ -1,5 +1,5 @@
 import { getCompleteSitemapSections } from '@data/sitemap-inventory';
-import type { SitemapPage, SitemapSection } from '@data/content-sitemap';
+import { isProductDetailPage, type SitemapPage, type SitemapSection } from '@data/content-sitemap';
 
 export interface RelatedPagesOptions {
   currentHref: string;
@@ -82,6 +82,13 @@ function isEligibleRelatedPage(page: SitemapPage, excludedHrefs: Set<string>): b
   }
 
   if (page.noindex || page.pageType === 'attractor' || page.pageType === 'informer') {
+    return false;
+  }
+
+  // Related strips offer guides. Product detail pages are converters too, so nothing
+  // here excluded them — they simply lost on topic overlap, which is luck rather than
+  // design with 214 of them in the inventory. Make it deliberate.
+  if (isProductDetailPage(page)) {
     return false;
   }
 

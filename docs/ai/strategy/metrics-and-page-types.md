@@ -3,7 +3,7 @@ title: Keystone Metric and Page Type Definitions
 type: canonical
 domain: strategy
 status: active
-updated: 2026-08-10
+updated: 2026-08-30
 tags:
   - chill-dogs
   - page-types
@@ -59,6 +59,50 @@ Every page, component, and content decision must trace back to one of these two 
 - Product data comes from canonical data sources — no hardcoded product rows
 
 **Examples:** `/cooling/cooling-mats/`, `/comforting/best-calming-dog-beds/`, `/gear/best-dog-gps-trackers/`
+
+#### The catalog layer — `/shop/<product-id>/`
+
+Product detail pages are converters, but they are not converter *guides*, and the
+difference matters enough to state. There is one generated page per catalog product.
+They are still `converter` — the type list is closed and this is the only honest fit:
+their job is an affiliate click and their metric is `amazon_outbound_click` rate.
+
+**How they differ from a hand-authored converter guide:**
+
+| | Converter guide | Catalog page |
+|---|---|---|
+| Authoring | Hand-written comparison | Generated from `product-catalog.ts` |
+| Scope | Several products, ranked | One product, no comparison |
+| Body | Editorial prose and sections | The product's own bullets |
+| Entry | Collector routes intent in | `/shop/` browse and social/search direct links |
+| Count | Tens | Hundreds |
+
+**Consequences that follow from that, and are enforced in code:**
+
+- They are **excluded from every surface that means "our guides"** — the homepage
+  Compare picks list, the section collectors, and related-content strips. By count alone
+  they would crowd all three out. The marker is `isProductDetailPage()` in
+  `src/data/content-sitemap.ts`; use it rather than a new href check.
+- They carry an **indexing gate** (`isIndexableProduct()` in `src/utils/product-meta.ts`):
+  under 2 bullets or 120 characters of copy, the page still builds — direct links keep
+  working — but goes `noindex`. Hundreds of near-empty pages read as doorway pages and
+  can discount the whole set.
+- Their **`id` is a public URL.** See the stability rule in `CLAUDE.md`.
+
+**The converter rules that still apply in full.** A looser contract is not no contract:
+`Disclosure` before the CTA, Amazon links through the shared affiliate components,
+product data from canonical sources, shared card primitives, product schema, and
+registration in the sitemap inventory.
+
+**Known tension, unresolved.** The funnel is defined below as
+*collector or attractor entry → converter click → affiliate_outbound_click*. Catalog
+pages sit outside it: nothing routes into them but `/shop/`, which is itself a converter,
+so the secondary keystone metric (`collector_to_converter_click`) does not measure them.
+They also overlap their category converter — `/shop/kh-cool-bed-iii/` and
+`/cooling/cooling-mats/` both want "k&h cool bed" traffic. The bet is that they capture
+narrower, more navigational queries the guides do not rank for. Watch whether the guides
+lose mid-tail positions after these are indexed; if they do, the answer is to cut the
+catalog set back, not to thin the guides.
 
 ---
 

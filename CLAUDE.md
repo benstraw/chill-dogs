@@ -22,6 +22,7 @@ Do not skip the task-specific docs.
 - **Product cards on converters must compose the shared primitives in `src/components/modules/primitives/`** (`ProductCardShell`, `ProductImageFrame`, `ProductBulletList`, `AffiliateOfferStack`). Do not hand-roll a card surface, image frame, bullet list, or CTA stack. If a primitive is missing something, add an opt-in prop to the primitive rather than forking it locally. Card-specific extras (badges, spec lists, notes) stay local. `BrowseProductCard` is the one sanctioned exception.
 - **"Show N more" expanders use the `DisclosureBar` primitive** (`src/components/modules/primitives/DisclosureBar.astro`) — a full-width outlined bar on the pillar accent. Do not hand-roll a bare `<summary>` text link.
 - Use the existing related-content system (`src/utils/related-pages.ts`). Do not add manual related arrays.
+- **A product `id` in `src/data/*-products.ts` is a public URL** — every product builds at `/shop/<id>/`. Renaming a product's `name` is free; renaming its `id` retires an indexed URL and needs redirects in **both** `vercel.json` and `astro.config.mjs`, with the old id left in `src/data/product-url-history.ts`. Enforced by `src/__tests__/product-slugs.test.ts`.
 - Run relevant tests/build checks before finishing.
 - **Never merge, close, or squash a pull request without explicit confirmation.** Phrases like "push the PR up", "put it up for review", or "send it up" mean push the branch and open/update the PR — NOT merge it. Only run `gh pr merge` when the user says exactly that.
 
@@ -49,7 +50,22 @@ bun run check:ai-docs    # Validate AI knowledge graph frontmatter and links
 bun run fetch:chewy      # Pull Chewy catalog metadata from Impact (diagnostic only)
 bun run chewy-link:verify # Confirm Impact credentials resolve
 bun run og:gen           # Generate product-style OG share images
+bun run pins:gen         # Generate 1000x1500 Pinterest pins for /shop/ product pages
+bun run admin:serve      # Local writer for /admin/images/ (see below); no network, no keys
 ```
+
+`pins:gen` renders one 1000x1500 Pinterest pin per product into `public/pins/`, which
+`PinterestSave` on `/shop/<id>/` hands to Pinterest. Without a pin, the Save button falls
+back to the raw product photo — a square catalogue shot with no title or branding, in a
+ratio Pinterest crops. It fetches product photos from the merchant CDN, so it **needs
+network** and will not run in a sandboxed agent container; add `--placeholder` to preview
+the template offline with a stand-in photo, and `--only <id>` to render one product.
+Pins are gitignored like `public/og/` — force-add the ones you have reviewed.
+
+`admin:serve` runs alongside `bun run dev`. It is the local companion for the
+`/admin/images/` browser: with it running, Save writes `src/data/product-galleries.ts`;
+without it the page falls back to copying a paste-ready snippet. It binds to
+127.0.0.1 only and validates product ids and image hosts before writing.
 
 Scripts that need API keys or outbound network access (`check:asins`, `fetch:chewy`,
 `chewy-link`, `fetch-amazon-data.ts`, `indexnow:submit`) are documented in
