@@ -128,9 +128,10 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
     hero: {
       title: 'Best Flea and Tick Products for Dogs',
       subtitle:
-        'Topical treatments, sprays, shampoos, collars, chews, and tick-removal tools — everything here is available without a prescription.'
-        + ' Plant-based options sit in each section alongside the conventional ones, marked in green.'
-        + ' For prescription options, consult your veterinarian.',
+        'Topical treatments, sprays, shampoos, collars, chews, and tick-removal tools.'
+        + ' Everything here is available without a prescription.'
+        + ' Plant-based, pesticide-free options are bordered in green.'
+        + ' For prescription medications, consult your veterinarian.',
       disclaimer: 'As an Amazon Associate and a Chewy Affiliate, we earn from qualifying purchases.',
       primaryCta: { label: 'See Topical Treatments', href: '#otc-topicals' },
       secondaryCta: { label: 'Read the Full Flea & Tick Guide', href: ROUTES.fleaTickPillar },
@@ -169,9 +170,9 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       {
         kind: 'prose',
         id: 'natural-options',
-        heading: 'The Natural Options, and What They Ask of You',
+        heading: 'The Natural Options',
         paragraphs: [
-          'Natural products on this page use plant oils rather than conventional pesticides. Rather than quarantine them, we list them in the section for the job they do — so a natural shampoo sits next to a conventional one, and you can compare them directly. <strong>Cards with a green edge and a green label are the plant-based options.</strong>',
+          'Natural products use plant oils rather than conventional pesticides. <strong>Products bordered in green are the plant-based options.</strong>',
           "Natural flea and tick products make the most sense when you are trying to reduce your dog's exposure to toxic ingredients, your dog has lighter exposure to pests, and you are willing to do the routine work that makes them more useful: coat checks, ear wipe-downs, bedding and pet-area cleanup, and bath support.",
           'Natural products may not be sufficient for heavy infestations, for dogs that spend a lot of time in tall grass or brush, or for regions with high tick-disease rates.',
         ],
