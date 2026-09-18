@@ -3,7 +3,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { productCatalogItems } from '../data/product-catalog';
-import { getAmazonOfferEntries, getOffer } from '../data/products/offers';
+import { getAllAmazonOfferEntries, getOffer } from '../data/products/offers';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -177,7 +177,7 @@ export function getCacheEntryAgeDays(entry: AmazonCacheManifestEntry, now = new 
 
 export function getCatalogAsinEntries(items: CatalogAsinSourceItem[] = productCatalogItems): CatalogAsinEntry[] {
   if (items === productCatalogItems) {
-    return getAmazonOfferEntries(productCatalogItems).map((item) => ({
+    return getAllAmazonOfferEntries(productCatalogItems).map((item) => ({
       asin: item.asin,
       name: item.name,
       pillar: item.pillar ?? '',

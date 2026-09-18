@@ -1,0 +1,653 @@
+{
+  "search_metadata": {
+    "id": "6a82a554b463f3861e139b25",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/3JuCI61_QMUhjoGiKHDT8Q/6a82a554b463f3861e139b25.json",
+    "markdown_endpoint": "https://serpapi.com/searches/3JuCI61_QMUhjoGiKHDT8Q/6a82a554b463f3861e139b25.md",
+    "created_at": "2026-08-17 06:08:20 UTC",
+    "processed_at": "2026-08-17 06:08:20 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B071ZZHCB8/?",
+    "raw_html_file": "https://serpapi.com/searches/3JuCI61_QMUhjoGiKHDT8Q/6a82a554b463f3861e139b25.html",
+    "total_time_taken": 6.92
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B071ZZHCB8",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "categories": [
+      {
+        "position": 1,
+        "name": "Pet Supplies",
+        "link": "https://www.amazon.com/pet-shops-dogs-cats-hamsters-kittens/b/ref=dp_bc_1?ie=UTF8&node=2619533011",
+        "node": "2619533011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2619533011"
+      },
+      {
+        "position": 2,
+        "name": "Dogs",
+        "link": "https://www.amazon.com/dogs-supplies-training-beds-collars-grooming/b/ref=dp_bc_2?ie=UTF8&node=2975312011",
+        "node": "2975312011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975312011"
+      },
+      {
+        "position": 3,
+        "name": "Flea & Tick Control",
+        "link": "https://www.amazon.com/dog-flea-lice-tick-control/b/ref=dp_bc_3?ie=UTF8&node=2975384011",
+        "node": "2975384011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975384011"
+      },
+      {
+        "position": 4,
+        "name": "Topical Treatments",
+        "link": "https://www.amazon.com/b/ref=dp_bc_4?ie=UTF8&node=120957552011",
+        "node": "120957552011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=120957552011"
+      },
+      {
+        "position": 5,
+        "name": "Flea Drops",
+        "link": "https://www.amazon.com/dog-flea-drops/b/ref=dp_bc_5?ie=UTF8&node=2975389011",
+        "node": "2975389011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975389011"
+      }
+    ],
+    "asin": "B071ZZHCB8",
+    "title": "Vectra 3D Flea and Tick Prevention for Extra Small Dogs 5-10 lbs, 3‑Month | Kills and Repels Fleas, Ticks & Mosquitoes | Fast‑Acting, Waterproof, No Prescription Needed",
+    "link": "https://www.amazon.com/Vectra-Mosquito-Treatment-Prevention-supply/dp/B071ZZHCB8/",
+    "link_clean": "https://www.amazon.com/dp/B071ZZHCB8/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B071ZZHCB8&device=desktop&engine=amazon_product",
+    "badges": [
+      "Amazon's Choice"
+    ],
+    "variants": [
+      {
+        "title": "Size",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B071ZZHCB8",
+            "name": "3 Pack",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B071ZZHCB8&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B072QDHKHW",
+            "name": "6 Pack",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B072QDHKHW&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the VECTRA 3D Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/71Sp8gSVG6L._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/71Sp8gSVG6L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71qLIawS0jL._AC_SL1000_.jpg",
+      "https://m.media-amazon.com/images/I/71qLIawS0jL._AC_SL1000_.jpg",
+      "https://m.media-amazon.com/images/I/71eaQypWUiL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71VHcqEe+2L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71VzomUoFjL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81-lnKWYqxL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81gKWiR0TlL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81EcgiCdquL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81VgyDZ+JML._AC_SL1500_.jpg"
+    ],
+    "rating": 4.1,
+    "reviews": 459,
+    "bought_last_month": "100+ bought in past month",
+    "discount": "-5%",
+    "price": "$49.99",
+    "extracted_price": 49.99,
+    "price_unit": "$16.66 / count",
+    "extracted_price_unit": 16.66,
+    "prime": true,
+    "delivery": [
+      "FREE delivery Saturday, August 22"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "buy_new": {
+      "caption": "One-time purchase",
+      "price": "$49.99",
+      "extracted_price": 49.99,
+      "price_unit": "$16.66 / count",
+      "extracted_price_unit": 16.66,
+      "delivery": [
+        "FREE delivery Saturday, August 22"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "shipper_seller": {
+          "text": "Amazon.com",
+          "details": {
+            "heading": "Shipper / Seller",
+            "content": "Amazon.com"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    },
+    "subscribe_and_save": {
+      "caption": "Subscribe & Save",
+      "price": "$47.49",
+      "extracted_price": 47.49,
+      "price_unit": "$15.83 / count",
+      "extracted_price_unit": 15.83,
+      "delivery": [
+        "FREE delivery Saturday, August 22"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "shipper_seller": {
+          "text": "Amazon.com",
+          "details": {
+            "heading": "Shipper / Seller",
+            "content": "Amazon.com"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "subscription": "No fees. Skip or cancel anytime."
+      }
+    }
+  },
+  "item_specifications": {
+    "brand": "VECTRA 3D",
+    "item_form": "Drops",
+    "scent": "Unscented",
+    "item_weight": "0.86 g",
+    "active_ingredients": "Dinotefuran, Permethrin, Pyriproxyfen",
+    "item_volume": "0.08 fluid ounces",
+    "allergen_information": "Abalone Free",
+    "dog_breed_size": "Extra Small",
+    "unit_count": "3 Count",
+    "age_range_description": "8 Weeks or Older"
+  },
+  "about_item": [
+    "FLEA, TICK & MOSQUITO PROTECTION FOR DOGS: Vectra 3D provides powerful flea and tick prevention for dogs while also repelling mosquitoes. Each topical application delivers up to one month of protection.",
+    "FAST-ACTING TOPICAL FLEA & TICK TREATMENT: This fast‑acting dog flea and tick treatment begins reducing flea feeding in as little as 5 minutes and kills fleas within 4 hours on dogs—no biting required",
+    "PROTECTION FOR DOGS WHO DO MORE: Built for dogs with more everyday exposure - from yards and parks to trails, travel and outdoor family adventures.",
+    "MONTHLY TOPICAL ROUTINE: This monthly topical flea and tick treatment uses a single‑dose, direct‑to‑skin applicator with a quick‑drying, non‑greasy formula. Waterproof after 24 hours, making it a dependable dog flea treatment for real‑life conditions.",
+    "VET RECOMMENDED, NO PRESCRIPTION NEEDED: Used by veterinarians for nearly 20 years and available without a prescription."
+  ],
+  "bought_together": [
+    {
+      "position": 1,
+      "title": "Vectra 3D Flea and Tick Prevention for Extra Small Dogs 5-10 lbs, 3‑Month | Kills and Repels Fleas, Ticks & Mosquitoes | Fast‑Acting, Waterproof, No Prescription Needed",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71Sp8gSVG6L._AC_UL116_SR116,116_.jpg",
+      "price": "$49.99",
+      "extracted_price": 49.99,
+      "price_unit": "$16.66/count",
+      "extracted_price_unit": 16.66,
+      "delivery": [
+        "Get it as soon as Saturday, Aug 22"
+      ],
+      "stock": "In Stock"
+    },
+    {
+      "position": 2,
+      "title": "Vectra 3D Flea and Tick Prevention for Small Dogs 11-20 lbs, 3‑Month | Kills and Repels Fleas, Ticks & Mosquitoes | Fast‑Acting, Waterproof, No Prescription Needed",
+      "link": "https://www.amazon.com/Vectra-3D-Mosquito-Treatment-Prevention/dp/B071G1CW6Z/ref=pd_bxgy_thbs_d_sccl_1/000-0000000-0000000?pd_rd_w=DElbl&content-id=amzn1.sym.9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_p=9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_r=9D14V4FRCZAC79X4C4B2&pd_rd_wg=T6pEE&pd_rd_r=0090704e-44d2-47c5-8b33-ce38a7e64d13&pd_rd_i=B071G1CW6Z&psc=1",
+      "asin": "B071G1CW6Z",
+      "link_clean": "https://www.amazon.com/Vectra-3D-Mosquito-Treatment-Prevention/dp/B071G1CW6Z/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B071G1CW6Z&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71urdK9ITtL._AC_UL116_SR116,116_.jpg",
+      "price": "$49.99",
+      "extracted_price": 49.99,
+      "price_unit": "$16.66/count",
+      "extracted_price_unit": 16.66,
+      "delivery": [
+        "Get it as soon as Saturday, Aug 22"
+      ],
+      "stock": "In Stock"
+    },
+    {
+      "position": 3,
+      "title": "Vectra 3D Flea and Tick Prevention for Medium Dogs 21-55 lbs, 6‑Month | Kills and Repels Fleas, Ticks & Mosquitoes | Fast‑Acting, Waterproof, No Prescription Needed",
+      "link": "https://www.amazon.com/Vectra-3D-Mosquito-Treatment-Prevention/dp/B072JTQB99/ref=pd_bxgy_thbs_d_sccl_2/000-0000000-0000000?pd_rd_w=DElbl&content-id=amzn1.sym.9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_p=9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_r=9D14V4FRCZAC79X4C4B2&pd_rd_wg=T6pEE&pd_rd_r=0090704e-44d2-47c5-8b33-ce38a7e64d13&pd_rd_i=B072JTQB99&psc=1",
+      "asin": "B072JTQB99",
+      "link_clean": "https://www.amazon.com/Vectra-3D-Mosquito-Treatment-Prevention/dp/B072JTQB99/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B072JTQB99&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71IIIaFBGgL._AC_UL116_SR116,116_.jpg",
+      "price": "$89.99",
+      "extracted_price": 89.99,
+      "price_unit": "$15.00/count",
+      "extracted_price_unit": 15,
+      "delivery": [
+        "Get it as soon as Saturday, Aug 22"
+      ],
+      "stock": "In Stock"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": "Vectra 3D - Head Banner",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/843dac57-059f-4c07-9b94-1443c4df99e4.__CR0,0,970,300_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 2,
+      "title": "Vectra 3D - Easy To Use",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/b03620fd-065a-4cba-863c-de4dadd2f3e2.__CR0,0,970,300_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 3,
+      "title": "Vectra 3D - Why",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/13394ff5-3f78-41b6-a194-2a383e3d2799.__CR0,0,970,600_PT0_SX970_V1___.jpg"
+    },
+    {
+      "position": 4,
+      "title": "Vectra 3D - Fights Against",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/9f3d9cca-fb31-4b15-ba4d-35f303bc421e.__CR0,0,970,600_PT0_SX970_V1___.jpg"
+    }
+  ],
+  "product_details": {
+    "product_dimensions": "5.25 x 1 x 5.25 inches; 0.03 ounces",
+    "item_model_number": "D73860B",
+    "date_first_available": "June 5, 2017",
+    "manufacturer": "Ceva Animal Health",
+    "asin": "B071ZZHCB8",
+    "best_sellers_rank": [
+      {
+        "text": "#22,542 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 22542,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#72 in Dog Flea Drops",
+        "extracted_rank": 72,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/2975389011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Flea Drops"
+      }
+    ],
+    "customer_reviews": "4.1 out of 5 stars",
+    "rating": 4.1,
+    "reviews": 459,
+    "brand_name": "VECTRA 3D",
+    "unit_count": "3 Count",
+    "age_range_description": "8 Weeks or Older",
+    "upc": "851321007045",
+    "global_trade_identification_number": "00851321007045",
+    "included_components": "3 tubes",
+    "item_type_name": "Flea and Tick",
+    "model_number": "D73860B",
+    "manufacturer_part_number": "D73860B",
+    "warranty_description": "Causes substantial but temporary eye injury. Harmful if swallowed or absorbed through skin. Do not get in eyes or on clothing. Avoid contact with skin. Remove and wash contaminated clothing before reuse. Wash thoroughly with soap and water after handling and before eating, drinking, chewing gum, using tobacco products or using the toilet.",
+    "item_form": "Drops",
+    "scent_name": "Unscented",
+    "dog_breed_size": "Extra Small",
+    "pet_type": "Dog",
+    "target_species": "Dog",
+    "item_weight": "0.86 g",
+    "volume": "0.08 fluid ounces",
+    "allergen_information": "Abalone Free",
+    "active_ingredients": "Dinotefuran, Permethrin, Pyriproxyfen"
+  },
+  "reviews_information": {
+    "summary": {
+      "text": "Customers find the pest control product easy to use and appreciate that it's odorless. Moreover, the quality receives positive feedback, with one customer noting it's perfect for active terriers. However, effectiveness and flea resistance show mixed results - while some customers report it works perfectly with zero fleas, others say it doesn't work at all and their dogs still have fleas. Additionally, opinions on value for money are divided, with some considering it a great value while others find it too expensive.",
+      "insights": [
+        {
+          "title": "Quality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 8,
+            "positive": 7,
+            "negative": 1
+          },
+          "summary": "Customers find the pest control product to be of excellent quality, with one customer noting it works well for active terriers and another mentioning it's perfect for small dogs.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Great product",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R34Q81I0E63CK4"
+            },
+            {
+              "position": 2,
+              "snippet": "Great value for the money. Good product at a fair price.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2AUNIWX7Y8IO2"
+            },
+            {
+              "position": 3,
+              "snippet": "...in just 5 minutes and kills fleas within 4 hours, which is perfect for my active terrier who loves romping through grassy parks....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RWT87ACNJVTX9"
+            },
+            {
+              "position": 4,
+              "snippet": "Vectra 3D flea and tick prevention is a quality product that does what it is advertised to do....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R278486YHLPN8L"
+            }
+          ]
+        },
+        {
+          "title": "Ease of use",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 6,
+            "positive": 6,
+            "negative": 0
+          },
+          "summary": "Customers find the pest control product easy to use and apply.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...of small dogs who need reliable, fast-acting protection that’s easy to apply and long-lasting. My terrier and I are both happier for it!",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RWT87ACNJVTX9"
+            },
+            {
+              "position": 2,
+              "snippet": "...Easy to use, have had no problem with the collar falling off we’re coming off even when these two get rowdy and wrestle",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/REVGDAT6UPEWN"
+            },
+            {
+              "position": 3,
+              "snippet": "This is very easy to put on my puppies and works great. They never get any fleas.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2NYUP9QH6YS8I"
+            },
+            {
+              "position": 4,
+              "snippet": "...It doesn’t have a strong Oder, it’s not oily or greasy. Very user friendly, you push the cap down and it’s ready to go.. no poking holes or...",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2HYHY7ARTPGAW"
+            }
+          ]
+        },
+        {
+          "title": "Odorless",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 6,
+            "positive": 5,
+            "negative": 1
+          },
+          "summary": "Customers appreciate that the pest control product is odorless, with one customer noting that the non-greasy formula sets in without leaving a mess or strong smell.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...It’s easy to apply and has no odor. Stay away from products that might hurt your pet neurologically.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R278486YHLPN8L"
+            },
+            {
+              "position": 2,
+              "snippet": "Vet approved. Dog didn't mind. Worked right away! No smell, no itching, no worry. Amazing!",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/REWY9BB05DLL5"
+            },
+            {
+              "position": 3,
+              "snippet": "...as instructed, and the quick-drying, non-greasy formula sets in without leaving a mess or strong odor....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RWT87ACNJVTX9"
+            },
+            {
+              "position": 4,
+              "snippet": "...It doesn’t have a strong Oder, it’s not oily or greasy....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2HYHY7ARTPGAW"
+            }
+          ]
+        },
+        {
+          "title": "Effectiveness",
+          "sentiment": "mixed",
+          "mentions": {
+            "total": 39,
+            "positive": 21,
+            "negative": 18
+          },
+          "summary": "Customers have mixed experiences with the pest control product: some report it works perfectly with zero fleas, while others say it doesn't work at all against them.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "This is very easy to put on my puppies and works great. They never get any fleas.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2NYUP9QH6YS8I"
+            },
+            {
+              "position": 2,
+              "snippet": "Doesn’t work and used only one and been finding fleas on the top of head. This product is way too expensive to not do what it says it suppose to do....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R250AN6613JMP3"
+            },
+            {
+              "position": 3,
+              "snippet": "I have been very happy with the results. This product took care of the fleas without causing any side effects to my precious pup.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2CW0GXBNN8IMK"
+            },
+            {
+              "position": 4,
+              "snippet": "I purchased this product for my PomChi puppy 4 months old. It DID NOT work! He still scratching for fleas....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R3M0L27WGU1XMT"
+            }
+          ]
+        },
+        {
+          "title": "Flea resistance",
+          "sentiment": "mixed",
+          "mentions": {
+            "total": 18,
+            "positive": 7,
+            "negative": 11
+          },
+          "summary": "Customers have mixed experiences with flea resistance: some report reduced scratching and no itching, while others mention their dogs still have fleas.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...Two weeks later, my dogs still had fleas....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2YLTTX0O0IUBQ"
+            },
+            {
+              "position": 2,
+              "snippet": "...I’m thrilled that it repels and kills pests like Deer Ticks, Brown Dog Ticks, and mosquitoes without requiring a bite, reducing the risk of Lyme...",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RWT87ACNJVTX9"
+            },
+            {
+              "position": 3,
+              "snippet": "...I noticed on May 10th that my dog has fleas. I don't request this product.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2YVVQR1ZVQJD"
+            },
+            {
+              "position": 4,
+              "snippet": "Worked for about a day on my dogs. Bad year for fleas",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R38OK8B661OWBB"
+            }
+          ]
+        },
+        {
+          "title": "Value for money",
+          "sentiment": "mixed",
+          "mentions": {
+            "total": 8,
+            "positive": 4,
+            "negative": 4
+          },
+          "summary": "Customers have mixed opinions about the product's value for money, with some finding it a great value while others consider it too expensive or a waste of money.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...Definitely recommend Seresto collar instead! (It is also cheaper per month and lasts 8 months.)",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RD5VCMUNR14MQ"
+            },
+            {
+              "position": 2,
+              "snippet": "...I won't buy it anymore until they change the dispenser. It is too expensive to lose so much product each use",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1U1XN3DQX1V95"
+            },
+            {
+              "position": 3,
+              "snippet": "Worth a try. Didn’t get rid of all fleas and I even did every three weeks . Ended up with a collar instead.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2DYAUA3SOETNA"
+            },
+            {
+              "position": 4,
+              "snippet": "...A waste of money.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R10LCQKT7IHNK4"
+            }
+          ]
+        }
+      ],
+      "images": [
+        "https://m.media-amazon.com/images/I/71EAe1EEHVL.jpg",
+        "https://m.media-amazon.com/images/I/71ZCgBfCL6L.jpg",
+        "https://m.media-amazon.com/images/I/71x9htS8+OL.jpg",
+        "https://m.media-amazon.com/images/I/71uUruAOaDL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 69,
+        "4 star": 7,
+        "3 star": 8,
+        "2 star": 2,
+        "1 star": 14
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Fast-Acting Flea and Tick Protection for My 4-Year-Old Terrier!",
+        "text": "I recently purchased the Vectra 3D for Dogs and Puppies (Gold, for Extra Small Dogs 5-10 lbs, 3-month supply) for my 4-year-old, 10-lb terrier, and it’s been a game-changer for keeping fleas and ticks at bay! This topical treatment, containing Dinotefuran (4.95%), Pyriproxyfen (0.44%), and Permethrin (36.08%), starts reducing flea feeding in just 5 minutes and kills fleas within 4 hours, which is perfect for my active terrier who loves romping through grassy parks. Living in an area where ticks and mosquitoes are common, I’m thrilled that it repels and kills pests like Deer Ticks, Brown Dog Ticks, and mosquitoes without requiring a bite, reducing the risk of Lyme disease and other vector-borne illnesses. It also protects against lice, mites (excluding mange mites), and biting flies, offering broad-spectrum coverage for up to 30 days per dose.Applying Vectra 3D is a breeze with its patented applicator. I part my terrier’s wiry coat at the base of his tail and apply a continuous line to his shoulder blades, as instructed, and the quick-drying, non-greasy formula sets in without leaving a mess or strong odor. My dog showed no irritation or discomfort, which is crucial since terriers can have sensitive skin. The treatment is waterproof after 24 hours, so his occasional puddle-jumping doesn’t reduce its effectiveness. As an eco-conscious pet parent, I appreciate that it’s an over-the-counter product with no prescription needed, and the packaging is minimal, reducing waste.Overall, Vectra 3D has kept my terrier flea- and tick-free, even during our long walks in tick-prone areas. I highly recommend it to owners of small dogs who need reliable, fast-acting protection that’s easy to apply and long-lasting. My terrier and I are both happier for it!",
+        "rating": 5,
+        "date": "August 3, 2025",
+        "author": "Marina Campbell",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFHWHB6GPKRYPJQPILCZADPMJCWA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/c8fd91ec-f344-4d42-98b3-1160cec8fadb._CR0%2C0%2C500%2C500_SX460_SX48_.jpeg",
+        "helpful_votes": "3 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "size": "3 Pack"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Best Rx strength OTC Flea Treatment, ( Vectra 3D is First Shield Trio Rx )",
+        "text": "Work at Banfield Pet hospital, we sell First shield trio it’s Rx only , had a rep from the manufacturer brand come in for a lunch and learn ,vectra 3D is actually First shield trio , compared both boxes same ingredients!This is Rx flea control that’s OTCAs a Vet Tech def recommend this to anyone who cannot go to the vet and get Rx flea control",
+        "rating": 5,
+        "date": "June 18, 2026",
+        "author": "Kevin",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AECQYI42LVEA6OEGECU3QCYXBRAQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/144dd27a-02d4-4966-99e2-986553446632._CR0%2C0%2C500%2C500_SX460_SX48_.jpg",
+        "verified_purchase": true,
+        "product": {
+          "size": "6 Pack"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Didn’t work against fleas",
+        "text": "Vectra 3D did not work at all against fleas. I bought it because our dog started to pick up a couple fleas in our backyard every couple days and wanted to try a topical solution. This was recommended by our vet, but this product did not deter or kill the fleas at all like it promises. Still kept getting fleas every day or two. It also made her coat terribly greasy and made her very itchy where it was applied, but at least she didn’t develop a rash. It is also very strong smelling, and the sprays I have did not work to cover the smell. Just ended up washing it off after a couple weeks and switched to a Seresto collar, which worked well in the past and is working great again with no more fleas. Definitely recommend Seresto collar instead! (It is also cheaper per month and lasts 8 months.)",
+        "rating": 1,
+        "date": "March 17, 2022",
+        "author": "JoshandShakila",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEY22CL36S7J37FTOLY3AKVOBB6A?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "3 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "size": "3 Pack"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Good stuff",
+        "text": "Works good, no real complaints. I do wish it lasted longer, but I think it lasted as long as it was supposed to.",
+        "rating": 5,
+        "date": "July 5, 2026",
+        "author": "Nad Reese",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGATSY5UPBJXDNPIXCVZC46UWNKA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "3 Pack"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Great so far",
+        "text": "Like the applicator as compared to others. My toy poodle has been itching and scratching for months while we used other flea, tick and mosquito products.The vet even put her on prescription medication that really didn’t stop the itching just made it a little less frequent.Tonight we applied this product and she hasn’t scratched once since the application. Not scratching once lasted for one evening.Update: She still gets her daily allergy pill and her itching seems less than before.It’s mosquitoe season and mosquitoes like black so I am guessing the mosquitoes probably bite her at least once as she is black.At this time I would say the product is awesome. I will update if things change.",
+        "rating": 5,
+        "date": "June 23, 2024",
+        "author": "cchunter",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AF2DGOKSV3VTH3VIA46OFWDKZLWQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "3 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "size": "3 Pack"
+        }
+      },
+      {
+        "position": 6,
+        "title": "Didn’t work had to end up getting soresto",
+        "text": "Worth a try. Didn’t get rid of all fleas and I even did every three weeks . Ended up with a collar instead.",
+        "rating": 3,
+        "date": "September 15, 2024",
+        "author": "flossiemae",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGXZONSGVCECDMMGRZ44ETDEQ5VA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "3 Pack"
+        }
+      },
+      {
+        "position": 7,
+        "title": "Very effective!",
+        "text": "Finally, a collar that got rid of all of my 2 Shih Tzu‘s fleas.Easy to use, have had no problem with the collar falling off we’re coming off even when these two get rowdy and wrestle",
+        "rating": 5,
+        "date": "October 4, 2025",
+        "author": "Loney Wilcoxson",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AF4LFOYIVGH66GFYKH6Y52RZOGKA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/71EAe1EEHVL.jpg"
+        ],
+        "verified_purchase": true,
+        "product": {
+          "size": "3 Pack"
+        }
+      },
+      {
+        "position": 8,
+        "title": "Vet recommended",
+        "text": "By week 3 this is wearing off, will find a flea or 2. Trying something different.",
+        "rating": 4,
+        "date": "July 18, 2023",
+        "author": "rainbows",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGB5PFAQ5V45JYYJY3IEBQ34JUWQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "size": "3 Pack"
+        }
+      }
+    ]
+  }
+}

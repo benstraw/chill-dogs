@@ -1,0 +1,411 @@
+{
+  "search_metadata": {
+    "id": "6a7ed623b13aa764bc9067d4",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/v7h-qztUr-XZZvLCNoK_KA/6a7ed623b13aa764bc9067d4.json",
+    "created_at": "2026-08-14 08:47:31 UTC",
+    "processed_at": "2026-08-14 08:47:31 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B071JS3MYK/?",
+    "raw_html_file": "https://serpapi.com/searches/v7h-qztUr-XZZvLCNoK_KA/6a7ed623b13aa764bc9067d4.html",
+    "total_time_taken": 13.43
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B071JS3MYK",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "categories": [
+      {
+        "position": 1,
+        "name": "Pet Supplies",
+        "link": "https://www.amazon.com/pet-shops-dogs-cats-hamsters-kittens/b/ref=dp_bc_1?ie=UTF8&node=2619533011",
+        "node": "2619533011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2619533011"
+      },
+      {
+        "position": 2,
+        "name": "Dogs",
+        "link": "https://www.amazon.com/dogs-supplies-training-beds-collars-grooming/b/ref=dp_bc_2?ie=UTF8&node=2975312011",
+        "node": "2975312011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975312011"
+      },
+      {
+        "position": 3,
+        "name": "Flea & Tick Control",
+        "link": "https://www.amazon.com/dog-flea-lice-tick-control/b/ref=dp_bc_3?ie=UTF8&node=2975384011",
+        "node": "2975384011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975384011"
+      },
+      {
+        "position": 4,
+        "name": "Topical Treatments",
+        "link": "https://www.amazon.com/b/ref=dp_bc_4?ie=UTF8&node=120957552011",
+        "node": "120957552011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=120957552011"
+      },
+      {
+        "position": 5,
+        "name": "Flea Drops",
+        "link": "https://www.amazon.com/dog-flea-drops/b/ref=dp_bc_5?ie=UTF8&node=2975389011",
+        "node": "2975389011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975389011"
+      }
+    ],
+    "asin": "B071JS3MYK",
+    "title": "Vectra 3D Flea and Tick Prevention for Extra Large Dogs Over 95 lbs 3‑Month | Kills and Repels Fleas, Ticks & Mosquitoes | Fast‑Acting, Waterproof, No Prescription Needed",
+    "link": "https://www.amazon.com/Vectra-3D-Mosquito-Treatment-Prevention/dp/B071JS3MYK/",
+    "link_clean": "https://www.amazon.com/dp/B071JS3MYK/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B071JS3MYK&device=desktop&engine=amazon_product",
+    "brand": "Visit the VECTRA 3D Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/61OiU7XqOaL._AC_SX300_SY300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/61OiU7XqOaL._AC_SL1200_.jpg",
+      "https://m.media-amazon.com/images/I/71t7QgzRd-L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71DryCdhcYL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71XMncMQrOL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.9,
+    "reviews": 21,
+    "bought_last_month": "100+ bought in past month",
+    "discount": "-8%",
+    "price": "$48.99",
+    "extracted_price": 48.99,
+    "price_unit": "$16.33 / count",
+    "extracted_price_unit": 16.33,
+    "old_price": "$52.99",
+    "extracted_old_price": 52.99,
+    "prime": true,
+    "delivery": [
+      "FREE delivery Wednesday, August 19"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "buy_new": {
+      "caption": "One-time purchase",
+      "price": "$48.99",
+      "extracted_price": 48.99,
+      "price_unit": "$16.33 / count",
+      "extracted_price_unit": 16.33,
+      "delivery": [
+        "FREE delivery Wednesday, August 19"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "shipper_seller": {
+          "text": "Amazon.com",
+          "details": {
+            "heading": "Shipper / Seller",
+            "content": "Amazon.com"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "gift_options": {
+          "text": "Available at checkout Available at checkout This item is a gift. Change",
+          "details": {
+            "content": "Add gift options at checkout"
+          }
+        }
+      }
+    },
+    "subscribe_and_save": {
+      "caption": "Subscribe & Save",
+      "price": "$46.54",
+      "extracted_price": 46.54,
+      "price_unit": "$15.51 / count",
+      "extracted_price_unit": 15.51,
+      "delivery": [
+        "FREE delivery Wednesday, August 19"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "shipper_seller": {
+          "text": "Amazon.com",
+          "details": {
+            "heading": "Shipper / Seller",
+            "content": "Amazon.com"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "subscription": "No fees. Skip or cancel anytime."
+      }
+    }
+  },
+  "item_ingredients": [
+    "Dinotefuran, Permethrin, Pyriproxifen"
+  ],
+  "item_specifications": {
+    "brand": "VECTRA 3D",
+    "item_form": "Drops",
+    "scent": "Unscented",
+    "item_weight": "0.07 kg",
+    "active_ingredients": "Dinotefuron 4.95%, Permethrin 36.08%, Pyriproxifen 0.44%",
+    "allergen_information": "Abalone Free",
+    "dog_breed_size": "Giant",
+    "unit_count": "3 Count",
+    "age_range_description": "All Life Stages",
+    "upc": "851321007120"
+  },
+  "about_item": [
+    "FLEA, TICK & MOSQUITO PROTECTION FOR DOGS: Vectra 3D provides powerful flea and tick prevention for dogs while also repelling mosquitoes. Each topical application delivers up to one month of protection.",
+    "FAST-ACTING TOPICAL FLEA & TICK TREATMENT: This fast‑acting dog flea and tick treatment begins reducing flea feeding in as little as 5 minutes and kills fleas within 4 hours on dogs—no biting required",
+    "PROTECTION FOR DOGS WHO DO MORE: Built for dogs with more everyday exposure - from yards and parks to trails, travel and outdoor family adventures.",
+    "MONTHLY TOPICAL ROUTINE: This monthly topical flea and tick treatment uses a single‑dose, direct‑to‑skin applicator with a quick‑drying, non‑greasy formula. Waterproof after 24 hours, making it a dependable dog flea treatment for real‑life conditions.",
+    "VET RECOMMENDED, NO PRESCRIPTION NEEDED: Used by veterinarians for nearly 20 years and available without a prescription."
+  ],
+  "product_description": [
+    {
+      "position": 1
+    }
+  ],
+  "product_details": {
+    "product_dimensions": "4.25 x 1 x 1 inches; 2.29 ounces",
+    "item_model_number": "D73840D",
+    "date_first_available": "June 7, 2017",
+    "manufacturer": "Ceva Animal Health",
+    "asin": "B071JS3MYK",
+    "best_sellers_rank": [
+      {
+        "text": "#52,585 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 52585,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#122 in Dog Flea Drops",
+        "extracted_rank": 122,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/2975389011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Flea Drops"
+      }
+    ],
+    "customer_reviews": "4.9 out of 5 stars",
+    "rating": 4.9,
+    "reviews": 21,
+    "brand_name": "VECTRA 3D",
+    "unit_count": "3 Count",
+    "age_range_description": "All Life Stages",
+    "upc": "851321007120",
+    "global_trade_identification_number": "00851321007120",
+    "included_components": "3 monthly doses",
+    "item_type_name": "Flea and Tick",
+    "model_number": "D73840D",
+    "manufacturer_part_number": "Extra Large Dog 95+ lbs",
+    "item_form": "Drops",
+    "scent_name": "Unscented",
+    "dog_breed_size": "Giant",
+    "item_weight": "0.07 kg",
+    "allergen_information": "Abalone Free",
+    "active_ingredients": "Dinotefuron 4.95%, Permethrin 36.08%, Pyriproxifen 0.44%"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B00008DFGY",
+      "title": "FRONTLINE Plus Flea & Tick Spot Treatment for Small Breed Dogs 5-22 lbs. (Orange) Count of 3 | Trusted by pet owners for over 20 years, kills fleas, ticks & chewing lice, waterproof 24 hr",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JIDPYuHwFBjlm2W2TXe2tDYAAAGf_3SjKgEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICCQVx78/clv1c_ek-IBfE3KsTWXmzhcEzHusHhJAMnst_PzyRyuj3GG-faRYdM11ifv3UrO-deM9ZuVNXob3MaktrSSbfKNq2AqtwOcxF5ksbLTwXLWoMjmUYGTRnKwnCK7bb9zs20ZvQz4npYvQdFsM40jAQ4KZoZ80_5IN-kBhXqkPTl2jWmbDeeWGgnSgQ1bKm4jCdduVDlb6m_XTDDzycIVeZONUTohimPFE03nNaykGyCOhUtL5Ma9VnpQ2AE_MAeJ5CBEKKioK27cIbQbrH00Bw_s0WL6ZbvqVpgdwLJ-yNCUXaY0iiJICE3g9ABjOt6j7ZNGHcw5DBxxgWHGBCJWHbEh5UofTuuv65VQK3kT3cD_qffXSOqk4RHMJjnDkTy3Bu5O2vjprEOuPWipbPP9I2qBG-4mQmmvSPyrYezf-j44YOCGtGB4Cri7yht0hGOAnNRfjI4YvNm4WlMLZZAr2RNr2Q-kkVW7cK3Xov_-TlRlmnvHTFjjBik3r6LvajpFfL_zDPiRipNhkJbSYFwoKe7S9rjloRzfxNAcKvKdMswss4SQU6UU0KRTDv7-LmpMpXImom7jq5YxDKK-bdpCzs5MYHxw2DKH_jci82VgE5_D3qjj7X6dJCClfr7WPmHrCfyqY57kLBhZ4IPrkJ2zKSlk9v-uX6tCJ_veYdPlVr9732861pm5vOKJ8Enbye5K5OYJ44uMaJHuMXHKVdXPhUAMdaDd_Czy7k5-K5MCYSDZ_SmlQC2fTAsAZzF7vDEv1Ts9dN4M_WpMLB2e1Uq6xXTSFERW8UJi2FLjRCXFmFGLAKqvoVWxNlPH2-2ObZDCFlSrmzH9Cfa2SF4rVMVfDRc4EF_4pJqGVuXrkakGg_OqycLRlGx_7oHuuqnC-lljJoc-tCudkRL_QJ_PNnT-zWPMeLrmJN7fv0tqccXu9fZRQlS7s2IqlU4dqnFai7Ed93c_OwfMALKxS-sIGvuIqbMjTp_V_79Pg_qLiOFpGZRI4niZnisYylJumXroqtuQCyVGGnFErWGpTwO31mmUmHl2Nz3dWgVd27E3insdEvO9PFXzCKTvzSnWwa3zJG1Zodz4N4arBJ2-TErBX9Y1rFqYVMaJ5aCpBcAdQ5-82QXzBm2WZmCgzKVQ_QU_Gc6CfHnXFoeVXgOyyfz7MPm7a_GHJGJO9YuaLAlpGLL0WPoPpVhmL-Y_A60FcW9RZInq16lPPm8TUoGLdyYic9Mm-HjylmioS_ao8E1byskcIjqTXZg-7pnzCUXRJ7IPsoGO2q0E5rliRFNT7zZgYfG-YLadY_auST9wrG3mvYLcwzfvVimD_dkpeN7tu_6IA-V1PRJ0qijBwb4AhpZnl0lybnTJny8ulP_jUVdow0om1x-1N0fWYjZfrpB0-SZNgVMjt5VnGIp8vXEFLXul7hDWzSR7UE7tBDbDd99FpS8YC_vdikXoXgoyV8G_6UuwEfnU-4xsm4hVPHAT9eZPt1ELWCnA2PxnwSLdspc1FhffC2bV6SUaY9s270TEioWhYfUFSySF2idwdmnVbcO8ZMkEUZLHM6LdpJHvbGYl64Dl-w/https://www.amazon.com/dp/B00008DFGY/?_encoding=UTF8&pd_rd_i=B00008DFGY&pd_rd_i=B00008DFGY&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=Hc1xf&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=ZQMBK7Y3AA7FH0DJSE21&pd_rd_wg=c7hvH&pd_rd_r=d0627c8e-9cc7-4f56-b146-5b35affa0204",
+      "link_clean": "https://www.amazon.com/dp/B00008DFGY/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B00008DFGY&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41TGjSYkg4L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/031cab12-95ab-4815-848c-07a499f0f9ea.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/031cab12-95ab-4815-848c-07a499f0f9ea.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.4,
+      "reviews": 49576,
+      "price": "$40.98",
+      "extracted_price": 40.98,
+      "old_price": "$42.99",
+      "extracted_old_price": 42.99
+    },
+    {
+      "position": 2,
+      "asin": "B06XKH9MRK",
+      "title": "TevraPet Activate II Flea and Tick Prevention for Dogs, Extra Large Dogs 55+ lbs, Topical Drops, 4 Month Flea and Tick Treatment",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JGcFxoIoVhnE0XbqV3d9EU0AAAGf_3SjKwEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICAhVxsj/clv1c_ek-wBfHXEsTW3uLbkz9lydv98LgzDJrDbVSoDj3GG3H8UsvzmRGv8Bk7QeLwFx4Fgk2OWTuiQ3E5-rQJBt1z_p-LWkJps6aWInWsvKbX1gouqhX4Wd6NME054uUYzqJi-TnrB5J666cIXEQB4ZB4ttTeqH0ckkH6qM70l_fKzo0ZFYNW6svpHRDtKpr_9cf_-3ajY0pKCTMQgUx9dvzku_vaXRhoFL611_hOAhJ1MbOzJQE-fGuwB09HFnHp-fPeUZ59pJjtR486vsdLbDgISWdpn1lAndCuZisrLlOBVGm5WOGsvtNs1yIpAapCp0pJ5dOKDh9ClbXtnmTs_Oh0-44dZWCspvn9f9QcpmiDElB0eSYzcy6hRofQZ2A8pDSuxAJAU2jn-McXnN7WOOMm-HkK3E4bm1GIDAq1MUGp2QNvdJwAkK2l79elqg8Yrn0WHf_786xeBbXzdvG1lqaNkHguUChWbQGu21TfYf4QaRQA7OJMQEnpDKi7vRN74Uq-wTsVzdwi5rmTgwsOUPeGgRhUJB_w2HDirokvLHQvauRYe2NgSo1AlMwf06c_M3owaeU5GCQMLwN1xjVwQv4cpJt45XrTomim1ZzcGP0nWe6M7umPkGHDuZ9t3OtSMV7x2zyI9DjsqBeW2s2dbT57jJd-x8aG8HIqHVEwH9NwJIkeqvJ9QVLThKOIj1FypXduD30VenpdyQVCLwCFWU_EaI9_HnRXn8TS0EUQe_AA8Mc5ZZngnUM3x-gwoHKqmjR3v0HGU5Ep1HIF70kwBa7ep1MYcIqkz4itwS9LNTwQ1K9LkUiVNbpyE74QRtAPREd05g-SMruA594baGODemEcpZOtDRgbVlzpJncnL3HU-efpK_l18Xxz-s7L6XrpUbUDImZc7uWWaNgufRPGm0ckLHGgR3UtZ-GkeNRnETIUoSO_TqCcd1C7QQvPLJslotIBzkEU3KO4I31PXq2sdM24eawnPgVfPfZ-JYr1PJnTpXWfOCXPfDKdRx5yUB00xTqvhrw7Arg8LGnnQHO54Au1QMd3C12UwD-IATlJOmpsb_HECtXXeE-5yoZIOI0dG3ZkUkq6zmu9mx8Agkm_ocnuiscHCjhqv7YazWqSC7qBVdEEZtGSo_Bk3Ge-SfPHUJg2MhmJE_9ZzCuy2JFt3UGI5pW2IDX4D9IpxPSJHp6oIFupb2iqx6WvgpTV9JVTmbXDh3Bo1_rci8szBX3cmrQzna6aylzn2U-vd5iLI4E9T1Dy5BJ6RPHgz6EXOCLclBbVwf5zbxHQ-j02jngJQxDuqtSPeV_yJh8XDE1NFIIK3hj9xfRoZbK1EqJaZfE64WRT5UVcpNqyPdRDctPD_HSs4VNzVeUxcQdco7NRSgMob7kdMFA8WbRuCLkt3KYL3XC7ISXcNKVWBOIz14cN_COrUF40kWVLyNlZ_B5EWDNDlDR-A-402Aww5UvpMjAxewCS0D-fuESH7uIGNwO9mYLrkJ_NsrR6po6rcIKXu9aBiPjz7ZsP5cpFE9BmY5mgFSxZqckFE7zN0pRtnt1a6NZKlRsvJ-PTPUZClwB4LA/https://www.amazon.com/dp/B06XKH9MRK/?_encoding=UTF8&pd_rd_i=B06XKH9MRK&pd_rd_i=B06XKH9MRK&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=Hc1xf&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=ZQMBK7Y3AA7FH0DJSE21&pd_rd_wg=c7hvH&pd_rd_r=d0627c8e-9cc7-4f56-b146-5b35affa0204",
+      "link_clean": "https://www.amazon.com/dp/B06XKH9MRK/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B06XKH9MRK&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51XF+Zbm11L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/1d7459d1-0c1d-4982-b7f0-f224486abe6a.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/1d7459d1-0c1d-4982-b7f0-f224486abe6a.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.2,
+      "reviews": 30199,
+      "price": "$24.97",
+      "extracted_price": 24.97
+    },
+    {
+      "position": 3,
+      "asin": "B07PWB9J43",
+      "title": "Capstar for Dogs (nitenpyram), Fast-Acting Oral Flea Treatment for Dogs Over 25+ lbs, Vet-Recommended Flea Medication Tablets Start Killing in 30 Minutes, 6 Doses | Ideal for Dogs 25+ lbs; Oral Tablet, No Mess; 6 doses; Fast Flea Knockdown",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JBWmnRIQQATXWbHgi71i4esAAAGf_3SjLAEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICBunRsQ/clv1c_ek-wBfHXUsbWHn2mJrbO8xPAyXQxfQsZvvmHPGn_tgGdBiXMcUq2E-S1fkx5OKn0BxYTg3MaOi3r8LjG8Ox63NBUe8LVbOP9aeLuJQghGaSyulfjDE4N1Ra6YPhMfqKRkESTa1NPMO3eq08BgKtRBYOe8F2cnB2qk2VTjbevwKCvOauZ4N3Kaqx2Qn9Sf_EuJf9SQsJ7P8dK0199vVCMofhrL1fX7DayVk7WxR16Uv0xtH_bCeaG3FlphCwp5gn5rv-50m1f2LrUQhgkkN-pqFKqe8182Qi-DYaeziP_rebw2NHDS6sDCHQXtsKOKP6VbIFYhWAPkasyGoNYnn3OdDyZ-yEkjX_VT7A72G3HmbNky5OgvsaSg16ydEY3F_p7m-2tnMO0Jti7EPTg4NZOcrYQXEC9YnP_kc7E30swFXXL0vzK-iI6bmsXQJPGc63LI7o_7GsCeHxccx3oq3gk5ZoAU_mC9VYZpAFKYpf-U-kOLkxlsjAQJKXHAQlVr002kdyKs3DOYQ1KdeHyETp_uCFOie51aLSpTsMJwSuH9O-6tqhBK0sBrhR-3ElKi4KL-9Xoe2ZfKGfqkqvBqLri3yZsiamRCtRpHK3IZZ_2a4l5hN_NRN-lJp2FYdvjEXLiJVwNIqC3bIDTnnWOlyinnjWq9X_FnUa1qSalzvnPthdDzRNw9Zrl1UFTwraUgn2iE4wAzadt6jfhmU_kSJqN2lOUvf4XKYGbwJ-KyvDWO0MfbV7HqRiVq4jXFQcbL4EbbW8G_AApFQJRFmLGx0bDNmg1n5Gp9b_-xHaCgxXURWtXm9cz6ggOcSIdoVD3lmzfdFbVM82EjgCctBI1-hAzpKwlcumYLFG4ZyflLOJJa5k2sjEAdSWHjc2fJB3VmFCAcSl2rdZCzAhq3UVkQPXzFkzWmFYP29p5JLPX1PuMdbN80_uRJ0odAIiUWgzegHUbWI9ZkopHNWmdnd_qvk2SEM3clSBCWpPYGYffmf5-X7f6LW3opTqv-BC1d7UyYCejzDa9J4YHUM9hVfs_g6lo4MnN9xqgUrgAxKu1-P1tPPCzWC_kDerLYr9klZ-PBiG8tDCkavzsMvU1CLhP3cDGTy2aupGAOU2z9iYb68aqyfMEVkwKLyGfFrpyobAHv3Akkw4g-CN6aZzTOnji_oogC2iDqlhfsrUd2Os0CBE9M9spQqy23WslN4laQENT1TchfvW7JFAbCZ_kXYjjXVrGA_jk4RHu4Zk7UX_QER_vaZr8YzJsaZfLh1BN7-3yuYOnUEUebtBg7YP1plSORSYRaZhADSCr5UcNuXreKU61hoj_ZXA_wt9hAa8l1DL9uZoSzvKTNIptIXNvWEa8jv8SH0tXZjIKaK5hi6E14R0_SrQ59iPqV8rSJNi4yHu57wLQg5LvxFiSdgTrH18qdUh59X9UCwkf-fFogZ8evFPaWdC11hx4xStV6Y9n7Y7hIc-ruuMbhmRYfb6byINh3ks8t-rhLes8jQGqdMKOaeKgsCqWHtZeBXcNKR0zjUajDRV7aNu3Sd6fIND6h2rLHFH8STS10eHb22c_ER1FgO2QQoYZ/https://www.amazon.com/dp/B07PWB9J43/?_encoding=UTF8&pd_rd_i=B07PWB9J43&pd_rd_i=B07PWB9J43&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=Hc1xf&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=ZQMBK7Y3AA7FH0DJSE21&pd_rd_wg=c7hvH&pd_rd_r=d0627c8e-9cc7-4f56-b146-5b35affa0204",
+      "link_clean": "https://www.amazon.com/dp/B07PWB9J43/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07PWB9J43&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41+BqSMUk2L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/870b8b58-4af9-47f1-b72b-bbbf0b63fe92.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/870b8b58-4af9-47f1-b72b-bbbf0b63fe92.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.2,
+      "reviews": 32725,
+      "price": "$42.97",
+      "extracted_price": 42.97
+    },
+    {
+      "position": 4,
+      "asin": "B0CGHKHYK6",
+      "title": "Woyamay 4 Pack Flea Collar for Dogs, Flea and Tick Prevention for Dogs | 32 Months Dog Flea and Tick Treatment, Adjustable Dog Flea Collars, Dog Flea Treatment Collar, Flea Treatment for Dogs",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JKbj3CHu-bzQVvtjCYk7bLUAAAGf_3SjLQEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICAa4qwN/clv1c_ek-wxfHTEsbWDdGAtG9pyfhI6sEXvb5fRm67TmcM34Ng8fbjJkqT_oeowuMGOfF4fZrnYFH-aHM7etywjtFW2XnzcgvZ9aby_UnZNglNHNQ7iZv-EFILlRa5Zv9cPiKR8WSXj6CgJv3ZS44Zjq_JATnJ6F2dl20qkvXRTrCr2LzP-SqatKK8maQLlzjx3OCUWaKjzTlJEjvE_dSUJ0lBnKMpt1-4juRUZJ0LcTElYLHCin57i5TDEWgpPOC_OUP1Qjv8kbqBjetyK5VIC35cdpnqZ4JSX8szm_n-bUIsnfbGz9VYVi1tO77fF16yKZegO9v5xN7hZ7F6cuh6xUbs6ktvjd3VWyjeIaEjOJoPU3MBERzJ5_Kh5itqhYtkQQbj5Ohjppn7y9MmFSoRuvOi3C2o3c07S4Ht1p9uBZc1MRS6OASPSE3isWMi2EJeNwlxvwpFENTYZLrmRdls36uGlYPEhRolSA9nCXXZIIm7vn9ZUW-boQkQZmrEGWdZq1S9FzlH2BPNtfN8nGCI6MiQxPVSxE6LfjKoTdccCEmTt84_2IKKXXKlIwis042qhwKygB1qszlnp-iFnm-BqL1iKWY5bf4QJQDIOP0PEHZlziuJdFb6dZukJLQSBownmCe-RKoZyls2FTFJokNzKOWNXmcsDc5NQ8-c2itnAySPKuvC7WBDy2b_zhsx2d7QIubysMWqOLOUQOWZ-pWA7ghYb4oKXUnwFfmpkYc6DKD21Um-dP_wzJhEM9ADuT84qfXlyZ2Vc4_W5lWAthYNv8Ql-51l2cS-fH5egnk5T59aPAHGI_rjSFrg5J6hpPCiTofICr_2zk-johnEpVeX_xWg_KYqybScy2TTdlXY0QlZVwiwFp3Q5GKQ2j0Gaeub58fjiA1uK89WPHqBajNeOE5KvLrKUXFdP8zDK7XRfSnByqt4TVEeV0NDa2ZwUL7CGBJBxYWLqi-0Stw39_3mKN_fEam0jzTM93MmWSlmIJgUT5kILGtBxTsDo6AOsIgOKNhR2eI82kQEVgRv6qRMMxlTDEItvKqKfcOCw67S3zLx4TJ2dA2zhdDTrLcRpmmrSF3pDUwoWo7icFHZ-1qnlXGU4GaE2IrOukNQv5opXdycHYIkJBF5RplVvS3pTR_SOIxBQLC-kws26iJ11HXmPaOpCoDzN58JizGKQJKd8ZGUWW3Q3sAAubwEgdUM0ONqXejOO6Ey7yVvyNZtaDV1BMnLpHLTqbPchWMNaDaiRmLLiZjMO6_S_6lLoMcgZxG5XXcLBAPwTgVB-i4WQ6HoEBqyVYQKChWxgQ2w-letEOFo7UhXlw5jK4WxZaioeqdnWnqQtTVonDdxYphnUrW9oURVVWVODpQI8SzSf6b7bSl82CeUuCOscXzRn5mT0KPlgotneWs47-xcB5wSLHp4JzOIwXgEkdjugVkR8r6jhN027_t8nrpbEXPndtBpP4WxmFjeNvnhtoDcWDYK3UJm_QSLBVPxh4eBwugR76h3PkuJfOF6th52Z3Trr_hhAWkJXSdOb6_gyTmKsBDj3wRESaojf7_C6SIpHhA87FmWuzKSIbgzY6aFheRHyBN5wV649iUGdTDx1qIkaA/https://www.amazon.com/dp/B0CGHKHYK6/?_encoding=UTF8&pd_rd_i=B0CGHKHYK6&pd_rd_i=B0CGHKHYK6&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=Hc1xf&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=ZQMBK7Y3AA7FH0DJSE21&pd_rd_wg=c7hvH&pd_rd_r=d0627c8e-9cc7-4f56-b146-5b35affa0204",
+      "link_clean": "https://www.amazon.com/dp/B0CGHKHYK6/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CGHKHYK6&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51NzHtrR9kL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/3adcd370-f484-40d5-b2b3-f432783e1852.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/3adcd370-f484-40d5-b2b3-f432783e1852.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.1,
+      "reviews": 328,
+      "price": "$23.74",
+      "extracted_price": 23.74,
+      "old_price": "$24.99",
+      "extracted_old_price": 24.99
+    },
+    {
+      "position": 5,
+      "asin": "B071G1CW6Z",
+      "title": "Vectra 3D Flea and Tick Prevention for Small Dogs 11-20 lbs, 3‑Month | Kills and Repels Fleas, Ticks & Mosquitoes | Fast‑Acting, Waterproof, No Prescription Needed",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JNIt5aHm7AaeKFS6hPyfWMgAAAGf_3SjLgEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICCH713r/clv1c_ek-wxfHXLcTWDVVAWi4kasJ9BJ4eIBZbFSLRuYnxuw-BZLpw9bTT3pJrntmHPoTyVCzLbHUanNU2OmewDjOWQqtyVM09fEbv-G_WNrtM3Ubnq5G-SwpOg8Hvksl0pWUrI5AQvvl_qxu2oNGDmneLru6GpNDsttTqliTixXPyjCUcWn1R9g2F9QvylEUftAeMJN3RpDyzHQGMjTSdoBjBdwPRj328gMQcdIdV5ec36bVCUzmQzqaDJx0IthAYA6V_WDmrJFaIG8MqUQthIhC7_I4WeYLs7gx3uPNnjRhwUNPJKupy6cyX3iubgXI23F51HrHQUCGvVJC0GiUEdUHFrU4moaTLx2pEZD_45h5M2qhUwxNG2MZC3-AcyXPUlwJu0TtlNdl1yvcF19cli4BvZ43xddBPGPPpoGxs32mz2objqyL2NXAVfgWLkTXB-I8ZQ71BuxEui9U4Z4vmXFwWC8IIy-4r978TGAAITwtMHHpqmFEioq2sYKktghR_fywDUAbH8Te8smHRXOKwRSSzl0mu17Sa3iDUxjnsli4hVpnsUZstu2SY82s4zGJzgLug4Ey8OneLeyzG3XkG-urDqsJ9G53HHt_gyufZ4W5uzI9FZO-CiGXHHRNn_mPSybHIr5937zdXx6QqnTqr34A1fvFWzBSPe6RQzxAuCeBYNavC6XBPS2Z5jhsz2RzAqpXSqMWqNPOMwOWV-p2C7gxY74oNW0lyFXnokef6D6A2xUmedD-wxIRCcbBi_HwaDDb-W1GQ0Srrlp_TpkC_zhEQq45ovJZKhRAXBCiTcFfzZa9zxF7NijO2GAPeWkw0uaMyDun3dQMn0e1qJRyJ5Jw9rzaTMNwBKMi4ZcCTBIKxr6jOvaSENuIGP7vJ9sD8HjWOOVRUCrcIDQ3iuQ3t0nx6XahMRkQVL8zj8rUYbIyIwxdHjtuc6ZRKUzoeK86954qefTFF99RqBO_ZSrMdEnwUev2Ar1Ob4wHxhWlm0KiWUPc2qWS80RXggM5gL4sGKNxRmRSAFY3eP62b9AYaKWbSBrCEcwzWs6wxqp-WZWMyeoERbFPPDC1J1VhjA-t6dr34baLMnGOUPgvfJS1gNuAMbIxZ60f4NoUTDXUwC6JqNqohcC0HoDe6ndEjcFR8PbSIshKE5V1TedLIQuqtBa4WJKnyx-MMGm5XPdQIUcbfp6kLZt77Iw1LqodpFY08VGstpBup_lcyDBQE6PDRRVHLT2g2swYuPfZEvNQ0exYRnVSG1Zxvj_fnxWVLWXn89kxQT7-R1TEfl-JTKq1nU67YQpzw_BVMifG-uLQVPtX6my0h22ZqJWczyZ7xxMxyIJQlGnMjYliLkHTBD6ufyI-AsEvs0sIAALQCKNlf0F90edj7jPp-pYPQfz5KcHBN-PGl06s-BR1VDTXdUHpHKvvgZp-jzIN5F1-hENlfUBZwWCxh7uq1R4z7qBJvE3PsisxPs1dF6mQAaJjhUquMk-slYGSF-Q1E9eOzfrwpfg39de4jn7ZbwcDDsvqpbighIQ-9uMy-cr3JHmCraX6J51DnSberOTyKst1kJ2iU-DSINWov0jsFgl6OIp-SXHGAc1VHN-Nc7yHFunyC/https://www.amazon.com/dp/B071G1CW6Z/?_encoding=UTF8&pd_rd_i=B071G1CW6Z&pd_rd_i=B071G1CW6Z&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=Hc1xf&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=ZQMBK7Y3AA7FH0DJSE21&pd_rd_wg=c7hvH&pd_rd_r=d0627c8e-9cc7-4f56-b146-5b35affa0204",
+      "link_clean": "https://www.amazon.com/dp/B071G1CW6Z/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B071G1CW6Z&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51-HtSuCNkL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/335c18f8-aacf-474a-9c30-7787bbce10dd.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/335c18f8-aacf-474a-9c30-7787bbce10dd.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.4,
+      "reviews": 949,
+      "price": "$49.99",
+      "extracted_price": 49.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "customer_reviews": {
+        "5 star": 93,
+        "4 star": 7,
+        "3 star": 0,
+        "2 star": 0,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "it works and easy to use",
+        "text": "Easy to use, and far cheaper here than the vet. I've used Vectra on my dogs for years. If a tick does get on them (Rare) it dies immediately. My dogs spend a lot of time in the North woods where where I find 15-20 ticks crawling on myself, but none on the dogs",
+        "rating": 5,
+        "date": "August 4, 2026",
+        "author": "Amazon Customer",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEUUYYW5MFX4DR42EBSZUDVTVV3Q?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "3 Pack"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Works well",
+        "text": "Love it! Other products have our dogs a chemical burn on their necks This works great for our 5 dogs We used to have to do daily tick checks when they came in from outside now we still do random checks but never seem to find any ticks and if we ever do they’re dead ones stuck in their coats.",
+        "rating": 5,
+        "date": "July 9, 2026",
+        "author": "Tami Wilson",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AG7WFBF6HNFYCIJ3ZKPMVXLSOMLA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "size": "3 Pack"
+        }
+      },
+      {
+        "position": 3,
+        "title": "It works!!!!",
+        "text": "We have used this for years, our dogs are in the woods ,lakes ,etc frequently. We have never had a issue with reactions to it and we have had many dogs.",
+        "rating": 5,
+        "date": "June 20, 2026",
+        "author": "reggie rauschnot",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AE2PH5C5KDLZQYURPHRI4YKBNK5A?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "size": "3 Pack"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Great stuff",
+        "text": "Got these from vet last year cost twice as much and they work wonderfully",
+        "rating": 5,
+        "date": "June 14, 2026",
+        "author": "KINGFISHY",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHU2MEDLNGJ7F4J6YLG3WVJQTKKQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "3 Pack"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Work well",
+        "text": "I have been using this for years on my 260 pound mastiff and never had any issues with fleas or ticks.",
+        "rating": 5,
+        "date": "July 7, 2025",
+        "author": "Kim Reid",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGLKMR4NNOLFMOSUGOTZ6IN65ILQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/24ed21c8-062e-4eaf-bda2-15ea3ca91a1b._CR0%2C0%2C375%2C375_UX460_SX48_.jpg",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "size": "3 Pack"
+        }
+      },
+      {
+        "position": 6,
+        "title": "Flea meds dogs",
+        "text": "Love this product",
+        "rating": 5,
+        "date": "June 27, 2025",
+        "author": "Alexis",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AECE56WZFSA5TZ4G73BYT5YM6OLQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "size": "3 Pack"
+        }
+      }
+    ]
+  }
+}

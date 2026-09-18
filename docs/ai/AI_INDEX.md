@@ -65,6 +65,7 @@ You are starting any task and need to know which docs apply.
 **Read:**
 - [`affiliate/amazon-associates-rules.md`](affiliate/amazon-associates-rules.md) — Required component, tag, and rel attributes
 - [`affiliate/product-data-rules.md`](affiliate/product-data-rules.md) — Data file locations, how to add products, check:amazon, check:asins
+- [`engineering/product-variants.md`](engineering/product-variants.md) — Products sold as several listings: sizes, pack counts, colorways
 - [`affiliate/disclosure-rules.md`](affiliate/disclosure-rules.md) — When and where to show disclosure
 - [`writing/product-copy-rules.md`](writing/product-copy-rules.md) — Language rules for product descriptions
 

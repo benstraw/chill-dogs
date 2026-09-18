@@ -12,7 +12,7 @@
  */
 
 import { productCatalogItems } from '../src/data/product-catalog';
-import { getAmazonOfferEntries } from '../src/data/products/offers';
+import { getAllAmazonOfferEntries } from '../src/data/products/offers';
 import {
   DEFAULT_AMAZON_CACHE_THRESHOLD_DAYS,
   isCacheEntryStale,
@@ -119,7 +119,7 @@ const OUT_DIR = join(dirname(fileURLToPath(import.meta.url)), '..', 'src', 'data
 await mkdir(OUT_DIR, { recursive: true });
 
 // --- Build product list ---
-const allProducts = getAmazonOfferEntries(productCatalogItems).map((p) => ({ asin: p.asin, name: p.name }));
+const allProducts = getAllAmazonOfferEntries(productCatalogItems).map((p) => ({ asin: p.asin, name: p.name }));
 
 const selectedProducts = singleAsin
   ? allProducts.filter((p) => p.asin === singleAsin).length > 0

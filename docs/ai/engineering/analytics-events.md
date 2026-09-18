@@ -93,6 +93,7 @@ track('hero_impression', { page: 'home' });
 | `email_signup_submit` | Form submitted | — |
 | `search_query` | User search produces results (fired after 150 ms debounce) | `query`, `result_count`, `filter` |
 | `search_result_click` | User clicks a page or product result card from `/search/` | `result_href`, `result_title`, `result_type`, `query` |
+| `product_variant_select` | Click on a size/pack/colorway chip in a `ProductVariantPicker` | `product_id`, `variant_axis`, `variant_option`, `page_slug`, `position` |
 
 Section collector hero events emitted before August 10, 2026 include
 `variant: "c"`. The section hero variant system was retired on that date, so
@@ -125,6 +126,19 @@ Merchant links fire `affiliate_outbound_click`. Amazon links also fire `amazon_o
 ```
 
 Never use a plain `<a>` for Amazon links — tracking and rel attributes are enforced by `AffiliateLink.astro`.
+
+### Variant properties
+
+Cards with a size/pack/colorway selector add `variant_option` and `variant_axis` to their affiliate click events, so
+variant performance is a breakdown on the existing dashboards rather than a separate event.
+
+Two naming traps: `variant` is already the CTA button style (`primary` / `secondary`), and section hero events before
+August 10, 2026 used `variant` for the retired A/B system. Product variants are always `variant_option` /
+`variant_axis`, never `variant`.
+
+The selector chips themselves are plain links with no `data-track` — only the CTAs fire affiliate events, so a card
+with a picker and a card without produce comparable click counts. See
+[`product-variants.md`](product-variants.md).
 
 ---
 
