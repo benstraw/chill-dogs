@@ -443,9 +443,9 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       {
         kind: 'product_section',
         id: 'bath-brushes',
-        heading: 'Bath brushes and shampoo scrubbers',
+        heading: 'Bath Brushes',
         intro:
-          'A bath brush does two jobs at once: it works shampoo down through the coat to the skin where dirt and dander sit, and it gives you a reason to run your hands over the whole dog. Pick on coat type and on how the brush stays attached to a wet hand.',
+          "A bath brush works shampoo down through your dog's coat to the skin where dirt and dander sit.",
         positionOffset: 6,
         columns: 3,
         visibleCount: 6,
