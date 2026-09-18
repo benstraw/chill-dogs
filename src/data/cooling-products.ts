@@ -17,6 +17,7 @@ export interface CoolingProduct {
   offers?: AffiliateOffer[];
   bullets: string[];
   image?: { src: string; alt: string };
+  images?: readonly { src: string; alt: string }[];
   rhysApproved?: boolean;
 }
 

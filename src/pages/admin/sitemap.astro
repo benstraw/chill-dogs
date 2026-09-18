@@ -1,20 +1,19 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
+import AdminLayout from '@layouts/AdminLayout.astro';
 import { getCompleteSitemapSections } from '@data/sitemap-inventory';
 
 const allSections = await getCompleteSitemapSections();
 const totalPages = allSections.reduce((count, section) => count + section.pages.length, 0);
 ---
 
-<BaseLayout
-  title="Content Sitemap"
-  description="Hidden editor-facing sitemap for working through current chill-dogs page titles and routes."
-  noindex={true}
+<AdminLayout
+  title="Sitemap"
+  description="Internal sitemap for reviewing current Chill-Dogs page titles, routes, page types, and share previews."
 >
-  <section class="content-sitemap container">
+  <section class="admin-sitemap">
     <div class="intro">
-      <p class="eyebrow">Hidden Editor Page</p>
-      <h1>Content sitemap</h1>
+      <p class="eyebrow">Admin</p>
+      <h1>Sitemap</h1>
       <p class="lede">
         A working list of current page titles and routes for editorial review. This page is set to noindex and is intended for internal use only.
       </p>
@@ -56,12 +55,11 @@ const totalPages = allSections.reduce((count, section) => count + section.pages.
       ))}
     </div>
   </section>
-</BaseLayout>
+</AdminLayout>
 
 <style>
-  .content-sitemap {
-    padding-top: var(--space-3xl);
-    padding-bottom: var(--space-4xl);
+  .admin-sitemap {
+    width: 100%;
   }
 
   .intro {

@@ -4,6 +4,7 @@ import type { ProductCatalogItem } from '@data/product-catalog';
 import type { PageRef } from '@data/product-page-map';
 import { getOffers } from '@data/products/offers';
 import { merchants } from '@data/products/merchants';
+import { shopProductRoute } from '@data/routes';
 
 interface Props {
   product: ProductCatalogItem;
@@ -12,6 +13,7 @@ interface Props {
 
 const { product, appearsOn = [] } = Astro.props;
 const offers = getOffers(product);
+const detailHref = shopProductRoute(product.id);
 
 const pillarLabels: Record<string, string> = {
   cooling: 'Cooling',
@@ -28,7 +30,7 @@ const pillarLabels: Record<string, string> = {
   data-category={product.category}
   data-name={product.name.toLowerCase()}
 >
-  <div class="card-image">
+  <a class="card-image" href={detailHref} tabindex="-1" aria-hidden="true">
     {product.image ? (
       <img src={product.image.src} alt={product.image.alt} loading="lazy" />
     ) : (
@@ -41,13 +43,13 @@ const pillarLabels: Record<string, string> = {
         <ellipse cx="32" cy="42" rx="4" ry="2.5" fill="currentColor" opacity="0.2"/>
       </svg>
     )}
-  </div>
+  </a>
 
   <div class="card-body">
     <span class={`pillar-badge pillar-badge--${product.pillar}`}>
       {pillarLabels[product.pillar] ?? product.pillar}
     </span>
-    <h3 class="card-name">{product.name}</h3>
+    <h3 class="card-name"><a href={detailHref}>{product.name}</a></h3>
     <ul class="card-bullets">
       {product.bullets.map((bullet) => <li>{bullet}</li>)}
     </ul>
@@ -93,7 +95,24 @@ const pillarLabels: Record<string, string> = {
     transform: translateY(-2px);
   }
 
+  .card-name a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .card-name a:hover {
+    color: var(--color-link);
+    text-decoration: underline;
+  }
+
+  .card-name a:focus-visible {
+    outline: 2px solid var(--color-link);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
   .card-image {
+    display: flex;
     aspect-ratio: 4 / 3;
     background: #f5f5f0;
     overflow: hidden;
@@ -167,12 +186,27 @@ const pillarLabels: Record<string, string> = {
     margin: 0;
   }
 
+  /* Markers match ProductBulletList on the converter cards. The global reset
+     clears list-style, so without one the indent is reserved and nothing is
+     drawn — unpunctuated bullets then read as one run-on paragraph. */
   .card-bullets {
     font-size: var(--text-xs);
     color: var(--color-text-muted);
     line-height: var(--leading-relaxed);
     margin: 0;
-    padding-left: 1rem;
+  }
+
+  .card-bullets li {
+    position: relative;
+    padding-left: var(--space-md);
+  }
+
+  .card-bullets li::before {
+    content: '+';
+    position: absolute;
+    left: 0;
+    color: var(--pillar-link);
+    font-weight: var(--weight-bold);
   }
 
   .card-footer {

@@ -3,7 +3,7 @@ title: Product Copy Rules
 type: canonical
 domain: writing
 status: active
-updated: 2026-05-03
+updated: 2026-08-23
 tags:
   - chill-dogs
   - writing
@@ -35,12 +35,35 @@ Never: `vet-approved`, `vet-recommended`, `clinically proven`, `proven to`, `gua
 
 See full vet and health claim rules at [`medical-and-vet-claim-guardrails.md`](medical-and-vet-claim-guardrails.md).
 
-### Do not claim hands-on testing unless it happened
+### Claim hands-on testing only for products that carry `handsOn`
 
-The site is research-based, not hands-on review-based.
+Most of the catalog is researched rather than handled, so research language is the
+default. Some products genuinely are used, though, and for those the copy should say
+so — understating real experience is its own kind of inaccuracy.
 
-- Do not write: "we tested," "in our testing," "we tried," "in our hands-on review."
-- Do write: "based on our research," "we compared," "we looked at," "customer reviews note."
+The `handsOn` field on the product record is the source of truth. It carries `since`
+(when the product was first used) and `note` (what was actually done with it), and it
+is set by hand only when that is true. See `ProductEditorialFields` in
+[`src/data/products/types.ts`](../../../src/data/products/types.ts).
+
+**Product has no `handsOn` field** — write research language:
+
+- "based on our research," "we compared," "we looked at," "customer reviews note."
+- Never: "we tested," "in our testing," "we tried," "in our hands-on review."
+
+**Product has `handsOn`** — first-hand language is allowed, and should stay inside what
+the `note` actually covers:
+
+- Write what was done, not what it proves: "we used this on a week of desert hikes" is
+  grounded; "we tested this against every competitor" is not, unless that happened.
+- One summer with one dog is one dog's experience. Say so rather than generalizing it
+  into a durability or safety verdict.
+- Everything else on this page still applies. Hands-on use does not license a vet
+  claim, a health claim, or "best" as an objective fact — see
+  [`medical-and-vet-claim-guardrails.md`](medical-and-vet-claim-guardrails.md).
+
+If a product was handled but has no `handsOn` field yet, add the field in the same
+change as the copy. Copy and record ship together, never one without the other.
 
 ### Do not use "best" as an unsupported superlative fact
 

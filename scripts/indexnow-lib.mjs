@@ -1,7 +1,6 @@
 const PAGES_PREFIX = 'src/pages/';
 const EXCLUDED_EXACT_ROUTES = new Set([
   '404',
-  'content-sitemap',
   'privacy-policy',
   'terms',
 ]);
