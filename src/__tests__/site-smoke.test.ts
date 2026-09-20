@@ -239,6 +239,7 @@ describe('site smoke tests', () => {
     expect(links).toEqual(
       expect.arrayContaining([
         '/gear/best-dog-gps-trackers/',
+        '/gear/aorkuler-gps-dog-tracker-review/',
         '/gear/fi-dog-collar-review/',
         '/safety/what-to-do-if-your-dog-runs-away/',
         '/travel/dog-road-trip-gear/',
@@ -247,6 +248,42 @@ describe('site smoke tests', () => {
     expect(headings).toEqual(
       expect.arrayContaining(['GPS Trackers & Escape Safety', 'Trail & Emergency Prep'])
     );
+  });
+
+  it('renders the Aorkuler field-review shell and comparison progress entry', () => {
+    const reviewDoc = readBuiltPage(path.join('gear', 'aorkuler-gps-dog-tracker-review', 'index.html'));
+    const comparisonDoc = readBuiltPage(path.join('gear', 'best-dog-gps-trackers', 'index.html'));
+    const tocLinks = Array.from(reviewDoc.querySelectorAll<HTMLAnchorElement>('.toc a'));
+    const schemas = Array.from(
+      reviewDoc.querySelectorAll<HTMLScriptElement>('script[type="application/ld+json"]')
+    ).map((script) => JSON.parse(script.textContent || '{}'));
+
+    expect(reviewDoc.documentElement.getAttribute('data-pillar-theme')).toBe('gear');
+    expect(reviewDoc.querySelector('link[rel="canonical"]')?.getAttribute('href'))
+      .toBe('https://www.chill-dogs.com/gear/aorkuler-gps-dog-tracker-review/');
+    expect(reviewDoc.querySelector('h1')?.textContent).toContain('Aorkuler GPS Dog Tracker Review');
+    expect(reviewDoc.querySelectorAll('[data-image-placeholder]')).toHaveLength(8);
+    expect(reviewDoc.body.textContent).toContain('Aorkuler supplied the tracker used for this review at no cost');
+    expect(reviewDoc.body.textContent).toContain('Draft — do not publish yet');
+    expect(reviewDoc.querySelectorAll('article [data-affiliate="true"]')).toHaveLength(0);
+    expect(schemas.some((schema) => schema['@type'] === 'Article')).toBe(true);
+
+    for (const link of tocLinks) {
+      const href = link.getAttribute('href');
+      expect(href?.startsWith('#')).toBe(true);
+      expect(reviewDoc.querySelector(href!)).not.toBeNull();
+    }
+
+    const converterLink = reviewDoc.querySelector<HTMLAnchorElement>(
+      `a[href="/gear/best-dog-gps-trackers/"][data-track="collector_to_converter_click"]`
+    );
+    expect(converterLink).not.toBeNull();
+
+    const progressCard = comparisonDoc.querySelector('.review-progress-card');
+    expect(progressCard?.textContent).toContain('Field review in progress');
+    expect(progressCard?.querySelector('a')?.getAttribute('href'))
+      .toBe('/gear/aorkuler-gps-dog-tracker-review/');
+    expect(progressCard?.querySelector('[data-affiliate="true"]')).toBeNull();
   });
 
   it('renders dynamic section collector inventories for articles and converters', () => {
@@ -845,6 +882,7 @@ describe('site smoke tests', () => {
     expect(sitemap).toContain('/cooling/best-cooling-products-for-dogs/');
     expect(sitemap).toContain('/cooling/car-cooling-for-dogs/');
     expect(sitemap).toContain('/travel/dog-road-trip-gear/');
+    expect(sitemap).toContain('/gear/aorkuler-gps-dog-tracker-review/');
     expect(sitemap).toContain('/calming/best-calming-products-for-anxious-dogs/');
     expect(sitemap).toContain('/calming/best-lick-mats-for-dogs/');
     expect(sitemap).toContain('/calming/dog-fireworks-anxiety-checklist/');
@@ -874,6 +912,8 @@ describe('site smoke tests', () => {
     expect(rssXml).toContain('Dog Fireworks Anxiety Checklist: What to Do Before, During, and After the Fourth of July');
     expect(rssXml).toContain('/calming/how-to-prepare-a-calm-room-for-fireworks-night/');
     expect(rssXml).toContain('How to Prepare a Calm Room for Fireworks Night');
+    expect(rssXml).toContain('/gear/aorkuler-gps-dog-tracker-review/');
+    expect(rssXml).toContain('Aorkuler GPS Dog Tracker Review');
   });
 
   it('does not render escaped HTML tags as visible text on any page', () => {

@@ -293,6 +293,22 @@ site_system:
       metric: "amazon_outbound_click rate (placeholder CTAs pending affiliate setup)"
       routes:
         - "/gear/best-dog-gps-trackers/"
+      notes: "Includes an unranked Aorkuler field-review-in-progress path; Aorkuler is not added to the canonical product catalog, ranking, or purchase CTAs until field testing and fact-checking are complete."
+
+    - name: "Aorkuler GPS Dog Tracker Review"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Answer Aorkuler-specific research intent and route readers to the GPS tracker comparison converter"
+      metric: "collector_to_converter_click to /gear/best-dog-gps-trackers/"
+      routes:
+        - "/gear/aorkuler-gps-dog-tracker-review/"
+      notes: >
+        Browser-previewable field-review shell for a free review unit tested with Rhys.
+        The draft PR remains unmerged until controlled field testing, source verification,
+        real images, FAQ answers, comparison conclusions, final metadata, and the verdict
+        replace all editorial placeholders. The gear collector prioritizes it with the
+        existing tracker articles, and the GPS comparison links to it without ranking,
+        pricing, affiliate CTAs, or canonical product data.
 
     - name: "Fi Dog Collar Review"
       type: "collector"

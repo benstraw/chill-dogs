@@ -2,19 +2,28 @@
 import { ROUTES } from '@data/routes';
 
 interface Props {
+  showAffiliate?: boolean;
   showSafety?: boolean;
+  providedProduct?: string;
 }
 
-const { showSafety = true } = Astro.props;
+const { showAffiliate = true, showSafety = true, providedProduct } = Astro.props;
 ---
 
 <aside class="disc" aria-label="Disclosures">
   <div class="disc-inner">
-    <p class="disc-affiliate">
-      <strong>Affiliate Disclosure:</strong> This page contains affiliate links to Amazon and Chewy. If you purchase through these links,
-      we earn a small commission at no extra cost to you. This supports our ability to research and recommend products.
-      <a href={ROUTES.affiliateDisclosure}>Full disclosure</a>.
-    </p>
+    {providedProduct && (
+      <p class="disc-product">
+        <strong>Product Disclosure:</strong> {providedProduct}
+      </p>
+    )}
+    {showAffiliate && (
+      <p class="disc-affiliate">
+        <strong>Affiliate Disclosure:</strong> This page contains affiliate links to Amazon and Chewy. If you purchase through these links,
+        we earn a small commission at no extra cost to you. This supports our ability to research and recommend products.
+        <a href={ROUTES.affiliateDisclosure}>Full disclosure</a>.
+      </p>
+    )}
     {showSafety && (
       <p class="disc-safety">
         <strong>Safety Note:</strong> No product replaces shade, water, and common sense. If temperatures exceed 85 °F (29 °C),
@@ -40,6 +49,7 @@ const { showSafety = true } = Astro.props;
   }
 
   .disc-affiliate,
+  .disc-product,
   .disc-safety {
     font-size: var(--text-sm);
     color: var(--color-text-muted);
@@ -48,6 +58,10 @@ const { showSafety = true } = Astro.props;
   }
 
   .disc-safety {
+    margin-bottom: 0;
+  }
+
+  .disc-inner > :last-child {
     margin-bottom: 0;
   }
 
