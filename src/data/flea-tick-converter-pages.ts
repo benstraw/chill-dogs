@@ -481,9 +481,9 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       {
         kind: 'product_section',
         id: 'drying',
-        heading: 'Drying and post-bath cleanup',
+        heading: 'Drying and Post-Bath Cleanup',
         intro:
-          'Drying is where a controlled bath turns into a wet house. A robe or a proper microfiber towel keeps the water on the dog long enough for you to finish up, and a dryer is what finally gets a dense double coat dry to the skin. The dry-shampoo applicator at the end is for the days a real bath is not going to happen.',
+          "Tools to dry your dog and keep your house from getting wet. The dry-shampoo applicator is for the days a real bath is not going to happen.",
         positionOffset: 20,
         columns: 3,
         productIds: [
