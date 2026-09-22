@@ -500,11 +500,10 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       {
         kind: 'callout',
         id: 'bath-support',
-        heading: 'Baths are support, not standalone flea control',
+        heading: 'Baths are a great time to check your dog for fleas and ticks',
         tone: 'info',
         paragraphs: [
-          `If you are bathing because your dog already feels buggy, itchy, or dirty after exposure, pair the setup tool here with a real shampoo plan such as <a href="${ROUTES.fleaTickProducts}#shampoo">the flea and tick shampoos</a> and with bedding cleanup at home.`,
-          `If you are still seeing live fleas after baths, move up to <a href="${ROUTES.fleaTickProducts}">the flea and tick products page</a> or back to <a href="${ROUTES.fleaTickPillar}">the full decision guide</a>.`,
+          `For more information on flea and tick prevention, see <a href="${ROUTES.fleaTickProducts}">Best Flea and Tick Products for Dogs</a> and <a href="${ROUTES.fleaTickPillar}">Flea and Tick Prevention for Dogs</a>.`,
         ],
       },
     ],
@@ -514,22 +513,22 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         {
           question: 'Can bathing alone get rid of fleas on a dog?',
           answer:
-            'Not reliably when there is a real infestation. Baths can help with cleanup and inspection, but fleas are usually a dog-plus-home problem. That means bedding, rugs, furniture, and sometimes the yard matter too.',
+            'Not reliably when there is a real infestation. Baths can help with cleanup and inspection, but eradicating fleas can sometimes mean addressing bedding, rugs, furniture, and even the yard.',
         },
         {
           question: 'When is a bath tool actually worth buying?',
           answer:
-            'When the hard part is the setup, not the soap. If your dog is messy after hikes, you struggle to rinse thoroughly in a regular tub, or flea-season baths keep getting skipped because the process is annoying, a rinse tool can make the routine realistic.',
+            'When you avoid bathing your dog because of the hassle. If you struggle to bathe your dog in a regular tub, or flea-season baths get skipped because the process is annoying, a proper tool can make the experience better for you and your dog.',
         },
         {
           question: 'Should I buy a bath tool kit or individual tools?',
           answer:
-            'A kit is the better first purchase if you are starting from nothing, because it gets a slicker, a rake, and a bath brush into the house for less than buying them separately. If you already own the coat tools and the bath itself is the problem, buy the one thing that fixes it — usually a sprayer or a brush that stays on your hand.',
+            'If you are starting with nothing, a kit is usually more cost-effective. They often include a slicker, a rake, and a bath brush. If you already own the coat tools, a rinser or a brush that attaches to your hand can often make the process easier.',
         },
         {
           question: 'What kind of bath brush works best for a double coat?',
           answer:
-            'Look for longer, firmer bristles and a larger head so you can work shampoo down to the skin rather than across the top of the coat. Short rubber-finger brushes are built for smooth coats and tend to skate over a dense undercoat. Whatever you pick, get the mats out with a rake before the dog gets wet — water tightens them.',
+            'Look for longer, firmer bristles and a larger head so you can work shampoo down to the skin rather than across the top of the coat. Short rubber-finger brushes are built for smooth coats and tend to skate over a dense undercoat. Whatever you pick, get the mats out with a rake before the dog gets wet, because water tightens them.',
         },
       ],
     },
