@@ -245,7 +245,7 @@ describe('multi-merchant product offers', () => {
       .filter((block) => block.kind === 'product_section')
       .flatMap((block) => (block.kind === 'product_section' ? block.productIds : []));
 
-    expect(sectionIds).toHaveLength(28);
+    expect(sectionIds).toHaveLength(27);
     expect(new Set(sectionIds).size, 'bath-tools products must be unique across sections').toBe(sectionIds.length);
     expect(config.itemListSchema?.productIds).toEqual(sectionIds);
 

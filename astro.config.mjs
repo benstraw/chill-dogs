@@ -22,6 +22,9 @@ export default defineConfig({
     // Merged into the single flea/tick converter; natural products now live there,
     // marked with the plant-based treatment. Live for weeks, so this must be a 301.
     '/safety/best-natural-flea-and-tick-products-for-dogs/': '/safety/best-flea-and-tick-products-for-dogs/',
+    // Retired per #370 — no direct replacement, so this sends prior visitors to the
+    // kits section where the remaining five multi-tool kits still live.
+    '/shop/sztopfocus-11-piece-grooming-kit/': '/safety/dog-bath-tools-for-flea-season/#bath-kits',
   },
   integrations: [
     mdx(),

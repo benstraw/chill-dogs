@@ -743,7 +743,7 @@ describe('site smoke tests', () => {
 
     expect(positions.length).toBeGreaterThan(0);
     expect([...new Set(positions)].sort((a, b) => a - b)).toEqual(
-      Array.from({ length: 28 }, (_, i) => i + 1),
+      Array.from({ length: 27 }, (_, i) => i + 1),
     );
   });
 

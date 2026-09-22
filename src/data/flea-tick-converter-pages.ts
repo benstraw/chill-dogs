@@ -466,13 +466,11 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       {
         kind: 'product_section',
         id: 'bath-kits',
-        heading: 'Multi-tool bath and grooming kits',
-        intro:
-          'Kits make sense when you are starting from nothing, or when the coat work around the bath — dematting, deshedding, a flea comb pass — matters as much as the wash itself. Compare them on which specific tools are included, not on the piece count.',
+        heading: 'Multi-Tool Bath and Grooming Kits',
+        intro: 'Tools for bathing, grooming, dematting, deshedding and flea checks.',
         positionOffset: 15,
         columns: 3,
         productIds: [
-          'sztopfocus-11-piece-grooming-kit',
           'anrundar-grooming-kit',
           'masterpeak-3-in-1-grooming-kit',
           'lyongsment-7-in-1-grooming-set',
@@ -486,7 +484,7 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         heading: 'Drying and post-bath cleanup',
         intro:
           'Drying is where a controlled bath turns into a wet house. A robe or a proper microfiber towel keeps the water on the dog long enough for you to finish up, and a dryer is what finally gets a dense double coat dry to the skin. The dry-shampoo applicator at the end is for the days a real bath is not going to happen.',
-        positionOffset: 21,
+        positionOffset: 20,
         columns: 3,
         productIds: [
           'tuff-pupper-drying-bathrobe',
@@ -556,7 +554,6 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
         'hop-wooden-handle-bath-brush',
         'unmeee-silicone-shampoo-brush',
         'techcare-foaming-bath-brush',
-        'sztopfocus-11-piece-grooming-kit',
         'anrundar-grooming-kit',
         'masterpeak-3-in-1-grooming-kit',
         'lyongsment-7-in-1-grooming-set',
