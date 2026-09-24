@@ -699,7 +699,7 @@ describe('site smoke tests', () => {
   });
 
   it('renders a variant picker without adding affiliate CTAs to the card', () => {
-    const doc = readBuiltPage(path.join('safety', 'dog-bath-tools-for-flea-season', 'index.html'));
+    const doc = readBuiltPage(path.join('safety', 'dog-bath-tools', 'index.html'));
     const card = doc.querySelector<HTMLElement>('#tuff-pupper-drying-bathrobe');
     const picker = card?.querySelector<HTMLElement>('[data-variant-picker]');
 
@@ -735,7 +735,7 @@ describe('site smoke tests', () => {
   });
 
   it('keeps affiliate CTA positions contiguous on a page carrying a variant picker', () => {
-    const doc = readBuiltPage(path.join('safety', 'dog-bath-tools-for-flea-season', 'index.html'));
+    const doc = readBuiltPage(path.join('safety', 'dog-bath-tools', 'index.html'));
     const positions = getAffiliateLinks(doc)
       .map((link) => link.getAttribute('data-position'))
       .filter((position): position is string => position !== null)
@@ -840,7 +840,7 @@ describe('site smoke tests', () => {
 
   it('leaves a product section open when too few products would be hidden', () => {
     const doc = readBuiltPage(
-      path.join('safety', 'dog-bath-tools-for-flea-season', 'index.html'),
+      path.join('safety', 'dog-bath-tools', 'index.html'),
     );
 
     // 9 products, 3 hidden — over the threshold, so the bar renders.

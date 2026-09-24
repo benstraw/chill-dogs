@@ -124,7 +124,7 @@ describe('admin product catalog data', () => {
     );
     expect(pageMap['rinseroo-original']).toEqual(
       expect.arrayContaining([
-        expect.objectContaining({ href: '/safety/dog-bath-tools-for-flea-season/' }),
+        expect.objectContaining({ href: '/safety/dog-bath-tools/' }),
       ])
     );
   });

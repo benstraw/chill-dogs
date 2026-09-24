@@ -211,7 +211,7 @@ describe('multi-merchant product offers', () => {
   });
 
   it('leads the bath-tools page with Rinseroo on its Amazon offer alone', () => {
-    const config = fleaTickConverterPages['dog-bath-tools-for-flea-season'];
+    const config = fleaTickConverterPages['dog-bath-tools'];
     const rinseSetups = config.blocks.find(
       (block) => block.kind === 'product_section' && block.id === 'rinse-setups'
     );
@@ -240,7 +240,7 @@ describe('multi-merchant product offers', () => {
   });
 
   it('keeps every bath-tools product image-backed, merchant-linked, and in the ItemList schema', () => {
-    const config = fleaTickConverterPages['dog-bath-tools-for-flea-season'];
+    const config = fleaTickConverterPages['dog-bath-tools'];
     const sectionIds = config.blocks
       .filter((block) => block.kind === 'product_section')
       .flatMap((block) => (block.kind === 'product_section' ? block.productIds : []));
@@ -280,7 +280,7 @@ describe('multi-merchant product offers', () => {
   });
 
   it('starts each bath-tools section at the running product position', () => {
-    const config = fleaTickConverterPages['dog-bath-tools-for-flea-season'];
+    const config = fleaTickConverterPages['dog-bath-tools'];
     let expectedOffset = 0;
 
     for (const block of config.blocks) {

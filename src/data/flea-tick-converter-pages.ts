@@ -390,13 +390,13 @@ export const fleaTickConverterPages: Record<string, FleaTickConverterPageConfig>
       ],
     },
   },
-  'dog-bath-tools-for-flea-season': {
-    slug: 'dog-bath-tools-for-flea-season',
+  'dog-bath-tools': {
+    slug: 'dog-bath-tools',
     title: 'Dog Bath Tools',
     description:
       'Compare dog bath tools that make washing realistic — sprayers, shampoo brushes and scrubbers, multi-tool grooming kits, and drying robes and towels.',
     ogTitle: 'Dog Bath Tools: Sprayers, Brushes, and Drying Gear',
-    pageSlug: 'dog-bath-tools-for-flea-season',
+    pageSlug: 'dog-bath-tools',
     currentHref: ROUTES.fleaSeasonBathTools,
     hero: {
       title: 'Dog Bath Tools',

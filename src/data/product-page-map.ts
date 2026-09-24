@@ -139,7 +139,7 @@ export function buildProductPageMap(): ProductPageMap {
       label: 'Best Flea and Tick Products for Dogs',
       href: ROUTES.fleaTickProducts,
     },
-    'dog-bath-tools-for-flea-season': {
+    'dog-bath-tools': {
       label: 'Dog Bath Tools',
       href: ROUTES.fleaSeasonBathTools,
     },

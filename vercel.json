@@ -36,12 +36,22 @@
     },
     {
       "source": "/shop/sztopfocus-11-piece-grooming-kit",
-      "destination": "/safety/dog-bath-tools-for-flea-season/#bath-kits",
+      "destination": "/safety/dog-bath-tools/#bath-kits",
       "statusCode": 301
     },
     {
       "source": "/shop/sztopfocus-11-piece-grooming-kit/",
-      "destination": "/safety/dog-bath-tools-for-flea-season/#bath-kits",
+      "destination": "/safety/dog-bath-tools/#bath-kits",
+      "statusCode": 301
+    },
+    {
+      "source": "/safety/dog-bath-tools-for-flea-season",
+      "destination": "/safety/dog-bath-tools/",
+      "statusCode": 301
+    },
+    {
+      "source": "/safety/dog-bath-tools-for-flea-season/",
+      "destination": "/safety/dog-bath-tools/",
       "statusCode": 301
     }
   ]

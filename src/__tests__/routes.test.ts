@@ -38,7 +38,7 @@ describe('route constants', () => {
     expect(ROUTES.fleaTickPillar).toBe('/safety/flea-and-tick-prevention-for-dogs/');
     expect(ROUTES.naturalFleaTickPrevention).toBe('/safety/natural-flea-and-tick-prevention-for-dogs/');
     expect(ROUTES.fleaTickProducts).toBe('/safety/best-flea-and-tick-products-for-dogs/');
-    expect(ROUTES.fleaSeasonBathTools).toBe('/safety/dog-bath-tools-for-flea-season/');
+    expect(ROUTES.fleaSeasonBathTools).toBe('/safety/dog-bath-tools/');
     // The medications converter was removed; the cluster must not regain a route to it.
     expect(ROUTES).not.toHaveProperty('fleaTickMedications');
     // The natural converter was merged into fleaTickProducts behind a 301; natural

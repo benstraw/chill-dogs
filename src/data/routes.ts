@@ -34,7 +34,7 @@ export const ROUTES = {
   fleaTickPillar: '/safety/flea-and-tick-prevention-for-dogs/',
   naturalFleaTickPrevention: '/safety/natural-flea-and-tick-prevention-for-dogs/',
   fleaTickProducts: '/safety/best-flea-and-tick-products-for-dogs/',
-  fleaSeasonBathTools: '/safety/dog-bath-tools-for-flea-season/',
+  fleaSeasonBathTools: '/safety/dog-bath-tools/',
   rattlesnakeSafetyForDogs: '/safety/rattlesnake-safety-for-dogs/',
   dogSnakeBiteEmergencyKit: '/gear/dog-snake-bite-emergency-kit/',
   comfortHub: '/comforting/',

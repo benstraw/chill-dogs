@@ -1445,7 +1445,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     amazonUrl: amazonUrl('B07CV3F6DS'),
     offers: [
       amazonOffer('B07CV3F6DS'),
-      chewyOffer('https://www.chewy.com/wondurdog-outdoor-garden-hose-nozzle/dp/332622', 'dog-bath-tools-for-flea-season'),
+      chewyOffer('https://www.chewy.com/wondurdog-outdoor-garden-hose-nozzle/dp/332622', 'dog-bath-tools'),
     ],
     image: {
       src: 'https://image.chewy.com/catalog/general/images/wondurdog-dog-washing-paw-rinse-outdoor-garden-hose-nozzle-attachment/img-191279._AC_SS1800_V1_.jpg',
@@ -1466,7 +1466,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     category: 'bath-tool',
     badge: 'Indoor shower kit',
     offers: [
-      chewyOffer('https://www.chewy.com/wondurdog-deluxe-indoor-dog-cat/dp/397024', 'dog-bath-tools-for-flea-season'),
+      chewyOffer('https://www.chewy.com/wondurdog-deluxe-indoor-dog-cat/dp/397024', 'dog-bath-tools'),
     ],
     image: {
       src: 'https://image.chewy.com/catalog/general/images/wondurdog-deluxe-indoor-dog-cat-washing-shower-kit/img-494673._AC_SS1800_V1_.jpg',
@@ -1489,7 +1489,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     amazonUrl: amazonUrl('B0858ZL2P1'),
     offers: [
       amazonOffer('B0858ZL2P1'),
-      chewyOffer('https://www.chewy.com/furesh-elevated-folding-pet-bath-tub/dp/264272', 'dog-bath-tools-for-flea-season'),
+      chewyOffer('https://www.chewy.com/furesh-elevated-folding-pet-bath-tub/dp/264272', 'dog-bath-tools'),
     ],
     image: {
       src: 'https://image.chewy.com/catalog/general/images/furesh-elevated-folding-pet-bath-tub-wash-station-gray/img-322821._AC_SS1800_V1_.jpg',
@@ -1512,7 +1512,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     category: 'bath-tool',
     badge: 'Bath brush',
     offers: [
-      chewyOffer('https://www.chewy.com/we-love-doodles-long-pin-dog-bath/dp/4011390', 'dog-bath-tools-for-flea-season'),
+      chewyOffer('https://www.chewy.com/we-love-doodles-long-pin-dog-bath/dp/4011390', 'dog-bath-tools'),
     ],
     image: {
       src: 'https://image.chewy.com/catalog/general/images/moe/069d6b9c-78c6-7f96-8000-e204bfc12442._AC_SS1800_V1_.jpg',
@@ -1530,7 +1530,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     category: 'bath-tool',
     badge: 'Plush towel',
     offers: [
-      chewyOffer('https://www.chewy.com/chemical-guys-furrocious-pet-towel/dp/2075838', 'dog-bath-tools-for-flea-season'),
+      chewyOffer('https://www.chewy.com/chemical-guys-furrocious-pet-towel/dp/2075838', 'dog-bath-tools'),
     ],
     image: {
       src: 'https://image.chewy.com/catalog/general/images/moe/0685598b-fdbb-7aae-8000-1ae6375502c3._AC_SS1800_V1_.jpg',
@@ -1549,7 +1549,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     category: 'bath-tool',
     badge: 'Shammy towel',
     offers: [
-      chewyOffer('https://www.chewy.com/dog-gone-smart-dirty-dog-shammy-towel/dp/132883', 'dog-bath-tools-for-flea-season'),
+      chewyOffer('https://www.chewy.com/dog-gone-smart-dirty-dog-shammy-towel/dp/132883', 'dog-bath-tools'),
     ],
     image: {
       src: 'https://image.chewy.com/catalog/general/images/dog-gone-smart-dirty-dog-shammy-towel-grey/img-258598._AC_SS1800_V1_.jpg',
@@ -1569,7 +1569,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     category: 'bath-tool',
     badge: 'Grooming dryer',
     offers: [
-      chewyOffer('https://www.chewy.com/fido-fave-dog-hair-dryer/dp/3603814', 'dog-bath-tools-for-flea-season'),
+      chewyOffer('https://www.chewy.com/fido-fave-dog-hair-dryer/dp/3603814', 'dog-bath-tools'),
     ],
     image: {
       src: 'https://image.chewy.com/catalog/general/images/moe/0690cf97-3bf3-7fb8-8000-d287ae6949b0._AC_SS1800_V1_.jpg',
@@ -1591,7 +1591,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     category: 'bath-tool',
     badge: 'Grooming dryer',
     offers: [
-      chewyOffer('https://www.chewy.com/flying-pig-grooming-one-high-velocity/dp/3768774', 'dog-bath-tools-for-flea-season'),
+      chewyOffer('https://www.chewy.com/flying-pig-grooming-one-high-velocity/dp/3768774', 'dog-bath-tools'),
     ],
     image: {
       src: 'https://image.chewy.com/catalog/general/images/moe/06965482-f05c-7d58-8000-38cf3ffe13c8._AC_SS1800_V1_.jpg',
@@ -1612,7 +1612,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     category: 'bath-tool',
     badge: 'Dry shampoo applicator',
     offers: [
-      chewyOffer('https://www.chewy.com/pet-life-unlimited-dry-shampoo/dp/2112062', 'dog-bath-tools-for-flea-season'),
+      chewyOffer('https://www.chewy.com/pet-life-unlimited-dry-shampoo/dp/2112062', 'dog-bath-tools'),
     ],
     image: {
       src: 'https://image.chewy.com/catalog/general/images/moe/06851b96-3842-72c1-8000-8e702d6e973e._AC_SS1800_V1_.jpg',

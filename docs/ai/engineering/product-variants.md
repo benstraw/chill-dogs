@@ -157,7 +157,7 @@ Affiliate CTAs on a variant card gain `variant_option` and `variant_axis` proper
 
 ## Reference implementation
 
-`tuff-pupper-drying-bathrobe` in `src/data/flea-tick-products.ts`, on `/safety/dog-bath-tools-for-flea-season/`. Eight dog sizes, every ASIN taken from Amazon's own variant list in the cached payload for `B0BY9GBMXX`. `large` is the default, matching the record's legacy `asin`.
+`tuff-pupper-drying-bathrobe` in `src/data/flea-tick-products.ts`, on `/safety/dog-bath-tools/`. Eight dog sizes, every ASIN taken from Amazon's own variant list in the cached payload for `B0BY9GBMXX`. `large` is the default, matching the record's legacy `asin`.
 
 ### Multi-merchant variants: Vectra 3D
 

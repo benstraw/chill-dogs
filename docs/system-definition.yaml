@@ -355,7 +355,7 @@ site_system:
       type: "collector"
       collector_subtype: "article"
       target_action: "Capture broad flea/tick search intent, then route buyers to the single flea/tick products converter and natural-first readers to the specialist natural guide"
-      metric: "collector_to_converter_click to /safety/best-flea-and-tick-products-for-dogs/ and /safety/dog-bath-tools-for-flea-season/"
+      metric: "collector_to_converter_click to /safety/best-flea-and-tick-products-for-dogs/ and /safety/dog-bath-tools/"
       routes:
         - "/safety/flea-and-tick-prevention-for-dogs/"
       notes: >
@@ -368,7 +368,7 @@ site_system:
       type: "collector"
       collector_subtype: "article"
       target_action: "Serve natural-first readers who already prefer a lower-toxicity routine, then route them to the plant-based options on the products converter and to bath tools, keeping a path back to the broad pillar"
-      metric: "collector_to_converter_click to /safety/best-flea-and-tick-products-for-dogs/#natural-options and /safety/dog-bath-tools-for-flea-season/"
+      metric: "collector_to_converter_click to /safety/best-flea-and-tick-products-for-dogs/#natural-options and /safety/dog-bath-tools/"
       routes:
         - "/safety/natural-flea-and-tick-prevention-for-dogs/"
       notes: >
@@ -399,7 +399,7 @@ site_system:
       target_action: "Drive affiliate outbound clicks on bath-support tools that help owners execute bath and flea-season cleanup routines"
       metric: "amazon_outbound_click rate + collector_to_converter_click from the natural guide and broad pillar"
       routes:
-        - "/safety/dog-bath-tools-for-flea-season/"
+        - "/safety/dog-bath-tools/"
       notes: >
         Shared-config safety converter organized around the four friction points of a dog bath:
         sprayers and rinse setups (Rinseroo, an outdoor faucet wand, a cordless bucket pump, both
