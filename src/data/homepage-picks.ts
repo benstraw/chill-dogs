@@ -10,7 +10,7 @@ import { productCatalogItems, type ProductCatalogItem } from './product-catalog'
 const HOMEPAGE_PICK_IDS: Record<ProductCatalogItem['pillar'], string[]> = {
   cooling: ['green-pet-shop-cooling-pad', 'ruffwear-swamp-cooler'],
   calming: ['thundershirt-classic', 'awoo-paradise-lick-mat'],
-  comfort: ['bedstill-donut-calming-bed', 'cwawz-orthopedic-bolster'],
+  comfort: ['bedstill-donut-calming-bed', 'rainmr-memory-foam-bed'],
   gear: ['fi-series-3-plus', 'apple-airtag-2nd-gen'],
   // No safety section on the homepage yet, so there is nothing to pick. Kept as an
   // explicit key rather than widening the Record: a new pillar should keep failing
