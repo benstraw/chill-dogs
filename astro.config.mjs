@@ -19,6 +19,15 @@ export default defineConfig({
       destination: 'https://www.chill-dogs.com/subscribe/?utm_source=postcard&utm_medium=print&utm_campaign=offline_flyer',
     },
     '/travel/rhys-road-trip-chill-kit/': '/travel/dog-road-trip-gear/',
+    // Merged into the single flea/tick converter; natural products now live there,
+    // marked with the plant-based treatment. Live for weeks, so this must be a 301.
+    '/safety/best-natural-flea-and-tick-products-for-dogs/': '/safety/best-flea-and-tick-products-for-dogs/',
+    // Retired per #370 — no direct replacement, so this sends prior visitors to the
+    // kits section where the remaining five multi-tool kits still live.
+    '/shop/sztopfocus-11-piece-grooming-kit/': '/safety/dog-bath-tools/#bath-kits',
+    // The page dropped "for flea season" from its name — it's just Dog Bath Tools now.
+    // Live for weeks under the old slug, so this must be a real 301.
+    '/safety/dog-bath-tools-for-flea-season/': '/safety/dog-bath-tools/',
   },
   integrations: [
     mdx(),

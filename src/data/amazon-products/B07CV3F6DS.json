@@ -1,0 +1,805 @@
+{
+  "search_metadata": {
+    "id": "6a7ed9c4a3ce8405952cc95b",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/rHoBWQIshWGAeGqN5h7FUg/6a7ed9c4a3ce8405952cc95b.json",
+    "created_at": "2026-08-14 09:03:00 UTC",
+    "processed_at": "2026-08-14 09:03:00 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B07CV3F6DS/?",
+    "raw_html_file": "https://serpapi.com/searches/rHoBWQIshWGAeGqN5h7FUg/6a7ed9c4a3ce8405952cc95b.html",
+    "total_time_taken": 8.62
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B07CV3F6DS",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "categories": [
+      {
+        "position": 1,
+        "name": "Pet Supplies",
+        "link": "https://www.amazon.com/pet-shops-dogs-cats-hamsters-kittens/b/ref=dp_bc_1?ie=UTF8&node=2619533011",
+        "node": "2619533011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2619533011"
+      },
+      {
+        "position": 2,
+        "name": "Dogs",
+        "link": "https://www.amazon.com/dogs-supplies-training-beds-collars-grooming/b/ref=dp_bc_2?ie=UTF8&node=2975312011",
+        "node": "2975312011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975312011"
+      },
+      {
+        "position": 3,
+        "name": "Grooming",
+        "link": "https://www.amazon.com/dogs-grooming-supplies-clippers-shedding/b/ref=dp_bc_3?ie=UTF8&node=2975362011",
+        "node": "2975362011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975362011"
+      },
+      {
+        "position": 4,
+        "name": "Shower & Bath Supplies",
+        "link": "https://www.amazon.com/dog-shower-bath-accessories/b/ref=dp_bc_4?ie=UTF8&node=2975375011",
+        "node": "2975375011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975375011"
+      },
+      {
+        "position": 5,
+        "name": "Showerheads & Sprayers",
+        "link": "https://www.amazon.com/Dog-Showerheads-Sprayers/b/ref=dp_bc_5?ie=UTF8&node=23727019011",
+        "node": "23727019011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=23727019011"
+      }
+    ],
+    "asin": "B07CV3F6DS",
+    "title": "Outdoor Dog Wash Garden Hose Nozzle for Bath and Quick Paw Rinses. Splash Shield Handle and Rubber Grooming Brush. Metal Connection. Swivels on Hose with Water Pressure Control.",
+    "link": "https://www.amazon.com/Wondurdog-Grooming-Connector-Pressure-Control/dp/B07CV3F6DS/",
+    "link_clean": "https://www.amazon.com/dp/B07CV3F6DS/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B07CV3F6DS&device=desktop&engine=amazon_product",
+    "badges": [
+      "Amazon's Choice"
+    ],
+    "brand": "Visit the Wondurdog Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/71ZNmVSRUQL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/71ZNmVSRUQL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61JcNq8yUgL._AC_SL1414_.jpg",
+      "https://m.media-amazon.com/images/I/918A+1ZbQmL._AC_SL1414_.jpg",
+      "https://m.media-amazon.com/images/I/81oQLr2MSRL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/819aTsmneqL._AC_SL1414_.jpg",
+      "https://m.media-amazon.com/images/I/81Jtna0oZRL._AC_SL1500_.jpg"
+    ],
+    "rating": 4.5,
+    "reviews": 511,
+    "bought_last_month": "100+ bought in past month",
+    "price": "$39.99",
+    "extracted_price": 39.99,
+    "old_price": "$59.98",
+    "extracted_old_price": 59.98,
+    "prime": true,
+    "delivery": [
+      "FREE delivery Wednesday, August 19",
+      "Or Prime members get FREE delivery Tomorrow, August 15. Order within 14 hrs 11 mins. Join Prime"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$39.99",
+      "extracted_price": 39.99,
+      "delivery": [
+        "FREE delivery Wednesday, August 19",
+        "Or Prime members get FREE delivery Tomorrow, August 15. Order within 14 hrs 11 mins. Join Prime"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "Wondurdog",
+          "details": {
+            "heading": "Sold by",
+            "content": "Wondurdog"
+          },
+          "link": {
+            "text": "Wondurdog",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A3MZSR7W6TFU04&asin=B07CV3F6DS&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "material": "Metal, Plastic, Rubber",
+    "brand": "Wondurdog",
+    "item_dimensions_l_x_w_x_h": "3.8 x 6.6 x 8 inches",
+    "exterior_finish": "Metal",
+    "inlet_connection_size": "0.5 inches",
+    "inlet_connection_type": "Press",
+    "outlet_connection_type": "NPT",
+    "number_of_ports": "1",
+    "outlet_connection_size": "0.5 inches",
+    "unit_count": "1 Count"
+  },
+  "about_item": [
+    "INNOVATIVE BRUSH DESIGN: This outdoor dog bath attachment includes our patented rubber splash shield and bath hose attachment that keeps you dry as you groom and massage your dog. It's the ultimate choice in grooming comfort for both you and your pet.",
+    "PRESSURE CONTROL VALVE: This outdoor garden hose sprayer brush head comes with an adjustable water pressure valve. Even outside, you can control how fast you want the water to come out! Massage your dog and keep them calm with this hose nozzle attachment.",
+    "EASY FOR YOU & YOUR DOG: Baths are a great time for you and your dog to bond. Our massaging brush will feel great on your dog as you clean that messy fur. Make quick work of those dirty paws before moving inside. Whether a full bath is need or a quick touch up after a walk or romp, enjoy a stress-free and enjoyable bath time!",
+    "GREAT FOR ALL AGES: Ergonomic and easy to use, this garden hose sprayer brush leaves you with an extra hand free, so you can soap up and comfort your pet while bathing them. Bathe, brush, rinse, start and stop water with one hand. Plus, it's easy to use for all ages!",
+    "HIGH QUALITY: This outdoor grooming brush comes with the patented Wondurdog shower brush with patented splash shield and metal garden hose connector for a sturdy and leak-free connection. This dog bath brush is built for the outdoors (no plastic connectors here) so don't worry about its durability when outside."
+  ],
+  "bought_together": [
+    {
+      "position": 1,
+      "title": "Wondurdog Outdoor Dog Wash Garden Hose Nozzle for Bath and Quick Paw Rinses. Splash Shield Handle and Rubber Grooming Brush. Metal Connection. Swivels on Hose with Water Pressure Control.",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71ZNmVSRUQL._AC_UL116_SR116,116_.jpg",
+      "price": "$39.99",
+      "extracted_price": 39.99,
+      "delivery": [
+        "Get it as soon as Wednesday, Aug 19"
+      ],
+      "stock": "In Stock"
+    },
+    {
+      "position": 2,
+      "title": "Wahl USA Dry Skin & Itch Relief Pet Shampoo for Dogs – Oatmeal Formula with Coconut Lime Verbena Scent & Pet Friendly Formula, 24 Oz - Model 820004A | Oatmeal Formula Moisturizes Skin & Provides Itch Relief For Sensitive Skin Dogs, Pet Friendly Formula - Model 820004A",
+      "link": "https://www.amazon.com/Wahl-Dog-Pet-Shampoo-Oatmeal/dp/B005CUTWDE/ref=pd_bxgy_thbs_d_sccl_1/146-9219049-8162013?pd_rd_w=cB3wx&content-id=amzn1.sym.9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_p=9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_r=AM91KKSP89Y4VZ4686H1&pd_rd_wg=s6iCa&pd_rd_r=e957a982-f9a0-4355-91ec-c565471cbeeb&pd_rd_i=B005CUTWDE&psc=1",
+      "asin": "B005CUTWDE",
+      "link_clean": "https://www.amazon.com/Wahl-Dog-Pet-Shampoo-Oatmeal/dp/B005CUTWDE/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B005CUTWDE&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/718HUwiCsYL._AC_UL116_SR116,116_.jpg",
+      "price": "$7.43",
+      "extracted_price": 7.43,
+      "delivery": [
+        "Get it as soon as Wednesday, Aug 19"
+      ],
+      "stock": "In Stock"
+    }
+  ],
+  "videos": [
+    {
+      "position": 1,
+      "title": "Pawsome Product!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/3bc61999-b61c-4eb7-8a0a-6fb8ab2372ab/default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/615YHy2fbaL.jpg",
+      "duration": "0:13",
+      "vendor": "Ashley L.",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SL34_.png",
+      "date": "Oct 9, 2021"
+    },
+    {
+      "position": 2,
+      "title": "Wondurdog Outdoor Dog Wash Garden Hose Dog Attachment",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/0d91fa30-5125-4234-b7ac-d7ca60a358f7/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/61kwQCgRmAL.jpg",
+      "duration": "1:08",
+      "vendor": "Wondurdog",
+      "date": "Feb 7, 2021"
+    },
+    {
+      "position": 3,
+      "title": "Love the Wondurdog Outdoor Shower! Thanks so much!!!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/v2/1e44427b-479a-54b2-9f18-4612723add95/ShortForm-Generic-480p-16-9-1409173089793-rpcbe5.mp4",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/B1rchbjL7+S.png",
+      "duration": "0:43",
+      "vendor": "dianeb",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SL34_.png",
+      "date": "Jun 12, 2018"
+    },
+    {
+      "position": 4,
+      "title": "Wondurdog Outdoor Garden Hose Attachment For Dog Washing",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/44b0661f-38c0-43c9-9c5a-0a6e049c6b48/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/A13WSZ8+8dL.png",
+      "duration": "0:47",
+      "vendor": "Wondurdog",
+      "date": "Sep 22, 2021"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1
+    },
+    {
+      "position": 2,
+      "carousel_images": [
+        {
+          "position": 1,
+          "title": "Washing Paws",
+          "image": "https://m.media-amazon.com/images/S/aplus-media/sc/bf76033f-05e2-4f0a-9525-2f6c64b041d7.__CR0,0,1464,600_PT0_SX1464_V1___.png"
+        },
+        {
+          "position": 2,
+          "title": "Water Pressure Control",
+          "image": "https://m.media-amazon.com/images/S/aplus-media/sc/225a9f18-bc6e-455c-9cc6-cf6d23ffeeab.__CR0,0,1464,600_PT0_SX1464_V1___.png"
+        },
+        {
+          "position": 3,
+          "title": "keep Water on your dog. not yourself",
+          "image": "https://m.media-amazon.com/images/S/aplus-media/sc/e03b81f3-d5fd-46d1-baf7-fe09881c2d6e.__CR0,0,1464,600_PT0_SX1464_V1___.png"
+        },
+        {
+          "position": 4,
+          "title": "Shield up",
+          "image": "https://m.media-amazon.com/images/S/aplus-media/sc/0b32ae51-039f-46a4-8a7e-caa653aceaab.__CR0,0,1464,600_PT0_SX1464_V1___.png"
+        },
+        {
+          "position": 5,
+          "title": "Quality, Quality, Quality",
+          "image": "https://m.media-amazon.com/images/S/aplus-media/sc/c3e732e0-2dee-4f25-aef2-71204e6b42aa.__CR0,0,1464,600_PT0_SX1464_V1___.png"
+        }
+      ]
+    },
+    {
+      "position": 3
+    },
+    {
+      "position": 4
+    },
+    {
+      "position": 5
+    },
+    {
+      "position": 6
+    },
+    {
+      "position": 7,
+      "title": "Launchpad logo",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/69c5945c-37f4-4d6f-8f8e-3401031bff60.__CR0,0,1464,600_PT0_SX1464_V1___.png"
+    }
+  ],
+  "product_details": {
+    "brand_name": "Wondurdog",
+    "model_number": "WD002",
+    "unit_count": "1 Count",
+    "manufacturer": "Wondurdog",
+    "upc": "860114001610",
+    "included_components": "Garden Hose Nozzle",
+    "item_type_name": "dog bath, dog wash, dog bath brush, hose faucet, hose attachment, bathing supplies, dog wash brush, bath hose attachment, dog bath attachment, brush hose attachment, outdoor dog wash, outdoor dog bath, garden hose brush attachment, hose nozzle attachment, hose brush attachment, garden hose brush",
+    "manufacturer_part_number": "WD002",
+    "best_sellers_rank": [
+      {
+        "text": "#29,423 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 29423,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#26 in Dog Showerheads & Sprayers",
+        "extracted_rank": 26,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/23727019011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Showerheads & Sprayers"
+      }
+    ],
+    "asin": "B07CV3F6DS",
+    "customer_reviews": "4.5 out of 5 stars",
+    "rating": 4.5,
+    "reviews": 511,
+    "material_type": "Metal, Plastic, Rubber",
+    "exterior_finish": "Metal",
+    "inlet_connection_type": "Press",
+    "outlet_connection_type": "NPT",
+    "number_of_ports": "1",
+    "thread_size": "0.5 inches",
+    "thread_type": "Threaded",
+    "connector_type": "Threaded",
+    "valve_type": "Ball Valve",
+    "item_dimensions": "3.8 x 6.6 x 8 inches",
+    "inlet_connection_size": "0.5 inches",
+    "outlet_connection_size": "0.5 inches",
+    "size": "Medium"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0DY1BG1ZQ",
+      "title": "RESTMO Heavy Duty Garden Hose Nozzle, Multi-Angle Hose Spray Nozzle | 4 Adjustable Spray Patterns, Garden Hose Sprayer with Twist Switch, Thumb Flow Control, Ideal for Outdoor Lawn & Yard, Green",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JF9XfqgrMcliSxIZ_G-7-LsAAAGf_4LBUgEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICAZsmRF/clv1c_ek-IBfHXLcTWXlRhtwlAiFwLMC57Ksl5e5JIc83Cvh8lFjxtkRP745ukxWqXaDfjRdwcWDi61vtA8BMHm3IM5q9r2k1LrSKf8ALw5DfEWN1w-0nDQco7CGXe8hk2IfOG1TrfAaVCfxjq-ueZbAQZ8eyzYN-TmrVqo2RwiDKwyb6vOaolsx3uYt55HiEcz1LuiEyT3B3JFhnd74jXg2ihq9g3N38eJ-WOKEMStD1y1owtdg77GWBEnYHQ2ZYo9gq7kGcTGF3KVtT90jK7lCAB__ELUtxEFo7e5Uv5tGMoh39c9cx336TxOdKgI0fOQ02VNj5eESGrLd48mRUci0JZ8irV0yozqu-XhWLtUS40aVwsUV9xgKbA65g6mxB3L2bBDyMypMeCkpCX6FrOskBX-_rxcZAmNVDY-jD1YkeZZLVoubhj7waBbuB_r7yEDmFbhADfo8biquyTzaniUxLhUNSk1U2WTnaYj0DyrDkHBAh1rit8w63_gNxh_tudUNuH2cAVbPnskAXbw79seqD9dNX0nfv1lKpZnWEDfkh2V-Bd01tuto5UKYgMJPPgyNeaTtFGFMCJbTUKszVNbaAc3NLNyqCIJlfVVuDtazKtaRUmVAk0DXEJMxrIYauUl9u2EG_VuCfNpJqRZsIhIYOihu62PPhYki_jrEB5TL3z5qJNpY4TPq3Ppj7wxlAHocophX_RIThuHL05oE7pEiG5c_2fUITM1TS88WEkRGLC1qzZBlDDGtGpwpBshif5Xmm9wmJm34yOoKIQOwIJTUdJkZ-ssarhR9su5EU6SCMA-rVg9dcVI7CdMbaiuD8VX0n4oa1hTfR_fL7KPnJwRJFGgHgEJqDIEegLnNmlwjtBA9rsXpPJp0JlU72L1FfHoVn2eFT-rbIVVkPNHvjm_QS1nKjVVw4sEYyn4E6AckyEZcq179kV7k6tjjuwu9H0KIkHmRXvMDFnwdPb7y21rdBFZKkoZecZUwSu9ewRm3ZJ_bwWZdCrPjIsCKZ8uUP3WVoxgWDUrxzk_AtICxpr2Qldt9keZL4SYdRpRMHW12sPLs0qapt6YxKbKTQzAVY9oZOvFAYpaZeWYJ33nZlUrNGv_zQ2pBF9OqioAVFtUIjfvYfIf33mdezC7quoXZlg6UbWlV3Z1AMU4e1r1J3VeVJ0AK8y-3dkMTadK89Upw0MbgqSxz_xOux2h5DlS13Cty9IQDYeJsQjYNjG7pRG43NTyLvAuXmkKr4NKnxFVHoxDBuPNiJL6i_inQvBvpF181dNuc6Sl2C2W8f3rasw6PjfmGo2CsQrqHZr4TPoKJgVATUkNqQTLmVAINilwKq71pwoDXIVajsclWy1wcMJMw3EhyDRSlBdqZwZFO5gQAVAMe4JRXj8NmiGU7o1wvJ5I8bN3i7y9mI377hmy2UtG6twJlTvCnujccjr-V8FyieYXB9R9TIF7zGOB1tZwx_sT4JWqBd8k2W5SruP6oohXv1kXoJmQ1xkWuqSHf18gRP0nLQnYLUad9Yzvv_nJK2Uqq-fpIq9LHodz2mpoAxO_0GDOsGyAq5YSjXDpNKim_LQ2lAMTY4gargj0g/https://www.amazon.com/dp/B0DY1BG1ZQ/?_encoding=UTF8&pd_rd_i=B0DY1BG1ZQ&pd_rd_i=B0DY1BG1ZQ&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=Svc1p&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=AM91KKSP89Y4VZ4686H1&pd_rd_wg=s6iCa&pd_rd_r=e957a982-f9a0-4355-91ec-c565471cbeeb",
+      "link_clean": "https://www.amazon.com/dp/B0DY1BG1ZQ/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0DY1BG1ZQ&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/314YFN+XZfL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7571f79e-94f6-4c79-97cd-05caa28cce24.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7571f79e-94f6-4c79-97cd-05caa28cce24.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.2,
+      "reviews": 200,
+      "price": "$29.99",
+      "extracted_price": 29.99
+    },
+    {
+      "position": 2,
+      "asin": "B0HCQ37Y89",
+      "title": "High-Pressure Hose Nozzle Metal Fits Garden Hoses with 3 Spray Modes (Jet/Mist/Shower), Heavy Duty Metal Direct Spray Hose Gun for Watering Plants, Lawn, Car Washing, Patio, Pet 1PCS",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JGDMF8fr6IXTH2WblsfqKBwAAAGf_4LBVAEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICCS1pwC/clv1c_ek-wBfXWVcba3jK2ZyrC7XdcuEa5bm8Jvoiv-0e1NaEGk6lmeZ22jFZW90qXCMHdOKBQiqoIRujlUHI_Fqe3kGNEyhO4CAmv_GYnwvrixUgmCR3wV6aNPk074O0YvkIk5FSbUo0i3MDUafDihEB-qsGaodeEtlTrCs3l7SuKHAcZWl1RMdPQbw8CAJVfC75l1k-jwlFnl3eoFUG8sER22yOfBFtrUEzoJV8ir3DKBsHmRBU2yny6ULLymSt_SGMZQTt2dS06tCjc42K4rj7K5RYLUHwQKMP9fopeCOJphmCWBtqPmNPZwt7qGRrrtRzuBTtsBvdPIF6cuCQXoXeKcAfp5xZFdcbdg_u0p9OiGD2dTkxEshg9Y3UBS07lTf2AsHDlnzckG9I8lX3758HGUrYQfJCHmNp0QuLfwEN_KbjAoEH0b1EUBoEWhyez235EVYS-3lknGhgHt1Uj9joZFIKexBR7mKLZnDoDo5OQZfltsA6yMK8ueenhHEm5phG_lv8FO-NWMwzPnG34HLDHXMl3Efsp19vAhjQPCNh2hx6mWi--j1aACHC6MY9w0Lu_hJRBLs2HgcFgvJ3SA6maySPbq_UxRTQQwIoALTXqt8toD82zHEJjG2_EaSFaj-d-UsaYI8-18Juzu3ThJViC9Y385XHF1GBGdwgNJ740-YixHkPXlorj1bEJ0EPzkG4Q7JbZXh611jdhEoVbxj_YTN0o0pRRc7Q2P4bjKbChEAgSaf41LHPYliHzcTqEMiGe9cDcSdk3ybbUliBK0QU4sZ0Ut3X7RwEzDi-Ve_N6fJhQYbE4f2H-w5_kM49EEVmV17mjYHDbreGcoAJuX2h0UlFeIh7rZSZOt1ez6zA56DX_aoZHUUf_T5hZXUXBwDqEoxjLNVQGHCMg_m2V0EW2yyJBoTVzNJVY1KunktU8ZXmKw0LC44SGoq0VeCpuigTrfdUzzWeKkA3v9rcPIXr3JGMtY6stUnEioEo82qTLDm3aAoDf3YG3B-TNWFHyHIz9oIzTVKdS-B-0X3BVBtOWjCNn3tE-t5ztWjYWx277YHgvYf-rX0W8QIBv6XBhi_vh0kHNplBGXX7AJGPle4FjfMAduBNetqeGlEvl0fMueFeXqyifj861KdXuyqv7t9ewPre49-D_DqFOGGAc7SkyrQdiE2wRB_zmUkmrzY6s7Fl4dgU7wasmWcfm_bMbP-uhBRKeeQhANdegLG0hRqxuwQRXs54qu2k-EsPNDhJcIoN5dJgeFo9R10BMj5JY2GF26I6ubtixDTmXMCZSBqaaxaunJ6X9KSXeN22W4fSxONNtrPL7P9L26NDbBp2GSp8uFC9EFMwbE2UDzGOVRk9wCi-tBCSDPBoh1_ttVAuKFQLkTrXyruFUJymAgm6zEE37Ke11mAB4XtTkqyUZREvw-BdmxJpZq3ZXopM9eobs8wmgMFmkSHXhrS0vY6VQ6KGtKd0qAvgAOn8SaEGZk9UDkmZqQuAAwVavB7r-V5vl_S2G0bBwBaW9NMyuTCWKNlgl-OuTZOs8MkbY5CrX3ydIPLlGDISug5k/https://www.amazon.com/dp/B0HCQ37Y89/?_encoding=UTF8&pd_rd_i=B0HCQ37Y89&pd_rd_i=B0HCQ37Y89&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=Svc1p&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=AM91KKSP89Y4VZ4686H1&pd_rd_wg=s6iCa&pd_rd_r=e957a982-f9a0-4355-91ec-c565471cbeeb",
+      "link_clean": "https://www.amazon.com/dp/B0HCQ37Y89/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0HCQ37Y89&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/413IyHs1XUL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/184ca24d-0841-421d-a244-4db411288f72.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/184ca24d-0841-421d-a244-4db411288f72.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 5,
+      "reviews": 2,
+      "price": "$28.99",
+      "extracted_price": 28.99
+    },
+    {
+      "position": 3,
+      "asin": "B0CSF2LLS3",
+      "title": "Rinseroo Slip-On Bathtub Faucet Sprayer Attachment, 5 Foot Hose | Ultra-Flex Dog Shower Hose Adapter, Portable with Sprayer Pet Showerhead, Attach Tub Spout, No Install for Speedy Washing",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JH_nO4BZ64YFvcfZTvwA6RUAAAGf_4LBVQEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICBLtOjt/clv1c_ek-YBfv3VcbW3jI2m8VSJvBwCsVHk2j0WPK3IdCqyu5-Ix7JYJmoFBdZw7ngNFV66dufBiGAjMbFSbZoQZCewQq-nTeU1OjGJ0BRfc-HENQXzaF63WxXFn7Uwjnxp-FR0zwLFRZHVUI5S55UjIuaz_KzYN-TmrVqo2WyTzSe_vZ_mO2Uzq_FCojtvcwlr-6aJQ3fQ8MrXofL1srgjdhw_yPJeXcTksyRzOKf7mmiEg7z-FSncvRqKQMvIMn7RWSxuBwIjl2jQhb7mLL1XnXsrqsae9doXTyIEgRGQAh2vAyio_MgziZlPSXy1Uca2L1ROrU1PCYxQjXgDCVHr031Q8ik50aDRRZ5Y1rjOAlwIMGI5qJJighq1I0QPGo4wzefY7xSSN8kPxoIWht8-VYrx91wHCOGiNqhwByTFo1XT7nkPfsOOQWwgnouyG4NaSKInhJncNTyzKSnVw2pccZbc5p0h5wyRQ3VCrK4y4XYdwF19bsFjErjXClofvCxeiwIcA5F0YjnqmdSXeJyfDEgJBYdSDjna6cBXy1Iv7icaNABPA0lggSXMVc4rVxNxqV0P7MOtODZxKlcOT7W_oGjsfeZ7X64PMNtZTnUtVSyfyFjahMDceyOEkwJ5RDMPA4wrwj8fCKLMRzdPpjUqsT3H3ukOuytAKxUdpuqLALGmNeTx39zo35_9wts3t7gJSLSqKWkNFFFGAzxF8fZKt6I1B17Lla9FM0O7Vg8wWFK-ExnuTpWk7Mto1cOOlakyIm8g1Z0zCqZ7Hq_AiMv0RVDvqeTL4vHzVD2JpA_yhMhw45ZxvUbTzMjciDnyhaN3rUNRPZqEEmUYk3dowQrWbAuBhEnENnBn_cfiyfFZudZLGDB26GYErg5FDoG4wzdv7TM_P4hK0NPEmrVeOoPlhzg9Z_i9SiLxHoZVE_jC75GHYv5AGU7eZOMvoRavmpfHm2L2vQQGq-Ravc1wfPzPc_0096rDPejdaXr5K5oNCFokyifd1rr2Gd3rp5UzQcCFJCOQChHxNZdnWr6nl-LVBhj48wg6xIiTFEIX8bAi0H6V_I53j9RhrYgTVPvz1kxaZfmMhjkKpK7mTH2XJJsdjvBxv6Y_o3rXvsxbSgEiSsz_FeyyzosJGMtsW-be9Q4bQWljyUw3isttKZNMSpQJMMTd5T6ftKp6VqrtWF0XDORQES8jcgJf13zs0wHsBxgQbSGTsmbZAMFOHdyPBL9bMQ67fvkhcYvQz8olun5vVjBWV0vLaWaoqStJVWWRWo0rnOQe7OgNitc65idEp4_JBmC5FH7CN06d-YcS-63FyUmLsTqYPKOc9bqPy_riMDgPmofbMDtkXT25qVCKGCr9AyaJDLDHNuRkEB27Yi7LGnDsGB-rjjUJ4eoC2PT-Gq7fZ4bfo4dDYLLITwEIws2ldXpUtqGEiXeqEtrlaRnzstKz5wbIq3Toq31HKYiN4-fjeFnjs267q40GNOXJp_3uQ2jIW6_zq7I03ezPTd-UV_cv-rNRp-lqcfTuerqziKWSCAteSpiJcYGBK1jsFgMLkNfHIiYIr8QrTNn/https://www.amazon.com/dp/B0CSF2LLS3/?_encoding=UTF8&pd_rd_i=B0CSF2LLS3&pd_rd_i=B0CSF2LLS3&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=Svc1p&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=AM91KKSP89Y4VZ4686H1&pd_rd_wg=s6iCa&pd_rd_r=e957a982-f9a0-4355-91ec-c565471cbeeb",
+      "link_clean": "https://www.amazon.com/dp/B0CSF2LLS3/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CSF2LLS3&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41cfK3v65EL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/63e3bfe4-5cb0-4409-bf63-83023ad9e74d.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/63e3bfe4-5cb0-4409-bf63-83023ad9e74d.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 3.8,
+      "reviews": 3618,
+      "price": "$33.95",
+      "extracted_price": 33.95
+    },
+    {
+      "position": 4,
+      "asin": "B0CPKYDW24",
+      "title": "FANHAO Thumb Control Garden Hose Nozzle Heavy Duty Metal, 8 Spray Patterns | Rustproof Zinc Alloy Water Hose Sprayer, High Pressure, Non-Slip Ergonomic Grip for Lawn & Plant Watering, Car & Pet Washing",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JCnvAbR-kmOSgiaxfyR_Ky0AAAGf_4LBVgEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICCj4NgF/clv1c_ek-wBXfWErTa3eubk_3lSZr7kbgxFJrEqc38cFrw3biE2HkoWvYOCDZP1gdaBzi7LeRg_Rq9y9YfP5PqdsURkSMsexkrI_bhAwyucN3B7MB123FIhSEMGwigYnt5pVTwWyp70Mf_3Xg28lyoPdd18fLz4NyfsnXqoZTQDTao0e4vOaiZdGH96uhCSj0uTbDBWK_PJ2jsrycKVOVqvVXwKsy_NG03bCa8Cu51zT72Nt3Rz3f4w-dvX1xQXV3Qe9KFd4M2Yd7Ax11NR31WystryFNBIHuJbVNpOpz7MyE2q-f32LrTcMoBOHqq3qngWwhc9Z61hH41xDVho0hjOyvs6_0pimPcLutmAzRYHOQafccXqiylBL73FNtov6BfjWjYiKg88fQ1Yb0CIs1yWYFBQ1cJ6jRdvFL6ga-aNsBow097TTt2G9YOsHmKr-DFeaPE3F91q-JgnxaGgXhbkcQ-Kz-y8smO_VhVCdq4CVHTGhq03tYkLm6ra5fheQxEUgz0b4b0hUXdCwvJQt5P-luX274oLJTJPB40_2g3PUtojvCVkThLxAAQckZeC5SJtlBei5vUJXXOtGwsoEb8FZVD2z8_ENeUSst6FlaqX3J5xKNyDzq8ZJxVbnmsYqtWlMpe2Xmj0uu1MdydvohwIekLiU5YftHzw73WTlvrPH1bOZsHAZOAPG_K148eeGv2cSnJ_kz5n8G5c8QP3T1Hcn_2m5rNcPb3cear05j0VQfNY-ICyX8RWaswYKasfy7WDTfyzb7IEDjRkX3Do1TTXxXDP1cFEZdK-VD-OojToKBrGG5ZxrV7u5Jtjm-S3ahAGZmVVzhjCfdSPHvVzoKZr0mP9DB3BKcg99rqKe77OXsrAFF5qcAvuvPXT67Ecfyh312Eqlhvfl1vP08bXTzNaTb6dwCkcR5pvy3JmeU69cVe-ZoG0lVwI1ESKXsGLPnuc6SV7Sqz7sKzi27OfuHI5uzLyStgAMfzUJMn_DgSGVshDl8a1XEqHvGIzXd_36fmDQuC2JcKey5zSk_KcCLHlhU7CZ3XiF95iplh5D9x-x1yfBOsklAWZ5NqIsCFGBMLmyxcz0wayV0V6ruE6DsAvBkU1dVKEd1NK41J_xqiX8xVXj0JyhPuVx6f8VQal1VKjZsMqqJSYiZgTSWHwPI8W58xrSdmk29xJ-WcnqXDS9QOUgow8k0sAUBAvrYURd6C9-bJygEbNh-rflzQi2KrtFtTEPa1CYYpeujC-XSkPRGm55T8YzZtINTLjoqBN9T2n5m83zClStHXDBQFp_cGkFnTgVd9yN8suZxghdo_Rk2XBVpN4-k-_7jTHfNK_Vu9VFBM1dBZnpP86oiPC0Q5wA6vpaSDpS1WCZlPoCkvDhQUj9IRhhZ_2S04-wEVDFT-lCtb41g8BIFlRtdzZ-lqlGvv-c13Flb_w9SeHW6Wrdm-yZwaetLTK9Wi1-xDt5ki9D8o1eYhNqsPnR6_VvkRypOu7u6_RgWBlYK2NRv-JBsxD_cMosIcNBD_J25qTieFAtxlGBNO1l2AxeQJ63jxPcQqBm6cVuasrg/https://www.amazon.com/dp/B0CPKYDW24/?_encoding=UTF8&pd_rd_i=B0CPKYDW24&pd_rd_i=B0CPKYDW24&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=Svc1p&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=AM91KKSP89Y4VZ4686H1&pd_rd_wg=s6iCa&pd_rd_r=e957a982-f9a0-4355-91ec-c565471cbeeb",
+      "link_clean": "https://www.amazon.com/dp/B0CPKYDW24/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CPKYDW24&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51vh27+iEjL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/e0337cb9-2863-499c-9918-cf395e16d895.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/e0337cb9-2863-499c-9918-cf395e16d895.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.3,
+      "reviews": 3522,
+      "price": "$28.90",
+      "extracted_price": 28.9
+    },
+    {
+      "position": 5,
+      "asin": "B0H265VQVM",
+      "title": "2Pcs Power Washer Nozzle, High Pressure Hose Nozzle with 6 Spray Patterns with Adjustable Spray Patterns for Car Wash, Patio, Garden, Pet – Heavy Duty Metal",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JIl6qC-nad-Wm5Sh9KFLi1sAAAGf_4LBVwEAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDjgOdp/clv1c_ek-wBXfWLcTSXk6hthlGgETDcDYb_teUxUR8UjbGG3l4Zzkq0CCKTrNESpK1hYIBYUnObA0kneeP56VYNtkEUKIYTYFgf6Yc6QWy3VJMjJkirfsH8tqji238ZinUtX6m01pOPWXBACA8zqNpBPh7-vy7Idqa5pWyMoZ0ygOAvGbe3VUTFsSJqplJs96UhqmVFmfIXGlHl7doFIJ9vmyMsfiPBEsrEEv5pFe06m2SEg7jWDPxNlY5rbD3iN77QWSx4BzK7l2jQp789S70XnfU7MyRzYwCzqjY3h5xY2vJ6oPeMfcgbAVykK1agPxF0pyu-D3mNDcmd7F2EuiGBKJzKVny17Tt-EwVV7jTJ9RSJPmGlqJNiljGdfJyiNv37Mn1tKZxj5V99LvcC4RFDreLpC7By0jgxYr892hah_JseR-3vzaEN3mrkR1CHqZoijyp3nWA6jmUtiHqTSxDnHAdKDaQX7Qvec6bT5NtXI_Ic39OHF2jo7saBimPaU4gATsdNNia0hOYHDfNk8L-44gQNMyq4Aa-ybRKLZZer3e_jsXOeVeMR3esAYsorUXrqJCQJxu7siapicyKlwIaRXbU7xHf6EJpBqL7kX7A8ECIpQnVhT9zKltpZ3WGW2zkPhTJQX9emqGlJyaM0mTjrCpNI49pPqg0da9cvuEuHQPMBpYIq7t46F7PhyWwhsoY1RwzyEr4X2vT3obzWSBYwyxBPYRW1oYifcFbZx7wqi1KTnSUBWMnW960lqNmYSzjjhYohrctO0TJYCtydfn4zgV9oEQuFC_wjQpqTVuYmUWiI7BThu22D7cnhiLJqmS58w4dEpYuM4KW6RXIx7DhZ5tWdJcgaRbCWc5MzVYy37qWmAU-8GJO0ZMbyqVRvXz0sxETvlVXWPhOSdGc_WRaPacyjGAf6V7FiVpFSC4XLv42p1WY5xUYyId9yqJ43tuV6mjtP8ZSeU8c3suefJXHAzxGYf8v0xMcFCWgKNoR2lM4qLk5bGEPYUY3GmneU3KE02fhgsjYr5DQA-gN2_lFSYv9VaAZu38wsbzMo-i7909v1EZYNN5Rxn49f3UPyb9bdD0gOzgFkTnGYGKo451oM6f8__5YCW06n660Zyvfetp9xJO3zkeAQ7amHNHv-JZUtSXkM22cDO7UQg5fjfIlgoNgatqiqblHORt_jmZ6BhJOYot0En_HtwbtBUkNAT5zx_OOUVkjfcQZ1NJ_8Zb_7f2hTrz_zwYkKBsp-zgJTzJu7Yjo67cUYzwiZTPB3fGV3AX_h1aRlcFkoQswRRKGwdEn-go-DkLVt3cq4T3zktVLEV54t_wBG6GVGGTN2cs7lCnGpoDD86T4vx7KaL5ujHwBpyCwrfTPrMs1_UH2etcEBP6Zg-443lgfULpFMg3_He2h_SrR-4Q_5CduymEqFXl4hrw3mNaOis-TLMjPdUkGgMvhy7Sl9bL3rGvmqvconRyKMQZzeoPgukWzL-smiJmP1w6qsvi1RDKYTcwcC_QUmuiSVrKQM5xxJk_O044ZZx1XpG8-prxcuLebAVZqY82hmd2phKRPrDVSik9H1QlJyRzOaqf-kiCd3A/https://www.amazon.com/dp/B0H265VQVM/?_encoding=UTF8&pd_rd_i=B0H265VQVM&pd_rd_i=B0H265VQVM&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=Svc1p&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=AM91KKSP89Y4VZ4686H1&pd_rd_wg=s6iCa&pd_rd_r=e957a982-f9a0-4355-91ec-c565471cbeeb",
+      "link_clean": "https://www.amazon.com/dp/B0H265VQVM/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0H265VQVM&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/412aKG9ivLL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/d9967095-b296-41c9-8398-de318f44ebc3.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/d9967095-b296-41c9-8398-de318f44ebc3.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 3.4,
+      "reviews": 3,
+      "price": "$25.98",
+      "extracted_price": 25.98
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "text": "Customers find the dog wash nozzle easy to turn on and off, making bathing simpler, and appreciate its functionality, with one customer noting it works well for German Shepherds. The water control features receive positive feedback, with one mentioning it can be switched off and on with a thumb. While the nozzle is heavy-duty and prevents getting drenched during baths, some report issues with the hose connection being leaky. Customers disagree on how easy it is to hold while bathing their dogs.",
+      "insights": [
+        {
+          "title": "Ease of use",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 46,
+            "positive": 35,
+            "negative": 11
+          },
+          "summary": "Customers find the hose nozzle easy to use, particularly for bathing their dogs, with one customer noting that it scrubs and rinses all in one step.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "I like the device as it is easy to use, quick shutoff, and an ability to control the pressure of water on the pet's coat....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R3DD28UT60QFAA"
+            },
+            {
+              "position": 2,
+              "snippet": "Made dog washing so much easier, less messy, and faster",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R60U7MK4ZU0IZ"
+            },
+            {
+              "position": 3,
+              "snippet": "...This nozzle makes that a lot easier: easy to turn the water on and off very good flow of water to rinse the dogs...",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R13HLWD8CGSHFV"
+            },
+            {
+              "position": 4,
+              "snippet": "...and off with your thumb, when your hand has soap on it it’s very hard to maneuver it. Also, for being an outside product it should not be white",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RUOUB9S3BWY1F"
+            }
+          ]
+        },
+        {
+          "title": "Quality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 31,
+            "positive": 30,
+            "negative": 1
+          },
+          "summary": "Customers find the dog shower head to be of good quality and a great idea.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "This is great product! The attachment is brass and NOT CHEAP PLASTIC....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R3U8AGKP7W92XI"
+            },
+            {
+              "position": 2,
+              "snippet": "Perfect for using in my laundry tub. This is a well made & well designed dog-wash nozzle. Wish I’d have found it sooner.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1A1O91PTI2FS"
+            },
+            {
+              "position": 3,
+              "snippet": "Good product. It's a 10",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RC05E72UCT5YK"
+            },
+            {
+              "position": 4,
+              "snippet": "No leaks, made well, works as expected. This sprayer is really what I needed to control water flow and spray around my dogs eyes and ears....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R230AWOX9T0WQO"
+            }
+          ]
+        },
+        {
+          "title": "Functionality",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 21,
+            "positive": 20,
+            "negative": 1
+          },
+          "summary": "Customers find that the hose nozzle works well, with one customer specifically mentioning its effectiveness for bathing German Shepherds outside and another noting its ability to stop water flow when turned off.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "This works great. It keeps the water from splashing. I highly recommend this for anyone with dogs.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RI9R2YSGKFP2L"
+            },
+            {
+              "position": 2,
+              "snippet": "Works as advertised!",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/REGUP19T98LKU"
+            },
+            {
+              "position": 3,
+              "snippet": "Worked as advertised. I used it for my potbelly pig. He hates water so I like that you can turn it on and off easily.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RKOLID8EYQVNN"
+            },
+            {
+              "position": 4,
+              "snippet": "Like the switch on handle to turn the water off and on. Made it easy to remove the shampoo off my dog.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1GBV7HEXUGV7H"
+            }
+          ]
+        },
+        {
+          "title": "Water control",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 13,
+            "positive": 12,
+            "negative": 1
+          },
+          "summary": "Customers appreciate the water control features of the hose nozzle, with one mentioning that it can be switched off and on with the thumb.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...There is a nice toggle on and off switch on the handpiece. I would recommend.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R21L1I3YBG8F84"
+            },
+            {
+              "position": 2,
+              "snippet": "Love the on off switch too",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R29SV0MHDGVWYK"
+            },
+            {
+              "position": 3,
+              "snippet": "...I love how I can switch it off and on with my thumb and the silicone bristles massages their coat to help with rinsing the undercoat out completely!!...",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R3W3XRQLTT8LW5"
+            },
+            {
+              "position": 4,
+              "snippet": "...down to avoid creating a big mud puddle, but since this controls and directs the water flow to go exactly where I want it, I’m able to stand in one...",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RPYEYRLF6THVE"
+            }
+          ]
+        },
+        {
+          "title": "Water flow",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 12,
+            "positive": 9,
+            "negative": 3
+          },
+          "summary": "Customers like the water flow of the nozzle, with several mentioning it prevents getting drenched during baths, and one customer noting it provides good rinse action for dogs.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...This sprayer is really what I needed to control water flow and spray around my dogs eyes and ears....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R230AWOX9T0WQO"
+            },
+            {
+              "position": 2,
+              "snippet": "...Being able to have the brush and water together in one hand, rather than holding a brush in one hand and the hose in the other, makes the job so...",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RPYEYRLF6THVE"
+            },
+            {
+              "position": 3,
+              "snippet": "...good but the connection to the hose is leaky despite the gasket, I get soaked. My dog prefers it over other sprayers.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2LX4YGQ6QY1YE"
+            },
+            {
+              "position": 4,
+              "snippet": "...easy to turn the water on and off very good flow of water to rinse the dogs nice grip for when my hand is soapy",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R13HLWD8CGSHFV"
+            }
+          ]
+        },
+        {
+          "title": "Durability",
+          "sentiment": "mixed",
+          "mentions": {
+            "total": 12,
+            "positive": 6,
+            "negative": 6
+          },
+          "summary": "Customers have mixed opinions about the durability of the hose nozzle, with some finding it heavy duty while others report issues with the silicon tearing and the cable rusting.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "I consider this a sturdy, quality product to wash the dog!!. It's easy to connect to an outdoor hose....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R21L1I3YBG8F84"
+            },
+            {
+              "position": 2,
+              "snippet": "This broke the second time I used it, I wrote a review and didn’t ask for a replacement but the company sent me a brand new one without me asking!...",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2U16TK7SXWKB3"
+            },
+            {
+              "position": 3,
+              "snippet": "Practical, Durable and Smart. We’ve had ours for several months and it’s been great. I just purchased two more as gifts for friends with dogs....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1EWENMVRN8B5Y"
+            },
+            {
+              "position": 4,
+              "snippet": "...The head came loose while using and rotated to deliver a blast of water right in my face. Found it awkward to use because it is heavy and stiff....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2UX21GKAELUNZ"
+            }
+          ]
+        },
+        {
+          "title": "Handling",
+          "sentiment": "mixed",
+          "mentions": {
+            "total": 12,
+            "positive": 8,
+            "negative": 4
+          },
+          "summary": "Customers find the hose nozzle easy to hold while bathing their dogs, making bath time easier. However, one customer mentions it's difficult to handle with soapy hands.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Best thing ever!!!! Rotates, easy to hold. Great",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R319K0W8E78W1J"
+            },
+            {
+              "position": 2,
+              "snippet": "It's quite heavy and difficult to handle with soapy hands. Otherwise, it can get the job done.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2ROYFH1OVPN5G"
+            },
+            {
+              "position": 3,
+              "snippet": "...very good flow of water to rinse the dogs nice grip for when my hand is soapy",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R13HLWD8CGSHFV"
+            },
+            {
+              "position": 4,
+              "snippet": "...The on-off valve and the flow valve can be used one-handed and work great....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R3HI4FYN85Y2AN"
+            }
+          ]
+        },
+        {
+          "title": "Leakage",
+          "sentiment": "mixed",
+          "mentions": {
+            "total": 12,
+            "positive": 5,
+            "negative": 7
+          },
+          "summary": "Customers have mixed experiences with the hose nozzle: some report no leaks, while others mention issues with the connection to the hose being leaky.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...First of all, it leaked at the connection - spraying where I did not want it....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2UX21GKAELUNZ"
+            },
+            {
+              "position": 2,
+              "snippet": "No leaks, made well, works as expected. This sprayer is really what I needed to control water flow and spray around my dogs eyes and ears....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R230AWOX9T0WQO"
+            },
+            {
+              "position": 3,
+              "snippet": "...It is worst nozzle I have ever bought. It leaks and makes a very loud sound. Waist of money!",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R3DPH6UD1CCWO8"
+            },
+            {
+              "position": 4,
+              "snippet": "...Very easy to use and attach to the hose without leaking.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2UF5CAUS69S69"
+            }
+          ]
+        }
+      ],
+      "images": [
+        "https://m.media-amazon.com/images/I/51bb9r-Kp4L.jpg",
+        "https://m.media-amazon.com/images/I/61Le2UpG+IL.jpg",
+        "https://m.media-amazon.com/images/I/81BC4oEZAPL.jpg",
+        "https://m.media-amazon.com/images/I/81UONsDozsL.jpg",
+        "https://m.media-amazon.com/images/I/71WIVrQs+GL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 71,
+        "4 star": 19,
+        "3 star": 6,
+        "2 star": 2,
+        "1 star": 2
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Happy face washing!",
+        "text": "Finally our mini goldendoodle tolerates the shower to rinse his face! Truly a miracle and game changer for all the reasons everyone already said! Thank you so much for putting the pet first when designing this amazing product 🐾",
+        "rating": 5,
+        "date": "October 12, 2025",
+        "author": "Donna J Calu",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFLCHFWS7FZJR6ATMSRWT2RYFDOA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "3 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "White"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Bath time is way easier using this",
+        "text": "After using a regular hose end nozzle and spraying water everywhere I didn’t want to, using this sprayer is a joy. The on-off valve and the flow valve can be used one-handed and work great. It’s easy to control the spray when cleaning around the face which really helps. It seems kinda pricey, but after you use it you will be happy with your purchase. We have been using it for about a year now and it still functions like new.",
+        "rating": 5,
+        "date": "August 5, 2023",
+        "author": "Rick",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGWLCERXSIH6MU2HVCT5ZH4ZOUJQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "6 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "White"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Awkward Nozzle, Works As Advertised",
+        "text": "It's really well made, however the position of the spray head is very awkward. It makes it difficult to scrub in different orientations without accidently unscrewing it from the hose. If it was a straight barrel (like those detatchable kitchen faucet spray heads), it'd be much easier to use in all different orientations.Other than that, it does what it's designed to do. It gets water all the way down to their undercoat, and pulls away excess fur as you comb it along their coat. They also enjoy it more than the shower setting on the normal garden nozzle.If it didn't have that awkward nozzle head, it'd be perfect.",
+        "rating": 4,
+        "date": "June 24, 2020",
+        "author": "MrHistamine",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFPCABAJXPVVX4DYX4RMPHJAIQCQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "5 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "White"
+        }
+      },
+      {
+        "position": 4,
+        "title": "But it",
+        "text": "Best thing ever!!!! Rotates, easy to hold. Great",
+        "rating": 5,
+        "date": "August 8, 2026",
+        "author": "sherry mcCormick",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AE32W5S44SYKF3ZV3CTCIQQNV2FQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "verified_purchase": true,
+        "product": {
+          "color": "White"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Great dog washing attachment",
+        "text": "This is one of the best dog washing attachments for a hose! I have 2 blue heelers that hate baths, with this they tolerate it now. On/ off control at the control of your thumb (palm design). I use this and dog wash mit to help scrub their coats, but this helps flush the soap and hair out of their double coat.",
+        "rating": 5,
+        "date": "August 30, 2024",
+        "author": "Ryan",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGITLMGDHNKM4D6U4CU2P6XMEHXA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "White"
+        }
+      },
+      {
+        "position": 6,
+        "title": "Works great",
+        "text": "I was able to give both my large dog and puppy a shower without getting wet. The water guard definitely works as described. The on/off switch is easy to use. No leaks. Exactly what I was looking for to use with a mini water heater to wash the dogs outside.",
+        "rating": 5,
+        "date": "July 12, 2023",
+        "author": "S S",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHLNW5VAPB23AJAY5YE7HLHYGM2Q?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "4 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "White"
+        }
+      },
+      {
+        "position": 7,
+        "title": "Well made. Very handy",
+        "text": "In the summer, I prefer to wash my dogs outside to avoid a mess.This nozzle makes that a lot easier:easy to turn the water on and offvery good flow of water to rinse the dogsnice grip for when my hand is soapy",
+        "rating": 5,
+        "date": "July 16, 2024",
+        "author": "Byron Watson",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AETD52BRDXU7SL7KIAMANEUXRHYQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "2 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "White"
+        }
+      },
+      {
+        "position": 8,
+        "title": "Unusual use for this product",
+        "text": "I swim in my own pool at least twice a day, year-round (I live in South Florida, so don't hate me!!). I wanted a way to wash my hair after swimming without having to take a shower, so after researching the horrendously expensive outdoor shower equipment, I bought this dog shower hose attachment. It is terrific! I love the rubber \"fingers\" that massage my scalp, as well as the frugal use of water. The only downside is that I must use a separate water shut-off valve between the hose and the scrubber for those moments when changing hair products. The scrubber warns that leaving water pressure on for \"an extended period of time\" can cause leakage, and indeed that is true. So rather than using the very convenient shut-off slide that is on the scrubber itself, I instead use the shut-off valve to relieve pressure on the scrubber. Not a big deal, but slightly annoying. Other than that, though, this is a great solution to my desire for a quick shampoo.",
+        "rating": 4,
+        "date": "September 3, 2018",
+        "author": "SMM",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGPIEN2VEFGTIPTSNJNH6KX6P5XQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "12 people found this helpful",
+        "verified_purchase": true,
+        "product": {
+          "color": "White"
+        }
+      }
+    ]
+  }
+}

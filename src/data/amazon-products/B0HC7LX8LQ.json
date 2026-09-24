@@ -1,0 +1,816 @@
+{
+  "search_metadata": {
+    "id": "6a7ed5fbd868dde4298fd713",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/CppJmQlp_wl1daCXJ6bRzA/6a7ed5fbd868dde4298fd713.json",
+    "created_at": "2026-08-14 08:46:51 UTC",
+    "processed_at": "2026-08-14 08:46:51 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0HC7LX8LQ/?",
+    "raw_html_file": "https://serpapi.com/searches/CppJmQlp_wl1daCXJ6bRzA/6a7ed5fbd868dde4298fd713.html",
+    "total_time_taken": 7.77
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0HC7LX8LQ",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "categories": [
+      {
+        "position": 1,
+        "name": "Pet Supplies",
+        "link": "https://www.amazon.com/pet-shops-dogs-cats-hamsters-kittens/b/ref=dp_bc_1?ie=UTF8&node=2619533011",
+        "node": "2619533011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2619533011"
+      },
+      {
+        "position": 2,
+        "name": "Dogs",
+        "link": "https://www.amazon.com/dogs-supplies-training-beds-collars-grooming/b/ref=dp_bc_2?ie=UTF8&node=2975312011",
+        "node": "2975312011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975312011"
+      },
+      {
+        "position": 3,
+        "name": "Flea & Tick Control",
+        "link": "https://www.amazon.com/dog-flea-lice-tick-control/b/ref=dp_bc_3?ie=UTF8&node=2975384011",
+        "node": "2975384011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975384011"
+      },
+      {
+        "position": 4,
+        "name": "Topical Treatments",
+        "link": "https://www.amazon.com/b/ref=dp_bc_4?ie=UTF8&node=120957552011",
+        "node": "120957552011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=120957552011"
+      },
+      {
+        "position": 5,
+        "name": "Flea Drops",
+        "link": "https://www.amazon.com/dog-flea-drops/b/ref=dp_bc_5?ie=UTF8&node=2975389011",
+        "node": "2975389011",
+        "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&device=desktop&engine=amazon&node=2975389011"
+      }
+    ],
+    "asin": "B0HC7LX8LQ",
+    "title": "Flea and Tick Protection for Dogs-200 Natural Soft Chewable Fleas Ticks Pests Defense Supplement Supports Skin Coat Immune Health-Daily Oral Flea Tick Treatment All Breeds Ages-Chicken",
+    "link": "https://www.amazon.com/Protection-Supplement-Health-Daily-Treatment-Ages-Chicken/dp/B0HC7LX8LQ/",
+    "link_clean": "https://www.amazon.com/dp/B0HC7LX8LQ/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0HC7LX8LQ&device=desktop&engine=amazon_product",
+    "badges": [
+      "#1 New Release"
+    ],
+    "brand": "Brand: LKDHFJC",
+    "thumbnail": "https://m.media-amazon.com/images/I/71XB0AgjT4L._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/71XB0AgjT4L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71IgWVcZ8RL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/717FbxoWoaL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/712YTvjjQqL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71nchCNo7ML._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/717EihYmLxL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71P+AiZp9kL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71qB2XZeXYL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71XmEN5nuIL._AC_SL1500_.jpg"
+    ],
+    "rating": 5,
+    "reviews": 19,
+    "price": "$19.99",
+    "extracted_price": 19.99,
+    "price_unit": "$0.10 / count",
+    "extracted_price_unit": 0.1,
+    "offers": [
+      "Save 10%",
+      "Save 15%"
+    ],
+    "prime": true,
+    "delivery": [
+      "FREE delivery Wednesday, August 19 on orders shipped by Amazon over $35",
+      "Or Prime members get FREE delivery Sunday, August 16. Join Prime"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$19.99",
+      "extracted_price": 19.99,
+      "price_unit": "$0.10 / count",
+      "extracted_price_unit": 0.1,
+      "delivery": [
+        "FREE delivery Wednesday, August 19 on orders shipped by Amazon over $35",
+        "Or Prime members get FREE delivery Sunday, August 16. Join Prime"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "Blinking Twice",
+          "details": {
+            "heading": "Sold by",
+            "content": "Blinking Twice"
+          },
+          "link": {
+            "text": "Blinking Twice",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A7GWSQJWS1VB5&asin=B0HC7LX8LQ&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "gift_options": {
+          "text": "Available at checkout Available at checkout This item is a gift. Change",
+          "details": {
+            "content": "Add gift options at checkout"
+          }
+        }
+      }
+    }
+  },
+  "item_specifications": {
+    "brand": "LKDHFJC",
+    "item_form": "Tablets",
+    "unit_count": "200 Count",
+    "upc": "701055011750",
+    "size": "200 Count"
+  },
+  "about_item": [
+    "Comprehensive Support:Dog flea and tick treatment chewable is designed to provide balanced daily care for dogs, especially for those frequently exposed to outdoor environments where seasonal pests like fleas and ticks may be present.With regular use,chewable flea chews for dogs may help support natural adaptability during walks,playtime,or yard activities,while helping reduce the impact of everyday environmental factors.Flea chewables for dogs also helps maintain normal skin condition",
+    "Natural Defense Fleas & Ticks: This flea and tick protection for dogs chewable offers a natural approach to pest defense without relying on harsh topical chemicals. As a daily supplement, these flea & tick chewables for dogs help build your pup's internal support to biting pests from the inside out.Choosing this oral dog flea and tick protection method means no more messy applications or strong odors on your pet's coat. Your dog deserves protection that works gently every single day",
+    "Soothes Itchy Skin&Promotes a Shiny Coat: These flea chews for dogs address more than just pest defense by actively supporting skin repair and a healthier coat. Each dog flea chew delivers nutrients that help reduce the urge to scratch.Unlike basic flea chewables for dogs, this formula includes ingredients chosen to promote a soft, glossy appearance. This chewable flea and tick for dogs solution means a happier, more comfortable pup with a noticeably improved shine",
+    "Premium Natural Ingredients:This oral flea treatment for dogs contains brewer's yeast, rich in B vitamins, which helps naturally make skin naturally less attractive to pests.The flaxseed in the flea chews for dogs provides omega fatty acids, which help maintain overall skin health in dogs.Together in this chewable flea treatment for dogs, they create a gentle yet powerful internal system.This flea oral chewable for dogs approach delivers consistent nourishment from the inside out",
+    "All Breeds,Ages&Long Term Use:These flea and tick chews are suitable for all dogs in the family, regardless of breed or life stage, not necessary the need for multiple products. Each jar contains 200 flea and tick chews, delivering consistent daily support for multi-dog families or extended use.These reliable flea and tick chews make protecting every dog in your home simple and affordable"
+  ],
+  "bought_together": [
+    {
+      "position": 1,
+      "title": "Flea and Tick Protection for Dogs-200 Natural Soft Chewable Fleas Ticks Pests Defense Supplement Supports Skin Coat Immune Health-Daily Oral Flea Tick Treatment All Breeds Ages-Chicken",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71XB0AgjT4L._AC_UL116_SR116,116_.jpg",
+      "price": "$19.99",
+      "extracted_price": 19.99,
+      "price_unit": "$0.10/count",
+      "extracted_price_unit": 0.1,
+      "delivery": [
+        "Get it as soon as Wednesday, Aug 19"
+      ],
+      "stock": "In Stock"
+    },
+    {
+      "position": 2,
+      "title": "Natural Care Flea & Tick Spray for Dogs, Flea & Tick Treatment, 14oz | Dog Tick & Flea Treatment, Pest Control, Certified Oils, Repels Fleas, Repels Ticks, Easy Spray Application, Pet Care",
+      "link": "https://www.amazon.com/Natural-Care-Treatment-Killer-Certified/dp/B01BWKMV2Q/ref=pd_bxgy_thbs_d_sccl_1/143-2390221-9407354?pd_rd_w=yV1r9&content-id=amzn1.sym.9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_p=9bef5913-5870-4504-8883-3ba89d7f8e39&pf_rd_r=D5W5VYFFTN1256KH07SK&pd_rd_wg=4DNJn&pd_rd_r=26adaf42-a2e7-42f4-8129-a33f2faa3c40&pd_rd_i=B01BWKMV2Q&psc=1",
+      "asin": "B01BWKMV2Q",
+      "link_clean": "https://www.amazon.com/Natural-Care-Treatment-Killer-Certified/dp/B01BWKMV2Q/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B01BWKMV2Q&device=desktop&engine=amazon_product",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/61Wzm8e6cXL._AC_UL116_SR116,116_.jpg",
+      "price": "$10.97",
+      "extracted_price": 10.97,
+      "price_unit": "$0.78/ounce",
+      "extracted_price_unit": 0.78,
+      "delivery": [
+        "Get it as soon as Wednesday, Aug 19"
+      ],
+      "stock": "In Stock"
+    }
+  ],
+  "related_products": [
+    {
+      "position": 1,
+      "asin": "B003PRI6OC",
+      "title": "Vet's Best Indoor Flea & Tick Home Spray for Dogs, Plant-Based Spray, 32 oz | Plant-Based Flea & Tick Spray, Kills Fleas, Eggs & Ticks on Contact, Natural Oils, For Indoor Home Use, Made in USA",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo4NjkwNzgwNzgzMzYxMTAwOjE3ODY2OTcyMTc6c3BfZGV0YWlsX3RoZW1hdGljOjIwMDAxMDEzNzMyOTQ2MTo6Ojo&url=%2Fdp%2FB003PRI6OC%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB003PRI6OC%26pd_rd_w%3D2yluN%26content-id%3Damzn1.sym.4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_p%3D4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_r%3DD5W5VYFFTN1256KH07SK%26pd_rd_wg%3D4DNJn%26pd_rd_r%3D26adaf42-a2e7-42f4-8129-a33f2faa3c40%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B003PRI6OC/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B003PRI6OC&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "#1 Best Seller"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/71g2Ssd9f8L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.2,
+      "reviews": 87684,
+      "price": "$15.48",
+      "extracted_price": 15.48,
+      "price_unit": "$0.48 / fluid ounce",
+      "extracted_price_unit": 0.48
+    },
+    {
+      "position": 2,
+      "asin": "B00N7DEBN4",
+      "title": "K9 Advantix II Large Dog Vet-Recommended Flea, Tick & Mosquito Treatment & Prevention | Dogs 21-55 lbs. | 2-Mo Supply (Packaging may vary)",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo4NjkwNzgwNzgzMzYxMTAwOjE3ODY2OTcyMTc6c3BfZGV0YWlsX3RoZW1hdGljOjIwMDEyNTg0NDU2MzA5ODo6Ojo&url=%2Fdp%2FB00N7DEBN4%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB00N7DEBN4%26pd_rd_w%3D2yluN%26content-id%3Damzn1.sym.4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_p%3D4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_r%3DD5W5VYFFTN1256KH07SK%26pd_rd_wg%3D4DNJn%26pd_rd_r%3D26adaf42-a2e7-42f4-8129-a33f2faa3c40%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B00N7DEBN4/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B00N7DEBN4&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71HVlv6LUvL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 44448,
+      "price": "$35.62",
+      "extracted_price": 35.62,
+      "price_unit": "$17.81 / count",
+      "extracted_price_unit": 17.81
+    },
+    {
+      "position": 3,
+      "asin": "B0CLM2S47F",
+      "title": "NextStar Flea & Tick Topical Dogs Large, 7-Way, 1-Month | Ideal for Large Dogs; Kills Fleas, Ticks, Mosquitoes & Lice; 1-month; 30-Day Protection",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo4NjkwNzgwNzgzMzYxMTAwOjE3ODY2OTcyMTc6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDEyNjE0ODAwNTYwMjo6Ojo&url=%2Fdp%2FB0CLM2S47F%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0CLM2S47F%26pd_rd_w%3D2yluN%26content-id%3Damzn1.sym.4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_p%3D4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_r%3DD5W5VYFFTN1256KH07SK%26pd_rd_wg%3D4DNJn%26pd_rd_r%3D26adaf42-a2e7-42f4-8129-a33f2faa3c40%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0CLM2S47F/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CLM2S47F&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71JbtJful0L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4,
+      "reviews": 2237,
+      "price": "$15.96",
+      "extracted_price": 15.96,
+      "price_unit": "$15.96 / count",
+      "extracted_price_unit": 15.96
+    },
+    {
+      "position": 4,
+      "asin": "B00B8CG58U",
+      "title": "Seresto Small Dog Vet-Recommended Flea & Tick Treatment & Prevention Collar for Dogs Under 18 lbs | 8 Months Protection",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo4NjkwNzgwNzgzMzYxMTAwOjE3ODY2OTcyMTc6c3BfZGV0YWlsX3RoZW1hdGljOjIwMDAzNzk1MjM2MzA5ODo6Ojo&url=%2Fdp%2FB00B8CG58U%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB00B8CG58U%26pd_rd_w%3D2yluN%26content-id%3Damzn1.sym.4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_p%3D4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_r%3DD5W5VYFFTN1256KH07SK%26pd_rd_wg%3D4DNJn%26pd_rd_r%3D26adaf42-a2e7-42f4-8129-a33f2faa3c40%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B00B8CG58U/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B00B8CG58U&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/719A5cR550L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 54716,
+      "price": "$59.97",
+      "extracted_price": 59.97
+    },
+    {
+      "position": 5,
+      "asin": "B0002J1FOE",
+      "title": "FRONTLINE Plus Flea & Tick Spot Treatment for Large Breed Dogs 45-88 lbs. (Purple) Count of 3 | Trusted by pet owners for over 20 years,² kills fleas, ticks & chewing lice, waterproof 24 hr",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo4NjkwNzgwNzgzMzYxMTAwOjE3ODY2OTcyMTc6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDE0NjM5MTkxNDMwMjo6Ojo&url=%2Fdp%2FB0002J1FOE%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0002J1FOE%26pd_rd_w%3D2yluN%26content-id%3Damzn1.sym.4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_p%3D4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_r%3DD5W5VYFFTN1256KH07SK%26pd_rd_wg%3D4DNJn%26pd_rd_r%3D26adaf42-a2e7-42f4-8129-a33f2faa3c40%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0002J1FOE/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0002J1FOE&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71cWyt6fBNL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 50571,
+      "discount": "-5%",
+      "price": "$40.98",
+      "extracted_price": 40.98,
+      "price_unit": "$40.98 / count",
+      "extracted_price_unit": 40.98,
+      "old_price": "null"
+    },
+    {
+      "position": 6,
+      "asin": "B00B8CG602",
+      "title": "Seresto Flea & Tick Collar For Dogs Over 18 lbs., Treatment & Prevention, Vet-Recommend, 8 Month Protection",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo4NjkwNzgwNzgzMzYxMTAwOjE3ODY2OTcyMTc6c3BfZGV0YWlsX3RoZW1hdGljOjIwMDAzNzk3MTY3ODE5ODo6Ojo&url=%2Fdp%2FB00B8CG602%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB00B8CG602%26pd_rd_w%3D2yluN%26content-id%3Damzn1.sym.4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_p%3D4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_r%3DD5W5VYFFTN1256KH07SK%26pd_rd_wg%3D4DNJn%26pd_rd_r%3D26adaf42-a2e7-42f4-8129-a33f2faa3c40%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B00B8CG602/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B00B8CG602&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "#1 Best Seller"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/71Z9LppzSnL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.5,
+      "reviews": 114635,
+      "price": "$59.92",
+      "extracted_price": 59.92
+    },
+    {
+      "position": 7,
+      "asin": "B0HBKVGKF8",
+      "title": "Chewable Flea and Tick Prevention for Dogs - 240 Chews - Flea Oral Pills | Dog Flea & Tick Treatment & Control Chews for Small, Medium & Large Dogs - All Breeds & Ages - Chicken Flavor - Made in USA",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo4NjkwNzgwNzgzMzYxMTAwOjE3ODY2OTcyMTc6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTQxNTYwNTY3NzkwMjo6Ojo&url=%2Fdp%2FB0HBKVGKF8%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0HBKVGKF8%26pd_rd_w%3D2yluN%26content-id%3Damzn1.sym.4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_p%3D4adc092d-0184-45e6-8bd0-773f48fbf8ff%26pf_rd_r%3DD5W5VYFFTN1256KH07SK%26pd_rd_wg%3D4DNJn%26pd_rd_r%3D26adaf42-a2e7-42f4-8129-a33f2faa3c40%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM",
+      "link_clean": "https://www.amazon.com/dp/B0HBKVGKF8/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0HBKVGKF8&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/812EBgyDX2L._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4,
+      "reviews": 1495,
+      "discount": "-29%",
+      "price": "$21.99",
+      "extracted_price": 21.99,
+      "price_unit": "$0.09 / count",
+      "extracted_price_unit": 0.09,
+      "old_price": "null",
+      "save_with_coupon": "You pay $18.99"
+    },
+    {
+      "position": 8,
+      "asin": "B0D2KRCCX7",
+      "title": "TiCK MiTT Pink Tick Removal Glove for Pets & People: Gently Remove Ticks with Ease - Chemical-Free, Durable, Portable Tick Management Tool for Outdoor Adventures & Everyday Use | Safely Remove Ticks Effortlessly, Chemical-Free, Durable, Portable Tick Management Tool",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo1Njg0MjIzNDM2MDMyNjU0OjE3ODY2OTcyMTc6c3BfZGV0YWlsMjozMDEyNjQ3MTA5MjczMDI6Ojo6&url=%2Fdp%2FB0D2KRCCX7%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0D2KRCCX7%26pd_rd_w%3DR9UL8%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DD5W5VYFFTN1256KH07SK%26pd_rd_wg%3D4DNJn%26pd_rd_r%3D26adaf42-a2e7-42f4-8129-a33f2faa3c40%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0D2KRCCX7/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0D2KRCCX7&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/81xYdZ+n-sL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 3.7,
+      "reviews": 1173,
+      "discount": "-15%",
+      "price": "$16.95",
+      "extracted_price": 16.95,
+      "old_price": "null",
+      "save_with_coupon": "You pay $13.56"
+    },
+    {
+      "position": 9,
+      "asin": "B004QREOPU",
+      "title": "K9 Advantix II XL Dog Vet-Recommended Flea, Tick & Mosquito Treatment & Prevention | Dogs Over 55 lbs. | 4-Mo Supply",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo1Njg0MjIzNDM2MDMyNjU0OjE3ODY2OTcyMTc6c3BfZGV0YWlsMjoyMDAwNTk4MTg1MDUyOTg6Ojo6&url=%2Fdp%2FB004QREOPU%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB004QREOPU%26pd_rd_w%3DR9UL8%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DD5W5VYFFTN1256KH07SK%26pd_rd_wg%3D4DNJn%26pd_rd_r%3D26adaf42-a2e7-42f4-8129-a33f2faa3c40%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B004QREOPU/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B004QREOPU&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71z0d5Gy7dL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.5,
+      "reviews": 36504,
+      "price": "$55.00",
+      "extracted_price": 55,
+      "price_unit": "$13.75 / count",
+      "extracted_price_unit": 13.75
+    },
+    {
+      "position": 10,
+      "asin": "B00B8CG602",
+      "title": "Seresto Flea & Tick Collar For Dogs Over 18 lbs., Treatment & Prevention, Vet-Recommend, 8 Month Protection",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo1Njg0MjIzNDM2MDMyNjU0OjE3ODY2OTcyMTc6c3BfZGV0YWlsMjoyMDAwMzc5NzE2NzgxOTg6Ojo6&url=%2Fdp%2FB00B8CG602%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB00B8CG602%26pd_rd_w%3DR9UL8%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DD5W5VYFFTN1256KH07SK%26pd_rd_wg%3D4DNJn%26pd_rd_r%3D26adaf42-a2e7-42f4-8129-a33f2faa3c40%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B00B8CG602/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B00B8CG602&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "#1 Best Seller"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/71Z9LppzSnL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.5,
+      "reviews": 114635,
+      "price": "$59.92",
+      "extracted_price": 59.92
+    },
+    {
+      "position": 11,
+      "asin": "B004QRHSU8",
+      "title": "Advantage II Small Cat Vet-Recommended Flea Treatment & Prevention | Cats 5-9 lbs. | 4-Month Supply",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo1Njg0MjIzNDM2MDMyNjU0OjE3ODY2OTcyMTc6c3BfZGV0YWlsMjozMDA3MDQ0Mzc4MDA3MDI6Ojo6&url=%2Fdp%2FB004QRHSU8%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB004QRHSU8%26pd_rd_w%3DR9UL8%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DD5W5VYFFTN1256KH07SK%26pd_rd_wg%3D4DNJn%26pd_rd_r%3D26adaf42-a2e7-42f4-8129-a33f2faa3c40%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B004QRHSU8/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B004QRHSU8&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71I6gBPQxSL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.5,
+      "reviews": 38984,
+      "price": "$51.98",
+      "extracted_price": 51.98,
+      "price_unit": "$13.00 / count",
+      "extracted_price_unit": 13
+    },
+    {
+      "position": 12,
+      "asin": "B0GZNGT1HT",
+      "title": "200 Soft Chews Flea and Tick Protection for Dogs Chewable-Natural Oral Fleas Ticks ...",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo1Njg0MjIzNDM2MDMyNjU0OjE3ODY2OTcyMTc6c3BfZGV0YWlsMjozMDEzOTEzODU1Mjk4MDI6Ojo6&url=%2Fdp%2FB0GZNGT1HT%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0GZNGT1HT%26pd_rd_w%3DR9UL8%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DD5W5VYFFTN1256KH07SK%26pd_rd_wg%3D4DNJn%26pd_rd_r%3D26adaf42-a2e7-42f4-8129-a33f2faa3c40%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0GZNGT1HT/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GZNGT1HT&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71lWZ1NCBFL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 5,
+      "reviews": 11,
+      "price": "$19.99",
+      "extracted_price": 19.99,
+      "price_unit": "$0.10 / count",
+      "extracted_price_unit": 0.1
+    },
+    {
+      "position": 13,
+      "asin": "B0CX3LFP55",
+      "title": "Vet's Best Flea & Tick Home Spray for Dogs, Indoor Use, Cotton Spice, 32oz | Plant-Based Flea & Tick Spray, Cotton Spice Scent, Kills Fleas & Ticks on Contact, Indoor Home Treatment, Made in USA",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo1Njg0MjIzNDM2MDMyNjU0OjE3ODY2OTcyMTc6c3BfZGV0YWlsMjozMDEzNDUyMTEyODg5MDI6Ojo6&url=%2Fdp%2FB0CX3LFP55%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0CX3LFP55%26pd_rd_w%3DR9UL8%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DD5W5VYFFTN1256KH07SK%26pd_rd_wg%3D4DNJn%26pd_rd_r%3D26adaf42-a2e7-42f4-8129-a33f2faa3c40%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0CX3LFP55/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0CX3LFP55&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "badges": [
+        "#1 Best Seller"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/I/71vWQyORuyL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.2,
+      "reviews": 87684,
+      "price": "$15.48",
+      "extracted_price": 15.48,
+      "price_unit": "$0.48 / fluid ounce",
+      "extracted_price_unit": 0.48
+    },
+    {
+      "position": 14,
+      "asin": "B0002J1FOE",
+      "title": "FRONTLINE Plus Flea & Tick Spot Treatment for Large Breed Dogs 45-88 lbs. (Purple) Count of 3 | Trusted by pet owners for over 20 years,² kills fleas, ticks & chewing lice, waterproof 24 hr",
+      "link": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo1Njg0MjIzNDM2MDMyNjU0OjE3ODY2OTcyMTc6c3BfZGV0YWlsMjozMDAxNDYzOTE5MTQzMDI6Ojo6&url=%2Fdp%2FB0002J1FOE%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0002J1FOE%26pd_rd_w%3DR9UL8%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DD5W5VYFFTN1256KH07SK%26pd_rd_wg%3D4DNJn%26pd_rd_r%3D26adaf42-a2e7-42f4-8129-a33f2faa3c40%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy",
+      "link_clean": "https://www.amazon.com/dp/B0002J1FOE/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0002J1FOE&device=desktop&engine=amazon_product",
+      "sponsored": true,
+      "thumbnail": "https://m.media-amazon.com/images/I/71cWyt6fBNL._AC_UF480,480_SR480,480_.jpg",
+      "rating": 4.4,
+      "reviews": 50571,
+      "discount": "-5%",
+      "price": "$40.98",
+      "extracted_price": 40.98,
+      "price_unit": "$40.98 / count",
+      "extracted_price_unit": 40.98,
+      "old_price": "null"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": "dog flea and tick treatment chewable",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/6798bd01-4e3b-435f-bfd8-cb4f113d1704.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 2,
+      "title": "flea and tick prevention for dogs pills chewable",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/d6555d6f-4e57-4258-9afd-4ab40ce5cfb3.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 3,
+      "title": "oral flea treatment for dogs",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/11e1e94d-fcad-4eb9-a545-893960f9466a.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 4,
+      "title": "flea and tick chewables for dogs",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/e6f00b2e-a834-428a-8a2a-ad530a0aa896.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 5,
+      "title": "chewable flea and tick for dogs",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/986b8c4c-475c-43f2-83c1-39e0185e64fc.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 6,
+      "title": "flea chews for dogs",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/115988f8-3433-47d2-af5f-16f166d48b38.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 7,
+      "title": "flea and tic prevention for dogs",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/a354aee8-b7e6-4feb-809e-126c39d251c5.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    }
+  ],
+  "product_details": {
+    "package_dimensions": "5.24 x 3.66 x 3.58 inches; 1.06 pounds",
+    "item_model_number": "zkhj1",
+    "date_first_available": "July 30, 2026",
+    "manufacturer": "LKDHFJC",
+    "asin": "B0HC7LX8LQ",
+    "best_sellers_rank": [
+      {
+        "text": "#4,054 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 4054,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#23 in Dog Flea Drops",
+        "extracted_rank": 23,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/2975389011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Flea Drops"
+      }
+    ],
+    "customer_reviews": "5.0 out of 5 stars",
+    "rating": 5,
+    "reviews": 19,
+    "brand_name": "LKDHFJC",
+    "unit_count": "200 Count",
+    "upc": "701055011750",
+    "included_components": "no",
+    "model_number": "zkhj1",
+    "item_form": "Tablets"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0FVLZHK7G",
+      "title": "Woyamay Flea and Tick Prevention for Dogs, Dog Flea and Tick Treatment | Natural Dog Tick and Flea Treatment, 500 Crunchy Flea and Tick Chews for Dogs, Oral Flea Treatment for Dogs, Chicken Flavor",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JKj1fFByZ5MmOu3WKnetZvMAAAGf_3P2QwEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDIgICBN1tCo/clv1c_ek-wxQfWLcTaTBVEai7mSw7J7cmzeeYVAkry-SNhG9tDnNG7jfvNh0EgPoAfF2RT0iO31ttLGu6CSxw7TJUeuPBafZip_j7Ga5OHn4XofPwCm9Hb6ey-EDfWKsl0pWkroxYPy7JppZUAyBWbuxTxBuf_nPnMllLouoTxLhUrS4MTY9t93kSj3xtrhFlt6yyjgABiptdjekRatGR6skX24UALLRJ6JeaWNCxUWP025faM7ISqv3EDEx3kazREAN74NvjRK0ftSsHNDwg5jGdb6FM1WE8jjjcDciR5RvHdrQOGKvpF_wmS2UWAVRXJY2uE-SXPJcOg4BFtnNq1g0dpcn0ucWoX2vxMscv-Y1hFMqMTUVlwJTWaOI_sCVhhHQSLaXttvMa7AjghYrO8FRfYmb0XGoJ0DPDgOMsQpZ9zzENCWKgPzuoF6inSroW9Ro-MLO1J-H0zp31Te_pDCjtp4kCaq_-MPidgRGNOEfXDEwNu5lj0PtXlNdF0fUUoy87Cc0L0VxUa4n_UWNlYRqrk2T0xAk8hxXHx0k77W2dRtduknzZN9QAI0Ma_lupWeqMyJ6y4P6X0qbXdUsIxpraj3G0ynmHsqV4RVfNlF6lxG6WBiBbw2OThawMSVDoadfBbktGdYIyRMORLGTha3pWY4tBezJXJ4M1sXlw8z84fppTxe8Ge5md-t38TWcZVJAcLC52MtL9auOdOpfhrQFa_0nhdk08VJ1wfcoXDLQEqISk2fs67PfC6LSQxr1wxicr1ky6wOkt71C6xyPtJHOwE6cg0JGLczTh_qqAANFDske49AF2i0NMGVrI5ubPpgtXDE7VLvg2wluqb4WTP_NXzk_FgLM7dfdzuChkRxqGHdB3_36cz8nnDx7PbOTokwGTDkfdTnGJI5Yi75zYDv0WFRO7_NkoyUcKBm_ahK2BD6EDAALQVZy8LFUMyDkzu5sDBd0UbJiwxlMH5Lr941j5RLs9pzV9sCzYAwxqfobioXZf0gnfher8d6doURC-eNtk3Zd5BIdTiPUXIwxD4Bryo8zaP9l7Xu9W5T_xar0NSkgaxeY4iDY5KTk6D3-0Qk8UvLce4HcfTSh0_zsCsjfbNE2-G3PquMzv7oYPZzqok4lEFCVsHX7HlLWuqTbSlMzbZ9z4hymVhQUxsOOjy16tX-KFvS0gtLnlNum7pZcse-2WwY6Se_QVQDbAm8L__622VTzu0hG1n2OIBSlEcA0gRik6Qns9u5RFEXs62Xm3hb90fT7D8IDY4k1eyeMVH83QV0IcvIJBW5YyRybUzUPiU--ytOLckWQtmWHShty6w_oSspqfvt-9SsOZNTHsE8l-UXJxSZjA09W8z55R-u8ugfTEOlYHE0iN0TSz-Lxt-6GI-nUQL73F56kjYNZY3KxtzJHx9KyjbCO0qOSYKIYoB8fwAey8z4qS0J7_D4-DC-LBmrRnYUf5N6ww-vxEH6z-yoeNtMHl8wkvkVLVmjpay433tDvKIn-uFaJLR068yRh26bY8Z43w8zaXAvcYIT9uUk2FAn66fUzlWf2WdfkHiP9Bb1LIx-pWRqd15OsyuyI0ESwhP1iU3TNVQNDZurtLawA/https://www.amazon.com/dp/B0FVLZHK7G/?_encoding=UTF8&pd_rd_i=B0FVLZHK7G&pd_rd_i=B0FVLZHK7G&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=Cgrr2&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=D5W5VYFFTN1256KH07SK&pd_rd_wg=4DNJn&pd_rd_r=26adaf42-a2e7-42f4-8129-a33f2faa3c40",
+      "link_clean": "https://www.amazon.com/dp/B0FVLZHK7G/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FVLZHK7G&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51DfG5+jIzL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/82d54d8c-c0da-4904-adf8-43ce1382a171.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/82d54d8c-c0da-4904-adf8-43ce1382a171.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.2,
+      "reviews": 242,
+      "price": "$20.89",
+      "extracted_price": 20.89,
+      "old_price": "$21.99",
+      "extracted_old_price": 21.99
+    },
+    {
+      "position": 2,
+      "asin": "B0G2427FBP",
+      "title": "Flea Spray for Home & Pets - Flea and Tick Prevention for Dogs - Plant Based Repellent with Natural Essential Oils for Dog Flea Treatment Protection - Peppermint Scent - 16 Fl Oz",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JJDOYBz8aixD0JF2rEWLF9UAAAGf_3P2RAEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDIgICCLF0Hs/clv1c_ek-YBfHXLcTWXmxhtwlAiFwLMC57Ksl5qyQhQWmj3aMS9z2JIPYPPpIGlx4VGesXoUjOTE3WpE9uTVQoGusrJAQ9cwm3BHKT8uzwRHxexO3zkzDvOd2UYdF4ZfhsHqKRpDg4Pcl3CEyyi3psyp6IjDAqUH2dmFG6EsYySjW72ra3mekYDXo8WDp8ogFG7LoujCPehQR2agXL98iVBxGQc-7yNFV-AUevDQ5h5i1qYvEmjbhS4LcyD6u5rmE74k6B8d_rL1mFogyAGW0JSgXiMqHJIX_HLuzs-uPpWq4WWl7ObZlHeryl9pBTGKwRUMXodERpsdlC8Vf53vdUoDw5sJzT_4TocFrhQUE5iXmk0NGIl0MH37Ah_kgTn2o_LnDV7HxiqopP3F0ojsgbtqxv-Cdz3NwLkY-lvbkr55Ot3R9v0_WbZRXxFQ24w_JxrlCSHt2xO4jn_DY0fCoxd48p6w0Do_oMk0ItGjeFQmeNc3JtTnIP9L6hTRZg9eyK87Pfni0Myn5HNgd-QTKzs5_g2eW7RUo2pBAlWfRPaNR8aVDbLafsZ36tYbMz15naK2MsJnA355xyDpUnJzCd90YP-cfY8fZCmfG33PxttNXKoEJ-smRPNmcXGN6MkNmnEZX_ra52KiPKLRucakLzrgRVYIlLqvq2aErsRCv4jSfwvlbxdyd_fAFG75lp_mikdJxRiuW8XHhW3oQTULPqu6zSHnB8VtblYOLvlJ8yX6xSvcj5oytfKmrodOnp8YOxR1c4sYe-eerdm6dRsTXletNJ2GcB9LW-Voxmb62RYBfDqPUyXl_Y_Ogkpl5yhUjK21oOG3YNTMOjhooVY6QCzhyCEmolkNk1tA7WTgDBnLtKBAP2q5a0ojpGRSamAPZzoL5rRT1DD4aK1OmLEbdrOp6QUs_K86YeAlY1NCrjBfLtD7nyr4kNgd28GUcEG1ygHHeb9EL7WM16fyXBls7HHTycZoE10i3LvJTQV1JAe_Vl4H1LbCxbJI_f0A4Sx3AMoC2T1VWq7T52V1ukYcurFJ_uwTl5ZaLFUMn10jzSId3ZHWucNjvCU-3vo8gcrtnP2NhfWfmRBHIoatWDRIH3YEnkRbeZZDk1TGwHOm15qPsRG2A20-pp4L9iQF0Shv2Ee22Am8-Iw5OXywbnasJkCxYt9173Bn9rxEuFdlKUQks0c0zy2rhjH7BVqDL3y-j6YTqAXznGL2giLn4jcsW9smbjRHGwt0Y2jKCseVEXQdVUVSs6KUItb7cb8swzIBeQ1OZTQ2aoXtM9bFDbR2Q2ACiZp0pwjPWGZo7bybg5mscWMeFh5oGv7GBavkiztWcojL2WR1MUcRHrPF6xxON7LbsXlzKvEaumk5_8Xadf6yc-Eq61ezfXgQdGuw_tHm4vaSEMpDwyEbC3gOvc6IpOnwnnKQAZvDYgulFMeZepTgC7blOTlw8zHmg6vBvTyMkBGz_lsOnUy2AjrdczNXbeETzPq51eWxE0ozdFups238a3Nmt2SZvx-BFanNy3Jl-y3Oz1Wavi1IiyZKtuH-a62MDxD8u2KR2oe3cycO7Oxw/https://www.amazon.com/dp/B0G2427FBP/?_encoding=UTF8&pd_rd_i=B0G2427FBP&pd_rd_i=B0G2427FBP&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=Cgrr2&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=D5W5VYFFTN1256KH07SK&pd_rd_wg=4DNJn&pd_rd_r=26adaf42-a2e7-42f4-8129-a33f2faa3c40",
+      "link_clean": "https://www.amazon.com/dp/B0G2427FBP/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0G2427FBP&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/31gnjeAYV2L._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/39b377b6-9f4c-47cf-839a-b05d3aad446a.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/39b377b6-9f4c-47cf-839a-b05d3aad446a.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "price": "$12.99",
+      "extracted_price": 12.99
+    },
+    {
+      "position": 3,
+      "asin": "B0FR4D64QG",
+      "title": "YOTANGO Flea and Tick Support for Dogs, Flea Treatment Chews, 500 Chews | Crunchy, Creamy Beef-Flavored Chews with Pumpkin Seed, Brewer's Yeast, Flaxseed Oil and Biotin for Skin, Coat and Digestion.",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JGZhqz4bALuPIZPWRNL0ZnEAAAGf_3P2RQEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDIgICDy59aW/clv1c_ek-wBQf2UsbWHn0mG_3P82PkEFX3Ep95Avx5AxlGt-nEJVpdJWwJWfoL_7Iy92rwtRi2FzEKuv6SoG_2yD_M-7HZ-wE9kOm5wpG3Zs_x_0AGyZ2LiUZoYFu8unn1q3FX2h0BpjFN8f9I8iTF5nBU6NFUoNd81lXvuuSEZ9dLzAUVdXOtf148LOvB9InVB9HU7cyW0FNwmwLW2-hFsjzgk4E5NRQfJG197AzHiqA3yb3Acz1mgix75coBx5GB0BWxh0Q--_3YqfcTB8VIwgt0tZvrV4aswNPPC9Sck4t6_UVijI81rXA9SG0iZlInP5QSEy8bx8twTYnXc6NKsJxVY-e7P0AA9okJwxMi5A8vNeiyV6uirRxJ2rbIIyd_xL0Uja2j92UWhSEjkHc_oLWPXFkyxhYmisY52FCd24cko8PfyGVlDr4-7GooTN2kkj6I_1Pw8mmEq8sxydPR7np44inp7tMnmYrv-hjJ2OkQPRmrjymg_n4KwapxLAaEq4H-IqN7mTyw_i3KqwMuBlB6CS198tJCIxffTjuA_O6DaRqVhRlnTkT_uqkZ6WN2nrWzCgrAxCNabAgg7Z1AxM4-bwoFuKsVr62_YMcp-zaVpeBK_ru9FIBw7qEc0dVhTbszI4-3k5LgaOj6q5qbioJv3-Y9mqpWeDAbnEiIdPvdU-HlQOLkxWOEYRW2SPpyHV5Gxap6h9K6CPuEwEYry2gcCETCmICQ38IFlWYbRW3EBTF9aeKD2dN6kCAIeKcfjD3TJlCI6vZnnsLaduXIDKr8JuGGwyBrWXL486iGRj9YtwEMeaYFV613qQXzvjsVQ03Zr05hxYX3fNsJ-OJPcZWnraxK5t4RUhjkddF7qzBAa00HfPizmOpFl4L02fmi8Wm808rhXTud3XAefp-Dxu_T3lRyTnEvnmR0Db9LQ8nw6jGfSqUY1qm7CLf43tJZ0faU085dnkMUB8jsE-4iAL3RAb4fUDs1yaMtcT4ZX5EU0IEFPVfbrb6dbWtXDoEmiIvNOx1nGaXCf_o9NyRjLmDbZZOU3FYc8bffR5-ManmmWJv-x3o0CHFsA6XXDCOmuf5gNyf3rTmWTxDzhgYcDDrsVRYScdTSDjk5s_VabY0cXZFpVS5_9zeWwWra-uI5xrMkxoM-Zlb5HZQR6TKX9skfH24h2eR20SGAkfZWFTBbSwvw8duSHaYQo_qiiUBDntGF9M6402J2WqsVMAfZpYQAEzIQxHaUE_qzCK9_mEwN4_sED5_RMp9quHMwoY1IwVN1y4jtl7Fd4Sew-Bwmc7qjDvqD68lciFtkOyKdhqq2wUOG14nwxPRXVGeMagwoDbI1Ad_V0rSE8M1je0Z6pTwF2KYasAcvH2YUGKFpGVpcj32lR-UM_Vg8kc-Sozs8p4YO2sh8rrEZp-lLS53bmMxtpGbdZfI-DVZ47JTO2NAZbHudP7M44To95YurqCxPQu61JFGi2x_DwDej3kP3H9cuuRcZZQ4JuFxWHPV6oNfN55n-H7QYmXoDhsv3RjeKkiSVEVMCIANnaCrtsaJVxEgmmLd1UGIxedDuwT7KIhrtcxuWyHetLKKT-cMBjmc/https://www.amazon.com/dp/B0FR4D64QG/?_encoding=UTF8&pd_rd_i=B0FR4D64QG&pd_rd_i=B0FR4D64QG&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=Cgrr2&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=D5W5VYFFTN1256KH07SK&pd_rd_wg=4DNJn&pd_rd_r=26adaf42-a2e7-42f4-8129-a33f2faa3c40",
+      "link_clean": "https://www.amazon.com/dp/B0FR4D64QG/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FR4D64QG&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/51uSz8J4vfL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c4d6f667-7092-4d2c-b298-680bee29dd69.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/c4d6f667-7092-4d2c-b298-680bee29dd69.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 3.7,
+      "reviews": 110,
+      "price": "$19.99",
+      "extracted_price": 19.99
+    },
+    {
+      "position": 4,
+      "asin": "B0FQ1VTXJC",
+      "title": "Flea and Tick Prevention for Dogs, 4-Pack Flea Collars, 32 Months, Grey | Waterproof and Adjustable Dog Flea and Tick Treatment Collars; One Size Fits Dogs of All Breeds and Sizes",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JNdD-KKJQqbF3V2PwjxSO9sAAAGf_3P2RQEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDIgICCmGpq8/clv1c_ek-wBfHXLcTWnuOrk1Z1yXszSZsVi5MvaxK3QEfGG5k61oQV0iuvYBaRr6xYT7VujAUdSAQpZaREmLPK725OTZFqboGwfXC31X3PNBP-_UCmqQkDmUsLBH3CQpk0IyRzlT7YOMhfalXB8FiO4aqn6jCbotHstlTrVUD80RF6JGZ_metLKciIXxJb47aom1OH1nKrsWk_7zdpV616tUzMofiPBGdrUMv2IF6irZZl4bQ_05DgDvUuVQsr6NJd3pyqlDDKj1-1-KrwK61ICR5CfmloX6rPIMP9fBnyFUJsQfH6c9WlmfPXN-T1P6l4vgnQFKllmHKasfuAkawKR0Kc79gvZ7QGDN_7uWLk2q9Vc0AiBZr_3jriuwwVGo9hL4-wIkGPZ4nHWCgAj2dE7YZ4dw8OjDdNMLBTGSnMSHc5IUQdWBhPSC9BPt1a7amKdQk3xrGisv5OSFvK-_LgakAKvhqKR6XSz-TMaii3MVe4lhcj0jc9BT0d5iG_ac4bsDCA2pCex7vvzW3MYK1P-F_bugYE3Ne-fs17y2CcmpCSX9z_H6xIU73bZ3kThrVCQJedrFtEPO9kT47xJxo9ModsuTuL4aToL5YhWvXwjrgDTMlaoxMFpana-lsm3IfTWAqOiXjHRmNwjdE93X3rBvfrY0YUru4psg8XyZDJPMoGimqJgoiKNQ-Fs2VR-ClEUJAsMURGmN766dTOBjWEEDkIqEbqL665yJ7J5ByqZ4kSd0Q6ZnRgNadWtJjSGwfdLbm2gZGe_AwqBaRRrvQxZddRCJKQcC6qE-c4xmgAQ98Nk5lZn8L0W9CJo5ChoDbwlixf8h8a5LnAb7fk1JRBNGVnJF92djCFMLNC4iMtYEgqJ-Mry3B6mMrFlMD02XuBlzoOs8ZjXe3pOyPEx3qEScZo-wG2o6clhQc-E4MfIyEAUubiuKGUbV-0CmW-Cqvv6dFZ0wxlkCbdnHs4b6raHZ_KI0BWN-8Sgw-GF_OwcT6V1g85vb7jwonCEefDOPia6gdjCtYjVwnDL1LoWhb-qBv4SD2SJxcEcnXKmwEszROMjgdIJtPjah2zMtTyGP5oo3SJ5N2vD_Br5HsQ4u13TDW0ppdmOHGfsMbNWKriFWjGxIVNoK1CJOWL2r7iovP3lkuxpqxGv2r0AKjr2n_rRrXWGFJyrlyXIUFLSGDOp3t_muu59LrwF_yPLw326U5x4aa8YKQT2X9zbLFd4ZLEKvMbZPSX8CmnqKG3ai2XI1Km5f3e2hXV1BvMXpXK2xByP1lnsRSm9Pq2YywQjNCFZy8yesMej7l4UV5S-fy4thTEY3zJ2fz6cZGMsTvdDL0WECAePDGd4VtKXV_GccwOnpLrHAEqkc_hhDy0e17pr2ixRvOeA3Frs0COiI9m6lyWQJ7hVL6Q8vSKi3Lu3V2ykVwzs081fgrhtqy5xlY7CcpVYNPEryOtYOo5heP9eTJijcQS0CpB0YLYBUd7-9IYM9rOdmnbIgB-y7jgpP9Y8PyuvW2S6UZ8VHR1q_HzYSwZZEUas4RsPKSIP92P043cYgusj6NLSIqRvy0smRlB04ajhj4Yxjk6HKqrmplkGw/https://www.amazon.com/dp/B0FQ1VTXJC/?_encoding=UTF8&pd_rd_i=B0FQ1VTXJC&pd_rd_i=B0FQ1VTXJC&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=Cgrr2&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=D5W5VYFFTN1256KH07SK&pd_rd_wg=4DNJn&pd_rd_r=26adaf42-a2e7-42f4-8129-a33f2faa3c40",
+      "link_clean": "https://www.amazon.com/dp/B0FQ1VTXJC/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FQ1VTXJC&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41-CDzSn0DL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/b03cc346-86ad-4026-b1cc-2f2539c42b3a.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/b03cc346-86ad-4026-b1cc-2f2539c42b3a.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.2,
+      "reviews": 159,
+      "price": "$21.79",
+      "extracted_price": 21.79,
+      "old_price": "$23.99",
+      "extracted_old_price": 23.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "text": "Customers find the pest control supplement effective at preventing fleas and ticks, with one mentioning it's a convenient way to protect their pets. The product receives positive feedback for its taste, ease of use, and value for money.",
+      "insights": [
+        {
+          "title": "Effectiveness",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 14,
+            "positive": 14,
+            "negative": 0
+          },
+          "summary": "Customers find the pest control product effective at preventing fleas and ticks on their pets.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...Seems to be made from quality ingredients and my dog enjoys them. No ticks so far!",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RY7CJPII1TQRF"
+            },
+            {
+              "position": 2,
+              "snippet": "...a lot of change in her since she does not scratch, I checked her and no bugs, and the best thing is that she loves it for the flavor and very easy...",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R3IDKHL9X29Y2R"
+            },
+            {
+              "position": 3,
+              "snippet": "Love this for my dog. He liked how it tasted and after using it for a month he stopped scratching at himself. I feel this works really well.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R19Q69H5F9JXPD"
+            },
+            {
+              "position": 4,
+              "snippet": "...Since giving my older dog. I actually see a difference in his coat. Super shiny and soft.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RYG2RJY6KUTM5"
+            }
+          ]
+        },
+        {
+          "title": "Taste",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 6,
+            "positive": 6,
+            "negative": 0
+          },
+          "summary": "Customers like the taste of the product.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "Great value for the price! Super cute heart shapes and my dogs love the taste. The ingredients are all great too....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R7OY92RCKP9KN"
+            },
+            {
+              "position": 2,
+              "snippet": "...They seem to enjoy the taste, making them easy to give each day....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1O42W7C9WSX4X"
+            },
+            {
+              "position": 3,
+              "snippet": "My dog loves the flavor of these chews which is surprising because she's a very picky girl! They are chicken flavored....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R13790PWTLQ7RO"
+            },
+            {
+              "position": 4,
+              "snippet": "...I checked her and no bugs, and the best thing is that she loves it for the flavor and very easy to give them, I highly recommend her",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R3IDKHL9X29Y2R"
+            }
+          ]
+        },
+        {
+          "title": "Value for money",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 6,
+            "positive": 6,
+            "negative": 0
+          },
+          "summary": "Customers find the product offers good value for money.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "...It’s a product that combines quality with a good price and an appealing heart shape. Without a doubt, a fantastic product.",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R3KVHCMTTAAQS9"
+            },
+            {
+              "position": 2,
+              "snippet": "...It really helps and it also keeps the flea away. Definitely worth the money and help my pups every day!",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R3SP5LQFVBI2BB"
+            },
+            {
+              "position": 3,
+              "snippet": "...It’s a good portion size and not too much on the pricey side compared to others i have seen....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R2W6T807T5P104"
+            },
+            {
+              "position": 4,
+              "snippet": "Great value for the price! Super cute heart shapes and my dogs love the taste. The ingredients are all great too....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R7OY92RCKP9KN"
+            }
+          ]
+        },
+        {
+          "title": "Ease of use",
+          "sentiment": "positive",
+          "mentions": {
+            "total": 5,
+            "positive": 5,
+            "negative": 0
+          },
+          "summary": "Customers find the product easy to give to their pets, with one mentioning that their dog took it without much fuss.",
+          "examples": [
+            {
+              "position": 1,
+              "snippet": "We’ve been using these flea and tick chews and they’ve been so easy to give!My pup is usually picky with medications, but he took this without much...",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1YFH0Q5RBC5TL"
+            },
+            {
+              "position": 2,
+              "snippet": "...I appreciate the ease of giving them this treat and they love eating them!! I haven't even seen any fleas or ticks this season!!",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/RFV9IKOOQRDRT"
+            },
+            {
+              "position": 3,
+              "snippet": "...They seem to enjoy the taste, making them easy to give each day....",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R1O42W7C9WSX4X"
+            },
+            {
+              "position": 4,
+              "snippet": "...and the best thing is that she loves it for the flavor and very easy to give them, I highly recommend her",
+              "link": "https://www.amazon.com/portal/customer-reviews/srp/-/R3IDKHL9X29Y2R"
+            }
+          ]
+        }
+      ],
+      "images": [
+        "https://m.media-amazon.com/images/I/61UZIGsOZnL.jpg",
+        "https://m.media-amazon.com/images/I/61OxYWCzQ7L.jpg",
+        "https://m.media-amazon.com/images/I/61NMxGSyWFL.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 100,
+        "4 star": 0,
+        "3 star": 0,
+        "2 star": 0,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "My dogs enjoy these chews",
+        "text": "My dogs accepted these chews right away, which was my biggest concerns before trying them. They seem to enjoy the taste, making them easy to give each day. I also appreciate that they offer a more affordable option compared to many other flea and tick products. Based on my experience so far, they've been a practical choice for my dogs and fit well within my budget.",
+        "rating": 5,
+        "date": "July 29, 2026",
+        "author": "Ahorra Ya con Mariel Enid",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFJOG7O3D47AY2RVVRN3NHP2O2FA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/bfdf7855-d681-4b02-ba46-940b893f5c20._CR0%2C0%2C500%2C500_SX460_SX48_.jpeg",
+        "helpful_votes": "2 people found this helpful",
+        "verified_purchase": true
+      },
+      {
+        "position": 2,
+        "title": "Product seems to be working great, my dogs love the taste",
+        "text": "Great value for the price! Super cute heart shapes and my dogs love the taste. The ingredients are all great too. I live in an area with lots of ticks present and so far have had no problems this summer since starting them! Super happy about this.",
+        "rating": 5,
+        "date": "August 1, 2026",
+        "author": "Maddie",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGXDD3VBVBICLOES3R5TGNZIOZOA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "4 people found this helpful",
+        "verified_purchase": true
+      },
+      {
+        "position": 3,
+        "title": "Keeping my dogs safe!",
+        "text": "I started giving these to my dogs a few weeks ago. We live in the country and have had problems with fleas and ticks in the past. We were putting flea collars on them which they didnt like and were expensive. I appreciate the ease of giving them this treat and they love eating them!! I haven't even seen any fleas or ticks this season!!",
+        "rating": 5,
+        "date": "August 6, 2026",
+        "author": "THoward",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHJVDNOX2ONT7FXNPEFK5ZIRI4TA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "4 people found this helpful",
+        "verified_purchase": true
+      },
+      {
+        "position": 4,
+        "title": "Highly recommended for your pets",
+        "text": "I have 2 dogs, and the smallest as she has a lot of hair it is very easy for her to fill up with ticks, since I give her these gummies, I have noticed a lot of change in her since she does not scratch, I checked her and no bugs, and the best thing is that she loves it for the flavor and very easy to give them, I highly recommend her",
+        "rating": 5,
+        "date": "August 1, 2026",
+        "author": "Jeniffer Ruiz",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEFEXZU3CUXENNAHJRR7WPG5CWFQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "3 people found this helpful",
+        "verified_purchase": true
+      },
+      {
+        "position": 5,
+        "title": "Very good",
+        "text": "An excellent product for preventing ticks on my dog; I’ve been giving it to him for several days now, and he eats it eagerly—he gets really happy when he has it. It’s a product that combines quality with a good price and an appealing heart shape. Without a doubt, a fantastic product.",
+        "rating": 5,
+        "date": "July 27, 2026",
+        "author": "Yadier Forte Hernandez",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFL4DYUQ3AIQMQY5ZKQD5G7JSAZQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/9fa3e2a5-a2a6-4d26-923f-5626b05d126e._CR0%2C0%2C500%2C500_SX460_SX48_.jpeg",
+        "helpful_votes": "2 people found this helpful",
+        "verified_purchase": true
+      },
+      {
+        "position": 6,
+        "title": "Good price and ingredients",
+        "text": "I just received these and my dog loves them. We are in the Northeast and the ticks are out with a vengeance.Cute little heart shaped treats and you get 200 for a great price. Seems to be made from quality ingredients and my dog enjoys them. No ticks so far!",
+        "rating": 5,
+        "date": "July 24, 2026",
+        "author": "JT",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AG3BKBBXY5GDIY7M4EAK5R5JKMKA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true
+      },
+      {
+        "position": 7,
+        "title": "Peace of Mind",
+        "text": "We’ve been using these flea and tick chews and they’ve been so easy to give!My pup is usually picky with medications, but he took this without much fuss, which made our routine so much easier. I love having the peace of mind that he’s protected while we’re out on walks, at the beach, or exploring outside. So far, we’ve had a great experience, and Definitely recommend if you’re looking for a convenient way to help keep your pup protected!",
+        "rating": 5,
+        "date": "July 21, 2026",
+        "author": "Dee",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGASHDPJ4N2W5TI6RYZ5DVCWP6ZQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/61UZIGsOZnL.jpg"
+        ],
+        "helpful_votes": "2 people found this helpful",
+        "verified_purchase": true
+      },
+      {
+        "position": 8,
+        "title": "Amazing!",
+        "text": "Love this for my dog. He liked how it tasted and after using it for a month he stopped scratching at himself. I feel this works really well.",
+        "rating": 5,
+        "date": "August 1, 2026",
+        "author": "Kati",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGR4R2PLGXSMNRJ6VTJFJHTRJDUA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/f86987c3-4726-4796-a2c1-f9508e4e7b60._CR3%2C0%2C825%2C825_SX460_SX48_.jpg",
+        "helpful_votes": "One person found this helpful",
+        "verified_purchase": true
+      }
+    ]
+  }
+}

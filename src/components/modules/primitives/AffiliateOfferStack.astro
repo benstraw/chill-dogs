@@ -1,7 +1,8 @@
 ---
+import ProductVariantPicker from './ProductVariantPicker.astro';
 import MerchantAffiliateLink from '@components/MerchantAffiliateLink.astro';
 import { merchants } from '@data/products/merchants';
-import type { AffiliateOffer } from '@data/products/types';
+import type { AffiliateOffer, ProductVariantGroup } from '@data/products/types';
 
 /**
  * Renders a product's offers as a stack of shared `.ui-cta` buttons through
@@ -15,10 +16,16 @@ import type { AffiliateOffer } from '@data/products/types';
  *
  * `topGap` adds the per-offer top margin the pillar converter cards carry; browse's
  * compact footer CTAs pass `topGap={false}` to stay flush.
+ *
+ * `variantGroup` is opt-in: pass one and the stack renders a ProductVariantPicker
+ * above the buttons and lets it repoint them, so a product with a separate ASIN
+ * per size stays at one selector plus the usual merchant buttons. Omit it and
+ * the stack renders exactly as it always has.
  */
 interface Props {
   offers: AffiliateOffer[];
   product: { id?: string; name: string; category?: string };
+  variantGroup?: ProductVariantGroup;
   tone?: 'pillar' | 'neutral' | 'merchant';
   size?: 'compact' | 'standard' | 'wide';
   pageType?: string;
@@ -31,6 +38,7 @@ interface Props {
 const {
   offers,
   product,
+  variantGroup,
   tone = 'pillar',
   size,
   pageType,
@@ -43,7 +51,19 @@ const {
 const labelFor = resolveLabel ?? ((offer: AffiliateOffer) => merchants[offer.merchant].ctaCopy);
 ---
 
-<div class:list={['offer-stack', { 'offer-stack--top-gap': topGap }]}>
+<div
+  class:list={['offer-stack', { 'offer-stack--top-gap': topGap }]}
+  data-variant-scope={variantGroup ? '' : undefined}
+>
+  {variantGroup && (
+    <ProductVariantPicker
+      variantGroup={variantGroup}
+      product={product}
+      pageSlug={pageSlug}
+      position={position}
+    />
+  )}
+
   {offers.map((offer, i) => (
     <MerchantAffiliateLink
       offer={offer}

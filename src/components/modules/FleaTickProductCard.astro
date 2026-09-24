@@ -10,10 +10,16 @@ interface Props {
   product: FleaTickProduct;
   pageSlug: string;
   position: string | number;
+  /** Opt in to the plant-based mark. Only the merged flea/tick converter sets this. */
+  markNatural?: boolean;
 }
 
-const { product, pageSlug, position } = Astro.props;
+const { product, pageSlug, position, markNatural = false } = Astro.props;
 const offers = getOffers(product);
+
+// The category union is the only reliable signal: badge text does not say "natural" on the
+// chews ("Daily chew") or the Duty Mitt ("Repellent mitt").
+const isNatural = markNatural && product.category.startsWith('natural-');
 
 const metadata = [
   product.activeIngredient ? { label: 'Active', value: product.activeIngredient } : null,
@@ -23,12 +29,14 @@ const metadata = [
 ].filter(Boolean);
 ---
 
-<ProductCardShell id={product.id} fill>
+<ProductCardShell id={product.id} fill accent={isNatural ? 'natural' : undefined}>
   <ProductImageFrame slot="image" image={product.image} />
 
-  <p class="ft-card__badge">{product.badge}</p>
+  <p class:list={['ft-card__badge', isNatural && 'ft-card__badge--natural']}>
+    {isNatural && <span class="sr-only">Natural product: </span>}{product.badge}
+  </p>
   <h3 class="ft-card__name">{product.name}</h3>
-  <p class="ft-card__best-for">{product.bestFor}</p>
+  {product.bestFor && <p class="ft-card__best-for">{product.bestFor}</p>}
 
   {metadata.length > 0 && (
     <dl class="ft-card__meta">
@@ -49,6 +57,7 @@ const metadata = [
   <AffiliateOfferStack
     offers={offers}
     product={{ id: product.id, name: product.name, category: product.category }}
+    variantGroup={product.variantGroup}
     pageType="converter"
     pageSlug={pageSlug}
     position={position}
@@ -70,6 +79,15 @@ const metadata = [
     letter-spacing: 0.06em;
     color: var(--color-text-muted);
     font-weight: var(--weight-semibold);
+  }
+
+  .ft-card__badge--natural {
+    align-self: start;
+    color: var(--color-accent-text);
+    background: color-mix(in srgb, var(--color-sage) 10%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-sage) 30%, transparent);
+    border-radius: var(--radius-sm);
+    padding: 0.15rem 0.4rem;
   }
 
   .ft-card__name {

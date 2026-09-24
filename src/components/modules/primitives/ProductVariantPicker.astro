@@ -1,0 +1,305 @@
+---
+import { getVariantOffers, getVariants } from '@data/products/offers';
+import type { ProductVariantGroup } from '@data/products/types';
+
+/**
+ * Size/pack/colorway selector for a product whose variants are separate
+ * merchant listings.
+ *
+ * The selector is deliberately decoupled from the CTAs: picking a variant
+ * repoints the existing merchant buttons rather than adding one button per
+ * variant, so a five-size product with Amazon and Chewy offers stays at one
+ * chip row plus two buttons instead of ten buttons.
+ *
+ * Chips render as real anchors so no-JS visitors and crawlers still reach every
+ * ASIN. They deliberately carry neither `data-affiliate` nor `data-track` —
+ * only the CTAs below fire the keystone affiliate event, so the click counts
+ * stay comparable to cards without a picker. A no-JS chip click going untracked
+ * is not a gap: analytics needs JS either way.
+ *
+ * Rendered by AffiliateOfferStack when a product has a `variantGroup`.
+ */
+interface Props {
+  variantGroup: ProductVariantGroup;
+  product: { id?: string; name: string };
+  pageSlug?: string;
+  position?: string | number;
+}
+
+const { variantGroup, product, pageSlug, position } = Astro.props;
+
+const variants = getVariants({ variantGroup });
+const selectedId =
+  variants.find((variant) => variant.id === variantGroup.defaultVariantId)?.id ?? variants[0]?.id;
+
+/**
+ * Serialized offer table the script reads on selection. Mirrors the shop
+ * page's `data-cats-by-pillar` approach — state is rendered by the server, the
+ * script only applies it.
+ */
+const offersByVariant = Object.fromEntries(
+  variants.map((variant) => {
+    const offers = getVariantOffers(variant);
+
+    return [
+      variant.id,
+      {
+        label: variant.longLabel ?? variant.label,
+        note: variant.note,
+        image: variant.image,
+        merchants: Object.fromEntries(
+          offers.map((offer) => [
+            offer.merchant,
+            {
+              url: offer.url,
+              merchantProductId:
+                offer.merchantProductId ?? (offer.merchant === 'amazon' ? offer.asin : undefined),
+              asin: offer.merchant === 'amazon' ? offer.asin : undefined,
+            },
+          ]),
+        ),
+      },
+    ];
+  }),
+);
+
+const selectedNote = variants.find((variant) => variant.id === selectedId)?.note;
+---
+
+{variants.length > 1 && (
+  <div
+    class="variant-picker"
+    data-variant-picker
+    data-variant-axis={variantGroup.axis.id}
+    data-variant-selected={selectedId}
+    data-variant-offers={JSON.stringify(offersByVariant)}
+    data-product-id={product.id}
+    data-page-slug={pageSlug}
+    data-position={position !== undefined ? String(position) : undefined}
+  >
+    <p class="variant-picker__label" id={`variant-label-${product.id}`}>{variantGroup.axis.label}</p>
+    {variantGroup.axis.hint && <p class="variant-picker__hint">{variantGroup.axis.hint}</p>}
+
+    <div class="variant-picker__options" data-variant-options aria-labelledby={`variant-label-${product.id}`}>
+      {variants.map((variant) => {
+        const offers = getVariantOffers(variant);
+
+        return (
+          <a
+            class:list={['variant-chip', { 'variant-chip--selected': variant.id === selectedId }]}
+            href={offers[0]?.url}
+            rel="sponsored noopener noreferrer"
+            target="_blank"
+            data-variant-option={variant.id}
+            aria-label={variant.longLabel ?? variant.label}
+          >
+            {variant.label}
+          </a>
+        );
+      })}
+    </div>
+
+    <p class="variant-picker__note" data-variant-note aria-live="polite">{selectedNote}</p>
+  </div>
+)}
+
+<style>
+  .variant-picker {
+    display: grid;
+    gap: var(--space-xs);
+    margin-top: var(--space-md);
+  }
+
+  .variant-picker__label {
+    margin: 0;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: var(--weight-semibold);
+  }
+
+  .variant-picker__hint,
+  .variant-picker__note {
+    margin: 0;
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+  }
+
+  .variant-picker__note:empty {
+    display: none;
+  }
+
+  .variant-picker__options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+  }
+
+  .variant-chip {
+    display: inline-flex;
+    align-items: center;
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    padding: 5px 12px;
+    border: 1.5px solid var(--color-border);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--color-text);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+  }
+
+  .variant-chip:hover {
+    border-color: var(--pillar-link);
+  }
+
+  .variant-chip:focus-visible {
+    outline: 2px solid var(--pillar-link);
+    outline-offset: 2px;
+  }
+
+  .variant-chip--selected {
+    background: var(--color-charcoal);
+    border-color: var(--color-charcoal);
+    color: var(--color-sand);
+  }
+</style>
+
+<script>
+  import { track } from '@scripts/analytics';
+
+  interface VariantMerchantOffer {
+    url: string;
+    merchantProductId?: string;
+    asin?: string;
+  }
+
+  interface VariantEntry {
+    label: string;
+    note?: string;
+    image?: { src: string; alt: string };
+    merchants: Record<string, VariantMerchantOffer>;
+  }
+
+  function select(picker: HTMLElement, optionId: string, fromClick: boolean): void {
+    const table: Record<string, VariantEntry> = JSON.parse(picker.dataset.variantOffers || '{}');
+    const entry = table[optionId];
+    if (!entry) return;
+
+    picker.dataset.variantSelected = optionId;
+
+    const chips = [...picker.querySelectorAll<HTMLAnchorElement>('[data-variant-option]')];
+    for (const chip of chips) {
+      const active = chip.dataset.variantOption === optionId;
+      chip.classList.toggle('variant-chip--selected', active);
+      chip.setAttribute('aria-checked', String(active));
+      chip.tabIndex = active ? 0 : -1;
+    }
+
+    const note = picker.querySelector<HTMLElement>('[data-variant-note]');
+    if (note) note.textContent = entry.note ?? '';
+
+    // The offer stack wraps the picker and the CTAs it repoints.
+    const scope = picker.closest<HTMLElement>('[data-variant-scope]');
+    if (!scope) return;
+
+    // Colorways swap the card image, which lives outside the offer stack.
+    const image = picker.closest('.product-card')?.querySelector<HTMLImageElement>('img');
+    if (image && entry.image) {
+      image.src = entry.image.src;
+      image.srcset = '';
+      image.alt = entry.image.alt;
+    }
+
+    const ctas = [...scope.querySelectorAll<HTMLAnchorElement>('a[data-affiliate="true"]')];
+    for (const cta of ctas) {
+      const offer = entry.merchants[cta.dataset.merchant ?? ''];
+
+      if (!offer) {
+        cta.hidden = true;
+        continue;
+      }
+
+      cta.hidden = false;
+      cta.href = offer.url;
+      cta.dataset.variantAxis = picker.dataset.variantAxis ?? '';
+      cta.dataset.variantOption = optionId;
+
+      if (offer.asin) cta.dataset.asin = offer.asin;
+      else delete cta.dataset.asin;
+
+      if (offer.merchantProductId) cta.dataset.merchantProductId = offer.merchantProductId;
+      else delete cta.dataset.merchantProductId;
+    }
+
+    // Keep the filled/outlined pairing correct when a merchant drops out.
+    const visible = ctas.filter((cta) => !cta.hidden);
+    visible.forEach((cta, i) => {
+      cta.dataset.variant = i === 0 ? 'primary' : 'secondary';
+    });
+
+    if (fromClick) {
+      track('product_variant_select', {
+        product_id: picker.dataset.productId,
+        variant_axis: picker.dataset.variantAxis,
+        variant_option: optionId,
+        page_slug: picker.dataset.pageSlug,
+        position: picker.dataset.position,
+      });
+    }
+  }
+
+  function upgrade(picker: HTMLElement): void {
+    const options = picker.querySelector<HTMLElement>('[data-variant-options]');
+    const chips = [...picker.querySelectorAll<HTMLAnchorElement>('[data-variant-option]')];
+    if (!options || chips.length === 0) return;
+
+    // Only claim radio semantics once the script is running — without it the
+    // chips are plain links and should read as plain links.
+    options.setAttribute('role', 'radiogroup');
+    for (const chip of chips) {
+      chip.setAttribute('role', 'radio');
+      chip.removeAttribute('target');
+    }
+
+    select(picker, picker.dataset.variantSelected ?? chips[0].dataset.variantOption!, false);
+  }
+
+  function move(picker: HTMLElement, step: number): void {
+    const chips = [...picker.querySelectorAll<HTMLAnchorElement>('[data-variant-option]')];
+    const current = chips.findIndex((chip) => chip.dataset.variantOption === picker.dataset.variantSelected);
+    const next = chips[(current + step + chips.length) % chips.length];
+    if (!next) return;
+
+    select(picker, next.dataset.variantOption!, true);
+    next.focus();
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-variant-picker]').forEach(upgrade);
+
+  document.addEventListener('click', (event) => {
+    const chip = (event.target as HTMLElement).closest<HTMLAnchorElement>('[data-variant-option]');
+    const picker = chip?.closest<HTMLElement>('[data-variant-picker]');
+    if (!chip || !picker) return;
+
+    event.preventDefault();
+    select(picker, chip.dataset.variantOption!, true);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    const chip = (event.target as HTMLElement).closest<HTMLAnchorElement>('[data-variant-option]');
+    const picker = chip?.closest<HTMLElement>('[data-variant-picker]');
+    if (!chip || !picker) return;
+
+    if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
+      event.preventDefault();
+      move(picker, 1);
+    } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
+      event.preventDefault();
+      move(picker, -1);
+    }
+  });
+</script>

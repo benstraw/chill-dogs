@@ -39,7 +39,7 @@ const secondaryIsAffiliate = secondaryCta
 <section class="hero">
   <div class="hero-inner">
     <h1 class="hero-title">{title}</h1>
-    {subtitle && <p class="hero-subtitle">{subtitle}</p>}
+    {subtitle && <p class="hero-subtitle" set:html={subtitle} />}
     {disclaimer && <p class="hero-disclaimer">{disclaimer}</p>}
     <div class="hero-ctas">
       {primaryCta.offer ? (

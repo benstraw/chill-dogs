@@ -1,0 +1,479 @@
+{
+  "search_metadata": {
+    "id": "6a7c02031dcfe2b09fa7c2fc",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/s9DyOcOcIfl_EqPf09wqcw/6a7c02031dcfe2b09fa7c2fc.json",
+    "created_at": "2026-08-12 05:17:55 UTC",
+    "processed_at": "2026-08-12 05:17:55 UTC",
+    "amazon_product_url": "https://www.amazon.com/dp/B0FKHDJCF3/?",
+    "raw_html_file": "https://serpapi.com/searches/s9DyOcOcIfl_EqPf09wqcw/6a7c02031dcfe2b09fa7c2fc.html",
+    "total_time_taken": 6.87
+  },
+  "search_parameters": {
+    "engine": "amazon_product",
+    "asin": "B0FKHDJCF3",
+    "amazon_domain": "amazon.com",
+    "device": "desktop"
+  },
+  "product_results": {
+    "asin": "B0FKHDJCF3",
+    "title": "ROPO Double Sided Dog Bath Brush, Pet Grooming Tool with Long and Plum Blossom Teeth, Deep Cleaning and Massage (Blue+Black)",
+    "link": "https://www.amazon.com/ROPO-Grooming-Blossom-Cleaning-Massage/dp/B0FKHDJCF3/",
+    "link_clean": "https://www.amazon.com/dp/B0FKHDJCF3/",
+    "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FKHDJCF3&device=desktop&engine=amazon_product",
+    "badges": [
+      "Amazon's Choice"
+    ],
+    "variants": [
+      {
+        "title": "Color",
+        "items": [
+          {
+            "position": 1,
+            "asin": "B0FKHDJCF3",
+            "name": "Blue+Black",
+            "image": "https://m.media-amazon.com/images/I/51JsrqHjYhL._SS64_.jpg",
+            "selected": true,
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FKHDJCF3&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 2,
+            "asin": "B0FKHCQ7F7",
+            "name": "Black",
+            "image": "https://m.media-amazon.com/images/I/41se7PiQ4vL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FKHCQ7F7&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 3,
+            "asin": "B0FKHFYKKM",
+            "name": "Blue",
+            "image": "https://m.media-amazon.com/images/I/41e+yyUh6fL._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FKHFYKKM&device=desktop&engine=amazon_product"
+          },
+          {
+            "position": 4,
+            "asin": "B0FKHDTDFR",
+            "name": "Purple",
+            "image": "https://m.media-amazon.com/images/I/41w7LB2eh0L._SS64_.jpg",
+            "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0FKHDTDFR&device=desktop&engine=amazon_product"
+          }
+        ]
+      }
+    ],
+    "brand": "Visit the ROPO Store",
+    "thumbnail": "https://m.media-amazon.com/images/I/51JsrqHjYhL._SY300_SX300_QL70_FMwebp_.jpg",
+    "thumbnails": [
+      "https://m.media-amazon.com/images/I/71j94PPB42L._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71rL-NFc-jL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61SHxR5djKL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81xfzkMTqpL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71OmIAFvudL._SL1280_.jpg"
+    ],
+    "rating": 4.4,
+    "reviews": 17,
+    "price": "$7.99",
+    "extracted_price": 7.99,
+    "prime": true,
+    "delivery": [
+      "FREE delivery Monday, August 17 on orders shipped by Amazon over $35",
+      "Or Prime members get FREE delivery Tomorrow, August 13. Order within 8 hrs 31 mins. Join Prime"
+    ],
+    "stock": "In Stock"
+  },
+  "purchase_options": {
+    "single_offer": {
+      "price": "$7.99",
+      "extracted_price": 7.99,
+      "delivery": [
+        "FREE delivery Monday, August 17 on orders shipped by Amazon over $35",
+        "Or Prime members get FREE delivery Tomorrow, August 13. Order within 8 hrs 31 mins. Join Prime"
+      ],
+      "stock": "In Stock",
+      "features": {
+        "ships_from": {
+          "text": "Amazon",
+          "details": {
+            "heading": "Ships from",
+            "content": "Amazon"
+          }
+        },
+        "sold_by": {
+          "text": "ROPO-US",
+          "details": {
+            "heading": "Sold by",
+            "content": "ROPO-US"
+          },
+          "link": {
+            "text": "ROPO-US",
+            "link": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A1WFLWJYJHOL1J&asin=B0FKHDJCF3&ref_=dp_merchant_link&isAmazonFulfilled=1"
+          }
+        },
+        "returns": {
+          "text": "FREE 30-day refund/replacement",
+          "details": {
+            "heading": "FREE 30-day refund/replacement"
+          },
+          "link": {
+            "text": "See exceptions",
+            "link": "https://www.amazon.com/gp/help/customer/display.html/?nodeId=GKQNFKFK5CF3C54B"
+          }
+        },
+        "payment": {
+          "text": "Secure transaction",
+          "details": {
+            "heading": "Your transaction is secure",
+            "content": "We work hard to protect your security and privacy. Our payment security system encrypts your information during transmission. We don’t share your credit card details with third-party sellers, and we don’t sell your information to others. Learn more"
+          },
+          "link": {
+            "text": "Learn more",
+            "link": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
+          }
+        }
+      }
+    }
+  },
+  "about_item": [
+    "DUAL-SIDED DESIGN: Features long needle teeth on one side for deep cleaning and plum blossom-shaped teeth on the other side for gentle massage and grooming",
+    "DEEP CLEANING: Long teeth effectively penetrate thick fur to remove loose hair, dirt, and tangles while creating rich lather during bath time",
+    "MASSAGE FUNCTION: Specially designed teeth pattern stimulates blood circulation and provides a soothing massage experience for your pet",
+    "VERSATILE USE: Suitable for both dogs and cats of various sizes, perfect for regular grooming sessions and bath time",
+    "ERGONOMIC GRIP: Blue brush handle provides comfortable control while bathing and grooming your pets, making the process easier and more effective"
+  ],
+  "videos": [
+    {
+      "position": 1,
+      "title": "Double sides dog brush review",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/289eec62-bdfc-4ec6-8d42-5fa10078e671/default.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/51zTQ07W+oL.jpg",
+      "duration": "0:39",
+      "vendor": "Kristy",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/I/81Jq3ftfraL._CR0,0,1242,1242_._FMjpg_._SL34_.jpg",
+      "date": "Nov 17, 2025"
+    },
+    {
+      "position": 2,
+      "title": "My short-coated hounds absolutely love these brushes!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/7823d058-8576-4ab5-8395-409f8791351d/embedded.cc.default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/617Ug5-ZDJL.jpg",
+      "duration": "0:10",
+      "vendor": "lp",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/S/amazon-avatars-global/a68cb591-23c1-4353-8d28-7f546daa63c7._CR0%2C0%2C500%2C500_SX460_._SL34_.jpg",
+      "date": "Sep 25, 2025"
+    },
+    {
+      "position": 3,
+      "title": "Faster/easier bath time!",
+      "link": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/ef289918-6b32-49e0-8b9b-419e49ee47cb/embedded.cc.default.vertical.jobtemplate.hls.m3u8",
+      "thumbnail": "https://m.media-amazon.com/images/I/51SuqoXHSaL.jpg",
+      "duration": "0:05",
+      "vendor": "Katy",
+      "vendor_thumbnail": "https://m.media-amazon.com/images/S/amazon-avatars-global/e57a97db-d2bc-492a-853a-ec0231ae78d9._CR0%2C0%2C612%2C612_SX460_._SL34_.jpg",
+      "date": "Sep 21, 2025"
+    }
+  ],
+  "product_description": [
+    {
+      "position": 1,
+      "title": "ROPO dog bath brush",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/b4949602-9f7c-427c-82d9-b59785b91e4e.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 2
+    },
+    {
+      "position": 3,
+      "title": "ROPO dog double sided brush",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/e4c563b4-b8e9-4293-8069-7624b128f0a4.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 4,
+      "title": "ROPO dog double sided brush use for dogs &amp;amp;amp; cats",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/883848b0-f71c-4861-9a06-01c6b685516c.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    },
+    {
+      "position": 5,
+      "title": "the best gift for you pets",
+      "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/171087a5-1ff4-4564-842e-95ce24f133c0.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    }
+  ],
+  "product_details": {
+    "brand_name": "ROPO",
+    "product_benefits": "Deep Cleaning",
+    "manufacturer": "ROPO",
+    "hair_type": "All",
+    "best_sellers_rank": [
+      {
+        "text": "#223,971 in Pet Supplies (See Top 100 in Pet Supplies)",
+        "extracted_rank": 223971,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/ref=pd_zg_ts_pet-supplies",
+        "link_text": "See Top 100 in Pet Supplies"
+      },
+      {
+        "text": "#1,404 in Dog Brushes",
+        "extracted_rank": 1404,
+        "link": "https://www.amazon.com/gp/bestsellers/pet-supplies/2975363011/ref=pd_zg_hrsr_pet-supplies",
+        "link_text": "Dog Brushes"
+      }
+    ],
+    "asin": "B0FKHDJCF3",
+    "rating": 4.4,
+    "reviews": 17,
+    "item_dimensions_l_x_w_x_h": "9.4\"L x 3.9\"W x 0.7\"H",
+    "unit_count": "1 Count",
+    "item_weight": "2.08 ounces",
+    "number_of_items": "1",
+    "bristle_material": "Silicone",
+    "handle_material": "Rubber",
+    "material_type": "Rubber",
+    "color": "Blue+Black",
+    "item_shape": "Oval",
+    "additional_features": "Double Sided",
+    "package_dimensions": "5.24 x 4.57 x 1.14 inches; 2.08 ounces"
+  },
+  "sponsored_brands": [
+    {
+      "position": 1,
+      "asin": "B0H6KDT2L7",
+      "title": "Bamboo Slicker Brush for Long Haired Dogs, Dog Brush for Doodles and Curly Coats, Detangling Grooming Brush for Daily Use with Ergonomic Handle",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JCxcz_WtkJjdoVtFA8dCTG0AAAGf9GfytAEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDIgICA97_wg/clv1c_ek-wxfHXLcTWDVVAWi4kasJ9BF4_KlpQTizZDqCWD5tXwsilb8jqQnx2wDt5TZ5LxeeXOtNUPmSAHiVftb16iSlT70zAo4Kv8Ao863b-0c68njcBMPpcraz49qUcdvOkHyoIl5_conppoMe9LafW_Ondre2U1lTrms_57RuKnQcZUk1pzAeNHCcCSKdMydgp1net3c1KDhH8DdCtloj0l3M0nde9homnstWfoJOSadIjTRb8bUo3BkeNz_T6wQUAS2xHe4P_QoeV-Bk9v_JDfDEOsi13EICWCnohGJ611ZyD6WfLyYS58W96SdORzNDgD1_Yq-nBHHR95CgWVcnY3ECgJFD1GN6Le-Nk3S7puEP6y7TIgZ9C6W5V8s1rmHaM3IW47vMmbsZPWWFsrAH2kvujoRGaRQ5zq1oZoFujEtevJLQDOx-wtpmqKrOYKreUnhKW-nl_ax1_VYyKQh6rYxt1l_xPRF_Jsp0WtSaJsoc2uElpxc57Zm1ta0-jFiTtq32fIEmtCrgx-0Hv37u23DMX9DsufV1uuk1jw--j2D6lXMBc1Bt9vxUfd_VCy3qYvb1YpZyVArlHetaRVZjDvm9TmU0lY_w7T46C2PbbuzbptOzDj4TnI_MN--n3HWBoIrlfdCKTiyNR5dZrN0utBYvpjsZFF44Fe8sKHZYgSW_kW0oTYF_zeTv_ZHln955lQGfP4Y7h8u4Xu9eJYwt6BOYhU5RcP1Sh548tGTNHcacYXQGIghMoOIyrPtJwBjjnYsuxUiNJ54L-918EY-0WRTGi4T5qJTsMRDZ7dsoabBnCIq3-TWra5YnMLip0phN8StZR90adTgLNxNldmmJWp2u5l_22xW7bwaRi4IxhopwjyVY6atFF7Re7ouHRle0d8f_Fj6tkhcirSmxA0C5rxUcYB07Rq_eVUp7xGE-oCFsNZNDsoYXYOgAcWQpV43WsbEe23HvZBefVSpvEoKu9rmMuA9Ov7i-9Oa5ZOX93LwPNAurUL88fulXimbgSEgiEWFlkTFVrZrz0mdtk732wBNQAoPYSnQlsfZhVALImu7ikzi05Q_UsAV-5JrSXDCCnEv6kEMZIOF6cE1Hf7f0zmjCUu6GdXDlDf9Uyekwre2aCxdraU7xhHlw6omS1GlkLw4U_UEQUamqdL6MNubPBfMCFu-1xT5zp9EabCLLN3it-63zff_xsy4lfzGTNIQk_kfq-Ws1Jzy4N3K1URIXX0HppMLLk3E757gUVzuihh_qFYhUsrSme3ABUQR-aZDpVzb22O6SBlyZHRa8nbBXEHdPcpppDIDwG3sk6LMm1VakbfKg6PR3ExccJxgYKHP2cqLutBYlwe-hYJHrFe5FTqWNFZd4Fsor3aAcsI2ioGWaEflmYRS0O4rDeaAVJttGjQCh20jql47t81b3L9uxAJKAXxxnoFOzx21My2gbwh3SGFpnjceCZlHGe4Bv8AIftAzRE_vxqDptJrxU_xNEMi4n9s3sxCQbc7RAdqyfxU8n9WQ_uvHdyptjsWmkALMV8wqvcXGfQ5jBaZCzLQMuom7Rn3OpQRXMpcV6uXzEoSSpQVQ7UjUfaVh3q/https://www.amazon.com/dp/B0H6KDT2L7/?_encoding=UTF8&pd_rd_i=B0H6KDT2L7&pd_rd_i=B0H6KDT2L7&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=VjJyv&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=TNWPJDYHT8AZ1R1AXGGW&pd_rd_wg=bx3ap&pd_rd_r=94f955d7-4ad9-4011-996f-c5c1da2e9999",
+      "link_clean": "https://www.amazon.com/dp/B0H6KDT2L7/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0H6KDT2L7&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41coml4IryL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/8e2bfa64-d59a-44e1-a196-c534551f4742.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/8e2bfa64-d59a-44e1-a196-c534551f4742.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 3.8,
+      "reviews": 5,
+      "price": "$19.99",
+      "extracted_price": 19.99
+    },
+    {
+      "position": 2,
+      "asin": "B0GYT491Q5",
+      "title": "Rhykin GroomPro Dog Deshedding Brush | Pet Hair Remover for All Coat Types | Dog Home Grooming Undercoat Tool - Reduce Pet Hair on Furniture, Clothing, and Floors",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JK9j_zvfNrmryxTLofMieegAAAGf9GfytQEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDIgICCBbu5R/clv1c_ek-IBXf2FcTW3uu7cOoEbugzoh05WFG5YE58Ol3w3QL-6WMC7_j3Yxausr_0XWa6c_Ql1sdZCgjob6BbNrkTkyIdMwi3oeHOInUMOlptzIou6tVbu08hOX_Aunn0rXEXwxROToJ0w3mUAHQBlQLKGd-xqsc8FlTntgTM-ROSjKccWn1xhni3X4VOF2PSIZoCmI86IxA6h7foFGX8IEHdgrINv79qlN4mZLbEa27i4X5Bi8hVJPbwCHM2e_lqryPVMWNWHIJgV1oq8f4z__AZa1OyoWSC3FkN-lAfSKV22MCtrxZAHYDWJRnxVvEJF8H0E686vI6kGOlxxjg913hscGPCa_1Aux33DsTTLB-Tr1NLYFP347Ajtfr7_qYgweTW7vRLqZV7EHj1ZoZANXdPYxYxJKXymybSYMm3PeO4P6hujUO9D_Vr5UwG_V73FYotnZAMGWoFYDi4GuHK3ACsIHzH6QVWM5ldJeBuZqDXUdpNCtIQ8YOujFlidcWZrPIF1cWf7SJ6Yq6hLlyBhjSOVcNpGsphrChZzg13nzZC2TPMAhSNYXp6IN_5nf4QYdgbKI2201XKWUavtbEHaQvkDSW_9NiFxElk8KLz5S1O_sGwvuUpobN0S7CnA17ZKF4xxKk5aRo2TNWnKxSgz-6dtQnOEONNJneheD_BT13CPj22FEDe_FYw1aBvLto5xt3E9zqpm9o3diZlipdWOpopIuqeqYurTSmDveILTe7MN1WpsI2uTFJzYCKtf57uusbbY8SV8c6Fv0aKZm2YTMK1O3pkIsvzyYx8L8rEGE0RFdd0kHxmAcvfi2WCZsynqwhSjbCcbHfx2NRJH3qW64spf-6hhwVd5cIrxkDM0nD0xnnhnXbPd_RCM5FVYp9M6kP4-tKA_NM0Xzl286w7ockdYi3BJQIkbp1JJhMWcLIbBAjq4-fRzOtkn4vAJ27StMaq1wxt9guj8SL2WtiLS2Dx7MXy-vCoTZjPT_m-OuuPuFsg9ann7qaHuypNjoMwumlLggJZJACVimFUvM-x311zV070cbHeTtiwGcC4CyV-Ffxua13XoVN6KtAvvDcXoM7ZsE9EKc8a2D89zcDq5mB_MB4SdAHs_G-FpHanjyOuFOtstZ_JVDQwpIevgTgJry6KrpsMurLRBbVxi1XNio6awv0wrEgZgWGV0i1zBVqFCWOMWZqDgIFwMrbXMC5EXo4CNhl9ZGmLxCEDe1R5_e7REPSUCYY5GujCi0kIgj8lESHgaNX48NNRmijmK2JZyGLJPralWhXrjIP751zy4dtSntQdhhs7aYYbPJHOnXR8o7l8Fm-9Z-FWlkil8kDp7Lu5b8jPMmnxUxXrtFx4QfBUU8jBXvkeB24EPqyNXhfkvTgNGI7IWQWiKvup93HaP_CsWucs7H1QIigGpwcGEqAs-kDNgNsmJ0iTf3-85LhG1iZ4-7BbPY46vS_QokvKkAw2b0zQkB0ga6RZjwd5yTbKoy5bTC44nMud2wiNy9i3zVVeiUVY2LqHjd0hq27eikcjRWmZXMg9L5DVwpp6KoZmGKfTZPzvDJM/https://www.amazon.com/dp/B0GYT491Q5/?_encoding=UTF8&pd_rd_i=B0GYT491Q5&pd_rd_i=B0GYT491Q5&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=VjJyv&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=TNWPJDYHT8AZ1R1AXGGW&pd_rd_wg=bx3ap&pd_rd_r=94f955d7-4ad9-4011-996f-c5c1da2e9999",
+      "link_clean": "https://www.amazon.com/dp/B0GYT491Q5/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GYT491Q5&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41nDUUnDQXL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/871ee9bc-6f60-4b50-9335-a249749dc175.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/871ee9bc-6f60-4b50-9335-a249749dc175.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.2,
+      "reviews": 90,
+      "price": "$35.00",
+      "extracted_price": 35
+    },
+    {
+      "position": 3,
+      "asin": "B0H2Z7H724",
+      "title": "Garstor Dog Brush, Cat Brush for Long Haired Cats | Remove Loose Fur Undercoat and Mats, Rounded Pins Reduces Painful Pulling, Not for Tangle and Curly Fur, Sapphire",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JChSsFgDyNRbSwPYTQ0pb2cAAAGf9GfytgEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDIgICCjlR--/clv1c_ek-wxfHXLcTWDVVAWi4kasK9owkYDlpQTizZDqCWD5vXZboeb8jqQuTK9fCGKLqXelPaKSQ7mImj1j167ehwrDO7P0KLxOPzbW7XxJZXvsA0ASCn_nFQ6Gj25FmU5HUsxY45HCET2lYJJn74AEL-Pj1PqIlcllLw2oTIhyfKzQMVVTMtX0dfb4K_J5Do-R2NDAIo4FbwOh_YtaV6esjGyibIi1Y1jGaekLI32Kw640Iag8Y1SBfEB-9Ppf0kRp1ax-9cddtePFPNbkrmv0sO3LW3qVhAr8HRbRYwOvX4_cb8jw0wWX9b5jL8JPVNFPcw-M11IJF1Xps1n0rEhZWwYyavzgspJTaDIffrLNQk4vbbhTZUDzR3WjsRE5AQBDOxwCCaByiJ4pw6jIq4gWa3aR2nDIxjk1y6QmU8MD9LtpRUboyfoZ8E0QH2AuG82NDzFl-RuwvnzT4YsZnjg2k22_6MXcKXcommRfEmF-4NKe_3OCBrsN4-uqMhsaL88G79gfZZp_NkqYBQoKHaq7aDwBPQMZZQMXArlAuD8IcSQc6Q0kJVTjrzmLmtUpUEasBLc3GPzoeia-fTJ9YPif2K683wE_t741L4bwaw3-lhv2XVX4PwKcfqjfEFUKvSRMefKtf3eT1shRDPcVsNdwnxeayiqJ7v8od_ZgD17V18idqR1nOLF429vCVZqjehvZwuMEDGmFrxAsghtafdEzlift8XOf7zB4up5By6JYnSdvzLYu9NIuDC-flWjcmkjv_qNZgNGwwqFWJBFtIiY96RN5PNch0gLl96-p7Pi_O5Lk9RU9n2EC4jPqrlWiAKPGBhLCyrvkCmjFB9JnFQ7MkmyS7MnpR8NotB9S4vyscWZohB8aYjbbejuLLaBalYehoinR8d6KZKsh3SWDvqOqydMZ0bdS-Z-7B_pc9GpVejrK9ZzVs2JButORlyUhlSDYr2KhLno4PiwTbMIjZejlmSqEyxKroj13SLvjIHwEljip1Px_cpf_EAdHELzUow1khWFjSSgXAfJtWfv4Yv9AOdI2u1M95n8Qp8kbCQ449bXg-GzBi4tfvVUoGJBzBsSxPzaxvWZuvgKKtaAq3TIDnfb2gHKtaB1Tx5wHOB2LTDr3NWBkqXHWtYhgEXHr8Tu5JMTFK-uBud8RQEp52b8ML2KQa5dAMZl9I691xZH3uwpBUfKtTEWUopoRndXoIwoy6MO-Eq5yV-yJJtdjXlG8nL4PLo1LZDzvJF7yihxm9L6TgEK2tTa-kzK-dSJg0BRTPFVgSbYGAjz-3pNnS_WCGhDznfUynL0TbCFfqAEm4cRnA_xLkPD-jmDAZKWswWbS9BUx9YFghYwNewDDWcqC1skEKgsfI73bR3pMmvk--LchO52l7ghTl2FanBBbLCFP1Np_G-lffCJ_JR6J6p66xNeXIS-T2Xq1HX9ZSUZnmPr_QCq_3lyuGSulIPlIl8vv7WDRvfBna4UnvFNu358PUKAkIH9XdhsnPr2eUdb4CdKEeXitNBqGNSfCUpzhCFCVVaBcnmuGW8Wdiu1iQvRo-C0gHzB0tErQ2mrQVi7u8YaC6nEZJDJkx6rnmkdnB2CQ/https://www.amazon.com/dp/B0H2Z7H724/?_encoding=UTF8&pd_rd_i=B0H2Z7H724&pd_rd_i=B0H2Z7H724&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=VjJyv&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=TNWPJDYHT8AZ1R1AXGGW&pd_rd_wg=bx3ap&pd_rd_r=94f955d7-4ad9-4011-996f-c5c1da2e9999",
+      "link_clean": "https://www.amazon.com/dp/B0H2Z7H724/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0H2Z7H724&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/516ljsVtwPL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/aa1adaeb-56a7-4acb-ac33-7ce5240fb990.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/aa1adaeb-56a7-4acb-ac33-7ce5240fb990.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 4.6,
+      "reviews": 1327,
+      "price": "$16.99",
+      "extracted_price": 16.99,
+      "old_price": "$21.99",
+      "extracted_old_price": 21.99
+    },
+    {
+      "position": 4,
+      "asin": "B0HBLB267M",
+      "title": "Dematting Comb for Dogs and Cats, 2026 New Undercoat Rake Pet Brush for Long Hair, 2-in-1 Dual-Sided Deshedding Dog Brush Removes Tangles Knots and Loose Fur, Grooming Tool for Thick Coats (Blue L)",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JKX02XwRGvQkuT5GRpHXhJ8AAAGf9GfytwEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDIgICBNFF5u/clv1c_ek-wBXf2FcTW3uu7cOoEbugzoh05WFG5uMPmTkPGG5na7mP6MwEtTq3S9ZBPU6dEnhKLPRGFFmiAHuWC9z0BnytT70zAs-E-8AI87Yoq1K26mtKttKs6QYyY4_taquphZ0yerPzvvQ-Qh9g5RQwMBXB9ANyWjoWqkAi1TTOt5OJ_mekQjYAn2UN53KT0-hhWH0KwkOKCrycJVOVqvlWwKvw5DQuvfHK0Cma2_a4bOioil7i0ONaCuj_kW8UQAUwG1vylVndn0ecgUQT2sK3Ejp16GPpe3DCRy3D5sGNYovye0tm760yanZTTAJTNlBlc6TK7leD3ccl-zZDTXP1QEhoqIN59ZTzoR-7WGlh0kB0NVX9xgppAq8WTka4BtwBCS7_qViCGrR-wOdPtB49k4oQ-g0zlkIuob7Cb1Pad3DNsWclbsiAkZ7QJKvjNpnFCpvFXE6z6AuXZnuAmaIpzSy1Fh_na_LGY1KePxYyt-pK9RCzTon7xYblSY7cI2pNnv3K4sUvE_1I2ILj6HNDdGSYbCJV2yg03IiVIx6RFWCttJG8csMHPZdqCrfb7sLdRI651VqqG-VoUQ0w3eoOpG6CyssGo3_IC6P8VN1dA24RUxAjASHiSf5mkQInydHrmgZJRMfnKT7Ck8KcAIC2Lr0jtNSiIOPVFbC3UDgqMK0SyZtdj8huFwMty174X0pAaXSmiiemYmLlBjeTKqUAyr79fmFRpWRQd5EzNGQd-esVDQklqelqhaC_rqRYcalKHzj_OY-cQT1sRFnPxxZ8DqRQFhAOnIxxPkVm0xRqLEKGA8DI95ybBIoX-7o3G3PnBOH6GnDhJnQRrCZaa27_vhZJ8F4eEj_v-yWjxb0yZPUFj3ONQICan68FvfGcqm5euYEBvKlETtXkfPTxOOfZrE3xEK13NObJf_De_G6ZLAPSNMWVU7AcRqqCLdIdi6aba7ShXk4t5arOf9gAC_dBmW9N7Sp9M52PyMFn0hXroobfC87ZhMV9P4Y4Ge6o5jXCfANE1zvrJXadJWkX6eon0GBrl8oSlaXyuPEzrjvI4ipluvs142bX9_CJSAAMvMNKOUt1KBE16rjfqMKE10ETCEJXiGAFHKAakxTyicyukDMKw3b3g3OhJMqy1N0OQlS0H-_UUSE53sYWVCgu1l6vWB4cT0p2p7Ni5mB84OJkoQBlZZYYgyJ048_SHzvfmfwvGFZVLwubeiJ4s74K812_lIfJnBkwgJ0mXXAcLtqcHKTBh_d-tpiG79Krk13AZ-JNMyJ0Ymx2RWrgZ6XVfXwr1K5OaehDfUbatRwOs9XeCOnlqxFcSMxA80YVFgpsZjjaWPQxEAtg1OA6LCdc8_yuUyh_qs_kQcs8mL2kfOvaFkTrU8NMjks4mw2eB9ZT-SZUqW7ZJ0DmhYt0DRwBcfR0urduRR5SyFQjPAx0pg3W7iqdVb8Jyv-ERKs60zfPybBW7mEub2UIUOJflXiXEWTUA1SjJ-mZiFFC4ycpLb-_lNVyqeW4yBoS358vueRyEvKUX7WQQM5i9vxfhj23vCdxlUoLuHbsp/https://www.amazon.com/dp/B0HBLB267M/?_encoding=UTF8&pd_rd_i=B0HBLB267M&pd_rd_i=B0HBLB267M&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=VjJyv&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=TNWPJDYHT8AZ1R1AXGGW&pd_rd_wg=bx3ap&pd_rd_r=94f955d7-4ad9-4011-996f-c5c1da2e9999",
+      "link_clean": "https://www.amazon.com/dp/B0HBLB267M/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0HBLB267M&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/31wT29paOQL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/a4c62b57-7a6d-41ab-9af0-c055a40c52fb.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/a4c62b57-7a6d-41ab-9af0-c055a40c52fb.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 5,
+      "reviews": 2,
+      "price": "$12.99",
+      "extracted_price": 12.99
+    },
+    {
+      "position": 5,
+      "asin": "B0GT8K1WG1",
+      "title": "Deshedding Pet Brush, Deshedding Brush for Indoor Cats, Dogs, Pet Hair Remover Comb for Short Long Hair, Easy Clean Pet Grooming Tool for Shedding Control",
+      "link": "https://aax-us-east-retail-direct.amazon.com/x/c/JAM-_NCs-kQ7mmZunRq9kLQAAAGf9GfyuAEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDIgICDhGIL4/clv1c_ek-wBXf2VcbW3jI2m8VSJvBwCvKxcAcQ-QPpLCV8tN4IZtPLBRMzk8h74Ijs_0bvN_GLNEfYDL90MfklFqe0kiVWK5LzuQ3RyJG3Zs_x_0gGSZkKiGZgZkqs2nn0q3kHswROycNkK0yyGHuSW04PNs0PpMncl1bw2kTJBydLzQMVVXNtf5f11gI3nJ5rdcpQfsgQoDPCQ8ZJ3evrS0LmEhrWRHkVJO4WhIdiM5KHyzKjCFhUMq8yEK-zUr_lkYi94kC6RnH35kvFDpBpElwrZSetq3h43YDNDSK5Pyx14ryVpEVYXlsad-i6dqYrbm-pWEfYBJWSS_61GN-GwAcXRxXvh0JjC-Du8cn4wDAqprb1DlSN8Wd9S4G4rqVD8569ZkLKLuFj9ZiOhTLtZDdvYxQxp-XyGVbMZqinSXSB2slwjf6ZYzvskDhD9vto1KocWJIirSW4ZLe45icJdyzeeH3onyhaUvkXWFU5yfK_aq-jQcmk56W9cdVh7H5_fSBE2bANQnlrt2ZWw95s-b5vWPDIdRy3tTygoU4Jhz91ka_1nQTeylohbXMz0F3avHhXYZeuvMX-gmavtbGEWQvkHSO_9NylyEsd4Cby5S5u8sGwOqQpIrP7yr8nAl5aSV4xxAmCBT5Oq14yrdyWBeFLlUAYcOTCmr2RFDdkYshbPegHiapAG9kL0a_-sUMucSnIvmSxPcpvEUY_XQBHwvjma4LK58mUzEsaReeG_ulK4K65w_n9Y73VXGxcY6XyHJIzxN2sx16PqgWEjNMLWFHkWznfzqxjZVK8_oLzQni2ehnjhkYqfEwGRu7f3JfIHYF2ZZlCy8f3BdWwuTR1kyVqkw_0G4q-wL8RRKnTzyjOiZ012hysd6LA3lyxryHbHxOq28N4EJXMRBoxL5A-bLwgfOE7S9iPWCnrYWsTveshA-papxMIhQxJxTkV2L9cTzajM58yCH5HHYbB1XAaYu9yjdIGU5Kts9J2nXT7wMANRHSE2qx3XOatmexKNrlMuqfr8SznzIcDoCzKKw6QcrOxcqg3yywEYdn_cDnfEKxaDHWy2bQ4YJi0rWTsAg8mENUbivrtNu6rI8IoxCdbcWZj7_K7FrN72KY208Bgi97d0c8FFHv-AwfcJKgkNsnJr4ay4butXOllRTpw5SZ9bOyTVPYwK-DtCxREirfdxgpxd88y_QN-j3kpHgc-dLbyBSM9ETso_q5i1Jz6ABGNKLd_sAGM8sQ1CJ0BPIvuL-1d2dGrWdjgVQl_-8YBzmePu797hL3K-S82BmSCHY1uMXmZUJqfUlR0nIIuyL5UmFZVqHrj0ZkSmOCwi7UNAe1RIqdVVZFYCkBQAQBbn_eDoAhPqxJMtju1nhMXi6Cm61CiY1J5Q7AFh_FwJiP7ZBzEgRlJ-eQjbNMgOuIMRi0xwgrlVz8oBY5asaNwGFQ4Za0nGP79TuBL0GfK7mEhmfb_71NLN_cgY_lMkF4EE4Xl5Wh_iyvT46WslPHkXdbKlpChlI0nne5109Y0suGh495YiEvFk26F_nrFYWQ9zdHWuGpucATTW0w/https://www.amazon.com/dp/B0GT8K1WG1/?_encoding=UTF8&pd_rd_i=B0GT8K1WG1&pd_rd_i=B0GT8K1WG1&ref_=sbx_be_s_sparkle_ssd_cta&pd_rd_w=VjJyv&content-id=amzn1.sym.ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_p=ccb770a9-35d1-4af6-8af2-bcbd12656fbb&pf_rd_r=TNWPJDYHT8AZ1R1AXGGW&pd_rd_wg=bx3ap&pd_rd_r=94f955d7-4ad9-4011-996f-c5c1da2e9999",
+      "link_clean": "https://www.amazon.com/dp/B0GT8K1WG1/",
+      "serpapi_link": "https://serpapi.com/search.json?amazon_domain=amazon.com&asin=B0GT8K1WG1&device=desktop&engine=amazon_product",
+      "thumbnail": "https://m.media-amazon.com/images/I/41yeoO2TfRL._AC_SR100,100_QL65_.jpg",
+      "video": {
+        "link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/bc1c1e34-f6bd-4690-a38d-80b8430d8d30.mp4/productVideoOptimized.mp4",
+        "thumbnail": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/bc1c1e34-f6bd-4690-a38d-80b8430d8d30.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG"
+      },
+      "rating": 3.9,
+      "reviews": 10,
+      "price": "$7.99",
+      "extracted_price": 7.99,
+      "old_price": "$9.99",
+      "extracted_old_price": 9.99
+    }
+  ],
+  "reviews_information": {
+    "summary": {
+      "images": [
+        "https://m.media-amazon.com/images/I/71f2JDDN5UL.jpg",
+        "https://m.media-amazon.com/images/I/71I+oxgH4HL.jpg",
+        "https://m.media-amazon.com/images/I/71ufixA+w+L.jpg",
+        "https://m.media-amazon.com/images/I/61pctTrw3gL.jpg",
+        "https://m.media-amazon.com/images/I/81R+FhVe09L.jpg",
+        "https://m.media-amazon.com/images/I/61uqaJbqWOL.jpg",
+        "https://m.media-amazon.com/images/I/71oumhtx4PL.jpg",
+        "https://m.media-amazon.com/images/I/71fpbun1ufL.jpg",
+        "https://m.media-amazon.com/images/I/61Eonw+V9sL.jpg",
+        "https://m.media-amazon.com/images/I/61KZijggGLL.jpg",
+        "https://m.media-amazon.com/images/I/81kVaMELOcL.jpg",
+        "https://m.media-amazon.com/images/I/81OZEDqoV6L.jpg"
+      ],
+      "customer_reviews": {
+        "5 star": 53,
+        "4 star": 30,
+        "3 star": 17,
+        "2 star": 0,
+        "1 star": 0
+      }
+    },
+    "authors_reviews": [
+      {
+        "position": 1,
+        "title": "Great bath brush",
+        "text": "This brush is a soft silicone, but not so soft it collapses when you use it. It scrubs through my puppy’s medium-thick fur and gets a solid lather going without scratching. He hasn’t fully lost his puppy coat yet so verdict is still out on long-term effectiveness, but so far so good. The two sides have different length teeth, which is great for reaching both the top coat and the fluff underneath. It’s comfortable to hold (might be a tad slippery if you have smaller hands) and easy to rinse clean.My puppy tolerates it pretty well, keeping in mind that he’s still at the stage where he thinks everything in the world is either food or a chew toy. (They grow out of that, right? ...Right?) Honestly, it works well enough that I’m half-tempted to hand it to my kid, who has about the same hair density and washing enthusiasm. But I won’t. Probably.Bottom line: Great design, easy to use, and gets the job done.",
+        "rating": 5,
+        "date": "November 10, 2025",
+        "author": "Steph",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AG4RKLI4CV4HIA6J7KAL3PLE6ZEA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "product": {
+          "color": "Black"
+        }
+      },
+      {
+        "position": 2,
+        "title": "A little ruff for small dogs.",
+        "text": "I'll start out with saying, our dog is on the very small end of the scale. He's a wonderful little 8 pound Havanese with medium length hair. He does very well in a bath, but it can sometimes be a challenge getting a good scrub of the little guy. So, we gave these a shot.In general, these are very easy to use. They seem very durable and I would expect them to last quite a long time. The bristles are firm to the point they retain their shape well, but the geometry provides a soft brushing to the dog.I expect these would work very well for a larger dog (30 lb and above). But for our pup, these are were over sized and ended up being a little cumbersome to use.For the money, these would be a nice value for an appropriately sized dog. For small dogs, you should probably look for something else.",
+        "rating": 4,
+        "date": "October 7, 2025",
+        "author": "Dan",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AGNWVVDI5KHV6LJLPCGJ7L4BUIOQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/71I+oxgH4HL.jpg"
+        ],
+        "product": {
+          "color": "Blue+Black"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Makes bathtime more productive and fun!",
+        "text": "My dog is on a medicated shampoo to help cut down on itching. While it works very well in that aspect, it never really foams up the way a regular dog shampoo would. I'd have to use several handfuls of shampoo before I felt my dog was fully covered, and then it has to sit for 10 minutes, so it's always hard to tell how effective my shampooing has been. Also, my hands become covered in dog fur and shampoo suds and while that's part of the job, it's always been a little off-putting.After seeing this bath brush on Amazon, I decided to give it a try. It did an amazing job! The shampoo got extremely foamy, more sudsy than I expected, and I was able to use a lot less shampoo in our next bath. While I still got hair and shampoo on my hands, there wasn't as much. We'll definitely use this next bath! I have a corgi, so this was not too harsh on his undercoat, but also able to get through his fur. A longer-haired dog might need a little more effort in getting down to the skin.",
+        "rating": 5,
+        "date": "September 21, 2025",
+        "author": "ShortCorgiGuy",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFFHTN6MEB5CKUPEJ4UUY4J4ZR2Q?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "product": {
+          "color": "Black"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Not ideal for thick coats and challenging to hold when wet",
+        "text": "I really like the two styles of bristles - one to me is more of a fast scrub lather while the other is more of an exfoliant. The quality of the plastic was more sturdy than I was anticipating which is nice if your dog has thicker fur (like our border collie). With that said, the bristles aren’t long enough in my opinion for dogs with super thick fur like a German Shepard. I am also reducing a star because it’s somewhat challenging to grip and remain gripping it when it’s wet and you’re trying to go in circles or use around the sides or under your dog. Would be nice if it had some sort of handle to go over the back or side of your hand (but I imagine it wouldn’t be able to be 2 sided in that case). Also the more exfoliant side bristles are shorter than the other side as you can see from my pics.",
+        "rating": 3,
+        "date": "October 13, 2025",
+        "author": "Schellay",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHS4S7CBX3SBN2NH5YABUHONLGVQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/61dqbzYaJML.jpg",
+          "https://m.media-amazon.com/images/I/61KZijggGLL.jpg",
+          "https://m.media-amazon.com/images/I/71-YcIsyYfL.jpg",
+          "https://m.media-amazon.com/images/I/61pctTrw3gL.jpg"
+        ],
+        "product": {
+          "color": "Blue+Black"
+        }
+      },
+      {
+        "position": 5,
+        "title": "Great for Working Shampoo Into Coarse Fur (and Apparently a Dog Massage Tool Too)",
+        "text": "I picked this up because my Belgian has that kind of coarse coat where shampoo just sits on top instead of working in. I wanted a brush that could help get the suds down to the skin without scratching or irritating him. This one does exactly that.The funny part? The second I start brushing him with it, he kicks his legs like he’s trying to start a motorcycle. Clearly, he enjoys it. There are a few spots on his back where it sends him into overdrive, so I guess it doubles as a massage tool too.Functionally, it does what I need—works the shampoo deep into his coat and helps shed some loose hair at the same time. I like that it has two sides for different uses, and since the pack comes with two, I’m prepared for the inevitable moment when one goes missing.",
+        "rating": 5,
+        "date": "October 2, 2025",
+        "author": "RNF",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AE5RVIY4LXJE2JU2UDLTMDVZKOKA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/71ufixA+w+L.jpg",
+          "https://m.media-amazon.com/images/I/71f2JDDN5UL.jpg"
+        ],
+        "product": {
+          "color": "Blue+Black"
+        }
+      },
+      {
+        "position": 6,
+        "title": "Good bathing brush for dogs!",
+        "text": "This is a sturdy rubber brush for bathing and shampooing your dog. It fits nicely in my hand...the oval shape is easy to hold. However, I do wish it had a loop to fit your finger...this would make it even easier to hold while bathing. There are two sides to the bristles, and both seem up to the job of bathing and massaging your dog. The rubber seems very sturdy yet flexible. Overall, very happy with this--as is my dog! Would give it 5 stars if it had a loop.",
+        "rating": 4,
+        "date": "September 14, 2025",
+        "author": "AmazonBuyer",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AHRSI6I4ABBYN4H66NYD4WGZNNPQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/61uqaJbqWOL.jpg",
+          "https://m.media-amazon.com/images/I/61Eonw+V9sL.jpg"
+        ],
+        "product": {
+          "color": "Black"
+        }
+      },
+      {
+        "position": 7,
+        "title": "Massaging double sided dog/cat brush - works well!",
+        "text": "These massaging double sided dog brushes are great! They can be used for grooming/brushing your dog or cat. Or they can be used to scrub your dog/cat in the bathtub. These brushes do feel a little more rigid than other brands. My dog is a jackapoo so her fur is a cross between soft poodle hair and more wirey Jack Russell terrier fur. Her fur is straighter with a slight curl and is a single layer (not a double coat). These brushes work well for her. She particularly likes the shorter bristle side (plum blossom teeth) that massages. (I’m not sure how well this would work for thicker fur or double coated dogs). These brushes are easy to use and easy to clean. The size works well for both my cats and my dog. Both the dog and cats prefer these brushes to the traditional bristle brushes or slicker brushes.",
+        "rating": 5,
+        "date": "September 21, 2025",
+        "author": "Anonymous in the USA",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AEUI64ZHOK4OZTTRMPJNEY7ZXXPQ?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/71oumhtx4PL.jpg",
+          "https://m.media-amazon.com/images/I/81R+FhVe09L.jpg"
+        ],
+        "product": {
+          "color": "Blue+Black"
+        }
+      },
+      {
+        "position": 8,
+        "title": "Brushes work well for bathing and brushing German Shepherd and Border Collie",
+        "text": "These are great double sided dog bath brushes. It comes in a set of 2 - one black and one blue. There are two sides on each brush with different types of teeth. I have a german shepherd and a long haired border collie. These silicone brushes work very well while bathing them. It helps lather the soap and make washing easier. My dogs don't mind me using the brushes since the brushes are gentle. They also work great as a brush to remove hair. The brushes fit well in my hand and are a good size and quality. I highly recommend them for bathing and brushing your dogs.",
+        "rating": 5,
+        "date": "September 19, 2025",
+        "author": "Blessed chick",
+        "author_link": "https://www.amazon.com/gp/profile/amzn1.account.AFUM5RIDQDRRLBK4FNIYJPEXE3TA?ref=cm_cr_dp_d_bdcrb_top",
+        "author_image": "https://m.media-amazon.com/images/S/amazon-avatars-global/default._SX48_.png",
+        "images": [
+          "https://m.media-amazon.com/images/I/71fpbun1ufL.jpg"
+        ],
+        "product": {
+          "color": "Blue+Black"
+        }
+      }
+    ]
+  }
+}
