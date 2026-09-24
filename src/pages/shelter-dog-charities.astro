@@ -196,8 +196,10 @@ import BaseLayout from '@layouts/BaseLayout.astro';
         <p class="charity-logo-wrap">
           <span class="charity-lockup">
             <img
-              src="https://hollywoodrescuegrooming.org/images/logo-mark.png"
+              src="/images/charities/hollywood-rescue-grooming-mark.png"
               alt=""
+              width="96"
+              height="96"
               class="charity-logo charity-logo--mark"
               loading="lazy"
               decoding="async"
@@ -627,8 +629,9 @@ import BaseLayout from '@layouts/BaseLayout.astro';
     object-position: left center;
   }
   /*
-   * Hollywood Rescue Grooming only publishes its heart mark as an image; the
-   * wordmark on their site is live text. Rebuild their header lockup — mark,
+   * Hollywood Rescue Grooming only publishes its heart mark as an image (served
+   * locally from public/images/charities/, not hotlinked); the wordmark on their
+   * site is live text. Rebuild their header lockup — mark,
    * serif name, spaced pink italic "Foundation" — so the tile reads as their
    * logo rather than a lone icon. Serif stack only, no extra web font load.
    */
