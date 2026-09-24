@@ -335,6 +335,7 @@ export const sectionCollectorDefinitions: Record<SectionCollectorKey, SectionCol
       'snake-safety',
       'trail-safety',
       'emergency-prep',
+      'flea-tick',
       'travel',
       'road-trips',
       'flying',
@@ -362,6 +363,14 @@ export const sectionCollectorDefinitions: Record<SectionCollectorKey, SectionCol
       ROUTES.travelFlyWithDog,
     ],
     topicSections: [
+      {
+        // First, so a page carrying both 'flea-tick' and a broader safety topic
+        // (e.g. the natural guide's 'lost-dog-safety') groups with its siblings
+        // here rather than leaking into GPS & Escape Safety below.
+        heading: 'Flea & Tick Safety',
+        intro: 'Prevention guides, no-prescription product picks, and bath-day support for flea and tick season.',
+        topics: ['flea-tick'],
+      },
       {
         // gps-tracking (not the broad 'tracking') so the snake-bite kit, which
         // also carries 'tracking', falls through to Trail & Emergency Prep.
