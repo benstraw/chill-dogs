@@ -230,6 +230,159 @@ describe('relaxation converter page config', () => {
     ]));
   });
 
+  it('returns travel beds converter config with travel-specific product logic', () => {
+    const config = getRelaxationConverterPageConfig('best-dog-travel-beds');
+
+    expect(config.pageSlug).toBe('best-dog-travel-beds');
+    expect(config.hero.secondaryCta?.href).toBe('/travel/dog-road-trip-gear/');
+    expect(config.itemListSchema?.productIds).toEqual([
+      'chuckit-travel-bed',
+      'coleman-roll-up-travel-bed',
+      'furhaven-outdoor-travel-dog-bed',
+      'kindtail-nomad-nap-mat',
+      'onetigris-travel-dog-bed',
+      'kurgo-loft-wander-bed',
+      'bingpet-outdoor-travel-bed',
+      'yofang-extra-large-travel-bed',
+    ]);
+    expect(config.blocks.some((block) => (
+      block.kind === 'note' &&
+      block.heading === 'Important Flight Note'
+    ))).toBe(true);
+  });
+
+  it('returns chew-resistant beds converter config with toughness-specific product logic', () => {
+    const config = getRelaxationConverterPageConfig('best-chew-resistant-dog-beds');
+
+    expect(config.pageSlug).toBe('best-chew-resistant-dog-beds');
+    expect(config.title).toBe('Best Chew-Proof Dog Beds');
+    expect(config.hero.secondaryCta?.href).toBe('/comforting/');
+    expect(config.itemListSchema?.productIds).toEqual([
+      'k9-ballistics-armored-crate-bed',
+      'k9-ballistics-elevated-cooling-bed',
+      'fxw-titannest-elevated-bed',
+      'veehoo-chewproof-elevated-bed',
+      'k9-ballistics-ripstop-oval-bolster-bed',
+    ]);
+    expect(config.hero.disclaimer).toBe('As an Amazon Associate, we earn from qualifying purchases.');
+  });
+
+  it('returns orthopedic beds converter config with grouped support sections', () => {
+    const config = getRelaxationConverterPageConfig('best-orthopedic-dog-beds');
+
+    expect(config.pageSlug).toBe('best-orthopedic-dog-beds');
+    // #375 dropped both hero buttons from this page.
+    expect(config.hero.primaryCta).toBeUndefined();
+    expect(config.hero.secondaryCta).toBeUndefined();
+    expect(config.itemListSchema?.productIds).toEqual([
+      'rainmr-memory-foam-bed',
+      'eheyciga-xl-memory-foam-couch',
+      'noah-paw-denim-orthopedic-bed',
+      'cozy-kiss-xl-bolster-bed',
+      'anti-anxiety-orthopedic-bed',
+      'carolina-pet-bolster-lg',
+      'dog-bed-wont-go-flat-crate-bed',
+      'nupida-xl-crate-bed',
+      'veehoo-xxl-memory-foam-bed',
+      'noah-paw-giant-orthopedic-bed',
+      'zomisia-orthopedic-bed',
+      'ohgeni-orthopedic-bed',
+    ]);
+    expect(config.blocks.some((block) => (
+      block.kind === 'product_section' &&
+      block.id === 'waterproof-beds'
+    ))).toBe(true);
+    expect(config.blocks.some((block) => (
+      block.kind === 'product_section' &&
+      block.id === 'crate-beds'
+    ))).toBe(true);
+    expect(config.blocks.some((block) => (
+      block.kind === 'product_section' &&
+      block.id === 'budget-beds'
+    ))).toBe(true);
+  });
+
+  it('keeps orthopedic bed products in the orthopedic-beds category', () => {
+    const productIds = getRelaxationProductsByCategory('orthopedic-beds').map((product) => product.id);
+
+    expect(productIds).toEqual(expect.arrayContaining([
+      'rainmr-memory-foam-bed',
+      'eheyciga-xl-memory-foam-couch',
+      'noah-paw-denim-orthopedic-bed',
+      'cozy-kiss-xl-bolster-bed',
+      'anti-anxiety-orthopedic-bed',
+      'carolina-pet-bolster-lg',
+      'dog-bed-wont-go-flat-crate-bed',
+      'nupida-xl-crate-bed',
+      'veehoo-xxl-memory-foam-bed',
+      'noah-paw-giant-orthopedic-bed',
+      'zomisia-orthopedic-bed',
+      'ohgeni-orthopedic-bed',
+    ]));
+  });
+
+  it('keeps travel bed products in the travel-beds category', () => {
+    const productIds = getRelaxationProductsByCategory('travel-beds').map((product) => product.id);
+
+    expect(productIds).toEqual(expect.arrayContaining([
+      'furhaven-outdoor-travel-dog-bed',
+      'chuckit-travel-bed',
+      'coleman-roll-up-travel-bed',
+      'kindtail-nomad-nap-mat',
+      'onetigris-travel-dog-bed',
+      'kurgo-loft-wander-bed',
+      'yofang-extra-large-travel-bed',
+      'bingpet-outdoor-travel-bed',
+    ]));
+  });
+
+  it('keeps chew-resistant bed products in the chew-resistant-beds category', () => {
+    const productIds = getRelaxationProductsByCategory('chew-resistant-beds').map((product) => product.id);
+
+    expect(productIds).toEqual(expect.arrayContaining([
+      'k9-ballistics-armored-crate-bed',
+      'fxw-titannest-elevated-bed',
+      'veehoo-chewproof-elevated-bed',
+      'k9-ballistics-ripstop-oval-bolster-bed',
+    ]));
+  });
+
+  it('borrows the K9 Ballistics elevated cooling bed onto the chew-proof page without refiling it', () => {
+    const [product] = resolveRelaxationDisplayProducts(['k9-ballistics-elevated-cooling-bed']);
+
+    expect(product.name).toBe('K9 Ballistics Chew Proof Elevated Cooling Bed');
+    expect(product.category).toBe('cooling-mats');
+    expect(product.amazonUrl).toContain('tag=chill-dogs-20');
+  });
+
+  it('keeps the bed converters on the current block kinds only', () => {
+    const allowed = new Set(['prose', 'product_section', 'decision_columns', 'note']);
+
+    for (const slug of ['best-orthopedic-dog-beds', 'best-chew-resistant-dog-beds', 'best-dog-travel-beds']) {
+      const config = getRelaxationConverterPageConfig(slug);
+      for (const block of config.blocks) {
+        expect(allowed.has(block.kind)).toBe(true);
+      }
+      for (const heading of config.toc ?? []) {
+        expect(heading.anchor).not.toMatch(/quick-picks|comparison-table/);
+      }
+      expect(config.hero.primaryCta?.href).not.toBe('#quick-picks');
+    }
+  });
+
+  it('carries the reviewed OneTigris copy on the travel beds page only', () => {
+    const config = getRelaxationConverterPageConfig('best-dog-travel-beds');
+    const section = config.blocks.find((block) => block.kind === 'product_section');
+    if (section?.kind !== 'product_section') throw new Error('missing travel bed section');
+
+    const products = resolveRelaxationDisplayProducts(section.productIds);
+    const onetigris = products.find((product) => product.id === 'onetigris-travel-dog-bed');
+
+    expect(onetigris?.bullets).toContain('Portable design makes it convenient to keep in the car');
+    expect(getRelaxationProductsByCategory('travel-beds').find((p) => p.id === 'onetigris-travel-dog-bed')?.bullets)
+      .not.toContain('Portable design makes it convenient to keep in the car');
+  });
+
   it('throws for unknown slugs', () => {
     expect(() => getRelaxationConverterPageConfig('missing-slug')).toThrow(
       'Missing relaxation converter page config for slug: missing-slug'

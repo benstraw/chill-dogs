@@ -1,3 +1,4 @@
+import { coolingProducts, type CoolingProduct } from './cooling-products';
 import { relaxationProducts, type RelaxationProduct } from './relaxation-products';
 import { getRequiredPrimaryOffer } from './products/offers';
 import { ROUTES } from './routes';
@@ -8,7 +9,7 @@ export interface HeroConfig {
   title: string;
   subtitle: string;
   disclaimer: string;
-  primaryCta: { label: string; href: string };
+  primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
 }
 
@@ -64,7 +65,17 @@ export interface ProductSectionProductOverride {
 
 export type ProductSectionProductRef = string | ProductSectionProductOverride;
 
-export interface RelaxationDisplayProduct extends Omit<RelaxationProduct, 'bullets'> {
+/**
+ * A product a comfort converter can list. Mostly relaxation records, but a page may
+ * borrow a cooling record when the same item belongs on both (the K9 Ballistics
+ * elevated cooling bed doubles as a chew-proof bed). The record keeps its own pillar
+ * and category, so /shop/ still files it under cooling.
+ */
+export type RelaxationSourceProduct = Omit<RelaxationProduct, 'category'> & {
+  category: RelaxationProduct['category'] | CoolingProduct['category'];
+};
+
+export interface RelaxationDisplayProduct extends Omit<RelaxationSourceProduct, 'bullets'> {
   bullets: string[];
 }
 
@@ -96,15 +107,29 @@ export interface RelaxationConverterPageConfig {
   };
 }
 
-function getRequiredProduct(id: string): RelaxationProduct {
+function getRequiredProduct(id: string): RelaxationSourceProduct {
   const product = relaxationProducts.find((p) => p.id === id);
-  if (!product) {
-    throw new Error(`Missing relaxation product: ${id}`);
+  if (product) return product;
+
+  const cooling = coolingProducts.find((p) => p.id === id);
+  if (cooling) {
+    return {
+      id: cooling.id,
+      asin: cooling.asin,
+      name: cooling.name,
+      category: cooling.category,
+      amazonUrl: cooling.amazonUrl,
+      offers: cooling.offers,
+      bullets: [...cooling.bullets],
+      image: cooling.image,
+      images: cooling.images,
+    };
   }
-  return product;
+
+  throw new Error(`Missing relaxation product: ${id}`);
 }
 
-export function getRequiredProducts(ids: string[]): RelaxationProduct[] {
+export function getRequiredProducts(ids: string[]): RelaxationSourceProduct[] {
   return ids.map((id) => getRequiredProduct(id));
 }
 
@@ -1132,60 +1157,137 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
     hero: {
       title: 'Best Orthopedic Dog Beds',
       subtitle:
-        'Older dogs, larger breeds, and heavy daily resters need more than a padded surface. Orthopedic beds use denser foam to distribute body weight more evenly — reducing pressure on joints over the hours dogs spend resting each day. The right bed does that without sliding across the floor or collapsing after a few weeks.',
+        'Some orthopedic dog beds offer flat memory-foam support, while others add bolsters for dogs that like an edge to lean on. Others prioritize waterproof liners, washable covers, crate-friendly sizing, or extra room for larger breeds. Choose based on how your dog likes to sleep and which best fits your space.',
       disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
-      primaryCta: { label: 'See Products', href: '#support-beds' },
-      secondaryCta: { label: 'Calming Beds', href: ROUTES.comfortCalmingBeds },
     },
     toc: [
-      { label: 'Orthopedic Support Beds', anchor: 'support-beds' },
-      { label: 'Orthopedic Bolster Beds', anchor: 'bolster-beds' },
-      { label: 'Which Bed Fits Your Dog', anchor: 'which-bed' },
+      { label: 'Best Overall', anchor: 'overall-beds' },
+      { label: 'Waterproof Beds', anchor: 'waterproof-beds' },
+      { label: 'Bolster Beds', anchor: 'bolster-beds' },
+      { label: 'Crate-Friendly Beds', anchor: 'crate-beds' },
+      { label: 'Large & XXL Beds', anchor: 'large-beds' },
+      { label: 'Budget Beds', anchor: 'budget-beds' },
       { label: 'FAQ', anchor: 'faq' },
     ],
     blocks: [
       {
+        kind: 'prose',
+        id: 'what-to-look-for',
+        heading: 'What to Look for in an Orthopedic Dog Bed',
+        paragraphs: [
+          'Foam thickness matters, but so does format. Flat slab or egg-crate beds preserve more usable sleeping area, while sofa and bolster beds trade some center space for edges that dogs can lean against.',
+          'Waterproof liners and removable covers are worth paying attention to on orthopedic beds because the foam core is the part you want to protect long term. A washable outer cover is helpful, but a waterproof inner layer does more to keep the support material in better shape over time.',
+          'Crate-friendly beds are usually thinner and flatter so they fit cleanly inside the crate without wasting space. XXL and giant-breed beds push the opposite direction: more foam depth and more length so big dogs are not hanging off the ends or compressing the base too quickly.',
+        ],
+      },
+      {
         kind: 'product_section',
-        id: 'support-beds',
-        heading: 'Orthopedic Support Beds',
+        id: 'overall-beds',
+        heading: 'Best Overall Orthopedic Dog Beds',
         positionOffset: 0,
         columns: 3,
         intro:
-          'These beds prioritize the foam base. The focus is consistent support across the full sleeping surface — particularly useful for heavier dogs or dogs who spend long stretches resting in the same spot.',
-        productIds: ['invenho-orthopedic-bed', 'invenho-orthopedic-couch-bed', 'zomisia-orthopedic-bed', 'anti-anxiety-orthopedic-bed', 'bedsure-comfyfleece-orthopedic'],
+          'These are the strongest all-around orthopedic picks when you want supportive foam first and clear everyday usability second. They cover flat loungers, roomy sofas, and large-dog-friendly formats without drifting into travel mats or plush-only beds.',
+        productIds: [
+          'rainmr-memory-foam-bed',
+          'eheyciga-xl-memory-foam-couch',
+        ],
+      },
+      {
+        kind: 'product_section',
+        id: 'waterproof-beds',
+        heading: 'Best Waterproof Orthopedic Dog Beds',
+        positionOffset: 2,
+        columns: 3,
+        alt: true,
+        intro:
+          'Waterproof orthopedic beds make more sense for dogs that track in mess, drool heavily, have occasional accidents, or simply use the same bed hard every day. The goal here is to protect the foam core without giving up support.',
+        productIds: [
+          'noah-paw-denim-orthopedic-bed',
+        ],
       },
       {
         kind: 'product_section',
         id: 'bolster-beds',
-        heading: 'Orthopedic Bolster Beds',
+        heading: 'Best Bolster Orthopedic Dog Beds',
         positionOffset: 3,
-        columns: 2,
+        columns: 3,
+        intro:
+          'Bolster orthopedic beds work well for dogs that like to rest their head on an edge or feel more settled with a defined perimeter. The tradeoff is a little less open sleeping area than a flat lounger gives you.',
+        productIds: [
+          'cozy-kiss-xl-bolster-bed',
+          'anti-anxiety-orthopedic-bed',
+          'carolina-pet-bolster-lg',
+        ],
+      },
+      {
+        kind: 'product_section',
+        id: 'crate-beds',
+        heading: 'Best Crate-Friendly Orthopedic Beds',
+        positionOffset: 6,
+        columns: 3,
         alt: true,
         intro:
-          'Bolster beds add raised edges to an orthopedic base — useful for dogs who need joint support and like having something to lean against. These suit dogs who shift between flat resting and head-on-edge positions.',
-        productIds: ['cwawz-orthopedic-bolster', 'carolina-pet-bolster-lg'],
+          'Crate-friendly orthopedic beds keep the format flatter and more space-efficient. That helps preserve usable crate room while still giving your dog more support than a thin plush kennel pad.',
+        productIds: [
+          'dog-bed-wont-go-flat-crate-bed',
+          'nupida-xl-crate-bed',
+        ],
+      },
+      {
+        kind: 'product_section',
+        id: 'large-beds',
+        heading: 'Best Orthopedic Beds for Large and XXL Dogs',
+        positionOffset: 8,
+        columns: 3,
+        intro:
+          'Once your dog gets into true large, XL, or giant-breed territory, the sizing problem changes. You need enough length and enough foam depth that the bed still feels supportive when the dog fully stretches out.',
+        productIds: [
+          'veehoo-xxl-memory-foam-bed',
+          'noah-paw-giant-orthopedic-bed',
+          'zomisia-orthopedic-bed',
+        ],
+      },
+      {
+        kind: 'product_section',
+        id: 'budget-beds',
+        heading: 'Best Budget Orthopedic Dog Beds',
+        positionOffset: 11,
+        columns: 3,
+        alt: true,
+        intro:
+          'Budget orthopedic beds are usually thinner and simpler, but they can still be a real upgrade over loose fiber fill. These make the most sense when you want supportive foam and washable covers without paying for oversized premium builds.',
+        productIds: [
+          'ohgeni-orthopedic-bed',
+        ],
       },
       {
         kind: 'decision_columns',
         id: 'which-bed',
         left: {
-          heading: 'Flat orthopedic bed makes sense when',
+          heading: 'Flat or crate-style orthopedic bed makes sense when',
           items: [
-            'Your dog stretches out fully to sleep rather than curling.',
-            'You want maximum surface area for less money.',
-            'The bed will go inside a crate or against a wall where bolsters would be in the way.',
-            'Your dog tends to step onto the bed from one specific side.',
+            'Your dog stretches out fully and does not care about having edges to lean on.',
+            'You want the most usable sleeping area for the money.',
+            'The bed needs to fit inside a crate, along a wall, or in a tighter room footprint.',
+            'You care more about simple washing and easier placement than about a couch-style look.',
           ],
         },
         right: {
-          heading: 'Bolster orthopedic bed makes sense when',
+          heading: 'Bolster or sofa orthopedic bed makes sense when',
           items: [
-            'Your dog regularly repositions to lean its head against a surface.',
-            'You want one bed that supports both flat resting and chin-on-edge positions.',
-            'Your dog tends to feel more settled with a defined perimeter around it.',
-            'You want the joint support of foam plus the enclosed feel of a bolster.',
+            'Your dog regularly rests its head on a bed edge, pillow, or couch arm.',
+            'You want one bed that feels more settled and furniture-like in a living space.',
+            'Your dog curls and leans instead of only sprawling flat.',
+            'You are comfortable giving up some center sleeping area in exchange for more perimeter support.',
           ],
         },
+      },
+      {
+        kind: 'note',
+        heading: 'A Quick Reality Check on “Orthopedic” Labels',
+        text:
+          'Orthopedic on Amazon can describe everything from flat egg-crate mats to thick memory-foam sofas with bolsters. The label matters less than the actual build: foam thickness, washable layers, waterproof protection, and whether the shape matches how your dog really sleeps.',
       },
     ],
     faq: {
@@ -1202,19 +1304,29 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
             'Standard dog beds typically use polyester fiber fill, which compresses over time and provides less consistent support. Orthopedic beds use denser foam — similar to memory foam — that distributes weight more evenly across the sleeping surface and holds its shape longer with regular use.',
         },
         {
+          question: 'Are waterproof liners worth it on an orthopedic dog bed?',
+          answer:
+            'Usually, yes. The washable outer cover handles day-to-day dirt, but the waterproof layer is what helps protect the foam core from accidents, drool, or repeated dampness. That matters because once the foam absorbs moisture, the bed gets harder to clean and less pleasant to keep using.',
+        },
+        {
+          question: 'Can an orthopedic dog bed go inside a crate?',
+          answer:
+            'Yes, but flat and lower-profile orthopedic beds tend to work better than thick bolster sofas inside crates. Check the usable crate floor size and compare it to the bed\'s actual sleeping surface, not just the outside dimensions listed in the title.',
+        },
+        {
           question: 'How do I pick the right size orthopedic bed?',
           answer:
             'Measure your dog from nose to base of tail when fully stretched. The sleeping surface of the bed should match or slightly exceed that length. For bolster beds, measure the inner sleeping area, not the full bed dimension including the bolster edge.',
         },
         {
+          question: 'Are bolster orthopedic beds better than flat beds?',
+          answer:
+            'Not automatically. Bolsters are better for dogs that like leaning on an edge or feel more settled with a defined perimeter. Flat beds are often a better fit for crate use, sprawling sleepers, and shoppers who want maximum sleeping area for the money.',
+        },
+        {
           question: 'How long do orthopedic dog beds last?',
           answer:
             'A well-constructed orthopedic bed typically holds its support for one to three years with regular use, depending on your dog\'s weight and how much time it spends resting there. Dual-sided beds extend useful life by giving you a fresh surface when one side compresses.',
-        },
-        {
-          question: 'Can I wash an orthopedic dog bed?',
-          answer:
-            'All beds listed here have machine washable covers. Foam inserts are typically spot-cleaned or surface-washed — avoid machine washing foam as it can damage the structure. Check the product care label before washing any component you are unsure about.',
         },
       ],
     },
@@ -1227,13 +1339,330 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       name: 'Best Orthopedic Dog Beds',
       url: 'https://www.chill-dogs.com/comforting/best-orthopedic-dog-beds/',
       productIds: [
-        'invenho-orthopedic-bed',
-        'invenho-orthopedic-couch-bed',
-        'zomisia-orthopedic-bed',
+        'rainmr-memory-foam-bed',
+        'eheyciga-xl-memory-foam-couch',
+        'noah-paw-denim-orthopedic-bed',
+        'cozy-kiss-xl-bolster-bed',
         'anti-anxiety-orthopedic-bed',
-        'bedsure-comfyfleece-orthopedic',
-        'cwawz-orthopedic-bolster',
         'carolina-pet-bolster-lg',
+        'dog-bed-wont-go-flat-crate-bed',
+        'nupida-xl-crate-bed',
+        'veehoo-xxl-memory-foam-bed',
+        'noah-paw-giant-orthopedic-bed',
+        'zomisia-orthopedic-bed',
+        'ohgeni-orthopedic-bed',
+      ],
+    },
+  },
+
+  'best-chew-resistant-dog-beds': {
+    slug: 'best-chew-resistant-dog-beds',
+    title: 'Best Chew-Proof Dog Beds',
+    ogTitle: 'Best Chew-Proof Dog Beds for Heavy Chewers',
+    description:
+      'Compare chew-proof dog beds for aggressive chewers, including elevated cots, crate pads, rip-stop beds, waterproof mats, and tougher K9 Ballistics picks.',
+    pageSlug: 'best-chew-resistant-dog-beds',
+    hero: {
+      title: 'Best Chew-Proof Dog Beds',
+      subtitle:
+        'No fabric bed is truly indestructible for every dog. This guide compares beds made from tougher material, elevated cot-style beds, crate pads, waterproof mats, and rip-stop options for dogs who chew, dig, shred, or destroy soft bedding.',
+      disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
+      primaryCta: { label: 'See Chew-Proof Beds', href: '#elevated-beds' },
+      secondaryCta: { label: 'Comfort & Rest', href: ROUTES.comfortHub },
+    },
+    toc: [
+      { label: 'Buying Guidance', anchor: 'buying-guidance' },
+      { label: 'Elevated Chew-Proof Beds', anchor: 'elevated-beds' },
+      { label: 'Tough Comfort Beds', anchor: 'tough-comfort-beds' },
+      { label: 'Which Style?', anchor: 'which-style' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    blocks: [
+      {
+        kind: 'prose',
+        id: 'buying-guidance',
+        heading: 'How to Choose a Chew-Proof Dog Bed',
+        paragraphs: [
+          '<strong>Elevated Cot vs. Foam Bed vs. Crate Mat:</strong> Elevated cot-style beds are best for serious chewers because they don\'t have stuffing or soft edges.  Foam beds add support for senior dogs and heavy resters, but the cover, zipper, and corners are susceptible to chewing.  Crate mats work well as kennel bedding because the flat surface is harder for a dog to bunch, grab, and shred.',
+          '<strong>Edges are the weak point.</strong> Seams, zippers, bolsters, piping, and corners are where many dogs start their attack.  For serious chewers, the safest choice is often a bed that eliminates these things.',
+          '<strong>Chew-proof, Chew-resistant, Rip-stop, and Waterproof are not the same thing.</strong> Chew-proof usually means tougher construction. Chew-resistant means harder to damage than standard plush.  Rip-stop fabric is more resistant to tearing and digging. Waterproof protects against liquids, but it does not make a bed harder to chew.',
+          '<strong>Safety comes first:</strong> No bed is safe if your dog is actively eating fabric, foam, plastic, coating, or hardware. Remove the bed, supervise closely, and use a simple chew-resistant crate mat if your dog tends to ingest bedding material.',
+        ],
+        alt: true,
+      },
+      {
+        kind: 'product_section',
+        id: 'elevated-beds',
+        heading: 'Best Elevated Chew-Proof Beds',
+        positionOffset: 0,
+        columns: 2,
+        intro:
+          'Elevated cot-style beds tend to make more sense for destructive chewers than plush bolsters because they remove stuffing, pillow seams, and many of the edges dogs like to grab first. They are also the best fit for hot sleepers that need airflow.',
+        productIds: [
+          'k9-ballistics-elevated-cooling-bed',
+          'fxw-titannest-elevated-bed',
+          'veehoo-chewproof-elevated-bed',
+        ],
+      },
+      {
+        kind: 'product_section',
+        id: 'tough-comfort-beds',
+        heading: 'Best Tough Comfort Beds for Moderate Chewers',
+        positionOffset: 3,
+        columns: 2,
+        alt: true,
+        intro:
+          'These are better for dogs that dig, scratch, nest, or chew lightly to moderately. They preserve more of a traditional bed feel, but bolsters, raised seams, and thicker padding can still be tempting for determined destroyers.',
+        productIds: [
+          'k9-ballistics-armored-crate-bed',
+          'k9-ballistics-ripstop-oval-bolster-bed',
+        ],
+      },
+      {
+        kind: 'prose',
+        id: 'which-style',
+        heading: 'Which Chew-Proof Dog Bed Style Should You Choose?',
+        paragraphs: [
+          '<strong>Heavy chewer:</strong> start with an elevated chew-proof bed, especially one with a rigid frame and no stuffing. That format gives the dog fewer corners and seams to attack.',
+          '<strong>Crate destroyer:</strong> use a crate mat only if the edges are protected by the crate fit and the dog is supervised closely enough that you can remove it if chewing starts. A dog that eats bedding may need no bedding when unsupervised.',
+          '<strong>Senior dog or joint support need:</strong> choose an orthopedic-style flat bed only if the dog is not likely to open the cover and eat foam. Support matters, but exposed foam is a real hazard.',
+          '<strong>Hot sleeper:</strong> choose an elevated breathable bed. Airflow underneath the dog is more useful than a waterproof label if the dog overheats on dense padding.',
+          '<strong>Digger or nester:</strong> consider rip-stop K9 Ballistics-style fabric or a tough nesting bed, but avoid calling these fully indestructible. Raised edges can be comfort features and chew targets at the same time.',
+        ],
+      },
+      {
+        kind: 'prose',
+        heading: 'What to Avoid if Your Dog Destroys Beds',
+        paragraphs: [
+          'Avoid assuming that more fluff equals more comfort for a destructive chewer. Deep plush fill, decorative piping, exposed zippers, loose liners, and soft raised corners can all become chew targets quickly. Those designs may be great for gentle sleepers, but they are often the exact opposite of what serious chewers need.',
+          'Also avoid buying purely on the word “indestructible.” Product names can tell you what the brand is aiming for, but the better question is what the bed removes: stuffing, seam exposure, soft corners, or easy pull points. Formats matter more than slogans.',
+        ],
+        alt: true,
+      },
+      {
+        kind: 'note',
+        heading: 'When a Chew-Proof Bed Is Not Enough',
+        text:
+          'If your dog destroys every bed, swallows fabric or stuffing, or only chews bedding when left alone, the bed itself may not be the whole problem. You may need more supervision, crate-training changes, a flatter crate-safe setup, or a heavy-duty confinement plan rather than a softer “better” bed.',
+      },
+    ],
+    faq: {
+      heading: 'Indestructible and Chew-Proof Dog Bed FAQ',
+      items: [
+        {
+          question: 'Are any dog beds truly indestructible?',
+          answer:
+            'No. Some beds are much tougher than standard plush beds, and elevated cots often remove the easiest chew targets, but no fabric, foam, or soft bed is guaranteed against every determined dog. If your dog is swallowing pieces, remove the bed.',
+        },
+        {
+          question: 'Are elevated dog beds better for chewers?',
+          answer:
+            'Often, yes. Elevated beds remove stuffing, bolsters, and many soft corners, which gives destroyers fewer obvious places to start. They are usually the first format to try when plush beds keep failing.',
+        },
+        {
+          question: 'What type of dog bed is safest for aggressive chewers?',
+          answer:
+            'The safest starting point is usually an elevated cot or very flat crate mat because there is less stuffing, less foam, and fewer soft edges to attack. Safety still depends on the dog: a bed is not safe if the dog can destroy it and ingest pieces.',
+        },
+        {
+          question: 'Should I use a chew-proof bed in a crate?',
+          answer:
+            'Only if the bed fits the crate well, gives the dog few edges to grab, and your dog is not eating pieces of bedding. Crate mats can be useful for moderate chewers, but a dog that shreds bedding in confinement may need supervised bedding only.',
+        },
+        {
+          question: 'What should I do if my dog eats foam or fabric?',
+          answer:
+            'Remove the bed immediately and contact your veterinarian if you think your dog swallowed foam, fabric, plastic, coating, or hardware. Bedding ingestion can become an obstruction risk, so do not keep offering the same bed unsupervised.',
+        },
+        {
+          question: 'Is waterproof the same as chew-proof?',
+          answer:
+            'No. Waterproof means the bed resists liquid. It does not mean the cover, seams, zipper, foam, or coating can withstand chewing. Waterproof can be useful for cleanup, but chew resistance comes from structure and material choices.',
+        },
+        {
+          question: 'Should anxious dogs use chew-proof beds?',
+          answer:
+            'Sometimes, especially if they destroy bedding during stressed alone-time or crate-time. Just remember that a tougher bed helps with durability, not with the underlying anxiety. Dogs that chew from stress may also need training, management, and calming support.',
+        },
+      ],
+    },
+    relatedGuidesHeading: 'More Comfort & Behavior Help',
+    relatedGuidesLimit: 4,
+    disclosureShowSafety: false,
+    internalLinkStripHeading: 'More Rest, Crate, and Calming Guides',
+    internalLinkStripLimit: 6,
+    itemListSchema: {
+      name: 'Best Chew-Proof Dog Beds',
+      url: 'https://www.chill-dogs.com/comforting/best-chew-resistant-dog-beds/',
+      productIds: [
+        'k9-ballistics-armored-crate-bed',
+        'k9-ballistics-elevated-cooling-bed',
+        'fxw-titannest-elevated-bed',
+        'veehoo-chewproof-elevated-bed',
+        'k9-ballistics-ripstop-oval-bolster-bed',
+      ],
+    },
+  },
+
+  'best-dog-travel-beds': {
+    slug: 'best-dog-travel-beds',
+    title: 'Best Dog Travel Beds for Road Trips, Hotels, and Camping',
+    ogTitle: 'Best Dog Travel Beds for Road Trips & Hotels',
+    description:
+      'Compare portable dog travel beds for road trips, hotels, camping, and travel days. See foldable, washable, and water-resistant options for dogs on the go.',
+    pageSlug: 'best-dog-travel-beds',
+    hero: {
+      title: 'Best Dog Travel Beds for Road Trips, Hotels, and Camping',
+      subtitle:
+        'A travel bed gives your dog a familiar place to settle when you are away from home. The best options are portable, washable, water-resistant, and easy to pack.',
+      disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
+      primaryCta: { label: 'See Travel Beds', href: '#travel-bed-comparison' },
+      secondaryCta: { label: 'Road Trip Gear', href: ROUTES.roadTrip },
+    },
+    toc: [
+      { label: 'Travel Bed Comparison', anchor: 'travel-bed-comparison' },
+      { label: 'What to Look For', anchor: 'what-to-look-for' },
+      { label: 'Road Trips vs Flights vs Camping', anchor: 'trip-type-guide' },
+      { label: 'Thin vs Padded', anchor: 'thin-vs-padded' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    blocks: [
+      {
+        kind: 'note',
+        heading: 'Important Flight Note',
+        text:
+          'For flying, a travel bed is not a replacement for an airline-approved carrier. It is more useful at the airport, in the hotel, at your destination, in a travel crate, or as a familiar mat during car travel.',
+      },
+      {
+        kind: 'product_section',
+        id: 'travel-bed-comparison',
+        heading: 'Dog Travel Bed Comparison',
+        positionOffset: 0,
+        columns: 2,
+        intro:
+          'Portable dog beds and mats for road trips, hotels, campgrounds, patios, and travel crates. They are not meant to replace an airline carrier during transport.',
+        productIds: [
+          'chuckit-travel-bed',
+          'coleman-roll-up-travel-bed',
+          'furhaven-outdoor-travel-dog-bed',
+          'kindtail-nomad-nap-mat',
+          {
+            id: 'onetigris-travel-dog-bed',
+            bullets: [
+              'Waterproof anti-slip base helps it stay put on tent floors, slick hotel surfaces, and outdoor patios',
+              'Plush exterior gives dogs a warmer resting surface than bare nylon camping mats',
+              'Portable design makes it convenient to keep in the car',
+            ],
+          },
+          'kurgo-loft-wander-bed',
+          'bingpet-outdoor-travel-bed',
+          'yofang-extra-large-travel-bed',
+        ],
+      },
+      {
+        kind: 'prose',
+        id: 'what-to-look-for',
+        heading: 'What to Look for in a Dog Travel Bed',
+        paragraphs: [
+          'Start with <strong>packability</strong>. A travel bed only helps if you actually bring it. Thin mats and roll-up beds are easiest to keep in the car, toss into a hotel bag, or stash in camping gear. Thicker options are more comfortable once you arrive, but they cost you more cargo space.',
+          'Next, look for <strong>water resistance and washability</strong>. Travel beds end up on car seats, motel floors, campsites, patios, and rental homes. A washable construction or removable washable shell matters more for a travel bed than it might for a bed that never leaves the house.',
+          'A <strong>non-slip bottom</strong> is worth having when the bed will land on tile, vinyl, tent floors, or sealed wood. A mat that skates across the floor every time your dog circles before lying down is less useful as a familiar “place” cue.',
+          'Finally, compare the <strong>open size versus packed size</strong>. Some mats open wide enough for medium and large dogs but still fold down neatly; others prioritize thickness or plushness and are bulkier in the car. If you also want to use the travel bed as a crate mat, measure the crate floor to ensure it will fit.',
+        ],
+        alt: true,
+      },
+      {
+        kind: 'prose',
+        id: 'trip-type-guide',
+        heading: 'Road Trips vs Flights vs Camping',
+        paragraphs: [
+          '<strong>Road trips:</strong> Prioritize washable, non-slip, car-friendly mats that are easy to shake out and put back in the vehicle. If the bed will stay in the car trunk between trips, lighter packable designs will take up less room.',
+          '<strong>Flights:</strong> Use the travel bed at the airport, hotel, or destination, not as a carrier replacement. If your dog already likes a specific mat at home, bringing it along on your trip can help your dog settle after a long day of transport.',
+          '<strong>Hotels and vacation rentals:</strong> A travel bed can help with place training and settling because it gives your dog the same surface to sleep on every night, instead of whatever flooring the room happens to have. Machine-washable beds are easily cleaned after every trip.',
+          '<strong>Camping:</strong> Prioritize water resistance, packed size, and material that can withstand damp grass, dirt, tent floors, and rougher surfaces. Outdoor-friendly mats are usually thinner than home beds and thicker than standard travel beds.',
+        ],
+      },
+      {
+        kind: 'decision_columns',
+        id: 'thin-vs-padded',
+        left: {
+          heading: 'Choose a Thinner Travel Mat When',
+          items: [
+            'Cargo space is tight or you want to keep the bed in the car full time.',
+            'You mostly need a familiar “place” cue for hotels, rentals, or airport downtime.',
+            'Your dog already rests comfortably on lower-profile mats or crate pads.',
+            'Quick drying, easier washing, and lighter carry matter more than plushness.',
+          ],
+        },
+        right: {
+          heading: 'Choose More Padding When',
+          items: [
+            'Your dog will sleep on the bed for full nights, not just short settles and breaks.',
+            'You plan to use it on hard floors, patios, campsites, or cool ground.',
+            'Your dog is larger and requires more support.',
+            'You have enough room in the car for a bed that packs bulkier but feels more substantial.',
+          ],
+        },
+      },
+      {
+        kind: 'note',
+        heading: 'Bottom Line',
+        text:
+          'Chuckit! is the clearest all-around starting point. Coleman is the best roll-up format. KindTail is the easiest hotel-friendly mat. OneTigris and YOFANG are best for use outdoors. Kurgo is a strong premium pick when your dog needs a roomier bed.',
+        alt: true,
+      },
+    ],
+    faq: {
+      heading: 'Dog Travel Bed FAQ',
+      items: [
+        {
+          question: 'Do dogs need a travel bed?',
+          answer:
+            'Not every dog needs one, but many dogs settle faster when they sleep on the same familiar surface on each trip. A portable bed is especially useful for road trips, hotel stays, camping, patios, and destination downtime where the floor changes every night.',
+        },
+        {
+          question: 'Can a dog travel bed go inside an airline carrier?',
+          answer:
+            'Sometimes a very thin mat can be used inside a carrier, if it still leaves enough space for the dog to stand, turn, and lie down naturally. The carrier is still used for transport. A travel bed is not a substitute for an airline-approved carrier.',
+        },
+        {
+          question: 'What is the best dog bed for road trips?',
+          answer:
+            'Chuckit! is the best overall starting point for most road trips, because it balances portability, washable materials, and enough structure to work well in hotels, patios, and destination stops. If you want a bed more suitable for camping, look at Kurgo, OneTigris, or YOFANG.',
+        },
+        {
+          question: 'Are waterproof dog travel beds worth it?',
+          answer:
+            'Yes, especially if the bed will touch damp grass, patios, muddy campsites, or the car after outdoor stops. Waterproof or water-resistant materials make cleanup easier and help the bed stay usable through repeated travel days.',
+        },
+        {
+          question: 'What size travel bed should I buy?',
+          answer:
+            'Check both the open dimensions and the packed footprint. Your dog should be able to lie down comfortably when the bed is open, but the bed still needs to fit the car, luggage, crate floor, or travel setup you actually use.',
+        },
+        {
+          question: 'Can I use a regular dog bed for travel?',
+          answer:
+            'You can, but most home beds are bulkier, slower to dry, and harder to clean on the go. A dedicated travel bed is usually easier to pack, easier to wash, and better suited to cars, hotels, patios, and campsites.',
+        },
+      ],
+    },
+    relatedGuidesHeading: 'More Travel & Rest Help',
+    disclosureShowSafety: false,
+    internalLinkStripHeading: 'More Dog Travel & Rest Guides',
+    internalLinkStripLimit: 4,
+    itemListSchema: {
+      name: 'Best Dog Travel Beds',
+      url: 'https://www.chill-dogs.com/comforting/best-dog-travel-beds/',
+      productIds: [
+        'chuckit-travel-bed',
+        'coleman-roll-up-travel-bed',
+        'furhaven-outdoor-travel-dog-bed',
+        'kindtail-nomad-nap-mat',
+        'onetigris-travel-dog-bed',
+        'kurgo-loft-wander-bed',
+        'bingpet-outdoor-travel-bed',
+        'yofang-extra-large-travel-bed',
       ],
     },
   },

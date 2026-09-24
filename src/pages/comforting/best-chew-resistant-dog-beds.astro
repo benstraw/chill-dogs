@@ -1,0 +1,8 @@
+---
+import RelaxationConverterPage from '@components/modules/RelaxationConverterPage.astro';
+import { getRelaxationConverterPageConfig } from '@data/relaxation-converter-pages';
+
+const config = getRelaxationConverterPageConfig('best-chew-resistant-dog-beds');
+---
+
+<RelaxationConverterPage config={config} />
