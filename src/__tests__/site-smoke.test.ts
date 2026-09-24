@@ -1225,6 +1225,7 @@ describe('site smoke tests', () => {
       'cuddly',
       'every-bark-counts',
       'fixn-fidos',
+      'hollywood-rescue-grooming',
       'paw-some-mission',
       'reducing-animal-stress',
       'rolling-dog-farm',
