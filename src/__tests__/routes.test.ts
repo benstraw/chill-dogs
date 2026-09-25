@@ -80,6 +80,7 @@ describe('route constants', () => {
 
     expect(gear.href).toBe(ROUTES.gearHub);
     expect(ROUTES.gearHub).toBe('/gear/');
+    expect(ROUTES.aorkulerReview).toBe('/gear/aorkuler-gps-dog-tracker-review/');
     expect(ROUTES.articles).toBe('/articles/');
     expect(gear.hero.primaryCta.href).toBe(ROUTES.trackingTop);
     expect(gear.hero.secondaryCta.href).toBe(ROUTES.roadTrip);
@@ -90,6 +91,7 @@ describe('route constants', () => {
         ROUTES.comfortAirlineCarriers,
       ])
     );
+    expect(gear.articlePriority).toContain(ROUTES.aorkulerReview);
   });
 
   it('keeps comfort collector definition aligned to canonical routes', () => {

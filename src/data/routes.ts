@@ -27,6 +27,7 @@ export const ROUTES = {
   // Tracking cluster
   gearHub: '/gear/',
   trackingTop: '/gear/best-dog-gps-trackers/',
+  aorkulerReview: '/gear/aorkuler-gps-dog-tracker-review/',
   fiCollarReview: '/gear/fi-dog-collar-review/',
   garminTracking: '/gear/garmin-dog-tracking-collars/',
   airtagForDogs: '/gear/airtag-for-dogs/',
