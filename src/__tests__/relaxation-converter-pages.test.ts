@@ -267,7 +267,7 @@ describe('relaxation converter page config', () => {
     expect(config.hero.disclaimer).toBe('As an Amazon Associate, we earn from qualifying purchases.');
   });
 
-  it('returns orthopedic beds converter config with grouped support sections', () => {
+  it('returns orthopedic beds converter config as one ungrouped bed list', () => {
     const config = getRelaxationConverterPageConfig('best-orthopedic-dog-beds');
 
     expect(config.pageSlug).toBe('best-orthopedic-dog-beds');
@@ -288,18 +288,13 @@ describe('relaxation converter page config', () => {
       'zomisia-orthopedic-bed',
       'ohgeni-orthopedic-bed',
     ]);
-    expect(config.blocks.some((block) => (
-      block.kind === 'product_section' &&
-      block.id === 'waterproof-beds'
-    ))).toBe(true);
-    expect(config.blocks.some((block) => (
-      block.kind === 'product_section' &&
-      block.id === 'crate-beds'
-    ))).toBe(true);
-    expect(config.blocks.some((block) => (
-      block.kind === 'product_section' &&
-      block.id === 'budget-beds'
-    ))).toBe(true);
+    // #379 dropped the category sections: every bed sits in one grid, in schema order.
+    const sections = config.blocks.filter((block) => block.kind === 'product_section');
+    expect(sections).toHaveLength(1);
+    expect(sections[0].kind === 'product_section' ? sections[0].productIds : []).toEqual(
+      config.itemListSchema?.productIds,
+    );
+    expect(config.toc?.map((entry) => entry.anchor)).toEqual(['orthopedic-beds', 'faq']);
   });
 
   it('keeps orthopedic bed products in the orthopedic-beds category', () => {
