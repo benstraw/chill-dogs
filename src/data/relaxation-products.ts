@@ -1,4 +1,5 @@
-import type { AffiliateOffer } from './products/types';
+import { chewyOrthopedicBeds } from './chewy-orthopedic-beds';
+import type { AffiliateOffer, ProductVariantGroup } from './products/types';
 
 export type RelaxationProductCategory =
   | 'calming-beds'
@@ -16,6 +17,7 @@ export interface RelaxationProduct {
   category: RelaxationProductCategory;
   amazonUrl?: string;
   offers?: AffiliateOffer[];
+  variantGroup?: ProductVariantGroup;
   bullets: string[];
   image?: { src: string; alt: string };
   images?: readonly { src: string; alt: string }[];
@@ -1267,6 +1269,9 @@ export const relaxationProducts: RelaxationProduct[] = [
     ],
     image: { src: 'https://m.media-amazon.com/images/I/81gA-nAEDcL._SL500_.jpg', alt: 'Anild Dog Travel Backpack' },
   },
+
+  // ── Chewy-only orthopedic beds (issues #380, #381) ────────────────────────
+  ...chewyOrthopedicBeds,
 ];
 
 export function getRelaxationProductsByCategory(category: RelaxationProductCategory): RelaxationProduct[] {

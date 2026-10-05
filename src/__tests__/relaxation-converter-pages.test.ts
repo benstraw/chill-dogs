@@ -5,7 +5,9 @@ import {
   getRelaxationConverterPageConfig,
   resolveRelaxationDisplayProducts,
 } from '../data/relaxation-converter-pages';
-import { getRelaxationProductsByCategory } from '../data/relaxation-products';
+import { chewyOrthopedicBedIds } from '../data/chewy-orthopedic-beds';
+import { getAllAmazonOfferEntries, getOffers, getVariants } from '../data/products/offers';
+import { getRelaxationProductsByCategory, relaxationProducts } from '../data/relaxation-products';
 
 describe('relaxation converter page config', () => {
   it('returns puppy crates converter config with crate training route', () => {
@@ -287,7 +289,11 @@ describe('relaxation converter page config', () => {
       'noah-paw-giant-orthopedic-bed',
       'zomisia-orthopedic-bed',
       'ohgeni-orthopedic-bed',
+      ...chewyOrthopedicBedIds.sofa,
+      ...chewyOrthopedicBedIds.foam,
+      ...chewyOrthopedicBedIds.crate,
     ]);
+    expect(config.hero.disclaimer).toBe('As an Amazon Associate and a Chewy Affiliate, we earn from qualifying purchases.');
     expect(config.blocks.some((block) => (
       block.kind === 'product_section' &&
       block.id === 'waterproof-beds'
@@ -319,6 +325,117 @@ describe('relaxation converter page config', () => {
       'zomisia-orthopedic-bed',
       'ohgeni-orthopedic-bed',
     ]));
+  });
+
+  describe('Chewy orthopedic beds (#380, #381)', () => {
+    const chewyIds = [
+      ...chewyOrthopedicBedIds.sofa,
+      ...chewyOrthopedicBedIds.foam,
+      ...chewyOrthopedicBedIds.crate,
+    ];
+    const chewyBeds = chewyIds.map((id) => {
+      const product = relaxationProducts.find((p) => p.id === id);
+      if (!product) throw new Error(`missing Chewy bed ${id}`);
+      return product;
+    });
+
+    it('adds all 17 beds from the two issues, once each', () => {
+      expect(chewyIds).toHaveLength(17);
+      expect(new Set(chewyIds).size).toBe(17);
+    });
+
+    it('lists every bed on the orthopedic page in its own Chewy section, after the Amazon sections', () => {
+      const config = getRelaxationConverterPageConfig('best-orthopedic-dog-beds');
+      const sections = config.blocks.filter((block) => block.kind === 'product_section');
+      const chewySections = sections.filter((block) => block.id?.startsWith('chewy-'));
+
+      expect(chewySections.map((block) => block.id)).toEqual(['chewy-sofa-beds', 'chewy-foam-beds', 'chewy-crate-beds']);
+      expect(sections.slice(-3).map((block) => block.id)).toEqual(chewySections.map((block) => block.id));
+
+      // positionOffset must continue where the previous section ends, or data-position collides.
+      let expectedOffset = 0;
+      for (const section of sections) {
+        if (section.kind !== 'product_section') continue;
+        expect(section.positionOffset, section.id).toBe(expectedOffset);
+        expectedOffset += section.productIds.length;
+      }
+      expect(expectedOffset).toBe(29);
+    });
+
+    it('is Chewy-only: a Chewy primary offer and no Amazon data', () => {
+      for (const bed of chewyBeds) {
+        expect(bed.category).toBe('orthopedic-beds');
+        expect(bed.asin, bed.id).toBeUndefined();
+        expect(bed.amazonUrl, bed.id).toBeUndefined();
+        const offers = getOffers(bed);
+        expect(offers.map((offer) => offer.merchant), bed.id).toEqual(['chewy']);
+        expect(offers[0].canonicalUrl, bed.id).toMatch(/^https:\/\/www\.chewy\.com\/.+\/dp\/\d+$/);
+        expect(new URL(offers[0].url).hostname, bed.id).toBe('chewy.sjv.io');
+        expect(offers[0].merchantProductId, bed.id).toBe(offers[0].canonicalUrl!.match(/\/dp\/(\d+)/)![1]);
+      }
+      expect(getAllAmazonOfferEntries(chewyBeds)).toEqual([]);
+    });
+
+    it('gives each bed hand-written copy and an allowed Chewy image', () => {
+      for (const bed of chewyBeds) {
+        expect(bed.bullets.length, bed.id).toBeGreaterThanOrEqual(2);
+        expect(bed.image?.src, bed.id).toMatch(/^https:\/\/image\.chewy\.com\//);
+        expect(bed.image?.alt, bed.id).toBe(bed.name);
+        expect(bed.name, bed.id).not.toMatch(/vet-(approved|recommended)/i);
+        expect(bed.bullets.join(' '), bed.id).not.toMatch(/vet-(approved|recommended)/i);
+      }
+    });
+
+    it('mirrors the default variant in product.offers and keeps every size distinct', () => {
+      const withPicker = chewyBeds.filter((bed) => bed.variantGroup);
+      expect(withPicker.length).toBeGreaterThanOrEqual(10);
+
+      for (const bed of withPicker) {
+        const group = bed.variantGroup!;
+        const variants = getVariants({ variantGroup: group });
+        expect(group.axis.id, bed.id).toBe('dog-size');
+        expect(variants.length, bed.id).toBeGreaterThanOrEqual(2);
+        expect(new Set(variants.map((v) => v.id)).size, bed.id).toBe(variants.length);
+        expect(new Set(variants.map((v) => v.label)).size, bed.id).toBe(variants.length);
+
+        const fallback = variants.find((v) => v.id === group.defaultVariantId);
+        expect(fallback, `${bed.id} default variant`).toBeTruthy();
+        const defaultOffer = getOffers({ ...bed, offers: fallback!.offers as never })[0];
+        expect(defaultOffer.url, bed.id).toBe(getOffers(bed)[0].url);
+
+        const productIds = variants.map((v) => v.offers[0].merchantProductId);
+        expect(new Set(productIds).size, `${bed.id} duplicate Chewy listing`).toBe(variants.length);
+        for (const variant of variants) {
+          expect(variant.offers.map((offer) => offer.merchant), `${bed.id}/${variant.id}`).toEqual(['chewy']);
+        }
+      }
+    });
+
+    it('keeps the listing the issue linked as the default size', () => {
+      const issueListings: Record<string, string> = {
+        'eheyciga-waterproof-sofa-bed': '3816406',
+        'eheyciga-high-back-sofa-bed': '3816182',
+        'noah-paw-velvet-orthopedic-bed': '1971958',
+        'noah-paw-denim-collection-bed': '1971414',
+        'carolina-pet-berber-bolster-bed': '1384590',
+        'veehoo-elevated-memory-foam-bed': '3276798',
+        'zomisia-fluffy-egg-foam-bed': '4371206',
+        'kylinsure-orthopedic-pillow-bed': '3763614',
+        'berenlefe-oversized-lounge-bed': '4177406',
+        'timberdog-ruffrest-travel-bed': '1506782',
+        'laifug-orthopedic-memory-foam-bed': '907414',
+        'furhaven-cable-corduroy-couch-bed': '3305502',
+        'kylinsure-all-around-bolster-bed': '4529006',
+        'comfort-expression-waterproof-foam-bed': '1886782',
+        'three-dog-ez-wash-softshell-bolster-bed': '255891',
+        'snoozer-cozy-cave-orthopedic-bed': '1098158',
+        'furhaven-embossed-velvet-sofa-bed': '3305926',
+      };
+
+      for (const bed of chewyBeds) {
+        expect(getOffers(bed)[0].merchantProductId, bed.id).toBe(issueListings[bed.id]);
+      }
+    });
   });
 
   it('keeps travel bed products in the travel-beds category', () => {

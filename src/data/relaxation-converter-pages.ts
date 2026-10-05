@@ -1,3 +1,4 @@
+import { chewyOrthopedicBedIds } from './chewy-orthopedic-beds';
 import { coolingProducts, type CoolingProduct } from './cooling-products';
 import { relaxationProducts, type RelaxationProduct } from './relaxation-products';
 import { getRequiredPrimaryOffer } from './products/offers';
@@ -1158,7 +1159,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       title: 'Best Orthopedic Dog Beds',
       subtitle:
         'Some orthopedic dog beds offer flat memory-foam support, while others add bolsters for dogs that like an edge to lean on. Others prioritize waterproof liners, washable covers, crate-friendly sizing, or extra room for larger breeds. Choose based on how your dog likes to sleep and which best fits your space.',
-      disclaimer: 'As an Amazon Associate, we earn from qualifying purchases.',
+      disclaimer: 'As an Amazon Associate and a Chewy Affiliate, we earn from qualifying purchases.',
     },
     toc: [
       { label: 'Best Overall', anchor: 'overall-beds' },
@@ -1167,6 +1168,9 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       { label: 'Crate-Friendly Beds', anchor: 'crate-beds' },
       { label: 'Large & XXL Beds', anchor: 'large-beds' },
       { label: 'Budget Beds', anchor: 'budget-beds' },
+      { label: 'Sofa Beds on Chewy', anchor: 'chewy-sofa-beds' },
+      { label: 'Foam & Waterproof on Chewy', anchor: 'chewy-foam-beds' },
+      { label: 'Crate & Travel on Chewy', anchor: 'chewy-crate-beds' },
       { label: 'FAQ', anchor: 'faq' },
     ],
     blocks: [
@@ -1262,6 +1266,37 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         ],
       },
       {
+        kind: 'product_section',
+        id: 'chewy-sofa-beds',
+        heading: 'Orthopedic Sofa and Bolster Beds on Chewy',
+        positionOffset: 12,
+        columns: 3,
+        intro:
+          'Chewy sells these beds as families of separate size listings, so each card has a size selector that points the Chewy button at the listing for your dog. Pick the size first, then check the price on Chewy.',
+        productIds: [...chewyOrthopedicBedIds.sofa],
+      },
+      {
+        kind: 'product_section',
+        id: 'chewy-foam-beds',
+        heading: 'Memory Foam and Waterproof Beds on Chewy',
+        positionOffset: 20,
+        columns: 3,
+        alt: true,
+        intro:
+          'Flatter foam beds, pillow-style beds, and one oversized lounger that fits a dog and a person. Sizes are listed on each card where Chewy sells more than one.',
+        productIds: [...chewyOrthopedicBedIds.foam],
+      },
+      {
+        kind: 'product_section',
+        id: 'chewy-crate-beds',
+        heading: 'Crate, Cave, and Travel Orthopedic Beds on Chewy',
+        positionOffset: 26,
+        columns: 3,
+        intro:
+          'Beds built for portability or a more enclosed, den-style rest. Check the dimensions against your crate or carrier before you order.',
+        productIds: [...chewyOrthopedicBedIds.crate],
+      },
+      {
         kind: 'decision_columns',
         id: 'which-bed',
         left: {
@@ -1287,7 +1322,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         kind: 'note',
         heading: 'A Quick Reality Check on “Orthopedic” Labels',
         text:
-          'Orthopedic on Amazon can describe everything from flat egg-crate mats to thick memory-foam sofas with bolsters. The label matters less than the actual build: foam thickness, washable layers, waterproof protection, and whether the shape matches how your dog really sleeps.',
+          'Orthopedic on Amazon or Chewy can describe everything from flat egg-crate mats to thick memory-foam sofas with bolsters. The label matters less than the actual build: foam thickness, washable layers, waterproof protection, and whether the shape matches how your dog really sleeps.',
       },
     ],
     faq: {
@@ -1351,6 +1386,9 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         'noah-paw-giant-orthopedic-bed',
         'zomisia-orthopedic-bed',
         'ohgeni-orthopedic-bed',
+        ...chewyOrthopedicBedIds.sofa,
+        ...chewyOrthopedicBedIds.foam,
+        ...chewyOrthopedicBedIds.crate,
       ],
     },
   },
