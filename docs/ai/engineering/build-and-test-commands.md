@@ -3,7 +3,7 @@ title: Build and Test Commands
 type: canonical
 domain: engineering
 status: active
-updated: 2026-05-06
+updated: 2026-10-05
 tags:
   - chill-dogs
   - engineering
@@ -108,7 +108,7 @@ Results split into two kinds, because they call for different responses:
 
 Exits 1 on any dead link, and also when more than 25% of results are inconclusive — a run that could not see Amazon has not verified anything, and reporting it as a pass would be worse than reporting nothing. Amazon throttles unauthenticated traffic from shared CI runner IPs, so the inconclusive path is normal there, not a bug.
 
-**Cannot run in a proxied agent container** — it runs under Bun. See [`environment-and-integrations.md`](environment-and-integrations.md).
+**Runs in a proxied agent container** on current Bun, as long as `www.amazon.com` is allowlisted, though Amazon serves most container requests a CAPTCHA, so results are mostly inconclusive. Older Bun (1.3.11) could not use the agent proxy, and the session-start hook flags it as `no-proxy` if that comes back. See [`environment-and-integrations.md`](environment-and-integrations.md).
 
 ---
 
