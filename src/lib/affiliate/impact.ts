@@ -41,10 +41,20 @@ function mediaPartnerPath(accountSid: string, path: string): string {
 export function hasImpactTrackingConfig(env: NodeJS.ProcessEnv = process.env): boolean {
   return Boolean(
     cleanConfigValue(env.IMPACT_ACCOUNT_SID) &&
-      cleanConfigValue(env.IMPACT_AUTH_TOKEN) &&
+      hasImpactAuth(env) &&
       cleanConfigValue(env.CHEWY_IMPACT_CAMPAIGN_ID) &&
       cleanConfigValue(env.CHEWY_IMPACT_AD_ID),
   );
+}
+
+// Auth comes from IMPACT_AUTH_TOKEN (local .env, GitHub Actions secrets) or,
+// behind an HTTPS proxy, from the proxy itself: a Claude Code cloud environment
+// can hold the token as an API credential that the agent proxy adds to requests
+// for api.impact.com, so it never appears in the env. Without a proxy a missing
+// token still means "not configured", which keeps the CHEWY_IMPACT_BASE_URL
+// fallback working on a local machine.
+export function hasImpactAuth(env: NodeJS.ProcessEnv = process.env): boolean {
+  return Boolean(cleanConfigValue(env.IMPACT_AUTH_TOKEN) || cleanConfigValue(env.HTTPS_PROXY ?? env.https_proxy));
 }
 
 export function getChewyImpactTrackingConfig(env: NodeJS.ProcessEnv = process.env): ChewyImpactTrackingOptions {
@@ -178,14 +188,16 @@ async function impactGetJson<T>(pathOrUrl: string | URL, clientOptions: ImpactCl
   const authToken = getAuthToken(clientOptions);
   const url = typeof pathOrUrl === 'string' ? buildImpactUrl(pathOrUrl) : pathOrUrl;
 
+  // Without a token, send no Authorization header so a proxy-held credential
+  // can supply it.
+  const headers: Record<string, string> = { Accept: 'application/json' };
+  if (authToken) {
+    headers.Authorization = `Basic ${Buffer.from(`${accountSid}:${authToken}`).toString('base64')}`;
+  }
+
   let response: Response;
   try {
-    response = await fetchImpl(url, {
-      headers: {
-        Accept: 'application/json',
-        Authorization: `Basic ${Buffer.from(`${accountSid}:${authToken}`).toString('base64')}`,
-      },
-    });
+    response = await fetchImpl(url, { headers });
   } catch (err) {
     throw new Error(`Impact API request failed: ${err instanceof Error ? err.message : String(err)}`);
   }
@@ -195,7 +207,10 @@ async function impactGetJson<T>(pathOrUrl: string | URL, clientOptions: ImpactCl
     const scopeHint =
       response.status === 403
         ? ' Check that the token is a Partner/Media Partner token with read access for this resource.'
-        : '';
+        : response.status === 401 && !authToken
+          ? ' IMPACT_AUTH_TOKEN is unset, so no credentials were sent. Set it, or add a Basic API credential' +
+            ' (Account SID / Auth Token) for api.impact.com to the cloud environment.'
+          : '';
     throw new Error(`Impact API request failed with HTTP ${response.status}${scopeHint}${body ? `: ${body}` : ''}`);
   }
 
@@ -214,8 +229,8 @@ function getAccountSid(options: ImpactClientOptions): string {
   return options.accountSid?.trim() || requiredEnv(options.env, 'IMPACT_ACCOUNT_SID');
 }
 
-function getAuthToken(options: ImpactClientOptions): string {
-  return options.authToken?.trim() || requiredEnv(options.env, 'IMPACT_AUTH_TOKEN');
+function getAuthToken(options: ImpactClientOptions): string | undefined {
+  return options.authToken?.trim() || cleanConfigValue((options.env ?? process.env).IMPACT_AUTH_TOKEN);
 }
 
 function requiredEnv(env: NodeJS.ProcessEnv = process.env, key: string): string {

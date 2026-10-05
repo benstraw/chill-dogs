@@ -8,7 +8,7 @@ import {
   createChewyAffiliateLink,
   createChewyAffiliateLinkWithBase,
 } from '../lib/affiliate/chewy';
-import { getChewyTrackingLinkFromImpact } from '../lib/affiliate/impact';
+import { getChewyTrackingLinkFromImpact, hasImpactTrackingConfig } from '../lib/affiliate/impact';
 import {
   clearChewyCatalogCache,
   deleteChewyCatalogItemCache,
@@ -115,6 +115,49 @@ describe('Chewy affiliate link generation', () => {
     );
   });
 
+  it('falls back to CHEWY_IMPACT_BASE_URL without a token or a proxy', async () => {
+    process.env.IMPACT_ACCOUNT_SID = 'sid';
+    delete process.env.IMPACT_AUTH_TOKEN;
+    delete process.env.HTTPS_PROXY;
+    delete process.env.https_proxy;
+    process.env.CHEWY_IMPACT_CAMPAIGN_ID = 'campaign';
+    process.env.CHEWY_IMPACT_AD_ID = 'ad';
+    process.env.CHEWY_IMPACT_BASE_URL = 'https://cached.example/link';
+    const fetchSpy = vi.fn();
+    vi.stubGlobal('fetch', fetchSpy);
+
+    const link = await generateChewyAffiliateUrl({
+      chewyProductUrl: 'https://www.chewy.com/example-product/dp/123456',
+    });
+
+    expect(fetchSpy).not.toHaveBeenCalled();
+    expect(link.startsWith('https://cached.example/link')).toBe(true);
+  });
+
+  it('calls Impact without a token behind a proxy, sending no Authorization header', async () => {
+    process.env.IMPACT_ACCOUNT_SID = 'sid';
+    delete process.env.IMPACT_AUTH_TOKEN;
+    process.env.HTTPS_PROXY = 'http://127.0.0.1:3128';
+    process.env.CHEWY_IMPACT_CAMPAIGN_ID = 'campaign';
+    process.env.CHEWY_IMPACT_AD_ID = 'ad';
+    process.env.CHEWY_IMPACT_BASE_URL = 'https://cached.example/link';
+    let authorization: string | null = 'unset';
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async (_input: string | URL, init?: RequestInit) => {
+        authorization = new Headers(init?.headers).get('Authorization');
+        return Response.json({ TrackingLink: 'https://official.example/track' });
+      }),
+    );
+
+    const link = await generateChewyAffiliateUrl({
+      chewyProductUrl: 'https://www.chewy.com/example-product/dp/123456',
+    });
+
+    expect(authorization).toBeNull();
+    expect(link.startsWith('https://official.example/track')).toBe(true);
+  });
+
   it('prefers retrieved Impact tracking links over cached env values', async () => {
     process.env.IMPACT_ACCOUNT_SID = 'sid';
     process.env.IMPACT_AUTH_TOKEN = 'token';
@@ -179,6 +222,77 @@ describe('Impact API helpers', () => {
     );
 
     expect(requestedUrl).toContain('/Mediapartners/sid/Ads/ad/TrackingLink');
+  });
+
+  it('sends Basic auth when a token is set', async () => {
+    let authorization: string | null = null;
+
+    await getChewyTrackingLinkFromImpact(
+      { campaignId: 'campaign', adId: 'ad' },
+      {
+        accountSid: 'sid',
+        authToken: 'token',
+        fetchImpl: async (_input, init) => {
+          authorization = new Headers(init?.headers).get('Authorization');
+          return Response.json({ TrackingLink: 'https://official.example/track' });
+        },
+      },
+    );
+
+    expect(authorization).toBe(`Basic ${Buffer.from('sid:token').toString('base64')}`);
+  });
+
+  it('omits the Authorization header without a token so a proxy credential can supply it', async () => {
+    let authorization: string | null = 'unset';
+
+    const link = await getChewyTrackingLinkFromImpact(
+      { campaignId: 'campaign', adId: 'ad' },
+      {
+        accountSid: 'sid',
+        env: {},
+        fetchImpl: async (_input, init) => {
+          authorization = new Headers(init?.headers).get('Authorization');
+          return Response.json({ TrackingLink: 'https://official.example/track' });
+        },
+      },
+    );
+
+    expect(authorization).toBeNull();
+    expect(link).toBe('https://official.example/track');
+  });
+
+  it('explains a 401 sent without a token', async () => {
+    await expect(
+      getChewyTrackingLinkFromImpact(
+        { campaignId: 'campaign', adId: 'ad' },
+        {
+          accountSid: 'sid',
+          env: {},
+          fetchImpl: async () => new Response('Unauthorized', { status: 401 }),
+        },
+      ),
+    ).rejects.toThrow('IMPACT_AUTH_TOKEN is unset');
+  });
+
+  describe('hasImpactTrackingConfig', () => {
+    const ids = { IMPACT_ACCOUNT_SID: 'sid', CHEWY_IMPACT_CAMPAIGN_ID: 'c', CHEWY_IMPACT_AD_ID: 'a' };
+
+    it('is configured with a token (local .env, GitHub Actions)', () => {
+      expect(hasImpactTrackingConfig({ ...ids, IMPACT_AUTH_TOKEN: 'token' })).toBe(true);
+    });
+
+    it('is configured without a token behind a proxy (cloud API credential)', () => {
+      expect(hasImpactTrackingConfig({ ...ids, HTTPS_PROXY: 'http://127.0.0.1:3128' })).toBe(true);
+      expect(hasImpactTrackingConfig({ ...ids, https_proxy: 'http://127.0.0.1:3128' })).toBe(true);
+    });
+
+    it('is not configured without a token or a proxy, so CHEWY_IMPACT_BASE_URL still applies', () => {
+      expect(hasImpactTrackingConfig(ids)).toBe(false);
+    });
+
+    it('is not configured without the IDs', () => {
+      expect(hasImpactTrackingConfig({ IMPACT_ACCOUNT_SID: 'sid', IMPACT_AUTH_TOKEN: 'token' })).toBe(false);
+    });
   });
 });
 
