@@ -37,6 +37,7 @@ export const ROUTES = {
   fleaSeasonBathTools: '/safety/dog-bath-tools/',
   rattlesnakeSafetyForDogs: '/safety/rattlesnake-safety-for-dogs/',
   dogSnakeBiteEmergencyKit: '/gear/dog-snake-bite-emergency-kit/',
+  dogEmergencyGoBag: '/safety/dog-emergency-go-bag/',
   comfortHub: '/comforting/',
   comfortCalmingBeds: '/comforting/best-calming-dog-beds/',
   comfortOrthopedicBeds: '/comforting/best-orthopedic-dog-beds/',
