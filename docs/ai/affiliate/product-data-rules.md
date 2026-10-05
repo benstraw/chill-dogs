@@ -3,7 +3,7 @@ title: Product Data Rules
 type: canonical
 domain: affiliate
 status: active
-updated: 2026-08-26
+updated: 2026-10-05
 tags:
   - chill-dogs
   - affiliate
@@ -109,10 +109,12 @@ Notes on using it:
 - An empty `Asin` field means Impact knows of no Amazon match. That is *not* proof one does not exist, but it does
   mean you have nothing to verify against: keep the product Chewy-only rather than guessing at an ASIN.
 
-Credentials live in `.env` (`IMPACT_ACCOUNT_SID`, `IMPACT_AUTH_TOKEN`, `CHEWY_IMPACT_CAMPAIGN_ID`,
-`CHEWY_IMPACT_CATALOG_ID`). Note that `bun run chewy-link:verify` additionally needs `CHEWY_IMPACT_BASE_URL`, so
-that command can fail while `fetch:chewy` works fine — check the specific variable rather than assuming no
-credentials are present.
+Config lives in `.env` or the cloud environment (`IMPACT_ACCOUNT_SID`, `CHEWY_IMPACT_CAMPAIGN_ID`,
+`CHEWY_IMPACT_CATALOG_ID`), plus Impact auth: `IMPACT_AUTH_TOKEN`, or in a cloud environment a Basic API credential
+for `api.impact.com` (see [Impact auth](../engineering/environment-and-integrations.md#impact-auth)).
+`bun run chewy-link:verify` additionally needs `CHEWY_IMPACT_AD_ID`, the ad ID from the program's tracking link and
+not the catalog ID. `CHEWY_IMPACT_BASE_URL` is only its fallback when the rest is missing. So `chewy-link` can fail
+while `fetch:chewy` works fine; check the specific variable rather than assuming no credentials are present.
 
 1. Find or fetch the Chewy catalog item with `bun run fetch:chewy -- --search "product name"` or `bun run fetch:chewy -- --catalog-id <catalog-id> --item-id <item-id>`.
 2. Generate the Impact affiliate link from the canonical Chewy product URL with `bun run chewy-link -- "https://www.chewy.com/example-product/dp/123456" --article <page-slug> --placement <placement>`.

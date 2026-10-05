@@ -173,7 +173,7 @@ bun run fetch:chewy --stale --days 60   # Refresh only stale cache entries
 bun run fetch:chewy --clear-cache
 ```
 
-**Env vars needed:** `IMPACT_ACCOUNT_SID`, `IMPACT_AUTH_TOKEN`, `CHEWY_IMPACT_CAMPAIGN_ID`. Optional `CHEWY_IMPACT_CATALOG_ID` sets a default for `--catalog-id`.
+**Env vars needed:** `IMPACT_ACCOUNT_SID`, `CHEWY_IMPACT_CAMPAIGN_ID`, and `IMPACT_AUTH_TOKEN` unless a cloud environment API credential supplies Impact auth (see [Impact auth](environment-and-integrations.md#impact-auth)). Optional `CHEWY_IMPACT_CATALOG_ID` sets a default for `--catalog-id`.
 
 ---
 
@@ -187,7 +187,7 @@ bun run chewy-link:verify          # Confirm Impact credentials resolve
 bun run chewy-link:csv input.csv   # Batch-convert a CSV of Chewy URLs
 ```
 
-**Env vars needed:** `IMPACT_ACCOUNT_SID`, `IMPACT_AUTH_TOKEN`, `CHEWY_IMPACT_CAMPAIGN_ID`, `CHEWY_IMPACT_AD_ID`. Setting `CHEWY_IMPACT_BASE_URL` to a pre-resolved tracking base skips the Impact API round trip.
+**Env vars needed:** `IMPACT_ACCOUNT_SID`, `CHEWY_IMPACT_CAMPAIGN_ID`, `CHEWY_IMPACT_AD_ID`, and `IMPACT_AUTH_TOKEN` unless a cloud environment API credential supplies Impact auth (see [Impact auth](environment-and-integrations.md#impact-auth)). Setting `CHEWY_IMPACT_BASE_URL` to a pre-resolved tracking base skips the Impact API round trip.
 
 ---
 

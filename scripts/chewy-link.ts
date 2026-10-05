@@ -31,6 +31,10 @@ type CsvOutputRow = CsvInputRow & {
 
 const args = process.argv.slice(2);
 
+const MISSING_CONFIG_MESSAGE =
+  'Missing Impact config and CHEWY_IMPACT_BASE_URL. Set IMPACT_ACCOUNT_SID, CHEWY_IMPACT_CAMPAIGN_ID, ' +
+  'CHEWY_IMPACT_AD_ID and IMPACT_AUTH_TOKEN (or, behind the agent proxy, an api.impact.com API credential).';
+
 if (import.meta.main) {
   try {
     await runChewyLinkCli(args);
@@ -145,7 +149,7 @@ async function runVerifyCommand(): Promise<void> {
 
   const activeBase = officialBase ?? cachedBase;
   if (!activeBase) {
-    throw new Error('Missing Impact credentials/IDs and CHEWY_IMPACT_BASE_URL.');
+    throw new Error(MISSING_CONFIG_MESSAGE);
   }
 
   console.log(`Current Chewy Impact tracking base: ${activeBase}`);
@@ -162,7 +166,7 @@ async function resolveChewyTrackingBase(): Promise<string> {
 
   const cachedBase = process.env.CHEWY_IMPACT_BASE_URL?.trim();
   if (!cachedBase) {
-    throw new Error('Missing Impact credentials/IDs and CHEWY_IMPACT_BASE_URL.');
+    throw new Error(MISSING_CONFIG_MESSAGE);
   }
 
   return cachedBase;

@@ -67,11 +67,25 @@ History: on bun 1.3.11, Bun's `fetch` opened the tunnel and then failed the TLS 
 | `bun run check:ai-docs` | none | none | — |
 | `bun run admin:serve` | none | none — binds 127.0.0.1:4322, writes the repo | — |
 | `bun run indexnow:submit` | `INDEXNOW_KEY` | `api.indexnow.org` | node |
-| `bun run fetch:chewy` | `IMPACT_ACCOUNT_SID`, `IMPACT_AUTH_TOKEN`, `CHEWY_IMPACT_CAMPAIGN_ID`, optional `CHEWY_IMPACT_CATALOG_ID` | `api.impact.com` | **bun** |
-| `bun run chewy-link` | `IMPACT_ACCOUNT_SID`, `IMPACT_AUTH_TOKEN`, `CHEWY_IMPACT_CAMPAIGN_ID`, `CHEWY_IMPACT_AD_ID` (or `CHEWY_IMPACT_BASE_URL` to skip the API) | `api.impact.com`, `www.chewy.com` | **bun** |
+| `bun run fetch:chewy` | `IMPACT_ACCOUNT_SID`, Impact auth (see below), `CHEWY_IMPACT_CAMPAIGN_ID`, optional `CHEWY_IMPACT_CATALOG_ID` | `api.impact.com` | **bun** |
+| `bun run chewy-link` | `IMPACT_ACCOUNT_SID`, Impact auth (see below), `CHEWY_IMPACT_CAMPAIGN_ID`, `CHEWY_IMPACT_AD_ID` (or `CHEWY_IMPACT_BASE_URL` to skip the API) | `api.impact.com`, `www.chewy.com` | **bun** |
 | `scripts/fetch-amazon-data.ts` | `SERP_API_KEY` (preferred) or `SEARCHAPI_KEY` (backup) | `serpapi.com` or `www.searchapi.io` | **bun** |
 
 Rows marked **bun** depend on Bun's `fetch` working through the agent proxy. It does on current Bun; if the session-start hook reports them `no-proxy`, run them in GitHub Actions.
+
+### Impact auth
+
+Impact's API uses HTTP Basic auth: the Account SID is the username and the Auth Token is the password. `src/lib/affiliate/impact.ts` accepts it in either of two forms:
+
+| Where | How auth is supplied |
+|---|---|
+| Local dev | `IMPACT_AUTH_TOKEN` in `.env`. The client sends the `Authorization` header itself. |
+| GitHub Actions | `IMPACT_AUTH_TOKEN` from repository secrets, same as local. |
+| Claude Code on the web | An **API credential** on the environment: type **Basic**, username = Account SID, password = Auth Token, allowed website `api.impact.com`. The agent proxy adds the header, so the token never enters the container. Leave `IMPACT_AUTH_TOKEN` unset there. |
+
+When `IMPACT_AUTH_TOKEN` is unset the client sends no `Authorization` header, so the proxy's credential applies. It only treats a missing token as configured when `HTTPS_PROXY` is set. Without a proxy, a missing token still means "not configured", and `chewy-link` falls back to `CHEWY_IMPACT_BASE_URL` as before. If a tokenless request gets a 401, the error says no credentials were sent.
+
+`IMPACT_ACCOUNT_SID`, `CHEWY_IMPACT_CAMPAIGN_ID` and `CHEWY_IMPACT_AD_ID` stay plain environment variables in every setup: they are identifiers, not secrets, and the SID is part of every request path. `CHEWY_IMPACT_AD_ID` is the middle number of the program's tracking link (`chewy.sjv.io/c/<partner>/<ad>/<campaign>`, currently `2846786`). Do not confuse it with the catalog ID (`24727`), which `/Ads/<id>/TrackingLink` answers with a 404.
 
 `www.chewy.com` appears in the allowlist only because `chewy-link` resolves canonical product URLs against it.
 **Chewy product pages themselves are behind Kasada bot protection and return `429` to every automated client**
@@ -131,7 +145,8 @@ Copy `.env.example` to `.env` and fill in what you need. `.env` is gitignored. A
 
 Configured on the environment, not in the repo:
 
-- **Environment variables** — Environment settings → Environment variables. Secrets belong here, never in `.env.example` or a committed file.
+- **Environment variables** — Environment settings → Environment variables. These are visible to anyone using the environment, so keep tokens out of them where an API credential can carry them instead (see [Impact auth](#impact-auth)). Never put secrets in `.env.example` or a committed file.
+- **API credentials** — Environment settings → API credentials. The agent proxy adds the credential to requests for the allowed hosts, and sessions never see the value. Impact's token lives here.
 - **Network allowlist** — Environment settings → Network access. Without the hosts above, `check:asins`, `fetch:chewy`, `chewy-link`, and the SerpAPI fetch cannot run regardless of credentials.
 
 `.claude/hooks/session-start.sh` runs on session start and:
@@ -147,8 +162,8 @@ The readiness line reports the first blocker it finds, so fix them in the order 
 
 | Label | Meaning | Fix |
 |---|---|---|
-| `ready` | runnable right now | — |
-| `no-keys` | env vars unset | add them under Environment settings → Environment variables |
+| `ready` | runnable right now. The Impact scripts add `(auth: token)` or `(auth: proxy-credential)` | — |
+| `no-keys` | env vars unset, or no Impact auth (no `IMPACT_AUTH_TOKEN`, and an unauthenticated probe of `api.impact.com` did not return 200) | add the env vars, or the Impact API credential (see [Impact auth](#impact-auth)) |
 | `blocked` | host off the allowlist (`curl` cannot open the tunnel) | add the host under Environment settings → Network access |
 | `no-proxy` | keys and host fine, but the hook's Bun `fetch` probe failed (the bun 1.3.11 regression is back) | run it in GitHub Actions; see the Bun section above |
 
