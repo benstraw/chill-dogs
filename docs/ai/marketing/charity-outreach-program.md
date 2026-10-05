@@ -117,8 +117,9 @@ Begin with 2–3 charities per week so each message can be personalized and resp
 | 1 | 15 out of 10 Foundation · Cuddly · Every Bark Counts | Send initial introductions; record contacts and responses |
 | 2 | Fix'n Fidos · PAW-SOME MISSION · Reducing Animal Stress | Continue introductions; follow up on week 1 responses |
 | 3 | Rolling Dog Farm · Tails That Teach · Wild Tunes | Complete the first round; begin coordinating the next newsletter feature |
+| 4 | Hollywood Rescue Grooming | Added to the page after the first round (issue #376); send its introduction alongside the regular cycle |
 
-All nine organizations currently on the page are covered by weeks 1–3. When the page changes, this table changes with it.
+All ten organizations currently on the page are covered by weeks 1–4. When the page changes, this table changes with it.
 
 ### Week 4 onward — the regular cycle
 

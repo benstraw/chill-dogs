@@ -188,6 +188,67 @@ import BaseLayout from '@layouts/BaseLayout.astro';
         <span></span><i></i><span></span>
       </div>
 
+      <article class="charity" id="hollywood-rescue-grooming">
+        <h2 class="charity-name">
+          Hollywood Rescue Grooming
+          <a class="charity-anchor" href="#hollywood-rescue-grooming" aria-label="Link to Hollywood Rescue Grooming">#</a>
+        </h2>
+        <p class="charity-logo-wrap">
+          <span class="charity-lockup">
+            <img
+              src="/images/charities/hollywood-rescue-grooming-mark.png"
+              alt=""
+              width="96"
+              height="96"
+              class="charity-logo charity-logo--mark"
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="charity-lockup-text" role="img" aria-label="Hollywood Rescue Grooming Foundation logo">
+              <span class="charity-lockup-name" aria-hidden="true">Hollywood Rescue Grooming</span>
+              <span class="charity-lockup-sub" aria-hidden="true">Foundation</span>
+            </span>
+          </span>
+        </p>
+        <p>
+          <a
+            href="https://hollywoodrescuegrooming.org/"
+            target="_blank"
+            rel="noopener noreferrer">Hollywood Rescue Grooming Foundation</a
+          > is a 501(c)(3) that sends volunteer professional groomers into shelters across Los
+          Angeles County, and as far away as New Jersey. More than 5,000 shelter pets have been
+          groomed for free since 2015, and the foundation reports that 89% find their forever homes
+          within days.
+        </p>
+        <p>
+          It was founded by Chuck and Yael, the husband-and-wife duo behind Go Hollywood Grooming,
+          a mobile grooming service in Los Angeles since 2001. They kept seeing the same heartbreak
+          every time they walked into a shelter: animals overlooked for the one thing they could
+          change. A bath. So in 2015 they launched the foundation. Every Go Hollywood booking
+          supports its work, and every donation directly funds another shelter pet's transformation.
+        </p>
+        <aside class="charity-note">
+          <p>
+            The two organizations are separate. Hollywood Rescue Grooming is a registered charity;
+            Go Hollywood Grooming is its for-profit partner. They share one mission: every pet
+            deserves to look, and feel, their best.
+          </p>
+        </aside>
+        <p class="charity-cta-wrap">
+          <a
+            class="ui-cta charity-cta"
+            href="https://hollywoodrescuegrooming.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Visit official site <span aria-hidden="true">↗</span></a
+          >
+        </p>
+      </article>
+
+      <div class="charity-divider" aria-hidden="true">
+        <span></span><i></i><span></span>
+      </div>
+
       <article class="charity" id="paw-some-mission">
         <h2 class="charity-name">
           PAW-SOME MISSION
@@ -566,5 +627,49 @@ import BaseLayout from '@layouts/BaseLayout.astro';
     height: 96px;
     object-fit: contain;
     object-position: left center;
+  }
+  /*
+   * Hollywood Rescue Grooming only publishes its heart mark as an image (served
+   * locally from public/images/charities/, not hotlinked); the wordmark on their
+   * site is live text. Rebuild their header lockup — mark,
+   * serif name, spaced pink italic "Foundation" — so the tile reads as their
+   * logo rather than a lone icon. Serif stack only, no extra web font load.
+   */
+  .charity-lockup {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    min-width: 0;
+  }
+
+  /* Same 96px box as the other logos, so every tile is the same height. */
+  .charity-logo--mark {
+    flex: none;
+    width: 96px;
+    height: 96px;
+    object-position: center;
+  }
+
+  .charity-lockup-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.15;
+  }
+
+  .charity-lockup-name {
+    font-size: clamp(1.05rem, 3.6vw, 1.45rem);
+    font-weight: 700;
+    color: #3a3533;
+  }
+
+  .charity-lockup-sub {
+    margin-top: 2px;
+    font-size: clamp(0.8rem, 2.6vw, 0.95rem);
+    font-style: italic;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #d8436b;
   }
 </style>
