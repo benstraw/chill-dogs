@@ -425,6 +425,22 @@ site_system:
         symptoms, treatment overview, prevention, aversion training, vaccine context, and what to pack.
         It must not imply chill-dogs provides veterinary advice or that any product treats venom.
 
+    - name: "Dog Emergency Go-Bag"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Capture dog evacuation and emergency-kit search intent, then route readers to the snake-bite emergency kit, travel crate, GPS tracker, and travel hydration converters"
+      metric: "collector_to_converter_click to /gear/dog-snake-bite-emergency-kit/, /comforting/best-travel-crates-for-road-trips/, and /gear/best-dog-gps-trackers/"
+      routes:
+        - "/safety/dog-emergency-go-bag/"
+      notes: >
+        Preparedness article built around a portable go-bag (roughly 3 days, a Chill-Dogs packing
+        rule of thumb) plus a staged reserve beside it, with CDC (2 weeks) and ASPCA (7-10 days food
+        and water, 2 weeks medication) guidance presented as distinct recommendations. Covers ID
+        layers, a per-dog document packet, first aid and muzzle cautions, staged crate and bedding,
+        comfort items, situational add-ons, destinations, practice, and maintenance. Inline products
+        come from existing catalog records via GoBagProducts.astro. It must not present 3 days as an
+        official standard, imply every shelter accepts pets, or claim goggles protect against smoke.
+
     - name: "Snake-Bite Emergency Kit for Dogs"
       type: "converter"
       target_action: "Drive affiliate outbound clicks for transport, restraint, warmth, first-aid, phone, and visibility gear"
