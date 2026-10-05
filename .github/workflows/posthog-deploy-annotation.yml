@@ -38,13 +38,13 @@ jobs:
           DEPLOY_URL: ${{ github.event.deployment_status.target_url }}
           # Only tested for presence below; never printed.
           HAS_KEY: ${{ secrets.POSTHOG_CI_API_KEY != '' }}
-          PROJECT_ID: ${{ vars.POSTHOG_PROJECT_ID }}
+          PROJECT_ID: ${{ vars.POSTHOG_PROJECT_ID || '328578' }}
         run: |
           set -euo pipefail
           echo "Production deploy of $SHA: $DEPLOY_URL"
 
           if [ "$HAS_KEY" != "true" ] || [ -z "$PROJECT_ID" ]; then
-            echo "::notice title=PostHog deploy annotation not configured::Set POSTHOG_CI_API_KEY and POSTHOG_PROJECT_ID. The production deploy itself succeeded."
+            echo "::notice title=PostHog deploy annotation not configured::Set the POSTHOG_CI_API_KEY secret. The production deploy itself succeeded."
             echo "configured=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
@@ -71,7 +71,7 @@ jobs:
           # The site ingests through the woof.chill-dogs.com proxy; the
           # annotations API lives on the real PostHog host.
           annotation-api-host: ${{ vars.POSTHOG_HOST || 'https://us.posthog.com' }}
-          annotation-project-id: ${{ vars.POSTHOG_PROJECT_ID }}
+          annotation-project-id: ${{ vars.POSTHOG_PROJECT_ID || '328578' }}
           annotation-scope: project
           annotation-dedupe: true
           annotation-dedupe-key: ${{ steps.meta.outputs.dedupe_key }}
