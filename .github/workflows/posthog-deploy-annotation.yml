@@ -1,0 +1,97 @@
+# Mark every successful Vercel production deploy on PostHog's charts.
+#
+# Vercel, not GitHub Actions, builds and deploys this site. Its GitHub
+# integration reports each deployment as a `deployment_status` event. Waiting
+# for state `success` on the `Production` environment means a failed deploy is
+# never annotated, and this workflow cannot delay or affect the deployment.
+#
+# Previews arrive on the `Preview` environment and are ignored. GitHub runs
+# deployment_status workflows from the default branch, so a pull request cannot
+# supply a modified workflow that receives the PostHog credential.
+name: PostHog deploy annotation
+
+on:
+  deployment_status:
+
+permissions:
+  contents: read
+
+# Vercel redeploys and GitHub re-runs must not race beyond annotation dedupe.
+concurrency:
+  group: posthog-deploy-annotation-${{ github.event.deployment.sha }}
+  cancel-in-progress: false
+
+jobs:
+  annotate:
+    if: >-
+      github.event.deployment_status.state == 'success' &&
+      github.event.deployment_status.environment == 'Production'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Prepare annotation
+        id: meta
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          SHA: ${{ github.event.deployment.sha }}
+          DEPLOY_URL: ${{ github.event.deployment_status.target_url }}
+          # Only tested for presence below; never printed.
+          HAS_KEY: ${{ secrets.POSTHOG_CI_API_KEY != '' }}
+          PROJECT_ID: ${{ vars.POSTHOG_PROJECT_ID }}
+        run: |
+          set -euo pipefail
+          echo "Production deploy of $SHA: $DEPLOY_URL"
+
+          if [ "$HAS_KEY" != "true" ] || [ -z "$PROJECT_ID" ]; then
+            echo "::notice title=PostHog deploy annotation not configured::Set POSTHOG_CI_API_KEY and POSTHOG_PROJECT_ID. The production deploy itself succeeded."
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "configured=true" >> "$GITHUB_OUTPUT"
+
+          # Commit text reaches the action as input, never as shell code.
+          subject=$(gh api "repos/$REPO/commits/$SHA" --jq '.commit.message' | head -n 1 | tr -d '\r' | cut -c 1-120)
+          key="chill-dogs.com production deploy @ $SHA"
+          {
+            echo "dedupe_key=$key"
+            echo "content=$key · $subject · https://github.com/$REPO/commit/$SHA"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Create PostHog annotation
+        id: annotate
+        if: steps.meta.outputs.configured == 'true'
+        continue-on-error: true
+        # v1.3.0, pinned by commit because this step holds a credential.
+        uses: PostHog/posthog-github-action@9a6a19d360820ab4d95ecc4a5a7564062c895f84
+        with:
+          # With no `event`, this action creates only an annotation.
+          posthog-token: ${{ secrets.POSTHOG_CI_API_KEY }}
+          annotation: ${{ steps.meta.outputs.content }}
+          # The site ingests through the woof.chill-dogs.com proxy; the
+          # annotations API lives on the real PostHog host.
+          annotation-api-host: ${{ vars.POSTHOG_HOST || 'https://us.posthog.com' }}
+          annotation-project-id: ${{ vars.POSTHOG_PROJECT_ID }}
+          annotation-scope: project
+          annotation-dedupe: true
+          annotation-dedupe-key: ${{ steps.meta.outputs.dedupe_key }}
+
+      - name: Report PostHog failure
+        if: steps.annotate.outcome == 'failure'
+        run: |
+          echo "::warning title=PostHog annotation failed::Production deployed, but the PostHog annotation was not created."
+          echo "### ⚠️ PostHog annotation failed" >> "$GITHUB_STEP_SUMMARY"
+          echo "Production deployed. The deploy marker was not created; see the action log." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Summary
+        if: steps.annotate.outcome == 'success'
+        env:
+          CONTENT: ${{ steps.meta.outputs.content }}
+        run: |
+          {
+            echo "### PostHog deploy annotation"
+            echo
+            echo "\`$CONTENT\`"
+            echo
+            echo "Created, or already present from an earlier run."
+          } >> "$GITHUB_STEP_SUMMARY"
