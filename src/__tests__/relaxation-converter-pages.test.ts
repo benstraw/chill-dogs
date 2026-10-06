@@ -276,31 +276,24 @@ describe('relaxation converter page config', () => {
     // #375 dropped both hero buttons from this page.
     expect(config.hero.primaryCta).toBeUndefined();
     expect(config.hero.secondaryCta).toBeUndefined();
-    expect(config.itemListSchema?.productIds).toEqual([
-      'rainmr-memory-foam-bed',
-      'eheyciga-xl-memory-foam-couch',
-      'noah-paw-denim-orthopedic-bed',
-      'cozy-kiss-xl-bolster-bed',
-      'anti-anxiety-orthopedic-bed',
-      'carolina-pet-bolster-lg',
-      'dog-bed-wont-go-flat-crate-bed',
-      'nupida-xl-crate-bed',
-      'veehoo-xxl-memory-foam-bed',
-      'noah-paw-giant-orthopedic-bed',
-      'zomisia-orthopedic-bed',
-      'ohgeni-orthopedic-bed',
-      ...chewyOrthopedicBedIds.sofa,
-      ...chewyOrthopedicBedIds.foam,
-      ...chewyOrthopedicBedIds.crate,
-    ]);
+    expect(config.itemListSchema?.productIds).toHaveLength(29);
     expect(config.hero.disclaimer).toBe('As an Amazon Associate and a Chewy Affiliate, we earn from qualifying purchases.');
-    // #379: no category sections; every bed sits in one grid, in schema order.
+    // #387: two sections, Flat Beds then Bolster Beds; together they cover every bed once.
     const sections = config.blocks.filter((block) => block.kind === 'product_section');
-    expect(sections).toHaveLength(1);
-    expect(sections[0].kind === 'product_section' ? sections[0].productIds : []).toEqual(
-      config.itemListSchema?.productIds,
+    expect(sections.map((section) => section.id)).toEqual(['flat-beds', 'bolster-beds']);
+    const sectionIds = sections.flatMap((section) =>
+      section.kind === 'product_section'
+        ? section.productIds.map((ref) => (typeof ref === 'string' ? ref : ref.id))
+        : [],
     );
-    expect(config.toc?.map((entry) => entry.anchor)).toEqual(['orthopedic-beds', 'faq']);
+    expect(sectionIds).toEqual(config.itemListSchema?.productIds);
+    expect(new Set(sectionIds).size).toBe(29);
+    expect(config.toc?.map((entry) => entry.anchor)).toEqual([
+      'what-to-look-for',
+      'flat-beds',
+      'bolster-beds',
+      'faq',
+    ]);
   });
 
   it('keeps orthopedic bed products in the orthopedic-beds category', () => {
@@ -339,15 +332,17 @@ describe('relaxation converter page config', () => {
       expect(new Set(chewyIds).size).toBe(17);
     });
 
-    it('lists every bed in the single orthopedic grid, Chewy beds after the Amazon ones', () => {
+    it('lists every Chewy bed across the flat and bolster sections', () => {
       const config = getRelaxationConverterPageConfig('best-orthopedic-dog-beds');
-      const [section] = config.blocks.filter((block) => block.kind === 'product_section');
-      if (section?.kind !== 'product_section') throw new Error('missing bed grid');
-
-      const ids = section.productIds.map((ref) => (typeof ref === 'string' ? ref : ref.id));
+      const sections = config.blocks.filter((block) => block.kind === 'product_section');
+      const ids = sections.flatMap((section) =>
+        section.kind === 'product_section'
+          ? section.productIds.map((ref) => (typeof ref === 'string' ? ref : ref.id))
+          : [],
+      );
       expect(ids).toHaveLength(29);
-      expect(ids.slice(-17)).toEqual(chewyIds);
-      expect(section.positionOffset).toBe(0);
+      for (const id of chewyIds) expect(ids).toContain(id);
+      expect(sections[0].kind === 'product_section' ? sections[0].positionOffset : -1).toBe(0);
     });
 
     it('is Chewy-only: a Chewy primary offer and no Amazon data', () => {

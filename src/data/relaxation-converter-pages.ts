@@ -183,6 +183,34 @@ export function buildRelaxationItemListSchema(
   };
 }
 
+const orthopedicFlatBedIds = [
+  'rainmr-memory-foam-bed',
+  'dog-bed-wont-go-flat-crate-bed',
+  'nupida-xl-crate-bed',
+  'veehoo-xxl-memory-foam-bed',
+  'ohgeni-orthopedic-bed',
+  'comfort-expression-waterproof-foam-bed',
+  'laifug-orthopedic-memory-foam-bed',
+  'kylinsure-orthopedic-pillow-bed',
+  'veehoo-elevated-memory-foam-bed',
+  'timberdog-ruffrest-travel-bed',
+];
+
+const orthopedicBolsterBedIds = [
+  'eheyciga-xl-memory-foam-couch',
+  'noah-paw-denim-orthopedic-bed',
+  'cozy-kiss-xl-bolster-bed',
+  'anti-anxiety-orthopedic-bed',
+  'carolina-pet-bolster-lg',
+  'noah-paw-giant-orthopedic-bed',
+  'zomisia-orthopedic-bed',
+  ...chewyOrthopedicBedIds.sofa,
+  'zomisia-fluffy-egg-foam-bed',
+  'berenlefe-oversized-lounge-bed',
+  'three-dog-ez-wash-softshell-bolster-bed',
+  'snoozer-cozy-cave-orthopedic-bed',
+];
+
 export const relaxationConverterPages: Record<string, RelaxationConverterPageConfig> = {
   'best-calming-dog-beds': {
     slug: 'best-calming-dog-beds',
@@ -1162,7 +1190,9 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       disclaimer: 'As an Amazon Associate and a Chewy Affiliate, we earn from qualifying purchases.',
     },
     toc: [
-      { label: 'Orthopedic Bed Picks', anchor: 'orthopedic-beds' },
+      { label: 'What to Look for in an Orthopedic Bed', anchor: 'what-to-look-for' },
+      { label: 'Flat Beds', anchor: 'flat-beds' },
+      { label: 'Bolster Beds', anchor: 'bolster-beds' },
       { label: 'FAQ', anchor: 'faq' },
     ],
     blocks: [
@@ -1178,28 +1208,24 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       },
       {
         kind: 'product_section',
-        id: 'orthopedic-beds',
-        heading: 'Best Orthopedic Dog Beds',
+        id: 'flat-beds',
+        heading: 'Flat Beds',
+        intro:
+          'Flat slab, egg-crate, and crate-style beds keep the most usable sleeping area and fit cleanly along a wall or inside a crate.',
         positionOffset: 0,
         columns: 3,
         alt: true,
-        productIds: [
-          'rainmr-memory-foam-bed',
-          'eheyciga-xl-memory-foam-couch',
-          'noah-paw-denim-orthopedic-bed',
-          'cozy-kiss-xl-bolster-bed',
-          'anti-anxiety-orthopedic-bed',
-          'carolina-pet-bolster-lg',
-          'dog-bed-wont-go-flat-crate-bed',
-          'nupida-xl-crate-bed',
-          'veehoo-xxl-memory-foam-bed',
-          'noah-paw-giant-orthopedic-bed',
-          'zomisia-orthopedic-bed',
-          'ohgeni-orthopedic-bed',
-          ...chewyOrthopedicBedIds.sofa,
-          ...chewyOrthopedicBedIds.foam,
-          ...chewyOrthopedicBedIds.crate,
-        ],
+        productIds: orthopedicFlatBedIds,
+      },
+      {
+        kind: 'product_section',
+        id: 'bolster-beds',
+        heading: 'Bolster Beds',
+        intro:
+          'Bolster and sofa-style beds add raised edges for dogs that rest their heads, lean, or curl up.',
+        positionOffset: orthopedicFlatBedIds.length,
+        columns: 3,
+        productIds: orthopedicBolsterBedIds,
       },
       {
         kind: 'decision_columns',
@@ -1278,23 +1304,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
     itemListSchema: {
       name: 'Best Orthopedic Dog Beds',
       url: 'https://www.chill-dogs.com/comforting/best-orthopedic-dog-beds/',
-      productIds: [
-        'rainmr-memory-foam-bed',
-        'eheyciga-xl-memory-foam-couch',
-        'noah-paw-denim-orthopedic-bed',
-        'cozy-kiss-xl-bolster-bed',
-        'anti-anxiety-orthopedic-bed',
-        'carolina-pet-bolster-lg',
-        'dog-bed-wont-go-flat-crate-bed',
-        'nupida-xl-crate-bed',
-        'veehoo-xxl-memory-foam-bed',
-        'noah-paw-giant-orthopedic-bed',
-        'zomisia-orthopedic-bed',
-        'ohgeni-orthopedic-bed',
-        ...chewyOrthopedicBedIds.sofa,
-        ...chewyOrthopedicBedIds.foam,
-        ...chewyOrthopedicBedIds.crate,
-      ],
+      productIds: [...orthopedicFlatBedIds, ...orthopedicBolsterBedIds],
     },
   },
 
