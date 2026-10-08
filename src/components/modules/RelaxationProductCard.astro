@@ -23,6 +23,7 @@ const offers = getOffers(product);
   <AffiliateOfferStack
     offers={offers}
     product={{ id: product.id, name: product.name, category: product.category }}
+    variantGroup={product.variantGroup}
     tone="pillar"
     pageType="converter"
     pageSlug={pageSlug}

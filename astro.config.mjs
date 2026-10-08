@@ -25,6 +25,12 @@ export default defineConfig({
     // Retired per #370 — no direct replacement, so this sends prior visitors to the
     // kits section where the remaining five multi-tool kits still live.
     '/shop/sztopfocus-11-piece-grooming-kit/': '/safety/dog-bath-tools/#bath-kits',
+    // Retired per #375 (and the April exclusion of both INVENHO beds in #138); these
+    // were only ever featured on the orthopedic beds converter.
+    '/shop/invenho-orthopedic-couch-bed/': '/comforting/best-orthopedic-dog-beds/',
+    '/shop/bedsure-comfyfleece-orthopedic/': '/comforting/best-orthopedic-dog-beds/',
+    '/shop/invenho-orthopedic-bed/': '/comforting/best-orthopedic-dog-beds/',
+    '/shop/cwawz-orthopedic-bolster/': '/comforting/best-orthopedic-dog-beds/',
     // The page dropped "for flea season" from its name — it's just Dog Bath Tools now.
     // Live for weeks under the old slug, so this must be a real 301.
     '/safety/dog-bath-tools-for-flea-season/': '/safety/dog-bath-tools/',
