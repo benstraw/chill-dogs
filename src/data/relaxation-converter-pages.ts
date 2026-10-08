@@ -189,26 +189,27 @@ const orthopedicFlatBedIds = [
   'nupida-xl-crate-bed',
   'veehoo-xxl-memory-foam-bed',
   'ohgeni-orthopedic-bed',
-  'comfort-expression-waterproof-foam-bed',
   'laifug-orthopedic-memory-foam-bed',
   'kylinsure-orthopedic-pillow-bed',
   'veehoo-elevated-memory-foam-bed',
   'timberdog-ruffrest-travel-bed',
+  'noah-paw-denim-orthopedic-bed',
+  'noah-paw-denim-collection-bed',
+  'snoozer-cozy-cave-orthopedic-bed',
 ];
 
 const orthopedicBolsterBedIds = [
   'eheyciga-xl-memory-foam-couch',
-  'noah-paw-denim-orthopedic-bed',
   'cozy-kiss-xl-bolster-bed',
   'anti-anxiety-orthopedic-bed',
   'carolina-pet-bolster-lg',
   'noah-paw-giant-orthopedic-bed',
   'zomisia-orthopedic-bed',
-  ...chewyOrthopedicBedIds.sofa,
+  ...chewyOrthopedicBedIds.sofa.filter((id) => id !== 'noah-paw-denim-collection-bed'),
+  'comfort-expression-waterproof-foam-bed',
   'zomisia-fluffy-egg-foam-bed',
   'berenlefe-oversized-lounge-bed',
   'three-dog-ez-wash-softshell-bolster-bed',
-  'snoozer-cozy-cave-orthopedic-bed',
 ];
 
 export const relaxationConverterPages: Record<string, RelaxationConverterPageConfig> = {
@@ -1186,7 +1187,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
     hero: {
       title: 'Best Orthopedic Dog Beds',
       subtitle:
-        'Some orthopedic dog beds offer flat memory-foam support, while others add bolsters for dogs that like an edge to lean on. Others prioritize waterproof liners, washable covers, crate-friendly sizing, or extra room for larger breeds. Choose based on how your dog likes to sleep and which best fits your space.',
+        'Orthopedic beds provide joint support, making them a good choice for aging dogs, large breeds prone to hip dysplasia, and dogs recovering from medical procedures. They often use material like high-density memory foam that evenly distributes weight. Flat beds are ideal for dogs that like to stretch out completely, sprawl out on their side, or for supportive liners inside crates. Bolster beds have raised edges that act like built-in headrests, and are best for dogs who like to curl up. Choose based on how your dog likes to sleep and which best fits your space.',
       disclaimer: 'As an Amazon Associate and a Chewy Affiliate, we earn from qualifying purchases.',
     },
     toc: [
@@ -1199,11 +1200,12 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
       {
         kind: 'prose',
         id: 'what-to-look-for',
-        heading: 'What to Look for in an Orthopedic Dog Bed',
+        heading: 'What to Look For In An Orthopedic Dog Bed',
         paragraphs: [
-          'Foam thickness matters, but so does format. Flat slab or egg-crate beds preserve more usable sleeping area, while sofa and bolster beds trade some center space for edges that dogs can lean against.',
-          'Waterproof liners and removable covers are worth paying attention to on orthopedic beds because the foam core is the part you want to protect long term. A washable outer cover is helpful, but a waterproof inner layer does more to keep the support material in better shape over time.',
-          'Crate-friendly beds are usually thinner and flatter so they fit cleanly inside the crate without wasting space. XXL and giant-breed beds push the opposite direction: more foam depth and more length so big dogs are not hanging off the ends or compressing the base too quickly.',
+          'An orthopedic bed is one of the best investments you can make in your dog\'s long-term health, as it distributes weight evenly to cushion sensitive joints, relieve pressure points, and improve blood circulation. High density memory foam ensures that the bed won\'t flatten over time.',
+          'Avoid beds filled with shredded foam chunks or thin egg-crate styles if your dog is big or heavy, as they will quickly lose their shape.',
+          'Washable, removable covers will help you to keep the bed clean. Waterproof liners are worth investing in because memory foam is difficult to clean if it gets wet. A waterproof liner will help protect the foam core from accidents, drool or wet paws.',
+          'Crate-friendly beds are usually thinner and flat so they fit cleanly inside the crate.',
         ],
       },
       {

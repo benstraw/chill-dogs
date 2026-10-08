@@ -288,6 +288,22 @@ describe('relaxation converter page config', () => {
     );
     expect(sectionIds).toEqual(config.itemListSchema?.productIds);
     expect(new Set(sectionIds).size).toBe(29);
+    // #389: Noah & Paw denim (Amazon + Chewy) and Snoozer sit in Flat; Comfort Expression sits in Bolster.
+    const idsOf = (id: string) => {
+      const section = sections.find((block) => block.id === id);
+      return section && section.kind === 'product_section'
+        ? section.productIds.map((ref) => (typeof ref === 'string' ? ref : ref.id))
+        : [];
+    };
+    expect(idsOf('flat-beds')).toEqual(
+      expect.arrayContaining([
+        'noah-paw-denim-orthopedic-bed',
+        'noah-paw-denim-collection-bed',
+        'snoozer-cozy-cave-orthopedic-bed',
+      ]),
+    );
+    expect(idsOf('bolster-beds')).toContain('comfort-expression-waterproof-foam-bed');
+    expect(idsOf('flat-beds')).not.toContain('comfort-expression-waterproof-foam-bed');
     expect(config.toc?.map((entry) => entry.anchor)).toEqual([
       'what-to-look-for',
       'flat-beds',
