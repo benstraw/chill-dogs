@@ -406,15 +406,16 @@ export const chewyOrthopedicBeds: RelaxationProduct[] = [
   },
   {
     id: 'kylinsure-orthopedic-pillow-bed',
-    name: 'Kylinsure Orthopedic Pillow Dog & Cat Bed',
+    name: 'Kylinsure Orthopedic Pillow Dog Bed',
     category: 'orthopedic-beds',
     offers: [chewyOffer('https://www.chewy.com/kylinsure-orthopedic-pillow-dog-cat/dp/3763614')],
     bullets: [
-      'High-density egg-crate foam conforms to the body and eases pressure points',
-      'Low-bunk design makes stepping in and out easier for older dogs and dogs with limited mobility',
-      'Curly faux-fur cover with padded edges; the cover comes off for washing',
+      'High-density egg-crate foam',
+      'Removable and washable plush sherpa top cover',
+      'Non-slip bottom',
+      'Low-bunk design makes it easier to get in and out of for older dogs and dogs with limited mobility',
     ],
-    image: { src: 'https://image.chewy.com/catalog/general/images/moe/06a15f92-d517-74b4-8000-867f9823d67a._AC_SS500_V1_.jpg', alt: 'Kylinsure Orthopedic Pillow Dog & Cat Bed' },
+    image: { src: 'https://image.chewy.com/catalog/general/images/moe/06a15f92-d517-74b4-8000-867f9823d67a._AC_SS500_V1_.jpg', alt: 'Kylinsure Orthopedic Pillow Dog Bed' },
     variantGroup: {
       axis: sizeAxis,
       defaultVariantId: 'large',
@@ -449,15 +450,16 @@ export const chewyOrthopedicBeds: RelaxationProduct[] = [
   },
   {
     id: 'veehoo-elevated-memory-foam-bed',
-    name: 'Veehoo Elevated Orthopedic Memory Foam Dog Bed',
+    name: 'Veehoo Elevated Orthopedic Dog Bed',
     category: 'orthopedic-beds',
     offers: [chewyOffer('https://www.chewy.com/veehoo-orthopedic-memory-foam/dp/3276798')],
     bullets: [
-      'Thick memory foam over firm-support foam is aimed at senior and large-breed dogs',
-      'Dual-layer waterproof protection helps keep the foam core clean and dry',
-      'Plush cover is removable and washable',
+      'Thick memory foam over firm-support foam',
+      'Removable and washable plush cover',
+      'Dual-layer waterproof protection',
+      'Tear and chew-resistant construction',
     ],
-    image: { src: 'https://image.chewy.com/catalog/general/images/moe/068d11fe-8e6c-75c7-8000-a2a6d28ad00f._AC_SS500_V1_.jpg', alt: 'Veehoo Elevated Orthopedic Memory Foam Dog Bed' },
+    image: { src: 'https://image.chewy.com/catalog/general/images/moe/068d11fe-8e6c-75c7-8000-a2a6d28ad00f._AC_SS500_V1_.jpg', alt: 'Veehoo Elevated Orthopedic Dog Bed' },
     variantGroup: {
       axis: sizeAxis,
       defaultVariantId: 'large',
@@ -509,9 +511,12 @@ export const chewyOrthopedicBeds: RelaxationProduct[] = [
     category: 'orthopedic-beds',
     offers: [chewyOffer('https://www.chewy.com/timberdog-ruffrest-stormy-orthopedic/dp/1506782')],
     bullets: [
-      'Built-in blanket converts into a three-season sleeping bag, so the bed doubles as travel gear',
+      'Dual foam base: High-density and memory foam',
+      'Removable and washable cover',
+      'Highly portable and lightweight travel bed',
+      'Built-in blanket converts into a three-season sleeping bag',
       'Opens like a suitcase and packs up for trips, with a removable see-through organizer for essentials',
-      'Elevated orthopedic build with a removable cover, aimed at dogs that travel with you',
+      'Comes with a hydration pocket, reflective leash and emergency medical ID card',
     ],
     image: { src: 'https://image.chewy.com/catalog/general/images/timberdog-ruffrest-orthopedic-ultimate-travel-cat-dog-bed-with-removable-cover-orion-bluetangerineteal-medium/img-321160._AC_SS500_V1_.jpg', alt: 'Timberdog RuffRest Orthopedic Travel Bed' },
     variantGroup: {
