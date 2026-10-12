@@ -1,4 +1,4 @@
-import { chewyOrthopedicBeds } from './chewy-orthopedic-beds';
+import { chewyOrthopedicBeds, sizeAxis } from './chewy-orthopedic-beds';
 import type { AffiliateOffer, ProductVariantGroup } from './products/types';
 
 export type RelaxationProductCategory =
@@ -21,6 +21,39 @@ export interface RelaxationProduct {
   bullets: string[];
   image?: { src: string; alt: string };
   images?: readonly { src: string; alt: string }[];
+}
+
+const AMAZON_TAG = 'chill-dogs-20';
+
+function amazonSizeOffer(asin: string): AffiliateOffer {
+  return {
+    merchant: 'amazon',
+    asin,
+    merchantProductId: asin,
+    url: `https://www.amazon.com/dp/${asin}/?tag=${AMAZON_TAG}`,
+    status: 'active',
+  };
+}
+
+/**
+ * Size picker over Amazon's own sibling ASINs, taken from each product's cached payload
+ * (`variants` -> Size) in the default colour. `[label, asin, longLabel?]`, smallest first.
+ */
+function amazonSizes(defaultAsin: string, sizes: ReadonlyArray<readonly [string, string, string?]>): ProductVariantGroup {
+  const idOf = (label: string) => label.toLowerCase().replace(/ × /g, 'x').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  const fallback = sizes.find(([, asin]) => asin === defaultAsin);
+  if (!fallback) throw new Error(`Default ASIN ${defaultAsin} is not in its size list`);
+
+  return {
+    axis: sizeAxis,
+    defaultVariantId: idOf(fallback[0]),
+    variants: sizes.map(([label, asin, longLabel]) => ({
+      id: idOf(label),
+      label,
+      ...(longLabel ? { longLabel } : {}),
+      offers: [amazonSizeOffer(asin)],
+    })),
+  };
 }
 
 export const relaxationProducts: RelaxationProduct[] = [
@@ -87,6 +120,7 @@ export const relaxationProducts: RelaxationProduct[] = [
     name: 'Anti-Anxiety Orthopedic Dog Bed with Bolster',
     category: 'orthopedic-beds',
     amazonUrl: 'https://www.amazon.com/dp/B097XMD33D/?tag=chill-dogs-20',
+    variantGroup: amazonSizes('B097XMD33D', [['23 × 23 in','B097XMD33D','Small, 23 × 23 in'], ['26 × 26 in','B097XBWQX7','Medium, 26 × 26 in']]),
     bullets: [
       'Orthopedic base combined with raised bolster sides addresses both comfort and security in one bed',
       'Attached design means the bolster and base stay together — no separating components',
@@ -110,15 +144,16 @@ export const relaxationProducts: RelaxationProduct[] = [
   {
     id: 'carolina-pet-bolster-lg',
     asin: 'B0DCGQLJJ8',
-    name: 'Carolina Pet Company Microfiber Tipped Bolster Bed (Large)',
+    name: 'Carolina Pet Comfy Cup Bolster Dog Bed',
     category: 'orthopedic-beds',
     amazonUrl: 'https://www.amazon.com/dp/B0DCGQLJJ8/?tag=chill-dogs-20',
+    variantGroup: amazonSizes('B0DCGQLJJ8', [['Small','B0DCGQLJJ8'], ['Medium','B0DCGKQQ64'], ['Large','B0DCGR7YKR']]),
     bullets: [
       'Microfiber fill compresses more slowly than poly fill, keeping the sleeping surface supportive longer',
       'Bolster profile is lower than a full donut, making it accessible for dogs who prefer a gentle edge',
       'Quality construction from a US-based pet bed manufacturer with consistent sizing',
     ],
-    image: { src: 'https://m.media-amazon.com/images/I/51pzu55J+1L._SL500_.jpg', alt: 'Carolina Pet Company Microfiber Tipped Bolster Bed Large' },
+    image: { src: 'https://m.media-amazon.com/images/I/51pzu55J+1L._SL500_.jpg', alt: 'Carolina Pet Comfy Cup Bolster Dog Bed' },
   },
 
   {
@@ -127,6 +162,7 @@ export const relaxationProducts: RelaxationProduct[] = [
     name: 'NOAH & PAW Orthopedic Cooling-Gel Dog Bed',
     category: 'orthopedic-beds',
     amazonUrl: 'https://www.amazon.com/dp/B0DS6BZRJ1/?tag=chill-dogs-20',
+    variantGroup: amazonSizes('B0DS6BZRJ1', [['Small','B0DS6CKTJM'], ['Medium','B0DS6DGD1Y'], ['Large','B0DS6BZRJ1'], ['X-Large','B0DS6B6S2R'], ['XX-Large','B0DS6D11TW']]),
     bullets: [
       'Cooling-gel memory foam adds a different feel from standard egg-crate beds without moving into specialty cooling products',
       'Waterproof inner cover and machine-washable outer layer keep the bed practical for dogs that use it heavily every day',
@@ -137,15 +173,18 @@ export const relaxationProducts: RelaxationProduct[] = [
   {
     id: 'rainmr-memory-foam-bed',
     asin: 'B0CJHWCDQZ',
-    name: 'Rainmr 7-Inch Memory Foam Dog Bed',
+    name: 'Rainmr Orthopedic Dog Bed for Large Dogs',
     category: 'orthopedic-beds',
     amazonUrl: 'https://www.amazon.com/dp/B0CJHWCDQZ/?tag=chill-dogs-20',
+    variantGroup: amazonSizes('B0CJHWCDQZ', [['48 × 30 in','B0CJHWCDQZ'], ['52 × 36 in','B0CJHYL3LP'], ['60 × 48 in','B0CJHTM9MF']]),
     bullets: [
-      'Seven-inch-thick memory-foam build gives larger dogs a deeper, flatter support surface than entry-level orthopedic beds',
-      'Durable microsuede-style cover, waterproof liner, and washable setup make it feel more substantial than a basic crate mat',
-      '48-by-30-inch size lands in a strong large-to-XL range for dogs that need more room without going all the way to giant sizes',
+      'Seven-inch-thick three layer high-density sponge and memory foam',
+      'Removable and washable microsuede cover',
+      'Waterproof liner',
+      'Non-slip bottom',
+      'Head rest',
     ],
-    image: { src: 'https://m.media-amazon.com/images/I/51+rRnzoUWL._SL500_.jpg', alt: 'Rainmr 7-Inch Memory Foam Dog Bed' },
+    image: { src: 'https://m.media-amazon.com/images/I/51+rRnzoUWL._SL500_.jpg', alt: 'Rainmr Orthopedic Dog Bed for Large Dogs' },
   },
   {
     id: 'eheyciga-xl-memory-foam-couch',
@@ -153,6 +192,7 @@ export const relaxationProducts: RelaxationProduct[] = [
     name: 'EHEYCIGA XL Memory Foam Dog Couch',
     category: 'orthopedic-beds',
     amazonUrl: 'https://www.amazon.com/dp/B0DF2LMWQJ/?tag=chill-dogs-20',
+    variantGroup: amazonSizes('B0DF2LMWQJ', [['30 × 20 in','B0DF2PYMMZ'], ['35 × 22 in','B0F2SVNR7B'], ['36 × 27 in','B0DF2QJP44'], ['41 × 27 in','B0F2SWDDLN'], ['42 × 30 in','B0DF2LMWQJ'], ['48 × 35 in','B0F2SWDZXF'], ['52 × 41 in','B0F2SYQR67']]),
     bullets: [
       '42-by-30-inch memory-foam couch bed blends a roomy sleep surface with sides that support chin-resting and curling',
       'Waterproof liner, washable cover, and nonskid bottom make it easy to use in high-traffic rooms with hard floors',
@@ -166,6 +206,7 @@ export const relaxationProducts: RelaxationProduct[] = [
     name: 'COZY KISS XL Orthopedic Bolster Sofa',
     category: 'orthopedic-beds',
     amazonUrl: 'https://www.amazon.com/dp/B0FWCBBH37/?tag=chill-dogs-20',
+    variantGroup: amazonSizes('B0FWCBBH37', [['30 × 20 in','B0FWC7YYWN'], ['36 × 27 in','B0FWC8MGF3'], ['44 × 32 in','B0FWCBBH37'], ['48 × 35 in','B0FWC6F486']]),
     bullets: [
       '44-by-32-inch bolster sofa gives larger dogs both head support and more sleeping room than compact couch beds',
       'Egg-crate foam base and removable washable cover keep it focused on support rather than just plushness',
@@ -176,28 +217,34 @@ export const relaxationProducts: RelaxationProduct[] = [
   {
     id: 'nupida-xl-crate-bed',
     asin: 'B0DC6P1VFN',
-    name: 'NUPIDA XL Waterproof Orthopedic Crate Bed',
+    name: 'NUPIDA Orthopedic Dog Bed',
     category: 'orthopedic-beds',
     amazonUrl: 'https://www.amazon.com/dp/B0DC6P1VFN/?tag=chill-dogs-20',
+    variantGroup: amazonSizes('B0DC6P1VFN', [['23 × 17 in','B0DC6PYGNN'], ['29 × 18 in','B0DC6PXF8N'], ['35 × 22 in','B0DC6PXDXH'], ['41 × 27 in','B0DC6P1VFN'], ['47 × 29 in','B0DC6P1TW5'], ['53 × 36 in','B0DC6N9L46']]),
     bullets: [
-      '41-by-27-inch quilting-style mattress is clearly shaped for crate floors and other tighter rectangular spaces',
-      'Removable washable cover and waterproof construction make it a practical kennel-bed upgrade over basic plush pads',
-      'Low-profile shape preserves more crate headroom than thick sofa beds with bolsters',
+      'Egg-crate foam',
+      'Removable and washable quilted velvet cover',
+      'Waterproof liner',
+      'Non-slip bottom',
     ],
-    image: { src: 'https://m.media-amazon.com/images/I/61PI03xB3aL._SL500_.jpg', alt: 'NUPIDA XL Waterproof Orthopedic Crate Bed' },
+    image: { src: 'https://m.media-amazon.com/images/I/61PI03xB3aL._SL500_.jpg', alt: 'NUPIDA Orthopedic Dog Bed' },
   },
   {
     id: 'dog-bed-wont-go-flat-crate-bed',
     asin: 'B0FY3YKBYZ',
-    name: 'Dog Bed That Won\'t Go Flat XXL Memory Foam Bed',
+    name: 'Farmhouse Orthopedic Dog Bed for Large Dogs',
     category: 'orthopedic-beds',
     amazonUrl: 'https://www.amazon.com/dp/B0FY3YKBYZ/?tag=chill-dogs-20',
     bullets: [
-      '45D orthopedic memory foam is aimed at bigger, heavier dogs that can flatten cheaper foam more quickly',
-      'Sized for 54-inch crates and giant breeds, giving it a clearer crate-use case than most generic orthopedic beds',
-      'Waterproof liner and removable washable cover make the heavy-duty build easier to maintain over time',
+      'Ultra high density 45D orthopedic memory foam',
+      'Removable and washable premium polyester quilted cover',
+      'Waterproof liner',
+      'Non-slip bottom',
+      'Head rest',
+      'Certified free of harmful chemicals',
+      'Made in USA',
     ],
-    image: { src: 'https://m.media-amazon.com/images/I/81ETe6FhZnL._SL500_.jpg', alt: 'Dog Bed That Won\'t Go Flat XXL Memory Foam Bed' },
+    image: { src: 'https://m.media-amazon.com/images/I/81ETe6FhZnL._SL500_.jpg', alt: 'Farmhouse Orthopedic Dog Bed for Large Dogs' },
   },
   {
     id: 'veehoo-xxl-memory-foam-bed',
@@ -205,6 +252,7 @@ export const relaxationProducts: RelaxationProduct[] = [
     name: 'Veehoo XXL Orthopedic Memory Foam Dog Bed',
     category: 'orthopedic-beds',
     amazonUrl: 'https://www.amazon.com/dp/B0F2MYP4L9/?tag=chill-dogs-20',
+    variantGroup: amazonSizes('B0F2MYP4L9', [['48 × 30 in','B0F2MZKY5Z'], ['52 × 36 in','B0F2MYP4L9']]),
     bullets: [
       'Seven-inch-thick XXL memory-foam bed offers one of the deeper support profiles in this orthopedic group',
       '52-by-36-inch size gives sprawling extra-large dogs more room to stretch fully without hanging off the edges',
@@ -218,6 +266,7 @@ export const relaxationProducts: RelaxationProduct[] = [
     name: 'NOAH & PAW Giant XXL Orthopedic Dog Bed',
     category: 'orthopedic-beds',
     amazonUrl: 'https://www.amazon.com/dp/B0DS6GN236/?tag=chill-dogs-20',
+    variantGroup: amazonSizes('B0DS6GN236', [['Small','B0DS6FBPWV'], ['Medium','B0DS6GB8YQ'], ['Large','B0DS6FW7GV'], ['X-Large','B0DS6G79J9'], ['XX-Large','B0DS6GN236']]),
     bullets: [
       '55-by-45-inch giant format gives very large dogs real sprawl room that few mainstream orthopedic beds match',
       'Cooling-gel memory foam, waterproof layers, and washable cover make the huge size more practical for daily living',
@@ -231,6 +280,7 @@ export const relaxationProducts: RelaxationProduct[] = [
     name: 'OhGeni Waterproof Orthopedic Dog Bed',
     category: 'orthopedic-beds',
     amazonUrl: 'https://www.amazon.com/dp/B0FY55X61J/?tag=chill-dogs-20',
+    variantGroup: amazonSizes('B0FY55X61J', [['30 × 20 in','B0FY55Y8ZF'], ['35 × 22 in','B0FY55NG3N','35 × 22 in, crate size'], ['36 × 27 in','B0FY52TWMC'], ['41 × 28 in','B0FY55X61J','41 × 28 in, crate size'], ['44 × 32 in','B0FY57TCFV'], ['47 × 29 in','B0FY4YWF5B','47 × 29 in, crate size']]),
     bullets: [
       '41-by-28-inch flat bed offers a useful large-dog or crate-friendly size at a lower price than many thicker sofa beds',
       'Washable removable cover, waterproof design, and carry handle make it practical for moving between rooms or crates',

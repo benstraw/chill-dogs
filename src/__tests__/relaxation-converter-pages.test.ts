@@ -437,6 +437,25 @@ describe('relaxation converter page config', () => {
     });
   });
 
+  it('puts a size picker on every orthopedic bed that has more than one size to offer (#390)', () => {
+    // These have no sibling sizes in the cached Amazon payload / Impact catalog, so they stay single listings.
+    const singleSize = new Set([
+      'dog-bed-wont-go-flat-crate-bed',
+      'zomisia-orthopedic-bed',
+      'zomisia-fluffy-egg-foam-bed',
+      'three-dog-ez-wash-softshell-bolster-bed',
+    ]);
+
+    for (const bed of getRelaxationProductsByCategory('orthopedic-beds')) {
+      const variants = bed.variantGroup ? getVariants({ variantGroup: bed.variantGroup }) : [];
+      if (singleSize.has(bed.id)) {
+        expect(bed.variantGroup, bed.id).toBeUndefined();
+      } else {
+        expect(variants.length, `${bed.id} should offer size buttons`).toBeGreaterThanOrEqual(2);
+      }
+    }
+  });
+
   it('keeps travel bed products in the travel-beds category', () => {
     const productIds = getRelaxationProductsByCategory('travel-beds').map((product) => product.id);
 

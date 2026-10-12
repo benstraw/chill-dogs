@@ -7,8 +7,10 @@ import type { RelaxationProduct } from './relaxation-products';
  *
  * Every bed is sold on Chewy as a family of per-size listings, so each record carries a size
  * `variantGroup`. The default variant is the listing the issue linked, and `offers` mirrors it.
- * Sizes are limited to the default colour and to listings Chewy showed as in stock when the
- * catalog was pulled; names, bullets and images are hand-written review copy, not provider text.
+ * Sizes are limited to the default colour. Beds with several sizes list the ones Chewy showed as in
+ * stock when the catalog was pulled; Veehoo X-Large and Berenlefe 78 × 47.3 in showed as out of
+ * stock then and are kept so every bed offers its sizes. Names, bullets and images are
+ * hand-written review copy, not provider text.
  */
 
 const CHEWY_TRACKING_BASE = 'https://chewy.sjv.io/c/7067825/3054490/32975';
@@ -27,7 +29,7 @@ function chewyOffer(canonicalUrl: string): AffiliateOffer {
   };
 }
 
-const sizeAxis = { id: 'dog-size', label: 'Size', hint: 'Measure your dog before choosing' } as const;
+export const sizeAxis = { id: 'dog-size', label: 'Size', hint: 'Measure your dog before choosing' } as const;
 
 export const chewyOrthopedicBeds: RelaxationProduct[] = [
   {
@@ -384,6 +386,23 @@ export const chewyOrthopedicBeds: RelaxationProduct[] = [
       'Washable cover makes it simple to refresh the bed',
     ],
     image: { src: 'https://image.chewy.com/catalog/general/images/laifug-orthopedic-memory-foam-dog-bed-gray-orchid-medium/img-564541._AC_SS500_V1_.jpg', alt: 'LaiFug Orthopedic Memory Foam Dog Bed' },
+    variantGroup: {
+      axis: sizeAxis,
+      defaultVariantId: 'medium',
+      variants: [
+        {
+          id: 'medium',
+          label: 'Medium',
+          offers: [chewyOffer('https://www.chewy.com/laifug-orthopedic-memory-foam-dog-bed/dp/907414')],
+        },
+        {
+          id: 'large',
+          label: 'Large',
+          note: 'Chewy sells the Large in Gray & blue rather than Gray Orchid.',
+          offers: [chewyOffer('https://www.chewy.com/laifug-orthopedic-memory-foam-dog-bed/dp/907406')],
+        },
+      ],
+    } satisfies ProductVariantGroup,
   },
   {
     id: 'kylinsure-orthopedic-pillow-bed',
@@ -439,6 +458,22 @@ export const chewyOrthopedicBeds: RelaxationProduct[] = [
       'Plush cover is removable and washable',
     ],
     image: { src: 'https://image.chewy.com/catalog/general/images/moe/068d11fe-8e6c-75c7-8000-a2a6d28ad00f._AC_SS500_V1_.jpg', alt: 'Veehoo Elevated Orthopedic Memory Foam Dog Bed' },
+    variantGroup: {
+      axis: sizeAxis,
+      defaultVariantId: 'large',
+      variants: [
+        {
+          id: 'large',
+          label: 'Large',
+          offers: [chewyOffer('https://www.chewy.com/veehoo-orthopedic-memory-foam/dp/3276798')],
+        },
+        {
+          id: 'x-large',
+          label: 'X-Large',
+          offers: [chewyOffer('https://www.chewy.com/veehoo-orthopedic-memory-foam/dp/3276806')],
+        },
+      ],
+    } satisfies ProductVariantGroup,
   },
   {
     id: 'berenlefe-oversized-lounge-bed',
@@ -451,6 +486,22 @@ export const chewyOrthopedicBeds: RelaxationProduct[] = [
       'Comes with a pillow and blanket and has a non-slip bottom; measure your space before ordering',
     ],
     image: { src: 'https://image.chewy.com/catalog/general/images/moe/069e0f77-cd05-7dba-8000-60241de1a9a7._AC_SS500_V1_.jpg', alt: 'Berenlefe Oversized Memory Foam Lounge Bed' },
+    variantGroup: {
+      axis: sizeAxis,
+      defaultVariantId: '70-9x45-in',
+      variants: [
+        {
+          id: '70-9x45-in',
+          label: '70.9 × 45 in',
+          offers: [chewyOffer('https://www.chewy.com/berenlefe-oversized-orthopedic-memory/dp/4177406')],
+        },
+        {
+          id: '78x47-3-in',
+          label: '78 × 47.3 in',
+          offers: [chewyOffer('https://www.chewy.com/berenlefe-oversized-orthopedic-memory/dp/4177430')],
+        },
+      ],
+    } satisfies ProductVariantGroup,
   },
   {
     id: 'timberdog-ruffrest-travel-bed',

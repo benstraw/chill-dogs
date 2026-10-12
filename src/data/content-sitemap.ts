@@ -678,7 +678,7 @@ export const staticSitemapSections: SitemapSection[] = [
           ROUTES.calmingHub,
         ],
         relatedLabel: 'Best Orthopedic Dog Beds',
-        heroProduct: comfortHero('rainmr-memory-foam-bed', 'Best Overall', 'Rainmr 7-Inch Memory Foam Dog Bed'),
+        heroProduct: comfortHero('rainmr-memory-foam-bed', 'Best Overall', 'Rainmr Orthopedic Dog Bed for Large Dogs'),
         pubDate: new Date('2026-03-18'),
       }),
       createSitemapPage({

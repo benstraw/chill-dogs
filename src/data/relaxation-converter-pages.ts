@@ -1213,7 +1213,7 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         id: 'flat-beds',
         heading: 'Flat Beds',
         intro:
-          'Flat slab, egg-crate, and crate-style beds keep the most usable sleeping area and fit cleanly along a wall or inside a crate.',
+          'Flat slab, egg-crate, and crate-style beds fit cleanly along a wall or inside a crate.',
         positionOffset: 0,
         columns: 3,
         alt: true,
