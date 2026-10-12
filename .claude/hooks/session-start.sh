@@ -146,21 +146,53 @@ for host in "${HOSTS[@]}"; do
   [ "$(host_state "$host")" = "BLOCKED" ] && blocked_hosts+=("$host")
 done
 
-# Runtime: Bun's fetch cannot complete the TLS handshake inside a proxy CONNECT
-# tunnel — it fails ECONNRESET against every allowlisted host, while Node's
-# fetch (with NODE_USE_ENV_PROXY=1) and curl succeed against the same hosts.
-# So in a proxied container the Bun-based scripts cannot make network calls
-# even when their hosts are reachable. Verified on bun 1.3.11.
+# Runtime: on bun 1.3.11, Bun's fetch failed the TLS handshake inside the
+# agent proxy's CONNECT tunnel (ECONNRESET) while curl succeeded. By bun 1.3.14
+# it works. Probe it rather than assume either way: any HTTP status from a host
+# curl already reached means Bun's fetch can use the proxy.
 bun_net_broken=false
-[ -n "${HTTPS_PROXY:-}" ] && bun_net_broken=true
+if [ -n "${HTTPS_PROXY:-}" ]; then
+  bun_probe_host=""
+  for host in "${HOSTS[@]}"; do
+    if [ "$(host_state "$host")" = "reachable" ]; then
+      bun_probe_host="$host"
+      break
+    fi
+  done
+  if [ -n "$bun_probe_host" ] && ! timeout 15 bun -e "
+    await fetch('https://${bun_probe_host}', { method: 'HEAD', signal: AbortSignal.timeout(10000) });
+  " >/dev/null 2>&1; then
+    bun_net_broken=true
+  fi
+fi
+
+# Impact auth: IMPACT_AUTH_TOKEN in the env (local .env, GitHub Actions), or a
+# Basic "API credential" for api.impact.com that the agent proxy adds to
+# requests, so the token never reaches the container. A credential cannot be
+# seen from here, so probe for it: an unauthenticated request that comes back
+# 200 means the proxy authenticated it.
+impact_auth=missing
+if [ -n "${IMPACT_AUTH_TOKEN:-}" ]; then
+  impact_auth=token
+elif [ -n "${HTTPS_PROXY:-}" ] && [ -n "${IMPACT_ACCOUNT_SID:-}" ] && [ -n "${CHEWY_IMPACT_CAMPAIGN_ID:-}" ] \
+  && [ "$(host_state api.impact.com)" = "reachable" ]; then
+  impact_status="$(curl -sS -o /dev/null -w '%{http_code}' -m 10 -H 'Accept: application/json' \
+    "https://api.impact.com/Mediapartners/${IMPACT_ACCOUNT_SID}/Campaigns/${CHEWY_IMPACT_CAMPAIGN_ID}" 2>/dev/null || true)"
+  [ "$impact_status" = "200" ] && impact_auth=proxy-credential
+fi
 
 # report_script <label> <runtime: bun|node|none> <host or -> [env keys...]
+# The pseudo-key @impact_auth is satisfied by either form of Impact auth above.
 report_script() {
   local label="$1" runtime="$2" host="$3"
   shift 3
   local missing=()
   for key in "$@"; do
-    [ -z "${!key:-}" ] && missing+=("$key")
+    if [ "$key" = "@impact_auth" ]; then
+      [ "$impact_auth" = missing ] && missing+=("IMPACT_AUTH_TOKEN (or an api.impact.com API credential)")
+    else
+      [ -z "${!key:-}" ] && missing+=("$key")
+    fi
   done
 
   if [ ${#missing[@]} -gt 0 ]; then
@@ -168,17 +200,19 @@ report_script() {
   elif [ "$host" != "-" ] && [ "$(host_state "$host")" = "BLOCKED" ]; then
     echo "[chill-dogs]   blocked:  $label — $host is off the network allowlist"
   elif [ "$host" != "-" ] && [ "$runtime" = "bun" ] && [ "$bun_net_broken" = true ]; then
-    echo "[chill-dogs]   no-proxy: $label — bun fetch cannot use this container's proxy"
+    echo "[chill-dogs]   no-proxy: $label — bun fetch failed through this container's proxy (probe)"
   else
-    echo "[chill-dogs]   ready:    $label"
+    local via=""
+    [[ " $* " == *" @impact_auth "* ]] && via=" (auth: $impact_auth)"
+    echo "[chill-dogs]   ready:    $label$via"
   fi
 }
 
 echo "[chill-dogs] Integration script readiness:"
 report_script "bun run check:amazon (local cache only)" none -
 report_script "bun run check:asins" bun www.amazon.com
-report_script "bun run fetch:chewy" bun api.impact.com IMPACT_ACCOUNT_SID IMPACT_AUTH_TOKEN CHEWY_IMPACT_CAMPAIGN_ID
-report_script "bun run chewy-link" bun api.impact.com IMPACT_ACCOUNT_SID IMPACT_AUTH_TOKEN CHEWY_IMPACT_CAMPAIGN_ID CHEWY_IMPACT_AD_ID
+report_script "bun run fetch:chewy" bun api.impact.com IMPACT_ACCOUNT_SID CHEWY_IMPACT_CAMPAIGN_ID @impact_auth
+report_script "bun run chewy-link" bun api.impact.com IMPACT_ACCOUNT_SID CHEWY_IMPACT_CAMPAIGN_ID CHEWY_IMPACT_AD_ID @impact_auth
 report_script "scripts/fetch-amazon-data.ts (SerpAPI)" bun serpapi.com SERP_API_KEY
 report_script "scripts/fetch-amazon-data.ts (SearchAPI)" bun www.searchapi.io SEARCHAPI_KEY
 report_script "bun run indexnow:submit" node api.indexnow.org INDEXNOW_KEY

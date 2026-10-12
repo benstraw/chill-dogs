@@ -168,7 +168,8 @@ Usage:
 
 Environment variables:
   IMPACT_ACCOUNT_SID
-  IMPACT_AUTH_TOKEN
+  IMPACT_AUTH_TOKEN         (optional behind an HTTPS proxy that adds Impact auth,
+                             e.g. a Claude Code cloud environment API credential)
   CHEWY_IMPACT_CAMPAIGN_ID
   CHEWY_IMPACT_CATALOG_ID
 `);

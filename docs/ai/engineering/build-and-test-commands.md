@@ -3,7 +3,7 @@ title: Build and Test Commands
 type: canonical
 domain: engineering
 status: active
-updated: 2026-05-06
+updated: 2026-10-05
 tags:
   - chill-dogs
   - engineering
@@ -108,7 +108,7 @@ Results split into two kinds, because they call for different responses:
 
 Exits 1 on any dead link, and also when more than 25% of results are inconclusive — a run that could not see Amazon has not verified anything, and reporting it as a pass would be worse than reporting nothing. Amazon throttles unauthenticated traffic from shared CI runner IPs, so the inconclusive path is normal there, not a bug.
 
-**Cannot run in a proxied agent container** — it runs under Bun. See [`environment-and-integrations.md`](environment-and-integrations.md).
+**Runs in a proxied agent container** on current Bun, as long as `www.amazon.com` is allowlisted, though Amazon serves most container requests a CAPTCHA, so results are mostly inconclusive. Older Bun (1.3.11) could not use the agent proxy, and the session-start hook flags it as `no-proxy` if that comes back. See [`environment-and-integrations.md`](environment-and-integrations.md).
 
 ---
 
@@ -173,7 +173,7 @@ bun run fetch:chewy --stale --days 60   # Refresh only stale cache entries
 bun run fetch:chewy --clear-cache
 ```
 
-**Env vars needed:** `IMPACT_ACCOUNT_SID`, `IMPACT_AUTH_TOKEN`, `CHEWY_IMPACT_CAMPAIGN_ID`. Optional `CHEWY_IMPACT_CATALOG_ID` sets a default for `--catalog-id`.
+**Env vars needed:** `IMPACT_ACCOUNT_SID`, `CHEWY_IMPACT_CAMPAIGN_ID`, and `IMPACT_AUTH_TOKEN` unless a cloud environment API credential supplies Impact auth (see [Impact auth](environment-and-integrations.md#impact-auth)). Optional `CHEWY_IMPACT_CATALOG_ID` sets a default for `--catalog-id`.
 
 ---
 
@@ -187,7 +187,7 @@ bun run chewy-link:verify          # Confirm Impact credentials resolve
 bun run chewy-link:csv input.csv   # Batch-convert a CSV of Chewy URLs
 ```
 
-**Env vars needed:** `IMPACT_ACCOUNT_SID`, `IMPACT_AUTH_TOKEN`, `CHEWY_IMPACT_CAMPAIGN_ID`, `CHEWY_IMPACT_AD_ID`. Setting `CHEWY_IMPACT_BASE_URL` to a pre-resolved tracking base skips the Impact API round trip.
+**Env vars needed:** `IMPACT_ACCOUNT_SID`, `CHEWY_IMPACT_CAMPAIGN_ID`, `CHEWY_IMPACT_AD_ID`, and `IMPACT_AUTH_TOKEN` unless a cloud environment API credential supplies Impact auth (see [Impact auth](environment-and-integrations.md#impact-auth)). Setting `CHEWY_IMPACT_BASE_URL` to a pre-resolved tracking base skips the Impact API round trip.
 
 ---
 

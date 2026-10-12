@@ -19,6 +19,8 @@ CHEWY_IMPACT_BASE_URL=""
 
 `IMPACT_ACCOUNT_SID` is the Basic Auth username and `IMPACT_AUTH_TOKEN` is the password. Create them in Impact under user profile settings, Technical, API. Use read-only scopes for this tooling.
 
+In a Claude Code cloud environment, leave `IMPACT_AUTH_TOKEN` out of the env vars and add a **Basic** API credential for `api.impact.com` instead (username = Account SID, password = Auth Token). The agent proxy then authenticates requests and the token never enters the container. See `docs/ai/engineering/environment-and-integrations.md#impact-auth`.
+
 Leave unknown values blank or omit the line. Do not use placeholders like `...` or `<catalog-id>` in `.env`.
 
 Find the Chewy campaign/program ID from Impact's joined programs list or dashboard. Find the ad ID from the Chewy ad/asset used as the base tracking link. Find the catalog ID by running:
