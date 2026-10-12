@@ -249,16 +249,17 @@ export const relaxationProducts: RelaxationProduct[] = [
   {
     id: 'veehoo-xxl-memory-foam-bed',
     asin: 'B0F2MYP4L9',
-    name: 'Veehoo XXL Orthopedic Memory Foam Dog Bed',
+    name: 'Veehoo Orthopedic Memory Foam Dog Bed for Large Dogs',
     category: 'orthopedic-beds',
     amazonUrl: 'https://www.amazon.com/dp/B0F2MYP4L9/?tag=chill-dogs-20',
     variantGroup: amazonSizes('B0F2MYP4L9', [['48 × 30 in','B0F2MZKY5Z'], ['52 × 36 in','B0F2MYP4L9']]),
     bullets: [
-      'Seven-inch-thick XXL memory-foam bed offers one of the deeper support profiles in this orthopedic group',
-      '52-by-36-inch size gives sprawling extra-large dogs more room to stretch fully without hanging off the edges',
-      'Waterproof liner and removable washable cover make the oversized format more practical for everyday use',
+      '7 inch thick memory foam',
+      'Removable and washable ultra-soft faux fur cover',
+      'Waterproof liner',
+      'Non-slip bottom',
     ],
-    image: { src: 'https://m.media-amazon.com/images/I/719owAZ3tDL._SL500_.jpg', alt: 'Veehoo XXL Orthopedic Memory Foam Dog Bed' },
+    image: { src: 'https://m.media-amazon.com/images/I/719owAZ3tDL._SL500_.jpg', alt: 'Veehoo Orthopedic Memory Foam Dog Bed for Large Dogs' },
   },
   {
     id: 'noah-paw-giant-orthopedic-bed',
@@ -277,16 +278,19 @@ export const relaxationProducts: RelaxationProduct[] = [
   {
     id: 'ohgeni-orthopedic-bed',
     asin: 'B0FY55X61J',
-    name: 'OhGeni Waterproof Orthopedic Dog Bed',
+    name: 'OhGeni Orthopedic Dog Bed',
     category: 'orthopedic-beds',
     amazonUrl: 'https://www.amazon.com/dp/B0FY55X61J/?tag=chill-dogs-20',
     variantGroup: amazonSizes('B0FY55X61J', [['30 × 20 in','B0FY55Y8ZF'], ['35 × 22 in','B0FY55NG3N','35 × 22 in, crate size'], ['36 × 27 in','B0FY52TWMC'], ['41 × 28 in','B0FY55X61J','41 × 28 in, crate size'], ['44 × 32 in','B0FY57TCFV'], ['47 × 29 in','B0FY4YWF5B','47 × 29 in, crate size']]),
     bullets: [
-      '41-by-28-inch flat bed offers a useful large-dog or crate-friendly size at a lower price than many thicker sofa beds',
-      'Washable removable cover, waterproof design, and carry handle make it practical for moving between rooms or crates',
-      'High-density egg-crate foam keeps the design more supportive than a basic pillow mat without making it bulky',
+      'Dual-sided design: High density egg-crate foam and 32D memory foam',
+      'Removable and washable flannel fabric cover',
+      'Waterproof liner',
+      'Non-slip bottom',
+      'Carrying handle',
+      'Certified non-toxic materials',
     ],
-    image: { src: 'https://m.media-amazon.com/images/I/81SARwcv6oL._SL500_.jpg', alt: 'OhGeni Waterproof Orthopedic Dog Bed' },
+    image: { src: 'https://m.media-amazon.com/images/I/81SARwcv6oL._SL500_.jpg', alt: 'OhGeni Orthopedic Dog Bed' },
   },
 
   // ── Travel Beds ───────────────────────────────────────────────────────────

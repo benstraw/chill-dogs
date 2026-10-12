@@ -377,15 +377,15 @@ export const chewyOrthopedicBeds: RelaxationProduct[] = [
   },
   {
     id: 'laifug-orthopedic-memory-foam-bed',
-    name: 'LaiFug Orthopedic Memory Foam Dog Bed',
+    name: 'LaiFug Orthopedic Dog Bed',
     category: 'orthopedic-beds',
     offers: [chewyOffer('https://www.chewy.com/laifug-orthopedic-memory-foam-dog-bed/dp/907414')],
     bullets: [
-      'High-density memory foam paired with a two-inch foam layer springs back to full after use',
-      'Soft removable cover sits over a waterproof liner to protect the foam',
-      'Washable cover makes it simple to refresh the bed',
+      'Two inches of orthopedic foam topped by two inches of high density memory foam',
+      'Removable and washable cover',
+      'Waterproof liner',
     ],
-    image: { src: 'https://image.chewy.com/catalog/general/images/laifug-orthopedic-memory-foam-dog-bed-gray-orchid-medium/img-564541._AC_SS500_V1_.jpg', alt: 'LaiFug Orthopedic Memory Foam Dog Bed' },
+    image: { src: 'https://image.chewy.com/catalog/general/images/laifug-orthopedic-memory-foam-dog-bed-gray-orchid-medium/img-564541._AC_SS500_V1_.jpg', alt: 'LaiFug Orthopedic Dog Bed' },
     variantGroup: {
       axis: sizeAxis,
       defaultVariantId: 'medium',
