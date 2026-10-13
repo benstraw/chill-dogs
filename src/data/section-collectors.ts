@@ -353,6 +353,7 @@ export const sectionCollectorDefinitions: Record<SectionCollectorKey, SectionCol
       ROUTES.coolingHydration,
     ],
     articlePriority: [
+      ROUTES.aorkulerReview,
       ROUTES.fiCollarReview,
       ROUTES.garminTracking,
       ROUTES.airtagForDogs,
