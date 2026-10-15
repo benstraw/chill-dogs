@@ -192,7 +192,6 @@ export const PUBLISHED_PRODUCT_IDS: readonly string[] = [
   'nitecore-nu20-classic-headlamp',
   'nitecore-nu25-headlamp',
   'njkpuyt-flea-collar-small-4pack',
-  'noah-paw-denim-collection-bed',
   'noah-paw-denim-orthopedic-bed',
   'noah-paw-giant-orthopedic-bed',
   'noah-paw-velvet-orthopedic-bed',
