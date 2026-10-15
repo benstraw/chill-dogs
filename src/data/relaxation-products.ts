@@ -1,6 +1,14 @@
-import type { AffiliateOffer } from './products/types';
+import { chewyOffer, chewyOrthopedicBeds, sizeAxis } from './chewy-orthopedic-beds';
+import type { AffiliateOffer, ProductVariantGroup } from './products/types';
 
-export type RelaxationProductCategory = 'calming-beds' | 'orthopedic-beds' | 'crates' | 'travel-beds' | 'carriers' | 'travel-bags';
+export type RelaxationProductCategory =
+  | 'calming-beds'
+  | 'orthopedic-beds'
+  | 'chew-resistant-beds'
+  | 'crates'
+  | 'travel-beds'
+  | 'carriers'
+  | 'travel-bags';
 
 export interface RelaxationProduct {
   id: string;
@@ -9,9 +17,57 @@ export interface RelaxationProduct {
   category: RelaxationProductCategory;
   amazonUrl?: string;
   offers?: AffiliateOffer[];
+  variantGroup?: ProductVariantGroup;
   bullets: string[];
   image?: { src: string; alt: string };
   images?: readonly { src: string; alt: string }[];
+}
+
+const AMAZON_TAG = 'chill-dogs-20';
+
+function amazonSizeOffer(asin: string): AffiliateOffer {
+  return {
+    merchant: 'amazon',
+    asin,
+    merchantProductId: asin,
+    url: `https://www.amazon.com/dp/${asin}/?tag=${AMAZON_TAG}`,
+    status: 'active',
+  };
+}
+
+/**
+ * Size picker over Amazon's own sibling ASINs, taken from each product's cached payload
+ * (`variants` -> Size) in the default colour. `[label, asin, longLabel?]`, smallest first.
+ */
+function amazonSizes(defaultAsin: string, sizes: ReadonlyArray<readonly [string, string, string?]>): ProductVariantGroup {
+  const idOf = (label: string) => label.toLowerCase().replace(/ × /g, 'x').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  const fallback = sizes.find(([, asin]) => asin === defaultAsin);
+  if (!fallback) throw new Error(`Default ASIN ${defaultAsin} is not in its size list`);
+
+  return {
+    axis: sizeAxis,
+    defaultVariantId: idOf(fallback[0]),
+    variants: sizes.map(([label, asin, longLabel]) => ({
+      id: idOf(label),
+      label,
+      ...(longLabel ? { longLabel } : {}),
+      offers: [amazonSizeOffer(asin)],
+    })),
+  };
+}
+
+const NOAH_PAW_DENIM_CHEWY = 'https://www.chewy.com/noah-paw-denim-collection-orthopedic/dp/';
+
+/** Adds a Chewy listing to each size of an Amazon size picker, keyed by variant id. */
+function withChewyOffers(group: ProductVariantGroup, chewyUrls: Record<string, string>): ProductVariantGroup {
+  return {
+    ...group,
+    variants: group.variants.map((variant) => {
+      const url = chewyUrls[variant.id];
+      if (!url) throw new Error(`No Chewy listing for variant ${variant.id}`);
+      return { ...variant, offers: [...variant.offers, chewyOffer(url)] };
+    }),
+  };
 }
 
 export const relaxationProducts: RelaxationProduct[] = [
@@ -69,54 +125,16 @@ export const relaxationProducts: RelaxationProduct[] = [
     ],
     image: { src: 'https://m.media-amazon.com/images/I/51zWC7FVLdL._SL500_.jpg', alt: 'Carolina Pet Company Microfiber Tipped Bolster Bed' },
   },
-  {
-    id: 'invenho-orthopedic-couch-bed',
-    asin: 'B0D5B56X9V',
-    name: 'INVENHO Orthopedic Dog Couch Bed',
-    category: 'orthopedic-beds',
-    amazonUrl: 'https://www.amazon.com/dp/B0D5B56X9V/?tag=chill-dogs-20',
-    bullets: [
-      'Egg-crate foam base distributes body weight more evenly than flat poly fill',
-      'Waterproof lining and washable removable cover make cleanup practical for daily use',
-      'Couch-style profile with raised back gives dogs a surface to rest against during sleep',
-    ],
-    image: { src: 'https://m.media-amazon.com/images/I/610mMpDp39L._SL500_.jpg', alt: 'INVENHO Orthopedic Dog Couch Bed' },
-  },
-  {
-    id: 'bedsure-comfyfleece-orthopedic',
-    asin: 'B0DTH4195V',
-    name: 'Bedsure ComfyFleece Orthopedic Dog Bed with Sides',
-    category: 'orthopedic-beds',
-    amazonUrl: 'https://www.amazon.com/dp/B0DTH4195V/?tag=chill-dogs-20',
-    bullets: [
-      'Memory foam and egg-crate base combined in a sofa-style profile with raised sides',
-      'ComfyFleece corduroy cover adds texture and warmth without trapping excess heat',
-      'Non-slip bottom keeps the bed stable on hardwood and tile floors',
-    ],
-    image: { src: 'https://m.media-amazon.com/images/I/81-9n7k4bTL._SL500_.jpg', alt: 'Bedsure ComfyFleece Orthopedic Dog Bed with Sides' },
-  },
 
   // ── Orthopedic Beds ───────────────────────────────────────────────────────
 
-  {
-    id: 'invenho-orthopedic-bed',
-    asin: 'B0CCDVNH7N',
-    name: 'INVENHO Washable Orthopedic Dog Bed',
-    category: 'orthopedic-beds',
-    amazonUrl: 'https://www.amazon.com/dp/B0CCDVNH7N/?tag=chill-dogs-20',
-    bullets: [
-      'Orthopedic foam base reduces pressure on joints during extended rest periods',
-      'Anti-slip bottom keeps the bed from shifting on hardwood, tile, or vinyl floors',
-      'Fully washable construction — cover and foam — for dogs who spend a lot of time in their bed',
-    ],
-    image: { src: 'https://m.media-amazon.com/images/I/71UWPGl3COL._SL500_.jpg', alt: 'INVENHO Washable Orthopedic Dog Bed' },
-  },
   {
     id: 'anti-anxiety-orthopedic-bed',
     asin: 'B097XMD33D',
     name: 'Anti-Anxiety Orthopedic Dog Bed with Bolster',
     category: 'orthopedic-beds',
     amazonUrl: 'https://www.amazon.com/dp/B097XMD33D/?tag=chill-dogs-20',
+    variantGroup: amazonSizes('B097XMD33D', [['23 × 23 in','B097XMD33D','Small, 23 × 23 in'], ['26 × 26 in','B097XBWQX7','Medium, 26 × 26 in']]),
     bullets: [
       'Orthopedic base combined with raised bolster sides addresses both comfort and security in one bed',
       'Attached design means the bolster and base stay together — no separating components',
@@ -138,30 +156,167 @@ export const relaxationProducts: RelaxationProduct[] = [
     image: { src: 'https://m.media-amazon.com/images/I/71bAiTc5GCL._SL500_.jpg', alt: 'ZOMISIA Orthopedic Dog Bed for Large Dogs' },
   },
   {
-    id: 'cwawz-orthopedic-bolster',
-    asin: 'B0FGX7Q8DD',
-    name: 'CWAWZ Orthopedic Dog Bed with Full-Surround Bolsters',
-    category: 'orthopedic-beds',
-    amazonUrl: 'https://www.amazon.com/dp/B0FGX7Q8DD/?tag=chill-dogs-20',
-    bullets: [
-      'Full-surround bolster raises all four edges, creating a completely enclosed resting space',
-      'Dual-sided construction gives you two surface options as materials wear differently over time',
-      'Orthopedic foam base supports the body while the bolster perimeter supports resting heads and necks',
-    ],
-    image: { src: 'https://m.media-amazon.com/images/I/71wdK2f8JkL._SL500_.jpg', alt: 'CWAWZ Orthopedic Dog Bed with Full-Surround Bolsters' },
-  },
-  {
     id: 'carolina-pet-bolster-lg',
     asin: 'B0DCGQLJJ8',
-    name: 'Carolina Pet Company Microfiber Tipped Bolster Bed (Large)',
+    name: 'Carolina Pet Comfy Cup Bolster Dog Bed',
     category: 'orthopedic-beds',
     amazonUrl: 'https://www.amazon.com/dp/B0DCGQLJJ8/?tag=chill-dogs-20',
+    variantGroup: amazonSizes('B0DCGQLJJ8', [['Small','B0DCGQLJJ8'], ['Medium','B0DCGKQQ64'], ['Large','B0DCGR7YKR']]),
     bullets: [
       'Microfiber fill compresses more slowly than poly fill, keeping the sleeping surface supportive longer',
       'Bolster profile is lower than a full donut, making it accessible for dogs who prefer a gentle edge',
       'Quality construction from a US-based pet bed manufacturer with consistent sizing',
     ],
-    image: { src: 'https://m.media-amazon.com/images/I/51pzu55J+1L._SL500_.jpg', alt: 'Carolina Pet Company Microfiber Tipped Bolster Bed Large' },
+    image: { src: 'https://m.media-amazon.com/images/I/51pzu55J+1L._SL500_.jpg', alt: 'Carolina Pet Comfy Cup Bolster Dog Bed' },
+  },
+
+  {
+    id: 'noah-paw-denim-orthopedic-bed',
+    asin: 'B0DS6BZRJ1',
+    name: 'NOAH & PAW Orthopedic Cooling-Gel Dog Bed',
+    category: 'orthopedic-beds',
+    amazonUrl: 'https://www.amazon.com/dp/B0DS6BZRJ1/?tag=chill-dogs-20',
+    // One bed, two merchants: the Amazon and Chewy denim listings are the same product (#393).
+    offers: [chewyOffer(`${NOAH_PAW_DENIM_CHEWY}1971350`)],
+    variantGroup: withChewyOffers(
+      amazonSizes('B0DS6BZRJ1', [['Small','B0DS6CKTJM'], ['Medium','B0DS6DGD1Y'], ['Large','B0DS6BZRJ1'], ['X-Large','B0DS6B6S2R'], ['XX-Large','B0DS6D11TW']]),
+      {
+        small: `${NOAH_PAW_DENIM_CHEWY}1971270`,
+        medium: `${NOAH_PAW_DENIM_CHEWY}1971318`,
+        large: `${NOAH_PAW_DENIM_CHEWY}1971350`,
+        'x-large': `${NOAH_PAW_DENIM_CHEWY}1971382`,
+        'xx-large': `${NOAH_PAW_DENIM_CHEWY}1971414`,
+      },
+    ),
+    bullets: [
+      '6 inch thick base: a 3 layer, 4 inch base of 30D foam with 1 inch of memory foam and 1 inch of eggshell foam infused with cooling gel',
+      'Removable and washable cover',
+      'Removable and washable waterproof liner',
+      'Headrest',
+    ],
+    image: { src: 'https://m.media-amazon.com/images/I/61gtogsyrOL._SL500_.jpg', alt: 'NOAH & PAW Orthopedic Cooling-Gel Dog Bed' },
+  },
+  {
+    id: 'rainmr-memory-foam-bed',
+    asin: 'B0CJHWCDQZ',
+    name: 'Rainmr Orthopedic Dog Bed for Large Dogs',
+    category: 'orthopedic-beds',
+    amazonUrl: 'https://www.amazon.com/dp/B0CJHWCDQZ/?tag=chill-dogs-20',
+    variantGroup: amazonSizes('B0CJHWCDQZ', [['48 × 30 in','B0CJHWCDQZ'], ['52 × 36 in','B0CJHYL3LP'], ['60 × 48 in','B0CJHTM9MF']]),
+    bullets: [
+      'Seven-inch-thick three layer high-density sponge and memory foam',
+      'Removable and washable microsuede cover',
+      'Waterproof liner',
+      'Non-slip bottom',
+      'Head rest',
+    ],
+    image: { src: 'https://m.media-amazon.com/images/I/51+rRnzoUWL._SL500_.jpg', alt: 'Rainmr Orthopedic Dog Bed for Large Dogs' },
+  },
+  {
+    id: 'eheyciga-xl-memory-foam-couch',
+    asin: 'B0DF2LMWQJ',
+    name: 'EHEYCIGA XL Memory Foam Dog Couch',
+    category: 'orthopedic-beds',
+    amazonUrl: 'https://www.amazon.com/dp/B0DF2LMWQJ/?tag=chill-dogs-20',
+    variantGroup: amazonSizes('B0DF2LMWQJ', [['30 × 20 in','B0DF2PYMMZ'], ['35 × 22 in','B0F2SVNR7B'], ['36 × 27 in','B0DF2QJP44'], ['41 × 27 in','B0F2SWDDLN'], ['42 × 30 in','B0DF2LMWQJ'], ['48 × 35 in','B0F2SWDZXF'], ['52 × 41 in','B0F2SYQR67']]),
+    bullets: [
+      '42-by-30-inch memory-foam couch bed blends a roomy sleep surface with sides that support chin-resting and curling',
+      'Waterproof liner, washable cover, and nonskid bottom make it easy to use in high-traffic rooms with hard floors',
+      'Sofa profile sits between a flat lounger and a fully enclosed bolster bed, which makes it a versatile middle-ground pick',
+    ],
+    image: { src: 'https://m.media-amazon.com/images/I/710s6MvJO+L._SL500_.jpg', alt: 'EHEYCIGA XL Memory Foam Dog Couch' },
+  },
+  {
+    id: 'cozy-kiss-xl-bolster-bed',
+    asin: 'B0FWCBBH37',
+    name: 'COZY KISS XL Orthopedic Bolster Sofa',
+    category: 'orthopedic-beds',
+    amazonUrl: 'https://www.amazon.com/dp/B0FWCBBH37/?tag=chill-dogs-20',
+    variantGroup: amazonSizes('B0FWCBBH37', [['30 × 20 in','B0FWC7YYWN'], ['36 × 27 in','B0FWC8MGF3'], ['44 × 32 in','B0FWCBBH37'], ['48 × 35 in','B0FWC6F486']]),
+    bullets: [
+      '44-by-32-inch bolster sofa gives larger dogs both head support and more sleeping room than compact couch beds',
+      'Egg-crate foam base and removable washable cover keep it focused on support rather than just plushness',
+      'Lower price than many similarly sized bolster sofas makes it useful when you want a roomy couch shape on a firmer budget',
+    ],
+    image: { src: 'https://m.media-amazon.com/images/I/71k4rbTFp1L._SL500_.jpg', alt: 'COZY KISS XL Orthopedic Bolster Sofa' },
+  },
+  {
+    id: 'nupida-xl-crate-bed',
+    asin: 'B0DC6P1VFN',
+    name: 'NUPIDA Orthopedic Dog Bed',
+    category: 'orthopedic-beds',
+    amazonUrl: 'https://www.amazon.com/dp/B0DC6P1VFN/?tag=chill-dogs-20',
+    variantGroup: amazonSizes('B0DC6P1VFN', [['23 × 17 in','B0DC6PYGNN'], ['29 × 18 in','B0DC6PXF8N'], ['35 × 22 in','B0DC6PXDXH'], ['41 × 27 in','B0DC6P1VFN'], ['47 × 29 in','B0DC6P1TW5'], ['53 × 36 in','B0DC6N9L46']]),
+    bullets: [
+      'Egg-crate foam',
+      'Removable and washable quilted velvet cover',
+      'Waterproof liner',
+      'Non-slip bottom',
+    ],
+    image: { src: 'https://m.media-amazon.com/images/I/61PI03xB3aL._SL500_.jpg', alt: 'NUPIDA Orthopedic Dog Bed' },
+  },
+  {
+    id: 'dog-bed-wont-go-flat-crate-bed',
+    asin: 'B0FY3YKBYZ',
+    name: 'Farmhouse Orthopedic Dog Bed for Large Dogs',
+    category: 'orthopedic-beds',
+    amazonUrl: 'https://www.amazon.com/dp/B0FY3YKBYZ/?tag=chill-dogs-20',
+    bullets: [
+      'Ultra high density 45D orthopedic memory foam',
+      'Removable and washable premium polyester quilted cover',
+      'Waterproof liner',
+      'Non-slip bottom',
+      'Head rest',
+      'Certified free of harmful chemicals',
+      'Made in USA',
+    ],
+    image: { src: 'https://m.media-amazon.com/images/I/81ETe6FhZnL._SL500_.jpg', alt: 'Farmhouse Orthopedic Dog Bed for Large Dogs' },
+  },
+  {
+    id: 'veehoo-xxl-memory-foam-bed',
+    asin: 'B0F2MYP4L9',
+    name: 'Veehoo Orthopedic Memory Foam Dog Bed for Large Dogs',
+    category: 'orthopedic-beds',
+    amazonUrl: 'https://www.amazon.com/dp/B0F2MYP4L9/?tag=chill-dogs-20',
+    variantGroup: amazonSizes('B0F2MYP4L9', [['48 × 30 in','B0F2MZKY5Z'], ['52 × 36 in','B0F2MYP4L9']]),
+    bullets: [
+      '7 inch thick memory foam',
+      'Removable and washable ultra-soft faux fur cover',
+      'Waterproof liner',
+      'Non-slip bottom',
+    ],
+    image: { src: 'https://m.media-amazon.com/images/I/719owAZ3tDL._SL500_.jpg', alt: 'Veehoo Orthopedic Memory Foam Dog Bed for Large Dogs' },
+  },
+  {
+    id: 'noah-paw-giant-orthopedic-bed',
+    asin: 'B0DS6GN236',
+    name: 'NOAH & PAW Giant XXL Orthopedic Dog Bed',
+    category: 'orthopedic-beds',
+    amazonUrl: 'https://www.amazon.com/dp/B0DS6GN236/?tag=chill-dogs-20',
+    variantGroup: amazonSizes('B0DS6GN236', [['Small','B0DS6FBPWV'], ['Medium','B0DS6GB8YQ'], ['Large','B0DS6FW7GV'], ['X-Large','B0DS6G79J9'], ['XX-Large','B0DS6GN236']]),
+    bullets: [
+      '55-by-45-inch giant format gives very large dogs real sprawl room that few mainstream orthopedic beds match',
+      'Cooling-gel memory foam, waterproof layers, and washable cover make the huge size more practical for daily living',
+      'Sofa-style shape keeps some edge definition without shrinking the center sleeping area too aggressively',
+    ],
+    image: { src: 'https://m.media-amazon.com/images/I/61h2l0wFQWL._SL500_.jpg', alt: 'NOAH & PAW Giant XXL Orthopedic Dog Bed' },
+  },
+  {
+    id: 'ohgeni-orthopedic-bed',
+    asin: 'B0FY55X61J',
+    name: 'OhGeni Orthopedic Dog Bed',
+    category: 'orthopedic-beds',
+    amazonUrl: 'https://www.amazon.com/dp/B0FY55X61J/?tag=chill-dogs-20',
+    variantGroup: amazonSizes('B0FY55X61J', [['30 × 20 in','B0FY55Y8ZF'], ['35 × 22 in','B0FY55NG3N','35 × 22 in, crate size'], ['36 × 27 in','B0FY52TWMC'], ['41 × 28 in','B0FY55X61J','41 × 28 in, crate size'], ['44 × 32 in','B0FY57TCFV'], ['47 × 29 in','B0FY4YWF5B','47 × 29 in, crate size']]),
+    bullets: [
+      'Dual-sided design: High density egg-crate foam and 32D memory foam',
+      'Removable and washable flannel fabric cover',
+      'Waterproof liner',
+      'Non-slip bottom',
+      'Carrying handle',
+      'Certified non-toxic materials',
+    ],
+    image: { src: 'https://m.media-amazon.com/images/I/81SARwcv6oL._SL500_.jpg', alt: 'OhGeni Orthopedic Dog Bed' },
   },
 
   // ── Travel Beds ───────────────────────────────────────────────────────────
@@ -178,6 +333,153 @@ export const relaxationProducts: RelaxationProduct[] = [
       'Cushioned plush interior gives dogs a consistent, familiar sleep surface at every stop',
     ],
     image: { src: 'https://m.media-amazon.com/images/I/71riy3hJGtL._SL500_.jpg', alt: 'OneTigris Travel Dog Bed' },
+  },
+
+  {
+    id: 'furhaven-outdoor-travel-dog-bed',
+    asin: 'B08FNVH7VB',
+    name: 'FurHaven Outdoor Travel Dog Bed',
+    category: 'travel-beds',
+    amazonUrl: 'https://www.amazon.com/dp/B08FNVH7VB/?tag=chill-dogs-20',
+    bullets: [
+      'Lightweight pillow-style mat with a stuff sack keeps packed size reasonable for road trips and camping bins',
+      'Machine-washable construction',
+      '39-by-27-inch footprint gives larger dogs more real sleeping room',
+    ],
+    image: { src: 'https://m.media-amazon.com/images/I/71wgaf4kn3L._SL500_.jpg', alt: 'FurHaven Outdoor Travel Dog Bed' },
+  },
+  {
+    id: 'chuckit-travel-bed',
+    asin: 'B00027466A',
+    name: 'Chuckit! Outdoor Travel Dog Bed',
+    category: 'travel-beds',
+    amazonUrl: 'https://www.amazon.com/dp/B00027466A/?tag=chill-dogs-20',
+    bullets: [
+      'Water-resistant shell and raised pillow-style edge make it feel more finished than a bare travel mat',
+      '39-by-30-inch size works for a wide range of medium and large dogs on hotel floors, patios, or campsites',
+      'High review count makes it one of the more established travel-bed picks in this category',
+    ],
+    image: { src: 'https://m.media-amazon.com/images/I/4109ZxzH3pL._SL500_.jpg', alt: 'Chuckit! Outdoor Travel Dog Bed' },
+  },
+  {
+    id: 'coleman-roll-up-travel-bed',
+    asin: 'B01MSZJ3IX',
+    name: 'Coleman Large Dog Bed for Travel',
+    category: 'travel-beds',
+    amazonUrl: 'https://www.amazon.com/dp/B01MSZJ3IX/?tag=chill-dogs-20',
+    bullets: [
+      'Roll-up design is easy to pack, stow, and carry between the car and each overnight stop',
+      'Padded construction gives more insulation from hard or cool ground than thin mats',
+      'Coleman travel focus makes it a natural fit for camp setups and road-trip gear bins',
+    ],
+    image: { src: 'https://m.media-amazon.com/images/I/71aYJFmJxCL._SL500_.jpg', alt: 'Coleman Large Dog Bed for Travel' },
+  },
+  {
+    id: 'kindtail-nomad-nap-mat',
+    asin: 'B0F2GFMG74',
+    name: 'KindTail Nomad Nap Mat',
+    category: 'travel-beds',
+    amazonUrl: 'https://www.amazon.com/dp/B0F2GFMG74/?tag=chill-dogs-20',
+    bullets: [
+      'Folds to a compact travel size and weighs about 1.5 pounds, which makes it easy to carry through hotels or vacation rentals',
+      'Water-resistant washable design makes it practical for airport waiting areas and destination floors',
+      'Sized for pets up to 50 pounds, so it works best when you want a portable familiar mat rather than a sprawling XL bed',
+    ],
+    image: { src: 'https://m.media-amazon.com/images/I/81PVoGDckNL._SL500_.jpg', alt: 'KindTail Nomad Nap Mat' },
+  },
+  {
+    id: 'kurgo-loft-wander-bed',
+    asin: 'B01JFEAL1O',
+    name: 'Kurgo Loft Wander Dog Bed',
+    category: 'travel-beds',
+    amazonUrl: 'https://www.amazon.com/dp/B01JFEAL1O/?tag=chill-dogs-20',
+    bullets: [
+      'Large 48-by-36-inch size gives bigger dogs more room to stretch out at camp, in cabins, or on hotel floors',
+      'Durable water-resistant top and non-slip bottom suit repeated road-trip and campsite use',
+      'Roll-up travel design keeps it portable despite its roomy size',
+    ],
+    image: { src: 'https://m.media-amazon.com/images/I/71RWVbg9fGL._SL500_.jpg', alt: 'Kurgo Loft Wander Dog Bed' },
+  },
+  {
+    id: 'yofang-extra-large-travel-bed',
+    asin: 'B0FXTTLYSX',
+    name: 'YOFANG Extra Large Outdoor Travel Dog Bed Mat',
+    category: 'travel-beds',
+    amazonUrl: 'https://www.amazon.com/dp/B0FXTTLYSX/?tag=chill-dogs-20',
+    bullets: [
+      '47-by-32-inch footprint is one of the bigger size options for larger dogs',
+      'Waterproof ripstop nylon and anti-slip backing make it better suited for wet grass, campsite dirt, and harder outdoor surfaces',
+      'Lightweight, foldable and machine-washable',
+    ],
+    image: { src: 'https://m.media-amazon.com/images/I/61GZU6Zut8L._SL500_.jpg', alt: 'YOFANG Extra Large Outdoor Travel Dog Bed Mat' },
+  },
+  {
+    id: 'bingpet-outdoor-travel-bed',
+    asin: 'B0DQCV6CF9',
+    name: 'BINGPET Outdoor Travel Dog Bed',
+    category: 'travel-beds',
+    amazonUrl: 'https://www.amazon.com/dp/B0DQCV6CF9/?tag=chill-dogs-20',
+    bullets: [
+      'Carry-bag format keeps the setup simple for road trips, camping kits, and trunk storage',
+      'Portable washable design is reversible',
+      'Suitable for many medium and large dogs that do not need a thicker mat',
+    ],
+    image: { src: 'https://m.media-amazon.com/images/I/61rcAJgq3BL._SL500_.jpg', alt: 'BINGPET Outdoor Travel Dog Bed' },
+  },
+
+  // ── Chew-Resistant Beds ──────────────────────────────────────────────────
+
+  {
+    id: 'k9-ballistics-armored-crate-bed',
+    asin: 'B0FHS4FGS8',
+    name: 'K9 Ballistics Armored Padded Crate Bed',
+    category: 'chew-resistant-beds',
+    amazonUrl: 'https://www.amazon.com/dp/B0FHS4FGS8/?tag=chill-dogs-20',
+    bullets: [
+      'Armored padded crate-bed format gives dogs a tougher sleeping surface without exposed plush seams or loose stuffing',
+      'Easy-clean ripstop ballistic polyester is better suited to repeated scratching, nesting, and moderate bed destruction than standard fabric beds',
+      'Orthopedic-style padding makes it a stronger premium option when you need both toughness and actual sleep support',
+    ],
+    image: { src: 'https://m.media-amazon.com/images/I/513qWOks7wL._SL500_.jpg', alt: 'K9 Ballistics Armored Padded Crate Bed' },
+  },
+  {
+    id: 'fxw-titannest-elevated-bed',
+    asin: 'B0D5QZ1RCV',
+    name: 'FXW TitanNest Elevated Dog Bed',
+    category: 'chew-resistant-beds',
+    amazonUrl: 'https://www.amazon.com/dp/B0D5QZ1RCV/?tag=chill-dogs-20',
+    bullets: [
+      'Elevated cot style removes stuffing, bolsters, and loose seams that many dogs target first',
+      'Washable raised design works indoors, outdoors, and on trips where the bed needs to dry fast and stay cleaner',
+      'Extra-large footprint makes it a realistic option for bigger dogs that destroy smaller soft beds',
+    ],
+    image: { src: 'https://m.media-amazon.com/images/I/71--GYQCKuL._SL500_.jpg', alt: 'FXW TitanNest Elevated Dog Bed' },
+  },
+  {
+    id: 'veehoo-chewproof-elevated-bed',
+    asin: 'B0DY49VGG7',
+    name: 'Veehoo Chewproof Elevated Dog Bed',
+    category: 'chew-resistant-beds',
+    amazonUrl: 'https://www.amazon.com/dp/B0DY49VGG7/?tag=chill-dogs-20',
+    bullets: [
+      'Budget-friendlier elevated design still removes stuffing and pillow edges that invite chewing',
+      'Breathable mesh surface is useful for dogs that also run warm on dense padded beds',
+      'Washable, non-slip cot format works for indoor use, patios, and covered outdoor setups',
+    ],
+    image: { src: 'https://m.media-amazon.com/images/I/61twvRt-6BL._SL500_.jpg', alt: 'Veehoo Chewproof Elevated Dog Bed' },
+  },
+  {
+    id: 'k9-ballistics-ripstop-oval-bolster-bed',
+    asin: 'B0CW5963B8',
+    name: 'K9 Ballistics Ripstop Oval Bolster Bed',
+    category: 'chew-resistant-beds',
+    amazonUrl: 'https://www.amazon.com/dp/B0CW5963B8/?tag=chill-dogs-20',
+    bullets: [
+      'Rip-stop cover is tougher than plush upholstery for scratching, digging, and moderate chewing',
+      'Machine-washable construction is practical when the bed also needs to survive muddy paws and repeated cleanup',
+      'Oval den-style shape gives dogs a more enclosed feel than flat cot beds, which matters for dogs that still want a nest-like sleep spot',
+    ],
+    image: { src: 'https://m.media-amazon.com/images/I/51X4xnfEzfL._SL500_.jpg', alt: 'K9 Ballistics Ripstop Oval Bolster Bed' },
   },
 
   // ── Crates ───────────────────────────────────────────────────────────────
@@ -1047,6 +1349,9 @@ export const relaxationProducts: RelaxationProduct[] = [
     ],
     image: { src: 'https://m.media-amazon.com/images/I/81gA-nAEDcL._SL500_.jpg', alt: 'Anild Dog Travel Backpack' },
   },
+
+  // ── Chewy-only orthopedic beds (issues #380, #381) ────────────────────────
+  ...chewyOrthopedicBeds,
 ];
 
 export function getRelaxationProductsByCategory(category: RelaxationProductCategory): RelaxationProduct[] {

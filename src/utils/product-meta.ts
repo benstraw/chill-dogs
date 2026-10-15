@@ -61,6 +61,7 @@ const CATEGORY_LABELS: Record<string, string> = {
   'orthopedic-beds': 'Orthopedic Beds',
   'travel-bags': 'Travel Bags',
   'travel-beds': 'Travel Beds',
+  'chew-resistant-beds': 'Chew-Resistant Beds',
   accessories: 'Tracker Accessories',
   bluetooth: 'Bluetooth Trackers',
   carry: 'Carry Gear',

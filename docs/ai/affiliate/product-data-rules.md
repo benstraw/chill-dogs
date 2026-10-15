@@ -34,7 +34,8 @@ Adding new products, updating product data, checking product data file structure
 |---|---|
 | `src/data/cooling-products.ts` | 25 cooling products — canonical editorial copy, optional Amazon fields, merchant offers, image thumbnails, category metadata |
 | `src/data/calming-products.ts` | 23 calming products — canonical editorial copy, optional Amazon fields, merchant offers, image thumbnails |
-| `src/data/relaxation-products.ts` | 78 comfort/rest products — calming beds, orthopedic beds, crates, carriers, travel bags |
+| `src/data/relaxation-products.ts` | 111 comfort/rest products — calming beds, orthopedic beds, crates, carriers, travel bags |
+| `src/data/chewy-orthopedic-beds.ts` | 17 Chewy-only orthopedic beds (issues #380/#381), spread into `relaxationProducts`; 12 carry a size `variantGroup` |
 | `src/data/tracking-products.ts` | 8 tracker products + 1 accessory — cellular/off-grid/bluetooth/accessory types |
 | `src/data/product-catalog.ts` | Master catalog — normalized inventory across all pillar data files, including merchant offers |
 | `src/data/products/` | Merchant offer types, merchant registry, and offer helpers for Amazon/Chewy affiliate links |
