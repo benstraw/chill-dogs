@@ -276,7 +276,7 @@ describe('relaxation converter page config', () => {
     // #375 dropped both hero buttons from this page.
     expect(config.hero.primaryCta).toBeUndefined();
     expect(config.hero.secondaryCta).toBeUndefined();
-    expect(config.itemListSchema?.productIds).toHaveLength(29);
+    expect(config.itemListSchema?.productIds).toHaveLength(28);
     expect(config.hero.disclaimer).toBe('As an Amazon Associate and a Chewy Affiliate, we earn from qualifying purchases.');
     // #387: two sections, Flat Beds then Bolster Beds; together they cover every bed once.
     const sections = config.blocks.filter((block) => block.kind === 'product_section');
@@ -287,7 +287,7 @@ describe('relaxation converter page config', () => {
         : [],
     );
     expect(sectionIds).toEqual(config.itemListSchema?.productIds);
-    expect(new Set(sectionIds).size).toBe(29);
+    expect(new Set(sectionIds).size).toBe(28);
     // #389: Noah & Paw denim (Amazon + Chewy) and Snoozer sit in Flat; Comfort Expression sits in Bolster.
     const idsOf = (id: string) => {
       const section = sections.find((block) => block.id === id);
@@ -298,7 +298,6 @@ describe('relaxation converter page config', () => {
     expect(idsOf('flat-beds')).toEqual(
       expect.arrayContaining([
         'noah-paw-denim-orthopedic-bed',
-        'noah-paw-denim-collection-bed',
         'snoozer-cozy-cave-orthopedic-bed',
       ]),
     );
@@ -343,9 +342,9 @@ describe('relaxation converter page config', () => {
       return product;
     });
 
-    it('adds all 17 beds from the two issues, once each', () => {
-      expect(chewyIds).toHaveLength(17);
-      expect(new Set(chewyIds).size).toBe(17);
+    it('adds the 16 Chewy-only beds from the two issues, once each', () => {
+      expect(chewyIds).toHaveLength(16);
+      expect(new Set(chewyIds).size).toBe(16);
     });
 
     it('lists every Chewy bed across the flat and bolster sections', () => {
@@ -356,7 +355,7 @@ describe('relaxation converter page config', () => {
           ? section.productIds.map((ref) => (typeof ref === 'string' ? ref : ref.id))
           : [],
       );
-      expect(ids).toHaveLength(29);
+      expect(ids).toHaveLength(28);
       for (const id of chewyIds) expect(ids).toContain(id);
       expect(sections[0].kind === 'product_section' ? sections[0].positionOffset : -1).toBe(0);
     });
@@ -415,7 +414,6 @@ describe('relaxation converter page config', () => {
         'eheyciga-waterproof-sofa-bed': '3816406',
         'eheyciga-high-back-sofa-bed': '3816182',
         'noah-paw-velvet-orthopedic-bed': '1971958',
-        'noah-paw-denim-collection-bed': '1971414',
         'carolina-pet-berber-bolster-bed': '1384590',
         'veehoo-elevated-memory-foam-bed': '3276798',
         'zomisia-fluffy-egg-foam-bed': '4371206',

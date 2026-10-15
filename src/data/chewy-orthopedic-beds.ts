@@ -16,7 +16,7 @@ import type { RelaxationProduct } from './relaxation-products';
 const CHEWY_TRACKING_BASE = 'https://chewy.sjv.io/c/7067825/3054490/32975';
 const PAGE_SLUG = 'best-orthopedic-dog-beds';
 
-function chewyOffer(canonicalUrl: string): AffiliateOffer {
+export function chewyOffer(canonicalUrl: string): AffiliateOffer {
   return {
     merchant: 'chewy',
     merchantProductId: canonicalUrl.match(/\/dp\/(\d+)/)?.[1],
@@ -137,49 +137,6 @@ export const chewyOrthopedicBeds: RelaxationProduct[] = [
           id: 'x-large',
           label: 'X-Large',
           offers: [chewyOffer('https://www.chewy.com/noah-paw-velvet-collection-orthopedic/dp/1972006')],
-        },
-      ],
-    } satisfies ProductVariantGroup,
-  },
-  {
-    id: 'noah-paw-denim-collection-bed',
-    name: 'Noah & Paw Denim Orthopedic Dog Bed',
-    category: 'orthopedic-beds',
-    offers: [chewyOffer('https://www.chewy.com/noah-paw-denim-collection-orthopedic/dp/1971414')],
-    bullets: [
-      'Seven-inch-thick foam base is aimed at older dogs and larger breeds that need deeper support',
-      'Denim-style cover gives it a sturdier, furniture-friendly look than most fuzzy orthopedic sofas',
-      'Cooling-gel top layer and a waterproof lining, with a removable, machine-washable cover',
-    ],
-    image: { src: 'https://image.chewy.com/catalog/general/images/moe/068a8cc7-bc3f-7460-8000-2ccee671daca._AC_SS500_V1_.jpg', alt: 'Noah & Paw Denim Orthopedic Dog Bed' },
-    variantGroup: {
-      axis: sizeAxis,
-      defaultVariantId: 'xx-large',
-      variants: [
-        {
-          id: 'small',
-          label: 'Small',
-          offers: [chewyOffer('https://www.chewy.com/noah-paw-denim-collection-orthopedic/dp/1971270')],
-        },
-        {
-          id: 'medium',
-          label: 'Medium',
-          offers: [chewyOffer('https://www.chewy.com/noah-paw-denim-collection-orthopedic/dp/1971318')],
-        },
-        {
-          id: 'large',
-          label: 'Large',
-          offers: [chewyOffer('https://www.chewy.com/noah-paw-denim-collection-orthopedic/dp/1971350')],
-        },
-        {
-          id: 'x-large',
-          label: 'X-Large',
-          offers: [chewyOffer('https://www.chewy.com/noah-paw-denim-collection-orthopedic/dp/1971382')],
-        },
-        {
-          id: 'xx-large',
-          label: 'XX-Large',
-          offers: [chewyOffer('https://www.chewy.com/noah-paw-denim-collection-orthopedic/dp/1971414')],
         },
       ],
     } satisfies ProductVariantGroup,
@@ -554,14 +511,16 @@ export const chewyOrthopedicBeds: RelaxationProduct[] = [
   },
   {
     id: 'snoozer-cozy-cave-orthopedic-bed',
-    name: 'Snoozer Cozy Cave Orthopedic Dog & Cat Bed',
+    name: 'Snoozer Cozy Cave Orthopedic Dog Bed',
     category: 'orthopedic-beds',
     offers: [chewyOffer('https://www.chewy.com/snoozer-pet-products-100-washable/dp/1098158')],
     bullets: [
-      'Cave-style design gives dogs and cats that like to burrow a more enclosed place to rest',
-      'Orthopedic cushioning with a removable cover for easy washing',
+      'Orthopedic cushioning with plush chenille jacquard fabric',
+      'Cave-style design gives dogs that like to burrow a more enclosed place to rest',
+      'Removable and washable cover',
+      'Water-resistant, non-skid rubberized underside',
     ],
-    image: { src: 'https://image.chewy.com/catalog/general/images/snoozer-pet-products-100-washable-forgiveness-cozy-cave-orthopedic-dog-cat-crate-bed-with-removable-cover-olive-small/img-118213._AC_SS500_V1_.jpg', alt: 'Snoozer Cozy Cave Orthopedic Dog & Cat Bed' },
+    image: { src: 'https://image.chewy.com/catalog/general/images/snoozer-pet-products-100-washable-forgiveness-cozy-cave-orthopedic-dog-cat-crate-bed-with-removable-cover-olive-small/img-118213._AC_SS500_V1_.jpg', alt: 'Snoozer Cozy Cave Orthopedic Dog Bed' },
     variantGroup: {
       axis: sizeAxis,
       defaultVariantId: 'small',
@@ -592,7 +551,7 @@ export const chewyOrthopedicBeds: RelaxationProduct[] = [
 ];
 
 export const chewyOrthopedicBedIds = {
-  sofa: ['eheyciga-waterproof-sofa-bed', 'eheyciga-high-back-sofa-bed', 'noah-paw-velvet-orthopedic-bed', 'noah-paw-denim-collection-bed', 'carolina-pet-berber-bolster-bed', 'furhaven-cable-corduroy-couch-bed', 'kylinsure-all-around-bolster-bed', 'furhaven-embossed-velvet-sofa-bed'],
+  sofa: ['eheyciga-waterproof-sofa-bed', 'eheyciga-high-back-sofa-bed', 'noah-paw-velvet-orthopedic-bed', 'carolina-pet-berber-bolster-bed', 'furhaven-cable-corduroy-couch-bed', 'kylinsure-all-around-bolster-bed', 'furhaven-embossed-velvet-sofa-bed'],
   foam: ['comfort-expression-waterproof-foam-bed', 'zomisia-fluffy-egg-foam-bed', 'laifug-orthopedic-memory-foam-bed', 'kylinsure-orthopedic-pillow-bed', 'veehoo-elevated-memory-foam-bed', 'berenlefe-oversized-lounge-bed'],
   crate: ['timberdog-ruffrest-travel-bed', 'three-dog-ez-wash-softshell-bolster-bed', 'snoozer-cozy-cave-orthopedic-bed'],
 } as const;

@@ -194,7 +194,6 @@ const orthopedicFlatBedIds = [
   'veehoo-elevated-memory-foam-bed',
   'timberdog-ruffrest-travel-bed',
   'noah-paw-denim-orthopedic-bed',
-  'noah-paw-denim-collection-bed',
   'snoozer-cozy-cave-orthopedic-bed',
 ];
 
@@ -205,7 +204,7 @@ const orthopedicBolsterBedIds = [
   'carolina-pet-bolster-lg',
   'noah-paw-giant-orthopedic-bed',
   'zomisia-orthopedic-bed',
-  ...chewyOrthopedicBedIds.sofa.filter((id) => id !== 'noah-paw-denim-collection-bed'),
+  ...chewyOrthopedicBedIds.sofa,
   'comfort-expression-waterproof-foam-bed',
   'zomisia-fluffy-egg-foam-bed',
   'berenlefe-oversized-lounge-bed',

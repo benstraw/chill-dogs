@@ -1,4 +1,4 @@
-import { chewyOrthopedicBeds, sizeAxis } from './chewy-orthopedic-beds';
+import { chewyOffer, chewyOrthopedicBeds, sizeAxis } from './chewy-orthopedic-beds';
 import type { AffiliateOffer, ProductVariantGroup } from './products/types';
 
 export type RelaxationProductCategory =
@@ -53,6 +53,20 @@ function amazonSizes(defaultAsin: string, sizes: ReadonlyArray<readonly [string,
       ...(longLabel ? { longLabel } : {}),
       offers: [amazonSizeOffer(asin)],
     })),
+  };
+}
+
+const NOAH_PAW_DENIM_CHEWY = 'https://www.chewy.com/noah-paw-denim-collection-orthopedic/dp/';
+
+/** Adds a Chewy listing to each size of an Amazon size picker, keyed by variant id. */
+function withChewyOffers(group: ProductVariantGroup, chewyUrls: Record<string, string>): ProductVariantGroup {
+  return {
+    ...group,
+    variants: group.variants.map((variant) => {
+      const url = chewyUrls[variant.id];
+      if (!url) throw new Error(`No Chewy listing for variant ${variant.id}`);
+      return { ...variant, offers: [...variant.offers, chewyOffer(url)] };
+    }),
   };
 }
 
@@ -162,11 +176,23 @@ export const relaxationProducts: RelaxationProduct[] = [
     name: 'NOAH & PAW Orthopedic Cooling-Gel Dog Bed',
     category: 'orthopedic-beds',
     amazonUrl: 'https://www.amazon.com/dp/B0DS6BZRJ1/?tag=chill-dogs-20',
-    variantGroup: amazonSizes('B0DS6BZRJ1', [['Small','B0DS6CKTJM'], ['Medium','B0DS6DGD1Y'], ['Large','B0DS6BZRJ1'], ['X-Large','B0DS6B6S2R'], ['XX-Large','B0DS6D11TW']]),
+    // One bed, two merchants: the Amazon and Chewy denim listings are the same product (#393).
+    offers: [chewyOffer(`${NOAH_PAW_DENIM_CHEWY}1971350`)],
+    variantGroup: withChewyOffers(
+      amazonSizes('B0DS6BZRJ1', [['Small','B0DS6CKTJM'], ['Medium','B0DS6DGD1Y'], ['Large','B0DS6BZRJ1'], ['X-Large','B0DS6B6S2R'], ['XX-Large','B0DS6D11TW']]),
+      {
+        small: `${NOAH_PAW_DENIM_CHEWY}1971270`,
+        medium: `${NOAH_PAW_DENIM_CHEWY}1971318`,
+        large: `${NOAH_PAW_DENIM_CHEWY}1971350`,
+        'x-large': `${NOAH_PAW_DENIM_CHEWY}1971382`,
+        'xx-large': `${NOAH_PAW_DENIM_CHEWY}1971414`,
+      },
+    ),
     bullets: [
-      'Cooling-gel memory foam adds a different feel from standard egg-crate beds without moving into specialty cooling products',
-      'Waterproof inner cover and machine-washable outer layer keep the bed practical for dogs that use it heavily every day',
-      'Denim-inspired collection gives it a sturdier, furniture-friendly look than many fuzzy orthopedic sofas',
+      '6 inch thick base: a 3 layer, 4 inch base of 30D foam with 1 inch of memory foam and 1 inch of eggshell foam infused with cooling gel',
+      'Removable and washable cover',
+      'Removable and washable waterproof liner',
+      'Headrest',
     ],
     image: { src: 'https://m.media-amazon.com/images/I/61gtogsyrOL._SL500_.jpg', alt: 'NOAH & PAW Orthopedic Cooling-Gel Dog Bed' },
   },
