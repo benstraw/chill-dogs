@@ -205,7 +205,6 @@ const orthopedicBolsterBedIds = [
   'zomisia-orthopedic-bed',
   ...chewyOrthopedicBedIds.sofa,
   'comfort-expression-waterproof-foam-bed',
-  'zomisia-fluffy-egg-foam-bed',
   'berenlefe-oversized-lounge-bed',
   'three-dog-ez-wash-softshell-bolster-bed',
 ];
@@ -1231,53 +1230,43 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         kind: 'decision_columns',
         id: 'which-bed',
         left: {
-          heading: 'Flat or crate-style orthopedic bed makes sense when',
+          heading: 'Choose a flat or crate-style orthopedic bed when:',
           items: [
-            'Your dog stretches out fully and does not care about having edges to lean on.',
-            'You want the most usable sleeping area for the money.',
+            'Your dog sleeps fully stretched out.',
             'The bed needs to fit inside a crate, along a wall, or in a tighter room footprint.',
-            'You care more about simple washing and easier placement than about a couch-style look.',
           ],
         },
         right: {
-          heading: 'Bolster or sofa orthopedic bed makes sense when',
+          heading: 'Choose a bolster or sofa orthopedic bed when:',
           items: [
+            'Your dog likes to lean or sleeps curled up.',
             'Your dog regularly rests its head on a bed edge, pillow, or couch arm.',
-            'You want one bed that feels more settled and furniture-like in a living space.',
-            'Your dog curls and leans instead of only sprawling flat.',
-            'You are comfortable giving up some center sleeping area in exchange for more perimeter support.',
           ],
         },
-      },
-      {
-        kind: 'note',
-        heading: 'A Quick Reality Check on “Orthopedic” Labels',
-        text:
-          'Orthopedic on Amazon or Chewy can describe everything from flat egg-crate mats to thick memory-foam sofas with bolsters. The label matters less than the actual build: foam thickness, washable layers, waterproof protection, and whether the shape matches how your dog really sleeps.',
       },
     ],
     faq: {
       heading: 'Orthopedic Dog Bed FAQ',
       items: [
         {
-          question: 'Do orthopedic dog beds actually help dogs?',
+          question: 'Do orthopedic beds actually help dogs?',
           answer:
-            'Dense foam can reduce pressure buildup on joints during the hours dogs spend sleeping — which, for most adult dogs, is 12 to 14 hours per day. That can matter most for older dogs, heavier breeds, and dogs recovering from activity. The difference is less noticeable in younger, lighter dogs who do not rest as heavily.',
+            'Dense foam can reduce pressure buildup on joints during the hours dogs spend sleeping, which, for most adult dogs, is 12 to 14 hours per day. This can matter most for older dogs, heavier breeds, dogs recovering from activity, and dogs with arthritis or hip dysplasia.',
         },
         {
           question: 'What is the difference between orthopedic and regular dog beds?',
           answer:
-            'Standard dog beds typically use polyester fiber fill, which compresses over time and provides less consistent support. Orthopedic beds use denser foam — similar to memory foam — that distributes weight more evenly across the sleeping surface and holds its shape longer with regular use.',
+            'Standard dog beds typically use polyester fiber fill, which compresses over time and provides less consistent support. Orthopedic beds use denser foam, often memory foam, that distributes weight more evenly across the sleeping surface and holds its shape longer.',
         },
         {
-          question: 'Are waterproof liners worth it on an orthopedic dog bed?',
+          question: 'Are waterproof liners useful on an orthopedic dog bed?',
           answer:
-            'Usually, yes. The washable outer cover handles day-to-day dirt, but the waterproof layer is what helps protect the foam core from accidents, drool, or repeated dampness. That matters because once the foam absorbs moisture, the bed gets harder to clean and less pleasant to keep using.',
+            'Usually, yes. Washable outer covers eliminate dirt, but the waterproof layer is what helps protect the foam core from accidents, drool, rain and mud. This is important because once the foam absorbs moisture, the bed becomes harder to clean. Foam is often not washable.',
         },
         {
           question: 'Can an orthopedic dog bed go inside a crate?',
           answer:
-            'Yes, but flat and lower-profile orthopedic beds tend to work better than thick bolster sofas inside crates. Check the usable crate floor size and compare it to the bed\'s actual sleeping surface, not just the outside dimensions listed in the title.',
+            'Yes, but flat and lower-profile orthopedic beds tend to work better than thick bolster sofas. Check the usable crate floor size and compare it to the bed\'s actual sleeping surface.',
         },
         {
           question: 'How do I pick the right size orthopedic bed?',
@@ -1287,12 +1276,12 @@ export const relaxationConverterPages: Record<string, RelaxationConverterPageCon
         {
           question: 'Are bolster orthopedic beds better than flat beds?',
           answer:
-            'Not automatically. Bolsters are better for dogs that like leaning on an edge or feel more settled with a defined perimeter. Flat beds are often a better fit for crate use, sprawling sleepers, and shoppers who want maximum sleeping area for the money.',
+            'Not necessarily. Bolsters are better for dogs that like leaning on an edge or feel more settled with a defined perimeter. Flat beds are often a better fit for sprawling sleepers and for crate use.',
         },
         {
           question: 'How long do orthopedic dog beds last?',
           answer:
-            'A well-constructed orthopedic bed typically holds its support for one to three years with regular use, depending on your dog\'s weight and how much time it spends resting there. Dual-sided beds extend useful life by giving you a fresh surface when one side compresses.',
+            'It depends on your dog\'s weight and the material used in the bed\'s construction. Standard egg-crate foam usually lasts 1 - 3 years. High-density memory foam usually lasts 3 - 5 years. Natural fibers like wool can last 5 - 10 years or more.',
         },
       ],
     },

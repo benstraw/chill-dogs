@@ -54,7 +54,6 @@ export const PUBLISHED_PRODUCT_IDS: readonly string[] = [
   'cabins-flea-collar-4pack',
   'canada-pooch-chill-seeker',
   'canine-canyon-rover-rescue-carry-harness',
-  'carolina-pet-berber-bolster-bed',
   'carolina-pet-bolster-lg',
   'carolina-pet-bolster-sm',
   'caslfuca-anxiety-vest',
@@ -303,6 +302,5 @@ export const PUBLISHED_PRODUCT_IDS: readonly string[] = [
   'yofang-extra-large-travel-bed',
   'yotango-flea-tick-chews',
   'zomisia-collapsible-steel-crate',
-  'zomisia-fluffy-egg-foam-bed',
   'zomisia-orthopedic-bed',
 ];

@@ -111,47 +111,15 @@ export const chewyOrthopedicBeds: RelaxationProduct[] = [
     } satisfies ProductVariantGroup,
   },
   {
-    id: 'carolina-pet-berber-bolster-bed',
-    name: 'Carolina Pet Microfiber & Berber Bolster Dog Bed',
-    category: 'orthopedic-beds',
-    offers: [chewyOffer('https://www.chewy.com/carolina-pet-microfiber-tipped-berber/dp/1384590')],
-    bullets: [
-      'Built-in bolster cushion wraps around the dog for a snug, secure feel',
-      'High-loft polyester fill lifts dogs off cold floors; it is a softer, lighter option than the memory-foam beds on this page',
-      'Microfiber cover with a tipped Berber fleece surface; the cover unzips and goes in the washing machine',
-    ],
-    image: { src: 'https://image.chewy.com/catalog/general/images/moe/0682e0a7-42ed-728c-8000-b78f41795ec9._AC_SS500_V1_.jpg', alt: 'Carolina Pet Microfiber & Berber Bolster Dog Bed' },
-    variantGroup: {
-      axis: sizeAxis,
-      defaultVariantId: 'small',
-      variants: [
-        {
-          id: 'small',
-          label: 'Small',
-          offers: [chewyOffer('https://www.chewy.com/carolina-pet-microfiber-tipped-berber/dp/1384590')],
-        },
-        {
-          id: 'medium',
-          label: 'Medium',
-          offers: [chewyOffer('https://www.chewy.com/carolina-pet-microfiber-tipped-berber/dp/1384598')],
-        },
-        {
-          id: 'large',
-          label: 'Large',
-          offers: [chewyOffer('https://www.chewy.com/carolina-pet-microfiber-tipped-berber/dp/1384606')],
-        },
-      ],
-    } satisfies ProductVariantGroup,
-  },
-  {
     id: 'furhaven-cable-corduroy-couch-bed',
     name: 'Furhaven Cable Corduroy Orthopedic Couch Dog Bed',
     category: 'orthopedic-beds',
     offers: [chewyOffer('https://www.chewy.com/furhaven-plush-cable-corduroy-comfy/dp/3305502')],
     bullets: [
-      'Orthopedic foam base with bolstered sides cushions the neck and spine whether your dog curls up or sprawls',
-      'Cable corduroy cover with faux-leather piping suits living-room décor',
-      'Removable, reinforced cover makes upkeep simple',
+      'Orthopedic foam base',
+      'Removable and washable cable corduroy cover',
+      'Removable and washable water-resistant liner',
+      'Concealed zipper hardware helps prevent damage caused by chewing',
     ],
     image: { src: 'https://image.chewy.com/catalog/general/images/moe/068d444a-f3c9-7e65-8000-cb02711ea5e7._AC_SS500_V1_.jpg', alt: 'Furhaven Cable Corduroy Orthopedic Couch Dog Bed' },
     variantGroup: {
@@ -182,9 +150,11 @@ export const chewyOrthopedicBeds: RelaxationProduct[] = [
     category: 'orthopedic-beds',
     offers: [chewyOffer('https://www.chewy.com/kylinsure-all-around-orthopedic/dp/4529006')],
     bullets: [
-      'Full-coverage bolster cradles the head and neck, with a slimmer front edge that flows into a thicker, plush back',
-      'Contoured foam balances plush softness with firm support, under an ultrasoft fleece sleeping surface',
-      'Corduroy outer cover with a built-in waterproof lining that protects the foam from spills and accidents',
+      'Contoured foam balances plush softness with firm support',
+      'Ultrasoft fleece sleeping surface',
+      'Removable and washable corduroy cover',
+      'Built-in waterproof liner',
+      'Non-slip bottom',
     ],
     image: { src: 'https://image.chewy.com/catalog/general/images/moe/06a441d9-7179-7168-8000-8fc58ad97256._AC_SS500_V1_.jpg', alt: 'Kylinsure All-Around Orthopedic Bolster Sofa Bed' },
     variantGroup: {
@@ -216,15 +186,16 @@ export const chewyOrthopedicBeds: RelaxationProduct[] = [
   },
   {
     id: 'furhaven-embossed-velvet-sofa-bed',
-    name: 'Furhaven Embossed Velvet Orthopedic Sofa Dog Bed',
+    name: 'Furhaven Dreamer Sofa Orthopedic Dog Bed',
     category: 'orthopedic-beds',
     offers: [chewyOffer('https://www.chewy.com/furhaven-plush-embossed-velvet/dp/3305926')],
     bullets: [
-      'Orthopedic foam base with plush bolsters supports the spine and gives dogs an edge to lean on',
-      'Velvety sleeping surface flows into the supportive sides for a sofa-style look',
-      'Removable zippered cover and a built-in carry handle make it easy to wash and move',
+      'Orthopedic foam base',
+      'Removable and washable embossed velvet cover',
+      'Concealed zipper hardware helps prevent damage caused by chewing',
+      'Built-in handle',
     ],
-    image: { src: 'https://image.chewy.com/catalog/general/images/moe/068d443d-ab20-74bb-8000-b78dc32dae62._AC_SS500_V1_.jpg', alt: 'Furhaven Embossed Velvet Orthopedic Sofa Dog Bed' },
+    image: { src: 'https://image.chewy.com/catalog/general/images/moe/068d443d-ab20-74bb-8000-b78dc32dae62._AC_SS500_V1_.jpg', alt: 'Furhaven Dreamer Sofa Orthopedic Dog Bed' },
     variantGroup: {
       axis: sizeAxis,
       defaultVariantId: 'jumbo',
@@ -253,9 +224,9 @@ export const chewyOrthopedicBeds: RelaxationProduct[] = [
     category: 'orthopedic-beds',
     offers: [chewyOffer('https://www.chewy.com/comfort-expression-waterproof/dp/1886782')],
     bullets: [
-      'Thick egg-crate orthopedic foam gives dogs of all sizes cushioned support, especially seniors and dogs with sore joints',
-      'Removable, washable cover is waterproof, so spills and accidents wipe up without soaking the bed',
-      'Non-slip bottom keeps the bed in place on hard floors',
+      'Thick, high-quality egg-crate orthopedic foam',
+      'Removable and washable waterproof faux fur cover',
+      'Non-slip bottom',
     ],
     image: { src: 'https://image.chewy.com/catalog/general/images/moe/06a0b6a0-d5b9-78fb-8000-cffdbd609849._AC_SS500_V1_.jpg', alt: 'Comfort Expression Waterproof Orthopedic Foam Dog Bed' },
     variantGroup: {
@@ -288,18 +259,6 @@ export const chewyOrthopedicBeds: RelaxationProduct[] = [
         },
       ],
     } satisfies ProductVariantGroup,
-  },
-  {
-    id: 'zomisia-fluffy-egg-foam-bed',
-    name: 'ZOMISIA Fluffy Egg-Foam Dog Bed with Raised Bolster',
-    category: 'orthopedic-beds',
-    offers: [chewyOffer('https://www.chewy.com/zomisia-fluffy-waterproof-supportive/dp/4371206')],
-    bullets: [
-      'A 360-degree raised bolster filled with chopped foam gives dogs a nest-like edge to lean on',
-      'Egg-crate foam base adds cushioning under a faux-fur cover',
-      'Waterproof liner protects the foam, and the removable cover is machine washable',
-    ],
-    image: { src: 'https://image.chewy.com/catalog/general/images/moe/06a29824-5660-73bf-8000-e69c31d97ec3._AC_SS500_V1_.jpg', alt: 'ZOMISIA Fluffy Egg-Foam Dog Bed with Raised Bolster' },
   },
   {
     id: 'laifug-orthopedic-memory-foam-bed',
@@ -405,15 +364,20 @@ export const chewyOrthopedicBeds: RelaxationProduct[] = [
   },
   {
     id: 'berenlefe-oversized-lounge-bed',
-    name: 'Berenlefe Oversized Memory Foam Lounge Bed',
+    name: 'Berenlefe Oversized Memory Foam Lounge Human Dog Bed',
     category: 'orthopedic-beds',
     offers: [chewyOffer('https://www.chewy.com/berenlefe-oversized-orthopedic-memory/dp/4177406')],
     bullets: [
-      'Sized for a dog and a person to share, with raised edges and a plush faux-fur surface',
-      'Eggcrate-textured orthopedic memory-foam base spreads weight evenly for long lounging sessions',
-      'Comes with a pillow and blanket and has a non-slip bottom; measure your space before ordering',
+      'Thick egg-crate orthopedic memory foam base',
+      'Removable and washable faux fur cover',
+      'Built-in waterproof liner',
+      'Oversized design provides a spacious lounge area for a person and a dog',
+      'Comes with a pillow and a blanket',
+      'Side pocket',
+      'Built-in handle',
+      'Non-slip bottom',
     ],
-    image: { src: 'https://image.chewy.com/catalog/general/images/moe/069e0f77-cd05-7dba-8000-60241de1a9a7._AC_SS500_V1_.jpg', alt: 'Berenlefe Oversized Memory Foam Lounge Bed' },
+    image: { src: 'https://image.chewy.com/catalog/general/images/moe/069e0f77-cd05-7dba-8000-60241de1a9a7._AC_SS500_V1_.jpg', alt: 'Berenlefe Oversized Memory Foam Lounge Human Dog Bed' },
     variantGroup: {
       axis: sizeAxis,
       defaultVariantId: '70-9x45-in',
@@ -473,8 +437,9 @@ export const chewyOrthopedicBeds: RelaxationProduct[] = [
     category: 'orthopedic-beds',
     offers: [chewyOffer('https://www.chewy.com/3-dog-pet-supply-ez-wash-softshell/dp/255891')],
     bullets: [
-      'Memory foam over support foam with a plush bolster helps relieve pressure on joints',
-      'Waterproof protective liner and a fully removable cover make cleanup easy',
+      'Dual layer 4 inch thick design: 2 inches of support foam plus 2 inches of high-density memory foam',
+      'Removable and washable quilted polyester cover',
+      'Waterproof protective liner',
     ],
     image: { src: 'https://image.chewy.com/catalog/general/images/3-dog-pet-supply-ez-wash-softshell-orthopedic-bolster-dog-bed-with-removable-cover-slate-medium/img-242754._AC_SS500_V1_.jpg', alt: '3 Dog Pet Supply EZ Wash Softshell Orthopedic Bolster Dog Bed' },
   },
@@ -520,7 +485,7 @@ export const chewyOrthopedicBeds: RelaxationProduct[] = [
 ];
 
 export const chewyOrthopedicBedIds = {
-  sofa: ['eheyciga-waterproof-sofa-bed', 'eheyciga-high-back-sofa-bed', 'carolina-pet-berber-bolster-bed', 'furhaven-cable-corduroy-couch-bed', 'kylinsure-all-around-bolster-bed', 'furhaven-embossed-velvet-sofa-bed'],
-  foam: ['comfort-expression-waterproof-foam-bed', 'zomisia-fluffy-egg-foam-bed', 'laifug-orthopedic-memory-foam-bed', 'kylinsure-orthopedic-pillow-bed', 'veehoo-elevated-memory-foam-bed', 'berenlefe-oversized-lounge-bed'],
+  sofa: ['eheyciga-waterproof-sofa-bed', 'eheyciga-high-back-sofa-bed', 'furhaven-cable-corduroy-couch-bed', 'kylinsure-all-around-bolster-bed', 'furhaven-embossed-velvet-sofa-bed'],
+  foam: ['comfort-expression-waterproof-foam-bed', 'laifug-orthopedic-memory-foam-bed', 'kylinsure-orthopedic-pillow-bed', 'veehoo-elevated-memory-foam-bed', 'berenlefe-oversized-lounge-bed'],
   crate: ['timberdog-ruffrest-travel-bed', 'three-dog-ez-wash-softshell-bolster-bed', 'snoozer-cozy-cave-orthopedic-bed'],
 } as const;
