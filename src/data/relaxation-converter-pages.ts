@@ -201,7 +201,6 @@ const orthopedicBolsterBedIds = [
   'eheyciga-xl-memory-foam-couch',
   'cozy-kiss-xl-bolster-bed',
   'anti-anxiety-orthopedic-bed',
-  'carolina-pet-bolster-lg',
   'noah-paw-giant-orthopedic-bed',
   'zomisia-orthopedic-bed',
   ...chewyOrthopedicBedIds.sofa,

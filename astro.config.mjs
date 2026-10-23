@@ -31,6 +31,8 @@ export default defineConfig({
     '/shop/bedsure-comfyfleece-orthopedic/': '/comforting/best-orthopedic-dog-beds/',
     '/shop/invenho-orthopedic-bed/': '/comforting/best-orthopedic-dog-beds/',
     '/shop/cwawz-orthopedic-bolster/': '/comforting/best-orthopedic-dog-beds/',
+    // Retired per #395 — the Carolina Pet Comfy Cup was on the orthopedic beds converter.
+    '/shop/carolina-pet-bolster-lg/': '/comforting/best-orthopedic-dog-beds/',
     // The page dropped "for flea season" from its name — it's just Dog Bath Tools now.
     // Live for weeks under the old slug, so this must be a real 301.
     '/safety/dog-bath-tools-for-flea-season/': '/safety/dog-bath-tools/',

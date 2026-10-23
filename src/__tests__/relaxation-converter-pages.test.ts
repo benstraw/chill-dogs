@@ -276,7 +276,7 @@ describe('relaxation converter page config', () => {
     // #375 dropped both hero buttons from this page.
     expect(config.hero.primaryCta).toBeUndefined();
     expect(config.hero.secondaryCta).toBeUndefined();
-    expect(config.itemListSchema?.productIds).toHaveLength(28);
+    expect(config.itemListSchema?.productIds).toHaveLength(27);
     expect(config.hero.disclaimer).toBe('As an Amazon Associate and a Chewy Affiliate, we earn from qualifying purchases.');
     // #387: two sections, Flat Beds then Bolster Beds; together they cover every bed once.
     const sections = config.blocks.filter((block) => block.kind === 'product_section');
@@ -287,7 +287,7 @@ describe('relaxation converter page config', () => {
         : [],
     );
     expect(sectionIds).toEqual(config.itemListSchema?.productIds);
-    expect(new Set(sectionIds).size).toBe(28);
+    expect(new Set(sectionIds).size).toBe(27);
     // #389: Noah & Paw denim (Amazon + Chewy) and Snoozer sit in Flat; Comfort Expression sits in Bolster.
     const idsOf = (id: string) => {
       const section = sections.find((block) => block.id === id);
@@ -320,7 +320,6 @@ describe('relaxation converter page config', () => {
       'noah-paw-denim-orthopedic-bed',
       'cozy-kiss-xl-bolster-bed',
       'anti-anxiety-orthopedic-bed',
-      'carolina-pet-bolster-lg',
       'dog-bed-wont-go-flat-crate-bed',
       'nupida-xl-crate-bed',
       'veehoo-xxl-memory-foam-bed',
@@ -355,7 +354,7 @@ describe('relaxation converter page config', () => {
           ? section.productIds.map((ref) => (typeof ref === 'string' ? ref : ref.id))
           : [],
       );
-      expect(ids).toHaveLength(28);
+      expect(ids).toHaveLength(27);
       for (const id of chewyIds) expect(ids).toContain(id);
       expect(sections[0].kind === 'product_section' ? sections[0].positionOffset : -1).toBe(0);
     });
