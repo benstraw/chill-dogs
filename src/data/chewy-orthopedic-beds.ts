@@ -1,0 +1,491 @@
+import { createChewyAffiliateLinkWithBase } from '../lib/affiliate/chewy';
+import type { AffiliateOffer, ProductVariantGroup } from './products/types';
+import type { RelaxationProduct } from './relaxation-products';
+
+/**
+ * Chewy-only orthopedic beds for /comforting/best-orthopedic-dog-beds/ (issues #380, #381).
+ *
+ * Every bed is sold on Chewy as a family of per-size listings, so each record carries a size
+ * `variantGroup`. The default variant is the listing the issue linked, and `offers` mirrors it.
+ * Sizes are limited to the default colour. Beds with several sizes list the ones Chewy showed as in
+ * stock when the catalog was pulled; Veehoo X-Large and Berenlefe 78 × 47.3 in showed as out of
+ * stock then and are kept so every bed offers its sizes. Names, bullets and images are
+ * hand-written review copy, not provider text.
+ */
+
+const CHEWY_TRACKING_BASE = 'https://chewy.sjv.io/c/7067825/3054490/32975';
+const PAGE_SLUG = 'best-orthopedic-dog-beds';
+
+export function chewyOffer(canonicalUrl: string): AffiliateOffer {
+  return {
+    merchant: 'chewy',
+    merchantProductId: canonicalUrl.match(/\/dp\/(\d+)/)?.[1],
+    canonicalUrl,
+    url: createChewyAffiliateLinkWithBase(CHEWY_TRACKING_BASE, canonicalUrl, {
+      articleSlug: PAGE_SLUG,
+      placement: 'product-card',
+    }),
+    status: 'active',
+  };
+}
+
+export const sizeAxis = { id: 'dog-size', label: 'Size', hint: 'Measure your dog before choosing' } as const;
+
+export const chewyOrthopedicBeds: RelaxationProduct[] = [
+  {
+    id: 'eheyciga-waterproof-sofa-bed',
+    name: 'EHEYCIGA Orthopedic Sofa Dog Bed',
+    category: 'orthopedic-beds',
+    offers: [chewyOffer('https://www.chewy.com/eheyciga-waterproof-memory-foam/dp/3816406')],
+    bullets: [
+      'Dual layer memory foam and egg-crate foam',
+      'Removable and washable fleece cover',
+      'Waterproof layer',
+      'Non-slip bottom',
+    ],
+    image: { src: 'https://image.chewy.com/catalog/general/images/moe/06972834-3e06-7221-8000-1565897e4320._AC_SS500_V1_.jpg', alt: 'EHEYCIGA Orthopedic Sofa Dog Bed' },
+    variantGroup: {
+      axis: sizeAxis,
+      defaultVariantId: '44x32-in',
+      variants: [
+        {
+          id: '36x27-in',
+          label: '36 × 27 in',
+          offers: [chewyOffer('https://www.chewy.com/eheyciga-waterproof-memory-foam/dp/3816662')],
+        },
+        {
+          id: '41x27-in',
+          label: '41 × 27 in',
+          offers: [chewyOffer('https://www.chewy.com/eheyciga-waterproof-memory-foam/dp/3816590')],
+        },
+        {
+          id: '44x32-in',
+          label: '44 × 32 in',
+          offers: [chewyOffer('https://www.chewy.com/eheyciga-waterproof-memory-foam/dp/3816406')],
+        },
+        {
+          id: '48x35-in',
+          label: '48 × 35 in',
+          offers: [chewyOffer('https://www.chewy.com/eheyciga-waterproof-memory-foam/dp/3816534')],
+        },
+      ],
+    } satisfies ProductVariantGroup,
+  },
+  {
+    id: 'eheyciga-high-back-sofa-bed',
+    name: 'EHEYCIGA High-Back Sofa Dog Bed',
+    category: 'orthopedic-beds',
+    offers: [chewyOffer('https://www.chewy.com/eheyciga-memory-foam-orthopedic/dp/3816182')],
+    bullets: [
+      'Dual layer gel infused memory foam and high density egg-crate foam',
+      'Removable and washable corduroy fleece cover',
+      'Waterproof liner',
+      'Non-slip bottom',
+    ],
+    image: { src: 'https://image.chewy.com/catalog/general/images/moe/069f4ffe-ed94-7269-8000-a729bf665359._AC_SS500_V1_.jpg', alt: 'EHEYCIGA High-Back Sofa Dog Bed' },
+    variantGroup: {
+      axis: sizeAxis,
+      defaultVariantId: '42x30-in',
+      variants: [
+        {
+          id: '36x27-in',
+          label: '36 × 27 in',
+          offers: [chewyOffer('https://www.chewy.com/eheyciga-memory-foam-orthopedic/dp/3816142')],
+        },
+        {
+          id: '41x27-in',
+          label: '41 × 27 in',
+          offers: [chewyOffer('https://www.chewy.com/eheyciga-memory-foam-orthopedic/dp/3816270')],
+        },
+        {
+          id: '42x30-in',
+          label: '42 × 30 in',
+          offers: [chewyOffer('https://www.chewy.com/eheyciga-memory-foam-orthopedic/dp/3816182')],
+        },
+        {
+          id: '45x35-in',
+          label: '45 × 35 in',
+          offers: [chewyOffer('https://www.chewy.com/eheyciga-memory-foam-orthopedic/dp/3816222')],
+        },
+      ],
+    } satisfies ProductVariantGroup,
+  },
+  {
+    id: 'furhaven-cable-corduroy-couch-bed',
+    name: 'Furhaven Cable Corduroy Orthopedic Couch Dog Bed',
+    category: 'orthopedic-beds',
+    offers: [chewyOffer('https://www.chewy.com/furhaven-plush-cable-corduroy-comfy/dp/3305502')],
+    bullets: [
+      'Orthopedic foam base',
+      'Removable and washable cable corduroy cover',
+      'Removable and washable water-resistant liner',
+      'Concealed zipper hardware helps prevent damage caused by chewing',
+    ],
+    image: { src: 'https://image.chewy.com/catalog/general/images/moe/068d444a-f3c9-7e65-8000-cb02711ea5e7._AC_SS500_V1_.jpg', alt: 'Furhaven Cable Corduroy Orthopedic Couch Dog Bed' },
+    variantGroup: {
+      axis: sizeAxis,
+      defaultVariantId: 'medium',
+      variants: [
+        {
+          id: 'medium',
+          label: 'Medium',
+          offers: [chewyOffer('https://www.chewy.com/furhaven-plush-cable-corduroy-comfy/dp/3305502')],
+        },
+        {
+          id: 'large',
+          label: 'Large',
+          offers: [chewyOffer('https://www.chewy.com/furhaven-plush-cable-corduroy-comfy/dp/3305510')],
+        },
+        {
+          id: 'jumbo',
+          label: 'Jumbo',
+          offers: [chewyOffer('https://www.chewy.com/furhaven-plush-cable-corduroy-comfy/dp/3305518')],
+        },
+      ],
+    } satisfies ProductVariantGroup,
+  },
+  {
+    id: 'kylinsure-all-around-bolster-bed',
+    name: 'Kylinsure All-Around Orthopedic Bolster Sofa Bed',
+    category: 'orthopedic-beds',
+    offers: [chewyOffer('https://www.chewy.com/kylinsure-all-around-orthopedic/dp/4529006')],
+    bullets: [
+      'Contoured foam balances plush softness with firm support',
+      'Ultrasoft fleece sleeping surface',
+      'Removable and washable corduroy cover',
+      'Built-in waterproof liner',
+      'Non-slip bottom',
+    ],
+    image: { src: 'https://image.chewy.com/catalog/general/images/moe/06a441d9-7179-7168-8000-8fc58ad97256._AC_SS500_V1_.jpg', alt: 'Kylinsure All-Around Orthopedic Bolster Sofa Bed' },
+    variantGroup: {
+      axis: sizeAxis,
+      defaultVariantId: 'x-large',
+      variants: [
+        {
+          id: 'medium',
+          label: 'Medium',
+          offers: [chewyOffer('https://www.chewy.com/kylinsure-all-around-orthopedic/dp/4528990')],
+        },
+        {
+          id: 'large',
+          label: 'Large',
+          offers: [chewyOffer('https://www.chewy.com/kylinsure-all-around-orthopedic/dp/4528998')],
+        },
+        {
+          id: 'x-large',
+          label: 'X-Large',
+          offers: [chewyOffer('https://www.chewy.com/kylinsure-all-around-orthopedic/dp/4529006')],
+        },
+        {
+          id: 'jumbo',
+          label: 'Jumbo',
+          offers: [chewyOffer('https://www.chewy.com/kylinsure-all-around-orthopedic/dp/4529014')],
+        },
+      ],
+    } satisfies ProductVariantGroup,
+  },
+  {
+    id: 'furhaven-embossed-velvet-sofa-bed',
+    name: 'Furhaven Dreamer Sofa Orthopedic Dog Bed',
+    category: 'orthopedic-beds',
+    offers: [chewyOffer('https://www.chewy.com/furhaven-plush-embossed-velvet/dp/3305926')],
+    bullets: [
+      'Orthopedic foam base',
+      'Removable and washable embossed velvet cover',
+      'Concealed zipper hardware helps prevent damage caused by chewing',
+      'Built-in handle',
+    ],
+    image: { src: 'https://image.chewy.com/catalog/general/images/moe/068d443d-ab20-74bb-8000-b78dc32dae62._AC_SS500_V1_.jpg', alt: 'Furhaven Dreamer Sofa Orthopedic Dog Bed' },
+    variantGroup: {
+      axis: sizeAxis,
+      defaultVariantId: 'jumbo',
+      variants: [
+        {
+          id: 'medium',
+          label: 'Medium',
+          offers: [chewyOffer('https://www.chewy.com/furhaven-plush-embossed-velvet/dp/3305910')],
+        },
+        {
+          id: 'large',
+          label: 'Large',
+          offers: [chewyOffer('https://www.chewy.com/furhaven-plush-embossed-velvet/dp/3305918')],
+        },
+        {
+          id: 'jumbo',
+          label: 'Jumbo',
+          offers: [chewyOffer('https://www.chewy.com/furhaven-plush-embossed-velvet/dp/3305926')],
+        },
+      ],
+    } satisfies ProductVariantGroup,
+  },
+  {
+    id: 'comfort-expression-waterproof-foam-bed',
+    name: 'Comfort Expression Waterproof Orthopedic Foam Dog Bed',
+    category: 'orthopedic-beds',
+    offers: [chewyOffer('https://www.chewy.com/comfort-expression-waterproof/dp/1886782')],
+    bullets: [
+      'Thick, high-quality egg-crate orthopedic foam',
+      'Removable and washable waterproof faux fur cover',
+      'Non-slip bottom',
+    ],
+    image: { src: 'https://image.chewy.com/catalog/general/images/moe/06a0b6a0-d5b9-78fb-8000-cffdbd609849._AC_SS500_V1_.jpg', alt: 'Comfort Expression Waterproof Orthopedic Foam Dog Bed' },
+    variantGroup: {
+      axis: sizeAxis,
+      defaultVariantId: '36x27-in',
+      variants: [
+        {
+          id: '36x27-in',
+          label: '36 × 27 in',
+          longLabel: '36 × 27 × 7.5 in',
+          offers: [chewyOffer('https://www.chewy.com/comfort-expression-waterproof/dp/1886782')],
+        },
+        {
+          id: '42x30-in',
+          label: '42 × 30 in',
+          longLabel: '42 × 30 × 9.0 in',
+          offers: [chewyOffer('https://www.chewy.com/comfort-expression-waterproof/dp/1886830')],
+        },
+        {
+          id: '45x35-in',
+          label: '45 × 35 in',
+          longLabel: '45 × 35 × 9.0 in',
+          offers: [chewyOffer('https://www.chewy.com/comfort-expression-waterproof/dp/1886878')],
+        },
+        {
+          id: '53x42-in',
+          label: '53 × 42 in',
+          longLabel: '53 × 42 × 9.5 in',
+          offers: [chewyOffer('https://www.chewy.com/comfort-expression-waterproof/dp/1886926')],
+        },
+      ],
+    } satisfies ProductVariantGroup,
+  },
+  {
+    id: 'laifug-orthopedic-memory-foam-bed',
+    name: 'LaiFug Orthopedic Dog Bed',
+    category: 'orthopedic-beds',
+    offers: [chewyOffer('https://www.chewy.com/laifug-orthopedic-memory-foam-dog-bed/dp/907414')],
+    bullets: [
+      'Two inches of orthopedic foam topped by two inches of high density memory foam',
+      'Removable and washable cover',
+      'Waterproof liner',
+    ],
+    image: { src: 'https://image.chewy.com/catalog/general/images/laifug-orthopedic-memory-foam-dog-bed-gray-orchid-medium/img-564541._AC_SS500_V1_.jpg', alt: 'LaiFug Orthopedic Dog Bed' },
+    variantGroup: {
+      axis: sizeAxis,
+      defaultVariantId: 'medium',
+      variants: [
+        {
+          id: 'medium',
+          label: 'Medium',
+          offers: [chewyOffer('https://www.chewy.com/laifug-orthopedic-memory-foam-dog-bed/dp/907414')],
+        },
+        {
+          id: 'large',
+          label: 'Large',
+          note: 'Chewy sells the Large in Gray & blue rather than Gray Orchid.',
+          offers: [chewyOffer('https://www.chewy.com/laifug-orthopedic-memory-foam-dog-bed/dp/907406')],
+        },
+      ],
+    } satisfies ProductVariantGroup,
+  },
+  {
+    id: 'kylinsure-orthopedic-pillow-bed',
+    name: 'Kylinsure Orthopedic Pillow Dog Bed',
+    category: 'orthopedic-beds',
+    offers: [chewyOffer('https://www.chewy.com/kylinsure-orthopedic-pillow-dog-cat/dp/3763614')],
+    bullets: [
+      'High-density egg-crate foam',
+      'Removable and washable plush sherpa top cover',
+      'Non-slip bottom',
+      'Low-bunk design makes it easier to get in and out of for older dogs and dogs with limited mobility',
+    ],
+    image: { src: 'https://image.chewy.com/catalog/general/images/moe/06a15f92-d517-74b4-8000-867f9823d67a._AC_SS500_V1_.jpg', alt: 'Kylinsure Orthopedic Pillow Dog Bed' },
+    variantGroup: {
+      axis: sizeAxis,
+      defaultVariantId: 'large',
+      variants: [
+        {
+          id: 'small',
+          label: 'Small',
+          offers: [chewyOffer('https://www.chewy.com/kylinsure-orthopedic-pillow-dog-cat/dp/3763598')],
+        },
+        {
+          id: 'medium',
+          label: 'Medium',
+          offers: [chewyOffer('https://www.chewy.com/kylinsure-orthopedic-pillow-dog-cat/dp/3763606')],
+        },
+        {
+          id: 'large',
+          label: 'Large',
+          offers: [chewyOffer('https://www.chewy.com/kylinsure-orthopedic-pillow-dog-cat/dp/3763614')],
+        },
+        {
+          id: 'x-large',
+          label: 'X-Large',
+          offers: [chewyOffer('https://www.chewy.com/kylinsure-orthopedic-pillow-dog-cat/dp/3763622')],
+        },
+        {
+          id: 'xx-large',
+          label: 'XX-Large',
+          offers: [chewyOffer('https://www.chewy.com/kylinsure-orthopedic-pillow-dog-cat/dp/3763630')],
+        },
+      ],
+    } satisfies ProductVariantGroup,
+  },
+  {
+    id: 'veehoo-elevated-memory-foam-bed',
+    name: 'Veehoo Elevated Orthopedic Dog Bed',
+    category: 'orthopedic-beds',
+    offers: [chewyOffer('https://www.chewy.com/veehoo-orthopedic-memory-foam/dp/3276798')],
+    bullets: [
+      'Thick memory foam over firm-support foam',
+      'Removable and washable plush cover',
+      'Dual-layer waterproof protection',
+      'Tear and chew-resistant construction',
+    ],
+    image: { src: 'https://image.chewy.com/catalog/general/images/moe/068d11fe-8e6c-75c7-8000-a2a6d28ad00f._AC_SS500_V1_.jpg', alt: 'Veehoo Elevated Orthopedic Dog Bed' },
+    variantGroup: {
+      axis: sizeAxis,
+      defaultVariantId: 'large',
+      variants: [
+        {
+          id: 'large',
+          label: 'Large',
+          offers: [chewyOffer('https://www.chewy.com/veehoo-orthopedic-memory-foam/dp/3276798')],
+        },
+        {
+          id: 'x-large',
+          label: 'X-Large',
+          offers: [chewyOffer('https://www.chewy.com/veehoo-orthopedic-memory-foam/dp/3276806')],
+        },
+      ],
+    } satisfies ProductVariantGroup,
+  },
+  {
+    id: 'berenlefe-oversized-lounge-bed',
+    name: 'Berenlefe Oversized Memory Foam Lounge Human Dog Bed',
+    category: 'orthopedic-beds',
+    offers: [chewyOffer('https://www.chewy.com/berenlefe-oversized-orthopedic-memory/dp/4177406')],
+    bullets: [
+      'Thick egg-crate orthopedic memory foam base',
+      'Removable and washable faux fur cover',
+      'Built-in waterproof liner',
+      'Oversized design provides a spacious lounge area for a person and a dog',
+      'Comes with a pillow and a blanket',
+      'Side pocket',
+      'Built-in handle',
+      'Non-slip bottom',
+    ],
+    image: { src: 'https://image.chewy.com/catalog/general/images/moe/069e0f77-cd05-7dba-8000-60241de1a9a7._AC_SS500_V1_.jpg', alt: 'Berenlefe Oversized Memory Foam Lounge Human Dog Bed' },
+    variantGroup: {
+      axis: sizeAxis,
+      defaultVariantId: '70-9x45-in',
+      variants: [
+        {
+          id: '70-9x45-in',
+          label: '70.9 × 45 in',
+          offers: [chewyOffer('https://www.chewy.com/berenlefe-oversized-orthopedic-memory/dp/4177406')],
+        },
+        {
+          id: '78x47-3-in',
+          label: '78 × 47.3 in',
+          offers: [chewyOffer('https://www.chewy.com/berenlefe-oversized-orthopedic-memory/dp/4177430')],
+        },
+      ],
+    } satisfies ProductVariantGroup,
+  },
+  {
+    id: 'timberdog-ruffrest-travel-bed',
+    name: 'Timberdog RuffRest Orthopedic Travel Bed',
+    category: 'orthopedic-beds',
+    offers: [chewyOffer('https://www.chewy.com/timberdog-ruffrest-stormy-orthopedic/dp/1506782')],
+    bullets: [
+      'Dual foam base: High-density and memory foam',
+      'Removable and washable cover',
+      'Highly portable and lightweight travel bed',
+      'Built-in blanket converts into a three-season sleeping bag',
+      'Opens like a suitcase and packs up for trips, with a removable see-through organizer for essentials',
+      'Comes with a hydration pocket, reflective leash and emergency medical ID card',
+    ],
+    image: { src: 'https://image.chewy.com/catalog/general/images/timberdog-ruffrest-orthopedic-ultimate-travel-cat-dog-bed-with-removable-cover-orion-bluetangerineteal-medium/img-321160._AC_SS500_V1_.jpg', alt: 'Timberdog RuffRest Orthopedic Travel Bed' },
+    variantGroup: {
+      axis: sizeAxis,
+      defaultVariantId: 'medium',
+      variants: [
+        {
+          id: 'small',
+          label: 'Small',
+          offers: [chewyOffer('https://www.chewy.com/timberdog-ruffrest-stormy-orthopedic/dp/1506790')],
+        },
+        {
+          id: 'medium',
+          label: 'Medium',
+          offers: [chewyOffer('https://www.chewy.com/timberdog-ruffrest-stormy-orthopedic/dp/1506782')],
+        },
+        {
+          id: 'large',
+          label: 'Large',
+          offers: [chewyOffer('https://www.chewy.com/timberdog-ruffrest-stormy-orthopedic/dp/1506774')],
+        },
+      ],
+    } satisfies ProductVariantGroup,
+  },
+  {
+    id: 'three-dog-ez-wash-softshell-bolster-bed',
+    name: '3 Dog Pet Supply EZ Wash Softshell Orthopedic Bolster Dog Bed',
+    category: 'orthopedic-beds',
+    offers: [chewyOffer('https://www.chewy.com/3-dog-pet-supply-ez-wash-softshell/dp/255891')],
+    bullets: [
+      'Dual layer 4 inch thick design: 2 inches of support foam plus 2 inches of high-density memory foam',
+      'Removable and washable quilted polyester cover',
+      'Waterproof protective liner',
+    ],
+    image: { src: 'https://image.chewy.com/catalog/general/images/3-dog-pet-supply-ez-wash-softshell-orthopedic-bolster-dog-bed-with-removable-cover-slate-medium/img-242754._AC_SS500_V1_.jpg', alt: '3 Dog Pet Supply EZ Wash Softshell Orthopedic Bolster Dog Bed' },
+  },
+  {
+    id: 'snoozer-cozy-cave-orthopedic-bed',
+    name: 'Snoozer Cozy Cave Orthopedic Dog Bed',
+    category: 'orthopedic-beds',
+    offers: [chewyOffer('https://www.chewy.com/snoozer-pet-products-100-washable/dp/1098158')],
+    bullets: [
+      'Orthopedic cushioning with plush chenille jacquard fabric',
+      'Cave-style design gives dogs that like to burrow a more enclosed place to rest',
+      'Removable and washable cover',
+      'Water-resistant, non-skid rubberized underside',
+    ],
+    image: { src: 'https://image.chewy.com/catalog/general/images/snoozer-pet-products-100-washable-forgiveness-cozy-cave-orthopedic-dog-cat-crate-bed-with-removable-cover-olive-small/img-118213._AC_SS500_V1_.jpg', alt: 'Snoozer Cozy Cave Orthopedic Dog Bed' },
+    variantGroup: {
+      axis: sizeAxis,
+      defaultVariantId: 'small',
+      variants: [
+        {
+          id: 'small',
+          label: 'Small',
+          offers: [chewyOffer('https://www.chewy.com/snoozer-pet-products-100-washable/dp/1098158')],
+        },
+        {
+          id: 'medium',
+          label: 'Medium',
+          offers: [chewyOffer('https://www.chewy.com/snoozer-pet-products-100-washable/dp/1098166')],
+        },
+        {
+          id: 'large',
+          label: 'Large',
+          offers: [chewyOffer('https://www.chewy.com/snoozer-pet-products-100-washable/dp/1098174')],
+        },
+        {
+          id: 'x-large',
+          label: 'X-Large',
+          offers: [chewyOffer('https://www.chewy.com/snoozer-pet-products-100-washable/dp/1098182')],
+        },
+      ],
+    } satisfies ProductVariantGroup,
+  },
+];
+
+export const chewyOrthopedicBedIds = {
+  sofa: ['eheyciga-waterproof-sofa-bed', 'eheyciga-high-back-sofa-bed', 'furhaven-cable-corduroy-couch-bed', 'kylinsure-all-around-bolster-bed', 'furhaven-embossed-velvet-sofa-bed'],
+  foam: ['comfort-expression-waterproof-foam-bed', 'laifug-orthopedic-memory-foam-bed', 'kylinsure-orthopedic-pillow-bed', 'veehoo-elevated-memory-foam-bed', 'berenlefe-oversized-lounge-bed'],
+  crate: ['timberdog-ruffrest-travel-bed', 'three-dog-ez-wash-softshell-bolster-bed', 'snoozer-cozy-cave-orthopedic-bed'],
+} as const;

@@ -32,6 +32,7 @@ import imgDogPark from '../../images/watermarked/rhys-road-trip/20250709_190632~
 import imgSnuggled from '../../images/watermarked/rhys-road-trip/20250709_233517~2.jpg';
 import imgCoffeeStop from '../../images/watermarked/rhys-road-trip/20250711_195946~2.jpg';
 import imgNowhere from '../../images/watermarked/rhys-road-trip/20250713_014356~2.jpg';
+import { ROUTES } from '@data/routes';
 
 
 export const tocHeadings = [
@@ -366,6 +367,10 @@ export const roadTripFaqs = [
       <span class="hero-badge">Rhys Approved Product</span>
       <RoadTripProducts section="travel-bed" pageSlug="dog-road-trip-gear" />
     </div>
+    <p>
+      If you want more portable bed options for hotels, camping, patios, and destination stops, compare our{' '}
+      <a href={ROUTES.comfortTravelBeds} data-track="collector_to_converter_click" data-from-page="dog-road-trip-gear" data-to-page={ROUTES.comfortTravelBeds} data-link-position="section">dog travel bed picks</a>.
+    </p>
 
     <figure class="trip-photo">
       <Image
