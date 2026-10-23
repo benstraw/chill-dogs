@@ -34,15 +34,16 @@ export const sizeAxis = { id: 'dog-size', label: 'Size', hint: 'Measure your dog
 export const chewyOrthopedicBeds: RelaxationProduct[] = [
   {
     id: 'eheyciga-waterproof-sofa-bed',
-    name: 'EHEYCIGA Waterproof Memory Foam Sofa Dog Bed',
+    name: 'EHEYCIGA Orthopedic Sofa Dog Bed',
     category: 'orthopedic-beds',
     offers: [chewyOffer('https://www.chewy.com/eheyciga-waterproof-memory-foam/dp/3816406')],
     bullets: [
-      'Memory-foam base with an egg-crate layer gives joints a contoured surface and helps air move under the dog',
-      'Raised sides give dogs that like to curl up, or lean on something, a secure edge',
-      'Removable machine-washable cover and a non-slip bottom keep it easy to clean and steady on hard floors',
+      'Dual layer memory foam and egg-crate foam',
+      'Removable and washable fleece cover',
+      'Waterproof layer',
+      'Non-slip bottom',
     ],
-    image: { src: 'https://image.chewy.com/catalog/general/images/moe/06972834-3e06-7221-8000-1565897e4320._AC_SS500_V1_.jpg', alt: 'EHEYCIGA Waterproof Memory Foam Sofa Dog Bed' },
+    image: { src: 'https://image.chewy.com/catalog/general/images/moe/06972834-3e06-7221-8000-1565897e4320._AC_SS500_V1_.jpg', alt: 'EHEYCIGA Orthopedic Sofa Dog Bed' },
     variantGroup: {
       axis: sizeAxis,
       defaultVariantId: '44x32-in',
@@ -72,15 +73,16 @@ export const chewyOrthopedicBeds: RelaxationProduct[] = [
   },
   {
     id: 'eheyciga-high-back-sofa-bed',
-    name: 'EHEYCIGA High-Back Memory Foam Sofa Dog Bed',
+    name: 'EHEYCIGA High-Back Sofa Dog Bed',
     category: 'orthopedic-beds',
     offers: [chewyOffer('https://www.chewy.com/eheyciga-memory-foam-orthopedic/dp/3816182')],
     bullets: [
-      'Three-sided bolster and a high back support the head and neck for dogs that like to sleep propped up',
-      'Memory foam over an egg-crate layer, topped with a soft striped fleece cover',
-      'Reversible machine-washable cover has an internal waterproof layer, and the non-slip bottom keeps the bed in place',
+      'Dual layer gel infused memory foam and high density egg-crate foam',
+      'Removable and washable corduroy fleece cover',
+      'Waterproof liner',
+      'Non-slip bottom',
     ],
-    image: { src: 'https://image.chewy.com/catalog/general/images/moe/069f4ffe-ed94-7269-8000-a729bf665359._AC_SS500_V1_.jpg', alt: 'EHEYCIGA High-Back Memory Foam Sofa Dog Bed' },
+    image: { src: 'https://image.chewy.com/catalog/general/images/moe/069f4ffe-ed94-7269-8000-a729bf665359._AC_SS500_V1_.jpg', alt: 'EHEYCIGA High-Back Sofa Dog Bed' },
     variantGroup: {
       axis: sizeAxis,
       defaultVariantId: '42x30-in',
@@ -104,39 +106,6 @@ export const chewyOrthopedicBeds: RelaxationProduct[] = [
           id: '45x35-in',
           label: '45 × 35 in',
           offers: [chewyOffer('https://www.chewy.com/eheyciga-memory-foam-orthopedic/dp/3816222')],
-        },
-      ],
-    } satisfies ProductVariantGroup,
-  },
-  {
-    id: 'noah-paw-velvet-orthopedic-bed',
-    name: 'Noah & Paw Velvet Orthopedic Dog Bed',
-    category: 'orthopedic-beds',
-    offers: [chewyOffer('https://www.chewy.com/noah-paw-velvet-collection-orthopedic/dp/1971958')],
-    bullets: [
-      'Seven-inch-thick foam base is aimed at older dogs and larger breeds that need deeper support',
-      'Cooling-gel top layer of foam with a waterproof lining under a removable, machine-washable cover',
-      'Heavy-duty zippers with zipper covers make it harder for chewers to get at the cover',
-    ],
-    image: { src: 'https://image.chewy.com/catalog/general/images/moe/068a8cd6-84cd-7eda-8000-615031c76b88._AC_SS500_V1_.jpg', alt: 'Noah & Paw Velvet Orthopedic Dog Bed' },
-    variantGroup: {
-      axis: sizeAxis,
-      defaultVariantId: 'large',
-      variants: [
-        {
-          id: 'small',
-          label: 'Small',
-          offers: [chewyOffer('https://www.chewy.com/noah-paw-velvet-collection-orthopedic/dp/1971886')],
-        },
-        {
-          id: 'large',
-          label: 'Large',
-          offers: [chewyOffer('https://www.chewy.com/noah-paw-velvet-collection-orthopedic/dp/1971958')],
-        },
-        {
-          id: 'x-large',
-          label: 'X-Large',
-          offers: [chewyOffer('https://www.chewy.com/noah-paw-velvet-collection-orthopedic/dp/1972006')],
         },
       ],
     } satisfies ProductVariantGroup,
@@ -551,7 +520,7 @@ export const chewyOrthopedicBeds: RelaxationProduct[] = [
 ];
 
 export const chewyOrthopedicBedIds = {
-  sofa: ['eheyciga-waterproof-sofa-bed', 'eheyciga-high-back-sofa-bed', 'noah-paw-velvet-orthopedic-bed', 'carolina-pet-berber-bolster-bed', 'furhaven-cable-corduroy-couch-bed', 'kylinsure-all-around-bolster-bed', 'furhaven-embossed-velvet-sofa-bed'],
+  sofa: ['eheyciga-waterproof-sofa-bed', 'eheyciga-high-back-sofa-bed', 'carolina-pet-berber-bolster-bed', 'furhaven-cable-corduroy-couch-bed', 'kylinsure-all-around-bolster-bed', 'furhaven-embossed-velvet-sofa-bed'],
   foam: ['comfort-expression-waterproof-foam-bed', 'zomisia-fluffy-egg-foam-bed', 'laifug-orthopedic-memory-foam-bed', 'kylinsure-orthopedic-pillow-bed', 'veehoo-elevated-memory-foam-bed', 'berenlefe-oversized-lounge-bed'],
   crate: ['timberdog-ruffrest-travel-bed', 'three-dog-ez-wash-softshell-bolster-bed', 'snoozer-cozy-cave-orthopedic-bed'],
 } as const;

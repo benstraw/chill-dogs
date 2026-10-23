@@ -194,7 +194,6 @@ export const PUBLISHED_PRODUCT_IDS: readonly string[] = [
   'njkpuyt-flea-collar-small-4pack',
   'noah-paw-denim-orthopedic-bed',
   'noah-paw-giant-orthopedic-bed',
-  'noah-paw-velvet-orthopedic-bed',
   'non-stop-dogwear-dog-rescue-sling',
   'nupida-xl-crate-bed',
   'ohgeni-orthopedic-bed',

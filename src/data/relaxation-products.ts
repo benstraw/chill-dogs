@@ -57,6 +57,7 @@ function amazonSizes(defaultAsin: string, sizes: ReadonlyArray<readonly [string,
 }
 
 const NOAH_PAW_DENIM_CHEWY = 'https://www.chewy.com/noah-paw-denim-collection-orthopedic/dp/';
+const NOAH_PAW_VELVET_CHEWY = 'https://www.chewy.com/noah-paw-velvet-collection-orthopedic/dp/';
 
 /** Adds a Chewy listing to each size of an Amazon size picker, keyed by variant id. */
 function withChewyOffers(group: ProductVariantGroup, chewyUrls: Record<string, string>): ProductVariantGroup {
@@ -287,7 +288,18 @@ export const relaxationProducts: RelaxationProduct[] = [
     name: 'NOAH & PAW Orthopedic Dog Bed',
     category: 'orthopedic-beds',
     amazonUrl: 'https://www.amazon.com/dp/B0DS6GN236/?tag=chill-dogs-20',
-    variantGroup: amazonSizes('B0DS6GN236', [['Small','B0DS6FBPWV'], ['Medium','B0DS6GB8YQ'], ['Large','B0DS6FW7GV'], ['X-Large','B0DS6G79J9'], ['XX-Large','B0DS6GN236']]),
+    // One bed, two merchants: Chewy's Dark Green Noah & Paw velvet listings are this bed (#396).
+    offers: [chewyOffer(`${NOAH_PAW_VELVET_CHEWY}1972078`)],
+    variantGroup: withChewyOffers(
+      amazonSizes('B0DS6GN236', [['Small','B0DS6FBPWV'], ['Medium','B0DS6GB8YQ'], ['Large','B0DS6FW7GV'], ['X-Large','B0DS6G79J9'], ['XX-Large','B0DS6GN236']]),
+      {
+        small: `${NOAH_PAW_VELVET_CHEWY}1971870`,
+        medium: `${NOAH_PAW_VELVET_CHEWY}1971942`,
+        large: `${NOAH_PAW_VELVET_CHEWY}1971990`,
+        'x-large': `${NOAH_PAW_VELVET_CHEWY}1972038`,
+        'xx-large': `${NOAH_PAW_VELVET_CHEWY}1972078`,
+      },
+    ),
     bullets: [
       '3 layer construction: Base 30D foam, memory foam and egg-shell foam infused with cooling gel',
       'Removable and washable faux fur cover',
