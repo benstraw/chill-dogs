@@ -224,6 +224,8 @@ describe('related pages', () => {
       '/calming/best-lick-mats-for-dogs/',
       '/comforting/best-calming-dog-beds/',
       '/comforting/best-orthopedic-dog-beds/',
+      '/comforting/best-chew-resistant-dog-beds/',
+      '/comforting/best-dog-travel-beds/',
       '/comforting/best-puppy-crates/',
       '/comforting/best-anxiety-dog-crates/',
       '/comforting/best-travel-crates-for-road-trips/',

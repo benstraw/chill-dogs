@@ -183,6 +183,25 @@ Its Amazon sibling ASINs are **not** in the cache (`B071JS3MYK.json` has no `var
 sourced from live listings. Chewy part numbers come from the `/dp/<id>` segment of the canonical Chewy URL,
 which `chewyOffer()` parses into `merchantProductId`.
 
+### Chewy-only variants: orthopedic beds
+
+`src/data/chewy-orthopedic-beds.ts`, on `/comforting/best-orthopedic-dog-beds/`. Thirteen beds with no
+Amazon offer at all (`asin` and `amazonUrl` omitted); twelve carry a size picker, one (3 Dog) is a single listing.
+Each size is its own Chewy listing, so each variant has one Chewy offer and the card still renders one CTA.
+
+Rules these records settled:
+
+- **One colour per card.** Chewy lists size × colour as separate items; the picker only covers the colour
+  of the listing the issue linked, because the picker supports a single axis.
+- **Only in-stock sizes become chips**, except the default (the listing the issue linked) and a few
+  out-of-stock sizes kept so every bed offers its sizes (#390).
+- **A bed with a single in-stock size gets no `variantGroup`**: a one-chip picker is noise.
+- Chewy `/dp/` ids matched Impact catalog item ids for these beds (unlike the older Kurgo/Adventure Medical
+  cases in `docs/affiliate-links.md`), so `fetch:chewy --search` finds every size listing.
+- **Beds sold on both merchants** (the two NOAH & PAW beds) stay Amazon records; `withChewyOffers` in
+  `src/data/relaxation-products.ts` adds the matching Chewy listing to each Amazon size (#393, #396).
+- Sizes are labelled by name (`Small`, `X-Large`) or by dimensions (`44 × 32 in`) exactly as Chewy sells them.
+
 ---
 
 ## Related knowledge
