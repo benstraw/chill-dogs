@@ -1,14 +1,35 @@
+import { existsSync } from 'node:fs';
+import path from 'node:path';
+
 import type { SitemapPage } from '../../data/content-sitemap';
 
 const HERO_NAME_MAX_LENGTH = 48;
+const IMAGE_EXTENSION = /\.(?:avif|gif|jpe?g|png|webp)(?:$|[._?])/i;
 
 function isDirectImageUrl(value: string): boolean {
   try {
     const url = new URL(value);
-    return /^https?:$/.test(url.protocol) && /\.(?:avif|gif|jpe?g|png|webp)(?:$|[._?])/i.test(url.pathname);
+    return /^https?:$/.test(url.protocol) && IMAGE_EXTENSION.test(url.pathname);
   } catch {
     return false;
   }
+}
+
+/**
+ * Most product images are merchant CDN URLs, but a product we photographed
+ * ourselves is served straight out of `public/`. Accept a site-root-relative
+ * path as long as the file is actually there — the generator reads it off disk
+ * rather than fetching it. See `loadCachedImageDataUri` in cache.ts.
+ */
+function isLocalPublicImagePath(value: string): boolean {
+  if (!value.startsWith('/') || value.startsWith('//') || value.includes('..')) {
+    return false;
+  }
+  if (!IMAGE_EXTENSION.test(value)) {
+    return false;
+  }
+
+  return existsSync(path.join(process.cwd(), 'public', value.replace(/^\//, '')));
 }
 
 export function validateHeroProductPage(page: SitemapPage): string[] {
@@ -19,8 +40,10 @@ export function validateHeroProductPage(page: SitemapPage): string[] {
     return errors;
   }
 
-  if (!hero.image || !isDirectImageUrl(hero.image)) {
-    errors.push(`${page.href}: heroProduct.image must be a direct image URL`);
+  if (!hero.image || !(isDirectImageUrl(hero.image) || isLocalPublicImagePath(hero.image))) {
+    errors.push(
+      `${page.href}: heroProduct.image must be a direct image URL or a path to a file in public/`,
+    );
   }
 
   if (!hero.badge?.trim()) {

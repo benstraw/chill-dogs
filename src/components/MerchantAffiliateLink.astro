@@ -88,4 +88,16 @@ const ctaClass = isCta ? ['ui-cta', className].filter(Boolean).join(' ') : class
     border-color: #001a70;
     color: #fff;
   }
+
+  a[data-merchant="aorkuler"]:not(.ui-cta) {
+    background: #f7a600;
+    color: #1a1a1a;
+    border-color: #f7a600;
+  }
+
+  a[data-merchant="aorkuler"]:not(.ui-cta):hover {
+    background: #d98f00;
+    border-color: #d98f00;
+    color: #1a1a1a;
+  }
 </style>

@@ -126,3 +126,32 @@
 .ui-cta[data-tone][data-variant][data-merchant='chewy']:focus-visible {
   outline-color: #1c49c2;
 }
+
+/* ---- merchant override: aorkuler stays amber regardless of tone/variant ----
+ *
+ * Same two-selector shape as the Chewy block above and for the same reason: the
+ * Aorkuler offer leads its stack (displayOrder 0) so it normally renders primary,
+ * but it drops to `[data-tone][data-variant]` secondary anywhere the Amazon offer
+ * is promoted. The (0,4,0) selector is what keeps the brand fill in that case.
+ *
+ * Amber is light, so the label is near-black rather than white — #1a1a1a on
+ * #f7a600 is ~8.4:1, comfortably past AA.
+ */
+.ui-cta[data-merchant='aorkuler'],
+.ui-cta[data-tone][data-variant][data-merchant='aorkuler'] {
+  background: #f7a600;
+  color: #1a1a1a;
+  border: 1px solid #f7a600;
+}
+
+.ui-cta[data-merchant='aorkuler']:hover,
+.ui-cta[data-tone][data-variant][data-merchant='aorkuler']:hover {
+  background: #d98f00;
+  color: #1a1a1a;
+  border: 1px solid #d98f00;
+}
+
+.ui-cta[data-merchant='aorkuler']:focus-visible,
+.ui-cta[data-tone][data-variant][data-merchant='aorkuler']:focus-visible {
+  outline-color: #d98f00;
+}

@@ -1,0 +1,116 @@
+---
+/**
+ * The visible half of a review's star rating.
+ *
+ * Google requires a rating in `Review` structured data to be visible on the page,
+ * so a page that emits `reviewRating` must render this too. Hold the number in one
+ * variable on the page and pass it to both this component and `buildReviewSchema()`
+ * in src/utils/review-schema.ts, so the two cannot drift apart.
+ */
+
+interface Props {
+  /** Rating out of `best`. One decimal place is rendered; halves are drawn. */
+  value: number;
+  best?: number;
+  /** Short line under the stars, e.g. what the score is weighing. */
+  summary?: string;
+  label?: string;
+}
+
+const { value, best = 5, summary, label = 'Our rating' } = Astro.props;
+
+const clamped = Math.max(0, Math.min(value, best));
+const stars = Array.from({ length: best }, (_, i) => {
+  const filled = clamped - i;
+  if (filled >= 1) return 'full';
+  if (filled >= 0.5) return 'half';
+  return 'empty';
+});
+
+const display = Number.isInteger(clamped) ? `${clamped}.0` : clamped.toFixed(1);
+---
+
+<div class="review-rating">
+  <p class="rr-label">{label}</p>
+  <p class="rr-score">
+    <span class="rr-stars" role="img" aria-label={`${display} out of ${best} stars`}>
+      {stars.map((state) => (
+        <span class={`rr-star rr-star--${state}`} aria-hidden="true">★</span>
+      ))}
+    </span>
+    <span class="rr-value">{display}<span class="rr-out-of">/{best}</span></span>
+  </p>
+  {summary && <p class="rr-summary">{summary}</p>}
+</div>
+
+<style>
+  .review-rating {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-left: 4px solid var(--color-primary);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    margin: var(--space-lg) 0;
+  }
+
+  .rr-label {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-bold);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin: 0 0 var(--space-xs);
+  }
+
+  .rr-score {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  .rr-stars {
+    display: inline-flex;
+    font-size: var(--text-2xl);
+    line-height: 1;
+  }
+
+  /*
+   * A half star is one glyph painted twice: the filled colour clipped to the left
+   * half by a gradient, the muted colour behind it. Avoids shipping an icon set.
+   */
+  .rr-star--full {
+    color: #f5a623;
+  }
+
+  .rr-star--empty {
+    color: var(--color-border);
+  }
+
+  .rr-star--half {
+    background: linear-gradient(90deg, #f5a623 50%, var(--color-border) 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .rr-value {
+    font-size: var(--text-xl);
+    font-weight: var(--weight-bold);
+    color: var(--color-text);
+  }
+
+  .rr-out-of {
+    font-size: var(--text-base);
+    font-weight: var(--weight-normal);
+    color: var(--color-text-muted);
+  }
+
+  .rr-summary {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-normal);
+    margin: var(--space-sm) 0 0;
+  }
+</style>
