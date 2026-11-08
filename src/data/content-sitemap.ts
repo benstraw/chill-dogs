@@ -522,6 +522,7 @@ export const staticSitemapSections: SitemapSection[] = [
         pinnedRelated: [
           ROUTES.rhysRanAway,
           ROUTES.fiCollarReview,
+          ROUTES.aorkulerReview,
           ROUTES.garminTracking,
           ROUTES.airtagForDogs,
           ROUTES.dogRanAwaySafety,
@@ -587,6 +588,30 @@ export const staticSitemapSections: SitemapSection[] = [
         pubDate: new Date('2026-08-14'),
       }),
       createSitemapPage({
+        baseTitle: 'Aorkuler GPS Dog Tracker Review: No Subscription, No App (2026)',
+        ogTitle: 'Aorkuler GPS Dog Tracker Review: No Subscription, No App',
+        description:
+          'We field-tested the Aorkuler GPS dog tracker with Rhys: no subscription, no app, no cell service needed — and a radio link that came and went inside 500 feet.',
+        href: ROUTES.aorkulerReview,
+        pageType: 'collector',
+        collectorSubtype: 'article',
+        topics: ['tracking', 'gps-tracking', 'lost-dog-safety'],
+        pinnedRelated: [
+          ROUTES.trackingTop,
+          ROUTES.fiCollarReview,
+          ROUTES.garminTracking,
+          ROUTES.airtagForDogs,
+          ROUTES.dogRanAwaySafety,
+        ],
+        relatedLabel: 'Aorkuler Review',
+        heroProduct: trackerHero(
+          'aorkuler-pet-tracker',
+          'Hands-On Review',
+          'Aorkuler Pet Tracker (Single Dog Kit)',
+        ),
+        pubDate: new Date('2026-11-07'),
+      }),
+      createSitemapPage({
         baseTitle: 'Fi Dog Collar Review: GPS Tracking for Everyday Dogs (2026)',
         ogTitle: 'Fi Series 3+ Dog Collar GPS Review (2026)',
         description:
@@ -598,6 +623,7 @@ export const staticSitemapSections: SitemapSection[] = [
         pinnedRelated: [
           ROUTES.trackingTop,
           ROUTES.garminTracking,
+          ROUTES.aorkulerReview,
           ROUTES.airtagForDogs,
           ROUTES.rhysRanAway,
           ROUTES.dogRanAwaySafety,
@@ -617,6 +643,7 @@ export const staticSitemapSections: SitemapSection[] = [
         topics: ['tracking', 'gps-tracking', 'lost-dog-safety'],
         pinnedRelated: [
           ROUTES.trackingTop,
+          ROUTES.aorkulerReview,
           ROUTES.fiCollarReview,
           ROUTES.airtagForDogs,
           ROUTES.rhysRanAway,

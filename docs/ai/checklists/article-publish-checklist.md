@@ -44,6 +44,8 @@ Finishing any article collector page before marking work as done.
 - [ ] Health emergencies covered include escalation language ("contact your vet immediately")
 - [ ] Added to sitemap inventory (`src/data/content-sitemap.ts`) if not MDX — MDX auto-discovers from `canonicalPath`
 - [ ] `topics` frontmatter set to relevant values from the `TOPICS` const in `content-sitemap.ts`
+- [ ] No `ImagePlaceholder` slots left on the page — every one replaced with a real photo, or the slot and its surrounding claim removed
+- [ ] Review pages only: rating is visible on the page and comes from the same constant as `reviewRating` in the schema
 - [ ] Updated `docs/system-definition.yaml`
 - [ ] Build passes: `bun run build`
 - [ ] Tests pass: `bun run test`

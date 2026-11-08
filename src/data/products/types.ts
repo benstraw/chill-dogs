@@ -1,4 +1,4 @@
-export type MerchantId = 'amazon' | 'chewy';
+export type MerchantId = 'amazon' | 'chewy' | 'aorkuler';
 
 export type OfferStatus = 'active' | 'candidate' | 'unavailable';
 
@@ -21,7 +21,16 @@ export interface ChewyOffer extends AffiliateOfferBase {
   merchant: 'chewy';
 }
 
-export type AffiliateOffer = AmazonOffer | ChewyOffer;
+/**
+ * Aorkuler's own affiliate program — a direct-from-brand offer, not a marketplace
+ * listing. The brand sells one product line, so there is no ASIN or catalogue id to
+ * carry; `url` is the tracked affiliate link and `canonicalUrl` the raw product page.
+ */
+export interface AorkulerOffer extends AffiliateOfferBase {
+  merchant: 'aorkuler';
+}
+
+export type AffiliateOffer = AmazonOffer | ChewyOffer | AorkulerOffer;
 
 export interface ProviderMetadata {
   readonly fetchedAt: string;
