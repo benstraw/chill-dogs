@@ -591,7 +591,7 @@ export const staticSitemapSections: SitemapSection[] = [
         baseTitle: 'Aorkuler GPS Dog Tracker Review: No Subscription, No App (2026)',
         ogTitle: 'Aorkuler GPS Dog Tracker Review: No Subscription, No App',
         description:
-          'We field-tested the Aorkuler GPS dog tracker with Rhys: no subscription, no app, no cell service needed — and a radio link that quit far short of its range claim.',
+          'We field-tested the Aorkuler GPS dog tracker with Rhys: no subscription, no app, no cell service needed — and a radio link that came and went inside 500 feet.',
         href: ROUTES.aorkulerReview,
         pageType: 'collector',
         collectorSubtype: 'article',

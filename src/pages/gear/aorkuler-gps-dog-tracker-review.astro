@@ -97,9 +97,9 @@ const faqs = [
   },
   {
     question: 'What range did you actually get?',
-    short: 'Aorkuler claims up to 3.5 miles. Ours went to last-known-position well under 500 feet.',
+    short: 'We did not test range. Inside 500 feet, where we did work, the link came and went.',
     answer:
-      `Aorkuler advertises up to 3.5 miles in open terrain. We did not come close to that. In a wide, flat park with very little tree cover, the controller showed a live green direction arrow at 104.6 feet, and by 389.4 feet it had switched to the red display that Aorkuler’s own documentation defines as "last known position" — meaning the radio link had dropped. It stayed red out to around 502 feet. Two caveats we want to be straight about: we had just run the "Follow it again" re-sync, and the controller interrupted one run with a "GPS updating" message, so some of that red may be sync state rather than a hard range wall. We did not test to failure in a second location, and we never saw anything resembling miles.`,
+      `Straight answer: we did not test this, so we have no range figure and we are not going to imply one. Aorkuler advertises up to 3.5 miles in open terrain, we never attempted to walk that down, and nothing in this review should be read as a verdict on it. What we can report is from inside 500 feet. The controller showed a live green arrow at 104.6 feet, and twice fell back to the red "last known position" display — at 389.4 feet and again around 502 feet — meaning the radio link had dropped. We had just run the "Follow it again" re-sync and the controller interrupted one track with a "GPS updating" message, either of which could explain that better than distance does. Treat 3.5 miles as an unverified manufacturer claim and use the 30-day window to test it where you actually walk.`,
   },
   {
     question: 'How accurate is the Aorkuler?',
@@ -147,7 +147,7 @@ const reviewSchema = buildReviewSchema({
 <BaseLayout
   title="Aorkuler GPS Dog Tracker Review: No Subscription, No App (2026)"
   ogTitle="Aorkuler GPS Dog Tracker Review: No Subscription, No App"
-  description="We field-tested the Aorkuler GPS dog tracker with Rhys: no subscription, no app, no cell service needed — and a radio link that quit far short of its range claim."
+  description="We field-tested the Aorkuler GPS dog tracker with Rhys: no subscription, no app, no cell service needed — and a radio link that came and went inside 500 feet."
 >
   <JsonLd slot="head" schema={reviewSchema} />
 
@@ -188,13 +188,16 @@ const reviewSchema = buildReviewSchema({
           paid once, it undercuts a comparable Garmin setup by a wide margin.
         </p>
         <p class="section-body">
-          What keeps it off five stars is the gap between the advertised 3.5-mile range
-          and what we saw. In a flat park with almost no tree cover, the display had
-          already switched to Aorkuler's red "last known position" state by 389 feet.
-          Add a GPS fix that needs open sky and up to a minute and a half, a re-sync
-          routine that interrupts a search, a proprietary USB-A magnetic charger, and a
-          kit that drains flat if you forget to switch both halves off, and you have a
-          genuinely useful tool with real edges on it.
+          What keeps it off five stars is consistency. Twice during a short
+          hide-and-seek — at 389 feet and again around 502 feet — the display fell back
+          to Aorkuler's red "last known position" state, meaning the radio link had gone
+          and we were reading an old fix. We cannot tell you why, and we are not going
+          to guess: we had just run the "Follow it again" re-sync, the controller
+          interrupted one track with a "GPS updating" message, and we never set out to
+          find the range limit. Add a GPS fix that needs open sky and up to a minute and
+          a half, a direction arrow that often lags, a proprietary USB-A magnetic
+          charger, and a kit that drains flat if you forget to switch both halves off,
+          and you have a genuinely useful tool with real edges on it.
         </p>
         <p class="section-body">
           <strong>Buy it if</strong> you want off-grid tracking without a subscription
@@ -445,11 +448,11 @@ const reviewSchema = buildReviewSchema({
           confidently in the wrong direction for two minutes.
         </p>
 
-        <h3>Where the link gave out</h3>
+        <h3>When the link dropped</h3>
         <p class="section-body">
-          Somewhere between 105 and 390 feet, the display went red. By Aorkuler's own
-          legend that means the radio connection had dropped and we were looking at a
-          last known position rather than a live one.
+          Twice in the session the display went red. By Aorkuler's own legend that means
+          the radio connection had dropped and we were looking at a last known position
+          rather than a live one — first at 389.4 feet, then again around 502 feet.
         </p>
 
         <div class="photo-pair">
@@ -472,17 +475,19 @@ const reviewSchema = buildReviewSchema({
         </figure>
 
         <p class="section-body">
-          Two honest caveats. We had just run the "follow it again" re-sync, and at one
-          point mid-track the controller interrupted itself with a "GPS updating"
-          message — so some of that red may be the system resynchronising rather than a
-          hard wall at 500 feet. And we only tested one location on one day; we did not
-          walk it out to find the true limit.
+          Be careful what you read into that, because we were. <strong>This is not a
+          range test.</strong> We never walked out to find the limit — hide-and-seek in
+          a park was the whole exercise. We had also just run the "follow it again"
+          re-sync, and at one point mid-track the controller interrupted itself with a
+          "GPS updating" message. Any of those explains a dropped link at least as well
+          as distance does, and one outing gives us no way to separate them.
         </p>
         <p class="section-body">
-          But set that against the headline claim of up to 3.5 miles in open terrain.
-          Westchester Park <em>is</em> open terrain, and we were measuring in hundreds of
-          feet, not miles. If the thing you are buying this for is distance, go in
-          sceptical and use the 30-day return window to test it where you actually walk.
+          What it does show is that the connection is not something to take for granted
+          at the distances where you would actually be using this, and that is worth
+          knowing before you are using it in anger. Learn what the red arrow means, keep
+          walking toward the last known position, and expect the link to pick back up as
+          you close the gap — which, for us, it did every time.
         </p>
 
         <h3>On the dog</h3>
@@ -662,9 +667,9 @@ const reviewSchema = buildReviewSchema({
             <p class="vc-winner">Garmin wins</p>
             <p class="vc-body">
               Miles of VHF range, up to 20 dogs, maps on the handheld. It costs several
-              times as much and it is a more complicated system to learn, but our
-              Aorkuler link went to last-known-position inside 400 feet in open ground,
-              and that settles it. See <a href={ROUTES.garminTracking} data-track="collector_to_converter_click" data-from-page={pageSlug} data-to-page={ROUTES.garminTracking} data-link-position="comparisons">Garmin off-grid systems</a>.
+              times as much and is a more complicated system to learn, but it is the
+              proven option at distance — and distance is exactly what we did not verify
+              on the Aorkuler. See <a href={ROUTES.garminTracking} data-track="collector_to_converter_click" data-from-page={pageSlug} data-to-page={ROUTES.garminTracking} data-link-position="comparisons">Garmin off-grid systems</a>.
             </p>
           </div>
           <div class="verdict-card">
@@ -743,17 +748,21 @@ const reviewSchema = buildReviewSchema({
           with it.
         </p>
         <p class="section-body">
-          The reason it is four stars and not five is the distance claim. We measured in
-          hundreds of feet in close to ideal conditions, against an advertised 3.5 miles.
-          We cannot tell you where the real limit is, only that we did not get near the
-          advertised one. Buy it as a short-range finder that happens to need no network
-          and you will be pleased with it. Buy it expecting miles and use the 30-day
-          return window.
+          The reason it is four stars and not five is consistency. Inside 500 feet —
+          well within what this thing is for — the link dropped to last-known-position
+          twice. We cannot tell you whether that was distance, the re-sync, or the GPS
+          update cycle, because we did not build the test to find out. None of it stopped
+          us finding the dog, and the direction arrow needs the same patience. But a
+          finder you have to interpret is a slower finder, and that is friction worth
+          knowing about before you buy.
         </p>
 
         <h3>What we did not test</h3>
         <ul class="limits-list">
-          <li>The 3.5-mile range claim, in the terrain it was measured in</li>
+          <li>
+            <strong>Range.</strong> We never attempted the 3.5-mile claim and have no
+            figure of our own — nothing on this page is a range result
+          </li>
           <li>The IP67 rating — our unit never went in water</li>
             <li>Battery life from full to empty, on either unit</li>
           <li>The $379.99 Double Dog Kit and switching between two trackers</li>

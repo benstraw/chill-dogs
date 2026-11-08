@@ -285,7 +285,7 @@ export const trackerProducts: TrackerProduct[] = [
       'Hard zip case with everything included',
     ],
     cons: [
-      'Our radio link dropped and the distance froze near 500 ft in an open park',
+      'The link dropped to last-known-position twice inside 500 ft in our test',
       'GPS-only fix needs open sky and 30–90 seconds before you can start',
       'The "Follow it again" re-sync interrupts a search mid-hunt',
       'Proprietary magnetic charger on USB-A, and the magnet is weak',
@@ -296,14 +296,14 @@ export const trackerProducts: TrackerProduct[] = [
     bullets: [
       'GPS plus a direct radio link; no SIM, app, or subscription',
       'Handheld controller shows live distance and direction with no cell service',
-      'Aorkuler claims up to 3.5 miles; our link dropped near 500 ft in an open park',
+      'Aorkuler claims up to 3.5 miles, which we did not test; our link was intermittent inside 500 ft',
     ],
     ctaLabel: 'Buy direct from Aorkuler',
     signalNote: 'GPS satellite + direct radio to the handheld — no cell required',
     subscriptionNote: 'None — one-time purchase',
     handsOn: {
       since: '2026-11',
-      note: 'Two-person field test with Rhys at Westchester Park: binding and first GPS lock, hide-and-seek tracking runs from roughly 100 ft out to the point the radio link dropped, sound and light alarms, collar fit, and charging.',
+      note: 'Two-person field test with Rhys at Westchester Park: binding and first GPS lock, hide-and-seek tracking runs between roughly 100 and 500 ft, sound and light alarms, collar fit, and charging. Range was not tested.',
     },
     image: {
       src: '/images/products/aorkuler-pet-tracker.jpg',
