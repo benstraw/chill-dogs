@@ -9,6 +9,7 @@ import Disclosure from '@components/modules/Disclosure.astro';
 import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
 import AffiliateOfferStack from '@components/modules/primitives/AffiliateOfferStack.astro';
 import ReviewRating from '@components/modules/ReviewRating.astro';
+import ImagePlaceholder from '@components/modules/ImagePlaceholder.astro';
 import JsonLd from '@components/JsonLd.astro';
 import { getOffers } from '@data/products/offers';
 import { trackerProducts, AORKULER_DIRECT_URL } from '@data/tracking-products';
@@ -306,16 +307,29 @@ const reviewSchema = buildReviewSchema({
           tracking systems are often built for big gloves.
         </p>
 
-        <div class="photo-pending">
-          <p class="pp-label">Photos to add before publish</p>
-          <ul>
-            <li>The closed hard-shell case</li>
-            <li>The case open with everything laid out in the foam</li>
-            <li>Controller and tracker side by side, for scale</li>
-            <li>The magnetic charger and both cables</li>
-            <li>The collar strap and its clasp off the dog</li>
-          </ul>
-        </div>
+        <ImagePlaceholder
+          id="CASE-CLOSED"
+          title="The closed hard-shell case"
+          shot="Case zipped shut on a plain surface, three-quarter angle, even daylight. The Aorkuler name on the front must be legible and the carry handle visible."
+          caption="The case the kit ships in — closed, this is what lives in the cupboard."
+          alt="Closed Aorkuler hard-shell carry case with zip and handle"
+        />
+
+        <ImagePlaceholder
+          id="CASE-OPEN"
+          title="Case open, everything in the cut foam"
+          shot="Straight down on the open case, nothing removed, so the foam cutouts read. Both halves in frame, mesh lid pocket unzipped enough to show the two cables."
+          caption="Everything that comes in the box, still in its foam."
+          alt="Open Aorkuler case showing controller, tracker, antenna, collar strap and cables in cut foam"
+        />
+
+        <ImagePlaceholder
+          id="SCALE"
+          title="Controller and tracker side by side"
+          shot="Both units out of the case on a plain background with something for scale — a hand, or a credit card. Antenna screwed on. Shoot the face of each, then a second frame of the backs if the charging contacts do not show."
+          caption="The handheld controller and the collar tracker. The tracker is about the size of an AirTag."
+          alt="Aorkuler handheld controller beside the collar-mounted tracker for scale"
+        />
 
         <h3>Binding and the first GPS lock</h3>
         <p class="section-body">
@@ -402,6 +416,15 @@ const reviewSchema = buildReviewSchema({
             <dd>T is the tracker on the dog, C is the controller in your hand. Charge either at one bar.</dd>
           </div>
         </dl>
+
+        <ImagePlaceholder
+          id="SCREEN-ICONS"
+          title="Close-up of the status row"
+          shot="Tight on the top strip of the controller display so every icon is readable: the satellite indicator, the tracker number, and the T and C battery meters. Shade the screen to kill the glare that spoils the field frames."
+          caption="The status row: satellite lock on the left, tracker number in the middle, and the two battery meters — T for the tracker, C for the controller."
+          alt="Close view of the Aorkuler controller status icons including satellite lock and both battery meters"
+          screenshot={true}
+        />
 
         <p class="section-body">
           Aorkuler also warns that the compass is sensitive to magnetic interference and
@@ -509,6 +532,14 @@ const reviewSchema = buildReviewSchema({
           </figure>
         </div>
 
+        <ImagePlaceholder
+          id="STRAP-OFF-DOG"
+          title="The collar strap and clasp, off the dog"
+          shot="The strap and its metal-backed clasp laid flat, detached, next to an ordinary flat collar. Show how the clasp threads through — a second frame mid-thread would help more than a caption."
+          caption="The attachment on its own. The metal backing is what stops it working loose."
+          alt="Aorkuler elastic collar strap and reinforced metal clasp laid flat beside a dog collar"
+        />
+
         <h3>The sound and light alarms</h3>
         <p class="section-body">
           Both are menu options on the controller, and both are close-range tools. The
@@ -516,6 +547,14 @@ const reviewSchema = buildReviewSchema({
           and it is the more useful of the two. At dusk, in long grass, a flashing unit
           on a dark dog is genuinely easier to find than the dog.
         </p>
+        <ImagePlaceholder
+          id="LIGHT-ALARM-DUSK"
+          title="The light alarm firing at dusk"
+          shot="Tracker on the dog, low light, far enough back that the flash reads against the coat rather than filling the frame — the point is whether you could pick it out at distance. Needs a real dusk shoot; daylight will not show it."
+          caption="The light alarm at dusk. This is the one of the two alarms that does real work."
+          alt="Aorkuler tracker flashing on a dog's collar in low evening light"
+        />
+
         <p class="section-body">
           The beeper is faint. We could hear it from five to ten feet depending on
           ambient noise, and not reliably beyond that. As a way of locating a dog by ear
@@ -551,6 +590,14 @@ const reviewSchema = buildReviewSchema({
           is the half that lives outdoors on a dog. We would still rather have USB-C on
           the controller.
         </p>
+
+        <ImagePlaceholder
+          id="CHARGER"
+          title="The magnetic charger and both cables"
+          shot="Both cables laid out with the magnetic ends in focus, plus one frame of an end attached to a unit. The proprietary connector is the whole point of this section, so it needs to be unmistakable."
+          caption="Both cables are identical, and nothing else you own will fit the magnetic end."
+          alt="Aorkuler proprietary magnetic charging cables with USB-A connectors"
+        />
 
         <div class="callout callout--warning">
           <p class="callout-heading">Turn both units off, separately</p>
@@ -952,29 +999,6 @@ const reviewSchema = buildReviewSchema({
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     gap: var(--space-lg);
     max-width: var(--max-width-prose);
-  }
-
-  .photo-pending {
-    border: 1px dashed var(--color-border);
-    border-radius: var(--radius-md);
-    padding: var(--space-md) var(--space-lg);
-    margin: var(--space-lg) 0;
-    max-width: var(--max-width-prose);
-    font-size: var(--text-sm);
-    color: var(--color-text-muted);
-  }
-
-  .pp-label {
-    font-weight: var(--weight-bold);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    font-size: var(--text-xs);
-    margin-bottom: var(--space-xs);
-  }
-
-  .photo-pending ul {
-    margin: 0;
-    padding-left: var(--space-lg);
   }
 
   /* ── Pros & cons ───────────────────────────────────────────── */
