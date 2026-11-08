@@ -288,7 +288,7 @@ export const trackerProducts: TrackerProduct[] = [
       'The link dropped to last-known-position twice inside 500 ft in our test',
       'GPS-only fix needs open sky and 30–90 seconds before you can start',
       'The "Follow it again" re-sync interrupts a search mid-hunt',
-      'Proprietary magnetic charger on USB-A, and the magnet is weak',
+      'Proprietary magnetic charger — no cable you own will fit, and the magnet is weak',
       'Beeper is only audible within a few feet',
       'Drains flat if you forget to power both units down separately',
     ],
