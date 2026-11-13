@@ -77,6 +77,7 @@ You are starting any task and need to know which docs apply.
 
 **Read:**
 - [`marketing/pinterest-launch-plan.md`](marketing/pinterest-launch-plan.md) — Boards, pin format, cadence, CTA style
+- [`marketing/pinterest-launch-pins-2026-03.md`](marketing/pinterest-launch-pins-2026-03.md) — Copy of the March 2026 launch pins (history, not a template)
 - [`marketing/newsletter-guide.md`](marketing/newsletter-guide.md) — Email format, tone, link rules
 - [`marketing/utm-rules.md`](marketing/utm-rules.md) — UTM parameter format and examples
 - [`marketing/marketing-plan.md`](marketing/marketing-plan.md) — Positioning, audience, channels, KPIs
