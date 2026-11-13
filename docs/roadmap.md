@@ -15,6 +15,7 @@ is the historical record and its Phase 8 backlog is kept as-written for that rea
       and feature-flag flicker
 - [ ] Align Astro and MDX peer versions: use `@astrojs/mdx` v4 with the current
       Astro 5 stack, or upgrade Astro and its official integrations to v6 together
+- [ ] Content idea: dog sleep and activity trackers (from Ben's 2026-05-08 story list; the Fi collar review covers fitness tracking, nothing covers sleep yet)
 - [ ] Add third pillar: **Relaxing** — dog beds, plush toys, snuggly blankets, and cozy
       comfort gear
 

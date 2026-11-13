@@ -12,6 +12,7 @@ tags:
   - pins
 related:
   - marketing-plan.md
+  - pinterest-launch-pins-2026-03.md
   - utm-rules.md
   - newsletter-guide.md
   - ../writing/medical-and-vet-claim-guardrails.md
