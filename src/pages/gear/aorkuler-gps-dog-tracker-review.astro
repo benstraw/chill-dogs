@@ -314,6 +314,39 @@ const reviewSchema = buildReviewSchema({
           practice that means you start it outdoors, with a view of the sky, and wait.
         </p>
 
+        <h3>How the collar talks to the controller</h3>
+        <p class="section-body">
+          Three steps, and the third one explains the most confusing thing this device
+          does.
+        </p>
+        <ol class="rf-steps">
+          <li>
+            <strong>The collar gets its own fix.</strong> The tracker on your dog's
+            collar listens to GPS satellites overhead and works out its own coordinates.
+            Nothing else is involved — no phone, no tower, no network.
+          </li>
+          <li>
+            <strong>The collar radios those coordinates to you.</strong> Instead of
+            uploading them over a cellular network the way Fi or Tractive would, the
+            tracker transmits them straight to the handheld on its own proprietary radio
+            frequency. That link is what the screw-on antenna is there to receive, and
+            it is the part with no monthly bill attached.
+          </li>
+          <li>
+            <strong>The controller does the arithmetic.</strong> It compares the
+            coordinates it just received against its own position and renders the result
+            as a distance and a direction, refreshed every few seconds.
+          </li>
+        </ol>
+        <p class="section-body">
+          Step two is the entire value proposition: no SIM, no plan, no coverage map,
+          nothing to cancel. It is also the single point of failure. The satellites keep
+          working and your controller keeps working, but if that radio link between the
+          two units drops, the handheld has nothing fresh to do step three with — and as
+          we found at Playa Vista, it carries on doing step three anyway, against the
+          last coordinates it managed to receive.
+        </p>
+
         <h3>Specifications</h3>
         <p class="spec-note">
           Aorkuler's published figures, checked {CLAIMS_CHECKED}. These are the
@@ -1397,6 +1430,18 @@ const reviewSchema = buildReviewSchema({
     margin: 0;
     color: var(--color-text-muted);
     line-height: var(--leading-relaxed);
+  }
+
+  /* ── RF steps ──────────────────────────────────────────────── */
+  .rf-steps {
+    max-width: var(--max-width-prose);
+    padding-left: var(--space-lg);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-lg);
+  }
+
+  .rf-steps li {
+    margin-bottom: var(--space-sm);
   }
 
   /* ── Limits ────────────────────────────────────────────────── */
