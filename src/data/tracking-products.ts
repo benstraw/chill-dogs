@@ -289,6 +289,7 @@ export const trackerProducts: TrackerProduct[] = [
     cons: [
       'A red lost-link state flagged only by a tiny crossed-out signal icon, leaving you unsure what the distance is measuring',
       'No map: the arrow points straight through fences, walls and freeways',
+      'In a suburb the live link dropped under 1,000 ft in our drive test; the 3.5-mile open-terrain claim is untested',
       'Direction arrow lags, and sent us the wrong way at first in our second outing',
       'Collar unit is bulky on a small dog',
       'GPS-only fix needs open sky and 30–90 seconds to start, and the "Follow it again" re-sync can interrupt a search mid-hunt',
@@ -300,14 +301,14 @@ export const trackerProducts: TrackerProduct[] = [
     bullets: [
       'GPS plus a direct radio link; no SIM, app, or subscription',
       'Handheld controller shows live distance and direction with no cell service',
-      'Aorkuler claims up to 3.5 miles, which we did not test; we never had it more than about 1,000 ft away',
+      'Aorkuler claims up to 3.5 miles in open terrain; in our suburban drive test the live link dropped under 1,000 ft',
     ],
     ctaLabel: 'Buy direct from Aorkuler',
     signalNote: 'GPS satellite + direct radio to the handheld — no cell required',
     subscriptionNote: 'None — one-time purchase',
     handsOn: {
       since: '2026-11',
-      note: 'Two outings with Rhys: a two-person hide-and-seek at Westchester Park (binding and first GPS lock, tracking runs between roughly 100 and 500 ft, alarms, collar fit, charging), then a cold search around Playa Vista Sports Park after a 15-minute wait, never more than about 1,000 ft apart. Range was not tested.',
+      note: 'Two outings with Rhys: a two-person hide-and-seek at Westchester Park (binding and first GPS lock, tracking runs between roughly 100 and 500 ft, alarms, collar fit, charging), then a cold search around Playa Vista Sports Park after a 15-minute wait, never more than about 1,000 ft apart. Then a drive test with the tracker left at home: the arrow went red under 1,000 ft and stayed red out to 19,680 ft (about 3.7 miles) in a suburb. Open-terrain range was not tested.',
     },
     image: {
       src: '/images/products/aorkuler-pet-tracker.jpg',

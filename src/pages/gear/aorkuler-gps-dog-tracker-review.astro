@@ -28,6 +28,9 @@ import imgScreenIcons from '../../images/watermarked/aorkuler/aorkuler-screen-ic
 import imgRedWhileConnected from '../../images/watermarked/aorkuler/aorkuler-red-while-connected.jpg';
 import imgStrapOffDog from '../../images/watermarked/aorkuler/aorkuler-strap-off-dog.jpg';
 import imgStrapOffDogBack from '../../images/watermarked/aorkuler/aorkuler-strap-off-dog-back.jpg';
+import imgRangeDrive from '../../images/watermarked/aorkuler/aorkuler-range-drive-display.jpg';
+import imgRangeDrive18271 from '../../images/watermarked/aorkuler/aorkuler-range-drive-18271ft.jpg';
+import imgRangeDrive19680 from '../../images/watermarked/aorkuler/aorkuler-range-drive-19680ft.jpg';
 
 const pageSlug = 'aorkuler-gps-dog-tracker-review';
 const pubDate = '2026-11-07';
@@ -121,9 +124,9 @@ const faqs = [
   },
   {
     question: 'What range did you actually get?',
-    short: 'We did not test range. Across two outings the tracker was never more than about 1,000 feet away.',
+    short: 'In a suburb, from a car, the live link dropped under 1,000 feet and never came back. We have not tested open terrain.',
     answer:
-      'Straight answer: we did not test this, so we have no range figure and we are not going to imply one. Aorkuler advertises up to 3.5 miles in open terrain. Across two outings — hide-and-seek at Westchester Park and a cold search around Playa Vista — the tracker was never more than about 1,000 feet from the controller, and that is where we happened to stop, not where the device did. The display went red at points in both sessions, and we explain in the review what the red state does and does not tell you. A real range test is planned and described further down. Until it is done, treat 3.5 miles as an unverified manufacturer claim and use the 30-day window to test it where you actually walk.',
+      'Not the 3.5 miles on the box, at least not in a suburb. Aorkuler advertises up to 3.5 miles in open terrain. We left the tracker at home and drove away with the controller: the arrow went red less than 1,000 feet from the house and stayed red all the way out to 19,680 feet, about 3.7 miles. The distance kept counting the whole way, but with the signal bars crossed out, so it was measuring to the last position the controller had heard, not a live one. Across all three tests the longest green reading we photographed was 678.7 feet. Two caveats in Aorkuler’s favor: the controller was inside a car, and a built-up neighborhood is the opposite of open terrain. We have not tested open ground, so treat 3.5 miles as an unverified best case and use the 30-day window to test it where you actually walk.',
   },
   {
     question: 'How accurate is the Aorkuler?',
@@ -208,12 +211,13 @@ const reviewSchema = buildReviewSchema({
         <p class="dateline">
           Published <time datetime={pubDate}>{longDate(pubDate)}</time>. Updated
           <time datetime={updatedDate}>{longDate(updatedDate)}</time> after a second
-          field test, which changed how we read the red arrow and moved the rating.
+          field test and a range drive, which changed how we read the red arrow and
+          moved the rating.
         </p>
 
         <ReviewRating
           value={RATING}
-          summary="Scored on what we tested across two outings: setup, tracking in an open park and a cold search around a suburb, fit on the dog, the alarms, and charging. Provisional pending our range test — we have not verified the 3.5-mile claim, and the score may move when we do. We did not verify the IP67 rating or long-term battery life either."
+          summary="Scored on what we tested across two outings with Rhys and a drive test: setup, tracking in an open park, a cold search around a suburb, how far the live link reaches in a built-up area, fit on the dog, the alarms, and charging. We have not tested the 3.5-mile claim in open terrain, the IP67 rating, or long-term battery life."
         />
 
         <p class="section-body">
@@ -248,8 +252,8 @@ const reviewSchema = buildReviewSchema({
           <strong>Buy it if</strong> you want off-grid tracking without a subscription
           and your realistic search radius is a field, a campsite, or a rural property.
           <strong>Skip it if</strong> you need escape alerts pushed to your phone, a map
-          that shows what is between you and the dog, or confidence at a distance we
-          cannot yet vouch for.
+          that shows what is between you and the dog, or a live fix at long range in a
+          built-up area. Ours dropped under 1,000 feet.
         </p>
 
         <div class="buy-stack">
@@ -547,7 +551,8 @@ const reviewSchema = buildReviewSchema({
           to how the device would actually be used: a cold search through a suburb,
           fifteen minutes after the dog had gone, with buildings in the way. The second
           one changed how we read the first, and we have rewritten this section to say
-          so rather than quietly correct it.
+          so rather than quietly correct it. Then we left the tracker at home and drove
+          away from it, to see how far the link reaches.
         </p>
 
         <h3>Session one: hide and seek at Westchester Park</h3>
@@ -714,43 +719,78 @@ const reviewSchema = buildReviewSchema({
           <figcaption>Red arrow at 794.9 feet. The pins and both batteries look normal; the only other change is the crossed-out signal bars at top left.</figcaption>
         </figure>
 
-        <h3>The range test we have not done yet</h3>
-        <div class="callout callout--warning range-plan">
-          <p class="callout-heading">Not tested — this section describes a plan, not a result</p>
-          <p class="callout-body">
-            Aorkuler's 3.5-mile figure is the single biggest open question on this page,
-            and across two outings the tracker has never been more than about 1,000 feet
-            from the controller. A real multi-mile hike needs a second handler and is
-            not happening soon. So the plan is this: leave the tracker at home, drive
-            the neighborhood, and log how far we get before the link degrades, whether
-            a green arrow ever survives past a few hundred or a few thousand feet, and
-            photograph the display at each distance.
-          </p>
-          <p class="callout-body">
-            <strong>The method is better than it sounds.</strong> One end is fixed at a
-            known address, so every reading can be checked against a real map distance.
-            That is a cleaner range measurement than two people wandering a park, and it
-            finally gives us a ground truth for the distance readout itself.
-          </p>
-          <p class="callout-body">
-            <strong>What it still will not answer.</strong> The tracker is stationary,
-            so it tests radio reach, not behavior while the dog moves — which is
-            exactly the condition the red-arrow hypothesis above needs to resolve. And a
-            neighborhood drive is dense urban: buildings between the two units are part
-            of what gets measured, which is realistic but is not the open terrain
-            Aorkuler's 3.5-mile figure refers to. Until this is done, nothing on this
-            page is a range result and the rating above is provisional.
-          </p>
+        <h3>The drive test: a suburb, a car, and 3.7 miles</h3>
+        <p class="section-body">
+          Aorkuler's 3.5-mile figure was the biggest open question on this page, so we
+          tested it the only way two people and one dog can: we left the tracker at
+          home, took the controller in the car, and drove away from it through the
+          neighborhood on a Sunday afternoon, filming the screen as we went.
+        </p>
+        <p class="section-body">
+          The arrow went red less than 1,000 feet from the house and never went green
+          again. Every frame we recorded after that, from 1,610 feet out to the farthest
+          point of the drive at <strong>19,680 feet, about 3.7 miles</strong>, shows a red
+          arrow and crossed-out signal bars. We passed the advertised 3.5 miles with no
+          link at all.
+        </p>
+
+        <figure class="article-photo article-photo--screenshot">
+          <Image src={imgRangeDrive} alt="Aorkuler controller held in a car showing 8,522.3 feet with a red arrow and crossed-out signal bars" width={620} quality={80} />
+          <figcaption>
+            8,522.3 feet from the tracker, about 1.6 miles. Red arrow, signal bars
+            crossed out at top left.
+          </figcaption>
+        </figure>
+
+        <div class="photo-pair">
+          <figure class="article-photo article-photo--screenshot">
+            <Image src={imgRangeDrive18271} alt="Aorkuler controller showing 18,271.3 feet with a red arrow and crossed-out signal bars" width={620} quality={80} />
+            <figcaption>18,271.3 feet, just short of the advertised 3.5 miles.</figcaption>
+          </figure>
+          <figure class="article-photo article-photo--screenshot">
+            <Image src={imgRangeDrive19680} alt="Aorkuler controller showing 19,680.0 feet with a red arrow and crossed-out signal bars" width={620} quality={80} />
+            <figcaption>19,680.0 feet, about 3.7 miles: the farthest reading of the drive. Still red, still counting.</figcaption>
+          </figure>
         </div>
 
-        <ImagePlaceholder
-          id="RANGE-DRIVE-DISPLAY"
-          title="The controller display at distance during the drive test"
-          shot="Pending the drive test. A series of controller frames at known map distances from the house — at minimum one green and one red, each labeled with the measured distance. Shoot with the car stopped and the controller held level, away from the dashboard."
-          caption="The display at distance from a fixed tracker. Not yet shot — the test has not been run."
-          alt="Aorkuler controller display photographed at a measured distance from a stationary tracker"
-          screenshot={true}
-        />
+        <p class="section-body">
+          The number never stopped. It climbed smoothly the whole way out, in feet (the
+          controller does not switch to miles, so three and a half miles reads as
+          18,480). That is the strongest support yet for the hypothesis above: with the
+          link down for more than three miles, the only thing the controller can be
+          measuring is the gap between its own GPS position and the last position it
+          heard from the tracker. Because the tracker was sitting still at home, that
+          number was probably still right. With a moving dog it would not be.
+        </p>
+        <p class="section-body">
+          Put the three tests together and the pattern is consistent. The longest green
+          reading we have photographed is 678.7 feet, at Playa Vista. Behind the school
+          the arrow was red at about 800 feet, and on this drive it was red inside
+          1,000. In a built-up area, a live link has so far been a few-hundred-feet
+          thing for us.
+        </p>
+
+        <div class="callout callout--warning range-plan">
+          <p class="callout-heading">What this test does and does not show</p>
+          <p class="callout-body">
+            <strong>It is a suburban result, and a harsh one.</strong> The controller was
+            inside a car, held at lap height, with a neighborhood's worth of buildings
+            between the two units. Aorkuler's 3.5 miles is an open-terrain
+            figure, and this was the opposite of open terrain. A person on foot in the
+            same streets might do better than we did from a car.
+          </p>
+          <p class="callout-body">
+            <strong>We did not check the readings against a map,</strong> so the
+            distances here are what the controller reported, not measured ground truth.
+            And the tracker never moved, so the question of what the number does when
+            the dog moves while the arrow is red is still open.
+          </p>
+          <p class="callout-body">
+            <strong>What we take from it:</strong> do not buy this expecting miles of
+            live tracking in a neighborhood. We have not tested open ground, and until we
+            do, 3.5 miles is an unverified best case.
+          </p>
+        </div>
 
         <h3>On the dog</h3>
         <p class="section-body">
@@ -966,7 +1006,7 @@ const reviewSchema = buildReviewSchema({
             <span class="bfi-icon bfi-icon--no">✗</span>
             <div>
               <p class="bfi-label">Hunters and working-dog handlers</p>
-              <p class="bfi-desc">Multi-dog tracking at genuine distance with maps on the handheld is Garmin territory, and we have not tested the Aorkuler at anything like that distance.</p>
+              <p class="bfi-desc">Multi-dog tracking at genuine distance with maps on the handheld is Garmin territory, and in our suburban drive test the Aorkuler's live link dropped under 1,000 feet.</p>
             </div>
           </div>
           <div class="best-for-item best-for-item--no">
@@ -1022,8 +1062,8 @@ const reviewSchema = buildReviewSchema({
             <p class="vc-body">
               Miles of VHF range, up to 20 dogs, maps on the handheld. It costs several
               times as much and is a more complicated system to learn, but it is the
-              proven option at distance — and distance is exactly what we did not verify
-              on the Aorkuler. See <a href={ROUTES.garminTracking} data-track="collector_to_converter_click" data-from-page={pageSlug} data-to-page={ROUTES.garminTracking} data-link-position="comparisons">Garmin off-grid systems</a>.
+              proven option at distance — and distance is where the Aorkuler's live link
+              gave out in our suburban drive test. See <a href={ROUTES.garminTracking} data-track="collector_to_converter_click" data-from-page={pageSlug} data-to-page={ROUTES.garminTracking} data-link-position="comparisons">Garmin off-grid systems</a>.
             </p>
           </div>
           <div class="verdict-card">
@@ -1094,7 +1134,7 @@ const reviewSchema = buildReviewSchema({
         <ReviewRating
           value={RATING}
           label="Final rating"
-          summary="Provisional pending the range test described in the field-test section. This is the same number our review markup carries, and it will move if the range result warrants it."
+          summary="This is the same number our review markup carries. It takes in the suburban drive test described in the field-test section; an open-terrain range test is still to do."
         />
 
         <p class="section-body">
@@ -1121,11 +1161,12 @@ const reviewSchema = buildReviewSchema({
         <h3>What we did not test</h3>
         <ul class="limits-list">
           <li>
-            <strong>Range.</strong> We never attempted the 3.5-mile claim and have no
-            figure of our own. Across two outings the tracker was never more than about
-            1,000 feet away, and nothing on this page is a range result. A drive-based
-            test is planned and described above
+            <strong>Range in open terrain.</strong> Our drive test was in a suburb,
+            from inside a car, and the live link dropped under 1,000 feet. We have not
+            tested the 3.5-mile claim on open ground, which is where Aorkuler says it
+            applies
           </li>
+          <li>Whether the distance stays right when the dog moves while the arrow is red</li>
           <li>The IP67 rating — our unit never went in water</li>
             <li>Battery life from full to empty, on either unit</li>
           <li>The $379.99 Double Dog Kit and switching between two trackers</li>
