@@ -75,6 +75,7 @@ const tocHeadings = [
   { label: 'Unboxing and Setup', anchor: 'unboxing-setup' },
   { label: 'Reading the Screen', anchor: 'reading-the-screen' },
   { label: 'Field Test', anchor: 'field-test' },
+  { label: 'A Bearing Is Not a Route', anchor: 'bearing-not-route' },
   { label: 'Battery and Charging', anchor: 'battery-charging' },
   { label: 'Pros, Cons, Who It Suits', anchor: 'pros-cons' },
   { label: 'Aorkuler vs Fi, Garmin, AirTag', anchor: 'comparisons' },
@@ -127,9 +128,9 @@ const faqs = [
   },
   {
     question: 'What does the red arrow on the screen mean?',
-    short: 'Something is wrong, and the device will not tell you what. Everything else on screen can still read healthy.',
+    short: 'Aorkuler calls it a lost link. The screen keeps updating anyway, so you cannot tell what the number is measuring.',
     answer:
-      'We first reported red as a frozen last-known position, and our second outing showed that is not what happens. While the display was red, the satellite icon and both battery meters still read connected, the pointer still moved, and the distance still rose and fell correctly as we walked toward and away from Rhys. So red is a warning without an explanation. The practical problem is that you cannot tell whether you are walking toward where the dog is or where the dog was. Our untested hypothesis is that the controller keeps measuring from its own position to the tracker’s last known coordinates, which would make the number trustworthy only while the dog stays still. Keep walking, keep the controller level, and treat the number with suspicion until it goes green.',
+      'Aorkuler’s legend calls a red arrow a lost connection to the tracker, and we first reported it as a frozen last-known position. Our second outing showed that is not how it behaves. While the display was red, the satellite icon and both battery meters still read connected, the pointer still moved, and the distance still rose and fell correctly as we walked toward and away from Rhys. So red is a warning without an explanation. The practical problem is that you cannot tell whether you are walking toward where the dog is or where the dog was. Our untested hypothesis is that the controller keeps measuring from its own position to the tracker’s last known coordinates, which would make the number trustworthy only while the dog stays still. Keep walking, keep the controller level, and treat the number with suspicion until it goes green.',
   },
   {
     question: 'Is the Aorkuler waterproof?',
@@ -160,7 +161,7 @@ const reviewSchema = buildReviewSchema({
 <BaseLayout
   title="Aorkuler GPS Dog Tracker Review: No Subscription, No App (2026)"
   ogTitle="Aorkuler GPS Dog Tracker Review: No Subscription, No App"
-  description="We field-tested the Aorkuler GPS dog tracker with Rhys over two outings: no subscription, no app, no cell service needed — and a red warning it never explains."
+  description="We field-tested the Aorkuler GPS dog tracker with Rhys over two outings: no subscription, no app, no cell service — and a red warning the screen never explains."
 >
   <JsonLd slot="head" schema={reviewSchema} />
 
@@ -204,9 +205,9 @@ const reviewSchema = buildReviewSchema({
         </p>
         <p class="section-body">
           What keeps it off five stars is the information the screen withholds. Twice in
-          the park and again on the street the arrow went red, and the device never says
-          why: the satellite icon and both batteries still read fine, the number still
-          moves with you, and you are left unable to tell whether you are walking toward
+          the park and again on the street the arrow went red, and the screen never says
+          why: Aorkuler's legend calls it a lost link, yet the satellite icon and both
+          batteries still read fine, the number still moves with you, and you are left unable to tell whether you are walking toward
           where the dog is or where the dog was. There is no map, so the arrow points
           straight through fences and freeways. The arrow itself lags, and sent one of us
           the wrong way for a minute before it corrected. Add a GPS fix that needs open
@@ -417,13 +418,14 @@ const reviewSchema = buildReviewSchema({
           <div class="legend-row legend-row--flag">
             <dt>Red arrow</dt>
             <dd>
-              <strong>A warning the device does not explain.</strong> In our second
-              outing the display went red while the satellite icon and both battery
-              meters still read connected, the pointer still moved, and the distance
-              still tracked our own movement — so do not read it as a frozen fix. Read
-              it as: something about this reading is not to be trusted, and the screen
-              will not tell you what. Keep walking, keep the controller level, and
-              expect green to return.
+              <strong>A warning the screen does not explain.</strong> Aorkuler's legend
+              calls this a lost connection to the tracker. What we saw does not match a
+              simple drop: in our second outing the display went red while the
+              satellite icon and both battery meters still read connected, the pointer
+              still moved, and the distance still tracked our own movement — so do not
+              read it as a frozen fix. Read it as: something about this reading is not
+              to be trusted, and nothing on screen tells you what. Keep walking, keep
+              the controller level, and expect green to return.
             </dd>
           </div>
           <div class="legend-row">
@@ -555,10 +557,10 @@ const reviewSchema = buildReviewSchema({
           <a href={PLAYA_VISTA_TOUR_URL}>Playa Vista Sports Park</a>, a suburb of
           soccer fields, a school and tight streets that Ben walks often enough to have
           written a tour of it. Natalie took Rhys and the tracker out around the fields,
-          behind the elementary school, and into the wetlands demonstration park beyond
-          it <mark class="pending-fact">[park name pending — Ben to confirm; "Leonis
-          Wetlands" unverified]</mark>. Ben waited about fifteen minutes in the car, then
-          got out and went looking.
+          behind the elementary school, and into the Ballona Wetlands demonstration park
+          beyond it <mark class="pending-fact">[confirm: the Ballona Wetlands reserve
+          itself, or Ballona Discovery Park?]</mark>. Ben waited about fifteen minutes in
+          the car, then got out and went looking.
         </p>
         <p class="section-body">
           That gap matters. The first time out we watched the number the whole way, so
@@ -593,9 +595,10 @@ const reviewSchema = buildReviewSchema({
           not changing because they were not moving.
         </p>
         <p class="section-body">
-          So red is not "the link has dropped and this is old data". Red is
-          <strong>something is wrong, and the device will not tell you what.</strong>
-          Everything else on screen says healthy. The number still answers to your own
+          Aorkuler's legend calls red a lost connection to the tracker, and that may
+          well be true. But red is not "the link has dropped and this is old data". Red
+          is <strong>something is wrong, and nothing on the screen tells you
+          what.</strong> Everything else on it says healthy. The number still answers to your own
           feet. What you lose is the ability to trust what that number is measuring
           against — and so you cannot tell whether you are walking toward where the dog
           is or where the dog was. That is a usability failure rather than a reliability
@@ -605,10 +608,12 @@ const reviewSchema = buildReviewSchema({
         <div class="callout callout--warning">
           <p class="callout-heading">Our hypothesis — untested</p>
           <p class="callout-body">
-            One reading fits everything we saw: while red, the controller may be
-            recomputing distance from its own GPS position to the tracker's
-            <em>last known coordinates</em>. That would explain a number that tracks
-            the searcher's movement perfectly while the link to the dog is in doubt. If
+            One reading fits everything we saw, and it is the plain implication of
+            Aorkuler's own legend: if red really is a lost link, the controller still
+            knows where <em>it</em> is, so it may be recomputing distance from its own
+            GPS position to the tracker's <em>last known coordinates</em>. That would
+            explain a number that tracks the searcher's movement perfectly while the
+            link to the dog is down. If
             it is right, the practical rule is sharp: <strong>while the display is red,
             the distance is only trustworthy if the dog has not moved.</strong> We have
             not confirmed this, and we are not presenting it as fact.
@@ -630,32 +635,6 @@ const reviewSchema = buildReviewSchema({
           alt="Aorkuler controller showing a red direction arrow while the satellite lock icon and both battery meters still read connected"
           screenshot={true}
         />
-
-        <h3>A bearing is not a route</h3>
-        <p class="section-body">
-          The second thing street use taught us is arguably the most useful sentence in
-          this review for anyone choosing between this and a map tracker. The Aorkuler
-          gives you a bearing and a range. It does not give you a map. A map-based
-          tracker shows the barriers between you and your dog — fences, walls, freeways,
-          rivers. The arrow shows none of them. It points straight through them, because
-          straight-line distance is the only thing it knows.
-        </p>
-        <p class="section-body">
-          Ben's example from the same neighbourhood: the LMU campus is large and fenced
-          the whole way round. If Rhys got loose near there and crossed to the far side,
-          following the arrow walks you onto campus, across it, and into a wall — with
-          the arrow still pointing serenely through the fence. The dog is 300 feet away
-          and twenty minutes away.
-        </p>
-        <p class="section-body">
-          The honest qualifier: if you know the area and expect this, it is not a big
-          deal, and the device is still very helpful. It is a problem you solve with
-          local knowledge, not one the hardware solves for you. It bites hardest in dense
-          urban and suburban searching, where fenced campuses, walled developments and
-          freeways are everywhere, and far less in woods and open country — though
-          rivers and canyons still apply. It pairs with the red-arrow finding: in both
-          cases the display is withholding the context you need to act on it.
-        </p>
 
         <h3>The range test we have not done yet</h3>
         <div class="callout callout--warning range-plan">
@@ -755,8 +734,39 @@ const reviewSchema = buildReviewSchema({
       </div>
     </section>
 
+    <!-- A bearing is not a route -->
+    <section class="content-section" id="bearing-not-route">
+      <div class="section-inner">
+        <h2>A Bearing Is Not a Route</h2>
+        <p class="section-body">
+          The second thing street use taught us is arguably the most useful sentence in
+          this review for anyone choosing between this and a map tracker. The Aorkuler
+          gives you a bearing and a range. It does not give you a map. A map-based
+          tracker shows the barriers between you and your dog — fences, walls, freeways,
+          rivers. The arrow shows none of them. It points straight through them, because
+          straight-line distance is the only thing it knows.
+        </p>
+        <p class="section-body">
+          Ben's example from the same neighbourhood: the LMU campus is large and fenced
+          the whole way round. If Rhys got loose near there and crossed to the far side,
+          following the arrow walks you onto campus, across it, and into a wall — with
+          the arrow still pointing serenely through the fence. The dog is 300 feet away
+          and twenty minutes away.
+        </p>
+        <p class="section-body">
+          The honest qualifier: if you know the area and expect this, it is not a big
+          deal, and the device is still very helpful. It is a problem you solve with
+          local knowledge, not one the hardware solves for you. It bites hardest in dense
+          urban and suburban searching, where fenced campuses, walled developments and
+          freeways are everywhere, and far less in woods and open country — though
+          rivers and canyons still apply. It pairs with the red-arrow finding: in both
+          cases the display is withholding the context you need to act on it.
+        </p>
+      </div>
+    </section>
+
     <!-- Battery and charging -->
-    <section class="content-section" id="battery-charging">
+    <section class="content-section content-section--alt" id="battery-charging">
       <div class="section-inner">
         <h2>Battery and Charging</h2>
         <p class="section-body">
@@ -809,7 +819,7 @@ const reviewSchema = buildReviewSchema({
     </section>
 
     <!-- Pros, cons, who it suits -->
-    <section class="content-section content-section--alt" id="pros-cons">
+    <section class="content-section" id="pros-cons">
       <div class="section-inner">
         <h2>Pros, Cons, and Who It Suits</h2>
 
@@ -890,7 +900,7 @@ const reviewSchema = buildReviewSchema({
     </section>
 
     <!-- Comparisons -->
-    <section class="content-section" id="comparisons">
+    <section class="content-section content-section--alt" id="comparisons">
       <div class="section-inner">
         <h2>Aorkuler vs Fi, Garmin, and AirTag</h2>
         <p class="section-body">
@@ -996,7 +1006,7 @@ const reviewSchema = buildReviewSchema({
     </section>
 
     <!-- Verdict -->
-    <section class="content-section content-section--alt" id="verdict">
+    <section class="content-section" id="verdict">
       <div class="section-inner">
         <h2>Verdict: Is the Aorkuler Worth It?</h2>
 
@@ -1017,8 +1027,8 @@ const reviewSchema = buildReviewSchema({
         </p>
         <p class="section-body">
           The reason it is four and a half and not five is what the screen withholds. The
-          display goes red and never says why, leaving you unsure what the distance is
-          measuring. There is no map, so the arrow points through fences and freeways.
+          display goes red with no on-screen explanation, leaving you unsure what the
+          distance is measuring. There is no map, so the arrow points through fences and freeways.
           The arrow lags, and sent us the wrong way until it corrected. The collar unit
           is bulky on a small dog. Then the charger, the near-inaudible beeper and the
           standby drain. Every one of those is manageable once you know it is coming, and
