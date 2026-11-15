@@ -34,6 +34,12 @@ export interface ReviewSchemaInput {
   bestRating?: number;
   worstRating?: number;
   datePublished: string;
+  /**
+   * Set when the review has been materially revised after publication (new
+   * testing, a changed rating). Render the same date visibly on the page so the
+   * markup and the dateline agree.
+   */
+  dateModified?: string;
   /** The thing being reviewed, not the article. */
   product: {
     name: string;
@@ -55,6 +61,7 @@ export function buildReviewSchema(input: ReviewSchemaInput) {
     bestRating = 5,
     worstRating = 1,
     datePublished,
+    dateModified,
     product,
   } = input;
 
@@ -88,6 +95,7 @@ export function buildReviewSchema(input: ReviewSchemaInput) {
     description,
     url: `${SITE_URL}${path}`,
     datePublished,
+    ...(dateModified ? { dateModified } : {}),
     author: AUTHOR,
     publisher: PUBLISHER,
     reviewRating: {

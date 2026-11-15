@@ -354,10 +354,10 @@ site_system:
         per the Associates operating agreement. Revised after a second field test (Playa
         Vista, November 2026): the red arrow is framed as an unexplained warning rather
         than a frozen last-known fix, the rating is 4.5 and marked provisional pending a
-        drive-based range test that is stubbed on the page as NOT TESTED, and the
-        session-two park (Ballona Wetlands) carries a visible pending-fact flag until Ben
-        confirms whether he means the reserve or Ballona Discovery Park. "A Bearing Is
-        Not a Route" is its own H2 and TOC entry rather than a field-test subsection.
+        drive-based range test that is stubbed on the page as NOT TESTED. Session two
+        ran through Ballona Discovery Park. "A Bearing Is Not a Route" is its own H2 and
+        TOC entry. The page carries a visible Published/Updated dateline, and
+        buildReviewSchema() takes an optional dateModified that must match it.
 
     - name: "Garmin Dog Tracking Collars"
       type: "collector"

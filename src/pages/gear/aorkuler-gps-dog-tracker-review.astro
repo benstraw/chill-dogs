@@ -25,6 +25,16 @@ import imgRed502 from '../../images/watermarked/aorkuler/aorkuler-controller-502
 
 const pageSlug = 'aorkuler-gps-dog-tracker-review';
 const pubDate = '2026-11-07';
+/** Second field test folded in; the red-arrow reading and the rating both changed. */
+const updatedDate = '2026-11-15';
+
+const longDate = (iso: string) =>
+  new Date(`${iso}T12:00:00Z`).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    timeZone: 'UTC',
+  });
 
 /**
  * One number, two consumers: the visible star block and the `Review` JSON-LD.
@@ -148,6 +158,7 @@ const reviewSchema = buildReviewSchema({
   path: ROUTES.aorkulerReview,
   rating: RATING,
   datePublished: pubDate,
+  dateModified: updatedDate,
   product: {
     name: 'Aorkuler Pet Tracker (Single Dog Kit)',
     brand: 'Aorkuler',
@@ -187,6 +198,12 @@ const reviewSchema = buildReviewSchema({
     <section class="content-section" id="quick-verdict">
       <div class="section-inner">
         <h2>Quick Verdict</h2>
+
+        <p class="dateline">
+          Published <time datetime={pubDate}>{longDate(pubDate)}</time>. Updated
+          <time datetime={updatedDate}>{longDate(updatedDate)}</time> after a second
+          field test, which changed how we read the red arrow and moved the rating.
+        </p>
 
         <ReviewRating
           value={RATING}
@@ -554,13 +571,12 @@ const reviewSchema = buildReviewSchema({
         <h3>Session two: a cold search at Playa Vista</h3>
         <p class="section-body">
           A week later we tried something closer to a real lost-dog scenario at
-          <a href={PLAYA_VISTA_TOUR_URL}>Playa Vista Sports Park</a>, a suburb of
-          soccer fields, a school and tight streets that Ben walks often enough to have
-          written a tour of it. Natalie took Rhys and the tracker out around the fields,
-          behind the elementary school, and into the Ballona Wetlands demonstration park
-          beyond it <mark class="pending-fact">[confirm: the Ballona Wetlands reserve
-          itself, or Ballona Discovery Park?]</mark>. Ben waited about fifteen minutes in
-          the car, then got out and went looking.
+          <a href={PLAYA_VISTA_TOUR_URL}>Playa Vista Sports Park</a>, in a planned
+          neighbourhood of soccer fields, a school and tight streets that Ben walks often
+          enough to have written a tour of it. Natalie took Rhys and the tracker out around the fields,
+          behind the elementary school, and into Ballona Discovery Park beyond it — the
+          small demonstration park that shows off the wetland habitat. Ben waited about
+          fifteen minutes in the car, then got out and went looking.
         </p>
         <p class="section-body">
           That gap matters. The first time out we watched the number the whole way, so
@@ -1098,6 +1114,14 @@ const reviewSchema = buildReviewSchema({
     padding-bottom: var(--space-2xl);
   }
 
+  .dateline {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-normal);
+    max-width: var(--max-width-prose);
+    margin-bottom: var(--space-md);
+  }
+
   /* ── Quick answers ─────────────────────────────────────────── */
   .quick-answers {
     display: grid;
@@ -1222,19 +1246,6 @@ const reviewSchema = buildReviewSchema({
   }
 
   /* ── Editorial flags ───────────────────────────────────────── */
-  /*
-   * A fact still waiting on confirmation. Deliberately loud, like ImagePlaceholder:
-   * it must be impossible to publish one by accident.
-   */
-  .pending-fact {
-    background: #fde8e6;
-    color: #8f1d14;
-    border: 1px dashed #c0392b;
-    border-radius: var(--radius-sm);
-    padding: 0 0.35em;
-    font-weight: var(--weight-bold);
-  }
-
   .range-plan {
     border: 2px dashed #c0392b;
     border-left-width: 4px;

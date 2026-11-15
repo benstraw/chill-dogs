@@ -610,6 +610,7 @@ export const staticSitemapSections: SitemapSection[] = [
           'Aorkuler Pet Tracker (Single Dog Kit)',
         ),
         pubDate: new Date('2026-11-07'),
+        lastUpdated: new Date('2026-11-15'),
       }),
       createSitemapPage({
         baseTitle: 'Fi Dog Collar Review: GPS Tracking for Everyday Dogs (2026)',
