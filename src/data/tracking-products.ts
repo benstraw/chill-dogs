@@ -287,7 +287,7 @@ export const trackerProducts: TrackerProduct[] = [
       'Hard zip case with everything included',
     ],
     cons: [
-      'A red warning state with no on-screen explanation, leaving you unsure what the distance is measuring',
+      'A red lost-link state flagged only by a tiny crossed-out signal icon, leaving you unsure what the distance is measuring',
       'No map: the arrow points straight through fences, walls and freeways',
       'Direction arrow lags, and sent us the wrong way at first in our second outing',
       'Collar unit is bulky on a small dog',

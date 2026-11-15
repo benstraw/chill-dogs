@@ -123,7 +123,7 @@ const faqs = [
     question: 'What range did you actually get?',
     short: 'We did not test range. Across two outings the tracker was never more than about 1,000 feet away.',
     answer:
-      'Straight answer: we did not test this, so we have no range figure and we are not going to imply one. Aorkuler advertises up to 3.5 miles in open terrain. Across two outings — hide-and-seek at Westchester Park and a cold search around Playa Vista — the tracker was never more than about 1,000 feet from the controller, and that is where we happened to stop, not where the device did. The display went red at points in both sessions, and we explain in the review why we no longer read that as a dropped link. A proper range test is planned and described further down. Until it is done, treat 3.5 miles as an unverified manufacturer claim and use the 30-day window to test it where you actually walk.',
+      'Straight answer: we did not test this, so we have no range figure and we are not going to imply one. Aorkuler advertises up to 3.5 miles in open terrain. Across two outings — hide-and-seek at Westchester Park and a cold search around Playa Vista — the tracker was never more than about 1,000 feet from the controller, and that is where we happened to stop, not where the device did. The display went red at points in both sessions, and we explain in the review what the red state does and does not tell you. A proper range test is planned and described further down. Until it is done, treat 3.5 miles as an unverified manufacturer claim and use the 30-day window to test it where you actually walk.',
   },
   {
     question: 'How accurate is the Aorkuler?',
@@ -144,9 +144,9 @@ const faqs = [
   },
   {
     question: 'What does the red arrow on the screen mean?',
-    short: 'Aorkuler calls it a lost link. The screen keeps updating anyway, so you cannot tell what the number is measuring.',
+    short: 'A lost radio link, flagged only by a tiny crossed-out signal icon. The distance keeps moving anyway, so the screen still looks live.',
     answer:
-      'Aorkuler’s legend calls a red arrow a lost connection to the tracker, and we first reported it as a frozen last-known position. Our second outing showed that is not how it behaves. While the display was red, the satellite icon and both battery meters still read connected, the pointer still moved, and the distance still rose and fell correctly as we walked toward and away from Rhys. So red is a warning without an explanation. The practical problem is that you cannot tell whether you are walking toward where the dog is or where the dog was. Our untested hypothesis is that the controller keeps measuring from its own position to the tracker’s last known coordinates, which would make the number trustworthy only while the dog stays still. Keep walking, keep the controller level, and treat the number with suspicion until it goes green.',
+      'Aorkuler’s legend calls a red arrow a lost connection to the tracker, and the screen does back that up: in every red frame of our second-outing footage the signal bars at the far left of the status row are crossed out, where the green frames show full bars. We missed that icon in the field — it is a few millimetres wide — and only found it going through the video afterwards. Nothing else changes. The link icon, the location pins and both battery meters stay put, the pointer still moves, and the distance still rises and falls as you walk. So the display looks live while the link is down, and you cannot tell whether you are walking toward where the dog is or where the dog was. Our untested hypothesis is that the controller keeps measuring from its own position to the tracker’s last known coordinates, which would make the number trustworthy only while the dog stays still. Check the signal bars, keep walking, keep the controller level, and treat the number with suspicion until it goes green.',
   },
   {
     question: 'Is the Aorkuler waterproof?',
@@ -160,7 +160,7 @@ const quickAnswers = faqs.filter((faq) => faq.short);
 const reviewSchema = buildReviewSchema({
   name: 'Aorkuler GPS Dog Tracker Review',
   description:
-    'Hands-on review of the Aorkuler GPS dog tracker: a subscription-free, app-free handheld system field-tested with Rhys over two outings, including the red warning state it never explains.',
+    'Hands-on review of the Aorkuler GPS dog tracker: a subscription-free, app-free handheld system field-tested with Rhys over two outings, including a red lost-signal state that still looks live.',
   path: ROUTES.aorkulerReview,
   rating: RATING,
   datePublished: pubDate,
@@ -178,7 +178,7 @@ const reviewSchema = buildReviewSchema({
 <BaseLayout
   title="Aorkuler GPS Dog Tracker Review: No Subscription, No App (2026)"
   ogTitle="Aorkuler GPS Dog Tracker Review: No Subscription, No App"
-  description="We field-tested the Aorkuler GPS dog tracker with Rhys over two outings: no subscription, no app, no cell service — and a red warning the screen never explains."
+  description="We field-tested the Aorkuler GPS dog tracker with Rhys over two outings: no subscription, no app, no cell service, and a red lost-signal state that still looks live."
 >
   <JsonLd slot="head" schema={reviewSchema} />
 
@@ -227,11 +227,14 @@ const reviewSchema = buildReviewSchema({
           is in your hand the number reads as fair rather than steep.
         </p>
         <p class="section-body">
-          What keeps it off five stars is the information the screen withholds. Twice in
+          What keeps it off five stars is how little the screen tells you. Twice in
           the park and again on the street the arrow went red, and the screen never says
-          why: Aorkuler's legend calls it a lost link, yet the satellite icon and both
-          batteries still read fine, the number still moves with you, and you are left unable to tell whether you are walking toward
-          where the dog is or where the dog was. There is no map, so the arrow points
+          why in any way you would notice. Aorkuler's legend calls it a lost link, and
+          the only thing on screen that agrees is a crossed-out signal icon a few
+          millimetres wide, which we did not spot until we went back through the footage.
+          Everything else still reads fine, the number still moves with you, and you are
+          left unable to tell whether you are walking toward where the dog is or where
+          the dog was. There is no map, so the arrow points
           straight through fences and freeways. The arrow itself lags, and sent one of us
           the wrong way for a minute before it corrected. Add a GPS fix that needs open
           sky and up to a minute and a half, a proprietary charger no spare cable will
@@ -435,19 +438,27 @@ const reviewSchema = buildReviewSchema({
           <div class="legend-row legend-row--flag">
             <dt>Red arrow</dt>
             <dd>
-              <strong>A warning the screen does not explain.</strong> Aorkuler's legend
-              calls this a lost connection to the tracker. What we saw does not match a
-              simple drop: in our second outing the display went red while the
-              satellite icon and both battery meters still read connected, the pointer
-              still moved, and the distance still tracked our own movement — so do not
-              read it as a frozen fix. Read it as: something about this reading is not
-              to be trusted, and nothing on screen tells you what. Keep walking, keep
-              the controller level, and expect green to return.
+              <strong>A lost link that still looks live.</strong> Aorkuler's legend
+              calls this a lost connection to the tracker, and one icon agrees: the
+              signal bars at the far left of the status row are crossed out. That is
+              the only other change. In our second outing the link icon, the location
+              pins and both battery meters stayed as they were, the pointer still
+              moved, and the distance still tracked our own movement — so do not read
+              it as a frozen screen, and do not read the moving number as a live fix
+              either. Check the signal bars, keep walking, keep the controller level,
+              and expect green to return.
             </dd>
           </div>
           <div class="legend-row">
             <dt>Distance number</dt>
             <dd>Feet or metres, switchable in the menu. Updates roughly every 3 seconds.</dd>
+          </div>
+          <div class="legend-row">
+            <dt>Signal bars</dt>
+            <dd>
+              Far left of the status row. Full bars on a green arrow; crossed out
+              whenever ours was red. The icon is tiny, and we missed it on both outings.
+            </dd>
           </div>
           <div class="legend-row">
             <dt>Satellite icon</dt>
@@ -467,7 +478,7 @@ const reviewSchema = buildReviewSchema({
         </dl>
 
         <figure class="article-photo article-photo--screenshot">
-          <Image src={imgScreenIcons} alt="Close view of the Aorkuler controller status icons including satellite lock and both battery meters" width={900} quality={80} />
+          <Image src={imgScreenIcons} alt="Close view of the Aorkuler controller status row with signal bars, link icon, tracker number, location pins and both battery meters" width={900} quality={80} />
           <figcaption>The status row: signal bars and the link icon on the left, the tracker number, a location pin each for tracker and controller, and the two battery meters — T for the tracker, C for the controller.</figcaption>
         </figure>
 
@@ -531,7 +542,7 @@ const reviewSchema = buildReviewSchema({
           Twice in the session the display went red — first at 389.4 feet, then again
           around 502 feet. When we first published this review we read that as the radio
           link dropping and the screen freezing on a last known position. The second
-          outing, below, showed that is not what red means, and we no longer stand by
+          outing, below, showed the screen does not freeze, and we no longer stand by
           that reading.
         </p>
 
@@ -598,34 +609,44 @@ const reviewSchema = buildReviewSchema({
 
         <h3>What red actually means</h3>
         <p class="section-body">
-          This is the finding that rewrote the review. While the arrow was red, the
-          satellite icon still showed a lock, both battery meters still read connected,
-          the pointer still moved, and the distance still rose and fell correctly as Ben
-          walked toward and away from Rhys. Nothing on that screen was frozen. Go back to
-          the three near-identical frames at 502 feet above and the simplest explanation
-          is not a stale fix: it is a person standing still, reading a number that was
-          not changing because they were not moving.
+          This is the finding that rewrote the review, and going back through the footage
+          rewrote it once more. While the arrow was red, the pointer still moved and the
+          distance still rose and fell correctly as Ben walked toward and away from Rhys.
+          The location pins and both battery meters looked exactly as they do on green.
+          Nothing on that screen was frozen. Go back to the three near-identical frames at
+          502 feet above and the simplest explanation is not a stale fix: it is a person
+          standing still, reading a number that was not changing because they were not
+          moving.
         </p>
         <p class="section-body">
-          Aorkuler's legend calls red a lost connection to the tracker, and that may
-          well be true. But red is not "the link has dropped and this is old data". Red
-          is <strong>something is wrong, and nothing on the screen tells you
-          what.</strong> Everything else on it says healthy. The number still answers to your own
-          feet. What you lose is the ability to trust what that number is measuring
-          against — and so you cannot tell whether you are walking toward where the dog
-          is or where the dog was. That is a usability failure rather than a reliability
-          one, and it is the sharper criticism.
+          What we missed while standing there is in the top-left corner. In every red
+          frame of the Playa Vista video the signal bars are crossed out; in the green
+          frames from the same afternoon they are full. So Aorkuler's legend is right:
+          red is a lost connection to the tracker, and the screen does say so — in an icon
+          a few millimetres wide, on a display you are reading at arm's length in
+          daylight, while the link icon beside it stays put. Neither of us noticed it on
+          either outing.
+        </p>
+        <p class="section-body">
+          That changes the criticism rather than removing it. Red is not "this is old
+          data, frozen". Red is <strong>the link is down, and the screen carries on as if
+          it were not.</strong> The number still answers to your own feet. What you lose
+          is the ability to trust what that number is measuring against — and so you
+          cannot tell whether you are walking toward where the dog is or where the dog
+          was. That is a usability failure rather than a reliability one, and it is the
+          sharper criticism.
         </p>
 
         <div class="callout callout--warning">
           <p class="callout-heading">Our hypothesis — untested</p>
           <p class="callout-body">
-            One reading fits everything we saw, and it is the plain implication of
-            Aorkuler's own legend: if red really is a lost link, the controller still
-            knows where <em>it</em> is, so it may be recomputing distance from its own
-            GPS position to the tracker's <em>last known coordinates</em>. That would
-            explain a number that tracks the searcher's movement perfectly while the
-            link to the dog is down. If
+            One reading fits everything we saw, and the crossed-out signal icon makes
+            it likelier: with the link down, the controller still knows where
+            <em>it</em> is, so it may be recomputing distance from its own GPS position
+            to the tracker's <em>last known coordinates</em>. That would explain a
+            number that tracks the searcher's movement perfectly while the link to the
+            dog is down. In the video the reading falls from 818 to 794 feet as Ben
+            walks, then holds within a foot while he stands. If
             it is right, the practical rule is sharp: <strong>while the display is red,
             the distance is only trustworthy if the dog has not moved.</strong> We have
             not confirmed this, and we are not presenting it as fact.
@@ -633,15 +654,16 @@ const reviewSchema = buildReviewSchema({
           <p class="callout-body">
             The test that would settle it is simple, and it is the open question on this
             page. Wait for the display to go red, stand still, and have the dog move. If
-            the number changes, the link is live and red means something else. If it
+            the number changes, position data is still getting through despite the
+            crossed-out bars. If it
             does not, the controller is computing against a stale position. We will run
             it on the next outing.
           </p>
         </div>
 
         <figure class="article-photo article-photo--screenshot">
-          <Image src={imgRedWhileConnected} alt="Aorkuler controller showing a red direction arrow while the satellite lock icon and both battery meters still read connected" width={620} quality={80} />
-          <figcaption>Red arrow, satellite locked, both batteries fine. Whatever red means, it is not a dead link.</figcaption>
+          <Image src={imgRedWhileConnected} alt="Aorkuler controller showing a red direction arrow and crossed-out signal bars while the location pins and both battery meters look normal" width={620} quality={80} />
+          <figcaption>Red arrow at 794.9 feet. The pins and both batteries look normal; the only other change is the crossed-out signal bars at top left.</figcaption>
         </figure>
 
         <h3>The range test we have not done yet</h3>
@@ -771,7 +793,7 @@ const reviewSchema = buildReviewSchema({
           urban and suburban searching, where fenced campuses, walled developments and
           freeways are everywhere, and far less in woods and open country — though
           rivers and canyons still apply. It pairs with the red-arrow finding: in both
-          cases the display is withholding the context you need to act on it.
+          cases the display leaves out, or barely shows, the context you need to act on it.
         </p>
       </div>
     </section>
@@ -1037,9 +1059,9 @@ const reviewSchema = buildReviewSchema({
           in a suburb. Natalie wanted to give it five stars. We would not go below four.
         </p>
         <p class="section-body">
-          The reason it is four and a half and not five is what the screen withholds. The
-          display goes red with no on-screen explanation, leaving you unsure what the
-          distance is measuring. There is no map, so the arrow points through fences and freeways.
+          The reason it is four and a half and not five is how little the screen tells
+          you. The display goes red and keeps counting, with one tiny icon to say the
+          link is down, leaving you unsure what the distance is measuring. There is no map, so the arrow points through fences and freeways.
           The arrow lags, and sent us the wrong way until it corrected. The collar unit
           is bulky on a small dog. Then the charger, the near-inaudible beeper and the
           standby drain. Every one of those is manageable once you know it is coming, and
