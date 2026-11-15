@@ -22,6 +22,12 @@ import imgGreen104 from '../../images/watermarked/aorkuler/aorkuler-controller-1
 import imgRed389 from '../../images/watermarked/aorkuler/aorkuler-controller-389ft.jpg';
 import imgRed501 from '../../images/watermarked/aorkuler/aorkuler-controller-501ft-red.jpg';
 import imgRed502 from '../../images/watermarked/aorkuler/aorkuler-controller-502ft-red.jpg';
+import imgCaseClosed from '../../images/watermarked/aorkuler/aorkuler-case-closed.jpg';
+import imgCaseOpen from '../../images/watermarked/aorkuler/aorkuler-case-open.jpg';
+import imgScreenIcons from '../../images/watermarked/aorkuler/aorkuler-screen-icons.jpg';
+import imgRedWhileConnected from '../../images/watermarked/aorkuler/aorkuler-red-while-connected.jpg';
+import imgStrapOffDog from '../../images/watermarked/aorkuler/aorkuler-strap-off-dog.jpg';
+import imgStrapOffDogBack from '../../images/watermarked/aorkuler/aorkuler-strap-off-dog-back.jpg';
 
 const pageSlug = 'aorkuler-gps-dog-tracker-review';
 const pubDate = '2026-11-07';
@@ -351,21 +357,15 @@ const reviewSchema = buildReviewSchema({
           built for big gloves.
         </p>
 
-        <ImagePlaceholder
-          id="CASE-CLOSED"
-          title="The closed hard-shell case"
-          shot="Case zipped shut on a plain surface, three-quarter angle, even daylight. The Aorkuler name on the front must be legible and the carry handle visible."
-          caption="The case the kit ships in — closed, this is what lives in the cupboard."
-          alt="Closed Aorkuler hard-shell carry case with zip and handle"
-        />
+        <figure class="article-photo">
+          <Image src={imgCaseClosed} alt="Closed Aorkuler hard-shell carry case with zip and handle" width={900} quality={80} />
+          <figcaption>The case the kit ships in — closed, this is what lives in the cupboard.</figcaption>
+        </figure>
 
-        <ImagePlaceholder
-          id="CASE-OPEN"
-          title="Case open, everything in the cut foam"
-          shot="Straight down on the open case, nothing removed, so the foam cutouts read. Both halves in frame, mesh lid pocket unzipped enough to show the two cables."
-          caption="Everything that comes in the box, still in its foam."
-          alt="Open Aorkuler case showing controller, tracker, antenna, collar strap and cables in cut foam"
-        />
+        <figure class="article-photo">
+          <Image src={imgCaseOpen} alt="Open Aorkuler case showing controller, tracker, antenna, collar strap and cables in cut foam" width={900} quality={80} />
+          <figcaption>Everything that comes in the box, still in its foam.</figcaption>
+        </figure>
 
         <ImagePlaceholder
           id="SCALE"
@@ -466,14 +466,10 @@ const reviewSchema = buildReviewSchema({
           </div>
         </dl>
 
-        <ImagePlaceholder
-          id="SCREEN-ICONS"
-          title="Close-up of the status row"
-          shot="Tight on the top strip of the controller display so every icon is readable: the satellite indicator, the tracker number, and the T and C battery meters. Shade the screen to kill the glare that spoils the field frames."
-          caption="The status row: satellite lock on the left, tracker number in the middle, and the two battery meters — T for the tracker, C for the controller."
-          alt="Close view of the Aorkuler controller status icons including satellite lock and both battery meters"
-          screenshot={true}
-        />
+        <figure class="article-photo article-photo--screenshot">
+          <Image src={imgScreenIcons} alt="Close view of the Aorkuler controller status icons including satellite lock and both battery meters" width={900} quality={80} />
+          <figcaption>The status row: signal bars and the link icon on the left, the tracker number, a location pin each for tracker and controller, and the two battery meters — T for the tracker, C for the controller.</figcaption>
+        </figure>
 
         <p class="section-body">
           Aorkuler also warns that the compass is sensitive to magnetic interference and
@@ -643,14 +639,10 @@ const reviewSchema = buildReviewSchema({
           </p>
         </div>
 
-        <ImagePlaceholder
-          id="RED-WHILE-CONNECTED"
-          title="Red arrow with every other indicator reading healthy"
-          shot="A frame from the Playa Vista controller recordings: the arrow red, with the satellite lock icon steady and both the T and C battery meters clearly visible in the same frame. This single image is the proof of the reframed claim, so the status row must be legible — pick the frame with the least glare, not the most dramatic one."
-          caption="Red arrow, satellite locked, both batteries fine. Whatever red means, it is not a dead link."
-          alt="Aorkuler controller showing a red direction arrow while the satellite lock icon and both battery meters still read connected"
-          screenshot={true}
-        />
+        <figure class="article-photo article-photo--screenshot">
+          <Image src={imgRedWhileConnected} alt="Aorkuler controller showing a red direction arrow while the satellite lock icon and both battery meters still read connected" width={620} quality={80} />
+          <figcaption>Red arrow, satellite locked, both batteries fine. Whatever red means, it is not a dead link.</figcaption>
+        </figure>
 
         <h3>The range test we have not done yet</h3>
         <div class="callout callout--warning range-plan">
@@ -716,13 +708,16 @@ const reviewSchema = buildReviewSchema({
           </figure>
         </div>
 
-        <ImagePlaceholder
-          id="STRAP-OFF-DOG"
-          title="The collar strap and clasp, off the dog"
-          shot="The strap and its metal-backed clasp laid flat, detached, next to an ordinary flat collar. Show how the clasp threads through — a second frame mid-thread would help more than a caption."
-          caption="The attachment on its own. The metal backing is what stops it working loose."
-          alt="Aorkuler elastic collar strap and reinforced metal clasp laid flat beside a dog collar"
-        />
+        <div class="photo-pair">
+          <figure class="article-photo">
+            <Image src={imgStrapOffDog} alt="Aorkuler tracker, its black holder and the elastic collar strap with metal end loops laid out separately" width={620} quality={80} />
+            <figcaption>The attachment on its own. The metal backing is what stops it working loose.</figcaption>
+          </figure>
+          <figure class="article-photo">
+            <Image src={imgStrapOffDogBack} alt="Back of the Aorkuler tracker in its holder with the elastic strap stretched across it" width={620} quality={80} />
+            <figcaption>Assembled, from the back: the strap spans the holder and the collar passes underneath.</figcaption>
+          </figure>
+        </div>
 
         <h3>The sound and light alarms</h3>
         <p class="section-body">
