@@ -279,13 +279,18 @@ export const trackerProducts: TrackerProduct[] = [
     pros: [
       'No subscription, no SIM, and no phone app — ever',
       'Handheld controller works with zero cell service',
-      'Distance readout updates live and tracked reliably in our test',
+      'Distance readout updates live and tracked our own movement reliably in both outings',
+      'Build quality that reads as more than the price — everyone we handed it to said so',
+      'Rugged, sealed housing that looks built to take weather (IP67 claimed, not tested by us)',
+      'Stretchy collar strap with a metal-backed clasp that we expect to hold',
       'LED light alarm is genuinely useful at dusk',
-      'Light enough on the collar that Rhys ignored it',
       'Hard zip case with everything included',
     ],
     cons: [
-      'The link dropped to last-known-position twice inside 500 ft in our test',
+      'A red warning state the device never explains, leaving you unsure what the distance is measuring',
+      'No map: the arrow points straight through fences, walls and freeways',
+      'Direction arrow lags, and sent us the wrong way at first in our second outing',
+      'Collar unit is bulky on a small dog',
       'GPS-only fix needs open sky and 30–90 seconds before you can start',
       'The "Follow it again" re-sync interrupts a search mid-hunt',
       'Proprietary magnetic charger — no cable you own will fit, and the magnet is weak',
@@ -296,14 +301,14 @@ export const trackerProducts: TrackerProduct[] = [
     bullets: [
       'GPS plus a direct radio link; no SIM, app, or subscription',
       'Handheld controller shows live distance and direction with no cell service',
-      'Aorkuler claims up to 3.5 miles, which we did not test; our link was intermittent inside 500 ft',
+      'Aorkuler claims up to 3.5 miles, which we did not test; we never had it more than about 1,000 ft away',
     ],
     ctaLabel: 'Buy direct from Aorkuler',
     signalNote: 'GPS satellite + direct radio to the handheld — no cell required',
     subscriptionNote: 'None — one-time purchase',
     handsOn: {
       since: '2026-11',
-      note: 'Two-person field test with Rhys at Westchester Park: binding and first GPS lock, hide-and-seek tracking runs between roughly 100 and 500 ft, sound and light alarms, collar fit, and charging. Range was not tested.',
+      note: 'Two outings with Rhys: a two-person hide-and-seek at Westchester Park (binding and first GPS lock, tracking runs between roughly 100 and 500 ft, alarms, collar fit, charging), then a cold search around Playa Vista Sports Park after a 15-minute wait, never more than about 1,000 ft apart. Range was not tested.',
     },
     image: {
       src: '/images/products/aorkuler-pet-tracker.jpg',

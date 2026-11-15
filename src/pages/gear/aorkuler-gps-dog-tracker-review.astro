@@ -30,7 +30,13 @@ const pubDate = '2026-11-07';
  * One number, two consumers: the visible star block and the `Review` JSON-LD.
  * Google drops a rating it cannot find on the page, so these must not diverge.
  */
-const RATING = 4;
+const RATING = 4.5;
+
+/**
+ * Session two was a cold search around Playa Vista Sports Park. The walking-tour
+ * page it links to is Ben's own, on his personal site — an editorial link, not a route.
+ */
+const PLAYA_VISTA_TOUR_URL = 'https://www.benstrawbridge.com/trails/pv-tour/';
 
 const aorkuler = trackerProducts.find((p) => p.id === 'aorkuler-pet-tracker')!;
 const offers = getOffers(aorkuler);
@@ -98,15 +104,21 @@ const faqs = [
   },
   {
     question: 'What range did you actually get?',
-    short: 'We did not test range. Inside 500 feet, where we did work, the link came and went.',
+    short: 'We did not test range. Across two outings the tracker was never more than about 1,000 feet away.',
     answer:
-      `Straight answer: we did not test this, so we have no range figure and we are not going to imply one. Aorkuler advertises up to 3.5 miles in open terrain, we never attempted to walk that down, and nothing in this review should be read as a verdict on it. What we can report is from inside 500 feet. The controller showed a live green arrow at 104.6 feet, and twice fell back to the red "last known position" display — at 389.4 feet and again around 502 feet — meaning the radio link had dropped. We had just run the "Follow it again" re-sync and the controller interrupted one track with a "GPS updating" message, either of which could explain that better than distance does. Treat 3.5 miles as an unverified manufacturer claim and use the 30-day window to test it where you actually walk.`,
+      'Straight answer: we did not test this, so we have no range figure and we are not going to imply one. Aorkuler advertises up to 3.5 miles in open terrain. Across two outings — hide-and-seek at Westchester Park and a cold search around Playa Vista — the tracker was never more than about 1,000 feet from the controller, and that is where we happened to stop, not where the device did. The display went red at points in both sessions, and we explain in the review why we no longer read that as a dropped link. A proper range test is planned and described further down. Until it is done, treat 3.5 miles as an unverified manufacturer claim and use the 30-day window to test it where you actually walk.',
   },
   {
     question: 'How accurate is the Aorkuler?',
     short: 'The distance number is the trustworthy part. The direction arrow needs care.',
     answer:
-      'The distance readout was the reliable half of the display. It counted up and down in step with real movement — we watched it climb from 106 to 119 feet as the person carrying the tracker walked away, and fall as we closed in. The direction arrow was less dependable: it often held one quadrant while we moved. Aorkuler says the compass is sensitive to magnetic interference and should be held level and away from phones, keys, and metal, and that matches what we saw. Treat the arrow as a rough bearing and the number as the real signal.',
+      'The distance readout was the reliable half of the display in both outings. It counted up and down in step with real movement — we watched it climb from 106 to 119 feet as the person carrying the tracker walked away, and fall as we closed in. The direction arrow was less dependable: it often held one quadrant while we moved, and at Playa Vista it let one of us set off the wrong way for the first minute before it corrected. Aorkuler says the compass is sensitive to magnetic interference and should be held level and away from phones, keys, and metal, and that matches what we saw. Treat the arrow as a rough bearing and the number as the real signal.',
+  },
+  {
+    question: 'Does the Aorkuler show a map?',
+    short: 'No. It gives you a bearing and a distance, and the arrow points straight through fences and freeways.',
+    answer:
+      'No. The controller shows an arrow and a number and nothing else — no map, no trail, no sense of what lies between you and the dog. That matters more than it sounds. A map-based tracker shows you the fence, the freeway or the river in the way; the Aorkuler arrow points straight through them, because straight-line distance is the only thing it knows. If your dog has crossed a fenced campus or a walled development, a 300-foot reading can mean a twenty-minute walk around. Local knowledge solves it, and in open country it rarely bites. In a dense suburb it is the first thing to weigh against the price.',
   },
   {
     question: 'How long does the Aorkuler battery last?',
@@ -115,14 +127,14 @@ const faqs = [
   },
   {
     question: 'What does the red arrow on the screen mean?',
-    short: 'The radio link dropped. You are looking at the last known position, not a live one.',
+    short: 'Something is wrong, and the device will not tell you what. Everything else on screen can still read healthy.',
     answer:
-      'A green arrow is a live fix. A red arrow is Aorkuler telling you the radio connection has dropped and the direction and distance on screen are the last ones it managed to receive. It is not an error state and the device does not announce it in words, which is exactly why it is worth knowing before you need it. Walk toward the last known position and the link usually picks back up as you close the gap.',
+      'We first reported red as a frozen last-known position, and our second outing showed that is not what happens. While the display was red, the satellite icon and both battery meters still read connected, the pointer still moved, and the distance still rose and fell correctly as we walked toward and away from Rhys. So red is a warning without an explanation. The practical problem is that you cannot tell whether you are walking toward where the dog is or where the dog was. Our untested hypothesis is that the controller keeps measuring from its own position to the tracker’s last known coordinates, which would make the number trustworthy only while the dog stays still. Keep walking, keep the controller level, and treat the number with suspicion until it goes green.',
   },
   {
     question: 'Is the Aorkuler waterproof?',
     answer:
-      'Aorkuler rates the collar unit IP67, which covers rain and brief immersion. We did not test this — our unit never went in water — so we are passing on the manufacturer’s rating rather than a result. The proprietary magnetic charging contacts, rather than an open USB-C port, are presumably part of how that rating is achieved.',
+      'Aorkuler rates the collar unit IP67, which covers rain and brief immersion. We did not test this — our unit never went in water — so we are passing on the manufacturer’s rating rather than a result. What we can say is that the sealed housing and magnetic charging contacts, rather than an open USB-C port, read as a unit built to take weather, and that is the redeeming half of the proprietary-charger complaint.',
   },
 ];
 
@@ -131,7 +143,7 @@ const quickAnswers = faqs.filter((faq) => faq.short);
 const reviewSchema = buildReviewSchema({
   name: 'Aorkuler GPS Dog Tracker Review',
   description:
-    'Hands-on review of the Aorkuler GPS dog tracker: a subscription-free, app-free handheld system field-tested with Rhys, including where its radio link gave out.',
+    'Hands-on review of the Aorkuler GPS dog tracker: a subscription-free, app-free handheld system field-tested with Rhys over two outings, including the red warning state it never explains.',
   path: ROUTES.aorkulerReview,
   rating: RATING,
   datePublished: pubDate,
@@ -148,13 +160,13 @@ const reviewSchema = buildReviewSchema({
 <BaseLayout
   title="Aorkuler GPS Dog Tracker Review: No Subscription, No App (2026)"
   ogTitle="Aorkuler GPS Dog Tracker Review: No Subscription, No App"
-  description="We field-tested the Aorkuler GPS dog tracker with Rhys: no subscription, no app, no cell service needed — and a radio link that came and went inside 500 feet."
+  description="We field-tested the Aorkuler GPS dog tracker with Rhys over two outings: no subscription, no app, no cell service needed — and a red warning it never explains."
 >
   <JsonLd slot="head" schema={reviewSchema} />
 
   <Hero
     title="Aorkuler GPS Dog Tracker Review"
-    subtitle="A handheld dog tracker with no app, no SIM, and no monthly bill. We took it to a wide-open park with Rhys to find out what that actually buys you — and what it costs you."
+    subtitle="A handheld dog tracker with no app, no SIM, and no monthly bill. We took it to a wide-open park with Rhys, then ran a cold search around a suburb, to find out what that actually buys you — and what it costs you."
     disclaimer="Aorkuler supplied the review unit. We earn a commission on purchases through our links."
     primaryCta={{
       label: 'Buy direct from Aorkuler',
@@ -177,34 +189,40 @@ const reviewSchema = buildReviewSchema({
 
         <ReviewRating
           value={RATING}
-          summary="Scored on what we tested: setup, tracking behaviour in an open park, fit on the dog, the alarms, and charging. We did not verify the 3.5-mile range claim, the IP67 rating, or long-term battery life."
+          summary="Scored on what we tested across two outings: setup, tracking in an open park and a cold search around a suburb, fit on the dog, the alarms, and charging. Provisional pending our range test — we have not verified the 3.5-mile claim, and the score may move when we do. We did not verify the IP67 rating or long-term battery life either."
         />
 
         <p class="section-body">
           The Aorkuler does the thing it promises. You press a button, the controller
           shows you how far away your dog is and roughly which way to walk, and it does
           that with no phone, no app, no SIM, and no monthly bill — in places where a
-          cellular collar would show you nothing. Natalie found Rhys with it quickly and
-          would buy it. That is not nothing, and at Aorkuler's $249.99 direct price,
-          paid once, it undercuts a comparable Garmin setup by a wide margin.
+          cellular collar would show you nothing. Natalie found Rhys with it quickly in
+          a park and would buy it; Ben found him again a week later from a cold start in
+          a suburb. The hardware carries the price: at Aorkuler's $249.99 direct, paid
+          once, it undercuts a comparable Garmin setup by a wide margin, and once the kit
+          is in your hand the number reads as fair rather than steep.
         </p>
         <p class="section-body">
-          What keeps it off five stars is consistency. Twice during a short
-          hide-and-seek — at 389 feet and again around 502 feet — the display fell back
-          to Aorkuler's red "last known position" state, meaning the radio link had gone
-          and we were reading an old fix. We cannot tell you why, and we are not going
-          to guess: we had just run the "Follow it again" re-sync, the controller
-          interrupted one track with a "GPS updating" message, and we never set out to
-          find the range limit. Add a GPS fix that needs open sky and up to a minute and
-          a half, a direction arrow that often lags, a proprietary charger no spare
-          cable will replace, and a kit that drains flat if you forget to switch both
-          halves off, and you have a genuinely useful tool with real edges on it.
+          What keeps it off five stars is the information the screen withholds. Twice in
+          the park and again on the street the arrow went red, and the device never says
+          why: the satellite icon and both batteries still read fine, the number still
+          moves with you, and you are left unable to tell whether you are walking toward
+          where the dog is or where the dog was. There is no map, so the arrow points
+          straight through fences and freeways. The arrow itself lags, and sent one of us
+          the wrong way for a minute before it corrected. Add a GPS fix that needs open
+          sky and up to a minute and a half, a proprietary charger no spare cable will
+          replace, a beeper you can barely hear, a kit that drains flat if you forget to
+          switch both halves off, and a collar unit that is a lot of plastic on a small
+          dog, and you have a genuinely useful tool with real edges on it. None of those
+          edges stopped us finding the dog, and all of them are manageable once you know
+          they are there.
         </p>
         <p class="section-body">
           <strong>Buy it if</strong> you want off-grid tracking without a subscription
           and your realistic search radius is a field, a campsite, or a rural property.
-          <strong>Skip it if</strong> you need escape alerts pushed to your phone, a map,
-          or confidence at distance.
+          <strong>Skip it if</strong> you need escape alerts pushed to your phone, a map
+          that shows what is between you and the dog, or confidence at a distance we
+          cannot yet vouch for.
         </p>
 
         <div class="buy-stack">
@@ -260,6 +278,11 @@ const reviewSchema = buildReviewSchema({
           you already know they are gone.
         </p>
         <p class="section-body">
+          More precisely, it is a <strong>bearing-and-range finder</strong>. It tells you
+          how far and roughly which way, and nothing about what is in between — no map,
+          no trail, no streets. That one sentence explains most of what follows.
+        </p>
+        <p class="section-body">
           It is also GPS-only, with no cellular assist to speed up the first fix. In
           practice that means you start it outdoors, with a view of the sky, and wait.
         </p>
@@ -302,9 +325,12 @@ const reviewSchema = buildReviewSchema({
         </p>
         <p class="section-body">
           The antenna screws onto the controller; it does not ship attached. Both units
-          are a light, matte plastic. Natalie is 5 feet 3 inches and found the
-          controller comfortably sized for her hand — worth saying, because handheld
-          tracking systems are often built for big gloves.
+          are a light, matte plastic, and the whole kit feels more expensive than it is.
+          Everyone we handed it to remarked on the build before anyone asked the price —
+          a report of how it feels, not how it performs, but it is what makes $249.99
+          read as fair. Natalie is 5 feet 3 inches and found the controller comfortably
+          sized for her hand — worth saying, because handheld tracking systems are often
+          built for big gloves.
         </p>
 
         <ImagePlaceholder
@@ -391,9 +417,13 @@ const reviewSchema = buildReviewSchema({
           <div class="legend-row legend-row--flag">
             <dt>Red arrow</dt>
             <dd>
-              <strong>The radio link has dropped.</strong> What you are looking at is the
-              last direction and distance the controller received, not a live one. Walk
-              toward it and the connection usually resumes as you close the gap.
+              <strong>A warning the device does not explain.</strong> In our second
+              outing the display went red while the satellite icon and both battery
+              meters still read connected, the pointer still moved, and the distance
+              still tracked our own movement — so do not read it as a frozen fix. Read
+              it as: something about this reading is not to be trusted, and the screen
+              will not tell you what. Keep walking, keep the controller level, and
+              expect green to return.
             </dd>
           </div>
           <div class="legend-row">
@@ -438,7 +468,17 @@ const reviewSchema = buildReviewSchema({
     <!-- Field test -->
     <section class="content-section content-section--alt" id="field-test">
       <div class="section-inner">
-        <h2>Field Test: Hide and Seek at Westchester Park</h2>
+        <h2>Field Test: Two Outings with Rhys</h2>
+        <p class="section-body">
+          We took the Aorkuler out twice. The first outing was hide-and-seek in an open
+          park, watching the screen the whole time. The second, a week later, was closer
+          to how the device would actually be used: a cold search through a suburb,
+          fifteen minutes after the dog had gone, with buildings in the way. The second
+          one changed how we read the first, and we have rewritten this section to say
+          so rather than quietly correct it.
+        </p>
+
+        <h3>Session one: hide and seek at Westchester Park</h3>
         <p class="section-body">
           We ran this two-handed at a large, flat municipal park with very little tree
           cover and wide sightlines — close to the best case for a GPS-and-radio system
@@ -471,11 +511,13 @@ const reviewSchema = buildReviewSchema({
           confidently in the wrong direction for two minutes.
         </p>
 
-        <h3>When the link dropped</h3>
+        <h3>When the display went red</h3>
         <p class="section-body">
-          Twice in the session the display went red. By Aorkuler's own legend that means
-          the radio connection had dropped and we were looking at a last known position
-          rather than a live one — first at 389.4 feet, then again around 502 feet.
+          Twice in the session the display went red — first at 389.4 feet, then again
+          around 502 feet. When we first published this review we read that as the radio
+          link dropping and the screen freezing on a last known position. The second
+          outing, below, showed that is not what red means, and we no longer stand by
+          that reading.
         </p>
 
         <div class="photo-pair">
@@ -492,33 +534,180 @@ const reviewSchema = buildReviewSchema({
         <figure class="article-photo article-photo--screenshot">
           <Image src={imgRed502} alt="Aorkuler controller showing 502.1 feet with a red direction sector" width={900} quality={80} />
           <figcaption>
-            Three frames taken across this stretch read 501.2, 502.1, and 502.0 feet —
-            within a foot of each other, all red.
+            Three frames taken across this stretch read 501.2, 502.1, and 502.0 feet,
+            all red. We originally read that as a frozen fix. The likelier explanation
+            is that the person holding the controller was standing still.
           </figcaption>
         </figure>
 
         <p class="section-body">
-          Be careful what you read into that, because we were. <strong>This is not a
-          range test.</strong> We never walked out to find the limit — hide-and-seek in
-          a park was the whole exercise. We had also just run the "follow it again"
-          re-sync, and at one point mid-track the controller interrupted itself with a
-          "GPS updating" message. Any of those explains a dropped link at least as well
-          as distance does, and one outing gives us no way to separate them.
+          Be careful what you read into those frames, because we were. <strong>This is
+          not a range test.</strong> We never walked out to find the limit —
+          hide-and-seek in a park was the whole exercise. We had also just run the
+          "follow it again" re-sync, and at one point mid-track the controller
+          interrupted itself with a "GPS updating" message. One outing gave us no way to
+          separate any of that from distance, which is why we went back out.
+        </p>
+
+        <h3>Session two: a cold search at Playa Vista</h3>
+        <p class="section-body">
+          A week later we tried something closer to a real lost-dog scenario at
+          <a href={PLAYA_VISTA_TOUR_URL}>Playa Vista Sports Park</a>, a suburb of
+          soccer fields, a school and tight streets that Ben walks often enough to have
+          written a tour of it. Natalie took Rhys and the tracker out around the fields,
+          behind the elementary school, and into the wetlands demonstration park beyond
+          it <mark class="pending-fact">[park name pending — Ben to confirm; "Leonis
+          Wetlands" unverified]</mark>. Ben waited about fifteen minutes in the car, then
+          got out and went looking.
         </p>
         <p class="section-body">
-          What it does show is that the connection is not something to take for granted
-          at the distances where you would actually be using this, and that is worth
-          knowing before you are using it in anger. Learn what the red arrow means, keep
-          walking toward the last known position, and expect the link to pick back up as
-          you close the gap — which, for us, it did every time.
+          That gap matters. The first time out we watched the number the whole way, so
+          we always knew roughly where the tracker was. This time the device was picked
+          up cold, with a dog already a quarter of an hour gone — which is the only
+          situation in which anyone will ever use it. On the controller, the tracker was
+          <strong>never more than about 1,000 feet away</strong>. That is not a range
+          figure. It is how far Natalie happened to walk.
         </p>
+        <p class="section-body">
+          Ben knew roughly which way she had gone, set off, and went the wrong way. The
+          arrow and the climbing number corrected him inside a minute, and from there the
+          device walked him to the dog. That is honest evidence in both directions: the
+          arrow lagged enough to let him start wrong, and it is also exactly what a
+          direction arrow is for. He found Rhys.
+        </p>
+        <p class="section-body">
+          The display went red while he was behind the school. A building between the
+          handheld and the tracker is the obvious candidate, and we think obstruction is
+          the likely explanation — but that is an inference from where he was standing,
+          not something the device told us.
+        </p>
+
+        <h3>What red actually means</h3>
+        <p class="section-body">
+          This is the finding that rewrote the review. While the arrow was red, the
+          satellite icon still showed a lock, both battery meters still read connected,
+          the pointer still moved, and the distance still rose and fell correctly as Ben
+          walked toward and away from Rhys. Nothing on that screen was frozen. Go back to
+          the three near-identical frames at 502 feet above and the simplest explanation
+          is not a stale fix: it is a person standing still, reading a number that was
+          not changing because they were not moving.
+        </p>
+        <p class="section-body">
+          So red is not "the link has dropped and this is old data". Red is
+          <strong>something is wrong, and the device will not tell you what.</strong>
+          Everything else on screen says healthy. The number still answers to your own
+          feet. What you lose is the ability to trust what that number is measuring
+          against — and so you cannot tell whether you are walking toward where the dog
+          is or where the dog was. That is a usability failure rather than a reliability
+          one, and it is the sharper criticism.
+        </p>
+
+        <div class="callout callout--warning">
+          <p class="callout-heading">Our hypothesis — untested</p>
+          <p class="callout-body">
+            One reading fits everything we saw: while red, the controller may be
+            recomputing distance from its own GPS position to the tracker's
+            <em>last known coordinates</em>. That would explain a number that tracks
+            the searcher's movement perfectly while the link to the dog is in doubt. If
+            it is right, the practical rule is sharp: <strong>while the display is red,
+            the distance is only trustworthy if the dog has not moved.</strong> We have
+            not confirmed this, and we are not presenting it as fact.
+          </p>
+          <p class="callout-body">
+            The test that would settle it is simple, and it is the open question on this
+            page. Wait for the display to go red, stand still, and have the dog move. If
+            the number changes, the link is live and red means something else. If it
+            does not, the controller is computing against a stale position. We will run
+            it on the next outing.
+          </p>
+        </div>
+
+        <ImagePlaceholder
+          id="RED-WHILE-CONNECTED"
+          title="Red arrow with every other indicator reading healthy"
+          shot="A frame from the Playa Vista controller recordings: the arrow red, with the satellite lock icon steady and both the T and C battery meters clearly visible in the same frame. This single image is the proof of the reframed claim, so the status row must be legible — pick the frame with the least glare, not the most dramatic one."
+          caption="Red arrow, satellite locked, both batteries fine. Whatever red means, it is not a dead link."
+          alt="Aorkuler controller showing a red direction arrow while the satellite lock icon and both battery meters still read connected"
+          screenshot={true}
+        />
+
+        <h3>A bearing is not a route</h3>
+        <p class="section-body">
+          The second thing street use taught us is arguably the most useful sentence in
+          this review for anyone choosing between this and a map tracker. The Aorkuler
+          gives you a bearing and a range. It does not give you a map. A map-based
+          tracker shows the barriers between you and your dog — fences, walls, freeways,
+          rivers. The arrow shows none of them. It points straight through them, because
+          straight-line distance is the only thing it knows.
+        </p>
+        <p class="section-body">
+          Ben's example from the same neighbourhood: the LMU campus is large and fenced
+          the whole way round. If Rhys got loose near there and crossed to the far side,
+          following the arrow walks you onto campus, across it, and into a wall — with
+          the arrow still pointing serenely through the fence. The dog is 300 feet away
+          and twenty minutes away.
+        </p>
+        <p class="section-body">
+          The honest qualifier: if you know the area and expect this, it is not a big
+          deal, and the device is still very helpful. It is a problem you solve with
+          local knowledge, not one the hardware solves for you. It bites hardest in dense
+          urban and suburban searching, where fenced campuses, walled developments and
+          freeways are everywhere, and far less in woods and open country — though
+          rivers and canyons still apply. It pairs with the red-arrow finding: in both
+          cases the display is withholding the context you need to act on it.
+        </p>
+
+        <h3>The range test we have not done yet</h3>
+        <div class="callout callout--warning range-plan">
+          <p class="callout-heading">Not tested — this section describes a plan, not a result</p>
+          <p class="callout-body">
+            Aorkuler's 3.5-mile figure is the single biggest open question on this page,
+            and across two outings the tracker has never been more than about 1,000 feet
+            from the controller. A real multi-mile hike needs a second handler and is
+            not happening soon. So the plan is this: leave the tracker at home, drive
+            the neighbourhood, and log how far we get before the link degrades, whether
+            a green arrow ever survives past a few hundred or a few thousand feet, and
+            photograph the display at each distance.
+          </p>
+          <p class="callout-body">
+            <strong>The method is better than it sounds.</strong> One end is fixed at a
+            known address, so every reading can be checked against a real map distance.
+            That is a cleaner range measurement than two people wandering a park, and it
+            finally gives us a ground truth for the distance readout itself.
+          </p>
+          <p class="callout-body">
+            <strong>What it still will not answer.</strong> The tracker is stationary,
+            so it tests radio reach, not behaviour while the dog moves — which is
+            exactly the condition the red-arrow hypothesis above needs to resolve. And a
+            neighbourhood drive is dense urban: buildings between the two units are part
+            of what gets measured, which is realistic but is not the open terrain
+            Aorkuler's 3.5-mile figure refers to. Until this is done, nothing on this
+            page is a range result and the rating above is provisional.
+          </p>
+        </div>
+
+        <ImagePlaceholder
+          id="RANGE-DRIVE-DISPLAY"
+          title="The controller display at distance during the drive test"
+          shot="Pending the drive test. A series of controller frames at known map distances from the house — at minimum one green and one red, each labelled with the measured distance. Shoot with the car stopped and the controller held level, away from the dashboard."
+          caption="The display at distance from a fixed tracker. Not yet shot — the test has not been run."
+          alt="Aorkuler controller display photographed at a measured distance from a stationary tracker"
+          screenshot={true}
+        />
 
         <h3>On the dog</h3>
         <p class="section-body">
           The tracker attaches with an elastic strap and a reinforced metal-backed clasp
           that threads through the collar. It is a better design than it needs to be —
-          nothing about it felt like it was going to work loose, and at around 30 grams
-          Rhys gave no sign of noticing it was there.
+          the stretch takes up the slack on any collar width, nothing about it felt like
+          it was going to work loose across two outings, and we expect it to hold. At
+          around 30 grams Rhys gave no sign of noticing it was there.
+        </p>
+        <p class="section-body">
+          One caveat on that weight figure: light is not the same as small. Rhys is not
+          a small dog, and the unit that disappears on his neck is a lot of plastic on a
+          terrier's. If your dog is small, hold the collar unit up against their collar
+          before you commit, and use the 30-day window if it is too much.
         </p>
 
         <div class="photo-pair">
@@ -585,10 +774,12 @@ const reviewSchema = buildReviewSchema({
           is worth a glance back before you walk away from a charging unit.
         </p>
         <p class="section-body">
-          There is a defensible reason for it. Sealed magnetic contacts are an easier
-          path to an IP67 rating than an open USB-C port with a flap, and the collar unit
-          is the half that lives outdoors on a dog. We would still rather have USB-C on
-          the controller.
+          There is a good reason for it, and it is the redeeming half of the complaint.
+          Sealed magnetic contacts are an easier path to an IP67 rating than an open
+          USB-C port with a flap, and the collar unit is the half that lives outdoors on
+          a dog. In the hand the whole kit feels rugged and built to be rained on and
+          dunked — we have not tested the rating, but the trade reads as a fair one. We
+          would still rather have USB-C on the controller.
         </p>
 
         <ImagePlaceholder
@@ -642,7 +833,7 @@ const reviewSchema = buildReviewSchema({
             <span class="bfi-icon">✓</span>
             <div>
               <p class="bfi-label">Rural property and campsite owners</p>
-              <p class="bfi-desc">A few hundred feet of reliable finding, with no cell service and no monthly bill, is exactly the shape of this product.</p>
+              <p class="bfi-desc">A few hundred feet of reliable finding, with no cell service and no monthly bill, is exactly the shape of this product. Open ground is also where the missing map matters least — there is nothing between you and the dog for the arrow to point through.</p>
             </div>
           </div>
           <div class="best-for-item best-for-item--yes">
@@ -669,8 +860,22 @@ const reviewSchema = buildReviewSchema({
           <div class="best-for-item best-for-item--no">
             <span class="bfi-icon bfi-icon--no">✗</span>
             <div>
+              <p class="bfi-label">Dense suburban and urban searching</p>
+              <p class="bfi-desc">This is the concrete reason for the rural-versus-city split. The arrow points straight through fenced campuses, walled developments and freeways. You can work around that with local knowledge, but a map tracker shows you the barrier and this does not.</p>
+            </div>
+          </div>
+          <div class="best-for-item best-for-item--no">
+            <span class="bfi-icon bfi-icon--no">✗</span>
+            <div>
+              <p class="bfi-label">Small dogs</p>
+              <p class="bfi-desc">The collar unit is light, but it is not small. Rhys ignored it; Rhys is not a small dog. On a small neck it is a lot of plastic, and we would want to see it on the collar before buying.</p>
+            </div>
+          </div>
+          <div class="best-for-item best-for-item--no">
+            <span class="bfi-icon bfi-icon--no">✗</span>
+            <div>
               <p class="bfi-label">Hunters and working-dog handlers</p>
-              <p class="bfi-desc">Multi-dog tracking at genuine distance with maps on the handheld is Garmin territory, and our range result does not come close.</p>
+              <p class="bfi-desc">Multi-dog tracking at genuine distance with maps on the handheld is Garmin territory, and we have not tested the Aorkuler at anything like that distance.</p>
             </div>
           </div>
           <div class="best-for-item best-for-item--no">
@@ -703,7 +908,9 @@ const reviewSchema = buildReviewSchema({
               subscription <em>is</em> the network. A Garmin Alpha system does it, but
               the collar and handheld together cost multiples of this. If "no monthly
               bill, works without cell service, under $300" is your brief, Aorkuler is
-              the answer and it is not particularly close.
+              the answer and it is not particularly close. The cost is the screen: you
+              get a bearing and a distance, never a map, so you supply the knowledge of
+              what lies between you and the dog.
             </p>
           </div>
           <div class="verdict-card">
@@ -711,9 +918,11 @@ const reviewSchema = buildReviewSchema({
             <p class="vc-winner">Fi wins</p>
             <p class="vc-body">
               Fi pushes you a notification the moment your dog crosses a geofence, shows
-              a live map, and needs nothing in your hand. Aorkuler offers none of that.
-              If you have LTE where your dog actually goes, this is not a close call
-              either. See our <a href={ROUTES.fiCollarReview} data-track="collector_to_converter_click" data-from-page={pageSlug} data-to-page={ROUTES.fiCollarReview} data-link-position="comparisons">Fi collar review</a>.
+              a live map with the streets, fences and freeways between you and the dog,
+              and needs nothing in your hand. Aorkuler offers none of that: its arrow
+              points straight through whatever is in the way, and in a fenced-up suburb
+              that gap matters at least as much as the alerts. If you have LTE where
+              your dog actually goes, this is not a close call either. See our <a href={ROUTES.fiCollarReview} data-track="collector_to_converter_click" data-from-page={pageSlug} data-to-page={ROUTES.fiCollarReview} data-link-position="comparisons">Fi collar review</a>.
             </p>
           </div>
           <div class="verdict-card">
@@ -791,31 +1000,40 @@ const reviewSchema = buildReviewSchema({
       <div class="section-inner">
         <h2>Verdict: Is the Aorkuler Worth It?</h2>
 
-        <ReviewRating value={RATING} label="Final rating" />
+        <ReviewRating
+          value={RATING}
+          label="Final rating"
+          summary="Provisional pending the range test described in the field-test section. This is the same number our review markup carries, and it will move if the range result warrants it."
+        />
 
         <p class="section-body">
           Yes, for the right buyer, and the right buyer is narrower than the marketing
-          suggests. The Aorkuler is a well-made, genuinely subscription-free finder that
-          works where cellular collars do not, and the hardware quality — the case, the
-          collar clasp, the fit in the hand — is better than the price implies. Two
-          people with no instructions worked out how to use it in a park and found a dog
-          with it.
+          suggests. The Aorkuler is a rugged, genuinely subscription-free finder that
+          works where cellular collars do not, and the hardware — the case, the sealed
+          housing, the collar clasp, the fit in the hand — reads as more than the price.
+          Two people with no instructions worked out how to use it in a park and found a
+          dog with it, and a week later one of them found the same dog cold, from a car,
+          in a suburb. Natalie wanted to give it five stars. We would not go below four.
         </p>
         <p class="section-body">
-          The reason it is four stars and not five is consistency. Inside 500 feet —
-          well within what this thing is for — the link dropped to last-known-position
-          twice. We cannot tell you whether that was distance, the re-sync, or the GPS
-          update cycle, because we did not build the test to find out. None of it stopped
-          us finding the dog, and the direction arrow needs the same patience. But a
-          finder you have to interpret is a slower finder, and that is friction worth
-          knowing about before you buy.
+          The reason it is four and a half and not five is what the screen withholds. The
+          display goes red and never says why, leaving you unsure what the distance is
+          measuring. There is no map, so the arrow points through fences and freeways.
+          The arrow lags, and sent us the wrong way until it corrected. The collar unit
+          is bulky on a small dog. Then the charger, the near-inaudible beeper and the
+          standby drain. Every one of those is manageable once you know it is coming, and
+          none of them stopped us finding the dog — which is why the score is as high as
+          it is. But a finder you have to interpret is a slower finder, and that is
+          friction worth knowing about before you buy.
         </p>
 
         <h3>What we did not test</h3>
         <ul class="limits-list">
           <li>
             <strong>Range.</strong> We never attempted the 3.5-mile claim and have no
-            figure of our own — nothing on this page is a range result
+            figure of our own. Across two outings the tracker was never more than about
+            1,000 feet away, and nothing on this page is a range result. A drive-based
+            test is planned and described above
           </li>
           <li>The IP67 rating — our unit never went in water</li>
             <li>Battery life from full to empty, on either unit</li>
@@ -991,6 +1209,29 @@ const reviewSchema = buildReviewSchema({
       grid-template-columns: 1fr;
       gap: var(--space-xs);
     }
+  }
+
+  /* ── Editorial flags ───────────────────────────────────────── */
+  /*
+   * A fact still waiting on confirmation. Deliberately loud, like ImagePlaceholder:
+   * it must be impossible to publish one by accident.
+   */
+  .pending-fact {
+    background: #fde8e6;
+    color: #8f1d14;
+    border: 1px dashed #c0392b;
+    border-radius: var(--radius-sm);
+    padding: 0 0.35em;
+    font-weight: var(--weight-bold);
+  }
+
+  .range-plan {
+    border: 2px dashed #c0392b;
+    border-left-width: 4px;
+  }
+
+  .callout .callout-body + .callout-body {
+    margin-top: var(--space-sm);
   }
 
   /* ── Photos ────────────────────────────────────────────────── */
