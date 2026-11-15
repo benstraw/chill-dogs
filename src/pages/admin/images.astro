@@ -51,8 +51,8 @@ for (const [path, module] of Object.entries(cacheGlob)) {
 }
 
 /**
- * Cache URLs are normalised here, at render time, so a tile shows the exact URL that
- * will be written. Showing the raw URL and normalising only on save is how the old
+ * Cache URLs are normalized here, at render time, so a tile shows the exact URL that
+ * will be written. Showing the raw URL and normalizing only on save is how the old
  * double-modifier bug stayed invisible.
  */
 const products = productCatalogItems.map((product) => {
@@ -381,7 +381,7 @@ const withoutCache = products.filter((p) => p.cacheImages.length === 0).length;
     // Add/remove via cache tile click
     const tile = target.closest<HTMLElement>('[data-add-src]');
     if (tile) {
-      // Tiles already carry normalised URLs — the page normalises at render time so the
+      // Tiles already carry normalized URLs — the page normalizes at render time so the
       // thumbnail you see is the URL that gets written.
       const src = tile.dataset.addSrc!;
       const pid = tile.dataset.addTo!;

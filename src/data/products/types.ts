@@ -23,7 +23,7 @@ export interface ChewyOffer extends AffiliateOfferBase {
 
 /**
  * Aorkuler's own affiliate program — a direct-from-brand offer, not a marketplace
- * listing. The brand sells one product line, so there is no ASIN or catalogue id to
+ * listing. The brand sells one product line, so there is no ASIN or catalog id to
  * carry; `url` is the tracked affiliate link and `canonicalUrl` the raw product page.
  */
 export interface AorkulerOffer extends AffiliateOfferBase {

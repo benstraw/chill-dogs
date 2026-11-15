@@ -567,7 +567,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     offers: [amazonOffer('B0H5CPWNV6')],
     image: {
       src: 'https://m.media-amazon.com/images/I/71grh6AWVWL._AC_SY300_SX300_QL70_FMwebp_.jpg',
-      alt: 'tenerolike natural essential-oil flea and tick collars for dogs, 5-pack in grey',
+      alt: 'tenerolike natural essential-oil flea and tick collars for dogs, 5-pack in gray',
     },
     bullets: [
       'Interrupts the life cycle of fleas and ticks',
@@ -1553,7 +1553,7 @@ export const fleaTickProducts: FleaTickProduct[] = [
     ],
     image: {
       src: 'https://image.chewy.com/catalog/general/images/dog-gone-smart-dirty-dog-shammy-towel-grey/img-258598._AC_SS1800_V1_.jpg',
-      alt: 'Dog Gone Smart Dirty Dog microfiber shammy towel in grey, 31 by 13 inches',
+      alt: 'Dog Gone Smart Dirty Dog microfiber shammy towel in gray, 31 by 13 inches',
     },
     bullets: [
       'Made of absorbent microfiber blend',

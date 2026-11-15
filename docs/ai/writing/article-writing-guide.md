@@ -78,6 +78,30 @@ Write like someone who looked into this carefully and is telling a friend what t
 - "Check out these AMAZING cooling products!" — marketing voice, not editorial
 - "In conclusion..." — no signposting your own structure
 
+### American English
+
+Chill-Dogs is written in American English. Ben and Natalie are in Los Angeles and the readers are US dog owners buying from Amazon.com. Rhys has a Welsh name; that is not a reason to write British English, and neither is a British-sounding product manual.
+
+This has been corrected more than once (most recently 2026-11-15, after the Aorkuler review shipped "The no-subscription maths"). Treat it as a hard rule, not a style preference.
+
+| Area | Write | Not |
+|---|---|---|
+| Spelling | math, color, favorite, behavior, neighborhood, gray | maths, colour, favourite, behaviour, neighbourhood, grey |
+| `-ize` / `-yze` | synchronize, normalize, recognize, analyze | synchronise, normalise, recognise, analyse |
+| `-er` | meters, millimeters, center, fiber | metres, millimetres, centre, fibre |
+| Single `l` | traveling, labeled, canceled | travelling, labelled, cancelled |
+| Other | catalog, judgment, aluminum, cozy, toward, afterward, while, among | catalogue, judgement, aluminium, cosy, towards, afterwards, whilst, amongst |
+| Vocabulary | leash, backyard, closet, store, tall grass, trash, sidewalk, flashlight, vacation | lead, back garden, cupboard, shop, long grass, rubbish, pavement, torch, holiday |
+| Idiom | dead battery, a real test, fifteen minutes, all the way around, from someone | flat battery, a proper test, a quarter of an hour, the whole way round, off someone |
+| Punctuation | periods and commas inside closing quotes: "frozen." | "frozen". |
+| Units | feet, miles, ounces, °F first; metric only when quoting a manufacturer | metric-first |
+
+Scope: page copy, FAQ answers, alt text, captions, meta descriptions, code comments, test names, docs, commit messages, and PR descriptions.
+
+Exceptions: product IDs, URLs, and brand or product names that already contain a British spelling (for example an ID ending `-grey`) stay as they are, and provider data under `src/data/amazon-products/` and `src/data/chewy-products/` is never edited.
+
+`src/__tests__/american-english.test.ts` fails the build on the common spellings. It cannot catch vocabulary or idiom, so reread for those.
+
 ### Numbers and units
 
 - Use numerals for all numbers: `85 °F`, `3 products`, `10–15 minutes`

@@ -41,6 +41,7 @@ Finishing any article collector page before marking work as done.
 - [ ] Product cards include `Disclosure` component when present on the page
 - [ ] No vet-authority claims ("vet-approved," "vet-recommended," "clinically proven")
 - [ ] First-hand claims ("we tested," "in our testing") only for products carrying `handsOn`; everything else uses research language
+- [ ] American English throughout — spelling, vocabulary (leash, backyard, store), and punctuation inside quotes; see the writing guide's American English section
 - [ ] Health emergencies covered include escalation language ("contact your vet immediately")
 - [ ] Added to sitemap inventory (`src/data/content-sitemap.ts`) if not MDX — MDX auto-discovers from `canonicalPath`
 - [ ] `topics` frontmatter set to relevant values from the `TOPICS` const in `content-sitemap.ts`

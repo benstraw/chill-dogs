@@ -41,7 +41,7 @@ describe('normalizeMerchantImageUrl', () => {
     ).toBe(`${AMAZON}/71bgbXfa7lL._SL500_.jpg`);
   });
 
-  it('is idempotent — normalising twice changes nothing', () => {
+  it('is idempotent — normalizing twice changes nothing', () => {
     const once = normalizeMerchantImageUrl(`${AMAZON}/81IWGNpchBL._AC_SL1500_.jpg`);
     expect(normalizeMerchantImageUrl(once)).toBe(once);
   });
@@ -66,7 +66,7 @@ describe('normalizeMerchantImageUrl', () => {
     expect(normalizeMerchantImageUrl('')).toBe('');
   });
 
-  it('honours a custom modifier', () => {
+  it('honors a custom modifier', () => {
     expect(normalizeMerchantImageUrl(`${AMAZON}/71n1Mod8sRL._AC_SL1500_.jpg`, '_SL1000_')).toBe(
       `${AMAZON}/71n1Mod8sRL._SL1000_.jpg`
     );
@@ -74,7 +74,7 @@ describe('normalizeMerchantImageUrl', () => {
 });
 
 describe('isSameMerchantImage', () => {
-  it('matches a raw cache URL against its normalised tray form', () => {
+  it('matches a raw cache URL against its normalized tray form', () => {
     expect(
       isSameMerchantImage(`${AMAZON}/81IWGNpchBL._AC_SL1500_.jpg`, `${AMAZON}/81IWGNpchBL._SL500_.jpg`)
     ).toBe(true);
@@ -122,7 +122,7 @@ describe('against the real Amazon cache', () => {
     return urls;
   }
 
-  it('normalises every cached image to exactly one modifier group', () => {
+  it('normalizes every cached image to exactly one modifier group', () => {
     const urls = cachedImageUrls();
     expect(urls.length).toBeGreaterThan(1000);
 

@@ -830,7 +830,7 @@ describe('site smoke tests', () => {
       expect(marked, `${id} must not be marked natural`).not.toContain(id);
     }
 
-    // The mark cannot be colour-only: each marked card carries a spoken label.
+    // The mark cannot be color-only: each marked card carries a spoken label.
     expect(doc.body.innerHTML.match(/Natural product: /g) ?? []).toHaveLength(27);
 
     // The legend that explains the mark, and the anchor inbound links land on.

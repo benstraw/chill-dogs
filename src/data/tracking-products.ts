@@ -294,7 +294,7 @@ export const trackerProducts: TrackerProduct[] = [
       'GPS-only fix needs open sky and 30–90 seconds to start, and the "Follow it again" re-sync can interrupt a search mid-hunt',
       'Proprietary magnetic charger — no cable you own will fit, and the magnet is weak',
       'Beeper is only audible within a few feet',
-      'Drains flat if you forget to power both units down separately',
+      'Drains completely if you forget to power both units down separately',
     ],
     best_for: 'Owners who want off-grid tracking without a monthly bill or a phone',
     bullets: [

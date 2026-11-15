@@ -1,7 +1,7 @@
 /**
  * `Review` JSON-LD for hands-on product reviews.
  *
- * Google only honours a rating in `Review` markup when the same rating is visible
+ * Google only honors a rating in `Review` markup when the same rating is visible
  * on the page. Keeping the schema behind this helper means a page passes its
  * rating once and hands the identical number to `ReviewRating.astro`, so the two
  * cannot drift apart.

@@ -5,7 +5,7 @@
  * sitemap, and config is evaluated before the `@` path aliases it declares
  * exist.
  *
- * The XML sitemap previously honoured only `EXCLUDED_DISCOVERY_FRAGMENTS`, so
+ * The XML sitemap previously honored only `EXCLUDED_DISCOVERY_FRAGMENTS`, so
  * `noindex` pages were still submitted — contradictory signals that Search
  * Console reports as an error. llms.txt already filtered on `noindex`; this
  * closes the gap between the two surfaces.

@@ -33,6 +33,7 @@ Finishing any coding task — new page, component change, data file update, util
 - [ ] Product cards compose the primitives in `src/components/modules/primitives/` — did not hand-roll a card surface, image frame, bullet list, or CTA stack; extended a primitive with an opt-in prop instead of forking it
 - [ ] Did not invent page types — used only `converter`, `collector`, `attractor`, `informer`
 - [ ] Did not use "hub" in code, comments, or specs — used `collector`
+- [ ] American English in copy, comments, test names, and docs (`color`, `normalize`, `behavior` — not `colour`, `normalise`, `behaviour`)
 - [ ] Did not hardcode internal route strings where `ROUTES` constants exist in `src/data/routes.ts`
 - [ ] Updated `docs/system-definition.yaml` if page structure, routes, page types, navigation, or module stacks changed
 - [ ] Updated sitemap inventory (`src/data/content-sitemap.ts`) if new non-MDX pages were added or routes changed
