@@ -84,6 +84,7 @@ const specs = [
 const costRows = [
   { tracker: 'Aorkuler', year1: '$249.99', year3: '$249.99', ongoing: 'None', us: true },
   { tracker: 'Fi Series 3+', year1: '~$209', year3: '~$446+', ongoing: 'From ~$99/yr', us: false },
+  { tracker: 'Garmin Alpha 300i + TT 25', year1: '~$1,200', year3: '~$1,200', ongoing: 'None (inReach messaging is optional)', us: false },
 ];
 
 const tocHeadings = [
@@ -125,7 +126,7 @@ const faqs = [
     question: 'What range did you actually get?',
     short: 'In a suburb, from a car, the live link dropped under 1,000 feet and never came back. We have not tested open terrain.',
     answer:
-      'Not the 3.5 miles on the box, at least not in a suburb. Aorkuler advertises up to 3.5 miles in open terrain. We left the tracker at home and drove away with the controller: the arrow went red less than 1,000 feet from the house and stayed red all the way out to 19,680 feet, about 3.7 miles. The distance kept counting the whole way, but with the signal bars crossed out, so it was measuring to the last position the controller had heard, not a live one. Across all three tests the longest green reading we photographed was 678.7 feet. Two caveats in Aorkuler’s favor: the controller was inside a car, and a built-up neighborhood is the opposite of open terrain. We have not tested open ground, so treat 3.5 miles as an unverified best case and use the 30-day window to test it where you actually walk.',
+      'Not the 3.5 miles on the box, at least not in a suburb. Aorkuler advertises up to 3.5 miles in open terrain. We left the tracker at home and drove away with the controller: the arrow went red less than 1,000 feet from the house and stayed red all the way out to 19,680 feet, about 3.7 miles. The distance kept counting the whole way, but with the signal bars crossed out, so it was measuring to the last position the controller had heard, not a live one. Across all three tests the longest green reading we photographed was 678.7 feet. One caveat in Aorkuler’s favor: a built-up neighborhood is the opposite of open terrain. The car was not much of a factor, because we drove with the windows open and held the controller out of one for much of the drive. We have not tested open ground, so treat 3.5 miles as an unverified best case and use the 30-day window to test it where you actually walk.',
   },
   {
     question: 'How accurate is the Aorkuler?',
@@ -723,7 +724,8 @@ const reviewSchema = buildReviewSchema({
           Aorkuler's 3.5-mile figure was the biggest open question on this page, so we
           tested it the only way two people and one dog can: we left the tracker at
           home, took the controller in the car, and drove away from it through the
-          neighborhood on a Sunday afternoon, filming the screen as we went.
+          neighborhood on a Sunday afternoon, windows open, holding the controller out
+          of one for much of the drive and filming the screen as we went.
         </p>
         <p class="section-body">
           The arrow went red less than 1,000 feet from the house and never went green
@@ -772,11 +774,11 @@ const reviewSchema = buildReviewSchema({
         <div class="callout callout--warning range-plan">
           <p class="callout-heading">What this test does and does not show</p>
           <p class="callout-body">
-            <strong>It is a suburban result, and a harsh one.</strong> The controller was
-            inside a car, held at lap height, with a neighborhood's worth of buildings
-            between the two units. Aorkuler's 3.5 miles is an open-terrain
-            figure, and this was the opposite of open terrain. A person on foot in the
-            same streets might do better than we did from a car.
+            <strong>It is a suburban result.</strong> We drove with the windows open
+            and held the controller out of one for much of the drive, so the car was
+            not doing most of the blocking. A neighborhood's worth of buildings between
+            the two units was. Aorkuler's 3.5 miles is an open-terrain figure, and this
+            was the opposite of open terrain.
           </p>
           <p class="callout-body">
             <strong>We did not check the readings against a map,</strong> so the
@@ -1079,7 +1081,8 @@ const reviewSchema = buildReviewSchema({
         <h3>The no-subscription math</h3>
         <p class="spec-note">
           Manufacturer-published pricing, checked {CLAIMS_CHECKED}. Subscription costs
-          move; verify before you buy.
+          move; verify before you buy. The Garmin figure is its suggested retail price for
+          the Alpha 300i handheld and one TT 25 collar bought separately.
         </p>
         <div class="table-wrap">
           <table class="cost-table">
@@ -1105,8 +1108,10 @@ const reviewSchema = buildReviewSchema({
         </div>
         <p class="section-body">
           A cellular tracker is cheaper to walk out of the store with and roughly $150–200
-          more expensive by year three. Which is better value depends entirely on
-          whether the thing Aorkuler cannot do — alert you — is a thing you need.
+          more expensive by year three. A Garmin handheld and collar carry no
+          subscription either, but cost nearly five times as much up front. Which is
+          better value depends entirely on whether the things Aorkuler cannot do — alert
+          you, or show you a map — are things you need.
         </p>
 
         <div class="comparison-cta">
@@ -1161,7 +1166,8 @@ const reviewSchema = buildReviewSchema({
         <ul class="limits-list">
           <li>
             <strong>Range in open terrain.</strong> Our drive test was in a suburb,
-            from inside a car, and the live link dropped under 1,000 feet. We have not
+            with buildings in the way throughout, and the live link dropped under 1,000
+            feet. We have not
             tested the 3.5-mile claim on open ground, which is where Aorkuler says it
             applies
           </li>
