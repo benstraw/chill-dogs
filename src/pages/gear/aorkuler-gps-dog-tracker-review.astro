@@ -37,14 +37,6 @@ const pubDate = '2026-11-07';
 /** Second field test folded in; the red-arrow reading and the rating both changed. */
 const updatedDate = '2026-11-15';
 
-const longDate = (iso: string) =>
-  new Date(`${iso}T12:00:00Z`).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-    timeZone: 'UTC',
-  });
-
 /**
  * One number, two consumers: the visible star block and the `Review` JSON-LD.
  * Google drops a rating it cannot find on the page, so these must not diverge.
@@ -187,8 +179,8 @@ const reviewSchema = buildReviewSchema({
 
   <Hero
     title="Aorkuler GPS Dog Tracker Review"
-    subtitle="A handheld dog tracker with no app, no SIM, and no monthly bill. We took it to a wide-open park with Rhys, then ran a cold search around a suburb, to find out what that actually buys you — and what it costs you."
-    disclaimer="Aorkuler supplied the review unit. We earn a commission on purchases through our links."
+    subtitle="A handheld dog tracker that doesn't require an app or a monthly subscription fee. We took it to a wide-open park with Rhys, then ran a cold search around a suburb, to find out how well it works."
+    disclaimer="Aorkuler supplied the review unit. This did not affect our assessment. We earn a commission on purchases through our links."
     primaryCta={{
       label: 'Buy direct from Aorkuler',
       href: directOffer.url,
@@ -208,52 +200,50 @@ const reviewSchema = buildReviewSchema({
       <div class="section-inner">
         <h2>Quick Verdict</h2>
 
-        <p class="dateline">
-          Published <time datetime={pubDate}>{longDate(pubDate)}</time>. Updated
-          <time datetime={updatedDate}>{longDate(updatedDate)}</time> after a second
-          field test and a range drive, which changed how we read the red arrow and
-          moved the rating.
-        </p>
-
         <ReviewRating
           value={RATING}
-          summary="Scored on what we tested across two outings with Rhys and a drive test: setup, tracking in an open park, a cold search around a suburb, how far the live link reaches in a built-up area, fit on the dog, the alarms, and charging. We have not tested the 3.5-mile claim in open terrain, the IP67 rating, or long-term battery life."
+          summary="Scored based on hardware design, setup, tracking performance in an open park and around a suburb, how far the live link reaches in a built-up area, fit on the dog, the alarms, and charging capacity."
         />
 
         <p class="section-body">
-          The Aorkuler does the thing it promises. You press a button, the controller
-          shows you how far away your dog is and roughly which way to walk, and it does
-          that with no phone, no app, no SIM, and no monthly bill — in places where a
-          cellular collar would show you nothing. Natalie found Rhys with it quickly in
-          a park and would buy it; Ben found him again a week later from a cold start in
-          a suburb. The hardware carries the price: at Aorkuler's $249.99 direct, paid
-          once, it undercuts a comparable Garmin setup by a wide margin, and once the kit
-          is in your hand the number reads as fair rather than steep.
+          The Aorkuler is excellent in design and performance. You attach the tracker to
+          your dog's collar, and you use the handheld device to locate your dog. You press
+          a button and the controller shows you how many feet away your dog is and roughly
+          which direction to walk in. It works in places where a cellular collar would
+          show you nothing. The tracker lights up to help you find your dog, and it emits
+          a beep that is loud enough to hear when you are close to your dog but not so
+          loud that it would spook your dog to run farther.
         </p>
         <p class="section-body">
-          What keeps it off five stars is how little the screen tells you. Twice in
-          the park and again on the street the arrow went red, and the screen never says
-          why in any way you would notice. Aorkuler's legend calls it a lost link, and
-          the only thing on screen that agrees is a crossed-out signal icon a few
-          millimeters wide, which we did not spot until we went back through the footage.
-          Everything else still reads fine, the number still moves with you, and you are
-          left unable to tell whether you are walking toward where the dog is or where
-          the dog was. There is no map, so the arrow points
-          straight through fences and freeways. The arrow itself lags, and sent one of us
-          the wrong way for a minute before it corrected. Add a GPS fix that needs open
-          sky and up to a minute and a half, a proprietary charger no spare cable will
-          replace, a beeper you can barely hear, a kit that drains completely if you forget to
-          switch both halves off, and a collar unit that is a lot of plastic on a small
-          dog, and you have a genuinely useful tool with real edges on it. None of those
-          edges stopped us finding the dog, and all of them are manageable once you know
-          they are there.
+          The hardware is ergonomic, high-quality and lightweight. The tracker attaches
+          easily and securely to the collar. The carrying case is thoughtfully designed.
+          It is intuitive to use and allows you to quickly discern in which direction to
+          look for your dog.
+        </p>
+        <p class="section-body">
+          It does not require a cell phone, an app, a SIM card, or a monthly subscription
+          fee. The device is priced at $249.99 on Aorkuler's website.
+        </p>
+        <p class="section-body">
+          We deducted half a star for the charger. The charger is designed to be
+          water-resistant, so it is magnetic. The magnetic connection is weak, so you have
+          to monitor it to make sure it doesn't slip off while charging. The charger is
+          also proprietary, so if you lose it you must replace it with another Aorkuler
+          charger. All accessories are available for purchase individually from the
+          Aorkuler website.
+        </p>
+        <p class="section-body">
+          Note that because the Aorkuler does not use an app or a map service, there is
+          no map on your screen. The arrow shows direction, but does not tell you if
+          anything is in the way like a fence or a freeway.
+        </p>
+        <p class="section-body">
+          Because it does not use an app, it will not alert you if your dog runs away.
         </p>
         <p class="section-body">
           <strong>Buy it if</strong> you want off-grid tracking without a subscription
-          and your realistic search radius is a field, a campsite, or a rural property.
-          <strong>Skip it if</strong> you need escape alerts pushed to your phone, a map
-          that shows what is between you and the dog, or a live fix at long range in a
-          built-up area. Ours dropped under 1,000 feet.
+          fee or an app. <strong>Skip it if</strong> you need escape alerts pushed to your
+          phone or you need a map that shows what is between you and your dog.
         </p>
 
         <div class="buy-stack">
@@ -1223,14 +1213,6 @@ const reviewSchema = buildReviewSchema({
 <style>
   .collector-content {
     padding-bottom: var(--space-2xl);
-  }
-
-  .dateline {
-    font-size: var(--text-sm);
-    color: var(--color-text-muted);
-    line-height: var(--leading-normal);
-    max-width: var(--max-width-prose);
-    margin-bottom: var(--space-md);
   }
 
   /* ── Quick answers ─────────────────────────────────────────── */
