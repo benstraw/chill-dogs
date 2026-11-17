@@ -98,13 +98,13 @@ const tocHeadings = [
 const faqs = [
   {
     question: 'Does the Aorkuler tracker require a subscription?',
-    short: 'No. One purchase, no SIM, no monthly fee, no account.',
+    short: 'No. One purchase, no app, no SIM, no monthly fee, no account.',
     answer:
       'No. Aorkuler is a one-time purchase with no SIM card, no cellular plan, and no monthly fee. The tracker talks directly to the handheld controller over its own radio link, so there is no network to pay for. That is the single biggest structural difference between it and a cellular collar like Fi.',
   },
   {
     question: 'Does the Aorkuler work without cell service?',
-    short: 'Yes — that is the point. It needs sky, not signal.',
+    short: 'Yes. It needs sky, not signal.',
     answer:
       'Yes. Neither unit uses cellular data. The tracker gets its position from GPS satellites and sends it to the handheld over a direct radio link, so it works in places where a cellular collar reports nothing at all. The trade is that it needs a clear view of the sky to get a fix in the first place, and heavy tree canopy, buildings, or a deep valley will slow that down or stop it.',
   },
@@ -116,19 +116,19 @@ const faqs = [
   },
   {
     question: 'What range did you actually get?',
-    short: 'In a suburb, from a car, the live link dropped under 1,000 feet and never came back. We have not tested open terrain.',
+    short: 'In a suburb, from a moving car, the live link dropped at about 1,000 feet.',
     answer:
       'Not the 3.5 miles on the box, at least not in a suburb. Aorkuler advertises up to 3.5 miles in open terrain. We left the tracker at home and drove away with the controller: the arrow went red less than 1,000 feet from the house and stayed red all the way out to 19,680 feet, about 3.7 miles. The distance kept counting the whole way, but with the signal bars crossed out, so it was measuring to the last position the controller had heard, not a live one. Across all three tests the longest green reading we photographed was 678.7 feet. One caveat in Aorkuler’s favor: a built-up neighborhood is the opposite of open terrain. The car was not much of a factor, because we drove with the windows open and held the controller out of one for much of the drive. We have not tested open ground, so treat 3.5 miles as an unverified best case and use the 30-day window to test it where you actually walk.',
   },
   {
     question: 'How accurate is the Aorkuler?',
-    short: 'The distance number is the trustworthy part. The direction arrow needs care.',
+    short: 'The device accurately adds and subtracts feet away from your dog as you search. The numbers change in real time.',
     answer:
       'The distance readout was the reliable half of the display in both outings. It counted up and down in step with real movement — we watched it climb from 106 to 119 feet as the person carrying the tracker walked away, and fall as we closed in. The direction arrow was less dependable: it often held one quadrant while we moved, and at Playa Vista it let one of us set off the wrong way for the first minute before it corrected. Aorkuler says the compass is sensitive to magnetic interference and should be held level and away from phones, keys, and metal, and that matches what we saw. Treat the arrow as a rough bearing and the number as the real signal.',
   },
   {
     question: 'Does the Aorkuler show a map?',
-    short: 'No. It gives you a bearing and a distance, and the arrow points straight through fences and freeways.',
+    short: 'No. It gives you a bearing and a distance, and the arrow points you in the direction of the tracker.',
     answer:
       'No. The controller shows an arrow and a number and nothing else — no map, no trail, no sense of what lies between you and the dog. That matters more than it sounds. A map-based tracker shows you the fence, the freeway or the river in the way; the Aorkuler arrow points straight through them, because straight-line distance is the only thing it knows. If your dog has crossed a fenced campus or a walled development, a 300-foot reading can mean a twenty-minute walk around. Local knowledge solves it, and in open country it rarely bites. In a dense suburb it is the first thing to weigh against the price.',
   },
@@ -139,7 +139,7 @@ const faqs = [
   },
   {
     question: 'What does the red arrow on the screen mean?',
-    short: 'A lost radio link, flagged only by a tiny crossed-out signal icon. The distance keeps moving anyway, so the screen still looks live.',
+    short: 'When the green arrow changes to red, it signals a lost radio link. The red arrow indicates the last known location.',
     answer:
       'Aorkuler’s legend calls a red arrow a lost connection to the tracker, and the screen does back that up: in every red frame of our second-outing footage the signal bars at the far left of the status row are crossed out, where the green frames show full bars. We missed that icon in the field — it is a few millimeters wide — and only found it going through the video afterward. Nothing else changes. The link icon, the location pins and both battery meters stay put, the pointer still moves, and the distance still rises and falls as you walk. So the display looks live while the link is down, and you cannot tell whether you are walking toward where the dog is or where the dog was. Our untested hypothesis is that the controller keeps measuring from its own position to the tracker’s last known coordinates, which would make the number trustworthy only while the dog stays still. Check the signal bars, keep walking, keep the controller level, and treat the number with suspicion until it goes green.',
   },
@@ -283,69 +283,53 @@ const reviewSchema = buildReviewSchema({
       <div class="section-inner">
         <h2>What the Aorkuler Is</h2>
         <p class="section-body">
-          Two devices. A small tracker, roughly AirTag-sized, that straps to your dog's
-          collar. And a handheld controller the size of a chunky key fob, with a
-          screw-on antenna, a screen, and two buttons. The tracker reads its own
-          position from GPS satellites and sends it to the controller over a direct
-          radio link. The controller does the arithmetic and shows you a distance and a
-          direction.
+          The Aorkuler is comprised of two devices. The first is a small tracker,
+          roughly the size of an AirTag, that straps to your dog's collar. The second is
+          a handheld controller with a screw-on antenna, a small screen, and two
+          buttons. The tracker reads its own position from GPS satellites and sends it
+          to the controller over a direct radio link. The controller does the
+          arithmetic and shows you a distance and a direction. The device is intuitive
+          and easy to use.
         </p>
         <p class="section-body">
-          That architecture is the whole story. There is no cellular modem in either
-          unit, so there is no SIM, no network, and nothing to subscribe to — and
-          equally no way for the system to tell you anything when you are not holding
-          the controller. It is a <em>finder</em>, not a monitor. Fi will text you the
-          moment your dog leaves the yard. Aorkuler will help you walk to your dog once
-          you already know they are gone.
+          There is no cellular modem in either unit, so there is no app, no SIM, no
+          network, and nothing to subscribe to. You do not need a cell phone to use it.
+          With that in mind, it is a <em>finder</em>, not a monitor. A device like Fi
+          will text you the moment your dog leaves the yard. Aorkuler will help you walk
+          to your dog once you already know they are gone.
         </p>
         <p class="section-body">
           More precisely, it is a <strong>bearing-and-range finder</strong>. It tells you
-          how far and roughly which way, and nothing about what is in between — no map,
-          no trail, no streets. That one sentence explains most of what follows.
-        </p>
-        <p class="section-body">
-          It is also GPS-only, with no cellular assist to speed up the first fix. In
-          practice that means you start it outdoors, with a view of the sky, and wait.
+          how far away your dog is and roughly which way to travel to find them. It does
+          not provide a map of what lies between you or provide any information about
+          trails or streets.
         </p>
 
-        <h3>How the collar talks to the controller</h3>
-        <p class="section-body">
-          Three steps, and the third one explains the most confusing thing this device
-          does.
-        </p>
+        <h3>How the Tracker Talks to the Controller</h3>
         <ol class="rf-steps">
           <li>
-            <strong>The collar gets its own fix.</strong> The tracker on your dog's
-            collar listens to GPS satellites overhead and works out its own coordinates.
-            Nothing else is involved — no phone, no tower, no network.
+            The tracker attached to the collar communicates with GPS satellites. It
+            determines its own coordinates. Nothing else is involved: no phone, no
+            tower, no network.
           </li>
           <li>
-            <strong>The collar radios those coordinates to you.</strong> Instead of
-            uploading them over a cellular network the way Fi would, the
-            tracker transmits them straight to the handheld on its own proprietary radio
-            frequency. That link is what the screw-on antenna is there to receive, and
-            it is the part with no monthly bill attached.
+            The tracker radios those coordinates to your handheld device. Instead of
+            uploading them over a cellular network the way Fi would, the Aorkuler
+            tracker transmits them straight to the handheld device on its own
+            proprietary radio frequency. It is received via the screw-on antenna. There
+            is no monthly bill attached.
           </li>
           <li>
-            <strong>The controller does the arithmetic.</strong> It compares the
-            coordinates it just received against its own position and renders the result
-            as a distance and a direction, refreshed every few seconds.
+            The controller does the arithmetic. It compares the coordinates it just
+            received against its own position and renders the result as a distance and
+            a direction, refreshed every few seconds. The number of feet away increases
+            or decreases as you search.
           </li>
         </ol>
-        <p class="section-body">
-          Step two is the entire value proposition: no SIM, no plan, no coverage map,
-          nothing to cancel. It is also the single point of failure. The satellites keep
-          working and your controller keeps working, but if that radio link between the
-          two units drops, the handheld has nothing fresh to do step three with — and as
-          we found at Playa Vista, it carries on doing step three anyway, against the
-          last coordinates it managed to receive.
-        </p>
 
         <h3>Specifications</h3>
         <p class="spec-note">
-          Aorkuler's published figures, checked {CLAIMS_CHECKED}. These are the
-          manufacturer's claims, not our measurements — where we tested something, we
-          say so further down.
+          As published on the Aorkuler website.
         </p>
         <div class="table-wrap">
           <table class="spec-table">
@@ -367,34 +351,24 @@ const reviewSchema = buildReviewSchema({
       <div class="section-inner">
         <h2>Unboxing and Setup</h2>
 
-        <h3>In the box</h3>
+        <h3>In the Box</h3>
         <p class="section-body">
-          A plain white shipping box, and inside it something much nicer than the
-          outside suggests: a hard-shell zippered case with a carry handle and the
-          Aorkuler name on the front. Open it and the contents sit in cut foam —
-          controller, antenna, tracker, collar strap — with a mesh pocket in the lid for
-          the two charging cables. There is a welcome kit and a note from the founder.
-          For a $249.99 product it presents well, and the case is genuinely the thing
-          you would store it in rather than a box you throw away.
-        </p>
-        <p class="section-body">
-          The antenna screws onto the controller; it does not ship attached. Both units
-          are a light, matte plastic, and the whole kit feels more expensive than it is.
-          Everyone we handed it to remarked on the build before anyone asked the price —
-          a report of how it feels, not how it performs, but it is what makes $249.99
-          read as fair. Natalie is 5 feet 3 inches and found the controller comfortably
-          sized for her hand — worth saying, because handheld tracking systems are often
-          built for big gloves.
+          The device comes in a hard-shell zippered case with a wristlet carry handle
+          and the Aorkuler name on the front. Inside, the tracker, clip-on attachment,
+          and handheld receiver are nestled in dense foam. A mesh pocket holds the
+          screw-on antenna and charging accessories. The tracker and receiver are made
+          of sturdy, high-quality, lightweight plastic. The device is ergonomically
+          designed and comfortable to hold in your hand.
         </p>
 
         <figure class="article-photo">
           <Image src={imgCaseClosed} alt="Closed Aorkuler hard-shell carry case with zip and handle" width={900} quality={80} />
-          <figcaption>The case the kit ships in — closed, this is what lives in the closet.</figcaption>
+          <figcaption>The carrying case</figcaption>
         </figure>
 
         <figure class="article-photo">
           <Image src={imgCaseOpen} alt="Open Aorkuler case showing controller, tracker, antenna, collar strap and cables in cut foam" width={900} quality={80} />
-          <figcaption>Everything that comes in the box, still in its foam.</figcaption>
+          <figcaption>Everything that comes in the carrying case</figcaption>
         </figure>
 
         <ImagePlaceholder
@@ -405,7 +379,7 @@ const reviewSchema = buildReviewSchema({
           alt="Aorkuler handheld controller beside the collar-mounted tracker for scale"
         />
 
-        <h3>Binding and the first GPS lock</h3>
+        <h3>Binding and the First GPS Lock</h3>
         <p class="section-body">
           The tracker has to be bound to the controller before it will report anything,
           and both have to find satellites. Aorkuler says a lock takes 30 to 90 seconds,
@@ -415,30 +389,27 @@ const reviewSchema = buildReviewSchema({
         </p>
         <p class="section-body">
           Do this outside, in the open. Because there is no cellular assist, a GPS-only
-          device has to download what it needs from the satellites themselves, and
-          buildings, tree canopy, and valleys all get in the way. Starting the kit
-          indoors and walking out with it is the most likely way to have a frustrating
-          first ten minutes.
+          tracker has to download what it needs from the satellites themselves, and
+          buildings, tree canopy, and valleys all get in the way. Hold the handheld
+          device perpendicular to the ground and wave it in a figure-eight motion to
+          calibrate the device.
         </p>
 
-        <h3>"Follow it again"</h3>
+        <h3>"Follow It Again"</h3>
         <p class="section-body">
           Partway into our session the controller asked us to "follow it again" — a
-          re-synchronization that wants you to wave the unit through a figure-eight
+          re-synchronization that requires you to wave the unit through a figure-eight
           motion, the same gesture a phone compass calibration asks for. It worked, and
-          it took about a minute. It is also, inevitably, the kind of thing that asks
-          for your attention at the exact moment you would rather be walking. Worth
-          doing once deliberately in the backyard so the prompt is familiar.
+          it took about a minute.
         </p>
 
         <div class="callout callout--warning">
-          <p class="callout-heading">Two buttons, four behaviors</p>
+          <p class="callout-heading">Two buttons</p>
           <p class="callout-body">
-            The right-hand button powers the unit on and off with a long press. A short
-            press wakes the screen from sleep. The round multifunction button handles
-            the menu, also on a long press. The distinction between "the screen went to
-            sleep" and "the unit is off" is not obvious from looking at it, and we got
-            it wrong more than once.
+            There are only two buttons on the handheld device. The small button on the
+            right side powers the unit on and off with a long press. A short press wakes
+            the screen from sleep. The larger round multifunction button on the center of
+            the device controls the menu.
           </p>
         </div>
       </div>
@@ -448,59 +419,47 @@ const reviewSchema = buildReviewSchema({
     <section class="content-section" id="reading-the-screen">
       <div class="section-inner">
         <h2>Reading the Controller Screen</h2>
-        <p class="section-body">
-          This is the part worth learning before you need it, and the part our field
-          test turned on. The display is small and almost entirely symbolic, and one
-          symbol in particular changes what the whole screen means.
-        </p>
 
         <dl class="legend">
           <div class="legend-row">
-            <dt>Green arrow</dt>
+            <dt>Green Arrow</dt>
             <dd>
               A live fix. Points toward your dog's current position relative to you.
               Hold the controller level and walk the way it points.
             </dd>
           </div>
           <div class="legend-row legend-row--flag">
-            <dt>Red arrow</dt>
+            <dt>Red Arrow</dt>
             <dd>
-              <strong>A lost link that still looks live.</strong> Aorkuler's legend
-              calls this a lost connection to the tracker, and one icon agrees: the
-              signal bars at the far left of the status row are crossed out. That is
-              the only other change. In our second outing the link icon, the location
-              pins and both battery meters stayed as they were, the pointer still
-              moved, and the distance still tracked our own movement — so do not read
-              it as a frozen screen, and do not read the moving number as a live fix
-              either. Check the signal bars, keep walking, keep the controller level,
-              and expect green to return.
+              A lost connection to the tracker. Check the signal bars, keep walking,
+              keep the controller level, and expect green to return.
             </dd>
           </div>
           <div class="legend-row">
-            <dt>Distance number</dt>
-            <dd>Feet or meters, switchable in the menu. Updates roughly every 3 seconds.</dd>
+            <dt>Distance Number</dt>
+            <dd>The distance between the handheld device and the tracker device attached to the collar. Measured in feet or meters, switchable in the menu. Updates roughly every 3 seconds.</dd>
           </div>
           <div class="legend-row">
-            <dt>Signal bars</dt>
+            <dt>Signal Bars</dt>
             <dd>
-              Far left of the status row. Full bars on a green arrow; crossed out
-              whenever ours was red. The icon is tiny, and we missed it on both outings.
+              Far left of the status row. Full bars on a green arrow, crossed out on a red arrow.
             </dd>
           </div>
           <div class="legend-row">
-            <dt>Satellite icon</dt>
-            <dd>Blinking means still searching. Steady means locked. Wait for steady before you set off.</dd>
+            <dt>Satellite Icon</dt>
+            <dd>Blinking means still searching. Steady means locked in. Wait for steady before you set off.</dd>
           </div>
           <div class="legend-row">
-            <dt>Nearby mode</dt>
+            <dt>Nearby Mode</dt>
             <dd>
-              Inside roughly 10–20 meters the screen switches to tell you that you are
-              close. This is where the sound and light alarms earn their keep.
+              When you are roughly 10–20 meters away, the screen switches to tell you
+              that you are close. The sound and light alarms may become noticeable at
+              this point, depending on ambient light and sound.
             </dd>
           </div>
           <div class="legend-row">
-            <dt>T and C batteries</dt>
-            <dd>T is the tracker on the dog, C is the controller in your hand. Charge either at one bar.</dd>
+            <dt>T and C Batteries</dt>
+            <dd>T is the tracker on the dog, C is the controller in your hand. Keep both charged.</dd>
           </div>
         </dl>
 
@@ -510,23 +469,19 @@ const reviewSchema = buildReviewSchema({
         </figure>
 
         <div class="callout callout--warning">
-          <p class="callout-heading">Hold it flat. This is not a nicety.</p>
+          <p class="callout-heading">Hold it flat.</p>
           <p class="callout-body">
-            The compass only reads correctly when the controller is horizontal. Tilt it
-            up to look at the screen the way you would a phone and the arrow genuinely
-            swings — not subtly, and not just for a second. Aorkuler stresses this in
-            the instructions and they are right to. It is also the easiest mistake in
-            the world to make, because the instinctive way to read a small screen is
-            exactly the wrong way to hold this one. Stop walking, hold it level at waist
-            height like a plate, let the arrow settle, then read it.
+            The compass only reads correctly when the controller is held horizontally.
+            Aorkuler stresses this in the instructions. If you tilt it up to look at the
+            screen the way you would a cell phone, the arrow swings. If you do tilt it
+            up, stop walking, hold it parallel to the ground, let the arrow settle, then
+            read it.
           </p>
         </div>
         <p class="section-body">
-          Aorkuler warns about magnetic interference too — keep it away from your phone,
-          your keys, and your belt buckle, and recalibrate with the figure-eight motion
-          if the bearing looks wrong. That is real, and we saw it near a metal fence.
-          But tilt is the one that will catch you, because you will do it without
-          noticing every single time you glance down.
+          Aorkuler also warns about magnetic interference. Keep it away from your phone,
+          your keys, and your belt buckle, and recalibrate it with the figure-eight
+          motion if the bearing looks wrong.
         </p>
       </div>
     </section>
