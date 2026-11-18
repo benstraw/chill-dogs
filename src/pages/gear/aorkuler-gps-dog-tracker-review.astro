@@ -21,7 +21,6 @@ import imgOnNeck from '../../images/watermarked/aorkuler/aorkuler-tracker-on-rhy
 import imgGreen104 from '../../images/watermarked/aorkuler/aorkuler-controller-104ft-green.jpg';
 import imgRed389 from '../../images/watermarked/aorkuler/aorkuler-controller-389ft.jpg';
 import imgRed501 from '../../images/watermarked/aorkuler/aorkuler-controller-501ft-red.jpg';
-import imgRed502 from '../../images/watermarked/aorkuler/aorkuler-controller-502ft-red.jpg';
 import imgCaseClosed from '../../images/watermarked/aorkuler/aorkuler-case-closed.jpg';
 import imgCaseOpen from '../../images/watermarked/aorkuler/aorkuler-case-open.jpg';
 import imgScreenIcons from '../../images/watermarked/aorkuler/aorkuler-screen-icons.jpg';
@@ -42,12 +41,6 @@ const updatedDate = '2026-11-15';
  * Google drops a rating it cannot find on the page, so these must not diverge.
  */
 const RATING = 4.5;
-
-/**
- * Session two was a cold search around Playa Vista Sports Park. The walking-tour
- * page it links to is Ben's own, on his personal site — an editorial link, not a route.
- */
-const PLAYA_VISTA_TOUR_URL = 'https://www.benstrawbridge.com/trails/pv-tour/';
 
 const aorkuler = trackerProducts.find((p) => p.id === 'aorkuler-pet-tracker')!;
 const offers = getOffers(aorkuler);
@@ -84,7 +77,7 @@ const tocHeadings = [
   { label: 'Quick Answers', anchor: 'quick-answers' },
   { label: 'What the Aorkuler Is', anchor: 'what-it-is' },
   { label: 'Unboxing and Setup', anchor: 'unboxing-setup' },
-  { label: 'Reading the Screen', anchor: 'reading-the-screen' },
+  { label: 'Reading the Screen', anchor: 'reading-the-controller-screen' },
   { label: 'Field Test', anchor: 'field-test' },
   { label: 'A Bearing Is Not a Route', anchor: 'bearing-not-route' },
   { label: 'Battery and Charging', anchor: 'battery-charging' },
@@ -116,7 +109,7 @@ const faqs = [
   },
   {
     question: 'What range did you actually get?',
-    short: 'In a suburb, from a moving car, the live link dropped at about 1,000 feet.',
+    short: 'On the ground, Aorkuler advertises a range of about three and a half miles. In a moving car, the live link dropped at about 1,000 feet.',
     answer:
       'Not the 3.5 miles on the box, at least not in a suburb. Aorkuler advertises up to 3.5 miles in open terrain. We left the tracker at home and drove away with the controller: the arrow went red less than 1,000 feet from the house and stayed red all the way out to 19,680 feet, about 3.7 miles. The distance kept counting the whole way, but with the signal bars crossed out, so it was measuring to the last position the controller had heard, not a live one. Across all three tests the longest green reading we photographed was 678.7 feet. One caveat in Aorkuler’s favor: a built-up neighborhood is the opposite of open terrain. The car was not much of a factor, because we drove with the windows open and held the controller out of one for much of the drive. We have not tested open ground, so treat 3.5 miles as an unverified best case and use the 30-day window to test it where you actually walk.',
   },
@@ -202,7 +195,7 @@ const reviewSchema = buildReviewSchema({
 
         <ReviewRating
           value={RATING}
-          summary="Scored based on hardware design, setup, tracking performance in an open park and around a suburb, how far the live link reaches in a built-up area, fit on the dog, the alarms, and charging capacity."
+          summary="Scored based on hardware design, setup, tracking performance, how far the live link reaches in a built-up area, fit on the dog, the alarms, and charging capacity."
         />
 
         <p class="section-body">
@@ -217,7 +210,7 @@ const reviewSchema = buildReviewSchema({
         <p class="section-body">
           The hardware is ergonomic, high-quality and lightweight. The tracker attaches
           easily and securely to the collar. The carrying case is thoughtfully designed.
-          It is intuitive to use and allows you to quickly discern in which direction to
+          The tracker is intuitive to use and allows you to quickly discern in which direction to
           look for your dog.
         </p>
         <p class="section-body">
@@ -255,9 +248,7 @@ const reviewSchema = buildReviewSchema({
             position="quick-verdict"
           />
           <p class="buy-note">
-            Aorkuler lists the Single Dog Kit at $249.99 direct, one time, with a
-            1-year warranty and a 30-day money-back window (checked {CLAIMS_CHECKED}).
-            Marketplace pricing varies — check the listing.
+            The Aorkuler list price is $249.99 on their website.
           </p>
         </div>
       </div>
@@ -284,24 +275,25 @@ const reviewSchema = buildReviewSchema({
         <h2>What the Aorkuler Is</h2>
         <p class="section-body">
           The Aorkuler is comprised of two devices. The first is a small tracker,
-          roughly the size of an AirTag, that straps to your dog's collar. The second is
+          roughly the size of an AirTag, that straps to your dog's collar. The strap is
+          included. It is well-designed and fits securely to the collar. The second is
           a handheld controller with a screw-on antenna, a small screen, and two
           buttons. The tracker reads its own position from GPS satellites and sends it
           to the controller over a direct radio link. The controller does the
-          arithmetic and shows you a distance and a direction. The device is intuitive
-          and easy to use.
+          arithmetic and shows you how far away you are from the tracker and which
+          direction to travel to find it. The device is intuitive and easy to use.
         </p>
         <p class="section-body">
           There is no cellular modem in either unit, so there is no app, no SIM, no
           network, and nothing to subscribe to. You do not need a cell phone to use it.
           With that in mind, it is a <em>finder</em>, not a monitor. A device like Fi
-          will text you the moment your dog leaves the yard. Aorkuler will help you walk
-          to your dog once you already know they are gone.
+          will text you the moment your dog leaves the yard. Aorkuler will help you find
+          your dog once you already know they are gone.
         </p>
         <p class="section-body">
           More precisely, it is a <strong>bearing-and-range finder</strong>. It tells you
           how far away your dog is and roughly which way to travel to find them. It does
-          not provide a map of what lies between you or provide any information about
+          not provide a map of what lies between you and your dog or provide any information about
           trails or streets.
         </p>
 
@@ -382,9 +374,9 @@ const reviewSchema = buildReviewSchema({
         <h3>Binding and the First GPS Lock</h3>
         <p class="section-body">
           The tracker has to be bound to the controller before it will report anything,
-          and both have to find satellites. Aorkuler says a lock takes 30 to 90 seconds,
-          up to two minutes on first use, and that subsequent power-ons are faster
-          because the devices remember recent satellite positions. The satellite icon
+          and both have to find satellites. A lock takes 30 to 90 seconds, up to two
+          minutes on first use. Subsequent power-ons are faster because the devices
+          remember recent satellite positions. The satellite icon
           blinks while it is searching and goes steady when it has a fix.
         </p>
         <p class="section-body">
@@ -416,7 +408,7 @@ const reviewSchema = buildReviewSchema({
     </section>
 
     <!-- Reading the screen -->
-    <section class="content-section" id="reading-the-screen">
+    <section class="content-section" id="reading-the-controller-screen">
       <div class="section-inner">
         <h2>Reading the Controller Screen</h2>
 
@@ -491,112 +483,68 @@ const reviewSchema = buildReviewSchema({
       <div class="section-inner">
         <h2>Field Test: Two Outings with Rhys</h2>
         <p class="section-body">
-          We took the Aorkuler out twice. The first outing was hide-and-seek in an open
-          park, watching the screen the whole time. The second, a week later, was closer
-          to how the device would actually be used: a cold search through a suburb,
-          fifteen minutes after the dog had gone, with buildings in the way. The second
-          one changed how we read the first, and we have rewritten this section to say
-          so rather than quietly correct it. Then we left the tracker at home and drove
-          away from it, to see how far the link reaches.
+          We took the Aorkuler out twice. Each time one of us was hiding with Rhys while
+          the other searched for him using the device. The first outing was in an open
+          park with trails. The second was a cold search through a suburb, with
+          buildings in the way. Then we left Rhys at home in the backyard and drove
+          away, to see how far the link reaches.
         </p>
 
-        <h3>Session one: hide and seek at Westchester Park</h3>
+        <h3>Session One</h3>
         <p class="section-body">
-          We ran this two-handed at a large, flat municipal park with very little tree
-          cover and wide sightlines — close to the best case for a GPS-and-radio system
-          short of open countryside. One person took Rhys and the tracker and walked off
+          We tested this in a large, flat municipal park with very little tree cover
+          and wide sightlines — close to the best case scenario for a GPS-and-radio
+          system. One person took Rhys and the tracker and walked off
           to hide; the other followed on the controller. Then we swapped. Rhys stayed
           with a handler on a leash the whole time.
         </p>
 
-        <h3>Distance and direction</h3>
+        <h3>Distance and Direction</h3>
         <p class="section-body">
-          The distance readout was the half of the display we came to trust. It climbed
-          from 106 to 119 feet in step with Natalie walking away, and fell as we closed
-          in. If you ignore everything else on the screen and just walk until the number
-          gets smaller, the device works.
+          The distance readout changes in real time as we search for the dog. The
+          number climbed as the dog walked away and fell as we closed in.
         </p>
 
         <figure class="article-photo article-photo--screenshot">
           <Image src={imgGreen104} alt="Aorkuler controller showing 104.6 feet with a green direction arrow" width={900} quality={80} />
           <figcaption>
-            104.6 feet, green arrow. This is the device doing exactly what it is
-            supposed to: a live fix and a usable bearing.
+            The controller screen displays distance and direction to the tracker
           </figcaption>
         </figure>
 
+        <h3>The Direction Arrow Turns Red</h3>
         <p class="section-body">
-          The direction arrow was the weaker half. It would hold a quadrant while we
-          moved, and only resolve intermittently. How you hold the unit matters more
-          than anything else you can control: flat and level it settles, tilted up to
-          read it the arrow moves on you. Being near a metal fence did not help either.
-          We would not plan a search around the arrow alone, but held properly and
-          paired with a falling number it is enough to stop you walking confidently in
-          the wrong direction for two minutes.
-        </p>
-
-        <h3>When the display went red</h3>
-        <p class="section-body">
-          Twice in the session the display went red — first at 389.4 feet, then again
-          around 502 feet. When we first published this review we read that as the radio
-          link dropping and the screen freezing on a last known position. The second
-          outing, below, showed the screen does not freeze, and we no longer stand by
-          that reading.
+          Twice in the session the direction arrow went red, first at 389.4 feet, then
+          again around 502 feet. This signals that the radio link has been dropped. We
+          recalibrated, held the device level, and continued to walk in the direction
+          the arrow was pointed. The arrow then turned back to green.
         </p>
 
         <div class="photo-pair">
           <figure class="article-photo article-photo--screenshot">
             <Image src={imgRed389} alt="Aorkuler controller showing 389.4 feet with a red direction sector" width={620} quality={80} />
-            <figcaption>389.4 feet — the sector has gone red.</figcaption>
+            <figcaption>389.4 feet — the green arrow has turned red.</figcaption>
           </figure>
           <figure class="article-photo article-photo--screenshot">
             <Image src={imgRed501} alt="Aorkuler controller showing 501.2 feet with a red direction sector" width={620} quality={80} />
-            <figcaption>501.2 feet, still red.</figcaption>
+            <figcaption>501.2 feet — the green arrow has turned red.</figcaption>
           </figure>
         </div>
 
-        <figure class="article-photo article-photo--screenshot">
-          <Image src={imgRed502} alt="Aorkuler controller showing 502.1 feet with a red direction sector" width={900} quality={80} />
-          <figcaption>
-            Three frames taken across this stretch read 501.2, 502.1, and 502.0 feet,
-            all red. We originally read that as a frozen fix. The likelier explanation
-            is that the person holding the controller was standing still.
-          </figcaption>
-        </figure>
-
+        <h3>Session Two</h3>
         <p class="section-body">
-          Be careful what you read into those frames, because we were. <strong>This is
-          not a range test.</strong> We never walked out to find the limit —
-          hide-and-seek in a park was the whole exercise. We had also just run the
-          "follow it again" re-sync, and at one point mid-track the controller
-          interrupted itself with a "GPS updating" message. One outing gave us no way to
-          separate any of that from distance, which is why we went back out.
-        </p>
-
-        <h3>Session two: a cold search at Playa Vista</h3>
-        <p class="section-body">
-          A week later we tried something closer to a real lost-dog scenario at
-          <a href={PLAYA_VISTA_TOUR_URL}>Playa Vista Sports Park</a>, in a planned
-          neighborhood of soccer fields, a school and tight streets that Ben walks often
-          enough to have written a tour of it. Natalie took Rhys and the tracker out around the fields,
-          behind the elementary school, and into Ballona Discovery Park beyond it — the
-          small demonstration park that shows off the wetland habitat. Ben waited about
-          fifteen minutes in the car, then got out and went looking.
+          We tested this in a neighborhood of homes, soccer fields, a school and tight
+          streets. Natalie walked off with Rhys, and Ben started looking for them about
+          20 minutes later.
         </p>
         <p class="section-body">
-          That gap matters. The first time out we watched the number the whole way, so
-          we always knew roughly where the tracker was. This time the device was picked
-          up cold, with a dog already fifteen minutes gone — which is the only
-          situation in which anyone will ever use it. On the controller, the tracker was
-          <strong>never more than about 1,000 feet away</strong>. That is not a range
-          figure. It is how far Natalie happened to walk.
+          During this session, the device was picked up cold, with the dog already
+          long gone.
         </p>
         <p class="section-body">
-          Ben knew roughly which way she had gone, set off, and went the wrong way. The
-          arrow and the climbing number corrected him inside a minute, and from there the
-          device walked him to the dog. That is honest evidence in both directions: the
-          arrow lagged enough to let him start wrong, and it is also exactly what a
-          direction arrow is for. He found Rhys.
+          Not knowing in which direction the dog went, Ben set off, and went the wrong
+          way. The arrow and the climbing number corrected him inside a minute, and from
+          there the device directed him to the tracker. He found Rhys.
         </p>
         <p class="section-body">
           The display went red while he was behind the school. A building between the
