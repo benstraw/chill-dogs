@@ -24,7 +24,6 @@ import imgRed501 from '../../images/watermarked/aorkuler/aorkuler-controller-501
 import imgCaseClosed from '../../images/watermarked/aorkuler/aorkuler-case-closed.jpg';
 import imgCaseOpen from '../../images/watermarked/aorkuler/aorkuler-case-open.jpg';
 import imgScreenIcons from '../../images/watermarked/aorkuler/aorkuler-screen-icons.jpg';
-import imgRedWhileConnected from '../../images/watermarked/aorkuler/aorkuler-red-while-connected.jpg';
 import imgStrapOffDog from '../../images/watermarked/aorkuler/aorkuler-strap-off-dog.jpg';
 import imgStrapOffDogBack from '../../images/watermarked/aorkuler/aorkuler-strap-off-dog-back.jpg';
 import imgRangeDrive from '../../images/watermarked/aorkuler/aorkuler-range-drive-display.jpg';
@@ -547,71 +546,6 @@ const reviewSchema = buildReviewSchema({
           way. The arrow and the climbing number corrected him inside a minute, and from
           there the device directed him to the tracker. He found Rhys.
         </p>
-        <p class="section-body">
-          The display went red while he was behind the school. A building between the
-          handheld and the tracker is the obvious candidate, and we think obstruction is
-          the likely explanation — but that is an inference from where he was standing,
-          not something the device told us.
-        </p>
-
-        <h3>What red actually means</h3>
-        <p class="section-body">
-          This is the finding that rewrote the review, and going back through the footage
-          rewrote it once more. While the arrow was red, the pointer still moved and the
-          distance still rose and fell correctly as Ben walked toward and away from Rhys.
-          The location pins and both battery meters looked exactly as they do on green.
-          Nothing on that screen was frozen. Go back to the three near-identical frames at
-          502 feet above and the simplest explanation is not a stale fix: it is a person
-          standing still, reading a number that was not changing because they were not
-          moving.
-        </p>
-        <p class="section-body">
-          What we missed while standing there is in the top-left corner. In every red
-          frame of the Playa Vista video the signal bars are crossed out; in the green
-          frames from the same afternoon they are full. So Aorkuler's legend is right:
-          red is a lost connection to the tracker, and the screen does say so — in an icon
-          a few millimeters wide, on a display you are reading at arm's length in
-          daylight, while the link icon beside it stays put. Neither of us noticed it on
-          either outing.
-        </p>
-        <p class="section-body">
-          That changes the criticism rather than removing it. Red is not "this is old
-          data, frozen." Red is <strong>the link is down, and the screen carries on as if
-          it were not.</strong> The number still answers to your own feet. What you lose
-          is the ability to trust what that number is measuring against — and so you
-          cannot tell whether you are walking toward where Rhys is or where Rhys
-          was. That is a usability failure rather than a reliability one, and it is the
-          sharper criticism.
-        </p>
-
-        <div class="callout callout--warning">
-          <p class="callout-heading">Our hypothesis — untested</p>
-          <p class="callout-body">
-            One reading fits everything we saw, and the crossed-out signal icon makes
-            it likelier: with the link down, the controller still knows where
-            <em>it</em> is, so it may be recomputing distance from its own GPS position
-            to the tracker's <em>last known coordinates</em>. That would explain a
-            number that tracks the searcher's movement perfectly while the link to the
-            dog is down. In the video the reading falls from 818 to 794 feet as Ben
-            walks, then holds within a foot while he stands. If
-            it is right, the practical rule is sharp: <strong>while the display is red,
-            the distance is only trustworthy if Rhys has not moved.</strong> We have
-            not confirmed this, and we are not presenting it as fact.
-          </p>
-          <p class="callout-body">
-            The test that would settle it is simple, and it is the open question on this
-            page. Wait for the display to go red, stand still, and have Rhys move. If
-            the number changes, position data is still getting through despite the
-            crossed-out bars. If it
-            does not, the controller is computing against a stale position. We will run
-            it on the next outing.
-          </p>
-        </div>
-
-        <figure class="article-photo article-photo--screenshot">
-          <Image src={imgRedWhileConnected} alt="Aorkuler controller showing a red direction arrow and crossed-out signal bars while the location pins and both battery meters look normal" width={620} quality={80} />
-          <figcaption>Red arrow at 794.9 feet. The pins and both batteries look normal; the only other change is the crossed-out signal bars at top left.</figcaption>
-        </figure>
 
         <h3>The drive test: a suburb, a car, and 3.7 miles</h3>
         <p class="section-body">
@@ -651,7 +585,7 @@ const reviewSchema = buildReviewSchema({
         <p class="section-body">
           The number never stopped. It climbed smoothly the whole way out, in feet (the
           controller does not switch to miles, so three and a half miles reads as
-          18,480). That is the strongest support yet for the hypothesis above: with the
+          18,480). One explanation fits: with the
           link down for more than three miles, the only thing the controller can be
           measuring is the gap between its own GPS position and the last position it
           heard from the tracker. Because the tracker was sitting still at home, that
