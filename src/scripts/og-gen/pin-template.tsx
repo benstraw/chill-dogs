@@ -5,7 +5,7 @@
  * Pinterest pin for a `/shop/<id>/` product page — 1000×1500.
  *
  * The Save button used to hand Pinterest the raw Amazon product photo, so a pin was a
- * bare square catalogue shot with no title, no branding, and the wrong aspect ratio.
+ * bare square catalog shot with no title, no branding, and the wrong aspect ratio.
  * Pinterest crops anything squarer than 2:3 and buries it; a pin has to work as a
  * thumbnail in a scrolling feed.
  *
@@ -154,7 +154,7 @@ export function ProductPinTemplate(data: ProductPinTemplateData): JSXNode {
         </div>
 
         {/* Product photo — the reason a product pin exists. White card so cut-out
-            catalogue shots on transparent or white backgrounds still read as framed.
+            catalog shots on transparent or white backgrounds still read as framed.
             It grows to absorb slack: a product with two short bullets gets a bigger
             photo rather than a band of dead cream above the footer. */}
         <div

@@ -7,7 +7,7 @@ import type { RelaxationProduct } from './relaxation-products';
  *
  * Every bed is sold on Chewy as a family of per-size listings, so each record carries a size
  * `variantGroup`. The default variant is the listing the issue linked, and `offers` mirrors it.
- * Sizes are limited to the default colour. Beds with several sizes list the ones Chewy showed as in
+ * Sizes are limited to the default color. Beds with several sizes list the ones Chewy showed as in
  * stock when the catalog was pulled; Veehoo X-Large and Berenlefe 78 × 47.3 in showed as out of
  * stock then and are kept so every bed offers its sizes. Names, bullets and images are
  * hand-written review copy, not provider text.

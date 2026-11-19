@@ -118,6 +118,12 @@ export function buildProductPageMap(): ProductPageMap {
     addRef(map, p.id, garminTrackingRef);
   }
 
+  const aorkulerReviewRef: PageRef = {
+    label: 'Aorkuler GPS Dog Tracker Review',
+    href: ROUTES.aorkulerReview,
+  };
+  addRef(map, 'aorkuler-pet-tracker', aorkulerReviewRef);
+
   const fiReviewRef: PageRef = { label: 'Fi Dog Collar Review', href: '/gear/fi-dog-collar-review/' };
   addRef(map, 'fi-series-3-plus', fiReviewRef);
   addRef(map, 'stunt-puppy-fi-collar', fiReviewRef);

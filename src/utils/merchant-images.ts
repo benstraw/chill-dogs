@@ -1,5 +1,5 @@
 /**
- * Normalising merchant image URLs.
+ * Normalizing merchant image URLs.
  *
  * Amazon serves a given photo from one base id with an optional **single** modifier
  * group appended before the extension:
@@ -83,7 +83,7 @@ export function normalizeMerchantImageUrl(
 /**
  * Whether two merchant image URLs point at the same underlying photo.
  *
- * The admin tray holds normalised URLs while the cache grid holds raw ones, so identity
+ * The admin tray holds normalized URLs while the cache grid holds raw ones, so identity
  * has to be judged on the base id rather than the full string. The old code compared by
  * string-splicing `._SL500_` in and out, which missed every already-modified URL.
  */

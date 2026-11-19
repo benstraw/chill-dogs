@@ -3,7 +3,7 @@
  *
  * WRITTEN BY A TOOL. `bun run admin:serve` rewrites this file wholesale when you save
  * a selection in `/admin/images/`. Hand edits survive (the writer reformats from the
- * parsed data, it does not append), but the formatting is normalised on every save.
+ * parsed data, it does not append), but the formatting is normalized on every save.
  *
  * Why a separate file rather than `images: [...]` inside each product record: a machine
  * can regenerate one whole file deterministically, but patching a TypeScript object

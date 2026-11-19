@@ -85,7 +85,28 @@ async function dataUriForSatori(bytes: Buffer, mimeType: string): Promise<string
   }
 }
 
+function localPublicPath(url: string): string | null {
+  if (!url.startsWith('/') || url.startsWith('//')) {
+    return null;
+  }
+
+  return path.join(process.cwd(), 'public', url.replace(/^\//, '').split('?')[0]);
+}
+
 async function loadCachedImageDataUri(url: string): Promise<string | null> {
+  // A product we photographed ourselves lives in public/, not on a merchant CDN.
+  // Read it straight off disk: no network, nothing worth caching.
+  const localPath = localPublicPath(url);
+  if (localPath) {
+    if (!existsSync(localPath)) {
+      console.warn(`[og] hero image not found on disk: ${localPath}`);
+      return null;
+    }
+
+    const mimeType = localPath.toLowerCase().endsWith('.png') ? 'image/png' : 'image/jpeg';
+    return dataUriForSatori(readFileSync(localPath), mimeType);
+  }
+
   ensureCacheDirs();
   const base = imageCacheBase(url);
   const imagePath = `${base}.bin`;

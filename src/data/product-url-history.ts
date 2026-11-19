@@ -32,6 +32,7 @@ export const PUBLISHED_PRODUCT_IDS: readonly string[] = [
   'anild-dog-travel-backpack',
   'anrundar-grooming-kit',
   'anti-anxiety-orthopedic-bed',
+  'aorkuler-pet-tracker',
   'apple-airtag-2nd-gen',
   'arca-pet-100-piece-first-aid-kit',
   'arca-pet-car-first-aid-kit',

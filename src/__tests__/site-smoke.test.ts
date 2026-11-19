@@ -69,6 +69,7 @@ function readArticlePublishOrder(): string[] {
     });
 
   const staticArticlePages = [
+    { canonicalPath: '/gear/aorkuler-gps-dog-tracker-review/', pubDate: new Date('2026-11-07') },
     { canonicalPath: '/gear/fi-dog-collar-review/', pubDate: new Date('2026-03-18') },
     { canonicalPath: '/gear/garmin-dog-tracking-collars/', pubDate: new Date('2026-03-18') },
     { canonicalPath: '/gear/airtag-for-dogs/', pubDate: new Date('2026-03-18') },
@@ -394,9 +395,9 @@ describe('site smoke tests', () => {
         expected: [
           '/gear/best-dog-gps-trackers/',
           '/gear/garmin-dog-tracking-collars/',
+          '/gear/aorkuler-gps-dog-tracker-review/',
           '/gear/airtag-for-dogs/',
           '/travel/rhys-ran-away-cerro-san-luis-obispo/',
-          '/safety/what-to-do-if-your-dog-runs-away/',
         ],
       },
       {
@@ -829,7 +830,7 @@ describe('site smoke tests', () => {
       expect(marked, `${id} must not be marked natural`).not.toContain(id);
     }
 
-    // The mark cannot be colour-only: each marked card carries a spoken label.
+    // The mark cannot be color-only: each marked card carries a spoken label.
     expect(doc.body.innerHTML.match(/Natural product: /g) ?? []).toHaveLength(27);
 
     // The legend that explains the mark, and the anchor inbound links land on.

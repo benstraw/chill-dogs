@@ -109,7 +109,7 @@ Merging separate product records into one variant group removes cards from a pag
 
 | Function | Returns |
 |---|---|
-| `getOffers(product)` | The default variant's offers. Unchanged behaviour for products without variants. |
+| `getOffers(product)` | The default variant's offers. Unchanged behavior for products without variants. |
 | `getDefaultVariant(product)` | The variant a card shows before the buyer touches the selector. |
 | `getVariants(product)` | Every selectable variant, unavailable ones dropped. |
 | `getVariantOffers(variant)` | One variant's offers, ordered and filtered like `getOffers`. |
@@ -135,7 +135,7 @@ The split between the last two is load-bearing. `getAmazonOfferEntries` matches 
 
 Chips render as **real anchors** to each variant's primary offer, so no-JS visitors and crawlers reach every ASIN. They carry `rel="sponsored noopener noreferrer"` but deliberately **not** `data-affiliate="true"` or `data-track` — only the CTAs below fire the keystone event, so click counts stay comparable between cards with and without a picker. An untracked no-JS chip click is not a gap: analytics needs JS either way.
 
-Script behaviour, following the chip pattern in `src/pages/shop/index.astro`:
+Script behavior, following the chip pattern in `src/pages/shop/index.astro`:
 
 - The server serializes the offer table onto `data-variant-offers`; the script only applies it.
 - On selection it rewrites each CTA's `href`, `data-asin`, `data-merchant-product-id`, `data-variant-option` and `data-variant-axis`, hides CTAs whose merchant has no offer for the selection, and re-assigns `data-variant="primary"` to the first visible CTA so the filled/outlined pairing survives.
@@ -191,7 +191,7 @@ Each size is its own Chewy listing, so each variant has one Chewy offer and the 
 
 Rules these records settled:
 
-- **One colour per card.** Chewy lists size × colour as separate items; the picker only covers the colour
+- **One color per card.** Chewy lists size × color as separate items; the picker only covers the color
   of the listing the issue linked, because the picker supports a single axis.
 - **Only in-stock sizes become chips**, except the default (the listing the issue linked) and a few
   out-of-stock sizes kept so every bed offers its sizes (#390).
@@ -200,7 +200,7 @@ Rules these records settled:
   cases in `docs/affiliate-links.md`), so `fetch:chewy --search` finds every size listing.
 - **Beds sold on both merchants** (the two NOAH & PAW beds) stay Amazon records; `withChewyOffers` in
   `src/data/relaxation-products.ts` adds the matching Chewy listing to each Amazon size (#393, #396).
-- Sizes are labelled by name (`Small`, `X-Large`) or by dimensions (`44 × 32 in`) exactly as Chewy sells them.
+- Sizes are labeled by name (`Small`, `X-Large`) or by dimensions (`44 × 32 in`) exactly as Chewy sells them.
 
 ---
 

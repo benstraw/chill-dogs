@@ -77,7 +77,7 @@ describe('affiliate instrumentation', () => {
    * tagged nor instrumented. Two sources are allowed:
    *
    * - /admin/products/, the internal catalog diagnostic — it links out to every ASIN on
-   *   purpose and is not a monetised surface.
+   *   purpose and is not a monetized surface.
    * - ProductVariantPicker chips, which are untracked by design: they repoint the CTA
    *   rather than replacing it, and instrumenting them would inflate click counts on
    *   cards with a selector relative to cards without one. They are still real anchors

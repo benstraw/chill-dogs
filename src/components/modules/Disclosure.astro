@@ -3,13 +3,23 @@ import { ROUTES } from '@data/routes';
 
 interface Props {
   showSafety?: boolean;
+  /**
+   * Opt-in. Set on any page reviewing a unit the brand supplied, so the material
+   * connection is stated on the page itself and not only in the affiliate line.
+   */
+  providedProduct?: string;
 }
 
-const { showSafety = true } = Astro.props;
+const { showSafety = true, providedProduct } = Astro.props;
 ---
 
 <aside class="disc" aria-label="Disclosures">
   <div class="disc-inner">
+    {providedProduct && (
+      <p class="disc-provided">
+        <strong>Review Unit Disclosure:</strong> {providedProduct}
+      </p>
+    )}
     <p class="disc-affiliate">
       <strong>Affiliate Disclosure:</strong> This page contains affiliate links to Amazon and Chewy. If you purchase through these links,
       we earn a small commission at no extra cost to you. This supports our ability to research and recommend products.
@@ -39,6 +49,7 @@ const { showSafety = true } = Astro.props;
     padding: var(--space-lg);
   }
 
+  .disc-provided,
   .disc-affiliate,
   .disc-safety {
     font-size: var(--text-sm);

@@ -224,7 +224,7 @@ Both surfaces read through `isIndexableProduct`, so they cannot drift: llms.txt 
 `noindex` directly, and the XML sitemap filter in `astro.config.mjs` excludes
 `noindexProductPaths()` from `src/data/product-indexing.ts`. That module is deliberately
 alias-free because config is evaluated before the `@` aliases it declares exist. Before this,
-the sitemap honoured only `EXCLUDED_DISCOVERY_FRAGMENTS`, so all 214 pages were submitted
+the sitemap honored only `EXCLUDED_DISCOVERY_FRAGMENTS`, so all 214 pages were submitted
 including the 19 thin ones already carrying `noindex` — contradictory signals that Search
 Console reports as an error.
 

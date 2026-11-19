@@ -56,7 +56,7 @@ bun run admin:serve      # Local writer for /admin/images/ (see below); no netwo
 
 `pins:gen` renders one 1000x1500 Pinterest pin per product into `public/pins/`, which
 `PinterestSave` on `/shop/<id>/` hands to Pinterest. Without a pin, the Save button falls
-back to the raw product photo — a square catalogue shot with no title or branding, in a
+back to the raw product photo — a square catalog shot with no title or branding, in a
 ratio Pinterest crops. It fetches product photos from the merchant CDN, so it **needs
 network** and will not run in a sandboxed agent container; add `--placeholder` to preview
 the template offline with a stand-in photo, and `--only <id>` to render one product.
@@ -83,6 +83,7 @@ Use `ogTitle` prop on `BaseLayout` when `<title>` falls outside the og:title ran
 
 ## Content guardrails
 
+- **American English only.** Chill-Dogs is a US site with US authors. Write `math`, `color`, `neighborhood`, `meters`, `-ize`, `leash`, `backyard`, `closet`, `store` — never `maths`, `colour`, `neighbourhood`, `metres`, `-ise`, `lead`, `garden`, `cupboard`, `shop`. Rhys is a Welsh name on a Los Angeles dog; it is not a cue for British English. Applies to copy, alt text, comments, docs, and commit messages. Enforced by `src/__tests__/american-english.test.ts`; details in [`docs/ai/writing/article-writing-guide.md`](docs/ai/writing/article-writing-guide.md#american-english).
 - Do not use "vet-approved", "vet-recommended", or similar without documented sourcing.
 - Prefer: researched, compared, curated, popular, practical.
 - Full guardrails: [`docs/ai/writing/medical-and-vet-claim-guardrails.md`](docs/ai/writing/medical-and-vet-claim-guardrails.md)

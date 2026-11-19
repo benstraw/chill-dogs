@@ -61,7 +61,7 @@ const PIN_DIR = 'pins';
  * The generated 1000×1500 Pinterest pin for a product, when one has been rendered.
  *
  * `PinterestSave` declares `width="1000" height="1500"` on its image — it was built for
- * a 2:3 pin. Handing it the raw square Amazon photo made every pin a bare catalogue shot
+ * a 2:3 pin. Handing it the raw square Amazon photo made every pin a bare catalog shot
  * with no title or branding, in a ratio Pinterest crops. `bun run pins:gen` renders the
  * real thing into `public/pins/`; until a product has one, callers fall back to the
  * product photo so the button still works.

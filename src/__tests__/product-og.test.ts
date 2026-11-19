@@ -214,7 +214,7 @@ describe('product-style OG images', () => {
         })
       )
     ).toEqual([
-      '/test/page/: heroProduct.image must be a direct image URL',
+      '/test/page/: heroProduct.image must be a direct image URL or a path to a file in public/',
       '/test/page/: heroProduct.badge is required',
       '/test/page/: heroProduct.name must be 48 characters or fewer',
     ]);
@@ -229,5 +229,49 @@ describe('product-style OG images', () => {
         })
       )
     ).toEqual([]);
+  });
+
+  // A product we photographed ourselves is served out of public/ rather than a
+  // merchant CDN, and the generator reads it off disk. Accept it, but only when
+  // the file is really there — a typo'd path should fail here, not render blank.
+  it('accepts a hero image served from public/ and rejects one that is not on disk', () => {
+    expect(
+      validateHeroProductPage(
+        page({
+          heroProduct: {
+            image: '/images/products/aorkuler-pet-tracker.jpg',
+            badge: 'Hands-On Review',
+            name: 'Aorkuler Pet Tracker',
+          },
+        })
+      )
+    ).toEqual([]);
+
+    expect(
+      validateHeroProductPage(
+        page({
+          heroProduct: {
+            image: '/images/products/does-not-exist.jpg',
+            badge: 'Hands-On Review',
+            name: 'Aorkuler Pet Tracker',
+          },
+        })
+      )
+    ).toEqual([
+      '/test/page/: heroProduct.image must be a direct image URL or a path to a file in public/',
+    ]);
+
+    for (const traversal of ['/../package.json', '//evil.example.com/x.jpg']) {
+      expect(
+        validateHeroProductPage(
+          page({
+            heroProduct: { image: traversal, badge: 'Badge', name: 'Name' },
+          })
+        ),
+        traversal
+      ).toEqual([
+        '/test/page/: heroProduct.image must be a direct image URL or a path to a file in public/',
+      ]);
+    }
   });
 });

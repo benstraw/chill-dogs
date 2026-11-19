@@ -39,7 +39,7 @@ describe('pillar themes', () => {
     expect(pillarThemes.comfort.link).toBe('#8c4a52');
   });
 
-  it('keeps gear on violet instead of grey', () => {
+  it('keeps gear on violet instead of gray', () => {
     expect(pillarThemes.gear.accent).toBe('hsl(262, 45%, 38%)');
     expect(pillarThemes.gear.link).toBe('#5b3d8c');
   });

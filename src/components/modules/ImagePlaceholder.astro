@@ -1,0 +1,96 @@
+---
+/**
+ * A marked, empty slot where a photo belongs but does not exist yet.
+ *
+ * Sits inline at the exact point in the article the photo goes, so the writer
+ * shooting it can see the surrounding copy and the editor can see what is still
+ * missing. Deliberately loud: it must be impossible to publish one by accident.
+ *
+ * Replace it with the real `<figure class="article-photo">` + `<Image>` block
+ * once the shot exists; do not leave it on a page that goes live.
+ */
+
+interface Props {
+  /** Short stable handle used to refer to the shot, e.g. `CASE-OPEN`. */
+  id: string;
+  /** What the photo is, in a few words. */
+  title: string;
+  /** Direction for whoever takes it — framing, lighting, what must be legible. */
+  shot: string;
+  /** The caption this will carry once the photo lands. */
+  caption?: string;
+  /** The alt text this will carry once the photo lands. */
+  alt?: string;
+  /** Set for a screen or display capture so the final figure gets the inset border. */
+  screenshot?: boolean;
+}
+
+const { id, title, shot, caption, alt, screenshot = false } = Astro.props;
+---
+
+<figure class="img-slot" data-placeholder-id={id} aria-label={`Photo placeholder: ${title}`}>
+  <div class="img-slot-frame">
+    <p class="img-slot-badge">Photo needed · {id}</p>
+    <p class="img-slot-title">{title}</p>
+    <p class="img-slot-shot"><span class="img-slot-key">Shot:</span> {shot}</p>
+    {caption && <p class="img-slot-meta"><span class="img-slot-key">Caption:</span> {caption}</p>}
+    {alt && <p class="img-slot-meta"><span class="img-slot-key">Alt:</span> {alt}</p>}
+    {screenshot && <p class="img-slot-meta"><span class="img-slot-key">Style:</span> screen capture — use <code>article-photo--screenshot</code></p>}
+  </div>
+</figure>
+
+<style>
+  .img-slot {
+    max-width: var(--max-width-prose);
+    margin: var(--space-xl) 0;
+  }
+
+  .img-slot-frame {
+    border: 2px dashed #c0392b;
+    border-radius: var(--radius-lg);
+    background: repeating-linear-gradient(
+      45deg,
+      rgba(192, 57, 43, 0.04),
+      rgba(192, 57, 43, 0.04) 12px,
+      transparent 12px,
+      transparent 24px
+    );
+    padding: var(--space-lg);
+  }
+
+  .img-slot-badge {
+    display: inline-block;
+    background: #c0392b;
+    color: #fff;
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.2em 0.6em;
+    border-radius: var(--radius-sm);
+    margin: 0 0 var(--space-sm);
+  }
+
+  .img-slot-title {
+    font-weight: var(--weight-bold);
+    font-size: var(--text-lg);
+    margin: 0 0 var(--space-sm);
+  }
+
+  .img-slot-shot,
+  .img-slot-meta {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-relaxed);
+    margin: 0 0 var(--space-xs);
+  }
+
+  .img-slot-meta:last-child {
+    margin-bottom: 0;
+  }
+
+  .img-slot-key {
+    font-weight: var(--weight-bold);
+    color: var(--color-text);
+  }
+</style>

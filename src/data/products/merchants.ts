@@ -9,6 +9,16 @@ export interface MerchantConfig {
 }
 
 export const merchants: Record<MerchantId, MerchantConfig> = {
+  // displayOrder 0: the only product carrying an Aorkuler offer is the Aorkuler
+  // tracker itself, and the brand pays more on a direct sale than Amazon does, so
+  // direct leads its offer stack. No other product's ordering is affected.
+  aorkuler: {
+    id: 'aorkuler',
+    label: 'Aorkuler',
+    domain: 'aorkuler.com',
+    ctaCopy: 'Buy direct from Aorkuler',
+    displayOrder: 0,
+  },
   amazon: {
     id: 'amazon',
     label: 'Amazon',
