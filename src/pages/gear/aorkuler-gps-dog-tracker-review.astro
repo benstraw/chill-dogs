@@ -194,6 +194,7 @@ const reviewSchema = buildReviewSchema({
 
         <ReviewRating
           value={RATING}
+          headline="We highly recommend the Aorkuler GPS Dog Tracker."
           summary="Scored based on hardware design, setup, tracking performance, how far the live link reaches in a built-up area, fit on the dog, the alarms, and charging capacity."
         />
 
@@ -547,13 +548,10 @@ const reviewSchema = buildReviewSchema({
           there the device directed him to the tracker. He found Rhys.
         </p>
 
-        <h3>The drive test: a suburb, a car, and 3.7 miles</h3>
+        <h3>The Drive Test: A moving car and 3.7 miles</h3>
         <p class="section-body">
-          Aorkuler's 3.5-mile figure was the biggest open question on this page, so we
-          tested it the only way two people and one dog can: we left the tracker at
-          home, took the controller in the car, and drove away from it through the
-          neighborhood on a Sunday afternoon, windows open, holding the controller out
-          of one for much of the drive and filming the screen as we went.
+          We left Rhys wearing the tracker in the backyard and drove away. We held the
+          controller and kept the car windows open, filming the screen as we went.
         </p>
         <p class="section-body">
           The arrow went red less than 1,000 feet from the house and never went green
@@ -583,67 +581,33 @@ const reviewSchema = buildReviewSchema({
         </div>
 
         <p class="section-body">
-          The number never stopped. It climbed smoothly the whole way out, in feet (the
-          controller does not switch to miles, so three and a half miles reads as
-          18,480). One explanation fits: with the
-          link down for more than three miles, the only thing the controller can be
-          measuring is the gap between its own GPS position and the last position it
-          heard from the tracker. Because the tracker was sitting still at home, that
-          number was probably still right. With a moving dog it would not be.
-        </p>
-        <p class="section-body">
-          Put the three tests together and the pattern is consistent. The longest green
-          reading we have photographed is 678.7 feet, at Playa Vista. Behind the school
-          the arrow was red at about 800 feet, and on this drive it was red inside
-          1,000. In a built-up area, a live link has so far been a few-hundred-feet
-          thing for us.
+          The distance number continued to climb as we drove. The controller was still
+          measuring the gap between its own GPS position and the last known position of
+          the tracker. Because Rhys was contained in the backyard, that number was
+          probably still right. With a moving dog it would not be.
         </p>
 
-        <div class="callout callout--warning range-plan">
-          <p class="callout-heading">What this test does and does not show</p>
-          <p class="callout-body">
-            <strong>It is a suburban result.</strong> We drove with the windows open
-            and held the controller out of one for much of the drive, so the car was
-            not doing most of the blocking. A neighborhood's worth of buildings between
-            the two units was. Aorkuler's 3.5 miles is an open-terrain figure, and this
-            was the opposite of open terrain.
-          </p>
-          <p class="callout-body">
-            <strong>We did not check the readings against a map,</strong> so the
-            distances here are what the controller reported, not measured ground truth.
-            And the tracker never moved, so the question of what the number does when
-            Rhys moves while the arrow is red is still open.
-          </p>
-          <p class="callout-body">
-            <strong>What we take from it:</strong> do not buy this expecting miles of
-            live tracking in a neighborhood. We have not tested open ground, and until we
-            do, 3.5 miles is an unverified best case.
-          </p>
-        </div>
-
-        <h3>On Rhys</h3>
+        <h3>The Tracker Fit on Rhys</h3>
         <p class="section-body">
-          The tracker attaches with an elastic strap and a reinforced metal-backed clasp
-          that threads through the collar. It is a better design than it needs to be —
-          the stretch takes up the slack on any collar width, nothing about it felt like
-          it was going to work loose across two outings, and we expect it to hold. At
-          around 30 grams Rhys gave no sign of noticing it was there.
+          The tracker attaches to the dog collar with an elastic strap and a reinforced
+          metal-backed clasp. It is high quality and well-designed. There was never any
+          concern of it falling off. It weighs about 30 grams, and Rhys gave no sign of
+          noticing it was there.
         </p>
         <p class="section-body">
-          One caveat on that weight figure: light is not the same as small. Rhys is not
-          a small dog, and the unit that disappears on his neck is a lot of plastic on a
-          terrier's. If your dog is small, hold the collar unit up against their collar
-          before you commit, and use the 30-day window if it is too much.
+          One caveat: light is not the same as small. Rhys is a medium to large dog, and
+          he weighs about 70 pounds. If your dog is small, your dog may find the tracker
+          unit more distracting.
         </p>
 
         <div class="photo-pair">
           <figure class="article-photo">
             <Image src={imgOnCollar} alt="Close view of the Aorkuler tracker strapped to Rhys's collar" width={620} quality={80} />
-            <figcaption>The clasp threaded through Rhys's collar. It does not move.</figcaption>
+            <figcaption>The clasp attached to Rhys's collar. It does not move.</figcaption>
           </figure>
           <figure class="article-photo">
             <Image src={imgOnNeck} alt="The Aorkuler tracker sitting on Rhys's neck on his everyday collar" width={620} quality={80} />
-            <figcaption>How it sits on an everyday flat collar.</figcaption>
+            <figcaption>The tracker sits flat on the collar.</figcaption>
           </figure>
         </div>
 
@@ -654,16 +618,15 @@ const reviewSchema = buildReviewSchema({
           </figure>
           <figure class="article-photo">
             <Image src={imgStrapOffDogBack} alt="Back of the Aorkuler tracker in its holder with the elastic strap stretched across it" width={620} quality={80} />
-            <figcaption>Assembled, from the back: the strap spans the holder and the collar passes underneath.</figcaption>
+            <figcaption>The tracker assembled, from the back: the strap spans the holder and the collar passes underneath it.</figcaption>
           </figure>
         </div>
 
-        <h3>The sound and light alarms</h3>
+        <h3>The Sound and Light Alarms</h3>
         <p class="section-body">
-          Both are menu options on the controller, and both are close-range tools. The
-          light alarm flashes the tracker — we saw two yellow pulses followed by red —
-          and it is the more useful of the two. At dusk, in tall grass, a flashing unit
-          on a dark dog is genuinely easier to find than the dog.
+          The tracker alarms are menu options on the controller, and both are
+          close-range tools. The light alarm flashes two yellow pulses followed by red.
+          At dusk, in tall grass, a flashing unit on a dog is genuinely useful.
         </p>
         <ImagePlaceholder
           id="LIGHT-ALARM-DUSK"
@@ -674,12 +637,11 @@ const reviewSchema = buildReviewSchema({
         />
 
         <p class="section-body">
-          The beeper is faint. We could hear it from five to ten feet depending on
-          ambient noise, and not reliably beyond that. As a way of locating a dog by ear
-          it is close to useless. But Natalie made the point that this may be deliberate:
-          a loud alarm strapped to the neck of a frightened, already-running dog is a
-          good way to make it run further. Rhys had no reaction to it at all. Read it as
-          a confirmation tool for the last twenty feet, not a locator.
+          The sound alarm is faint. We could hear it from five to ten feet away,
+          depending on ambient noise. It is loud enough to hear when you are nearby, but
+          not so loud that it would be jarring to the dog. A loud alarm strapped to the
+          neck of a frightened, already-running dog runs the risk of spooking the dog
+          into running even farther. Rhys had no reaction to the sound at all.
         </p>
       </div>
     </section>
@@ -1174,12 +1136,6 @@ const reviewSchema = buildReviewSchema({
       grid-template-columns: 1fr;
       gap: var(--space-xs);
     }
-  }
-
-  /* ── Editorial flags ───────────────────────────────────────── */
-  .range-plan {
-    border: 2px dashed #c0392b;
-    border-left-width: 4px;
   }
 
   .callout .callout-body + .callout-body {

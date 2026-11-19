@@ -14,10 +14,12 @@ interface Props {
   best?: number;
   /** Short line under the stars, e.g. what the score is weighing. */
   summary?: string;
+  /** Optional bold recommendation line shown above the summary. */
+  headline?: string;
   label?: string;
 }
 
-const { value, best = 5, summary, label = 'Our rating' } = Astro.props;
+const { value, best = 5, summary, headline, label = 'Our rating' } = Astro.props;
 
 const clamped = Math.max(0, Math.min(value, best));
 const stars = Array.from({ length: best }, (_, i) => {
@@ -40,6 +42,7 @@ const display = Number.isInteger(clamped) ? `${clamped}.0` : clamped.toFixed(1);
     </span>
     <span class="rr-value">{display}<span class="rr-out-of">/{best}</span></span>
   </p>
+  {headline && <p class="rr-headline">{headline}</p>}
   {summary && <p class="rr-summary">{summary}</p>}
 </div>
 
@@ -105,6 +108,14 @@ const display = Number.isInteger(clamped) ? `${clamped}.0` : clamped.toFixed(1);
     font-size: var(--text-base);
     font-weight: var(--weight-normal);
     color: var(--color-text-muted);
+  }
+
+  .rr-headline {
+    font-size: var(--text-base);
+    font-weight: var(--weight-bold);
+    color: var(--color-text);
+    line-height: var(--leading-normal);
+    margin: var(--space-sm) 0 0;
   }
 
   .rr-summary {
