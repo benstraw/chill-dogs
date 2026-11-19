@@ -22,6 +22,7 @@ import imgGreen104 from '../../images/watermarked/aorkuler/aorkuler-controller-1
 import imgRed389 from '../../images/watermarked/aorkuler/aorkuler-controller-389ft.jpg';
 import imgRed501 from '../../images/watermarked/aorkuler/aorkuler-controller-501ft-red.jpg';
 import imgCaseClosed from '../../images/watermarked/aorkuler/aorkuler-case-closed.jpg';
+import imgCharging from '../../images/watermarked/aorkuler/aorkuler-charging.jpg';
 import imgCaseOpen from '../../images/watermarked/aorkuler/aorkuler-case-open.jpg';
 import imgScreenIcons from '../../images/watermarked/aorkuler/aorkuler-screen-icons.jpg';
 import imgStrapOffDog from '../../images/watermarked/aorkuler/aorkuler-strap-off-dog.jpg';
@@ -354,7 +355,7 @@ const reviewSchema = buildReviewSchema({
         </p>
 
         <figure class="article-photo">
-          <Image src={imgCaseClosed} alt="Closed Aorkuler hard-shell carry case with zip and handle" width={900} quality={80} />
+          <Image src={imgCaseClosed} alt="Closed Aorkuler hard-shell carry case with zip and wrist strap" width={900} quality={80} />
           <figcaption>The carrying case</figcaption>
         </figure>
 
@@ -704,13 +705,10 @@ const reviewSchema = buildReviewSchema({
           would still rather have USB-C on the controller.
         </p>
 
-        <ImagePlaceholder
-          id="CHARGER"
-          title="The magnetic charger and both cables"
-          shot="Both cables laid out with the magnetic ends in focus, plus one frame of an end attached to a unit. The proprietary connector is the whole point of this section, so it needs to be unmistakable."
-          caption="Both cables are identical, and nothing else you own will fit the magnetic end."
-          alt="Aorkuler proprietary magnetic charging cables with USB-A connectors"
-        />
+        <figure class="article-photo">
+          <Image src={imgCharging} alt="Aorkuler controller and tracker each connected to a proprietary magnetic charging cable" width={600} quality={80} />
+          <figcaption>Both cables are identical, and nothing else you own will fit the magnetic end.</figcaption>
+        </figure>
 
         <div class="callout callout--warning">
           <p class="callout-heading">Turn both units off, separately</p>
