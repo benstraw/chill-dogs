@@ -22,7 +22,7 @@ import imgGreen104 from '../../images/watermarked/aorkuler/aorkuler-controller-1
 import imgRed389 from '../../images/watermarked/aorkuler/aorkuler-controller-389ft.jpg';
 import imgRed501 from '../../images/watermarked/aorkuler/aorkuler-controller-501ft-red.jpg';
 import imgCaseClosed from '../../images/watermarked/aorkuler/aorkuler-case-closed.jpg';
-import imgCharging from '../../images/watermarked/aorkuler/aorkuler-charging.jpg';
+import imgControllerTracker from '../../images/watermarked/aorkuler/aorkuler-controller-tracker.jpg';
 import imgCaseOpen from '../../images/watermarked/aorkuler/aorkuler-case-open.jpg';
 import imgScreenIcons from '../../images/watermarked/aorkuler/aorkuler-screen-icons.jpg';
 import imgStrapOffDog from '../../images/watermarked/aorkuler/aorkuler-strap-off-dog.jpg';
@@ -349,13 +349,10 @@ const reviewSchema = buildReviewSchema({
           <figcaption>Everything that comes in the carrying case</figcaption>
         </figure>
 
-        <ImagePlaceholder
-          id="SCALE"
-          title="Controller and tracker side by side"
-          shot="Both units out of the case on a plain background with something for scale — a hand, or a credit card. Antenna screwed on. Shoot the face of each, then a second frame of the backs if the charging contacts do not show."
-          caption="The handheld controller and the collar tracker. The tracker is about the size of an AirTag."
-          alt="Aorkuler handheld controller beside the collar-mounted tracker for scale"
-        />
+        <figure class="article-photo">
+          <Image src={imgControllerTracker} alt="Aorkuler handheld controller beside the collar-mounted tracker, each connected to a magnetic charging cable" width={600} quality={80} />
+          <figcaption>The handheld controller and the collar tracker. The tracker is about the size of an AirTag.</figcaption>
+        </figure>
 
         <h3>Binding and the First GPS Lock</h3>
         <p class="section-body">
@@ -690,10 +687,13 @@ const reviewSchema = buildReviewSchema({
           would still rather have USB-C on the controller.
         </p>
 
-        <figure class="article-photo">
-          <Image src={imgCharging} alt="Aorkuler controller and tracker each connected to a proprietary magnetic charging cable" width={600} quality={80} />
-          <figcaption>Both cables are identical, and nothing else you own will fit the magnetic end.</figcaption>
-        </figure>
+        <ImagePlaceholder
+          id="CHARGER"
+          title="The magnetic charger and both cables"
+          shot="Both cables laid out with the magnetic ends in focus, plus one frame of an end attached to a unit. The proprietary connector is the whole point of this section, so it needs to be unmistakable."
+          caption="Both cables are identical, and nothing else you own will fit the magnetic end."
+          alt="Aorkuler proprietary magnetic charging cables with USB-A connectors"
+        />
 
         <div class="callout callout--warning">
           <p class="callout-heading">Turn both units off, separately</p>
