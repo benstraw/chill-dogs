@@ -25,6 +25,10 @@ import imgCaseClosed from '../../images/watermarked/aorkuler/aorkuler-case-close
 import imgControllerTracker from '../../images/watermarked/aorkuler/aorkuler-controller-tracker.jpg';
 import imgCaseOpen from '../../images/watermarked/aorkuler/aorkuler-case-open.jpg';
 import imgScreenIcons from '../../images/watermarked/aorkuler/aorkuler-screen-icons.jpg';
+import imgRhysPlay from '../../images/watermarked/aorkuler/aorkuler-rhys-play.jpg';
+import imgRhysCloseup from '../../images/watermarked/aorkuler/aorkuler-rhys-tracker-closeup.jpg';
+import imgChargeContacts from '../../images/watermarked/aorkuler/aorkuler-charging-contacts.jpg';
+import imgChargeAttached from '../../images/watermarked/aorkuler/aorkuler-charging-attached.jpg';
 import imgStrapOffDog from '../../images/watermarked/aorkuler/aorkuler-strap-off-dog.jpg';
 import imgStrapOffDogBack from '../../images/watermarked/aorkuler/aorkuler-strap-off-dog-back.jpg';
 import imgRangeDrive from '../../images/watermarked/aorkuler/aorkuler-range-drive-display.jpg';
@@ -585,6 +589,17 @@ const reviewSchema = buildReviewSchema({
 
         <div class="photo-pair">
           <figure class="article-photo">
+            <Image src={imgRhysPlay} alt="Rhys playing on a patio with the Aorkuler tracker on his collar" width={620} quality={80} />
+            <figcaption>Rhys mid-play with the tracker on. He kept going as if it were not there.</figcaption>
+          </figure>
+          <figure class="article-photo">
+            <Image src={imgRhysCloseup} alt="Close view of the Aorkuler tracker on Rhys's collar as he turns his head" width={620} quality={80} />
+            <figcaption>Even with Rhys moving around, the tracker stayed put on the collar.</figcaption>
+          </figure>
+        </div>
+
+        <div class="photo-pair">
+          <figure class="article-photo">
             <Image src={imgOnCollar} alt="Close view of the Aorkuler tracker strapped to Rhys's collar" width={620} quality={80} />
             <figcaption>The clasp attached to Rhys's collar. It does not move.</figcaption>
           </figure>
@@ -687,13 +702,16 @@ const reviewSchema = buildReviewSchema({
           would still rather have USB-C on the controller.
         </p>
 
-        <ImagePlaceholder
-          id="CHARGER"
-          title="The magnetic charger and both cables"
-          shot="Both cables laid out with the magnetic ends in focus, plus one frame of an end attached to a unit. The proprietary connector is the whole point of this section, so it needs to be unmistakable."
-          caption="Both cables are identical, and nothing else you own will fit the magnetic end."
-          alt="Aorkuler proprietary magnetic charging cables with USB-A connectors"
-        />
+        <div class="photo-pair">
+          <figure class="article-photo">
+            <Image src={imgChargeContacts} alt="Aorkuler controller on its side showing the magnetic charging contacts, with the cable end lying beside it" width={620} quality={80} />
+            <figcaption>The magnetic contacts on the controller and the matching cable end. Nothing else you own will fit.</figcaption>
+          </figure>
+          <figure class="article-photo">
+            <Image src={imgChargeAttached} alt="Aorkuler controller with the magnetic charging cable attached" width={620} quality={80} />
+            <figcaption>The cable snapped onto the controller.</figcaption>
+          </figure>
+        </div>
 
         <div class="callout callout--warning">
           <p class="callout-heading">Turn both units off, separately</p>
