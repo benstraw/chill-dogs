@@ -29,17 +29,17 @@ const faqs = [
   {
     question: 'What is the best GPS tracker for dogs?',
     answer:
-      'There is no single best — it depends on your environment. For cities and suburbs, a cellular tracker like Fi is the most practical choice. For hiking and wilderness, a Garmin off-grid system is the only option that works without cell signal. AirTags are a budget backup layer, not a real GPS tracker.',
+      'There is no single best — it depends on your environment. For cities and suburbs, a cellular tracker like Fi is the most practical choice. For hiking and wilderness, a Garmin off-grid system offers the longest range and most features without cell signal. If you want off-grid tracking without a subscription at a lower price, the Aorkuler kit is a one-time $249.99 purchase with shorter range and no map. AirTags are a budget backup layer, not a real GPS tracker.',
   },
   {
     question: 'Do I need a subscription for a dog GPS tracker?',
     answer:
-      'Cellular trackers (Fi, Halo, Garmin Alpha LTE) require a monthly subscription or membership to access the LTE network and app features. Garmin off-grid systems (Alpha TT 25 + 300i) have a high upfront cost but no monthly fee for radio dog tracking mode. Bluetooth tags like AirTag have no subscription.',
+      'Cellular trackers (Fi, Halo, Garmin Alpha LTE) require a monthly subscription or membership to access the LTE network and app features. Garmin off-grid systems (Alpha TT 25 + 300i) have a high upfront cost but no monthly fee for radio dog tracking mode. The Aorkuler kit is also subscription-free: one $249.99 purchase with no SIM, no app, and no account. Bluetooth tags like AirTag have no subscription.',
   },
   {
     question: 'Can a dog GPS tracker work without WiFi or cell service?',
     answer:
-      'Garmin off-grid GPS systems use GPS satellites and VHF radio — they work without cell service or WiFi, anywhere you can see the sky. Cellular trackers (Fi, Garmin Alpha LTE in cellular mode) require LTE signal and stop reporting without it. Bluetooth tags require other devices nearby.',
+      'Off-grid systems such as Garmin and Aorkuler use GPS satellites and a direct radio link to a handheld — they work without cell service or WiFi, anywhere you can see the sky. Cellular trackers (Fi, Garmin Alpha LTE in cellular mode) require LTE signal and stop reporting without it. Bluetooth tags require other devices nearby.',
   },
   {
     question: 'How accurate are dog GPS trackers?',
@@ -49,7 +49,7 @@ const faqs = [
   {
     question: 'What is the range of a GPS dog tracker?',
     answer:
-      'Cellular trackers have no range limit — they report anywhere with LTE coverage, which can span hundreds of miles. Garmin off-grid systems have a line-of-sight radio range of up to 9 miles. Bluetooth tags update only when within Bluetooth range of a network device.',
+      'Cellular trackers have no range limit — they report anywhere with LTE coverage, which can span hundreds of miles. Garmin off-grid systems have a line-of-sight radio range of up to 9 miles. Aorkuler advertises up to 3.5 miles in open terrain; in our suburban drive test its live link dropped at about 1,000 feet. Bluetooth tags update only when within Bluetooth range of a network device.',
   },
   {
     question: 'Is Fi collar worth it?',
@@ -77,14 +77,14 @@ const itemListSchema = {
 <BaseLayout
   title="Best Dog GPS Trackers: Cellular vs Off-Grid vs Bluetooth (2026)"
   ogTitle="Best Dog GPS Trackers: Types Compared (2026)"
-  description="Compare the top dog GPS trackers — cellular (Fi, Halo, Garmin LTE), off-grid Garmin systems, and Bluetooth tags (AirTag). Honest trade-offs for each."
+  description="Compare top dog GPS trackers — cellular (Fi, Halo, Garmin LTE), off-grid systems (Garmin, Aorkuler), and Bluetooth tags (AirTag). Honest trade-offs for each."
 >
   <JsonLd slot="head" schema={itemListSchema} />
 
   <Hero
     title="Best Dog GPS Trackers"
     subtitle="Cellular, Off-Grid, and Bluetooth:  Three categories that solve three different problems. Know the difference before you buy."
-    disclaimer="As an Amazon Associate, we earn from qualifying purchases."
+    disclaimer="We earn a commission on purchases through our links. As an Amazon Associate, we earn from qualifying purchases."
     primaryCta={{ label: 'Jump to Comparison', href: '#cellular' }}
     secondaryCta={{ label: 'Decision Guide', href: '#decision-guide' }}
     pageSlug={pageSlug}
@@ -115,6 +115,11 @@ const itemListSchema = {
             <p class="summary-card-pick">AirTag or Tile</p>
             <p class="summary-card-why">Not real GPS; city-only; crowd-sourced</p>
           </div>
+          <div class="summary-card">
+            <p class="summary-card-label">No subscription, off-grid</p>
+            <p class="summary-card-pick">Aorkuler kit</p>
+            <p class="summary-card-why">One $249.99 payment; no app or SIM; bearing and distance only</p>
+          </div>
         </div>
       </div>
     </section>
@@ -143,7 +148,7 @@ const itemListSchema = {
 
         <div class="section-note">
           <p>
-            <strong>When cellular trackers fail:</strong> These trackers go dark anywhere without LTE signal — remote trails, wilderness areas, rural land, and mountain terrain. If your dog runs away at a trail summit with no signal (as happened with Rhys on Cerro San Luis Obispo), a cellular tracker cannot help you. Read <a href={ROUTES.rhysRanAway} class="note-link">the full story</a> to understand the gap.
+            <strong>When cellular trackers fail:</strong> These trackers go dark anywhere without LTE signal — remote trails, wilderness areas, rural land, and mountain terrain. If your dog runs away at a trail summit with no signal (as happened with Rhys on Cerro San Luis Obispo), a cellular tracker cannot help you. Read <a href={ROUTES.rhysRanAway} class="note-link">the full story</a> to understand the gap. Off-grid tracking no longer means Garmin money: the <a href={ROUTES.aorkulerReview} class="note-link">Aorkuler kit</a> is $249.99 with no plan.
           </p>
         </div>
 
@@ -182,6 +187,12 @@ const itemListSchema = {
           ))}
         </div>
 
+        <div class="section-note">
+          <p>
+            <strong>Garmin or Aorkuler?</strong> Garmin is the serious backcountry system: up to 9 miles of line-of-sight range, maps on the handheld, and tracking for up to 20 dogs — at several times the price. Aorkuler is one $249.99 kit with no subscription, no app, and no SIM. It gives you a bearing and a distance, not a map. Aorkuler advertises up to 3.5 miles in open terrain; in our suburban drive test the live link dropped at about 1,000 feet. If your searches happen in a park, a campsite, or on rural property, the Aorkuler covers it for a fraction of the cost.
+          </p>
+        </div>
+
         <p class="section-cta-line">
           <a
             href={ROUTES.garminTracking}
@@ -192,6 +203,18 @@ const itemListSchema = {
             data-link-position="offgrid-section"
           >
             See the full Garmin dog tracking guide →
+          </a>
+        </p>
+        <p class="section-cta-line">
+          <a
+            href={ROUTES.aorkulerReview}
+            class="inline-cta"
+            data-track="collector_to_converter_click"
+            data-from-page={pageSlug}
+            data-to-page={ROUTES.aorkulerReview}
+            data-link-position="offgrid-section"
+          >
+            Read our hands-on Aorkuler review →
           </a>
         </p>
       </div>
@@ -280,7 +303,7 @@ const itemListSchema = {
               <tr>
                 <td>Want off-grid tracking but refuse a monthly subscription</td>
                 <td>Off-grid Aorkuler kit</td>
-                <td>One payment, no SIM or app — but no map, a red lost-link state the screen barely flags, and in a suburb its live link dropped under 1,000 ft</td>
+                <td>One $249.99 payment; no app, SIM, or phone. Bearing and distance only, with no map or escape alerts</td>
               </tr>
               <tr>
                 <td>Budget-conscious; city dog; want a backup layer</td>
@@ -290,7 +313,7 @@ const itemListSchema = {
               <tr>
                 <td>Mixed use — city most days, occasional hikes</td>
                 <td>Cellular for daily use + off-grid for backcountry trips</td>
-                <td>Two different tools for two different environments</td>
+                <td>Two different tools for two different environments; Aorkuler is the lower-cost off-grid second tool</td>
               </tr>
             </tbody>
           </table>
@@ -391,7 +414,7 @@ const itemListSchema = {
 
   .summary-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--space-lg);
   }
 
@@ -625,6 +648,12 @@ const itemListSchema = {
   }
 
   @media (max-width: 1024px) {
+    .summary-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 560px) {
     .summary-cards {
       grid-template-columns: 1fr;
     }
