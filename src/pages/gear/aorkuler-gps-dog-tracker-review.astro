@@ -718,6 +718,28 @@ const reviewSchema = buildReviewSchema({
       <FAQ faqs={faqs} heading="Aorkuler GPS Dog Tracker FAQ" />
     </section>
 
+    <!-- Buy -->
+    <section class="content-section" id="buy">
+      <div class="section-inner">
+        <h2>Where to Buy the Aorkuler</h2>
+        <p class="section-body">
+          Off-grid tracking with no app, no SIM, and no monthly subscription fee.
+        </p>
+        <div class="buy-stack">
+          <AffiliateOfferStack
+            offers={offers}
+            product={{ id: aorkuler.id, name: aorkuler.name, category: aorkuler.type }}
+            pageType="collector"
+            pageSlug={pageSlug}
+            position="after-faq"
+          />
+          <p class="buy-note">
+            The Aorkuler list price is $249.99 on their website.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <Disclosure
       showSafety={false}
       providedProduct="Aorkuler supplied the tracker reviewed on this page at no cost. No money changed hands, and Aorkuler had no sight of this review or any say over its contents or its rating before publication. We also earn a commission if you buy through the links above."
