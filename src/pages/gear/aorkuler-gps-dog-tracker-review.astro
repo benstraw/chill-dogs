@@ -46,12 +46,6 @@ const aorkuler = trackerProducts.find((p) => p.id === 'aorkuler-pet-tracker')!;
 const offers = getOffers(aorkuler);
 const directOffer = offers.find((o) => o.merchant === 'aorkuler')!;
 
-/**
- * Manufacturer-published figures, not ours. Date-stamped because Aorkuler's page
- * and the competitors' pricing both move, and a stale table reads as a measurement.
- */
-const CLAIMS_CHECKED = 'November 2026';
-
 const specs = [
   ['Tracking technology', 'GPS positioning + direct radio link to the handheld'],
   ['Advertised range', 'Up to 3.5 miles, open terrain'],
@@ -66,12 +60,6 @@ const specs = [
   ['Price', '$249.99 Single Dog Kit / $379.99 Double Dog Kit'],
 ];
 
-const costRows = [
-  { tracker: 'Aorkuler', year1: '$249.99', year3: '$249.99', ongoing: 'None', us: true },
-  { tracker: 'Fi Series 3+', year1: '~$209', year3: '~$446+', ongoing: 'From ~$99/yr', us: false },
-  { tracker: 'Garmin Alpha 300i + TT 25', year1: '~$1,200', year3: '~$1,200', ongoing: 'None (inReach messaging is optional)', us: false },
-];
-
 const tocHeadings = [
   { label: 'Quick Verdict', anchor: 'quick-verdict' },
   { label: 'Quick Answers', anchor: 'quick-answers' },
@@ -81,9 +69,6 @@ const tocHeadings = [
   { label: 'Field Test', anchor: 'field-test' },
   { label: 'A Bearing Is Not a Route', anchor: 'bearing-not-route' },
   { label: 'Battery and Charging', anchor: 'battery-charging' },
-  { label: 'Pros, Cons, Who It Suits', anchor: 'pros-cons' },
-  { label: 'Aorkuler vs Fi, Garmin, AirTag', anchor: 'comparisons' },
-  { label: 'Verdict', anchor: 'verdict' },
 ];
 
 // `short` marks the questions that gate the buying decision — those answer up top
@@ -728,267 +713,6 @@ const reviewSchema = buildReviewSchema({
       </div>
     </section>
 
-    <!-- Pros, cons, who it suits -->
-    <section class="content-section" id="pros-cons">
-      <div class="section-inner">
-        <h2>Pros, Cons, and Who It Suits</h2>
-
-        <div class="pros-cons-grid">
-          <div class="pros-card">
-            <h3 class="pros-heading">What it does well</h3>
-            <ul class="verdict-list verdict-list--pros">
-              {aorkuler.pros.map((p) => <li>{p}</li>)}
-            </ul>
-          </div>
-          <div class="cons-card">
-            <h3 class="cons-heading">Trade-offs to know</h3>
-            <ul class="verdict-list verdict-list--cons">
-              {aorkuler.cons.map((c) => <li>{c}</li>)}
-            </ul>
-          </div>
-        </div>
-
-        <div class="best-for-list">
-          <div class="best-for-item best-for-item--yes">
-            <span class="bfi-icon">✓</span>
-            <div>
-              <p class="bfi-label">Rural property and campsite owners</p>
-              <p class="bfi-desc">A few hundred feet of reliable finding, with no cell service and no monthly bill, is exactly the shape of this product. Open ground is also where the missing map matters least — there is nothing between you and the dog for the arrow to point through.</p>
-            </div>
-          </div>
-          <div class="best-for-item best-for-item--yes">
-            <span class="bfi-icon">✓</span>
-            <div>
-              <p class="bfi-label">People who refuse subscriptions on principle</p>
-              <p class="bfi-desc">Three years in, Aorkuler has cost you $249.99 and a cellular tracker has cost you roughly $400–450. If that math is the deciding factor, this is the category winner.</p>
-            </div>
-          </div>
-          <div class="best-for-item best-for-item--yes">
-            <span class="bfi-icon">✓</span>
-            <div>
-              <p class="bfi-label">Owners of a dog with a recall problem, not an escape problem</p>
-              <p class="bfi-desc">If your dog disappears into the treeline on walks and comes back eventually, this shortens the search. Natalie found Rhys quickly with it and would buy one.</p>
-            </div>
-          </div>
-          <div class="best-for-item best-for-item--no">
-            <span class="bfi-icon bfi-icon--no">✗</span>
-            <div>
-              <p class="bfi-label">Anyone who needs to be told their dog is gone</p>
-              <p class="bfi-desc">There are no geofences and no alerts. The controller sits in a drawer until you pick it up, by which point you already know. That is Fi's job.</p>
-            </div>
-          </div>
-          <div class="best-for-item best-for-item--no">
-            <span class="bfi-icon bfi-icon--no">✗</span>
-            <div>
-              <p class="bfi-label">Dense suburban and urban searching</p>
-              <p class="bfi-desc">This is the concrete reason for the rural-versus-city split. The arrow points straight through fenced campuses, walled developments and freeways. You can work around that with local knowledge, but a map tracker shows you the barrier and this does not.</p>
-            </div>
-          </div>
-          <div class="best-for-item best-for-item--no">
-            <span class="bfi-icon bfi-icon--no">✗</span>
-            <div>
-              <p class="bfi-label">Small dogs</p>
-              <p class="bfi-desc">The collar unit is light, but it is not small. Rhys ignored it; Rhys is not a small dog. On a small neck it is a lot of plastic, and we would want to see it on the collar before buying.</p>
-            </div>
-          </div>
-          <div class="best-for-item best-for-item--no">
-            <span class="bfi-icon bfi-icon--no">✗</span>
-            <div>
-              <p class="bfi-label">Hunters and working-dog handlers</p>
-              <p class="bfi-desc">Multi-dog tracking at genuine distance with maps on the handheld is Garmin territory, and in our suburban drive test the Aorkuler's live link dropped under 1,000 feet.</p>
-            </div>
-          </div>
-          <div class="best-for-item best-for-item--no">
-            <span class="bfi-icon bfi-icon--no">✗</span>
-            <div>
-              <p class="bfi-label">Anyone who wants location history or sharing</p>
-              <p class="bfi-desc">No app means no map, no breadcrumb trail, and no way for a second person to help search from their phone.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Comparisons -->
-    <section class="content-section content-section--alt" id="comparisons">
-      <div class="section-inner">
-        <h2>Aorkuler vs Fi, Garmin, and AirTag</h2>
-        <p class="section-body">
-          These are not four versions of the same product, so there is no single winner.
-          But there is a clear winner in each situation, and in one of them it is the
-          Aorkuler outright.
-        </p>
-
-        <div class="verdict-grid">
-          <div class="verdict-card verdict-card--win">
-            <p class="vc-scenario">Subscription-free tracking under $300</p>
-            <p class="vc-winner">Aorkuler wins</p>
-            <p class="vc-body">
-              Nothing else in this comparison does it. Fi structurally cannot — the
-              subscription <em>is</em> the network. A Garmin Alpha system does it, but
-              the collar and handheld together cost multiples of this. If "no monthly
-              bill, works without cell service, under $300" is your brief, Aorkuler is
-              the answer and it is not particularly close. The cost is the screen: you
-              get a bearing and a distance, never a map, so you supply the knowledge of
-              what lies between you and the dog.
-            </p>
-          </div>
-          <div class="verdict-card">
-            <p class="vc-scenario">Suburban dog, escape alerts, phone in your pocket</p>
-            <p class="vc-winner">Fi wins</p>
-            <p class="vc-body">
-              Fi pushes you a notification the moment your dog crosses a geofence, shows
-              a live map with the streets, fences and freeways between you and the dog,
-              and needs nothing in your hand. Aorkuler offers none of that: its arrow
-              points straight through whatever is in the way, and in a fenced-up suburb
-              that gap matters at least as much as the alerts. If you have LTE where
-              your dog actually goes, this is not a close call either. See our <a href={ROUTES.fiCollarReview} data-track="collector_to_converter_click" data-from-page={pageSlug} data-to-page={ROUTES.fiCollarReview} data-link-position="comparisons">Fi collar review</a>.
-            </p>
-          </div>
-          <div class="verdict-card">
-            <p class="vc-scenario">Backcountry, multiple dogs, real distance</p>
-            <p class="vc-winner">Garmin wins</p>
-            <p class="vc-body">
-              Miles of VHF range, up to 20 dogs, maps on the handheld. It costs several
-              times as much and is a more complicated system to learn, but it is the
-              proven option at distance — and distance is where the Aorkuler's live link
-              gave out in our suburban drive test. See <a href={ROUTES.garminTracking} data-track="collector_to_converter_click" data-from-page={pageSlug} data-to-page={ROUTES.garminTracking} data-link-position="comparisons">Garmin off-grid systems</a>.
-            </p>
-          </div>
-          <div class="verdict-card">
-            <p class="vc-scenario">A cheap backup layer in a city</p>
-            <p class="vc-winner">AirTag wins, on price</p>
-            <p class="vc-body">
-              Different category: a crowd-sourced item finder that only updates when
-              someone else's iPhone walks past. Useless in a field, occasionally
-              brilliant in a dense neighborhood. See <a href={ROUTES.airtagForDogs} data-track="collector_to_converter_click" data-from-page={pageSlug} data-to-page={ROUTES.airtagForDogs} data-link-position="comparisons">AirTags for dogs</a>.
-            </p>
-          </div>
-        </div>
-
-        <h3>The no-subscription math</h3>
-        <p class="spec-note">
-          Manufacturer-published pricing, checked {CLAIMS_CHECKED}. Subscription costs
-          move; verify before you buy. The Garmin figure is its suggested retail price for
-          the Alpha 300i handheld and one TT 25 collar bought separately.
-        </p>
-        <div class="table-wrap">
-          <table class="cost-table">
-            <thead>
-              <tr>
-                <th scope="col">Tracker</th>
-                <th scope="col">Year 1</th>
-                <th scope="col">3-year total</th>
-                <th scope="col">Ongoing fees</th>
-              </tr>
-            </thead>
-            <tbody>
-              {costRows.map((row) => (
-                <tr class={row.us ? 'cost-row--highlight' : undefined}>
-                  <th scope="row">{row.tracker}</th>
-                  <td>{row.year1}</td>
-                  <td>{row.year3}</td>
-                  <td>{row.ongoing}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <p class="section-body">
-          A cellular tracker is cheaper to walk out of the store with and roughly $150–200
-          more expensive by year three. A Garmin handheld and collar carry no
-          subscription either, but cost nearly five times as much up front. Which is
-          better value depends entirely on whether the things Aorkuler cannot do — alert
-          you, or show you a map — are things you need.
-        </p>
-
-        <div class="comparison-cta">
-          <p class="comparison-cta-text">Compare every tracker type side by side:</p>
-          <a
-            href={ROUTES.trackingTop}
-            class="ui-cta"
-            data-track="collector_to_converter_click"
-            data-from-page={pageSlug}
-            data-to-page={ROUTES.trackingTop}
-            data-link-position="comparisons-bottom"
-          >
-            Full GPS Tracker Comparison →
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Verdict -->
-    <section class="content-section" id="verdict">
-      <div class="section-inner">
-        <h2>Verdict: Is the Aorkuler Worth It?</h2>
-
-        <ReviewRating
-          value={RATING}
-          label="Final rating"
-          summary="This is the same number our review markup carries. It takes in the suburban drive test described in the field-test section; an open-terrain range test is still to do."
-        />
-
-        <p class="section-body">
-          Yes, for the right buyer, and the right buyer is narrower than the marketing
-          suggests. The Aorkuler is a rugged, genuinely subscription-free finder that
-          works where cellular collars do not, and the hardware — the case, the sealed
-          housing, the collar clasp, the fit in the hand — reads as more than the price.
-          Two people with no instructions worked out how to use it in a park and found a
-          dog with it, and a week later one of them found the same dog cold, from a car,
-          in a suburb. Natalie wanted to give it five stars. We would not go below four.
-        </p>
-        <p class="section-body">
-          The reason it is four and a half and not five is how little the screen tells
-          you. The display goes red and keeps counting, with one tiny icon to say the
-          link is down, leaving you unsure what the distance is measuring. There is no map, so the arrow points through fences and freeways.
-          The arrow lags, and sent us the wrong way until it corrected. The collar unit
-          is bulky on a small dog. Then the charger, the near-inaudible beeper and the
-          standby drain. Every one of those is manageable once you know it is coming, and
-          none of them stopped us finding Rhys — which is why the score is as high as
-          it is. But a finder you have to interpret is a slower finder, and that is
-          friction worth knowing about before you buy.
-        </p>
-
-        <h3>What we did not test</h3>
-        <ul class="limits-list">
-          <li>
-            <strong>Range in open terrain.</strong> Our drive test was in a suburb,
-            with buildings in the way throughout, and the live link dropped under 1,000
-            feet. We have not
-            tested the 3.5-mile claim on open ground, which is where Aorkuler says it
-            applies
-          </li>
-          <li>Whether the distance stays right when Rhys moves while the arrow is red</li>
-          <li>The IP67 rating — our unit never went in water</li>
-            <li>Battery life from full to empty, on either unit</li>
-          <li>The $379.99 Double Dog Kit and switching between two trackers</li>
-          <li>Cold-weather performance, or use under heavy tree canopy</li>
-        </ul>
-
-        <div class="callout callout--warning">
-          <p class="callout-heading">No tracker is a safety plan</p>
-          <p class="callout-body">
-            A tracker shortens a search. It does not replace an ID tag with a current
-            phone number, a registered microchip, recall training, a secure collar and
-            leash, a fence you have actually checked, or supervision. If your dog is
-            already missing, start with
-            <a href={ROUTES.dogRanAwaySafety}>what to do if your dog runs away</a>.
-          </p>
-        </div>
-
-        <div class="buy-stack">
-          <AffiliateOfferStack
-            offers={offers}
-            product={{ id: aorkuler.id, name: aorkuler.name, category: aorkuler.type }}
-            pageType="collector"
-            pageSlug={pageSlug}
-            position="verdict"
-          />
-        </div>
-      </div>
-    </section>
-
     <!-- FAQ -->
     <section id="faq">
       <FAQ faqs={faqs} heading="Aorkuler GPS Dog Tracker FAQ" />
@@ -1063,38 +787,24 @@ const reviewSchema = buildReviewSchema({
     margin-bottom: var(--space-lg);
   }
 
-  .spec-table,
-  .cost-table {
+  .spec-table {
     width: 100%;
     border-collapse: collapse;
     font-size: var(--text-sm);
   }
 
   .spec-table th,
-  .spec-table td,
-  .cost-table th,
-  .cost-table td {
+  .spec-table td {
     border: 1px solid var(--color-border);
     padding: var(--space-sm) var(--space-md);
     text-align: left;
     vertical-align: top;
   }
 
-  .spec-table th[scope='row'],
-  .cost-table th[scope='row'] {
+  .spec-table th[scope='row'] {
     width: 34%;
     background: var(--color-bg-alt);
     font-weight: var(--weight-bold);
-  }
-
-  .cost-table thead th {
-    background: var(--color-bg-alt);
-    font-weight: var(--weight-bold);
-  }
-
-  .cost-row--highlight td,
-  .cost-row--highlight th[scope='row'] {
-    background: rgba(247, 166, 0, 0.12);
   }
 
   /* ── Screen legend ─────────────────────────────────────────── */
@@ -1148,125 +858,6 @@ const reviewSchema = buildReviewSchema({
     max-width: var(--max-width-prose);
   }
 
-  /* ── Pros & cons ───────────────────────────────────────────── */
-  .pros-cons-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-    gap: var(--space-lg);
-    margin-bottom: var(--space-2xl);
-  }
-
-  .pros-card,
-  .cons-card {
-    background: var(--color-bg);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    padding: var(--space-lg);
-  }
-
-  .pros-heading,
-  .cons-heading {
-    font-size: var(--text-lg);
-    font-weight: var(--weight-bold);
-    margin-bottom: var(--space-md);
-  }
-
-  .verdict-list {
-    margin: 0;
-    padding-left: var(--space-lg);
-    line-height: var(--leading-relaxed);
-  }
-
-  .verdict-list li {
-    margin-bottom: var(--space-xs);
-  }
-
-  .verdict-list--pros li::marker {
-    content: '✓  ';
-    color: #2e7d32;
-  }
-
-  .verdict-list--cons li::marker {
-    content: '✗  ';
-    color: #c0392b;
-  }
-
-  /* ── Best for ──────────────────────────────────────────────── */
-  .best-for-list {
-    display: grid;
-    gap: var(--space-md);
-  }
-
-  .best-for-item {
-    display: grid;
-    grid-template-columns: 1.75rem 1fr;
-    gap: var(--space-md);
-    padding: var(--space-md);
-    border-radius: var(--radius-md);
-    background: var(--color-bg);
-    border: 1px solid var(--color-border);
-  }
-
-  .bfi-icon {
-    font-weight: var(--weight-bold);
-    color: #2e7d32;
-  }
-
-  .bfi-icon--no {
-    color: #c0392b;
-  }
-
-  .bfi-label {
-    font-weight: var(--weight-bold);
-    margin-bottom: var(--space-xs);
-  }
-
-  .bfi-desc {
-    margin: 0;
-    color: var(--color-text-muted);
-    line-height: var(--leading-relaxed);
-  }
-
-  /* ── Scenario verdicts ─────────────────────────────────────── */
-  .verdict-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
-    gap: var(--space-lg);
-    margin-bottom: var(--space-2xl);
-  }
-
-  .verdict-card {
-    background: var(--color-bg);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    padding: var(--space-lg);
-  }
-
-  .verdict-card--win {
-    border-color: #f7a600;
-    border-left: 4px solid #f7a600;
-  }
-
-  .vc-scenario {
-    font-size: var(--text-sm);
-    color: var(--color-text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: var(--space-xs);
-  }
-
-  .vc-winner {
-    font-size: var(--text-lg);
-    font-weight: var(--weight-bold);
-    margin-bottom: var(--space-sm);
-  }
-
-  .vc-body {
-    margin: 0;
-    color: var(--color-text-muted);
-    line-height: var(--leading-relaxed);
-  }
-
   /* ── RF steps ──────────────────────────────────────────────── */
   .rf-steps {
     list-style: decimal;
@@ -1278,29 +869,5 @@ const reviewSchema = buildReviewSchema({
 
   .rf-steps li {
     margin-bottom: var(--space-sm);
-  }
-
-  /* ── Limits ────────────────────────────────────────────────── */
-  .limits-list {
-    list-style: disc;
-    max-width: var(--max-width-prose);
-    padding-left: var(--space-lg);
-    line-height: var(--leading-relaxed);
-    margin-bottom: var(--space-lg);
-  }
-
-  .limits-list li {
-    margin-bottom: var(--space-xs);
-  }
-
-  /* ── Comparison CTA ────────────────────────────────────────── */
-  .comparison-cta {
-    margin-top: var(--space-xl);
-    text-align: center;
-  }
-
-  .comparison-cta-text {
-    margin-bottom: var(--space-sm);
-    color: var(--color-text-muted);
   }
 </style>
