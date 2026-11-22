@@ -29,6 +29,7 @@ import imgRhysPlay from '../../images/watermarked/aorkuler/aorkuler-rhys-play.jp
 import imgRhysLookingBack from '../../images/watermarked/aorkuler/aorkuler-rhys-looking-back.jpg';
 import imgChargeContacts from '../../images/watermarked/aorkuler/aorkuler-charging-contacts.jpg';
 import imgChargeAttached from '../../images/watermarked/aorkuler/aorkuler-charging-attached.jpg';
+import imgLightAlarm from '../../images/watermarked/aorkuler/aorkuler-light-alarm-night.jpg';
 import imgStrapOffDog from '../../images/watermarked/aorkuler/aorkuler-strap-off-dog.jpg';
 import imgStrapOffDogBack from '../../images/watermarked/aorkuler/aorkuler-strap-off-dog-back.jpg';
 import imgRangeDrive from '../../images/watermarked/aorkuler/aorkuler-range-drive-display.jpg';
@@ -621,13 +622,10 @@ const reviewSchema = buildReviewSchema({
           close-range tools. The light alarm flashes two yellow pulses followed by red.
           At dusk, in tall grass, a flashing unit on a dog is genuinely useful.
         </p>
-        <ImagePlaceholder
-          id="LIGHT-ALARM-DUSK"
-          title="The light alarm firing at dusk"
-          shot="Tracker on the dog, low light, far enough back that the flash reads against the coat rather than filling the frame — the point is whether you could pick it out at distance. Needs a real dusk shoot; daylight will not show it."
-          caption="The light alarm at dusk. This is the one of the two alarms that does real work."
-          alt="Aorkuler tracker flashing on a dog's collar in low evening light"
-        />
+        <figure class="article-photo">
+          <Image src={imgLightAlarm} alt="Aorkuler tracker glowing blue on the collar of Rhys, sitting on a patio at night" width={620} quality={80} />
+          <figcaption>The light alarm at night. This is the one of the two alarms that does real work.</figcaption>
+        </figure>
 
         <p class="section-body">
           The sound alarm is faint. We could hear it from five to ten feet away,
