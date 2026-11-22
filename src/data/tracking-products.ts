@@ -312,7 +312,7 @@ export const trackerProducts: TrackerProduct[] = [
     },
     image: {
       src: '/images/products/aorkuler-pet-tracker.jpg',
-      alt: 'Aorkuler handheld controller showing a tracking screen at 501.2 feet during our field test',
+      alt: 'Aorkuler handheld controller showing a green direction arrow at 104.6 feet during our field test',
     },
   },
   // ── Bluetooth ─────────────────────────────────────────────────────────────
