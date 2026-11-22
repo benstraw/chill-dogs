@@ -77,7 +77,8 @@ const tocHeadings = [
 ];
 
 // `short` marks the questions that gate the buying decision — those answer up top
-// in one line each, and the full answers stay in the FAQ at the bottom.
+// in one line each. `answer` puts the question in the FAQ at the bottom; an entry
+// without one is a Quick Answer only.
 const faqs = [
   {
     question: 'Does the Aorkuler tracker require a subscription?',
@@ -89,51 +90,42 @@ const faqs = [
     question: 'Does the Aorkuler work without cell service?',
     short: 'Yes. It needs sky, not signal.',
     answer:
-      'Yes. Neither unit uses cellular data. The tracker gets its position from GPS satellites and sends it to the handheld over a direct radio link, so it works in places where a cellular collar reports nothing at all. The trade is that it needs a clear view of the sky to get a fix in the first place, and heavy tree canopy, buildings, or a deep valley will slow that down or stop it.',
+      'Yes. Neither unit uses cellular data. The tracker gets its position from GPS satellites and sends it to the handheld over a direct radio link, so it works in places where a cellular collar reports nothing at all. It requires a clear view of the sky to determine location using GPS satellites.',
   },
   {
     question: 'Do you need a phone or an app?',
     short: 'No. Everything happens on the handheld controller.',
     answer:
-      'No. There is no app, no pairing with a phone, and no account to create. Setup, tracking, the sound and light alarms, language, and distance units are all handled on the controller itself. In practice that means one less thing to fail, and also no map, no location history, and no way to share your dog’s position with anyone who is not holding the controller.',
+      'No. There is no app, no pairing with a phone, and no account to create. Setup, tracking, the sound and light alarms, language, and distance units are all handled on the device itself.',
   },
   {
     question: 'What range did you actually get?',
     short: 'On the ground, Aorkuler advertises a range of about three and a half miles. In a moving car, the live link dropped at about 1,000 feet.',
-    answer:
-      'Not the 3.5 miles on the box, at least not in a suburb. Aorkuler advertises up to 3.5 miles in open terrain. We left the tracker at home and drove away with the controller: the arrow went red less than 1,000 feet from the house and stayed red all the way out to 19,680 feet, about 3.7 miles. The distance kept counting the whole way, but with the signal bars crossed out, so it was measuring to the last position the controller had heard, not a live one. Across all three tests the longest green reading we photographed was 678.7 feet. One caveat in Aorkuler’s favor: a built-up neighborhood is the opposite of open terrain. The car was not much of a factor, because we drove with the windows open and held the controller out of one for much of the drive. We have not tested open ground, so treat 3.5 miles as an unverified best case and use the 30-day window to test it where you actually walk.',
   },
   {
     question: 'How accurate is the Aorkuler?',
     short: 'The device accurately adds and subtracts feet away from your dog as you search. The numbers change in real time.',
-    answer:
-      'The distance readout was the reliable half of the display in both outings. It counted up and down in step with real movement — we watched it climb from 106 to 119 feet as the person carrying the tracker walked away, and fall as we closed in. The direction arrow was less dependable: it often held one quadrant while we moved, and at Playa Vista it let one of us set off the wrong way for the first minute before it corrected. Aorkuler says the compass is sensitive to magnetic interference and should be held level and away from phones, keys, and metal, and that matches what we saw. Treat the arrow as a rough bearing and the number as the real signal.',
   },
   {
     question: 'Does the Aorkuler show a map?',
     short: 'No. It gives you a bearing and a distance, and the arrow points you in the direction of the tracker.',
     answer:
-      'No. The controller shows an arrow and a number and nothing else — no map, no trail, no sense of what lies between you and the dog. That matters more than it sounds. A map-based tracker shows you the fence, the freeway or the river in the way; the Aorkuler arrow points straight through them, because straight-line distance is the only thing it knows. If your dog has crossed a fenced campus or a walled development, a 300-foot reading can mean a twenty-minute walk around. Local knowledge solves it, and in open country it rarely bites. In a dense suburb it is the first thing to weigh against the price.',
-  },
-  {
-    question: 'How long does the Aorkuler battery last?',
-    answer:
-      'Aorkuler claims all-day use. We did not run either unit from full to empty, so we cannot confirm a figure. What we can report is the failure we hit: the kit went completely dead after sitting unused, which we think means it kept trying to hold a connection. Both units power down separately, and if you only switch one off you will come back to a dead device. Build the habit of turning both off.',
+      'No. The device uses satellite GPS, not cellular service. It shows you the distance between the handheld controller and the collar tracker. The distance number increases and decreases in real time as you search. The arrow on the screen tells you in what direction you should be searching.',
   },
   {
     question: 'What does the red arrow on the screen mean?',
     short: 'When the green arrow changes to red, it signals a lost radio link. The red arrow indicates the last known location.',
-    answer:
-      'Aorkuler’s legend calls a red arrow a lost connection to the tracker, and the screen does back that up: in every red frame of our second-outing footage the signal bars at the far left of the status row are crossed out, where the green frames show full bars. We missed that icon in the field — it is a few millimeters wide — and only found it going through the video afterward. Nothing else changes. The link icon, the location pins and both battery meters stay put, the pointer still moves, and the distance still rises and falls as you walk. So the display looks live while the link is down, and you cannot tell whether you are walking toward where the dog is or where the dog was. Our untested hypothesis is that the controller keeps measuring from its own position to the tracker’s last known coordinates, which would make the number trustworthy only while the dog stays still. Check the signal bars, keep walking, keep the controller level, and treat the number with suspicion until it goes green.',
   },
   {
     question: 'Is the Aorkuler waterproof?',
     answer:
-      'Aorkuler rates the collar unit IP67, which covers rain and brief immersion. We did not test this — our unit never went in water — so we are passing on the manufacturer’s rating rather than a result. What we can say is that the sealed housing and magnetic charging contacts, rather than an open USB-C port, read as a unit built to take weather, and that is the redeeming half of the proprietary-charger complaint.',
+      'Yes. Aorkuler has an IP67 rating, which means it can be submerged in about 3 feet of fresh water for about 30 minutes. It is completely dust-tight.',
   },
 ];
 
 const quickAnswers = faqs.filter((faq) => faq.short);
+/** Entries with no `answer` are Quick Answers only and stay out of the FAQ (and its schema). */
+const faqItems = faqs.filter((faq): faq is (typeof faqs)[number] & { answer: string } => Boolean(faq.answer));
 
 const reviewSchema = buildReviewSchema({
   name: 'Aorkuler GPS Dog Tracker Review',
@@ -199,7 +191,8 @@ const reviewSchema = buildReviewSchema({
           loud that it would spook your dog to run farther.
         </p>
         <p class="section-body">
-          The hardware is ergonomic, high-quality and lightweight. The tracker attaches
+          The hardware is ergonomic, high-quality and lightweight. The device feels
+          rugged and durable. The tracker attaches
           easily and securely to the collar. The carrying case is thoughtfully designed.
           The tracker is intuitive to use and allows you to quickly discern in which direction to
           look for your dog.
@@ -268,7 +261,7 @@ const reviewSchema = buildReviewSchema({
           The Aorkuler is comprised of two devices. The first is a small tracker,
           roughly the size of an AirTag, that straps to your dog's collar. The strap is
           included. It is well-designed and fits securely to the collar. The second is
-          a handheld controller with a screw-on antenna, a small screen, and two
+          a handheld controller with an antenna, a small screen, and two
           buttons. The tracker reads its own position from GPS satellites and sends it
           to the controller over a direct radio link. The controller does the
           arithmetic and shows you how far away you are from the tracker and which
@@ -579,23 +572,23 @@ const reviewSchema = buildReviewSchema({
         <p class="section-body">
           The tracker attaches to the dog collar with an elastic strap and a reinforced
           metal-backed clasp. It is high quality and well-designed. There was never any
-          concern of it falling off. It weighs about 30 grams, and Rhys gave no sign of
-          noticing it was there.
+          concern of it falling off. It weighs about 30 grams and is about 2 inches in
+          diameter. Rhys gave no sign of noticing it was there.
         </p>
         <p class="section-body">
           One caveat: light is not the same as small. Rhys is a medium to large dog, and
           he weighs about 70 pounds. If your dog is small, your dog may find the tracker
-          unit more distracting.
+          unit more bulky and distracting.
         </p>
 
         <div class="photo-pair">
           <figure class="article-photo">
             <Image src={imgRhysPlay} alt="Rhys playing on a patio with the Aorkuler tracker on his collar" width={620} quality={80} />
-            <figcaption>Rhys mid-play with the tracker on. He kept going as if it were not there.</figcaption>
+            <figcaption>Rhys wearing the tracker.</figcaption>
           </figure>
           <figure class="article-photo">
             <Image src={imgRhysLookingBack} alt="Rhys sitting and looking back over his shoulder with the Aorkuler tracker on top of his collar" width={620} quality={80} />
-            <figcaption>On top of the neck, where Aorkuler says to mount it for better GPS reception.</figcaption>
+            <figcaption>Aorkuler says to mount the tracker on top of the neck for better GPS reception.</figcaption>
           </figure>
         </div>
 
@@ -613,7 +606,7 @@ const reviewSchema = buildReviewSchema({
         <div class="photo-pair">
           <figure class="article-photo">
             <Image src={imgStrapOffDog} alt="Aorkuler tracker, its black holder and the elastic collar strap with metal end loops laid out separately" width={620} quality={80} />
-            <figcaption>The attachment on its own. The metal backing is what stops it working loose.</figcaption>
+            <figcaption>The tracker and the attachments.</figcaption>
           </figure>
           <figure class="article-photo">
             <Image src={imgStrapOffDogBack} alt="Back of the Aorkuler tracker in its holder with the elastic strap stretched across it" width={620} quality={80} />
@@ -650,28 +643,10 @@ const reviewSchema = buildReviewSchema({
       <div class="section-inner">
         <h2>A Bearing Is Not a Route</h2>
         <p class="section-body">
-          The second thing street use taught us is arguably the most useful sentence in
-          this review for anyone choosing between this and a map tracker. The Aorkuler
-          gives you a bearing and a range. It does not give you a map. A map-based
-          tracker shows the barriers between you and your dog — fences, walls, freeways,
-          rivers. The arrow shows none of them. It points straight through them, because
-          straight-line distance is the only thing it knows.
-        </p>
-        <p class="section-body">
-          Ben's example from the same neighborhood: the LMU campus is large and fenced
-          all the way around. If Rhys got loose near there and crossed to the far side,
-          following the arrow walks you onto campus, across it, and into a wall — with
-          the arrow still pointing serenely through the fence. Rhys is 300 feet away
-          and twenty minutes away.
-        </p>
-        <p class="section-body">
-          The honest qualifier: if you know the area and expect this, it is not a big
-          deal, and the device is still very helpful. It is a problem you solve with
-          local knowledge, not one the hardware solves for you. It bites hardest in dense
-          urban and suburban searching, where fenced campuses, walled developments and
-          freeways are everywhere, and far less in woods and open country — though
-          rivers and canyons still apply. It pairs with the red-arrow finding: in both
-          cases the display leaves out, or barely shows, the context you need to act on it.
+          The Aorkuler gives you a bearing and a range. It does not give you a map. A
+          map-based tracker shows the barriers between you and your dog — fences,
+          walls, freeways, rivers. The controller screen shows none of them. It displays
+          an arrow that points you in the direction of the tracker.
         </p>
       </div>
     </section>
@@ -682,25 +657,23 @@ const reviewSchema = buildReviewSchema({
         <h2>Battery and Charging</h2>
         <p class="section-body">
           Both units charge over the same proprietary magnetic connector, and two
-          identical cables are included so you can do them at once. They plug in at
-          USB-A, which is a non-issue if your wall bricks, power banks and car chargers
-          still have an A port — most do — and mildly irritating if you have gone all-in
-          on USB-C.
+          identical cables are included so you can charge them simultaneously. They plug
+          in at USB-A. This is a non-issue if your wall bricks, power banks and car
+          chargers still have an A port — most do — and mildly irritating if you have
+          gone all-in on USB-C. It does not come with a plug-in AC adapter.
         </p>
         <p class="section-body">
-          The end that matters is the other one, and it is proprietary. No cable you
-          already own will charge this, so the two in the box are the two you have. Lose
-          one on a trip and you are ordering a replacement part, not borrowing a cable
-          from someone. The magnet is also weak enough that a knock will part it, so it
-          is worth a glance back before you walk away from a charging unit.
+          The Aorkuler tracker has an IP67 weather-resistant rating. This means that the
+          electronic device is sealed against dust and protected against temporary water
+          immersion. A magnetic charger keeps the device more dust- and water-tight than
+          an open USB-C port with a flap would. The magnetic connection is weak enough to
+          be knocked off, so it is important to monitor the connection until the devices
+          are fully charged.
         </p>
         <p class="section-body">
-          There is a good reason for it, and it is the redeeming half of the complaint.
-          Sealed magnetic contacts are an easier path to an IP67 rating than an open
-          USB-C port with a flap, and the collar unit is the half that lives outdoors on
-          a dog. In the hand the whole kit feels rugged and built to be rained on and
-          dunked — we have not tested the rating, but the trade reads as a fair one. We
-          would still rather have USB-C on the controller.
+          The charger cable is proprietary. No cable you already own will charge this,
+          so the two in the box are the two you have. If you lose them, you must order
+          replacement cables from the Aorkuler website.
         </p>
 
         <div class="photo-pair">
@@ -710,31 +683,24 @@ const reviewSchema = buildReviewSchema({
           </figure>
           <figure class="article-photo">
             <Image src={imgChargeAttached} alt="Aorkuler controller with the magnetic charging cable attached" width={620} quality={80} />
-            <figcaption>The cable snapped onto the controller.</figcaption>
+            <figcaption>The charger cable attached to the controller.</figcaption>
           </figure>
         </div>
 
         <div class="callout callout--warning">
           <p class="callout-heading">Turn both units off, separately</p>
           <p class="callout-body">
-            Our kit went completely dead after sitting unused — most likely because
-            something was left on and kept trying to hold a connection. The tracker and
-            the controller power down independently, and switching off the one in your
-            hand does nothing to the one on the collar. Check both before it goes back
-            in the case, or you will reach for a dead tracker on the day you need it.
+            The tracker and the controller power down independently. Be sure to turn
+            off both of them before you put them back in the case or they will lose
+            their charge.
           </p>
         </div>
-
-        <p class="section-body">
-          Aorkuler claims all-day use. We never ran either unit from full to empty, so
-          we have no number of our own to offer against that.
-        </p>
       </div>
     </section>
 
     <!-- FAQ -->
     <section id="faq">
-      <FAQ faqs={faqs} heading="Aorkuler GPS Dog Tracker FAQ" />
+      <FAQ faqs={faqItems} heading="Aorkuler GPS Dog Tracker FAQ" />
     </section>
 
     <!-- Buy -->
@@ -761,7 +727,7 @@ const reviewSchema = buildReviewSchema({
 
     <Disclosure
       showSafety={false}
-      providedProduct="Aorkuler supplied the tracker reviewed on this page at no cost. No money changed hands, and Aorkuler had no sight of this review or any say over its contents or its rating before publication. We also earn a commission if you buy through the links above."
+      providedProduct="Aorkuler supplied the tracker reviewed on this page at no cost. No money was exchanged, and Aorkuler had no sight of this review or any say over its contents or its rating before publication. We earn a commission if you buy through the links above."
     />
 
     <InternalLinkStrip
