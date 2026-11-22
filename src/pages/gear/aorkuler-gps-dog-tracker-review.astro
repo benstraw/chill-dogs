@@ -36,9 +36,11 @@ import imgRangeDrive18271 from '../../images/watermarked/aorkuler/aorkuler-range
 import imgRangeDrive19680 from '../../images/watermarked/aorkuler/aorkuler-range-drive-19680ft.jpg';
 
 const pageSlug = 'aorkuler-gps-dog-tracker-review';
+/**
+ * Not yet published: set to the day PR #401 merges, here, in content-sitemap.ts and
+ * in the site-smoke publish-order fixture. No `dateModified` until a real post-launch revision.
+ */
 const pubDate = '2026-11-07';
-/** Second field test folded in; the red-arrow reading and the rating both changed. */
-const updatedDate = '2026-11-15';
 
 /**
  * One number, two consumers: the visible star block and the `Review` JSON-LD.
@@ -134,7 +136,6 @@ const reviewSchema = buildReviewSchema({
   path: ROUTES.aorkulerReview,
   rating: RATING,
   datePublished: pubDate,
-  dateModified: updatedDate,
   product: {
     name: 'Aorkuler Pet Tracker (Single Dog Kit)',
     brand: 'Aorkuler',
