@@ -21,7 +21,6 @@ const tocHeadings = [
   { label: 'Cellular Trackers', anchor: 'cellular' },
   { label: 'Off-Grid GPS Systems', anchor: 'off-grid' },
   { label: 'Bluetooth Tags', anchor: 'bluetooth' },
-  { label: 'Decision Guide', anchor: 'decision-guide' },
   { label: 'FAQ', anchor: 'faq' },
 ];
 
@@ -29,7 +28,7 @@ const faqs = [
   {
     question: 'What is the best GPS tracker for dogs?',
     answer:
-      'There is no single best — it depends on your environment. For cities and suburbs, a cellular tracker like Fi is the most practical choice. For hiking and wilderness, a Garmin off-grid system offers the longest range and most features without cell signal. If you want off-grid tracking without a subscription at a lower price, the Aorkuler kit is a one-time $249.99 purchase with shorter range and no map. AirTags are a budget backup layer, not a real GPS tracker.',
+      'There is no single best. It depends on your environment, how many dogs you want to be able to track at once, and whether you require a map or push alerts if your dog runs away.',
   },
   {
     question: 'Do I need a subscription for a dog GPS tracker?',
@@ -39,22 +38,17 @@ const faqs = [
   {
     question: 'Can a dog GPS tracker work without WiFi or cell service?',
     answer:
-      'Off-grid systems such as Garmin and Aorkuler use GPS satellites and a direct radio link to a handheld — they work without cell service or WiFi, anywhere you can see the sky. Cellular trackers (Fi, Garmin Alpha LTE in cellular mode) require LTE signal and stop reporting without it. Bluetooth tags require other devices nearby.',
+      'Off-grid systems such as Garmin and Aorkuler use GPS satellites and a direct radio link to a handheld controller. They work without cell service or WiFi, anywhere you can clearly see the sky. Cellular trackers (Fi, Garmin Alpha LTE in cellular mode) require LTE signal and stop reporting without it. Bluetooth tags require other Bluetooth devices nearby.',
   },
   {
     question: 'How accurate are dog GPS trackers?',
     answer:
-      'GPS accuracy for both cellular and Garmin systems is typically within 10–30 feet under open sky. Accuracy can degrade in dense tree cover, canyons, or areas with GPS interference. Bluetooth tags are not GPS and cannot give precise real-time location — they show approximate last-seen location only.',
+      'GPS accuracy for both cellular and Garmin systems is typically within 10–30 feet under open sky. Accuracy can degrade in dense tree cover, canyons, or areas with GPS interference. Bluetooth tags are not GPS and cannot give precise real-time location. They show approximate last-seen location only.',
   },
   {
     question: 'What is the range of a GPS dog tracker?',
     answer:
-      'Cellular trackers have no range limit — they report anywhere with LTE coverage, which can span hundreds of miles. Garmin off-grid systems have a line-of-sight radio range of up to 9 miles. Aorkuler advertises up to 3.5 miles in open terrain; in our suburban drive test its live link dropped at about 1,000 feet. Bluetooth tags update only when within Bluetooth range of a network device.',
-  },
-  {
-    question: 'Is Fi collar worth it?',
-    answer:
-      'For everyday city and suburban use, Fi is a well-regarded option: slim, lightweight, real-time tracking, escape alerts, and geofencing. The trade-off is a monthly subscription and no functionality in no-signal areas. If you regularly hike into remote terrain, you need to supplement Fi or switch to a different system for those trips.',
+      'Cellular trackers have no range limit. They report anywhere with LTE coverage, which can span hundreds of miles. Garmin off-grid systems have a line-of-sight radio range of up to 9 miles. Aorkuler has a range of up to 3.5 miles in open terrain. Bluetooth tags update only when within Bluetooth range of a network device.',
   },
 ];
 
@@ -84,9 +78,7 @@ const itemListSchema = {
   <Hero
     title="Best Dog GPS Trackers"
     subtitle="Cellular, Off-Grid, and Bluetooth:  Three categories that solve three different problems. Know the difference before you buy."
-    disclaimer="We earn a commission on purchases through our links. As an Amazon Associate, we earn from qualifying purchases."
-    primaryCta={{ label: 'Jump to Comparison', href: '#cellular' }}
-    secondaryCta={{ label: 'Decision Guide', href: '#decision-guide' }}
+    disclaimer="We earn a commission on purchases through our links. As an Amazon Associate and a Chewy Affiliate, we earn from qualifying purchases."
     pageSlug={pageSlug}
   />
 
@@ -97,28 +89,28 @@ const itemListSchema = {
       <div class="summary-inner">
         <h2 class="summary-heading">Quick Summary</h2>
         <p class="summary-body">
-          The single most important thing to understand about dog GPS trackers: <strong>different tools suit different environments.</strong> A cellular tracker is not a worse or better version of an off-grid tracker; they solve different problems. Before picking a product, identify your terrain.
+          A cellular tracker is not better or worse than an off-grid tracker. They solve different problems and suit different environments.
         </p>
         <div class="summary-cards">
           <div class="summary-card">
-            <p class="summary-card-label">City + suburbs</p>
-            <p class="summary-card-pick">Cellular (Fi, Halo, Garmin LTE)</p>
-            <p class="summary-card-why">Real-time LTE tracking; escape alerts; easy app</p>
+            <p class="summary-card-label">Cellular</p>
+            <p class="summary-card-pick">Fi, Halo, Garmin LTE</p>
+            <p class="summary-card-why">Real-time LTE tracking in cities and suburbs. Escape alerts. Cellphone app.</p>
           </div>
           <div class="summary-card">
-            <p class="summary-card-label">Hiking + wilderness</p>
-            <p class="summary-card-pick">Off-grid Garmin system</p>
-            <p class="summary-card-why">GPS + radio; works with zero cell signal</p>
+            <p class="summary-card-label">Off-grid Garmin system</p>
+            <p class="summary-card-pick">GPS + radio.</p>
+            <p class="summary-card-why">No cellular service needed. For hiking in the wilderness.</p>
           </div>
           <div class="summary-card">
-            <p class="summary-card-label">Budget backup</p>
-            <p class="summary-card-pick">AirTag or Tile</p>
-            <p class="summary-card-why">Not real GPS; city-only; crowd-sourced</p>
+            <p class="summary-card-label">Aorkuler kit</p>
+            <p class="summary-card-pick">Off-grid. Uses GPS satellites. No cellular service needed.</p>
+            <p class="summary-card-why">One $249.99 payment. No app or SIM.</p>
           </div>
           <div class="summary-card">
-            <p class="summary-card-label">No subscription, off-grid</p>
-            <p class="summary-card-pick">Aorkuler kit</p>
-            <p class="summary-card-why">One $249.99 payment; no app or SIM; bearing and distance only</p>
+            <p class="summary-card-label">AirTag or Tile</p>
+            <p class="summary-card-pick">Crowd-sourced tracking. Not GPS.</p>
+            <p class="summary-card-why">Low cost option for use in densely populated cities.</p>
           </div>
         </div>
       </div>
@@ -148,7 +140,7 @@ const itemListSchema = {
 
         <div class="section-note">
           <p>
-            <strong>When cellular trackers fail:</strong> These trackers go dark anywhere without LTE signal — remote trails, wilderness areas, rural land, and mountain terrain. If your dog runs away at a trail summit with no signal (as happened with Rhys on Cerro San Luis Obispo), a cellular tracker cannot help you. Read <a href={ROUTES.rhysRanAway} class="note-link">the full story</a> to understand the gap. Off-grid tracking no longer means Garmin money: the <a href={ROUTES.aorkulerReview} class="note-link">Aorkuler kit</a> is $249.99 with no plan.
+            <strong>When cellular trackers fail:</strong> These trackers go dark anywhere without LTE signal — remote trails, wilderness areas, rural land, and mountain terrain. If your dog runs away at a trail summit with no signal as happened with Rhys on Cerro San Luis Obispo, a cellular tracker cannot help you. Read <a href={ROUTES.rhysRanAway} class="note-link">the full story</a>.
           </p>
         </div>
 
@@ -174,7 +166,9 @@ const itemListSchema = {
           <span class="section-tag section-tag--offgrid">Off-Grid GPS</span>
           <h2>{trackerCategoryMeta['off-grid'].title}</h2>
         </div>
-        <p class="section-intro">{trackerCategoryMeta['off-grid'].intro}</p>
+        {trackerCategoryMeta['off-grid'].intro.split('\n\n').map((para) => (
+          <p class="section-intro">{para}</p>
+        ))}
 
         <div class="product-grid ui-grid ui-grid--2">
           {offGrid.map((product, i) => (
@@ -185,12 +179,6 @@ const itemListSchema = {
               amazonLabel={product.ctaLabel ?? 'Shop Alpha TT 25 Collar on Amazon'}
             />
           ))}
-        </div>
-
-        <div class="section-note">
-          <p>
-            <strong>Garmin or Aorkuler?</strong> Garmin is the serious backcountry system: up to 9 miles of line-of-sight range, maps on the handheld, and tracking for up to 20 dogs — at several times the price. Aorkuler is one $249.99 kit with no subscription, no app, and no SIM. It gives you a bearing and a distance, not a map. Aorkuler advertises up to 3.5 miles in open terrain; in our suburban drive test the live link dropped at about 1,000 feet. If your searches happen in a park, a campsite, or on rural property, the Aorkuler covers it for a fraction of the cost.
-          </p>
         </div>
 
         <p class="section-cta-line">
@@ -214,7 +202,7 @@ const itemListSchema = {
             data-to-page={ROUTES.aorkulerReview}
             data-link-position="offgrid-section"
           >
-            Read our hands-on Aorkuler review →
+            Read our Aorkuler review →
           </a>
         </p>
       </div>
@@ -232,7 +220,7 @@ const itemListSchema = {
         <div class="callout callout--note">
           <p class="callout-heading">Not GPS</p>
           <p class="callout-body">
-            AirTag and Tile do not use GPS satellites. They use Bluetooth crowd-sourcing — location updates only happen when another device in the network passes within Bluetooth range of the tag. In a neighborhood this can happen often. In remote terrain it may not happen at all.
+            AirTag and Tile do not use GPS satellites. They use Bluetooth crowd-sourcing. Location updates only happen when another device in the network passes within Bluetooth range of the tag. In a neighborhood this can happen often. In remote terrain it may not happen at all.
           </p>
         </div>
 
@@ -263,64 +251,10 @@ const itemListSchema = {
     </section>
 
     <!-- Decision Guide -->
-    <section class="tracker-section tracker-section--alt" id="decision-guide">
+    <section class="tracker-section tracker-section--alt" id="more-guides">
       <div class="section-inner">
-        <h2>Decision Guide: Which Tracker Fits Your Situation</h2>
-        <p class="section-intro">
-          Match your environment to the right category. The best tracker is the one that works where you actually are.
-        </p>
-
-        <div class="decision-table-wrap">
-          <table class="decision-table">
-            <thead>
-              <tr>
-                <th scope="col">Your situation</th>
-                <th scope="col">Recommended category</th>
-                <th scope="col">Key reason</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>City or suburban dog — daily walks, parks, urban areas</td>
-                <td>Cellular (Fi, Halo, Garmin LTE)</td>
-                <td>Real-time tracking; escape alerts; LTE coverage is reliable</td>
-              </tr>
-              <tr>
-                <td>Dog travels with you to parks with cell coverage</td>
-                <td>Cellular — check coverage maps first</td>
-                <td>Most campgrounds and popular parks have LTE, but verify before trip</td>
-              </tr>
-              <tr>
-                <td>Hiking into remote or wilderness areas</td>
-                <td>Off-grid Garmin system</td>
-                <td>Only technology that works without any cell signal</td>
-              </tr>
-              <tr>
-                <td>Hunting dog or field work in rural terrain</td>
-                <td>Off-grid Garmin system</td>
-                <td>Range, ruggedness, multi-dog tracking, no monthly fee</td>
-              </tr>
-              <tr>
-                <td>Want off-grid tracking but refuse a monthly subscription</td>
-                <td>Off-grid Aorkuler kit</td>
-                <td>One $249.99 payment; no app, SIM, or phone. Bearing and distance only, with no map or escape alerts</td>
-              </tr>
-              <tr>
-                <td>Budget-conscious; city dog; want a backup layer</td>
-                <td>Bluetooth tag (AirTag, Tile)</td>
-                <td>Affordable; passive; supplement to an existing collar, not a replacement</td>
-              </tr>
-              <tr>
-                <td>Mixed use — city most days, occasional hikes</td>
-                <td>Cellular for daily use + off-grid for backcountry trips</td>
-                <td>Two different tools for two different environments; Aorkuler is the lower-cost off-grid second tool</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
         <div class="related-guides">
-          <h3 class="related-guides-heading">Go deeper on each category</h3>
+          <h3 class="related-guides-heading">See More In Each Category</h3>
           <div class="related-guide-links">
             <a
               href={ROUTES.fiCollarReview}
@@ -350,7 +284,7 @@ const itemListSchema = {
               data-to-page={ROUTES.aorkulerReview}
               data-link-position="decision-guide-related"
             >
-              Aorkuler Review — subscription-free off-grid tracking, tested
+              Aorkuler Review — subscription-free off-grid tracking
             </a>
             <a
               href={ROUTES.airtagForDogs}
@@ -360,7 +294,7 @@ const itemListSchema = {
               data-to-page={ROUTES.airtagForDogs}
               data-link-position="decision-guide-related"
             >
-              AirTag for Dogs — honest assessment of Bluetooth tags
+              AirTag for Dogs — Crowd-sourced Bluetooth Tracking
             </a>
           </div>
         </div>
@@ -577,44 +511,9 @@ const itemListSchema = {
     text-decoration: underline;
   }
 
-  /* Decision table */
-  .decision-table-wrap {
-    overflow-x: auto;
-    margin-bottom: var(--space-xl);
-  }
-
-  .decision-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: var(--text-sm);
-    min-width: 560px;
-  }
-
-  .decision-table th {
-    background: var(--color-surface);
-    font-weight: var(--weight-semibold);
-    text-align: left;
-    padding: var(--space-sm) var(--space-md);
-    border-bottom: 2px solid var(--color-border);
-  }
-
-  .decision-table td {
-    padding: var(--space-sm) var(--space-md);
-    border-bottom: 1px solid var(--color-border);
-    vertical-align: top;
-    line-height: var(--leading-normal);
-    color: var(--color-text-muted);
-  }
-
-  .decision-table td:first-child {
-    font-weight: var(--weight-medium);
-    color: var(--color-text);
-    max-width: 260px;
-  }
-
   /* Related guides */
   .related-guides {
-    margin-top: var(--space-xl);
+    margin-top: 0;
   }
 
   .related-guides-heading {
