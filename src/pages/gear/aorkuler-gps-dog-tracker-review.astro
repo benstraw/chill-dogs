@@ -68,7 +68,7 @@ const specs = [
 ];
 
 const tocHeadings = [
-  { label: 'Quick Verdict', anchor: 'quick-verdict' },
+  { label: 'Verdict', anchor: 'verdict' },
   { label: 'Quick Answers', anchor: 'quick-answers' },
   { label: 'What the Aorkuler Is', anchor: 'what-it-is' },
   { label: 'Unboxing and Setup', anchor: 'unboxing-setup' },
@@ -172,10 +172,10 @@ const reviewSchema = buildReviewSchema({
 
     <Toc headings={tocHeadings} pageSlug={pageSlug} />
 
-    <!-- Quick verdict -->
-    <section class="content-section" id="quick-verdict">
+    <!-- Verdict -->
+    <section class="content-section" id="verdict">
       <div class="section-inner">
-        <h2>Quick Verdict</h2>
+        <h2>Verdict</h2>
 
         <ReviewRating
           value={RATING}
@@ -273,7 +273,7 @@ const reviewSchema = buildReviewSchema({
           There is no cellular modem in either unit, so there is no app, no SIM, no
           network, and nothing to subscribe to. You do not need a cell phone to use it.
           With that in mind, it is a <em>finder</em>, not a monitor. A device like Fi
-          will text you the moment your dog leaves the yard. Aorkuler will help you find
+          will text you the moment your dog leaves the yard. Aorkuler will help you locate
           your dog once you already know they are gone.
         </p>
         <p class="section-body">
@@ -489,8 +489,8 @@ const reviewSchema = buildReviewSchema({
           number climbed as Rhys walked away and fell as we closed in.
         </p>
 
-        <figure class="article-photo article-photo--screenshot">
-          <Image src={imgGreen104} alt="Aorkuler controller showing 104.6 feet with a green direction arrow" width={900} quality={80} />
+        <figure class="article-photo article-photo--screenshot article-photo--portrait">
+          <Image src={imgGreen104} alt="Aorkuler controller showing 104.6 feet with a green direction arrow" width={620} quality={80} />
           <figcaption>
             The controller screen displays distance and direction to the tracker
           </figcaption>
@@ -857,6 +857,10 @@ const reviewSchema = buildReviewSchema({
   }
 
   /* ── Photos ────────────────────────────────────────────────── */
+  .article-photo--portrait {
+    max-width: 22rem;
+  }
+
   .photo-pair {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));

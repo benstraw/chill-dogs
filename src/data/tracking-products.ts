@@ -278,6 +278,7 @@ export const trackerProducts: TrackerProduct[] = [
     use_case: 'Off-leash recall gaps, rural property, camping, and anywhere without cell service',
     pros: [
       'No subscription, no SIM, and no phone app',
+      'Intuitive and easy to use',
       'Handheld controller works without cell service',
       'Distance readout updates in real time',
       'High quality, durable construction',
