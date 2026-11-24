@@ -66,6 +66,7 @@ History: on bun 1.3.11, Bun's `fetch` opened the tunnel and then failed the TLS 
 | `bun run check:asins` | none | `www.amazon.com` | **bun** |
 | `bun run check:ai-docs` | none | none | — |
 | `bun run admin:serve` | none | none — binds 127.0.0.1:4322, writes the repo | — |
+| `bun run newsletter:sync` | `BUTTONDOWN_API_KEY` (private; never `PUBLIC_`) | `api.buttondown.com` (read-only) | **bun** |
 | `bun run indexnow:submit` | `INDEXNOW_KEY` | `api.indexnow.org` | node |
 | `bun run fetch:chewy` | `IMPACT_ACCOUNT_SID`, Impact auth (see below), `CHEWY_IMPACT_CAMPAIGN_ID`, optional `CHEWY_IMPACT_CATALOG_ID` | `api.impact.com` | **bun** |
 | `bun run chewy-link` | `IMPACT_ACCOUNT_SID`, Impact auth (see below), `CHEWY_IMPACT_CAMPAIGN_ID`, `CHEWY_IMPACT_AD_ID` (or `CHEWY_IMPACT_BASE_URL` to skip the API) | `api.impact.com`, `www.chewy.com` | **bun** |
