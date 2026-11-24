@@ -12,7 +12,7 @@ import ReviewRating from '@components/modules/ReviewRating.astro';
 import ImagePlaceholder from '@components/modules/ImagePlaceholder.astro';
 import JsonLd from '@components/JsonLd.astro';
 import { getOffers } from '@data/products/offers';
-import { trackerProducts, AORKULER_DIRECT_URL } from '@data/tracking-products';
+import { trackerProducts, AORKULER_PRODUCT_URL } from '@data/tracking-products';
 import { buildReviewSchema } from '@utils/review-schema';
 import '@styles/article-components.css';
 
@@ -141,7 +141,7 @@ const reviewSchema = buildReviewSchema({
     name: 'Aorkuler Pet Tracker (Single Dog Kit)',
     brand: 'Aorkuler',
     image: aorkuler.image?.src,
-    offerUrl: AORKULER_DIRECT_URL,
+    offerUrl: AORKULER_PRODUCT_URL,
     price: '249.99',
   },
 });

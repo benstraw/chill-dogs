@@ -76,6 +76,7 @@ affiliate/amazon-associates-rules.md      # AffiliateLink.astro, tag, rel attrib
 affiliate/product-data-rules.md           # Data files, product catalog, check:amazon, check:asins
     ↓
 affiliate/disclosure-rules.md             # Where disclosure must appear
+affiliate/awin.md                         # Awin network: Aorkuler link, publisher id, how to add links
     ↓
 writing/converter-writing-guide.md        # Copy structure, length limits, anti-repetition rules
     ↓

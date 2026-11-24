@@ -48,11 +48,16 @@ export interface AccessoryProduct {
 }
 
 /**
- * TODO(ben): swap in the tracked URL from Aorkuler's partner program. Until then
- * this is the plain product page — the right destination, just no commission
- * attribution. One constant, one edit.
+ * Aorkuler sells through Awin (advertiser id 69556, our publisher id 3019981).
+ * `AORKULER_AWIN_URL` is the Awin deep link generated in Awin's Link Builder for
+ * the product page below; it is the click-through URL that earns commission.
+ * `AORKULER_PRODUCT_URL` is the raw page it lands on, used for structured data and
+ * as the offer's `canonicalUrl`. Deep links are per destination: a different
+ * Aorkuler page needs a new link from Awin's Link Builder (Toolbox > Link Builder).
  */
-export const AORKULER_DIRECT_URL = 'https://aorkuler.com/pages/pet-tracker';
+export const AORKULER_PRODUCT_URL = 'https://aorkuler.com/products/aorkuler-dog-gps-tracker';
+export const AORKULER_AWIN_URL =
+  'https://www.awin1.com/cread.php?awinmid=69556&awinaffid=3019981&ued=https%3A%2F%2Faorkuler.com%2Fproducts%2Faorkuler-dog-gps-tracker';
 
 export const trackerProducts: TrackerProduct[] = [
   // ── Cellular ──────────────────────────────────────────────────────────────
@@ -262,8 +267,8 @@ export const trackerProducts: TrackerProduct[] = [
     offers: [
       {
         merchant: 'aorkuler',
-        url: AORKULER_DIRECT_URL,
-        canonicalUrl: 'https://aorkuler.com/pages/pet-tracker',
+        url: AORKULER_AWIN_URL,
+        canonicalUrl: AORKULER_PRODUCT_URL,
         label: 'Buy direct from Aorkuler',
         status: 'active',
       },

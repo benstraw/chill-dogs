@@ -346,8 +346,8 @@ site_system:
         Review JSON-LD carrying reviewRating. The rating lives in one constant on the page
         and feeds both the visible ReviewRating block and buildReviewSchema() in
         src/utils/review-schema.ts, because Google drops a rating it cannot see rendered.
-        Also the first page using the aorkuler merchant: Aorkuler's own affiliate program
-        pays better than Amazon on this product, so merchants.aorkuler has displayOrder 0
+        Also the first page using the aorkuler merchant: Aorkuler's affiliate program
+        (run through Awin, see docs/ai/affiliate/awin.md) pays better than Amazon on this product, so merchants.aorkuler has displayOrder 0
         and leads the offer stack, with the Amazon ASIN second. The unit was supplied free,
         so Disclosure carries the opt-in providedProduct line as well as the affiliate one.
         Prices quoted on the page are Aorkuler's published direct prices, never Amazon's,
