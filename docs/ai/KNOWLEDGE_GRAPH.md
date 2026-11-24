@@ -102,6 +102,7 @@ marketing/pinterest-launch-plan.md        # Boards, pin format, cadence, CTA sty
 marketing/utm-rules.md                    # UTM parameter format for external links
     ↓
 marketing/newsletter-guide.md             # Email format and link rules
+marketing/newsletter-archive.md           # Every issue sent, charities featured, next-issue gaps
     ↓
 marketing/charity-outreach-program.md     # Charity relationships, spotlight coordination, tracker
     ↓

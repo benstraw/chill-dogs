@@ -79,6 +79,7 @@ You are starting any task and need to know which docs apply.
 - [`marketing/pinterest-launch-plan.md`](marketing/pinterest-launch-plan.md) — Boards, pin format, cadence, CTA style
 - [`marketing/pinterest-launch-pins-2026-03.md`](marketing/pinterest-launch-pins-2026-03.md) — Copy of the March 2026 launch pins (history, not a template)
 - [`marketing/newsletter-guide.md`](marketing/newsletter-guide.md) — Email format, tone, link rules
+- [`marketing/newsletter-archive.md`](marketing/newsletter-archive.md) — Every issue sent: Buttondown links, articles, converters, charities, call-outs, next-issue gaps
 - [`marketing/utm-rules.md`](marketing/utm-rules.md) — UTM parameter format and examples
 - [`marketing/marketing-plan.md`](marketing/marketing-plan.md) — Positioning, audience, channels, KPIs
 - [`writing/medical-and-vet-claim-guardrails.md`](writing/medical-and-vet-claim-guardrails.md) — What not to claim
@@ -93,6 +94,7 @@ You are starting any task and need to know which docs apply.
 - [`marketing/charity-outreach-program.md`](marketing/charity-outreach-program.md) — Three-touch outreach sequence, rollout schedule, tracker, success measures
 - [`marketing/charity-outreach-templates.md`](marketing/charity-outreach-templates.md) — Email copy for each touch, placeholders, week 1 drafts
 - [`marketing/newsletter-guide.md`](marketing/newsletter-guide.md) — Format and link rules for the spotlight issue
+- [`marketing/newsletter-archive.md`](marketing/newsletter-archive.md) — Which charities have been featured and which are next
 - [`marketing/utm-rules.md`](marketing/utm-rules.md) — UTM tagging for links sent to charities
 - [`writing/medical-and-vet-claim-guardrails.md`](writing/medical-and-vet-claim-guardrails.md) — Claim guardrails for outreach copy
 
