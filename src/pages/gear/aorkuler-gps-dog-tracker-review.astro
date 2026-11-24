@@ -16,6 +16,7 @@ import { trackerProducts, AORKULER_PRODUCT_URL } from '@data/tracking-products';
 import { buildReviewSchema } from '@utils/review-schema';
 import '@styles/article-components.css';
 
+import rhysApprovedBadge from '../../images/badges/rhys-approved-horizontal.png';
 import imgOnCollar from '../../images/watermarked/aorkuler/aorkuler-tracker-on-collar-closeup.jpg';
 import imgOnNeck from '../../images/watermarked/aorkuler/aorkuler-tracker-on-rhys-neck.jpg';
 import imgGreen104 from '../../images/watermarked/aorkuler/aorkuler-controller-104ft-green.jpg';
@@ -175,7 +176,18 @@ const reviewSchema = buildReviewSchema({
     <!-- Verdict -->
     <section class="content-section" id="verdict">
       <div class="section-inner">
-        <h2>Verdict</h2>
+        <div class="verdict-heading">
+          <h2>Verdict</h2>
+          <Image
+            class="rhys-approved-badge"
+            src={rhysApprovedBadge}
+            alt="Rhys Approved — a product Rhys uses"
+            widths={[224, 448, 672]}
+            sizes="(max-width: 640px) 160px, 224px"
+            width={224}
+            quality={90}
+          />
+        </div>
 
         <ReviewRating
           value={RATING}
@@ -755,6 +767,31 @@ const reviewSchema = buildReviewSchema({
 </BaseLayout>
 
 <style>
+  .verdict-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+
+  .verdict-heading h2 {
+    margin: 0;
+  }
+
+  .rhys-approved-badge {
+    display: block;
+    width: 14rem;
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 640px) {
+    .rhys-approved-badge {
+      width: 10rem;
+    }
+  }
+
   .collector-content {
     padding-bottom: var(--space-2xl);
   }

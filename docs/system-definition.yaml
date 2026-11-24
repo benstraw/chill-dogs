@@ -346,6 +346,9 @@ site_system:
         Review JSON-LD carrying reviewRating. The rating lives in one constant on the page
         and feeds both the visible ReviewRating block and buildReviewSchema() in
         src/utils/review-schema.ts, because Google drops a rating it cannot see rendered.
+        The Verdict heading pairs with a responsive horizontal Rhys Approved photo badge
+        (without a checkmark) for this product used by Rhys, optimized through Astro Image.
+        Both the horizontal and full-body shield badge assets are saved in src/images/badges/.
         Also the first page using the aorkuler merchant: Aorkuler's affiliate program
         (run through Awin, see docs/ai/affiliate/awin.md) pays better than Amazon on this product, so merchants.aorkuler has displayOrder 0
         and leads the offer stack, with the Amazon ASIN second. The unit was supplied free,
