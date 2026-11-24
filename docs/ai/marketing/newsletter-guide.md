@@ -14,6 +14,7 @@ related:
   - marketing-plan.md
   - utm-rules.md
   - charity-outreach-program.md
+  - newsletter-archive.md
   - ../writing/article-writing-guide.md
   - ../writing/medical-and-vet-claim-guardrails.md
 ---
@@ -113,6 +114,7 @@ The newsletter reader is a fellow dog owner. Write to them directly and usefully
 
 ## Related knowledge
 
+- [`newsletter-archive.md`](newsletter-archive.md) — Every issue sent, charities featured, what to cover next
 - [`utm-rules.md`](utm-rules.md) — UTM parameter format
 - [`marketing-plan.md`](marketing-plan.md) — Channel strategy and KPIs
 - [`charity-outreach-program.md`](charity-outreach-program.md) — Coordinating charity spotlight issues
