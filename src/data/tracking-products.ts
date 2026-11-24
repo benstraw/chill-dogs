@@ -304,7 +304,7 @@ export const trackerProducts: TrackerProduct[] = [
       'Handheld controller shows live distance and direction with no cell service',
       'Tracking range up to 3.5 miles in open terrain',
     ],
-    ctaLabel: 'Buy direct from Aorkuler',
+    ctaLabel: 'Check price on Amazon',
     signalNote: 'GPS satellite + direct radio to the handheld — no cellular service required',
     subscriptionNote: 'None — one-time purchase',
     handsOn: {
