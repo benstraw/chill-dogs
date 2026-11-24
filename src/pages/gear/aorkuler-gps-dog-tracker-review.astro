@@ -626,6 +626,22 @@ const reviewSchema = buildReviewSchema({
           <Image src={imgLightAlarm} alt="Aorkuler tracker glowing blue on the collar of Rhys, sitting on a patio at night" width={620} quality={80} />
           <figcaption>The light alarm at night. This is the one of the two alarms that does real work.</figcaption>
         </figure>
+        <figure class="article-photo article-photo--portrait">
+          <video
+            controls
+            muted
+            loop
+            playsinline
+            preload="none"
+            poster="/videos/aorkuler-light-alarm-night-poster.jpg"
+            width="406"
+            height="720"
+            aria-label="Twenty seconds of the Aorkuler light alarm cycling through its colors on Rhys's collar at night"
+          >
+            <source src="/videos/aorkuler-light-alarm-night.mp4" type="video/mp4" />
+          </video>
+          <figcaption>Twenty seconds of the light alarm cycling on Rhys's collar.</figcaption>
+        </figure>
 
         <p class="section-body">
           The sound alarm is faint. We could hear it from five to ten feet away,
@@ -855,6 +871,14 @@ const reviewSchema = buildReviewSchema({
   /* ── Photos ────────────────────────────────────────────────── */
   .article-photo--portrait {
     max-width: 22rem;
+  }
+
+  .article-photo video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-lg);
+    background: #000;
   }
 
   .photo-pair {
