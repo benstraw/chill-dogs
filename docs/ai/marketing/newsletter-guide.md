@@ -79,8 +79,8 @@ The newsletter reader is a fellow dog owner. Write to them directly and usefully
 - Use Markdown link format: `[Link text](https://www.chill-dogs.com/path/)`
 - Include 2–4 Chill-Dogs links per email (one featured, 1–3 related)
 - All links point to production URLs: `https://www.chill-dogs.com/`
-- Add UTM parameters to links — see [`utm-rules.md`](utm-rules.md)
-- Example with UTM: `https://www.chill-dogs.com/cooling/keep-dog-cool-in-car/?utm_source=newsletter&utm_medium=email&utm_campaign=may2026`
+- Every site link carries `utm_source=chill-dogs&utm_medium=email&utm_campaign=<issue-slug>` — see [Newsletter links in `utm-rules.md`](utm-rules.md#newsletter-links)
+- Example with UTM: `https://www.chill-dogs.com/cooling/keep-dog-cool-in-car/?utm_source=chill-dogs&utm_medium=email&utm_campaign=how-to-keep-a-dog-cool-in-a-car`
 
 ---
 

@@ -34,6 +34,7 @@ Before publishing any marketing content — Pinterest pin, newsletter email, or 
 - [ ] Link points to canonical production URL, not staging, preview, or Vercel branch deployment
 - [ ] Production URL format: `https://www.chill-dogs.com/path/`
 - [ ] UTM parameters present for all campaign links — format: `?utm_source=pinterest&utm_medium=social&utm_campaign=<name>`
+- [ ] Newsletter links: `utm_source=chill-dogs&utm_medium=email&utm_campaign=<issue-slug>` on every site link (see [`utm-rules.md`](../marketing/utm-rules.md#newsletter-links))
 - [ ] Pinterest title is clear and keyword-aware (searchable terms, not vague)
 - [ ] Pinterest description is useful and informative — not spammy or keyword-stuffed
 - [ ] Pinterest pin image uses a vertical 2:3-style composition

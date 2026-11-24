@@ -72,14 +72,33 @@ https://www.chill-dogs.com/cooling/keep-dog-cool-in-car/?utm_source=pinterest&ut
 ### Newsletter example
 
 ```
-https://www.chill-dogs.com/cooling/keep-dog-cool-in-car/?utm_source=newsletter&utm_medium=email&utm_campaign=may2026
+https://www.chill-dogs.com/cooling/keep-dog-cool-in-car/?utm_source=chill-dogs&utm_medium=email&utm_campaign=how-to-keep-a-dog-cool-in-a-car
 ```
+
+See [Newsletter links](#newsletter-links) below. Do not use the old `utm_source=newsletter&utm_campaign=may2026` pattern.
 
 ### Pinterest board launch campaign
 
 ```
 https://www.chill-dogs.com/comforting/best-calming-dog-beds/?utm_source=pinterest&utm_medium=social&utm_campaign=comfort-launch&utm_content=pin012_calming-beds
 ```
+
+---
+
+## Newsletter links
+
+Every newsletter link to chill-dogs.com carries the same three values, so PostHog can attribute visits and affiliate clicks to one issue:
+
+| Parameter | Value | Why |
+|---|---|---|
+| `utm_source` | `chill-dogs` | Buttondown's own tagging has used this since issue 9 (2026-06-12); matches existing data |
+| `utm_medium` | `email` | The PostHog insights filter on this, so it must be exactly `email` |
+| `utm_campaign` | the issue's Buttondown slug, e.g. `natural-flea-and-tick-prevention-products` | One value per issue, so each issue is one row in PostHog |
+
+- The six most recent issues already have this shape. It looks like Buttondown's automatic link tagging, so check that setting before adding tags by hand, and do not stack hand-written UTMs on top of it.
+- Apply it to every site link in the issue, including the charities page and the Pinterest call-out (use `utm_source=chill-dogs&utm_medium=email` there as well).
+- Issues 1–8 carry no tags and issue 10 used `utm_source=buttondown`. Those are not corrected retroactively; their traffic shows as "None" or `buttondown` in PostHog.
+- Reports: the PostHog insights [Newsletter: visitors by issue](https://us.posthog.com/project/328578/insights/dwQ69u4U) and [Newsletter: Amazon outbound clicks by issue](https://us.posthog.com/project/328578/insights/tYgvLbf2) break sessions that started from email down by `utm_campaign`. They count whole sessions, so a click on a later page is credited to the issue that started the visit. They need `utm_medium=email` to find a session.
 
 ---
 
