@@ -334,6 +334,36 @@ site_system:
         per the Associates operating agreement; cost is described structurally and the number
         lives behind the CTA.
 
+    - name: "Aorkuler GPS Dog Tracker Review"
+      type: "collector"
+      collector_subtype: "article"
+      target_action: "Convert hands-on Aorkuler research intent to direct-from-brand affiliate clicks; route readers whose needs it does not fit to Fi, Garmin, or the comparison"
+      metric: "affiliate_outbound_click rate (merchant=aorkuler) + collector_to_converter_click to /gear/best-dog-gps-trackers/"
+      routes:
+        - "/gear/aorkuler-gps-dog-tracker-review/"
+      notes: >
+        First hands-on review on the site with a star rating, and the first page to emit
+        Review JSON-LD carrying reviewRating. The rating lives in one constant on the page
+        and feeds both the visible ReviewRating block and buildReviewSchema() in
+        src/utils/review-schema.ts, because Google drops a rating it cannot see rendered.
+        The Verdict heading pairs with a responsive horizontal Rhys Approved photo badge
+        (without a checkmark) for this product used by Rhys, optimized through Astro Image.
+        Both the horizontal and full-body shield badge assets are saved in src/images/badges/.
+        Also the first page using the aorkuler merchant: Aorkuler's affiliate program
+        (run through Awin, see docs/ai/affiliate/awin.md) pays better than Amazon on this product, so merchants.aorkuler has displayOrder 0
+        and leads the offer stack, with the Amazon ASIN second. The unit was supplied free,
+        so Disclosure carries the opt-in providedProduct line as well as the affiliate one.
+        Prices quoted on the page are Aorkuler's published direct prices, never Amazon's,
+        per the Associates operating agreement. Revised after a second field test (Playa
+        Vista, November 2026): the red arrow is framed as a lost link that still looks live
+        (flagged only by crossed-out signal bars, found in the session-two footage) rather
+        than a frozen last-known fix, the rating is 4.5. A drive test (2026-11-15, tracker left
+        at home) is written up as a suburban result: red under 1,000 ft and still red at
+        19,680 ft; open-terrain range remains NOT TESTED. Session two
+        ran through Ballona Discovery Park. "A Bearing Is Not a Route" is its own H2 and
+        TOC entry. The page carries a visible Published/Updated dateline, and
+        buildReviewSchema() takes an optional dateModified that must match it.
+
     - name: "Garmin Dog Tracking Collars"
       type: "collector"
       target_action: "Route off-grid tracking intent to GPS tracker comparison"
@@ -561,7 +591,7 @@ site_system:
         cooling: "cooling blue for links, buttons, hover states, and soft accents on /cooling/*"
         calming: "calming green for links, buttons, hover states, and soft accents on /calming/*"
         comfort: "dusty rose for links, buttons, hover states, and soft accents on /comforting/*; do not use sky blue or terracotta as the Comforting authority"
-        gear: "violet for links, buttons, hover states, and soft accents on /gear/*, /travel/*, and /safety/*; replaces the former grey gear palette"
+        gear: "violet for links, buttons, hover states, and soft accents on /gear/*, /travel/*, and /safety/*; replaces the former gray gear palette"
 
   footer:
     sections:

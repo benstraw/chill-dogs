@@ -28,6 +28,7 @@ export const ROUTES = {
   gearHub: '/gear/',
   trackingTop: '/gear/best-dog-gps-trackers/',
   fiCollarReview: '/gear/fi-dog-collar-review/',
+  aorkulerReview: '/gear/aorkuler-gps-dog-tracker-review/',
   garminTracking: '/gear/garmin-dog-tracking-collars/',
   airtagForDogs: '/gear/airtag-for-dogs/',
   dogRanAwaySafety: '/safety/what-to-do-if-your-dog-runs-away/',

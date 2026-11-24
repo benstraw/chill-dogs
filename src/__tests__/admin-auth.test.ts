@@ -189,7 +189,7 @@ describe('basic auth fallback', () => {
   });
 
   it('does not let a cached basic header carry a browser past GitHub', async () => {
-    // Browsers replay cached credentials on every request forever. Honouring
+    // Browsers replay cached credentials on every request forever. Honoring
     // one on a page load would make GitHub sign-in unreachable wherever both
     // are configured — the primary auth path silently bypassed.
     const response = await authorizeAdminRequest(

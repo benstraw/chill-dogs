@@ -67,6 +67,7 @@ Repository guidance for coding agents working in `/Volumes/wanderer/dev/solo/chi
 
 ## Content Guardrails
 
+- **American English only.** Chill-Dogs is a US site with US authors. Write `math`, `color`, `neighborhood`, `meters`, `-ize`, `leash`, `backyard`, `closet`, `store` — never `maths`, `colour`, `neighbourhood`, `metres`, `-ise`, `lead`, `garden`, `cupboard`, `shop`. Rhys is a Welsh name on a Los Angeles dog; it is not a cue for British English. Applies to copy, alt text, comments, docs, and commit messages. Enforced by `src/__tests__/american-english.test.ts`; details in [`docs/ai/writing/article-writing-guide.md`](docs/ai/writing/article-writing-guide.md#american-english).
 - Do not say products are `vet-recommended`, `vet-approved`, or anything similar unless there is real documented sourcing for that exact claim.
 - Do not imply chill-dogs consulted veterinarians or has veterinary endorsements when it did not.
 - Prefer language like `researched`, `compared`, `curated`, `practical`, or `popular`.

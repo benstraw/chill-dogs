@@ -126,7 +126,7 @@ const mockStaticSitemapSections = vi.hoisted(() => {
 
 vi.mock('@data/content-sitemap', () => ({
   staticSitemapSections: mockStaticSitemapSections,
-  // Real behaviour, not a stub: getHomepageConverters uses this to keep the 214
+  // Real behavior, not a stub: getHomepageConverters uses this to keep the 214
   // generated /shop/<id>/ product pages out of the homepage's Compare picks, and a
   // mock that always returned false would hide that filter from these tests.
   isProductDetailPage: (page: { href: string }) =>

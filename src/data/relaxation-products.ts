@@ -37,7 +37,7 @@ function amazonSizeOffer(asin: string): AffiliateOffer {
 
 /**
  * Size picker over Amazon's own sibling ASINs, taken from each product's cached payload
- * (`variants` -> Size) in the default colour. `[label, asin, longLabel?]`, smallest first.
+ * (`variants` -> Size) in the default color. `[label, asin, longLabel?]`, smallest first.
  */
 function amazonSizes(defaultAsin: string, sizes: ReadonlyArray<readonly [string, string, string?]>): ProductVariantGroup {
   const idOf = (label: string) => label.toLowerCase().replace(/ × /g, 'x').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');

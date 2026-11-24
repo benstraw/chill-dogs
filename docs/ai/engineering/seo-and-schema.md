@@ -139,6 +139,19 @@ Used on section collector pages (`/cooling/`, `/calming/`, `/comforting/`). `Sec
 
 Used on pages with an `FAQ` module when the FAQ has 3+ questions. Check existing converter pages for implementation reference.
 
+### Review
+
+Used on hands-on product reviews — a page where we actually handled the product and are scoring it. Build it with `buildReviewSchema()` in `src/utils/review-schema.ts` and emit it through `JsonLd.astro` in the `head` slot.
+
+Two rules that are easy to get wrong:
+
+- **A rating must be visible.** Google ignores `reviewRating` it cannot find rendered on the page. Hold the value in a single constant and pass that same constant to both `buildReviewSchema()` and the `ReviewRating.astro` module. Never hardcode the number twice.
+- **`itemReviewed` is the product, not the article.** `name`, `description` and `url` describe the review; the thing being reviewed goes inside `itemReviewed` as a `Product`.
+
+A review page also needs a `handsOn` entry on the product record in `src/data/` — that field is what licenses first-hand copy at all. See `docs/ai/writing/product-copy-rules.md`.
+
+Reference implementation: `src/pages/gear/aorkuler-gps-dog-tracker-review.astro`. `src/pages/gear/fi-dog-collar-review.astro` emits `Review` without a rating, which is also valid.
+
 ### WebSite and Organization
 
 Present on the homepage. Do not duplicate on other pages.

@@ -75,7 +75,7 @@ function imageDataUriFromFile(filePath: string, mimeType: string): string | null
 
 /**
  * Pin copy is shorter than page copy. A pin is read at thumbnail size, so a 200-character
- * bullet becomes an unreadable grey block — trim to a phrase and drop what will not fit.
+ * bullet becomes an unreadable gray block — trim to a phrase and drop what will not fit.
  */
 function pinBullets(product: ProductCatalogItem): string[] {
   return product.bullets

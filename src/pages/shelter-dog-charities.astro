@@ -527,7 +527,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
    * Inline links carry more weight than body copy — bold with a soft underline
    * rather than a button, so a block of prose still reads as prose. reset.css
    * clears text-decoration globally, so the underline has to be re-declared
-   * here or the offset and colour have nothing to draw on.
+   * here or the offset and color have nothing to draw on.
    *
    * :global() so links rendered by AffiliateLink match the hand-written ones;
    * :not(.ui-cta) keeps it off the solid official-site button, which would
@@ -552,7 +552,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 
   /*
    * Official-site CTA. Reuses the shared .ui-cta button (cta.css, global via
-   * BaseLayout) so it picks up the site's CTA colour, radius, and hover for
+   * BaseLayout) so it picks up the site's CTA color, radius, and hover for
    * free — this override only makes it an inline pill instead of a full-width
    * block.
    */
@@ -597,8 +597,8 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 
   /*
    * Logos are hotlinked from each charity's own site and most are transparent
-   * PNGs, so they need a backdrop we control rather than the page's blue-grey
-   * tint. White suits dark and full-colour marks; reversed (white) logos opt
+   * PNGs, so they need a backdrop we control rather than the page's blue-gray
+   * tint. White suits dark and full-color marks; reversed (white) logos opt
    * into the charcoal tile instead — that is what --dark is for.
    *
    * The logo box is a fixed 340x96 with object-fit: contain, so every tile is the

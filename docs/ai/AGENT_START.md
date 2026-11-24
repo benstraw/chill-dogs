@@ -79,6 +79,7 @@ Do not use the word "hub" in specs, code, or comments. Use `collector`.
 
 ## Key constraints at a glance
 
+- **American English only.** US spelling, vocabulary, and punctuation everywhere — copy, alt text, comments, docs. No `maths`, `colour`, `-ise`, `metres`, `lead` for leash. Rhys's Welsh name is not a cue. See [`writing/article-writing-guide.md`](writing/article-writing-guide.md#american-english).
 - **No vet-authority language.** Do not say "vet-approved," "vet-recommended," or imply medical endorsement. Use "researched," "compared," "curated," "popular."
 - **No hardcoded routes.** Always import from `src/data/routes.ts`.
 - **No manual related arrays.** Use sitemap metadata; the system derives links automatically.

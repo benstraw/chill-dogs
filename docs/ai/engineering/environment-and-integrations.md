@@ -122,7 +122,7 @@ The page probes `GET /health` on load and shows which mode it is in:
 
 - **reachable** → the Save button writes `src/data/product-galleries.ts`
 - **not reachable** → falls back to copying a paste-ready snippet, which is the only
-  behaviour available in production, where the admin pages sit behind GitHub sign-in on a
+  behavior available in production, where the admin pages sit behind GitHub sign-in on a
   static build with no repository to write to
 
 It needs no keys and makes no outbound calls, so it works in a proxied container. It does
@@ -130,7 +130,7 @@ have write access to the repository, so it binds to loopback only, requires a lo
 `Origin`, and rejects any payload whose `productId` is not a real catalog product or whose
 image URLs are not https on a known merchant CDN. Do not expose it off your machine.
 
-Saves rewrite the whole gallery file rather than patching it, so formatting is normalised
+Saves rewrite the whole gallery file rather than patching it, so formatting is normalized
 on every save and a save for one product cannot corrupt another's entry.
 
 ---

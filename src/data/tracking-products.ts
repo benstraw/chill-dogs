@@ -1,4 +1,4 @@
-import type { AffiliateOffer } from './products/types';
+import type { AffiliateOffer, HandsOnReview } from './products/types';
 
 export type TrackerType = 'cellular' | 'off-grid' | 'bluetooth';
 
@@ -25,6 +25,8 @@ export interface TrackerProduct {
   signalNote: string;
   /** Monthly fee if any */
   subscriptionNote?: string;
+  /** Set only when we actually handled the product. Licenses first-hand copy. */
+  handsOn?: HandsOnReview;
   /** Product image from Amazon CDN */
   image?: { src: string; alt: string };
   /** Hand-authored gallery override. Normally galleries live in src/data/product-galleries.ts;
@@ -44,6 +46,18 @@ export interface AccessoryProduct {
    *  read both through getProductImages() in src/data/products/images.ts. */
   images?: readonly { src: string; alt: string }[];
 }
+
+/**
+ * Aorkuler sells through Awin (advertiser id 69556, our publisher id 3019981).
+ * `AORKULER_AWIN_URL` is the Awin deep link generated in Awin's Link Builder for
+ * the product page below; it is the click-through URL that earns commission.
+ * `AORKULER_PRODUCT_URL` is the raw page it lands on, used for structured data and
+ * as the offer's `canonicalUrl`. Deep links are per destination: a different
+ * Aorkuler page needs a new link from Awin's Link Builder (Toolbox > Link Builder).
+ */
+export const AORKULER_PRODUCT_URL = 'https://aorkuler.com/products/aorkuler-dog-gps-tracker';
+export const AORKULER_AWIN_URL =
+  'https://www.awin1.com/cread.php?awinmid=69556&awinaffid=3019981&ued=https%3A%2F%2Faorkuler.com%2Fproducts%2Faorkuler-dog-gps-tracker';
 
 export const trackerProducts: TrackerProduct[] = [
   // ── Cellular ──────────────────────────────────────────────────────────────
@@ -165,7 +179,7 @@ export const trackerProducts: TrackerProduct[] = [
     bullets: [
       'GPS dog collar with app-controlled wireless fence features',
       'Best for owners who want tracking plus boundary management',
-      'Membership required; training and setup matter',
+      'Membership required; training and setup necessary',
     ],
     signalNote: 'GPS + cellular/app connectivity for tracking and boundaries',
     subscriptionNote: 'Halo membership required for GPS and fence features',
@@ -242,6 +256,64 @@ export const trackerProducts: TrackerProduct[] = [
     image: {
       src: 'https://m.media-amazon.com/images/I/51hAFi77UnL._SL500_.jpg',
       alt: 'Garmin Alpha 300i handheld on white background',
+    },
+  },
+  {
+    id: 'aorkuler-pet-tracker',
+    name: 'Aorkuler Pet Tracker (Single Dog Kit)',
+    type: 'off-grid',
+    asin: 'B0DSK9LJSZ',
+    amazonUrl: 'https://www.amazon.com/dp/B0DSK9LJSZ?tag=chill-dogs-20',
+    offers: [
+      {
+        merchant: 'aorkuler',
+        url: AORKULER_AWIN_URL,
+        canonicalUrl: AORKULER_PRODUCT_URL,
+        label: 'Buy direct from Aorkuler',
+        status: 'active',
+      },
+      {
+        merchant: 'amazon',
+        asin: 'B0DSK9LJSZ',
+        merchantProductId: 'B0DSK9LJSZ',
+        url: 'https://www.amazon.com/dp/B0DSK9LJSZ?tag=chill-dogs-20',
+        status: 'active',
+      },
+    ],
+    use_case: 'Off-leash recall gaps, rural property, camping, and anywhere without cell service',
+    pros: [
+      'No subscription, no SIM, and no phone app',
+      'Intuitive and easy to use',
+      'Handheld controller works without cell service',
+      'Distance readout updates in real time',
+      'High quality, durable construction',
+      'Rugged, weatherproof IP67 rating',
+      'LED light and sound alarms',
+      'Hardshell zippered carrying case with everything included',
+    ],
+    cons: [
+      'No map. The screen notes distance and direction.',
+      'Collar unit is bulky on a small dog',
+      'GPS orientation needs a clear view of the sky and 30–120 seconds to start. The "Follow it again" re-sync can interrupt a search.',
+      'Proprietary magnetic charger, and the magnet connection is weak.',
+      'Tracker and controller must be turned off separately or power will be drained completely.',
+    ],
+    best_for: 'Owners who want off-grid tracking without a subscription fee',
+    bullets: [
+      'GPS plus a direct radio link; no SIM, app, or subscription',
+      'Handheld controller shows live distance and direction with no cell service',
+      'Tracking range up to 3.5 miles in open terrain',
+    ],
+    ctaLabel: 'Check price on Amazon',
+    signalNote: 'GPS satellite + direct radio to the handheld — no cellular service required',
+    subscriptionNote: 'None — one-time purchase',
+    handsOn: {
+      since: '2026-11',
+      note: 'Two outings with Rhys: a two-person hide-and-seek at Westchester Park (binding and first GPS lock, tracking runs between roughly 100 and 500 ft, alarms, collar fit, charging), then a cold search around Playa Vista Sports Park after a 15-minute wait, never more than about 1,000 ft apart. Then a drive test with the tracker left at home: the arrow went red under 1,000 ft and stayed red out to 19,680 ft (about 3.7 miles) in a suburb. Open-terrain range was not tested.',
+    },
+    image: {
+      src: '/images/products/aorkuler-pet-tracker.jpg',
+      alt: 'Aorkuler handheld controller showing a green direction arrow at 104.6 feet during our field test',
     },
   },
   // ── Bluetooth ─────────────────────────────────────────────────────────────
@@ -337,14 +409,14 @@ export const trackerCategoryMeta: Record<
     title: 'Cellular GPS Trackers',
     description: 'Real-time LTE tracking for dogs in areas with cell coverage.',
     intro:
-      'Cellular trackers use the nationwide LTE network to show real-time location on your phone. They work great in cities, suburbs, and most parks — but they depend entirely on cell signal. No signal means no tracking. Fi is a straightforward everyday GPS collar, Halo adds wireless fence features, and Garmin Alpha LTE adds a VHF radio fallback for mixed-terrain use.',
+      'Cellular trackers use the nationwide LTE network to show real-time location on your phone. They work great in cities, suburbs, and most parks, but they depend entirely on cellular service. No signal means no tracking. Fi is a straightforward everyday GPS collar, Halo adds wireless fence features, and Garmin Alpha LTE adds a VHF radio fallback for mixed-terrain use.',
   },
   'off-grid': {
-    title: 'Off-Grid GPS Systems (Garmin)',
+    title: 'Off-Grid GPS Systems',
     description:
-      'GPS + radio tracking that works in true wilderness with no cell signal required.',
+      'GPS + radio tracking that works with no cell signal required.',
     intro:
-      "Off-grid systems like Garmin's Alpha line combine GPS satellites with VHF radio to track dogs regardless of cell coverage. The Alpha TT 25 collar pairs with the Alpha 300i handheld — sold separately — to create a complete off-grid system. They require a dedicated handheld device but will work anywhere you can see the sky.",
+      "Off-grid systems pair GPS satellites with a radio link straight to a handheld you carry, so they keep working where there is no cell coverage at all. They need a clear view of the sky.\n\nGarmin's Alpha line is long-range and allows you to track multiple dogs at once. The Alpha TT 25 collar and Alpha 300i handheld are sold separately.\n\nAorkuler allows you to track one dog. It is a one-time purchase with no subscription fee.",
   },
   bluetooth: {
     title: 'Bluetooth Tags (AirTag / Tile)',
