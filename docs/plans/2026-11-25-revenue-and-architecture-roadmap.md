@@ -1,0 +1,124 @@
+---
+title: Revenue and Architecture Roadmap
+type: plan
+domain: global
+status: planned
+updated: 2026-11-25
+tags:
+  - chill-dogs
+  - roadmap
+  - revenue
+  - architecture
+related:
+  - ../roadmap.md
+  - ../engineering/architecture.md
+  - ../engineering/analytics-events.md
+  - ../affiliate/disclosure-rules.md
+  - ../strategy/metrics-and-page-types.md
+---
+
+# Plan: Revenue and Architecture Roadmap
+
+## Context
+
+This plan comes out of the November 2026 deep dive. The testing half shipped first, in #425–#428: a faster suite split into two tiers, site-wide revenue and SEO checks, and a docs cleanup. This plan covers what comes next. It draws on two sources: the architecture review, and PostHog data for the 90 days to 2026-11-25.
+
+What the data showed. The counts are raw and unfiltered, so treat them as directional, not exact:
+
+| Page | Views | Affiliate clicks | Click rate |
+|---|---|---|---|
+| `/calming/best-thundershirt-alternatives/` | 25 | 15 | 60% |
+| `/gear/best-dog-gps-trackers/` | 24 | 12 | 50% |
+| `/cooling/car-cooling-for-dogs/` | 19 | 7 | 37% |
+| `/calming/best-calming-products-for-anxious-dogs/` | 13 | 4 | 31% |
+| `/cooling/keep-dog-cool-in-car/` | 35 | 9 | 26% |
+| `/` (homepage) | 87 | 0 | 0% |
+| `/lifestyle/how-to-spend-time-with-dogs-without-owning-one/` | 57 | 0 | 0% |
+| `/travel/dog-friendly-airlines/` | 42 | 0 | 0% |
+| about 20 `/shop/<product>/` pages | 10–16 each | 0 | 0% |
+
+- **Traffic is the bottleneck.** The busiest page got 87 views in 90 days.
+- **Comparison pages convert very well** once a reader reaches them: 26–60%.
+- **The three busiest pages earn nothing.**
+- **The `/shop/` numbers look suspicious.** Most of those pages show as many visitors as views, which points to bots or link previews rather than people.
+
+The architecture review found that converter pages are built four different ways: cooling, calming, relaxation and flea-tick each have their own page component and config format, and three of them define the same block types. Hand-written gear pages sit beside them. It also found product lists that must be kept in sync by hand, and six identical article route files.
+
+The phases run from cheapest and most certain to largest. Measurement comes first, because every later decision depends on trusting the numbers.
+
+## Phase 1 — Measure
+
+Goal: know which traffic is real before spending effort on it.
+
+1. **Check the `/shop/` traffic.** Break `$pageview` on `/shop/*` down by referrer, user agent and session length. Decide whether the visits are bots, link-preview fetchers or real people.
+   - **If bots:** filter them, through PostHog's test-account or bot filters or by excluding them at capture. Re-read the click rates.
+   - **If real people:** the `/shop/` page itself is not converting, and its layout becomes a Phase 2 item.
+2. **Build a click-rate dashboard.** For each converter and article: pageviews, `affiliate_outbound_click`, `amazon_outbound_click` and click rate, with bots excluded, plus a weekly trend. It's how each later phase gets judged.
+
+Done when: the dashboard exists, and the `/shop/` question has an answer.
+
+## Phase 2 — Revenue on existing traffic
+
+Goal: earn more from the visitors the site already has, with small edits.
+
+3. **Products on the busiest zero-click pages.**
+   - `/travel/dog-friendly-airlines/`: readers are planning a flight, so route them to `/comforting/best-airline-approved-dog-carriers/` and travel bags, with a product module or a prominent link above the fold.
+   - Homepage: find out why its picks get no clicks (placement, which picks, what shows above the fold) and fix it.
+   - `/lifestyle/…`: it has no buying intent, so make it a newsletter-signup page rather than forcing products onto it.
+4. **More traffic to the winners.** The ThunderShirt alternatives and GPS tracker pages convert at 50–60%. Give them:
+   - links from the busiest articles, through `pinnedRelated` or in-body links;
+   - new Pinterest pins;
+   - a spot in the next newsletter.
+5. **Fix disclosure placement.** Seven pages show an affiliate link before any disclosure: the homepage, `/shop/`, the Aorkuler review (a brand-provided unit), Garmin, crate training, keep-cool-in-car, and charities. Put the disclosure above the first link on each, and delete each page's entry from `src/__tests__/allowlists/disclosure.ts` as it is fixed. This is an FTC and Amazon Associates compliance risk.
+   - The **Fi collar review** also has Review schema with no rating. Give it an editorial rating, or switch it to Article schema.
+
+Done when: each change is live and the dashboard shows its effect over a few weeks. The disclosure allowlist is empty.
+
+## Phase 3 — Foundations
+
+Goal: remove duplication and manual sync points while the changes are still small.
+
+6. **One article route.** Replace the six identical `src/pages/{calming,comforting,cooling,lifestyle,safety,travel}/[slug].astro` files with a single `src/pages/[...article].astro` that builds each article at its `canonicalPath`.
+   - URLs don't change.
+   - Articles can live in any section without adding a route file.
+   - Hand-written pages still win, because Astro ranks specific routes above a catch-all.
+   - Add a test that no article `canonicalPath` collides with a hand-written page.
+7. **Remove hand-synced product lists.** `src/data/product-page-map.ts` repeats the product ids shown by `RoadTripProducts.astro` and `CarCoolingArticleProducts.astro`, marked "Keep in sync with". Move each list into one data export that the component and the page map both read.
+8. **Shrink the allowlists in small PRs:**
+   - the 39 hard-coded internal routes (use `ROUTES`);
+   - the route key names `coolingHub`, `calmingHub`, `comfortHub` and `gearHub` (rename to collector wording across their callers);
+   - the three hand-built product cards (`airtag-for-dogs`, `fi-dog-collar-review`, and `shelter-dog-charities`, which needs reviewing).
+
+   Each entry removed from `src/__tests__/allowlists/` is one fixed violation.
+
+Done when: there is one article route, the "Keep in sync with" comments are gone, and the allowlists are shorter.
+
+## Phase 4 — Platform
+
+Goal: one converter system on a current Astro.
+
+9. **Upgrade to Astro 6.** `@astrojs/mdx` 5.0.3 already requires Astro ^6, but Astro 5.18 is installed. Upgrade Astro and its official integrations together, or pin `@astrojs/mdx` to v4 to match Astro 5. Do this before the converter merge, so the merged system is built once, on the new version.
+10. **One converter system.** Merge `CoolingConverterPage`, `CalmingConverterPage`, `RelaxationConverterPage` and `FleaTickConverterPage` into one composer with one config format:
+    - one set of hero, section, prose, note and decision-column block types;
+    - products referenced by id. Cooling's one-category-per-record model is why the same product needed two records (the OHMO bowl `shopPageId` workaround);
+    - then move the hand-written gear pages and `/cooling/best-cooling-products-for-dogs/` onto it.
+
+    Migrate one page at a time. The site-wide dist tests (sweep, JSON-LD, affiliate attributes, disclosure) are the safety net, and a page's built HTML should not change except where intended.
+
+Done when: there is one composer and one config format, `shopPageId` is no longer needed, and no converter page is written by hand.
+
+## Not in this plan
+
+These were left out of the test overhaul:
+- behavior tests for the `/shop/?q=` filter and the search page;
+- tests for the local `admin:serve` writer.
+
+Add them alongside Phase 3 or 4, whichever touches that code first.
+
+## Related knowledge
+
+- [`../roadmap.md`](../roadmap.md) — Open, shipped and dropped items
+- [`../engineering/architecture.md`](../engineering/architecture.md) — Current structure
+- [`../engineering/analytics-events.md`](../engineering/analytics-events.md) — Events behind the click-rate numbers
+- [`../affiliate/disclosure-rules.md`](../affiliate/disclosure-rules.md) — Disclosure placement rules
+- [`../strategy/metrics-and-page-types.md`](../strategy/metrics-and-page-types.md) — Page types and their metrics
