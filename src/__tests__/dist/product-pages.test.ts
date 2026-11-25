@@ -42,19 +42,7 @@ describe('converter contract on the built page', () => {
     return /<article class="product-detail"[\s\S]*?<\/article>/.exec(html)?.[0] ?? '';
   }
 
-  it('puts the affiliate disclosure before the CTA', () => {
-    // Converter checklist: "Disclosure appears before product CTAs". The first version
-    // of this page rendered it four sections below the CTA on all 214 pages.
-    for (const productId of sample) {
-      const article = articleHtml(productId);
-      const disclosure = article.indexOf('class="disc');
-      const cta = article.indexOf('data-affiliate="true"');
-
-      expect(disclosure, `${productId}: no disclosure`).toBeGreaterThan(-1);
-      expect(cta, `${productId}: no affiliate CTA`).toBeGreaterThan(-1);
-      expect(disclosure, `${productId}: disclosure must precede the CTA`).toBeLessThan(cta);
-    }
-  });
+  // Disclosure-before-CTA is checked on every page by site-sweep.test.ts.
 
   it('keeps one affiliate CTA block, with no share action competing beside it', () => {
     for (const productId of sample) {

@@ -1,6 +1,7 @@
 import { execSync } from 'node:child_process';
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import {
   buildSubmissionUrls,
   collectChangedPageUrls,
@@ -37,14 +38,14 @@ async function ensureKeyFile({ key, distDir }) {
   console.log(`[IndexNow] Wrote key file to ${target}`);
 }
 
-async function submitIndexNow({ endpoint, payload, dryRun }) {
+async function submitIndexNow({ endpoint, payload, dryRun, fetchImpl }) {
   if (dryRun) {
     console.log('[IndexNow] Dry run enabled. Payload:');
     console.log(JSON.stringify(payload, null, 2));
     return;
   }
 
-  const response = await fetch(endpoint, {
+  const response = await fetchImpl(endpoint, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json; charset=utf-8' },
     body: JSON.stringify(payload),
@@ -58,28 +59,45 @@ async function submitIndexNow({ endpoint, payload, dryRun }) {
   console.log(`[IndexNow] Submitted successfully (${response.status}).`);
 }
 
-async function main() {
-  if (!isProductionVercelEnv(process.env)) {
+/**
+ * Submit changed URLs (or the sitemap) to IndexNow. Exported, with `env` and
+ * `fetchImpl` injectable, so the test can drive it without a network.
+ * @returns {Promise<'skipped' | 'submitted' | 'dry-run' | 'failed'>}
+ */
+export async function runIndexNow({ env = process.env, fetchImpl = fetch } = {}) {
+  try {
+    return await submit(env, fetchImpl);
+  } catch (err) {
+    // A third-party outage must never fail the production build, and with it the
+    // deploy. It used to process.exit(1) here. Search engines pick the change up from
+    // the sitemap on their next crawl anyway.
+    console.warn(`[IndexNow] Submission failed; continuing the build: ${err instanceof Error ? err.message : String(err)}`);
+    return 'failed';
+  }
+}
+
+async function submit(env, fetchImpl) {
+  if (!isProductionVercelEnv(env)) {
     console.log('[IndexNow] Skipping: VERCEL_ENV is not production.');
-    return;
+    return 'skipped';
   }
 
-  const key = (process.env.INDEXNOW_KEY || '').trim();
+  const key = (env.INDEXNOW_KEY || '').trim();
   if (!key) {
     console.log('[IndexNow] Skipping: INDEXNOW_KEY is not set.');
-    return;
+    return 'skipped';
   }
 
-  const siteOrigin = normalizeOrigin(process.env.INDEXNOW_SITE_ORIGIN || 'https://www.chill-dogs.com');
-  const endpoint = (process.env.INDEXNOW_ENDPOINT || 'https://api.indexnow.org/indexnow').trim();
-  const dryRun = toBool(process.env.INDEXNOW_DRY_RUN);
-  const distDir = process.env.INDEXNOW_DIST_DIR || 'dist';
+  const siteOrigin = normalizeOrigin(env.INDEXNOW_SITE_ORIGIN || 'https://www.chill-dogs.com');
+  const endpoint = (env.INDEXNOW_ENDPOINT || 'https://api.indexnow.org/indexnow').trim();
+  const dryRun = toBool(env.INDEXNOW_DRY_RUN);
+  const distDir = env.INDEXNOW_DIST_DIR || 'dist';
 
   await ensureKeyFile({ key, distDir });
   console.log(`[IndexNow] Key file URL: ${siteOrigin}/${key}.txt`);
 
-  const previousSha = (process.env.VERCEL_GIT_PREVIOUS_SHA || '').trim();
-  const currentSha = (process.env.VERCEL_GIT_COMMIT_SHA || '').trim();
+  const previousSha = (env.VERCEL_GIT_PREVIOUS_SHA || '').trim();
+  const currentSha = (env.VERCEL_GIT_COMMIT_SHA || '').trim();
 
   const changedFiles = getChangedFiles(previousSha, currentSha);
   const changedPageUrls = changedFiles ? collectChangedPageUrls(changedFiles, siteOrigin) : [];
@@ -96,10 +114,10 @@ async function main() {
   console.log(`[IndexNow] Submission mode: ${selection.mode}`);
   console.log(`[IndexNow] URL count: ${selection.urlList.length}`);
 
-  await submitIndexNow({ endpoint, payload, dryRun });
+  await submitIndexNow({ endpoint, payload, dryRun, fetchImpl });
+  return dryRun ? 'dry-run' : 'submitted';
 }
 
-main().catch((err) => {
-  console.error(`[IndexNow] Failed: ${err instanceof Error ? err.message : String(err)}`);
-  process.exit(1);
-});
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  await runIndexNow();
+}

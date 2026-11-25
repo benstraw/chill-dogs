@@ -1,4 +1,7 @@
-import { describe, expect, it } from 'vitest';
+import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import path from 'node:path';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   buildSubmissionUrls,
   collectChangedPageUrls,
@@ -6,6 +9,7 @@ import {
   mapPageFileToUrl,
   normalizeOrigin,
 } from '../../scripts/indexnow-lib.mjs';
+import { runIndexNow } from '../../scripts/indexnow-submit.mjs';
 
 describe('indexnow-lib', () => {
   it('detects production Vercel environment', () => {
@@ -73,5 +77,64 @@ describe('indexnow-lib', () => {
       mode: 'sitemap_fallback',
       urlList: ['https://www.chill-dogs.com/sitemap-index.xml'],
     });
+  });
+});
+
+describe('indexnow-submit', () => {
+  const quiet = () => {
+    vi.spyOn(console, 'log').mockImplementation(() => {});
+    return vi.spyOn(console, 'warn').mockImplementation(() => {});
+  };
+  let distDir: string;
+  beforeEach(() => {
+    distDir = mkdtempSync(path.join(tmpdir(), 'indexnow-'));
+  });
+  afterEach(() => {
+    vi.restoreAllMocks();
+    rmSync(distDir, { recursive: true, force: true });
+  });
+  const prodEnv = () => ({ VERCEL_ENV: 'production', INDEXNOW_KEY: 'k3y', INDEXNOW_DIST_DIR: distDir });
+
+  it('never fails the build when IndexNow is down', async () => {
+    const warn = quiet();
+    const fetchImpl = vi.fn(async () => {
+      throw new Error('ECONNRESET');
+    });
+
+    await expect(runIndexNow({ env: prodEnv(), fetchImpl })).resolves.toBe('failed');
+    expect(fetchImpl).toHaveBeenCalledOnce();
+    expect(warn.mock.calls.flat().join(' ')).toContain('ECONNRESET');
+  });
+
+  it('treats an HTTP error the same way', async () => {
+    quiet();
+    const fetchImpl = vi.fn(async () => new Response('busy', { status: 503, statusText: 'Service Unavailable' }));
+    await expect(runIndexNow({ env: prodEnv(), fetchImpl })).resolves.toBe('failed');
+  });
+
+  it('submits the sitemap with the key file in production', async () => {
+    quiet();
+    const fetchImpl = vi.fn(async (_url: string | URL | Request, _init?: RequestInit) => new Response('', { status: 200 }));
+    await expect(runIndexNow({ env: prodEnv(), fetchImpl })).resolves.toBe('submitted');
+
+    const body = JSON.parse(String(fetchImpl.mock.calls[0][1]?.body));
+    expect(body).toMatchObject({ key: 'k3y', keyLocation: 'https://www.chill-dogs.com/k3y.txt' });
+    expect(body.urlList).toContain('https://www.chill-dogs.com/sitemap-index.xml');
+    expect(readFileSync(path.join(distDir, 'k3y.txt'), 'utf8')).toBe('k3y\n');
+  });
+
+  it('skips outside production and without a key, without calling out', async () => {
+    quiet();
+    const fetchImpl = vi.fn();
+    await expect(runIndexNow({ env: { VERCEL_ENV: 'preview', INDEXNOW_KEY: 'k' }, fetchImpl })).resolves.toBe('skipped');
+    await expect(runIndexNow({ env: { VERCEL_ENV: 'production' }, fetchImpl })).resolves.toBe('skipped');
+    expect(fetchImpl).not.toHaveBeenCalled();
+  });
+
+  it('does not call out on a dry run', async () => {
+    quiet();
+    const fetchImpl = vi.fn();
+    await expect(runIndexNow({ env: { ...prodEnv(), INDEXNOW_DRY_RUN: 'true' }, fetchImpl })).resolves.toBe('dry-run');
+    expect(fetchImpl).not.toHaveBeenCalled();
   });
 });

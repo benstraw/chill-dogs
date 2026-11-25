@@ -9,16 +9,16 @@
  * published. These tests make the hazard enforceable rather than advisory.
  */
 
-import { readFileSync } from 'node:fs';
-import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 
 import { productCatalogItems } from '../data/product-catalog';
 import { PUBLISHED_PRODUCT_IDS } from '../data/product-url-history';
+import { PUBLISHED_IDS_SNAPSHOT } from './allowlists/published-ids.snapshot';
+import { astroRedirects, vercelRedirects, vercelSources } from './helpers/redirects';
 
-const root = process.cwd();
-const vercelJson = readFileSync(path.join(root, 'vercel.json'), 'utf8');
-const astroConfig = readFileSync(path.join(root, 'astro.config.mjs'), 'utf8');
+const vercel = vercelRedirects();
+const astro = astroRedirects();
+const vercelSourceList = vercelSources();
 
 const currentIds = productCatalogItems.map((product) => product.id);
 const currentIdSet = new Set(currentIds);
@@ -28,12 +28,17 @@ function shopPath(id: string): string {
   return `/shop/${id}/`;
 }
 
-/** True when both redirect surfaces carry a rule for this retired path. */
+/**
+ * True when both redirect surfaces carry a rule for exactly this path. It used to be a
+ * substring search of the raw files, so `/shop/kh-cool-bed` counted as redirected
+ * because `/shop/kh-cool-bed-iii/` contained it, and so did a mention in a comment.
+ */
 function hasRedirect(retiredPath: string): { vercel: boolean; astro: boolean } {
-  const withoutTrailingSlash = retiredPath.replace(/\/$/, '');
+  const key = retiredPath.replace(/\/$/, '');
   return {
-    vercel: vercelJson.includes(retiredPath) || vercelJson.includes(withoutTrailingSlash),
-    astro: astroConfig.includes(retiredPath) || astroConfig.includes(withoutTrailingSlash),
+    // Vercel matches the slash forms separately, so both must be listed.
+    vercel: vercelSourceList.includes(key) && vercelSourceList.includes(`${key}/`),
+    astro: astro.has(key),
   };
 }
 
@@ -69,7 +74,7 @@ describe('published product URLs stay reachable', () => {
       .map(({ id, redirect }) => {
         const gaps = [
           !redirect.vercel ? 'vercel.json' : null,
-          !redirect.astro ? 'astro.config.mjs' : null,
+          !redirect.astro ? 'src/data/redirects.ts' : null,
         ].filter(Boolean);
         return `${shopPath(id)} was published but no longer builds — add a redirect in ${gaps.join(' and ')}`;
       });
@@ -103,5 +108,29 @@ describe('published product URLs stay reachable', () => {
       (id, index) => PUBLISHED_PRODUCT_IDS.indexOf(id) !== index
     );
     expect(duplicates).toEqual([]);
+  });
+});
+
+describe('redirect surfaces agree', () => {
+  it('has the same rules in vercel.json and astro.config.mjs', () => {
+    expect(vercel.size).toBeGreaterThan(0);
+    const describe = (map: Map<string, { destination: string; status: number }>) =>
+      Object.fromEntries([...map].sort(([a], [b]) => a.localeCompare(b)).map(([k, v]) => [k, `${v.status} ${v.destination}`]));
+    expect(describe(vercel), 'a redirect must be added to both files, with the same destination and status').toEqual(describe(astro));
+  });
+
+  it('lists both slash forms of every vercel.json source', () => {
+    const missing = [...vercel.keys()].flatMap((key) =>
+      [key, `${key}/`].filter((form) => !vercelSourceList.includes(form))
+    );
+    expect(missing, 'vercel.json matches /x and /x/ separately').toEqual([]);
+  });
+
+  it('never drops a published id from the history file', () => {
+    // A git-free "append-only" check: the history must still contain every id in this
+    // frozen snapshot. New ids need no snapshot change.
+    const known = new Set(PUBLISHED_PRODUCT_IDS);
+    expect(PUBLISHED_IDS_SNAPSHOT.length).toBeGreaterThan(100);
+    expect(PUBLISHED_IDS_SNAPSHOT.filter((id) => !known.has(id)), 'restore these to src/data/product-url-history.ts').toEqual([]);
   });
 });

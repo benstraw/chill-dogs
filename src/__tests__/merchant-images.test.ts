@@ -104,7 +104,10 @@ describe('isAllowedImageHost', () => {
 describe('against the real Amazon cache', () => {
   const cacheDir = path.join(process.cwd(), 'src/data/amazon-products');
 
+  // Parsed once: the cache is 15 MB of JSON and two tests read it.
+  let cached: string[] | undefined;
   function cachedImageUrls(): string[] {
+    if (cached) return cached;
     const urls: string[] = [];
     for (const file of readdirSync(cacheDir)) {
       if (!file.endsWith('.json') || file.includes('_index')) continue;
@@ -119,6 +122,7 @@ describe('against the real Amazon cache', () => {
       const serpApi = data?.product_results?.thumbnails;
       if (Array.isArray(serpApi)) urls.push(...serpApi.filter(Boolean));
     }
+    cached = urls;
     return urls;
   }
 

@@ -152,13 +152,9 @@ describe('validate-ai-docs: catches rot', () => {
 });
 
 describe('validate-ai-docs: CLI', () => {
-  // The one spawn: proves the command CI runs still exits 0 / 1 as before.
-  it('exits 0 on a valid directory and 1 with the issue printed on an invalid one', () => {
-    const good = mkdtempSync(join(root, 'cli-good-'));
-    writeFileSync(join(good, 'doc.md'), frontmatter() + SECTIONS);
-    writeFileSync(join(good, 'target.md'), target);
-    expect(execFileSync('node', [SCRIPT, good], { encoding: 'utf-8' })).toContain('All AI docs are valid.');
-
+  // The one spawn: proves the command fails CI (exit 1, issue printed) on rot. The
+  // success path runs for real in CI as `bun run check:ai-docs`.
+  it('exits 1 with the issue printed on an invalid directory', () => {
     const bad = mkdtempSync(join(root, 'cli-bad-'));
     writeFileSync(join(bad, 'doc.md'), frontmatter());
     let out = '';

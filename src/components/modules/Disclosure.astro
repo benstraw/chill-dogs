@@ -13,7 +13,7 @@ interface Props {
 const { showSafety = true, providedProduct } = Astro.props;
 ---
 
-<aside class="disc" aria-label="Disclosures">
+<aside class="disc" aria-label="Disclosures" data-affiliate-disclosure>
   <div class="disc-inner">
     {providedProduct && (
       <p class="disc-provided">

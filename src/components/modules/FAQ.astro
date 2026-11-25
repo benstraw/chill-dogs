@@ -1,4 +1,6 @@
 ---
+import JsonLd from '@components/JsonLd.astro';
+
 interface FaqItem {
   question: string;
   answer: string;
@@ -37,7 +39,7 @@ const faqSchema = {
   </dl>
 </section>
 
-<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+<JsonLd schema={faqSchema} />
 
 <style>
   .faq {

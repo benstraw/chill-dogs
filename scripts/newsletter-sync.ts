@@ -15,6 +15,8 @@
  */
 import { writeFileSync } from 'node:fs';
 
+import { linkedPaths, utmSources } from './newsletter-links';
+
 const API = 'https://api.buttondown.com/v1';
 const key = process.env.BUTTONDOWN_API_KEY;
 const write = process.argv.includes('--write');
@@ -56,15 +58,6 @@ async function allEmails(): Promise<Email[]> {
   return out;
 }
 
-/** chill-dogs.com paths linked in a Markdown body, UTMs stripped, de-duplicated in order. */
-function linkedPaths(body = ''): string[] {
-  const seen = new Set<string>();
-  for (const m of body.matchAll(/https?:\/\/(?:www\.)?chill-dogs\.com(\/[^\s)"'>]*)/g)) {
-    seen.add(m[1].split('?')[0]);
-  }
-  return [...seen];
-}
-
 const emails = await allEmails();
 const rows = emails.map((e) => ({
   id: e.id,
@@ -73,7 +66,7 @@ const rows = emails.map((e) => ({
   sent: (e.publish_date ?? e.creation_date ?? '').slice(0, 10),
   url: e.absolute_url ?? '',
   paths: linkedPaths(e.body),
-  utmSources: [...new Set([...(e.body ?? '').matchAll(/utm_source=([\w-]+)/g)].map((m) => m[1]))],
+  utmSources: utmSources(e.body),
   hasPinterest: /pinterest\.com\/chilldogs42/.test(e.body ?? ''),
   analytics: e.analytics ?? null,
 }));

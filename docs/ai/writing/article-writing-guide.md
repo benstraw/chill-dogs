@@ -100,7 +100,7 @@ Scope: page copy, FAQ answers, alt text, captions, meta descriptions, code comme
 
 Exceptions: product IDs, URLs, and brand or product names that already contain a British spelling (for example an ID ending `-grey`) stay as they are, and provider data under `src/data/amazon-products/` and `src/data/chewy-products/` is never edited.
 
-`src/__tests__/american-english.test.ts` fails the build on the common spellings. It cannot catch vocabulary or idiom, so reread for those.
+`src/__tests__/content-guardrails.test.ts` fails the build on the common spellings and a few vocabulary forms (`on-lead`, `retractable lead`, `cupboard`). It cannot catch most vocabulary or idiom, so reread for those. Words inside `code spans` in Markdown are exempt, which is how rule docs quote the forms they forbid.
 
 ### Numbers and units
 

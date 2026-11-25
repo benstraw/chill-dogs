@@ -11,6 +11,7 @@ import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
 import Analytics from '@components/Analytics.astro';
 import Pinterest from '@components/Pinterest.astro';
+import JsonLd from '@components/JsonLd.astro';
 import SpeedInsights from '@vercel/speed-insights/astro';
 import type { ImageMetadata } from 'astro';
 import { resolveAutoOgImagePath, resolveProvidedOgImagePath } from '@utils/og';
@@ -98,7 +99,7 @@ const breadcrumbSchema = !noindex && !isStaging && Astro.site
 
     <slot name="head" />
     {breadcrumbSchema && (
-      <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+      <JsonLd schema={breadcrumbSchema} />
     )}
     <Pinterest noindex={noindex} />
   </head>

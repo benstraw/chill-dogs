@@ -34,6 +34,13 @@ const {
   tone,
   'data-track': dataTrack = 'affiliate_outbound_click',
   'data-track-also': dataTrackAlso = offer.merchant === 'amazon' ? 'amazon_outbound_click' : undefined,
+  // Fixed by this component. Pulled out of `rest` and discarded so a caller can never
+  // override them: a rel="nofollow" passed through used to drop "sponsored".
+  href: _href,
+  rel: _rel,
+  target: _target,
+  'data-affiliate': _dataAffiliate,
+  'data-merchant': _dataMerchant,
   ...rest
 } = Astro.props;
 
