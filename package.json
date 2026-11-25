@@ -21,6 +21,7 @@
     "test:unit": "vitest run --exclude '**/node_modules/**' --exclude '**/dist/**' --exclude 'src/__tests__/{site-smoke,seo-meta,llms-coverage,affiliate-instrumentation}.test.ts'",
     "test:smoke": "vitest run src/__tests__/site-smoke.test.ts",
     "test:coverage": "vitest run --coverage",
+    "test:timing": "bun run scripts/test-timing.ts",
     "indexnow:submit": "node scripts/indexnow-submit.mjs",
     "check:asins": "bun run scripts/check-asin-validity.ts",
     "check:amazon": "bun run scripts/check-amazon-freshness.ts",
