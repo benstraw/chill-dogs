@@ -194,18 +194,9 @@ describe('related pages', () => {
   });
 
   it('keeps migrated static related hrefs in the complete sitemap and excludes self', async () => {
-    const sections = [
-      ...await getCompleteSitemapSections(),
-      createSection('Articles', [
-        createPage({ href: '/travel/rhys-ran-away-cerro-san-luis-obispo/', pageType: 'collector', collectorSubtype: 'article' }),
-        createPage({ href: '/safety/what-to-do-if-your-dog-runs-away/', pageType: 'collector', collectorSubtype: 'article' }),
-        createPage({ href: '/travel/dog-road-trip-gear/', pageType: 'collector', collectorSubtype: 'article' }),
-        createPage({ href: '/calming/crate-training-for-dogs/', pageType: 'collector', collectorSubtype: 'article' }),
-        createPage({ href: '/calming/how-to-prepare-a-calm-room-for-fireworks-night/', pageType: 'collector', collectorSubtype: 'article' }),
-        createPage({ href: '/calming/should-you-take-your-dog-to-fireworks/', pageType: 'collector', collectorSubtype: 'article' }),
-        createPage({ href: '/travel/how-to-fly-with-a-dog/', pageType: 'collector', collectorSubtype: 'article' }),
-      ]),
-    ];
+    // The astro:content mock loads the real articles, so no hand-stubbed article pages.
+    const sections = await getCompleteSitemapSections();
+    expect(sections.some((section) => section.pages.some((page) => page.collectorSubtype === 'article'))).toBe(true);
     const pages = sections.flatMap((section) => section.pages);
     const hrefs = new Set(pages.map((page) => page.href));
     const migratedHrefs = [

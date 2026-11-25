@@ -4,10 +4,10 @@ import { calmingProducts } from '../data/calming-products';
 
 describe('calming product data integrity', () => {
   it('every product amazonUrl contains the affiliate tag', () => {
-    for (const product of calmingProducts) {
-      if (product.amazonUrl) {
-        expect(product.amazonUrl).toContain('tag=chill-dogs-20');
-      }
+    const withAmazon = calmingProducts.filter((product) => product.amazonUrl);
+    expect(withAmazon.length, 'no Amazon URLs to check').toBeGreaterThan(0);
+    for (const product of withAmazon) {
+      expect(product.amazonUrl, product.id).toContain('tag=chill-dogs-20');
     }
   });
 

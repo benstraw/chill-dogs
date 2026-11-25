@@ -9,56 +9,38 @@
  * These checks run as part of the full test suite via `bun run test`.
  */
 
-import { readdirSync, readFileSync, existsSync } from 'node:fs';
+import { existsSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 import { beforeAll, describe, expect, it } from 'vitest';
 
-const distRoot = path.join(process.cwd(), 'dist');
+import { distRoot, isNoindex as htmlIsNoindex, readDist } from '../helpers/dist';
 
 function readSitemapUrls(): string[] {
-  const files = readdirSync(distRoot).filter(
-    (name) => /^sitemap-\d+\.xml$/.test(name)
-  );
-
-  if (files.length === 0) {
-    throw new Error('No dist/sitemap-*.xml found. Run `bun run build` first.');
-  }
-
-  return files.flatMap((file) => {
-    const xml = readFileSync(path.join(distRoot, file), 'utf8');
-    return Array.from(xml.matchAll(/<loc>([^<]+)<\/loc>/g)).map((match) => match[1]);
-  });
+  const files = readdirSync(distRoot).filter((name) => /^sitemap-\d+\.xml$/.test(name));
+  if (files.length === 0) throw new Error('No dist/sitemap-*.xml found. Run `bun run build` first.');
+  return files.flatMap((file) => Array.from(readDist(file).matchAll(/<loc>([^<]+)<\/loc>/g), (m) => m[1]));
 }
 
 function readLlmsUrls(): string[] {
-  const llmsPath = path.join(distRoot, 'llms.txt');
+  return Array.from(readDist('llms.txt').matchAll(/^- \[[^\]]*\]\((https?:\/\/[^)\s]+)\)/gm), (m) => m[1]);
+}
 
-  if (!existsSync(llmsPath)) {
-    throw new Error('No dist/llms.txt found. Run `bun run build` first.');
+const toPathname = (url: string) => new URL(url).pathname;
+
+/** Built HTML per sitemap route, read once. A sitemap URL with no built page is a failure. */
+const htmlByPath = new Map<string, string>();
+function pageHtml(pathname: string): string {
+  let html = htmlByPath.get(pathname);
+  if (html === undefined) {
+    const rel = path.join(pathname, 'index.html');
+    if (!existsSync(path.join(distRoot, rel))) throw new Error(`Sitemap lists ${pathname} but dist${rel} does not exist.`);
+    html = readDist(rel);
+    htmlByPath.set(pathname, html);
   }
-
-  const body = readFileSync(llmsPath, 'utf8');
-  return Array.from(body.matchAll(/^- \[[^\]]*\]\((https?:\/\/[^)\s]+)\)/gm)).map(
-    (match) => match[1]
-  );
+  return html;
 }
 
-function toPathname(url: string): string {
-  return new URL(url).pathname;
-}
-
-/** True when the built page for this route asks robots not to index it. */
-function isNoindex(pathname: string): boolean {
-  const htmlPath = path.join(distRoot, pathname, 'index.html');
-
-  if (!existsSync(htmlPath)) {
-    return false;
-  }
-
-  const html = readFileSync(htmlPath, 'utf8');
-  const robots = html.match(/<meta[^>]+name="robots"[^>]+content="([^"]*)"/i);
-  return Boolean(robots && /noindex/i.test(robots[1]));
-}
+const isNoindex = (pathname: string) => htmlIsNoindex(pageHtml(pathname));
 
 let sitemapPaths: string[];
 let llmsPaths: string[];
@@ -93,11 +75,9 @@ describe('llms.txt sitemap coverage', () => {
   });
 
   it('lists every article collector', () => {
-    const articlePaths = sitemapPaths.filter((pathname) => {
-      const htmlPath = path.join(distRoot, pathname, 'index.html');
-      if (!existsSync(htmlPath)) return false;
-      return /"@type"\s*:\s*"(Article|BlogPosting)"/.test(readFileSync(htmlPath, 'utf8'));
-    });
+    const articlePaths = sitemapPaths.filter((pathname) =>
+      /"@type"\s*:\s*"(Article|BlogPosting)"/.test(pageHtml(pathname))
+    );
 
     expect(articlePaths.length).toBeGreaterThan(0);
     expect(articlePaths.filter((pathname) => !llmsPaths.includes(pathname))).toEqual([]);

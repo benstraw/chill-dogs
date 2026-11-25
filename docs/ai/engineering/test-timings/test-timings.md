@@ -41,6 +41,9 @@ bun run test:timing -- --compare docs/ai/engineering/test-timings/<previous>.jso
 | Snapshot | Commit | Build | `test:unit` | `dist` | Full `vitest run` | Tests |
 |---|---|---|---|---|---|---|
 | [baseline.json](baseline.json) | `cb0a5d2` | 17.68 s | 6.51 s (353 tests) | — | 8.66 s | 418 |
+| [phase-1.json](phase-1.json) | Phase 1 | 16.56 s | 3.58 s (395 tests, **−45%**) | 2.47 s (69 tests) | 5.35 s (**−38%**) | 464 |
+
+`test:unit` changed meaning in Phase 1: the baseline figure still included two files that read `dist/`. Since Phase 1, `unit` never touches `dist/`.
 
 Baseline machine: 4× Intel Xeon @ 2.10 GHz, Bun 1.4.4 (the repo pins 1.3.6; same major line), cloud container.
 
@@ -50,6 +53,13 @@ Baseline machine: 4× Intel Xeon @ 2.10 GHz, Bun 1.4.4 (the repo pins 1.3.6; sam
 - `site-smoke.test.ts` is 3.47 s, about half of all test execution time. It walks and re-reads all 352 built pages eight times.
 - `validate-ai-docs.test.ts` is 1.35 s, from spawning a `node` process per case.
 - Test files sorted by speed: 2 files take 4.8 s; the other 37 take 1.6 s combined.
+
+### Phase 1 observations
+
+- `environment` setup fell from 9.5 s to 0.5 s summed. Tests default to `node`; only `analytics` and `site-smoke` boot happy-dom.
+- `site-smoke` fell from 3.47 s to 1.58 s. Its eight whole-site walks became one pass in `site-sweep`, and the 1.2 MB admin catalog page is scanned as a string, not parsed as a DOM.
+- `validate-ai-docs` fell from 1.35 s to 0.23 s by validating in process instead of spawning `node` per case.
+- `related-pages` rose from 46 ms to 120 ms. It now runs over the 17 real articles instead of an empty collection. That's under the noise threshold, and it buys real coverage.
 
 ## Related knowledge
 

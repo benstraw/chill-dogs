@@ -1,3 +1,5 @@
+import { globSync, readFileSync } from 'node:fs';
+import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 
 import { emergencyProducts } from '../data/emergency-products';
@@ -17,12 +19,14 @@ describe('multi-merchant product offers', () => {
   });
 
   it('keeps the Amazon affiliate tag on every Amazon offer', () => {
-    for (const product of productCatalogItems) {
-      for (const offer of getOffers(product)) {
-        if (offer.merchant === 'amazon') {
-          expect(offer.url, `${product.id} missing Amazon tag`).toContain('tag=chill-dogs-20');
-        }
-      }
+    const amazonOffers = productCatalogItems.flatMap((product) =>
+      getOffers(product)
+        .filter((offer) => offer.merchant === 'amazon')
+        .map((offer) => ({ id: product.id, url: offer.url }))
+    );
+    expect(amazonOffers.length, 'no Amazon offers to check').toBeGreaterThan(0);
+    for (const { id, url } of amazonOffers) {
+      expect(url, `${id} missing Amazon tag`).toContain('tag=chill-dogs-20');
     }
   });
 
@@ -453,49 +457,19 @@ describe('multi-merchant product offers', () => {
     }
   });
 
-  it('keeps rendered/search/admin editorial fields canonical instead of provider metadata sourced', () => {
-    const providerMetadata: ProviderMetadata = {
-      fetchedAt: '2026-05-28T00:00:00.000Z',
-      provider: 'fixture',
-      title: 'Provider Title Should Not Render',
-      imageUrl: 'https://example.com/provider-image.jpg',
-    };
-    const product: ProductCatalogItem = {
-      id: 'editorial-guardrail',
-      name: 'Canonical Editorial Name',
-      pillar: 'cooling',
-      category: 'cooling-mats',
-      asin: 'B000EDIT',
-      amazonUrl: 'https://www.amazon.com/dp/B000EDIT/?tag=chill-dogs-20',
-      offers: [
-        {
-          merchant: 'amazon',
-          asin: 'B000EDIT',
-          merchantProductId: 'B000EDIT',
-          url: 'https://www.amazon.com/dp/B000EDIT/?tag=chill-dogs-20',
-        },
-      ],
-      bullets: ['Canonical bullet'],
-      image: { src: 'https://example.com/canonical.jpg', alt: 'Canonical alt' },
-      source: 'src/data/products-offers.test.ts',
-    };
+  it('keeps provider caches out of every public rendering path', () => {
+    // Rule: Amazon/Chewy provider metadata is diagnostic only and must never overwrite
+    // editorial copy or images. The provider caches live in src/data/amazon-products/ and
+    // src/data/chewy-products/; only the cache tooling and the noindex /admin/ pages may
+    // read them. (The old test built objects from a fixture and compared them to
+    // themselves, so it could not fail.)
+    const allowed = [/^src\/scripts\/(chewy-cache|amazon-cache-freshness)\.ts$/, /^src\/pages\/admin\//, /^src\/data\/products\/types\.ts$/];
+    const provider = /amazon-products\/|chewy-products\/|chewy-cache|amazon-cache-freshness|providerMetadata/;
+    const root = path.resolve(__dirname, '../..');
+    const offenders = globSync('src/**/*.{ts,tsx,astro,mdx,mjs}', { cwd: root })
+      .filter((file) => !file.startsWith('src/__tests__/') && !allowed.some((re) => re.test(file)))
+      .filter((file) => provider.test(readFileSync(path.join(root, file), 'utf8')));
 
-    const searchLikeItem = {
-      name: product.name,
-      bullets: product.bullets,
-      image: product.image,
-    };
-    const adminLikeItem = {
-      name: product.name,
-      bullets: product.bullets,
-      image: product.image,
-    };
-
-    expect(searchLikeItem.name).toBe('Canonical Editorial Name');
-    expect(searchLikeItem.bullets).toEqual(['Canonical bullet']);
-    expect(searchLikeItem.image?.src).toBe('https://example.com/canonical.jpg');
-    expect(adminLikeItem.name).not.toBe(providerMetadata.title);
-    expect(adminLikeItem.bullets).toEqual(['Canonical bullet']);
-    expect(adminLikeItem.image?.src).not.toBe(providerMetadata.imageUrl);
+    expect(offenders, 'render editorial fields from the product records, not provider caches').toEqual([]);
   });
 });

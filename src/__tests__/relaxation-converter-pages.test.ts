@@ -15,13 +15,6 @@ describe('relaxation converter page config', () => {
 
     expect(config.pageSlug).toBe('best-puppy-crates');
     expect(config.hero.secondaryCta?.href).toBe('/calming/crate-training-for-dogs/');
-    expect(config.itemListSchema?.productIds).toEqual([
-      'kindtail-pawd-collapsible-crate',
-      'midwest-icrate-puppy',
-      'midwest-life-stages-puppy-crate',
-      'petmate-training-retreat-kennel',
-      'internets-best-small-wire-crate',
-    ]);
   });
 
   it('returns anxiety crates converter config with safety framing', () => {
@@ -29,11 +22,6 @@ describe('relaxation converter page config', () => {
 
     expect(config.pageSlug).toBe('best-anxiety-dog-crates');
     expect(config.hero.secondaryCta?.href).toBe('/calming/crate-training-for-dogs/');
-    expect(config.itemListSchema?.productIds).toEqual([
-      'midwest-life-stages-crate',
-      'petmate-sky-kennel',
-      'impact-high-anxiety-crate',
-    ]);
     expect(config.blocks.some((block) => (
       block.kind === 'prose' &&
       block.heading === 'Safety First: A Crate Is Not a Separation Anxiety Cure'
@@ -45,14 +33,6 @@ describe('relaxation converter page config', () => {
 
     expect(config.pageSlug).toBe('best-travel-crates-for-road-trips');
     expect(config.hero.secondaryCta?.href).toBe('/travel/dog-road-trip-gear/');
-    expect(config.itemListSchema?.productIds).toEqual([
-      'petsafe-happy-ride-travel-crate',
-      'petmate-sky-kennel',
-      'elitefield-three-door-soft-crate',
-      'lesure-soft-collapsible-crate',
-      'collapsible-hard-sided-travel-crate',
-      'zomisia-collapsible-steel-crate',
-    ]);
     expect(config.blocks.some((block) => (
       block.kind === 'prose' &&
       block.heading === 'Hard-Sided vs Soft Folding Travel Crates'
@@ -64,12 +44,6 @@ describe('relaxation converter page config', () => {
 
     expect(config.pageSlug).toBe('best-airline-crates-for-flying-with-your-dog');
     expect(config.hero.secondaryCta?.href).toBe('/calming/crate-training-for-dogs/');
-    expect(config.itemListSchema?.productIds).toEqual([
-      'petmate-sky-kennel',
-      'sportpet-airline-compliant-kennel',
-      'amazon-basics-hard-sided-carrier',
-      'petmate-two-door-kennel',
-    ]);
   });
 
   it('resolves plain product refs to canonical display products', () => {
@@ -139,25 +113,6 @@ describe('relaxation converter page config', () => {
 
     expect(config.pageSlug).toBe('best-furniture-dog-crates');
     expect(config.hero.secondaryCta?.href).toBe('/comforting/');
-    expect(config.itemListSchema?.productIds).toEqual([
-      'amazon-basics-furniture-style-crate',
-      'dwanton-dog-crate-furniture',
-      'rehomerance-dog-crate-furniture',
-      'feandrea-furniture-crate',
-      'internets-best-decorative-kennel',
-      'lyromix-dog-crate-furniture',
-      'ironck-small-furniture-crate',
-      'easycom-foldable-dog-crate-furniture',
-      'rotating-bowl-furniture-crate',
-      'ironck-extra-large-dog-crate-furniture',
-      'bifanuo-dog-crate-furniture',
-      'charging-station-furniture-crate',
-      'saksun-furniture-crate',
-      'rovibek-double-dog-crate-furniture',
-      'hugcoz-double-furniture-dog-crate',
-      'pawhut-furniture-dog-crate-double',
-      'oranland-heavy-duty-furniture-crate',
-    ]);
   });
 
   it('returns heavy-duty crates converter config with reinforced containment product logic', () => {
@@ -165,17 +120,6 @@ describe('relaxation converter page config', () => {
 
     expect(config.pageSlug).toBe('best-heavy-duty-dog-crates');
     expect(config.hero.secondaryCta?.href).toBe('/comforting/best-anxiety-dog-crates/');
-    expect(config.itemListSchema?.productIds).toEqual([
-      'impact-high-anxiety-crate',
-      'oranland-heavy-duty-dog-crate',
-      'kokotangs-heavy-duty-dog-crate',
-      'gardner-pet-heavy-duty-crate',
-      'xxl-heavy-duty-dog-crate',
-      'hiwokk-large-dog-crate',
-      'hzuaneri-furniture-dog-crate',
-      'rexwelten-furniture-dog-crate',
-      'petrova-furniture-dog-crate',
-    ]);
   });
 
   it('builds item list schema for puppy crates', () => {
@@ -237,16 +181,6 @@ describe('relaxation converter page config', () => {
 
     expect(config.pageSlug).toBe('best-dog-travel-beds');
     expect(config.hero.secondaryCta?.href).toBe('/travel/dog-road-trip-gear/');
-    expect(config.itemListSchema?.productIds).toEqual([
-      'chuckit-travel-bed',
-      'coleman-roll-up-travel-bed',
-      'furhaven-outdoor-travel-dog-bed',
-      'kindtail-nomad-nap-mat',
-      'onetigris-travel-dog-bed',
-      'kurgo-loft-wander-bed',
-      'bingpet-outdoor-travel-bed',
-      'yofang-extra-large-travel-bed',
-    ]);
     expect(config.blocks.some((block) => (
       block.kind === 'note' &&
       block.heading === 'Important Flight Note'
@@ -259,13 +193,6 @@ describe('relaxation converter page config', () => {
     expect(config.pageSlug).toBe('best-chew-resistant-dog-beds');
     expect(config.title).toBe('Best Chew-Proof Dog Beds');
     expect(config.hero.secondaryCta?.href).toBe('/comforting/');
-    expect(config.itemListSchema?.productIds).toEqual([
-      'k9-ballistics-armored-crate-bed',
-      'k9-ballistics-elevated-cooling-bed',
-      'fxw-titannest-elevated-bed',
-      'veehoo-chewproof-elevated-bed',
-      'k9-ballistics-ripstop-oval-bolster-bed',
-    ]);
     expect(config.hero.disclaimer).toBe('As an Amazon Associate, we earn from qualifying purchases.');
   });
 

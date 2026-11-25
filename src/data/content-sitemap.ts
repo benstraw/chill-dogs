@@ -1000,7 +1000,7 @@ export const staticSitemapSections: SitemapSection[] = [
  *
  * Generated rather than hand-listed: 214 entries would rot the moment a product is
  * added. Registering here is what puts these pages in llms.txt — `llms.txt` is built
- * from the complete inventory, and `src/__tests__/llms-coverage.test.ts` fails the
+ * from the complete inventory, and `src/__tests__/dist/llms-coverage.test.ts` fails the
  * build if it and the XML sitemap disagree on any indexable URL.
  *
  * Products under the copy bar are marked `noindex`, which keeps them out of both

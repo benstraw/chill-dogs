@@ -39,8 +39,11 @@ Do not skip the task-specific docs.
 bun run dev              # Start dev server at localhost:4321
 bun run build            # Static build to dist/
 bun run preview          # Preview built site
-bun run test             # Run full vitest suite (build first; seo-meta test reads dist/)
-bun run test:smoke       # Smoke tests only; builds the site internally
+bun run test             # Build, then run both test tiers (unit + dist)
+bun run test:unit        # Unit tier only: no dist/, ~3 s
+bun run test:dist        # Dist tier only: fails loudly if dist/ is missing or stale
+bun run test:smoke       # Page-level HTML checks; builds only if dist/ is stale
+bun run test:timing      # Time build + tiers; --compare <json> against a snapshot
 bun run test:coverage    # Coverage report for src/utils/**, src/scripts/**, src/data/**
 bun run check:asins      # Check all product ASINs are still live on Amazon
 bun run check:asins -- --quiet  # Same, issues only

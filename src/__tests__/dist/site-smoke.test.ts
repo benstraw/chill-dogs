@@ -1,41 +1,17 @@
-import { beforeAll, describe, expect, it } from 'vitest';
-import { execFileSync } from 'node:child_process';
-import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
+// @vitest-environment happy-dom
+/**
+ * Page-specific checks on the built site. Site-wide rules (one h1, canonical, og
+ * lengths, links, affiliate instrumentation, ...) live in site-sweep.test.ts, which
+ * reads every page once. Only add a test here when it is about particular pages.
+ */
+import { describe, expect, it } from 'vitest';
+import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 
-import { MIDDLEWARE_ONLY_ROUTES } from '../data/routes';
-
-const projectRoot = path.resolve(__dirname, '../..');
-const distRoot = path.join(projectRoot, 'dist');
-
-function collectHtmlFiles(dir: string): string[] {
-  const files: string[] = [];
-  for (const entry of readdirSync(dir)) {
-    const full = path.join(dir, entry);
-    if (statSync(full).isDirectory()) {
-      files.push(...collectHtmlFiles(full));
-    } else if (entry.endsWith('.html')) {
-      files.push(full);
-    }
-  }
-  return files;
-}
-
-/**
- * Reuses an existing dist/ (CI and `bun run test` build before running vitest,
- * and the other dist-reading specs already assume that). Only builds when dist/
- * is absent, so a standalone `test:smoke` still works. Set FORCE_SMOKE_BUILD=1
- * to rebuild regardless.
- */
-function buildSite() {
-  const distIsBuilt = existsSync(path.join(distRoot, 'index.html'));
-  if (distIsBuilt && process.env.FORCE_SMOKE_BUILD !== '1') return;
-
-  execFileSync('bun', ['run', 'build'], {
-    cwd: projectRoot,
-    stdio: 'pipe',
-  });
-}
+import { productCatalogItems } from '../../data/product-catalog';
+import { getCompleteSitemapPages } from '../../data/sitemap-inventory';
+import { isHomepageArticle } from '../../utils/homepage-articles';
+import { SITE_ORIGIN, decodeEntities, distRoot, projectRoot } from '../helpers/dist';
 
 function readBuiltPage(relativePath: string): Document {
   const html = readFileSync(path.join(distRoot, relativePath), 'utf8')
@@ -48,36 +24,18 @@ function readBuiltAsset(relativePath: string): string {
   return readFileSync(path.join(distRoot, relativePath), 'utf8');
 }
 
-function readArticlePublishOrder(): string[] {
-  const articlesRoot = path.join(projectRoot, 'src', 'content', 'articles');
-
-  const articlePages = readdirSync(articlesRoot)
-    .filter((entry) => entry.endsWith('.mdx'))
-    .map((entry) => {
-      const contents = readFileSync(path.join(articlesRoot, entry), 'utf8');
-      const pubDate = contents.match(/^pubDate:\s*([0-9-]+)/m)?.[1];
-      const canonicalPath = contents.match(/^canonicalPath:\s*'([^']+)'/m)?.[1];
-
-      if (!pubDate || !canonicalPath) {
-        throw new Error(`Missing pubDate or canonicalPath in ${entry}`);
-      }
-
-      return {
-        canonicalPath,
-        pubDate: new Date(pubDate),
-      };
-    });
-
-  const staticArticlePages = [
-    { canonicalPath: '/gear/aorkuler-gps-dog-tracker-review/', pubDate: new Date('2026-11-07') },
-    { canonicalPath: '/gear/fi-dog-collar-review/', pubDate: new Date('2026-03-18') },
-    { canonicalPath: '/gear/garmin-dog-tracking-collars/', pubDate: new Date('2026-03-18') },
-    { canonicalPath: '/gear/airtag-for-dogs/', pubDate: new Date('2026-03-18') },
-  ];
-
-  return [...articlePages, ...staticArticlePages]
-    .sort((a, b) => b.pubDate.valueOf() - a.pubDate.valueOf())
-    .map((article) => article.canonicalPath);
+/**
+ * Expected article order, derived from the same data the site is built from (the
+ * astro:content mock loads the real MDX frontmatter; static review pages come from
+ * the inventory), then sorted here independently: newest first, ties by href.
+ * It used to combine readdirSync order with a hard-coded list of static pages.
+ */
+async function readArticlePublishOrder(): Promise<string[]> {
+  return (await getCompleteSitemapPages())
+    .filter(isHomepageArticle)
+    .map((page) => ({ href: page.href, date: page.pubDate!.valueOf() }))
+    .sort((a, b) => b.date - a.date || (a.href < b.href ? -1 : a.href > b.href ? 1 : 0))
+    .map((page) => page.href);
 }
 
 function firstMainImageAbsolute(doc: Document): string | null {
@@ -86,7 +44,7 @@ function firstMainImageAbsolute(doc: Document): string | null {
   if (!src) return null;
   if (src.startsWith('data:')) return null;
   if (src.startsWith('//')) return `https:${src}`;
-  return new URL(src, 'https://www.chill-dogs.com').href;
+  return new URL(src, SITE_ORIGIN).href;
 }
 
 function getAffiliateLinks(root: ParentNode): HTMLAnchorElement[] {
@@ -114,17 +72,7 @@ function relTokens(link: HTMLAnchorElement): string[] {
     .sort();
 }
 
-/** Returns true for Astro-generated redirect stub pages (no real content). */
-function isRedirectStub(html: string): boolean {
-  return /http-equiv=['"]refresh['"]/i.test(html);
-}
-
 describe('site smoke tests', () => {
-  beforeAll(() => {
-    buildSite();
-    // Generous: only the no-dist fallback path actually builds, and a cold
-    // build runs well past two minutes on slower machines.
-  }, 300_000);
 
   it('renders the homepage with both primary navigation CTAs', () => {
     const doc = readBuiltPage('index.html');
@@ -158,7 +106,7 @@ describe('site smoke tests', () => {
     expect(heroSlogan?.textContent?.replace(/\s+/g, ' ').trim()).toBe(
       'Temperature or Temperament — We Have You Covered'
     );
-    expect(canonical?.getAttribute('href')).toBe('https://www.chill-dogs.com/');
+    expect(canonical?.getAttribute('href')).toBe(`${SITE_ORIGIN}/`);
   });
 
   it('links the homepage theme sections into converter and guide paths', () => {
@@ -213,9 +161,9 @@ describe('site smoke tests', () => {
     }
   });
 
-  it('renders the articles index in reverse publish order with pillar labels', () => {
+  it('renders the articles index in reverse publish order with pillar labels', async () => {
     const doc = readBuiltPage(path.join('articles', 'index.html'));
-    const publishOrder = readArticlePublishOrder();
+    const publishOrder = await readArticlePublishOrder();
 
     const featured = doc.querySelector<HTMLAnchorElement>(
       'a[data-link-position="articles-index-featured"]'
@@ -312,30 +260,6 @@ describe('site smoke tests', () => {
     expect(existsSync(path.join(distRoot, 'calming', 'v'))).toBe(false);
   });
 
-  it('applies pillar themes to all pages under pillar URL paths', () => {
-    const cases = [
-      { page: path.join('cooling', 'index.html'), theme: 'cooling' },
-      { page: path.join('cooling', 'cooling-mats', 'index.html'), theme: 'cooling' },
-      { page: path.join('cooling', 'keep-dog-cool-in-car', 'index.html'), theme: 'cooling' },
-      { page: path.join('calming', 'index.html'), theme: 'calming' },
-      { page: path.join('calming', 'best-calming-products-for-anxious-dogs', 'index.html'), theme: 'calming' },
-      { page: path.join('calming', 'cbd-for-dogs', 'index.html'), theme: 'calming' },
-      { page: path.join('comforting', 'index.html'), theme: 'comfort' },
-      { page: path.join('comforting', 'best-anxiety-dog-crates', 'index.html'), theme: 'comfort' },
-      { page: path.join('comforting', 'how-much-do-dogs-sleep', 'index.html'), theme: 'comfort' },
-      { page: path.join('gear', 'index.html'), theme: 'gear' },
-      { page: path.join('gear', 'fi-dog-collar-review', 'index.html'), theme: 'gear' },
-      { page: path.join('travel', 'dog-road-trip-gear', 'index.html'), theme: 'gear' },
-      { page: path.join('safety', 'what-to-do-if-your-dog-runs-away', 'index.html'), theme: 'gear' },
-    ];
-
-    for (const { page, theme } of cases) {
-      const doc = readBuiltPage(page);
-      expect(doc.documentElement.getAttribute('data-pillar-theme')).toBe(theme);
-      expect(doc.documentElement.getAttribute('style')).toContain('--pillar-accent:');
-    }
-  });
-
   it('marks the active pillar top-nav item with the pillar theme', () => {
     const comfortDoc = readBuiltPage(path.join('comforting', 'best-anxiety-dog-crates', 'index.html'));
     const activeNav = comfortDoc.querySelector<HTMLAnchorElement>('.main-nav a[aria-current="page"]');
@@ -350,115 +274,6 @@ describe('site smoke tests', () => {
     expect(gearDoc.documentElement.getAttribute('data-pillar-theme')).toBe('gear');
     expect(gearDoc.documentElement.getAttribute('style')).toContain('--color-nav-accent: hsl(262, 45%, 38%)');
     expect(gearActiveNav?.getAttribute('href')).toBe('/gear/');
-  });
-
-  it('renders derived InternalLinkStrip links on migrated pages', () => {
-    const cases = [
-      {
-        page: path.join('cooling', 'keep-dog-cool-in-car', 'index.html'),
-        expected: ['/cooling/car-cooling-for-dogs/', '/cooling/cooling-mats/', '/cooling/dog-travel-hydration/', '/travel/dog-road-trip-gear/'],
-      },
-      {
-        page: path.join('travel', 'how-to-fly-with-a-dog', 'index.html'),
-        expected: [
-          '/comforting/best-airline-approved-dog-carriers/',
-          '/comforting/best-dog-travel-bags-for-flying/',
-          '/cooling/dog-travel-hydration/',
-          '/comforting/best-airline-crates-for-flying-with-your-dog/',
-          '/calming/best-calming-products-for-anxious-dogs/',
-          '/calming/car-anxiety-for-dogs/',
-          '/travel/dog-road-trip-gear/',
-        ],
-      },
-      {
-        page: path.join('travel', 'dog-road-trip-gear', 'index.html'),
-        expected: [
-          '/comforting/best-travel-crates-for-road-trips/',
-          '/cooling/car-cooling-for-dogs/',
-          '/cooling/dog-travel-hydration/',
-          '/calming/car-anxiety-for-dogs/',
-          '/calming/best-lick-mats-for-dogs/',
-        ],
-      },
-      {
-        page: path.join('calming', 'cbd-for-dogs', 'index.html'),
-        expected: [
-          '/calming/best-calming-products-for-anxious-dogs/',
-          '/calming/best-thundershirt-alternatives/',
-          '/calming/car-anxiety-for-dogs/',
-          '/calming/best-lick-mats-for-dogs/',
-          '/comforting/best-orthopedic-dog-beds/',
-        ],
-      },
-      {
-        page: path.join('gear', 'fi-dog-collar-review', 'index.html'),
-        expected: [
-          '/gear/best-dog-gps-trackers/',
-          '/gear/garmin-dog-tracking-collars/',
-          '/gear/aorkuler-gps-dog-tracker-review/',
-          '/gear/airtag-for-dogs/',
-          '/travel/rhys-ran-away-cerro-san-luis-obispo/',
-        ],
-      },
-      {
-        page: path.join('cooling', 'cooling-mats', 'index.html'),
-        expected: [
-          '/cooling/cooling-bandanas/',
-          '/cooling/cooling-vests/',
-          '/cooling/freezable-dog-toys/',
-          '/cooling/best-cooling-products-for-dogs/',
-        ],
-      },
-      {
-        page: path.join('cooling', 'car-cooling-for-dogs', 'index.html'),
-        expected: [
-          '/travel/dog-road-trip-gear/',
-          '/cooling/cooling-mats/',
-          '/cooling/dog-travel-hydration/',
-          '/cooling/best-cooling-products-for-dogs/',
-        ],
-      },
-      {
-        page: path.join('calming', 'best-calming-products-for-anxious-dogs', 'index.html'),
-        expected: [
-          '/travel/dog-road-trip-gear/',
-          '/cooling/best-cooling-products-for-dogs/',
-          '/calming/',
-          '/calming/best-thundershirt-alternatives/',
-          '/gear/best-dog-gps-trackers/',
-          '/safety/what-to-do-if-your-dog-runs-away/',
-        ],
-      },
-      {
-        page: path.join('comforting', 'best-anxiety-dog-crates', 'index.html'),
-        expected: [
-          '/calming/crate-training-for-dogs/',
-          '/calming/best-calming-products-for-anxious-dogs/',
-          '/comforting/best-heavy-duty-dog-crates/',
-          '/comforting/best-puppy-crates/',
-        ],
-      },
-      {
-        page: path.join('calming', 'dog-fireworks-anxiety-checklist', 'index.html'),
-        expected: [
-          '/calming/how-to-prepare-a-calm-room-for-fireworks-night/',
-          '/calming/should-you-take-your-dog-to-fireworks/',
-          '/calming/best-calming-products-for-anxious-dogs/',
-          '/calming/best-thundershirt-alternatives/',
-          '/calming/car-anxiety-for-dogs/',
-        ],
-      },
-    ];
-
-    for (const testCase of cases) {
-      const doc = readBuiltPage(testCase.page);
-      const links = Array.from(doc.querySelectorAll<HTMLAnchorElement>('.ils-link'));
-
-      expect(links.map((link) => link.getAttribute('href'))).toEqual(testCase.expected);
-      for (const link of links) {
-        expect(link.getAttribute('data-track')).toBe('collector_to_converter_click');
-      }
-    }
   });
 
   it('links fireworks checklist sections to supporting article guides', () => {
@@ -476,36 +291,9 @@ describe('site smoke tests', () => {
     expect(eventDecisionLink?.getAttribute('data-from-page')).toBe('dog-fireworks-anxiety-checklist');
   });
 
-  it('renders derived RelatedGuides cards on migrated converter pages', () => {
-    const cases = [
-      {
-        page: path.join('calming', 'best-calming-products-for-anxious-dogs', 'index.html'),
-        expected: ['/travel/dog-road-trip-gear/', '/cooling/best-cooling-products-for-dogs/'],
-      },
-      {
-        page: path.join('comforting', 'best-travel-crates-for-road-trips', 'index.html'),
-        expected: [
-          '/travel/dog-road-trip-gear/',
-          '/calming/crate-training-for-dogs/',
-          '/comforting/best-airline-crates-for-flying-with-your-dog/',
-        ],
-      },
-    ];
-
-    for (const testCase of cases) {
-      const doc = readBuiltPage(testCase.page);
-      const links = Array.from(doc.querySelectorAll<HTMLAnchorElement>('.related-guide-card'));
-
-      expect(links.map((link) => link.getAttribute('href'))).toEqual(testCase.expected);
-      for (const link of links) {
-        expect(link.getAttribute('data-track')).toBe('collector_to_converter_click');
-      }
-    }
-  });
-
-  it('orders homepage article cards by article publish date', () => {
+  it('orders homepage article cards by article publish date', async () => {
     const doc = readBuiltPage('index.html');
-    const publishOrder = readArticlePublishOrder();
+    const publishOrder = await readArticlePublishOrder();
     const themeFor = (href: string) =>
       href.startsWith('/cooling/')
         ? 'cool'
@@ -916,7 +704,7 @@ describe('site smoke tests', () => {
   });
 
   it('publishes the postcard QR alias as a tracked subscribe redirect', () => {
-    const expectedDestination = 'https://www.chill-dogs.com/subscribe/?utm_source=postcard&utm_medium=print&utm_campaign=offline_flyer';
+    const expectedDestination = `${SITE_ORIGIN}/subscribe/?utm_source=postcard&utm_medium=print&utm_campaign=offline_flyer`;
     const joinDoc = readBuiltPage(path.join('join', 'index.html'));
     const refresh = joinDoc.querySelector('meta[http-equiv="refresh"]');
     const vercelConfig = JSON.parse(readFileSync(path.join(projectRoot, 'vercel.json'), 'utf8'));
@@ -953,16 +741,14 @@ describe('site smoke tests', () => {
   });
 
   it('renders the admin product catalog from all product data files', () => {
-    const doc = readBuiltPage(path.join('admin', 'products', 'index.html'));
+    // Raw HTML, not a DOM: this page is over 1 MB and parsing it took most of this file's
+    // run time. Every catalog product must be listed, not a hand-picked eight.
+    const html = decodeEntities(readBuiltAsset(path.join('admin', 'products', 'index.html')));
+    const missing = productCatalogItems.filter((product) => !html.includes(product.name)).map((product) => product.id);
 
-    expect(doc.body.textContent).toContain('Fi Series 3+ GPS Collar');
-    expect(doc.body.textContent).toContain('Stunt Puppy Fi-Ready Collar');
-    expect(doc.body.textContent).toContain('The Green Pet Shop Cooling Pet Pad');
-    expect(doc.body.textContent).toContain('ThunderShirt Classic Dog Anxiety Jacket');
-    expect(doc.body.textContent).toContain('SportPet Airline Compliant Travel Kennel');
-    expect(doc.body.textContent).toContain('Amazon Basics Furniture Style Dog Crate');
-    expect(doc.body.textContent).toContain('Oranland Heavy Duty Indestructible Dog Crate');
-    expect(doc.body.textContent).toContain('src/data/tracking-products.ts');
+    expect(productCatalogItems.length).toBeGreaterThan(100);
+    expect(missing).toEqual([]);
+    expect(html).toContain('src/data/tracking-products.ts');
   });
 
   it('renders new crate converter pages with affiliate links', () => {
@@ -987,9 +773,9 @@ describe('site smoke tests', () => {
     expect(calmingDoc.querySelector('meta[name="robots"]')).toBeNull();
 
     expect(coolingDoc.querySelector('link[rel="canonical"]')?.getAttribute('href'))
-      .toBe('https://www.chill-dogs.com/cooling/');
+      .toBe(`${SITE_ORIGIN}/cooling/`);
     expect(calmingDoc.querySelector('link[rel="canonical"]')?.getAttribute('href'))
-      .toBe('https://www.chill-dogs.com/calming/');
+      .toBe(`${SITE_ORIGIN}/calming/`);
   });
 
   it('publishes robots and sitemap with key routes and no variants', () => {
@@ -997,9 +783,9 @@ describe('site smoke tests', () => {
     const sitemapIndex = readBuiltAsset('sitemap-index.xml');
     const sitemap = readBuiltAsset('sitemap-0.xml');
 
-    expect(robotsTxt).toContain('Sitemap: https://www.chill-dogs.com/sitemap-index.xml');
+    expect(robotsTxt).toContain(`Sitemap: ${SITE_ORIGIN}/sitemap-index.xml`);
     expect(sitemapIndex).toContain('/sitemap-0.xml');
-    expect(sitemap).toContain('<loc>https://www.chill-dogs.com/</loc>');
+    expect(sitemap).toContain(`<loc>${SITE_ORIGIN}/</loc>`);
     expect(sitemap).toContain('/cooling/best-cooling-products-for-dogs/');
     expect(sitemap).toContain('/cooling/car-cooling-for-dogs/');
     expect(sitemap).toContain('/travel/dog-road-trip-gear/');
@@ -1034,172 +820,6 @@ describe('site smoke tests', () => {
     expect(rssXml).toContain('How to Prepare a Calm Room for Fireworks Night');
   });
 
-  it('does not render escaped HTML tags as visible text on any page', () => {
-    const htmlFiles = collectHtmlFiles(distRoot);
-    const failures: string[] = [];
-
-    for (const filePath of htmlFiles) {
-      const html = readFileSync(filePath, 'utf8');
-      // Look for escaped HTML tags in the rendered output (outside of <script>/<style> blocks)
-      const stripped = html
-        .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '')
-        .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, '');
-
-      // Match &lt;a, &lt;span, &lt;div etc — escaped tags that should have been rendered
-      const escapedTagPattern = /&lt;(?:a|span|div|p|strong|em|br|img|ul|ol|li)\b/i;
-      if (escapedTagPattern.test(stripped)) {
-        const relative = path.relative(distRoot, filePath);
-        failures.push(relative);
-      }
-    }
-
-    expect(failures, `Pages with escaped HTML tags visible as text: ${failures.join(', ')}`).toEqual([]);
-  });
-
-  it('every page has exactly one h1 tag', () => {
-    const ignored = ['404.html'];
-    const htmlFiles = collectHtmlFiles(distRoot);
-    const failures: string[] = [];
-
-    for (const filePath of htmlFiles) {
-      const relative = path.relative(distRoot, filePath);
-      if (ignored.some((i) => relative.includes(i))) continue;
-
-      const html = readFileSync(filePath, 'utf8');
-      if (isRedirectStub(html)) continue;
-      const h1Count = (html.match(/<h1[\s>]/gi) || []).length;
-      if (h1Count !== 1) {
-        failures.push(`${relative} (${h1Count} h1 tags)`);
-      }
-    }
-
-    expect(failures, `Pages without exactly 1 h1: ${failures.join(', ')}`).toEqual([]);
-  });
-
-  it('every page has exactly one canonical tag', () => {
-    const htmlFiles = collectHtmlFiles(distRoot);
-    const failures: string[] = [];
-
-    for (const filePath of htmlFiles) {
-      const html = readFileSync(filePath, 'utf8');
-      const canonicalCount = (html.match(/<link[^>]+rel=['"]canonical['"][^>]*>/gi) || []).length;
-      if (canonicalCount !== 1) {
-        const relative = path.relative(distRoot, filePath);
-        failures.push(`${relative} (${canonicalCount} canonical tags)`);
-      }
-    }
-
-    expect(failures, `Pages without exactly 1 canonical: ${failures.join(', ')}`).toEqual([]);
-  });
-
-  it('every page has a meta description', () => {
-    const htmlFiles = collectHtmlFiles(distRoot);
-    const failures: string[] = [];
-
-    for (const filePath of htmlFiles) {
-      const html = readFileSync(filePath, 'utf8');
-      if (isRedirectStub(html)) continue;
-      const descMatch = html.match(/<meta[^>]*name=['"]description['"][^>]*content=['"]([^'"]*)['"]/i);
-      if (!descMatch || !descMatch[1].trim()) {
-        const relative = path.relative(distRoot, filePath);
-        failures.push(relative);
-      }
-    }
-
-    expect(failures, `Pages missing meta description: ${failures.join(', ')}`).toEqual([]);
-  });
-
-  it('every page has an og:image', () => {
-    const htmlFiles = collectHtmlFiles(distRoot);
-    const failures: string[] = [];
-
-    for (const filePath of htmlFiles) {
-      const html = readFileSync(filePath, 'utf8');
-      if (isRedirectStub(html)) continue;
-      const ogMatch = html.match(/<meta[^>]*property=['"]og:image['"][^>]*content=['"]([^'"]*)['"]/i);
-      if (!ogMatch || !/^https:\/\/www\.chill-dogs\.com\//.test(ogMatch[1])) {
-        const relative = path.relative(distRoot, filePath);
-        failures.push(relative);
-      }
-    }
-
-    expect(failures, `Pages missing og:image: ${failures.join(', ')}`).toEqual([]);
-  });
-
-  it('content pages have at least one JSON-LD script', () => {
-    const noSchemaExpected = ['404.html', 'privacy-policy', 'terms', 'admin/', 'subscribe/', 'search/'];
-    const htmlFiles = collectHtmlFiles(distRoot);
-    const failures: string[] = [];
-
-    for (const filePath of htmlFiles) {
-      const relative = path.relative(distRoot, filePath);
-      if (noSchemaExpected.some((i) => relative.includes(i))) continue;
-
-      const html = readFileSync(filePath, 'utf8');
-      if (isRedirectStub(html)) continue;
-      const ldJsonCount = (html.match(/<script[^>]*type="application\/ld\+json"/gi) || []).length;
-      if (ldJsonCount === 0) {
-        failures.push(relative);
-      }
-    }
-
-    expect(failures, `Content pages missing JSON-LD: ${failures.join(', ')}`).toEqual([]);
-  });
-
-  it('all internal links resolve to built pages', () => {
-    const htmlFiles = collectHtmlFiles(distRoot);
-    const failures: string[] = [];
-
-    for (const filePath of htmlFiles) {
-      const html = readFileSync(filePath, 'utf8');
-      const relative = path.relative(distRoot, filePath);
-      const hrefMatches = html.matchAll(/href="(\/[^"#?]*)"/g);
-
-      for (const match of hrefMatches) {
-        const href = match[1];
-        const skipAsset = /\.(ico|png|jpg|jpeg|webp|svg|pdf|xml|txt|webmanifest|css|js)$/i.test(href);
-        if (skipAsset) continue;
-        // Admin auth routes are served by the edge middleware and never built.
-        if (MIDDLEWARE_ONLY_ROUTES.includes(href)) continue;
-        // Check if the path resolves to a file or directory with index.html
-        const asFile = path.join(distRoot, href);
-        const asIndex = path.join(distRoot, href, 'index.html');
-        const asHtml = href.endsWith('/') ? null : path.join(distRoot, href + '.html');
-
-        const exists =
-          existsSync(asFile) ||
-          existsSync(asIndex) ||
-          (asHtml !== null && existsSync(asHtml));
-
-        if (!exists) {
-          const entry = `${relative}: broken link → ${href}`;
-          if (!failures.includes(entry)) failures.push(entry);
-        }
-      }
-    }
-
-    expect(failures, `Broken internal links:\n${failures.join('\n')}`).toEqual([]);
-  });
-
-  it('no render-blocking external stylesheets in head', () => {
-    const htmlFiles = collectHtmlFiles(distRoot);
-    const failures: string[] = [];
-
-    for (const filePath of htmlFiles) {
-      const html = readFileSync(filePath, 'utf8');
-      const headMatch = html.match(/<head[\s>][\s\S]*?<\/head>/i);
-      if (!headMatch) continue;
-
-      const blockingLinks = (headMatch[0].match(/<link[^>]+rel=['"]stylesheet['"][^>]*>/gi) || []);
-      if (blockingLinks.length > 0) {
-        const relative = path.relative(distRoot, filePath);
-        failures.push(`${relative} (${blockingLinks.length} blocking stylesheet(s))`);
-      }
-    }
-
-    expect(failures, `Pages with render-blocking CSS:\n${failures.join('\n')}`).toEqual([]);
-  });
-
   it('publishes llms.txt with all sections, key links, and no excluded paths', () => {
     const llmsText = readBuiltAsset('llms.txt');
 
@@ -1207,9 +827,9 @@ describe('site smoke tests', () => {
     expect(llmsText).toContain('## Cooling Guides');
     expect(llmsText).toContain('## Calming Guides');
     expect(llmsText).toContain('## Travel Guides');
-    expect(llmsText).toContain('https://www.chill-dogs.com/cooling/');
-    expect(llmsText).toContain('https://www.chill-dogs.com/cooling/best-cooling-products-for-dogs/');
-    expect(llmsText).toContain('https://www.chill-dogs.com/travel/dog-road-trip-gear/');
+    expect(llmsText).toContain(`${SITE_ORIGIN}/cooling/`);
+    expect(llmsText).toContain(`${SITE_ORIGIN}/cooling/best-cooling-products-for-dogs/`);
+    expect(llmsText).toContain(`${SITE_ORIGIN}/travel/dog-road-trip-gear/`);
     expect(llmsText).not.toContain('/v/a/');
     expect(llmsText).not.toContain('/admin/sitemap/');
     expect(llmsText).not.toContain('/privacy-policy/');

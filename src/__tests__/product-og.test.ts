@@ -2,7 +2,7 @@ import { execFileSync } from 'node:child_process';
 import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterAll, afterEach, beforeAll, describe, expect, it } from 'vitest';
 
 import { staticSitemapSections, type SitemapPage } from '../data/content-sitemap';
 import { cacheKey, copyCachedOutputToPublic, writeOutputWithCache } from '../scripts/og-gen/cache';
@@ -11,7 +11,6 @@ import { outputFilenameFromHref, resolveOgSummary, splitOgTitle } from '../scrip
 import { validateHeroProductPage } from '../scripts/og-gen/validation';
 import { buildGeneralOgRecords } from '../scripts/generate-og-images.mjs';
 
-const touchedKeys: string[] = [];
 const touchedDirs: string[] = [];
 
 function pagesByHref(): Map<string, SitemapPage> {
@@ -24,17 +23,30 @@ function readCommittedProductOgManifest(): ReturnType<typeof buildProductOgManif
   );
 }
 
-function isTrackedByGit(relativePath: string): boolean {
+/**
+ * Tracked files under public/og/, from ONE `git ls-files` call (it used to spawn git
+ * once per hero product). `null` outside a git checkout, where only existence can be
+ * checked; CI always runs in a checkout, so the tracking check still gates merges.
+ */
+function trackedOgFiles(): Set<string> | null {
   try {
-    execFileSync('git', ['ls-files', '--error-unmatch', relativePath], {
-      cwd: process.cwd(),
-      stdio: 'ignore',
-    });
-    return true;
+    const out = execFileSync('git', ['ls-files', '-z', 'public/og'], { cwd: process.cwd(), encoding: 'utf8' });
+    return new Set(out.split('\0').filter(Boolean));
   } catch {
-    return false;
+    return null;
   }
 }
+
+let ogCacheDir: string;
+beforeAll(() => {
+  // Never write into the repo's real .cache/og-gen (it races a concurrent og:gen).
+  ogCacheDir = mkdtempSync(path.join(tmpdir(), 'og-gen-cache-'));
+  process.env.OG_GEN_CACHE_DIR = ogCacheDir;
+});
+afterAll(() => {
+  delete process.env.OG_GEN_CACHE_DIR;
+  rmSync(ogCacheDir, { recursive: true, force: true });
+});
 
 function page(overrides: Partial<SitemapPage>): SitemapPage {
   return {
@@ -51,10 +63,6 @@ function page(overrides: Partial<SitemapPage>): SitemapPage {
 }
 
 afterEach(() => {
-  for (const key of touchedKeys.splice(0)) {
-    rmSync(path.join(process.cwd(), '.cache', 'og-gen', 'outputs', `${key}.jpg`), { force: true });
-  }
-
   for (const dir of touchedDirs.splice(0)) {
     rmSync(dir, { force: true, recursive: true });
   }
@@ -115,15 +123,20 @@ describe('product-style OG images', () => {
   });
 
   it('has checked-in product-style OG assets for every hero product page', () => {
-    for (const href of getProductOgHrefs()) {
+    const tracked = trackedOgFiles();
+    const hrefs = getProductOgHrefs();
+    expect(hrefs.length).toBeGreaterThan(0);
+    for (const href of hrefs) {
       const relativePath = path.join('public', 'og', outputFilenameFromHref(href));
       expect(
         existsSync(path.join(process.cwd(), relativePath)),
         `${href} is missing its committed product-style OG image`
       ).toBe(true);
-      expect(isTrackedByGit(relativePath), `${relativePath} must be tracked; use git add -f for new product OGs`).toBe(
-        true
-      );
+      if (tracked) {
+        expect(tracked.has(relativePath), `${relativePath} must be tracked; use git add -f for new product OGs`).toBe(
+          true
+        );
+      }
     }
   });
 
@@ -174,7 +187,6 @@ describe('product-style OG images', () => {
     const targetDir = mkdtempSync(path.join(tmpdir(), 'chill-og-target-'));
     const targetPath = path.join(targetDir, 'airtag.jpg');
     const jpegBuffer = Buffer.from('fake-jpeg-bytes');
-    touchedKeys.push(key);
     touchedDirs.push(targetDir);
 
     expect(cacheKey({ route: '/gear/airtag-for-dogs/', version: 'test-v1' })).toBe(key);

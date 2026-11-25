@@ -28,8 +28,9 @@ import { cpus } from 'node:os';
 import { mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join, relative } from 'node:path';
 import { tmpdir } from 'node:os';
+import { fileURLToPath } from 'node:url';
 
-const ROOT = join(import.meta.dir, '..');
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PCT = 0.1;
 const FLOOR_MS = 250;
 
@@ -186,13 +187,14 @@ function measure(): Report {
   }
 
   const git = spawnSync('git', ['rev-parse', '--short', 'HEAD'], { cwd: ROOT, encoding: 'utf8' });
+  const dirty = spawnSync('git', ['status', '--porcelain'], { cwd: ROOT, encoding: 'utf8' }).stdout.trim() !== '';
   return {
     meta: {
       date: new Date().toISOString(),
-      gitSha: git.stdout.trim(),
+      gitSha: `${git.stdout.trim()}${dirty ? '+dirty' : ''}`,
       cpus: cpus().length,
       cpuModel: cpus()[0]?.model ?? 'unknown',
-      bun: Bun.version,
+      bun: process.versions.bun ?? 'n/a',
       runs,
       note: 'Median of N runs after one discarded warm-up. perFile = test execution time per file (excludes import/collect).',
     },

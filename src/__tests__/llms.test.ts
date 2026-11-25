@@ -21,6 +21,7 @@ describe('llms utilities', () => {
   });
 
   it('excludes every path the XML sitemap excludes', () => {
+    expect(EXCLUDED_DISCOVERY_FRAGMENTS.length).toBeGreaterThan(0);
     for (const fragment of EXCLUDED_DISCOVERY_FRAGMENTS) {
       expect(shouldExcludePath(`${fragment}example/`)).toBe(true);
     }

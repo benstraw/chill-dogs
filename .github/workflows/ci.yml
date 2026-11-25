@@ -35,8 +35,25 @@ jobs:
         run: bun run build
 
       - name: Test
-        # The suite reads dist/, which the build step above produced.
-        run: bunx vitest run
+        # Both tiers. The dist tier reads dist/, which the build step above produced,
+        # and refuses to run if it is missing or stale.
+        run: bunx vitest run --reporter=default --reporter=json --outputFile.json=vitest-report.json
+
+      - name: Report test timings
+        # Report-only, never blocking: shared-runner timing noise would make a hard
+        # gate flaky. The gate is `bun run test:timing -- --compare` in each PR.
+        if: always()
+        run: |
+          [ -f vitest-report.json ] || exit 0
+          node -e '
+            const r = require("./vitest-report.json");
+            const rows = r.testResults
+              .map((t) => [t.name.replace(process.cwd() + "/", ""), Math.round(t.endTime - t.startTime)])
+              .sort((a, b) => b[1] - a[1]);
+            const out = ["### Test timings", "", `${r.numTotalTests} tests in ${rows.length} files`, "", "| File | Test time |", "|---|---|"];
+            for (const [f, ms] of rows.slice(0, 15)) out.push(`| ${f} | ${ms} ms |`);
+            require("fs").appendFileSync(process.env.GITHUB_STEP_SUMMARY, out.join("\n") + "\n");
+          ' || true
 
       - name: Validate AI knowledge graph
         run: bun run check:ai-docs

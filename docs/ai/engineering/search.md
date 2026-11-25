@@ -127,7 +127,7 @@ Product results route internally to `/shop/?q=...`, where product cards render A
 
 ## Smoke test exemption
 
-`src/__tests__/site-smoke.test.ts` exempts `search/` from the JSON-LD presence check (noindex pages do not get breadcrumb schema from `BaseLayout`).
+`src/__tests__/dist/site-sweep.test.ts` exempts `search/` from the JSON-LD presence check (noindex pages do not get breadcrumb schema from `BaseLayout`).
 
 ---
 

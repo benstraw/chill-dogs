@@ -1,3 +1,5 @@
+import { readdirSync, readFileSync } from 'node:fs';
+import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 
 import { calmingProducts } from '../data/calming-products';
@@ -9,43 +11,30 @@ import { buildProductPageMap } from '../data/product-page-map';
 import { relaxationProducts } from '../data/relaxation-products';
 import { accessoryProducts, trackerProducts } from '../data/tracking-products';
 
-describe('admin product catalog data', () => {
-  it('keeps snake-bite kit product ASINs unique and current', () => {
-    const emergencyAsins = emergencyProducts.map((product) => product.asin).filter(Boolean);
-    const addedAsins = [
-      'B0GFMQT8YJ',
-      'B0GH76XGKZ',
-      'B0GRV66Y6X',
-      'B0GJD28NRT',
-      'B07GVSG62X',
-      'B0F6YL3LT1',
-      'B0FD8KWS9L',
-      'B07WRPCLYR',
-      'B097PLDD92',
-      'B09FKVQQVH',
-      'B08ZFVZPHM',
-      'B0B1W6VLKW',
-      'B0B1W5R11Y',
-      'B0F2CBR1T1',
-      'B0CLV3YJDX',
-      'B0C3CDQGJQ',
-      'B0CRWLL6C1',
-      'B0FY6TVDHQ',
-      'B0GHHDV7Y9',
-      'B0GXF114LP',
-      'B0GTR1575S',
-      'B0F1ZFMVXG',
-      'B0DCQDXSS5',
-      'B077Z3LNX9',
-      'B00TI8GSE2',
-      'B0BWSQWXPC',
-      'B0G4W14R1Y',
-    ];
+/**
+ * ASINs that two catalog records share today. Ratchet: entries may be removed, never
+ * added. B0C9TX38RZ is the OHMO bowl, listed as `ohmo-spill-proof-bowl` (car-cooling)
+ * and `ohmo-spill-proof-dog-bowl` (hydration): two near-duplicate /shop/ pages.
+ */
+const KNOWN_DUPLICATE_ASINS = new Set(['B0C9TX38RZ']);
 
-    expect(new Set(emergencyAsins).size).toBe(emergencyAsins.length);
-    expect(emergencyAsins).toEqual(expect.arrayContaining(addedAsins));
-    expect(emergencyAsins).not.toEqual(expect.arrayContaining(['B00074W3RW', 'B08TW84CR1', 'B08D66HCXW']));
-    expect(emergencyProducts.filter((product) => product.category === 'stretcher')).toHaveLength(4);
+describe('admin product catalog data', () => {
+  it('gives every ASIN a valid shape and one catalog record', () => {
+    // An invariant over the whole catalog instead of a hard-coded list of 27 ASINs,
+    // which had to be edited with every kit change and checked nothing about the rest.
+    const asins = productCatalogItems.map((product) => product.asin).filter((asin): asin is string => Boolean(asin));
+    expect(asins.length).toBeGreaterThan(100);
+    expect(asins.filter((asin) => !/^[A-Z0-9]{10}$/.test(asin))).toEqual([]);
+
+    const seen = new Map<string, string>();
+    const duplicates: string[] = [];
+    for (const product of productCatalogItems) {
+      if (!product.asin) continue;
+      const first = seen.get(product.asin);
+      if (first && !KNOWN_DUPLICATE_ASINS.has(product.asin)) duplicates.push(`${product.asin}: ${first} and ${product.id}`);
+      seen.set(product.asin, first ?? product.id);
+    }
+    expect(duplicates, 'one product, two /shop/ pages: merge the records (an id rename needs redirects)').toEqual([]);
   });
 
   it('includes every product from every product data file', () => {
@@ -58,16 +47,35 @@ describe('admin product catalog data', () => {
       ...emergencyProducts,
       ...fleaTickProducts,
     ];
-    const catalogIds = productCatalogItems.map((product) => product.id);
+    const catalogIds = new Set(productCatalogItems.map((product) => product.id));
 
     expect(productCatalogItems).toHaveLength(sourceProducts.length);
+    expect(sourceProducts.filter((product) => !catalogIds.has(product.id)).map((product) => product.id)).toEqual([]);
+  });
 
-    for (const product of sourceProducts) {
-      expect(catalogIds).toContain(product.id);
-    }
+  it('imports every *-products.ts data file into the catalog', () => {
+    // The list above mirrors the catalog's own imports, so a new product file left out of
+    // both would pass it. This reads the directory instead. A file that only re-exports
+    // an imported one (comfort-products.ts aliases relaxation-products.ts) counts.
+    const dataDir = path.resolve(__dirname, '../data');
+    const catalogSource = readFileSync(path.join(dataDir, 'product-catalog.ts'), 'utf8');
+    const imported = new Set(Array.from(catalogSource.matchAll(/from '\.\/([\w-]+-products)'/g), (m) => m[1]));
+    expect(imported.size).toBeGreaterThan(0);
+
+    const missing = readdirSync(dataDir)
+      .filter((file) => file.endsWith('-products.ts'))
+      .map((file) => file.replace(/\.ts$/, ''))
+      .filter((name) => {
+        if (imported.has(name)) return false;
+        const reExportOf = readFileSync(path.join(dataDir, `${name}.ts`), 'utf8').match(/^export \{[\s\S]*?\} from '\.\/([\w-]+)';\s*$/);
+        return !(reExportOf && imported.has(reExportOf[1]));
+      });
+    expect(missing, 'import these in src/data/product-catalog.ts').toEqual([]);
   });
 
   it('normalizes all products for admin display', () => {
+    expect(productCatalogItems.length).toBeGreaterThan(100);
+    expect(productCatalogItems.filter((product) => product.amazonUrl).length).toBeGreaterThan(0);
     for (const product of productCatalogItems) {
       expect(product.id).toBeTruthy();
       expect(product.name).toBeTruthy();

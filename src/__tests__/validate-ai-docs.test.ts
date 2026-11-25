@@ -1,5 +1,6 @@
 import { describe, expect, it, beforeAll, afterAll } from 'vitest';
 import { execFileSync } from 'node:child_process';
+import { validateDocs } from '../../scripts/validate-ai-docs.mjs';
 import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
@@ -39,13 +40,9 @@ function check(files: Record<string, string>): { ok: boolean; out: string } {
     mkdirSync(resolve(full, '..'), { recursive: true });
     writeFileSync(full, body);
   }
-  try {
-    const out = execFileSync('node', [SCRIPT, dir], { encoding: 'utf-8', stdio: 'pipe' });
-    return { ok: true, out };
-  } catch (err) {
-    const e = err as { stdout?: string; stderr?: string };
-    return { ok: false, out: `${e.stdout ?? ''}${e.stderr ?? ''}` };
-  }
+  // In-process: one node spawn per case used to cost ~1.3 s for this file alone.
+  const { issues, error } = validateDocs(dir);
+  return { ok: !error && issues.length === 0, out: [error ?? '', ...issues].join('\n') };
 }
 
 /** A minimal valid doc that other cases vary from. */
@@ -151,5 +148,27 @@ describe('validate-ai-docs: catches rot', () => {
   it('fails a missing required section', () => {
     const doc = `${frontmatter()}\n\n## Use this when\n\nNo related section.\n`;
     expect(check({ 'doc.md': doc, 'target.md': target }).out).toContain('Missing "## Related knowledge"');
+  });
+});
+
+describe('validate-ai-docs: CLI', () => {
+  // The one spawn: proves the command CI runs still exits 0 / 1 as before.
+  it('exits 0 on a valid directory and 1 with the issue printed on an invalid one', () => {
+    const good = mkdtempSync(join(root, 'cli-good-'));
+    writeFileSync(join(good, 'doc.md'), frontmatter() + SECTIONS);
+    writeFileSync(join(good, 'target.md'), target);
+    expect(execFileSync('node', [SCRIPT, good], { encoding: 'utf-8' })).toContain('All AI docs are valid.');
+
+    const bad = mkdtempSync(join(root, 'cli-bad-'));
+    writeFileSync(join(bad, 'doc.md'), frontmatter());
+    let out = '';
+    try {
+      execFileSync('node', [SCRIPT, bad], { encoding: 'utf-8', stdio: 'pipe' });
+    } catch (err) {
+      const e = err as { status?: number; stdout?: string };
+      expect(e.status).toBe(1);
+      out = e.stdout ?? '';
+    }
+    expect(out).toContain('Missing "## Use this when"');
   });
 });

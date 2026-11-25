@@ -26,11 +26,11 @@ import { fileURLToPath } from 'node:url';
 import { parse as parseYaml } from 'yaml';
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const targetDir = resolve(repoRoot, process.argv[2] ?? join('docs', 'ai'));
-
 const REQUIRED_FRONTMATTER_KEYS = ['title', 'type', 'domain', 'status', 'updated', 'tags', 'related'];
 
-const issueLog = [];
+// Per-run state; reset by validateDocs() so the function can be called repeatedly
+// in-process (the tests do, instead of spawning a node process per case).
+let issueLog = [];
 let totalFiles = 0;
 
 /** Repo-relative where that reads well, absolute once the path escapes the repo. */
@@ -237,30 +237,44 @@ function validateFile(filePath) {
   }
 }
 
-// Main
-console.log(`Validating AI docs under ${displayPath(targetDir)}/...\n`);
-
-if (!existsSync(targetDir)) {
-  console.error(`Directory not found: ${targetDir}`);
-  process.exit(1);
+/**
+ * Validate every Markdown file under `dir`. Returns the issues instead of exiting,
+ * so tests can call it in-process.
+ * @returns {{ files: number, issues: string[], error?: string }}
+ */
+export function validateDocs(dir) {
+  issueLog = [];
+  totalFiles = 0;
+  if (!existsSync(dir)) return { files: 0, issues: [], error: `Directory not found: ${dir}` };
+  const markdownFiles = findMarkdownFiles(dir);
+  if (markdownFiles.length === 0) {
+    return { files: 0, issues: [], error: `No .md files found under ${displayPath(dir)}` };
+  }
+  for (const file of markdownFiles) validateFile(file);
+  return { files: totalFiles, issues: issueLog };
 }
 
-const markdownFiles = findMarkdownFiles(targetDir);
-if (markdownFiles.length === 0) {
-  console.error(`No .md files found under ${displayPath(targetDir)}`);
-  process.exit(1);
+function main() {
+  const targetDir = resolve(repoRoot, process.argv[2] ?? join('docs', 'ai'));
+  console.log(`Validating AI docs under ${displayPath(targetDir)}/...\n`);
+
+  const { files, issues, error } = validateDocs(targetDir);
+  if (error) {
+    console.error(error);
+    process.exit(1);
+  }
+
+  console.log(`Files checked: ${files}`);
+  console.log(`Issues found:  ${issues.length}`);
+
+  if (issues.length > 0) {
+    console.log('\nIssues:\n');
+    for (const issue of issues) console.log(issue);
+    process.exit(1);
+  }
+
+  console.log('\nAll AI docs are valid.');
+  process.exit(0);
 }
 
-for (const file of markdownFiles) validateFile(file);
-
-console.log(`Files checked: ${totalFiles}`);
-console.log(`Issues found:  ${issueLog.length}`);
-
-if (issueLog.length > 0) {
-  console.log('\nIssues:\n');
-  for (const issue of issueLog) console.log(issue);
-  process.exit(1);
-}
-
-console.log('\nAll AI docs are valid.');
-process.exit(0);
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) main();
