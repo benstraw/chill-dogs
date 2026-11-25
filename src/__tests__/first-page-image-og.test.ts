@@ -30,3 +30,32 @@ describe('apply first page image OG script helpers', () => {
     expect(applyFirstImageOg(html)).toBe(html);
   });
 });
+
+describe('applyFirstImageOg', () => {
+  const page = (main: string, meta = '<meta property="og:image" content="https://www.chill-dogs.com/og/default.jpg"><meta name="twitter:image" content="https://www.chill-dogs.com/og/default.jpg">') =>
+    `<html><head>${meta}</head><body><main>${main}</main></body></html>`;
+
+  it('points og:image and twitter:image at the first main image, made absolute', () => {
+    const out = applyFirstImageOg(page('<img src="/_assets/rhys.webp" alt="Rhys">'));
+    expect(out).toContain('<meta property="og:image" content="https://www.chill-dogs.com/_assets/rhys.webp">');
+    expect(out).toContain('<meta name="twitter:image" content="https://www.chill-dogs.com/_assets/rhys.webp">');
+  });
+
+  it('refuses a cross-origin first image: share images stay self-hosted', () => {
+    const html = page('<img src="https://m.media-amazon.com/images/I/x.jpg" alt="mat">');
+    expect(applyFirstImageOg(html)).toBe(html);
+  });
+
+  it('leaves pages without a <main>, or with a data: image, untouched', () => {
+    const noMain = '<html><head><meta property="og:image" content="https://www.chill-dogs.com/og/a.jpg"></head><body><img src="/x.jpg"></body></html>';
+    expect(applyFirstImageOg(noMain)).toBe(noMain);
+    const dataImage = page('<img src="data:image/png;base64,AAAA">');
+    expect(applyFirstImageOg(dataImage)).toBe(dataImage);
+  });
+
+  it('adds content to a meta tag that had none, and skips a missing twitter tag', () => {
+    const out = applyFirstImageOg(page('<img src="/a.jpg">', '<meta property="og:image">'));
+    expect(out).toContain('<meta property="og:image" content="https://www.chill-dogs.com/a.jpg">');
+    expect(out).not.toContain('twitter:image');
+  });
+});

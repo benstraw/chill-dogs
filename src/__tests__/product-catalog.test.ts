@@ -3,7 +3,7 @@ import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 
 import { calmingProducts } from '../data/calming-products';
-import { coolingProducts } from '../data/cooling-products';
+import { categoryMeta, coolingProducts } from '../data/cooling-products';
 import { emergencyProducts } from '../data/emergency-products';
 import { fleaTickProducts } from '../data/flea-tick-products';
 import { productCatalogItems } from '../data/product-catalog';
@@ -135,5 +135,22 @@ describe('admin product catalog data', () => {
         expect.objectContaining({ href: '/safety/dog-bath-tools/' }),
       ])
     );
+  });
+
+  it('gives every cooling category full page meta with FAQs', () => {
+    // Every category a product uses, not a hand-kept list of five.
+    const categories = [...new Set(coolingProducts.map((product) => product.category))];
+    expect(categories.length).toBeGreaterThan(0);
+    for (const category of categories) {
+      const meta = categoryMeta[category];
+      expect(meta, `${category} has no categoryMeta`).toBeDefined();
+      expect(meta.title && meta.heroHeadline && meta.introCopy, category).toBeTruthy();
+      expect(meta.faqs.length, category).toBeGreaterThan(0);
+    }
+  });
+
+  it('gives every product non-blank bullets', () => {
+    const blank = productCatalogItems.filter((product) => product.bullets.some((bullet) => !bullet.trim()));
+    expect(blank.map((product) => product.id)).toEqual([]);
   });
 });

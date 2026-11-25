@@ -11,6 +11,7 @@ import {
   config,
   createSessionToken,
   parseAllowlist,
+  SESSION_TTL_SECONDS,
   verifySessionToken,
 } from '../../middleware';
 
@@ -151,7 +152,27 @@ describe('basic auth fallback', () => {
       basicOnly
     );
 
-    for (const response of [missing, incorrect]) {
+    const wrongUser = await authorizeAdminRequest(
+      adminRequest('/admin/', {
+        authorization: basicAuthorization(`${basicOnly.ADMIN_USERNAME}x`, basicOnly.ADMIN_PASSWORD),
+      }),
+      basicOnly
+    );
+    // Length mismatches exercise constantTimeEqual's early path in both directions.
+    const longer = await authorizeAdminRequest(
+      adminRequest('/admin/', {
+        authorization: basicAuthorization(basicOnly.ADMIN_USERNAME, `${basicOnly.ADMIN_PASSWORD}x`),
+      }),
+      basicOnly
+    );
+    const prefix = await authorizeAdminRequest(
+      adminRequest('/admin/', {
+        authorization: basicAuthorization(basicOnly.ADMIN_USERNAME, basicOnly.ADMIN_PASSWORD.slice(0, -1)),
+      }),
+      basicOnly
+    );
+
+    for (const response of [missing, incorrect, wrongUser, longer, prefix]) {
       expect(response?.status).toBe(401);
       expect(response?.headers.get('www-authenticate')).toContain('Chill-Dogs Admin');
       expect(response?.headers.get('cache-control')).toBe('no-store');
@@ -782,7 +803,8 @@ describe('session tokens', () => {
     expect(await verifySessionToken(SESSION_SECRET, token, now)).toMatchObject({ sub: 'benstraw' });
     expect(await verifySessionToken('a-different-secret', token, now)).toBeNull();
     expect(await verifySessionToken(SESSION_SECRET, `${token}x`, now)).toBeNull();
-    expect(await verifySessionToken(SESSION_SECRET, token, now + 9 * 60 * 60 * 1000)).toBeNull();
+    expect(await verifySessionToken(SESSION_SECRET, token, now + (SESSION_TTL_SECONDS - 1) * 1000)).toMatchObject({ sub: 'benstraw' });
+    expect(await verifySessionToken(SESSION_SECRET, token, now + (SESSION_TTL_SECONDS + 1) * 1000)).toBeNull();
   });
 
   it('does not let a forged payload through without a matching signature', async () => {
@@ -802,7 +824,7 @@ describe('session tokens', () => {
     const response = await authorizeAdminRequest(
       adminRequest('/admin/', { cookie: `cd_admin_session=${encodeURIComponent(token)}` }),
       githubOnly,
-      now + 9 * 60 * 60 * 1000
+      now + (SESSION_TTL_SECONDS + 1) * 1000
     );
 
     expect(response?.status).toBe(302);
