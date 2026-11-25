@@ -2,7 +2,7 @@
 title: Revenue and Architecture Roadmap
 type: plan
 domain: global
-status: planned
+status: in-progress
 updated: 2026-11-25
 tags:
   - chill-dogs
@@ -40,7 +40,7 @@ What the data showed. The counts are raw and unfiltered, so treat them as direct
 - **Traffic is the bottleneck.** The busiest page got 87 views in 90 days.
 - **Comparison pages convert very well** once a reader reaches them: 26–60%.
 - **The three busiest pages earn nothing.**
-- **The `/shop/` numbers look suspicious.** Most of those pages show as many visitors as views, which points to bots or link previews rather than people.
+- **The `/shop/` numbers look suspicious.** Most of those pages show as many visitors as views, which points to bots or link previews rather than people. Phase 1 confirmed it was a crawler; see "Phase 1 results" for the human-only numbers.
 
 The architecture review found that converter pages are built four different ways: cooling, calming, relaxation and flea-tick each have their own page component and config format, and three of them define the same block types. Hand-written gear pages sit beside them. It also found product lists that must be kept in sync by hand, and six identical article route files.
 
@@ -56,6 +56,46 @@ Goal: know which traffic is real before spending effort on it.
 2. **Build a click-rate dashboard.** For each converter and article: pageviews, `affiliate_outbound_click`, `amazon_outbound_click` and click rate, with bots excluded, plus a weekly trend. It's how each later phase gets judged.
 
 Done when: the dashboard exists, and the `/shop/` question has an answer.
+
+### Phase 1 results (done 2026-11-25)
+
+**The `/shop/` traffic is a bot.** An undeclared crawler spoofs ordinary browsers, so PostHog's built-in bot detection missed it. It started on 26–27 September 2026, and it accounted for 672 of 679 `/shop/` product-page views and about 64% of all pageviews in the 90 days. Its fingerprint:
+- one pageview per visit, no referrer (`$direct`);
+- browser language mostly `zh-CN`;
+- IPs in China, Hong Kong, Singapore and some in the US;
+- a different viewport size on each visit.
+
+A second fingerprint is Linux Chrome 150 at a 1920 px viewport with no referrer.
+
+Two custom PostHog bot rules now classify both, so `$virt_is_bot` is true for them:
+- `e66180c2-ee60-46d4-9144-19c292e5b45b`, "Undeclared crawler: zh browser, no referrer";
+- `a2346ef2-6411-4f4e-95e1-2cc5cf62bfe8`, "Undeclared crawler: Linux Chrome 150 at 1920px, no referrer".
+
+After the rules, `/shop/` product pages show 11 human views in 90 days. That's too little traffic to be worth redesigning, so the `/shop/` layout is **not** a Phase 2 item.
+
+**The dashboard.** "Chill-Dogs Revenue Command Center" (PostHog dashboard 1985689) now has a dashboard-wide filter, `$virt_is_bot = false`. Raw SQL tiles ignore dashboard filters, so the Monetization-gap tile excludes bots in its own query. Any new SQL tile must do the same.
+
+That tile had also been dropping the homepage, because trimming the trailing `/` left an empty path. It now keeps the homepage as `/`.
+
+Human-only numbers for the 90 days to 2026-11-25 replace the raw table in Context:
+
+| Page | Human visitors | Amazon clicks | Clicks per visitor |
+|---|---|---|---|
+| `/` (homepage) | 52 | 0 | 0 |
+| `/lifestyle/how-to-spend-time-with-dogs-without-owning-one/` | 41 | 0 | 0 |
+| `/travel/dog-friendly-airlines/` | 41 | 0 | 0 |
+| `/calming/best-thundershirt-alternatives/` | 19 | 14 | 0.74 |
+| `/cooling/keep-dog-cool-in-car/` | 19 | 6 | 0.32 |
+| `/gear/best-dog-gps-trackers/` | 17 | 12 | 0.71 |
+| `/cooling/car-cooling-for-dogs/` | 16 | 7 | 0.44 |
+| `/safety/what-to-do-if-your-dog-runs-away/` | 12 | 0 | 0 |
+| `/gear/fi-dog-collar-review/` | 12 | 1 | 0.08 |
+
+Site-wide, about 11% of human visitors click an Amazon link.
+
+What this changes for Phase 2:
+- The three zero-click pages in item 3 are confirmed as real human traffic, most of it from search.
+- `/safety/what-to-do-if-your-dog-runs-away/` joins them. A lost-dog reader may want a GPS tracker, which is the site's best-converting page.
 
 ## Phase 2 — Revenue on existing traffic
 
