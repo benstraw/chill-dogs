@@ -1,7 +1,7 @@
 ---
 type: context
 tags: [ai-context, strategy, creative]
-updated: 2026-05-25
+updated: 2026-11-25
 ---
 
 # Chill-Dogs Portable AI Onboarding Brief
@@ -322,18 +322,14 @@ bun install --frozen-lockfile
 bun run dev
 bun run build
 bun run preview
-bun run test
+bun run test          # build, then both test tiers
+bun run test:unit     # no build needed, ~3 s
+bun run test:dist     # reads dist/; fails if it is missing or stale
 bun run test:smoke
 bun run test:coverage
 bun run check:asins
 bun run check:amazon
 bun run check:ai-docs
-```
-
-The pre-commit hook runs:
-
-```bash
-bun run test && bun run test:smoke
 ```
 
 For substantive page or module changes, run both:

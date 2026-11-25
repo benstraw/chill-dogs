@@ -1,4 +1,26 @@
+---
+title: Amazon Product Data Fetching
+type: reference
+domain: affiliate
+status: active
+updated: 2026-11-25
+tags:
+  - chill-dogs
+  - amazon
+  - product-data
+  - cache
+related:
+  - product-data-rules.md
+  - ../engineering/environment-and-integrations.md
+  - ../engineering/build-and-test-commands.md
+---
+
 # Amazon Product Data Fetching
+
+## Use this when
+
+You are fetching Amazon metadata for a product, checking the provider cache's freshness, or need the full flag reference for `scripts/fetch-amazon-data.ts`. The rules for what that data may and may not change are in [`product-data-rules.md`](product-data-rules.md).
+
 
 ## Purpose
 
@@ -96,3 +118,9 @@ The backfill scans existing raw cache files, extracts normalized title/image sna
    ```
 
 `check:amazon` verifies cache coverage and freshness. `check:asins` verifies live Amazon page availability.
+
+## Related knowledge
+
+- [`product-data-rules.md`](product-data-rules.md) — Where product data lives and what provider data may change
+- [`../engineering/environment-and-integrations.md`](../engineering/environment-and-integrations.md) — API keys and network hosts for the fetch scripts
+- [`../engineering/build-and-test-commands.md`](../engineering/build-and-test-commands.md) — `check:amazon` and `check:asins`

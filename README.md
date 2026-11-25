@@ -87,7 +87,7 @@ Most projects document themselves for people. This one also documents itself for
 agents that work on it. [`docs/ai/`](./docs/ai/) is a Markdown knowledge graph. It is an
 operating brief, a task router, a dependency map, and twenty-five domain documents
 covering everything from affiliate compliance to how to write a product bullet. There is a
-generated `/llms.txt` for crawlers, `CLAUDE.md` and `AGENTS.md` for coding agents, and a
+generated `/llms.txt` for crawlers, one `AGENTS.md` for every coding agent (`CLAUDE.md` imports it), and a
 validator that fails CI when a cross-link rots or a doc's frontmatter drifts. Documentation
 that can go stale silently will, so this documentation can't.
 

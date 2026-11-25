@@ -29,8 +29,7 @@ Use this mapping to decide which `docs/ai/` files may need updating:
 | `src/layouts/**`, `astro.config.mjs`, `tsconfig.json` | `engineering/architecture.md` |
 | `src/__tests__/**`, `vitest.config.ts` | `engineering/build-and-test-commands.md` |
 | `docs/system-definition.yaml` | `strategy/chill-dogs-context.md`, `strategy/metrics-and-page-types.md` |
-| `docs/article-writing-guide.md` | `writing/article-writing-guide.md` |
-| `CLAUDE.md` | `engineering/architecture.md`, `AGENT_START.md` |
+| `AGENTS.md` (`CLAUDE.md` imports it) | `engineering/architecture.md`, `AGENT_START.md` |
 | `src/utils/related-pages.ts` | `engineering/routes-and-sitemap.md` |
 | `src/utils/og.ts`, `src/config/og-cta.mjs` | `engineering/seo-and-schema.md` |
 | `.env.example` | `engineering/architecture.md` |

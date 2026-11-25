@@ -1,4 +1,26 @@
+---
+title: Affiliate Link Tooling
+type: reference
+domain: affiliate
+status: active
+updated: 2026-11-25
+tags:
+  - chill-dogs
+  - chewy
+  - impact
+  - affiliate-links
+related:
+  - product-data-rules.md
+  - awin.md
+  - ../engineering/environment-and-integrations.md
+---
+
 # Affiliate Link Tooling
+
+## Use this when
+
+You are creating or checking a non-Amazon affiliate link: minting Chewy links through Impact, batch-converting Chewy URLs, or confirming Impact credentials.
+
 
 Internal workflows for creating and checking non-Amazon affiliate links.
 
@@ -132,3 +154,9 @@ bun run test:coverage
 bun run build
 bun run test
 ```
+
+## Related knowledge
+
+- [`product-data-rules.md`](product-data-rules.md) — Where merchant offers live in product data
+- [`awin.md`](awin.md) — Aorkuler links through Awin
+- [`../engineering/environment-and-integrations.md`](../engineering/environment-and-integrations.md) — Impact credentials and hosts

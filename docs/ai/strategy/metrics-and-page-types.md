@@ -87,7 +87,7 @@ their job is an affiliate click and their metric is `amazon_outbound_click` rate
   under 2 bullets or 120 characters of copy, the page still builds — direct links keep
   working — but goes `noindex`. Hundreds of near-empty pages read as doorway pages and
   can discount the whole set.
-- Their **`id` is a public URL.** See the stability rule in `CLAUDE.md`.
+- Their **`id` is a public URL.** See the stability rule in `AGENTS.md`.
 
 **The converter rules that still apply in full.** A looser contract is not no contract:
 `Disclosure` before the CTA, Amazon links through the shared affiliate components,

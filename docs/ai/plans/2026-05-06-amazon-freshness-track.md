@@ -13,7 +13,7 @@ tags:
 related:
   - ../affiliate/product-data-rules.md
   - ../engineering/build-and-test-commands.md
-  - ../../amazon-product-data.md
+  - ../affiliate/amazon-product-data.md
 ---
 
 # Plan: Amazon Freshness Track
@@ -44,4 +44,4 @@ The goal is to add a manual, warning-only freshness workflow without changing pa
 
 - [Product Data Rules](../affiliate/product-data-rules.md)
 - [Build and Test Commands](../engineering/build-and-test-commands.md)
-- [Amazon Product Data Fetching](../../amazon-product-data.md)
+- [Amazon Product Data Fetching](../affiliate/amazon-product-data.md)
