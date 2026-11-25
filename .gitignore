@@ -2,7 +2,8 @@
 node_modules/
 
 # astro
-dist/
+# Anchored to the root: a bare "dist/" also ignored src/__tests__/dist/.
+/dist/
 .astro/
 
 # Generated share images. Product-style OG JPGs are committed with git add -f and stay tracked.
