@@ -22,7 +22,7 @@ Do not skip the task-specific docs.
 - **Product cards on converters must compose the shared primitives in `src/components/modules/primitives/`** (`ProductCardShell`, `ProductImageFrame`, `ProductBulletList`, `AffiliateOfferStack`). Do not hand-roll a card surface, image frame, bullet list, or CTA stack. If a primitive is missing something, add an opt-in prop to the primitive rather than forking it locally. Card-specific extras (badges, spec lists, notes) stay local. `BrowseProductCard` is the one sanctioned exception.
 - **"Show N more" expanders use the `DisclosureBar` primitive** (`src/components/modules/primitives/DisclosureBar.astro`) — a full-width outlined bar on the pillar accent. Do not hand-roll a bare `<summary>` text link.
 - Use the existing related-content system (`src/utils/related-pages.ts`). Do not add manual related arrays.
-- **A product `id` in `src/data/*-products.ts` is a public URL** — every product builds at `/shop/<id>/`. Renaming a product's `name` is free; renaming its `id` retires an indexed URL and needs redirects in **both** `vercel.json` and `astro.config.mjs`, with the old id left in `src/data/product-url-history.ts`. Enforced by `src/__tests__/product-slugs.test.ts`.
+- **A product `id` in `src/data/*-products.ts` is a public URL** — every product builds at `/shop/<id>/`. Renaming a product's `name` is free; renaming its `id` retires an indexed URL and needs redirects in **both** `vercel.json` and `src/data/redirects.ts` (which `astro.config.mjs` uses), with the old id left in `src/data/product-url-history.ts`. Enforced by `src/__tests__/product-slugs.test.ts`.
 - Run relevant tests/build checks before finishing.
 - **Never merge, close, or squash a pull request without explicit confirmation.** Phrases like "push the PR up", "put it up for review", or "send it up" mean push the branch and open/update the PR — NOT merge it. Only run `gh pr merge` when the user says exactly that.
 
@@ -86,7 +86,7 @@ Use `ogTitle` prop on `BaseLayout` when `<title>` falls outside the og:title ran
 
 ## Content guardrails
 
-- **American English only.** Chill-Dogs is a US site with US authors. Write `math`, `color`, `neighborhood`, `meters`, `-ize`, `leash`, `backyard`, `closet`, `store` — never `maths`, `colour`, `neighbourhood`, `metres`, `-ise`, `lead`, `garden`, `cupboard`, `shop`. Rhys is a Welsh name on a Los Angeles dog; it is not a cue for British English. Applies to copy, alt text, comments, docs, and commit messages. Enforced by `src/__tests__/american-english.test.ts`; details in [`docs/ai/writing/article-writing-guide.md`](docs/ai/writing/article-writing-guide.md#american-english).
+- **American English only.** Chill-Dogs is a US site with US authors. Write `math`, `color`, `neighborhood`, `meters`, `-ize`, `leash`, `backyard`, `closet`, `store` — never `maths`, `colour`, `neighbourhood`, `metres`, `-ise`, `lead`, `garden`, `cupboard`, `shop`. Rhys is a Welsh name on a Los Angeles dog; it is not a cue for British English. Applies to copy, alt text, comments, docs, and commit messages. Enforced (spelling, plus a few vocabulary forms) by `src/__tests__/content-guardrails.test.ts`; details in [`docs/ai/writing/article-writing-guide.md`](docs/ai/writing/article-writing-guide.md#american-english).
 - Do not use "vet-approved", "vet-recommended", or similar without documented sourcing.
 - Prefer: researched, compared, curated, popular, practical.
 - Full guardrails: [`docs/ai/writing/medical-and-vet-claim-guardrails.md`](docs/ai/writing/medical-and-vet-claim-guardrails.md)

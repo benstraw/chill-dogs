@@ -4,6 +4,9 @@ interface Props {
 }
 
 const { schema } = Astro.props;
+// Escape "<" so a string containing "</script>" can never end the block early. The
+// JSON stays equivalent: \u003c parses back to "<".
+const json = JSON.stringify(schema).replace(/</g, '\\u003c');
 ---
 
-<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+<script type="application/ld+json" set:html={json} />

@@ -62,6 +62,7 @@ site_system:
 
   page_inventory:
     - name: "Home"
+      routes: ["/"]
       type: "attractor"
       target_action: "Route visitors into cooling, calming, comforting, and gear/travel/safety paths; surface top product picks for direct affiliate clicks"
       metric: "hero_click_* CTR + collector_to_converter_click + amazon_outbound_click from homepage picks"
@@ -85,6 +86,7 @@ site_system:
         A homepage-inline email signup block sits below HomepageBody as a secondary capture path.
 
     - name: "Cooling"
+      routes: ["/cooling/"]
       type: "collector"
       collector_subtype: "section"
       target_action: "Route heat-intent traffic to cooling converters"
@@ -92,6 +94,7 @@ site_system:
       notes: "Section collector uses SectionCollectorPage with dynamic topic-matched converter and article cards from the complete sitemap inventory, grouped into topic subsections for car cooling, mats, wearables, frozen enrichment, heat safety, and related cooling paths."
 
     - name: "Calming"
+      routes: ["/calming/"]
       type: "collector"
       collector_subtype: "section"
       target_action: "Route anxiety-intent traffic to calming converters"
@@ -99,6 +102,7 @@ site_system:
       notes: "Section collector uses SectionCollectorPage with dynamic topic-matched converter and article cards from the complete sitemap inventory, grouped into topic subsections for car anxiety, fireworks/noise including prep and checklist searches, crate comfort, escape-risk tracking, research/safety, and calming comparisons including lick-mat enrichment."
 
     - name: "Comfort"
+      routes: ["/comforting/"]
       type: "collector"
       collector_subtype: "section"
       target_action: "Route rest, crate, carrier, and travel-comfort intent to comfort converters"
@@ -106,6 +110,7 @@ site_system:
       notes: "Section collector uses SectionCollectorPage with dynamic topic-matched converter and article cards from the complete sitemap inventory, grouped into topic subsections for beds, crates, flying/carriers/travel prep, and related comfort paths."
 
     - name: "Gear, Travel & Safety"
+      routes: ["/gear/"]
       type: "collector"
       collector_subtype: "section"
       target_action: "Route tracking, travel, and safety intent to gear converters"
@@ -113,6 +118,7 @@ site_system:
       notes: "Fourth main pillar (violet theme) at /gear/, replacing the former 301 redirect stub. Section collector uses SectionCollectorPage with dynamic topic-matched cards grouped into GPS trackers/escape safety, trail/emergency prep, road trips/travel, and flying/carriers subsections. Covers /gear/, /travel/, and /safety/ content."
 
     - name: "All Articles"
+      routes: ["/articles/"]
       type: "collector"
       target_action: "Route article browsers into the latest guides across all four pillars"
       metric: "collector_to_converter_click from articles-index link positions"
@@ -651,12 +657,12 @@ site_system:
     seo_strategy: "collector captures intent; converter monetizes intent; homepage variant routes remain canonicalized and noindex"
     sitemap_inventory: "src/data/sitemap-inventory.ts composes staticSitemapSections with article MDX collection entries at build time; future related-content derivation should use the complete inventory instead of static-only sections. Converter sitemap entries carry pubDate and optional lastUpdated metadata for homepage theme-section converter recency ordering."
     section_collectors: "src/data/section-collectors.ts defines cooling, calming, comfort, and gear collector metadata, shared SectionHero content/theme inputs, topic subsection grouping, topic coverage, priority ordering, dynamic CollectorBody card inventories, and CollectionPage hasPart schema from the complete sitemap inventory. The retired /cooling/v/ and /calming/v/ hero experiment routes are no longer built."
-    product_urls: "Product detail pages ship noindex and out of the XML sitemap behind the PRODUCT_PAGES_INDEXABLE switch in src/utils/product-meta.ts: ~200 generated pages on a site of ~65 is the shape that draws site-wide quality demotion, so the URLs work for Pinterest and direct links from day one while indexing is enabled deliberately, ideally a pillar at a time. meetsProductCopyBar is the per-product bar that applies once the switch is on, and stays enforced meanwhile. A noindex page is never submitted in the sitemap. Every product in src/data/*-products.ts builds a detail page at /shop/<id>/, so the id field is a public indexed URL rather than an internal key. Renaming a product name is free; renaming an id retires a live URL and requires redirects in both vercel.json and astro.config.mjs with the old id retained in src/data/product-url-history.ts. src/__tests__/product-slugs.test.ts enforces id uniqueness, URL-safe kebab-case, redirect coverage for retired ids, and history-file completeness."
+    product_urls: "Product detail pages ship noindex and out of the XML sitemap behind the PRODUCT_PAGES_INDEXABLE switch in src/utils/product-meta.ts: ~200 generated pages on a site of ~65 is the shape that draws site-wide quality demotion, so the URLs work for Pinterest and direct links from day one while indexing is enabled deliberately, ideally a pillar at a time. meetsProductCopyBar is the per-product bar that applies once the switch is on, and stays enforced meanwhile. A noindex page is never submitted in the sitemap. Every product in src/data/*-products.ts builds a detail page at /shop/<id>/, so the id field is a public indexed URL rather than an internal key. Renaming a product name is free; renaming an id retires a live URL and requires redirects in both vercel.json and src/data/redirects.ts (used by astro.config.mjs) with the old id retained in src/data/product-url-history.ts. src/__tests__/product-slugs.test.ts enforces id uniqueness, URL-safe kebab-case, redirect coverage for retired ids, and history-file completeness."
     discovery_surfaces: "The XML sitemap (astro.config.mjs) and llms.txt (src/pages/llms.txt.ts) share one exclusion list in src/data/discovery-exclusions.ts. llms.txt is generated from the complete sitemap inventory — every registered page that is not noindex and not excluded is listed, so new pages appear automatically. It is never a hand-curated subset; src/__tests__/dist/llms-coverage.test.ts fails the build if llms.txt and the XML sitemap disagree on any indexable URL."
 
   redirects:
     # Production: vercel.json → redirects array (true HTTP redirect at Vercel edge).
-    # Local dev/preview: astro.config.mjs → redirects block (meta-refresh fallback).
+    # Local dev/preview: src/data/redirects.ts, used by astro.config.mjs (meta-refresh fallback).
     # Add an entry here any time a live/indexed URL changes or a marketing alias is added.
     - from: "/join"
       to: "https://www.chill-dogs.com/subscribe/?utm_source=postcard&utm_medium=print&utm_campaign=offline_flyer"
@@ -668,6 +674,58 @@ site_system:
       status: 301
       reason: "Slug updated to target primary keyword 'dog road trip gear'; old URL was indexed."
       date: "2026-03-20"
+    - from: "/safety/best-natural-flea-and-tick-products-for-dogs/"
+      to: "/safety/best-flea-and-tick-products-for-dogs/"
+      status: 301
+      reason: "Merged into the single flea and tick converter; natural products now live there."
+    - from: "/shop/sztopfocus-11-piece-grooming-kit/"
+      to: "/safety/dog-bath-tools/#bath-kits"
+      status: 301
+      reason: "Product retired (#370); sends visitors to the remaining bath kits."
+    - from: "/shop/invenho-orthopedic-couch-bed/"
+      to: "/comforting/best-orthopedic-dog-beds/"
+      status: 301
+      reason: "Product retired (#375)."
+    - from: "/shop/bedsure-comfyfleece-orthopedic/"
+      to: "/comforting/best-orthopedic-dog-beds/"
+      status: 301
+      reason: "Product retired (#375)."
+    - from: "/shop/invenho-orthopedic-bed/"
+      to: "/comforting/best-orthopedic-dog-beds/"
+      status: 301
+      reason: "Product retired (#375)."
+    - from: "/shop/cwawz-orthopedic-bolster/"
+      to: "/comforting/best-orthopedic-dog-beds/"
+      status: 301
+      reason: "Product retired (#375)."
+    - from: "/shop/carolina-pet-bolster-lg/"
+      to: "/comforting/best-orthopedic-dog-beds/"
+      status: 301
+      reason: "Product retired (#395)."
+    - from: "/safety/dog-bath-tools-for-flea-season/"
+      to: "/safety/dog-bath-tools/"
+      status: 301
+      reason: "Page renamed to Dog Bath Tools; old slug was live for weeks."
+    - from: "/comforting/best-gps-trackers-for-dogs/"
+      to: "/gear/best-dog-gps-trackers/"
+      status: 301
+      reason: "Wrong URL in the sent 'The Day Rhys Ran Off' newsletter (2026-04-29); never a site page."
+    - from: "/comforting/what-to-do-if-your-dog-runs-away/"
+      to: "/safety/what-to-do-if-your-dog-runs-away/"
+      status: 301
+      reason: "Wrong URL in the sent 'The Day Rhys Ran Off' newsletter (2026-04-29); never a site page."
+    - from: "/comforting/fi-series-3-dog-collar-review/"
+      to: "/gear/fi-dog-collar-review/"
+      status: 301
+      reason: "Wrong URL in the sent 'The Day Rhys Ran Off' newsletter (2026-04-29); never a site page."
+    - from: "/comforting/garmin-dog-tracking-systems/"
+      to: "/gear/garmin-dog-tracking-collars/"
+      status: 301
+      reason: "Wrong URL in the sent 'The Day Rhys Ran Off' newsletter (2026-04-29); never a site page."
+    - from: "/comforting/apple-airtag-for-dogs/"
+      to: "/gear/airtag-for-dogs/"
+      status: 301
+      reason: "Wrong URL in the sent 'The Day Rhys Ran Off' newsletter (2026-04-29); never a site page."
 
   analytics:
     primary_events:

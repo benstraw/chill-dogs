@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
+import { ROUTES } from '@data/routes';
 import JsonLd from '@components/JsonLd.astro';
 import Hero from '@components/modules/Hero.astro';
 import SummaryBlock from '@components/modules/SummaryBlock.astro';
@@ -232,11 +233,11 @@ const pillarFaqs = [
 
     <InternalLinkStrip
       links={[
-        { label: 'Back to Cooling Hub', href: '/cooling/' },
-        { label: 'Cooling Mats', href: '/cooling/cooling-mats/' },
-        { label: 'Cooling Bandanas', href: '/cooling/cooling-bandanas/' },
-        { label: 'Cooling Vests', href: '/cooling/cooling-vests/' },
-        { label: 'Freezable Toys', href: '/cooling/freezable-dog-toys/' },
+        { label: 'Back to Cooling Guides', href: ROUTES.coolingHub },
+        { label: 'Cooling Mats', href: ROUTES.coolingMats },
+        { label: 'Cooling Bandanas', href: ROUTES.coolingBandanas },
+        { label: 'Cooling Vests', href: ROUTES.coolingVests },
+        { label: 'Freezable Toys', href: ROUTES.coolingToys },
       ]}
       fromPage={pageSlug}
     />

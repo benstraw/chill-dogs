@@ -12,12 +12,14 @@ interface Props {
   description: string;
   ogTitle?: string;
   canonicalPath: string;
+  /** Required: Google's Article rich result needs datePublished. */
+  pubDate: Date;
   ogImage?: string | ImageMetadata;
   navAccent?: string;
   pillarTheme?: PillarThemeKey;
 }
 
-const { title, description, ogTitle, canonicalPath, ogImage, navAccent, pillarTheme } = Astro.props;
+const { title, description, ogTitle, canonicalPath, pubDate, ogImage, navAccent, pillarTheme } = Astro.props;
 const canonicalUrl = `https://www.chill-dogs.com${canonicalPath}`;
 const resolvedArticleImage = resolveProvidedOgImagePath(ogImage)
   ?? `https://www.chill-dogs.com${resolveAutoOgImagePath({ pathname: canonicalPath }) ?? '/og-default.jpg'}`;
@@ -28,6 +30,7 @@ const articleSchema = {
   headline: title,
   description,
   url: canonicalUrl,
+  datePublished: pubDate.toISOString().slice(0, 10),
   image: [resolvedArticleImage],
   author: { '@type': 'Person', name: 'Benjamin Strawbridge', url: 'https://www.benstrawbridge.com/' },
   publisher: {

@@ -33,8 +33,9 @@ describe('search index — product data shape', () => {
 
     expect(productItems.length).toBe(productCatalogItems.length);
 
+    const catalogById = new Map(productCatalogItems.map((product) => [product.id, product]));
     for (const item of productItems) {
-      const catalogItem = productCatalogItems.find((product) => product.id === item.id);
+      const catalogItem = catalogById.get(item.id);
       expect(catalogItem, `${item.id} missing from product catalog`).toBeTruthy();
       expect(item.href).toBe(`${ROUTES.shop}?q=${encodeURIComponent(item.name)}`);
       expect(item.href.startsWith(ROUTES.shop)).toBe(true);

@@ -72,6 +72,10 @@ The suite is split into two Vitest projects (`vitest.config.ts`):
 - **Site-wide rules go in `src/__tests__/dist/site-sweep.test.ts`.** It reads every built page once and runs each rule as a visitor over it. Add a visitor there rather than a new walk of `dist/`. Helpers for anchors, attributes, meta tags and JSON-LD are in `src/__tests__/helpers/dist.ts`; use string scanning, not a DOM.
 - **Tests run in the `node` environment.** A file that needs a DOM opts in with `// @vitest-environment happy-dom` on its first line.
 - **`astro:content` is mocked with the real article frontmatter** (`src/__mocks__/astro-content.ts`), so unit tests see the actual articles.
+- **Source rules go in `src/__tests__/content-guardrails.test.ts`.** It reads the source tree once: American English, vet-authority language, route constants, "hub", card primitives, `DisclosureBar`.
+- **Rules that shipped code already breaks use a ratchet** (`src/__tests__/helpers/ratchet.ts`, lists in `src/__tests__/allowlists/`). A violation not on the list fails; a listed one that no longer occurs prints a warning so you can delete it. Keys are `file :: literal`, never line numbers. Fix entries; never add them.
+- **Unit tests are hermetic.** `src/__tests__/setup/hermetic.ts` makes `fetch` throw and strips ambient merchant credentials and proxy variables. Inject `fetchImpl`, or stub `fetch` and call `vi.unstubAllGlobals()` in `afterEach`.
+- **A new guard must be shown to fail.** Make a temporary violation, see the test fail, revert.
 - **Assert invariants, not snapshots.** "Every strip link is tracked and resolves", not "this page links to these five URLs". The exception is public URL stability (route constants, product ids), where pinning the value is the point.
 - **Speed is tracked.** See [`test-timings/test-timings.md`](test-timings/test-timings.md). Nothing gets slower without a reason written in the PR.
 

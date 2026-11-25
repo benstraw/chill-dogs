@@ -9,14 +9,14 @@ const { variant = 'inline' } = Astro.props;
 ---
 
 {variant === 'banner' ? (
-  <div class="disclosure-banner">
+  <div class="disclosure-banner" data-affiliate-disclosure>
     <p>
       <strong>Disclosure:</strong> This post contains affiliate links. If you make a purchase through these links, we may earn a small commission at no extra cost to you.
       <a href={ROUTES.affiliateDisclosure}>Learn more</a>.
     </p>
   </div>
 ) : (
-  <p class="disclosure-inline">
+  <p class="disclosure-inline" data-affiliate-disclosure>
     <em>As an Amazon Associate, we earn from qualifying purchases. <a href={ROUTES.affiliateDisclosure}>Full disclosure</a>.</em>
   </p>
 )}

@@ -24,6 +24,7 @@ import ProductImageFrame from '@components/modules/primitives/ProductImageFrame.
 import { productCatalogItems, type ProductCatalogItem } from '@data/product-catalog';
 import { buildProductPageMap, type PageRef } from '@data/product-page-map';
 import { getProductImages } from '@data/products/images';
+import { merchants } from '@data/products/merchants';
 import { productPinImage, productShareImage } from '@data/product-share-images';
 import { ROUTES, shopProductRoute } from '@data/routes';
 import type { PillarThemeKey } from '@data/pillar-themes';
@@ -116,7 +117,8 @@ const productSchema = {
     availability: 'https://schema.org/InStock',
     seller: {
       '@type': 'Organization',
-      name: offer.merchant === 'amazon' ? 'Amazon' : 'Chewy',
+      // Every merchant, not just Amazon/Chewy: this used to label the Aorkuler direct offer "Chewy".
+      name: merchants[offer.merchant].label,
     },
   })),
 };

@@ -13,11 +13,21 @@ import { getCompleteSitemapPages } from '../../data/sitemap-inventory';
 import { isHomepageArticle } from '../../utils/homepage-articles';
 import { SITE_ORIGIN, decodeEntities, distRoot, projectRoot } from '../helpers/dist';
 
+/**
+ * Parsed once per page and shared: the homepage alone was parsed eight times. Tests
+ * only read these documents; none may mutate one.
+ */
+const parsedPages = new Map<string, Document>();
 function readBuiltPage(relativePath: string): Document {
-  const html = readFileSync(path.join(distRoot, relativePath), 'utf8')
-    .replace(/<link\b[^>]*rel="stylesheet"[^>]*>/g, '')
-    .replace(/<script\b[^>]*src="[^"]*"[^>]*><\/script>/g, '');
-  return new DOMParser().parseFromString(html, 'text/html');
+  let doc = parsedPages.get(relativePath);
+  if (!doc) {
+    const html = readFileSync(path.join(distRoot, relativePath), 'utf8')
+      .replace(/<link\b[^>]*rel="stylesheet"[^>]*>/g, '')
+      .replace(/<script\b[^>]*src="[^"]*"[^>]*><\/script>/g, '');
+    doc = new DOMParser().parseFromString(html, 'text/html');
+    parsedPages.set(relativePath, doc);
+  }
+  return doc;
 }
 
 function readBuiltAsset(relativePath: string): string {

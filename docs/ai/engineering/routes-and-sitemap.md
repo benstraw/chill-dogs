@@ -172,7 +172,9 @@ AI-assisted page changes are incomplete until this file is updated.
 When a live/indexed URL changes slug:
 - Add a redirect entry in `docs/system-definition.yaml` under `redirects:`
 - Add the HTTP redirect to `vercel.json` → `redirects` array (true 301 at Vercel edge)
-- Add a meta-refresh fallback to `astro.config.mjs` → `redirects` block for local dev
+- Add a meta-refresh fallback to `src/data/redirects.ts` (used by `astro.config.mjs`) for local dev
+
+All three must agree, with the same destination and status: `src/__tests__/product-slugs.test.ts` checks `vercel.json` against `src/data/redirects.ts` (and that both slash forms are in `vercel.json`), `src/__tests__/system-definition.test.ts` checks the YAML, and `src/__tests__/dist/redirects.test.ts` checks that every destination, `#anchor` included, is a built page.
 
 ---
 

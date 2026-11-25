@@ -9,6 +9,7 @@
 
 import { productCatalogItems } from '../src/data/product-catalog';
 import { getAllAmazonOfferEntries } from '../src/data/products/offers';
+import { classify, type Status } from './asin-classify';
 
 // --- CLI args ---
 const args = process.argv.slice(2);
@@ -43,7 +44,6 @@ const DELAY_MS = 800;
 const RETRY_BACKOFF_MS = [3_000, 8_000];
 const RETRY_BUDGET_MS = 300_000;
 
-type Status = 'OK' | 'UNAVAILABLE' | 'REMOVED' | 'RATE LIMITED' | `ERROR ${number}` | 'UNKNOWN' | 'FETCH ERROR';
 
 interface Result {
   asin: string;
@@ -51,46 +51,6 @@ interface Result {
   pillar: string;
   status: Status;
   detail?: string;
-}
-
-function classify(responseStatus: number, html: string, finalUrl: string): { status: Status; detail?: string } {
-  if (responseStatus === 404) return { status: 'REMOVED', detail: '404' };
-  if (responseStatus === 429 || responseStatus === 503) return { status: 'RATE LIMITED', detail: `HTTP ${responseStatus}` };
-  if (responseStatus !== 200) return { status: `ERROR ${responseStatus}` };
-
-  // Redirected away from /dp/ — product no longer has its own page
-  if (!finalUrl.includes('/dp/')) {
-    return { status: 'REMOVED', detail: 'redirected off product page' };
-  }
-
-  const lower = html.toLowerCase();
-
-  // Unavailable — product page exists but item can't be bought
-  if (lower.includes('currently unavailable') || lower.includes('this item is not available')) {
-    return { status: 'UNAVAILABLE' };
-  }
-
-  // Amazon "page not found" / error pages
-  if (
-    lower.includes("isn't available") ||
-    lower.includes('page not found') ||
-    lower.includes('looking for something?') ||
-    lower.includes('dogs of amazon')
-  ) {
-    return { status: 'REMOVED', detail: 'error page' };
-  }
-
-  // Product title present — definitive OK signal
-  if (html.includes('id="productTitle"') || html.includes("id='productTitle'")) {
-    return { status: 'OK' };
-  }
-
-  // CAPTCHA or bot-detection wall — couldn't assess
-  if (lower.includes('captcha') || lower.includes('robot check')) {
-    return { status: 'UNKNOWN', detail: 'CAPTCHA / bot check' };
-  }
-
-  return { status: 'UNKNOWN', detail: 'no product title found in page' };
 }
 
 // --- Column widths ---

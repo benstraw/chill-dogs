@@ -42,6 +42,7 @@ bun run test:timing -- --compare docs/ai/engineering/test-timings/<previous>.jso
 |---|---|---|---|---|---|---|
 | [baseline.json](baseline.json) | `cb0a5d2` | 17.68 s | 6.51 s (353 tests) | — | 8.66 s | 418 |
 | [phase-1.json](phase-1.json) | Phase 1 | 16.56 s | 3.58 s (395 tests, **−45%**) | 2.47 s (69 tests) | 5.35 s (**−38%**) | 464 |
+| [phase-2.json](phase-2.json) | Phase 2 | 16.51 s | 3.81 s (438 tests) | 2.27 s (79 tests) | 5.48 s | 517 |
 
 `test:unit` changed meaning in Phase 1: the baseline figure still included two files that read `dist/`. Since Phase 1, `unit` never touches `dist/`.
 
@@ -60,6 +61,17 @@ Baseline machine: 4× Intel Xeon @ 2.10 GHz, Bun 1.4.4 (the repo pins 1.3.6; sam
 - `site-smoke` fell from 3.47 s to 1.58 s. Its eight whole-site walks became one pass in `site-sweep`, and the 1.2 MB admin catalog page is scanned as a string, not parsed as a DOM.
 - `validate-ai-docs` fell from 1.35 s to 0.23 s by validating in process instead of spawning `node` per case.
 - `related-pages` rose from 46 ms to 120 ms. It now runs over the 17 real articles instead of an empty collection. That's under the noise threshold, and it buys real coverage.
+
+### Phase 2 observations
+
+Phase 2 added 53 tests and 10 revenue and SEO rules: JSON-LD validity, offer sellers, disclosure placement, site-wide affiliate tracking, assets, redirect parity, and others. Against Phase 1, the full run is within noise (+2%) and the dist tier is faster (−8%). That's because the new dist rules ride on the existing single sweep, and these savings offset their cost:
+
+- `site-smoke` 1.58 s → about 1.0 s: each built page is parsed with happy-dom once, not once per test (the homepage was parsed eight times).
+- The American English rule pre-checks each whole file before splitting it into lines. Its first version shared a global regex between the pre-check and the line scan and silently missed every hit; the mutation check caught it.
+- Redirects moved from `astro.config.mjs` into `src/data/redirects.ts`. Importing the Astro config cost about 1 s per test file.
+- `merchant-images` parses the 15 MB Amazon cache once instead of twice; `validate-ai-docs` keeps one CLI spawn (the failure path) instead of two.
+
+Tier-level noise on this machine is about ±300 ms between back-to-back runs (`unit` read 3.50 s and 3.81 s for nearly identical code), which is why the regression rule needs both >10% and >250 ms.
 
 ## Related knowledge
 
