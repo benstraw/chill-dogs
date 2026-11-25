@@ -229,6 +229,6 @@ if [ "$bun_net_broken" = true ]; then
   echo "[chill-dogs] .github/workflows/integration-checks.yml (workflow_dispatch)."
 fi
 
-echo "[chill-dogs] Details: docs/ai/engineering/environment-and-integrations.md"
+echo "[chill-dogs] Details: docs/engineering/environment-and-integrations.md"
 
 exit 0

@@ -1,5 +1,5 @@
 ---
-title: Create AI Knowledge Graph under docs/ai/
+title: Create AI Knowledge Graph under docs/
 type: plan
 domain: global
 status: executed
@@ -15,11 +15,11 @@ related:
   - ../KNOWLEDGE_GRAPH.md
 ---
 
-# Plan: Create AI Knowledge Graph under docs/ai/
+# Plan: Create AI Knowledge Graph under docs/
 
 ## Context
 
-CLAUDE.md had grown to contain the entire project brain in a single file, making it hard to maintain, easy to contradict, and poorly scoped for different agent types (coding, writing, marketing, affiliate). The goal was to decompose it into a navigable knowledge graph under `docs/ai/` so agents can read only what's relevant to their task.
+CLAUDE.md had grown to contain the entire project brain in a single file, making it hard to maintain, easy to contradict, and poorly scoped for different agent types (coding, writing, marketing, affiliate). The goal was to decompose it into a navigable knowledge graph under `docs/` so agents can read only what's relevant to their task.
 
 **Executed:** 2026-05-03
 **Commit:** `e8fba20`
@@ -28,7 +28,7 @@ CLAUDE.md had grown to contain the entire project brain in a single file, making
 
 ## Changes made
 
-### Created `docs/ai/` — 25 files across 6 domains
+### Created `docs/` — 25 files across 6 domains
 
 **Top-level:**
 - `AI_INDEX.md` — routes agents by task type
@@ -81,7 +81,7 @@ Added `"check:ai-docs": "node scripts/validate-ai-docs.mjs"` to `package.json`.
 
 ### Refactored `CLAUDE.md`
 
-Reduced from 228 lines to 59 lines. Now a bootloader pointing to `docs/ai/`. Retained: commands table, SEO meta constraints, content guardrails, source-of-truth files, core rules.
+Reduced from 228 lines to 59 lines. Now a bootloader pointing to `docs/`. Retained: commands table, SEO meta constraints, content guardrails, source-of-truth files, core rules.
 
 ## Related knowledge
 

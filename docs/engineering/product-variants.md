@@ -197,7 +197,7 @@ Rules these records settled:
   out-of-stock sizes kept so every bed offers its sizes (#390).
 - **A bed with a single in-stock size gets no `variantGroup`**: a one-chip picker is noise.
 - Chewy `/dp/` ids matched Impact catalog item ids for these beds (unlike the older Kurgo/Adventure Medical
-  cases in `docs/ai/affiliate/affiliate-link-tooling.md`), so `fetch:chewy --search` finds every size listing.
+  cases in `docs/affiliate/affiliate-link-tooling.md`), so `fetch:chewy --search` finds every size listing.
 - **Beds sold on both merchants** (the two NOAH & PAW beds) stay Amazon records; `withChewyOffers` in
   `src/data/relaxation-products.ts` adds the matching Chewy listing to each Amazon size (#393, #396).
 - Sizes are labeled by name (`Small`, `X-Large`) or by dimensions (`44 × 32 in`) exactly as Chewy sells them.

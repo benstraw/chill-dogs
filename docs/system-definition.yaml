@@ -356,7 +356,7 @@ site_system:
         (without a checkmark) for this product used by Rhys, optimized through Astro Image.
         Both the horizontal and full-body shield badge assets are saved in src/images/badges/.
         Also the first page using the aorkuler merchant: Aorkuler's affiliate program
-        (run through Awin, see docs/ai/affiliate/awin.md) pays better than Amazon on this product, so merchants.aorkuler has displayOrder 0
+        (run through Awin, see docs/affiliate/awin.md) pays better than Amazon on this product, so merchants.aorkuler has displayOrder 0
         and leads the offer stack, with the Amazon ASIN second. The unit was supplied free,
         so Disclosure carries the opt-in providedProduct line as well as the affiliate one.
         Prices quoted on the page are Aorkuler's published direct prices, never Amazon's,
@@ -518,7 +518,7 @@ site_system:
         no comparison. Excluded from the homepage Compare picks, section collectors, and related
         strips via isProductDetailPage(), which by count would otherwise crowd all three out.
         Sits outside the collector -> converter funnel, so collector_to_converter_click does not
-        measure it. See docs/ai/strategy/metrics-and-page-types.md.
+        measure it. See docs/strategy/metrics-and-page-types.md.
 
     - name: "Search"
       type: "collector"
@@ -530,7 +530,7 @@ site_system:
         Client-side Fuse.js search at /search/. Index prerendered at build time via src/pages/search-index.json.ts,
         which merges all non-noindex sitemap pages with the full product catalog. Filter bar (All/Guides/Collectors/Products).
         Page result cards route to indexed site pages. Product result cards route internally to /shop/?q=... so
-        search results do not expose direct Amazon links. Page is noindex. See docs/ai/engineering/search.md.
+        search results do not expose direct Amazon links. Page is noindex. See docs/engineering/search.md.
 
     - name: "Informer pages"
       type: "informer"

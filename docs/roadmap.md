@@ -1,4 +1,22 @@
+---
+title: Chill-Dogs Roadmap
+type: plan-list
+domain: global
+status: active
+updated: 2026-11-25
+tags:
+  - chill-dogs
+  - roadmap
+related:
+  - system-definition.yaml
+  - engineering/build-and-test-commands.md
+---
+
 # Chill-Dogs Roadmap
+
+## Use this when
+
+You want to know what is planned, already shipped, or dropped. Check an item against the code before acting on it.
 
 Open work, carried over from the README's TODO list when the README became a project
 overview rather than a working document. This is the current list; `docs/archive/build-log.md`
@@ -41,10 +59,10 @@ Last reviewed 2026-11-25 against the code.
 - Feature-flag hero experiments and the winner evaluation: the section collector hero
   experiments were retired on 2026-08-10 (see `docs/archive/hero-experiments.md`)
 
-## Where the details live
+## Related knowledge
 
-- Build commands and test layers — [`docs/ai/engineering/build-and-test-commands.md`](./ai/engineering/build-and-test-commands.md)
-- Environment variables and integration scripts — [`docs/ai/engineering/environment-and-integrations.md`](./ai/engineering/environment-and-integrations.md)
-- Analytics event registry — [`docs/ai/engineering/analytics-events.md`](./ai/engineering/analytics-events.md)
-- OG image pipeline and SEO metadata — [`docs/ai/engineering/seo-and-schema.md`](./ai/engineering/seo-and-schema.md)
-- Page types, routes, and module stacks — [`docs/system-definition.yaml`](./system-definition.yaml)
+- Build commands and test layers — [`docs/engineering/build-and-test-commands.md`](engineering/build-and-test-commands.md)
+- Environment variables and integration scripts — [`docs/engineering/environment-and-integrations.md`](engineering/environment-and-integrations.md)
+- Analytics event registry — [`docs/engineering/analytics-events.md`](engineering/analytics-events.md)
+- OG image pipeline and SEO metadata — [`docs/engineering/seo-and-schema.md`](engineering/seo-and-schema.md)
+- Page types, routes, and module stacks — [`docs/system-definition.yaml`](system-definition.yaml)

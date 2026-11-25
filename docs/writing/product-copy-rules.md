@@ -44,7 +44,7 @@ so — understating real experience is its own kind of inaccuracy.
 The `handsOn` field on the product record is the source of truth. It carries `since`
 (when the product was first used) and `note` (what was actually done with it), and it
 is set by hand only when that is true. See `ProductEditorialFields` in
-[`src/data/products/types.ts`](../../../src/data/products/types.ts).
+[`src/data/products/types.ts`](../../src/data/products/types.ts).
 
 **Product has no `handsOn` field** — write research language:
 

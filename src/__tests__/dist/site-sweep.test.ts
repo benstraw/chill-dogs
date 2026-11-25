@@ -357,7 +357,7 @@ for (const { rel, html } of pages) {
   // Affiliate links. Every anchor to a merchant host must go through AffiliateLink /
   // MerchantAffiliateLink: tracked, marked sponsored, and (Amazon) tagged exactly.
   // Exempt: /admin/ (internal diagnostic) and variant chips, which repoint the tracked
-  // CTA instead of replacing it (docs/ai/engineering/product-variants.md); chips are
+  // CTA instead of replacing it (docs/engineering/product-variants.md); chips are
   // still checked for the tag and rel.
   const isAdmin = rel.startsWith('admin/');
   for (const tag of anchors(html)) {

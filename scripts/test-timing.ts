@@ -3,8 +3,8 @@
  * Test-suite timing harness.
  *
  *   bun run test:timing                         # measure, print, write JSON to --out (optional)
- *   bun run test:timing -- --out docs/ai/engineering/test-timings/phase-1.json
- *   bun run test:timing -- --compare docs/ai/engineering/test-timings/baseline.json
+ *   bun run test:timing -- --out docs/engineering/test-timings/phase-1.json
+ *   bun run test:timing -- --compare docs/engineering/test-timings/baseline.json
  *   bun run test:timing -- --compare old.json --against new.json   # compare two saved runs
  *
  * Options:

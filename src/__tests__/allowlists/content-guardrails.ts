@@ -60,7 +60,7 @@ export const HUB_TOKEN_ALLOWLIST: Allowlist = {
   gearHub: 'ROUTES key for a pillar collector; renaming touches every caller.',
   'src/content/articles/travel-how-to-fly-with-a-dog.mdx :: hubs': 'Airline hubs (airports), not page-type naming.',
   'src/styles/utilities.css :: hub': 'Legacy .hub-* CSS classes on collector pages.',
-  'docs/ai/engineering/architecture.md :: hub': '"collector hub grids" wording in the grid notes.',
+  'docs/engineering/architecture.md :: hub': '"collector hub grids" wording in the grid notes.',
 };
 
 /** Pages that render product images beside affiliate links without the card primitives. */

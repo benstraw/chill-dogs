@@ -64,7 +64,7 @@ History: on bun 1.3.11, Bun's `fetch` opened the tunnel and then failed the TLS 
 | `bun run test` / `test:smoke` / `test:coverage` | none | none | — |
 | `bun run check:amazon` | none | none — reads the local cache only | — |
 | `bun run check:asins` | none | `www.amazon.com` | **bun** |
-| `bun run check:ai-docs` | none | none | — |
+| `bun run check:docs` | none | none | — |
 | `bun run admin:serve` | none | none — binds 127.0.0.1:4322, writes the repo | — |
 | `bun run newsletter:sync` | `BUTTONDOWN_API_KEY` (private; never `PUBLIC_`) | `api.buttondown.com` (read-only) | **bun** |
 | `bun run indexnow:submit` | `INDEXNOW_KEY` | `api.indexnow.org` | node |
@@ -170,7 +170,7 @@ The readiness line reports the first blocker it finds, so fix them in the order 
 
 ### GitHub Actions
 
-- `.github/workflows/ci.yml` — build, test, and `check:ai-docs` on every push to `main` and every PR.
+- `.github/workflows/ci.yml` — build, test, and `check:docs` on every push to `main` and every PR.
 - `.github/workflows/integration-checks.yml` — weekly (and `workflow_dispatch`) run of `check:asins`, `check:amazon --fail-on-stale`, and `chewy-link:verify`.
 - `.github/workflows/posthog-deploy-annotation.yml` — on a successful Vercel `Production` `deployment_status`, creates a PostHog annotation (deduped per commit SHA) so deploys show up on charts. Needs secret `POSTHOG_CI_API_KEY` (a personal API key with annotation write scope); optional variables `POSTHOG_PROJECT_ID` (defaults to chill-dogs project 328578) and `POSTHOG_HOST` (defaults to `https://us.posthog.com` — not the `woof.chill-dogs.com` ingest proxy). It self-skips with a notice when unconfigured and never blocks the deploy.
 

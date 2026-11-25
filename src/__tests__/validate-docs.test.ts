@@ -1,6 +1,6 @@
 import { describe, expect, it, beforeAll, afterAll } from 'vitest';
 import { execFileSync } from 'node:child_process';
-import { validateDocs } from '../../scripts/validate-ai-docs.mjs';
+import { validateDocs } from '../../scripts/validate-docs.mjs';
 import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
@@ -12,7 +12,7 @@ import { join, resolve } from 'node:path';
  * wolf gets disabled, and then nothing is checked at all.
  */
 
-const SCRIPT = resolve(__dirname, '../../scripts/validate-ai-docs.mjs');
+const SCRIPT = resolve(__dirname, '../../scripts/validate-docs.mjs');
 
 let root: string;
 
@@ -56,7 +56,7 @@ afterAll(() => {
   rmSync(root, { recursive: true, force: true });
 });
 
-describe('validate-ai-docs: accepts legitimate docs', () => {
+describe('validate-docs: accepts legitimate docs', () => {
   it('passes a well-formed doc', () => {
     expect(check({ 'doc.md': frontmatter() + SECTIONS, 'target.md': target }).ok).toBe(true);
   });
@@ -106,7 +106,7 @@ describe('validate-ai-docs: accepts legitimate docs', () => {
   });
 });
 
-describe('validate-ai-docs: catches rot', () => {
+describe('validate-docs: catches rot', () => {
   it('fails a related: entry that does not resolve', () => {
     const doc = frontmatter({ related: '\n  - ./gone.md' }) + SECTIONS;
     const { ok, out } = check({ 'doc.md': doc, 'target.md': target });
@@ -151,9 +151,9 @@ describe('validate-ai-docs: catches rot', () => {
   });
 });
 
-describe('validate-ai-docs: CLI', () => {
+describe('validate-docs: CLI', () => {
   // The one spawn: proves the command fails CI (exit 1, issue printed) on rot. The
-  // success path runs for real in CI as `bun run check:ai-docs`.
+  // success path runs for real in CI as `bun run check:docs`.
   it('exits 1 with the issue printed on an invalid directory', () => {
     const bad = mkdtempSync(join(root, 'cli-bad-'));
     writeFileSync(join(bad, 'doc.md'), frontmatter());

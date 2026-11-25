@@ -3,7 +3,7 @@ import { defineConfig } from 'vitest/config';
 const alias = (path: string) => new URL(path, import.meta.url).pathname;
 
 /**
- * Two tiers (see docs/ai/engineering/build-and-test-commands.md):
+ * Two tiers (see docs/engineering/build-and-test-commands.md):
  *
  *   unit  `bun run test:unit`  — no dist/, no network, no git. Runs anywhere, fast.
  *   dist  `bun run test:dist`  — reads the built site. Its global setup fails the tier

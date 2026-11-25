@@ -25,8 +25,8 @@ Measured wall-clock numbers for the build and each test tier, recorded before an
 ## How to measure
 
 ```bash
-bun run test:timing -- --out docs/ai/engineering/test-timings/phase-N.json
-bun run test:timing -- --compare docs/ai/engineering/test-timings/<previous>.json
+bun run test:timing -- --out docs/engineering/test-timings/phase-N.json
+bun run test:timing -- --compare docs/engineering/test-timings/<previous>.json
 ```
 
 - Each tier runs once as a discarded warm-up, then 3 times; the **median** is recorded.

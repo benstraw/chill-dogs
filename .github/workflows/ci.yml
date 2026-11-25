@@ -55,8 +55,8 @@ jobs:
             require("fs").appendFileSync(process.env.GITHUB_STEP_SUMMARY, out.join("\n") + "\n");
           ' || true
 
-      - name: Validate AI knowledge graph
-        run: bun run check:ai-docs
+      - name: Validate docs
+        run: bun run check:docs
 
       - name: Type check
         run: bunx astro check

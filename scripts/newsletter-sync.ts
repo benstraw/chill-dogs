@@ -3,7 +3,7 @@
  *
  * Usage:
  *   bun run newsletter:sync            # print a summary table
- *   bun run newsletter:sync -- --write # also write docs/ai/marketing/newsletter-issues.json
+ *   bun run newsletter:sync -- --write # also write docs/marketing/newsletter-issues.json
  *
  * Needs BUTTONDOWN_API_KEY in .env (bun loads it). The key is sent only as an
  * Authorization header and is never printed or written. This script only reads;
@@ -11,7 +11,7 @@
  *
  * The snapshot lists, per email: subject, send date, status, archive URL, the
  * chill-dogs.com paths linked in the body, and any analytics Buttondown returns.
- * docs/ai/marketing/newsletter-archive.md is still edited by hand from it.
+ * docs/marketing/newsletter-archive.md is still edited by hand from it.
  */
 import { writeFileSync } from 'node:fs';
 
@@ -79,7 +79,7 @@ for (const r of rows) {
 console.log(`\n${rows.length} emails.`);
 
 if (write) {
-  const file = 'docs/ai/marketing/newsletter-issues.json';
+  const file = 'docs/marketing/newsletter-issues.json';
   writeFileSync(file, JSON.stringify(rows, null, 2) + '\n');
   console.log(`Wrote ${file}`);
 }
