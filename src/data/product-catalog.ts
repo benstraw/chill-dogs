@@ -28,7 +28,8 @@ export interface ProductCatalogItem {
 }
 
 export const productCatalogItems: ProductCatalogItem[] = [
-  ...coolingProducts.map((product) => ({
+  // A record with shopPageId is a second card for a product listed under another id.
+  ...coolingProducts.filter((product) => !product.shopPageId).map((product) => ({
     ...product,
     pillar: 'cooling' as const,
     category: product.category,

@@ -11,12 +11,6 @@ import { buildProductPageMap } from '../data/product-page-map';
 import { relaxationProducts } from '../data/relaxation-products';
 import { accessoryProducts, trackerProducts } from '../data/tracking-products';
 
-/**
- * ASINs that two catalog records share today. Ratchet: entries may be removed, never
- * added. B0C9TX38RZ is the OHMO bowl, listed as `ohmo-spill-proof-bowl` (car-cooling)
- * and `ohmo-spill-proof-dog-bowl` (hydration): two near-duplicate /shop/ pages.
- */
-const KNOWN_DUPLICATE_ASINS = new Set(['B0C9TX38RZ']);
 
 describe('admin product catalog data', () => {
   it('gives every ASIN a valid shape and one catalog record', () => {
@@ -31,10 +25,25 @@ describe('admin product catalog data', () => {
     for (const product of productCatalogItems) {
       if (!product.asin) continue;
       const first = seen.get(product.asin);
-      if (first && !KNOWN_DUPLICATE_ASINS.has(product.asin)) duplicates.push(`${product.asin}: ${first} and ${product.id}`);
+      if (first) duplicates.push(`${product.asin}: ${first} and ${product.id}`);
       seen.set(product.asin, first ?? product.id);
     }
-    expect(duplicates, 'one product, two /shop/ pages: merge the records (an id rename needs redirects)').toEqual([]);
+    expect(
+      duplicates,
+      'one product, two /shop/ pages. If both cards are wanted, set shopPageId on one record and redirect its old /shop/ URL'
+    ).toEqual([]);
+  });
+
+  it('points every second-card record at a real /shop/ page for the same product', () => {
+    const byId = new Map(productCatalogItems.map((product) => [product.id, product]));
+    const aliases = coolingProducts.filter((product) => product.shopPageId);
+    expect(aliases.length).toBeGreaterThan(0);
+    for (const alias of aliases) {
+      const target = byId.get(alias.shopPageId!);
+      expect(target, `${alias.id} → ${alias.shopPageId}: no such catalog product`).toBeDefined();
+      expect(target!.asin, `${alias.id} and ${alias.shopPageId} must be the same product`).toBe(alias.asin);
+      expect(byId.has(alias.id), `${alias.id} must not build its own /shop/ page`).toBe(false);
+    }
   });
 
   it('includes every product from every product data file', () => {
@@ -49,8 +58,10 @@ describe('admin product catalog data', () => {
     ];
     const catalogIds = new Set(productCatalogItems.map((product) => product.id));
 
-    expect(productCatalogItems).toHaveLength(sourceProducts.length);
-    expect(sourceProducts.filter((product) => !catalogIds.has(product.id)).map((product) => product.id)).toEqual([]);
+    // Second-card records (shopPageId) share another record's /shop/ page.
+    const expected = sourceProducts.filter((product) => !('shopPageId' in product && product.shopPageId));
+    expect(productCatalogItems).toHaveLength(expected.length);
+    expect(expected.filter((product) => !catalogIds.has(product.id)).map((product) => product.id)).toEqual([]);
   });
 
   it('imports every *-products.ts data file into the catalog', () => {
