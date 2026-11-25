@@ -726,6 +726,11 @@ site_system:
       to: "/gear/airtag-for-dogs/"
       status: 301
       reason: "Wrong URL in the sent 'The Day Rhys Ran Off' newsletter (2026-04-29); never a site page."
+    - from: "/shop/ohmo-spill-proof-bowl/"
+      to: "/shop/ohmo-spill-proof-dog-bowl/"
+      status: 301
+      reason: "Duplicate /shop/ page for the OHMO bowl (B0C9TX38RZ); the car-cooling card now shares the hydration record's page."
+      date: "2026-11-25"
 
   analytics:
     primary_events:

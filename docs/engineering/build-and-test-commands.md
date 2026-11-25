@@ -117,7 +117,7 @@ Measures the build and each test tier (median of 3 after a warm-up) and compares
 
 ### `bun run test:coverage`
 
-Runs Vitest with coverage reporting. Coverage target is ≥90% statement coverage for `src/utils/**` and `src/scripts/**`.
+Runs Vitest with coverage reporting. Covers `src/utils/**`, `src/scripts/**`, `src/data/**`, `src/lib/**` and `scripts/**`, with a floor in `vitest.config.ts` (`coverage.thresholds`) set just under the measured level. Raise it as coverage grows; never lower it to pass.
 
 Use when adding or modifying utility functions, scripts, or data modules.
 

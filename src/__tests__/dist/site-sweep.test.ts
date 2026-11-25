@@ -76,13 +76,15 @@ type Bucket =
   | 'offerSeller'
   | 'disclosure'
   | 'missingAssets'
-  | 'reviewRating';
+  | 'reviewRating'
+  | 'affiliateAttrs'
+  | 'breadcrumbs';
 
 const failures = Object.fromEntries(
   ([
     'escapedHtml', 'h1', 'canonical', 'metaDescription', 'ogImage', 'jsonLdPresent', 'brokenLinks',
     'blockingCss', 'ogTitleLength', 'ogDescLength', 'amazonEvent', 'amazonTag', 'affiliateUntracked', 'amazonProductData', 'aorkulerDirect', 'variantTag',
-    'relatedLinks', 'pillarTheme', 'jsonLdInvalid', 'offerSeller', 'disclosure', 'missingAssets', 'reviewRating',
+    'relatedLinks', 'pillarTheme', 'jsonLdInvalid', 'offerSeller', 'disclosure', 'missingAssets', 'reviewRating', 'affiliateAttrs', 'breadcrumbs',
   ] as Bucket[]).map((b) => [b, [] as string[]]),
 ) as Record<Bucket, string[]>;
 
@@ -292,6 +294,14 @@ for (const { rel, html } of pages) {
     }
   }
 
+  // BreadcrumbList on every indexable page below the homepage, and never on a noindex one.
+  if (!stub && rel !== 'index.html' && !rel.endsWith('404.html')) {
+    const hasCrumbs = jsonLdBlocks(html).some((block) => block.includes('"BreadcrumbList"'));
+    if (hasCrumbs === isNoindex(html)) {
+      failures.breadcrumbs.push(`${route}: ${hasCrumbs ? 'noindex page carries' : 'indexable page lacks'} BreadcrumbList`);
+    }
+  }
+
   // Pillar theme: every page under a pillar path carries that pillar's theme.
   const pillar = themeByPrefix.find(([prefix]) => route.startsWith(prefix));
   if (pillar && !stub) {
@@ -389,6 +399,15 @@ for (const { rel, html } of pages) {
     if (attr(tag, 'data-affiliate') !== 'true' || !attr(tag, 'data-track') || !sponsored) {
       failures.affiliateUntracked.push(where);
     }
+    if (attr(tag, 'data-affiliate') === 'true') {
+      const rels = (attr(tag, 'rel') ?? '').split(/\s+/);
+      if (attr(tag, 'target') !== '_blank' || !rels.includes('noopener') || !rels.includes('noreferrer')) {
+        failures.affiliateAttrs.push(`${where}: needs target="_blank" rel="sponsored noopener noreferrer"`);
+      }
+      if (attr(tag, 'data-merchant') !== 'amazon' && attr(tag, 'data-track-also') === 'amazon_outbound_click') {
+        failures.affiliateAttrs.push(`${where}: non-Amazon link fires amazon_outbound_click`);
+      }
+    }
     if (AMAZON_HOST.test(url.hostname)) {
       if (!attr(tag, 'data-product-name')) failures.amazonProductData.push(`${where}: empty data-product-name`);
       if (/\/dp\//.test(url.pathname) && !attr(tag, 'data-asin')) failures.amazonProductData.push(`${where}: empty data-asin`);
@@ -439,6 +458,10 @@ describe('site sweep: every built page', () => {
   it('shows every Review rating on the page, matching the schema', () => {
     expect(reviewRatingsChecked, 'no Review ratings found').toBeGreaterThan(0);
     expect(failures.reviewRating, report('reviewRating', 'pass the same RATING to buildReviewSchema and <ReviewRating>')).toEqual([]);
+  });
+
+  it('puts BreadcrumbList on indexable pages only', () => {
+    expect(failures.breadcrumbs, report('breadcrumbs', 'BaseLayout adds it from the path; check noindex')).toEqual([]);
   });
 
   it('renders no escaped HTML tags as visible text', () => {
@@ -496,6 +519,10 @@ describe('site sweep: every built page', () => {
       'untracked merchant link',
       'use AffiliateLink.astro / MerchantAffiliateLink.astro instead of a raw <a>'
     );
+  });
+
+  it('opens every affiliate link in a new tab with sponsored noopener noreferrer', () => {
+    expect(failures.affiliateAttrs, report('affiliateAttrs', 'use MerchantAffiliateLink, which sets these')).toEqual([]);
   });
 
   it('every Amazon link names its product, and its ASIN for /dp/ links', () => {

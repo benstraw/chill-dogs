@@ -3,7 +3,7 @@ import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 
 import { calmingProducts } from '../data/calming-products';
-import { coolingProducts } from '../data/cooling-products';
+import { categoryMeta, coolingProducts } from '../data/cooling-products';
 import { emergencyProducts } from '../data/emergency-products';
 import { fleaTickProducts } from '../data/flea-tick-products';
 import { productCatalogItems } from '../data/product-catalog';
@@ -11,12 +11,6 @@ import { buildProductPageMap } from '../data/product-page-map';
 import { relaxationProducts } from '../data/relaxation-products';
 import { accessoryProducts, trackerProducts } from '../data/tracking-products';
 
-/**
- * ASINs that two catalog records share today. Ratchet: entries may be removed, never
- * added. B0C9TX38RZ is the OHMO bowl, listed as `ohmo-spill-proof-bowl` (car-cooling)
- * and `ohmo-spill-proof-dog-bowl` (hydration): two near-duplicate /shop/ pages.
- */
-const KNOWN_DUPLICATE_ASINS = new Set(['B0C9TX38RZ']);
 
 describe('admin product catalog data', () => {
   it('gives every ASIN a valid shape and one catalog record', () => {
@@ -31,10 +25,25 @@ describe('admin product catalog data', () => {
     for (const product of productCatalogItems) {
       if (!product.asin) continue;
       const first = seen.get(product.asin);
-      if (first && !KNOWN_DUPLICATE_ASINS.has(product.asin)) duplicates.push(`${product.asin}: ${first} and ${product.id}`);
+      if (first) duplicates.push(`${product.asin}: ${first} and ${product.id}`);
       seen.set(product.asin, first ?? product.id);
     }
-    expect(duplicates, 'one product, two /shop/ pages: merge the records (an id rename needs redirects)').toEqual([]);
+    expect(
+      duplicates,
+      'one product, two /shop/ pages. If both cards are wanted, set shopPageId on one record and redirect its old /shop/ URL'
+    ).toEqual([]);
+  });
+
+  it('points every second-card record at a real /shop/ page for the same product', () => {
+    const byId = new Map(productCatalogItems.map((product) => [product.id, product]));
+    const aliases = coolingProducts.filter((product) => product.shopPageId);
+    expect(aliases.length).toBeGreaterThan(0);
+    for (const alias of aliases) {
+      const target = byId.get(alias.shopPageId!);
+      expect(target, `${alias.id} → ${alias.shopPageId}: no such catalog product`).toBeDefined();
+      expect(target!.asin, `${alias.id} and ${alias.shopPageId} must be the same product`).toBe(alias.asin);
+      expect(byId.has(alias.id), `${alias.id} must not build its own /shop/ page`).toBe(false);
+    }
   });
 
   it('includes every product from every product data file', () => {
@@ -49,8 +58,10 @@ describe('admin product catalog data', () => {
     ];
     const catalogIds = new Set(productCatalogItems.map((product) => product.id));
 
-    expect(productCatalogItems).toHaveLength(sourceProducts.length);
-    expect(sourceProducts.filter((product) => !catalogIds.has(product.id)).map((product) => product.id)).toEqual([]);
+    // Second-card records (shopPageId) share another record's /shop/ page.
+    const expected = sourceProducts.filter((product) => !('shopPageId' in product && product.shopPageId));
+    expect(productCatalogItems).toHaveLength(expected.length);
+    expect(expected.filter((product) => !catalogIds.has(product.id)).map((product) => product.id)).toEqual([]);
   });
 
   it('imports every *-products.ts data file into the catalog', () => {
@@ -135,5 +146,22 @@ describe('admin product catalog data', () => {
         expect.objectContaining({ href: '/safety/dog-bath-tools/' }),
       ])
     );
+  });
+
+  it('gives every cooling category full page meta with FAQs', () => {
+    // Every category a product uses, not a hand-kept list of five.
+    const categories = [...new Set(coolingProducts.map((product) => product.category))];
+    expect(categories.length).toBeGreaterThan(0);
+    for (const category of categories) {
+      const meta = categoryMeta[category];
+      expect(meta, `${category} has no categoryMeta`).toBeDefined();
+      expect(meta.title && meta.heroHeadline && meta.introCopy, category).toBeTruthy();
+      expect(meta.faqs.length, category).toBeGreaterThan(0);
+    }
+  });
+
+  it('gives every product non-blank bullets', () => {
+    const blank = productCatalogItems.filter((product) => product.bullets.some((bullet) => !bullet.trim()));
+    expect(blank.map((product) => product.id)).toEqual([]);
   });
 });

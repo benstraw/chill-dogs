@@ -36,7 +36,7 @@ const SIGNED_OUT_COOKIE = 'cd_admin_signed_out';
 // The browser replays cached credentials automatically, so refusing the first
 // attempt is the only way to make it ask; the retry carries this cookie.
 const CHALLENGE_COOKIE = 'cd_admin_challenge';
-const SESSION_TTL_SECONDS = 8 * 60 * 60;
+export const SESSION_TTL_SECONDS = 8 * 60 * 60;
 const STATE_TTL_SECONDS = 10 * 60;
 const SIGNED_OUT_TTL_SECONDS = 12 * 60 * 60;
 const CHALLENGE_TTL_SECONDS = 5 * 60;

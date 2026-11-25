@@ -38,4 +38,7 @@ export const redirects: Record<string, string | { status: 301 | 302 | 307 | 308;
   '/comforting/fi-series-3-dog-collar-review/': '/gear/fi-dog-collar-review/',
   '/comforting/garmin-dog-tracking-systems/': '/gear/garmin-dog-tracking-collars/',
   '/comforting/apple-airtag-for-dogs/': '/gear/airtag-for-dogs/',
+  // Duplicate /shop/ page for the OHMO bowl (B0C9TX38RZ). The car-cooling card now
+  // shares the hydration record's page (shopPageId in src/data/cooling-products.ts).
+  '/shop/ohmo-spill-proof-bowl/': '/shop/ohmo-spill-proof-dog-bowl/',
 };

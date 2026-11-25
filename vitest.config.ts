@@ -32,8 +32,11 @@ export default defineConfig({
     hookTimeout: 10_000,
     coverage: {
       provider: 'v8',
-      include: ['src/utils/**', 'src/scripts/**', 'src/data/**'],
+      include: ['src/utils/**', 'src/scripts/**', 'src/data/**', 'src/lib/**', 'scripts/**/*.{ts,mjs}'],
       reporter: ['text', 'json-summary'],
+      // Floor, 1-2 points under the measured level (2026-11-25: 56.4 / 53.8 / 69.0 / 57.0)
+      // so refactors do not trip it but a real drop does. Raise it as coverage grows.
+      thresholds: { statements: 55, branches: 52, functions: 67, lines: 55 },
     },
     projects: [
       {

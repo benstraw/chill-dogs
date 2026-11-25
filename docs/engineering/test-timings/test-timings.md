@@ -43,6 +43,7 @@ bun run test:timing -- --compare docs/engineering/test-timings/<previous>.json
 | [baseline.json](baseline.json) | `cb0a5d2` | 17.68 s | 6.51 s (353 tests) | — | 8.66 s | 418 |
 | [phase-1.json](phase-1.json) | Phase 1 | 16.56 s | 3.58 s (395 tests, **−45%**) | 2.47 s (69 tests) | 5.35 s (**−38%**) | 464 |
 | [phase-2.json](phase-2.json) | Phase 2 | 16.51 s | 3.81 s (438 tests) | 2.27 s (79 tests) | 5.48 s | 517 |
+| [phase-3.json](phase-3.json) | Phase 3 | 16.29 s | 3.69 s (446 tests) | 2.14 s (75 tests) | 5.48 s | 521 |
 
 `test:unit` changed meaning in Phase 1: the baseline figure still included two files that read `dist/`. Since Phase 1, `unit` never touches `dist/`.
 
@@ -70,6 +71,14 @@ Phase 2 added 53 tests and 10 revenue and SEO rules: JSON-LD validity, offer sel
 - The American English rule pre-checks each whole file before splitting it into lines. Its first version shared a global regex between the pre-check and the line scan and silently missed every hit; the mutation check caught it.
 - Redirects moved from `astro.config.mjs` into `src/data/redirects.ts`. Importing the Astro config cost about 1 s per test file.
 - `merchant-images` parses the 15 MB Amazon cache once instead of twice; `validate-ai-docs` keeps one CLI spawn (the failure path) instead of two.
+
+### Phase 3 observations
+
+No tier got slower than Phase 2 (unit −3%, dist −6%, full flat), with a behavior test for the variant picker added. Dedupe paid for it:
+
+- Six `site-smoke` tests that each parsed one to three converter pages to check affiliate attributes became one site-wide rule in the sweep (`target`, `rel`, no Amazon event on non-Amazon links), which costs nothing extra because the sweep already reads every page.
+- The breadcrumb check moved from two sampled pages into the sweep, covering every page.
+- `cooling-` and `calming-converter-pages`, and `cooling-` and `calming-products`, were replaced by invariants over every config and product (four fewer worker files).
 
 Tier-level noise on this machine is about ±300 ms between back-to-back runs (`unit` read 3.50 s and 3.81 s for nearly identical code), which is why the regression rule needs both >10% and >250 ms.
 
