@@ -14,12 +14,14 @@ import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 
 import { pillarThemes } from '../../data/pillar-themes';
+import { merchants } from '../../data/products/merchants';
 import { MIDDLEWARE_ONLY_ROUTES } from '../../data/routes';
 import {
   SITE_ORIGIN,
   anchors,
   attr,
   builtPages,
+  decodeEntities,
   distRoot,
   isNoindex,
   isRedirectStub,
@@ -27,12 +29,26 @@ import {
   metaContent,
   routeOf,
 } from '../helpers/dist';
+import { AFFILIATE_LINK_ALLOWLIST } from '../allowlists/affiliate-links';
+import { DISCLOSURE_ALLOWLIST } from '../allowlists/disclosure';
+import { JSON_LD_ALLOWLIST } from '../allowlists/json-ld';
+import { expectWithinAllowlist } from '../helpers/ratchet';
 
 // og meta lengths (search and social display limits).
 const OG_TITLE = { min: 40, max: 65 };
 const OG_DESC = { min: 100, max: 165 };
 
-const AMAZON_HOST = /amazon\.com/;
+/** Hosts where a click can earn a commission. Short links count: amzn.to, a.co. */
+const AFFILIATE_HOST = /^(?:www\.)?(?:amazon\.[a-z.]+|amzn\.to|a\.co|awin1\.com|aorkuler\.com|chewy\.com|chewy\.sjv\.io)$/;
+const AMAZON_HOST = /^(?:www\.)?(?:amazon\.[a-z.]+|amzn\.to|a\.co)$/;
+
+function outboundUrl(href: string): URL | undefined {
+  try {
+    return new URL(decodeEntities(href));
+  } catch {
+    return undefined;
+  }
+}
 const ESCAPED_TAG = /&lt;(?:a|span|div|p|strong|em|br|img|ul|ol|li)\b/i;
 const ASSET_EXT = /\.(ico|png|jpg|jpeg|webp|svg|pdf|xml|txt|webmanifest|css|js)$/i;
 const NO_SCHEMA_EXPECTED = ['404.html', 'privacy-policy', 'terms', 'admin/', 'subscribe/', 'search/'];
@@ -50,22 +66,120 @@ type Bucket =
   | 'ogDescLength'
   | 'amazonEvent'
   | 'amazonTag'
-  | 'rawAmazon'
+  | 'affiliateUntracked'
+  | 'amazonProductData'
+  | 'aorkulerDirect'
   | 'variantTag'
   | 'relatedLinks'
-  | 'pillarTheme';
+  | 'pillarTheme'
+  | 'jsonLdInvalid'
+  | 'offerSeller'
+  | 'disclosure'
+  | 'missingAssets'
+  | 'reviewRating';
 
 const failures = Object.fromEntries(
   ([
     'escapedHtml', 'h1', 'canonical', 'metaDescription', 'ogImage', 'jsonLdPresent', 'brokenLinks',
-    'blockingCss', 'ogTitleLength', 'ogDescLength', 'amazonEvent', 'amazonTag', 'rawAmazon', 'variantTag',
-    'relatedLinks', 'pillarTheme',
+    'blockingCss', 'ogTitleLength', 'ogDescLength', 'amazonEvent', 'amazonTag', 'affiliateUntracked', 'amazonProductData', 'aorkulerDirect', 'variantTag',
+    'relatedLinks', 'pillarTheme', 'jsonLdInvalid', 'offerSeller', 'disclosure', 'missingAssets', 'reviewRating',
   ] as Bucket[]).map((b) => [b, [] as string[]]),
 ) as Record<Bucket, string[]>;
 
 let indexablePages = 0;
 let pagesWithRelatedLinks = 0;
 let pillarPages = 0;
+let offersChecked = 0;
+let pagesWithAffiliateLinks = 0;
+let assetsChecked = 0;
+let reviewRatingsChecked = 0;
+
+const assetExists = new Map<string, boolean>();
+/** Same-origin asset URL → whether dist/ has the file. Off-site and data: URLs → undefined. */
+function localAssetExists(src: string): boolean | undefined {
+  if (!src || src.startsWith('data:')) return undefined;
+  let url: URL;
+  try {
+    url = new URL(decodeEntities(src), `${SITE_ORIGIN}/`);
+  } catch {
+    return false;
+  }
+  if (url.origin !== SITE_ORIGIN) return undefined;
+  const file = decodeURIComponent(url.pathname);
+  let hit = assetExists.get(file);
+  if (hit === undefined) {
+    hit = existsSync(path.join(distRoot, file));
+    assetExists.set(file, hit);
+  }
+  return hit;
+}
+/** Disclosure copy written inline rather than through a disclosure component. */
+const DISCLOSURE_TEXT = /As an Amazon Associate|contains affiliate links|affiliate links? (?:to|on)|earn (?:a small )?commissions?/i;
+
+/** Merchant label for an offer URL, by host. Unknown hosts are not judged. */
+const SELLER_BY_HOST: Array<[RegExp, string]> = [
+  [/(^|\.)amazon\.com$/, merchants.amazon.label],
+  [/(^|\.)(chewy\.com|chewy\.sjv\.io)$/, merchants.chewy.label],
+  [/(^|\.)(aorkuler\.com|awin1\.com)$/, merchants.aorkuler.label],
+];
+function expectedSeller(url: string): string | undefined {
+  try {
+    const host = new URL(url).hostname;
+    return SELLER_BY_HOST.find(([re]) => re.test(host))?.[1];
+  } catch {
+    return undefined;
+  }
+}
+
+type Json = Record<string, unknown>;
+const asArray = (v: unknown): unknown[] => (Array.isArray(v) ? v : v === undefined ? [] : [v]);
+const types = (node: Json) => asArray(node['@type']).map(String);
+const has = (node: Json, key: string) => node[key] !== undefined && node[key] !== '' && node[key] !== null;
+
+/** Required fields per schema.org type, as Google's rich-result docs require them. */
+function schemaProblems(node: Json): string[] {
+  const problems: string[] = [];
+  const need = (key: string) => {
+    if (!has(node, key)) problems.push(`${types(node).join('/')} missing ${key}`);
+  };
+  for (const type of types(node)) {
+    if (type === 'Product') need('name');
+    if (type === 'Offer') need('url');
+    if (type === 'Review') {
+      need('author');
+      const rating = node.reviewRating as Json | undefined;
+      if (!rating || !has(rating, 'ratingValue')) problems.push('Review missing reviewRating.ratingValue');
+      const item = node.itemReviewed as Json | undefined;
+      if (!item || !has(item, 'name')) problems.push('Review missing itemReviewed.name');
+    }
+    if (type === 'Article' || type === 'BlogPosting') ['headline', 'datePublished'].forEach(need);
+    if (type === 'FAQPage') {
+      const questions = asArray(node.mainEntity) as Json[];
+      if (!questions.length) problems.push('FAQPage has no questions');
+      for (const q of questions) {
+        const answer = q.acceptedAnswer as Json | undefined;
+        if (!has(q, 'name') || !answer || !has(answer, 'text')) problems.push(`FAQ question incomplete: ${String(q.name ?? '?')}`);
+      }
+    }
+    if (type === 'BreadcrumbList' || type === 'ItemList') {
+      const items = asArray(node.itemListElement) as Json[];
+      if (!items.length) problems.push(`${type} has no itemListElement`);
+      items.forEach((item, i) => {
+        if (item.position !== i + 1) problems.push(`${type} item ${i + 1} has position ${String(item.position)}`);
+      });
+    }
+  }
+  return problems;
+}
+
+/** Every object node in a JSON-LD document, including @graph members and nested values. */
+function* nodes(value: unknown): Generator<Json> {
+  if (Array.isArray(value)) for (const v of value) yield* nodes(v);
+  else if (value && typeof value === 'object') {
+    yield value as Json;
+    for (const v of Object.values(value)) yield* nodes(v);
+  }
+}
 const themeByPrefix = Object.values(pillarThemes).flatMap((theme) =>
   theme.pathPrefixes.map((prefix) => [prefix, theme.key] as const)
 );
@@ -144,6 +258,40 @@ for (const { rel, html } of pages) {
     }
   }
 
+  // JSON-LD: parses, required fields per type, and each Offer's seller is the merchant its URL goes to.
+  for (const block of jsonLdBlocks(html)) {
+    let doc: unknown;
+    try {
+      doc = JSON.parse(block);
+    } catch (error) {
+      failures.jsonLdInvalid.push(`${rel}: does not parse (${(error as Error).message})`);
+      continue;
+    }
+    for (const node of nodes(doc)) {
+      for (const problem of schemaProblems(node)) failures.jsonLdInvalid.push(`${rel}: ${problem}`);
+      // Google ignores a Review rating that is not visible on the page. ReviewRating.astro
+      // renders it as aria-label="4.5 out of 5 stars".
+      const rating = types(node).includes('Review') ? (node.reviewRating as Json | undefined) : undefined;
+      if (rating && typeof rating.ratingValue === 'number') {
+        reviewRatingsChecked++;
+        const value = rating.ratingValue;
+        const display = Number.isInteger(value) ? `${value}.0` : value.toFixed(1);
+        const best = rating.bestRating ?? 5;
+        if (!html.includes(`aria-label="${display} out of ${best} stars"`)) {
+          failures.reviewRating.push(`${rel}: schema rates ${value}/${best} but the page shows no matching <ReviewRating>`);
+        }
+      }
+      if (types(node).includes('Offer') && typeof node.url === 'string') {
+        const expected = expectedSeller(node.url);
+        const seller = (node.seller as Json | undefined)?.name;
+        if (expected && seller !== undefined) {
+          offersChecked++;
+          if (seller !== expected) failures.offerSeller.push(`${rel}: offer to ${new URL(node.url).hostname} names seller "${String(seller)}", expected "${expected}"`);
+        }
+      }
+    }
+  }
+
   // Pillar theme: every page under a pillar path carries that pillar's theme.
   const pillar = themeByPrefix.find(([prefix]) => route.startsWith(prefix));
   if (pillar && !stub) {
@@ -172,30 +320,78 @@ for (const { rel, html } of pages) {
     seenRelated.add(`${kind} ${href}`);
   }
 
-  // Affiliate instrumentation.
+  // Local images and share images exist. The link check skips assets, so a renamed
+  // image or a missing generated OG card shipped silently.
+  const assetRefs = [
+    ...Array.from(html.matchAll(/<(?:img|source)\b[^>]*>/gi), (m) => m[0]).flatMap((tag) => [
+      attr(tag, 'src') ?? '',
+      ...(attr(tag, 'srcset') ?? '').split(',').map((part) => part.trim().split(/\s+/)[0]),
+    ]),
+    metaContent(html, 'og:image') ?? '',
+    metaContent(html, 'twitter:image') ?? '',
+  ];
+  for (const src of assetRefs) {
+    const exists = localAssetExists(src);
+    if (exists === undefined) continue;
+    assetsChecked++;
+    if (!exists) failures.missingAssets.push(`${rel} → ${src}`);
+  }
+
+  // Disclosure before the first affiliate link (above the footer, whose own
+  // disclosure covers only the footer logos).
+  if (!rel.startsWith('admin/')) {
+    const footerAt = html.search(/<footer\b/);
+    const main = footerAt > -1 ? html.slice(0, footerAt) : html;
+    const firstLink = main.search(/<a\b[^>]*data-affiliate="true"/);
+    if (firstLink > -1) {
+      pagesWithAffiliateLinks++;
+      const before = main.slice(0, firstLink);
+      const text = before
+        .slice(Math.max(0, before.search(/<body\b/)))
+        .replace(/<script\b[\s\S]*?<\/script>/gi, '')
+        .replace(/<[^>]+>/g, ' ');
+      if (!before.includes('data-affiliate-disclosure') && !DISCLOSURE_TEXT.test(text)) failures.disclosure.push(rel);
+    }
+  }
+
+  // Affiliate links. Every anchor to a merchant host must go through AffiliateLink /
+  // MerchantAffiliateLink: tracked, marked sponsored, and (Amazon) tagged exactly.
+  // Exempt: /admin/ (internal diagnostic) and variant chips, which repoint the tracked
+  // CTA instead of replacing it (docs/ai/engineering/product-variants.md); chips are
+  // still checked for the tag and rel.
   const isAdmin = rel.startsWith('admin/');
   for (const tag of anchors(html)) {
     const href = attr(tag, 'href') ?? '';
-    const amazon = AMAZON_HOST.test(href);
 
     if (attr(tag, 'data-merchant') === 'amazon') {
       amazonMerchantLinks++;
       const emits = [attr(tag, 'data-track'), attr(tag, 'data-track-also')];
       if (!emits.includes('amazon_outbound_click')) {
-        failures.amazonEvent.push(`${rel} :: ${attr(tag, 'data-product-name') ?? tag.slice(0, 90)}`);
+        failures.amazonEvent.push(`${rel} :: ${attr(tag, 'data-product-name') || tag.slice(0, 90)}`);
       }
     }
-    if (!amazon) continue;
 
-    const tagged = href.includes('tag=chill-dogs-20');
-    if (attr(tag, 'data-affiliate') === 'true' && !tagged) failures.amazonTag.push(`${rel} :: ${href.slice(0, 90)}`);
-    if (attr(tag, 'data-variant-option')) {
-      if (!tagged) failures.variantTag.push(`${rel} :: ${href.slice(0, 90)}`);
-    } else if (!isAdmin && !attr(tag, 'data-track') && !attr(tag, 'data-track-also')) {
-      // Raw <a> to Amazon that never went through AffiliateLink: neither tagged nor
-      // instrumented. Allowed: /admin/ (internal diagnostic) and variant chips, which
-      // repoint the tracked CTA instead (docs/ai/engineering/product-variants.md).
-      failures.rawAmazon.push(rel);
+    const url = outboundUrl(href);
+    if (isAdmin || !url || !AFFILIATE_HOST.test(url.hostname)) continue;
+    const where = `${rel} :: ${url.hostname}${url.pathname.slice(0, 60)}`;
+    const isChip = Boolean(attr(tag, 'data-variant-option'));
+    const sponsored = /(?:^|\s)sponsored(?:\s|$)/.test(attr(tag, 'rel') ?? '');
+
+    if (AMAZON_HOST.test(url.hostname) && url.searchParams.get('tag') !== 'chill-dogs-20') {
+      (isChip ? failures.variantTag : failures.amazonTag).push(`${where} (tag=${url.searchParams.get('tag') ?? 'none'})`);
+    }
+    if (url.hostname.endsWith('aorkuler.com')) failures.aorkulerDirect.push(where);
+
+    if (isChip) {
+      if (!sponsored) failures.affiliateUntracked.push(`${where}: variant chip without rel="sponsored"`);
+      continue;
+    }
+    if (attr(tag, 'data-affiliate') !== 'true' || !attr(tag, 'data-track') || !sponsored) {
+      failures.affiliateUntracked.push(where);
+    }
+    if (AMAZON_HOST.test(url.hostname)) {
+      if (!attr(tag, 'data-product-name')) failures.amazonProductData.push(`${where}: empty data-product-name`);
+      if (/\/dp\//.test(url.pathname) && !attr(tag, 'data-asin')) failures.amazonProductData.push(`${where}: empty data-asin`);
     }
   }
 }
@@ -219,6 +415,30 @@ describe('site sweep: every built page', () => {
   it('applies the pillar theme to every page under a pillar path', () => {
     expect(pillarPages).toBeGreaterThan(30);
     expect(failures.pillarTheme, report('pillarTheme', 'render the page through BaseLayout so the path resolves its theme')).toEqual([]);
+  });
+
+  it('emits valid JSON-LD with the fields each type requires', () => {
+    expectWithinAllowlist(failures.jsonLdInvalid, JSON_LD_ALLOWLIST, 'JSON-LD', 'fix the schema object passed to <JsonLd>');
+  });
+
+  it("names the right seller on every Offer", () => {
+    expect(offersChecked, 'no Offer sellers found to check').toBeGreaterThan(50);
+    expect(failures.offerSeller, report('offerSeller', 'take the seller from merchants[offer.merchant].label')).toEqual([]);
+  });
+
+  it('discloses affiliate links before the first one', () => {
+    expect(pagesWithAffiliateLinks).toBeGreaterThan(100);
+    expectWithinAllowlist(failures.disclosure, DISCLOSURE_ALLOWLIST, 'disclosure placement', 'put <Disclosure /> or <AffiliateDisclosure /> above the first affiliate link');
+  });
+
+  it('every local image and share image exists', () => {
+    expect(assetsChecked).toBeGreaterThan(500);
+    expect(failures.missingAssets, report('missingAssets', 'fix the path, or regenerate the image (bun run build / og:gen)')).toEqual([]);
+  });
+
+  it('shows every Review rating on the page, matching the schema', () => {
+    expect(reviewRatingsChecked, 'no Review ratings found').toBeGreaterThan(0);
+    expect(failures.reviewRating, report('reviewRating', 'pass the same RATING to buildReviewSchema and <ReviewRating>')).toEqual([]);
   });
 
   it('renders no escaped HTML tags as visible text', () => {
@@ -265,12 +485,25 @@ describe('site sweep: every built page', () => {
     expect(failures.amazonEvent, report('amazonEvent', 'use AffiliateLink.astro for Amazon links')).toEqual([]);
   });
 
-  it('every affiliate Amazon link carries the associate tag', () => {
+  it('every Amazon link carries exactly tag=chill-dogs-20', () => {
     expect(failures.amazonTag, report('amazonTag', 'build the URL with the product data helpers so tag=chill-dogs-20 is added')).toEqual([]);
   });
 
-  it('has no uninstrumented raw Amazon anchors', () => {
-    expect(failures.rawAmazon, report('rawAmazon', 'use AffiliateLink.astro instead of a raw <a>')).toEqual([]);
+  it('every merchant link is tracked and marked sponsored', () => {
+    expectWithinAllowlist(
+      failures.affiliateUntracked,
+      AFFILIATE_LINK_ALLOWLIST,
+      'untracked merchant link',
+      'use AffiliateLink.astro / MerchantAffiliateLink.astro instead of a raw <a>'
+    );
+  });
+
+  it('every Amazon link names its product, and its ASIN for /dp/ links', () => {
+    expect(failures.amazonProductData, report('amazonProductData', 'pass data-product-name (and data-asin) to AffiliateLink')).toEqual([]);
+  });
+
+  it('never links to aorkuler.com directly (the Awin link earns the commission)', () => {
+    expect(failures.aorkulerDirect, report('aorkulerDirect', 'use the Awin tracking URL from the Aorkuler offer')).toEqual([]);
   });
 
   it('every variant chip carries the associate tag', () => {
