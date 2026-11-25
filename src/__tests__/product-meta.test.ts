@@ -89,7 +89,7 @@ describe('og:description for every indexable product', () => {
   });
 
   it('avoids the medical claim wording the content guardrails ban', () => {
-    // docs/ai/writing/medical-and-vet-claim-guardrails.md — generated copy must not
+    // docs/writing/medical-and-vet-claim-guardrails.md — generated copy must not
     // reintroduce claims that hand-written copy is held away from.
     const banned = /vet[-\s]?(approved|recommended|endorsed)|clinically proven|\bcures?\b/i;
     const violations = productCatalogItems

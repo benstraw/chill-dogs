@@ -76,7 +76,7 @@ than the canonical editorial record, surface it for manual editorial review inst
 ## Chewy Impact workflow
 
 Chewy links are stored as merchant offers. Generate and verify Chewy affiliate links with the Impact-backed tooling in
-[`../../affiliate-links.md`](../../affiliate-links.md).
+[`affiliate-link-tooling.md`](affiliate-link-tooling.md).
 
 ### Source Chewy product data from Impact, never from chewy.com
 

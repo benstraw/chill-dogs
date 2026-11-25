@@ -1,23 +1,38 @@
+---
+title: Chill-Dogs Roadmap
+type: plan-list
+domain: global
+status: active
+updated: 2026-11-25
+tags:
+  - chill-dogs
+  - roadmap
+related:
+  - system-definition.yaml
+  - engineering/build-and-test-commands.md
+---
+
 # Chill-Dogs Roadmap
 
+## Use this when
+
+You want to know what is planned, already shipped, or dropped. Check an item against the code before acting on it.
+
 Open work, carried over from the README's TODO list when the README became a project
-overview rather than a working document. This is the current list; `docs/build-log.md`
+overview rather than a working document. This is the current list; `docs/archive/build-log.md`
 is the historical record and its Phase 8 backlog is kept as-written for that reason.
+Last reviewed 2026-11-25 against the code.
 
 ## Open
 
-- [ ] Implement feature flag–driven hero experiments (replace hardcoded variants)
-- [ ] Evaluate hero experiment winner after 2 weeks / 200+ primary CTA clicks per
-      variant; promote winner to default, retire losing variant URLs
-- [ ] Expand calming category: individual converter pages for anxiety-wraps,
-      calming-treats, lick-mats, snuffle-mats (parallel to cooling converter structure)
-- [ ] Defer PostHog init (idle + interaction fallback); monitor early-bounce event loss
-      and feature-flag flicker
-- [ ] Align Astro and MDX peer versions: use `@astrojs/mdx` v4 with the current
-      Astro 5 stack, or upgrade Astro and its official integrations to v6 together
+- [ ] Expand calming category: converter pages for calming treats and snuffle mats
+      (anxiety wraps and lick mats are shipped)
+- [ ] Monitor early-bounce event loss and feature-flag flicker from the deferred PostHog
+      init (the idle-time init itself is shipped)
+- [ ] Align Astro and MDX peer versions: `@astrojs/mdx` 5.0.3 requires Astro ^6 but
+      Astro 5.18 is installed. Use `@astrojs/mdx` v4 with Astro 5, or upgrade Astro and
+      its official integrations to v6 together
 - [ ] Content idea: dog sleep and activity trackers (from Ben's 2026-05-08 story list; the Fi collar review covers fitness tracking, nothing covers sleep yet)
-- [ ] Add third pillar: **Relaxing** — dog beds, plush toys, snuggly blankets, and cozy
-      comfort gear
 
 ## Shipped
 
@@ -35,12 +50,19 @@ is the historical record and its Phase 8 backlog is kept as-written for that rea
       (`chill-dogs-20`)
 - [x] Set up IndexNow for instant search engine indexing on deploy (Bing, Yandex, etc.)
 - [x] Redo the entire article about Thundershirt alternatives
+- [x] Third pillar, launched as **Comforting** (`/comforting/`): beds, crates and travel gear
+- [x] Calming converters for anxiety wraps (ThunderShirt alternatives) and lick mats
+- [x] Defer PostHog init to idle time (`requestIdleCallback`, with a timeout fallback)
 
-## Where the details live
+## Dropped
 
-- Hero experiment variants, hypotheses, and tracking — [`docs/EXPERIMENTS.md`](./EXPERIMENTS.md)
-- Build commands and test layers — [`docs/ai/engineering/build-and-test-commands.md`](./ai/engineering/build-and-test-commands.md)
-- Environment variables and integration scripts — [`docs/ai/engineering/environment-and-integrations.md`](./ai/engineering/environment-and-integrations.md)
-- Analytics event registry — [`docs/ai/engineering/analytics-events.md`](./ai/engineering/analytics-events.md)
-- OG image pipeline and SEO metadata — [`docs/ai/engineering/seo-and-schema.md`](./ai/engineering/seo-and-schema.md)
-- Page types, routes, and module stacks — [`docs/system-definition.yaml`](./system-definition.yaml)
+- Feature-flag hero experiments and the winner evaluation: the section collector hero
+  experiments were retired on 2026-08-10 (see `docs/archive/hero-experiments.md`)
+
+## Related knowledge
+
+- Build commands and test layers — [`docs/engineering/build-and-test-commands.md`](engineering/build-and-test-commands.md)
+- Environment variables and integration scripts — [`docs/engineering/environment-and-integrations.md`](engineering/environment-and-integrations.md)
+- Analytics event registry — [`docs/engineering/analytics-events.md`](engineering/analytics-events.md)
+- OG image pipeline and SEO metadata — [`docs/engineering/seo-and-schema.md`](engineering/seo-and-schema.md)
+- Page types, routes, and module stacks — [`docs/system-definition.yaml`](system-definition.yaml)

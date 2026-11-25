@@ -3,7 +3,7 @@ title: AI Knowledge Graph Index
 type: index
 domain: global
 status: active
-updated: 2026-05-06
+updated: 2026-11-25
 tags:
   - chill-dogs
   - routing
@@ -66,6 +66,8 @@ You are starting any task and need to know which docs apply.
 - [`affiliate/amazon-associates-rules.md`](affiliate/amazon-associates-rules.md) — Required component, tag, and rel attributes
 - [`affiliate/product-data-rules.md`](affiliate/product-data-rules.md) — Data file locations, how to add products, check:amazon, check:asins
 - [`engineering/product-variants.md`](engineering/product-variants.md) — Products sold as several listings: sizes, pack counts, colorways
+- [`affiliate/amazon-product-data.md`](affiliate/amazon-product-data.md) — Fetching Amazon metadata into the provider cache; `fetch-amazon-data.ts` flags
+- [`affiliate/affiliate-link-tooling.md`](affiliate/affiliate-link-tooling.md) — Minting and checking Chewy (Impact) affiliate links
 - [`affiliate/disclosure-rules.md`](affiliate/disclosure-rules.md) — When and where to show disclosure
 - [`writing/product-copy-rules.md`](writing/product-copy-rules.md) — Language rules for product descriptions
 

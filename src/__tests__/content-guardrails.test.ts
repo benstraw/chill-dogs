@@ -20,8 +20,9 @@ import {
 import { expectWithinAllowlist } from './helpers/ratchet';
 
 const ROOT = path.resolve(__dirname, '../..');
-// Provider data is diagnostic and never edited by hand; images are binary.
-const SKIP_DIRS = new Set(['amazon-products', 'chewy-products', 'watermarked', 'images', 'node_modules']);
+// Provider data is diagnostic and never edited by hand; images are binary; the docs
+// archive is a historical record and keeps the wording it had.
+const SKIP_DIRS = new Set(['amazon-products', 'chewy-products', 'watermarked', 'images', 'node_modules', 'archive']);
 const TEXT_FILE = /\.(astro|ts|tsx|mdx|md|mjs|css|json|ya?ml)$/;
 
 interface SourceFile {
@@ -47,7 +48,7 @@ function collect(target: string, out: SourceFile[]) {
 }
 
 const all: SourceFile[] = [];
-for (const target of ['src', 'docs/ai', 'docs/system-definition.yaml', 'CLAUDE.md', 'AGENTS.md']) collect(target, all);
+for (const target of ['src', 'docs', 'CLAUDE.md', 'AGENTS.md']) collect(target, all);
 
 const isTest = (file: string) => file.startsWith('src/__tests__/') || file.startsWith('src/__mocks__/');
 /** Site code and copy: what ships. */
@@ -56,11 +57,11 @@ const site = all.filter(({ file }) => file.startsWith('src/') && !isTest(file) &
 describe('content guardrails', () => {
   it('reads the source tree', () => {
     expect(site.length).toBeGreaterThan(150);
-    expect(all.some(({ file }) => file.startsWith('docs/ai/'))).toBe(true);
+    expect(all.some(({ file }) => file.startsWith('docs/'))).toBe(true);
   });
 
   // ── American English ──────────────────────────────────────────────────────────
-  // Rule and word table: docs/ai/writing/article-writing-guide.md (American English).
+  // Rule and word table: docs/writing/article-writing-guide.md (American English).
   // In Markdown, words inside `code spans` are exempt: that is how the rule docs
   // (CLAUDE.md, AGENT_START.md, the checklist) quote the British forms they forbid.
   const BRITISH = new RegExp(
@@ -105,7 +106,7 @@ describe('content guardrails', () => {
   const ENGLISH_EXEMPT = new Set([
     'src/__tests__/content-guardrails.test.ts',
     // The canonical word table: it lists the British forms in plain table cells.
-    'docs/ai/writing/article-writing-guide.md',
+    'docs/writing/article-writing-guide.md',
   ]);
 
   it('uses American spelling and vocabulary in copy, comments and docs', () => {
@@ -139,7 +140,7 @@ describe('content guardrails', () => {
       found,
       VET_LANGUAGE_ALLOWLIST,
       'vet-authority claim',
-      'say researched, compared, curated or popular (docs/ai/writing/medical-and-vet-claim-guardrails.md)'
+      'say researched, compared, curated or popular (docs/writing/medical-and-vet-claim-guardrails.md)'
     );
   });
 
@@ -173,7 +174,7 @@ describe('content guardrails', () => {
         found.add(ROUTE_KEY.test(m[0]) ? m[0] : `${file} :: ${m[0].toLowerCase()}`);
       }
     }
-    expectWithinAllowlist(found, HUB_TOKEN_ALLOWLIST, '"hub"', 'use "collector" (docs/ai/strategy/metrics-and-page-types.md)');
+    expectWithinAllowlist(found, HUB_TOKEN_ALLOWLIST, '"hub"', 'use "collector" (docs/strategy/metrics-and-page-types.md)');
   });
 
   // ── Shared primitives ─────────────────────────────────────────────────────────

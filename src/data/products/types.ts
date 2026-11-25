@@ -22,7 +22,7 @@ export interface ChewyOffer extends AffiliateOfferBase {
 }
 
 /**
- * Aorkuler's affiliate program (run through Awin, see docs/ai/affiliate/awin.md) — a direct-from-brand offer, not a marketplace
+ * Aorkuler's affiliate program (run through Awin, see docs/affiliate/awin.md) — a direct-from-brand offer, not a marketplace
  * listing. The brand sells one product line, so there is no ASIN or catalog id to
  * carry; `url` is the tracked affiliate link and `canonicalUrl` the raw product page.
  */
@@ -49,7 +49,7 @@ export interface ProductImage {
  *
  * Presence of this field is what licenses first-hand copy ("we tested",
  * "in our testing") for a product; without it, copy stays research-based.
- * See docs/ai/writing/product-copy-rules.md.
+ * See docs/writing/product-copy-rules.md.
  */
 export interface HandsOnReview {
   /** When the product was first used, as `YYYY-MM` or `YYYY-MM-DD`. */

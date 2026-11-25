@@ -79,15 +79,15 @@ Amazon or Chewy. **Collectors** catch search intent and route it to the right co
 handle legal and trust.
 
 One page, one type, one metric. The full model lives in
-[`docs/system-definition.yaml`](./docs/system-definition.yaml).
+[`docs/system-definition.yaml`](docs/system-definition.yaml).
 
 ## The Repo Is Written for Robots Too
 
 Most projects document themselves for people. This one also documents itself for the AI
-agents that work on it. [`docs/ai/`](./docs/ai/) is a Markdown knowledge graph. It is an
-operating brief, a task router, a dependency map, and twenty-five domain documents
+agents that work on it. [`docs/`](docs/) is a Markdown knowledge graph. It is an
+operating brief, a task router, a dependency map, and thirty-five domain documents
 covering everything from affiliate compliance to how to write a product bullet. There is a
-generated `/llms.txt` for crawlers, `CLAUDE.md` and `AGENTS.md` for coding agents, and a
+generated `/llms.txt` for crawlers, one `AGENTS.md` for every coding agent (`CLAUDE.md` imports it), and a
 validator that fails CI when a cross-link rots or a doc's frontmatter drifts. Documentation
 that can go stale silently will, so this documentation can't.
 
@@ -114,5 +114,5 @@ and `main`.
 [Comforting](https://www.chill-dogs.com/comforting/) ·
 [Gear](https://www.chill-dogs.com/gear/) ·
 [Affiliate disclosure](https://www.chill-dogs.com/affiliate-disclosure/) ·
-[AI docs](./docs/ai/AI_INDEX.md) ·
-[Roadmap](./docs/roadmap.md)
+[AI docs](docs/AI_INDEX.md) ·
+[Roadmap](docs/roadmap.md)

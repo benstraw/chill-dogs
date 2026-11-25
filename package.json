@@ -25,7 +25,7 @@
     "indexnow:submit": "node scripts/indexnow-submit.mjs",
     "check:asins": "bun run scripts/check-asin-validity.ts",
     "check:amazon": "bun run scripts/check-amazon-freshness.ts",
-    "check:ai-docs": "node scripts/validate-ai-docs.mjs",
+    "check:docs": "node scripts/validate-docs.mjs",
     "newsletter:sync": "bun run scripts/newsletter-sync.ts",
     "chewy-link": "bun run scripts/chewy-link.ts",
     "chewy-link:verify": "bun run scripts/chewy-link.ts verify",

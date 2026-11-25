@@ -1,7 +1,7 @@
 ---
 type: context
 tags: [ai-context, strategy, creative]
-updated: 2026-05-25
+updated: 2026-11-25
 ---
 
 # Chill-Dogs Portable AI Onboarding Brief
@@ -12,10 +12,10 @@ This is a portable context snapshot for sharing `chill-dogs.com` with AI tools t
 
 Use the maintained AI documentation and live repo data before relying on this snapshot:
 
-- GitHub AI docs folder: <https://github.com/benstraw/chill-dogs/tree/main/docs/ai>
-- `docs/ai/AGENT_START.md` - minimum operating brief
-- `docs/ai/AI_INDEX.md` - task-based documentation router
-- `docs/ai/KNOWLEDGE_GRAPH.md` - dependency chain between docs
+- GitHub AI docs folder: <https://github.com/benstraw/chill-dogs/tree/main/docs>
+- `docs/AGENT_START.md` - minimum operating brief
+- `docs/AI_INDEX.md` - task-based documentation router
+- `docs/KNOWLEDGE_GRAPH.md` - dependency chain between docs
 - `docs/system-definition.yaml` - site structure, page types, modules, and conversion architecture
 - `src/data/routes.ts` - internal route constants
 - `src/data/content-sitemap.ts` and `src/data/sitemap-inventory.ts` - page metadata and related-content inventory
@@ -322,18 +322,14 @@ bun install --frozen-lockfile
 bun run dev
 bun run build
 bun run preview
-bun run test
+bun run test          # build, then both test tiers
+bun run test:unit     # no build needed, ~3 s
+bun run test:dist     # reads dist/; fails if it is missing or stale
 bun run test:smoke
 bun run test:coverage
 bun run check:asins
 bun run check:amazon
-bun run check:ai-docs
-```
-
-The pre-commit hook runs:
-
-```bash
-bun run test && bun run test:smoke
+bun run check:docs
 ```
 
 For substantive page or module changes, run both:
@@ -346,7 +342,7 @@ bun run build
 For documentation-only AI doc changes, run:
 
 ```bash
-bun run check:ai-docs
+bun run check:docs
 ```
 
 ### Path aliases
@@ -429,4 +425,4 @@ When coding in the repo:
 9. Use sitemap metadata for related content.
 10. Run the relevant checks before finishing.
 
-For task-specific instructions, read the relevant files under `docs/ai/` before editing.
+For task-specific instructions, read the relevant files under `docs/` before editing.

@@ -1,8 +1,8 @@
 ---
-description: Sync docs/ai/ knowledge graph with recent code changes
+description: Sync docs/ knowledge graph with recent code changes
 ---
 
-You are the knowledge base notetaker for Chill-Dogs. Your job is to review recent changes and update the `docs/ai/` knowledge graph so it stays accurate.
+You are the knowledge base notetaker for Chill-Dogs. Your job is to review recent changes and update the `docs/` knowledge graph so it stays accurate.
 
 ## Step 1: Understand what changed
 
@@ -16,9 +16,9 @@ Run these in parallel:
 
 ## Step 2: Map changes to knowledge domains
 
-Use this mapping to decide which `docs/ai/` files may need updating:
+Use this mapping to decide which `docs/` files may need updating:
 
-| Changed area | Potentially stale docs/ai/ files |
+| Changed area | Potentially stale docs/ files |
 |---|---|
 | `src/data/routes.ts`, `src/pages/**` | `engineering/routes-and-sitemap.md` |
 | `src/data/sitemap-inventory.ts`, `src/data/content-sitemap.ts` | `engineering/routes-and-sitemap.md` |
@@ -29,19 +29,18 @@ Use this mapping to decide which `docs/ai/` files may need updating:
 | `src/layouts/**`, `astro.config.mjs`, `tsconfig.json` | `engineering/architecture.md` |
 | `src/__tests__/**`, `vitest.config.ts` | `engineering/build-and-test-commands.md` |
 | `docs/system-definition.yaml` | `strategy/chill-dogs-context.md`, `strategy/metrics-and-page-types.md` |
-| `docs/article-writing-guide.md` | `writing/article-writing-guide.md` |
-| `CLAUDE.md` | `engineering/architecture.md`, `AGENT_START.md` |
+| `AGENTS.md` (`CLAUDE.md` imports it) | `engineering/architecture.md`, `AGENT_START.md` |
 | `src/utils/related-pages.ts` | `engineering/routes-and-sitemap.md` |
 | `src/utils/og.ts`, `src/config/og-cta.mjs` | `engineering/seo-and-schema.md` |
 | `.env.example` | `engineering/architecture.md` |
 
-## Step 3: Read the affected docs/ai/ files
+## Step 3: Read the affected docs/ files
 
 Read each potentially stale file identified in Step 2. Also read the changed source files to understand what actually changed.
 
 ## Step 4: Update stale content
 
-For each docs/ai/ file that needs updating:
+For each docs/ file that needs updating:
 - Edit only the sections that are factually wrong or missing information
 - Do not rewrite sections that are still accurate
 - Update the `updated:` frontmatter date to today's date
@@ -51,7 +50,7 @@ Do NOT update files just because they are adjacent to the change. Only update if
 
 ## Step 5: Save a plan record
 
-Create a new file in `docs/ai/plans/` using this filename pattern:
+Create a new file in `docs/plans/` using this filename pattern:
 
 `YYYY-MM-DD-HHMM-knowledge-sync.md`
 
@@ -84,7 +83,7 @@ related:
 
 ## Changes made
 
-<List of docs/ai/ files updated and what was changed in each. If no files needed updating, say so.>
+<List of docs/ files updated and what was changed in each. If no files needed updating, say so.>
 
 ## Related knowledge
 
@@ -93,12 +92,12 @@ related:
 
 ## Step 6: Validate
 
-Run `bun run check:ai-docs` and fix any issues before proceeding.
+Run `bun run check:docs` and fix any issues before proceeding.
 
 ## Step 7: Commit behavior
 
 **If this command was invoked as a standalone knowledge-sync task** (not as part of a larger coding task):
-- Stage and commit the docs changes: `git add docs/ai/ && git commit -m "chore: sync knowledge graph - <brief description>"`
+- Stage and commit the docs changes: `git add docs/ && git commit -m "chore: sync knowledge graph - <brief description>"`
 - Push to the current branch.
 
 **If this command is being run as part of a larger coding task** (e.g. called from the finish checklist mid-task):

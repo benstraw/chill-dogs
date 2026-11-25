@@ -1,10 +1,24 @@
 ---
-type:
-tags: [web, systems]
-created: 2026-02-26
+title: Web Systems Adventure Mode
+type: reference
+domain: strategy
+status: active
+updated: 2026-11-25
+tags:
+  - chill-dogs
+  - framework
+  - web-systems
+related:
+  - web-systems.md
+  - metrics-and-page-types.md
 ---
 
 # Web Systems Adventure Mode
+
+## Use this when
+
+You want the original, full text of the framework that page types, keystone metrics and module rules come from. For how it applies to this site day to day, read [`web-systems.md`](web-systems.md) first.
+
 
 ## Modular, Metric-Driven Website Planning System
 
@@ -413,3 +427,8 @@ It is:
 - Improved through continuous measurement.
 
 ---
+
+## Related knowledge
+
+- [`web-systems.md`](web-systems.md) — The framework applied to Chill-Dogs
+- [`metrics-and-page-types.md`](metrics-and-page-types.md) — The four page types and their metrics

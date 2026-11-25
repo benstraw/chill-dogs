@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
- * validate-ai-docs.mjs
+ * validate-docs.mjs
  *
- * Validates the Markdown knowledge graph under docs/ai/:
+ * Validates the Markdown knowledge graph under docs/:
  *   1. Each file starts with parseable YAML frontmatter
  *   2. Required frontmatter keys are present and non-empty
  *   3. Each file has a "## Use this when" section (plans use "## Context")
@@ -10,7 +10,7 @@
  *   5. `related:` frontmatter entries resolve to existing files
  *   6. Relative Markdown links resolve, including their #anchors
  *
- * Usage: node scripts/validate-ai-docs.mjs [dir]   (default: docs/ai)
+ * Usage: node scripts/validate-docs.mjs [dir]   (default: docs)
  * Exits 1 if any issues are found.
  *
  * Deliberately lenient where Markdown is legitimately varied: fenced code
@@ -43,10 +43,13 @@ function logIssue(file, message) {
   issueLog.push(`  [${displayPath(file)}] ${message}`);
 }
 
+/** Folders that are not validated: the archive is a historical record, kept as written. */
+const SKIPPED_DIRS = new Set(['archive']);
+
 function findMarkdownFiles(dir) {
   return readdirSync(dir).flatMap((entry) => {
     const fullPath = join(dir, entry);
-    if (statSync(fullPath).isDirectory()) return findMarkdownFiles(fullPath);
+    if (statSync(fullPath).isDirectory()) return SKIPPED_DIRS.has(entry) ? [] : findMarkdownFiles(fullPath);
     return entry.endsWith('.md') ? [fullPath] : [];
   });
 }
@@ -255,8 +258,8 @@ export function validateDocs(dir) {
 }
 
 function main() {
-  const targetDir = resolve(repoRoot, process.argv[2] ?? join('docs', 'ai'));
-  console.log(`Validating AI docs under ${displayPath(targetDir)}/...\n`);
+  const targetDir = resolve(repoRoot, process.argv[2] ?? 'docs');
+  console.log(`Validating docs under ${displayPath(targetDir)}/...\n`);
 
   const { files, issues, error } = validateDocs(targetDir);
   if (error) {
@@ -273,7 +276,7 @@ function main() {
     process.exit(1);
   }
 
-  console.log('\nAll AI docs are valid.');
+  console.log('\nAll docs are valid.');
   process.exit(0);
 }
 

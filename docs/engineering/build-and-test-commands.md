@@ -174,16 +174,16 @@ Use for manual re-submission after a batch of content changes.
 
 ---
 
-### `bun run check:ai-docs`
+### `bun run check:docs`
 
-Validates the AI knowledge graph in `docs/ai/`. Checks:
+Validates the AI knowledge graph in `docs/`. Checks:
 - All `.md` files have frontmatter that parses as YAML
 - Required frontmatter keys are present and non-empty (`title`, `type`, `domain`, `status`, `updated`, `tags`, `related`)
 - Each file has `## Use this when` and `## Related knowledge` sections (`type: plan` uses `## Context`)
 - `related:` entries resolve to existing files, relative to the doc's own directory
 - Relative Markdown links resolve, **including their `#anchors`**
 
-Run after adding or modifying files in `docs/ai/`. Takes an optional directory argument (`node scripts/validate-ai-docs.mjs <dir>`), which is how its own test suite drives it.
+Run after adding or modifying files in `docs/`. Takes an optional directory argument (`node scripts/validate-docs.mjs <dir>`), which is how its own test suite drives it.
 
 It is built to be lenient about legitimate Markdown variation, so that a failure means real rot rather than a style disagreement:
 
@@ -191,7 +191,7 @@ It is built to be lenient about legitimate Markdown variation, so that a failure
 - Anchors match GitHub's slug algorithm — formatting and punctuation stripped, repeated headings suffixed `-1`, `-2` — and also accept explicit `{#custom-id}` and `<a id="…">` anchors.
 - A mistyped anchor gets a "did you mean" suggestion rather than a bare failure.
 
-`src/__tests__/validate-ai-docs.test.ts` pins both directions: that it catches rot, and that the cases above do not trip it. Add a case there before tightening a rule — a doc linter that cries wolf gets disabled, and then nothing is checked at all.
+`src/__tests__/validate-docs.test.ts` pins both directions: that it catches rot, and that the cases above do not trip it. Add a case there before tightening a rule — a doc linter that cries wolf gets disabled, and then nothing is checked at all.
 
 ---
 
@@ -258,7 +258,7 @@ Generated files land in `public/og/`, which is gitignored except for product-sty
 | Page-level HTML only | `bun run test:smoke` |
 | Added or changed utilities/scripts/data | `bun run test:coverage` |
 | Added or changed products | `bun run check:amazon` and `bun run check:asins` |
-| Added or changed `docs/ai/` files | `bun run check:ai-docs` |
+| Added or changed `docs/` files | `bun run check:docs` |
 | Verify final production output | `bun run build && bun run preview` |
 | A script fails on a missing key or a network error | [`environment-and-integrations.md`](environment-and-integrations.md) |
 

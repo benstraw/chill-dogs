@@ -18,7 +18,7 @@ related:
 
 # Web Systems Framework — Applied to Chill-Dogs
 
-This file summarizes how the Web Systems Adventure Mode framework (`docs/web-systems-adventure-mode.md`) governs every decision on chill-dogs.com.
+This file summarizes how the Web Systems Adventure Mode framework ([`web-systems-adventure-mode.md`](web-systems-adventure-mode.md)) governs every decision on chill-dogs.com.
 
 ## Use this when
 

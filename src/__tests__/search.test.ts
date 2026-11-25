@@ -48,7 +48,7 @@ describe('search index — product data shape', () => {
   it('keeps search-specific UI on article terminology and docs on collector terminology', () => {
     const projectRoot = path.resolve(__dirname, '../..');
     const searchPage = readFileSync(path.join(projectRoot, 'src/pages/search.astro'), 'utf8');
-    const searchDoc = readFileSync(path.join(projectRoot, 'docs/ai/engineering/search.md'), 'utf8');
+    const searchDoc = readFileSync(path.join(projectRoot, 'docs/engineering/search.md'), 'utf8');
 
     expect(searchPage).toContain('Articles');
     expect(searchPage).not.toContain('Hubs');
@@ -59,7 +59,7 @@ describe('search index — product data shape', () => {
   it('documents and renders collector search UI states', () => {
     const projectRoot = path.resolve(__dirname, '../..');
     const searchPage = readFileSync(path.join(projectRoot, 'src/pages/search.astro'), 'utf8');
-    const searchDoc = readFileSync(path.join(projectRoot, 'docs/ai/engineering/search.md'), 'utf8');
+    const searchDoc = readFileSync(path.join(projectRoot, 'docs/engineering/search.md'), 'utf8');
 
     expect(searchPage).toContain('Loading search...');
     expect(searchPage).toContain('input.focus({ preventScroll: true })');

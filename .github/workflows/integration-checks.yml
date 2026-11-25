@@ -4,7 +4,7 @@ name: Integration checks
 # api.impact.com. GitHub runners have unrestricted egress, so this is the
 # reliable place to run them on a schedule — sandboxed agent containers only
 # reach hosts on their environment's network allowlist, and Bun's fetch cannot
-# use the agent proxy at all (docs/ai/engineering/environment-and-integrations.md).
+# use the agent proxy at all (docs/engineering/environment-and-integrations.md).
 
 on:
   schedule:

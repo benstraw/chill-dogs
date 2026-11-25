@@ -1,4 +1,26 @@
+---
+title: Affiliate Link Tooling
+type: reference
+domain: affiliate
+status: active
+updated: 2026-11-25
+tags:
+  - chill-dogs
+  - chewy
+  - impact
+  - affiliate-links
+related:
+  - product-data-rules.md
+  - awin.md
+  - ../engineering/environment-and-integrations.md
+---
+
 # Affiliate Link Tooling
+
+## Use this when
+
+You are creating or checking a non-Amazon affiliate link: minting Chewy links through Impact, batch-converting Chewy URLs, or confirming Impact credentials.
+
 
 Internal workflows for creating and checking non-Amazon affiliate links.
 
@@ -19,7 +41,7 @@ CHEWY_IMPACT_BASE_URL=""
 
 `IMPACT_ACCOUNT_SID` is the Basic Auth username and `IMPACT_AUTH_TOKEN` is the password. Create them in Impact under user profile settings, Technical, API. Use read-only scopes for this tooling.
 
-In a Claude Code cloud environment, leave `IMPACT_AUTH_TOKEN` out of the env vars and add a **Basic** API credential for `api.impact.com` instead (username = Account SID, password = Auth Token). The agent proxy then authenticates requests and the token never enters the container. See `docs/ai/engineering/environment-and-integrations.md#impact-auth`.
+In a Claude Code cloud environment, leave `IMPACT_AUTH_TOKEN` out of the env vars and add a **Basic** API credential for `api.impact.com` instead (username = Account SID, password = Auth Token). The agent proxy then authenticates requests and the token never enters the container. See `docs/engineering/environment-and-integrations.md#impact-auth`.
 
 Leave unknown values blank or omit the line. Do not use placeholders like `...` or `<catalog-id>` in `.env`.
 
@@ -132,3 +154,9 @@ bun run test:coverage
 bun run build
 bun run test
 ```
+
+## Related knowledge
+
+- [`product-data-rules.md`](product-data-rules.md) — Where merchant offers live in product data
+- [`awin.md`](awin.md) — Aorkuler links through Awin
+- [`../engineering/environment-and-integrations.md`](../engineering/environment-and-integrations.md) — Impact credentials and hosts

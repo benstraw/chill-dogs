@@ -52,7 +52,7 @@ What changed in code:
     `<Image>` (remote Amazon URLs pass through unchanged, no `image.domains` configured),
     so it does not contradict the raw-`<img>`-for-external guidance.
 
-No other docs/ai/ files were factually stale. `affiliate/amazon-associates-rules.md` still
+No other docs/ files were factually stale. `affiliate/amazon-associates-rules.md` still
 correctly describes the `AffiliateLink.astro` contract (it wraps `MerchantAffiliateLink`,
 unchanged); the converter-page checklist and routers needed no edits.
 

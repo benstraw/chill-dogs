@@ -6,7 +6,7 @@
  * rating once and hands the identical number to `ReviewRating.astro`, so the two
  * cannot drift apart.
  *
- * See docs/ai/engineering/seo-and-schema.md.
+ * See docs/engineering/seo-and-schema.md.
  */
 
 const SITE_URL = 'https://www.chill-dogs.com';

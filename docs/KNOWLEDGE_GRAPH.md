@@ -29,7 +29,7 @@ You need to understand how a doc relates to other docs, or you want to find the 
 Everything depends on these three in order:
 
 ```
-docs/web-systems-adventure-mode.md        # Framework: modular conversion system theory
+strategy/web-systems-adventure-mode.md    # Framework: modular conversion system theory
     ↓
 strategy/web-systems.md                   # How that framework applies to chill-dogs
     ↓

@@ -20,7 +20,7 @@ superseded_by:
 ---
 
 This document was the concrete application of the
-[Web Systems Adventure Mode](./web-systems-adventure-mode.md) framework to
+[Web Systems Adventure Mode](web-systems-adventure-mode.md) framework to
 `chill-dogs.com`. It records the strategic decisions made when building the
 site and should be consulted before adding new pages, categories, or features.
 

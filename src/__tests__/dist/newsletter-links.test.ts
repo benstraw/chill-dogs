@@ -10,7 +10,7 @@ import { describe, expect, it } from 'vitest';
 import { distRoot, projectRoot } from '../helpers/dist';
 import { vercelRedirects } from '../helpers/redirects';
 
-const issues = JSON.parse(readFileSync(path.join(projectRoot, 'docs/ai/marketing/newsletter-issues.json'), 'utf8')) as Array<{
+const issues = JSON.parse(readFileSync(path.join(projectRoot, 'docs/marketing/newsletter-issues.json'), 'utf8')) as Array<{
   subject: string;
   paths: string[];
 }>;
