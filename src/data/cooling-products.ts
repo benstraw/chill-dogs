@@ -19,6 +19,14 @@ export interface CoolingProduct {
   image?: { src: string; alt: string };
   images?: readonly { src: string; alt: string }[];
   rhysApproved?: boolean;
+  /**
+   * Set when this record is a second card for a product that already has a /shop/ page
+   * under another id. Cooling pages pick products by category, one category per record,
+   * so the same product on two pages needs two records, each with its own page-specific
+   * copy. Only the record named here builds /shop/<id>/; this one never does, and its old
+   * /shop/ URL (if it was published) needs a redirect to the named page.
+   */
+  shopPageId?: string;
 }
 
 export interface CategoryMeta {
@@ -226,6 +234,9 @@ export const coolingProducts: CoolingProduct[] = [
   },
   {
     id: 'ohmo-spill-proof-bowl',
+    // The car-cooling card for the OHMO bowl. Its /shop/ page is the hydration record
+    // (Rhys Approved, edited in #143); /shop/ohmo-spill-proof-bowl/ redirects there.
+    shopPageId: 'ohmo-spill-proof-dog-bowl',
     asin: 'B0C9TX38RZ',
     name: 'OHMO Spill Proof Collapsible Dog Water Bowl',
     category: 'car-cooling',

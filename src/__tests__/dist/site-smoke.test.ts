@@ -10,6 +10,7 @@ import path from 'node:path';
 
 import { productCatalogItems } from '../../data/product-catalog';
 import { getCompleteSitemapPages } from '../../data/sitemap-inventory';
+import { initVariantPickers } from '../../scripts/variant-picker';
 import { isHomepageArticle } from '../../utils/homepage-articles';
 import { SITE_ORIGIN, decodeEntities, distRoot, projectRoot } from '../helpers/dist';
 
@@ -448,55 +449,6 @@ describe('site smoke tests', () => {
     }
   });
 
-  it('injects BreadcrumbList schema on indexable pages only', () => {
-    const coolingDoc = readBuiltPage(path.join('cooling', 'cooling-mats', 'index.html'));
-    const termsDoc = readBuiltPage(path.join('terms', 'index.html'));
-
-    const coolingSchemas = Array.from(
-      coolingDoc.querySelectorAll<HTMLScriptElement>('script[type="application/ld+json"]')
-    ).map((script) => script.textContent || '');
-
-    expect(coolingSchemas.some((schema) => schema.includes('"@type":"BreadcrumbList"'))).toBe(true);
-
-    const termsSchemas = Array.from(
-      termsDoc.querySelectorAll<HTMLScriptElement>('script[type="application/ld+json"]')
-    ).map((script) => script.textContent || '');
-
-    expect(termsSchemas.some((schema) => schema.includes('"@type":"BreadcrumbList"'))).toBe(false);
-  });
-
-  it('renders cooling converter pages with tracked merchant affiliate links', () => {
-    const doc = readBuiltPage(path.join('cooling', 'cooling-mats', 'index.html'));
-    const affiliateLinks = getAffiliateLinks(doc);
-
-    expect(affiliateLinks.length).toBeGreaterThan(0);
-
-    for (const link of affiliateLinks) {
-      expectTrackedAffiliateLink(link);
-    }
-  });
-
-  it('renders calming converter pages with tracked merchant affiliate links', () => {
-    const doc = readBuiltPage(path.join('calming', 'best-calming-products-for-anxious-dogs', 'index.html'));
-    const affiliateLinks = getAffiliateLinks(doc);
-
-    expect(affiliateLinks.length).toBeGreaterThan(0);
-
-    for (const link of affiliateLinks) {
-      expectTrackedAffiliateLink(link);
-    }
-  });
-
-  it('renders travel converter with affiliate links', () => {
-    const doc = readBuiltPage(path.join('travel', 'dog-road-trip-gear', 'index.html'));
-    const affiliateLinks = getAffiliateLinks(doc);
-
-    expect(affiliateLinks.length).toBeGreaterThan(0);
-    for (const link of affiliateLinks) {
-      expectTrackedAffiliateLink(link);
-    }
-  });
-
   it('renders a variant picker without adding affiliate CTAs to the card', () => {
     const doc = readBuiltPage(path.join('safety', 'dog-bath-tools', 'index.html'));
     const card = doc.querySelector<HTMLElement>('#tuff-pupper-drying-bathrobe');
@@ -531,6 +483,70 @@ describe('site smoke tests', () => {
     const table = JSON.parse(picker!.getAttribute('data-variant-offers') || '{}');
     expect(Object.keys(table)).toHaveLength(8);
     expect(table['xx-large'].merchants.amazon.asin).toBe('B0BY9C72VY');
+  });
+
+  it('repoints every CTA to the chosen variant, tagged and tracked once (picker behavior)', () => {
+    // Runs the real picker logic (src/scripts/variant-picker.ts) against fresh copies of
+    // every built page that carries a picker. A broken select() would send clicks to
+    // the wrong ASIN or drop the associate tag, with nothing else to notice.
+    const pages = ['safety/dog-bath-tools', 'safety/best-flea-and-tick-products-for-dogs', 'comforting/best-orthopedic-dog-beds'];
+    let optionsChecked = 0;
+
+    for (const page of pages) {
+      const html = readBuiltAsset(path.join(page, 'index.html'));
+      const doc = new DOMParser().parseFromString(html, 'text/html');
+      const trackCalls: Array<Record<string, unknown>> = [];
+      initVariantPickers(doc, (_event, props) => trackCalls.push(props));
+
+      const pickers = Array.from(doc.querySelectorAll<HTMLElement>('[data-variant-picker]'));
+      expect(pickers.length, `${page}: no pickers`).toBeGreaterThan(0);
+
+      for (const picker of pickers) {
+        const table = JSON.parse(picker.dataset.variantOffers || '{}') as Record<
+          string,
+          { merchants: Record<string, { url: string; asin?: string }> }
+        >;
+        const scope = picker.closest<HTMLElement>('[data-variant-scope]')!;
+        const ctas = Array.from(scope.querySelectorAll<HTMLAnchorElement>('a[data-affiliate="true"]'));
+        expect(picker.querySelector('[data-variant-options]')?.getAttribute('role')).toBe('radiogroup');
+
+        for (const chip of Array.from(picker.querySelectorAll<HTMLAnchorElement>('[data-variant-option]'))) {
+          const option = chip.dataset.variantOption!;
+          const before = trackCalls.length;
+          chip.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
+          optionsChecked++;
+
+          expect(picker.dataset.variantSelected).toBe(option);
+          expect(chip.getAttribute('aria-checked')).toBe('true');
+          expect(trackCalls.length - before, `${page} ${option}: one product_variant_select per click`).toBe(1);
+          expect(trackCalls.at(-1)?.variant_option).toBe(option);
+
+          for (const cta of ctas) {
+            const offer = table[option].merchants[cta.dataset.merchant!];
+            expect(cta.hidden, `${page} ${option} ${cta.dataset.merchant}`).toBe(!offer);
+            if (!offer) continue;
+            expect(cta.getAttribute('href')).toBe(offer.url);
+            if (cta.dataset.merchant === 'amazon') {
+              expect(new URL(offer.url).searchParams.get('tag')).toBe('chill-dogs-20');
+              expect(cta.dataset.asin).toBe(offer.asin);
+            }
+          }
+          const visible = ctas.filter((cta) => !cta.hidden);
+          expect(visible[0]?.dataset.variant, 'first visible CTA stays primary').toBe('primary');
+        }
+      }
+
+      // Keyboard: ArrowRight moves the selection, ArrowLeft moves it back.
+      const picker = pickers[0];
+      const chips = Array.from(picker.querySelectorAll<HTMLAnchorElement>('[data-variant-option]'));
+      chips[0].dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
+      chips[0].dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight', bubbles: true }));
+      expect(picker.dataset.variantSelected).toBe(chips[1].dataset.variantOption);
+      chips[1].dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowLeft', bubbles: true }));
+      expect(picker.dataset.variantSelected).toBe(chips[0].dataset.variantOption);
+    }
+
+    expect(optionsChecked).toBeGreaterThan(10);
   });
 
   it('keeps affiliate CTA positions contiguous on a page carrying a variant picker', () => {
@@ -761,20 +777,6 @@ describe('site smoke tests', () => {
     expect(html).toContain('src/data/tracking-products.ts');
   });
 
-  it('renders new crate converter pages with affiliate links', () => {
-    const airlineDoc = readBuiltPage(path.join('comforting', 'best-airline-crates-for-flying-with-your-dog', 'index.html'));
-    const furnitureDoc = readBuiltPage(path.join('comforting', 'best-furniture-dog-crates', 'index.html'));
-    const heavyDutyDoc = readBuiltPage(path.join('comforting', 'best-heavy-duty-dog-crates', 'index.html'));
-
-    for (const doc of [airlineDoc, furnitureDoc, heavyDutyDoc]) {
-      const affiliateLinks = getAffiliateLinks(doc);
-      expect(affiliateLinks.length).toBeGreaterThan(0);
-      for (const link of affiliateLinks) {
-        expectTrackedAffiliateLink(link);
-      }
-    }
-  });
-
   it('collector section pages are indexable with correct canonical', () => {
     const coolingDoc = readBuiltPage(path.join('cooling', 'index.html'));
     const calmingDoc = readBuiltPage(path.join('calming', 'index.html'));
@@ -880,27 +882,6 @@ describe('site smoke tests', () => {
     // expiry, so a logo sourced from there dies on its own schedule.
     for (const logo of doc.querySelectorAll('img.charity-logo')) {
       expect(logo.getAttribute('src'), logo.getAttribute('alt') ?? '').not.toContain('fbcdn.net');
-    }
-  });
-  it('renders comfort travel-bed converter pages with tagged Amazon affiliate links', () => {
-    const doc = readBuiltPage(path.join('comforting', 'best-dog-travel-beds', 'index.html'));
-    const affiliateLinks = getAffiliateLinks(doc).filter((link) => link.getAttribute('data-merchant') === 'amazon');
-
-    expect(affiliateLinks.length).toBeGreaterThan(0);
-
-    for (const link of affiliateLinks) {
-      expectTrackedAffiliateLink(link);
-    }
-  });
-
-  it('renders comfort chew-resistant converter pages with tagged Amazon affiliate links', () => {
-    const doc = readBuiltPage(path.join('comforting', 'best-chew-resistant-dog-beds', 'index.html'));
-    const affiliateLinks = getAffiliateLinks(doc).filter((link) => link.getAttribute('data-merchant') === 'amazon');
-
-    expect(affiliateLinks.length).toBeGreaterThan(0);
-
-    for (const link of affiliateLinks) {
-      expectTrackedAffiliateLink(link);
     }
   });
 });

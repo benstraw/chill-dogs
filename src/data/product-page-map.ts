@@ -27,16 +27,23 @@ function cleanCoolingTitle(raw: string): string {
 }
 
 function addRef(map: ProductPageMap, productId: string, ref: PageRef) {
+  // A second card's pages belong to the product page it shares.
+  productId = shopPageAliases.get(productId) ?? productId;
   if (!map[productId]) map[productId] = [];
   if (!map[productId].some((r) => r.href === ref.href)) {
     map[productId].push(ref);
   }
 }
 
+/** Second-card cooling records → the id whose /shop/ page they share. */
+const shopPageAliases = new Map(
+  coolingProducts.flatMap((p) => (p.shopPageId ? [[p.id, p.shopPageId] as const] : []))
+);
+
 export function buildProductPageMap(): ProductPageMap {
   const map: ProductPageMap = {};
 
-  for (const p of coolingProducts) map[p.id] = [];
+  for (const p of coolingProducts) if (!p.shopPageId) map[p.id] = [];
   for (const p of calmingProducts) map[p.id] = [];
   for (const p of relaxationProducts) map[p.id] = [];
   for (const p of trackerProducts) map[p.id] = [];
