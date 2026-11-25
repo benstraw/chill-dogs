@@ -1,7 +1,7 @@
 /**
  * Product page meta must be in range for every product, not just today's catalog.
  *
- * `seo-meta.test.ts` scans `dist/` and enforces og:title 40–65 and og:description
+ * `dist/site-sweep.test.ts` scans `dist/` and enforces og:title 40–65 and og:description
  * 100–165. With 214 generated `/shop/` pages, one awkward product name would fail that
  * test with no indication of which product or why. These checks run the same limits
  * against the composer directly, so the failure names the product and shows the string.
@@ -110,29 +110,34 @@ describe('indexing gate', () => {
     expect(indexable.length).toBeGreaterThan(productCatalogItems.length * 0.8);
   });
 
-  it('gates exactly the products that fall under the copy bar', () => {
-    for (const product of productCatalogItems) {
-      const bullets = product.bullets.map((bullet) => bullet.trim()).filter(Boolean);
-      const expected =
-        bullets.length >= LIMITS.MIN_BULLETS &&
-        bullets.join(' ').length >= LIMITS.MIN_BULLET_CHARS;
+  it('applies the copy bar to concrete boundary cases', () => {
+    // Fixed fixtures at the thresholds, not a re-implementation of the rule: a wrong
+    // threshold or a dropped trim() changes these answers.
+    const { MIN_BULLETS, MIN_BULLET_CHARS } = LIMITS;
+    const product = (bullets: string[]) => ({ id: 'fixture', name: 'Fixture', pillar: 'cooling', category: 'mat', bullets });
+    const enough = (n: number) => Array.from({ length: n }, () => 'x'.repeat(Math.ceil(MIN_BULLET_CHARS / n) + 1));
 
-      expect(meetsProductCopyBar(product), product.id).toBe(expected);
-    }
+    expect(meetsProductCopyBar(product(enough(MIN_BULLETS)))).toBe(true);
+    expect(meetsProductCopyBar(product(enough(MIN_BULLETS).slice(1))), 'one bullet short').toBe(false);
+    expect(meetsProductCopyBar(product([...enough(MIN_BULLETS).slice(1), '   '])), 'blank bullets do not count').toBe(false);
+
+    // Exactly at the character floor passes; one character under fails.
+    const atFloor = Array.from({ length: MIN_BULLETS }, () => 'y');
+    const joinedLength = (bullets: string[]) => bullets.join(' ').length;
+    atFloor[0] += 'y'.repeat(MIN_BULLET_CHARS - joinedLength(atFloor));
+    expect(joinedLength(atFloor)).toBe(MIN_BULLET_CHARS);
+    expect(meetsProductCopyBar(product(atFloor))).toBe(true);
+    expect(meetsProductCopyBar(product([atFloor[0].slice(1), ...atFloor.slice(1)]))).toBe(false);
   });
 });
 
 describe('the indexing switch', () => {
-  it('keeps every product page out of the index while it is off', () => {
-    // ~200 generated pages on a site of ~65 is the shape that draws site-wide
-    // quality demotion, so they ship noindex and are switched on deliberately.
-    if (PRODUCT_PAGES_INDEXABLE) {
-      expect(productCatalogItems.some(isIndexableProduct)).toBe(true);
-      return;
+  it('never indexes a product below the copy bar, and indexes exactly the rest when on', () => {
+    // Holds whichever way the switch is set, without branching on it.
+    for (const product of productCatalogItems) {
+      expect(isIndexableProduct(product), product.id).toBe(PRODUCT_PAGES_INDEXABLE && meetsProductCopyBar(product));
     }
-
-    expect(productCatalogItems.every((product) => !isIndexableProduct(product))).toBe(true);
-    // The copy bar still has real opinions, ready for when it is turned on.
+    // The copy bar still has real opinions, ready for when the switch is turned on.
     expect(productCatalogItems.some(meetsProductCopyBar)).toBe(true);
   });
 });

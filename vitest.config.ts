@@ -2,6 +2,17 @@ import { defineConfig } from 'vitest/config';
 
 const alias = (path: string) => new URL(path, import.meta.url).pathname;
 
+/**
+ * Two tiers (see docs/ai/engineering/build-and-test-commands.md):
+ *
+ *   unit  `bun run test:unit`  — no dist/, no network, no git. Runs anywhere, fast.
+ *   dist  `bun run test:dist`  — reads the built site. Its global setup fails the tier
+ *                                loudly when dist/ is missing, partial, or stale.
+ *
+ * `vitest run` (CI, `bun run test`) runs both. Tests default to the `node`
+ * environment; the few that need a DOM opt in with `// @vitest-environment happy-dom`.
+ * Booting happy-dom in every file used to cost more than all the test bodies combined.
+ */
 export default defineConfig({
   resolve: {
     alias: {
@@ -15,15 +26,33 @@ export default defineConfig({
     },
   },
   test: {
-    environment: 'happy-dom',
-    // The default 5s is too tight once ~30 happy-dom suites run in parallel:
-    // slower machines blow it on CPU contention alone, not on real slowness.
-    testTimeout: 30_000,
-    hookTimeout: 30_000,
+    environment: 'node',
+    // A slow test should show up as a failure, not hide under a generous timeout.
+    testTimeout: 10_000,
+    hookTimeout: 10_000,
     coverage: {
       provider: 'v8',
       include: ['src/utils/**', 'src/scripts/**', 'src/data/**'],
       reporter: ['text', 'json-summary'],
     },
+    projects: [
+      {
+        extends: true,
+        test: {
+          name: 'unit',
+          include: ['src/__tests__/**/*.test.ts'],
+          exclude: ['src/__tests__/dist/**'],
+          setupFiles: ['src/__tests__/setup/hermetic.ts'],
+        },
+      },
+      {
+        extends: true,
+        test: {
+          name: 'dist',
+          include: ['src/__tests__/dist/**/*.test.ts'],
+          globalSetup: ['src/__tests__/dist/global-setup.ts'],
+        },
+      },
+    ],
   },
 });

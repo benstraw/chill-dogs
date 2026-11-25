@@ -2,7 +2,7 @@
  * Self-hosted share images for `/shop/<id>/` product pages.
  *
  * og:image must be on chill-dogs.com. `scripts/apply-first-page-image-og.mjs` refuses
- * any other origin and `site-smoke.test.ts` fails the build on one, and hotlinking
+ * any other origin and `dist/site-sweep.test.ts` fails the build on one, and hotlinking
  * Amazon's CDN for share cards is unreliable anyway — Pinterest and Facebook fetch these
  * server-side.
  *

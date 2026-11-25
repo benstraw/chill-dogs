@@ -3,9 +3,10 @@ import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from
 import path from 'node:path';
 import sharp from 'sharp';
 
-const CACHE_DIR = path.join(process.cwd(), '.cache', 'og-gen');
-const OUTPUT_CACHE_DIR = path.join(CACHE_DIR, 'outputs');
-const IMAGE_CACHE_DIR = path.join(CACHE_DIR, 'images');
+// OG_GEN_CACHE_DIR lets tests point the cache at a temp dir instead of the repo's.
+const cacheDir = () => process.env.OG_GEN_CACHE_DIR ?? path.join(process.cwd(), '.cache', 'og-gen');
+const outputCacheDir = () => path.join(cacheDir(), 'outputs');
+const imageCacheDir = () => path.join(cacheDir(), 'images');
 const DEFAULT_IMAGE_FETCH_TIMEOUT_MS = 5_000;
 const imageDataUriRequests = new Map<string, Promise<string | null>>();
 
@@ -17,12 +18,12 @@ export function cacheKey(inputs: object): string {
 }
 
 export function ensureCacheDirs(): void {
-  mkdirSync(OUTPUT_CACHE_DIR, { recursive: true });
-  mkdirSync(IMAGE_CACHE_DIR, { recursive: true });
+  mkdirSync(outputCacheDir(), { recursive: true });
+  mkdirSync(imageCacheDir(), { recursive: true });
 }
 
 export function copyCachedOutputToPublic(key: string, targetPath: string): boolean {
-  const cachedPath = path.join(OUTPUT_CACHE_DIR, `${key}.jpg`);
+  const cachedPath = path.join(outputCacheDir(), `${key}.jpg`);
   if (!existsSync(cachedPath)) {
     return false;
   }
@@ -36,11 +37,11 @@ export function writeOutputWithCache(key: string, targetPath: string, jpegBuffer
   mkdirSync(path.dirname(targetPath), { recursive: true });
   ensureCacheDirs();
   writeFileSync(targetPath, jpegBuffer);
-  writeFileSync(path.join(OUTPUT_CACHE_DIR, `${key}.jpg`), jpegBuffer);
+  writeFileSync(path.join(outputCacheDir(), `${key}.jpg`), jpegBuffer);
 }
 
 function imageCacheBase(url: string): string {
-  return path.join(IMAGE_CACHE_DIR, createHash('md5').update(url).digest('hex'));
+  return path.join(imageCacheDir(), createHash('md5').update(url).digest('hex'));
 }
 
 function inferMimeType(url: string, responseType?: string | null): string {

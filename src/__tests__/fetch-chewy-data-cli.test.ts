@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 const searchChewyCatalogItems = vi.fn();
 const writeChewyCatalogItemCache = vi.fn();
@@ -33,16 +33,23 @@ vi.mock('../scripts/chewy-cache', () => ({
 }));
 
 describe('fetch-chewy-data CLI', () => {
+  const originalArgv = process.argv;
+
   beforeEach(() => {
     vi.resetModules();
     vi.clearAllMocks();
+  });
+
+  // Restore even when an assertion fails, so argv and spies never leak into the next test.
+  afterEach(() => {
+    process.argv = originalArgv;
+    vi.restoreAllMocks();
   });
 
   it('supports search discovery without writing cache files', async () => {
     const log = vi.spyOn(console, 'log').mockImplementation(() => {});
     const error = vi.spyOn(console, 'error').mockImplementation(() => {});
     const exit = vi.spyOn(process, 'exit').mockImplementation((() => undefined) as never);
-    const originalArgv = process.argv;
     process.argv = ['bun', 'scripts/fetch-chewy-data.ts', '--search', 'cooling mat', '--no-cache'];
     searchChewyCatalogItems.mockResolvedValue([{ CatalogItemId: 'item-1', Name: 'Cooling Mat' }]);
 
@@ -54,18 +61,12 @@ describe('fetch-chewy-data CLI', () => {
     expect(log).toHaveBeenCalledWith('\nDone. Found: 1, Cached: 0 (--no-cache)');
     expect(error).not.toHaveBeenCalled();
     expect(exit).not.toHaveBeenCalledWith(1);
-
-    process.argv = originalArgv;
-    log.mockRestore();
-    error.mockRestore();
-    exit.mockRestore();
   });
 
   it('deletes cache entries without calling Impact', async () => {
     const log = vi.spyOn(console, 'log').mockImplementation(() => {});
     const error = vi.spyOn(console, 'error').mockImplementation(() => {});
-    const exit = vi.spyOn(process, 'exit').mockImplementation((() => undefined) as never);
-    const originalArgv = process.argv;
+    vi.spyOn(process, 'exit').mockImplementation((() => undefined) as never);
     process.argv = ['bun', 'scripts/fetch-chewy-data.ts', '--delete-cache', 'item-1'];
     deleteChewyCatalogItemCache.mockResolvedValue(true);
 
@@ -75,10 +76,5 @@ describe('fetch-chewy-data CLI', () => {
     expect(searchChewyCatalogItems).not.toHaveBeenCalled();
     expect(log).toHaveBeenCalledWith('Deleted Chewy cache entry: item-1');
     expect(error).not.toHaveBeenCalled();
-
-    process.argv = originalArgv;
-    log.mockRestore();
-    error.mockRestore();
-    exit.mockRestore();
   });
 });

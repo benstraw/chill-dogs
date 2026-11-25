@@ -5,7 +5,12 @@ import { createSitemapPage, staticSitemapSections, type SitemapPage, type Sitema
 export async function getArticleSitemapSection(): Promise<SitemapSection> {
   const articleEntries = await getCollection('articles');
   const articlePages = [...articleEntries]
-    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+    // Newest first; same-day ties break on path so the order is deterministic.
+    .sort(
+      (a, b) =>
+        b.data.pubDate.valueOf() - a.data.pubDate.valueOf() ||
+        a.data.canonicalPath.localeCompare(b.data.canonicalPath)
+    )
     .map((entry: CollectionEntry<'articles'>) =>
       createSitemapPage({
         baseTitle: entry.data.title,

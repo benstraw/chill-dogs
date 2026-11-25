@@ -44,6 +44,14 @@ export function resolveHomepageArticleTheme(canonicalPath: string): Pick<Homepag
   return { label: match.label, color: match.color };
 }
 
+/**
+ * Newest first; same-day ties break on href so the order never depends on file or
+ * collection order (several articles share a publish date).
+ */
+export function compareNewestFirst(a: SitemapPage, b: SitemapPage): number {
+  return b.pubDate!.valueOf() - a.pubDate!.valueOf() || a.href.localeCompare(b.href);
+}
+
 export function isHomepageArticle(page: SitemapPage): boolean {
   return page.pageType === 'collector' && page.collectorSubtype === 'article' && !!page.pubDate;
 }
@@ -134,7 +142,7 @@ export async function getHomepageArticleFeed(
 ): Promise<HomepageArticleFeed> {
   const sortedArticles = (await getCompleteSitemapPages())
     .filter(isHomepageArticle)
-    .sort((a, b) => b.pubDate!.valueOf() - a.pubDate!.valueOf())
+    .sort(compareNewestFirst)
     .map(mapHomepageArticle);
 
   return {

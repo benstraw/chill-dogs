@@ -2,7 +2,7 @@
  * Titles, descriptions, and the indexing gate for `/shop/<id>/` detail pages.
  *
  * These pages are generated for all 214 catalog products, so their meta cannot be
- * hand-written. `src/__tests__/seo-meta.test.ts` enforces og:title 40–65 chars and
+ * hand-written. `src/__tests__/dist/site-sweep.test.ts` enforces og:title 40–65 chars and
  * og:description 100–165 chars on every indexable page, which means a single product
  * with an awkward name can fail the whole build. Everything here is deterministic and
  * covered by `src/__tests__/product-meta.test.ts` over the entire catalog, so a new

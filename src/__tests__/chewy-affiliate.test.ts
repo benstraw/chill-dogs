@@ -1,8 +1,8 @@
-import { mkdtemp, readFile } from 'node:fs/promises';
+import { mkdtemp, readFile, rm } from 'node:fs/promises';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { afterAll, afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import {
   createChewyAffiliateLink,
@@ -25,6 +25,15 @@ beforeEach(() => {
 afterEach(() => {
   process.env = { ...originalEnv };
   vi.restoreAllMocks();
+  // restoreAllMocks does not undo vi.stubGlobal; without this a stubbed fetch leaked
+  // into whichever test ran next.
+  vi.unstubAllGlobals();
+});
+
+
+const tempDirs: string[] = [];
+afterAll(async () => {
+  await Promise.all(tempDirs.map((dir) => rm(dir, { recursive: true, force: true })));
 });
 
 describe('Chewy affiliate link generation', () => {
@@ -299,6 +308,7 @@ describe('Impact API helpers', () => {
 describe('Chewy catalog cache', () => {
   it('normalizes catalog items and updates the manifest', async () => {
     const dir = await mkdtemp(join(tmpdir(), 'chewy-cache-'));
+    tempDirs.push(dir);
     const cacheDir = join(dir, 'cache');
     const manifestPath = join(cacheDir, '_index.json');
 
@@ -337,6 +347,7 @@ describe('Chewy catalog cache', () => {
 
   it('deletes one cached catalog item and updates the manifest', async () => {
     const dir = await mkdtemp(join(tmpdir(), 'chewy-cache-'));
+    tempDirs.push(dir);
     const cacheDir = join(dir, 'cache');
     const manifestPath = join(cacheDir, '_index.json');
 
@@ -355,6 +366,7 @@ describe('Chewy catalog cache', () => {
 
   it('clears cached catalog items and leaves an empty manifest', async () => {
     const dir = await mkdtemp(join(tmpdir(), 'chewy-cache-'));
+    tempDirs.push(dir);
     const cacheDir = join(dir, 'cache');
     const manifestPath = join(cacheDir, '_index.json');
 

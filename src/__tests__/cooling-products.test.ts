@@ -8,10 +8,10 @@ import {
 
 describe('cooling product data integrity', () => {
   it('every product amazonUrl contains the affiliate tag', () => {
-    for (const product of coolingProducts) {
-      if (product.amazonUrl) {
-        expect(product.amazonUrl).toContain('tag=chill-dogs-20');
-      }
+    const withAmazon = coolingProducts.filter((product) => product.amazonUrl);
+    expect(withAmazon.length, 'no Amazon URLs to check').toBeGreaterThan(0);
+    for (const product of withAmazon) {
+      expect(product.amazonUrl, product.id).toContain('tag=chill-dogs-20');
     }
   });
 

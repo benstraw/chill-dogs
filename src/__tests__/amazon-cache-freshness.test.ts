@@ -1,8 +1,8 @@
-import { mkdir, mkdtemp, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
-import { describe, expect, it } from 'vitest';
+import { afterAll, describe, expect, it } from 'vitest';
 
 import {
   backfillAmazonCacheManifest,
@@ -14,8 +14,15 @@ import {
   type CatalogAsinEntry,
 } from '../scripts/amazon-cache-freshness';
 
+const tempDirs: string[] = [];
+afterAll(async () => {
+  await Promise.all(tempDirs.map((dir) => rm(dir, { recursive: true, force: true })));
+});
+
 async function makeTempCacheDir(): Promise<string> {
-  return mkdtemp(join(tmpdir(), 'amazon-cache-freshness-'));
+  const dir = await mkdtemp(join(tmpdir(), 'amazon-cache-freshness-'));
+  tempDirs.push(dir);
+  return dir;
 }
 
 async function writeJson(path: string, value: unknown): Promise<void> {

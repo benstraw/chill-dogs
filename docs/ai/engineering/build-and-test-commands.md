@@ -3,7 +3,7 @@ title: Build and Test Commands
 type: canonical
 domain: engineering
 status: active
-updated: 2026-10-05
+updated: 2026-11-25
 tags:
   - chill-dogs
   - engineering
@@ -45,9 +45,9 @@ Full production build. Runs all three pipeline phases:
 
 1. **Pre-build:** `watermark-images.mjs` (watermarks original photos) → `generate-og-images.mjs` (generates OG images for every eligible route)
 2. **Astro build:** outputs static HTML to `dist/`
-3. **Post-build:** `apply-first-page-image-og.mjs` → `apply-sitemap-share-preview.mjs` → `indexnow-submit.mjs`
+3. **Post-build:** `apply-first-page-image-og.mjs` → `apply-sitemap-share-preview.mjs` → `build-stamp.mjs` (records which inputs `dist/` was built from) → `indexnow-submit.mjs`
 
-**Run before:** `bun run test` (the SEO meta test reads from `dist/`), deploying, or verifying final output.
+**Run before:** the dist test tier (it reads `dist/`), deploying, or verifying final output.
 
 **Env vars needed:** `PUBLIC_SITE_URL` for OG image and canonical URL generation. `INDEXNOW_KEY` for the post-build IndexNow submission (skips gracefully if not set).
 
@@ -59,24 +59,55 @@ Previews the built site from `dist/`. Run after `bun run build` to verify the pr
 
 ---
 
+### Test tiers
+
+The suite is split into two Vitest projects (`vitest.config.ts`):
+
+| Tier | Files | Needs `dist/` | Command |
+|---|---|---|---|
+| `unit` | `src/__tests__/*.test.ts` | No. Also no network, no git writes, no child processes beyond one CLI smoke spawn | `bun run test:unit` |
+| `dist` | `src/__tests__/dist/*.test.ts` | Yes, current | `bun run test:dist` |
+
+- **Missing or stale `dist/` fails loudly.** The dist tier's global setup (`src/__tests__/dist/global-setup.ts`) refuses to run when `dist/` is missing, has fewer than 200 pages, or was built from different inputs. Freshness is a content hash of `src/`, `public/` and the build config, written by `scripts/build-stamp.mjs` at the end of `bun run build` to `.cache/dist-build-stamp`. Set `ALLOW_STALE_DIST=1` to skip only the freshness check.
+- **Site-wide rules go in `src/__tests__/dist/site-sweep.test.ts`.** It reads every built page once and runs each rule as a visitor over it. Add a visitor there rather than a new walk of `dist/`. Helpers for anchors, attributes, meta tags and JSON-LD are in `src/__tests__/helpers/dist.ts`; use string scanning, not a DOM.
+- **Tests run in the `node` environment.** A file that needs a DOM opts in with `// @vitest-environment happy-dom` on its first line.
+- **`astro:content` is mocked with the real article frontmatter** (`src/__mocks__/astro-content.ts`), so unit tests see the actual articles.
+- **Assert invariants, not snapshots.** "Every strip link is tracked and resolves", not "this page links to these five URLs". The exception is public URL stability (route constants, product ids), where pinning the value is the point.
+- **Speed is tracked.** See [`test-timings/test-timings.md`](test-timings/test-timings.md). Nothing gets slower without a reason written in the PR.
+
+---
+
 ### `bun run test`
 
-Runs the full Vitest test suite. **Automatically triggers `bun run build` first** because the SEO meta test (`src/__tests__/seo-meta.test.ts`) reads from `dist/`.
+Builds, then runs both tiers (`bun run build && vitest run`). CI does the same.
 
 Run this before finishing any substantive page or module change.
 
-**What it checks:**
-- SEO meta tag length constraints (og:title 40–65 chars, og:description 100–165 chars) for every indexable page
-- Unit tests for `src/utils/**`, `src/scripts/**`, `src/data/**`
-- Pre-commit hook: runs `bun run test && bun run test:smoke` before every commit
+---
+
+### `bun run test:unit`
+
+The unit tier only. Runs in about 3 s and needs no build, so it's the fast loop while editing data, utils or scripts.
+
+---
+
+### `bun run test:dist`
+
+The dist tier only, against the current `dist/`. Fails if `dist/` is missing or stale; run `bun run build` first.
 
 ---
 
 ### `bun run test:smoke`
 
-Smoke tests only (`src/__tests__/site-smoke.test.ts`). Builds the site internally before testing.
+Page-level HTML checks (`src/__tests__/dist/site-smoke.test.ts`). Builds first **only if `dist/` is missing or stale** (`BUILD_IF_STALE=1`), otherwise reuses it, so a repeat run takes about 2 s.
 
-Use this for a faster check when only page-level HTML structure is affected (not utility logic or SEO meta values).
+Use this for a fast check when only page-level HTML structure is affected.
+
+---
+
+### `bun run test:timing`
+
+Measures the build and each test tier (median of 3 after a warm-up) and compares against a saved snapshot. See [`test-timings/test-timings.md`](test-timings/test-timings.md).
 
 ---
 

@@ -110,7 +110,7 @@ Both public discovery surfaces derive from the same data. Neither is a curated l
 
 A page appears in `llms.txt` automatically once it is registered in `content-sitemap.ts` (or is an MDX article with a `canonicalPath`). There is nothing to curate — do not reintroduce a hand-maintained link array in `llms.txt.ts`. Ordering-only nudges for high-intent pages go in `PRIORITY_OVERRIDES`; they move a page within its section and never decide whether it is listed.
 
-`src/__tests__/llms-coverage.test.ts` fails if `llms.txt` omits any indexable sitemap URL, lists a URL absent from the sitemap, or lists a `noindex` page.
+`src/__tests__/dist/llms-coverage.test.ts` fails if `llms.txt` omits any indexable sitemap URL, lists a URL absent from the sitemap, or lists a `noindex` page.
 
 Sections in `llms.txt` come from path prefix (`LLMS_SECTION_ORDER` in `src/utils/llms.ts`). When adding a new top-level path prefix, add a matching section rule — otherwise its pages still appear, but under `Core Pages`.
 
