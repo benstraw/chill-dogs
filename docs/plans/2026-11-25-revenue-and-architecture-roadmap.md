@@ -97,9 +97,82 @@ What this changes for Phase 2:
 - The three zero-click pages in item 3 are confirmed as real human traffic, most of it from search.
 - `/safety/what-to-do-if-your-dog-runs-away/` joins them. A lost-dog reader may want a GPS tracker, which is the site's best-converting page.
 
+## PR sequence for Phases 2 and 3
+
+Each step below is its own PR, so a reviewer can check one kind of change at a time. Disclosure fixes and product additions never share a PR.
+
+**The rule for every PR here: no written content changes.** These PRs may add a module, move a component, or change markup, metadata or schema. They must not reword, cut or add any prose sentence:
+- in an article;
+- in a product record (`name`, `bullets`, `description` and other copy fields);
+- in page copy.
+
+If a step turns out to need a copy edit, stop and raise it as a separate editorial PR for the owner to write or approve.
+
+Every PR also runs `bun run test:timing -- --compare` against the latest snapshot, as the test overhaul set up.
+
+### Step 0 — A copy-freeze check (tooling, first PR)
+
+A script, `bun run copy:diff`:
+- extracts the visible text of every built page into a snapshot (`--save`, run on main);
+- compares a branch build against that snapshot (`--compare`);
+- reports, for each page, the sentences that were removed, changed or added.
+
+How to read the report:
+- **Revenue PRs:** zero removed or changed sentences. Added text may come only from the new module, such as product names and bullets read from existing records, or the standard disclosure text.
+- **Phase 3 refactors:** `--html` mode compares the full built HTML, and the diff must be empty except where intended.
+
+The extractor gets unit tests. Each PR pastes the report into its description.
+
+### Phase 2 PRs
+
+| PR | Change | What the copy diff must show |
+|---|---|---|
+| 2a | **Disclosure placement, hand-built pages:** homepage, `/shop/`, Aorkuler review, Garmin, shelter-dog charities. Move or add `<Disclosure />` above the first affiliate link. Remove each page from `src/__tests__/allowlists/disclosure.ts`. | Disclosure text moved or added; nothing else |
+| 2b | **Disclosure placement, two MDX articles:** crate training and keep-cool-in-car. Move the existing `<Disclosure />` tag above the first inline affiliate link. Only the tag line moves; no prose line changes. Remove both from the allowlist, which leaves it empty. | Disclosure block moved; nothing else |
+| 2c | **Fi collar review schema.** Its Review schema has no rating. Default: switch it to Article schema, which needs no new claim. The alternative is a star rating, but a rating is an editorial judgment, so the owner would have to supply it. | No visible change |
+| 2d | **Airlines page → airline carriers.** Add an existing product module, with the top carrier picks from `/comforting/best-airline-approved-dog-carriers/`, above the fold or right after the intro. | Additions only, from the module |
+| 2e | **Runaway-dog page → GPS trackers.** The same pattern, with the top picks from `/gear/best-dog-gps-trackers/`, the site's best-converting page. | Additions only |
+| 2f | **Links to the winners**, through `pinnedRelated` and related-link metadata only. In-body links would be copy edits, so they're left for a separate editorial PR. | Related-link strips change; prose unchanged |
+| 2g | **Lifestyle article → newsletter.** Make the existing signup module more prominent. No products. | Additions or moves of the signup module only |
+| 2h | **Homepage picks.** Investigate first, using the hero funnel and placement tiles; then make a layout change only. | Moves only, unless a copy change is agreed separately |
+
+All of these reuse an existing module. If no existing module can render a few products by id inside an article, raise that before writing a new one.
+
+After each revenue PR merges, add a PostHog annotation so its effect shows on the dashboard. At roughly 40 human visitors per page every 90 days, judge each change after about six weeks, not days.
+
+Outside the repo: post the 214 Pinterest pins already in `public/pins/` and put the two winners in the next newsletter. Neither needs a PR.
+
+### The `/shop/` decision (after 2a)
+
+What Phase 1 found:
+- The product pages were never open to Google. `PRODUCT_PAGES_INDEXABLE` in `src/utils/product-meta.ts` has been `false` since launch on 2026-09-02, so all 280 pages are `noindex` and out of the sitemap. The long-tail bet hasn't been tested.
+- Since launch they've had 11 human views: 7 direct, 3 from Google and 1 internal. None came from Pinterest.
+- 248 of the 280 products already meet the per-product copy bar.
+
+Options:
+- **Delete the pages.** Saves little: they're noindexed, so they cost nothing in search. It would mean about 280 redirects, and it would kill the Pinterest landing pages.
+- **Switch on indexing for all of them.** That's the risk the switch exists to prevent: about 250 template pages next to about 65 hand-written ones is the pattern that can pull a whole site down in Google, the converters that earn included.
+- **Recommended: a bounded test.** Make the switch per pillar and index one pillar of about 30 products, preferably ones no converter already covers. Watch Search Console for about 10 weeks. Set the bar before starting. If the pillar earns impressions and clicks, open the next pillar. If it doesn't, leave the product pages noindexed as Pinterest and direct-link targets, and stop investing in them.
+
+Search Console isn't connected to this workspace, so the owner reads those numbers.
+
+### Phase 3 PRs
+
+Each is a refactor, so the `--html` copy diff must be empty unless a change is intended and described.
+
+| PR | Change |
+|---|---|
+| 3a | One `[...article].astro` route replaces the six `[slug].astro` files, with a test that no article's `canonicalPath` collides with a hand-written page |
+| 3b | The road-trip and car-cooling product lists move into data exports, and the "Keep in sync with" comments go |
+| 3c | The hardcoded internal routes move to `ROUTES`, in batches small enough to review |
+| 3d | The route keys `coolingHub`, `calmingHub`, `comfortHub` and `gearHub` are renamed to collector wording |
+| 3e | The hand-built cards in `airtag-for-dogs` and `fi-dog-collar-review` move onto the card primitives. `shelter-dog-charities` is reviewed and either fixed or kept with a written reason |
+
+Phase 4 (Astro 6, one converter system) starts after 3e.
+
 ## Phase 2 — Revenue on existing traffic
 
-Goal: earn more from the visitors the site already has, with small edits.
+Goal: earn more from the visitors the site already has, with small edits. "PR sequence for Phases 2 and 3" above is the order of work.
 
 3. **Products on the busiest zero-click pages.**
    - `/travel/dog-friendly-airlines/`: readers are planning a flight, so route them to `/comforting/best-airline-approved-dog-carriers/` and travel bags, with a product module or a prominent link above the fold.
