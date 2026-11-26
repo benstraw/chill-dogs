@@ -25,6 +25,8 @@ Last reviewed 2026-11-25 against the code.
 
 ## Open
 
+The next round of work is planned in [`plans/2026-11-25-revenue-and-architecture-roadmap.md`](plans/2026-11-25-revenue-and-architecture-roadmap.md): measure, then revenue on existing traffic, then foundations, then platform.
+
 - [ ] Expand calming category: converter pages for calming treats and snuffle mats
       (anxiety wraps and lick mats are shipped)
 - [ ] Monitor early-bounce event loss and feature-flag flicker from the deferred PostHog

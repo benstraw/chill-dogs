@@ -44,6 +44,7 @@ bun run test:timing -- --compare docs/engineering/test-timings/<previous>.json
 | [phase-1.json](phase-1.json) | Phase 1 | 16.56 s | 3.58 s (395 tests, **−45%**) | 2.47 s (69 tests) | 5.35 s (**−38%**) | 464 |
 | [phase-2.json](phase-2.json) | Phase 2 | 16.51 s | 3.81 s (438 tests) | 2.27 s (79 tests) | 5.48 s | 517 |
 | [phase-3.json](phase-3.json) | Phase 3 | 16.29 s | 3.69 s (446 tests) | 2.14 s (75 tests) | 5.48 s | 521 |
+| [step-0-copy-diff.json](step-0-copy-diff.json) | Roadmap step 0 (`copy:diff`) | 14.83 s | 3.31 s (466 tests) | 1.98 s (75 tests) | 4.65 s | 541 |
 
 `test:unit` changed meaning in Phase 1: the baseline figure still included two files that read `dist/`. Since Phase 1, `unit` never touches `dist/`.
 
