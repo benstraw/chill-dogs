@@ -3,11 +3,11 @@ import ProductCardShell from './primitives/ProductCardShell.astro';
 import ProductImageFrame from './primitives/ProductImageFrame.astro';
 import ProductBulletList from './primitives/ProductBulletList.astro';
 import AffiliateOfferStack from './primitives/AffiliateOfferStack.astro';
-import type { RelaxationDisplayProduct } from '@data/relaxation-converter-pages';
+import type { PickProduct } from '@data/converter-picks';
 import { getOffers } from '@data/products/offers';
 
 interface Props {
-  product: RelaxationDisplayProduct;
+  product: PickProduct;
   position?: number;
   pageSlug?: string;
   /** Analytics page type of the page the card sits on. Opt-in for cards shown outside a converter. */
