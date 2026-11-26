@@ -110,18 +110,15 @@ If a step turns out to need a copy edit, stop and raise it as a separate editori
 
 Every PR also runs `bun run test:timing -- --compare` against the latest snapshot, as the test overhaul set up.
 
-### Step 0 — A copy-freeze check (tooling, first PR)
+### Step 0 — A copy-freeze check (tooling, first PR) — done
 
-A script, `bun run copy:diff`:
-- extracts the visible text of every built page into a snapshot (`--save`, run on main);
-- compares a branch build against that snapshot (`--compare`);
-- reports, for each page, the sentences that were removed, changed or added.
+`bun run copy:diff -- --base origin/main` builds the base branch in a temporary worktree, then compares it with the current `dist/`. For every page it reports which visible text blocks were removed, edited, added or moved, and it groups pages that share a change. `--strict` exits 1 on any removed or edited text. `--html` also compares the full HTML. Details: [`../engineering/build-and-test-commands.md`](../engineering/build-and-test-commands.md#bun-run-copydiff).
 
 How to read the report:
-- **Revenue PRs:** zero removed or changed sentences. Added text may come only from the new module, such as product names and bullets read from existing records, or the standard disclosure text.
-- **Phase 3 refactors:** `--html` mode compares the full built HTML, and the diff must be empty except where intended.
+- **Revenue PRs:** zero removed or edited blocks. Added blocks may come only from the new module, such as product names and bullets from existing records, or the standard disclosure text. Moved blocks are expected for disclosure fixes.
+- **Phase 3 refactors:** `--html` must report no changes, except where intended.
 
-The extractor gets unit tests. Each PR pastes the report into its description.
+Every PR pastes the report into its description.
 
 ### Phase 2 PRs
 

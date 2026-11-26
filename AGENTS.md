@@ -70,6 +70,7 @@ bun run test:dist        # Dist tier only: fails loudly if dist/ is missing or s
 bun run test:smoke       # Page-level HTML checks; builds only if dist/ is stale
 bun run test:timing      # Time build + tiers; --compare <json> against a snapshot
 bun run test:coverage    # Coverage report (scope and floor in vitest.config.ts)
+bun run copy:diff -- --base origin/main  # What visible text a change removed, edited, added or moved
 bun run check:asins      # Check all product ASINs are still live on Amazon
 bun run check:asins -- --quiet  # Same, issues only
 bun run check:amazon     # Check local Amazon cache coverage, freshness, and drift

@@ -22,6 +22,7 @@
     "test:smoke": "BUILD_IF_STALE=1 vitest run --project dist src/__tests__/dist/site-smoke.test.ts",
     "test:coverage": "vitest run --coverage",
     "test:timing": "bun run scripts/test-timing.ts",
+    "copy:diff": "bun run scripts/copy-diff.ts",
     "indexnow:submit": "node scripts/indexnow-submit.mjs",
     "check:asins": "bun run scripts/check-asin-validity.ts",
     "check:amazon": "bun run scripts/check-amazon-freshness.ts",

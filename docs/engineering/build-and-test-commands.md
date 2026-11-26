@@ -115,6 +115,28 @@ Measures the build and each test tier (median of 3 after a warm-up) and compares
 
 ---
 
+### `bun run copy:diff`
+
+Proves a change did not rewrite written content. It compares the visible text of every built page with another build and reports, per page, the text blocks that were removed, edited, added or moved. Pages with the same change are grouped, so a footer edit reads as one entry.
+
+```bash
+bun run build
+bun run copy:diff -- --base origin/main            # builds main in a temp worktree (cached by commit), compares dist/ with it
+bun run copy:diff -- --base origin/main --strict   # exit 1 on any removed or edited text
+bun run copy:diff -- --base origin/main --html     # also compare full HTML (refactors: expect no change at all)
+bun run copy:diff -- --save                        # or: snapshot dist/ now, then compare later with no flags
+```
+
+- Text covers headings, paragraphs, list items, link and button text, image alt text, the `<title>`, and meta and Open Graph descriptions. Scripts, JSON-LD, styles and SVG are not text; use `--html` to see them.
+- `--html` ignores content-hashed asset names and Astro scope ids, which change without any real change.
+- `--out report.md` writes the report to paste into a PR.
+- It needs a fresh `dist/` (the build stamp must match) unless you pass `--allow-stale`.
+- Builds are reproducible: two builds of the same tree compare clean, HTML included. Keep it that way; anything random at build time needs a fixed seed (see `src/pages/404.astro`).
+
+Use it on every PR that must not change copy, such as disclosure fixes, product modules and refactors. Paste the report into the PR description.
+
+---
+
 ### `bun run test:coverage`
 
 Runs Vitest with coverage reporting. Covers `src/utils/**`, `src/scripts/**`, `src/data/**`, `src/lib/**` and `scripts/**`, with a floor in `vitest.config.ts` (`coverage.thresholds`) set just under the measured level. Raise it as coverage grows; never lower it to pass.
@@ -259,6 +281,7 @@ Generated files land in `public/og/`, which is gitignored except for product-sty
 | Added or changed utilities/scripts/data | `bun run test:coverage` |
 | Added or changed products | `bun run check:amazon` and `bun run check:asins` |
 | Added or changed `docs/` files | `bun run check:docs` |
+| Change that must not alter written content | `bun run copy:diff -- --base origin/main --strict` |
 | Verify final production output | `bun run build && bun run preview` |
 | A script fails on a missing key or a network error | [`environment-and-integrations.md`](environment-and-integrations.md) |
 
