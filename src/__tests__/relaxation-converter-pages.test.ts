@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 
 import {
   buildRelaxationItemListSchema,
+  getConverterSectionPicks,
   getRelaxationConverterPageConfig,
   resolveRelaxationDisplayProducts,
 } from '../data/relaxation-converter-pages';
@@ -441,6 +442,41 @@ describe('relaxation converter page config', () => {
   it('throws for unknown slugs', () => {
     expect(() => getRelaxationConverterPageConfig('missing-slug')).toThrow(
       'Missing relaxation converter page config for slug: missing-slug'
+    );
+  });
+});
+
+describe('getConverterSectionPicks', () => {
+  const sectionIds = (slug: string, id: string) => {
+    const block = getRelaxationConverterPageConfig(slug).blocks.find(
+      (b) => b.kind === 'product_section' && b.id === id,
+    );
+    if (!block || block.kind !== 'product_section') throw new Error(`no section ${id}`);
+    return block.productIds.map((ref) => (typeof ref === 'string' ? ref : ref.id));
+  };
+
+  it('takes the first picks of the named section, in the converter order', () => {
+    const picks = getConverterSectionPicks('best-airline-approved-dog-carriers', 'classic-soft-sided');
+    expect(picks.products.map((p) => p.id)).toEqual(
+      sectionIds('best-airline-approved-dog-carriers', 'classic-soft-sided').slice(0, 3),
+    );
+  });
+
+  it("reuses the converter's own heading and title, so the article adds no copy", () => {
+    const config = getRelaxationConverterPageConfig('best-airline-approved-dog-carriers');
+    const picks = getConverterSectionPicks('best-airline-approved-dog-carriers', 'classic-soft-sided');
+    expect(picks.converterTitle).toBe(config.title);
+    expect(picks.heading).toBe('Best Classic Soft-Sided Carriers');
+  });
+
+  it('honors the limit', () => {
+    expect(getConverterSectionPicks('best-airline-approved-dog-carriers', 'classic-soft-sided', 1).products).toHaveLength(1);
+  });
+
+  it('fails loudly on an unknown converter or section', () => {
+    expect(() => getConverterSectionPicks('no-such-converter', 'x')).toThrow(/no-such-converter/);
+    expect(() => getConverterSectionPicks('best-airline-approved-dog-carriers', 'no-such-section')).toThrow(
+      /no-such-section/,
     );
   });
 });

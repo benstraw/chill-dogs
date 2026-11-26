@@ -10,9 +10,11 @@ interface Props {
   product: RelaxationDisplayProduct;
   position?: number;
   pageSlug?: string;
+  /** Analytics page type of the page the card sits on. Opt-in for cards shown outside a converter. */
+  pageType?: 'converter' | 'collector';
 }
 
-const { product, position = 0, pageSlug = '' } = Astro.props;
+const { product, position = 0, pageSlug = '', pageType = 'converter' } = Astro.props;
 const offers = getOffers(product);
 ---
 
@@ -25,7 +27,7 @@ const offers = getOffers(product);
     product={{ id: product.id, name: product.name, category: product.category }}
     variantGroup={product.variantGroup}
     tone="pillar"
-    pageType="converter"
+    pageType={pageType}
     pageSlug={pageSlug}
     position={position}
   />

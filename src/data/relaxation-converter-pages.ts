@@ -1855,3 +1855,32 @@ export function getRelaxationConverterPageConfig(slug: string): RelaxationConver
   }
   return config;
 }
+
+export interface ConverterSectionPicks {
+  /** The converter's own section heading, reused so no new copy is written. */
+  heading: string;
+  /** The converter's page title, for the "see all" link. */
+  converterTitle: string;
+  products: RelaxationDisplayProduct[];
+}
+
+/**
+ * The first `limit` products of one product section on a converter, for showing a
+ * converter's picks elsewhere (an article) without copying its product ids: the
+ * converter config stays the single source, so a reordered or swapped pick there
+ * shows up everywhere.
+ */
+export function getConverterSectionPicks(slug: string, sectionId: string, limit = 3): ConverterSectionPicks {
+  const config = getRelaxationConverterPageConfig(slug);
+  const section = config.blocks.find(
+    (block): block is ProductSectionBlock => block.kind === 'product_section' && block.id === sectionId,
+  );
+  if (!section) {
+    throw new Error(`Converter ${slug} has no product section with id "${sectionId}"`);
+  }
+  return {
+    heading: section.heading,
+    converterTitle: config.title,
+    products: resolveRelaxationDisplayProducts(section.productIds.slice(0, limit)),
+  };
+}

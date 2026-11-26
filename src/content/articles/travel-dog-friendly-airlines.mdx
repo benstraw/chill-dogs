@@ -18,6 +18,8 @@ import Toc from '@components/modules/Toc.astro';
 import FAQ from '@components/modules/FAQ.astro';
 import Disclosure from '@components/modules/Disclosure.astro';
 import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
+import ConverterPicks from '@components/modules/ConverterPicks.astro';
+import { ROUTES } from '@data/routes';
 
 export const tocHeadings = [
   { label: 'What dog-friendly airline means', anchor: 'meaning' },
@@ -64,6 +66,8 @@ export const dogFriendlyAirlineFaqs = [
 
   <Toc headings={tocHeadings} pageSlug="dog-friendly-airlines" />
 
+  <Disclosure />
+
   <div class="prose">
     <p>
       "Pet-friendly airline" usually means one thing: a small dog in a zippered carrier under the seat in front of you. That will work if your dog is small. But if you have a larger dog, you may still be wondering, can my dog be onboard with me without being treated like cargo or carry-on luggage?
@@ -85,6 +89,16 @@ export const dogFriendlyAirlineFaqs = [
         <li><strong>Best one to verify/watch:</strong> RetrievAir, now showing active U.S. route and booking information</li>
       </ul>
     </div>
+  </div>
+
+  <ConverterPicks
+    converter="best-airline-approved-dog-carriers"
+    section="classic-soft-sided"
+    href={ROUTES.comfortAirlineCarriers}
+    pageSlug="dog-friendly-airlines"
+  />
+
+  <div class="prose">
 
     <h2 id="meaning">What "dog-friendly airline" actually means</h2>
     <p>
@@ -259,7 +273,6 @@ export const dogFriendlyAirlineFaqs = [
   </div>
 
   <FAQ faqs={dogFriendlyAirlineFaqs} />
-  <Disclosure />
   <InternalLinkStrip
     heading="More Dog Travel Guides"
     currentHref="/travel/dog-friendly-airlines/"

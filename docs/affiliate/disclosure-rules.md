@@ -3,7 +3,7 @@ title: Affiliate Disclosure Rules
 type: canonical
 domain: affiliate
 status: active
-updated: 2026-05-23
+updated: 2026-11-26
 tags:
   - chill-dogs
   - affiliate
@@ -44,7 +44,7 @@ The `Disclosure` component must appear on section collector pages (`/cooling/`, 
 
 ### Article collectors with inline product cards
 
-When an article collector includes inline product cards (`CoolingProductCard`, `RelaxationProductCard`, etc.), the `Disclosure` component is required on that page.
+When an article collector includes inline product cards (`CoolingProductCard`, `RelaxationProductCard`, `ConverterPicks`, etc.), the `Disclosure` component is required on that page, above the first card. The usual spot is right under the table of contents.
 
 If an article has no inline product cards, the `Disclosure` component is optional — the sitewide footer disclosure covers it.
 
