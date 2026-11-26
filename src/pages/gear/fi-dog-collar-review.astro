@@ -1,4 +1,5 @@
 ---
+import { staticSitemapSections } from '@data/content-sitemap';
 import { ROUTES } from '@data/routes';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Hero from '@components/modules/Hero.astro';
@@ -12,6 +13,7 @@ import JsonLd from '@components/JsonLd.astro';
 import AffiliateLink from '@components/AffiliateLink.astro';
 import { getOffers } from '@data/products/offers';
 import { getTrackersByType, accessoryProducts } from '@data/tracking-products';
+import { resolveAutoOgImagePath } from '@utils/og';
 
 const pageSlug = 'fi-dog-collar-review';
 
@@ -78,22 +80,27 @@ const faqs = [
 
 const quickAnswers = faqs.filter((faq) => faq.short);
 
+// Article, not Review: a Review needs an editorial star rating (reviewRating), and
+// this page has none. The publish date comes from the page's sitemap entry.
+const sitemapEntry = staticSitemapSections
+  .flatMap((section) => section.pages)
+  .find((page) => page.href === ROUTES.fiCollarReview);
+if (!sitemapEntry?.pubDate) throw new Error('Fi review: sitemap entry with a pubDate not found');
+
 const articleSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Review',
-  name: 'Fi Dog Collar Review: Cellular GPS Tracking for Everyday Dogs',
+  '@type': 'Article',
+  headline: 'Fi Dog Collar Review: Cellular GPS Tracking for Everyday Dogs',
   description:
     'Honest review of the Fi Series 3+ GPS dog collar — cellular tracking, subscription model, what it does well, and where it falls short for remote or off-grid use.',
-  url: 'https://www.chill-dogs.com/gear/fi-dog-collar-review/',
+  url: `https://www.chill-dogs.com${ROUTES.fiCollarReview}`,
+  datePublished: sitemapEntry.pubDate.toISOString().slice(0, 10),
+  image: [`https://www.chill-dogs.com${resolveAutoOgImagePath({ pathname: ROUTES.fiCollarReview }) ?? '/og-default.jpg'}`],
   author: { '@type': 'Person', name: 'Benjamin Strawbridge', url: 'https://www.benstrawbridge.com/' },
   publisher: {
     '@type': 'Organization',
     name: 'Chill-Dogs',
-    logo: { '@type': 'ImageObject', url: 'https://www.chill-dogs.com/og/og-default.png' },
-  },
-  itemReviewed: {
-    '@type': 'Product',
-    name: 'Fi Series 3+ GPS Dog Collar',
+    logo: { '@type': 'ImageObject', url: 'https://www.chill-dogs.com/images/chill-dogs-logo-padded.png', width: 700, height: 700 },
   },
 };
 ---
