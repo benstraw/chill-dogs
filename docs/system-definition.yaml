@@ -75,7 +75,9 @@ site_system:
         newest guide renders as a horizontal featured card (data-link-position
         homepage-hero-featured) followed by a pill-style "View all articles" button
         (data-track hero_click_articles) linking to /articles/.
-        Below the hero, HomepageBody renders four theme sections via HomepageSection:
+        Between the hero and the first section, the Disclosure module (showSafety false)
+        sits above the first product pick's affiliate link.
+        Below it, HomepageBody renders four theme sections via HomepageSection:
         Cooling, Calming, Comfort, and Gear/Travel/Safety (violet, headed to /gear/).
         Each section shows the 3 latest articles for its theme, up to 5 compact
         converter links sorted lastUpdated ?? pubDate descending (each with a

@@ -2,6 +2,7 @@
 import { ROUTES } from '@data/routes';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import ComingSoon from '@components/ComingSoon.astro';
+import Disclosure from '@components/modules/Disclosure.astro';
 import EmailSignup from '@components/EmailSignup.astro';
 import HomepageHero from '@components/modules/HomepageHero.astro';
 import HomepageBody from '@components/modules/HomepageBody.astro';
@@ -50,6 +51,9 @@ const orgSchema = {
     <JsonLd slot="head" schema={websiteSchema} />
     <JsonLd slot="head" schema={orgSchema} />
     <HomepageHero featuredArticle={articleFeed.latestGuides[0]} />
+
+    {/* Above the first section, so it comes before the first pick's affiliate link. */}
+    <Disclosure showSafety={false} />
 
     <HomepageBody articleFeed={articleFeed}>
       <section slot="newsletter" class="container homepage-signup">

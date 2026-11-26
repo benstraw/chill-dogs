@@ -43,6 +43,9 @@ for (const pillar of pillars) {
       <div class="container">
         <h1>All Products</h1>
         <p class="shop-lede">Every product we've curated across cooling, calming, comfort, gear, and safety.</p>
+        <div class="disclosure" data-affiliate-disclosure>
+          <p>Chill Dogs is a participant in the Amazon Services LLC Associates Program. As an Amazon Associate, we earn from qualifying purchases at no extra cost to you. Chill Dogs also participates in the Chewy Affiliate Program and earns commissions from qualifying Chewy purchases. <a href={ROUTES.affiliateDisclosure}>Full disclosure →</a></p>
+        </div>
       </div>
     </header>
 
@@ -135,9 +138,6 @@ for (const pillar of pillars) {
         <button class="text-btn" id="clear-empty">Clear filters</button>
       </p>
 
-      <div class="disclosure">
-        <p>Chill Dogs is a participant in the Amazon Services LLC Associates Program. As an Amazon Associate, we earn from qualifying purchases at no extra cost to you. Chill Dogs also participates in the Chewy Affiliate Program and earns commissions from qualifying Chewy purchases. <a href={ROUTES.affiliateDisclosure}>Full disclosure →</a></p>
-      </div>
     </div>
 
   </div>
@@ -668,15 +668,16 @@ for (const pillar of pillars) {
     padding: 0;
   }
 
+  /* In the header, above the grid: it must come before the first affiliate link. */
   .disclosure {
-    border-top: 1px solid var(--color-border);
-    padding-top: var(--space-lg);
-    margin-top: var(--space-lg);
+    max-width: var(--max-width-prose);
+    margin-top: var(--space-sm);
   }
 
   .disclosure p {
     font-size: var(--text-xs);
-    color: var(--color-text-muted);
+    /* Same as the lede: muted text on the dark header must stay readable. */
+    color: rgba(240, 244, 246, 0.65);
     line-height: var(--leading-relaxed);
     margin: 0;
   }

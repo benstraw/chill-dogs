@@ -116,7 +116,7 @@ function localAssetExists(src: string): boolean | undefined {
   return hit;
 }
 /** Disclosure copy written inline rather than through a disclosure component. */
-const DISCLOSURE_TEXT = /As an Amazon Associate|contains affiliate links|affiliate links? (?:to|on)|earn (?:a small )?commissions?/i;
+const DISCLOSURE_TEXT = /As an Amazon Associate|contains affiliate links|affiliate links? (?:to|on)|earn (?:a (?:small )?)?commissions?/i;
 
 /** Merchant label for an offer URL, by host. Unknown hosts are not judged. */
 const SELLER_BY_HOST: Array<[RegExp, string]> = [
