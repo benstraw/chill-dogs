@@ -26,22 +26,23 @@
   margin-bottom: var(--space-lg);
 }
 
-.prose ul,
-.prose ol {
+/* Article text styles skip components inside prose (class="not-prose") and CTA buttons. */
+.prose ul:where(:not(.not-prose *)),
+.prose ol:where(:not(.not-prose *)) {
   list-style: disc;
   padding-left: var(--space-xl);
   margin-bottom: var(--space-lg);
 }
 
-.prose ol {
+.prose ol:where(:not(.not-prose *)) {
   list-style: decimal;
 }
 
-.prose li {
+.prose li:where(:not(.not-prose *)) {
   margin-bottom: var(--space-sm);
 }
 
-.prose a {
+.prose a:where(:not(.ui-cta, .not-prose *)) {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
