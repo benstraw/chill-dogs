@@ -88,12 +88,23 @@ track('hero_impression', { page: 'home' });
 | `toc_click` | Click on table of contents link | `anchor`, `page_slug` |
 | `pinterest_save_click` | Click on an opt-in Pinterest save card or save button | `page_slug`, `pin_title`, `placement`, `media` |
 | `newsletter_cta_click` | Click on a contextual article newsletter CTA | `cta_type`, `topic`, `placement`, `source_page` |
-| `email_signup_view` | Email signup form is viewed | — |
-| `email_signup_start` | Email field is focused | — |
-| `email_signup_submit` | Form submitted | — |
+| `email_signup_view` | Email signup form is viewed (35% on screen, once per page view) | `placement`, `signup_id`, `page_slug`, `page_path`, `page_type`, `category` |
+| `email_signup_start` | Email field is focused (once per page view) | same as `email_signup_view` |
+| `email_signup_submit` | Form submitted; sent with `sendBeacon` so it survives the jump to Buttondown | same as `email_signup_view` |
 | `search_query` | User search produces results (fired after 150 ms debounce) | `query`, `result_count`, `filter` |
 | `search_result_click` | User clicks a page or product result card from `/search/` | `result_href`, `result_title`, `result_type`, `query` |
 | `product_variant_select` | Click on a size/pack/colorway chip in a `ProductVariantPicker` | `product_id`, `variant_axis`, `variant_option`, `page_slug`, `position` |
+
+**Newsletter signup placements.** Every `EmailSignup` form has a `placement` and a `signup_id` (`email-signup-<placement>-<page>`, from `src/utils/email-signup.ts`), carried on all three events and on the Buttondown subscriber's metadata:
+
+| `placement` | Where |
+|---|---|
+| `footer` | Site footer, on every page except converters |
+| `homepage_inline` | Homepage, below the sections |
+| `subscribe_page` | `/subscribe/` |
+| `article_inline` | Inside an article |
+
+A new placement is added to `SIGNUP_PLACEMENTS`; `src/__tests__/email-signup.test.ts` fails on any `<EmailSignup>` without a valid one. The fireworks article's hand-built callout links to `/subscribe/` and fires `newsletter_cta_click` instead.
 
 Section collector hero events emitted before August 10, 2026 include
 `variant: "c"`. The section hero variant system was retired on that date, so
