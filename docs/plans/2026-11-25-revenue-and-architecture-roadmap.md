@@ -129,7 +129,7 @@ Every PR pastes the report into its description.
 | 2c | **Fi collar review schema.** Its Review schema has no rating. Default: switch it to Article schema, which needs no new claim. The alternative is a star rating, but a rating is an editorial judgment, so the owner would have to supply it. | No visible change |
 | 2d | **Airlines page → airline carriers.** Add an existing product module, with the top carrier picks from `/comforting/best-airline-approved-dog-carriers/`, above the fold or right after the intro. | Additions only, from the module |
 | 2e | **Runaway-dog page → GPS trackers.** The same pattern, with the top picks from `/gear/best-dog-gps-trackers/`, the site's best-converting page. | Additions only |
-| 2f | **Links to the winners**, through `pinnedRelated` and related-link metadata only. In-body links would be copy edits, so they're left for a separate editorial PR. | Related-link strips change; prose unchanged |
+| 2f | **Links to the winners**, through `pinnedRelated` only: ThunderShirt alternatives pinned on the airlines, how-to-fly and crate-training articles, GPS trackers on road-trip gear, each strip's limit raised by one so no existing link drops off. In-body links would be copy edits, so they're left for a separate editorial PR. | One related-link pill added per page; prose unchanged |
 | 2g | **Lifestyle article → newsletter.** Make the existing signup module more prominent. No products. | Additions or moves of the signup module only |
 | 2h | **Homepage picks.** Investigate first, using the hero funnel and placement tiles; then make a layout change only. | Moves only, unless a copy change is agreed separately |
 
