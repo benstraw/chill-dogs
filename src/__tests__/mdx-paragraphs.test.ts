@@ -1,4 +1,3 @@
-import { readFileSync, readdirSync } from 'node:fs';
 import { hasSafeParagraphMarkup } from '../../scripts/lib/mdx-paragraph-check';
 import { describe, expect, it } from 'vitest';
 import { compile } from '@mdx-js/mdx';
@@ -109,11 +108,14 @@ describe('MDX paragraph fast pass', () => {
     'export const example = `<p>\nTemplate literal\n</p>`;',
     'export const example = "<p>String literal</p>";',
     '<p />',
+    '<p{...lede}>Spread with no space.</p>',
+    '<p{...lede}>First line\nsecond line</p>',
+    '<p><a href="1">One</A><A href="2">Two</a></p>',
   ])('delegates ambiguous or invalid syntax to the existing AST guard: %s', (source) => expect(hasSafeParagraphMarkup(source)).toBe(false));
 
-  it('covers every current article without loading the MDX compiler', () => {
-    const files = readdirSync('src/content/articles').filter((file) => file.endsWith('.mdx'));
-    expect(files.length).toBeGreaterThan(0);
-    expect(files.filter((file) => !hasSafeParagraphMarkup(readFileSync(`src/content/articles/${file}`, 'utf8')))).toEqual([]);
+  it('defers a valid article with a code fence instead of failing it', () => {
+    const source = 'Run this:\n\n```bash\nls\n```\n\n<p class="lede">Styled.</p>';
+    expect(hasSafeParagraphMarkup(source)).toBe(false);
+    expect(mdxParagraphProblems(source)).toEqual([]);
   });
 });

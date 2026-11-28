@@ -5,7 +5,10 @@
  */
 export function hasSafeParagraphMarkup(source: string): boolean {
   let body = source.replace(/^---\r?\n[\s\S]*?\r?\n---(?:\r?\n|$)/, '');
-  if (!/<p(?=[\s/>])/.test(body)) return true;
+  // Any `<p` not continuing a longer tag name (`<pre>`, `<path>`) counts as a paragraph
+  // opening, including `<p{...props}>`, which JSX accepts with no space after the name.
+  const opening = String.raw`<p(?![\w.:-])`;
+  if (!new RegExp(opening).test(body)) return true;
   if (/```|~~~|<!--|\{\s*\/\*/.test(body)) return false;
   // Inline code cannot introduce JSX. Keep offsets and line boundaries intact.
   // Multiline/escaped backticks and expressions are left to the real MDX parser.
@@ -14,7 +17,7 @@ export function hasSafeParagraphMarkup(source: string): boolean {
   const attribute = String.raw`\s+[A-Za-z_:][\w:.-]*\s*=\s*(?:"[^"{}\r\n]*"|'[^'{}\r\n]*')`;
   const attributed = new RegExp(`^<p(?:${attribute})+\\s*>`);
   const link = new RegExp(`^<a(?:${attribute})*\\s*>`);
-  const starts = [...body.matchAll(/<p(?=[\s/>])/g)];
+  const starts = [...body.matchAll(new RegExp(opening, 'g'))];
   let previousEnd = 0;
   for (const start of starts) {
     const offset = start.index;
@@ -26,8 +29,9 @@ export function hasSafeParagraphMarkup(source: string): boolean {
     if (!attributed.test(paragraph)) {
       if (!paragraph.startsWith('<p>')) return false;
       const inner = paragraph.slice(3, -4);
-      const opening = inner.match(link)?.[0];
-      if (!opening || !inner.endsWith('</a>') || /<\/?a\b/.test(inner.slice(opening.length, -4))) return false;
+      const anchor = inner.match(link)?.[0];
+      // Case-insensitive: `<A>` is a different JSX element, and mismatched case is a parse error.
+      if (!anchor || !inner.endsWith('</a>') || /<\/?a\b/i.test(inner.slice(anchor.length, -4))) return false;
     }
     previousEnd = end + 4;
   }
