@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest';
 import type { SitemapPage, SitemapSection, SitemapTopic } from '../data/content-sitemap';
 import { ROUTES } from '../data/routes';
 import { getCompleteSitemapSections } from '../data/sitemap-inventory';
-import { getRelatedPages, toLinkStripItems, toRelatedGuideCards } from '../utils/related-pages';
+import { getRelatedPages, toLinkStripItems, toRelatedGuideCards, defaultRelatedHeading } from '../utils/related-pages';
 
 function createPage(input: {
   href: string;
@@ -288,5 +288,24 @@ describe('related pages', () => {
       ROUTES.naturalFleaTickPrevention,
       ROUTES.fleaSeasonBathTools,
     ]));
+  });
+});
+
+describe('defaultRelatedHeading', () => {
+  it('names the strip for the page pillar', () => {
+    expect(defaultRelatedHeading('/cooling/keep-dog-cool-in-car/')).toBe('More Cooling Guides');
+    expect(defaultRelatedHeading('/calming/crate-training-for-dogs/')).toBe('More Calming Guides');
+    expect(defaultRelatedHeading('/comforting/how-much-do-dogs-sleep/')).toBe('More Comfort Guides');
+    expect(defaultRelatedHeading('/travel/dog-road-trip-gear/')).toBe('More Dog Gear Guides');
+  });
+
+  it('never calls a non-cooling page a cooling guide', () => {
+    for (const path of ['/calming/x/', '/comforting/x/', '/gear/x/', '/safety/x/', '/lifestyle/x/', '/about/']) {
+      expect(defaultRelatedHeading(path)).not.toMatch(/cooling/i);
+    }
+  });
+
+  it('falls back to a neutral heading off the pillars', () => {
+    expect(defaultRelatedHeading('/about/')).toBe('More Dog Guides');
   });
 });
