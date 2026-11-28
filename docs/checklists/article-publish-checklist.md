@@ -3,7 +3,7 @@ title: Article Publish Checklist
 type: checklist
 domain: checklists
 status: active
-updated: 2026-08-23
+updated: 2026-11-28
 tags:
   - chill-dogs
   - checklist
@@ -34,6 +34,8 @@ Finishing any article collector page before marking work as done.
 - [ ] Lede is specific and useful (also serves as meta description — 100–165 chars)
 - [ ] TOC exists when article has 4+ H2s
 - [ ] TOC anchors match H2 `id` attributes exactly
+- [ ] MDX prose uses Markdown paragraphs separated from JSX blocks by blank lines; explicit attributed or standalone-link `<p>` elements keep tags and content on one line (see the writing guide's [MDX paragraphs](../writing/article-writing-guide.md#mdx-paragraphs))
+- [ ] Raw built HTML has no nested or empty paragraphs or block elements inside paragraphs; after a markup migration, compare text, links, IDs and tracking attributes and visually inspect classed paragraphs
 - [ ] FAQ exists with 3+ real questions (not invented to pad)
 - [ ] Article JSON-LD schema present with all required fields (headline, description, url, image, author, publisher)
 - [ ] `InternalLinkStrip` appears after FAQ, links to relevant converters

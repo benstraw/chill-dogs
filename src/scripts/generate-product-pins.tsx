@@ -32,7 +32,8 @@ import { categoryLabel } from '../utils/product-meta';
 import { getCachedImageDataUri } from './og-gen/cache';
 import { loadOgFonts } from './og-gen/fonts';
 import { OG_THEMES, type OgTheme } from './og-gen/themes';
-import { PIN_HEIGHT, PIN_WIDTH, ProductPinTemplate } from './og-gen/pin-template';
+import { pinLayoutProblems, shortenPinBullet } from './og-gen/pin-layout';
+import { PIN_HEIGHT, PIN_PHOTO_HEIGHTS, PIN_WIDTH, ProductPinTemplate } from './og-gen/pin-template';
 
 const OUT_DIR = path.join(process.cwd(), 'public', 'pins');
 const LOGO_PATH = path.join(process.cwd(), 'public', 'images', 'chill-dogs-logo-padded.png');
@@ -81,7 +82,7 @@ function pinBullets(product: ProductCatalogItem): string[] {
   return product.bullets
     .map((bullet) => bullet.trim())
     .filter(Boolean)
-    .map((bullet) => (bullet.length > 92 ? `${bullet.slice(0, 89).trimEnd()}…` : bullet))
+    .map((bullet) => shortenPinBullet(bullet))
     .slice(0, 3);
 }
 
@@ -108,7 +109,7 @@ async function renderPin(
       return 'failed';
     }
 
-    const svg = await satori(
+    const pinFor = (photoHeight: number) =>
       ProductPinTemplate({
         name: product.name,
         category: categoryLabel(product.category),
@@ -116,9 +117,28 @@ async function renderPin(
         productImageDataUri,
         logoDataUri,
         theme: THEME_BY_PILLAR[product.pillar] ?? OG_THEMES.gear,
-      }),
-      { width: PIN_WIDTH, height: PIN_HEIGHT, fonts }
-    );
+        photoHeight,
+      });
+
+    // Layout check: a render with real <text> elements shows where each word landed.
+    // Long copy gets a shorter photo; a pin that fits at no photo height is not written.
+    let pin: ReturnType<typeof ProductPinTemplate> | null = null;
+    let problems: string[] = [];
+    for (const photoHeight of PIN_PHOTO_HEIGHTS) {
+      const candidate = pinFor(photoHeight);
+      const layoutSvg = await satori(candidate, { width: PIN_WIDTH, height: PIN_HEIGHT, fonts, embedFont: false });
+      problems = pinLayoutProblems(layoutSvg);
+      if (problems.length === 0) {
+        pin = candidate;
+        break;
+      }
+    }
+    if (!pin) {
+      console.error(`[pins] layout problem in ${product.id}: ${problems.join('; ')} — skipped`);
+      return 'failed';
+    }
+
+    const svg = await satori(pin, { width: PIN_WIDTH, height: PIN_HEIGHT, fonts });
 
     // Resvg rasterises the SVG (satori emits SVG; sharp cannot rasterise foreignObject-free
     // SVG text reliably), then sharp encodes the JPEG.

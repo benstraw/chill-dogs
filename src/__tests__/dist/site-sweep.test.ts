@@ -16,6 +16,7 @@ import { describe, expect, it } from 'vitest';
 import { pillarThemes } from '../../data/pillar-themes';
 import { merchants } from '../../data/products/merchants';
 import { MIDDLEWARE_ONLY_ROUTES } from '../../data/routes';
+import { getArticleSitemapSection } from '../../data/sitemap-inventory';
 import {
   SITE_ORIGIN,
   anchors,
@@ -33,6 +34,7 @@ import { AFFILIATE_LINK_ALLOWLIST } from '../allowlists/affiliate-links';
 import { DISCLOSURE_ALLOWLIST } from '../allowlists/disclosure';
 import { JSON_LD_ALLOWLIST } from '../allowlists/json-ld';
 import { expectWithinAllowlist } from '../helpers/ratchet';
+import { htmlParagraphProblems } from '../helpers/html-paragraphs';
 
 // og meta lengths (search and social display limits).
 const OG_TITLE = { min: 40, max: 65 };
@@ -54,6 +56,7 @@ const ASSET_EXT = /\.(ico|png|jpg|jpeg|webp|svg|pdf|xml|txt|webmanifest|css|js)$
 const NO_SCHEMA_EXPECTED = ['404.html', 'privacy-policy', 'terms', 'admin/', 'subscribe/', 'search/'];
 
 type Bucket =
+  | 'paragraphs'
   | 'escapedHtml'
   | 'h1'
   | 'canonical'
@@ -82,7 +85,7 @@ type Bucket =
 
 const failures = Object.fromEntries(
   ([
-    'escapedHtml', 'h1', 'canonical', 'metaDescription', 'ogImage', 'jsonLdPresent', 'brokenLinks',
+    'paragraphs', 'escapedHtml', 'h1', 'canonical', 'metaDescription', 'ogImage', 'jsonLdPresent', 'brokenLinks',
     'blockingCss', 'ogTitleLength', 'ogDescLength', 'amazonEvent', 'amazonTag', 'affiliateUntracked', 'amazonProductData', 'aorkulerDirect', 'variantTag',
     'relatedLinks', 'pillarTheme', 'jsonLdInvalid', 'offerSeller', 'disclosure', 'missingAssets', 'reviewRating', 'affiliateAttrs', 'breadcrumbs',
   ] as Bucket[]).map((b) => [b, [] as string[]]),
@@ -187,6 +190,8 @@ const themeByPrefix = Object.values(pillarThemes).flatMap((theme) =>
 );
 const RELATED_LINK_CLASS = /(?:^|\s)(?:ils-link|related-guide-card)(?:\s|$)/;
 let amazonMerchantLinks = 0;
+const articleRoutes = new Set((await getArticleSitemapSection()).pages.map((page) => page.href));
+let articlePagesChecked = 0;
 
 const linkExists = new Map<string, boolean>();
 function internalTargetExists(href: string): boolean {
@@ -204,6 +209,11 @@ function internalTargetExists(href: string): boolean {
 const pages = builtPages();
 
 for (const { rel, html } of pages) {
+  // Empty prose is a regression in MDX articles. Other pages deliberately leave
+  // live-region / gallery-label paragraphs empty for their client scripts.
+  const article = articleRoutes.has(routeOf(rel));
+  if (article) articlePagesChecked++;
+  for (const problem of htmlParagraphProblems(html, article)) failures.paragraphs.push(`${rel}: ${problem}`);
   const stub = isRedirectStub(html);
   const route = routeOf(rel);
 
@@ -421,6 +431,12 @@ function report(bucket: Bucket, fix: string): string {
 }
 
 describe('site sweep: every built page', () => {
+  it('emits valid paragraph structure everywhere and no empty article paragraphs', () => {
+    expect(articlePagesChecked).toBeGreaterThan(0);
+    expect(articlePagesChecked).toBe(articleRoutes.size);
+    expect(failures.paragraphs, report('paragraphs', 'use Markdown prose or single-line attributed <p> tags in MDX; separate JSX blocks with blank lines')).toEqual([]);
+  });
+
   it('swept a real build', () => {
     expect(indexablePages, 'no indexable pages found in dist/').toBeGreaterThan(50);
     expect(amazonMerchantLinks, 'no Amazon merchant links found in dist/').toBeGreaterThan(50);
