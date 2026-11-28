@@ -1,0 +1,89 @@
+---
+/**
+ * A converter's top picks, shown inside an article.
+ *
+ * Reads the products from the converter's own data (no copied product ids), renders
+ * them with the lean pick card, and links to the full converter.
+ * The heading and link label are the converter's own section heading and title,
+ * so placing this module adds no new copy.
+ *
+ * Collector pages use it to put products in front of readers who are already
+ * planning a purchase (see docs/plans/2026-11-25-revenue-and-architecture-roadmap.md, 2d).
+ * The page must show its disclosure above this module.
+ */
+import RelaxationProductCard from '@components/modules/RelaxationProductCard.astro';
+import type { ConverterPicksData } from '@data/converter-picks';
+import { getConverterSectionPicks } from '@data/relaxation-converter-pages';
+
+type Source =
+  /** A product section of a converter in relaxation-converter-pages.ts. */
+  | { converter: string; section: string; limit?: number; picks?: never }
+  /** Picks from another converter's adapter in src/data/converter-picks.ts. */
+  | { picks: ConverterPicksData; converter?: never; section?: never; limit?: never };
+
+type Props = Source & {
+  /** The converter's route, from ROUTES. */
+  href: string;
+  /** Slug of the page this module sits on, for analytics. */
+  pageSlug: string;
+  /** Anchor id for the heading; defaults to the section id. */
+  id?: string;
+};
+
+const props = Astro.props;
+const picks =
+  props.picks !== undefined
+    ? props.picks
+    : getConverterSectionPicks(props.converter, props.section, props.limit ?? 3);
+const headingId = `picks-${props.id ?? props.section ?? 'converter'}`;
+const { href, pageSlug } = props;
+---
+
+<section class="converter-picks" aria-labelledby={headingId}>
+  <h2 class="converter-picks-heading" id={headingId}>{picks.heading}</h2>
+  <div class="converter-picks-grid">
+    {picks.products.map((product, i) => (
+      <RelaxationProductCard product={product} position={i + 1} pageSlug={pageSlug} pageType="collector" />
+    ))}
+  </div>
+  <a
+    class="converter-picks-link"
+    href={href}
+    data-track="collector_to_converter_click"
+    data-from-page={pageSlug}
+    data-to-page={href}
+    data-link-position="converter-picks"
+  >
+    See all: {picks.converterTitle} <span aria-hidden="true">→</span>
+  </a>
+</section>
+
+<style>
+  .converter-picks {
+    margin: var(--space-2xl) 0;
+  }
+
+  .converter-picks-heading {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-lg);
+  }
+
+  /* Three across in the 720px article column, one per row on phones. */
+  .converter-picks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .converter-picks-link {
+    display: inline-block;
+    margin-top: var(--space-lg);
+    font-weight: var(--weight-semibold);
+    /* The same pillar accent as the cards' buttons. */
+    color: var(--pillar-accent, var(--color-accent-text));
+  }
+
+  .converter-picks-link:hover {
+    text-decoration: underline;
+  }
+</style>

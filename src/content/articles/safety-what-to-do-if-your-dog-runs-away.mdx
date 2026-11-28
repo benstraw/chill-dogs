@@ -18,6 +18,9 @@ import Toc from '@components/modules/Toc.astro';
 import FAQ from '@components/modules/FAQ.astro';
 import Disclosure from '@components/modules/Disclosure.astro';
 import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
+import ConverterPicks from '@components/modules/ConverterPicks.astro';
+import { getTrackerTypePicks } from '@data/converter-picks';
+import { ROUTES } from '@data/routes';
 
 
 export const tocHeadings = [
@@ -237,6 +240,15 @@ export const faqs = [
         </div>
       </div>
 
+      <Disclosure showSafety={false} />
+
+      <ConverterPicks
+        picks={getTrackerTypePicks()}
+        id="tracker-types"
+        href={ROUTES.trackingTop}
+        pageSlug="what-to-do-if-your-dog-runs-away"
+      />
+
       <div class="story-callout">
         <div class="story-callout-text">
           <strong>Real example:</strong> When Rhys ran off at the summit of Cerro San Luis Obispo, a cellular tracker was on his collar, but there was no LTE signal at altitude. The tracker was useless in that environment. That experience inspired this guide on tracker types and limitations.
@@ -320,7 +332,6 @@ export const faqs = [
     </div>
   </section>
 
-  <Disclosure />
 
   <InternalLinkStrip
     heading="Related Dog Safety Guides"

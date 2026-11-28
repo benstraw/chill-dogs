@@ -397,6 +397,9 @@ export const accessoryProducts: AccessoryProduct[] = [
   },
 ];
 
+/** The GPS trackers converter's title (its Hero), shared with ConverterPicks in articles. */
+export const trackerConverterTitle = 'Best Dog GPS Trackers';
+
 export function getTrackersByType(type: TrackerType): TrackerProduct[] {
   return trackerProducts.filter((p) => p.type === type);
 }

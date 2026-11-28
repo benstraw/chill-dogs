@@ -18,6 +18,8 @@ import Toc from '@components/modules/Toc.astro';
 import FAQ from '@components/modules/FAQ.astro';
 import Disclosure from '@components/modules/Disclosure.astro';
 import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
+import ConverterPicks from '@components/modules/ConverterPicks.astro';
+import { ROUTES } from '@data/routes';
 
 export const tocHeadings = [
   { label: 'What dog-friendly airline means', anchor: 'meaning' },
@@ -91,6 +93,18 @@ export const dogFriendlyAirlineFaqs = [
 
     This list is weighted around cabin access, dog comfort, larger-dog possibility, route practicality, and cost. "Best" here means best fit for a particular travel need, not a permanent ranking.
 
+  </div>
+
+  <Disclosure showSafety={false} />
+
+  <ConverterPicks
+    converter="best-airline-approved-dog-carriers"
+    section="classic-soft-sided"
+    href={ROUTES.comfortAirlineCarriers}
+    pageSlug="dog-friendly-airlines"
+  />
+
+  <div class="prose">
     <h2 id="bark-air">BARK Air: The closest thing to a real airline for dogs</h2>
 
     <a href="https://air.bark.co/" rel="nofollow noopener" target="_blank">BARK Air</a> is designed around dogs first, not around humans asking a conventional airline to tolerate pets. BARK Air describes its flight experience as built entirely around your dog's comfort in the air and on the ground. It has spacious cabins, no crates, and no cargo. They provide concierge service, charter flights, and relocation support.
@@ -226,7 +240,6 @@ export const dogFriendlyAirlineFaqs = [
   </div>
 
   <FAQ faqs={dogFriendlyAirlineFaqs} />
-  <Disclosure />
   <InternalLinkStrip
     heading="More Dog Travel Guides"
     currentHref="/travel/dog-friendly-airlines/"
