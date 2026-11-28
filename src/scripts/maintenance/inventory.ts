@@ -8,7 +8,7 @@ import { redirects } from '../../data/redirects';
 import { staticSitemapSections } from '../../data/content-sitemap';
 import { ROUTES } from '../../data/routes';
 import { amazonObservation, chewyDestination, chewyObservation, record } from './providers';
-import { DAY, makeFinding, type Finding, type InventoryProduct, type Listing, type Report, type State } from './model';
+import { DAY, listingProblem, makeFinding, type Finding, type InventoryProduct, type Listing, type Report, type State } from './model';
 
 export function readJson(file: string): any {
   return JSON.parse(readFileSync(file, 'utf8'));
@@ -191,10 +191,7 @@ export function addReviewFindings(report: Report, state: State): void {
       const observations = state.observations.filter((o) => o.listing === key).sort((a, b) => b.at.localeCompare(a.at));
       const last = observations.find((o) => o.identityVerified && o.title);
       if (listing.merchant === 'chewy' && !listing.itemId) add(`mapping-${product.id}-${listing.id.replace(/\W/g, '-')}`, 3, 'No unique Impact item ID maps from existing cache to the canonical Chewy destination.', 'Resolve the catalog-item mapping manually; do not substitute the Chewy /dp/ number.', key);
-      const identity = observations.find((o) => o.identityVerified || o.verdict === 'identity-mismatch');
-      const stock = observations.find((o) => ['available', 'unavailable'].includes(o.verdict));
-      const endpoint = observations.find((o) => o.identityVerified || o.verdict === 'missing-item');
-      const problem = identity?.verdict === 'identity-mismatch' ? identity : stock?.verdict === 'unavailable' ? stock : endpoint?.verdict === 'missing-item' ? endpoint : undefined;
+      const problem = listingProblem(state, key);
       if (problem) {
         const lastPositive = observations.find((o) => o.verdict === 'available' && o.at <= problem.at);
         const repeated = problem.verdict === 'unavailable' && observations.some((o) => o.verdict === 'unavailable' && o.at <= problem.at && (!lastPositive || o.at > lastPositive.at) && Date.parse(problem.at) - Date.parse(o.at) >= 7 * DAY);

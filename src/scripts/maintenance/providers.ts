@@ -1,4 +1,4 @@
-import { DAY, isoWeek, lastObservation, selectListings, type Coverage, type Ledger, type Listing, type Observation, type State } from './model';
+import { DAY, isoWeek, lastObservation, listingProblem, selectListings, type Coverage, type Ledger, type Listing, type Observation, type State } from './model';
 
 export type Fetcher = (input: string | URL, init?: RequestInit) => Promise<Response>;
 export const record = (value: unknown): Record<string, any> => value && typeof value === 'object' && !Array.isArray(value) ? value as Record<string, any> : {};
@@ -118,10 +118,11 @@ export async function checkAmazon(listings: Listing[], state: State, broker: Req
   const integrationProblems = new Set<string>();
   const partialReasons = new Set<string>();
   for (const listing of selected) {
-    const followup = ['unavailable', 'identity-mismatch', 'missing-item'].includes(lastObservation(state, listing.key)?.verdict ?? '');
+    const followup = Boolean(listingProblem(state, listing.key));
     broker.maxUsed = followup ? Math.min(broker.ledger.reserved, startUsed + 5) : broker.ledger.reserved;
     if (broker.ledger.used >= broker.maxUsed) { if (followup) continue; else break; }
     if (broker.ledger.used >= broker.ledger.reserved) break;
+    const usedBeforeListing = broker.ledger.used;
     let observation: Observation | undefined;
     for (const provider of providers) {
       if (broker.ledger.used >= broker.maxUsed) break;
@@ -139,6 +140,7 @@ export async function checkAmazon(listings: Listing[], state: State, broker: Req
       }
     }
     if (!observation) break;
+    if (broker.ledger.used === usedBeforeListing) break;
     state.observations.push(observation); count(c, observation); await save();
   }
   c.budgetLimited = Math.max(0, eligible.length - c.checked);
@@ -171,13 +173,17 @@ export async function checkChewy(listings: Listing[], state: State, broker: Requ
   const startUsed = broker.ledger.used;
   if (smoke && !selected.length) return { ...c, status: 'integration failure', failed: 1, detail: 'No currently referenced cache-backed Impact item mapping exists for this catalog.' };
   for (const listing of selected) {
-    const followup = !smoke && ['unavailable', 'identity-mismatch', 'missing-item'].includes(lastObservation(state, listing.key)?.verdict ?? '');
+    const followup = !smoke && Boolean(listingProblem(state, listing.key));
     broker.maxUsed = followup ? Math.min(broker.ledger.reserved, startUsed + 5) : broker.ledger.reserved;
     if (broker.ledger.used >= broker.maxUsed) { if (followup) continue; else break; }
     if (broker.ledger.used >= broker.ledger.reserved) break;
+    const usedBeforeListing = broker.ledger.used;
     let observation: Observation;
     try { observation = chewyObservation(await broker.json('impact', endpoint(`/Catalogs/${encodeURIComponent(catalog)}/${listing.itemEndpoint === 'Item' ? 'Item' : 'Items'}/${encodeURIComponent(listing.itemId!)}`), headers), listing, at); }
-    catch (error) { observation = observeFailure(error, listing, 'impact', at); }
+    catch (error) {
+      if (broker.ledger.used === usedBeforeListing) break;
+      observation = observeFailure(error, listing, 'impact', at);
+    }
     state.observations.push(observation); count(c, observation); await save();
     if (broker.stopped.has('impact')) break;
   }

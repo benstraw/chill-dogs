@@ -87,8 +87,8 @@ password. See [Impact credential guidance](https://impact.com/partnerships/get-m
    Its observation includes timestamp and Impact stock when supplied.
 3. After a successful smoke test, set `MAINTENANCE_LIVE_ENABLED=true` and dispatch
    `mode: live`. Verify both integrations' coverage, request ledgers, artifacts,
-   and the issue. Smoke testing reserves that UTC week's full Impact allowance;
-   the subsequent live run reports Impact budget limited until the next week.
+   and the issue. A completed smoke test releases its unused reservation, so the
+   live run can use the remaining requests within that UTC week's ten-request cap.
 4. Verify the first scheduled report the following Monday. A dispatch on a feature
    branch is intentionally skipped. GitHub may disable schedules after 60 days of
    repository inactivity; check the Actions tab if weekly reports stop appearing.
@@ -129,9 +129,11 @@ Weekly caps are **25 Amazon requests and 10 Impact requests per UTC ISO week**.
 The workflow serializes all runs in one concurrency group. Before requests begin,
 the integration's entire remaining allowance is reserved on `maintenance-data`
 using a fast-forward-only Git ref update. A competing writer cannot spend a
-reservation from a rejected commit. Unused slots are deliberately not refunded:
-reruns, cancellation, or crashes cannot silently obtain another allowance. A
-lease expires at the UTC week boundary. If state cannot be safely read or written,
+reservation from a rejected commit. Once every request in an integration has
+returned, its reservation is durably settled to the attempts actually counted;
+later runs can use the remainder of the same weekly cap. Cancellation, crashes,
+or failed settlement retain the full reservation unless the history ref proves
+settlement committed. A lease expires at the UTC week boundary. If state cannot be safely read or written,
 external requests stop and the offline report still publishes as far as possible.
 
 The orphan history branch holds normalized observations, human acknowledgments,

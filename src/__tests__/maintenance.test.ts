@@ -5,7 +5,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest';
 import { parse } from 'yaml';
 import { spawnSync } from 'node:child_process';
 import { addReviewFindings, assembleListings, editorialPlacements, mapChewyCache } from '../scripts/maintenance/inventory';
-import { CAPS, DAY, emptyState, isoWeek, lastObservation, makeFinding, reconcile, reserve, seedCaches, selectListings, type Finding, type Listing, type Report } from '../scripts/maintenance/model';
+import { CAPS, DAY, emptyState, isoWeek, lastObservation, makeFinding, reconcile, reserve, seedCaches, selectListings, settleReservation, type Finding, type Listing, type Report } from '../scripts/maintenance/model';
 import { amazonObservation, checkAmazon, checkChewy, chewyDestination, chewyObservation, RequestBroker, RequestError, stockVerdict, trackingBase, type Fetcher } from '../scripts/maintenance/providers';
 import { GitHubHistory, trustedRun, validateState } from '../scripts/maintenance/github';
 import { renderHtml, renderIssue } from '../scripts/maintenance/report';
@@ -34,6 +34,10 @@ describe('durable request allowances', () => {
     const reloaded = validateState(JSON.parse(JSON.stringify(state)));
     expect(reserve(reloaded, name, 'retry-run', at)).toBeUndefined();
     expect(reserve(reloaded, name, 'next-week', '2026-11-30T00:00:00Z')?.reserved).toBe(CAPS[name]);
+    const completed = emptyState(); const finished = reserve(completed, name, 'completed', at)!;
+    finished.used = 3; settleReservation(finished);
+    expect(reserve(completed, name, 'follow-up', at)?.reserved).toBe(CAPS[name] - 3);
+    expect(reserve(validateState(JSON.parse(JSON.stringify(completed))), name, 'interrupted-follow-up', at)).toBeUndefined();
   });
   it.each(['amazon', 'impact'] as const)('counts retries and stops at the %s cap', async (name) => {
     const fetcher = vi.fn(async () => json({}, 503)); const b = broker(emptyState(), name, fetcher);
@@ -62,7 +66,10 @@ describe('durable request allowances', () => {
   });
   it('limits followup HTTP attempts, including retries, to five Amazon slots', async () => {
     const state = emptyState(); const items = Array.from({ length: 40 }, (_, i) => listing(`B${String(i).padStart(9, '0')}`));
-    for (const item of items.slice(0, 10)) state.observations.push(amazonObservation(amazonPayload(item.id, 'Out of stock'), item, '2026-01-01T00:00:00Z', 'serpapi'));
+    for (const item of items.slice(0, 10)) {
+      state.observations.push(amazonObservation(amazonPayload(item.id, 'Out of stock'), item, '2026-01-01T00:00:00Z', 'serpapi'));
+      state.observations.push({ listing: item.key, at: '2026-11-08T00:00:00Z', source: 'live', provider: 'serpapi', verdict: 'unknown', detail: 'timeout' });
+    }
     const problemIds = new Set(items.slice(0, 10).map((l) => l.id));
     const fetcher = vi.fn(async (url: string | URL) => problemIds.has(new URL(url).searchParams.get('asin')!) ? json({}, 503) : json(amazonPayload(new URL(url).searchParams.get('asin')!)));
     const b = broker(state, 'amazon', fetcher);

@@ -126,8 +126,19 @@ export function reserve(state: State, integration: Integration, run: string, at:
   state.ledgers.push(entry);
   return entry;
 }
+/** Call only after every request has returned; crashes retain the original lease. */
+export function settleReservation(ledger: Ledger): void {
+  ledger.reserved = ledger.used;
+}
 export function lastObservation(state: State, key: string): Observation | undefined {
   return state.observations.filter((o) => o.listing === key).sort((a, b) => b.at.localeCompare(a.at))[0];
+}
+export function listingProblem(state: State, key: string): Observation | undefined {
+  const observations = state.observations.filter((o) => o.listing === key).sort((a, b) => b.at.localeCompare(a.at));
+  const identity = observations.find((o) => o.identityVerified || o.verdict === 'identity-mismatch');
+  const stock = observations.find((o) => ['available', 'unavailable'].includes(o.verdict));
+  const endpoint = observations.find((o) => o.identityVerified || o.verdict === 'missing-item');
+  return identity?.verdict === 'identity-mismatch' ? identity : stock?.verdict === 'unavailable' ? stock : endpoint?.verdict === 'missing-item' ? endpoint : undefined;
 }
 export function seedCaches(state: State, listings: Listing[]): void {
   for (const listing of listings) {
@@ -141,7 +152,7 @@ export function selectListings(listings: Listing[], state: State, at: string, li
     const last = lastObservation(state, listing.key);
     return !last || Date.parse(at) - Date.parse(last.at) >= 7 * DAY;
   }).sort((a, b) => (lastObservation(state, a.key)?.at ?? '').localeCompare(lastObservation(state, b.key)?.at ?? '') || a.key.localeCompare(b.key));
-  const isProblem = (l: Listing) => ['unavailable', 'identity-mismatch', 'missing-item'].includes(lastObservation(state, l.key)?.verdict ?? '');
+  const isProblem = (l: Listing) => Boolean(listingProblem(state, l.key));
   const followups = eligible.filter(isProblem).slice(0, Math.min(5, limit));
   const rotation = eligible.filter((l) => !isProblem(l));
   return [...followups, ...rotation.slice(0, limit - followups.length)];

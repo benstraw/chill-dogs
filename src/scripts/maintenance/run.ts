@@ -2,7 +2,7 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { collectInventory, addReviewFindings } from './inventory';
 import { GitHubHistory, trustedRun } from './github';
-import { DAY, emptyState, lastObservation, reconcile, reserve, seedCaches, type Report, type State } from './model';
+import { DAY, emptyState, lastObservation, reconcile, reserve, seedCaches, settleReservation, type Report, type State } from './model';
 import { checkAmazon, checkChewy, coverage, RequestBroker, type Fetcher } from './providers';
 import { renderHtml } from './report';
 
@@ -69,6 +69,9 @@ export async function runMaintenance(options: RunOptions): Promise<Report> {
       try {
         const save = () => history!.save(state);
         report.coverage[name] = integration === 'amazon' ? await checkAmazon(listings, state, broker, env, at, save) : await checkChewy(listings, state, broker, env, at, options.mode === 'chewy-smoke', save);
+        // Only a completed integration can release unused slots. If this save
+        // fails, stop; the durable ref determines the allowance on the next run.
+        settleReservation(ledger);
         await save();
       } catch {
         report.errors.push(`${integration} maintenance machinery failed; remaining external requests disabled.`);
