@@ -31,6 +31,11 @@ export interface ProductPinTemplateData {
   bullets: readonly string[];
   /** Product photo as a data URI, or null to render the empty frame. */
   productImageDataUri: string | null;
+  /**
+   * Photo height in px. Long names and bullets need a shorter photo to keep the footer
+   * on the pin; `pins:gen` steps down through PIN_PHOTO_HEIGHTS until the layout fits.
+   */
+  photoHeight?: number;
   logoDataUri: string | null;
   theme: OgTheme;
 }
@@ -38,6 +43,9 @@ export interface ProductPinTemplateData {
 const INK = '#152a3a';
 const MUTED = '#5a6470';
 const CREAM = '#f7f3ec';
+
+/** Photo heights `pins:gen` tries in order; the first whose layout fits is used. */
+export const PIN_PHOTO_HEIGHTS = [560, 480, 400, 320] as const;
 
 export const PIN_WIDTH = 1000;
 export const PIN_HEIGHT = 1500;
@@ -101,6 +109,7 @@ function PawMark({ color, size }: { color: string; size: number }): JSXNode {
 
 export function ProductPinTemplate(data: ProductPinTemplateData): JSXNode {
   const { name, category, bullets, productImageDataUri, logoDataUri, theme } = data;
+  const photoHeight = data.photoHeight ?? PIN_PHOTO_HEIGHTS[0];
   const points = bullets.slice(0, 3);
 
   return (
@@ -170,7 +179,7 @@ export function ProductPinTemplate(data: ProductPinTemplateData): JSXNode {
             marginTop: 40,
             width: 872,
             flexGrow: 1,
-            minHeight: 480,
+            minHeight: photoHeight,
             borderRadius: 28,
             background: '#ffffff',
             border: `3px solid ${theme.accentBorder}`,
@@ -183,7 +192,7 @@ export function ProductPinTemplate(data: ProductPinTemplateData): JSXNode {
             <img
               src={productImageDataUri}
               width={800}
-              height={560}
+              height={photoHeight}
               style={{ objectFit: 'contain' }}
             />
           ) : (

@@ -5,9 +5,12 @@
  * The pin is rendered a second time with `embedFont: false`, so satori writes each word
  * as a <text> element with its position and width instead of glyph paths. That makes
  * two checks cheap: no word inside the corner where Pinterest draws its own buttons, and
- * no word pushed off the bottom of the pin.
+ * no word pushed below the footer's normal place (a clipped footer).
  */
 import { PIN_HEIGHT, PINTEREST_BUTTON_ZONE } from './pin-template';
+
+/** Lowest baseline any word may have: the footer tagline's, when nothing pushes it down. */
+export const PIN_FOOTER_LOWEST_BASELINE = PIN_HEIGHT - 30;
 
 export interface PinWord {
   text: string;
@@ -33,7 +36,11 @@ export function pinLayoutProblems(svg: string): string[] {
   if (covered.length) {
     problems.push(`text under Pinterest's corner buttons: ${covered.map((w) => `"${w.text}"`).join(', ')}`);
   }
-  const offPin = words.filter((w) => w.baseline > PIN_HEIGHT);
-  if (offPin.length) problems.push(`text below the bottom of the pin: ${offPin.map((w) => `"${w.text}"`).join(', ')}`);
+  // The footer tagline sits 35px above the bottom edge when everything fits. Any word
+  // lower than that means the content pushed the footer down and clipped it.
+  const pushed = words.filter((w) => w.baseline > PIN_FOOTER_LOWEST_BASELINE);
+  if (pushed.length) {
+    problems.push(`footer pushed down or off the pin: ${pushed.map((w) => `"${w.text}"`).join(', ')}`);
+  }
   return problems;
 }

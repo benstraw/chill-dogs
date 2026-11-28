@@ -23,8 +23,16 @@ describe('pin layout check (run by pins:gen)', () => {
     expect(pinLayoutProblems(svg)).toEqual([`text under Pinterest's corner buttons: "details"`]);
   });
 
+  it('passes a footer tagline in its normal place', () => {
+    expect(pinLayoutProblems(`<svg>${word('COMFORTABLE', 400, 200, 1465)}</svg>`)).toEqual([]);
+  });
+
+  it('flags a footer pushed down by long copy, even while still on the pin', () => {
+    const svg = `<svg>${word('COMFORTABLE', 400, 200, 1496)}</svg>`;
+    expect(pinLayoutProblems(svg)).toEqual(['footer pushed down or off the pin: "COMFORTABLE"']);
+  });
+
   it('flags text pushed off the bottom of the pin', () => {
-    const svg = `<svg>${word('COMFORTABLE', 400, 200, 1530)}</svg>`;
-    expect(pinLayoutProblems(svg)).toEqual(['text below the bottom of the pin: "COMFORTABLE"']);
+    expect(pinLayoutProblems(`<svg>${word('COMFORTABLE', 400, 200, 1530)}</svg>`)).toHaveLength(1);
   });
 });

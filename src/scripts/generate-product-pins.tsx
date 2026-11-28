@@ -33,7 +33,7 @@ import { getCachedImageDataUri } from './og-gen/cache';
 import { loadOgFonts } from './og-gen/fonts';
 import { OG_THEMES, type OgTheme } from './og-gen/themes';
 import { pinLayoutProblems } from './og-gen/pin-layout';
-import { PIN_HEIGHT, PIN_WIDTH, ProductPinTemplate } from './og-gen/pin-template';
+import { PIN_HEIGHT, PIN_PHOTO_HEIGHTS, PIN_WIDTH, ProductPinTemplate } from './og-gen/pin-template';
 
 const OUT_DIR = path.join(process.cwd(), 'public', 'pins');
 const LOGO_PATH = path.join(process.cwd(), 'public', 'images', 'chill-dogs-logo-padded.png');
@@ -109,20 +109,31 @@ async function renderPin(
       return 'failed';
     }
 
-    const pin = ProductPinTemplate({
-      name: product.name,
-      category: categoryLabel(product.category),
-      bullets: pinBullets(product),
-      productImageDataUri,
-      logoDataUri,
-      theme: THEME_BY_PILLAR[product.pillar] ?? OG_THEMES.gear,
-    });
+    const pinFor = (photoHeight: number) =>
+      ProductPinTemplate({
+        name: product.name,
+        category: categoryLabel(product.category),
+        bullets: pinBullets(product),
+        productImageDataUri,
+        logoDataUri,
+        theme: THEME_BY_PILLAR[product.pillar] ?? OG_THEMES.gear,
+        photoHeight,
+      });
 
-    // Layout check: a second render with real <text> elements shows where each word
-    // landed. A pin with words under Pinterest's buttons or off the bottom is not written.
-    const layoutSvg = await satori(pin, { width: PIN_WIDTH, height: PIN_HEIGHT, fonts, embedFont: false });
-    const problems = pinLayoutProblems(layoutSvg);
-    if (problems.length) {
+    // Layout check: a render with real <text> elements shows where each word landed.
+    // Long copy gets a shorter photo; a pin that fits at no photo height is not written.
+    let pin: ReturnType<typeof ProductPinTemplate> | null = null;
+    let problems: string[] = [];
+    for (const photoHeight of PIN_PHOTO_HEIGHTS) {
+      const candidate = pinFor(photoHeight);
+      const layoutSvg = await satori(candidate, { width: PIN_WIDTH, height: PIN_HEIGHT, fonts, embedFont: false });
+      problems = pinLayoutProblems(layoutSvg);
+      if (problems.length === 0) {
+        pin = candidate;
+        break;
+      }
+    }
+    if (!pin) {
       console.error(`[pins] layout problem in ${product.id}: ${problems.join('; ')} — skipped`);
       return 'failed';
     }
