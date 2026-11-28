@@ -1,5 +1,6 @@
 import { getCompleteSitemapSections } from '@data/sitemap-inventory';
 import { isProductDetailPage, type SitemapPage, type SitemapSection } from '@data/content-sitemap';
+import { resolvePillarThemeFromPath, type PillarThemeKey } from '@data/pillar-themes';
 
 export interface RelatedPagesOptions {
   currentHref: string;
@@ -148,4 +149,20 @@ function stableHash(value: string): number {
 
 function cleanPreviewTitle(title: string): string {
   return title.replace(/\s+\|\s+Chill-Dogs$/, '');
+}
+
+const RELATED_HEADING_BY_PILLAR: Record<PillarThemeKey, string> = {
+  cooling: 'More Cooling Guides',
+  calming: 'More Calming Guides',
+  comfort: 'More Comfort Guides',
+  gear: 'More Dog Gear Guides',
+};
+
+/**
+ * The related-links strip heading for a page that does not pass its own: named for
+ * the page's pillar, so a calming article never reads "More Cooling Guides".
+ */
+export function defaultRelatedHeading(pathname: string): string {
+  const theme = resolvePillarThemeFromPath(pathname);
+  return theme ? RELATED_HEADING_BY_PILLAR[theme.key] : 'More Dog Guides';
 }

@@ -27,7 +27,7 @@ const { id, fill = false, accent } = Astro.props;
 ---
 
 <div
-  class:list={['product-card', fill && 'product-card--fill', accent && `product-card--accent-${accent}`]}
+  class:list={['product-card', 'not-prose', fill && 'product-card--fill', accent && `product-card--accent-${accent}`]}
   id={id}
 >
   <slot name="image" />

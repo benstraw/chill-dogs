@@ -41,20 +41,20 @@
 }
 
 .prose p,
-.prose ul {
+.prose ul:where(:not(.not-prose *)) {
   margin-bottom: var(--space-md);
   line-height: 1.7;
 }
 
-.prose ul {
+.prose ul:where(:not(.not-prose *)) {
   padding-left: var(--space-lg);
 }
 
-.prose li {
+.prose li:where(:not(.not-prose *)) {
   margin-bottom: var(--space-sm);
 }
 
-.prose a:not(.ui-cta) {
+.prose a:where(:not(.ui-cta, .not-prose *)) {
   color: var(--color-link);
   text-decoration: underline;
 }
