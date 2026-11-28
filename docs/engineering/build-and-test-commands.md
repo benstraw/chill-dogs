@@ -29,6 +29,15 @@ You need to know which command to run before finishing a task, or what a script 
 
 ## Commands
 
+### Product maintenance
+
+`bun run maintenance:offline` audits the built site without network, credentials,
+or GitHub writes. Build first. Reports go to `.cache/maintenance/` as complete
+HTML and JSON. Cache age is informational; deterministic integrity failures fail
+the command. `maintenance:live` and `maintenance:chewy-smoke` require trusted
+default-branch Actions runs and durable weekly request reservations. See
+[weekly product maintenance](product-maintenance.md) for setup and rollout.
+
 ### `bun run dev`
 
 Starts the local development server at `localhost:4321`.

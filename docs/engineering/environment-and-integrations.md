@@ -3,7 +3,7 @@ title: Environment and Integrations
 type: canonical
 domain: engineering
 status: active
-updated: 2026-10-05
+updated: 2026-11-28
 tags:
   - chill-dogs
   - engineering
@@ -14,6 +14,7 @@ tags:
 related:
   - build-and-test-commands.md
   - architecture.md
+  - product-maintenance.md
   - ../checklists/coding-agent-finish-checklist.md
 ---
 
@@ -86,7 +87,7 @@ Impact's API uses HTTP Basic auth: the Account SID is the username and the Auth 
 
 When `IMPACT_AUTH_TOKEN` is unset the client sends no `Authorization` header, so the proxy's credential applies. It only treats a missing token as configured when `HTTPS_PROXY` is set. Without a proxy, a missing token still means "not configured", and `chewy-link` falls back to `CHEWY_IMPACT_BASE_URL` as before. If a tokenless request gets a 401, the error says no credentials were sent.
 
-`IMPACT_ACCOUNT_SID`, `CHEWY_IMPACT_CAMPAIGN_ID` and `CHEWY_IMPACT_AD_ID` stay plain environment variables in every setup: they are identifiers, not secrets, and the SID is part of every request path. `CHEWY_IMPACT_AD_ID` is the middle number of the program's tracking link (`chewy.sjv.io/c/<partner>/<ad>/<campaign>`, currently `2846786`). Do not confuse it with the catalog ID (`24727`), which `/Ads/<id>/TrackingLink` answers with a 404.
+`IMPACT_ACCOUNT_SID`, `CHEWY_IMPACT_CAMPAIGN_ID` and `CHEWY_IMPACT_AD_ID` stay plain environment variables in every setup: they are identifiers, not secrets, and the SID is part of every request path. `CHEWY_IMPACT_AD_ID` is the middle number of the program's tracking link (`chewy.sjv.io/c/<partner>/<ad>/<campaign>`, currently `3054490`, verified against current site links). Do not confuse it with the catalog ID (`24727`), which `/Ads/<id>/TrackingLink` answers with a 404. Confirm authenticated program, tracking base, and catalog access with the bounded Chewy smoke test before enabling weekly checks.
 
 `www.chewy.com` appears in the allowlist only because `chewy-link` resolves canonical product URLs against it.
 **Chewy product pages themselves are behind Kasada bot protection and return `429` to every automated client**
@@ -171,14 +172,14 @@ The readiness line reports the first blocker it finds, so fix them in the order 
 ### GitHub Actions
 
 - `.github/workflows/ci.yml` — build, test, and `check:docs` on every push to `main` and every PR.
-- `.github/workflows/integration-checks.yml` — weekly (and `workflow_dispatch`) run of `check:asins`, `check:amazon --fail-on-stale`, and `chewy-link:verify`.
+- `.github/workflows/integration-checks.yml` — Monday 13:00 UTC offline inventory and bounded merchant checks, with manual offline/live/Chewy smoke modes. See [weekly product maintenance](product-maintenance.md) for rollout, budgets, and credential setup.
 - `.github/workflows/posthog-deploy-annotation.yml` — on a successful Vercel `Production` `deployment_status`, creates a PostHog annotation (deduped per commit SHA) so deploys show up on charts. Needs secret `POSTHOG_CI_API_KEY` (a personal API key with annotation write scope); optional variables `POSTHOG_PROJECT_ID` (defaults to chill-dogs project 328578) and `POSTHOG_HOST` (defaults to `https://us.posthog.com` — not the `woof.chill-dogs.com` ingest proxy). It self-skips with a notice when unconfigured and never blocks the deploy.
 
-The three checks run under `continue-on-error` so one failure cannot suppress the others, and a final gate step fails the job on any of their outcomes. On failure the workflow files a `merchant-check` issue assigned to `benstraw`, or comments on the open one if it already exists — a long-lived dead link produces one issue with a comment per week, not a new issue every Monday. Close the issue once fixed; the next failure opens a fresh one. Reports upload as artifacts (`merchant-check-reports`, 90 days) and per-check outcomes land in the job summary.
+Independent collection/publication steps use explicit Bash shells so `tee` cannot mask errors. One maintained `merchant-check` issue, assigned to `benstraw`, contains up to five review tasks and preserves checked tasks and human notes. Complete HTML/JSON reports and sanitized observations persist on the nondeploying `maintenance-data` branch, with 90-day Actions artifacts. A separate final gate fails deterministic integrity or machinery errors; editorial findings and bounded partial coverage remain visible without automatic product edits or deployments.
 
 Note: GitHub disables scheduled workflows after 60 days without repository activity. On a quiet stretch this check stops running rather than failing, which looks identical to passing — re-enable it from the Actions tab.
 
-Runners have unrestricted egress, which makes Actions the reliable home for the network-dependent merchant checks when the agent container's allowlist does not cover them. Impact credentials come from repository secrets (`IMPACT_ACCOUNT_SID`, `IMPACT_AUTH_TOKEN`, `CHEWY_IMPACT_CAMPAIGN_ID`, `CHEWY_IMPACT_AD_ID`); the Chewy step self-skips when they are absent.
+Actions uses Amazon provider secrets `SERP_API_KEY` and `SEARCHAPI_KEY`, plus secret `IMPACT_AUTH_TOKEN` and identifier variables `IMPACT_ACCOUNT_SID`, `CHEWY_IMPACT_CAMPAIGN_ID`, `CHEWY_IMPACT_AD_ID`, and `CHEWY_IMPACT_CATALOG_ID`. Existing identifier secrets are fallbacks. Missing setup creates a visible task; configured authentication failure is an integration failure. Enable automatic live checks with `MAINTENANCE_LIVE_ENABLED=true` only after offline publication and a successful Chewy smoke test. The 25 Amazon / 10 Impact weekly budgets are reserved durably before external requests; the direct Amazon checker remains manual.
 
 ### Vercel
 
@@ -195,5 +196,6 @@ Project Settings → Environment Variables. `INDEXNOW_KEY` and `PUBLIC_SITE_URL`
 ## Related knowledge
 
 - [`build-and-test-commands.md`](build-and-test-commands.md) — What each command does and when to run it
+- [`product-maintenance.md`](product-maintenance.md) — Weekly inventory, credential rollout, review acknowledgments, and retirement
 - [`architecture.md`](architecture.md) — Build pipeline phases and file structure
 - [`../checklists/coding-agent-finish-checklist.md`](../checklists/coding-agent-finish-checklist.md) — Which checks to run before finishing
