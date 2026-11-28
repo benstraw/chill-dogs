@@ -1,0 +1,36 @@
+---
+import { getRelaxationProductsByCategory } from '@data/relaxation-products';
+import { getEmergencyProductsByCategory } from '@data/emergency-products';
+import RelaxationProductCard from '@components/modules/RelaxationProductCard.astro';
+import EmergencyProductCard from '@components/modules/EmergencyProductCard.astro';
+
+/**
+ * Inline product slots for the dog emergency go-bag article. Every product is an
+ * existing catalog record — this module only picks which one renders in each slot.
+ */
+interface Props {
+  section: 'bag' | 'first-aid' | 'travel-bed';
+  pageSlug: string;
+}
+
+const { section, pageSlug } = Astro.props;
+
+const bag = getRelaxationProductsByCategory('travel-bags').filter(p => p.id === 'petami-dog-travel-backpack');
+const firstAid = getEmergencyProductsByCategory('first-aid').filter(p => p.id === 'adventure-medical-me-and-my-dog-kit');
+const travelBed = getRelaxationProductsByCategory('travel-beds').filter(p => p.id === 'onetigris-travel-dog-bed');
+---
+{section === 'bag' && bag.map((product) => (
+  <div class="product-slot">
+    <RelaxationProductCard product={product} position={1} pageSlug={pageSlug} />
+  </div>
+))}
+{section === 'first-aid' && firstAid.map((product) => (
+  <div class="product-slot">
+    <EmergencyProductCard product={product} pageSlug={pageSlug} position="go-bag-first-aid" />
+  </div>
+))}
+{section === 'travel-bed' && travelBed.map((product) => (
+  <div class="product-slot">
+    <RelaxationProductCard product={product} position={3} pageSlug={pageSlug} />
+  </div>
+))}
