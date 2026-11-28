@@ -3,7 +3,7 @@ title: Build and Test Commands
 type: canonical
 domain: engineering
 status: active
-updated: 2026-11-25
+updated: 2026-11-28
 tags:
   - chill-dogs
   - engineering
@@ -73,6 +73,7 @@ The suite is split into two Vitest projects (`vitest.config.ts`):
 - **Tests run in the `node` environment.** A file that needs a DOM opts in with `// @vitest-environment happy-dom` on its first line.
 - **`astro:content` is mocked with the real article frontmatter** (`src/__mocks__/astro-content.ts`), so unit tests see the actual articles.
 - **Source rules go in `src/__tests__/content-guardrails.test.ts`.** It reads the source tree once: American English, vet-authority language, route constants, "hub", card primitives, `DisclosureBar`.
+- **MDX paragraphs are checked in both tiers.** The source guard parses articles with the MDX compiler and requires Markdown prose, with single-line explicit paragraphs for attributes or standalone JSX links. The site sweep inspects raw HTML for nested or unmatched paragraphs and block elements inside paragraphs on every page, plus empty paragraphs on article pages, before a browser repairs them. Other pages may intentionally have empty live regions filled by client scripts. See the writing guide's [MDX paragraphs](../writing/article-writing-guide.md#mdx-paragraphs). `src/__tests__/mdx-paragraphs.test.ts` covers the migration and malformed HTML cases.
 - **Rules that shipped code already breaks use a ratchet** (`src/__tests__/helpers/ratchet.ts`, lists in `src/__tests__/allowlists/`). A violation not on the list fails; a listed one that no longer occurs prints a warning so you can delete it. Keys are `file :: literal`, never line numbers. Fix entries; never add them.
 - **Unit tests are hermetic.** `src/__tests__/setup/hermetic.ts` makes `fetch` throw and strips ambient merchant credentials and proxy variables. Inject `fetchImpl`, or stub `fetch` and call `vi.unstubAllGlobals()` in `afterEach`.
 - **A new guard must be shown to fail.** Make a temporary violation, see the test fail, revert.
