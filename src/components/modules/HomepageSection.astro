@@ -62,6 +62,54 @@ const sectionConverters = converters.slice(0, converterLimit);
     </a>
   </div>
 
+  {/* Picks and converter links come first: most homepage visits never scroll past the
+      first quarter of the page (see the roadmap, 2h), so the buy buttons sit above the
+      article cards rather than below them. */}
+  <div class="home-section-lower">
+    {picks.length > 0 && (
+      <div class="home-section-picks">
+        <h3 class="home-section-subhead">Top picks</h3>
+        <div class="home-section-picks-grid">
+          {picks.map((pick, index) => (
+            <ProductCardShell>
+              <ProductImageFrame slot="image" image={pick.image} />
+              <h4 class="pick-name">{pick.name}</h4>
+              {pick.bullets[0] && <p class="pick-bullet">{pick.bullets[0]}</p>}
+              <AffiliateOfferStack
+                offers={pick.offers}
+                product={{ id: pick.id, name: pick.name, category: pick.category }}
+                tone="pillar"
+                size="compact"
+                pageType="attractor"
+                pageSlug={ROUTES.home}
+                position={index}
+              />
+            </ProductCardShell>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {sectionConverters.length > 0 && (
+      <div class="home-section-converters">
+        <h3 class="home-section-subhead">Compare picks</h3>
+        {sectionConverters.map((converter) => (
+          <a
+            href={converter.href}
+            class={`more-card more-card--${converter.color}`}
+            data-home-pick="true"
+            data-track="collector_to_converter_click"
+            data-to-page={converter.href}
+            data-link-position={`homepage-${theme}-converters`}
+          >
+            <h4 class="more-title">{converter.title}</h4>
+            <p class="more-desc">{converter.description}</p>
+            <span class="more-cta">See Products <span class="more-arrow" aria-hidden="true">→</span></span>
+          </a>
+        ))}
+      </div>
+    )}
+  </div>
   {sectionArticles.length > 0 && (
     <div class="home-section-articles">
       {sectionArticles.map((article) => (
@@ -93,52 +141,6 @@ const sectionConverters = converters.slice(0, converterLimit);
       ))}
     </div>
   )}
-
-  <div class="home-section-lower">
-    {sectionConverters.length > 0 && (
-      <div class="home-section-converters">
-        <h3 class="home-section-subhead">Compare picks</h3>
-        {sectionConverters.map((converter) => (
-          <a
-            href={converter.href}
-            class={`more-card more-card--${converter.color}`}
-            data-home-pick="true"
-            data-track="collector_to_converter_click"
-            data-to-page={converter.href}
-            data-link-position={`homepage-${theme}-converters`}
-          >
-            <h4 class="more-title">{converter.title}</h4>
-            <p class="more-desc">{converter.description}</p>
-            <span class="more-cta">See Products <span class="more-arrow" aria-hidden="true">→</span></span>
-          </a>
-        ))}
-      </div>
-    )}
-
-    {picks.length > 0 && (
-      <div class="home-section-picks">
-        <h3 class="home-section-subhead">Top picks</h3>
-        <div class="home-section-picks-grid">
-          {picks.map((pick, index) => (
-            <ProductCardShell>
-              <ProductImageFrame slot="image" image={pick.image} />
-              <h4 class="pick-name">{pick.name}</h4>
-              {pick.bullets[0] && <p class="pick-bullet">{pick.bullets[0]}</p>}
-              <AffiliateOfferStack
-                offers={pick.offers}
-                product={{ id: pick.id, name: pick.name, category: pick.category }}
-                tone="pillar"
-                size="compact"
-                pageType="attractor"
-                pageSlug={ROUTES.home}
-                position={index}
-              />
-            </ProductCardShell>
-          ))}
-        </div>
-      </div>
-    )}
-  </div>
 </section>
 
 <style>
@@ -278,6 +280,7 @@ const sectionConverters = converters.slice(0, converterLimit);
     grid-template-columns: 1fr 1fr;
     gap: var(--space-2xl);
     align-items: start;
+    margin-bottom: var(--space-2xl);
   }
 
   .home-section-subhead {

@@ -131,13 +131,36 @@ Every PR pastes the report into its description.
 | 2e | **Runaway-dog page → GPS trackers.** The same pattern, with the top picks from `/gear/best-dog-gps-trackers/`, the site's best-converting page. | Additions only |
 | 2f | **Links to the winners**, through `pinnedRelated` and related-link metadata only. In-body links would be copy edits, so they're left for a separate editorial PR. | Related-link strips change; prose unchanged |
 | 2g | **Lifestyle article → newsletter.** Make the existing signup module more prominent. No products. | Additions or moves of the signup module only |
-| 2h | **Homepage picks.** Investigate first, using the hero funnel and placement tiles; then make a layout change only. | Moves only, unless a copy change is agreed separately |
+| 2h | **Homepage picks.** Investigate first, then make a layout change only. Investigated 2026-11-28 (below): in each section, the picks and converter links now come before the article cards. | Moves only, unless a copy change is agreed separately |
 
 All of these reuse an existing module. If no existing module can render a few products by id inside an article, raise that before writing a new one.
 
 After each revenue PR merges, add a PostHog annotation so its effect shows on the dashboard. At roughly 40 human visitors per page every 90 days, judge each change after about six weeks, not days.
 
 Outside the repo: post the 214 Pinterest pins already in `public/pins/` and put the two winners in the next newsletter. Neither needs a PR.
+
+### 2h findings: why the homepage picks get no clicks (2026-11-28)
+
+PostHog, human traffic only, for the 90 days to 2026-11-28:
+- **Who comes.** 57 people and 83 views. Only 3 look internal (admin pages or previews). Most are direct visits on desktop (36 direct, 15 from search), so these look like people checking out the brand, not shoppers.
+- **What they do.** About 70% of homepage sessions leave the site from it. The rest go one each to a scatter of pages, mostly through the "Latest guide" card (the Aorkuler review) and section links. There were 0 affiliate clicks. Only 7 people reached the newsletter form at the bottom.
+- **How far they scroll** (`$prev_pageview_max_scroll_percentage`). 33 of 47 desktop visits and 16 of 17 phone visits never scrolled past 25% of the page.
+
+Where the picks sat before the change, as measured in the built page:
+
+| | Desktop (1440 px) | Phone (390 px) |
+|---|---|---|
+| Page length | 7,700 px (8.6 screens) | 16,200 px (19 screens) |
+| First buy button | 2,407 px, 31% down | 4,429 px, 27% down |
+| Calming picks (ThunderShirt) | 44% down | 46% down |
+
+Each section showed its article cards first and its picks last, so about 77% of visits never saw a single pick. The zero clicks are a placement problem, not a product problem.
+
+**The change (2h, layout only).** In each section, the picks (with the converter links beside them on desktop) now come before the article cards. Nothing was added or removed. Afterward, the first buy button is at 1,956 px (25%) on desktop and 2,606 px (16%) on phones, and the Calming picks are at 37% and 32%.
+
+**What to expect.** With about 50 human visitors a quarter, even a large relative gain is a click or two. The homepage mainly routes people elsewhere; the revenue is in the articles that get search traffic (2d–2f). Judge this change with the others, after about six weeks.
+
+**Not done.** A shorter phone page, with fewer article cards per section on mobile, would cut the 19-screen length. That hides content, so it's an editorial call and is listed in #435.
 
 ### The `/shop/` decision (after 2a)
 
