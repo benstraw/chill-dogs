@@ -32,6 +32,7 @@ import { categoryLabel } from '../utils/product-meta';
 import { getCachedImageDataUri } from './og-gen/cache';
 import { loadOgFonts } from './og-gen/fonts';
 import { OG_THEMES, type OgTheme } from './og-gen/themes';
+import { pinLayoutProblems } from './og-gen/pin-layout';
 import { PIN_HEIGHT, PIN_WIDTH, ProductPinTemplate } from './og-gen/pin-template';
 
 const OUT_DIR = path.join(process.cwd(), 'public', 'pins');
@@ -108,17 +109,25 @@ async function renderPin(
       return 'failed';
     }
 
-    const svg = await satori(
-      ProductPinTemplate({
-        name: product.name,
-        category: categoryLabel(product.category),
-        bullets: pinBullets(product),
-        productImageDataUri,
-        logoDataUri,
-        theme: THEME_BY_PILLAR[product.pillar] ?? OG_THEMES.gear,
-      }),
-      { width: PIN_WIDTH, height: PIN_HEIGHT, fonts }
-    );
+    const pin = ProductPinTemplate({
+      name: product.name,
+      category: categoryLabel(product.category),
+      bullets: pinBullets(product),
+      productImageDataUri,
+      logoDataUri,
+      theme: THEME_BY_PILLAR[product.pillar] ?? OG_THEMES.gear,
+    });
+
+    // Layout check: a second render with real <text> elements shows where each word
+    // landed. A pin with words under Pinterest's buttons or off the bottom is not written.
+    const layoutSvg = await satori(pin, { width: PIN_WIDTH, height: PIN_HEIGHT, fonts, embedFont: false });
+    const problems = pinLayoutProblems(layoutSvg);
+    if (problems.length) {
+      console.error(`[pins] layout problem in ${product.id}: ${problems.join('; ')} — skipped`);
+      return 'failed';
+    }
+
+    const svg = await satori(pin, { width: PIN_WIDTH, height: PIN_HEIGHT, fonts });
 
     // Resvg rasterises the SVG (satori emits SVG; sharp cannot rasterise foreignObject-free
     // SVG text reliably), then sharp encodes the JPEG.

@@ -42,6 +42,13 @@ const CREAM = '#f7f3ec';
 export const PIN_WIDTH = 1000;
 export const PIN_HEIGHT = 1500;
 
+/**
+ * Pinterest draws its own expand and visual-search buttons over the bottom-right corner
+ * of every pin. Nothing readable may sit in this box; a "See the details" pill there was
+ * covered on live pins. `bun run pins:gen` checks every pin against it (og-gen/pin-layout.ts).
+ */
+export const PINTEREST_BUTTON_ZONE = { left: 860, top: 1260 } as const;
+
 /** Headline sizing: long product names must not overflow the fixed band. */
 function headlineSize(name: string): number {
   if (name.length <= 22) return 84;
@@ -163,7 +170,7 @@ export function ProductPinTemplate(data: ProductPinTemplateData): JSXNode {
             marginTop: 40,
             width: 872,
             flexGrow: 1,
-            minHeight: 560,
+            minHeight: 480,
             borderRadius: 28,
             background: '#ffffff',
             border: `3px solid ${theme.accentBorder}`,
@@ -184,13 +191,13 @@ export function ProductPinTemplate(data: ProductPinTemplateData): JSXNode {
           )}
         </div>
 
-        {/* Selling points, sitting just above the footer band. */}
+        {/* Selling points, sitting just above the call to action. */}
         <div
           style={{
             display: 'flex',
             flexDirection: 'column',
             marginTop: 36,
-            marginBottom: 44,
+            marginBottom: 28,
           }}
         >
           {points.map((point, index) => (
@@ -226,18 +233,38 @@ export function ProductPinTemplate(data: ProductPinTemplateData): JSXNode {
             </div>
           ))}
         </div>
+
+        {/* Call to action, centered above the footer and clear of Pinterest's corner
+            buttons. 600px leaves room on both sides at feed-thumbnail size. */}
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 40 }}>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              width: 600,
+              height: 84,
+              borderRadius: 999,
+              background: theme.accent,
+              color: '#ffffff',
+              fontSize: 34,
+              fontWeight: 700,
+            }}
+          >
+            See the details
+          </div>
+        </div>
       </div>
 
-      {/* Footer band — wordmark and tagline, matching the hand-made pins. */}
+      {/* Footer band — wordmark and tagline, centered, matching the hand-made pins. */}
       <div
         style={{
           display: 'flex',
           width: PIN_WIDTH,
-          height: 168,
+          height: 140,
           background: theme.accent,
           alignItems: 'center',
-          justifyContent: 'space-between',
-          padding: '0 64px',
+          justifyContent: 'center',
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -272,21 +299,6 @@ export function ProductPinTemplate(data: ProductPinTemplateData): JSXNode {
               COOL · CALM · COMFORTABLE
             </div>
           </div>
-        </div>
-
-        <div
-          style={{
-            display: 'flex',
-            padding: '16px 30px',
-            borderRadius: 999,
-            background: 'rgba(255,255,255,0.16)',
-            border: '2px solid rgba(255,255,255,0.4)',
-            color: '#ffffff',
-            fontSize: 26,
-            fontWeight: 700,
-          }}
-        >
-          See the details
         </div>
       </div>
     </div>

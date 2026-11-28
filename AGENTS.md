@@ -93,6 +93,8 @@ ratio Pinterest crops. It fetches product photos from the merchant CDN, so it **
 network** and will not run in a sandboxed agent container; add `--placeholder` to preview
 the template offline with a stand-in photo, and `--only <id>` to render one product.
 Pins are gitignored like `public/og/` — force-add the ones you have reviewed.
+Each pin is checked as it renders: a pin with text under Pinterest's corner buttons, or
+pushed off the bottom, is reported and not written (`src/scripts/og-gen/pin-layout.ts`).
 
 `admin:serve` runs alongside `bun run dev`. It is the local companion for the
 `/admin/images/` browser: with it running, Save writes `src/data/product-galleries.ts`;
