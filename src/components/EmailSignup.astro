@@ -1,9 +1,11 @@
 ---
 import { ROUTES } from '@data/routes';
 import type { PageType } from '@utils/types';
+import { signupId, type SignupPlacement } from '@utils/email-signup';
 
 interface Props {
-  placement: 'footer' | 'homepage_inline';
+  /** Where the form sits; rides on every signup event as `placement`. */
+  placement: SignupPlacement;
   title?: string;
   body?: string;
   compact?: boolean;
@@ -17,21 +19,11 @@ const {
   title = 'Tips for keeping your dog cool, calm, and comfortable',
   body = 'Seasonal safety tips, practical gear picks, and helpful guides. Sent occasionally.',
   compact = false,
-  pageSlug = '',
+  pageSlug = Astro.url.pathname,
   pageType = 'collector',
   category = 'general',
 } = Astro.props;
 
-function normalizeIdSegment(value: string): string {
-  const trimmed = value.trim();
-  if (!trimmed || trimmed === '/') return 'root';
-
-  return trimmed
-    .replace(/^\/+|\/+$/g, '')
-    .replace(/[^a-zA-Z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '')
-    .toLowerCase() || 'root';
-}
 
 // `PUBLIC_BUTTONDOWN_FORM_ACTION` should include the full embed URL and optional `?next=...`.
 // When only the username is configured, the Buttondown dashboard controls the redirect flow.
@@ -42,7 +34,8 @@ const fallbackAction = buttondownUsername
   : '';
 const formAction = buttondownAction || fallbackAction;
 const hasLiveAction = Boolean(formAction);
-const formId = `email-signup-${normalizeIdSegment(placement)}-${normalizeIdSegment(pageSlug || category)}`;
+// Unique per placement and page: the id that identifies this exact form in analytics.
+const formId = signupId(placement, pageSlug || category);
 ---
 
 <section
@@ -51,7 +44,7 @@ const formId = `email-signup-${normalizeIdSegment(placement)}-${normalizeIdSegme
     {
       'email-signup--compact': compact,
       'email-signup--footer': placement === 'footer',
-      'email-signup--inline': placement === 'homepage_inline',
+      'email-signup--inline': placement !== 'footer',
       'email-signup--disabled': !hasLiveAction,
     },
   ]}
@@ -74,6 +67,7 @@ const formId = `email-signup-${normalizeIdSegment(placement)}-${normalizeIdSegme
           method="post"
           enctype="application/x-www-form-urlencoded"
           data-placement={placement}
+          data-signup-id={formId}
           data-page-slug={pageSlug}
           data-page-type={pageType}
           data-category={category}
@@ -81,6 +75,7 @@ const formId = `email-signup-${normalizeIdSegment(placement)}-${normalizeIdSegme
           <input type="hidden" name="embed" value="1" />
           <input type="hidden" name="tag" value={placement} />
           <input type="hidden" name="metadata__placement" value={placement} />
+          <input type="hidden" name="metadata__signup_id" value={formId} />
           <input type="hidden" name="metadata__page_slug" value={pageSlug} />
           <input type="hidden" name="metadata__page_type" value={pageType} />
           <input type="hidden" name="metadata__category" value={category} />
@@ -116,14 +111,16 @@ const formId = `email-signup-${normalizeIdSegment(placement)}-${normalizeIdSegme
             var data = form.dataset || {};
             var props = {
               placement: data.placement || '',
+              signup_id: data.signupId || form.id || '',
               page_slug: data.pageSlug || '',
+              page_path: window.location.pathname,
               page_type: data.pageType || '',
               category: data.category || '',
             };
 
-            function capture(eventName) {
+            function capture(eventName, options) {
               if (window.posthog && typeof window.posthog.capture === 'function') {
-                window.posthog.capture(eventName, props);
+                window.posthog.capture(eventName, props, options);
               }
             }
 
@@ -140,7 +137,9 @@ const formId = `email-signup-${normalizeIdSegment(placement)}-${normalizeIdSegme
             }
 
             form.addEventListener('submit', function () {
-              capture('email_signup_submit');
+              // The form navigates to Buttondown right away; sendBeacon lets the event
+              // leave the page before it unloads.
+              capture('email_signup_submit', { transport: 'sendBeacon' });
             });
 
             if ('IntersectionObserver' in window) {
