@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "date": "2026-11-28T08:26:25.128Z",
+    "gitSha": "887c40d+dirty",
+    "cpus": 16,
+    "cpuModel": "Apple M4 Max",
+    "bun": "1.3.6",
+    "runs": 5,
+    "note": "Median of N runs after one discarded warm-up. perFile = test execution time per file (excludes import/collect)."
+  },
+  "tiers": {
+    "unit": {
+      "wallMs": 848,
+      "tests": 503,
+      "files": 44,
+      "breakdown": {
+        "total": 637,
+        "transform": 2190,
+        "setup": 301,
+        "import": 3460,
+        "tests": 940,
+        "environment": 134
+      },
+      "perFile": {
+        "src/__tests__/admin-auth.test.ts": 32,
+        "src/__tests__/amazon-cache-freshness.test.ts": 29,
+        "src/__tests__/analytics-gate.test.ts": 1,
+        "src/__tests__/analytics.test.ts": 9,
+        "src/__tests__/asin-classify.test.ts": 1,
+        "src/__tests__/astro-content-mock.test.ts": 12,
+        "src/__tests__/breadcrumbs.test.ts": 1,
+        "src/__tests__/chewy-affiliate.test.ts": 40,
+        "src/__tests__/content-guardrails.test.ts": 224,
+        "src/__tests__/converter-configs.test.ts": 19,
+        "src/__tests__/copy-diff.test.ts": 5,
+        "src/__tests__/cta-merchant-styles.test.ts": 2,
+        "src/__tests__/dist-helpers.test.ts": 2,
+        "src/__tests__/email-signup.test.ts": 2,
+        "src/__tests__/fetch-chewy-data-cli.test.ts": 44,
+        "src/__tests__/first-page-image-og.test.ts": 1,
+        "src/__tests__/homepage-articles.test.ts": 2,
+        "src/__tests__/homepage-picks.test.ts": 1,
+        "src/__tests__/indexnow.test.ts": 20,
+        "src/__tests__/llms.test.ts": 9,
+        "src/__tests__/mdx-paragraphs.test.ts": 22,
+        "src/__tests__/merchant-images.test.ts": 45,
+        "src/__tests__/newsletter-links.test.ts": 1,
+        "src/__tests__/og.test.ts": 2,
+        "src/__tests__/pillar-themes.test.ts": 1,
+        "src/__tests__/pin-layout.test.ts": 2,
+        "src/__tests__/product-catalog.test.ts": 13,
+        "src/__tests__/product-images.test.ts": 2,
+        "src/__tests__/product-meta.test.ts": 10,
+        "src/__tests__/product-og.test.ts": 59,
+        "src/__tests__/product-pages.test.ts": 3,
+        "src/__tests__/product-slugs.test.ts": 8,
+        "src/__tests__/product-variants.test.ts": 18,
+        "src/__tests__/products-offers.test.ts": 58,
+        "src/__tests__/related-pages.test.ts": 39,
+        "src/__tests__/relaxation-converter-pages.test.ts": 11,
+        "src/__tests__/review-schema.test.ts": 1,
+        "src/__tests__/routes.test.ts": 2,
+        "src/__tests__/search.test.ts": 50,
+        "src/__tests__/section-collectors.test.ts": 4,
+        "src/__tests__/sitemap-inventory.test.ts": 2,
+        "src/__tests__/system-definition.test.ts": 12,
+        "src/__tests__/third-party.test.ts": 0,
+        "src/__tests__/validate-docs.test.ts": 72
+      }
+    }
+  }
+}

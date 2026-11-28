@@ -3,7 +3,7 @@ title: Test Suite Timings
 type: canonical
 domain: engineering
 status: active
-updated: 2026-11-25
+updated: 2026-11-28
 tags:
   - chill-dogs
   - engineering
@@ -37,6 +37,28 @@ bun run test:timing -- --compare docs/engineering/test-timings/<previous>.json
 - `perFile` is test execution time only. Import and environment setup are summed across workers in `breakdown` (`import`, `environment`).
 
 ## History
+
+### MDX source guard performance fix
+
+The MDX migration added a full syntax-tree parse of every article to the source
+guard. The common valid paragraph forms now use a small conservative check;
+unfamiliar syntax still loads the original AST validator and keeps its diagnostics.
+The existing migration/compiler fixtures remain, with 24 additional fast-pass
+cases in the same fixture file. No timing assertions or weakened allowlists.
+
+Measured on the same local machine, five runs after a discarded warm-up, with
+no build or other test suite running concurrently:
+
+| Measurement | Before | After | Change |
+|---|---|---|---|
+| `content-guardrails.test.ts` execution | 224 ms | 44 ms | −80% |
+| Complete unit tier wall time | 848 ms | 792 ms | −7% |
+| Unit tests | 503 | 527 | +24 fixtures |
+
+[Before snapshot](mdx-guard-before.json) · [After snapshot](mdx-guard-after.json).
+These local measurements compare main at `887c40d` with the fix; they are separate
+from the older cloud-machine phase snapshots below. The complete unit tier
+comparison passed the existing regression gate.
 
 | Snapshot | Commit | Build | `test:unit` | `dist` | Full `vitest run` | Tests |
 |---|---|---|---|---|---|---|
