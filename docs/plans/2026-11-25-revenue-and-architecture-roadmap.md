@@ -146,12 +146,31 @@ What Phase 1 found:
 - Since launch they've had 11 human views: 7 direct, 3 from Google and 1 internal. None came from Pinterest.
 - 248 of the 280 products already meet the per-product copy bar.
 
-Options:
+Options considered:
 - **Delete the pages.** Saves little: they're noindexed, so they cost nothing in search. It would mean about 280 redirects, and it would kill the Pinterest landing pages.
 - **Switch on indexing for all of them.** That's the risk the switch exists to prevent: about 250 template pages next to about 65 hand-written ones is the pattern that can pull a whole site down in Google, the converters that earn included.
-- **Recommended: a bounded test.** Make the switch per pillar and index one pillar of about 30 products, preferably ones no converter already covers. Watch Search Console for about 10 weeks. Set the bar before starting. If the pillar earns impressions and clicks, open the next pillar. If it doesn't, leave the product pages noindexed as Pinterest and direct-link targets, and stop investing in them.
+- **Index one pillar of about 30 (the earlier plan). Dropped.** A check on 2026-11-28 found that **278 of the 280 products already appear on a converter.** Every `/shop/` page would duplicate a card that ranks on a converter, and would compete with it in search, the two best converters included.
 
-Search Console isn't connected to this workspace, so the owner reads those numbers.
+**Decision (2026-11-28): test the pages with Pinterest first, with no change for Google.**
+
+Stage 1, the Pinterest test (#444):
+- The `/shop/` pages had two jobs: ranking in search, and acting as Pinterest landing pages. The second was never tried, since only one pin had been posted, to an "Other stuff" board.
+- Pin design: #442 moved "See the details" clear of Pinterest's corner buttons and regenerated all 280 pins.
+- The pins: 20 products, chosen by human Amazon clicks over the past year and posted from each page's Save button to a matching board, about 2–3 a day.
+  - Wave 1, now: anxiety and fireworks, GPS trackers, travel.
+  - Wave 2, early March: cooling.
+- Measurement: the PostHog tile [Pinterest test: /shop/ visits and merchant clicks](https://us.posthog.com/project/328578/insights/GGnpGJsq) on the Revenue dashboard, plus each pin's Pinterest "Outbound clicks".
+- After about six weeks:
+  - **If visitors who reach a `/shop/` page click through to a merchant**, stage 2 is worth considering.
+  - **If they don't**, keep the pages as quiet Pinterest landing pages, leave them `noindex`, and stop investing in them.
+
+Stage 2, only if stage 1 passes: a tiny search test.
+- **Size:** 10 products, not a pillar.
+- **Choosing them:** only products whose names get no search impressions for the site today, so there's nothing for a new page to take from a converter.
+- **Switch:** a per-product allowlist, never `PRODUCT_PAGES_INDEXABLE`.
+- **Baseline and stop rule:** record a Search Console baseline for the converters first. If converter impressions or clicks fall beyond normal noise, switch the 10 back to `noindex` the same day.
+
+PostHog lists Google Search Console as a connected integration. If its data is reachable there, it can pick the stage 2 products. Otherwise the owner reads Search Console directly.
 
 ### Phase 3 PRs
 
