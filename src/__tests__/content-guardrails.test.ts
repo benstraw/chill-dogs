@@ -18,6 +18,7 @@ import {
   VET_LANGUAGE_ALLOWLIST,
 } from './allowlists/content-guardrails';
 import { expectWithinAllowlist } from './helpers/ratchet';
+import { mdxParagraphProblems } from '../../scripts/lib/mdx-paragraphs';
 
 const ROOT = path.resolve(__dirname, '../..');
 // Provider data is diagnostic and never edited by hand; images are binary; the docs
@@ -55,6 +56,13 @@ const isTest = (file: string) => file.startsWith('src/__tests__/') || file.start
 const site = all.filter(({ file }) => file.startsWith('src/') && !isTest(file) && /\.(astro|ts|tsx|mdx|mjs)$/.test(file));
 
 describe('content guardrails', () => {
+  it('uses Markdown prose and safe explicit paragraphs in MDX articles', () => {
+    const articles = site.filter(({ file }) => file.startsWith('src/content/articles/') && file.endsWith('.mdx'));
+    expect(articles.length).toBeGreaterThan(0);
+    const failures = articles.flatMap(({ file, text }) => mdxParagraphProblems(text).map((problem) => `${file}: ${problem}`));
+    expect(failures, 'See docs/writing/article-writing-guide.md#mdx-paragraphs').toEqual([]);
+  });
+
   it('reads the source tree', () => {
     expect(site.length).toBeGreaterThan(150);
     expect(all.some(({ file }) => file.startsWith('docs/'))).toBe(true);

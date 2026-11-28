@@ -1,5 +1,5 @@
 ---
-import { getRelatedPages, toLinkStripItems } from '@utils/related-pages';
+import { defaultRelatedHeading, getRelatedPages, toLinkStripItems } from '@utils/related-pages';
 
 interface LinkItem {
   label: string;
@@ -14,7 +14,9 @@ interface Props {
   fromPage?: string;
 }
 
-const { heading = 'More Cooling Guides', links, currentHref, limit, fromPage = '' } = Astro.props;
+const { links, currentHref, limit, fromPage = '' } = Astro.props;
+// Without an explicit heading, name the strip for the page's pillar.
+const heading = Astro.props.heading ?? defaultRelatedHeading(currentHref ?? Astro.url.pathname);
 const resolvedLinks = links ?? (currentHref ? toLinkStripItems(await getRelatedPages({ currentHref, limit })) : []);
 ---
 

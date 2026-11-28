@@ -3,7 +3,7 @@ title: Article Writing Guide
 type: canonical
 domain: writing
 status: active
-updated: 2026-05-03
+updated: 2026-11-28
 tags:
   - chill-dogs
   - writing
@@ -64,6 +64,49 @@ Write like someone who looked into this carefully and is telling a friend what t
 
 - Three to four sentences per paragraph. Five is the ceiling.
 - One idea per paragraph.
+
+### MDX paragraphs
+
+Write ordinary prose as Markdown, with a blank line before and after each paragraph.
+Hard wrapping is fine. Keep a blank line between prose and a JSX heading, list,
+layout wrapper, or component so MDX cannot absorb that block into the paragraph.
+
+```mdx
+<div class="prose">
+  <h2 id="heat-risk">Heat risk</h2>
+
+  This ordinary paragraph can wrap across source lines. Keep existing tracked
+  <a href={ROUTES.coolingSafety} data-track="collector_to_converter_click">safety links</a> intact.
+
+  <TemperatureChart />
+</div>
+```
+
+Keep an explicit paragraph when it needs attributes, such as a lede's class or an
+ID used by `aria-labelledby`. Its opening tag, content, and closing tag must be on
+one source line:
+
+```mdx
+<p id="intro" class="lede">A short introduction with <strong>emphasis</strong>.</p>
+```
+
+A standalone JSX link may also keep a single-line `<p><a ...>…</a></p>` wrapper
+to preserve paragraph spacing. Inline links within ordinary prose keep their
+existing JSX, route expressions, and tracking attributes.
+
+Never put the contents of an explicit `<p>` on separate lines. MDX parses those
+children as Markdown and can produce `<p><p>…</p></p>`. Browsers repair that into
+empty paragraphs, and classes can end up on empty elements. Do not replace a
+classed `<p>` with a `<div>` without checking its CSS selectors and semantics.
+
+The source guard in `content-guardrails.test.ts` enforces these rules. The built
+site sweep also rejects nested paragraphs, block elements inside paragraphs,
+unmatched paragraph tags, and empty paragraphs in raw HTML before a browser can
+repair them. For older branches, preview `bun run scripts/migrate-mdx-paragraphs.ts`
+and apply with `--write`; it preserves hard wrapping and refuses unfamiliar block
+content or multiline expressions for manual review. After migrating, compare the
+built text, heading IDs, links and tracking attributes, and inspect classed
+paragraphs visually: their styles may now apply to text for the first time.
 
 ### What sounds right
 
