@@ -49,15 +49,6 @@ async function readArticlePublishOrder(): Promise<string[]> {
     .map((page) => page.href);
 }
 
-function firstMainImageAbsolute(doc: Document): string | null {
-  const image = doc.querySelector<HTMLImageElement>('main img');
-  const src = image?.getAttribute('src');
-  if (!src) return null;
-  if (src.startsWith('data:')) return null;
-  if (src.startsWith('//')) return `https:${src}`;
-  return new URL(src, SITE_ORIGIN).href;
-}
-
 function getAffiliateLinks(root: ParentNode): HTMLAnchorElement[] {
   return Array.from(
     root.querySelectorAll<HTMLAnchorElement>('a[data-affiliate="true"][data-track="affiliate_outbound_click"]')
@@ -353,15 +344,18 @@ describe('site smoke tests', () => {
     const contactDoc = readBuiltPage(path.join('contact', 'index.html'));
     const termsDoc = readBuiltPage(path.join('terms', 'index.html'));
 
+    // The homepage's first image is the paw logo; unmarked images never become the share image (#339).
     expect(homeDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
-      .toBe(firstMainImageAbsolute(homeDoc));
+      .toBe('https://www.chill-dogs.com/og/home.jpg');
     expect(homeDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
       .toBe(homeDoc.querySelector('meta[name="twitter:image"]')?.getAttribute('content'));
 
     expect(coolingDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
       .toContain('/og/cooling-cooling-mats.jpg');
+    // An article with an ogImage photo shares it as a titled photo card (#339).
     expect(travelDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
-      .toBe(firstMainImageAbsolute(travelDoc));
+      .toBe('https://www.chill-dogs.com/og/photo/travel-dog-road-trip-gear.jpg');
+    expect(readFileSync(path.join(distRoot, 'og', 'photo', 'travel-dog-road-trip-gear.jpg')).length).toBeGreaterThan(1024);
     expect(travelDoc.querySelector('meta[property="og:image"]')?.getAttribute('content'))
       .toBe(travelDoc.querySelector('meta[name="twitter:image"]')?.getAttribute('content'));
 
@@ -398,13 +392,13 @@ describe('site smoke tests', () => {
     expect(roadTripRow?.querySelector('[data-share-description]')?.textContent)
       .toContain('Dog road trip gear tested on a 6,000-mile cross-country drive');
     expect(roadTripRow?.querySelector('[data-share-image]')?.getAttribute('src'))
-      .toContain('/_assets/20250629_131343');
+      .toContain('/og/photo/travel-dog-road-trip-gear.jpg');
 
     const rhysRow = sitemapDoc.querySelector('[data-share-preview-row][data-href="/travel/rhys-ran-away-cerro-san-luis-obispo/"]');
     expect(rhysRow?.querySelector('[data-share-title]')?.textContent)
       .toContain('The Day Rhys Ran Off: What We Learned About Dog Tracking');
     expect(rhysRow?.querySelector('[data-share-image]')?.getAttribute('src'))
-      .toContain('/_assets/bishop-peak-expert-trail-marker');
+      .toContain('/og/photo/travel-rhys-ran-away-cerro-san-luis-obispo.jpg');
 
     expect(subscribeRow?.querySelector('[data-share-title]')?.textContent)
       .toContain('Subscribe to Chill-Dogs | Dog Tips and Gear Picks');

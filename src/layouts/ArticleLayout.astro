@@ -40,7 +40,7 @@ const articleSchema = {
   },
 };
 ---
-<BaseLayout {title} {description} {ogTitle} canonicalUrl={canonicalUrl} {navAccent} {pillarTheme}>
+<BaseLayout {title} {description} {ogTitle} {ogImage} canonicalUrl={canonicalUrl} {navAccent} {pillarTheme}>
   <JsonLd slot="head" schema={articleSchema} />
   <slot />
 </BaseLayout>

@@ -161,11 +161,11 @@ Three phases run automatically via `bun run build`:
 
 1. **Pre-build** (`src/scripts/`): `watermark-images.mjs` → `generate-og-images.mjs`
    - Generates `/public/og/<slug>.jpg` for every eligible route
-   - CTA text per page type comes from `src/config/og-cta.mjs`
+   - The button text comes from `ogCtaFor()` in `src/config/og-cta.mjs`: articles, pillar landing pages, utility pages (no button) and page types
 
 2. **Astro build**: outputs static HTML to `dist/`
 
-3. **Post-build** (`scripts/`): `apply-first-page-image-og.mjs` → `apply-sitemap-share-preview.mjs` → `indexnow-submit.mjs`
+3. **Post-build** (`scripts/`): `apply-first-page-image-og.mjs` (a `data-og-hero` photo or article `ogImage` becomes a titled photo card at `/og/photo/<slug>.jpg`) → `apply-sitemap-share-preview.mjs` → `indexnow-submit.mjs`
 
 ---
 

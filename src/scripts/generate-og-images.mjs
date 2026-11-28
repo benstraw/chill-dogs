@@ -1,6 +1,6 @@
 import { mkdirSync, readdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
-import { PAGE_TYPE_CTA } from '../config/og-cta.mjs';
+import { ogCtaFor } from '../config/og-cta.mjs';
 import { staticSitemapSections } from '../data/content-sitemap.ts';
 import { Resvg } from '@resvg/resvg-js';
 import sharp from 'sharp';
@@ -81,12 +81,8 @@ function deriveHeadline({ title, seoTitle, ogHeadline }) {
   );
 }
 
-function deriveCta({ pageType, ogCta }) {
-  if (ogCta) {
-    return clampText(ogCta, 44);
-  }
-
-  return PAGE_TYPE_CTA[pageType] || PAGE_TYPE_CTA.collector;
+function deriveCta(record) {
+  return ogCtaFor(record);
 }
 
 function slugFromPathname(pathname) {
@@ -190,7 +186,7 @@ function wrapText(text, maxCharsPerLine, maxLines) {
   return lines;
 }
 
-function renderOgSvg({ headline, cta, theme }) {
+export function renderOgSvg({ headline, cta, theme }) {
   const themes = {
     cooling: {
       bg1: '#E4EFF5',
@@ -291,11 +287,12 @@ function renderOgSvg({ headline, cta, theme }) {
     ${headlineSvg}
   </text>
 
+${cta ? `
   <!-- CTA pill -->
   <rect x="80" y="470" width="520" height="76" rx="38" ry="38" fill="${t.pillBg}" />
   <text x="340" y="519" text-anchor="middle" font-size="32" font-family="'Inter', Arial, sans-serif" fill="${t.pillInk}" font-weight="700" letter-spacing="0.2">
     ${escapeXml(clampText(cta, 42))}
-  </text>
+  </text>` : ''}
 </svg>`;
 }
 
@@ -424,7 +421,9 @@ function buildArticleRouteRecords() {
       title: frontmatter.title || titleFromPathname(pathname),
       seoTitle: frontmatter.seoTitle,
       ogHeadline: frontmatter.ogTitle || frontmatter.ogHeadline,
+      ogCta: frontmatter.ogCta,
       pageType: 'collector',
+      isArticle: true,
       ogTheme: inferTheme(pathname, frontmatter.ogTheme),
     });
   }
