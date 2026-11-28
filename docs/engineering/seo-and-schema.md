@@ -94,7 +94,23 @@ Use `heroProduct` only when one product should represent the page in a social pr
 
 `noindex` controls robots metadata only; it does not block generated social images. Routes without generated OG assets, including `/v/` variants, `404`, admin/internal pages, and legal policy pages, fall back to `/og-default.jpg`.
 
-CTA text per page type is configured in `src/config/og-cta.mjs`.
+The button on a generated card comes from `ogCtaFor()` in `src/config/og-cta.mjs`. It says what the page actually offers:
+
+- **Articles:** "Read the Guide".
+- **Pillar landing pages:** "Browse Cooling Picks" and the like.
+- **Converters, the homepage and informers:** their page-type wording.
+- **Utility pages** (search, subscribe, thanks): no button.
+
+An article can set its own button with an `ogCta` frontmatter field.
+
+#### Photo cards
+
+A page can share a photo instead of a generated card, in two ways:
+
+- an article sets `ogImage` in its frontmatter;
+- a page marks one image `<img data-og-hero>` inside `<main>`.
+
+Unmarked images never count, because the first image on a landing page is usually a listing thumbnail, a logo or a badge (#339). After the build, `scripts/apply-first-page-image-og.mjs` composes every local share photo into a titled card at `/og/photo/<slug>.jpg`: the photo cropped to 1200×630, with the page's `og:title` in a translucent rounded box. The drawing lives in `scripts/og-photo-card.mjs`.
 
 ---
 

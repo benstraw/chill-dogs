@@ -1,6 +1,6 @@
 import type { ImageMetadata } from 'astro';
 import type { PageType } from '@utils/types';
-import { PAGE_TYPE_CTA as OG_PAGE_TYPE_CTA } from '../config/og-cta.mjs';
+import { ogCtaFor } from '../config/og-cta.mjs';
 
 interface OgHeadlineOptions {
   title?: string;
@@ -9,7 +9,9 @@ interface OgHeadlineOptions {
 }
 
 interface OgCtaOptions {
+  pathname?: string;
   pageType?: PageType;
+  isArticle?: boolean;
   ogCta?: string;
 }
 
@@ -18,8 +20,6 @@ interface AutoOgOptions {
 }
 
 export type OgImageInput = string | ImageMetadata | null | undefined;
-
-const PAGE_TYPE_CTA: Record<PageType, string> = OG_PAGE_TYPE_CTA;
 
 function normalizeWhitespace(value: string): string {
   return value.replace(/\s+/g, ' ').trim();
@@ -49,13 +49,9 @@ export function deriveOgHeadline({ title, seoTitle, ogHeadline }: OgHeadlineOpti
   return clampOgText(cleaned || 'Chill-Dogs', 88);
 }
 
-export function deriveOgCta({ pageType, ogCta }: OgCtaOptions): string {
-  if (ogCta) {
-    return clampOgText(ogCta, 44);
-  }
-
-  const resolvedType = pageType || 'collector';
-  return PAGE_TYPE_CTA[resolvedType];
+/** The share-image button for a page, or '' for none. Rules live in `src/config/og-cta.mjs`. */
+export function deriveOgCta(options: OgCtaOptions): string {
+  return ogCtaFor(options);
 }
 
 export function ogSlugFromPathname(pathname: string): string {

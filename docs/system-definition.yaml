@@ -55,6 +55,9 @@ site_system:
       - "Deploy builds generate only general OG images and must not fetch remote product images."
       - "Pages without heroProduct use the general OG template generated during pre-build."
       - "/shop/ and broad or multi-product collectors stay on the general OG path."
+      - "General OG buttons come from ogCtaFor() in src/config/og-cta.mjs: articles say Read the Guide, pillar landing pages name their pillar, utility pages (search, subscribe, thanks) show no button; article frontmatter ogCta overrides."
+      - "A share photo comes only from article ogImage frontmatter or an img marked data-og-hero; unmarked first images (listing thumbnails, logos, badges) never become the share image."
+      - "Post-build, scripts/apply-first-page-image-og.mjs composes each local share photo into a titled card at dist/og/photo/<slug>.jpg (scripts/og-photo-card.mjs)."
 
   keystone_metrics:
     primary: "Amazon affiliate revenue (qualified outbound clicks to purchases)"

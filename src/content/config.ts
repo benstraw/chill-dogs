@@ -8,6 +8,8 @@ const articles = defineCollection({
       title: z.string(),
       description: z.string(),
       ogTitle: z.string().optional(),
+      /** Share-image button text; defaults to "Read the Guide" for articles. */
+      ogCta: z.string().optional(),
       pubDate: z.date(),
       canonicalPath: z.string(),
       ogImage: image().optional(),

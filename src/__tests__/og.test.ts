@@ -60,6 +60,24 @@ describe('og utility functions', () => {
     expect(deriveOgCta({})).toBe('See Top Product Picks');
   });
 
+  it('gives articles a guide button, not a picks promise (#339)', () => {
+    expect(deriveOgCta({ pathname: '/calming/should-you-take-your-dog-to-fireworks/', pageType: 'collector', isArticle: true }))
+      .toBe('Read the Guide');
+    expect(deriveOgCta({ pathname: '/calming/cbd-for-dogs/', pageType: 'collector', isArticle: true, ogCta: 'See the Safety Checklist' }))
+      .toBe('See the Safety Checklist');
+  });
+
+  it('gives pillar landing pages their own picks line', () => {
+    expect(deriveOgCta({ pathname: '/cooling/', pageType: 'collector' })).toBe('Browse Cooling Picks');
+    expect(deriveOgCta({ pathname: '/calming/', pageType: 'collector' })).toBe('Browse Calming Picks');
+  });
+
+  it('shows no button on utility pages', () => {
+    for (const pathname of ['/search/', '/subscribe/', '/subscribe/thanks/', '/subscribe/confirmed/', '/articles/']) {
+      expect(deriveOgCta({ pathname, pageType: 'collector' }), pathname).toBe('');
+    }
+  });
+
   it('creates predictable route slugs', () => {
     expect(ogSlugFromPathname('/')).toBe('home');
     expect(ogSlugFromPathname('/cooling/cooling-mats/')).toBe('cooling-cooling-mats');
