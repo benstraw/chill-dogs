@@ -18,7 +18,7 @@ import {
   VET_LANGUAGE_ALLOWLIST,
 } from './allowlists/content-guardrails';
 import { expectWithinAllowlist } from './helpers/ratchet';
-import { mdxParagraphProblems } from '../../scripts/lib/mdx-paragraphs';
+import { hasSafeParagraphMarkup } from '../../scripts/lib/mdx-paragraph-check';
 
 const ROOT = path.resolve(__dirname, '../..');
 // Provider data is diagnostic and never edited by hand; images are binary; the docs
@@ -56,10 +56,18 @@ const isTest = (file: string) => file.startsWith('src/__tests__/') || file.start
 const site = all.filter(({ file }) => file.startsWith('src/') && !isTest(file) && /\.(astro|ts|tsx|mdx|mjs)$/.test(file));
 
 describe('content guardrails', () => {
-  it('uses Markdown prose and safe explicit paragraphs in MDX articles', () => {
+  it('uses Markdown prose and safe explicit paragraphs in MDX articles', async () => {
     const articles = site.filter(({ file }) => file.startsWith('src/content/articles/') && file.endsWith('.mdx'));
     expect(articles.length).toBeGreaterThan(0);
-    const failures = articles.flatMap(({ file, text }) => mdxParagraphProblems(text).map((problem) => `${file}: ${problem}`));
+    const needsParser = articles.filter(({ text }) => !hasSafeParagraphMarkup(text));
+    const mdxParagraphProblems = needsParser.length
+      ? (await import('../../scripts/lib/mdx-paragraphs')).mdxParagraphProblems
+      : undefined;
+    // The normal source-tree scan never imports or parses with the MDX compiler.
+    // Complex syntax still gets the original AST check, with its full diagnostics.
+    const failures = needsParser.length
+      ? needsParser.flatMap(({ file, text }) => mdxParagraphProblems!(text).map((problem) => `${file}: ${problem}`))
+      : [];
     expect(failures, 'See docs/writing/article-writing-guide.md#mdx-paragraphs').toEqual([]);
   });
 

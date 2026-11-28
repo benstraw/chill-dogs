@@ -1,3 +1,4 @@
+import { hasSafeParagraphMarkup } from '../../scripts/lib/mdx-paragraph-check';
 import { describe, expect, it } from 'vitest';
 import { compile } from '@mdx-js/mdx';
 import { mdxParagraphProblems, migrateMdxParagraphs } from '../../scripts/lib/mdx-paragraphs';
@@ -76,5 +77,45 @@ describe('served HTML paragraph guard', () => {
   it('can allow empty live regions outside articles without allowing invalid nesting', () => {
     expect(htmlParagraphProblems('<p aria-live="polite"></p>', false)).toEqual([]);
     expect(htmlParagraphProblems('<p><p>Broken</p></p>', false).length).toBeGreaterThan(0);
+  });
+});
+
+describe('MDX paragraph fast pass', () => {
+  it.each([
+    'Ordinary Markdown with **emphasis**.',
+    '<p class="lede">A safe styled paragraph.</p>',
+    '<p id="note" class="lede">Text <strong>with emphasis</strong> and <br /> a break.</p>',
+    '<p><a href="https://example.com" data-track="click">See all <strong>picks</strong></a></p>',
+    '---\ntitle: "<p>frontmatter literal</p>"\n---\n\nMarkdown prose.',
+    'Use `<p>example only</p>` in inline code.\n\n<p class="lede">Actual paragraph.</p>',
+    '<div>\n  <p class="lede">One.</p>\n  <p class="note">Two.</p>\n</div>',
+  ])('accepts a simple safe form: %s', (source) => expect(hasSafeParagraphMarkup(source)).toBe(true));
+
+  it.each([
+    '<p>Use Markdown.</p>',
+    '<p class="lede">\nMultiline.\n</p>',
+    '<p\n class="lede">Multiline opening.</p>',
+    '<p class="lede">No closing tag',
+    '<p class="lede"><p>Nested ordinary prose.</p></p>',
+    '<p><a href="one">One</a><a href="two">Two</a></p>',
+    '<p>Before <a href="one">One</a></p>',
+    '<div><p class="lede">Inline JSX context.</p></div>',
+    '<p class={style}>Expression attribute.</p>',
+    '<p class="lede">{text}</p>',
+    '```html\n<p>Code example.</p>\n```',
+    '{/* <p>Comment example.</p> */}',
+    '<!-- <p>Comment example.</p> -->',
+    'export const example = `<p>\nTemplate literal\n</p>`;',
+    'export const example = "<p>String literal</p>";',
+    '<p />',
+    '<p{...lede}>Spread with no space.</p>',
+    '<p{...lede}>First line\nsecond line</p>',
+    '<p><a href="1">One</A><A href="2">Two</a></p>',
+  ])('delegates ambiguous or invalid syntax to the existing AST guard: %s', (source) => expect(hasSafeParagraphMarkup(source)).toBe(false));
+
+  it('defers a valid article with a code fence instead of failing it', () => {
+    const source = 'Run this:\n\n```bash\nls\n```\n\n<p class="lede">Styled.</p>';
+    expect(hasSafeParagraphMarkup(source)).toBe(false);
+    expect(mdxParagraphProblems(source)).toEqual([]);
   });
 });
