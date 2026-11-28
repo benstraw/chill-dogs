@@ -59,6 +59,11 @@
   text-decoration: underline;
 }
 
+/* Inline newsletter signup between article sections (EmailSignup placement="article_inline"). */
+.article-signup {
+  margin: var(--space-2xl) 0;
+}
+
 .product-slot {
   margin: var(--space-xl) 0;
 }

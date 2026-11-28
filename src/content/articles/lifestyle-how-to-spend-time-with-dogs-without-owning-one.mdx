@@ -16,6 +16,7 @@ relatedLabel: 'Dog Time Without Owning One'
 import Toc from '@components/modules/Toc.astro';
 import FAQ from '@components/modules/FAQ.astro';
 import InternalLinkStrip from '@components/modules/InternalLinkStrip.astro';
+import EmailSignup from '@components/EmailSignup.astro';
 import { ROUTES } from '@data/routes';
 
 export const pageSlug = 'how-to-spend-time-with-dogs-without-owning-one';
@@ -266,6 +267,20 @@ export const faqs = [
       The organization sets the equipment rules, so check with them before you purchase anything. If you are setting up a space for repeat stays, see our <a href={ROUTES.comfortPuppyCrates} data-track="collector_to_converter_click" data-from-page={pageSlug} data-to-page={ROUTES.comfortPuppyCrates} data-link-position="puppy-sitting-section">puppy crate picks</a>.
     </p>
 
+  </div>
+
+  {/* Newsletter signup for readers without a dog: copy pending editorial review (see #435). */}
+  <div class="article-signup">
+    <EmailSignup
+      placement="article_inline"
+      title="Get new Chill-Dogs guides by email"
+      body="We send an occasional email when new guides go up."
+      pageType="collector"
+      category="lifestyle"
+    />
+  </div>
+
+  <div class="prose">
     <h2 id="find-near-you">Find Programs Near You</h2>
     <p>
       A good place to start is to search for programs alongside your city or town, then go directly to the organization's own volunteer page.
