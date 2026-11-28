@@ -278,10 +278,10 @@ site_system:
       type: "collector"
       collector_subtype: "article"
       target_action: "Route dog-friendly flight service intent to travel, calming, and comfort converters/collectors"
-      metric: "collector_to_converter_click to travel, calming, and comfort pages"
+      metric: "collector_to_converter_click to travel, calming, and comfort pages; amazon_outbound_click from the carrier picks"
       routes:
         - "/travel/dog-friendly-airlines/"
-      notes: "Article collector focused on dog-forward onboard flight options beyond standard under-seat commercial airline pet policies; routes to flying-with-dogs, carrier, travel bag, car anxiety, and road trip pages."
+      notes: "Article collector focused on dog-forward onboard flight options beyond standard under-seat commercial airline pet policies; routes to flying-with-dogs, carrier, travel bag, car anxiety, and road trip pages. After the \"What dog-friendly airline means\" section, which covers under-seat carriers, ConverterPicks shows the first three picks of the airline-carriers converter's classic-soft-sided section (read from its config) with a link to that converter; the Disclosure (showSafety false) sits directly above them."
 
     - name: "How Much Do Dogs Sleep"
       type: "collector"
@@ -569,6 +569,7 @@ site_system:
       - "CoolingProductCard"
       - "CalmingProductCard"
       - "RelaxationProductCard"
+      - "ConverterPicks"
       - "FAQ"
       - "Disclosure"
       - "InternalLinkStrip"

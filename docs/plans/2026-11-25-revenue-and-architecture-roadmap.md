@@ -127,11 +127,13 @@ Every PR pastes the report into its description.
 | 2a | **Disclosure placement, hand-built pages:** homepage, `/shop/`, Aorkuler review, Garmin, shelter-dog charities. Move or add `<Disclosure />` above the first affiliate link. Remove each page from `src/__tests__/allowlists/disclosure.ts`. | Disclosure text moved or added; nothing else |
 | 2b | **Disclosure placement, two MDX articles:** crate training and keep-cool-in-car. Move the existing `<Disclosure />` tag above the first inline affiliate link. Only the tag line moves; no prose line changes. Remove both from the allowlist, which leaves it empty. | Disclosure block moved; nothing else |
 | 2c | **Fi collar review schema.** Its Review schema has no rating. Default: switch it to Article schema, which needs no new claim. The alternative is a star rating, but a rating is an editorial judgment, so the owner would have to supply it. | No visible change |
-| 2d | **Airlines page → airline carriers.** Add an existing product module, with the top carrier picks from `/comforting/best-airline-approved-dog-carriers/`, above the fold or right after the intro. | Additions only, from the module |
-| 2e | **Runaway-dog page → GPS trackers.** The same pattern, with the top picks from `/gear/best-dog-gps-trackers/`, the site's best-converting page. | Additions only |
+| 2d | **Airlines page → airline carriers.** A `ConverterPicks` module with the top carrier picks from `/comforting/best-airline-approved-dog-carriers/`, inline in the section about under-seat carriers (#434). | Additions only, from the module |
+| 2e | **Runaway-dog page → GPS trackers.** The same pattern, with the top picks from `/gear/best-dog-gps-trackers/`, the site's best-converting page, inline in the section about tracking. | Additions only |
 | 2f | **Links to the winners**, through `pinnedRelated` and related-link metadata only. In-body links would be copy edits, so they're left for a separate editorial PR. | Related-link strips change; prose unchanged |
 | 2g | **Lifestyle article → newsletter.** Make the existing signup module more prominent. No products. | Additions or moves of the signup module only |
 | 2h | **Homepage picks.** Investigate first, using the hero funnel and placement tiles; then make a layout change only. | Moves only, unless a copy change is agreed separately |
+
+**Placement rule for product additions.** These pages are article collectors, which drive conversions through links and inline cards, not through an early call to action (`docs/strategy/metrics-and-page-types.md`). Put picks inline, in the section whose text gives the reason to buy, and keep a link to the converter.
 
 All of these reuse an existing module. If no existing module can render a few products by id inside an article, raise that before writing a new one.
 
@@ -191,7 +193,7 @@ Phase 4 (Astro 6, one converter system) starts after 3e.
 Goal: earn more from the visitors the site already has, with small edits. "PR sequence for Phases 2 and 3" above is the order of work.
 
 3. **Products on the busiest zero-click pages.**
-   - `/travel/dog-friendly-airlines/`: readers are planning a flight, so route them to `/comforting/best-airline-approved-dog-carriers/` and travel bags, with a product module or a prominent link above the fold.
+   - `/travel/dog-friendly-airlines/`: readers are planning a flight, so route them to `/comforting/best-airline-approved-dog-carriers/` and travel bags, with a product module inline in the section about carriers.
    - Homepage: find out why its picks get no clicks (placement, which picks, what shows above the fold) and fix it.
    - `/lifestyle/…`: it has no buying intent, so make it a newsletter-signup page rather than forcing products onto it.
 4. **More traffic to the winners.** The ThunderShirt alternatives and GPS tracker pages convert at 50–60%. Give them:
