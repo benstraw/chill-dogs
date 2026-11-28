@@ -23,6 +23,16 @@ Do not skip the task-specific docs.
 - Leave untracked marketing assets alone unless the task asks for them.
 - Do not make changes outside the requested section or scope.
 
+## Temporary verification TODO — #304
+
+Ben has added `SERP_API_KEY` and `SEARCHAPI_KEY` to the Claude Code environment.
+On the next **Claude Code web** session, verify both providers before removing this TODO:
+
+1. Check that both variables are nonempty without printing their values. Record `bun --version` and inspect the session-start readiness report; resolve missing keys, blocked provider hosts, or a failed Bun proxy probe first. See [`docs/engineering/environment-and-integrations.md`](docs/engineering/environment-and-integrations.md).
+2. From the repo root, run `bun run scripts/fetch-amazon-data.ts --asin B00027466A --force`, then the same command with `--provider searchapi`. Each must report `Fetched: 1` and `Errors: 0`, and update the ASIN's raw JSON and manifest entry. These are single-product tests; do not refresh the whole catalog just to test connectivity. The script's exit code alone does not prove success.
+3. Run `bun run check:amazon`; distinguish unrelated catalog warnings from the two provider tests. Local-machine success does not verify the cloud environment.
+4. Once **both cloud tests pass**, record the Bun version and results on [issue #304](https://github.com/benstraw/chill-dogs/issues/304), then remove this entire temporary TODO section in the same follow-up change. If either test fails, keep the TODO and record the blocker. Do not close the issue automatically.
+
 ## Core rules
 
 - Chill-Dogs is an **Astro 5 / Bun** static affiliate site.
@@ -93,6 +103,8 @@ ratio Pinterest crops. It fetches product photos from the merchant CDN, so it **
 network** and will not run in a sandboxed agent container; add `--placeholder` to preview
 the template offline with a stand-in photo, and `--only <id>` to render one product.
 Pins are gitignored like `public/og/` — force-add the ones you have reviewed.
+Each pin is checked as it renders: a pin with text under Pinterest's corner buttons, or
+pushed off the bottom, is reported and not written (`src/scripts/og-gen/pin-layout.ts`).
 
 `admin:serve` runs alongside `bun run dev`. It is the local companion for the
 `/admin/images/` browser: with it running, Save writes `src/data/product-galleries.ts`;

@@ -4,17 +4,17 @@
    ============================================================= */
 
 /* ── Prose overrides ─────────────────────────────────────────── */
-.prose ul:not(.story-list):not(.checklist) {
+.prose ul:not(.story-list):not(.checklist):where(:not(.not-prose *)) {
   margin-bottom: var(--space-md);
   line-height: 1.7;
   padding-left: var(--space-lg);
 }
 
-.prose ul:not(.story-list):not(.checklist) li {
+.prose ul:not(.story-list):not(.checklist):where(:not(.not-prose *)) li {
   margin-bottom: var(--space-sm);
 }
 
-.prose a {
+.prose a:where(:not(.ui-cta, .not-prose *)) {
   color: var(--color-link);
   font-weight: var(--weight-semibold);
   text-decoration: underline;
