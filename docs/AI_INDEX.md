@@ -131,6 +131,7 @@ You are starting any task and need to know which docs apply.
 
 **Read:**
 - [`engineering/environment-and-integrations.md`](engineering/environment-and-integrations.md) — Env vars and outbound hosts per script, plus local/web/CI/Vercel config
+- [`engineering/product-maintenance.md`](engineering/product-maintenance.md) — Weekly product review queue, complete inventory, bounded providers, Chewy smoke test, and safe retirement
 - [`engineering/build-and-test-commands.md`](engineering/build-and-test-commands.md) — What each command does
 
 ---

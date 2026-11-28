@@ -463,8 +463,8 @@ describe('multi-merchant product offers', () => {
     // src/data/chewy-products/; only the cache tooling and the noindex /admin/ pages may
     // read them. (The old test built objects from a fixture and compared them to
     // themselves, so it could not fail.)
-    const allowed = [/^src\/scripts\/(chewy-cache|amazon-cache-freshness)\.ts$/, /^src\/pages\/admin\//, /^src\/data\/products\/types\.ts$/];
-    const provider = /amazon-products\/|chewy-products\/|chewy-cache|amazon-cache-freshness|providerMetadata/;
+    const allowed = [/^src\/scripts\/(chewy-cache|amazon-cache-freshness)\.ts$/, /^src\/scripts\/maintenance\/inventory\.ts$/, /^src\/pages\/admin\//, /^src\/data\/products\/types\.ts$/];
+    const provider = /amazon-products\/|chewy-products\/|chewy-cache|amazon-cache-freshness|providerMetadata|scripts\/maintenance\//;
     const root = path.resolve(__dirname, '../..');
     const offenders = globSync('src/**/*.{ts,tsx,astro,mdx,mjs}', { cwd: root })
       .filter((file) => !file.startsWith('src/__tests__/') && !allowed.some((re) => re.test(file)))
