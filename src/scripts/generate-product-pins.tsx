@@ -32,7 +32,7 @@ import { categoryLabel } from '../utils/product-meta';
 import { getCachedImageDataUri } from './og-gen/cache';
 import { loadOgFonts } from './og-gen/fonts';
 import { OG_THEMES, type OgTheme } from './og-gen/themes';
-import { pinLayoutProblems } from './og-gen/pin-layout';
+import { pinLayoutProblems, shortenPinBullet } from './og-gen/pin-layout';
 import { PIN_HEIGHT, PIN_PHOTO_HEIGHTS, PIN_WIDTH, ProductPinTemplate } from './og-gen/pin-template';
 
 const OUT_DIR = path.join(process.cwd(), 'public', 'pins');
@@ -82,7 +82,7 @@ function pinBullets(product: ProductCatalogItem): string[] {
   return product.bullets
     .map((bullet) => bullet.trim())
     .filter(Boolean)
-    .map((bullet) => (bullet.length > 92 ? `${bullet.slice(0, 89).trimEnd()}…` : bullet))
+    .map((bullet) => shortenPinBullet(bullet))
     .slice(0, 3);
 }
 

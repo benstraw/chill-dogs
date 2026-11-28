@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { pinLayoutProblems, pinWords } from '../scripts/og-gen/pin-layout';
+import { PIN_BULLET_MAX, pinLayoutProblems, pinWords, shortenPinBullet } from '../scripts/og-gen/pin-layout';
 
 // Hand-written stand-ins for satori's `embedFont: false` output: one <text> per word.
 const word = (text: string, x: number, width: number, y: number) =>
@@ -34,5 +34,38 @@ describe('pin layout check (run by pins:gen)', () => {
 
   it('flags text pushed off the bottom of the pin', () => {
     expect(pinLayoutProblems(`<svg>${word('COMFORTABLE', 400, 200, 1530)}</svg>`)).toHaveLength(1);
+  });
+});
+
+describe('shortenPinBullet', () => {
+  it('keeps a bullet that fits, as written', () => {
+    expect(shortenPinBullet('Real-time escape alerts and geofence zones')).toBe('Real-time escape alerts and geofence zones');
+  });
+
+  it('ends a long bullet at a clause break, with no ellipsis', () => {
+    expect(
+      shortenPinBullet('Versatile design allows you to wear it on your front or back, providing maximum convenience for owners on long hikes'),
+    ).toBe('Versatile design allows you to wear it on your front or back');
+  });
+
+  it('prefers a dash or sentence break over a comma inside a list', () => {
+    expect(
+      shortenPinBullet('Sleeping-bag style packs down to near water-bottle size — fits in any bag, suitcase, or car door pocket'),
+    ).toBe('Sleeping-bag style packs down to near water-bottle size');
+  });
+
+  it('otherwise ends on a whole word, never mid-word, and drops a dangling joiner', () => {
+    const out = shortenPinBullet(
+      'Durable buckles and sturdy straps make it ready for any adventure ensuring reliable support for heavier dogs every single day',
+    );
+    expect(out).toBe('Durable buckles and sturdy straps make it ready for any adventure ensuring reliable support…');
+    expect(out.length).toBeLessThanOrEqual(PIN_BULLET_MAX);
+  });
+
+  it('never leaves a partial word before the ellipsis', () => {
+    const long = 'Pressure activated cooling gel pad that recharges automatically between naps without any water electricity refrigeration';
+    const out = shortenPinBullet(long);
+    const lastWord = out.replace(/…$/, '').split(' ').pop()!;
+    expect(long.split(' ')).toContain(lastWord);
   });
 });

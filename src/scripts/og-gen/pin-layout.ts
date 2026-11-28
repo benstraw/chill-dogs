@@ -44,3 +44,43 @@ export function pinLayoutProblems(svg: string): string[] {
   }
   return problems;
 }
+
+/** Longest bullet a pin shows; longer ones are shortened by `shortenPinBullet`. */
+export const PIN_BULLET_MAX = 92;
+
+/** Words a shortened bullet must not end on. */
+const DANGLING = new Set(['and', 'or', 'with', 'for', 'to', 'the', 'a', 'an', 'of', 'in', 'on', 'at', 'by', 'from', 'so', 'but', 'that', 'while']);
+
+/**
+ * Shortens a product bullet for a pin without cutting a word in half.
+ * 1. A bullet that fits is kept as written.
+ * 2. Otherwise it ends at a clause break, with no ellipsis: a complete phrase. A strong
+ *    break (sentence end, semicolon, colon, dash) wins over a comma, and the phrase
+ *    must fill at least 40% of the space.
+ * 3. Failing that, it ends at the last whole word, minus any dangling joiner such as
+ *    "and" or "with", followed by an ellipsis.
+ */
+export function shortenPinBullet(text: string, max = PIN_BULLET_MAX): string {
+  const bullet = text.trim().replace(/\s+/g, ' ');
+  if (bullet.length <= max) return bullet;
+
+  // A clause break must leave a real phrase: at least 40% of the space.
+  const head = bullet.slice(0, max);
+  const minEnd = Math.round(max * 0.4);
+  const lastBreak = (re: RegExp) =>
+    [...head.matchAll(re)].map((m) => m.index ?? 0).filter((i) => i >= minEnd).pop();
+  // Strong breaks (sentence end, semicolon, colon, dash) beat a comma, which may sit
+  // inside a list ("fits in any bag, suitcase…").
+  const clauseEnd = lastBreak(/[.;:]\s|\s[—–-]\s/g) ?? lastBreak(/,\s/g);
+  if (clauseEnd !== undefined) return trimDangling(bullet.slice(0, clauseEnd));
+
+  const words = bullet.slice(0, max - 1).split(' ');
+  if (bullet[max - 1] !== ' ') words.pop(); // drop the word the limit cut through
+  return `${trimDangling(words.join(' '))}…`;
+}
+
+function trimDangling(text: string): string {
+  const words = text.replace(/[\s,;:—–-]+$/, '').split(' ');
+  while (words.length > 1 && DANGLING.has(words[words.length - 1].toLowerCase())) words.pop();
+  return words.join(' ').replace(/[\s,;:—–-]+$/, '');
+}
